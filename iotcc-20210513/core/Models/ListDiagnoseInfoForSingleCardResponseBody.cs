@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.IoTCC20210513.Models
             [Validation(Required=false)]
             public long? EndTime { get; set; }
 
-            [NameInMap("Iccid")]
+            [NameInMap("IccId")]
             [Validation(Required=false)]
-            public string Iccid { get; set; }
+            public string IccId { get; set; }
 
             [NameInMap("IoTCloudConnectorId")]
             [Validation(Required=false)]

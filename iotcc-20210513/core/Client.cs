@@ -721,6 +721,136 @@ namespace AlibabaCloud.SDK.IoTCC20210513
             return await CreateConnectionPoolWithOptionsAsync(request, runtime);
         }
 
+        public CreateDNSServiceRuleResponse CreateDNSServiceRuleWithOptions(CreateDNSServiceRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleDescription))
+            {
+                query["AuthorizationRuleDescription"] = request.AuthorizationRuleDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleName))
+            {
+                query["AuthorizationRuleName"] = request.AuthorizationRuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Destination))
+            {
+                query["Destination"] = request.Destination;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoTCloudConnectorId))
+            {
+                query["IoTCloudConnectorId"] = request.IoTCloudConnectorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceType))
+            {
+                query["ServiceType"] = request.ServiceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDNSServiceRule",
+                Version = "2021-05-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDNSServiceRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateDNSServiceRuleResponse> CreateDNSServiceRuleWithOptionsAsync(CreateDNSServiceRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleDescription))
+            {
+                query["AuthorizationRuleDescription"] = request.AuthorizationRuleDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleName))
+            {
+                query["AuthorizationRuleName"] = request.AuthorizationRuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Destination))
+            {
+                query["Destination"] = request.Destination;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoTCloudConnectorId))
+            {
+                query["IoTCloudConnectorId"] = request.IoTCloudConnectorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceType))
+            {
+                query["ServiceType"] = request.ServiceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDNSServiceRule",
+                Version = "2021-05-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDNSServiceRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateDNSServiceRuleResponse CreateDNSServiceRule(CreateDNSServiceRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDNSServiceRuleWithOptions(request, runtime);
+        }
+
+        public async Task<CreateDNSServiceRuleResponse> CreateDNSServiceRuleAsync(CreateDNSServiceRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDNSServiceRuleWithOptionsAsync(request, runtime);
+        }
+
         public CreateGroupAuthorizationRuleResponse CreateGroupAuthorizationRuleWithOptions(CreateGroupAuthorizationRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -857,6 +987,136 @@ namespace AlibabaCloud.SDK.IoTCC20210513
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateGroupAuthorizationRuleWithOptionsAsync(request, runtime);
+        }
+
+        public CreateGroupDNSServiceRuleResponse CreateGroupDNSServiceRuleWithOptions(CreateGroupDNSServiceRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleDescription))
+            {
+                query["DNSServiceRuleDescription"] = request.DNSServiceRuleDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleName))
+            {
+                query["DNSServiceRuleName"] = request.DNSServiceRuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Destination))
+            {
+                query["Destination"] = request.Destination;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoTCloudConnectorGroupId))
+            {
+                query["IoTCloudConnectorGroupId"] = request.IoTCloudConnectorGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceType))
+            {
+                query["ServiceType"] = request.ServiceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGroupDNSServiceRule",
+                Version = "2021-05-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGroupDNSServiceRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateGroupDNSServiceRuleResponse> CreateGroupDNSServiceRuleWithOptionsAsync(CreateGroupDNSServiceRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleDescription))
+            {
+                query["DNSServiceRuleDescription"] = request.DNSServiceRuleDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleName))
+            {
+                query["DNSServiceRuleName"] = request.DNSServiceRuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Destination))
+            {
+                query["Destination"] = request.Destination;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoTCloudConnectorGroupId))
+            {
+                query["IoTCloudConnectorGroupId"] = request.IoTCloudConnectorGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceType))
+            {
+                query["ServiceType"] = request.ServiceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGroupDNSServiceRule",
+                Version = "2021-05-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGroupDNSServiceRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateGroupDNSServiceRuleResponse CreateGroupDNSServiceRule(CreateGroupDNSServiceRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateGroupDNSServiceRuleWithOptions(request, runtime);
+        }
+
+        public async Task<CreateGroupDNSServiceRuleResponse> CreateGroupDNSServiceRuleAsync(CreateGroupDNSServiceRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateGroupDNSServiceRuleWithOptionsAsync(request, runtime);
         }
 
         public CreateIoTCloudConnectorResponse CreateIoTCloudConnectorWithOptions(CreateIoTCloudConnectorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1519,6 +1779,104 @@ namespace AlibabaCloud.SDK.IoTCC20210513
             return await DeleteConnectionPoolWithOptionsAsync(request, runtime);
         }
 
+        public DeleteDNSServiceRuleResponse DeleteDNSServiceRuleWithOptions(DeleteDNSServiceRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleId))
+            {
+                query["DNSServiceRuleId"] = request.DNSServiceRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoTCloudConnectorId))
+            {
+                query["IoTCloudConnectorId"] = request.IoTCloudConnectorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDNSServiceRule",
+                Version = "2021-05-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDNSServiceRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteDNSServiceRuleResponse> DeleteDNSServiceRuleWithOptionsAsync(DeleteDNSServiceRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleId))
+            {
+                query["DNSServiceRuleId"] = request.DNSServiceRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoTCloudConnectorId))
+            {
+                query["IoTCloudConnectorId"] = request.IoTCloudConnectorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDNSServiceRule",
+                Version = "2021-05-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDNSServiceRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteDNSServiceRuleResponse DeleteDNSServiceRule(DeleteDNSServiceRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDNSServiceRuleWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteDNSServiceRuleResponse> DeleteDNSServiceRuleAsync(DeleteDNSServiceRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDNSServiceRuleWithOptionsAsync(request, runtime);
+        }
+
         public DeleteGroupAuthorizationRuleResponse DeleteGroupAuthorizationRuleWithOptions(DeleteGroupAuthorizationRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1615,6 +1973,104 @@ namespace AlibabaCloud.SDK.IoTCC20210513
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteGroupAuthorizationRuleWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteGroupDNSServiceRuleResponse DeleteGroupDNSServiceRuleWithOptions(DeleteGroupDNSServiceRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleId))
+            {
+                query["DNSServiceRuleId"] = request.DNSServiceRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoTCloudConnectorGroupId))
+            {
+                query["IoTCloudConnectorGroupId"] = request.IoTCloudConnectorGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteGroupDNSServiceRule",
+                Version = "2021-05-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteGroupDNSServiceRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteGroupDNSServiceRuleResponse> DeleteGroupDNSServiceRuleWithOptionsAsync(DeleteGroupDNSServiceRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleId))
+            {
+                query["DNSServiceRuleId"] = request.DNSServiceRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoTCloudConnectorGroupId))
+            {
+                query["IoTCloudConnectorGroupId"] = request.IoTCloudConnectorGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteGroupDNSServiceRule",
+                Version = "2021-05-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteGroupDNSServiceRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteGroupDNSServiceRuleResponse DeleteGroupDNSServiceRule(DeleteGroupDNSServiceRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteGroupDNSServiceRuleWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteGroupDNSServiceRuleResponse> DeleteGroupDNSServiceRuleAsync(DeleteGroupDNSServiceRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteGroupDNSServiceRuleWithOptionsAsync(request, runtime);
         }
 
         public DeleteIoTCloudConnectorResponse DeleteIoTCloudConnectorWithOptions(DeleteIoTCloudConnectorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3405,6 +3861,144 @@ namespace AlibabaCloud.SDK.IoTCC20210513
             return await ListConnectionPoolsWithOptionsAsync(request, runtime);
         }
 
+        public ListDNSServiceRulesResponse ListDNSServiceRulesWithOptions(ListDNSServiceRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleIds))
+            {
+                query["DNSServiceRuleIds"] = request.DNSServiceRuleIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleName))
+            {
+                query["DNSServiceRuleName"] = request.DNSServiceRuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleStatus))
+            {
+                query["DNSServiceRuleStatus"] = request.DNSServiceRuleStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Destination))
+            {
+                query["Destination"] = request.Destination;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoTCloudConnectorId))
+            {
+                query["IoTCloudConnectorId"] = request.IoTCloudConnectorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceType))
+            {
+                query["ServiceType"] = request.ServiceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDNSServiceRules",
+                Version = "2021-05-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDNSServiceRulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListDNSServiceRulesResponse> ListDNSServiceRulesWithOptionsAsync(ListDNSServiceRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleIds))
+            {
+                query["DNSServiceRuleIds"] = request.DNSServiceRuleIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleName))
+            {
+                query["DNSServiceRuleName"] = request.DNSServiceRuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleStatus))
+            {
+                query["DNSServiceRuleStatus"] = request.DNSServiceRuleStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Destination))
+            {
+                query["Destination"] = request.Destination;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoTCloudConnectorId))
+            {
+                query["IoTCloudConnectorId"] = request.IoTCloudConnectorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceType))
+            {
+                query["ServiceType"] = request.ServiceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDNSServiceRules",
+                Version = "2021-05-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDNSServiceRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListDNSServiceRulesResponse ListDNSServiceRules(ListDNSServiceRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDNSServiceRulesWithOptions(request, runtime);
+        }
+
+        public async Task<ListDNSServiceRulesResponse> ListDNSServiceRulesAsync(ListDNSServiceRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDNSServiceRulesWithOptionsAsync(request, runtime);
+        }
+
         public ListDiagnoseInfoForSingleCardResponse ListDiagnoseInfoForSingleCardWithOptions(ListDiagnoseInfoForSingleCardRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3647,6 +4241,144 @@ namespace AlibabaCloud.SDK.IoTCC20210513
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListGroupAuthorizationRulesWithOptionsAsync(request, runtime);
+        }
+
+        public ListGroupDNSServiceRulesResponse ListGroupDNSServiceRulesWithOptions(ListGroupDNSServiceRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleIds))
+            {
+                query["DNSServiceRuleIds"] = request.DNSServiceRuleIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleName))
+            {
+                query["DNSServiceRuleName"] = request.DNSServiceRuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleStatus))
+            {
+                query["DNSServiceRuleStatus"] = request.DNSServiceRuleStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Destination))
+            {
+                query["Destination"] = request.Destination;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoTCloudConnectorGroupId))
+            {
+                query["IoTCloudConnectorGroupId"] = request.IoTCloudConnectorGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceType))
+            {
+                query["ServiceType"] = request.ServiceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGroupDNSServiceRules",
+                Version = "2021-05-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGroupDNSServiceRulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListGroupDNSServiceRulesResponse> ListGroupDNSServiceRulesWithOptionsAsync(ListGroupDNSServiceRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleIds))
+            {
+                query["DNSServiceRuleIds"] = request.DNSServiceRuleIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleName))
+            {
+                query["DNSServiceRuleName"] = request.DNSServiceRuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleStatus))
+            {
+                query["DNSServiceRuleStatus"] = request.DNSServiceRuleStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Destination))
+            {
+                query["Destination"] = request.Destination;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoTCloudConnectorGroupId))
+            {
+                query["IoTCloudConnectorGroupId"] = request.IoTCloudConnectorGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceType))
+            {
+                query["ServiceType"] = request.ServiceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGroupDNSServiceRules",
+                Version = "2021-05-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGroupDNSServiceRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListGroupDNSServiceRulesResponse ListGroupDNSServiceRules(ListGroupDNSServiceRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListGroupDNSServiceRulesWithOptions(request, runtime);
+        }
+
+        public async Task<ListGroupDNSServiceRulesResponse> ListGroupDNSServiceRulesAsync(ListGroupDNSServiceRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListGroupDNSServiceRulesWithOptionsAsync(request, runtime);
         }
 
         public ListIoTCloudConnectorAvailableZonesResponse ListIoTCloudConnectorAvailableZonesWithOptions(ListIoTCloudConnectorAvailableZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4301,6 +5033,202 @@ namespace AlibabaCloud.SDK.IoTCC20210513
             return await ListServiceEntriesWithOptionsAsync(request, runtime);
         }
 
+        public MoveAuthorizationRuleToDNSServiceResponse MoveAuthorizationRuleToDNSServiceWithOptions(MoveAuthorizationRuleToDNSServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleId))
+            {
+                query["AuthorizationRuleId"] = request.AuthorizationRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoTCloudConnectorId))
+            {
+                query["IoTCloudConnectorId"] = request.IoTCloudConnectorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MoveAuthorizationRuleToDNSService",
+                Version = "2021-05-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MoveAuthorizationRuleToDNSServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<MoveAuthorizationRuleToDNSServiceResponse> MoveAuthorizationRuleToDNSServiceWithOptionsAsync(MoveAuthorizationRuleToDNSServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleId))
+            {
+                query["AuthorizationRuleId"] = request.AuthorizationRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoTCloudConnectorId))
+            {
+                query["IoTCloudConnectorId"] = request.IoTCloudConnectorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MoveAuthorizationRuleToDNSService",
+                Version = "2021-05-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MoveAuthorizationRuleToDNSServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public MoveAuthorizationRuleToDNSServiceResponse MoveAuthorizationRuleToDNSService(MoveAuthorizationRuleToDNSServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return MoveAuthorizationRuleToDNSServiceWithOptions(request, runtime);
+        }
+
+        public async Task<MoveAuthorizationRuleToDNSServiceResponse> MoveAuthorizationRuleToDNSServiceAsync(MoveAuthorizationRuleToDNSServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await MoveAuthorizationRuleToDNSServiceWithOptionsAsync(request, runtime);
+        }
+
+        public MoveGroupAuthorizationRuleToDNSServiceResponse MoveGroupAuthorizationRuleToDNSServiceWithOptions(MoveGroupAuthorizationRuleToDNSServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleId))
+            {
+                query["AuthorizationRuleId"] = request.AuthorizationRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoTCloudConnectorGroupId))
+            {
+                query["IoTCloudConnectorGroupId"] = request.IoTCloudConnectorGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MoveGroupAuthorizationRuleToDNSService",
+                Version = "2021-05-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MoveGroupAuthorizationRuleToDNSServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<MoveGroupAuthorizationRuleToDNSServiceResponse> MoveGroupAuthorizationRuleToDNSServiceWithOptionsAsync(MoveGroupAuthorizationRuleToDNSServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleId))
+            {
+                query["AuthorizationRuleId"] = request.AuthorizationRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoTCloudConnectorGroupId))
+            {
+                query["IoTCloudConnectorGroupId"] = request.IoTCloudConnectorGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MoveGroupAuthorizationRuleToDNSService",
+                Version = "2021-05-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MoveGroupAuthorizationRuleToDNSServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public MoveGroupAuthorizationRuleToDNSServiceResponse MoveGroupAuthorizationRuleToDNSService(MoveGroupAuthorizationRuleToDNSServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return MoveGroupAuthorizationRuleToDNSServiceWithOptions(request, runtime);
+        }
+
+        public async Task<MoveGroupAuthorizationRuleToDNSServiceResponse> MoveGroupAuthorizationRuleToDNSServiceAsync(MoveGroupAuthorizationRuleToDNSServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await MoveGroupAuthorizationRuleToDNSServiceWithOptionsAsync(request, runtime);
+        }
+
         public OpenIoTCloudConnectorServiceResponse OpenIoTCloudConnectorServiceWithOptions(OpenIoTCloudConnectorServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4871,6 +5799,144 @@ namespace AlibabaCloud.SDK.IoTCC20210513
             return await UpdateConnectionPoolAttributeWithOptionsAsync(request, runtime);
         }
 
+        public UpdateDNSServiceRuleAttributeResponse UpdateDNSServiceRuleAttributeWithOptions(UpdateDNSServiceRuleAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleDescription))
+            {
+                query["AuthorizationRuleDescription"] = request.AuthorizationRuleDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleName))
+            {
+                query["AuthorizationRuleName"] = request.AuthorizationRuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleId))
+            {
+                query["DNSServiceRuleId"] = request.DNSServiceRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Destination))
+            {
+                query["Destination"] = request.Destination;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoTCloudConnectorId))
+            {
+                query["IoTCloudConnectorId"] = request.IoTCloudConnectorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceType))
+            {
+                query["ServiceType"] = request.ServiceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDNSServiceRuleAttribute",
+                Version = "2021-05-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDNSServiceRuleAttributeResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateDNSServiceRuleAttributeResponse> UpdateDNSServiceRuleAttributeWithOptionsAsync(UpdateDNSServiceRuleAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleDescription))
+            {
+                query["AuthorizationRuleDescription"] = request.AuthorizationRuleDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleName))
+            {
+                query["AuthorizationRuleName"] = request.AuthorizationRuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleId))
+            {
+                query["DNSServiceRuleId"] = request.DNSServiceRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Destination))
+            {
+                query["Destination"] = request.Destination;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoTCloudConnectorId))
+            {
+                query["IoTCloudConnectorId"] = request.IoTCloudConnectorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceType))
+            {
+                query["ServiceType"] = request.ServiceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDNSServiceRuleAttribute",
+                Version = "2021-05-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDNSServiceRuleAttributeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateDNSServiceRuleAttributeResponse UpdateDNSServiceRuleAttribute(UpdateDNSServiceRuleAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateDNSServiceRuleAttributeWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateDNSServiceRuleAttributeResponse> UpdateDNSServiceRuleAttributeAsync(UpdateDNSServiceRuleAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateDNSServiceRuleAttributeWithOptionsAsync(request, runtime);
+        }
+
         public UpdateGroupAuthorizationRuleAttributeResponse UpdateGroupAuthorizationRuleAttributeWithOptions(UpdateGroupAuthorizationRuleAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5015,6 +6081,144 @@ namespace AlibabaCloud.SDK.IoTCC20210513
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateGroupAuthorizationRuleAttributeWithOptionsAsync(request, runtime);
+        }
+
+        public UpdateGroupDNSServiceRuleAttributeResponse UpdateGroupDNSServiceRuleAttributeWithOptions(UpdateGroupDNSServiceRuleAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleDescription))
+            {
+                query["DNSServiceRuleDescription"] = request.DNSServiceRuleDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleId))
+            {
+                query["DNSServiceRuleId"] = request.DNSServiceRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleName))
+            {
+                query["DNSServiceRuleName"] = request.DNSServiceRuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Destination))
+            {
+                query["Destination"] = request.Destination;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoTCloudConnectorGroupId))
+            {
+                query["IoTCloudConnectorGroupId"] = request.IoTCloudConnectorGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceType))
+            {
+                query["ServiceType"] = request.ServiceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGroupDNSServiceRuleAttribute",
+                Version = "2021-05-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGroupDNSServiceRuleAttributeResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateGroupDNSServiceRuleAttributeResponse> UpdateGroupDNSServiceRuleAttributeWithOptionsAsync(UpdateGroupDNSServiceRuleAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleDescription))
+            {
+                query["DNSServiceRuleDescription"] = request.DNSServiceRuleDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleId))
+            {
+                query["DNSServiceRuleId"] = request.DNSServiceRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleName))
+            {
+                query["DNSServiceRuleName"] = request.DNSServiceRuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Destination))
+            {
+                query["Destination"] = request.Destination;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoTCloudConnectorGroupId))
+            {
+                query["IoTCloudConnectorGroupId"] = request.IoTCloudConnectorGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceType))
+            {
+                query["ServiceType"] = request.ServiceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGroupDNSServiceRuleAttribute",
+                Version = "2021-05-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGroupDNSServiceRuleAttributeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateGroupDNSServiceRuleAttributeResponse UpdateGroupDNSServiceRuleAttribute(UpdateGroupDNSServiceRuleAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateGroupDNSServiceRuleAttributeWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateGroupDNSServiceRuleAttributeResponse> UpdateGroupDNSServiceRuleAttributeAsync(UpdateGroupDNSServiceRuleAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateGroupDNSServiceRuleAttributeWithOptionsAsync(request, runtime);
         }
 
         public UpdateIoTCloudConnectorAttributeResponse UpdateIoTCloudConnectorAttributeWithOptions(UpdateIoTCloudConnectorAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
