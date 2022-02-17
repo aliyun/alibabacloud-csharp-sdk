@@ -357,6 +357,88 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return await AddVMIntoServiceMeshWithOptionsAsync(request, runtime);
         }
 
+        public CreateASMGatewayResponse CreateASMGatewayWithOptions(CreateASMGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
+            {
+                body["Body"] = request.Body;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IstioGatewayName))
+            {
+                body["IstioGatewayName"] = request.IstioGatewayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
+            {
+                body["ServiceMeshId"] = request.ServiceMeshId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateASMGateway",
+                Version = "2020-01-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateASMGatewayResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateASMGatewayResponse> CreateASMGatewayWithOptionsAsync(CreateASMGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
+            {
+                body["Body"] = request.Body;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IstioGatewayName))
+            {
+                body["IstioGatewayName"] = request.IstioGatewayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
+            {
+                body["ServiceMeshId"] = request.ServiceMeshId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateASMGateway",
+                Version = "2020-01-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateASMGatewayResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateASMGatewayResponse CreateASMGateway(CreateASMGatewayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateASMGatewayWithOptions(request, runtime);
+        }
+
+        public async Task<CreateASMGatewayResponse> CreateASMGatewayAsync(CreateASMGatewayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateASMGatewayWithOptionsAsync(request, runtime);
+        }
+
         public CreateExtensionProviderResponse CreateExtensionProviderWithOptions(CreateExtensionProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5383,6 +5465,88 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetServiceRegistrySourceWithOptionsAsync(request, runtime);
+        }
+
+        public UpdateASMGatewayResponse UpdateASMGatewayWithOptions(UpdateASMGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
+            {
+                body["Body"] = request.Body;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IstioGatewayName))
+            {
+                body["IstioGatewayName"] = request.IstioGatewayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
+            {
+                body["ServiceMeshId"] = request.ServiceMeshId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateASMGateway",
+                Version = "2020-01-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateASMGatewayResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateASMGatewayResponse> UpdateASMGatewayWithOptionsAsync(UpdateASMGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
+            {
+                body["Body"] = request.Body;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IstioGatewayName))
+            {
+                body["IstioGatewayName"] = request.IstioGatewayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
+            {
+                body["ServiceMeshId"] = request.ServiceMeshId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateASMGateway",
+                Version = "2020-01-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateASMGatewayResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateASMGatewayResponse UpdateASMGateway(UpdateASMGatewayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateASMGatewayWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateASMGatewayResponse> UpdateASMGatewayAsync(UpdateASMGatewayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateASMGatewayWithOptionsAsync(request, runtime);
         }
 
         public UpdateASMGatewayImportedServicesResponse UpdateASMGatewayImportedServicesWithOptions(UpdateASMGatewayImportedServicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
