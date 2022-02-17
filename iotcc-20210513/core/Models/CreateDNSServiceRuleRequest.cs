@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.IoTCC20210513.Models
         [Validation(Required=false)]
         public string AuthorizationRuleDescription { get; set; }
 
-        [NameInMap("AuthorizationRuleName")]
-        [Validation(Required=false)]
-        public string AuthorizationRuleName { get; set; }
-
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("DNSServiceRuleName")]
+        [Validation(Required=false)]
+        public string DNSServiceRuleName { get; set; }
 
         [NameInMap("Destination")]
         [Validation(Required=false)]
