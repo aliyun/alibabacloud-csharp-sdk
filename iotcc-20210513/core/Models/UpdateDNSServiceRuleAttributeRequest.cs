@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.IoTCC20210513.Models
 {
     public class UpdateDNSServiceRuleAttributeRequest : TeaModel {
-        [NameInMap("AuthorizationRuleName")]
-        [Validation(Required=false)]
-        public string AuthorizationRuleName { get; set; }
-
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.IoTCC20210513.Models
         [NameInMap("DNSServiceRuleId")]
         [Validation(Required=false)]
         public string DNSServiceRuleId { get; set; }
+
+        [NameInMap("DNSServiceRuleName")]
+        [Validation(Required=false)]
+        public string DNSServiceRuleName { get; set; }
 
         [NameInMap("Destination")]
         [Validation(Required=false)]

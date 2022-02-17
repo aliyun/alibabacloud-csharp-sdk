@@ -725,13 +725,13 @@ namespace AlibabaCloud.SDK.IoTCC20210513
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleDescription))
-            {
-                query["AuthorizationRuleDescription"] = request.AuthorizationRuleDescription;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleDescription))
+            {
+                query["DNSServiceRuleDescription"] = request.DNSServiceRuleDescription;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleName))
             {
@@ -784,13 +784,13 @@ namespace AlibabaCloud.SDK.IoTCC20210513
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleDescription))
-            {
-                query["AuthorizationRuleDescription"] = request.AuthorizationRuleDescription;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleDescription))
+            {
+                query["DNSServiceRuleDescription"] = request.DNSServiceRuleDescription;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleName))
             {
@@ -3405,6 +3405,10 @@ namespace AlibabaCloud.SDK.IoTCC20210513
             {
                 query["AuthorizationRuleStatus"] = request.AuthorizationRuleStatus;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleType))
+            {
+                query["AuthorizationRuleType"] = request.AuthorizationRuleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Destination))
             {
                 query["Destination"] = request.Destination;
@@ -3467,6 +3471,10 @@ namespace AlibabaCloud.SDK.IoTCC20210513
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleStatus))
             {
                 query["AuthorizationRuleStatus"] = request.AuthorizationRuleStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleType))
+            {
+                query["AuthorizationRuleType"] = request.AuthorizationRuleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Destination))
             {
@@ -5803,10 +5811,6 @@ namespace AlibabaCloud.SDK.IoTCC20210513
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleName))
-            {
-                query["AuthorizationRuleName"] = request.AuthorizationRuleName;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -5818,6 +5822,10 @@ namespace AlibabaCloud.SDK.IoTCC20210513
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleId))
             {
                 query["DNSServiceRuleId"] = request.DNSServiceRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleName))
+            {
+                query["DNSServiceRuleName"] = request.DNSServiceRuleName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Destination))
             {
@@ -5866,10 +5874,6 @@ namespace AlibabaCloud.SDK.IoTCC20210513
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleName))
-            {
-                query["AuthorizationRuleName"] = request.AuthorizationRuleName;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -5881,6 +5885,10 @@ namespace AlibabaCloud.SDK.IoTCC20210513
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleId))
             {
                 query["DNSServiceRuleId"] = request.DNSServiceRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNSServiceRuleName))
+            {
+                query["DNSServiceRuleName"] = request.DNSServiceRuleName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Destination))
             {

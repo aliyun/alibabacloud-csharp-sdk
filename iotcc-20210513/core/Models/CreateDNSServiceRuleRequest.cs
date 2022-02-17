@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.IoTCC20210513.Models
 {
     public class CreateDNSServiceRuleRequest : TeaModel {
-        [NameInMap("AuthorizationRuleDescription")]
-        [Validation(Required=false)]
-        public string AuthorizationRuleDescription { get; set; }
-
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("DNSServiceRuleDescription")]
+        [Validation(Required=false)]
+        public string DNSServiceRuleDescription { get; set; }
 
         [NameInMap("DNSServiceRuleName")]
         [Validation(Required=false)]

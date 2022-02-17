@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.IoTCC20210513.Models
             [Validation(Required=false)]
             public string AuthorizationRuleStatus { get; set; }
 
+            [NameInMap("AuthorizationRuleType")]
+            [Validation(Required=false)]
+            public string AuthorizationRuleType { get; set; }
+
             [NameInMap("Destination")]
             [Validation(Required=false)]
             public string Destination { get; set; }
