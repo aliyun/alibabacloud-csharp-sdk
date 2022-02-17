@@ -24,6 +24,13 @@ namespace AlibabaCloud.SDK.Mts20210728.Models
         public string Input { get; set; }
 
         /// <summary>
+        /// url链接
+        /// </summary>
+        [NameInMap("Url")]
+        [Validation(Required=false)]
+        public string Url { get; set; }
+
+        /// <summary>
         /// 用户数据
         /// </summary>
         [NameInMap("UserData")]

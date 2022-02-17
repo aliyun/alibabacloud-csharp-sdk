@@ -38,6 +38,20 @@ namespace AlibabaCloud.SDK.Mts20210728.Models
         public string Output { get; set; }
 
         /// <summary>
+        /// 嵌入水印开始时间
+        /// </summary>
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
+
+        /// <summary>
+        /// 嵌入水印总时长
+        /// </summary>
+        [NameInMap("TotalTime")]
+        [Validation(Required=false)]
+        public long? TotalTime { get; set; }
+
+        /// <summary>
         /// 外部url链接(Input和url二选一)
         /// </summary>
         [NameInMap("Url")]
