@@ -18,28 +18,28 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribeKubernetesVersionMetadataResponseBody> Body { get; set; }
         public class DescribeKubernetesVersionMetadataResponseBody : TeaModel {
             /// <summary>
-            /// Kubernetes版本特性。	
+            /// Kubernetes版本特性。
             /// </summary>
             [NameInMap("capabilities")]
             [Validation(Required=false)]
             public Dictionary<string, object> Capabilities { get; set; }
 
             /// <summary>
-            /// ECS系统镜像列表。	
+            /// ECS系统镜像列表。
             /// </summary>
             [NameInMap("images")]
             [Validation(Required=false)]
             public List<DescribeKubernetesVersionMetadataResponseBodyImages> Images { get; set; }
             public class DescribeKubernetesVersionMetadataResponseBodyImages : TeaModel {
                 /// <summary>
-                /// 镜像ID。	
+                /// 镜像ID。
                 /// </summary>
                 [NameInMap("image_id")]
                 [Validation(Required=false)]
                 public string ImageId { get; set; }
 
                 /// <summary>
-                /// 镜像名称。	
+                /// 镜像名称。
                 /// </summary>
                 [NameInMap("image_name")]
                 [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string OsVersion { get; set; }
 
                 /// <summary>
-                /// 镜像类型。	
+                /// 镜像类型。
                 /// </summary>
                 [NameInMap("image_type")]
                 [Validation(Required=false)]
@@ -83,21 +83,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// Kubernetes版本元数据信息。	
+            /// Kubernetes版本元数据信息。
             /// </summary>
             [NameInMap("meta_data")]
             [Validation(Required=false)]
             public Dictionary<string, object> MetaData { get; set; }
 
             /// <summary>
-            /// 容器运行时详情。	
+            /// 容器运行时详情。
             /// </summary>
             [NameInMap("runtimes")]
             [Validation(Required=false)]
             public List<Runtime> Runtimes { get; set; }
 
             /// <summary>
-            /// Kubernetes版本。	
+            /// Kubernetes版本。
             /// </summary>
             [NameInMap("version")]
             [Validation(Required=false)]

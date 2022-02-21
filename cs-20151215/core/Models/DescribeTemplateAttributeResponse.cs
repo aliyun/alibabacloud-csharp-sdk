@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribeTemplateAttributeResponseBody> Body { get; set; }
         public class DescribeTemplateAttributeResponseBody : TeaModel {
             /// <summary>
-            /// 编排模板ID，模板每次修改，这个ID都会改变。	
+            /// 编排模板ID，模板每次修改，这个ID都会改变。
             /// </summary>
             [NameInMap("id")]
             [Validation(Required=false)]
@@ -32,14 +32,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Acl { get; set; }
 
             /// <summary>
-            /// 编排模板名称。	
+            /// 编排模板名称。
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// 编排模板内容。	
+            /// 编排模板内容。
             /// </summary>
             [NameInMap("template")]
             [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Tags { get; set; }
 
             /// <summary>
-            /// 编排模板ID，该ID唯一不随更新而改变。	
+            /// 编排模板ID，该ID唯一不随更新而改变。
             /// </summary>
             [NameInMap("template_with_hist_id")]
             [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Created { get; set; }
 
             /// <summary>
-            /// 编排模板修改时间。	
+            /// 编排模板修改时间。
             /// </summary>
             [NameInMap("updated")]
             [Validation(Required=false)]

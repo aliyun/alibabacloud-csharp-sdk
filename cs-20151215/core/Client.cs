@@ -2387,9 +2387,9 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["action"] = request.Action;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespaces))
             {
-                body["namespace"] = request.Namespace;
+                body["namespaces"] = request.Namespaces;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
             {
@@ -2425,9 +2425,9 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["action"] = request.Action;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespaces))
             {
-                body["namespace"] = request.Namespace;
+                body["namespaces"] = request.Namespaces;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
             {
@@ -6545,6 +6545,80 @@ namespace AlibabaCloud.SDK.CS20151215
                 BodyType = "none",
             };
             return TeaModel.ToObject<RemoveWorkflowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public RepairClusterNodePoolResponse RepairClusterNodePool(string clusterId, string nodepoolId, RepairClusterNodePoolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RepairClusterNodePoolWithOptions(clusterId, nodepoolId, request, headers, runtime);
+        }
+
+        public async Task<RepairClusterNodePoolResponse> RepairClusterNodePoolAsync(string clusterId, string nodepoolId, RepairClusterNodePoolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RepairClusterNodePoolWithOptionsAsync(clusterId, nodepoolId, request, headers, runtime);
+        }
+
+        public RepairClusterNodePoolResponse RepairClusterNodePoolWithOptions(string clusterId, string nodepoolId, RepairClusterNodePoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
+            nodepoolId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(nodepoolId);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nodes))
+            {
+                body["nodes"] = request.Nodes;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RepairClusterNodePool",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + clusterId + "/nodepools/" + nodepoolId + "/repair",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RepairClusterNodePoolResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<RepairClusterNodePoolResponse> RepairClusterNodePoolWithOptionsAsync(string clusterId, string nodepoolId, RepairClusterNodePoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
+            nodepoolId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(nodepoolId);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nodes))
+            {
+                body["nodes"] = request.Nodes;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RepairClusterNodePool",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + clusterId + "/nodepools/" + nodepoolId + "/repair",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RepairClusterNodePoolResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ResumeComponentUpgradeResponse ResumeComponentUpgrade(string clusterid, string componentid)

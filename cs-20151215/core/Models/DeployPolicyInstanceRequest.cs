@@ -17,11 +17,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Action { get; set; }
 
         /// <summary>
-        /// 策略实例实施范围
+        /// 策略实例实施范围（限定命名空间）。默认 [] 代表集群所有命名空间。
         /// </summary>
-        [NameInMap("namespace")]
+        [NameInMap("namespaces")]
         [Validation(Required=false)]
-        public string Namespace { get; set; }
+        public List<string> Namespaces { get; set; }
 
         /// <summary>
         /// 当前规则实例的配置参数
