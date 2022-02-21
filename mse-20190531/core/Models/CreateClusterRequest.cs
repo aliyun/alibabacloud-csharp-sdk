@@ -29,10 +29,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string ConnectionType { get; set; }
 
-        [NameInMap("DiskCapacity")]
-        [Validation(Required=false)]
-        public int? DiskCapacity { get; set; }
-
         [NameInMap("DiskType")]
         [Validation(Required=false)]
         public string DiskType { get; set; }
