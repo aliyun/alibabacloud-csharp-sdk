@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeStreamsResponseBody : TeaModel {
+        [NameInMap("PageCount")]
+        [Validation(Required=false)]
+        public long? PageCount { get; set; }
+
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public long? PageNum { get; set; }
@@ -21,21 +25,41 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
-        [NameInMap("PageCount")]
-        [Validation(Required=false)]
-        public long? PageCount { get; set; }
-
         [NameInMap("Streams")]
         [Validation(Required=false)]
         public List<DescribeStreamsResponseBodyStreams> Streams { get; set; }
         public class DescribeStreamsResponseBodyStreams : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("App")]
             [Validation(Required=false)]
-            public string Status { get; set; }
+            public string App { get; set; }
+
+            [NameInMap("CreatedTime")]
+            [Validation(Required=false)]
+            public string CreatedTime { get; set; }
+
+            [NameInMap("DeviceId")]
+            [Validation(Required=false)]
+            public string DeviceId { get; set; }
+
+            [NameInMap("Enabled")]
+            [Validation(Required=false)]
+            public bool? Enabled { get; set; }
+
+            [NameInMap("GroupId")]
+            [Validation(Required=false)]
+            public string GroupId { get; set; }
+
+            [NameInMap("Height")]
+            [Validation(Required=false)]
+            public int? Height { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
 
             [NameInMap("PlayDomain")]
             [Validation(Required=false)]
@@ -45,47 +69,23 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public string Protocol { get; set; }
 
-            [NameInMap("DeviceId")]
+            [NameInMap("PushDomain")]
             [Validation(Required=false)]
-            public string DeviceId { get; set; }
+            public string PushDomain { get; set; }
 
-            [NameInMap("Height")]
+            [NameInMap("Status")]
             [Validation(Required=false)]
-            public int? Height { get; set; }
-
-            [NameInMap("GroupId")]
-            [Validation(Required=false)]
-            public string GroupId { get; set; }
-
-            [NameInMap("App")]
-            [Validation(Required=false)]
-            public string App { get; set; }
+            public string Status { get; set; }
 
             [NameInMap("Width")]
             [Validation(Required=false)]
             public int? Width { get; set; }
 
-            [NameInMap("Enabled")]
-            [Validation(Required=false)]
-            public bool? Enabled { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-            [NameInMap("PushDomain")]
-            [Validation(Required=false)]
-            public string PushDomain { get; set; }
-
-            [NameInMap("CreatedTime")]
-            [Validation(Required=false)]
-            public string CreatedTime { get; set; }
-
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public string Id { get; set; }
-
         }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

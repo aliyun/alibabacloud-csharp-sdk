@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public string Error { get; set; }
 
-            [NameInMap("TemplateType")]
-            [Validation(Required=false)]
-            public string TemplateType { get; set; }
-
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
@@ -36,6 +32,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
             public string TemplateId { get; set; }
+
+            [NameInMap("TemplateType")]
+            [Validation(Required=false)]
+            public string TemplateType { get; set; }
 
         }
 

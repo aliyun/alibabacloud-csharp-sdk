@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeDeviceURLResponseBody : TeaModel {
-        [NameInMap("Url")]
+        [NameInMap("ExpireTime")]
         [Validation(Required=false)]
-        public string Url { get; set; }
+        public long? ExpireTime { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("ExpireTime")]
+        [NameInMap("Url")]
         [Validation(Required=false)]
-        public long? ExpireTime { get; set; }
+        public string Url { get; set; }
 
     }
 

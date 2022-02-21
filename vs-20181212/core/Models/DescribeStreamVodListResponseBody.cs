@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeStreamVodListResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Records")]
         [Validation(Required=false)]
         public List<DescribeStreamVodListResponseBodyRecords> Records { get; set; }
@@ -26,6 +22,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public long? StartTime { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

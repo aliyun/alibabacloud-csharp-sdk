@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeVsDomainConfigsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DomainConfigs")]
         [Validation(Required=false)]
         public List<DescribeVsDomainConfigsResponseBodyDomainConfigs> DomainConfigs { get; set; }
         public class DescribeVsDomainConfigsResponseBodyDomainConfigs : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
             [NameInMap("ConfigId")]
             [Validation(Required=false)]
             public string ConfigId { get; set; }
-
-            [NameInMap("FunctionName")]
-            [Validation(Required=false)]
-            public string FunctionName { get; set; }
 
             [NameInMap("FunctionArgs")]
             [Validation(Required=false)]
@@ -43,7 +31,19 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 
             }
 
+            [NameInMap("FunctionName")]
+            [Validation(Required=false)]
+            public string FunctionName { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

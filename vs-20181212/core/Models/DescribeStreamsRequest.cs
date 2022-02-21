@@ -9,37 +9,45 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeStreamsRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("App")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("Id")]
-        [Validation(Required=false)]
-        public string Id { get; set; }
-
-        [NameInMap("GroupId")]
-        [Validation(Required=false)]
-        public string GroupId { get; set; }
+        public string App { get; set; }
 
         [NameInMap("DeviceId")]
         [Validation(Required=false)]
         public string DeviceId { get; set; }
 
-        [NameInMap("ParentId")]
+        [NameInMap("Domain")]
         [Validation(Required=false)]
-        public string ParentId { get; set; }
+        public string Domain { get; set; }
+
+        [NameInMap("GroupId")]
+        [Validation(Required=false)]
+        public string GroupId { get; set; }
+
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("Domain")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string Domain { get; set; }
+        public long? OwnerId { get; set; }
 
-        [NameInMap("App")]
+        [NameInMap("PageNum")]
         [Validation(Required=false)]
-        public string App { get; set; }
+        public long? PageNum { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
+
+        [NameInMap("ParentId")]
+        [Validation(Required=false)]
+        public string ParentId { get; set; }
 
         [NameInMap("SortBy")]
         [Validation(Required=false)]
@@ -48,14 +56,6 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("SortDirection")]
         [Validation(Required=false)]
         public string SortDirection { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public long? PageSize { get; set; }
-
-        [NameInMap("PageNum")]
-        [Validation(Required=false)]
-        public long? PageNum { get; set; }
 
     }
 

@@ -9,25 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeRecordsRequest : TeaModel {
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("Type")]
+        [NameInMap("PageNum")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public long? PageNum { get; set; }
 
-        [NameInMap("StreamId")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string StreamId { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
+        public long? PageSize { get; set; }
 
         [NameInMap("PrivateBucket")]
         [Validation(Required=false)]
@@ -41,13 +37,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string SortDirection { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public long? PageSize { get; set; }
+        public string StartTime { get; set; }
 
-        [NameInMap("PageNum")]
+        [NameInMap("StreamId")]
         [Validation(Required=false)]
-        public long? PageNum { get; set; }
+        public string StreamId { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

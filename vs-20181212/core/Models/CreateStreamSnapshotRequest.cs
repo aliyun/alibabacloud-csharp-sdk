@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class CreateStreamSnapshotRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("Location")]
         [Validation(Required=false)]
         public string Location { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
     }
 

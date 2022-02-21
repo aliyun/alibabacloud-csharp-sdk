@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class BatchBindTemplateRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("ApplyAll")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("TemplateId")]
-        [Validation(Required=false)]
-        public string TemplateId { get; set; }
+        public bool? ApplyAll { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -25,13 +21,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
-        [NameInMap("ApplyAll")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public bool? ApplyAll { get; set; }
+        public long? OwnerId { get; set; }
 
         [NameInMap("Replace")]
         [Validation(Required=false)]
         public bool? Replace { get; set; }
+
+        [NameInMap("TemplateId")]
+        [Validation(Required=false)]
+        public string TemplateId { get; set; }
 
     }
 

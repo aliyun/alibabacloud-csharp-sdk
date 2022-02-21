@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ModifyDirectoryRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string Description { get; set; }
 
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public long? OwnerId { get; set; }
 
     }
 

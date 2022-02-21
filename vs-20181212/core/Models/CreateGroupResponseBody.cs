@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string GbIp { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("GbPort")]
         [Validation(Required=false)]
         public long? GbPort { get; set; }
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

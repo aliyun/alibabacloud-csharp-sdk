@@ -13,23 +13,23 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string Id { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Presets")]
         [Validation(Required=false)]
         public List<DescribePresetsResponseBodyPresets> Presets { get; set; }
         public class DescribePresetsResponseBodyPresets : TeaModel {
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

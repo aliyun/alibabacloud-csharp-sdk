@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ModifyDeviceChannelsRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("Channels")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("Id")]
-        [Validation(Required=false)]
-        public string Id { get; set; }
-
-        [NameInMap("Dsn")]
-        [Validation(Required=false)]
-        public string Dsn { get; set; }
+        public string Channels { get; set; }
 
         [NameInMap("DeviceStatus")]
         [Validation(Required=false)]
         public string DeviceStatus { get; set; }
 
-        [NameInMap("Channels")]
+        [NameInMap("Dsn")]
         [Validation(Required=false)]
-        public string Channels { get; set; }
+        public string Dsn { get; set; }
+
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
     }
 

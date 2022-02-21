@@ -9,29 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListDeviceRecordsRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("DeviceId")]
         [Validation(Required=false)]
         public string DeviceId { get; set; }
 
-        [NameInMap("StreamId")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string StreamId { get; set; }
+        public long? OwnerId { get; set; }
 
-        [NameInMap("SearchCriteria")]
+        [NameInMap("PageNum")]
         [Validation(Required=false)]
-        public string SearchCriteria { get; set; }
+        public long? PageNum { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
-        [NameInMap("PageNum")]
+        [NameInMap("SearchCriteria")]
         [Validation(Required=false)]
-        public long? PageNum { get; set; }
+        public string SearchCriteria { get; set; }
+
+        [NameInMap("StreamId")]
+        [Validation(Required=false)]
+        public string StreamId { get; set; }
 
     }
 

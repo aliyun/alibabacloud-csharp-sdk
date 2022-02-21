@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class StartRecordStreamRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("App")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string App { get; set; }
 
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
 
-        [NameInMap("PlayDomain")]
-        [Validation(Required=false)]
-        public string PlayDomain { get; set; }
-
-        [NameInMap("App")]
-        [Validation(Required=false)]
-        public string App { get; set; }
-
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("PlayDomain")]
+        [Validation(Required=false)]
+        public string PlayDomain { get; set; }
 
     }
 

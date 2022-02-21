@@ -17,17 +17,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public List<BatchBindDirectoriesResponseBodyResults> Results { get; set; }
         public class BatchBindDirectoriesResponseBodyResults : TeaModel {
-            [NameInMap("Error")]
+            [NameInMap("DeviceId")]
             [Validation(Required=false)]
-            public string Error { get; set; }
+            public string DeviceId { get; set; }
 
             [NameInMap("DirectoryId")]
             [Validation(Required=false)]
             public string DirectoryId { get; set; }
 
-            [NameInMap("DeviceId")]
+            [NameInMap("Error")]
             [Validation(Required=false)]
-            public string DeviceId { get; set; }
+            public string Error { get; set; }
 
         }
 

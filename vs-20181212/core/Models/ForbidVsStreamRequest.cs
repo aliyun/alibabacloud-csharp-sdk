@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ForbidVsStreamRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
-
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
-        [NameInMap("StreamName")]
+        [NameInMap("ControlStreamAction")]
         [Validation(Required=false)]
-        public string StreamName { get; set; }
+        public string ControlStreamAction { get; set; }
+
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
 
         [NameInMap("LiveStreamType")]
         [Validation(Required=false)]
@@ -33,13 +29,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string Oneshot { get; set; }
 
-        [NameInMap("ControlStreamAction")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string ControlStreamAction { get; set; }
+        public long? OwnerId { get; set; }
 
         [NameInMap("ResumeTime")]
         [Validation(Required=false)]
         public string ResumeTime { get; set; }
+
+        [NameInMap("StreamName")]
+        [Validation(Required=false)]
+        public string StreamName { get; set; }
 
     }
 

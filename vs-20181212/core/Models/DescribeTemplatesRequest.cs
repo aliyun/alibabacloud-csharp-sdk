@@ -9,21 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeTemplatesRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
 
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("PageNum")]
+        [Validation(Required=false)]
+        public long? PageNum { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
 
         [NameInMap("SortBy")]
         [Validation(Required=false)]
@@ -33,13 +37,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string SortDirection { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("Type")]
         [Validation(Required=false)]
-        public long? PageSize { get; set; }
-
-        [NameInMap("PageNum")]
-        [Validation(Required=false)]
-        public long? PageNum { get; set; }
+        public string Type { get; set; }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListObjectsRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("BucketName")]
         [Validation(Required=false)]
         public string BucketName { get; set; }
+
+        [NameInMap("ContinuationToken")]
+        [Validation(Required=false)]
+        public string ContinuationToken { get; set; }
 
         [NameInMap("Delimiter")]
         [Validation(Required=false)]
@@ -33,13 +33,13 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public int? MaxKeys { get; set; }
 
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("Prefix")]
         [Validation(Required=false)]
         public string Prefix { get; set; }
-
-        [NameInMap("ContinuationToken")]
-        [Validation(Required=false)]
-        public string ContinuationToken { get; set; }
 
         [NameInMap("StartAfter")]
         [Validation(Required=false)]

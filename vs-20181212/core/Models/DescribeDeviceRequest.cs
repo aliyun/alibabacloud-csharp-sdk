@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeDeviceRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
+
+        [NameInMap("IncludeDirectory")]
+        [Validation(Required=false)]
+        public bool? IncludeDirectory { get; set; }
 
         [NameInMap("IncludeStats")]
         [Validation(Required=false)]
         public bool? IncludeStats { get; set; }
 
-        [NameInMap("IncludeDirectory")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public bool? IncludeDirectory { get; set; }
+        public long? OwnerId { get; set; }
 
     }
 

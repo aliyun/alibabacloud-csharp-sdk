@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ContinuousMoveRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
         [NameInMap("Pan")]
         [Validation(Required=false)]
@@ -28,10 +28,6 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("Zoom")]
         [Validation(Required=false)]
         public string Zoom { get; set; }
-
-        [NameInMap("SubProtocol")]
-        [Validation(Required=false)]
-        public string SubProtocol { get; set; }
 
     }
 

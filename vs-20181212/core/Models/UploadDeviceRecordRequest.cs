@@ -9,25 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class UploadDeviceRecordRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("DeviceId")]
         [Validation(Required=false)]
         public string DeviceId { get; set; }
 
-        [NameInMap("StreamId")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string StreamId { get; set; }
+        public long? OwnerId { get; set; }
 
         [NameInMap("SearchCriteria")]
         [Validation(Required=false)]
         public string SearchCriteria { get; set; }
 
-        [NameInMap("UploadType")]
+        [NameInMap("StreamId")]
         [Validation(Required=false)]
-        public string UploadType { get; set; }
+        public string StreamId { get; set; }
 
         [NameInMap("UploadId")]
         [Validation(Required=false)]
@@ -40,6 +36,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("UploadParams")]
         [Validation(Required=false)]
         public string UploadParams { get; set; }
+
+        [NameInMap("UploadType")]
+        [Validation(Required=false)]
+        public string UploadType { get; set; }
 
     }
 

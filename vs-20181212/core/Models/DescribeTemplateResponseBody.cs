@@ -9,61 +9,65 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeTemplateResponseBody : TeaModel {
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
-        [NameInMap("Trigger")]
-        [Validation(Required=false)]
-        public string Trigger { get; set; }
-
-        [NameInMap("HlsTs")]
-        [Validation(Required=false)]
-        public string HlsTs { get; set; }
-
-        [NameInMap("Mp4")]
-        [Validation(Required=false)]
-        public string Mp4 { get; set; }
-
-        [NameInMap("JpgOverwrite")]
-        [Validation(Required=false)]
-        public string JpgOverwrite { get; set; }
-
         [NameInMap("Callback")]
         [Validation(Required=false)]
         public string Callback { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("CreatedTime")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string CreatedTime { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("Region")]
+        [NameInMap("FileFormat")]
         [Validation(Required=false)]
-        public string Region { get; set; }
-
-        [NameInMap("Retention")]
-        [Validation(Required=false)]
-        public long? Retention { get; set; }
-
-        [NameInMap("HlsM3u8")]
-        [Validation(Required=false)]
-        public string HlsM3u8 { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
+        public string FileFormat { get; set; }
 
         [NameInMap("Flv")]
         [Validation(Required=false)]
         public string Flv { get; set; }
 
-        [NameInMap("CreatedTime")]
+        [NameInMap("HlsM3u8")]
         [Validation(Required=false)]
-        public string CreatedTime { get; set; }
+        public string HlsM3u8 { get; set; }
+
+        [NameInMap("HlsTs")]
+        [Validation(Required=false)]
+        public string HlsTs { get; set; }
+
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
+
+        [NameInMap("Interval")]
+        [Validation(Required=false)]
+        public long? Interval { get; set; }
+
+        [NameInMap("JpgOnDemand")]
+        [Validation(Required=false)]
+        public string JpgOnDemand { get; set; }
+
+        [NameInMap("JpgOverwrite")]
+        [Validation(Required=false)]
+        public string JpgOverwrite { get; set; }
+
+        [NameInMap("JpgSequence")]
+        [Validation(Required=false)]
+        public string JpgSequence { get; set; }
+
+        [NameInMap("Mp4")]
+        [Validation(Required=false)]
+        public string Mp4 { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("OssBucket")]
+        [Validation(Required=false)]
+        public string OssBucket { get; set; }
 
         [NameInMap("OssEndpoint")]
         [Validation(Required=false)]
@@ -73,75 +77,63 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string OssFilePrefix { get; set; }
 
-        [NameInMap("JpgOnDemand")]
+        [NameInMap("Region")]
         [Validation(Required=false)]
-        public string JpgOnDemand { get; set; }
+        public string Region { get; set; }
 
-        [NameInMap("OssBucket")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string OssBucket { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("FileFormat")]
+        [NameInMap("Retention")]
         [Validation(Required=false)]
-        public string FileFormat { get; set; }
-
-        [NameInMap("JpgSequence")]
-        [Validation(Required=false)]
-        public string JpgSequence { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        [NameInMap("Interval")]
-        [Validation(Required=false)]
-        public long? Interval { get; set; }
-
-        [NameInMap("Id")]
-        [Validation(Required=false)]
-        public string Id { get; set; }
+        public long? Retention { get; set; }
 
         [NameInMap("TransConfigs")]
         [Validation(Required=false)]
         public List<DescribeTemplateResponseBodyTransConfigs> TransConfigs { get; set; }
         public class DescribeTemplateResponseBodyTransConfigs : TeaModel {
+            [NameInMap("Fps")]
+            [Validation(Required=false)]
+            public long? Fps { get; set; }
+
             [NameInMap("Gop")]
             [Validation(Required=false)]
             public long? Gop { get; set; }
-
-            [NameInMap("Width")]
-            [Validation(Required=false)]
-            public long? Width { get; set; }
-
-            [NameInMap("VideoBitrate")]
-            [Validation(Required=false)]
-            public long? VideoBitrate { get; set; }
 
             [NameInMap("Height")]
             [Validation(Required=false)]
             public long? Height { get; set; }
 
-            [NameInMap("VideoCodec")]
+            [NameInMap("Id")]
             [Validation(Required=false)]
-            public string VideoCodec { get; set; }
-
-            [NameInMap("Fps")]
-            [Validation(Required=false)]
-            public long? Fps { get; set; }
+            public string Id { get; set; }
 
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
-            [NameInMap("Id")]
+            [NameInMap("VideoBitrate")]
             [Validation(Required=false)]
-            public string Id { get; set; }
+            public long? VideoBitrate { get; set; }
+
+            [NameInMap("VideoCodec")]
+            [Validation(Required=false)]
+            public string VideoCodec { get; set; }
+
+            [NameInMap("Width")]
+            [Validation(Required=false)]
+            public long? Width { get; set; }
 
         }
+
+        [NameInMap("Trigger")]
+        [Validation(Required=false)]
+        public string Trigger { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

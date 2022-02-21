@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class PrepareUploadResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("BucketName")]
         [Validation(Required=false)]
         public string BucketName { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("Endpoint")]
         [Validation(Required=false)]
         public string Endpoint { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

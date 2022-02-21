@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeVsDomainTrafficDataResponseBody : TeaModel {
-        [NameInMap("EndTime")]
+        [NameInMap("DataInterval")]
         [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string DataInterval { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("DataInterval")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string DataInterval { get; set; }
+        public string EndTime { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
         [NameInMap("TrafficDataPerInterval")]
         [Validation(Required=false)]
@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public List<DescribeVsDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeVsDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule : TeaModel {
-                public string TrafficValue { get; set; }
                 public string TimeStamp { get; set; }
+                public string TrafficValue { get; set; }
             }
         };
 

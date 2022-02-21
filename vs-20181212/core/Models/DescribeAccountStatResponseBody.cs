@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeAccountStatResponseBody : TeaModel {
-        [NameInMap("TemplateNum")]
-        [Validation(Required=false)]
-        public long? TemplateNum { get; set; }
-
         [NameInMap("GroupLimit")]
         [Validation(Required=false)]
         public long? GroupLimit { get; set; }
+
+        [NameInMap("GroupNum")]
+        [Validation(Required=false)]
+        public long? GroupNum { get; set; }
+
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -25,13 +29,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public long? TemplateLimit { get; set; }
 
-        [NameInMap("GroupNum")]
+        [NameInMap("TemplateNum")]
         [Validation(Required=false)]
-        public long? GroupNum { get; set; }
-
-        [NameInMap("Id")]
-        [Validation(Required=false)]
-        public string Id { get; set; }
+        public long? TemplateNum { get; set; }
 
     }
 

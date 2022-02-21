@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeDirectoryResponseBody : TeaModel {
-        [NameInMap("ParentId")]
+        [NameInMap("CreatedTime")]
         [Validation(Required=false)]
-        public string ParentId { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string CreatedTime { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -25,17 +21,21 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("CreatedTime")]
+        [NameInMap("ParentId")]
         [Validation(Required=false)]
-        public string CreatedTime { get; set; }
+        public string ParentId { get; set; }
 
-        [NameInMap("Id")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Id { get; set; }
+        public string RequestId { get; set; }
 
     }
 

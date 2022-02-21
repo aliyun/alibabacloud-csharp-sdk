@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class SetVsStreamsNotifyUrlConfigRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("AuthKey")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string AuthKey { get; set; }
+
+        [NameInMap("AuthType")]
+        [Validation(Required=false)]
+        public string AuthType { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -21,13 +25,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string NotifyUrl { get; set; }
 
-        [NameInMap("AuthType")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string AuthType { get; set; }
-
-        [NameInMap("AuthKey")]
-        [Validation(Required=false)]
-        public string AuthKey { get; set; }
+        public long? OwnerId { get; set; }
 
     }
 

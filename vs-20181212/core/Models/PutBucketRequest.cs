@@ -9,41 +9,41 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class PutBucketRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("BucketAcl")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string BucketAcl { get; set; }
 
         [NameInMap("BucketName")]
         [Validation(Required=false)]
         public string BucketName { get; set; }
 
-        [NameInMap("Endpoint")]
-        [Validation(Required=false)]
-        public string Endpoint { get; set; }
-
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
+
+        [NameInMap("DataRedundancyType")]
+        [Validation(Required=false)]
+        public string DataRedundancyType { get; set; }
 
         [NameInMap("DispatcherType")]
         [Validation(Required=false)]
         public string DispatcherType { get; set; }
 
-        [NameInMap("BucketAcl")]
+        [NameInMap("Endpoint")]
         [Validation(Required=false)]
-        public string BucketAcl { get; set; }
+        public string Endpoint { get; set; }
 
-        [NameInMap("StorageClass")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string StorageClass { get; set; }
+        public long? OwnerId { get; set; }
 
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
-        [NameInMap("DataRedundancyType")]
+        [NameInMap("StorageClass")]
         [Validation(Required=false)]
-        public string DataRedundancyType { get; set; }
+        public string StorageClass { get; set; }
 
     }
 

@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribePurchasedDevicesRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("GroupId")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string GroupId { get; set; }
 
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -21,21 +21,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("Type")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public long? OwnerId { get; set; }
 
-        [NameInMap("SubType")]
+        [NameInMap("PageNum")]
         [Validation(Required=false)]
-        public string SubType { get; set; }
+        public long? PageNum { get; set; }
 
-        [NameInMap("GroupId")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string GroupId { get; set; }
-
-        [NameInMap("Vendor")]
-        [Validation(Required=false)]
-        public string Vendor { get; set; }
+        public long? PageSize { get; set; }
 
         [NameInMap("SortBy")]
         [Validation(Required=false)]
@@ -45,13 +41,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string SortDirection { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("SubType")]
         [Validation(Required=false)]
-        public long? PageSize { get; set; }
+        public string SubType { get; set; }
 
-        [NameInMap("PageNum")]
+        [NameInMap("Type")]
         [Validation(Required=false)]
-        public long? PageNum { get; set; }
+        public string Type { get; set; }
+
+        [NameInMap("Vendor")]
+        [Validation(Required=false)]
+        public string Vendor { get; set; }
 
     }
 

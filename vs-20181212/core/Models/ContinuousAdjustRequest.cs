@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ContinuousAdjustRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("Focus")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string Focus { get; set; }
 
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -21,13 +21,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string Iris { get; set; }
 
-        [NameInMap("Focus")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string Focus { get; set; }
-
-        [NameInMap("SubProtocol")]
-        [Validation(Required=false)]
-        public string SubProtocol { get; set; }
+        public long? OwnerId { get; set; }
 
     }
 

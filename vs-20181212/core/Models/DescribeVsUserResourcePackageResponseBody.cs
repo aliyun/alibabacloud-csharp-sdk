@@ -21,12 +21,12 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public List<DescribeVsUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo> ResourcePackageInfo { get; set; }
             public class DescribeVsUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo : TeaModel {
-                public string DisplayName { get; set; }
-                public string Status { get; set; }
                 public string CommodityCode { get; set; }
                 public string CurrCapacity { get; set; }
+                public string DisplayName { get; set; }
                 public string InitCapacity { get; set; }
                 public string InstanceId { get; set; }
+                public string Status { get; set; }
             }
         };
 

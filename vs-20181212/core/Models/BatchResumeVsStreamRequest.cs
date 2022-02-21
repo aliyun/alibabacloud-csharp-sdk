@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class BatchResumeVsStreamRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("Channel")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string Channel { get; set; }
+
+        [NameInMap("ControlStreamAction")]
+        [Validation(Required=false)]
+        public string ControlStreamAction { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("Channel")]
-        [Validation(Required=false)]
-        public string Channel { get; set; }
-
         [NameInMap("LiveStreamType")]
         [Validation(Required=false)]
         public string LiveStreamType { get; set; }
 
-        [NameInMap("ControlStreamAction")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string ControlStreamAction { get; set; }
+        public long? OwnerId { get; set; }
 
     }
 

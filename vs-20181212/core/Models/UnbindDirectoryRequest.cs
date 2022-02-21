@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class UnbindDirectoryRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("DeviceId")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string DeviceId { get; set; }
 
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
-        [NameInMap("DeviceId")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string DeviceId { get; set; }
+        public long? OwnerId { get; set; }
 
     }
 

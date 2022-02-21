@@ -9,73 +9,53 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ModifyGroupRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("Callback")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("Id")]
-        [Validation(Required=false)]
-        public string Id { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
+        public string Callback { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("Region")]
+        [NameInMap("Enabled")]
         [Validation(Required=false)]
-        public string Region { get; set; }
+        public bool? Enabled { get; set; }
+
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
 
         [NameInMap("InProtocol")]
         [Validation(Required=false)]
         public string InProtocol { get; set; }
 
+        [NameInMap("LazyPull")]
+        [Validation(Required=false)]
+        public bool? LazyPull { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
         [NameInMap("OutProtocol")]
         [Validation(Required=false)]
         public string OutProtocol { get; set; }
 
-        [NameInMap("Enabled")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public bool? Enabled { get; set; }
-
-        [NameInMap("PushDomain")]
-        [Validation(Required=false)]
-        public string PushDomain { get; set; }
+        public long? OwnerId { get; set; }
 
         [NameInMap("PlayDomain")]
         [Validation(Required=false)]
         public string PlayDomain { get; set; }
 
-        [NameInMap("LazyPull")]
+        [NameInMap("PushDomain")]
         [Validation(Required=false)]
-        public bool? LazyPull { get; set; }
+        public string PushDomain { get; set; }
 
-        [NameInMap("Callback")]
+        [NameInMap("Region")]
         [Validation(Required=false)]
-        public string Callback { get; set; }
-
-        [NameInMap("CaptureInterval")]
-        [Validation(Required=false)]
-        public int? CaptureInterval { get; set; }
-
-        [NameInMap("CaptureImage")]
-        [Validation(Required=false)]
-        public int? CaptureImage { get; set; }
-
-        [NameInMap("CaptureVideo")]
-        [Validation(Required=false)]
-        public int? CaptureVideo { get; set; }
-
-        [NameInMap("CaptureOssBucket")]
-        [Validation(Required=false)]
-        public string CaptureOssBucket { get; set; }
-
-        [NameInMap("CaptureOssPath")]
-        [Validation(Required=false)]
-        public string CaptureOssPath { get; set; }
+        public string Region { get; set; }
 
     }
 

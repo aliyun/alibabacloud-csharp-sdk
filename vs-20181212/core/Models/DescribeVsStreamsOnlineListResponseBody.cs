@@ -9,9 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeVsStreamsOnlineListResponseBody : TeaModel {
-        [NameInMap("TotalPage")]
+        [NameInMap("OnlineInfo")]
         [Validation(Required=false)]
-        public int? TotalPage { get; set; }
+        public DescribeVsStreamsOnlineListResponseBodyOnlineInfo OnlineInfo { get; set; }
+        public class DescribeVsStreamsOnlineListResponseBodyOnlineInfo : TeaModel {
+            [NameInMap("LiveStreamOnlineInfo")]
+            [Validation(Required=false)]
+            public List<DescribeVsStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo> LiveStreamOnlineInfo { get; set; }
+            public class DescribeVsStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo : TeaModel {
+                public string AppName { get; set; }
+                public string DomainName { get; set; }
+                public string PublishDomain { get; set; }
+                public string PublishTime { get; set; }
+                public string PublishType { get; set; }
+                public string PublishUrl { get; set; }
+                public string StreamName { get; set; }
+                public string TranscodeId { get; set; }
+                public string Transcoded { get; set; }
+            }
+        };
 
         [NameInMap("PageNum")]
         [Validation(Required=false)]
@@ -29,25 +45,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public int? TotalNum { get; set; }
 
-        [NameInMap("OnlineInfo")]
+        [NameInMap("TotalPage")]
         [Validation(Required=false)]
-        public DescribeVsStreamsOnlineListResponseBodyOnlineInfo OnlineInfo { get; set; }
-        public class DescribeVsStreamsOnlineListResponseBodyOnlineInfo : TeaModel {
-            [NameInMap("LiveStreamOnlineInfo")]
-            [Validation(Required=false)]
-            public List<DescribeVsStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo> LiveStreamOnlineInfo { get; set; }
-            public class DescribeVsStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo : TeaModel {
-                public string PublishTime { get; set; }
-                public string AppName { get; set; }
-                public string PublishType { get; set; }
-                public string PublishUrl { get; set; }
-                public string Transcoded { get; set; }
-                public string StreamName { get; set; }
-                public string DomainName { get; set; }
-                public string TranscodeId { get; set; }
-                public string PublishDomain { get; set; }
-            }
-        };
+        public int? TotalPage { get; set; }
 
     }
 

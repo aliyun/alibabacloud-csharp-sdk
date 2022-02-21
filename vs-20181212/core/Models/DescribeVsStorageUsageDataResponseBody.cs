@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public List<DescribeVsStorageUsageDataResponseBodyStorageUsageStorageUsageDataModule> StorageUsageDataModule { get; set; }
             public class DescribeVsStorageUsageDataResponseBodyStorageUsageStorageUsageDataModule : TeaModel {
+                public string Bucket { get; set; }
                 public int? StorageDataValue { get; set; }
                 public string TimeStamp { get; set; }
-                public string Bucket { get; set; }
             }
         };
 

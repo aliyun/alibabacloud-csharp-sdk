@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeDeviceGatewayRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("Id")]
-        [Validation(Required=false)]
-        public string Id { get; set; }
-
         [NameInMap("ClientIp")]
         [Validation(Required=false)]
         public string ClientIp { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("Expire")]
         [Validation(Required=false)]
         public long? Expire { get; set; }
+
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
     }
 

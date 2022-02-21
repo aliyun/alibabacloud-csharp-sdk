@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribePresetsRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
 
-        [NameInMap("SubProtocol")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string SubProtocol { get; set; }
+        public long? OwnerId { get; set; }
 
     }
 

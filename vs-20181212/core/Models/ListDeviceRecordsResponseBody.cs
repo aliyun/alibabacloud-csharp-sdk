@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListDeviceRecordsResponseBody : TeaModel {
+        [NameInMap("PageCount")]
+        [Validation(Required=false)]
+        public long? PageCount { get; set; }
+
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public long? PageNum { get; set; }
@@ -16,18 +20,6 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
-        [NameInMap("PageCount")]
-        [Validation(Required=false)]
-        public long? PageCount { get; set; }
 
         [NameInMap("Records")]
         [Validation(Required=false)]
@@ -37,23 +29,31 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public string EndTime { get; set; }
 
-            [NameInMap("StartTime")]
+            [NameInMap("FileSize")]
             [Validation(Required=false)]
-            public string StartTime { get; set; }
-
-            [NameInMap("RecordType")]
-            [Validation(Required=false)]
-            public string RecordType { get; set; }
+            public long? FileSize { get; set; }
 
             [NameInMap("Filename")]
             [Validation(Required=false)]
             public string Filename { get; set; }
 
-            [NameInMap("FileSize")]
+            [NameInMap("RecordType")]
             [Validation(Required=false)]
-            public long? FileSize { get; set; }
+            public string RecordType { get; set; }
+
+            [NameInMap("StartTime")]
+            [Validation(Required=false)]
+            public string StartTime { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

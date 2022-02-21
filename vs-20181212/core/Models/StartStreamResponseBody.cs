@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class StartStreamResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("Id")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Id { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("Id")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Id { get; set; }
+        public string RequestId { get; set; }
 
     }
 

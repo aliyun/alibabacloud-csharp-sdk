@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ModifyDeviceCaptureRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("Image")]
         [Validation(Required=false)]
         public int? Image { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
         [NameInMap("Video")]
         [Validation(Required=false)]

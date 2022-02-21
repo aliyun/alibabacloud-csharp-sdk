@@ -13,14 +13,6 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string Host { get; set; }
 
-        [NameInMap("Token")]
-        [Validation(Required=false)]
-        public string Token { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Port")]
         [Validation(Required=false)]
         public long? Port { get; set; }
@@ -28,6 +20,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("Protocol")]
         [Validation(Required=false)]
         public string Protocol { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Token")]
+        [Validation(Required=false)]
+        public string Token { get; set; }
 
     }
 

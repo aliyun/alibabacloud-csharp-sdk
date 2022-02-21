@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ModifyDeviceAlarmRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("AlarmId")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("Id")]
-        [Validation(Required=false)]
-        public string Id { get; set; }
+        public string AlarmId { get; set; }
 
         [NameInMap("ChannelId")]
         [Validation(Required=false)]
         public int? ChannelId { get; set; }
 
-        [NameInMap("AlarmId")]
+        [NameInMap("Id")]
         [Validation(Required=false)]
-        public string AlarmId { get; set; }
+        public string Id { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
         [NameInMap("Status")]
         [Validation(Required=false)]

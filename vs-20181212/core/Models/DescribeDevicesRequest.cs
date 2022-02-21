@@ -9,45 +9,53 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeDevicesRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("Id")]
-        [Validation(Required=false)]
-        public string Id { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
-        [NameInMap("GroupId")]
-        [Validation(Required=false)]
-        public string GroupId { get; set; }
-
-        [NameInMap("ParentId")]
-        [Validation(Required=false)]
-        public string ParentId { get; set; }
-
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
         public string DirectoryId { get; set; }
+
+        [NameInMap("Dsn")]
+        [Validation(Required=false)]
+        public string Dsn { get; set; }
 
         [NameInMap("GbId")]
         [Validation(Required=false)]
         public string GbId { get; set; }
 
-        [NameInMap("Status")]
+        [NameInMap("GroupId")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string GroupId { get; set; }
 
-        [NameInMap("Vendor")]
+        [NameInMap("Id")]
         [Validation(Required=false)]
-        public string Vendor { get; set; }
+        public string Id { get; set; }
+
+        [NameInMap("IncludeDirectory")]
+        [Validation(Required=false)]
+        public bool? IncludeDirectory { get; set; }
+
+        [NameInMap("IncludeStats")]
+        [Validation(Required=false)]
+        public bool? IncludeStats { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("PageNum")]
+        [Validation(Required=false)]
+        public long? PageNum { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
+
+        [NameInMap("ParentId")]
+        [Validation(Required=false)]
+        public string ParentId { get; set; }
 
         [NameInMap("SortBy")]
         [Validation(Required=false)]
@@ -57,21 +65,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string SortDirection { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public long? PageSize { get; set; }
+        public string Status { get; set; }
 
-        [NameInMap("PageNum")]
+        [NameInMap("Type")]
         [Validation(Required=false)]
-        public long? PageNum { get; set; }
+        public string Type { get; set; }
 
-        [NameInMap("IncludeStats")]
+        [NameInMap("Vendor")]
         [Validation(Required=false)]
-        public bool? IncludeStats { get; set; }
-
-        [NameInMap("IncludeDirectory")]
-        [Validation(Required=false)]
-        public bool? IncludeDirectory { get; set; }
+        public string Vendor { get; set; }
 
     }
 

@@ -9,29 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeGroupsRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("Region")]
-        [Validation(Required=false)]
-        public string Region { get; set; }
 
         [NameInMap("InProtocol")]
         [Validation(Required=false)]
         public string InProtocol { get; set; }
 
-        [NameInMap("Status")]
+        [NameInMap("IncludeStats")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public bool? IncludeStats { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("PageNum")]
+        [Validation(Required=false)]
+        public long? PageNum { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
+
+        [NameInMap("Region")]
+        [Validation(Required=false)]
+        public string Region { get; set; }
 
         [NameInMap("SortBy")]
         [Validation(Required=false)]
@@ -41,17 +49,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string SortDirection { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public long? PageSize { get; set; }
-
-        [NameInMap("PageNum")]
-        [Validation(Required=false)]
-        public long? PageNum { get; set; }
-
-        [NameInMap("IncludeStats")]
-        [Validation(Required=false)]
-        public bool? IncludeStats { get; set; }
+        public string Status { get; set; }
 
     }
 

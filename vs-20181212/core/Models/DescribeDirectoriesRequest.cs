@@ -9,13 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeDirectoriesRequest : TeaModel {
+        [NameInMap("GroupId")]
+        [Validation(Required=false)]
+        public string GroupId { get; set; }
+
+        [NameInMap("NoPagination")]
+        [Validation(Required=false)]
+        public bool? NoPagination { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("GroupId")]
+        [NameInMap("PageNum")]
         [Validation(Required=false)]
-        public string GroupId { get; set; }
+        public long? PageNum { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
 
         [NameInMap("ParentId")]
         [Validation(Required=false)]
@@ -28,18 +40,6 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("SortDirection")]
         [Validation(Required=false)]
         public string SortDirection { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public long? PageSize { get; set; }
-
-        [NameInMap("PageNum")]
-        [Validation(Required=false)]
-        public long? PageNum { get; set; }
-
-        [NameInMap("NoPagination")]
-        [Validation(Required=false)]
-        public bool? NoPagination { get; set; }
 
     }
 
