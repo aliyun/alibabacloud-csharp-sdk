@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         /// </summary>
         [NameInMap("ruleName")]
         [Validation(Required=false)]
-        public byte[] RuleName { get; set; }
+        public string RuleName { get; set; }
 
         /// <summary>
         /// 时间窗口
