@@ -11,7 +11,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
     public class QueryMonitorResponseBody : TeaModel {
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public string Data { get; set; }
+        public List<QueryMonitorResponseBodyData> Data { get; set; }
+        public class QueryMonitorResponseBodyData : TeaModel {
+            [NameInMap("clusterNamePrefix")]
+            [Validation(Required=false)]
+            public string ClusterNamePrefix { get; set; }
+
+            [NameInMap("podName")]
+            [Validation(Required=false)]
+            public string PodName { get; set; }
+
+            [NameInMap("values")]
+            [Validation(Required=false)]
+            public List<Dictionary<string, object>> Values { get; set; }
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
