@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string DriftDetectionTime { get; set; }
 
+        [NameInMap("Interface")]
+        [Validation(Required=false)]
+        public string Interface { get; set; }
+
         [NameInMap("Log")]
         [Validation(Required=false)]
         public GetStackResponseBodyLog Log { get; set; }

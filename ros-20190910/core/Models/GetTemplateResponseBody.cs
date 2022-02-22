@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("Interface")]
+        [Validation(Required=false)]
+        public string Interface { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public string OwnerId { get; set; }
