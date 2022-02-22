@@ -8,22 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
-    public class ModifyDBNodeClassRequest : TeaModel {
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
+    public class RefreshProxyLevelRequest : TeaModel {
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
-        [NameInMap("DBNodeTargetClass")]
+        [NameInMap("FromTimeService")]
         [Validation(Required=false)]
-        public string DBNodeTargetClass { get; set; }
-
-        [NameInMap("ModifyType")]
-        [Validation(Required=false)]
-        public string ModifyType { get; set; }
+        public bool? FromTimeService { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -41,6 +33,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string PlannedStartTime { get; set; }
 
+        [NameInMap("ProxyTargetClass")]
+        [Validation(Required=false)]
+        public string ProxyTargetClass { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -48,10 +44,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("SubCategory")]
-        [Validation(Required=false)]
-        public string SubCategory { get; set; }
 
     }
 
