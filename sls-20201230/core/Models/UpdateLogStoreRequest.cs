@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public EncryptConf EncryptConf { get; set; }
 
+        [NameInMap("logstore")]
+        [Validation(Required=false)]
+        public string Logstore { get; set; }
+
         [NameInMap("logstoreName")]
         [Validation(Required=false)]
         public string LogstoreName { get; set; }

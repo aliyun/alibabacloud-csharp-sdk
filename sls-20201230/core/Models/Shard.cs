@@ -31,13 +31,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string InclusiveBeginKey { get; set; }
 
         /// <summary>
-        /// serverIp
-        /// </summary>
-        [NameInMap("serverIp")]
-        [Validation(Required=false)]
-        public string ServerIp { get; set; }
-
-        /// <summary>
         /// shard id
         /// </summary>
         [NameInMap("shardId")]
