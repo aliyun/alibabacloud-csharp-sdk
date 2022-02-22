@@ -1,0 +1,85 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
+{
+    public class CreateScheduleRequest : TeaModel {
+        /// <summary>
+        /// 终止时间（UTC+8），精确到分钟。
+        /// </summary>
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public int? EndTime { get; set; }
+
+        /// <summary>
+        /// 执行时间 (UTC+8)，为空立即执行。
+        /// </summary>
+        [NameInMap("ExecuteTime")]
+        [Validation(Required=false)]
+        public string ExecuteTime { get; set; }
+
+        /// <summary>
+        /// 人群Id。
+        /// </summary>
+        [NameInMap("GroupId")]
+        [Validation(Required=false)]
+        public string GroupId { get; set; }
+
+        /// <summary>
+        /// 发送计划名称。
+        /// </summary>
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        /// <summary>
+        /// 重复周期，按重复周期与重复周期单位执行。
+        /// </summary>
+        [NameInMap("RepeatCycle")]
+        [Validation(Required=false)]
+        public int? RepeatCycle { get; set; }
+
+        /// <summary>
+        /// 重复周期单位，若指定执行时间，则重复周期生效。
+        /// - 0: 从不（默认）
+        /// - 1: 小时
+        /// - 2: 天
+        /// - 3: 周
+        /// - 4: 月
+        /// </summary>
+        [NameInMap("RepeatCycleUnit")]
+        [Validation(Required=false)]
+        public int? RepeatCycleUnit { get; set; }
+
+        /// <summary>
+        /// 重复次数。
+        /// - -1: 不设终止时间
+        /// - 0: 不重复
+        /// - N: 重复N次后终止
+        /// </summary>
+        [NameInMap("RepeatTimes")]
+        [Validation(Required=false)]
+        public int? RepeatTimes { get; set; }
+
+        /// <summary>
+        /// 签名Id。
+        /// </summary>
+        [NameInMap("SignatureId")]
+        [Validation(Required=false)]
+        public string SignatureId { get; set; }
+
+        /// <summary>
+        /// 模板Id。
+        /// </summary>
+        [NameInMap("TemplateId")]
+        [Validation(Required=false)]
+        public string TemplateId { get; set; }
+
+    }
+
+}

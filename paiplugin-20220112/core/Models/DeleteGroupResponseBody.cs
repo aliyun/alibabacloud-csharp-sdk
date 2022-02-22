@@ -8,25 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
 {
-    public class SendMessageResponseBody : TeaModel {
+    public class DeleteGroupResponseBody : TeaModel {
         /// <summary>
         /// 返回数据
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public SendMessageResponseBodyData Data { get; set; }
-        public class SendMessageResponseBodyData : TeaModel {
-            [NameInMap("Messages")]
-            [Validation(Required=false)]
-            public List<SendMessageResponseBodyDataMessages> Messages { get; set; }
-            public class SendMessageResponseBodyDataMessages : TeaModel {
-                public string Id { get; set; }
-                public string PhoneNumber { get; set; }
-            }
-            [NameInMap("RequestId")]
-            [Validation(Required=false)]
-            public string RequestId { get; set; }
-        };
+        public string Data { get; set; }
 
         /// <summary>
         /// 错误码
