@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class InitFaceVerifyRequest : TeaModel {
+        [NameInMap("AuthId")]
+        [Validation(Required=false)]
+        public string AuthId { get; set; }
+
         [NameInMap("CallbackToken")]
         [Validation(Required=false)]
         public string CallbackToken { get; set; }

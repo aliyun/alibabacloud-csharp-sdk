@@ -1,3 +1,6 @@
+2022-02-23 Version: 1.0.7
+- Add AuthId.
+
 2021-10-27 Version: 1.0.6
 - Generated csharp 2019-03-07 for Cloudauth.
 
