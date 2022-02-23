@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string Digest { get; set; }
 
+        [NameInMap("FilterValue")]
+        [Validation(Required=false)]
+        public string FilterValue { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -33,6 +37,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string ScanTaskId { get; set; }
 
+        [NameInMap("ScanType")]
+        [Validation(Required=false)]
+        public string ScanType { get; set; }
+
         [NameInMap("Severity")]
         [Validation(Required=false)]
         public string Severity { get; set; }
@@ -40,6 +48,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public string Tag { get; set; }
+
+        [NameInMap("VulQueryKey")]
+        [Validation(Required=false)]
+        public string VulQueryKey { get; set; }
 
     }
 

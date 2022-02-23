@@ -41,9 +41,17 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [Validation(Required=false)]
             public string AddedBy { get; set; }
 
+            [NameInMap("AliasName")]
+            [Validation(Required=false)]
+            public string AliasName { get; set; }
+
             [NameInMap("CveLink")]
             [Validation(Required=false)]
             public string CveLink { get; set; }
+
+            [NameInMap("CveLocation")]
+            [Validation(Required=false)]
+            public string CveLocation { get; set; }
 
             [NameInMap("CveName")]
             [Validation(Required=false)]
@@ -60,6 +68,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [NameInMap("FixCmd")]
             [Validation(Required=false)]
             public string FixCmd { get; set; }
+
+            [NameInMap("ScanType")]
+            [Validation(Required=false)]
+            public string ScanType { get; set; }
 
             [NameInMap("Severity")]
             [Validation(Required=false)]
