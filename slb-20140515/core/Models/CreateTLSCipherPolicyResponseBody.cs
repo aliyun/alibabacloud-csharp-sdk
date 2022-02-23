@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class CreateTLSCipherPolicyResponseBody : TeaModel {
-        [NameInMap("TLSCipherPolicyId")]
-        [Validation(Required=false)]
-        public string TLSCipherPolicyId { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TLSCipherPolicyId")]
+        [Validation(Required=false)]
+        public string TLSCipherPolicyId { get; set; }
 
     }
 

@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class RemoveBackendServersResponseBody : TeaModel {
-        [NameInMap("LoadBalancerId")]
-        [Validation(Required=false)]
-        public string LoadBalancerId { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("BackendServers")]
         [Validation(Required=false)]
         public RemoveBackendServersResponseBodyBackendServers BackendServers { get; set; }
@@ -25,12 +17,20 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<RemoveBackendServersResponseBodyBackendServersBackendServer> BackendServer { get; set; }
             public class RemoveBackendServersResponseBodyBackendServersBackendServer : TeaModel {
-                public string Type { get; set; }
-                public int? Weight { get; set; }
                 public string Description { get; set; }
                 public string ServerId { get; set; }
+                public string Type { get; set; }
+                public int? Weight { get; set; }
             }
         };
+
+        [NameInMap("LoadBalancerId")]
+        [Validation(Required=false)]
+        public string LoadBalancerId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

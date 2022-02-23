@@ -9,9 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class CreateTLSCipherPolicyRequest : TeaModel {
+        [NameInMap("Ciphers")]
+        [Validation(Required=false)]
+        public List<string> Ciphers { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -20,26 +36,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("access_key_id")]
-        [Validation(Required=false)]
-        public string AccessKeyId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("Ciphers")]
-        [Validation(Required=false)]
-        public List<string> Ciphers { get; set; }
 
         [NameInMap("TLSVersions")]
         [Validation(Required=false)]

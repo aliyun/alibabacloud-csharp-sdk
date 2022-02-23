@@ -9,26 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeAccessControlListAttributeResponseBody : TeaModel {
-        [NameInMap("AclId")]
-        [Validation(Required=false)]
-        public string AclId { get; set; }
-
-        [NameInMap("AddressIPVersion")]
-        [Validation(Required=false)]
-        public string AddressIPVersion { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
-
-        [NameInMap("AclName")]
-        [Validation(Required=false)]
-        public string AclName { get; set; }
-
         [NameInMap("AclEntrys")]
         [Validation(Required=false)]
         public DescribeAccessControlListAttributeResponseBodyAclEntrys AclEntrys { get; set; }
@@ -42,6 +22,18 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             }
         };
 
+        [NameInMap("AclId")]
+        [Validation(Required=false)]
+        public string AclId { get; set; }
+
+        [NameInMap("AclName")]
+        [Validation(Required=false)]
+        public string AclName { get; set; }
+
+        [NameInMap("AddressIPVersion")]
+        [Validation(Required=false)]
+        public string AddressIPVersion { get; set; }
+
         [NameInMap("RelatedListeners")]
         [Validation(Required=false)]
         public DescribeAccessControlListAttributeResponseBodyRelatedListeners RelatedListeners { get; set; }
@@ -50,12 +42,20 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener> RelatedListener { get; set; }
             public class DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener : TeaModel {
-                public int? ListenerPort { get; set; }
                 public string AclType { get; set; }
-                public string Protocol { get; set; }
+                public int? ListenerPort { get; set; }
                 public string LoadBalancerId { get; set; }
+                public string Protocol { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
     }
 

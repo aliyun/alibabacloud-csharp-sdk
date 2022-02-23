@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class ListTLSCipherPoliciesResponseBody : TeaModel {
+        [NameInMap("IsTruncated")]
+        [Validation(Required=false)]
+        public bool? IsTruncated { get; set; }
+
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -17,21 +21,17 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("IsTruncated")]
-        [Validation(Required=false)]
-        public bool? IsTruncated { get; set; }
-
         [NameInMap("TLSCipherPolicies")]
         [Validation(Required=false)]
         public List<ListTLSCipherPoliciesResponseBodyTLSCipherPolicies> TLSCipherPolicies { get; set; }
         public class ListTLSCipherPoliciesResponseBodyTLSCipherPolicies : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("Ciphers")]
             [Validation(Required=false)]
-            public string Status { get; set; }
+            public List<string> Ciphers { get; set; }
+
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public long? CreateTime { get; set; }
 
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -41,14 +41,14 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public long? CreateTime { get; set; }
-
             [NameInMap("RelateListeners")]
             [Validation(Required=false)]
             public List<ListTLSCipherPoliciesResponseBodyTLSCipherPoliciesRelateListeners> RelateListeners { get; set; }
             public class ListTLSCipherPoliciesResponseBodyTLSCipherPoliciesRelateListeners : TeaModel {
+                [NameInMap("LoadBalancerId")]
+                [Validation(Required=false)]
+                public string LoadBalancerId { get; set; }
+
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public int? Port { get; set; }
@@ -57,21 +57,21 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                 [Validation(Required=false)]
                 public string Protocol { get; set; }
 
-                [NameInMap("LoadBalancerId")]
-                [Validation(Required=false)]
-                public string LoadBalancerId { get; set; }
-
             }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
 
             [NameInMap("TLSVersions")]
             [Validation(Required=false)]
             public List<string> TLSVersions { get; set; }
 
-            [NameInMap("Ciphers")]
-            [Validation(Required=false)]
-            public List<string> Ciphers { get; set; }
-
         }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

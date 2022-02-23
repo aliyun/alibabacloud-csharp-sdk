@@ -9,9 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeTagsRequest : TeaModel {
+        [NameInMap("DistinctKey")]
+        [Validation(Required=false)]
+        public bool? DistinctKey { get; set; }
+
+        [NameInMap("LoadBalancerId")]
+        [Validation(Required=false)]
+        public string LoadBalancerId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -21,33 +45,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("LoadBalancerId")]
-        [Validation(Required=false)]
-        public string LoadBalancerId { get; set; }
-
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string Tags { get; set; }
-
-        [NameInMap("DistinctKey")]
-        [Validation(Required=false)]
-        public bool? DistinctKey { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
 
     }
 

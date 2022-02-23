@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public DescribeRegionsResponseBodyRegions Regions { get; set; }
@@ -21,11 +17,15 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<DescribeRegionsResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeRegionsResponseBodyRegionsRegion : TeaModel {
-                public string RegionEndpoint { get; set; }
                 public string LocalName { get; set; }
+                public string RegionEndpoint { get; set; }
                 public string RegionId { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

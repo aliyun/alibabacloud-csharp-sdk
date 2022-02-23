@@ -9,9 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class SetCACertificateNameRequest : TeaModel {
+        [NameInMap("CACertificateId")]
+        [Validation(Required=false)]
+        public string CACertificateId { get; set; }
+
+        [NameInMap("CACertificateName")]
+        [Validation(Required=false)]
+        public string CACertificateName { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -20,22 +36,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("CACertificateId")]
-        [Validation(Required=false)]
-        public string CACertificateId { get; set; }
-
-        [NameInMap("CACertificateName")]
-        [Validation(Required=false)]
-        public string CACertificateName { get; set; }
 
     }
 

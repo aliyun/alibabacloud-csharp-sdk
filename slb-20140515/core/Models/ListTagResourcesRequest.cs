@@ -9,9 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class ListTagResourcesRequest : TeaModel {
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceId")]
+        [Validation(Required=false)]
+        public List<string> ResourceId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -21,25 +37,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("ResourceId")]
-        [Validation(Required=false)]
-        public List<string> ResourceId { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]

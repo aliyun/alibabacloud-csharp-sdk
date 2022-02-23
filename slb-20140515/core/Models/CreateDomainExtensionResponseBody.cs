@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class CreateDomainExtensionResponseBody : TeaModel {
+        [NameInMap("DomainExtensionId")]
+        [Validation(Required=false)]
+        public string DomainExtensionId { get; set; }
+
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
         public int? ListenerPort { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("DomainExtensionId")]
-        [Validation(Required=false)]
-        public string DomainExtensionId { get; set; }
 
     }
 

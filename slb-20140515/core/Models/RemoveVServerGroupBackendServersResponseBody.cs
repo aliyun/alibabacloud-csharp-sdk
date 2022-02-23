@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class RemoveVServerGroupBackendServersResponseBody : TeaModel {
-        [NameInMap("VServerGroupId")]
-        [Validation(Required=false)]
-        public string VServerGroupId { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("BackendServers")]
         [Validation(Required=false)]
         public RemoveVServerGroupBackendServersResponseBodyBackendServers BackendServers { get; set; }
@@ -25,12 +17,20 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<RemoveVServerGroupBackendServersResponseBodyBackendServersBackendServer> BackendServer { get; set; }
             public class RemoveVServerGroupBackendServersResponseBodyBackendServersBackendServer : TeaModel {
-                public string Type { get; set; }
-                public int? Weight { get; set; }
                 public int? Port { get; set; }
                 public string ServerId { get; set; }
+                public string Type { get; set; }
+                public int? Weight { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("VServerGroupId")]
+        [Validation(Required=false)]
+        public string VServerGroupId { get; set; }
 
     }
 

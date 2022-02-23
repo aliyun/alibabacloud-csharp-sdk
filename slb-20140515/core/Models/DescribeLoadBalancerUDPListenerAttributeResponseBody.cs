@@ -9,85 +9,85 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeLoadBalancerUDPListenerAttributeResponseBody : TeaModel {
-        [NameInMap("VServerGroupId")]
+        [NameInMap("AclId")]
         [Validation(Required=false)]
-        public string VServerGroupId { get; set; }
-
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
-
-        [NameInMap("AclType")]
-        [Validation(Required=false)]
-        public string AclType { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("HealthCheckConnectPort")]
-        [Validation(Required=false)]
-        public int? HealthCheckConnectPort { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("Bandwidth")]
-        [Validation(Required=false)]
-        public int? Bandwidth { get; set; }
-
-        [NameInMap("MasterSlaveServerGroupId")]
-        [Validation(Required=false)]
-        public string MasterSlaveServerGroupId { get; set; }
-
-        [NameInMap("BackendServerPort")]
-        [Validation(Required=false)]
-        public int? BackendServerPort { get; set; }
+        public string AclId { get; set; }
 
         [NameInMap("AclStatus")]
         [Validation(Required=false)]
         public string AclStatus { get; set; }
 
-        [NameInMap("UnhealthyThreshold")]
+        [NameInMap("AclType")]
         [Validation(Required=false)]
-        public int? UnhealthyThreshold { get; set; }
+        public string AclType { get; set; }
 
-        [NameInMap("ListenerPort")]
+        [NameInMap("BackendServerPort")]
         [Validation(Required=false)]
-        public int? ListenerPort { get; set; }
+        public int? BackendServerPort { get; set; }
 
-        [NameInMap("HealthCheckInterval")]
+        [NameInMap("Bandwidth")]
         [Validation(Required=false)]
-        public int? HealthCheckInterval { get; set; }
+        public int? Bandwidth { get; set; }
 
-        [NameInMap("HealthCheckExp")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public string HealthCheckExp { get; set; }
+        public string Description { get; set; }
 
-        [NameInMap("AclId")]
+        [NameInMap("HealthCheck")]
         [Validation(Required=false)]
-        public string AclId { get; set; }
+        public string HealthCheck { get; set; }
 
-        [NameInMap("Scheduler")]
+        [NameInMap("HealthCheckConnectPort")]
         [Validation(Required=false)]
-        public string Scheduler { get; set; }
+        public int? HealthCheckConnectPort { get; set; }
 
         [NameInMap("HealthCheckConnectTimeout")]
         [Validation(Required=false)]
         public int? HealthCheckConnectTimeout { get; set; }
 
-        [NameInMap("HealthyThreshold")]
+        [NameInMap("HealthCheckExp")]
         [Validation(Required=false)]
-        public int? HealthyThreshold { get; set; }
+        public string HealthCheckExp { get; set; }
+
+        [NameInMap("HealthCheckInterval")]
+        [Validation(Required=false)]
+        public int? HealthCheckInterval { get; set; }
 
         [NameInMap("HealthCheckReq")]
         [Validation(Required=false)]
         public string HealthCheckReq { get; set; }
 
-        [NameInMap("HealthCheck")]
+        [NameInMap("HealthyThreshold")]
         [Validation(Required=false)]
-        public string HealthCheck { get; set; }
+        public int? HealthyThreshold { get; set; }
+
+        [NameInMap("ListenerPort")]
+        [Validation(Required=false)]
+        public int? ListenerPort { get; set; }
+
+        [NameInMap("MasterSlaveServerGroupId")]
+        [Validation(Required=false)]
+        public string MasterSlaveServerGroupId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Scheduler")]
+        [Validation(Required=false)]
+        public string Scheduler { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
+        [NameInMap("UnhealthyThreshold")]
+        [Validation(Required=false)]
+        public int? UnhealthyThreshold { get; set; }
+
+        [NameInMap("VServerGroupId")]
+        [Validation(Required=false)]
+        public string VServerGroupId { get; set; }
 
     }
 

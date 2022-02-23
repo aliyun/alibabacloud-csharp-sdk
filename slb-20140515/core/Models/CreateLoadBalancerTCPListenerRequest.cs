@@ -9,29 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class CreateLoadBalancerTCPListenerRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("AclId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string AclId { get; set; }
 
-        [NameInMap("OwnerId")]
+        [NameInMap("AclStatus")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string AclStatus { get; set; }
 
-        [NameInMap("ResourceOwnerAccount")]
+        [NameInMap("AclType")]
         [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("LoadBalancerId")]
-        [Validation(Required=false)]
-        public string LoadBalancerId { get; set; }
-
-        [NameInMap("ListenerPort")]
-        [Validation(Required=false)]
-        public int? ListenerPort { get; set; }
+        public string AclType { get; set; }
 
         [NameInMap("BackendServerPort")]
         [Validation(Required=false)]
@@ -41,45 +29,33 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public int? Bandwidth { get; set; }
 
-        [NameInMap("Scheduler")]
+        [NameInMap("ConnectionDrain")]
         [Validation(Required=false)]
-        public string Scheduler { get; set; }
+        public string ConnectionDrain { get; set; }
 
-        [NameInMap("PersistenceTimeout")]
+        [NameInMap("ConnectionDrainTimeout")]
         [Validation(Required=false)]
-        public int? PersistenceTimeout { get; set; }
+        public int? ConnectionDrainTimeout { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
 
         [NameInMap("EstablishedTimeout")]
         [Validation(Required=false)]
         public int? EstablishedTimeout { get; set; }
 
-        [NameInMap("HealthyThreshold")]
+        [NameInMap("HealthCheckConnectPort")]
         [Validation(Required=false)]
-        public int? HealthyThreshold { get; set; }
-
-        [NameInMap("UnhealthyThreshold")]
-        [Validation(Required=false)]
-        public int? UnhealthyThreshold { get; set; }
+        public int? HealthCheckConnectPort { get; set; }
 
         [NameInMap("HealthCheckConnectTimeout")]
         [Validation(Required=false)]
         public int? HealthCheckConnectTimeout { get; set; }
 
-        [NameInMap("HealthCheckConnectPort")]
-        [Validation(Required=false)]
-        public int? HealthCheckConnectPort { get; set; }
-
-        [NameInMap("healthCheckInterval")]
-        [Validation(Required=false)]
-        public int? HealthCheckInterval { get; set; }
-
         [NameInMap("HealthCheckDomain")]
         [Validation(Required=false)]
         public string HealthCheckDomain { get; set; }
-
-        [NameInMap("HealthCheckURI")]
-        [Validation(Required=false)]
-        public string HealthCheckURI { get; set; }
 
         [NameInMap("HealthCheckHttpCode")]
         [Validation(Required=false)]
@@ -89,41 +65,65 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string HealthCheckType { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("HealthCheckURI")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public string HealthCheckURI { get; set; }
 
-        [NameInMap("VServerGroupId")]
+        [NameInMap("HealthyThreshold")]
         [Validation(Required=false)]
-        public string VServerGroupId { get; set; }
+        public int? HealthyThreshold { get; set; }
+
+        [NameInMap("ListenerPort")]
+        [Validation(Required=false)]
+        public int? ListenerPort { get; set; }
+
+        [NameInMap("LoadBalancerId")]
+        [Validation(Required=false)]
+        public string LoadBalancerId { get; set; }
 
         [NameInMap("MasterSlaveServerGroupId")]
         [Validation(Required=false)]
         public string MasterSlaveServerGroupId { get; set; }
 
-        [NameInMap("AclId")]
+        [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
-        public string AclId { get; set; }
+        public string OwnerAccount { get; set; }
 
-        [NameInMap("AclType")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string AclType { get; set; }
+        public long? OwnerId { get; set; }
 
-        [NameInMap("AclStatus")]
+        [NameInMap("PersistenceTimeout")]
         [Validation(Required=false)]
-        public string AclStatus { get; set; }
+        public int? PersistenceTimeout { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public string RegionId { get; set; }
 
-        [NameInMap("ConnectionDrain")]
+        [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
-        public string ConnectionDrain { get; set; }
+        public string ResourceOwnerAccount { get; set; }
 
-        [NameInMap("ConnectionDrainTimeout")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public int? ConnectionDrainTimeout { get; set; }
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("Scheduler")]
+        [Validation(Required=false)]
+        public string Scheduler { get; set; }
+
+        [NameInMap("UnhealthyThreshold")]
+        [Validation(Required=false)]
+        public int? UnhealthyThreshold { get; set; }
+
+        [NameInMap("VServerGroupId")]
+        [Validation(Required=false)]
+        public string VServerGroupId { get; set; }
+
+        [NameInMap("healthCheckInterval")]
+        [Validation(Required=false)]
+        public int? HealthCheckInterval { get; set; }
 
     }
 

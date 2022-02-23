@@ -9,22 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class UploadServerCertificateRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("AliCloudCertificateId")]
         [Validation(Required=false)]
         public string AliCloudCertificateId { get; set; }
@@ -37,25 +21,41 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string AliCloudCertificateRegionId { get; set; }
 
-        [NameInMap("ServerCertificate")]
+        [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
-        public string ServerCertificate { get; set; }
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
         [NameInMap("PrivateKey")]
         [Validation(Required=false)]
         public string PrivateKey { get; set; }
 
-        [NameInMap("ServerCertificateName")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string ServerCertificateName { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("ServerCertificate")]
+        [Validation(Required=false)]
+        public string ServerCertificate { get; set; }
+
+        [NameInMap("ServerCertificateName")]
+        [Validation(Required=false)]
+        public string ServerCertificateName { get; set; }
 
     }
 

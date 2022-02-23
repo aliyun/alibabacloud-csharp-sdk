@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<CreateRulesResponseBodyRulesRule> Rule { get; set; }
             public class CreateRulesResponseBodyRulesRule : TeaModel {
-                public string RuleName { get; set; }
                 public string RuleId { get; set; }
+                public string RuleName { get; set; }
             }
         };
 

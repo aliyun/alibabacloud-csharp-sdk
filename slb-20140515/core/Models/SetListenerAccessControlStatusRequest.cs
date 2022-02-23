@@ -9,13 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class SetListenerAccessControlStatusRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("AccessControlStatus")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string AccessControlStatus { get; set; }
+
+        [NameInMap("ListenerPort")]
+        [Validation(Required=false)]
+        public int? ListenerPort { get; set; }
+
+        [NameInMap("ListenerProtocol")]
+        [Validation(Required=false)]
+        public string ListenerProtocol { get; set; }
+
+        [NameInMap("LoadBalancerId")]
+        [Validation(Required=false)]
+        public string LoadBalancerId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -24,26 +44,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("LoadBalancerId")]
-        [Validation(Required=false)]
-        public string LoadBalancerId { get; set; }
-
-        [NameInMap("ListenerPort")]
-        [Validation(Required=false)]
-        public int? ListenerPort { get; set; }
-
-        [NameInMap("AccessControlStatus")]
-        [Validation(Required=false)]
-        public string AccessControlStatus { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("ListenerProtocol")]
-        [Validation(Required=false)]
-        public string ListenerProtocol { get; set; }
 
     }
 

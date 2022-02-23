@@ -1,3 +1,6 @@
+2022-02-23 Version: 2.0.3
+- Support latest apis.
+
 2021-08-03 Version: 2.0.2
 - Support query tags for DescribeLoadBalancers.
 

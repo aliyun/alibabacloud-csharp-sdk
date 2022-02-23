@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeDomainExtensionsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DomainExtensions")]
         [Validation(Required=false)]
         public DescribeDomainExtensionsResponseBodyDomainExtensions DomainExtensions { get; set; }
@@ -21,11 +17,15 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension> DomainExtension { get; set; }
             public class DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension : TeaModel {
-                public string ServerCertificateId { get; set; }
                 public string Domain { get; set; }
                 public string DomainExtensionId { get; set; }
+                public string ServerCertificateId { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

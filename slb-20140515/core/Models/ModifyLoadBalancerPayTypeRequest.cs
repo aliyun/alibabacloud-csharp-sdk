@@ -9,29 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class ModifyLoadBalancerPayTypeRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("AutoPay")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public bool? AutoPay { get; set; }
 
-        [NameInMap("ResourceOwnerAccount")]
+        [NameInMap("Duration")]
         [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
+        public int? Duration { get; set; }
 
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string LoadBalancerId { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
-        [NameInMap("LoadBalancerId")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string LoadBalancerId { get; set; }
+        public long? OwnerId { get; set; }
 
         [NameInMap("PayType")]
         [Validation(Required=false)]
@@ -41,13 +37,17 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string PricingCycle { get; set; }
 
-        [NameInMap("Duration")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public int? Duration { get; set; }
+        public string RegionId { get; set; }
 
-        [NameInMap("AutoPay")]
+        [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
-        public bool? AutoPay { get; set; }
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
     }
 

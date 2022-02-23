@@ -21,8 +21,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<DescribeVServerGroupsResponseBodyVServerGroupsVServerGroup> VServerGroup { get; set; }
             public class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroup : TeaModel {
-                public string VServerGroupId { get; set; }
-                public string VServerGroupName { get; set; }
                 public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjects AssociatedObjects { get; set; }
                 public class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjects : TeaModel {
                     [NameInMap("Listeners")]
@@ -46,14 +44,17 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                         [Validation(Required=false)]
                         public List<DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRulesRule> Rule { get; set; }
                         public class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRulesRule : TeaModel {
-                            public string Url { get; set; }
                             public string Domain { get; set; }
-                            public string RuleName { get; set; }
                             public string RuleId { get; set; }
+                            public string RuleName { get; set; }
+                            public string Url { get; set; }
                         }
                     };
 
                 }
+                public long? ServerCount { get; set; }
+                public string VServerGroupId { get; set; }
+                public string VServerGroupName { get; set; }
             }
         };
 

@@ -21,7 +21,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<DescribeZonesResponseBodyZonesZone> Zone { get; set; }
             public class DescribeZonesResponseBodyZonesZone : TeaModel {
-                public string ZoneId { get; set; }
                 public string LocalName { get; set; }
                 public DescribeZonesResponseBodyZonesZoneSlaveZones SlaveZones { get; set; }
                 public class DescribeZonesResponseBodyZonesZoneSlaveZones : TeaModel {
@@ -29,17 +28,18 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                     [Validation(Required=false)]
                     public List<DescribeZonesResponseBodyZonesZoneSlaveZonesSlaveZone> SlaveZone { get; set; }
                     public class DescribeZonesResponseBodyZonesZoneSlaveZonesSlaveZone : TeaModel {
-                        [NameInMap("ZoneId")]
-                        [Validation(Required=false)]
-                        public string ZoneId { get; set; }
-
                         [NameInMap("LocalName")]
                         [Validation(Required=false)]
                         public string LocalName { get; set; }
 
+                        [NameInMap("ZoneId")]
+                        [Validation(Required=false)]
+                        public string ZoneId { get; set; }
+
                     }
 
                 }
+                public string ZoneId { get; set; }
             }
         };
 

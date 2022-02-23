@@ -13,25 +13,25 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string Domain { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("DomainExtensionId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("LoadBalancerId")]
-        [Validation(Required=false)]
-        public string LoadBalancerId { get; set; }
+        public string DomainExtensionId { get; set; }
 
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
         public int? ListenerPort { get; set; }
 
+        [NameInMap("LoadBalancerId")]
+        [Validation(Required=false)]
+        public string LoadBalancerId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("ServerCertificateId")]
         [Validation(Required=false)]
         public string ServerCertificateId { get; set; }
-
-        [NameInMap("DomainExtensionId")]
-        [Validation(Required=false)]
-        public string DomainExtensionId { get; set; }
 
     }
 

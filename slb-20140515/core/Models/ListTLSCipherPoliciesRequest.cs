@@ -9,9 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class ListTLSCipherPoliciesRequest : TeaModel {
+        [NameInMap("IncludeListener")]
+        [Validation(Required=false)]
+        public bool? IncludeListener { get; set; }
+
+        [NameInMap("MaxItems")]
+        [Validation(Required=false)]
+        public int? MaxItems { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -21,37 +45,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("access_key_id")]
-        [Validation(Required=false)]
-        public string AccessKeyId { get; set; }
-
         [NameInMap("TLSCipherPolicyId")]
         [Validation(Required=false)]
         public string TLSCipherPolicyId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("IncludeListener")]
-        [Validation(Required=false)]
-        public bool? IncludeListener { get; set; }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("MaxItems")]
-        [Validation(Required=false)]
-        public int? MaxItems { get; set; }
 
     }
 
