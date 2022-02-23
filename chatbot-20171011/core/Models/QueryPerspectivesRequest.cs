@@ -8,21 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
-    public class MoveKnowledgeCategoryRequest : TeaModel {
+    public class QueryPerspectivesRequest : TeaModel {
         /// <summary>
         /// 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
         /// </summary>
         [NameInMap("AgentKey")]
         [Validation(Required=false)]
         public string AgentKey { get; set; }
-
-        [NameInMap("CategoryId")]
-        [Validation(Required=false)]
-        public long? CategoryId { get; set; }
-
-        [NameInMap("KnowledgeId")]
-        [Validation(Required=false)]
-        public long? KnowledgeId { get; set; }
 
     }
 
