@@ -1716,51 +1716,51 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         public ListMessagesResponse ListMessagesWithOptions(ListMessagesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Datetime))
             {
-                body["Datetime"] = request.Datetime;
+                query["Datetime"] = request.Datetime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
-                body["GroupId"] = request.GroupId;
+                query["GroupId"] = request.GroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageId))
             {
-                body["MessageId"] = request.MessageId;
+                query["MessageId"] = request.MessageId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
-                body["PageNumber"] = request.PageNumber;
+                query["PageNumber"] = request.PageNumber;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
-                body["PageSize"] = request.PageSize;
+                query["PageSize"] = request.PageSize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNumber))
             {
-                body["PhoneNumber"] = request.PhoneNumber;
+                query["PhoneNumber"] = request.PhoneNumber;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
             {
-                body["RequestId"] = request.RequestId;
+                query["RequestId"] = request.RequestId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleId))
             {
-                body["ScheduleId"] = request.ScheduleId;
+                query["ScheduleId"] = request.ScheduleId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Signature))
             {
-                body["Signature"] = request.Signature;
+                query["Signature"] = request.Signature;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
             {
-                body["TemplateCode"] = request.TemplateCode;
+                query["TemplateCode"] = request.TemplateCode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1780,51 +1780,51 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         public async Task<ListMessagesResponse> ListMessagesWithOptionsAsync(ListMessagesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Datetime))
             {
-                body["Datetime"] = request.Datetime;
+                query["Datetime"] = request.Datetime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
-                body["GroupId"] = request.GroupId;
+                query["GroupId"] = request.GroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageId))
             {
-                body["MessageId"] = request.MessageId;
+                query["MessageId"] = request.MessageId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
-                body["PageNumber"] = request.PageNumber;
+                query["PageNumber"] = request.PageNumber;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
-                body["PageSize"] = request.PageSize;
+                query["PageSize"] = request.PageSize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNumber))
             {
-                body["PhoneNumber"] = request.PhoneNumber;
+                query["PhoneNumber"] = request.PhoneNumber;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
             {
-                body["RequestId"] = request.RequestId;
+                query["RequestId"] = request.RequestId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleId))
             {
-                body["ScheduleId"] = request.ScheduleId;
+                query["ScheduleId"] = request.ScheduleId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Signature))
             {
-                body["Signature"] = request.Signature;
+                query["Signature"] = request.Signature;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
             {
-                body["TemplateCode"] = request.TemplateCode;
+                query["TemplateCode"] = request.TemplateCode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
