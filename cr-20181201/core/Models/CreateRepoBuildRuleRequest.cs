@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateRepoBuildRuleRequest : TeaModel {
+        [NameInMap("BuildArgs")]
+        [Validation(Required=false)]
+        public List<string> BuildArgs { get; set; }
+
         [NameInMap("DockerfileLocation")]
         [Validation(Required=false)]
         public string DockerfileLocation { get; set; }
@@ -24,6 +28,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("Platforms")]
+        [Validation(Required=false)]
+        public List<string> Platforms { get; set; }
 
         [NameInMap("PushName")]
         [Validation(Required=false)]

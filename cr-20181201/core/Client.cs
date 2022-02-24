@@ -859,6 +859,10 @@ namespace AlibabaCloud.SDK.Cr20181201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BuildArgs))
+            {
+                query["BuildArgs"] = request.BuildArgs;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DockerfileLocation))
             {
                 query["DockerfileLocation"] = request.DockerfileLocation;
@@ -874,6 +878,10 @@ namespace AlibabaCloud.SDK.Cr20181201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platforms))
+            {
+                query["Platforms"] = request.Platforms;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PushName))
             {
@@ -910,6 +918,10 @@ namespace AlibabaCloud.SDK.Cr20181201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BuildArgs))
+            {
+                query["BuildArgs"] = request.BuildArgs;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DockerfileLocation))
             {
                 query["DockerfileLocation"] = request.DockerfileLocation;
@@ -925,6 +937,10 @@ namespace AlibabaCloud.SDK.Cr20181201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platforms))
+            {
+                query["Platforms"] = request.Platforms;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PushName))
             {
