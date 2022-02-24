@@ -4287,6 +4287,110 @@ namespace AlibabaCloud.SDK.Devops20210625
             return TeaModel.ToObject<ListWorkItemWorkFlowStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        public ListWorkitemsResponse ListWorkitems(string organizationId, ListWorkitemsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListWorkitemsWithOptions(organizationId, request, headers, runtime);
+        }
+
+        public async Task<ListWorkitemsResponse> ListWorkitemsAsync(string organizationId, ListWorkitemsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListWorkitemsWithOptionsAsync(organizationId, request, headers, runtime);
+        }
+
+        public ListWorkitemsResponse ListWorkitemsWithOptions(string organizationId, ListWorkitemsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpaceIdentifier))
+            {
+                query["spaceIdentifier"] = request.SpaceIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpaceType))
+            {
+                query["spaceType"] = request.SpaceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWorkitems",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/organization/" + organizationId + "/listWorkitems",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWorkitemsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListWorkitemsResponse> ListWorkitemsWithOptionsAsync(string organizationId, ListWorkitemsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpaceIdentifier))
+            {
+                query["spaceIdentifier"] = request.SpaceIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpaceType))
+            {
+                query["spaceType"] = request.SpaceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWorkitems",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/organization/" + organizationId + "/listWorkitems",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWorkitemsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public ListWorkspacesResponse ListWorkspaces(ListWorkspacesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6046,6 +6150,10 @@ namespace AlibabaCloud.SDK.Devops20210625
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FieldType))
+            {
+                body["fieldType"] = request.FieldType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Identifier))
             {
                 body["identifier"] = request.Identifier;
@@ -6083,6 +6191,10 @@ namespace AlibabaCloud.SDK.Devops20210625
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FieldType))
+            {
+                body["fieldType"] = request.FieldType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Identifier))
             {
                 body["identifier"] = request.Identifier;

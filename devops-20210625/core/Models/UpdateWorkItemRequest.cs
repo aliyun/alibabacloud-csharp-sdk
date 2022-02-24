@@ -10,7 +10,14 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class UpdateWorkItemRequest : TeaModel {
         /// <summary>
-        /// 工作项id
+        /// 更新字段的类型，标题：subject/自定义字段：customField/状态：status/描述：document/基本字段：basic(包括负责人、迭代、参与人等)
+        /// </summary>
+        [NameInMap("fieldType")]
+        [Validation(Required=false)]
+        public string FieldType { get; set; }
+
+        /// <summary>
+        /// 工作项唯一标识id
         /// </summary>
         [NameInMap("identifier")]
         [Validation(Required=false)]

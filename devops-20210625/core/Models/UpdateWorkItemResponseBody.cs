@@ -89,6 +89,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+            [NameInMap("statusIdentifier")]
+            [Validation(Required=false)]
+            public string StatusIdentifier { get; set; }
             [NameInMap("statusStageIdentifier")]
             [Validation(Required=false)]
             public string StatusStageIdentifier { get; set; }
