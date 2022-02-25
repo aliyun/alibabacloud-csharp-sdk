@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [NameInMap("ClientIds")]
             [Validation(Required=false)]
             public string ClientIds { get; set; }
+            [NameInMap("CreateDate")]
+            [Validation(Required=false)]
+            public string CreateDate { get; set; }
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
@@ -37,6 +40,9 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [NameInMap("OIDCProviderName")]
             [Validation(Required=false)]
             public string OIDCProviderName { get; set; }
+            [NameInMap("UpdateDate")]
+            [Validation(Required=false)]
+            public string UpdateDate { get; set; }
         };
 
         [NameInMap("RequestId")]

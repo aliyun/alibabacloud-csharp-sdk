@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [Validation(Required=false)]
         public bool? AllowUserToManageMFADevices { get; set; }
 
+        [NameInMap("AllowUserToManagePersonalDingTalk")]
+        [Validation(Required=false)]
+        public bool? AllowUserToManagePersonalDingTalk { get; set; }
+
         [NameInMap("EnableSaveMFATicket")]
         [Validation(Required=false)]
         public bool? EnableSaveMFATicket { get; set; }
@@ -36,10 +40,6 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [NameInMap("LoginSessionDuration")]
         [Validation(Required=false)]
         public int? LoginSessionDuration { get; set; }
-
-        [NameInMap("VerificationTypes")]
-        [Validation(Required=false)]
-        public List<string> VerificationTypes { get; set; }
 
     }
 

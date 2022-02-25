@@ -27,12 +27,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public class ListOIDCProvidersResponseBodyOIDCProvidersOIDCProvider : TeaModel {
                 public string Arn { get; set; }
                 public string ClientIds { get; set; }
+                public string CreateDate { get; set; }
                 public string Description { get; set; }
                 public string Fingerprints { get; set; }
                 public string GmtCreate { get; set; }
                 public string GmtModified { get; set; }
                 public string IssuerUrl { get; set; }
                 public string OIDCProviderName { get; set; }
+                public string UpdateDate { get; set; }
             }
         };
 

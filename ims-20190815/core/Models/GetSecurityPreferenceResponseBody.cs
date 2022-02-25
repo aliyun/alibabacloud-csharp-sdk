@@ -60,13 +60,13 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 public bool? AllowUserToManageMFADevices { get; set; }
 
             }
-            [NameInMap("VerificationPreference")]
+            [NameInMap("PersonalInfoPreference")]
             [Validation(Required=false)]
-            public GetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference VerificationPreference { get; set; }
-            public class GetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference : TeaModel {
-                [NameInMap("VerificationTypes")]
+            public GetSecurityPreferenceResponseBodySecurityPreferencePersonalInfoPreference PersonalInfoPreference { get; set; }
+            public class GetSecurityPreferenceResponseBodySecurityPreferencePersonalInfoPreference : TeaModel {
+                [NameInMap("AllowUserToManagePersonalDingTalk")]
                 [Validation(Required=false)]
-                public List<string> VerificationTypes { get; set; }
+                public bool? AllowUserToManagePersonalDingTalk { get; set; }
 
             }
         };
