@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyCountResponseBody : TeaModel {
-        [NameInMap("AutoRun")]
+        [NameInMap("Autorun")]
         [Validation(Required=false)]
-        public int? AutoRun { get; set; }
+        public int? Autorun { get; set; }
 
         [NameInMap("Cron")]
         [Validation(Required=false)]
         public int? Cron { get; set; }
+
+        [NameInMap("Database")]
+        [Validation(Required=false)]
+        public int? Database { get; set; }
+
+        [NameInMap("Lkm")]
+        [Validation(Required=false)]
+        public int? Lkm { get; set; }
 
         [NameInMap("Port")]
         [Validation(Required=false)]
@@ -40,6 +48,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("User")]
         [Validation(Required=false)]
         public int? User { get; set; }
+
+        [NameInMap("Web")]
+        [Validation(Required=false)]
+        public int? Web { get; set; }
+
+        [NameInMap("Webserver")]
+        [Validation(Required=false)]
+        public int? Webserver { get; set; }
 
     }
 
