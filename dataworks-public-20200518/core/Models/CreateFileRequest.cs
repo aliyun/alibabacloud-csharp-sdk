@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateFileRequest : TeaModel {
+        [NameInMap("AdvancedSettings")]
+        [Validation(Required=false)]
+        public string AdvancedSettings { get; set; }
+
         [NameInMap("AutoParsing")]
         [Validation(Required=false)]
         public bool? AutoParsing { get; set; }
@@ -104,6 +108,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("StartEffectDate")]
         [Validation(Required=false)]
         public long? StartEffectDate { get; set; }
+
+        [NameInMap("StartImmediately")]
+        [Validation(Required=false)]
+        public bool? StartImmediately { get; set; }
 
         [NameInMap("Stop")]
         [Validation(Required=false)]
