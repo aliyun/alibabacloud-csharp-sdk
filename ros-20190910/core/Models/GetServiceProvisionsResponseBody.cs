@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public bool? AutoEnableService { get; set; }
 
+            [NameInMap("DependentServiceNames")]
+            [Validation(Required=false)]
+            public List<string> DependentServiceNames { get; set; }
+
             [NameInMap("EnableURL")]
             [Validation(Required=false)]
             public string EnableURL { get; set; }
