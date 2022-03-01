@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ivpd20190625.Models
 {
     public class RecognizeImageColorResponseBody : TeaModel {
-        [NameInMap("Message")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -26,14 +22,18 @@ namespace AlibabaCloud.SDK.Ivpd20190625.Models
             public List<RecognizeImageColorResponseBodyDataColorTemplateList> ColorTemplateList { get; set; }
             public class RecognizeImageColorResponseBodyDataColorTemplateList : TeaModel {
                 public string Color { get; set; }
-                public float? Percentage { get; set; }
                 public string Label { get; set; }
+                public float? Percentage { get; set; }
             }
         };
 
-        [NameInMap("Code")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

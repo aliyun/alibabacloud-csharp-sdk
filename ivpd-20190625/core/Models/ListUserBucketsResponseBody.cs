@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Ivpd20190625.Models
 {
     public class ListUserBucketsResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public List<string> Data { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -16,14 +24,6 @@ namespace AlibabaCloud.SDK.Ivpd20190625.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public List<string> Data { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
     }
 

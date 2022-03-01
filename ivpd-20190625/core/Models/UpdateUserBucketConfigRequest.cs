@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Ivpd20190625.Models
         [Validation(Required=false)]
         public List<UpdateUserBucketConfigRequestData> Data { get; set; }
         public class UpdateUserBucketConfigRequestData : TeaModel {
-            [NameInMap("Region")]
-            [Validation(Required=false)]
-            public string Region { get; set; }
-
             [NameInMap("Bucket")]
             [Validation(Required=false)]
             public string Bucket { get; set; }
+
+            [NameInMap("Region")]
+            [Validation(Required=false)]
+            public string Region { get; set; }
 
         }
 

@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ivpd20190625.Models
 {
     public class DetectImageElementsResponseBody : TeaModel {
-        [NameInMap("Message")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -25,18 +21,22 @@ namespace AlibabaCloud.SDK.Ivpd20190625.Models
             [Validation(Required=false)]
             public List<DetectImageElementsResponseBodyDataElements> Elements { get; set; }
             public class DetectImageElementsResponseBodyDataElements : TeaModel {
+                public int? Height { get; set; }
+                public float? Score { get; set; }
                 public string Type { get; set; }
                 public int? Width { get; set; }
-                public int? Height { get; set; }
-                public int? Y { get; set; }
-                public float? Score { get; set; }
                 public int? X { get; set; }
+                public int? Y { get; set; }
             }
         };
 
-        [NameInMap("Code")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

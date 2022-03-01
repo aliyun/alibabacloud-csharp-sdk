@@ -9,9 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Ivpd20190625.Models
 {
     public class CreateSegmentBodyJobRequest : TeaModel {
-        [NameInMap("Async")]
+        [NameInMap("DataList")]
         [Validation(Required=false)]
-        public bool? Async { get; set; }
+        public List<CreateSegmentBodyJobRequestDataList> DataList { get; set; }
+        public class CreateSegmentBodyJobRequestDataList : TeaModel {
+            [NameInMap("DataId")]
+            [Validation(Required=false)]
+            public string DataId { get; set; }
+
+            [NameInMap("ImageUrl")]
+            [Validation(Required=false)]
+            public string ImageUrl { get; set; }
+
+        }
 
         [NameInMap("JobId")]
         [Validation(Required=false)]
@@ -20,20 +30,6 @@ namespace AlibabaCloud.SDK.Ivpd20190625.Models
         [NameInMap("TimeToLive")]
         [Validation(Required=false)]
         public int? TimeToLive { get; set; }
-
-        [NameInMap("DataList")]
-        [Validation(Required=false)]
-        public List<CreateSegmentBodyJobRequestDataList> DataList { get; set; }
-        public class CreateSegmentBodyJobRequestDataList : TeaModel {
-            [NameInMap("ImageUrl")]
-            [Validation(Required=false)]
-            public string ImageUrl { get; set; }
-
-            [NameInMap("DataId")]
-            [Validation(Required=false)]
-            public string DataId { get; set; }
-
-        }
 
     }
 

@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ivpd20190625.Models
 {
     public class ListPackageDesignModelTypesResponseBody : TeaModel {
-        [NameInMap("Message")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -33,9 +29,13 @@ namespace AlibabaCloud.SDK.Ivpd20190625.Models
             }
         };
 
-        [NameInMap("Code")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

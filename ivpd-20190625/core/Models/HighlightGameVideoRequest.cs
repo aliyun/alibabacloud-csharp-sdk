@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ivpd20190625.Models
 {
     public class HighlightGameVideoRequest : TeaModel {
-        [NameInMap("VideoUrl")]
-        [Validation(Required=false)]
-        public string VideoUrl { get; set; }
-
         [NameInMap("Async")]
         [Validation(Required=false)]
         public bool? Async { get; set; }
+
+        [NameInMap("VideoUrl")]
+        [Validation(Required=false)]
+        public string VideoUrl { get; set; }
 
     }
 

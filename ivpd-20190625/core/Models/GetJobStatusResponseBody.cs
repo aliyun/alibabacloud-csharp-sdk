@@ -9,33 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ivpd20190625.Models
 {
     public class GetJobStatusResponseBody : TeaModel {
-        [NameInMap("Message")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetJobStatusResponseBodyData Data { get; set; }
         public class GetJobStatusResponseBodyData : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-            [NameInMap("TotalUsedTime")]
-            [Validation(Required=false)]
-            public long? TotalUsedTime { get; set; }
             [NameInMap("BatchSize")]
             [Validation(Required=false)]
             public string BatchSize { get; set; }
-            [NameInMap("Progress")]
-            [Validation(Required=false)]
-            public float? Progress { get; set; }
-            [NameInMap("TimeToLive")]
-            [Validation(Required=false)]
-            public int? TimeToLive { get; set; }
             [NameInMap("Completed")]
             [Validation(Required=false)]
             public bool? Completed { get; set; }
@@ -45,11 +29,27 @@ namespace AlibabaCloud.SDK.Ivpd20190625.Models
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
+            [NameInMap("Progress")]
+            [Validation(Required=false)]
+            public float? Progress { get; set; }
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+            [NameInMap("TimeToLive")]
+            [Validation(Required=false)]
+            public int? TimeToLive { get; set; }
+            [NameInMap("TotalUsedTime")]
+            [Validation(Required=false)]
+            public long? TotalUsedTime { get; set; }
         };
 
-        [NameInMap("Code")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 
