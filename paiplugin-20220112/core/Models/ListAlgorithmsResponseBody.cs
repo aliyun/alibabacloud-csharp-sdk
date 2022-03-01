@@ -8,24 +8,30 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
 {
-    public class SendMessageResponseBody : TeaModel {
+    public class ListAlgorithmsResponseBody : TeaModel {
         /// <summary>
         /// 返回数据
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public SendMessageResponseBodyData Data { get; set; }
-        public class SendMessageResponseBodyData : TeaModel {
-            [NameInMap("Messages")]
+        public ListAlgorithmsResponseBodyData Data { get; set; }
+        public class ListAlgorithmsResponseBodyData : TeaModel {
+            [NameInMap("Algorithms")]
             [Validation(Required=false)]
-            public List<SendMessageResponseBodyDataMessages> Messages { get; set; }
-            public class SendMessageResponseBodyDataMessages : TeaModel {
+            public List<ListAlgorithmsResponseBodyDataAlgorithms> Algorithms { get; set; }
+            public class ListAlgorithmsResponseBodyDataAlgorithms : TeaModel {
                 public string Id { get; set; }
-                public string PhoneNumber { get; set; }
+                public string Name { get; set; }
             }
-            [NameInMap("RequestId")]
+            [NameInMap("PageNumber")]
             [Validation(Required=false)]
-            public string RequestId { get; set; }
+            public int? PageNumber { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
         };
 
         /// <summary>

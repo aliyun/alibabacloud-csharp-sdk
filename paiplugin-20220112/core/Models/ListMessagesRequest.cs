@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
 {
     public class ListMessagesRequest : TeaModel {
         /// <summary>
-        /// 发送日期，格式为20220101
+        /// 发送日期，格式为20220101。
         /// </summary>
         [NameInMap("Datetime")]
         [Validation(Required=false)]

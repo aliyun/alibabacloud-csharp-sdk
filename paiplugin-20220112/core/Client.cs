@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+         * 注册人群
+        
+         */
         public CreateGroupResponse CreateGroup(CreateGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -44,6 +48,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return CreateGroupWithOptions(request, headers, runtime);
         }
 
+        /**
+         * 注册人群
+        
+         */
         public async Task<CreateGroupResponse> CreateGroupAsync(CreateGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -67,9 +75,9 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             {
                 body["Filter"] = request.Filter;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InferenceJob))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InferenceJobId))
             {
-                body["InferenceJob"] = request.InferenceJob;
+                body["InferenceJobId"] = request.InferenceJobId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -135,9 +143,9 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             {
                 body["Filter"] = request.Filter;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InferenceJob))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InferenceJobId))
             {
-                body["InferenceJob"] = request.InferenceJob;
+                body["InferenceJobId"] = request.InferenceJobId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -187,6 +195,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<CreateGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * 注册推理任务
+        
+         */
         public CreateInferenceJobResponse CreateInferenceJob(CreateInferenceJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -194,6 +206,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return CreateInferenceJobWithOptions(request, headers, runtime);
         }
 
+        /**
+         * 注册推理任务
+        
+         */
         public async Task<CreateInferenceJobResponse> CreateInferenceJobAsync(CreateInferenceJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -289,6 +305,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<CreateInferenceJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * 注册触达计划
+        
+         */
         public CreateScheduleResponse CreateSchedule(CreateScheduleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -296,6 +316,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return CreateScheduleWithOptions(request, headers, runtime);
         }
 
+        /**
+         * 注册触达计划
+        
+         */
         public async Task<CreateScheduleResponse> CreateScheduleAsync(CreateScheduleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -335,9 +359,17 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             {
                 body["RepeatTimes"] = request.RepeatTimes;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignName))
+            {
+                body["SignName"] = request.SignName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignatureId))
             {
                 body["SignatureId"] = request.SignatureId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
+            {
+                body["TemplateCode"] = request.TemplateCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
@@ -395,9 +427,17 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             {
                 body["RepeatTimes"] = request.RepeatTimes;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignName))
+            {
+                body["SignName"] = request.SignName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignatureId))
             {
                 body["SignatureId"] = request.SignatureId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
+            {
+                body["TemplateCode"] = request.TemplateCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
@@ -423,6 +463,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<CreateScheduleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * 注册签名。
+        
+         */
         public CreateSignatureResponse CreateSignature(CreateSignatureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -430,6 +474,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return CreateSignatureWithOptions(request, headers, runtime);
         }
 
+        /**
+         * 注册签名。
+        
+         */
         public async Task<CreateSignatureResponse> CreateSignatureAsync(CreateSignatureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -501,6 +549,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<CreateSignatureResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * 注册模板
+        
+         */
         public CreateTemplateResponse CreateTemplate(CreateTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -508,6 +560,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return CreateTemplateWithOptions(request, headers, runtime);
         }
 
+        /**
+         * 注册模板
+        
+         */
         public async Task<CreateTemplateResponse> CreateTemplateAsync(CreateTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -603,6 +659,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<CreateTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * 注册训练任务
+        
+         */
         public CreateTrainingJobResponse CreateTrainingJob(CreateTrainingJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -610,6 +670,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return CreateTrainingJobWithOptions(request, headers, runtime);
         }
 
+        /**
+         * 注册训练任务
+        
+         */
         public async Task<CreateTrainingJobResponse> CreateTrainingJobAsync(CreateTrainingJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -697,6 +761,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<CreateTrainingJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * 删除人群
+        
+         */
         public DeleteGroupResponse DeleteGroup(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -704,6 +772,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return DeleteGroupWithOptions(Id, headers, runtime);
         }
 
+        /**
+         * 删除人群
+        
+         */
         public async Task<DeleteGroupResponse> DeleteGroupAsync(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -755,6 +827,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<DeleteGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * 删除推理任务
+        
+         */
         public DeleteInferenceJobResponse DeleteInferenceJob(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -762,6 +838,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return DeleteInferenceJobWithOptions(Id, headers, runtime);
         }
 
+        /**
+         * 删除推理任务
+        
+         */
         public async Task<DeleteInferenceJobResponse> DeleteInferenceJobAsync(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -813,6 +893,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<DeleteInferenceJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * 删除触达计划
+        
+         */
         public DeleteScheduleResponse DeleteSchedule(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -820,6 +904,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return DeleteScheduleWithOptions(Id, headers, runtime);
         }
 
+        /**
+         * 删除触达计划
+        
+         */
         public async Task<DeleteScheduleResponse> DeleteScheduleAsync(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -871,6 +959,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<DeleteScheduleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * 删除签名。
+        
+         */
         public DeleteSignatureResponse DeleteSignature(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -878,6 +970,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return DeleteSignatureWithOptions(Id, headers, runtime);
         }
 
+        /**
+         * 删除签名。
+        
+         */
         public async Task<DeleteSignatureResponse> DeleteSignatureAsync(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -929,6 +1025,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<DeleteSignatureResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * 删除模板
+        
+         */
         public DeleteTemplateResponse DeleteTemplate(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -936,6 +1036,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return DeleteTemplateWithOptions(Id, headers, runtime);
         }
 
+        /**
+         * 删除模板
+        
+         */
         public async Task<DeleteTemplateResponse> DeleteTemplateAsync(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -987,6 +1091,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<DeleteTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * 删除训练任务
+        
+         */
         public DeleteTrainingJobResponse DeleteTrainingJob(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -994,6 +1102,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return DeleteTrainingJobWithOptions(Id, headers, runtime);
         }
 
+        /**
+         * 删除训练任务
+        
+         */
         public async Task<DeleteTrainingJobResponse> DeleteTrainingJobAsync(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1045,6 +1157,74 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<DeleteTrainingJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * 获取算法详情
+         */
+        public GetAlgorithmResponse GetAlgorithm(string Id)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAlgorithmWithOptions(Id, headers, runtime);
+        }
+
+        /**
+         * 获取算法详情
+         */
+        public async Task<GetAlgorithmResponse> GetAlgorithmAsync(string Id)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAlgorithmWithOptionsAsync(Id, headers, runtime);
+        }
+
+        public GetAlgorithmResponse GetAlgorithmWithOptions(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAlgorithm",
+                Version = "2022-01-12",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/algorithms/" + Id,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAlgorithmResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetAlgorithmResponse> GetAlgorithmWithOptionsAsync(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAlgorithm",
+                Version = "2022-01-12",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/algorithms/" + Id,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAlgorithmResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * 获取人群
+        默认返回所有人群信息
+         */
         public GetGroupResponse GetGroup(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1052,6 +1232,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return GetGroupWithOptions(Id, headers, runtime);
         }
 
+        /**
+         * 获取人群
+        默认返回所有人群信息
+         */
         public async Task<GetGroupResponse> GetGroupAsync(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1103,6 +1287,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<GetGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * 获取推理任务
+        默认返回所有推理任务信息
+         */
         public GetInferenceJobResponse GetInferenceJob(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1110,6 +1298,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return GetInferenceJobWithOptions(Id, headers, runtime);
         }
 
+        /**
+         * 获取推理任务
+        默认返回所有推理任务信息
+         */
         public async Task<GetInferenceJobResponse> GetInferenceJobAsync(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1161,6 +1353,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<GetInferenceJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * 获取触达计划详情。
+        
+         */
         public GetScheduleResponse GetSchedule(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1168,6 +1364,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return GetScheduleWithOptions(Id, headers, runtime);
         }
 
+        /**
+         * 获取触达计划详情。
+        
+         */
         public async Task<GetScheduleResponse> GetScheduleAsync(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1219,6 +1419,9 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<GetScheduleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * 获取签名详情
+         */
         public GetSignatureResponse GetSignature(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1226,6 +1429,9 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return GetSignatureWithOptions(Id, headers, runtime);
         }
 
+        /**
+         * 获取签名详情
+         */
         public async Task<GetSignatureResponse> GetSignatureAsync(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1277,6 +1483,11 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<GetSignatureResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * 获取模板
+        默认返回所有模板信息
+        ![模板列表](https://intranetproxy.alipay.com/skylark/lark/0/2021/png/302991/1615264998427-d2943cfb-106a-421d-b4a4-f06307b4d9be.png)
+         */
         public GetTemplateResponse GetTemplate(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1284,6 +1495,11 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return GetTemplateWithOptions(Id, headers, runtime);
         }
 
+        /**
+         * 获取模板
+        默认返回所有模板信息
+        ![模板列表](https://intranetproxy.alipay.com/skylark/lark/0/2021/png/302991/1615264998427-d2943cfb-106a-421d-b4a4-f06307b4d9be.png)
+         */
         public async Task<GetTemplateResponse> GetTemplateAsync(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1335,6 +1551,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<GetTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * 获取训练任务
+        默认返回所有训练任务信息
+         */
         public GetTrainingJobResponse GetTrainingJob(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1342,6 +1562,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return GetTrainingJobWithOptions(Id, headers, runtime);
         }
 
+        /**
+         * 获取训练任务
+        默认返回所有训练任务信息
+         */
         public async Task<GetTrainingJobResponse> GetTrainingJobAsync(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1393,6 +1617,109 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<GetTrainingJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * 获取算法列表
+         */
+        public ListAlgorithmsResponse ListAlgorithms(ListAlgorithmsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListAlgorithmsWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * 获取算法列表
+         */
+        public async Task<ListAlgorithmsResponse> ListAlgorithmsAsync(ListAlgorithmsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListAlgorithmsWithOptionsAsync(request, headers, runtime);
+        }
+
+        public ListAlgorithmsResponse ListAlgorithmsWithOptions(ListAlgorithmsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAlgorithms",
+                Version = "2022-01-12",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/algorithms",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAlgorithmsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListAlgorithmsResponse> ListAlgorithmsWithOptionsAsync(ListAlgorithmsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAlgorithms",
+                Version = "2022-01-12",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/algorithms",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAlgorithmsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * 获取人群列表
+         */
         public ListGroupsResponse ListGroups(ListGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1400,6 +1727,9 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return ListGroupsWithOptions(request, headers, runtime);
         }
 
+        /**
+         * 获取人群列表
+         */
         public async Task<ListGroupsResponse> ListGroupsAsync(ListGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1503,6 +1833,9 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<ListGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * 获取推理任务列表
+         */
         public ListInferenceJobsResponse ListInferenceJobs(ListInferenceJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1510,6 +1843,9 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return ListInferenceJobsWithOptions(request, headers, runtime);
         }
 
+        /**
+         * 获取推理任务列表
+         */
         public async Task<ListInferenceJobsResponse> ListInferenceJobsAsync(ListInferenceJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1605,6 +1941,9 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<ListInferenceJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * 获取用户短信发送统计
+         */
         public ListMessageMetricsResponse ListMessageMetrics(ListMessageMetricsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1612,6 +1951,9 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return ListMessageMetricsWithOptions(request, headers, runtime);
         }
 
+        /**
+         * 获取用户短信发送统计
+         */
         public async Task<ListMessageMetricsResponse> ListMessageMetricsAsync(ListMessageMetricsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1699,6 +2041,9 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<ListMessageMetricsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * 查询短信发送详情
+         */
         public ListMessagesResponse ListMessages(ListMessagesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1706,6 +2051,9 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return ListMessagesWithOptions(request, headers, runtime);
         }
 
+        /**
+         * 查询短信发送详情
+         */
         public async Task<ListMessagesResponse> ListMessagesAsync(ListMessagesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1841,6 +2189,9 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<ListMessagesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * 获取触达计划列表。
+         */
         public ListSchedulesResponse ListSchedules(ListSchedulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1848,6 +2199,9 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return ListSchedulesWithOptions(request, headers, runtime);
         }
 
+        /**
+         * 获取触达计划列表。
+         */
         public async Task<ListSchedulesResponse> ListSchedulesAsync(ListSchedulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2029,6 +2383,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<ListSignaturesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * 获取模板列表
+        默认返回所有模板信息
+         */
         public ListTemplatesResponse ListTemplates(ListTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2036,6 +2394,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return ListTemplatesWithOptions(request, headers, runtime);
         }
 
+        /**
+         * 获取模板列表
+        默认返回所有模板信息
+         */
         public async Task<ListTemplatesResponse> ListTemplatesAsync(ListTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2139,6 +2501,9 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<ListTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * 获取训练任务列表
+         */
         public ListTrainingJobsResponse ListTrainingJobs(ListTrainingJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2146,6 +2511,9 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return ListTrainingJobsWithOptions(request, headers, runtime);
         }
 
+        /**
+         * 获取训练任务列表
+         */
         public async Task<ListTrainingJobsResponse> ListTrainingJobsAsync(ListTrainingJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2241,6 +2609,9 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<ListTrainingJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * 发送短信
+         */
         public SendMessageResponse SendMessage(SendMessageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2248,6 +2619,9 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return SendMessageWithOptions(request, headers, runtime);
         }
 
+        /**
+         * 发送短信
+         */
         public async Task<SendMessageResponse> SendMessageAsync(SendMessageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

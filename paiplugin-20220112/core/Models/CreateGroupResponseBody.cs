@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
-            [NameInMap("InferenceJob")]
+            [NameInMap("InferenceJobId")]
             [Validation(Required=false)]
-            public string InferenceJob { get; set; }
+            public string InferenceJobId { get; set; }
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
@@ -79,6 +79,13 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
+
+        /// <summary>
+        /// 请求ID
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

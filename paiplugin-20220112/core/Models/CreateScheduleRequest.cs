@@ -67,14 +67,28 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         public int? RepeatTimes { get; set; }
 
         /// <summary>
-        /// 签名Id。
+        /// 签名。
+        /// </summary>
+        [NameInMap("SignName")]
+        [Validation(Required=false)]
+        public string SignName { get; set; }
+
+        /// <summary>
+        /// 签名Id，或指定签名。
         /// </summary>
         [NameInMap("SignatureId")]
         [Validation(Required=false)]
         public string SignatureId { get; set; }
 
         /// <summary>
-        /// 模板Id。
+        /// 模板Code。
+        /// </summary>
+        [NameInMap("TemplateCode")]
+        [Validation(Required=false)]
+        public string TemplateCode { get; set; }
+
+        /// <summary>
+        /// 模板Id，或指定模板Code。
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

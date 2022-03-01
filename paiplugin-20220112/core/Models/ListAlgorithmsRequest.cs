@@ -8,34 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
 {
-    public class CreateTrainingJobRequest : TeaModel {
+    public class ListAlgorithmsRequest : TeaModel {
         /// <summary>
-        /// 关联算法Id。
+        /// 算法Id过滤。
         /// </summary>
-        [NameInMap("Algorithm")]
+        [NameInMap("Id")]
         [Validation(Required=false)]
-        public string Algorithm { get; set; }
+        public string Id { get; set; }
 
         /// <summary>
-        /// 训练任务名称。
+        /// 算法名称过滤。
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// 备注。
+        /// 分页数，从1开始，默认为1。
         /// </summary>
-        [NameInMap("Remark")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string Remark { get; set; }
+        public int? PageNumber { get; set; }
 
         /// <summary>
-        /// 用户配置。
+        /// 分页大小，默认为10。
         /// </summary>
-        [NameInMap("UserConfig")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string UserConfig { get; set; }
+        public int? PageSize { get; set; }
 
     }
 

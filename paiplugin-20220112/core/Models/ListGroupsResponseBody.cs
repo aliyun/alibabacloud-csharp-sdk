@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
                 public string CreatedTime { get; set; }
                 public string Filter { get; set; }
                 public string Id { get; set; }
-                public string InferenceJob { get; set; }
+                public string InferenceJobId { get; set; }
                 public string Name { get; set; }
                 public string Project { get; set; }
                 public string Remark { get; set; }
@@ -61,6 +61,13 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
+
+        /// <summary>
+        /// 请求ID
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

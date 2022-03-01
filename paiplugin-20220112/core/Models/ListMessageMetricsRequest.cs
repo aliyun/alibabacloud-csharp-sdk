@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
 {
     public class ListMessageMetricsRequest : TeaModel {
         /// <summary>
-        /// 结束日期
+        /// 结束日期，格式20220102。
         /// </summary>
         [NameInMap("EndDate")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// 开始日期
+        /// 开始日期，格式20220102。
         /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]

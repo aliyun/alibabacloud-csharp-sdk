@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
 {
     public class ListTrainingJobsRequest : TeaModel {
         /// <summary>
-        /// 训练任务名称过滤，使用%name%模糊匹配
+        /// 训练任务名称过滤。
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// 训练任务备注过滤，使用%name%模糊匹配
+        /// 训练任务备注过滤。
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
@@ -39,6 +39,11 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
 
         /// <summary>
         /// 训练任务状态过滤
+        /// - 0: 队列中。
+        /// - 1: 已提交。
+        /// - 2: 运行中。
+        /// - 3: 成功。
+        /// - 4: 失败。
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

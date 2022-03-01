@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
 {
     public class ListTemplatesRequest : TeaModel {
         /// <summary>
-        /// 内容类型过滤，使用%content%模糊匹配
+        /// 内容类型过滤。
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// 模板名称过滤，使用%name%模糊匹配
+        /// 模板名称过滤。
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// 审核状态过滤
+        /// 审核状态过滤。
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public int? Status { get; set; }
 
         /// <summary>
-        /// 模板类型过滤
+        /// 模板类型过滤。
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

@@ -43,12 +43,18 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
             [NameInMap("RepeatTimes")]
             [Validation(Required=false)]
             public int? RepeatTimes { get; set; }
+            [NameInMap("SignName")]
+            [Validation(Required=false)]
+            public string SignName { get; set; }
             [NameInMap("SignatureId")]
             [Validation(Required=false)]
             public string SignatureId { get; set; }
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
+            [NameInMap("TemplateCode")]
+            [Validation(Required=false)]
+            public string TemplateCode { get; set; }
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
             public string TemplateId { get; set; }
@@ -70,6 +76,13 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
+
+        /// <summary>
+        /// 请求ID
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

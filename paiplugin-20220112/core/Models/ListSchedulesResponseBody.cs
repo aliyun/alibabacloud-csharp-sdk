@@ -35,8 +35,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
                 public int? RepeatCycle { get; set; }
                 public int? RepeatCycleUnit { get; set; }
                 public int? RepeatTimes { get; set; }
+                public string SignName { get; set; }
                 public string SignatureId { get; set; }
                 public int? Status { get; set; }
+                public string TemplateCode { get; set; }
                 public string TemplateId { get; set; }
                 public string UpdatedTime { get; set; }
             }
@@ -58,6 +60,13 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
+
+        /// <summary>
+        /// 请求ID
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

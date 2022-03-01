@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
 {
     public class CreateGroupRequest : TeaModel {
         /// <summary>
-        /// 算法名称
+        /// 算法
         /// </summary>
         [NameInMap("Algorithm")]
         [Validation(Required=false)]
@@ -34,11 +34,11 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// 推理任务
+        /// 预测任务Id
         /// </summary>
-        [NameInMap("InferenceJob")]
+        [NameInMap("InferenceJobId")]
         [Validation(Required=false)]
-        public string InferenceJob { get; set; }
+        public string InferenceJobId { get; set; }
 
         /// <summary>
         /// 人群名称
