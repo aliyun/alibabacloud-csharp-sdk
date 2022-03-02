@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class CreateUserRequest : TeaModel {
+        [NameInMap("DisplayId")]
+        [Validation(Required=false)]
+        public string DisplayId { get; set; }
+
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }

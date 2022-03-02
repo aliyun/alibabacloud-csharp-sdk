@@ -90,6 +90,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? EventTime { get; set; }
                 }
                 public string FlowId { get; set; }
+                public string FlowType { get; set; }
             }
             [NameInMap("QueueEvents")]
             [Validation(Required=false)]

@@ -8,30 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
-    public class ModifyUserRequest : TeaModel {
-        [NameInMap("DisplayId")]
+    public class ListAgentSummaryReportsSinceMidnightRequest : TeaModel {
+        [NameInMap("AgentIds")]
         [Validation(Required=false)]
-        public string DisplayId { get; set; }
+        public string AgentIds { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("Mobile")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string Mobile { get; set; }
+        public int? PageNumber { get; set; }
 
-        [NameInMap("RoleId")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string RoleId { get; set; }
+        public int? PageSize { get; set; }
 
-        [NameInMap("UserId")]
+        [NameInMap("SkillGroupId")]
         [Validation(Required=false)]
-        public string UserId { get; set; }
-
-        [NameInMap("WorkMode")]
-        [Validation(Required=false)]
-        public string WorkMode { get; set; }
+        public string SkillGroupId { get; set; }
 
     }
 

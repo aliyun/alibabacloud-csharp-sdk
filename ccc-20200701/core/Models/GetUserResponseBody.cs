@@ -26,6 +26,9 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [NameInMap("DeviceState")]
             [Validation(Required=false)]
             public string DeviceState { get; set; }
+            [NameInMap("DisplayId")]
+            [Validation(Required=false)]
+            public string DisplayId { get; set; }
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
