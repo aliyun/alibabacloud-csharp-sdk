@@ -42,7 +42,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         /// 0：验证码。
         /// 1：短信通知。
         /// 2：推广短信。
-        /// 3：国际/港澳台消息。
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

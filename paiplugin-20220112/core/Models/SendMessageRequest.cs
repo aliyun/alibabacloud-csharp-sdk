@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
 {
     public class SendMessageRequest : TeaModel {
         /// <summary>
-        /// 人群ID，用于关联人群。
+        /// 人群Id，用于关联人群。
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         public List<string> PhoneNumbers { get; set; }
 
         /// <summary>
-        /// 发送计划ID，用于关联发送计划。
+        /// 发送计划Id，用于关联发送计划。
         /// </summary>
         [NameInMap("ScheduleId")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         public string SignName { get; set; }
 
         /// <summary>
-        /// 签名ID，同时只能指定签名名称或签名ID其中之一。
+        /// 签名Id，同时只能指定签名名称或签名Id其中之一。
         /// </summary>
         [NameInMap("SignatureId")]
         [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         public string TemplateCode { get; set; }
 
         /// <summary>
-        /// 模板ID，同时只能指定模板Code或模板ID其中之一。
+        /// 模板Id，同时只能指定模板Code或模板Id其中之一。
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

@@ -40,6 +40,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 注册人群
         
+         * @tags 人群
          */
         public CreateGroupResponse CreateGroup(CreateGroupRequest request)
         {
@@ -51,6 +52,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 注册人群
         
+         * @tags 人群
          */
         public async Task<CreateGroupResponse> CreateGroupAsync(CreateGroupRequest request)
         {
@@ -198,6 +200,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 注册推理任务
         
+         * @tags 推理任务
          */
         public CreateInferenceJobResponse CreateInferenceJob(CreateInferenceJobRequest request)
         {
@@ -209,6 +212,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 注册推理任务
         
+         * @tags 推理任务
          */
         public async Task<CreateInferenceJobResponse> CreateInferenceJobAsync(CreateInferenceJobRequest request)
         {
@@ -308,6 +312,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 注册触达计划
         
+         * @tags 触达计划
          */
         public CreateScheduleResponse CreateSchedule(CreateScheduleRequest request)
         {
@@ -319,6 +324,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 注册触达计划
         
+         * @tags 触达计划
          */
         public async Task<CreateScheduleResponse> CreateScheduleAsync(CreateScheduleRequest request)
         {
@@ -466,6 +472,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 注册签名。
         
+         * @tags 签名
          */
         public CreateSignatureResponse CreateSignature(CreateSignatureRequest request)
         {
@@ -477,6 +484,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 注册签名。
         
+         * @tags 签名
          */
         public async Task<CreateSignatureResponse> CreateSignatureAsync(CreateSignatureRequest request)
         {
@@ -552,6 +560,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 注册模板
         
+         * @tags 模板
          */
         public CreateTemplateResponse CreateTemplate(CreateTemplateRequest request)
         {
@@ -563,6 +572,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 注册模板
         
+         * @tags 模板
          */
         public async Task<CreateTemplateResponse> CreateTemplateAsync(CreateTemplateRequest request)
         {
@@ -662,6 +672,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 注册训练任务
         
+         * @tags 训练任务
          */
         public CreateTrainingJobResponse CreateTrainingJob(CreateTrainingJobRequest request)
         {
@@ -673,6 +684,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 注册训练任务
         
+         * @tags 训练任务
          */
         public async Task<CreateTrainingJobResponse> CreateTrainingJobAsync(CreateTrainingJobRequest request)
         {
@@ -764,6 +776,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 删除人群
         
+         * @tags 人群
          */
         public DeleteGroupResponse DeleteGroup(string Id)
         {
@@ -775,6 +788,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 删除人群
         
+         * @tags 人群
          */
         public async Task<DeleteGroupResponse> DeleteGroupAsync(string Id)
         {
@@ -830,6 +844,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 删除推理任务
         
+         * @tags 推理任务
          */
         public DeleteInferenceJobResponse DeleteInferenceJob(string Id)
         {
@@ -841,6 +856,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 删除推理任务
         
+         * @tags 推理任务
          */
         public async Task<DeleteInferenceJobResponse> DeleteInferenceJobAsync(string Id)
         {
@@ -896,6 +912,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 删除触达计划
         
+         * @tags 触达计划
          */
         public DeleteScheduleResponse DeleteSchedule(string Id)
         {
@@ -907,6 +924,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 删除触达计划
         
+         * @tags 触达计划
          */
         public async Task<DeleteScheduleResponse> DeleteScheduleAsync(string Id)
         {
@@ -962,6 +980,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 删除签名。
         
+         * @tags 签名
          */
         public DeleteSignatureResponse DeleteSignature(string Id)
         {
@@ -973,6 +992,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 删除签名。
         
+         * @tags 签名
          */
         public async Task<DeleteSignatureResponse> DeleteSignatureAsync(string Id)
         {
@@ -1028,6 +1048,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 删除模板
         
+         * @tags 模板
          */
         public DeleteTemplateResponse DeleteTemplate(string Id)
         {
@@ -1039,6 +1060,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 删除模板
         
+         * @tags 模板
          */
         public async Task<DeleteTemplateResponse> DeleteTemplateAsync(string Id)
         {
@@ -1094,6 +1116,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 删除训练任务
         
+         * @tags 训练任务
          */
         public DeleteTrainingJobResponse DeleteTrainingJob(string Id)
         {
@@ -1105,6 +1128,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 删除训练任务
         
+         * @tags 训练任务
          */
         public async Task<DeleteTrainingJobResponse> DeleteTrainingJobAsync(string Id)
         {
@@ -1159,6 +1183,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         /**
          * 获取算法详情
+         * @tags 算法
          */
         public GetAlgorithmResponse GetAlgorithm(string Id)
         {
@@ -1169,6 +1194,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         /**
          * 获取算法详情
+         * @tags 算法
          */
         public async Task<GetAlgorithmResponse> GetAlgorithmAsync(string Id)
         {
@@ -1224,6 +1250,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 获取人群
         默认返回所有人群信息
+         * @tags 人群
          */
         public GetGroupResponse GetGroup(string Id)
         {
@@ -1235,6 +1262,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 获取人群
         默认返回所有人群信息
+         * @tags 人群
          */
         public async Task<GetGroupResponse> GetGroupAsync(string Id)
         {
@@ -1290,6 +1318,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 获取推理任务
         默认返回所有推理任务信息
+         * @tags 推理任务
          */
         public GetInferenceJobResponse GetInferenceJob(string Id)
         {
@@ -1301,6 +1330,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 获取推理任务
         默认返回所有推理任务信息
+         * @tags 推理任务
          */
         public async Task<GetInferenceJobResponse> GetInferenceJobAsync(string Id)
         {
@@ -1356,6 +1386,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 获取触达计划详情。
         
+         * @tags 触达计划
          */
         public GetScheduleResponse GetSchedule(string Id)
         {
@@ -1367,6 +1398,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 获取触达计划详情。
         
+         * @tags 触达计划
          */
         public async Task<GetScheduleResponse> GetScheduleAsync(string Id)
         {
@@ -1421,6 +1453,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         /**
          * 获取签名详情
+         * @tags 签名
          */
         public GetSignatureResponse GetSignature(string Id)
         {
@@ -1431,6 +1464,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         /**
          * 获取签名详情
+         * @tags 签名
          */
         public async Task<GetSignatureResponse> GetSignatureAsync(string Id)
         {
@@ -1487,6 +1521,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
          * 获取模板
         默认返回所有模板信息
         ![模板列表](https://intranetproxy.alipay.com/skylark/lark/0/2021/png/302991/1615264998427-d2943cfb-106a-421d-b4a4-f06307b4d9be.png)
+         * @tags 模板
          */
         public GetTemplateResponse GetTemplate(string Id)
         {
@@ -1499,6 +1534,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
          * 获取模板
         默认返回所有模板信息
         ![模板列表](https://intranetproxy.alipay.com/skylark/lark/0/2021/png/302991/1615264998427-d2943cfb-106a-421d-b4a4-f06307b4d9be.png)
+         * @tags 模板
          */
         public async Task<GetTemplateResponse> GetTemplateAsync(string Id)
         {
@@ -1554,6 +1590,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 获取训练任务
         默认返回所有训练任务信息
+         * @tags 训练任务
          */
         public GetTrainingJobResponse GetTrainingJob(string Id)
         {
@@ -1565,6 +1602,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 获取训练任务
         默认返回所有训练任务信息
+         * @tags 训练任务
          */
         public async Task<GetTrainingJobResponse> GetTrainingJobAsync(string Id)
         {
@@ -1619,6 +1657,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         /**
          * 获取算法列表
+         * @tags 算法
          */
         public ListAlgorithmsResponse ListAlgorithms(ListAlgorithmsRequest request)
         {
@@ -1629,6 +1668,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         /**
          * 获取算法列表
+         * @tags 算法
          */
         public async Task<ListAlgorithmsResponse> ListAlgorithmsAsync(ListAlgorithmsRequest request)
         {
@@ -1719,6 +1759,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         /**
          * 获取人群列表
+         * @tags 人群
          */
         public ListGroupsResponse ListGroups(ListGroupsRequest request)
         {
@@ -1729,6 +1770,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         /**
          * 获取人群列表
+         * @tags 人群
          */
         public async Task<ListGroupsResponse> ListGroupsAsync(ListGroupsRequest request)
         {
@@ -1835,6 +1877,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         /**
          * 获取推理任务列表
+         * @tags 推理任务
          */
         public ListInferenceJobsResponse ListInferenceJobs(ListInferenceJobsRequest request)
         {
@@ -1845,6 +1888,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         /**
          * 获取推理任务列表
+         * @tags 推理任务
          */
         public async Task<ListInferenceJobsResponse> ListInferenceJobsAsync(ListInferenceJobsRequest request)
         {
@@ -1943,6 +1987,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         /**
          * 获取用户短信发送统计
+         * @tags 短信
          */
         public ListMessageMetricsResponse ListMessageMetrics(ListMessageMetricsRequest request)
         {
@@ -1953,6 +1998,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         /**
          * 获取用户短信发送统计
+         * @tags 短信
          */
         public async Task<ListMessageMetricsResponse> ListMessageMetricsAsync(ListMessageMetricsRequest request)
         {
@@ -1969,6 +2015,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             {
                 query["EndDate"] = request.EndDate;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -1977,9 +2027,29 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleId))
+            {
+                query["ScheduleId"] = request.ScheduleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Signature))
+            {
+                query["Signature"] = request.Signature;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignatureId))
+            {
+                query["SignatureId"] = request.SignatureId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
             {
                 query["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
+            {
+                query["TemplateCode"] = request.TemplateCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2009,6 +2079,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             {
                 query["EndDate"] = request.EndDate;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -2017,9 +2091,29 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleId))
+            {
+                query["ScheduleId"] = request.ScheduleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Signature))
+            {
+                query["Signature"] = request.Signature;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignatureId))
+            {
+                query["SignatureId"] = request.SignatureId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
             {
                 query["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
+            {
+                query["TemplateCode"] = request.TemplateCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2043,6 +2137,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         /**
          * 查询短信发送详情
+         * @tags 短信
          */
         public ListMessagesResponse ListMessages(ListMessagesRequest request)
         {
@@ -2053,6 +2148,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         /**
          * 查询短信发送详情
+         * @tags 短信
          */
         public async Task<ListMessagesResponse> ListMessagesAsync(ListMessagesRequest request)
         {
@@ -2101,9 +2197,21 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             {
                 query["Signature"] = request.Signature;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignatureId))
+            {
+                query["SignatureId"] = request.SignatureId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
             {
                 query["TemplateCode"] = request.TemplateCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2165,9 +2273,21 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             {
                 query["Signature"] = request.Signature;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignatureId))
+            {
+                query["SignatureId"] = request.SignatureId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
             {
                 query["TemplateCode"] = request.TemplateCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2191,6 +2311,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         /**
          * 获取触达计划列表。
+         * @tags 触达计划
          */
         public ListSchedulesResponse ListSchedules(ListSchedulesRequest request)
         {
@@ -2201,6 +2322,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         /**
          * 获取触达计划列表。
+         * @tags 触达计划
          */
         public async Task<ListSchedulesResponse> ListSchedulesAsync(ListSchedulesRequest request)
         {
@@ -2289,6 +2411,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<ListSchedulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * 获取签名列表
+         * @tags 签名
+         */
         public ListSignaturesResponse ListSignatures(ListSignaturesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2296,6 +2422,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return ListSignaturesWithOptions(request, headers, runtime);
         }
 
+        /**
+         * 获取签名列表
+         * @tags 签名
+         */
         public async Task<ListSignaturesResponse> ListSignaturesAsync(ListSignaturesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2386,6 +2516,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 获取模板列表
         默认返回所有模板信息
+         * @tags 模板
          */
         public ListTemplatesResponse ListTemplates(ListTemplatesRequest request)
         {
@@ -2397,6 +2528,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 获取模板列表
         默认返回所有模板信息
+         * @tags 模板
          */
         public async Task<ListTemplatesResponse> ListTemplatesAsync(ListTemplatesRequest request)
         {
@@ -2503,6 +2635,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         /**
          * 获取训练任务列表
+         * @tags 训练任务
          */
         public ListTrainingJobsResponse ListTrainingJobs(ListTrainingJobsRequest request)
         {
@@ -2513,6 +2646,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         /**
          * 获取训练任务列表
+         * @tags 训练任务
          */
         public async Task<ListTrainingJobsResponse> ListTrainingJobsAsync(ListTrainingJobsRequest request)
         {
@@ -2611,6 +2745,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         /**
          * 发送短信
+         * @tags 短信
          */
         public SendMessageResponse SendMessage(SendMessageRequest request)
         {
@@ -2621,6 +2756,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         /**
          * 发送短信
+         * @tags 短信
          */
         public async Task<SendMessageResponse> SendMessageAsync(SendMessageRequest request)
         {

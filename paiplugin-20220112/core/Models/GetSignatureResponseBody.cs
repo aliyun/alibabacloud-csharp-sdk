@@ -40,21 +40,21 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         };
 
         /// <summary>
-        /// 错误码
+        /// 错误码。
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public int? ErrorCode { get; set; }
 
         /// <summary>
-        /// 错误信息
+        /// 错误信息。
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// 请求ID
+        /// 请求ID。
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

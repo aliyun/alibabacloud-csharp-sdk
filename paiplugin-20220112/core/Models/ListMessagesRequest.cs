@@ -73,11 +73,35 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         public string Signature { get; set; }
 
         /// <summary>
+        /// 签名Id，同时只能指定签名名称或签名Id其中之一。
+        /// </summary>
+        [NameInMap("SignatureId")]
+        [Validation(Required=false)]
+        public string SignatureId { get; set; }
+
+        /// <summary>
+        /// 短信发送状态。
+        /// - 0 : 发送中。
+        /// - 1 : 发送成功。
+        /// - 2 : 发送失败。
+        /// </summary>
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public int? Status { get; set; }
+
+        /// <summary>
         /// 模板号。
         /// </summary>
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]
         public string TemplateCode { get; set; }
+
+        /// <summary>
+        /// 模板Id，同时只能指定模板Code或模板Id其中之一。
+        /// </summary>
+        [NameInMap("TemplateId")]
+        [Validation(Required=false)]
+        public string TemplateId { get; set; }
 
     }
 
