@@ -169,6 +169,100 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await AddDataForApiSourceWithOptionsAsync(request, runtime);
         }
 
+        public BatchAddDataForApiSourceResponse BatchAddDataForApiSourceWithOptions(BatchAddDataForApiSourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchAddDataForApiSourceShrinkRequest request = new BatchAddDataForApiSourceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ContentList))
+            {
+                request.ContentListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ContentList, "ContentList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            {
+                query["ApiId"] = request.ApiId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentListShrink))
+            {
+                query["ContentList"] = request.ContentListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchAddDataForApiSource",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchAddDataForApiSourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<BatchAddDataForApiSourceResponse> BatchAddDataForApiSourceWithOptionsAsync(BatchAddDataForApiSourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchAddDataForApiSourceShrinkRequest request = new BatchAddDataForApiSourceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ContentList))
+            {
+                request.ContentListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ContentList, "ContentList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            {
+                query["ApiId"] = request.ApiId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentListShrink))
+            {
+                query["ContentList"] = request.ContentListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchAddDataForApiSource",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchAddDataForApiSourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public BatchAddDataForApiSourceResponse BatchAddDataForApiSource(BatchAddDataForApiSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchAddDataForApiSourceWithOptions(request, runtime);
+        }
+
+        public async Task<BatchAddDataForApiSourceResponse> BatchAddDataForApiSourceAsync(BatchAddDataForApiSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchAddDataForApiSourceWithOptionsAsync(request, runtime);
+        }
+
         public BatchAddDeviceGroupRelationsResponse BatchAddDeviceGroupRelationsWithOptions(BatchAddDeviceGroupRelationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -434,9 +528,22 @@ namespace AlibabaCloud.SDK.Iot20180120
         public BatchBindDevicesIntoProjectResponse BatchBindDevicesIntoProjectWithOptions(BatchBindDevicesIntoProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Devices))
+            {
+                body["Devices"] = request.Devices;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.Devices,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -456,9 +563,22 @@ namespace AlibabaCloud.SDK.Iot20180120
         public async Task<BatchBindDevicesIntoProjectResponse> BatchBindDevicesIntoProjectWithOptionsAsync(BatchBindDevicesIntoProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Devices))
+            {
+                body["Devices"] = request.Devices;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.Devices,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -490,9 +610,22 @@ namespace AlibabaCloud.SDK.Iot20180120
         public BatchBindProductsIntoProjectResponse BatchBindProductsIntoProjectWithOptions(BatchBindProductsIntoProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKeys))
+            {
+                body["ProductKeys"] = request.ProductKeys;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.IotInstanceId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -512,9 +645,22 @@ namespace AlibabaCloud.SDK.Iot20180120
         public async Task<BatchBindProductsIntoProjectResponse> BatchBindProductsIntoProjectWithOptionsAsync(BatchBindProductsIntoProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKeys))
+            {
+                body["ProductKeys"] = request.ProductKeys;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.IotInstanceId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2168,9 +2314,22 @@ namespace AlibabaCloud.SDK.Iot20180120
         public BatchUnbindProjectDevicesResponse BatchUnbindProjectDevicesWithOptions(BatchUnbindProjectDevicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Devices))
+            {
+                body["Devices"] = request.Devices;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.Devices,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2190,9 +2349,22 @@ namespace AlibabaCloud.SDK.Iot20180120
         public async Task<BatchUnbindProjectDevicesResponse> BatchUnbindProjectDevicesWithOptionsAsync(BatchUnbindProjectDevicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Devices))
+            {
+                body["Devices"] = request.Devices;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.Devices,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2224,9 +2396,22 @@ namespace AlibabaCloud.SDK.Iot20180120
         public BatchUnbindProjectProductsResponse BatchUnbindProjectProductsWithOptions(BatchUnbindProjectProductsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKeys))
+            {
+                body["ProductKeys"] = request.ProductKeys;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.IotInstanceId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2246,9 +2431,22 @@ namespace AlibabaCloud.SDK.Iot20180120
         public async Task<BatchUnbindProjectProductsResponse> BatchUnbindProjectProductsWithOptionsAsync(BatchUnbindProjectProductsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKeys))
+            {
+                body["ProductKeys"] = request.ProductKeys;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.IotInstanceId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3325,6 +3523,80 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await ClearEdgeInstanceDriverConfigsWithOptionsAsync(request, runtime);
         }
 
+        public CloseDeviceTunnelResponse CloseDeviceTunnelWithOptions(CloseDeviceTunnelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TunnelId))
+            {
+                query["TunnelId"] = request.TunnelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CloseDeviceTunnel",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CloseDeviceTunnelResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CloseDeviceTunnelResponse> CloseDeviceTunnelWithOptionsAsync(CloseDeviceTunnelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TunnelId))
+            {
+                query["TunnelId"] = request.TunnelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CloseDeviceTunnel",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CloseDeviceTunnelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CloseDeviceTunnelResponse CloseDeviceTunnel(CloseDeviceTunnelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CloseDeviceTunnelWithOptions(request, runtime);
+        }
+
+        public async Task<CloseDeviceTunnelResponse> CloseDeviceTunnelAsync(CloseDeviceTunnelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CloseDeviceTunnelWithOptionsAsync(request, runtime);
+        }
+
         public CloseEdgeInstanceDeploymentResponse CloseEdgeInstanceDeploymentWithOptions(CloseEdgeInstanceDeploymentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3730,9 +4002,42 @@ namespace AlibabaCloud.SDK.Iot20180120
         public CreateDataAPIServiceResponse CreateDataAPIServiceWithOptions(CreateDataAPIServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiPath))
+            {
+                body["ApiPath"] = request.ApiPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Desc))
+            {
+                body["Desc"] = request.Desc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                body["DisplayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginSql))
+            {
+                body["OriginSql"] = request.OriginSql;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestParam))
+            {
+                body["RequestParam"] = request.RequestParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseParam))
+            {
+                body["ResponseParam"] = request.ResponseParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateSql))
+            {
+                body["TemplateSql"] = request.TemplateSql;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.ApiPath,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3752,9 +4057,42 @@ namespace AlibabaCloud.SDK.Iot20180120
         public async Task<CreateDataAPIServiceResponse> CreateDataAPIServiceWithOptionsAsync(CreateDataAPIServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiPath))
+            {
+                body["ApiPath"] = request.ApiPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Desc))
+            {
+                body["Desc"] = request.Desc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                body["DisplayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginSql))
+            {
+                body["OriginSql"] = request.OriginSql;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestParam))
+            {
+                body["RequestParam"] = request.RequestParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseParam))
+            {
+                body["ResponseParam"] = request.ResponseParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateSql))
+            {
+                body["TemplateSql"] = request.TemplateSql;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.ApiPath,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3786,9 +4124,38 @@ namespace AlibabaCloud.SDK.Iot20180120
         public CreateDeviceDistributeJobResponse CreateDeviceDistributeJobWithOptions(CreateDeviceDistributeJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                body["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                body["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceInstanceId))
+            {
+                body["SourceInstanceId"] = request.SourceInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Strategy))
+            {
+                body["Strategy"] = request.Strategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetAliyunId))
+            {
+                body["TargetAliyunId"] = request.TargetAliyunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetInstanceConfig))
+            {
+                body["TargetInstanceConfig"] = request.TargetInstanceConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetUid))
+            {
+                body["TargetUid"] = request.TargetUid;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.DeviceName,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3808,9 +4175,38 @@ namespace AlibabaCloud.SDK.Iot20180120
         public async Task<CreateDeviceDistributeJobResponse> CreateDeviceDistributeJobWithOptionsAsync(CreateDeviceDistributeJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                body["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                body["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceInstanceId))
+            {
+                body["SourceInstanceId"] = request.SourceInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Strategy))
+            {
+                body["Strategy"] = request.Strategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetAliyunId))
+            {
+                body["TargetAliyunId"] = request.TargetAliyunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetInstanceConfig))
+            {
+                body["TargetInstanceConfig"] = request.TargetInstanceConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetUid))
+            {
+                body["TargetUid"] = request.TargetUid;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.DeviceName,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3837,6 +4233,96 @@ namespace AlibabaCloud.SDK.Iot20180120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDeviceDistributeJobWithOptionsAsync(request, runtime);
+        }
+
+        public CreateDeviceDynamicGroupResponse CreateDeviceDynamicGroupWithOptions(CreateDeviceDynamicGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DynamicGroupExpression))
+            {
+                query["DynamicGroupExpression"] = request.DynamicGroupExpression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupDesc))
+            {
+                query["GroupDesc"] = request.GroupDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
+            {
+                query["GroupName"] = request.GroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDeviceDynamicGroup",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDeviceDynamicGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateDeviceDynamicGroupResponse> CreateDeviceDynamicGroupWithOptionsAsync(CreateDeviceDynamicGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DynamicGroupExpression))
+            {
+                query["DynamicGroupExpression"] = request.DynamicGroupExpression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupDesc))
+            {
+                query["GroupDesc"] = request.GroupDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
+            {
+                query["GroupName"] = request.GroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDeviceDynamicGroup",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDeviceDynamicGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateDeviceDynamicGroupResponse CreateDeviceDynamicGroup(CreateDeviceDynamicGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDeviceDynamicGroupWithOptions(request, runtime);
+        }
+
+        public async Task<CreateDeviceDynamicGroupResponse> CreateDeviceDynamicGroupAsync(CreateDeviceDynamicGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDeviceDynamicGroupWithOptionsAsync(request, runtime);
         }
 
         public CreateDeviceGroupResponse CreateDeviceGroupWithOptions(CreateDeviceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3927,6 +4413,112 @@ namespace AlibabaCloud.SDK.Iot20180120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDeviceGroupWithOptionsAsync(request, runtime);
+        }
+
+        public CreateDeviceTunnelResponse CreateDeviceTunnelWithOptions(CreateDeviceTunnelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                query["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotId))
+            {
+                query["IotId"] = request.IotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                query["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Udi))
+            {
+                query["Udi"] = request.Udi;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDeviceTunnel",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDeviceTunnelResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateDeviceTunnelResponse> CreateDeviceTunnelWithOptionsAsync(CreateDeviceTunnelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                query["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotId))
+            {
+                query["IotId"] = request.IotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                query["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Udi))
+            {
+                query["Udi"] = request.Udi;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDeviceTunnel",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDeviceTunnelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateDeviceTunnelResponse CreateDeviceTunnel(CreateDeviceTunnelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDeviceTunnelWithOptions(request, runtime);
+        }
+
+        public async Task<CreateDeviceTunnelResponse> CreateDeviceTunnelAsync(CreateDeviceTunnelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDeviceTunnelWithOptionsAsync(request, runtime);
         }
 
         public CreateEdgeDriverResponse CreateEdgeDriverWithOptions(CreateEdgeDriverRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4679,9 +5271,27 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await CreateEdgeOssPreSignedAddressWithOptionsAsync(request, runtime);
         }
 
-        public CreateJobResponse CreateJobWithOptions(CreateJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateJobResponse CreateJobWithOptions(CreateJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateJobShrinkRequest request = new CreateJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.JobFile))
+            {
+                request.JobFileShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JobFile, "JobFile", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RolloutConfig))
+            {
+                request.RolloutConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RolloutConfig, "RolloutConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TargetConfig))
+            {
+                request.TargetConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TargetConfig, "TargetConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TimeoutConfig))
+            {
+                request.TimeoutConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TimeoutConfig, "TimeoutConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -4695,29 +5305,29 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["JobDocument"] = request.JobDocument;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobFile))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobFileShrink))
             {
-                query["JobFile"] = request.JobFile;
+                query["JobFile"] = request.JobFileShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
             {
                 query["JobName"] = request.JobName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RolloutConfig))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RolloutConfigShrink))
             {
-                query["RolloutConfig"] = request.RolloutConfig;
+                query["RolloutConfig"] = request.RolloutConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduledTime))
             {
                 query["ScheduledTime"] = request.ScheduledTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetConfig))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetConfigShrink))
             {
-                query["TargetConfig"] = request.TargetConfig;
+                query["TargetConfig"] = request.TargetConfigShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeoutConfig))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeoutConfigShrink))
             {
-                query["TimeoutConfig"] = request.TimeoutConfig;
+                query["TimeoutConfig"] = request.TimeoutConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
@@ -4742,9 +5352,27 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<CreateJobResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CreateJobResponse> CreateJobWithOptionsAsync(CreateJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateJobResponse> CreateJobWithOptionsAsync(CreateJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateJobShrinkRequest request = new CreateJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.JobFile))
+            {
+                request.JobFileShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JobFile, "JobFile", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RolloutConfig))
+            {
+                request.RolloutConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RolloutConfig, "RolloutConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TargetConfig))
+            {
+                request.TargetConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TargetConfig, "TargetConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TimeoutConfig))
+            {
+                request.TimeoutConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TimeoutConfig, "TimeoutConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -4758,29 +5386,29 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["JobDocument"] = request.JobDocument;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobFile))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobFileShrink))
             {
-                query["JobFile"] = request.JobFile;
+                query["JobFile"] = request.JobFileShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
             {
                 query["JobName"] = request.JobName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RolloutConfig))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RolloutConfigShrink))
             {
-                query["RolloutConfig"] = request.RolloutConfig;
+                query["RolloutConfig"] = request.RolloutConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduledTime))
             {
                 query["ScheduledTime"] = request.ScheduledTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetConfig))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetConfigShrink))
             {
-                query["TargetConfig"] = request.TargetConfig;
+                query["TargetConfig"] = request.TargetConfigShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeoutConfig))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeoutConfigShrink))
             {
-                query["TimeoutConfig"] = request.TimeoutConfig;
+                query["TimeoutConfig"] = request.TimeoutConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
@@ -4903,6 +5531,10 @@ namespace AlibabaCloud.SDK.Iot20180120
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownloadProtocol))
+            {
+                query["DownloadProtocol"] = request.DownloadProtocol;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DynamicMode))
             {
                 query["DynamicMode"] = request.DynamicMode;
@@ -4911,6 +5543,14 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["FirmwareId"] = request.FirmwareId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupType))
+            {
+                query["GroupType"] = request.GroupType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
             {
                 query["IotInstanceId"] = request.IotInstanceId;
@@ -4918,6 +5558,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaximumPerMinute))
             {
                 query["MaximumPerMinute"] = request.MaximumPerMinute;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiModuleMode))
+            {
+                query["MultiModuleMode"] = request.MultiModuleMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedConfirm))
             {
@@ -4978,6 +5622,10 @@ namespace AlibabaCloud.SDK.Iot20180120
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownloadProtocol))
+            {
+                query["DownloadProtocol"] = request.DownloadProtocol;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DynamicMode))
             {
                 query["DynamicMode"] = request.DynamicMode;
@@ -4986,6 +5634,14 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["FirmwareId"] = request.FirmwareId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupType))
+            {
+                query["GroupType"] = request.GroupType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
             {
                 query["IotInstanceId"] = request.IotInstanceId;
@@ -4993,6 +5649,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaximumPerMinute))
             {
                 query["MaximumPerMinute"] = request.MaximumPerMinute;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiModuleMode))
+            {
+                query["MultiModuleMode"] = request.MultiModuleMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedConfirm))
             {
@@ -5097,6 +5757,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["ModuleName"] = request.ModuleName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiFiles))
+            {
+                query["MultiFiles"] = request.MultiFiles;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedToVerify))
             {
                 query["NeedToVerify"] = request.NeedToVerify;
@@ -5175,6 +5839,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModuleName))
             {
                 query["ModuleName"] = request.ModuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiFiles))
+            {
+                query["MultiFiles"] = request.MultiFiles;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedToVerify))
             {
@@ -5337,6 +6005,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["DnListFileUrl"] = request.DnListFileUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownloadProtocol))
+            {
+                query["DownloadProtocol"] = request.DownloadProtocol;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirmwareId))
             {
                 query["FirmwareId"] = request.FirmwareId;
@@ -5345,6 +6017,14 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["GrayPercent"] = request.GrayPercent;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupType))
+            {
+                query["GroupType"] = request.GroupType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
             {
                 query["IotInstanceId"] = request.IotInstanceId;
@@ -5352,6 +6032,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaximumPerMinute))
             {
                 query["MaximumPerMinute"] = request.MaximumPerMinute;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiModuleMode))
+            {
+                query["MultiModuleMode"] = request.MultiModuleMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedConfirm))
             {
@@ -5432,6 +6116,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["DnListFileUrl"] = request.DnListFileUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownloadProtocol))
+            {
+                query["DownloadProtocol"] = request.DownloadProtocol;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirmwareId))
             {
                 query["FirmwareId"] = request.FirmwareId;
@@ -5440,6 +6128,14 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["GrayPercent"] = request.GrayPercent;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupType))
+            {
+                query["GroupType"] = request.GroupType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
             {
                 query["IotInstanceId"] = request.IotInstanceId;
@@ -5447,6 +6143,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaximumPerMinute))
             {
                 query["MaximumPerMinute"] = request.MaximumPerMinute;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiModuleMode))
+            {
+                query["MultiModuleMode"] = request.MultiModuleMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedConfirm))
             {
@@ -5535,6 +6235,10 @@ namespace AlibabaCloud.SDK.Iot20180120
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownloadProtocol))
+            {
+                query["DownloadProtocol"] = request.DownloadProtocol;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirmwareId))
             {
                 query["FirmwareId"] = request.FirmwareId;
@@ -5554,6 +6258,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
             {
                 query["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetDeviceName))
             {
@@ -5586,6 +6294,10 @@ namespace AlibabaCloud.SDK.Iot20180120
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownloadProtocol))
+            {
+                query["DownloadProtocol"] = request.DownloadProtocol;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirmwareId))
             {
                 query["FirmwareId"] = request.FirmwareId;
@@ -5605,6 +6317,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
             {
                 query["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetDeviceName))
             {
@@ -6345,88 +7061,6 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await CreateRuleActionWithOptionsAsync(request, runtime);
         }
 
-        public CreateRulengDistributeJobResponse CreateRulengDistributeJobWithOptions(CreateRulengDistributeJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
-            {
-                query["ProductKey"] = request.ProductKey;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceInstanceId))
-            {
-                query["SourceInstanceId"] = request.SourceInstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetInstanceId))
-            {
-                query["TargetInstanceId"] = request.TargetInstanceId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateRulengDistributeJob",
-                Version = "2018-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateRulengDistributeJobResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<CreateRulengDistributeJobResponse> CreateRulengDistributeJobWithOptionsAsync(CreateRulengDistributeJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
-            {
-                query["ProductKey"] = request.ProductKey;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceInstanceId))
-            {
-                query["SourceInstanceId"] = request.SourceInstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetInstanceId))
-            {
-                query["TargetInstanceId"] = request.TargetInstanceId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateRulengDistributeJob",
-                Version = "2018-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateRulengDistributeJobResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public CreateRulengDistributeJobResponse CreateRulengDistributeJob(CreateRulengDistributeJobRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return CreateRulengDistributeJobWithOptions(request, runtime);
-        }
-
-        public async Task<CreateRulengDistributeJobResponse> CreateRulengDistributeJobAsync(CreateRulengDistributeJobRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await CreateRulengDistributeJobWithOptionsAsync(request, runtime);
-        }
-
         public CreateSceneRuleResponse CreateSceneRuleWithOptions(CreateSceneRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6517,12 +7151,145 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await CreateSceneRuleWithOptionsAsync(request, runtime);
         }
 
-        public CreateSpeechResponse CreateSpeechWithOptions(CreateSpeechRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateSoundCodeResponse CreateSoundCodeWithOptions(CreateSoundCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
+            {
+                body["Duration"] = request.Duration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoundCodeContent))
+            {
+                body["SoundCodeContent"] = request.SoundCodeContent;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.BizCode,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSoundCode",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSoundCodeResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateSoundCodeResponse> CreateSoundCodeWithOptionsAsync(CreateSoundCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
+            {
+                body["Duration"] = request.Duration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoundCodeContent))
+            {
+                body["SoundCodeContent"] = request.SoundCodeContent;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSoundCode",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSoundCodeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateSoundCodeResponse CreateSoundCode(CreateSoundCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateSoundCodeWithOptions(request, runtime);
+        }
+
+        public async Task<CreateSoundCodeResponse> CreateSoundCodeAsync(CreateSoundCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateSoundCodeWithOptionsAsync(request, runtime);
+        }
+
+        public CreateSpeechResponse CreateSpeechWithOptions(CreateSpeechRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateSpeechShrinkRequest request = new CreateSpeechShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SoundCodeConfig))
+            {
+                request.SoundCodeConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SoundCodeConfig, "SoundCodeConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioFormat))
+            {
+                body["AudioFormat"] = request.AudioFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                body["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSoundCode))
+            {
+                body["EnableSoundCode"] = request.EnableSoundCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectCode))
+            {
+                body["ProjectCode"] = request.ProjectCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoundCodeConfigShrink))
+            {
+                body["SoundCodeConfig"] = request.SoundCodeConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechRate))
+            {
+                body["SpeechRate"] = request.SpeechRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechType))
+            {
+                body["SpeechType"] = request.SpeechType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
+            {
+                body["Text"] = request.Text;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Voice))
+            {
+                body["Voice"] = request.Voice;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Volume))
+            {
+                body["Volume"] = request.Volume;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6539,12 +7306,63 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<CreateSpeechResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CreateSpeechResponse> CreateSpeechWithOptionsAsync(CreateSpeechRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateSpeechResponse> CreateSpeechWithOptionsAsync(CreateSpeechRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateSpeechShrinkRequest request = new CreateSpeechShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SoundCodeConfig))
+            {
+                request.SoundCodeConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SoundCodeConfig, "SoundCodeConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioFormat))
+            {
+                body["AudioFormat"] = request.AudioFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                body["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSoundCode))
+            {
+                body["EnableSoundCode"] = request.EnableSoundCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectCode))
+            {
+                body["ProjectCode"] = request.ProjectCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoundCodeConfigShrink))
+            {
+                body["SoundCodeConfig"] = request.SoundCodeConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechRate))
+            {
+                body["SpeechRate"] = request.SpeechRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechType))
+            {
+                body["SpeechType"] = request.SpeechType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
+            {
+                body["Text"] = request.Text;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Voice))
+            {
+                body["Voice"] = request.Voice;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Volume))
+            {
+                body["Volume"] = request.Volume;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.BizCode,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6576,9 +7394,30 @@ namespace AlibabaCloud.SDK.Iot20180120
         public CreateStudioAppDomainOpenResponse CreateStudioAppDomainOpenWithOptions(CreateStudioAppDomainOpenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Host))
+            {
+                body["Host"] = request.Host;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
+            {
+                body["Protocol"] = request.Protocol;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.AppId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6598,9 +7437,30 @@ namespace AlibabaCloud.SDK.Iot20180120
         public async Task<CreateStudioAppDomainOpenResponse> CreateStudioAppDomainOpenWithOptionsAsync(CreateStudioAppDomainOpenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Host))
+            {
+                body["Host"] = request.Host;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
+            {
+                body["Protocol"] = request.Protocol;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.AppId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7077,6 +7937,80 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await CreateTopicRouteTableWithOptionsAsync(request, runtime);
         }
 
+        public DeleteClientIdsResponse DeleteClientIdsWithOptions(DeleteClientIdsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotId))
+            {
+                query["IotId"] = request.IotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteClientIds",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteClientIdsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteClientIdsResponse> DeleteClientIdsWithOptionsAsync(DeleteClientIdsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotId))
+            {
+                query["IotId"] = request.IotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteClientIds",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteClientIdsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteClientIdsResponse DeleteClientIds(DeleteClientIdsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteClientIdsWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteClientIdsResponse> DeleteClientIdsAsync(DeleteClientIdsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteClientIdsWithOptionsAsync(request, runtime);
+        }
+
         public DeleteConsumerGroupResponse DeleteConsumerGroupWithOptions(DeleteConsumerGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7389,6 +8323,80 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await DeleteDeviceDistributeJobWithOptionsAsync(request, runtime);
         }
 
+        public DeleteDeviceDynamicGroupResponse DeleteDeviceDynamicGroupWithOptions(DeleteDeviceDynamicGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDeviceDynamicGroup",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDeviceDynamicGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteDeviceDynamicGroupResponse> DeleteDeviceDynamicGroupWithOptionsAsync(DeleteDeviceDynamicGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDeviceDynamicGroup",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDeviceDynamicGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteDeviceDynamicGroupResponse DeleteDeviceDynamicGroup(DeleteDeviceDynamicGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDeviceDynamicGroupWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteDeviceDynamicGroupResponse> DeleteDeviceDynamicGroupAsync(DeleteDeviceDynamicGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDeviceDynamicGroupWithOptionsAsync(request, runtime);
+        }
+
         public DeleteDeviceFileResponse DeleteDeviceFileWithOptions(DeleteDeviceFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7657,6 +8665,162 @@ namespace AlibabaCloud.SDK.Iot20180120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDevicePropWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteDeviceSpeechResponse DeleteDeviceSpeechWithOptions(DeleteDeviceSpeechRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceSpeechList))
+            {
+                body["DeviceSpeechList"] = request.DeviceSpeechList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotId))
+            {
+                body["IotId"] = request.IotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDeviceSpeech",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDeviceSpeechResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteDeviceSpeechResponse> DeleteDeviceSpeechWithOptionsAsync(DeleteDeviceSpeechRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceSpeechList))
+            {
+                body["DeviceSpeechList"] = request.DeviceSpeechList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotId))
+            {
+                body["IotId"] = request.IotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDeviceSpeech",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDeviceSpeechResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteDeviceSpeechResponse DeleteDeviceSpeech(DeleteDeviceSpeechRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDeviceSpeechWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteDeviceSpeechResponse> DeleteDeviceSpeechAsync(DeleteDeviceSpeechRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDeviceSpeechWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteDeviceTunnelResponse DeleteDeviceTunnelWithOptions(DeleteDeviceTunnelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TunnelId))
+            {
+                query["TunnelId"] = request.TunnelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDeviceTunnel",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDeviceTunnelResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteDeviceTunnelResponse> DeleteDeviceTunnelWithOptionsAsync(DeleteDeviceTunnelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TunnelId))
+            {
+                query["TunnelId"] = request.TunnelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDeviceTunnel",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDeviceTunnelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteDeviceTunnelResponse DeleteDeviceTunnel(DeleteDeviceTunnelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDeviceTunnelWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteDeviceTunnelResponse> DeleteDeviceTunnelAsync(DeleteDeviceTunnelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDeviceTunnelWithOptionsAsync(request, runtime);
         }
 
         public DeleteEdgeDriverResponse DeleteEdgeDriverWithOptions(DeleteEdgeDriverRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8653,12 +9817,95 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await DeleteSceneRuleWithOptionsAsync(request, runtime);
         }
 
+        public DeleteSoundCodeResponse DeleteSoundCodeWithOptions(DeleteSoundCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoundCode))
+            {
+                body["SoundCode"] = request.SoundCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSoundCode",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSoundCodeResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteSoundCodeResponse> DeleteSoundCodeWithOptionsAsync(DeleteSoundCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoundCode))
+            {
+                body["SoundCode"] = request.SoundCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSoundCode",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSoundCodeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteSoundCodeResponse DeleteSoundCode(DeleteSoundCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteSoundCodeWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteSoundCodeResponse> DeleteSoundCodeAsync(DeleteSoundCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteSoundCodeWithOptionsAsync(request, runtime);
+        }
+
         public DeleteSpeechResponse DeleteSpeechWithOptions(DeleteSpeechRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechCodeList))
+            {
+                body["SpeechCodeList"] = request.SpeechCodeList;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.IotInstanceId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8678,9 +9925,18 @@ namespace AlibabaCloud.SDK.Iot20180120
         public async Task<DeleteSpeechResponse> DeleteSpeechWithOptionsAsync(DeleteSpeechRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechCodeList))
+            {
+                body["SpeechCodeList"] = request.SpeechCodeList;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.IotInstanceId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8712,9 +9968,26 @@ namespace AlibabaCloud.SDK.Iot20180120
         public DeleteStudioAppDomainOpenResponse DeleteStudioAppDomainOpenWithOptions(DeleteStudioAppDomainOpenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainId))
+            {
+                body["DomainId"] = request.DomainId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.AppId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8734,9 +10007,26 @@ namespace AlibabaCloud.SDK.Iot20180120
         public async Task<DeleteStudioAppDomainOpenResponse> DeleteStudioAppDomainOpenWithOptionsAsync(DeleteStudioAppDomainOpenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainId))
+            {
+                body["DomainId"] = request.DomainId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.AppId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9932,9 +11222,18 @@ namespace AlibabaCloud.SDK.Iot20180120
         public GetDataAPIServiceDetailResponse GetDataAPIServiceDetailWithOptions(GetDataAPIServiceDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiSrn))
+            {
+                body["ApiSrn"] = request.ApiSrn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.ApiSrn,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9954,9 +11253,18 @@ namespace AlibabaCloud.SDK.Iot20180120
         public async Task<GetDataAPIServiceDetailResponse> GetDataAPIServiceDetailWithOptionsAsync(GetDataAPIServiceDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiSrn))
+            {
+                body["ApiSrn"] = request.ApiSrn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.ApiSrn,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -10805,80 +12113,6 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await GetLoraNodesTaskWithOptionsAsync(request, runtime);
         }
 
-        public GetNodesAddingTaskResponse GetNodesAddingTaskWithOptions(GetNodesAddingTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
-            {
-                query["IotInstanceId"] = request.IotInstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
-            {
-                query["TaskId"] = request.TaskId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetNodesAddingTask",
-                Version = "2018-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetNodesAddingTaskResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<GetNodesAddingTaskResponse> GetNodesAddingTaskWithOptionsAsync(GetNodesAddingTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
-            {
-                query["IotInstanceId"] = request.IotInstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
-            {
-                query["TaskId"] = request.TaskId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetNodesAddingTask",
-                Version = "2018-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetNodesAddingTaskResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public GetNodesAddingTaskResponse GetNodesAddingTask(GetNodesAddingTaskRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return GetNodesAddingTaskWithOptions(request, runtime);
-        }
-
-        public async Task<GetNodesAddingTaskResponse> GetNodesAddingTaskAsync(GetNodesAddingTaskRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await GetNodesAddingTaskWithOptionsAsync(request, runtime);
-        }
-
         public GetRuleResponse GetRuleWithOptions(GetRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11101,6 +12335,154 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await GetSceneRuleWithOptionsAsync(request, runtime);
         }
 
+        public GetSoundCodeAudioResponse GetSoundCodeAudioWithOptions(GetSoundCodeAudioRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoundCodeList))
+            {
+                body["SoundCodeList"] = request.SoundCodeList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSoundCodeAudio",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSoundCodeAudioResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetSoundCodeAudioResponse> GetSoundCodeAudioWithOptionsAsync(GetSoundCodeAudioRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoundCodeList))
+            {
+                body["SoundCodeList"] = request.SoundCodeList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSoundCodeAudio",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSoundCodeAudioResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetSoundCodeAudioResponse GetSoundCodeAudio(GetSoundCodeAudioRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetSoundCodeAudioWithOptions(request, runtime);
+        }
+
+        public async Task<GetSoundCodeAudioResponse> GetSoundCodeAudioAsync(GetSoundCodeAudioRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetSoundCodeAudioWithOptionsAsync(request, runtime);
+        }
+
+        public GetSpeechDeviceDetailResponse GetSpeechDeviceDetailWithOptions(GetSpeechDeviceDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotId))
+            {
+                body["IotId"] = request.IotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSpeechDeviceDetail",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSpeechDeviceDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetSpeechDeviceDetailResponse> GetSpeechDeviceDetailWithOptionsAsync(GetSpeechDeviceDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotId))
+            {
+                body["IotId"] = request.IotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSpeechDeviceDetail",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSpeechDeviceDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetSpeechDeviceDetailResponse GetSpeechDeviceDetail(GetSpeechDeviceDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetSpeechDeviceDetailWithOptions(request, runtime);
+        }
+
+        public async Task<GetSpeechDeviceDetailResponse> GetSpeechDeviceDetailAsync(GetSpeechDeviceDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetSpeechDeviceDetailWithOptionsAsync(request, runtime);
+        }
+
         public GetSpeechVoiceResponse GetSpeechVoiceWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -11152,9 +12534,22 @@ namespace AlibabaCloud.SDK.Iot20180120
         public GetStudioAppTokenOpenResponse GetStudioAppTokenOpenWithOptions(GetStudioAppTokenOpenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.AppId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -11174,9 +12569,22 @@ namespace AlibabaCloud.SDK.Iot20180120
         public async Task<GetStudioAppTokenOpenResponse> GetStudioAppTokenOpenWithOptionsAsync(GetStudioAppTokenOpenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.AppId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -11671,6 +13079,186 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await GetThingTopoWithOptionsAsync(request, runtime);
         }
 
+        public GisQueryDeviceLocationResponse GisQueryDeviceLocationWithOptions(GisQueryDeviceLocationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThingList))
+            {
+                query["ThingList"] = request.ThingList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GisQueryDeviceLocation",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GisQueryDeviceLocationResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GisQueryDeviceLocationResponse> GisQueryDeviceLocationWithOptionsAsync(GisQueryDeviceLocationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThingList))
+            {
+                query["ThingList"] = request.ThingList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GisQueryDeviceLocation",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GisQueryDeviceLocationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GisQueryDeviceLocationResponse GisQueryDeviceLocation(GisQueryDeviceLocationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GisQueryDeviceLocationWithOptions(request, runtime);
+        }
+
+        public async Task<GisQueryDeviceLocationResponse> GisQueryDeviceLocationAsync(GisQueryDeviceLocationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GisQueryDeviceLocationWithOptionsAsync(request, runtime);
+        }
+
+        public GisSearchDeviceTraceResponse GisSearchDeviceTraceWithOptions(GisSearchDeviceTraceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                query["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MapMatch))
+            {
+                query["MapMatch"] = request.MapMatch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                query["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GisSearchDeviceTrace",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GisSearchDeviceTraceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GisSearchDeviceTraceResponse> GisSearchDeviceTraceWithOptionsAsync(GisSearchDeviceTraceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                query["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MapMatch))
+            {
+                query["MapMatch"] = request.MapMatch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                query["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GisSearchDeviceTrace",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GisSearchDeviceTraceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GisSearchDeviceTraceResponse GisSearchDeviceTrace(GisSearchDeviceTraceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GisSearchDeviceTraceWithOptions(request, runtime);
+        }
+
+        public async Task<GisSearchDeviceTraceResponse> GisSearchDeviceTraceAsync(GisSearchDeviceTraceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GisSearchDeviceTraceWithOptionsAsync(request, runtime);
+        }
+
         public ImportThingModelTslResponse ImportThingModelTslWithOptions(ImportThingModelTslRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11788,9 +13376,22 @@ namespace AlibabaCloud.SDK.Iot20180120
         public InvokeDataAPIServiceResponse InvokeDataAPIServiceWithOptions(InvokeDataAPIServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiSrn))
+            {
+                body["ApiSrn"] = request.ApiSrn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Param))
+            {
+                body["Param"] = request.Param;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToArray(request.ApiSrn),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -11810,9 +13411,22 @@ namespace AlibabaCloud.SDK.Iot20180120
         public async Task<InvokeDataAPIServiceResponse> InvokeDataAPIServiceWithOptionsAsync(InvokeDataAPIServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiSrn))
+            {
+                body["ApiSrn"] = request.ApiSrn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Param))
+            {
+                body["Param"] = request.Param;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToArray(request.ApiSrn),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12167,6 +13781,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                query["ProductKey"] = request.ProductKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
@@ -12175,10 +13793,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["TargetUid"] = request.TargetUid;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.JobId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12211,6 +13834,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                query["ProductKey"] = request.ProductKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
@@ -12219,10 +13846,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["TargetUid"] = request.TargetUid;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.JobId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13551,13 +15183,19 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await ListRuleActionsWithOptionsAsync(request, runtime);
         }
 
-        public ListTaskResponse ListTaskWithOptions(ListTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListTaskResponse ListTaskWithOptions(ListTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Device))
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListTaskShrinkRequest request = new ListTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Device))
             {
-                query["Device"] = request.Device;
+                request.DeviceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Device, "Device", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceShrink))
+            {
+                query["Device"] = request.DeviceShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
             {
@@ -13598,13 +15236,19 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<ListTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListTaskResponse> ListTaskWithOptionsAsync(ListTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListTaskResponse> ListTaskWithOptionsAsync(ListTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Device))
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListTaskShrinkRequest request = new ListTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Device))
             {
-                query["Device"] = request.Device;
+                request.DeviceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Device, "Device", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceShrink))
+            {
+                query["Device"] = request.DeviceShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
             {
@@ -13655,128 +15299,6 @@ namespace AlibabaCloud.SDK.Iot20180120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTaskWithOptionsAsync(request, runtime);
-        }
-
-        public ListTaskByPageResponse ListTaskByPageWithOptions(ListTaskByPageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Device))
-            {
-                query["Device"] = request.Device;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
-            {
-                query["DeviceName"] = request.DeviceName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
-            {
-                query["IotInstanceId"] = request.IotInstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
-            {
-                query["JobId"] = request.JobId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
-            {
-                query["JobName"] = request.JobName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
-            {
-                query["PageNo"] = request.PageNo;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
-            {
-                query["Status"] = request.Status;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListTaskByPage",
-                Version = "2018-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListTaskByPageResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<ListTaskByPageResponse> ListTaskByPageWithOptionsAsync(ListTaskByPageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Device))
-            {
-                query["Device"] = request.Device;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
-            {
-                query["DeviceName"] = request.DeviceName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
-            {
-                query["IotInstanceId"] = request.IotInstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
-            {
-                query["JobId"] = request.JobId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
-            {
-                query["JobName"] = request.JobName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
-            {
-                query["PageNo"] = request.PageNo;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
-            {
-                query["Status"] = request.Status;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListTaskByPage",
-                Version = "2018-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListTaskByPageResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public ListTaskByPageResponse ListTaskByPage(ListTaskByPageRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ListTaskByPageWithOptions(request, runtime);
-        }
-
-        public async Task<ListTaskByPageResponse> ListTaskByPageAsync(ListTaskByPageRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ListTaskByPageWithOptionsAsync(request, runtime);
         }
 
         public ListThingModelVersionResponse ListThingModelVersionWithOptions(ListThingModelVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -14086,9 +15608,38 @@ namespace AlibabaCloud.SDK.Iot20180120
         public PrintByTemplateResponse PrintByTemplateWithOptions(PrintByTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                body["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryPrintTopic))
+            {
+                body["HistoryPrintTopic"] = request.HistoryPrintTopic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotId))
+            {
+                body["IotId"] = request.IotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamsJsonString))
+            {
+                body["ParamsJsonString"] = request.ParamsJsonString;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                body["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBizCode))
+            {
+                body["TemplateBizCode"] = request.TemplateBizCode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.DeviceName,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -14108,9 +15659,38 @@ namespace AlibabaCloud.SDK.Iot20180120
         public async Task<PrintByTemplateResponse> PrintByTemplateWithOptionsAsync(PrintByTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                body["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryPrintTopic))
+            {
+                body["HistoryPrintTopic"] = request.HistoryPrintTopic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotId))
+            {
+                body["IotId"] = request.IotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamsJsonString))
+            {
+                body["ParamsJsonString"] = request.ParamsJsonString;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                body["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBizCode))
+            {
+                body["TemplateBizCode"] = request.TemplateBizCode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.DeviceName,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -14354,9 +15934,26 @@ namespace AlibabaCloud.SDK.Iot20180120
         public PublishStudioAppResponse PublishStudioAppWithOptions(PublishStudioAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.AppId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -14376,9 +15973,26 @@ namespace AlibabaCloud.SDK.Iot20180120
         public async Task<PublishStudioAppResponse> PublishStudioAppWithOptionsAsync(PublishStudioAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.AppId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -14513,10 +16127,39 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["GroupId"] = request.GroupId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                body["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotId))
+            {
+                body["IotId"] = request.IotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                body["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectCode))
+            {
+                body["ProjectCode"] = request.ProjectCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PushMode))
+            {
+                body["PushMode"] = request.PushMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechCodeList))
+            {
+                body["SpeechCodeList"] = request.SpeechCodeList;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.DeviceName,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -14541,10 +16184,39 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["GroupId"] = request.GroupId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                body["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotId))
+            {
+                body["IotId"] = request.IotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                body["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectCode))
+            {
+                body["ProjectCode"] = request.ProjectCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PushMode))
+            {
+                body["PushMode"] = request.PushMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechCodeList))
+            {
+                body["SpeechCodeList"] = request.SpeechCodeList;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.DeviceName,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -14571,120 +16243,6 @@ namespace AlibabaCloud.SDK.Iot20180120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PushSpeechWithOptionsAsync(request, runtime);
-        }
-
-        public QueryAppDeviceListResponse QueryAppDeviceListWithOptions(QueryAppDeviceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppKey))
-            {
-                query["AppKey"] = request.AppKey;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryKeyList))
-            {
-                query["CategoryKeyList"] = request.CategoryKeyList;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
-            {
-                query["CurrentPage"] = request.CurrentPage;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
-            {
-                query["IotInstanceId"] = request.IotInstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKeyList))
-            {
-                query["ProductKeyList"] = request.ProductKeyList;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagList))
-            {
-                query["TagList"] = request.TagList;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "QueryAppDeviceList",
-                Version = "2018-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<QueryAppDeviceListResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<QueryAppDeviceListResponse> QueryAppDeviceListWithOptionsAsync(QueryAppDeviceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppKey))
-            {
-                query["AppKey"] = request.AppKey;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryKeyList))
-            {
-                query["CategoryKeyList"] = request.CategoryKeyList;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
-            {
-                query["CurrentPage"] = request.CurrentPage;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
-            {
-                query["IotInstanceId"] = request.IotInstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKeyList))
-            {
-                query["ProductKeyList"] = request.ProductKeyList;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagList))
-            {
-                query["TagList"] = request.TagList;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "QueryAppDeviceList",
-                Version = "2018-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<QueryAppDeviceListResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public QueryAppDeviceListResponse QueryAppDeviceList(QueryAppDeviceListRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return QueryAppDeviceListWithOptions(request, runtime);
-        }
-
-        public async Task<QueryAppDeviceListResponse> QueryAppDeviceListAsync(QueryAppDeviceListRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await QueryAppDeviceListWithOptionsAsync(request, runtime);
         }
 
         public QueryBatchRegisterDeviceStatusResponse QueryBatchRegisterDeviceStatusWithOptions(QueryBatchRegisterDeviceStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -14841,6 +16399,80 @@ namespace AlibabaCloud.SDK.Iot20180120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryCertUrlByApplyIdWithOptionsAsync(request, runtime);
+        }
+
+        public QueryClientIdsResponse QueryClientIdsWithOptions(QueryClientIdsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotId))
+            {
+                query["IotId"] = request.IotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryClientIds",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryClientIdsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<QueryClientIdsResponse> QueryClientIdsWithOptionsAsync(QueryClientIdsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotId))
+            {
+                query["IotId"] = request.IotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryClientIds",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryClientIdsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public QueryClientIdsResponse QueryClientIds(QueryClientIdsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryClientIdsWithOptions(request, runtime);
+        }
+
+        public async Task<QueryClientIdsResponse> QueryClientIdsAsync(QueryClientIdsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryClientIdsWithOptionsAsync(request, runtime);
         }
 
         public QueryConsumerGroupByGroupIdResponse QueryConsumerGroupByGroupIdWithOptions(QueryConsumerGroupByGroupIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -16503,6 +18135,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["GroupId"] = request.GroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupType))
+            {
+                query["GroupType"] = request.GroupType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
             {
                 query["IotInstanceId"] = request.IotInstanceId;
@@ -16533,6 +18169,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
                 query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupType))
+            {
+                query["GroupType"] = request.GroupType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
             {
@@ -16581,6 +18221,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["GroupName"] = request.GroupName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupTypes))
+            {
+                query["GroupTypes"] = request.GroupTypes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
             {
                 query["IotInstanceId"] = request.IotInstanceId;
@@ -16623,6 +18267,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
             {
                 query["GroupName"] = request.GroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupTypes))
+            {
+                query["GroupTypes"] = request.GroupTypes;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
             {
@@ -16675,6 +18323,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["GroupId"] = request.GroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupType))
+            {
+                query["GroupType"] = request.GroupType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
             {
                 query["IotInstanceId"] = request.IotInstanceId;
@@ -16705,6 +18357,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
                 query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupType))
+            {
+                query["GroupType"] = request.GroupType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
             {
@@ -18027,6 +19683,96 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await QueryDeviceServiceDataWithOptionsAsync(request, runtime);
         }
 
+        public QueryDeviceSpeechResponse QueryDeviceSpeechWithOptions(QueryDeviceSpeechRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotId))
+            {
+                body["IotId"] = request.IotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageId))
+            {
+                body["PageId"] = request.PageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryDeviceSpeech",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryDeviceSpeechResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<QueryDeviceSpeechResponse> QueryDeviceSpeechWithOptionsAsync(QueryDeviceSpeechRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotId))
+            {
+                body["IotId"] = request.IotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageId))
+            {
+                body["PageId"] = request.PageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryDeviceSpeech",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryDeviceSpeechResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public QueryDeviceSpeechResponse QueryDeviceSpeech(QueryDeviceSpeechRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryDeviceSpeechWithOptions(request, runtime);
+        }
+
+        public async Task<QueryDeviceSpeechResponse> QueryDeviceSpeechAsync(QueryDeviceSpeechRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryDeviceSpeechWithOptionsAsync(request, runtime);
+        }
+
         public QueryDeviceStatisticsResponse QueryDeviceStatisticsWithOptions(QueryDeviceStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18107,6 +19853,210 @@ namespace AlibabaCloud.SDK.Iot20180120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryDeviceStatisticsWithOptionsAsync(request, runtime);
+        }
+
+        public QueryDeviceTunnelResponse QueryDeviceTunnelWithOptions(QueryDeviceTunnelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TunnelId))
+            {
+                query["TunnelId"] = request.TunnelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryDeviceTunnel",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryDeviceTunnelResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<QueryDeviceTunnelResponse> QueryDeviceTunnelWithOptionsAsync(QueryDeviceTunnelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TunnelId))
+            {
+                query["TunnelId"] = request.TunnelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryDeviceTunnel",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryDeviceTunnelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public QueryDeviceTunnelResponse QueryDeviceTunnel(QueryDeviceTunnelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryDeviceTunnelWithOptions(request, runtime);
+        }
+
+        public async Task<QueryDeviceTunnelResponse> QueryDeviceTunnelAsync(QueryDeviceTunnelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryDeviceTunnelWithOptionsAsync(request, runtime);
+        }
+
+        public QueryDynamicGroupDevicesResponse QueryDynamicGroupDevicesWithOptions(QueryDynamicGroupDevicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                query["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FuzzyName))
+            {
+                query["FuzzyName"] = request.FuzzyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                query["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryDynamicGroupDevices",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryDynamicGroupDevicesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<QueryDynamicGroupDevicesResponse> QueryDynamicGroupDevicesWithOptionsAsync(QueryDynamicGroupDevicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                query["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FuzzyName))
+            {
+                query["FuzzyName"] = request.FuzzyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                query["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryDynamicGroupDevices",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryDynamicGroupDevicesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public QueryDynamicGroupDevicesResponse QueryDynamicGroupDevices(QueryDynamicGroupDevicesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryDynamicGroupDevicesWithOptions(request, runtime);
+        }
+
+        public async Task<QueryDynamicGroupDevicesResponse> QueryDynamicGroupDevicesAsync(QueryDynamicGroupDevicesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryDynamicGroupDevicesWithOptionsAsync(request, runtime);
         }
 
         public QueryEdgeDriverResponse QueryEdgeDriverWithOptions(QueryEdgeDriverRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -20173,12 +22123,103 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await QuerySolutionDeviceGroupPageWithOptionsAsync(request, runtime);
         }
 
+        public QuerySoundCodeListResponse QuerySoundCodeListWithOptions(QuerySoundCodeListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageId))
+            {
+                body["PageId"] = request.PageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuerySoundCodeList",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuerySoundCodeListResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<QuerySoundCodeListResponse> QuerySoundCodeListWithOptionsAsync(QuerySoundCodeListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageId))
+            {
+                body["PageId"] = request.PageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuerySoundCodeList",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuerySoundCodeListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public QuerySoundCodeListResponse QuerySoundCodeList(QuerySoundCodeListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QuerySoundCodeListWithOptions(request, runtime);
+        }
+
+        public async Task<QuerySoundCodeListResponse> QuerySoundCodeListAsync(QuerySoundCodeListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QuerySoundCodeListWithOptionsAsync(request, runtime);
+        }
+
         public QuerySpeechResponse QuerySpeechWithOptions(QuerySpeechRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechCode))
+            {
+                body["SpeechCode"] = request.SpeechCode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.IotInstanceId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -20198,9 +22239,18 @@ namespace AlibabaCloud.SDK.Iot20180120
         public async Task<QuerySpeechResponse> QuerySpeechWithOptionsAsync(QuerySpeechRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechCode))
+            {
+                body["SpeechCode"] = request.SpeechCode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.IotInstanceId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -20229,12 +22279,147 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await QuerySpeechWithOptionsAsync(request, runtime);
         }
 
+        public QuerySpeechDeviceResponse QuerySpeechDeviceWithOptions(QuerySpeechDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvailableSpace))
+            {
+                body["AvailableSpace"] = request.AvailableSpace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvailableSpaceScope))
+            {
+                body["AvailableSpaceScope"] = request.AvailableSpaceScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                body["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageId))
+            {
+                body["PageId"] = request.PageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectCode))
+            {
+                body["ProjectCode"] = request.ProjectCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuerySpeechDevice",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuerySpeechDeviceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<QuerySpeechDeviceResponse> QuerySpeechDeviceWithOptionsAsync(QuerySpeechDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvailableSpace))
+            {
+                body["AvailableSpace"] = request.AvailableSpace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvailableSpaceScope))
+            {
+                body["AvailableSpaceScope"] = request.AvailableSpaceScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                body["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageId))
+            {
+                body["PageId"] = request.PageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectCode))
+            {
+                body["ProjectCode"] = request.ProjectCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuerySpeechDevice",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuerySpeechDeviceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public QuerySpeechDeviceResponse QuerySpeechDevice(QuerySpeechDeviceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QuerySpeechDeviceWithOptions(request, runtime);
+        }
+
+        public async Task<QuerySpeechDeviceResponse> QuerySpeechDeviceAsync(QuerySpeechDeviceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QuerySpeechDeviceWithOptionsAsync(request, runtime);
+        }
+
         public QuerySpeechListResponse QuerySpeechListWithOptions(QuerySpeechListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioFormat))
+            {
+                body["AudioFormat"] = request.AudioFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageId))
+            {
+                body["PageId"] = request.PageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectCode))
+            {
+                body["ProjectCode"] = request.ProjectCode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.IotInstanceId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -20254,9 +22439,30 @@ namespace AlibabaCloud.SDK.Iot20180120
         public async Task<QuerySpeechListResponse> QuerySpeechListWithOptionsAsync(QuerySpeechListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioFormat))
+            {
+                body["AudioFormat"] = request.AudioFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageId))
+            {
+                body["PageId"] = request.PageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectCode))
+            {
+                body["ProjectCode"] = request.ProjectCode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.IotInstanceId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -20293,10 +22499,35 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["JobCode"] = request.JobCode;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageId))
+            {
+                body["PageId"] = request.PageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectCode))
+            {
+                body["ProjectCode"] = request.ProjectCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PushMode))
+            {
+                body["PushMode"] = request.PushMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusList))
+            {
+                body["StatusList"] = request.StatusList;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.IotInstanceId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -20321,10 +22552,35 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["JobCode"] = request.JobCode;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageId))
+            {
+                body["PageId"] = request.PageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectCode))
+            {
+                body["ProjectCode"] = request.ProjectCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PushMode))
+            {
+                body["PushMode"] = request.PushMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusList))
+            {
+                body["StatusList"] = request.StatusList;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.IotInstanceId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -20356,9 +22612,34 @@ namespace AlibabaCloud.SDK.Iot20180120
         public QuerySpeechPushJobDeviceResponse QuerySpeechPushJobDeviceWithOptions(QuerySpeechPushJobDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                body["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobCode))
+            {
+                body["JobCode"] = request.JobCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageId))
+            {
+                body["PageId"] = request.PageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.DeviceName,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -20378,9 +22659,34 @@ namespace AlibabaCloud.SDK.Iot20180120
         public async Task<QuerySpeechPushJobDeviceResponse> QuerySpeechPushJobDeviceWithOptionsAsync(QuerySpeechPushJobDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                body["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobCode))
+            {
+                body["JobCode"] = request.JobCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageId))
+            {
+                body["PageId"] = request.PageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.DeviceName,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -20412,9 +22718,26 @@ namespace AlibabaCloud.SDK.Iot20180120
         public QuerySpeechPushJobSpeechResponse QuerySpeechPushJobSpeechWithOptions(QuerySpeechPushJobSpeechRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobCode))
+            {
+                body["JobCode"] = request.JobCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageId))
+            {
+                body["PageId"] = request.PageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.IotInstanceId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -20434,9 +22757,26 @@ namespace AlibabaCloud.SDK.Iot20180120
         public async Task<QuerySpeechPushJobSpeechResponse> QuerySpeechPushJobSpeechWithOptionsAsync(QuerySpeechPushJobSpeechRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobCode))
+            {
+                body["JobCode"] = request.JobCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageId))
+            {
+                body["PageId"] = request.PageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.IotInstanceId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -20468,9 +22808,22 @@ namespace AlibabaCloud.SDK.Iot20180120
         public QueryStudioAppDomainListOpenResponse QueryStudioAppDomainListOpenWithOptions(QueryStudioAppDomainListOpenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.AppId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -20490,9 +22843,22 @@ namespace AlibabaCloud.SDK.Iot20180120
         public async Task<QueryStudioAppDomainListOpenResponse> QueryStudioAppDomainListOpenWithOptionsAsync(QueryStudioAppDomainListOpenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.AppId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -20524,9 +22890,34 @@ namespace AlibabaCloud.SDK.Iot20180120
         public QueryStudioAppListResponse QueryStudioAppListWithOptions(QueryStudioAppListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FuzzyName))
+            {
+                body["FuzzyName"] = request.FuzzyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                body["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Types))
+            {
+                body["Types"] = request.Types;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.FuzzyName,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -20546,9 +22937,34 @@ namespace AlibabaCloud.SDK.Iot20180120
         public async Task<QueryStudioAppListResponse> QueryStudioAppListWithOptionsAsync(QueryStudioAppListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FuzzyName))
+            {
+                body["FuzzyName"] = request.FuzzyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                body["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Types))
+            {
+                body["Types"] = request.Types;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.FuzzyName,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -20580,9 +22996,34 @@ namespace AlibabaCloud.SDK.Iot20180120
         public QueryStudioAppPageListOpenResponse QueryStudioAppPageListOpenWithOptions(QueryStudioAppPageListOpenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsRelease))
+            {
+                body["IsRelease"] = request.IsRelease;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                body["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.AppId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -20602,9 +23043,34 @@ namespace AlibabaCloud.SDK.Iot20180120
         public async Task<QueryStudioAppPageListOpenResponse> QueryStudioAppPageListOpenWithOptionsAsync(QueryStudioAppPageListOpenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsRelease))
+            {
+                body["IsRelease"] = request.IsRelease;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                body["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.AppId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -20636,9 +23102,26 @@ namespace AlibabaCloud.SDK.Iot20180120
         public QueryStudioProjectListResponse QueryStudioProjectListWithOptions(QueryStudioProjectListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                body["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.IotInstanceId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -20658,9 +23141,26 @@ namespace AlibabaCloud.SDK.Iot20180120
         public async Task<QueryStudioProjectListResponse> QueryStudioProjectListWithOptionsAsync(QueryStudioProjectListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                body["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.IotInstanceId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -21764,9 +24264,22 @@ namespace AlibabaCloud.SDK.Iot20180120
         public RefreshStudioAppTokenOpenResponse RefreshStudioAppTokenOpenWithOptions(RefreshStudioAppTokenOpenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.AppId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -21786,9 +24299,22 @@ namespace AlibabaCloud.SDK.Iot20180120
         public async Task<RefreshStudioAppTokenOpenResponse> RefreshStudioAppTokenOpenWithOptionsAsync(RefreshStudioAppTokenOpenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.AppId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -22521,6 +25047,88 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await ResetThingWithOptionsAsync(request, runtime);
         }
 
+        public ReupgradeOTATaskResponse ReupgradeOTATaskWithOptions(ReupgradeOTATaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReupgradeOTATask",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReupgradeOTATaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ReupgradeOTATaskResponse> ReupgradeOTATaskWithOptionsAsync(ReupgradeOTATaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReupgradeOTATask",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReupgradeOTATaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ReupgradeOTATaskResponse ReupgradeOTATask(ReupgradeOTATaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ReupgradeOTATaskWithOptions(request, runtime);
+        }
+
+        public async Task<ReupgradeOTATaskResponse> ReupgradeOTATaskAsync(ReupgradeOTATaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ReupgradeOTATaskWithOptionsAsync(request, runtime);
+        }
+
         public SaveDevicePropResponse SaveDevicePropWithOptions(SaveDevicePropRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22733,6 +25341,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["GroupId"] = request.GroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupType))
+            {
+                query["GroupType"] = request.GroupType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
             {
                 query["IotInstanceId"] = request.IotInstanceId;
@@ -22767,6 +25379,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
                 query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupType))
+            {
+                query["GroupType"] = request.GroupType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
             {
@@ -23170,9 +25786,18 @@ namespace AlibabaCloud.SDK.Iot20180120
         public SetStudioProjectCooperationResponse SetStudioProjectCooperationWithOptions(SetStudioProjectCooperationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.IotInstanceId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -23192,9 +25817,18 @@ namespace AlibabaCloud.SDK.Iot20180120
         public async Task<SetStudioProjectCooperationResponse> SetStudioProjectCooperationWithOptionsAsync(SetStudioProjectCooperationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.IotInstanceId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -23226,9 +25860,26 @@ namespace AlibabaCloud.SDK.Iot20180120
         public SetupStudioAppAuthModeOpenResponse SetupStudioAppAuthModeOpenWithOptions(SetupStudioAppAuthModeOpenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMode))
+            {
+                body["AuthMode"] = request.AuthMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.AppId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -23248,9 +25899,26 @@ namespace AlibabaCloud.SDK.Iot20180120
         public async Task<SetupStudioAppAuthModeOpenResponse> SetupStudioAppAuthModeOpenWithOptionsAsync(SetupStudioAppAuthModeOpenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMode))
+            {
+                body["AuthMode"] = request.AuthMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.AppId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -23282,9 +25950,38 @@ namespace AlibabaCloud.SDK.Iot20180120
         public SpeechByCombinationResponse SpeechByCombinationWithOptions(SpeechByCombinationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioFormat))
+            {
+                body["AudioFormat"] = request.AudioFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CombinationList))
+            {
+                body["CombinationList"] = request.CombinationList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                body["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotId))
+            {
+                body["IotId"] = request.IotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                body["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechId))
+            {
+                body["SpeechId"] = request.SpeechId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.CombinationList,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -23304,9 +26001,38 @@ namespace AlibabaCloud.SDK.Iot20180120
         public async Task<SpeechByCombinationResponse> SpeechByCombinationWithOptionsAsync(SpeechByCombinationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioFormat))
+            {
+                body["AudioFormat"] = request.AudioFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CombinationList))
+            {
+                body["CombinationList"] = request.CombinationList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                body["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotId))
+            {
+                body["IotId"] = request.IotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                body["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechId))
+            {
+                body["SpeechId"] = request.SpeechId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.CombinationList,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -23333,6 +26059,144 @@ namespace AlibabaCloud.SDK.Iot20180120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SpeechByCombinationWithOptionsAsync(request, runtime);
+        }
+
+        public SpeechBySynthesisResponse SpeechBySynthesisWithOptions(SpeechBySynthesisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioFormat))
+            {
+                body["AudioFormat"] = request.AudioFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                body["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotId))
+            {
+                body["IotId"] = request.IotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                body["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechId))
+            {
+                body["SpeechId"] = request.SpeechId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechRate))
+            {
+                body["SpeechRate"] = request.SpeechRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
+            {
+                body["Text"] = request.Text;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Voice))
+            {
+                body["Voice"] = request.Voice;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Volume))
+            {
+                body["Volume"] = request.Volume;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SpeechBySynthesis",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SpeechBySynthesisResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SpeechBySynthesisResponse> SpeechBySynthesisWithOptionsAsync(SpeechBySynthesisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioFormat))
+            {
+                body["AudioFormat"] = request.AudioFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                body["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotId))
+            {
+                body["IotId"] = request.IotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                body["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechId))
+            {
+                body["SpeechId"] = request.SpeechId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechRate))
+            {
+                body["SpeechRate"] = request.SpeechRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
+            {
+                body["Text"] = request.Text;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Voice))
+            {
+                body["Voice"] = request.Voice;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Volume))
+            {
+                body["Volume"] = request.Volume;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SpeechBySynthesis",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SpeechBySynthesisResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SpeechBySynthesisResponse SpeechBySynthesis(SpeechBySynthesisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SpeechBySynthesisWithOptions(request, runtime);
+        }
+
+        public async Task<SpeechBySynthesisResponse> SpeechBySynthesisAsync(SpeechBySynthesisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SpeechBySynthesisWithOptionsAsync(request, runtime);
         }
 
         public StartCpuResponse StartCpuWithOptions(StartCpuRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -23565,12 +26429,131 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await StopRuleWithOptionsAsync(request, runtime);
         }
 
+        public SubscribeTopicResponse SubscribeTopicWithOptions(SubscribeTopicRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                query["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                query["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                query["Topic"] = request.Topic;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubscribeTopic",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubscribeTopicResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SubscribeTopicResponse> SubscribeTopicWithOptionsAsync(SubscribeTopicRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                query["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                query["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                query["Topic"] = request.Topic;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubscribeTopic",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubscribeTopicResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SubscribeTopicResponse SubscribeTopic(SubscribeTopicRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubscribeTopicWithOptions(request, runtime);
+        }
+
+        public async Task<SubscribeTopicResponse> SubscribeTopicAsync(SubscribeTopicRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubscribeTopicWithOptionsAsync(request, runtime);
+        }
+
         public SyncSpeechByCombinationResponse SyncSpeechByCombinationWithOptions(SyncSpeechByCombinationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioFormat))
+            {
+                body["AudioFormat"] = request.AudioFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CombinationList))
+            {
+                body["CombinationList"] = request.CombinationList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                body["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotId))
+            {
+                body["IotId"] = request.IotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                body["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechId))
+            {
+                body["SpeechId"] = request.SpeechId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.CombinationList,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -23590,9 +26573,38 @@ namespace AlibabaCloud.SDK.Iot20180120
         public async Task<SyncSpeechByCombinationResponse> SyncSpeechByCombinationWithOptionsAsync(SyncSpeechByCombinationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioFormat))
+            {
+                body["AudioFormat"] = request.AudioFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CombinationList))
+            {
+                body["CombinationList"] = request.CombinationList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                body["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotId))
+            {
+                body["IotId"] = request.IotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                body["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechId))
+            {
+                body["SpeechId"] = request.SpeechId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.CombinationList,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -23621,12 +26633,59 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await SyncSpeechByCombinationWithOptionsAsync(request, runtime);
         }
 
-        public TestSpeechResponse TestSpeechWithOptions(TestSpeechRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public TestSpeechResponse TestSpeechWithOptions(TestSpeechRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            TestSpeechShrinkRequest request = new TestSpeechShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SoundCodeConfig))
+            {
+                request.SoundCodeConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SoundCodeConfig, "SoundCodeConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioFormat))
+            {
+                body["AudioFormat"] = request.AudioFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSoundCode))
+            {
+                body["EnableSoundCode"] = request.EnableSoundCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectCode))
+            {
+                body["ProjectCode"] = request.ProjectCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoundCodeConfigShrink))
+            {
+                body["SoundCodeConfig"] = request.SoundCodeConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechRate))
+            {
+                body["SpeechRate"] = request.SpeechRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechType))
+            {
+                body["SpeechType"] = request.SpeechType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
+            {
+                body["Text"] = request.Text;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Voice))
+            {
+                body["Voice"] = request.Voice;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Volume))
+            {
+                body["Volume"] = request.Volume;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.IotInstanceId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -23643,12 +26702,59 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<TestSpeechResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<TestSpeechResponse> TestSpeechWithOptionsAsync(TestSpeechRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<TestSpeechResponse> TestSpeechWithOptionsAsync(TestSpeechRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            TestSpeechShrinkRequest request = new TestSpeechShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SoundCodeConfig))
+            {
+                request.SoundCodeConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SoundCodeConfig, "SoundCodeConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioFormat))
+            {
+                body["AudioFormat"] = request.AudioFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSoundCode))
+            {
+                body["EnableSoundCode"] = request.EnableSoundCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectCode))
+            {
+                body["ProjectCode"] = request.ProjectCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoundCodeConfigShrink))
+            {
+                body["SoundCodeConfig"] = request.SoundCodeConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechRate))
+            {
+                body["SpeechRate"] = request.SpeechRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechType))
+            {
+                body["SpeechType"] = request.SpeechType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
+            {
+                body["Text"] = request.Text;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Voice))
+            {
+                body["Voice"] = request.Voice;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Volume))
+            {
+                body["Volume"] = request.Volume;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.IotInstanceId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -23675,6 +26781,88 @@ namespace AlibabaCloud.SDK.Iot20180120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TestSpeechWithOptionsAsync(request, runtime);
+        }
+
+        public TransformClientIdResponse TransformClientIdWithOptions(TransformClientIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
+            {
+                query["ClientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotId))
+            {
+                query["IotId"] = request.IotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TransformClientId",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TransformClientIdResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<TransformClientIdResponse> TransformClientIdWithOptionsAsync(TransformClientIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
+            {
+                query["ClientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotId))
+            {
+                query["IotId"] = request.IotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TransformClientId",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TransformClientIdResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public TransformClientIdResponse TransformClientId(TransformClientIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return TransformClientIdWithOptions(request, runtime);
+        }
+
+        public async Task<TransformClientIdResponse> TransformClientIdAsync(TransformClientIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await TransformClientIdWithOptionsAsync(request, runtime);
         }
 
         public TriggerSceneRuleResponse TriggerSceneRuleWithOptions(TriggerSceneRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -24173,6 +27361,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["GroupId"] = request.GroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupType))
+            {
+                query["GroupType"] = request.GroupType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
             {
                 query["IotInstanceId"] = request.IotInstanceId;
@@ -24207,6 +27399,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
                 query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupType))
+            {
+                query["GroupType"] = request.GroupType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
             {
@@ -24829,9 +28025,19 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await UpdateEdgeInstanceMessageRoutingWithOptionsAsync(request, runtime);
         }
 
-        public UpdateJobResponse UpdateJobWithOptions(UpdateJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateJobResponse UpdateJobWithOptions(UpdateJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateJobShrinkRequest request = new UpdateJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RolloutConfig))
+            {
+                request.RolloutConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RolloutConfig, "RolloutConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TimeoutConfig))
+            {
+                request.TimeoutConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TimeoutConfig, "TimeoutConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -24845,13 +28051,13 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["JobId"] = request.JobId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RolloutConfig))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RolloutConfigShrink))
             {
-                query["RolloutConfig"] = request.RolloutConfig;
+                query["RolloutConfig"] = request.RolloutConfigShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeoutConfig))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeoutConfigShrink))
             {
-                query["TimeoutConfig"] = request.TimeoutConfig;
+                query["TimeoutConfig"] = request.TimeoutConfigShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -24872,9 +28078,19 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<UpdateJobResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<UpdateJobResponse> UpdateJobWithOptionsAsync(UpdateJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateJobResponse> UpdateJobWithOptionsAsync(UpdateJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateJobShrinkRequest request = new UpdateJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RolloutConfig))
+            {
+                request.RolloutConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RolloutConfig, "RolloutConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TimeoutConfig))
+            {
+                request.TimeoutConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TimeoutConfig, "TimeoutConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -24888,13 +28104,13 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["JobId"] = request.JobId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RolloutConfig))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RolloutConfigShrink))
             {
-                query["RolloutConfig"] = request.RolloutConfig;
+                query["RolloutConfig"] = request.RolloutConfigShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeoutConfig))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeoutConfigShrink))
             {
-                query["TimeoutConfig"] = request.TimeoutConfig;
+                query["TimeoutConfig"] = request.TimeoutConfigShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -25711,12 +28927,51 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await UpdateSceneRuleWithOptionsAsync(request, runtime);
         }
 
-        public UpdateSpeechResponse UpdateSpeechWithOptions(UpdateSpeechRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateSpeechResponse UpdateSpeechWithOptions(UpdateSpeechRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateSpeechShrinkRequest request = new UpdateSpeechShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SoundCodeConfig))
+            {
+                request.SoundCodeConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SoundCodeConfig, "SoundCodeConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSoundCode))
+            {
+                body["EnableSoundCode"] = request.EnableSoundCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectCode))
+            {
+                body["ProjectCode"] = request.ProjectCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoundCodeConfigShrink))
+            {
+                body["SoundCodeConfig"] = request.SoundCodeConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechCode))
+            {
+                body["SpeechCode"] = request.SpeechCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechRate))
+            {
+                body["SpeechRate"] = request.SpeechRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Voice))
+            {
+                body["Voice"] = request.Voice;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Volume))
+            {
+                body["Volume"] = request.Volume;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.IotInstanceId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -25733,12 +28988,51 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<UpdateSpeechResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<UpdateSpeechResponse> UpdateSpeechWithOptionsAsync(UpdateSpeechRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateSpeechResponse> UpdateSpeechWithOptionsAsync(UpdateSpeechRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateSpeechShrinkRequest request = new UpdateSpeechShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SoundCodeConfig))
+            {
+                request.SoundCodeConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SoundCodeConfig, "SoundCodeConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSoundCode))
+            {
+                body["EnableSoundCode"] = request.EnableSoundCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectCode))
+            {
+                body["ProjectCode"] = request.ProjectCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoundCodeConfigShrink))
+            {
+                body["SoundCodeConfig"] = request.SoundCodeConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechCode))
+            {
+                body["SpeechCode"] = request.SpeechCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechRate))
+            {
+                body["SpeechRate"] = request.SpeechRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Voice))
+            {
+                body["Voice"] = request.Voice;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Volume))
+            {
+                body["Volume"] = request.Volume;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = request.IotInstanceId,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -26049,88 +29343,6 @@ namespace AlibabaCloud.SDK.Iot20180120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateThingModelWithOptionsAsync(request, runtime);
-        }
-
-        public UpdateThingModelValidationConfigResponse UpdateThingModelValidationConfigWithOptions(UpdateThingModelValidationConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
-            {
-                query["IotInstanceId"] = request.IotInstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
-            {
-                query["ProductKey"] = request.ProductKey;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidateType))
-            {
-                query["ValidateType"] = request.ValidateType;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UpdateThingModelValidationConfig",
-                Version = "2018-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<UpdateThingModelValidationConfigResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<UpdateThingModelValidationConfigResponse> UpdateThingModelValidationConfigWithOptionsAsync(UpdateThingModelValidationConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
-            {
-                query["IotInstanceId"] = request.IotInstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
-            {
-                query["ProductKey"] = request.ProductKey;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidateType))
-            {
-                query["ValidateType"] = request.ValidateType;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UpdateThingModelValidationConfig",
-                Version = "2018-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<UpdateThingModelValidationConfigResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public UpdateThingModelValidationConfigResponse UpdateThingModelValidationConfig(UpdateThingModelValidationConfigRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return UpdateThingModelValidationConfigWithOptions(request, runtime);
-        }
-
-        public async Task<UpdateThingModelValidationConfigResponse> UpdateThingModelValidationConfigAsync(UpdateThingModelValidationConfigRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await UpdateThingModelValidationConfigWithOptionsAsync(request, runtime);
         }
 
         public UpdateThingScriptResponse UpdateThingScriptWithOptions(UpdateThingScriptRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

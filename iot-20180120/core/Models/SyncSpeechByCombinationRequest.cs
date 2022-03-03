@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class SyncSpeechByCombinationRequest : TeaModel {
+        [NameInMap("AudioFormat")]
+        [Validation(Required=false)]
+        public string AudioFormat { get; set; }
+
         [NameInMap("CombinationList")]
         [Validation(Required=false)]
         public List<string> CombinationList { get; set; }
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("ProductKey")]
         [Validation(Required=false)]
         public string ProductKey { get; set; }
+
+        [NameInMap("SpeechId")]
+        [Validation(Required=false)]
+        public string SpeechId { get; set; }
 
     }
 

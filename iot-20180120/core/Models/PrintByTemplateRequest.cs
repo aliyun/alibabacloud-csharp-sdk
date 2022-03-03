@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string DeviceName { get; set; }
 
+        [NameInMap("HistoryPrintTopic")]
+        [Validation(Required=false)]
+        public bool? HistoryPrintTopic { get; set; }
+
         [NameInMap("IotId")]
         [Validation(Required=false)]
         public string IotId { get; set; }
@@ -28,10 +32,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("ProductKey")]
         [Validation(Required=false)]
         public string ProductKey { get; set; }
-
-        [NameInMap("ProjectCode")]
-        [Validation(Required=false)]
-        public string ProjectCode { get; set; }
 
         [NameInMap("TemplateBizCode")]
         [Validation(Required=false)]

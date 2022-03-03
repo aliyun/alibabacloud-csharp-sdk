@@ -41,9 +41,12 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             public class InvokeDataAPIServiceResponseBodyDataResultList : TeaModel {
                 [NameInMap("ResultList")]
                 [Validation(Required=false)]
-                public List<Dictionary<string, string>> ResultList { get; set; }
+                public List<Dictionary<string, object>> ResultList { get; set; }
 
             }
+            [NameInMap("TotalSize")]
+            [Validation(Required=false)]
+            public int? TotalSize { get; set; }
         };
 
         [NameInMap("ErrorMessage")]

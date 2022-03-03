@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QuerySpeechListRequest : TeaModel {
+        [NameInMap("AudioFormat")]
+        [Validation(Required=false)]
+        public string AudioFormat { get; set; }
+
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }

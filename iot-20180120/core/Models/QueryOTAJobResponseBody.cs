@@ -20,6 +20,9 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("DestVersion")]
             [Validation(Required=false)]
             public string DestVersion { get; set; }
+            [NameInMap("DownloadProtocol")]
+            [Validation(Required=false)]
+            public string DownloadProtocol { get; set; }
             [NameInMap("DynamicMode")]
             [Validation(Required=false)]
             public int? DynamicMode { get; set; }
@@ -29,6 +32,12 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("GrayPercent")]
             [Validation(Required=false)]
             public string GrayPercent { get; set; }
+            [NameInMap("GroupId")]
+            [Validation(Required=false)]
+            public string GroupId { get; set; }
+            [NameInMap("GroupName")]
+            [Validation(Required=false)]
+            public string GroupName { get; set; }
             [NameInMap("JobDesc")]
             [Validation(Required=false)]
             public string JobDesc { get; set; }
@@ -44,6 +53,9 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("MaximumPerMinute")]
             [Validation(Required=false)]
             public int? MaximumPerMinute { get; set; }
+            [NameInMap("MultiModuleMode")]
+            [Validation(Required=false)]
+            public bool? MultiModuleMode { get; set; }
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }

@@ -41,6 +41,32 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string ModuleName { get; set; }
 
+        [NameInMap("MultiFiles")]
+        [Validation(Required=false)]
+        public List<CreateOTAFirmwareRequestMultiFiles> MultiFiles { get; set; }
+        public class CreateOTAFirmwareRequestMultiFiles : TeaModel {
+            [NameInMap("FileMd5")]
+            [Validation(Required=false)]
+            public string FileMd5 { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("SignValue")]
+            [Validation(Required=false)]
+            public string SignValue { get; set; }
+
+            [NameInMap("Size")]
+            [Validation(Required=false)]
+            public int? Size { get; set; }
+
+            [NameInMap("Url")]
+            [Validation(Required=false)]
+            public string Url { get; set; }
+
+        }
+
         [NameInMap("NeedToVerify")]
         [Validation(Required=false)]
         public bool? NeedToVerify { get; set; }

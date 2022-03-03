@@ -28,6 +28,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 public string GroupDesc { get; set; }
                 public string GroupId { get; set; }
                 public string GroupName { get; set; }
+                public string GroupType { get; set; }
                 public string UtcCreate { get; set; }
             }
         };

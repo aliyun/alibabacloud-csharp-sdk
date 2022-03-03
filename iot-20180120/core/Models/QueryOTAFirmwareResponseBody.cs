@@ -45,6 +45,16 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("ModuleName")]
             [Validation(Required=false)]
             public string ModuleName { get; set; }
+            [NameInMap("MultiFiles")]
+            [Validation(Required=false)]
+            public List<QueryOTAFirmwareResponseBodyFirmwareInfoMultiFiles> MultiFiles { get; set; }
+            public class QueryOTAFirmwareResponseBodyFirmwareInfoMultiFiles : TeaModel {
+                public string FileMd5 { get; set; }
+                public string Name { get; set; }
+                public string SignValue { get; set; }
+                public int? Size { get; set; }
+                public string Url { get; set; }
+            }
             [NameInMap("ProductKey")]
             [Validation(Required=false)]
             public string ProductKey { get; set; }

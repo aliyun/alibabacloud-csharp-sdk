@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public SyncSpeechByCombinationResponseBodyData Data { get; set; }
         public class SyncSpeechByCombinationResponseBodyData : TeaModel {
+            [NameInMap("Detail")]
+            [Validation(Required=false)]
+            public string Detail { get; set; }
             [NameInMap("DeviceErrorCode")]
             [Validation(Required=false)]
             public string DeviceErrorCode { get; set; }

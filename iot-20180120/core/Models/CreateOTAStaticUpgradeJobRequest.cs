@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string DnListFileUrl { get; set; }
 
+        [NameInMap("DownloadProtocol")]
+        [Validation(Required=false)]
+        public string DownloadProtocol { get; set; }
+
         [NameInMap("FirmwareId")]
         [Validation(Required=false)]
         public string FirmwareId { get; set; }
@@ -21,6 +25,14 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string GrayPercent { get; set; }
 
+        [NameInMap("GroupId")]
+        [Validation(Required=false)]
+        public string GroupId { get; set; }
+
+        [NameInMap("GroupType")]
+        [Validation(Required=false)]
+        public string GroupType { get; set; }
+
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
@@ -28,6 +40,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("MaximumPerMinute")]
         [Validation(Required=false)]
         public int? MaximumPerMinute { get; set; }
+
+        [NameInMap("MultiModuleMode")]
+        [Validation(Required=false)]
+        public bool? MultiModuleMode { get; set; }
 
         [NameInMap("NeedConfirm")]
         [Validation(Required=false)]

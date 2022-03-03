@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 [Validation(Required=false)]
                 public List<QuerySpeechListResponseBodyDataListItems> Items { get; set; }
                 public class QuerySpeechListResponseBodyDataListItems : TeaModel {
+                    [NameInMap("AudioFormat")]
+                    [Validation(Required=false)]
+                    public string AudioFormat { get; set; }
+
                     [NameInMap("BizCode")]
                     [Validation(Required=false)]
                     public string BizCode { get; set; }

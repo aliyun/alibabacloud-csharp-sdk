@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateOTAVerifyJobRequest : TeaModel {
+        [NameInMap("DownloadProtocol")]
+        [Validation(Required=false)]
+        public string DownloadProtocol { get; set; }
+
         [NameInMap("FirmwareId")]
         [Validation(Required=false)]
         public string FirmwareId { get; set; }
@@ -28,6 +32,20 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("ProductKey")]
         [Validation(Required=false)]
         public string ProductKey { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateOTAVerifyJobRequestTag> Tag { get; set; }
+        public class CreateOTAVerifyJobRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
         [NameInMap("TargetDeviceName")]
         [Validation(Required=false)]

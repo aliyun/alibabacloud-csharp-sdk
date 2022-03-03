@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
     public class ListTaskRequest : TeaModel {
         [NameInMap("Device")]
         [Validation(Required=false)]
-        public string Device { get; set; }
+        public Dictionary<string, object> Device { get; set; }
 
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]

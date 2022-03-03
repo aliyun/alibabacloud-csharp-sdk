@@ -30,6 +30,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 public string DriverProtocol { get; set; }
                 public long? GmtCreateTimestamp { get; set; }
                 public long? GmtModifiedTimestamp { get; set; }
+                public bool? IsApply { get; set; }
                 public bool? IsBuiltIn { get; set; }
                 public string Runtime { get; set; }
                 public int? Type { get; set; }

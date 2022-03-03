@@ -54,6 +54,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 [Validation(Required=false)]
                 public int? MaximumPerMinute { get; set; }
 
+                [NameInMap("MessageQoS")]
+                [Validation(Required=false)]
+                public string MessageQoS { get; set; }
+
             }
             [NameInMap("ScheduledTime")]
             [Validation(Required=false)]

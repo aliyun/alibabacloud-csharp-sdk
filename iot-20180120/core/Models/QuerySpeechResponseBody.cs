@@ -23,6 +23,22 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("BizCode")]
             [Validation(Required=false)]
             public string BizCode { get; set; }
+            [NameInMap("EnableSoundCode")]
+            [Validation(Required=false)]
+            public bool? EnableSoundCode { get; set; }
+            [NameInMap("SoundCodeConfig")]
+            [Validation(Required=false)]
+            public QuerySpeechResponseBodyDataSoundCodeConfig SoundCodeConfig { get; set; }
+            public class QuerySpeechResponseBodyDataSoundCodeConfig : TeaModel {
+                [NameInMap("AdditionalDuration")]
+                [Validation(Required=false)]
+                public int? AdditionalDuration { get; set; }
+
+                [NameInMap("SoundCodeContent")]
+                [Validation(Required=false)]
+                public string SoundCodeContent { get; set; }
+
+            }
             [NameInMap("SpeechCode")]
             [Validation(Required=false)]
             public string SpeechCode { get; set; }

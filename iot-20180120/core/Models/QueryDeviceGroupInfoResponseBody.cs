@@ -26,6 +26,9 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("DeviceOnline")]
             [Validation(Required=false)]
             public int? DeviceOnline { get; set; }
+            [NameInMap("DynamicGroupExpression")]
+            [Validation(Required=false)]
+            public string DynamicGroupExpression { get; set; }
             [NameInMap("GroupDesc")]
             [Validation(Required=false)]
             public string GroupDesc { get; set; }

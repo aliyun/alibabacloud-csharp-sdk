@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("ProductKey")]
+        [Validation(Required=false)]
+        public string ProductKey { get; set; }
+
         [NameInMap("Status")]
         [Validation(Required=false)]
         public int? Status { get; set; }

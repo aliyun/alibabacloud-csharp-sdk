@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateSpeechRequest : TeaModel {
+        [NameInMap("AudioFormat")]
+        [Validation(Required=false)]
+        public string AudioFormat { get; set; }
+
         [NameInMap("BizCode")]
         [Validation(Required=false)]
         public string BizCode { get; set; }
+
+        [NameInMap("EnableSoundCode")]
+        [Validation(Required=false)]
+        public bool? EnableSoundCode { get; set; }
 
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
@@ -20,6 +28,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("ProjectCode")]
         [Validation(Required=false)]
         public string ProjectCode { get; set; }
+
+        [NameInMap("SoundCodeConfig")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> SoundCodeConfig { get; set; }
 
         [NameInMap("SpeechRate")]
         [Validation(Required=false)]
