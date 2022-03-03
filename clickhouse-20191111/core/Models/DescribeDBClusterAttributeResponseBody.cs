@@ -94,6 +94,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [NameInMap("PublicConnectionString")]
             [Validation(Required=false)]
             public string PublicConnectionString { get; set; }
+            [NameInMap("PublicIpAddr")]
+            [Validation(Required=false)]
+            public string PublicIpAddr { get; set; }
             [NameInMap("PublicPort")]
             [Validation(Required=false)]
             public string PublicPort { get; set; }
@@ -153,6 +156,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
+            [NameInMap("VpcIpAddr")]
+            [Validation(Required=false)]
+            public string VpcIpAddr { get; set; }
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
             public string ZoneId { get; set; }

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
-    public class DescribeRDSschemasRequest : TeaModel {
+    public class CheckHealthRequest : TeaModel {
         [NameInMap("DbClusterId")]
         [Validation(Required=false)]
         public string DbClusterId { get; set; }
@@ -20,26 +20,6 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
-
-        [NameInMap("RdsId")]
-        [Validation(Required=false)]
-        public string RdsId { get; set; }
-
-        [NameInMap("RdsPassword")]
-        [Validation(Required=false)]
-        public string RdsPassword { get; set; }
-
-        [NameInMap("RdsPort")]
-        [Validation(Required=false)]
-        public long? RdsPort { get; set; }
-
-        [NameInMap("RdsUserName")]
-        [Validation(Required=false)]
-        public string RdsUserName { get; set; }
-
-        [NameInMap("RdsVpcUrl")]
-        [Validation(Required=false)]
-        public string RdsVpcUrl { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

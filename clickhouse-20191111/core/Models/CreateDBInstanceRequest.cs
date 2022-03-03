@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [Validation(Required=false)]
         public string EncryptionType { get; set; }
 
+        [NameInMap("OpenMonitor")]
+        [Validation(Required=false)]
+        public bool? OpenMonitor { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

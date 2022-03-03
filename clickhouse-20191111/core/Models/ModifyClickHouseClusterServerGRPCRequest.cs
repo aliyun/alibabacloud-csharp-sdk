@@ -8,10 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
-    public class DescribeRDSschemasRequest : TeaModel {
+    public class ModifyClickHouseClusterServerGRPCRequest : TeaModel {
+        [NameInMap("Config")]
+        [Validation(Required=false)]
+        public string Config { get; set; }
+
         [NameInMap("DbClusterId")]
         [Validation(Required=false)]
         public string DbClusterId { get; set; }
+
+        [NameInMap("Namespace")]
+        [Validation(Required=false)]
+        public string Namespace { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -21,25 +29,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("RdsId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string RdsId { get; set; }
-
-        [NameInMap("RdsPassword")]
-        [Validation(Required=false)]
-        public string RdsPassword { get; set; }
-
-        [NameInMap("RdsPort")]
-        [Validation(Required=false)]
-        public long? RdsPort { get; set; }
-
-        [NameInMap("RdsUserName")]
-        [Validation(Required=false)]
-        public string RdsUserName { get; set; }
-
-        [NameInMap("RdsVpcUrl")]
-        [Validation(Required=false)]
-        public string RdsVpcUrl { get; set; }
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [Validation(Required=false)]
             public string RdsUserName { get; set; }
 
+            [NameInMap("RdsVpcUrl")]
+            [Validation(Required=false)]
+            public string RdsVpcUrl { get; set; }
+
             [NameInMap("SynDb")]
             [Validation(Required=false)]
             public string SynDb { get; set; }
