@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 {
     public class ListInstancesRequest : TeaModel {
+        [NameInMap("AcceleratorType")]
+        [Validation(Required=false)]
+        public string AcceleratorType { get; set; }
+
+        [NameInMap("Accessibility")]
+        [Validation(Required=false)]
+        public string Accessibility { get; set; }
+
         /// <summary>
         /// 实例名称
         /// </summary>
@@ -36,6 +44,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
+
+        [NameInMap("PaymentType")]
+        [Validation(Required=false)]
+        public string PaymentType { get; set; }
 
         /// <summary>
         /// 排序字段
