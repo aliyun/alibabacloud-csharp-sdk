@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// 外部拓展字段。
+        /// 外部拓展字段，示例：["1234567890"]。
         /// </summary>
         [NameInMap("OutIds")]
         [Validation(Required=false)]
         public List<string> OutIds { get; set; }
 
         /// <summary>
-        /// 手机号，每个手机号对应一个模板变量、上行拓展码和外部拓展字段。
+        /// 手机号，每个手机号对应一个模板变量、上行拓展码和外部拓展字段，示例：["1234567890"]。
         /// </summary>
         [NameInMap("PhoneNumbers")]
         [Validation(Required=false)]
         public List<string> PhoneNumbers { get; set; }
 
         /// <summary>
-        /// 发送计划Id，用于关联发送计划。
+        /// 触达计划Id，用于关联触达计划。
         /// </summary>
         [NameInMap("ScheduleId")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         public string SignatureId { get; set; }
 
         /// <summary>
-        /// 短信上行拓展码。
+        /// 短信上行拓展码，示例：["1234567890"]。
         /// </summary>
         [NameInMap("SmsUpExtendCodes")]
         [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// 短信模板变量对应的实际值，JSON格式。支持传入多个参数，示例：{"name":"张三","number":"15038****76"}。
+        /// 短信模板变量对应的实际值，JSON格式。支持传入多个参数，示例：[{"name":"张三","number":"15038****76"}]。
         /// </summary>
         [NameInMap("TemplateParams")]
         [Validation(Required=false)]

@@ -31,7 +31,14 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// 签名Id。
+        /// 签名名称，同时只能指定签名名称或签名Id其中之一。
+        /// </summary>
+        [NameInMap("Signature")]
+        [Validation(Required=false)]
+        public string Signature { get; set; }
+
+        /// <summary>
+        /// 签名Id，可通过ListSignatures获取审核状态为已通过的签名列表，获取签名Id。
         /// </summary>
         [NameInMap("SignatureId")]
         [Validation(Required=false)]
@@ -39,9 +46,9 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
 
         /// <summary>
         /// 模板类型。
-        /// 0：验证码。
-        /// 1：短信通知。
-        /// 2：推广短信。
+        /// - 0 : 验证码。
+        /// - 1 : 短信通知。
+        /// - 2 : 推广短信。
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

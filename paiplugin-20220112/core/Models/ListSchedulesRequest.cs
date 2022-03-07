@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
 {
     public class ListSchedulesRequest : TeaModel {
         /// <summary>
-        /// 发送计划名称，用于名称过滤或搜索，使用%name%模糊匹配
+        /// 触达计划名称过滤。
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// 发送状态过滤
+        /// 发送状态过滤。
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

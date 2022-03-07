@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
 {
     public class CreateScheduleResponseBody : TeaModel {
         /// <summary>
-        /// 返回数据
+        /// 返回数据。
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

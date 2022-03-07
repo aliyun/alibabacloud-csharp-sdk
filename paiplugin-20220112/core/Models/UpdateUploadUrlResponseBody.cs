@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
 {
-    public class DeleteGroupResponseBody : TeaModel {
+    public class UpdateUploadUrlResponseBody : TeaModel {
         /// <summary>
         /// 返回数据。
         /// </summary>

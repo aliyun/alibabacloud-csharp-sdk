@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// 关联发送计划Id。
+        /// 关联触达计划Id。
         /// </summary>
         [NameInMap("ScheduleId")]
         [Validation(Required=false)]
@@ -78,6 +78,16 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
+
+        /// <summary>
+        /// 模板类型。
+        /// - 0 : 验证码。
+        /// - 1 : 短信通知。
+        /// - 2 : 推广短信。
+        /// </summary>
+        [NameInMap("TemplateType")]
+        [Validation(Required=false)]
+        public int? TemplateType { get; set; }
 
     }
 

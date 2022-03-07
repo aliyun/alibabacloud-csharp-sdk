@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
 {
     public class ListGroupsRequest : TeaModel {
         /// <summary>
-        /// 人群名称过滤，使用%name%模糊匹配
+        /// 人群名称过滤。
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -31,21 +31,21 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// 人群备注过滤，使用%name%模糊匹配
+        /// 人群备注过滤。
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
 
         /// <summary>
-        /// 来源过滤
+        /// 来源过滤。
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public int? Source { get; set; }
 
         /// <summary>
-        /// 审核状态过滤
+        /// 审核状态过滤。
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

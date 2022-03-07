@@ -8,13 +8,21 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
 {
-    public class DeleteGroupResponseBody : TeaModel {
+    public class GetMessageConfigResponseBody : TeaModel {
         /// <summary>
         /// 返回数据。
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public string Data { get; set; }
+        public GetMessageConfigResponseBodyData Data { get; set; }
+        public class GetMessageConfigResponseBodyData : TeaModel {
+            [NameInMap("SmsReportUrl")]
+            [Validation(Required=false)]
+            public string SmsReportUrl { get; set; }
+            [NameInMap("SmsUpUrl")]
+            [Validation(Required=false)]
+            public string SmsUpUrl { get; set; }
+        };
 
         /// <summary>
         /// 错误码。

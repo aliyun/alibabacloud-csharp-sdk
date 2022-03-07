@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         public string InferenceJobId { get; set; }
 
         /// <summary>
-        /// 人群名称
+        /// 人群名称。
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -62,12 +62,12 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// 人群来源
-        /// - 0: Text，每行一个手机号
-        /// - 1: 无header的csv文件，每行一个手机号
-        /// - 2: 带header的csv文件，需指定手机号列名
-        /// - 3: Odps，需指定手机号列名
-        /// - 4: Algorithm，由算法预测生成
+        /// 人群来源。
+        /// - 0: Text，每行一个手机号。
+        /// - 1: 文本文件，每行一个手机号。
+        /// - 2: 带header的csv文件，需指定手机号列名。
+        /// - 3: Odps，需指定手机号列名。
+        /// - 4: Algorithm，由算法预测生成。
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]

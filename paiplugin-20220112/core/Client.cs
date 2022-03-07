@@ -38,9 +38,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 注册人群
-        
-         * @tags 人群
+         * 注册人群。
          */
         public CreateGroupResponse CreateGroup(CreateGroupRequest request)
         {
@@ -50,9 +48,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 注册人群
-        
-         * @tags 人群
+         * 注册人群。
          */
         public async Task<CreateGroupResponse> CreateGroupAsync(CreateGroupRequest request)
         {
@@ -198,9 +194,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 注册推理任务
-        
-         * @tags 推理任务
+         * 注册预测任务。
          */
         public CreateInferenceJobResponse CreateInferenceJob(CreateInferenceJobRequest request)
         {
@@ -210,9 +204,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 注册推理任务
-        
-         * @tags 推理任务
+         * 注册预测任务。
          */
         public async Task<CreateInferenceJobResponse> CreateInferenceJobAsync(CreateInferenceJobRequest request)
         {
@@ -310,9 +302,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 注册触达计划
-        
-         * @tags 触达计划
+         * 注册触达计划。
          */
         public CreateScheduleResponse CreateSchedule(CreateScheduleRequest request)
         {
@@ -322,9 +312,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 注册触达计划
-        
-         * @tags 触达计划
+         * 注册触达计划。
          */
         public async Task<CreateScheduleResponse> CreateScheduleAsync(CreateScheduleRequest request)
         {
@@ -472,7 +460,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 注册签名。
         
-         * @tags 签名
          */
         public CreateSignatureResponse CreateSignature(CreateSignatureRequest request)
         {
@@ -484,7 +471,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 注册签名。
         
-         * @tags 签名
          */
         public async Task<CreateSignatureResponse> CreateSignatureAsync(CreateSignatureRequest request)
         {
@@ -558,9 +544,8 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 注册模板
+         * 注册模板。
         
-         * @tags 模板
          */
         public CreateTemplateResponse CreateTemplate(CreateTemplateRequest request)
         {
@@ -570,9 +555,8 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 注册模板
+         * 注册模板。
         
-         * @tags 模板
          */
         public async Task<CreateTemplateResponse> CreateTemplateAsync(CreateTemplateRequest request)
         {
@@ -596,6 +580,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Signature))
+            {
+                body["Signature"] = request.Signature;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignatureId))
             {
@@ -641,6 +629,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             {
                 body["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Signature))
+            {
+                body["Signature"] = request.Signature;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignatureId))
             {
                 body["SignatureId"] = request.SignatureId;
@@ -670,9 +662,8 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 注册训练任务
+         * 注册训练任务。
         
-         * @tags 训练任务
          */
         public CreateTrainingJobResponse CreateTrainingJob(CreateTrainingJobRequest request)
         {
@@ -682,9 +673,8 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 注册训练任务
+         * 注册训练任务。
         
-         * @tags 训练任务
          */
         public async Task<CreateTrainingJobResponse> CreateTrainingJobAsync(CreateTrainingJobRequest request)
         {
@@ -776,7 +766,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 删除人群
         
-         * @tags 人群
          */
         public DeleteGroupResponse DeleteGroup(string Id)
         {
@@ -788,7 +777,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 删除人群
         
-         * @tags 人群
          */
         public async Task<DeleteGroupResponse> DeleteGroupAsync(string Id)
         {
@@ -842,9 +830,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 删除推理任务
-        
-         * @tags 推理任务
+         * 删除预测任务。
          */
         public DeleteInferenceJobResponse DeleteInferenceJob(string Id)
         {
@@ -854,9 +840,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 删除推理任务
-        
-         * @tags 推理任务
+         * 删除预测任务。
          */
         public async Task<DeleteInferenceJobResponse> DeleteInferenceJobAsync(string Id)
         {
@@ -910,9 +894,8 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 删除触达计划
+         * 删除触达计划。
         
-         * @tags 触达计划
          */
         public DeleteScheduleResponse DeleteSchedule(string Id)
         {
@@ -922,9 +905,8 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 删除触达计划
+         * 删除触达计划。
         
-         * @tags 触达计划
          */
         public async Task<DeleteScheduleResponse> DeleteScheduleAsync(string Id)
         {
@@ -980,7 +962,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 删除签名。
         
-         * @tags 签名
          */
         public DeleteSignatureResponse DeleteSignature(string Id)
         {
@@ -992,7 +973,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 删除签名。
         
-         * @tags 签名
          */
         public async Task<DeleteSignatureResponse> DeleteSignatureAsync(string Id)
         {
@@ -1048,7 +1028,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 删除模板
         
-         * @tags 模板
          */
         public DeleteTemplateResponse DeleteTemplate(string Id)
         {
@@ -1060,7 +1039,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         /**
          * 删除模板
         
-         * @tags 模板
          */
         public async Task<DeleteTemplateResponse> DeleteTemplateAsync(string Id)
         {
@@ -1114,9 +1092,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 删除训练任务
-        
-         * @tags 训练任务
+         * 删除训练任务。
          */
         public DeleteTrainingJobResponse DeleteTrainingJob(string Id)
         {
@@ -1126,9 +1102,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 删除训练任务
-        
-         * @tags 训练任务
+         * 删除训练任务。
          */
         public async Task<DeleteTrainingJobResponse> DeleteTrainingJobAsync(string Id)
         {
@@ -1182,8 +1156,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 获取算法详情
-         * @tags 算法
+         * 获取算法详情。
          */
         public GetAlgorithmResponse GetAlgorithm(string Id)
         {
@@ -1193,8 +1166,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 获取算法详情
-         * @tags 算法
+         * 获取算法详情。
          */
         public async Task<GetAlgorithmResponse> GetAlgorithmAsync(string Id)
         {
@@ -1248,9 +1220,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 获取人群
-        默认返回所有人群信息
-         * @tags 人群
+         * 获取人群详情。
          */
         public GetGroupResponse GetGroup(string Id)
         {
@@ -1260,9 +1230,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 获取人群
-        默认返回所有人群信息
-         * @tags 人群
+         * 获取人群详情。
          */
         public async Task<GetGroupResponse> GetGroupAsync(string Id)
         {
@@ -1316,9 +1284,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 获取推理任务
-        默认返回所有推理任务信息
-         * @tags 推理任务
+         * 获取预测任务详情。
          */
         public GetInferenceJobResponse GetInferenceJob(string Id)
         {
@@ -1328,9 +1294,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 获取推理任务
-        默认返回所有推理任务信息
-         * @tags 推理任务
+         * 获取预测任务详情。
          */
         public async Task<GetInferenceJobResponse> GetInferenceJobAsync(string Id)
         {
@@ -1384,9 +1348,69 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
+         * 获取短信配置。
+         */
+        public GetMessageConfigResponse GetMessageConfig()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetMessageConfigWithOptions(headers, runtime);
+        }
+
+        /**
+         * 获取短信配置。
+         */
+        public async Task<GetMessageConfigResponse> GetMessageConfigAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetMessageConfigWithOptionsAsync(headers, runtime);
+        }
+
+        public GetMessageConfigResponse GetMessageConfigWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMessageConfig",
+                Version = "2022-01-12",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/users/messageConfig",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMessageConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetMessageConfigResponse> GetMessageConfigWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMessageConfig",
+                Version = "2022-01-12",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/users/messageConfig",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMessageConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
          * 获取触达计划详情。
-        
-         * @tags 触达计划
          */
         public GetScheduleResponse GetSchedule(string Id)
         {
@@ -1397,8 +1421,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         /**
          * 获取触达计划详情。
-        
-         * @tags 触达计划
          */
         public async Task<GetScheduleResponse> GetScheduleAsync(string Id)
         {
@@ -1452,8 +1474,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 获取签名详情
-         * @tags 签名
+         * 获取签名详情。
          */
         public GetSignatureResponse GetSignature(string Id)
         {
@@ -1463,8 +1484,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 获取签名详情
-         * @tags 签名
+         * 获取签名详情。
          */
         public async Task<GetSignatureResponse> GetSignatureAsync(string Id)
         {
@@ -1518,10 +1538,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 获取模板
-        默认返回所有模板信息
-        ![模板列表](https://intranetproxy.alipay.com/skylark/lark/0/2021/png/302991/1615264998427-d2943cfb-106a-421d-b4a4-f06307b4d9be.png)
-         * @tags 模板
+         * 获取模板详情。
          */
         public GetTemplateResponse GetTemplate(string Id)
         {
@@ -1531,10 +1548,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 获取模板
-        默认返回所有模板信息
-        ![模板列表](https://intranetproxy.alipay.com/skylark/lark/0/2021/png/302991/1615264998427-d2943cfb-106a-421d-b4a4-f06307b4d9be.png)
-         * @tags 模板
+         * 获取模板详情。
          */
         public async Task<GetTemplateResponse> GetTemplateAsync(string Id)
         {
@@ -1588,9 +1602,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 获取训练任务
-        默认返回所有训练任务信息
-         * @tags 训练任务
+         * 获取训练任务详情。
          */
         public GetTrainingJobResponse GetTrainingJob(string Id)
         {
@@ -1600,9 +1612,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 获取训练任务
-        默认返回所有训练任务信息
-         * @tags 训练任务
+         * 获取训练任务详情。
          */
         public async Task<GetTrainingJobResponse> GetTrainingJobAsync(string Id)
         {
@@ -1656,8 +1666,69 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 获取算法列表
-         * @tags 算法
+         * 获取账号状态。
+         */
+        public GetUserResponse GetUser()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetUserWithOptions(headers, runtime);
+        }
+
+        /**
+         * 获取账号状态。
+         */
+        public async Task<GetUserResponse> GetUserAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetUserWithOptionsAsync(headers, runtime);
+        }
+
+        public GetUserResponse GetUserWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUser",
+                Version = "2022-01-12",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/users",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetUserResponse> GetUserWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUser",
+                Version = "2022-01-12",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/users",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * 获取算法列表。
          */
         public ListAlgorithmsResponse ListAlgorithms(ListAlgorithmsRequest request)
         {
@@ -1667,8 +1738,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 获取算法列表
-         * @tags 算法
+         * 获取算法列表。
          */
         public async Task<ListAlgorithmsResponse> ListAlgorithmsAsync(ListAlgorithmsRequest request)
         {
@@ -1758,8 +1828,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 获取人群列表
-         * @tags 人群
+         * 获取人群列表。
          */
         public ListGroupsResponse ListGroups(ListGroupsRequest request)
         {
@@ -1769,8 +1838,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 获取人群列表
-         * @tags 人群
+         * 获取人群列表。
          */
         public async Task<ListGroupsResponse> ListGroupsAsync(ListGroupsRequest request)
         {
@@ -1876,8 +1944,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 获取推理任务列表
-         * @tags 推理任务
+         * 获取预测任务列表。
          */
         public ListInferenceJobsResponse ListInferenceJobs(ListInferenceJobsRequest request)
         {
@@ -1887,8 +1954,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 获取推理任务列表
-         * @tags 推理任务
+         * 获取预测任务列表。
          */
         public async Task<ListInferenceJobsResponse> ListInferenceJobsAsync(ListInferenceJobsRequest request)
         {
@@ -1986,8 +2052,9 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 获取用户短信发送统计
-         * @tags 短信
+         * 获取短信发送统计列表。
+        获取短信发送统计数据，可按指定条件获取分类别详细数据，返回数据按日期顺序排列，发送统计为空的日期默认不返回。
+        发送数据在48小时内会随实际短信发送状态不断更新，最终数据以48小时后数据为准。
          */
         public ListMessageMetricsResponse ListMessageMetrics(ListMessageMetricsRequest request)
         {
@@ -1997,8 +2064,9 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 获取用户短信发送统计
-         * @tags 短信
+         * 获取短信发送统计列表。
+        获取短信发送统计数据，可按指定条件获取分类别详细数据，返回数据按日期顺序排列，发送统计为空的日期默认不返回。
+        发送数据在48小时内会随实际短信发送状态不断更新，最终数据以48小时后数据为准。
          */
         public async Task<ListMessageMetricsResponse> ListMessageMetricsAsync(ListMessageMetricsRequest request)
         {
@@ -2050,6 +2118,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 query["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
+            {
+                query["TemplateType"] = request.TemplateType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2115,6 +2187,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             {
                 query["TemplateId"] = request.TemplateId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
+            {
+                query["TemplateType"] = request.TemplateType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2136,8 +2212,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 查询短信发送详情
-         * @tags 短信
+         * 查询短信发送详情列表。
          */
         public ListMessagesResponse ListMessages(ListMessagesRequest request)
         {
@@ -2147,8 +2222,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 查询短信发送详情
-         * @tags 短信
+         * 查询短信发送详情列表。
          */
         public async Task<ListMessagesResponse> ListMessagesAsync(ListMessagesRequest request)
         {
@@ -2212,6 +2286,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 query["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
+            {
+                query["TemplateType"] = request.TemplateType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2289,6 +2367,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             {
                 query["TemplateId"] = request.TemplateId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
+            {
+                query["TemplateType"] = request.TemplateType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2311,7 +2393,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         /**
          * 获取触达计划列表。
-         * @tags 触达计划
          */
         public ListSchedulesResponse ListSchedules(ListSchedulesRequest request)
         {
@@ -2322,7 +2403,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         /**
          * 获取触达计划列表。
-         * @tags 触达计划
          */
         public async Task<ListSchedulesResponse> ListSchedulesAsync(ListSchedulesRequest request)
         {
@@ -2412,8 +2492,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 获取签名列表
-         * @tags 签名
+         * 获取签名列表。
          */
         public ListSignaturesResponse ListSignatures(ListSignaturesRequest request)
         {
@@ -2423,8 +2502,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 获取签名列表
-         * @tags 签名
+         * 获取签名列表。
          */
         public async Task<ListSignaturesResponse> ListSignaturesAsync(ListSignaturesRequest request)
         {
@@ -2514,9 +2592,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 获取模板列表
-        默认返回所有模板信息
-         * @tags 模板
+         * 获取模板列表。
          */
         public ListTemplatesResponse ListTemplates(ListTemplatesRequest request)
         {
@@ -2526,9 +2602,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 获取模板列表
-        默认返回所有模板信息
-         * @tags 模板
+         * 获取模板列表。
          */
         public async Task<ListTemplatesResponse> ListTemplatesAsync(ListTemplatesRequest request)
         {
@@ -2634,8 +2708,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 获取训练任务列表
-         * @tags 训练任务
+         * 获取训练任务列表。
          */
         public ListTrainingJobsResponse ListTrainingJobs(ListTrainingJobsRequest request)
         {
@@ -2645,8 +2718,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 获取训练任务列表
-         * @tags 训练任务
+         * 获取训练任务列表。
          */
         public async Task<ListTrainingJobsResponse> ListTrainingJobsAsync(ListTrainingJobsRequest request)
         {
@@ -2744,8 +2816,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 发送短信
-         * @tags 短信
+         * 发送短信。
          */
         public SendMessageResponse SendMessage(SendMessageRequest request)
         {
@@ -2755,8 +2826,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         }
 
         /**
-         * 发送短信
-         * @tags 短信
+         * 发送短信。
          */
         public async Task<SendMessageResponse> SendMessageAsync(SendMessageRequest request)
         {
@@ -2891,6 +2961,292 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 BodyType = "json",
             };
             return TeaModel.ToObject<SendMessageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * 短信回执。
+         */
+        public SmsReportResponse SmsReport(SmsReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SmsReportWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * 短信回执。
+         */
+        public async Task<SmsReportResponse> SmsReportAsync(SmsReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SmsReportWithOptionsAsync(request, headers, runtime);
+        }
+
+        public SmsReportResponse SmsReportWithOptions(SmsReportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.TeaUtil.Common.ToArray(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SmsReport",
+                Version = "2022-01-12",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/recall/report",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SmsReportResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SmsReportResponse> SmsReportWithOptionsAsync(SmsReportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.TeaUtil.Common.ToArray(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SmsReport",
+                Version = "2022-01-12",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/recall/report",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SmsReportResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * 短信上行。
+         */
+        public SmsUpResponse SmsUp(SmsUpRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SmsUpWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * 短信上行。
+         */
+        public async Task<SmsUpResponse> SmsUpAsync(SmsUpRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SmsUpWithOptionsAsync(request, headers, runtime);
+        }
+
+        public SmsUpResponse SmsUpWithOptions(SmsUpRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.TeaUtil.Common.ToArray(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SmsUp",
+                Version = "2022-01-12",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/recall/up",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SmsUpResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SmsUpResponse> SmsUpWithOptionsAsync(SmsUpRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.TeaUtil.Common.ToArray(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SmsUp",
+                Version = "2022-01-12",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/recall/up",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SmsUpResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * 更新回执Url。
+        
+         */
+        public UpdateReportUrlResponse UpdateReportUrl(UpdateReportUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateReportUrlWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * 更新回执Url。
+        
+         */
+        public async Task<UpdateReportUrlResponse> UpdateReportUrlAsync(UpdateReportUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateReportUrlWithOptionsAsync(request, headers, runtime);
+        }
+
+        public UpdateReportUrlResponse UpdateReportUrlWithOptions(UpdateReportUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                body["Url"] = request.Url;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateReportUrl",
+                Version = "2022-01-12",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/users/reportUrl",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateReportUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateReportUrlResponse> UpdateReportUrlWithOptionsAsync(UpdateReportUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                body["Url"] = request.Url;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateReportUrl",
+                Version = "2022-01-12",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/users/reportUrl",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateReportUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * 更新上行Url。
+         */
+        public UpdateUploadUrlResponse UpdateUploadUrl(UpdateUploadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateUploadUrlWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * 更新上行Url。
+         */
+        public async Task<UpdateUploadUrlResponse> UpdateUploadUrlAsync(UpdateUploadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateUploadUrlWithOptionsAsync(request, headers, runtime);
+        }
+
+        public UpdateUploadUrlResponse UpdateUploadUrlWithOptions(UpdateUploadUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                body["Url"] = request.Url;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateUploadUrl",
+                Version = "2022-01-12",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/users/uploadUrl",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateUploadUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateUploadUrlResponse> UpdateUploadUrlWithOptionsAsync(UpdateUploadUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                body["Url"] = request.Url;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateUploadUrl",
+                Version = "2022-01-12",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/users/uploadUrl",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateUploadUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
     }

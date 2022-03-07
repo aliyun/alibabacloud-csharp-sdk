@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
 {
     public class ListMessagesResponseBody : TeaModel {
         /// <summary>
-        /// 返回数据
+        /// 返回数据。
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -30,6 +30,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
                 public int? Status { get; set; }
                 public string TemplateCode { get; set; }
                 public string TemplateParams { get; set; }
+                public int? TemplateType { get; set; }
             }
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
