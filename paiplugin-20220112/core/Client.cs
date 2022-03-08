@@ -161,6 +161,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             {
                 body["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Signature))
+            {
+                body["Signature"] = request.Signature;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignatureId))
             {
                 body["SignatureId"] = request.SignatureId;
@@ -204,6 +208,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Signature))
+            {
+                body["Signature"] = request.Signature;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignatureId))
             {
