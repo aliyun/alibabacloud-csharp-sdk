@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         public string Datetime { get; set; }
 
         /// <summary>
+        /// 短信错误码过滤。
+        /// </summary>
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
+        /// <summary>
         /// 关联人群Id过滤。
         /// </summary>
         [NameInMap("GroupId")]

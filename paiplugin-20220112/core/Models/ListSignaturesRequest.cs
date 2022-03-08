@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
 {
     public class ListSignaturesRequest : TeaModel {
         /// <summary>
-        /// 签名名称过滤。
+        /// 签名名称。
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -31,10 +31,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// 签名审核状态过滤。
-        /// - 0：审核中。
-        /// - 1：审核通过。
-        /// - 2：审核不通过。
+        /// 审核状态。
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

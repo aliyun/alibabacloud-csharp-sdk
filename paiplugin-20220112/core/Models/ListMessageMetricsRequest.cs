@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
 {
     public class ListMessageMetricsRequest : TeaModel {
         /// <summary>
-        /// 结束日期，格式20220102。
+        /// 结束日期，必填，格式20220102。
         /// </summary>
         [NameInMap("EndDate")]
         [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
         public string SignatureId { get; set; }
 
         /// <summary>
-        /// 开始日期，格式20220102。
+        /// 开始日期，必填，格式20220102。
         /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]
@@ -81,9 +81,9 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
 
         /// <summary>
         /// 模板类型。
-        /// - 0 : 验证码。
-        /// - 1 : 短信通知。
-        /// - 2 : 推广短信。
+        /// 0 : 验证码。
+        /// 1 : 短信通知。
+        /// 2 : 推广短信。
         /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]
