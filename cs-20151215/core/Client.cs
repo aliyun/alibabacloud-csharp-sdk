@@ -1793,6 +1793,118 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CreateTriggerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        public DeleteAlertContactResponse DeleteAlertContact()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteAlertContactWithOptions(headers, runtime);
+        }
+
+        public async Task<DeleteAlertContactResponse> DeleteAlertContactAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteAlertContactWithOptionsAsync(headers, runtime);
+        }
+
+        public DeleteAlertContactResponse DeleteAlertContactWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAlertContact",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/alert/contacts",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteAlertContactResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteAlertContactResponse> DeleteAlertContactWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAlertContact",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/alert/contacts",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteAlertContactResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteAlertContactGroupResponse DeleteAlertContactGroup()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteAlertContactGroupWithOptions(headers, runtime);
+        }
+
+        public async Task<DeleteAlertContactGroupResponse> DeleteAlertContactGroupAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteAlertContactGroupWithOptionsAsync(headers, runtime);
+        }
+
+        public DeleteAlertContactGroupResponse DeleteAlertContactGroupWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAlertContactGroup",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/alert/contact_groups",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteAlertContactGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteAlertContactGroupResponse> DeleteAlertContactGroupWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAlertContactGroup",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/alert/contact_groups",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteAlertContactGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public DeleteClusterResponse DeleteCluster(string ClusterId, DeleteClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7733,26 +7845,95 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public UpdateK8sClusterUserConfigExpireResponse UpdateK8sClusterUserConfigExpire(string ClusterId)
+        public UpdateContactGroupForAlertResponse UpdateContactGroupForAlert(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UpdateK8sClusterUserConfigExpireWithOptions(ClusterId, headers, runtime);
+            return UpdateContactGroupForAlertWithOptions(ClusterId, headers, runtime);
         }
 
-        public async Task<UpdateK8sClusterUserConfigExpireResponse> UpdateK8sClusterUserConfigExpireAsync(string ClusterId)
+        public async Task<UpdateContactGroupForAlertResponse> UpdateContactGroupForAlertAsync(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UpdateK8sClusterUserConfigExpireWithOptionsAsync(ClusterId, headers, runtime);
+            return await UpdateContactGroupForAlertWithOptionsAsync(ClusterId, headers, runtime);
         }
 
-        public UpdateK8sClusterUserConfigExpireResponse UpdateK8sClusterUserConfigExpireWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateContactGroupForAlertResponse UpdateContactGroupForAlertWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContactGroupForAlert",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/alert/" + ClusterId + "/alert_rule/contact_groups",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateContactGroupForAlertResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateContactGroupForAlertResponse> UpdateContactGroupForAlertWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContactGroupForAlert",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/alert/" + ClusterId + "/alert_rule/contact_groups",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateContactGroupForAlertResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateK8sClusterUserConfigExpireResponse UpdateK8sClusterUserConfigExpire(string ClusterId, UpdateK8sClusterUserConfigExpireRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateK8sClusterUserConfigExpireWithOptions(ClusterId, request, headers, runtime);
+        }
+
+        public async Task<UpdateK8sClusterUserConfigExpireResponse> UpdateK8sClusterUserConfigExpireAsync(string ClusterId, UpdateK8sClusterUserConfigExpireRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateK8sClusterUserConfigExpireWithOptionsAsync(ClusterId, request, headers, runtime);
+        }
+
+        public UpdateK8sClusterUserConfigExpireResponse UpdateK8sClusterUserConfigExpireWithOptions(string ClusterId, UpdateK8sClusterUserConfigExpireRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireHour))
+            {
+                body["expire_hour"] = request.ExpireHour;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.User))
+            {
+                body["user"] = request.User;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7769,12 +7950,23 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<UpdateK8sClusterUserConfigExpireResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<UpdateK8sClusterUserConfigExpireResponse> UpdateK8sClusterUserConfigExpireWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateK8sClusterUserConfigExpireResponse> UpdateK8sClusterUserConfigExpireWithOptionsAsync(string ClusterId, UpdateK8sClusterUserConfigExpireRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireHour))
+            {
+                body["expire_hour"] = request.ExpireHour;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.User))
+            {
+                body["user"] = request.User;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
