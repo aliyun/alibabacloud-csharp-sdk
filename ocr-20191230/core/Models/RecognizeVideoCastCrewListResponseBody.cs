@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [Validation(Required=false)]
             public List<RecognizeVideoCastCrewListResponseBodyDataCastResults> CastResults { get; set; }
             public class RecognizeVideoCastCrewListResponseBodyDataCastResults : TeaModel {
-                public Dictionary<string, string> DetailInfoes { get; set; }
+                public Dictionary<string, string> DetailInfo { get; set; }
                 public float? EndTime { get; set; }
                 public float? StartTime { get; set; }
             }
@@ -25,13 +25,13 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [Validation(Required=false)]
             public List<RecognizeVideoCastCrewListResponseBodyDataOcrResults> OcrResults { get; set; }
             public class RecognizeVideoCastCrewListResponseBodyDataOcrResults : TeaModel {
-                public List<RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoes> DetailInfoes { get; set; }
-                public class RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoes : TeaModel {
+                public List<RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfo> DetailInfo { get; set; }
+                public class RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfo : TeaModel {
                     public List<string> Boxes { get; set; }
                     public List<string> CharProbs { get; set; }
                     public long? FrameIndex { get; set; }
-                    public List<RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoesPosition> Position { get; set; }
-                    public class RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoesPosition : TeaModel {
+                    public List<RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoPosition> Position { get; set; }
+                    public class RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoPosition : TeaModel {
                         public long? X { get; set; }
                         public long? Y { get; set; }
                     }
@@ -59,11 +59,11 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [Validation(Required=false)]
             public List<RecognizeVideoCastCrewListResponseBodyDataVideoOcrResults> VideoOcrResults { get; set; }
             public class RecognizeVideoCastCrewListResponseBodyDataVideoOcrResults : TeaModel {
-                public List<RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoes> DetailInfoes { get; set; }
-                public class RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoes : TeaModel {
+                public List<RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfo> DetailInfo { get; set; }
+                public class RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfo : TeaModel {
                     public List<string> Boxes { get; set; }
-                    public List<RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoesPosition> Position { get; set; }
-                    public class RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoesPosition : TeaModel {
+                    public List<RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoPosition> Position { get; set; }
+                    public class RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoPosition : TeaModel {
                         public long? X { get; set; }
                         public long? Y { get; set; }
                     }
