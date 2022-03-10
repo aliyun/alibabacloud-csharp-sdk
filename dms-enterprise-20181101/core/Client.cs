@@ -649,6 +649,124 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await CreateDataCronClearOrderWithOptionsAsync(request, runtime);
         }
 
+        public CreateDataExportOrderResponse CreateDataExportOrderWithOptions(CreateDataExportOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDataExportOrderShrinkRequest request = new CreateDataExportOrderShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Param.ToMap()))
+            {
+                request.ParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Param.ToMap(), "Param", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RelatedUserList))
+            {
+                request.RelatedUserListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RelatedUserList, "RelatedUserList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachmentKey))
+            {
+                query["AttachmentKey"] = request.AttachmentKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                query["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamShrink))
+            {
+                query["Param"] = request.ParamShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelatedUserListShrink))
+            {
+                query["RelatedUserList"] = request.RelatedUserListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDataExportOrder",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDataExportOrderResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateDataExportOrderResponse> CreateDataExportOrderWithOptionsAsync(CreateDataExportOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDataExportOrderShrinkRequest request = new CreateDataExportOrderShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Param.ToMap()))
+            {
+                request.ParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Param.ToMap(), "Param", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RelatedUserList))
+            {
+                request.RelatedUserListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RelatedUserList, "RelatedUserList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachmentKey))
+            {
+                query["AttachmentKey"] = request.AttachmentKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                query["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamShrink))
+            {
+                query["Param"] = request.ParamShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelatedUserListShrink))
+            {
+                query["RelatedUserList"] = request.RelatedUserListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDataExportOrder",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDataExportOrderResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateDataExportOrderResponse CreateDataExportOrder(CreateDataExportOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDataExportOrderWithOptions(request, runtime);
+        }
+
+        public async Task<CreateDataExportOrderResponse> CreateDataExportOrderAsync(CreateDataExportOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDataExportOrderWithOptionsAsync(request, runtime);
+        }
+
         public CreateDataImportOrderResponse CreateDataImportOrderWithOptions(CreateDataImportOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4707,302 +4825,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await GetSQLReviewOptimizeDetailWithOptionsAsync(request, runtime);
         }
 
-        public GetSparkJobDetailResponse GetSparkJobDetailWithOptions(GetSparkJobDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
-            {
-                query["JobId"] = request.JobId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
-            {
-                query["Tid"] = request.Tid;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetSparkJobDetail",
-                Version = "2018-11-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetSparkJobDetailResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<GetSparkJobDetailResponse> GetSparkJobDetailWithOptionsAsync(GetSparkJobDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
-            {
-                query["JobId"] = request.JobId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
-            {
-                query["Tid"] = request.Tid;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetSparkJobDetail",
-                Version = "2018-11-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetSparkJobDetailResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public GetSparkJobDetailResponse GetSparkJobDetail(GetSparkJobDetailRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return GetSparkJobDetailWithOptions(request, runtime);
-        }
-
-        public async Task<GetSparkJobDetailResponse> GetSparkJobDetailAsync(GetSparkJobDetailRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await GetSparkJobDetailWithOptionsAsync(request, runtime);
-        }
-
-        public GetSparkJobDriverLogResponse GetSparkJobDriverLogWithOptions(GetSparkJobDriverLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
-            {
-                query["JobId"] = request.JobId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
-            {
-                query["Tid"] = request.Tid;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetSparkJobDriverLog",
-                Version = "2018-11-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetSparkJobDriverLogResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<GetSparkJobDriverLogResponse> GetSparkJobDriverLogWithOptionsAsync(GetSparkJobDriverLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
-            {
-                query["JobId"] = request.JobId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
-            {
-                query["Tid"] = request.Tid;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetSparkJobDriverLog",
-                Version = "2018-11-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetSparkJobDriverLogResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public GetSparkJobDriverLogResponse GetSparkJobDriverLog(GetSparkJobDriverLogRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return GetSparkJobDriverLogWithOptions(request, runtime);
-        }
-
-        public async Task<GetSparkJobDriverLogResponse> GetSparkJobDriverLogAsync(GetSparkJobDriverLogRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await GetSparkJobDriverLogWithOptionsAsync(request, runtime);
-        }
-
-        public GetSparkJobExecutorLogsResponse GetSparkJobExecutorLogsWithOptions(GetSparkJobExecutorLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
-            {
-                query["JobId"] = request.JobId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
-            {
-                query["Tid"] = request.Tid;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetSparkJobExecutorLogs",
-                Version = "2018-11-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetSparkJobExecutorLogsResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<GetSparkJobExecutorLogsResponse> GetSparkJobExecutorLogsWithOptionsAsync(GetSparkJobExecutorLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
-            {
-                query["JobId"] = request.JobId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
-            {
-                query["Tid"] = request.Tid;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetSparkJobExecutorLogs",
-                Version = "2018-11-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetSparkJobExecutorLogsResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public GetSparkJobExecutorLogsResponse GetSparkJobExecutorLogs(GetSparkJobExecutorLogsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return GetSparkJobExecutorLogsWithOptions(request, runtime);
-        }
-
-        public async Task<GetSparkJobExecutorLogsResponse> GetSparkJobExecutorLogsAsync(GetSparkJobExecutorLogsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await GetSparkJobExecutorLogsWithOptionsAsync(request, runtime);
-        }
-
-        public GetSparkJobLogResponse GetSparkJobLogWithOptions(GetSparkJobLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
-            {
-                query["JobId"] = request.JobId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
-            {
-                query["Tid"] = request.Tid;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetSparkJobLog",
-                Version = "2018-11-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetSparkJobLogResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<GetSparkJobLogResponse> GetSparkJobLogWithOptionsAsync(GetSparkJobLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
-            {
-                query["JobId"] = request.JobId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
-            {
-                query["Tid"] = request.Tid;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetSparkJobLog",
-                Version = "2018-11-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetSparkJobLogResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public GetSparkJobLogResponse GetSparkJobLog(GetSparkJobLogRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return GetSparkJobLogWithOptions(request, runtime);
-        }
-
-        public async Task<GetSparkJobLogResponse> GetSparkJobLogAsync(GetSparkJobLogRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await GetSparkJobLogWithOptionsAsync(request, runtime);
-        }
-
         public GetStructSyncExecSqlDetailResponse GetStructSyncExecSqlDetailWithOptions(GetStructSyncExecSqlDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5919,80 +5741,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await InspectProxyAccessSecretWithOptionsAsync(request, runtime);
-        }
-
-        public KillSparkJobResponse KillSparkJobWithOptions(KillSparkJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
-            {
-                query["JobId"] = request.JobId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
-            {
-                query["Tid"] = request.Tid;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "KillSparkJob",
-                Version = "2018-11-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<KillSparkJobResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<KillSparkJobResponse> KillSparkJobWithOptionsAsync(KillSparkJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
-            {
-                query["JobId"] = request.JobId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
-            {
-                query["Tid"] = request.Tid;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "KillSparkJob",
-                Version = "2018-11-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<KillSparkJobResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public KillSparkJobResponse KillSparkJob(KillSparkJobRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return KillSparkJobWithOptions(request, runtime);
-        }
-
-        public async Task<KillSparkJobResponse> KillSparkJobAsync(KillSparkJobRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await KillSparkJobWithOptionsAsync(request, runtime);
         }
 
         public ListColumnsResponse ListColumnsWithOptions(ListColumnsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8277,6 +8025,72 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await ListSensitiveColumnsDetailWithOptionsAsync(request, runtime);
         }
 
+        public ListStandardGroupsResponse ListStandardGroupsWithOptions(ListStandardGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListStandardGroups",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListStandardGroupsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListStandardGroupsResponse> ListStandardGroupsWithOptionsAsync(ListStandardGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListStandardGroups",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListStandardGroupsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListStandardGroupsResponse ListStandardGroups(ListStandardGroupsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListStandardGroupsWithOptions(request, runtime);
+        }
+
+        public async Task<ListStandardGroupsResponse> ListStandardGroupsAsync(ListStandardGroupsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListStandardGroupsWithOptionsAsync(request, runtime);
+        }
+
         public ListTablesResponse ListTablesWithOptions(ListTablesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10061,176 +9875,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitOrderApprovalWithOptionsAsync(request, runtime);
-        }
-
-        public SubmitSparkJobResponse SubmitSparkJobWithOptions(SubmitSparkJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            SubmitSparkJobShrinkRequest request = new SubmitSparkJobShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Arguments))
-            {
-                request.ArgumentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Arguments, "Arguments", "json");
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Configuration))
-            {
-                request.ConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Configuration, "Configuration", "json");
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Files))
-            {
-                request.FilesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Files, "Files", "json");
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OssInfo.ToMap()))
-            {
-                request.OssInfoShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OssInfo.ToMap(), "OssInfo", "json");
-            }
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
-            {
-                query["Tid"] = request.Tid;
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppCode))
-            {
-                body["AppCode"] = request.AppCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArgumentsShrink))
-            {
-                body["Arguments"] = request.ArgumentsShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigurationShrink))
-            {
-                body["Configuration"] = request.ConfigurationShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilesShrink))
-            {
-                body["Files"] = request.FilesShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MainClass))
-            {
-                body["MainClass"] = request.MainClass;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MainFile))
-            {
-                body["MainFile"] = request.MainFile;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
-            {
-                body["Name"] = request.Name;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssInfoShrink))
-            {
-                body["OssInfo"] = request.OssInfoShrink;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "SubmitSparkJob",
-                Version = "2018-11-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<SubmitSparkJobResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<SubmitSparkJobResponse> SubmitSparkJobWithOptionsAsync(SubmitSparkJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            SubmitSparkJobShrinkRequest request = new SubmitSparkJobShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Arguments))
-            {
-                request.ArgumentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Arguments, "Arguments", "json");
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Configuration))
-            {
-                request.ConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Configuration, "Configuration", "json");
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Files))
-            {
-                request.FilesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Files, "Files", "json");
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OssInfo.ToMap()))
-            {
-                request.OssInfoShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OssInfo.ToMap(), "OssInfo", "json");
-            }
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
-            {
-                query["Tid"] = request.Tid;
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppCode))
-            {
-                body["AppCode"] = request.AppCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArgumentsShrink))
-            {
-                body["Arguments"] = request.ArgumentsShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigurationShrink))
-            {
-                body["Configuration"] = request.ConfigurationShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilesShrink))
-            {
-                body["Files"] = request.FilesShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MainClass))
-            {
-                body["MainClass"] = request.MainClass;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MainFile))
-            {
-                body["MainFile"] = request.MainFile;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
-            {
-                body["Name"] = request.Name;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssInfoShrink))
-            {
-                body["OssInfo"] = request.OssInfoShrink;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "SubmitSparkJob",
-                Version = "2018-11-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<SubmitSparkJobResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public SubmitSparkJobResponse SubmitSparkJob(SubmitSparkJobRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return SubmitSparkJobWithOptions(request, runtime);
-        }
-
-        public async Task<SubmitSparkJobResponse> SubmitSparkJobAsync(SubmitSparkJobRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await SubmitSparkJobWithOptionsAsync(request, runtime);
         }
 
         public SubmitStructSyncOrderApprovalResponse SubmitStructSyncOrderApprovalWithOptions(SubmitStructSyncOrderApprovalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

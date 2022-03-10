@@ -8,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
-    public class GetSparkJobDriverLogRequest : TeaModel {
-        [NameInMap("JobId")]
-        [Validation(Required=false)]
-        public long? JobId { get; set; }
-
+    public class ListStandardGroupsRequest : TeaModel {
         [NameInMap("Tid")]
         [Validation(Required=false)]
         public long? Tid { get; set; }

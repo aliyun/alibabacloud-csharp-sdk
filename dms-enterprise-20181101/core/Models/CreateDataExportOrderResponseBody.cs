@@ -8,7 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
-    public class GetSparkJobExecutorLogsResponseBody : TeaModel {
+    public class CreateDataExportOrderResponseBody : TeaModel {
+        [NameInMap("CreateOrderResult")]
+        [Validation(Required=false)]
+        public List<long?> CreateOrderResult { get; set; }
+
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
@@ -16,18 +20,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
-
-        /// <summary>
-        /// log of the spark job
-        /// </summary>
-        [NameInMap("ExecutorLogs")]
-        [Validation(Required=false)]
-        public GetSparkJobExecutorLogsResponseBodyExecutorLogs ExecutorLogs { get; set; }
-        public class GetSparkJobExecutorLogsResponseBodyExecutorLogs : TeaModel {
-            [NameInMap("executorLogs")]
-            [Validation(Required=false)]
-            public List<string> ExecutorLogs { get; set; }
-        };
 
         /// <summary>
         /// Id of the request
