@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
-    public class CreateSceneResponse : TeaModel {
+    public class CheckUserPropertyResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public CreateSceneResponseBody Body { get; set; }
+        public CheckUserPropertyResponseBody Body { get; set; }
 
     }
 
