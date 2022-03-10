@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [Validation(Required=false)]
             public bool? CrossUser { get; set; }
 
+            [NameInMap("CustomLink")]
+            [Validation(Required=false)]
+            public bool? CustomLink { get; set; }
+
             [NameInMap("ImageFrom")]
             [Validation(Required=false)]
             public ListRepoSyncTaskResponseBodySyncTasksImageFrom ImageFrom { get; set; }

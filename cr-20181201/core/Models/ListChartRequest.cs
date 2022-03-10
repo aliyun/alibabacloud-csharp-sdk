@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
-    public class ListRepositoryRequest : TeaModel {
+    public class ListChartRequest : TeaModel {
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -28,14 +28,6 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [NameInMap("RepoNamespaceName")]
         [Validation(Required=false)]
         public string RepoNamespaceName { get; set; }
-
-        [NameInMap("RepoStatus")]
-        [Validation(Required=false)]
-        public string RepoStatus { get; set; }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
 
     }
 

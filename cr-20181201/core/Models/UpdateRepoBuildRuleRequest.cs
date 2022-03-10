@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class UpdateRepoBuildRuleRequest : TeaModel {
+        [NameInMap("BuildArgs")]
+        [Validation(Required=false)]
+        public List<string> BuildArgs { get; set; }
+
         [NameInMap("BuildRuleId")]
         [Validation(Required=false)]
         public string BuildRuleId { get; set; }

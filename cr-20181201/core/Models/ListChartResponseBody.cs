@@ -8,15 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
-    public class ListInstanceResponseBody : TeaModel {
-        [NameInMap("Code")]
+    public class ListChartResponseBody : TeaModel {
+        [NameInMap("Charts")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public List<ListChartResponseBodyCharts> Charts { get; set; }
+        public class ListChartResponseBodyCharts : TeaModel {
+            [NameInMap("Chart")]
+            [Validation(Required=false)]
+            public string Chart { get; set; }
 
-        [NameInMap("Instances")]
-        [Validation(Required=false)]
-        public List<ListInstanceResponseBodyInstances> Instances { get; set; }
-        public class ListInstanceResponseBodyInstances : TeaModel {
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
@@ -25,31 +25,23 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
-            [NameInMap("InstanceName")]
-            [Validation(Required=false)]
-            public string InstanceName { get; set; }
-
-            [NameInMap("InstanceSpecification")]
-            [Validation(Required=false)]
-            public string InstanceSpecification { get; set; }
-
-            [NameInMap("InstanceStatus")]
-            [Validation(Required=false)]
-            public string InstanceStatus { get; set; }
-
             [NameInMap("ModifiedTime")]
             [Validation(Required=false)]
-            public string ModifiedTime { get; set; }
+            public long? ModifiedTime { get; set; }
 
-            [NameInMap("RegionId")]
+            [NameInMap("RepoId")]
             [Validation(Required=false)]
-            public string RegionId { get; set; }
+            public string RepoId { get; set; }
 
-            [NameInMap("ResourceGroupId")]
+            [NameInMap("Status")]
             [Validation(Required=false)]
-            public string ResourceGroupId { get; set; }
+            public string Status { get; set; }
 
         }
+
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
 
         [NameInMap("IsSuccess")]
         [Validation(Required=false)]
