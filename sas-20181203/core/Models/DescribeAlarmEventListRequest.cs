@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
+        [NameInMap("TacticId")]
+        [Validation(Required=false)]
+        public string TacticId { get; set; }
+
     }
 
 }

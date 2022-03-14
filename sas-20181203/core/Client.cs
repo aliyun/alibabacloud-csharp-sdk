@@ -1633,6 +1633,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["SourceIp"] = request.SourceIp;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TacticId))
+            {
+                query["TacticId"] = request.TacticId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1703,6 +1707,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
             {
                 query["SourceIp"] = request.SourceIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TacticId))
+            {
+                query["TacticId"] = request.TacticId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10113,9 +10121,15 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["Uuids"] = request.Uuids;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TacticId))
+            {
+                body["TacticId"] = request.TacticId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -10224,9 +10238,15 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["Uuids"] = request.Uuids;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TacticId))
+            {
+                body["TacticId"] = request.TacticId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13541,6 +13561,80 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyOperateVulWithOptionsAsync(request, runtime);
+        }
+
+        public ModifyPropertyScheduleConfigResponse ModifyPropertyScheduleConfigWithOptions(ModifyPropertyScheduleConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleTime))
+            {
+                query["ScheduleTime"] = request.ScheduleTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyPropertyScheduleConfig",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyPropertyScheduleConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyPropertyScheduleConfigResponse> ModifyPropertyScheduleConfigWithOptionsAsync(ModifyPropertyScheduleConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleTime))
+            {
+                query["ScheduleTime"] = request.ScheduleTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyPropertyScheduleConfig",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyPropertyScheduleConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyPropertyScheduleConfigResponse ModifyPropertyScheduleConfig(ModifyPropertyScheduleConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyPropertyScheduleConfigWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyPropertyScheduleConfigResponse> ModifyPropertyScheduleConfigAsync(ModifyPropertyScheduleConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyPropertyScheduleConfigWithOptionsAsync(request, runtime);
         }
 
         public ModifyPushAllTaskResponse ModifyPushAllTaskWithOptions(ModifyPushAllTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

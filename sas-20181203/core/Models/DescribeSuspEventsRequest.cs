@@ -85,6 +85,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("TacticId")]
+        [Validation(Required=false)]
+        public string TacticId { get; set; }
+
         [NameInMap("TargetType")]
         [Validation(Required=false)]
         public string TargetType { get; set; }

@@ -241,6 +241,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Stages { get; set; }
 
+            /// <summary>
+            /// 攻击阶段展示名
+            /// </summary>
+            [NameInMap("TacticItems")]
+            [Validation(Required=false)]
+            public List<DescribeSuspEventsResponseBodySuspEventsTacticItems> TacticItems { get; set; }
+            public class DescribeSuspEventsResponseBodySuspEventsTacticItems : TeaModel {
+                [NameInMap("TacticDisplayName")]
+                [Validation(Required=false)]
+                public string TacticDisplayName { get; set; }
+
+                [NameInMap("TacticId")]
+                [Validation(Required=false)]
+                public string TacticId { get; set; }
+
+            }
+
             [NameInMap("UniqueInfo")]
             [Validation(Required=false)]
             public string UniqueInfo { get; set; }
