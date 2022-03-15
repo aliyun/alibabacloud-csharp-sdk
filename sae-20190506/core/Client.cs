@@ -591,6 +591,18 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["Jdk"] = request.Jdk;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KafkaEndpoint))
+            {
+                query["KafkaEndpoint"] = request.KafkaEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KafkaInstanceId))
+            {
+                query["KafkaInstanceId"] = request.KafkaInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KafkaLogfileConfig))
+            {
+                query["KafkaLogfileConfig"] = request.KafkaLogfileConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Liveness))
             {
                 query["Liveness"] = request.Liveness;
@@ -614,6 +626,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NasId))
             {
                 query["NasId"] = request.NasId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenCollectToKafka))
+            {
+                query["OpenCollectToKafka"] = request.OpenCollectToKafka;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageType))
             {
@@ -801,6 +817,18 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["Jdk"] = request.Jdk;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KafkaEndpoint))
+            {
+                query["KafkaEndpoint"] = request.KafkaEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KafkaInstanceId))
+            {
+                query["KafkaInstanceId"] = request.KafkaInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KafkaLogfileConfig))
+            {
+                query["KafkaLogfileConfig"] = request.KafkaLogfileConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Liveness))
             {
                 query["Liveness"] = request.Liveness;
@@ -824,6 +852,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NasId))
             {
                 query["NasId"] = request.NasId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenCollectToKafka))
+            {
+                query["OpenCollectToKafka"] = request.OpenCollectToKafka;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageType))
             {
@@ -1991,6 +2023,18 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["Jdk"] = request.Jdk;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KafkaEndpoint))
+            {
+                query["KafkaEndpoint"] = request.KafkaEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KafkaInstanceId))
+            {
+                query["KafkaInstanceId"] = request.KafkaInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KafkaLogfileConfig))
+            {
+                query["KafkaLogfileConfig"] = request.KafkaLogfileConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Liveness))
             {
                 query["Liveness"] = request.Liveness;
@@ -2014,6 +2058,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NasId))
             {
                 query["NasId"] = request.NasId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenCollectToKafka))
+            {
+                query["OpenCollectToKafka"] = request.OpenCollectToKafka;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageUrl))
             {
@@ -2189,6 +2237,18 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["Jdk"] = request.Jdk;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KafkaEndpoint))
+            {
+                query["KafkaEndpoint"] = request.KafkaEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KafkaInstanceId))
+            {
+                query["KafkaInstanceId"] = request.KafkaInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KafkaLogfileConfig))
+            {
+                query["KafkaLogfileConfig"] = request.KafkaLogfileConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Liveness))
             {
                 query["Liveness"] = request.Liveness;
@@ -2212,6 +2272,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NasId))
             {
                 query["NasId"] = request.NasId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenCollectToKafka))
+            {
+                query["OpenCollectToKafka"] = request.OpenCollectToKafka;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageUrl))
             {

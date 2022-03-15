@@ -33,10 +33,6 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public List<ListAppServicesPageResponseBodyDataResult> Result { get; set; }
             public class ListAppServicesPageResponseBodyDataResult : TeaModel {
-                [NameInMap("ClusterName")]
-                [Validation(Required=false)]
-                public string ClusterName { get; set; }
-
                 [NameInMap("EdasAppId")]
                 [Validation(Required=false)]
                 public string EdasAppId { get; set; }
@@ -44,10 +40,6 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [NameInMap("EdasAppName")]
                 [Validation(Required=false)]
                 public string EdasAppName { get; set; }
-
-                [NameInMap("GmtModifyTime")]
-                [Validation(Required=false)]
-                public string GmtModifyTime { get; set; }
 
                 [NameInMap("Group")]
                 [Validation(Required=false)]

@@ -87,6 +87,18 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Jdk { get; set; }
 
+        [NameInMap("KafkaEndpoint")]
+        [Validation(Required=false)]
+        public string KafkaEndpoint { get; set; }
+
+        [NameInMap("KafkaInstanceId")]
+        [Validation(Required=false)]
+        public string KafkaInstanceId { get; set; }
+
+        [NameInMap("KafkaLogfileConfig")]
+        [Validation(Required=false)]
+        public string KafkaLogfileConfig { get; set; }
+
         [NameInMap("Liveness")]
         [Validation(Required=false)]
         public string Liveness { get; set; }
@@ -110,6 +122,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("NasId")]
         [Validation(Required=false)]
         public string NasId { get; set; }
+
+        [NameInMap("OpenCollectToKafka")]
+        [Validation(Required=false)]
+        public bool? OpenCollectToKafka { get; set; }
 
         /// <summary>
         /// OSS使用的AKID

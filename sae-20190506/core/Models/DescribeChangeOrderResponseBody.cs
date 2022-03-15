@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public DescribeChangeOrderResponseBodyData Data { get; set; }
         public class DescribeChangeOrderResponseBodyData : TeaModel {
+            [NameInMap("AppId")]
+            [Validation(Required=false)]
+            public string AppId { get; set; }
             [NameInMap("AppName")]
             [Validation(Required=false)]
             public string AppName { get; set; }

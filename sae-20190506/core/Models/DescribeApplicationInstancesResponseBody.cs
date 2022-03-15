@@ -26,6 +26,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public class DescribeApplicationInstancesResponseBodyDataInstances : TeaModel {
                 public long? CreateTimeStamp { get; set; }
                 public string Eip { get; set; }
+                public long? FinishTimeStamp { get; set; }
                 public string GroupId { get; set; }
                 public string ImageUrl { get; set; }
                 public string InstanceContainerIp { get; set; }

@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public DescribeGreyTagRouteResponseBodyData Data { get; set; }
         public class DescribeGreyTagRouteResponseBodyData : TeaModel {
+            [NameInMap("AppId")]
+            [Validation(Required=false)]
+            public string AppId { get; set; }
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
