@@ -6255,9 +6255,9 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["instance_name"] = request.InstanceName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespaces))
             {
-                body["namespace"] = request.Namespace;
+                body["namespaces"] = request.Namespaces;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
             {
@@ -6297,9 +6297,9 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["instance_name"] = request.InstanceName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespaces))
             {
-                body["namespace"] = request.Namespace;
+                body["namespaces"] = request.Namespaces;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
             {

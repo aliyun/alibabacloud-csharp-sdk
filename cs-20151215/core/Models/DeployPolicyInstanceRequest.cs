@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Action { get; set; }
 
         /// <summary>
-        /// 策略实例实施范围（限定命名空间）。默认 [] 代表集群所有命名空间。
+        /// 限制策略实施的命名空间，为空时表示所有命名空间
         /// </summary>
         [NameInMap("namespaces")]
         [Validation(Required=false)]

@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// 策略实例实施范围
+        /// 限制策略实施的命名空间，为空时表示所有命名空间
         /// </summary>
-        [NameInMap("namespace")]
+        [NameInMap("namespaces")]
         [Validation(Required=false)]
-        public string Namespace { get; set; }
+        public List<string> Namespaces { get; set; }
 
         /// <summary>
         /// 当前规则实例的配置参数
