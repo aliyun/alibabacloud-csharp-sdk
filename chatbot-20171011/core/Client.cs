@@ -413,10 +413,6 @@ namespace AlibabaCloud.SDK.Chatbot20171011
             {
                 query["Perspective"] = request.Perspective;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Recommend))
-            {
-                query["Recommend"] = request.Recommend;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SenderId))
             {
                 query["SenderId"] = request.SenderId;
@@ -479,10 +475,6 @@ namespace AlibabaCloud.SDK.Chatbot20171011
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Perspective))
             {
                 query["Perspective"] = request.Perspective;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Recommend))
-            {
-                query["Recommend"] = request.Recommend;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SenderId))
             {

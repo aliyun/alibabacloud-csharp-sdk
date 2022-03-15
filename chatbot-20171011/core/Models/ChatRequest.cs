@@ -25,10 +25,6 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [Validation(Required=false)]
         public List<string> Perspective { get; set; }
 
-        [NameInMap("Recommend")]
-        [Validation(Required=false)]
-        public bool? Recommend { get; set; }
-
         [NameInMap("SenderId")]
         [Validation(Required=false)]
         public string SenderId { get; set; }

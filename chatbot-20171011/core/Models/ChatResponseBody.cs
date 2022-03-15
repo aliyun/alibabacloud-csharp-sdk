@@ -73,14 +73,6 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
                 [Validation(Required=false)]
                 public string AnswerSource { get; set; }
 
-                [NameInMap("Category")]
-                [Validation(Required=false)]
-                public string Category { get; set; }
-
-                [NameInMap("Content")]
-                [Validation(Required=false)]
-                public string Content { get; set; }
-
                 [NameInMap("KnowledgeId")]
                 [Validation(Required=false)]
                 public string KnowledgeId { get; set; }
@@ -88,10 +80,6 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
                 [NameInMap("Score")]
                 [Validation(Required=false)]
                 public double? Score { get; set; }
-
-                [NameInMap("Summary")]
-                [Validation(Required=false)]
-                public string Summary { get; set; }
 
                 [NameInMap("Title")]
                 [Validation(Required=false)]
@@ -109,6 +97,9 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
                 [NameInMap("ArticleTitle")]
                 [Validation(Required=false)]
                 public string ArticleTitle { get; set; }
+                [NameInMap("Commands")]
+                [Validation(Required=false)]
+                public Dictionary<string, string> Commands { get; set; }
                 [NameInMap("Content")]
                 [Validation(Required=false)]
                 public string Content { get; set; }
@@ -156,9 +147,23 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
                 public string UserDefinedChatTitle { get; set; }
             };
 
+            /// <summary>
+            /// 在线场景，反问标题
+            /// </summary>
+            [NameInMap("Title")]
+            [Validation(Required=false)]
+            public string Title { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
+
+            /// <summary>
+            /// 语音场景，澄清内容
+            /// </summary>
+            [NameInMap("VoiceTitle")]
+            [Validation(Required=false)]
+            public string VoiceTitle { get; set; }
 
         }
 
