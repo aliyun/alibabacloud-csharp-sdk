@@ -21,6 +21,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public long? Bandwidth { get; set; }
                 public long? Capacity { get; set; }
                 public string ChargeType { get; set; }
+                public string CloudType { get; set; }
                 public string Config { get; set; }
                 public string ConnectionDomain { get; set; }
                 public string ConnectionMode { get; set; }

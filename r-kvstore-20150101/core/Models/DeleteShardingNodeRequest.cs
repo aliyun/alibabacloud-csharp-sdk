@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        [NameInMap("ShardCount")]
+        [Validation(Required=false)]
+        public string ShardCount { get; set; }
+
     }
 
 }

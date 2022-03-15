@@ -13,9 +13,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
+        [NameInMap("BusinessInfo")]
+        [Validation(Required=false)]
+        public string BusinessInfo { get; set; }
+
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
+
+        [NameInMap("CouponNo")]
+        [Validation(Required=false)]
+        public string CouponNo { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

@@ -8,10 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class DescribeActiveOperationTaskRequest : TeaModel {
-        [NameInMap("IsHistory")]
+    public class DescribeActiveOperationTasksRequest : TeaModel {
+        [NameInMap("AllowCancel")]
         [Validation(Required=false)]
-        public int? IsHistory { get; set; }
+        public int? AllowCancel { get; set; }
+
+        [NameInMap("AllowChange")]
+        [Validation(Required=false)]
+        public int? AllowChange { get; set; }
+
+        [NameInMap("ChangeLevel")]
+        [Validation(Required=false)]
+        public string ChangeLevel { get; set; }
+
+        [NameInMap("DbType")]
+        [Validation(Required=false)]
+        public string DbType { get; set; }
+
+        [NameInMap("InsName")]
+        [Validation(Required=false)]
+        public string InsName { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -29,9 +45,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("Region")]
+        [NameInMap("ProductId")]
         [Validation(Required=false)]
-        public string Region { get; set; }
+        public string ProductId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -44,6 +60,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public int? Status { get; set; }
 
         [NameInMap("TaskType")]
         [Validation(Required=false)]

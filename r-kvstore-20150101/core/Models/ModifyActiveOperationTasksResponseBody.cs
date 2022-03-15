@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class ModifyActiveOperationTaskResponseBody : TeaModel {
+    public class ModifyActiveOperationTasksResponseBody : TeaModel {
         [NameInMap("Ids")]
         [Validation(Required=false)]
         public string Ids { get; set; }

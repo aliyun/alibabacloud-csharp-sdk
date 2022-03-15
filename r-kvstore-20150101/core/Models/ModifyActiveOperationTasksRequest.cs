@@ -8,10 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class ModifyActiveOperationTaskRequest : TeaModel {
+    public class ModifyActiveOperationTasksRequest : TeaModel {
         [NameInMap("Ids")]
         [Validation(Required=false)]
         public string Ids { get; set; }
+
+        [NameInMap("ImmediateStart")]
+        [Validation(Required=false)]
+        public int? ImmediateStart { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
