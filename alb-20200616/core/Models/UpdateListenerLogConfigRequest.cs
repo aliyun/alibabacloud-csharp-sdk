@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        ///  是否只预检此次请求
+        /// 是否只预检此次请求
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]

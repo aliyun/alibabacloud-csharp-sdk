@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// 总记录数	
+        /// 总记录数
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

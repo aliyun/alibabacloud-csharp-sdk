@@ -168,6 +168,42 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public string Query { get; set; }
                 };
 
+                [NameInMap("TrafficLimitConfig")]
+                [Validation(Required=false)]
+                public ListRulesResponseBodyRulesRuleActionsTrafficLimitConfig TrafficLimitConfig { get; set; }
+                public class ListRulesResponseBodyRulesRuleActionsTrafficLimitConfig : TeaModel {
+                    [NameInMap("QPS")]
+                    [Validation(Required=false)]
+                    public int? QPS { get; set; }
+                };
+
+                /// <summary>
+                /// 流量镜像Action对应的配置，type为TrafficMirror时必填且有效
+                /// </summary>
+                [NameInMap("TrafficMirrorConfig")]
+                [Validation(Required=false)]
+                public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig TrafficMirrorConfig { get; set; }
+                public class ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig : TeaModel {
+                    [NameInMap("MirrorGroupConfig")]
+                    [Validation(Required=false)]
+                    public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig MirrorGroupConfig { get; set; }
+                    public class ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig : TeaModel {
+                        [NameInMap("ServerGroupTuples")]
+                        [Validation(Required=false)]
+                        public List<ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples> ServerGroupTuples { get; set; }
+                        public class ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples : TeaModel {
+                            [NameInMap("ServerGroupId")]
+                            [Validation(Required=false)]
+                            public string ServerGroupId { get; set; }
+
+                        }
+
+                    }
+                    [NameInMap("TargetType")]
+                    [Validation(Required=false)]
+                    public string TargetType { get; set; }
+                };
+
                 /// <summary>
                 /// 转发规则动作类型
                 /// </summary>
