@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// 切换模式： 0:立刻执行，1：运维时间执行
+        /// </summary>
+        [NameInMap("SwitchMode")]
+        [Validation(Required=false)]
+        public string SwitchMode { get; set; }
+
     }
 
 }
