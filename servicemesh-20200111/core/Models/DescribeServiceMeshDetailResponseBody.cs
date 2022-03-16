@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public DescribeServiceMeshDetailResponseBodyServiceMesh ServiceMesh { get; set; }
         public class DescribeServiceMeshDetailResponseBodyServiceMesh : TeaModel {
+            [NameInMap("ClusterSpec")]
+            [Validation(Required=false)]
+            public string ClusterSpec { get; set; }
             [NameInMap("Clusters")]
             [Validation(Required=false)]
             public List<string> Clusters { get; set; }
@@ -316,6 +319,15 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             [NameInMap("PollDelay")]
                             [Validation(Required=false)]
                             public string PollDelay { get; set; }
+                        };
+
+                        [NameInMap("RateLimit")]
+                        [Validation(Required=false)]
+                        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationRateLimit RateLimit { get; set; }
+                        public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationRateLimit : TeaModel {
+                            [NameInMap("EnableGlobalRateLimit")]
+                            [Validation(Required=false)]
+                            public bool? EnableGlobalRateLimit { get; set; }
                         };
 
                         [NameInMap("SidecarProxyInitResourceLimit")]

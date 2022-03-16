@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public List<DescribeServiceMeshesResponseBodyServiceMeshes> ServiceMeshes { get; set; }
         public class DescribeServiceMeshesResponseBodyServiceMeshes : TeaModel {
+            [NameInMap("ClusterSpec")]
+            [Validation(Required=false)]
+            public string ClusterSpec { get; set; }
+
             [NameInMap("Clusters")]
             [Validation(Required=false)]
             public List<string> Clusters { get; set; }

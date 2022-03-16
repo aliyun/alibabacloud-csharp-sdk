@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public int? AccessLogServicePort { get; set; }
 
+        [NameInMap("ApiServerLoadBalancerSpec")]
+        [Validation(Required=false)]
+        public string ApiServerLoadBalancerSpec { get; set; }
+
         [NameInMap("ApiServerPublicEip")]
         [Validation(Required=false)]
         public bool? ApiServerPublicEip { get; set; }
@@ -45,9 +49,25 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string AuditProject { get; set; }
 
+        [NameInMap("AutoRenew")]
+        [Validation(Required=false)]
+        public bool? AutoRenew { get; set; }
+
+        [NameInMap("AutoRenewPeriod")]
+        [Validation(Required=false)]
+        public int? AutoRenewPeriod { get; set; }
+
         [NameInMap("CRAggregationEnabled")]
         [Validation(Required=false)]
         public bool? CRAggregationEnabled { get; set; }
+
+        [NameInMap("ChargeType")]
+        [Validation(Required=false)]
+        public string ChargeType { get; set; }
+
+        [NameInMap("ClusterSpec")]
+        [Validation(Required=false)]
+        public string ClusterSpec { get; set; }
 
         [NameInMap("ConfigSourceEnabled")]
         [Validation(Required=false)]
@@ -117,6 +137,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public bool? GatewayAPIEnabled { get; set; }
 
+        [NameInMap("GlobalRateLimitEnabled")]
+        [Validation(Required=false)]
+        public bool? GlobalRateLimitEnabled { get; set; }
+
         [NameInMap("IncludeIPRanges")]
         [Validation(Required=false)]
         public string IncludeIPRanges { get; set; }
@@ -140,6 +164,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [NameInMap("MSEEnabled")]
         [Validation(Required=false)]
         public bool? MSEEnabled { get; set; }
+
+        [NameInMap("MultiBufferEnabled")]
+        [Validation(Required=false)]
+        public bool? MultiBufferEnabled { get; set; }
+
+        [NameInMap("MultiBufferPollDelay")]
+        [Validation(Required=false)]
+        public string MultiBufferPollDelay { get; set; }
 
         [NameInMap("MysqlFilterEnabled")]
         [Validation(Required=false)]
@@ -176,6 +208,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [NameInMap("OpenAgentPolicy")]
         [Validation(Required=false)]
         public bool? OpenAgentPolicy { get; set; }
+
+        [NameInMap("Period")]
+        [Validation(Required=false)]
+        public int? Period { get; set; }
+
+        [NameInMap("PilotLoadBalancerSpec")]
+        [Validation(Required=false)]
+        public string PilotLoadBalancerSpec { get; set; }
 
         [NameInMap("PrometheusUrl")]
         [Validation(Required=false)]

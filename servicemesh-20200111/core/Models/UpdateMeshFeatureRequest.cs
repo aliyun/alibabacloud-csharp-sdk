@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public bool? CRAggregationEnabled { get; set; }
 
+        [NameInMap("ClusterSpec")]
+        [Validation(Required=false)]
+        public string ClusterSpec { get; set; }
+
         [NameInMap("CniEnabled")]
         [Validation(Required=false)]
         public bool? CniEnabled { get; set; }
@@ -120,6 +124,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [NameInMap("GatewayAPIEnabled")]
         [Validation(Required=false)]
         public bool? GatewayAPIEnabled { get; set; }
+
+        [NameInMap("GlobalRateLimitEnabled")]
+        [Validation(Required=false)]
+        public bool? GlobalRateLimitEnabled { get; set; }
 
         [NameInMap("Http10Enabled")]
         [Validation(Required=false)]
