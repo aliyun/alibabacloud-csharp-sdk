@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DescribeInstancesRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("ClusterId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string ClusterId { get; set; }
+
+        [NameInMap("ClusterName")]
+        [Validation(Required=false)]
+        public string ClusterName { get; set; }
+
+        [NameInMap("DbType")]
+        [Validation(Required=false)]
+        public string DbType { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -21,13 +29,9 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("DbType")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string DbType { get; set; }
-
-        [NameInMap("ClusterName")]
-        [Validation(Required=false)]
-        public string ClusterName { get; set; }
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

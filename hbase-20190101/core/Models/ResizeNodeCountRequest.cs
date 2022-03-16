@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public int? NodeCount { get; set; }
 
-        [NameInMap("ZoneId")]
-        [Validation(Required=false)]
-        public string ZoneId { get; set; }
-
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
+
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public string ZoneId { get; set; }
 
     }
 

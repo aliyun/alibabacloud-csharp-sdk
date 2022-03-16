@@ -9,29 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DescribeBackupPolicyResponseBody : TeaModel {
-        [NameInMap("PreferredBackupPeriod")]
+        [NameInMap("BackupRetentionPeriod")]
         [Validation(Required=false)]
-        public string PreferredBackupPeriod { get; set; }
+        public string BackupRetentionPeriod { get; set; }
 
         [NameInMap("PreferredBackupEndTimeUTC")]
         [Validation(Required=false)]
         public string PreferredBackupEndTimeUTC { get; set; }
 
+        [NameInMap("PreferredBackupPeriod")]
+        [Validation(Required=false)]
+        public string PreferredBackupPeriod { get; set; }
+
         [NameInMap("PreferredBackupStartTimeUTC")]
         [Validation(Required=false)]
         public string PreferredBackupStartTimeUTC { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
         [NameInMap("PreferredBackupTime")]
         [Validation(Required=false)]
         public string PreferredBackupTime { get; set; }
 
-        [NameInMap("BackupRetentionPeriod")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string BackupRetentionPeriod { get; set; }
+        public string RequestId { get; set; }
 
     }
 

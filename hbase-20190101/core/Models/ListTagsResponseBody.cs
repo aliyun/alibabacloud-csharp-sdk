@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<ListTagsResponseBodyTagsTag> Tag { get; set; }
             public class ListTagsResponseBodyTagsTag : TeaModel {
-                public string TagValue { get; set; }
                 public string TagKey { get; set; }
+                public string TagValue { get; set; }
             }
         };
 

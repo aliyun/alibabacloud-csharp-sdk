@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("alibabacloud-hbase")]
 [assembly: AssemblyDescription("Alibaba Cloud ApsaraDB for Hbase (20190101) SDK Library for .NET")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Alibaba Cloud, Inc")]
+[assembly: AssemblyCompany("Alibaba Cloud")]
 [assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a0111270-4a4e-11eb-984f-f59c523f5ca3")]
+[assembly: Guid("8a2e84a0-a4d0-11ec-9fe3-9d33648ce213")]
 
 // Version information for an assembly consists of the following four values:
 //

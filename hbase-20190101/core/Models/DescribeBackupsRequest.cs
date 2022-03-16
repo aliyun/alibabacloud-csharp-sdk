@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DescribeBackupsRequest : TeaModel {
+        [NameInMap("BackupId")]
+        [Validation(Required=false)]
+        public string BackupId { get; set; }
+
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("BackupId")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string BackupId { get; set; }
+        public string EndTime { get; set; }
+
+        [NameInMap("EndTimeUTC")]
+        [Validation(Required=false)]
+        public string EndTimeUTC { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -29,17 +37,9 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
-
         [NameInMap("StartTimeUTC")]
         [Validation(Required=false)]
         public string StartTimeUTC { get; set; }
-
-        [NameInMap("EndTimeUTC")]
-        [Validation(Required=false)]
-        public string EndTimeUTC { get; set; }
 
     }
 

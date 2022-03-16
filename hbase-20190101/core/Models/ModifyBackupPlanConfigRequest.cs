@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("Tables")]
-        [Validation(Required=false)]
-        public string Tables { get; set; }
-
         [NameInMap("FullBackupCycle")]
         [Validation(Required=false)]
         public string FullBackupCycle { get; set; }
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [NameInMap("NextFullBackupDate")]
         [Validation(Required=false)]
         public string NextFullBackupDate { get; set; }
+
+        [NameInMap("Tables")]
+        [Validation(Required=false)]
+        public string Tables { get; set; }
 
     }
 

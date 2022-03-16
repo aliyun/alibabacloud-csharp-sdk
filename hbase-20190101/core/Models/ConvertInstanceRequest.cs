@@ -13,13 +13,17 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("PricingCycle")]
-        [Validation(Required=false)]
-        public string PricingCycle { get; set; }
-
         [NameInMap("Duration")]
         [Validation(Required=false)]
         public int? Duration { get; set; }
+
+        [NameInMap("PayType")]
+        [Validation(Required=false)]
+        public string PayType { get; set; }
+
+        [NameInMap("PricingCycle")]
+        [Validation(Required=false)]
+        public string PricingCycle { get; set; }
 
     }
 

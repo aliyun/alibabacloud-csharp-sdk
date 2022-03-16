@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("MaintainStartTime")]
-        [Validation(Required=false)]
-        public string MaintainStartTime { get; set; }
-
         [NameInMap("MaintainEndTime")]
         [Validation(Required=false)]
         public string MaintainEndTime { get; set; }
+
+        [NameInMap("MaintainStartTime")]
+        [Validation(Required=false)]
+        public string MaintainStartTime { get; set; }
 
     }
 

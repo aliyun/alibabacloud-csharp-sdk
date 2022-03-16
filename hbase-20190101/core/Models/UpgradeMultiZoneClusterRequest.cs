@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        [NameInMap("Components")]
+        [Validation(Required=false)]
+        public string Components { get; set; }
+
+        [NameInMap("RestartComponents")]
+        [Validation(Required=false)]
+        public string RestartComponents { get; set; }
+
         [NameInMap("RunMode")]
         [Validation(Required=false)]
         public string RunMode { get; set; }
@@ -21,17 +29,9 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string UpgradeInsName { get; set; }
 
-        [NameInMap("Components")]
-        [Validation(Required=false)]
-        public string Components { get; set; }
-
         [NameInMap("Versions")]
         [Validation(Required=false)]
         public string Versions { get; set; }
-
-        [NameInMap("RestartComponents")]
-        [Validation(Required=false)]
-        public string RestartComponents { get; set; }
 
     }
 

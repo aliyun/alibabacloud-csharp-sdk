@@ -9,19 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DescribeRestoreFullDetailsResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("RestoreFull")]
         [Validation(Required=false)]
         public DescribeRestoreFullDetailsResponseBodyRestoreFull RestoreFull { get; set; }
         public class DescribeRestoreFullDetailsResponseBodyRestoreFull : TeaModel {
-            [NameInMap("Succeed")]
-            [Validation(Required=false)]
-            public int? Succeed { get; set; }
             [NameInMap("DataSize")]
             [Validation(Required=false)]
             public string DataSize { get; set; }
-            [NameInMap("Speed")]
+            [NameInMap("Fail")]
             [Validation(Required=false)]
-            public string Speed { get; set; }
+            public int? Fail { get; set; }
+            [NameInMap("PageNumber")]
+            [Validation(Required=false)]
+            public int? PageNumber { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
             [NameInMap("RestoreFullDetails")]
             [Validation(Required=false)]
             public DescribeRestoreFullDetailsResponseBodyRestoreFullRestoreFullDetails RestoreFullDetails { get; set; }
@@ -30,33 +37,33 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
                 [Validation(Required=false)]
                 public List<DescribeRestoreFullDetailsResponseBodyRestoreFullRestoreFullDetailsRestoreFullDetail> RestoreFullDetail { get; set; }
                 public class DescribeRestoreFullDetailsResponseBodyRestoreFullRestoreFullDetailsRestoreFullDetail : TeaModel {
+                    [NameInMap("DataSize")]
+                    [Validation(Required=false)]
+                    public string DataSize { get; set; }
+
                     [NameInMap("EndTime")]
                     [Validation(Required=false)]
                     public string EndTime { get; set; }
 
-                    [NameInMap("StartTime")]
+                    [NameInMap("Message")]
                     [Validation(Required=false)]
-                    public string StartTime { get; set; }
+                    public string Message { get; set; }
 
                     [NameInMap("Process")]
                     [Validation(Required=false)]
                     public string Process { get; set; }
 
-                    [NameInMap("DataSize")]
-                    [Validation(Required=false)]
-                    public string DataSize { get; set; }
-
                     [NameInMap("Speed")]
                     [Validation(Required=false)]
                     public string Speed { get; set; }
 
+                    [NameInMap("StartTime")]
+                    [Validation(Required=false)]
+                    public string StartTime { get; set; }
+
                     [NameInMap("State")]
                     [Validation(Required=false)]
                     public string State { get; set; }
-
-                    [NameInMap("Message")]
-                    [Validation(Required=false)]
-                    public string Message { get; set; }
 
                     [NameInMap("Table")]
                     [Validation(Required=false)]
@@ -65,23 +72,16 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
                 }
 
             }
-            [NameInMap("PageSize")]
+            [NameInMap("Speed")]
             [Validation(Required=false)]
-            public int? PageSize { get; set; }
-            [NameInMap("Fail")]
+            public string Speed { get; set; }
+            [NameInMap("Succeed")]
             [Validation(Required=false)]
-            public int? Fail { get; set; }
-            [NameInMap("PageNumber")]
-            [Validation(Required=false)]
-            public int? PageNumber { get; set; }
+            public int? Succeed { get; set; }
             [NameInMap("Total")]
             [Validation(Required=false)]
             public long? Total { get; set; }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

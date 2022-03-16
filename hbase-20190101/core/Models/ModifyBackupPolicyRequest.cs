@@ -13,9 +13,9 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("PreferredBackupTime")]
+        [NameInMap("PreferredBackupEndTimeUTC")]
         [Validation(Required=false)]
-        public string PreferredBackupTime { get; set; }
+        public string PreferredBackupEndTimeUTC { get; set; }
 
         [NameInMap("PreferredBackupPeriod")]
         [Validation(Required=false)]
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string PreferredBackupStartTimeUTC { get; set; }
 
-        [NameInMap("PreferredBackupEndTimeUTC")]
+        [NameInMap("PreferredBackupTime")]
         [Validation(Required=false)]
-        public string PreferredBackupEndTimeUTC { get; set; }
+        public string PreferredBackupTime { get; set; }
 
     }
 

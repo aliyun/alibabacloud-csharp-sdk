@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("TargetClusterId")]
-        [Validation(Required=false)]
-        public string TargetClusterId { get; set; }
-
         [NameInMap("RestoreAllTable")]
         [Validation(Required=false)]
         public bool? RestoreAllTable { get; set; }
@@ -32,6 +28,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [NameInMap("Tables")]
         [Validation(Required=false)]
         public string Tables { get; set; }
+
+        [NameInMap("TargetClusterId")]
+        [Validation(Required=false)]
+        public string TargetClusterId { get; set; }
 
     }
 

@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.HBase20190101.Models
 {
-    public class DescribeClusterConnectionRequest : TeaModel {
+    public class DescribeServerlessClusterRequest : TeaModel {
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("ZoneId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string ZoneId { get; set; }
 
     }
 

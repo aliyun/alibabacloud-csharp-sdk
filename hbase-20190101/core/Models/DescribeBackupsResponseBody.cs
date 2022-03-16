@@ -9,9 +9,36 @@ using Tea;
 namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DescribeBackupsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("Backups")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public DescribeBackupsResponseBodyBackups Backups { get; set; }
+        public class DescribeBackupsResponseBodyBackups : TeaModel {
+            [NameInMap("Backup")]
+            [Validation(Required=false)]
+            public List<DescribeBackupsResponseBodyBackupsBackup> Backup { get; set; }
+            public class DescribeBackupsResponseBodyBackupsBackup : TeaModel {
+                public string BackupDBNames { get; set; }
+                public string BackupDownloadURL { get; set; }
+                public string BackupEndTime { get; set; }
+                public string BackupEndTimeUTC { get; set; }
+                public int? BackupId { get; set; }
+                public string BackupMethod { get; set; }
+                public string BackupMode { get; set; }
+                public string BackupSize { get; set; }
+                public string BackupStartTime { get; set; }
+                public string BackupStartTimeUTC { get; set; }
+                public string BackupStatus { get; set; }
+                public string BackupType { get; set; }
+            }
+        };
+
+        [NameInMap("EnableStatus")]
+        [Validation(Required=false)]
+        public string EnableStatus { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -21,36 +48,9 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("EnableStatus")]
-        [Validation(Required=false)]
-        public string EnableStatus { get; set; }
-
-        [NameInMap("Backups")]
-        [Validation(Required=false)]
-        public DescribeBackupsResponseBodyBackups Backups { get; set; }
-        public class DescribeBackupsResponseBodyBackups : TeaModel {
-            [NameInMap("Backup")]
-            [Validation(Required=false)]
-            public List<DescribeBackupsResponseBodyBackupsBackup> Backup { get; set; }
-            public class DescribeBackupsResponseBodyBackupsBackup : TeaModel {
-                public string BackupStatus { get; set; }
-                public string BackupType { get; set; }
-                public string BackupStartTime { get; set; }
-                public string BackupDownloadURL { get; set; }
-                public string BackupStartTimeUTC { get; set; }
-                public string BackupEndTime { get; set; }
-                public int? BackupId { get; set; }
-                public string BackupDBNames { get; set; }
-                public string BackupEndTimeUTC { get; set; }
-                public string BackupSize { get; set; }
-                public string BackupMode { get; set; }
-                public string BackupMethod { get; set; }
-            }
-        };
+        public int? TotalCount { get; set; }
 
     }
 

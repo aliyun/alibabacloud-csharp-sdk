@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DescribeBackupTablesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
         [NameInMap("BackupRecords")]
         [Validation(Required=false)]
         public DescribeBackupTablesResponseBodyBackupRecords BackupRecords { get; set; }
@@ -25,13 +17,13 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<DescribeBackupTablesResponseBodyBackupRecordsBackupRecord> BackupRecord { get; set; }
             public class DescribeBackupTablesResponseBodyBackupRecordsBackupRecord : TeaModel {
-                public string EndTime { get; set; }
-                public string StartTime { get; set; }
-                public string Process { get; set; }
                 public string DataSize { get; set; }
-                public string Speed { get; set; }
-                public string State { get; set; }
+                public string EndTime { get; set; }
                 public string Message { get; set; }
+                public string Process { get; set; }
+                public string Speed { get; set; }
+                public string StartTime { get; set; }
+                public string State { get; set; }
                 public string Table { get; set; }
             }
         };
@@ -40,9 +32,13 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        [NameInMap("Total")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public long? Total { get; set; }
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Tables")]
         [Validation(Required=false)]
@@ -52,6 +48,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<string> Table { get; set; }
         };
+
+        [NameInMap("Total")]
+        [Validation(Required=false)]
+        public long? Total { get; set; }
 
     }
 

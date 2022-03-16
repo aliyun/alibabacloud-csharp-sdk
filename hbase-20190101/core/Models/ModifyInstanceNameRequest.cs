@@ -13,14 +13,6 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("ZoneId")]
-        [Validation(Required=false)]
-        public string ZoneId { get; set; }
-
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
@@ -28,6 +20,14 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
         public string ClusterName { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public string ZoneId { get; set; }
 
     }
 

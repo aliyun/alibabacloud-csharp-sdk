@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DescribeInstanceTypeResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("InstanceTypeSpecList")]
         [Validation(Required=false)]
         public DescribeInstanceTypeResponseBodyInstanceTypeSpecList InstanceTypeSpecList { get; set; }
@@ -22,10 +18,14 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             public List<DescribeInstanceTypeResponseBodyInstanceTypeSpecListInstanceTypeSpec> InstanceTypeSpec { get; set; }
             public class DescribeInstanceTypeResponseBodyInstanceTypeSpecListInstanceTypeSpec : TeaModel {
                 public long? CpuSize { get; set; }
-                public long? MemSize { get; set; }
                 public string InstanceType { get; set; }
+                public long? MemSize { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

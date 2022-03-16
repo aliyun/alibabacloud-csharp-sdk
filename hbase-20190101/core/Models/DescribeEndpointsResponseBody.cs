@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DescribeEndpointsResponseBody : TeaModel {
-        [NameInMap("VpcId")]
-        [Validation(Required=false)]
-        public string VpcId { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ConnAddrs")]
         [Validation(Required=false)]
         public DescribeEndpointsResponseBodyConnAddrs ConnAddrs { get; set; }
@@ -25,24 +17,32 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<DescribeEndpointsResponseBodyConnAddrsConnAddrInfo> ConnAddrInfo { get; set; }
             public class DescribeEndpointsResponseBodyConnAddrsConnAddrInfo : TeaModel {
-                public string ConnAddrPort { get; set; }
-                public string NetType { get; set; }
                 public string ConnAddr { get; set; }
+                public string ConnAddrPort { get; set; }
                 public string ConnType { get; set; }
+                public string NetType { get; set; }
             }
         };
 
-        [NameInMap("VSwitchId")]
+        [NameInMap("Engine")]
         [Validation(Required=false)]
-        public string VSwitchId { get; set; }
+        public string Engine { get; set; }
 
         [NameInMap("NetType")]
         [Validation(Required=false)]
         public string NetType { get; set; }
 
-        [NameInMap("Engine")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Engine { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("VSwitchId")]
+        [Validation(Required=false)]
+        public string VSwitchId { get; set; }
+
+        [NameInMap("VpcId")]
+        [Validation(Required=false)]
+        public string VpcId { get; set; }
 
     }
 

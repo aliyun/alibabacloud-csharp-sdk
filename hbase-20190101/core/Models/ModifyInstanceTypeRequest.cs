@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("MasterInstanceType")]
-        [Validation(Required=false)]
-        public string MasterInstanceType { get; set; }
-
         [NameInMap("CoreInstanceType")]
         [Validation(Required=false)]
         public string CoreInstanceType { get; set; }
+
+        [NameInMap("MasterInstanceType")]
+        [Validation(Required=false)]
+        public string MasterInstanceType { get; set; }
 
     }
 

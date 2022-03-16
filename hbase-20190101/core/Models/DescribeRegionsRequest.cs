@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        [NameInMap("Engine")]
+        [Validation(Required=false)]
+        public string Engine { get; set; }
+
     }
 
 }

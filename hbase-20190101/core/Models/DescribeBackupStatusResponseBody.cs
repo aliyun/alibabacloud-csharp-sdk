@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DescribeBackupStatusResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("BackupStatus")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string BackupStatus { get; set; }
 
         [NameInMap("BdsClusterId")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("BackupStatus")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string BackupStatus { get; set; }
+        public string RequestId { get; set; }
 
     }
 

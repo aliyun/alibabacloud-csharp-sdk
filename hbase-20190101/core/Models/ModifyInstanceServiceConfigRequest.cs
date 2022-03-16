@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("Restart")]
-        [Validation(Required=false)]
-        public bool? Restart { get; set; }
-
         [NameInMap("ConfigureName")]
         [Validation(Required=false)]
         public string ConfigureName { get; set; }
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public string Parameters { get; set; }
+
+        [NameInMap("Restart")]
+        [Validation(Required=false)]
+        public bool? Restart { get; set; }
 
     }
 

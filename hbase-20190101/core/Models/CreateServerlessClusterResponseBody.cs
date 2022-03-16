@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class CreateServerlessClusterResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [NameInMap("PassWord")]
         [Validation(Required=false)]
         public string PassWord { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
     }
 

@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("TimeEnd")]
-        [Validation(Required=false)]
-        public string TimeEnd { get; set; }
-
         [NameInMap("TimeBegin")]
         [Validation(Required=false)]
         public string TimeBegin { get; set; }
+
+        [NameInMap("TimeEnd")]
+        [Validation(Required=false)]
+        public string TimeEnd { get; set; }
 
     }
 

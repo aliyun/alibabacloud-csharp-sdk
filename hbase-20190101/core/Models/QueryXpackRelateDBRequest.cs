@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("RelateDbType")]
-        [Validation(Required=false)]
-        public string RelateDbType { get; set; }
-
         [NameInMap("HasSingleNode")]
         [Validation(Required=false)]
         public bool? HasSingleNode { get; set; }
+
+        [NameInMap("RelateDbType")]
+        [Validation(Required=false)]
+        public string RelateDbType { get; set; }
 
     }
 

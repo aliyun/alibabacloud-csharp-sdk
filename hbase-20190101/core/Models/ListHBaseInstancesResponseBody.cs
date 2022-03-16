@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<ListHBaseInstancesResponseBodyInstancesInstance> Instance { get; set; }
             public class ListHBaseInstancesResponseBodyInstancesInstance : TeaModel {
-                public bool? IsDefault { get; set; }
-                public string InstanceName { get; set; }
                 public string InstanceId { get; set; }
+                public string InstanceName { get; set; }
+                public bool? IsDefault { get; set; }
             }
         };
 

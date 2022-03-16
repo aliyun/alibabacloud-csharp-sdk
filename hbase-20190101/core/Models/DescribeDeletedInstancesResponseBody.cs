@@ -17,24 +17,24 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<DescribeDeletedInstancesResponseBodyInstancesInstance> Instance { get; set; }
             public class DescribeDeletedInstancesResponseBodyInstancesInstance : TeaModel {
-                public string Status { get; set; }
-                public string InstanceId { get; set; }
-                public string RegionId { get; set; }
-                public string ParentId { get; set; }
                 public string ClusterType { get; set; }
-                public string InstanceName { get; set; }
-                public string DeleteTime { get; set; }
-                public string ZoneId { get; set; }
-                public string ModuleStackVersion { get; set; }
-                public string Engine { get; set; }
-                public string MajorVersion { get; set; }
                 public string CreatedTime { get; set; }
+                public string DeleteTime { get; set; }
+                public string Engine { get; set; }
+                public string InstanceId { get; set; }
+                public string InstanceName { get; set; }
+                public string MajorVersion { get; set; }
+                public string ModuleStackVersion { get; set; }
+                public string ParentId { get; set; }
+                public string RegionId { get; set; }
+                public string Status { get; set; }
+                public string ZoneId { get; set; }
             }
         };
 
-        [NameInMap("TotalCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public long? TotalCount { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public long? TotalCount { get; set; }
 
     }
 

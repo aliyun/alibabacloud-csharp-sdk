@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string BdsId { get; set; }
 
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
         [NameInMap("HaId")]
         [Validation(Required=false)]
         public string HaId { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [NameInMap("HbaseType")]
         [Validation(Required=false)]
         public string HbaseType { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
 
     }
 

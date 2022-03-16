@@ -17,8 +17,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<CheckComponentsVersionResponseBodyComponentsComponent> Component { get; set; }
             public class CheckComponentsVersionResponseBodyComponentsComponent : TeaModel {
-                public string IsLatestVersion { get; set; }
                 public string Component { get; set; }
+                public string IsLatestVersion { get; set; }
             }
         };
 
