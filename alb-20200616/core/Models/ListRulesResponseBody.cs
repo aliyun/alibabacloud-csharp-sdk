@@ -95,6 +95,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public List<ListRulesResponseBodyRulesRuleActionsForwardGroupConfigServerGroupTuples> ServerGroupTuples { get; set; }
                     public class ListRulesResponseBodyRulesRuleActionsForwardGroupConfigServerGroupTuples : TeaModel {
                         public string ServerGroupId { get; set; }
+                        public int? Weight { get; set; }
                     }
                 };
 
@@ -172,9 +173,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 [Validation(Required=false)]
                 public ListRulesResponseBodyRulesRuleActionsTrafficLimitConfig TrafficLimitConfig { get; set; }
                 public class ListRulesResponseBodyRulesRuleActionsTrafficLimitConfig : TeaModel {
-                    [NameInMap("QPS")]
-                    [Validation(Required=false)]
-                    public int? QPS { get; set; }
                 };
 
                 /// <summary>
@@ -184,24 +182,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 [Validation(Required=false)]
                 public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig TrafficMirrorConfig { get; set; }
                 public class ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig : TeaModel {
-                    [NameInMap("MirrorGroupConfig")]
-                    [Validation(Required=false)]
-                    public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig MirrorGroupConfig { get; set; }
-                    public class ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig : TeaModel {
-                        [NameInMap("ServerGroupTuples")]
-                        [Validation(Required=false)]
-                        public List<ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples> ServerGroupTuples { get; set; }
-                        public class ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples : TeaModel {
-                            [NameInMap("ServerGroupId")]
-                            [Validation(Required=false)]
-                            public string ServerGroupId { get; set; }
-
-                        }
-
-                    }
-                    [NameInMap("TargetType")]
-                    [Validation(Required=false)]
-                    public string TargetType { get; set; }
                 };
 
                 /// <summary>

@@ -17,13 +17,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<ListListenersResponseBodyListeners> Listeners { get; set; }
         public class ListListenersResponseBodyListeners : TeaModel {
             /// <summary>
-            /// 是否开启双向认证
-            /// </summary>
-            [NameInMap("CaEnabled")]
-            [Validation(Required=false)]
-            public string CaEnabled { get; set; }
-
-            /// <summary>
             /// 默认动作
             /// </summary>
             [NameInMap("DefaultActions")]

@@ -107,6 +107,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public List<CreateRulesRequestRulesRuleActionsForwardGroupConfigServerGroupTuples> ServerGroupTuples { get; set; }
                     public class CreateRulesRequestRulesRuleActionsForwardGroupConfigServerGroupTuples : TeaModel {
                         public string ServerGroupId { get; set; }
+                        public int? Weight { get; set; }
                     }
                 };
 

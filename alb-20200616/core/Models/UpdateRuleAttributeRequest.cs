@@ -86,6 +86,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public List<UpdateRuleAttributeRequestRuleActionsForwardGroupConfigServerGroupTuples> ServerGroupTuples { get; set; }
                 public class UpdateRuleAttributeRequestRuleActionsForwardGroupConfigServerGroupTuples : TeaModel {
                     public string ServerGroupId { get; set; }
+                    public int? Weight { get; set; }
                 }
             };
 
