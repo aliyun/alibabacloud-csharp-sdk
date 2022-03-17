@@ -8,17 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ocr_api20210707.Models
 {
-    public class RecognizeVehicleLicenseRequest : TeaModel {
+    public class RecognizePaymentRecordRequest : TeaModel {
         /// <summary>
         /// 图片链接（长度不超 2048，不支持 base64）
         /// </summary>
         [NameInMap("Url")]
         [Validation(Required=false)]
         public string Url { get; set; }
-
-        [NameInMap("WorkflowOp")]
-        [Validation(Required=false)]
-        public string WorkflowOp { get; set; }
 
         /// <summary>
         /// 图片二进制字节流，最大10MB

@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
         [Validation(Required=false)]
         public string Url { get; set; }
 
+        [NameInMap("WorkflowOp")]
+        [Validation(Required=false)]
+        public string WorkflowOp { get; set; }
+
         /// <summary>
         /// 图片二进制字节流，最大10MB
         /// </summary>

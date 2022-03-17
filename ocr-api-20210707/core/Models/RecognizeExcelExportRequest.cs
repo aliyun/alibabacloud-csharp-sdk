@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
         public long? OcrImageCount { get; set; }
 
         /// <summary>
-        /// 图片识别结果集
+        /// 存储图片识别结果集的oss地址
         /// </summary>
         [NameInMap("OcrResult")]
         [Validation(Required=false)]
