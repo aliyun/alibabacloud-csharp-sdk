@@ -451,7 +451,10 @@ namespace AlibabaCloud.SDK.MPServerless20190615
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["RoleName"] = request.RoleName;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleName))
+            {
+                query["RoleName"] = request.RoleName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -475,7 +478,10 @@ namespace AlibabaCloud.SDK.MPServerless20190615
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["RoleName"] = request.RoleName;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleName))
+            {
+                query["RoleName"] = request.RoleName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -3221,6 +3227,10 @@ namespace AlibabaCloud.SDK.MPServerless20190615
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                body["FileId"] = request.FileId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
             {
                 body["Keyword"] = request.Keyword;
@@ -3260,6 +3270,10 @@ namespace AlibabaCloud.SDK.MPServerless20190615
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                body["FileId"] = request.FileId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
             {
                 body["Keyword"] = request.Keyword;

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class ListFileRequest : TeaModel {
+        [NameInMap("FileId")]
+        [Validation(Required=false)]
+        public string FileId { get; set; }
+
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
