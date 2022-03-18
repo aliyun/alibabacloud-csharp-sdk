@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
-    public class AddLogicTableRouteConfigRequest : TeaModel {
-        [NameInMap("RouteExpr")]
+    public class CreateStandardGroupRequest : TeaModel {
+        [NameInMap("DbType")]
         [Validation(Required=false)]
-        public string RouteExpr { get; set; }
+        public string DbType { get; set; }
 
-        [NameInMap("RouteKey")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public string RouteKey { get; set; }
+        public string Description { get; set; }
 
-        [NameInMap("TableId")]
+        [NameInMap("GroupName")]
         [Validation(Required=false)]
-        public long? TableId { get; set; }
+        public string GroupName { get; set; }
 
         [NameInMap("Tid")]
         [Validation(Required=false)]
