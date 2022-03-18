@@ -51,6 +51,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string Profile { get; set; }
 
+        /// <summary>
+        /// 地域。
+        /// </summary>
+        [NameInMap("region_id")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
     }
 
 }

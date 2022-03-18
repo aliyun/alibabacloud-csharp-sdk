@@ -39,13 +39,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterLog { get; set; }
 
             /// <summary>
-            /// 日志等级。
-            /// </summary>
-            [NameInMap("log_level")]
-            [Validation(Required=false)]
-            public string LogLevel { get; set; }
-
-            /// <summary>
             /// 日志创建时间。
             /// </summary>
             [NameInMap("created")]
