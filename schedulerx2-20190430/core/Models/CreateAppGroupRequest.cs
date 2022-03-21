@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         [Validation(Required=false)]
         public string AlarmJson { get; set; }
 
+        [NameInMap("AppKey")]
+        [Validation(Required=false)]
+        public string AppKey { get; set; }
+
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
@@ -28,6 +32,14 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         [NameInMap("MaxJobs")]
         [Validation(Required=false)]
         public int? MaxJobs { get; set; }
+
+        [NameInMap("MonitorConfigJson")]
+        [Validation(Required=false)]
+        public string MonitorConfigJson { get; set; }
+
+        [NameInMap("MonitorContactsJson")]
+        [Validation(Required=false)]
+        public string MonitorContactsJson { get; set; }
 
         [NameInMap("Namespace")]
         [Validation(Required=false)]

@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 [Validation(Required=false)]
                 public string JarUrl { get; set; }
 
+                [NameInMap("JobId")]
+                [Validation(Required=false)]
+                public long? JobId { get; set; }
+
                 [NameInMap("JobMonitorInfo")]
                 [Validation(Required=false)]
                 public GetJobInfoResponseBodyDataJobConfigInfoJobMonitorInfo JobMonitorInfo { get; set; }

@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         [Validation(Required=false)]
         public long? JobId { get; set; }
 
+        [NameInMap("JobName")]
+        [Validation(Required=false)]
+        public string JobName { get; set; }
+
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }

@@ -8,27 +8,27 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
-    public class CreateAppGroupResponseBody : TeaModel {
+    public class CreateNamespaceResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public CreateAppGroupResponseBodyData Data { get; set; }
-        public class CreateAppGroupResponseBodyData : TeaModel {
-            [NameInMap("AppGroupId")]
+        public CreateNamespaceResponseBodyData Data { get; set; }
+        public class CreateNamespaceResponseBodyData : TeaModel {
+            [NameInMap("NamespaceUid")]
             [Validation(Required=false)]
-            public long? AppGroupId { get; set; }
-            [NameInMap("AppKey")]
-            [Validation(Required=false)]
-            public string AppKey { get; set; }
+            public string NamespaceUid { get; set; }
         };
 
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// Id of the request
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
