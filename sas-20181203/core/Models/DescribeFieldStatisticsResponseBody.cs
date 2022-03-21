@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("AliYunInstanceCount")]
             [Validation(Required=false)]
             public int? AliYunInstanceCount { get; set; }
+            [NameInMap("AwsInstanceCount")]
+            [Validation(Required=false)]
+            public int? AwsInstanceCount { get; set; }
             [NameInMap("ExposedInstanceCount")]
             [Validation(Required=false)]
             public int? ExposedInstanceCount { get; set; }
