@@ -19828,6 +19828,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["MethodName"] = request.MethodName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenSwitch))
+            {
+                body["OpenSwitch"] = request.OpenSwitch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operator))
             {
                 body["Operator"] = request.Operator;
@@ -19926,6 +19930,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MethodName))
             {
                 body["MethodName"] = request.MethodName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenSwitch))
+            {
+                body["OpenSwitch"] = request.OpenSwitch;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operator))
             {
