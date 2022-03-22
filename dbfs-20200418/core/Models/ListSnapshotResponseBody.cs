@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.DBFS20200418.Models
             [Validation(Required=false)]
             public int? SourceFsSize { get; set; }
 
+            [NameInMap("SourceFsStripeWidth")]
+            [Validation(Required=false)]
+            public int? SourceFsStripeWidth { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
