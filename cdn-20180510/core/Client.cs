@@ -12319,6 +12319,10 @@ namespace AlibabaCloud.SDK.Cdn20180510
             {
                 query["Area"] = request.Area;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.L2Preload))
+            {
+                query["L2Preload"] = request.L2Preload;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectPath))
             {
                 query["ObjectPath"] = request.ObjectPath;
@@ -12357,6 +12361,10 @@ namespace AlibabaCloud.SDK.Cdn20180510
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Area))
             {
                 query["Area"] = request.Area;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.L2Preload))
+            {
+                query["L2Preload"] = request.L2Preload;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectPath))
             {
