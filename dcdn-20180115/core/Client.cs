@@ -3752,6 +3752,128 @@ namespace AlibabaCloud.SDK.Dcdn20180115
             return await DescribeDcdnDomainBpsDataWithOptionsAsync(request, runtime);
         }
 
+        public DescribeDcdnDomainBpsDataByLayerResponse DescribeDcdnDomainBpsDataByLayerWithOptions(DescribeDcdnDomainBpsDataByLayerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IspNameEn))
+            {
+                query["IspNameEn"] = request.IspNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Layer))
+            {
+                query["Layer"] = request.Layer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocationNameEn))
+            {
+                query["LocationNameEn"] = request.LocationNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDcdnDomainBpsDataByLayer",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDcdnDomainBpsDataByLayerResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeDcdnDomainBpsDataByLayerResponse> DescribeDcdnDomainBpsDataByLayerWithOptionsAsync(DescribeDcdnDomainBpsDataByLayerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IspNameEn))
+            {
+                query["IspNameEn"] = request.IspNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Layer))
+            {
+                query["Layer"] = request.Layer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocationNameEn))
+            {
+                query["LocationNameEn"] = request.LocationNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDcdnDomainBpsDataByLayer",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDcdnDomainBpsDataByLayerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeDcdnDomainBpsDataByLayerResponse DescribeDcdnDomainBpsDataByLayer(DescribeDcdnDomainBpsDataByLayerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDcdnDomainBpsDataByLayerWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeDcdnDomainBpsDataByLayerResponse> DescribeDcdnDomainBpsDataByLayerAsync(DescribeDcdnDomainBpsDataByLayerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDcdnDomainBpsDataByLayerWithOptionsAsync(request, runtime);
+        }
+
         public DescribeDcdnDomainByCertificateResponse DescribeDcdnDomainByCertificateWithOptions(DescribeDcdnDomainByCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4478,6 +4600,128 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDcdnDomainHttpCodeDataWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeDcdnDomainHttpCodeDataByLayerResponse DescribeDcdnDomainHttpCodeDataByLayerWithOptions(DescribeDcdnDomainHttpCodeDataByLayerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IspNameEn))
+            {
+                query["IspNameEn"] = request.IspNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Layer))
+            {
+                query["Layer"] = request.Layer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocationNameEn))
+            {
+                query["LocationNameEn"] = request.LocationNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDcdnDomainHttpCodeDataByLayer",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDcdnDomainHttpCodeDataByLayerResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeDcdnDomainHttpCodeDataByLayerResponse> DescribeDcdnDomainHttpCodeDataByLayerWithOptionsAsync(DescribeDcdnDomainHttpCodeDataByLayerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IspNameEn))
+            {
+                query["IspNameEn"] = request.IspNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Layer))
+            {
+                query["Layer"] = request.Layer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocationNameEn))
+            {
+                query["LocationNameEn"] = request.LocationNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDcdnDomainHttpCodeDataByLayer",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDcdnDomainHttpCodeDataByLayerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeDcdnDomainHttpCodeDataByLayerResponse DescribeDcdnDomainHttpCodeDataByLayer(DescribeDcdnDomainHttpCodeDataByLayerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDcdnDomainHttpCodeDataByLayerWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeDcdnDomainHttpCodeDataByLayerResponse> DescribeDcdnDomainHttpCodeDataByLayerAsync(DescribeDcdnDomainHttpCodeDataByLayerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDcdnDomainHttpCodeDataByLayerWithOptionsAsync(request, runtime);
         }
 
         public DescribeDcdnDomainIpaBpsDataResponse DescribeDcdnDomainIpaBpsDataWithOptions(DescribeDcdnDomainIpaBpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5498,6 +5742,128 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDcdnDomainQpsDataWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeDcdnDomainQpsDataByLayerResponse DescribeDcdnDomainQpsDataByLayerWithOptions(DescribeDcdnDomainQpsDataByLayerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IspNameEn))
+            {
+                query["IspNameEn"] = request.IspNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Layer))
+            {
+                query["Layer"] = request.Layer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocationNameEn))
+            {
+                query["LocationNameEn"] = request.LocationNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDcdnDomainQpsDataByLayer",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDcdnDomainQpsDataByLayerResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeDcdnDomainQpsDataByLayerResponse> DescribeDcdnDomainQpsDataByLayerWithOptionsAsync(DescribeDcdnDomainQpsDataByLayerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IspNameEn))
+            {
+                query["IspNameEn"] = request.IspNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Layer))
+            {
+                query["Layer"] = request.Layer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocationNameEn))
+            {
+                query["LocationNameEn"] = request.LocationNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDcdnDomainQpsDataByLayer",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDcdnDomainQpsDataByLayerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeDcdnDomainQpsDataByLayerResponse DescribeDcdnDomainQpsDataByLayer(DescribeDcdnDomainQpsDataByLayerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDcdnDomainQpsDataByLayerWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeDcdnDomainQpsDataByLayerResponse> DescribeDcdnDomainQpsDataByLayerAsync(DescribeDcdnDomainQpsDataByLayerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDcdnDomainQpsDataByLayerWithOptionsAsync(request, runtime);
         }
 
         public DescribeDcdnDomainRealTimeBpsDataResponse DescribeDcdnDomainRealTimeBpsDataWithOptions(DescribeDcdnDomainRealTimeBpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -11690,6 +12056,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115
             {
                 query["Area"] = request.Area;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.L2Preload))
+            {
+                query["L2Preload"] = request.L2Preload;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectPath))
             {
                 query["ObjectPath"] = request.ObjectPath;
@@ -11728,6 +12098,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Area))
             {
                 query["Area"] = request.Area;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.L2Preload))
+            {
+                query["L2Preload"] = request.L2Preload;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectPath))
             {

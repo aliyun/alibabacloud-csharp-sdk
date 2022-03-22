@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [Validation(Required=false)]
         public string Area { get; set; }
 
+        [NameInMap("L2Preload")]
+        [Validation(Required=false)]
+        public bool? L2Preload { get; set; }
+
         [NameInMap("ObjectPath")]
         [Validation(Required=false)]
         public string ObjectPath { get; set; }
