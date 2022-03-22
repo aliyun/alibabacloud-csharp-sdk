@@ -262,108 +262,6 @@ namespace AlibabaCloud.SDK.Mts20210728
             return TeaModel.ToObject<QueryCopyrightExtractResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public QueryImageCopyrightResponse QueryImageCopyright(QueryImageCopyrightRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return QueryImageCopyrightWithOptions(request, headers, runtime);
-        }
-
-        public async Task<QueryImageCopyrightResponse> QueryImageCopyrightAsync(QueryImageCopyrightRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await QueryImageCopyrightWithOptionsAsync(request, headers, runtime);
-        }
-
-        public QueryImageCopyrightResponse QueryImageCopyrightWithOptions(QueryImageCopyrightRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeEnd))
-            {
-                body["CreateTimeEnd"] = request.CreateTimeEnd;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeStart))
-            {
-                body["CreateTimeStart"] = request.CreateTimeStart;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
-            {
-                body["JobId"] = request.JobId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
-            {
-                body["PageNumber"] = request.PageNumber;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                body["PageSize"] = request.PageSize;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "QueryImageCopyright",
-                Version = "2021-07-28",
-                Protocol = "HTTPS",
-                Pathname = "/queryImageCopyright",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<QueryImageCopyrightResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<QueryImageCopyrightResponse> QueryImageCopyrightWithOptionsAsync(QueryImageCopyrightRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeEnd))
-            {
-                body["CreateTimeEnd"] = request.CreateTimeEnd;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeStart))
-            {
-                body["CreateTimeStart"] = request.CreateTimeStart;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
-            {
-                body["JobId"] = request.JobId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
-            {
-                body["PageNumber"] = request.PageNumber;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                body["PageSize"] = request.PageSize;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "QueryImageCopyright",
-                Version = "2021-07-28",
-                Protocol = "HTTPS",
-                Pathname = "/queryImageCopyright",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<QueryImageCopyrightResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
         public QueryTraceAbResponse QueryTraceAb(QueryTraceAbRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -990,6 +888,10 @@ namespace AlibabaCloud.SDK.Mts20210728
             {
                 body["CallBack"] = request.CallBack;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CipherBase64ed))
+            {
+                body["CipherBase64ed"] = request.CipherBase64ed;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
             {
                 body["Input"] = request.Input;
@@ -1045,6 +947,10 @@ namespace AlibabaCloud.SDK.Mts20210728
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallBack))
             {
                 body["CallBack"] = request.CallBack;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CipherBase64ed))
+            {
+                body["CipherBase64ed"] = request.CipherBase64ed;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
             {

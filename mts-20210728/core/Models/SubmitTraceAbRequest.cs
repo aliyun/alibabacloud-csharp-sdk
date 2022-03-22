@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Mts20210728.Models
         public string CallBack { get; set; }
 
         /// <summary>
+        /// 密钥base64串
+        /// </summary>
+        [NameInMap("CipherBase64ed")]
+        [Validation(Required=false)]
+        public string CipherBase64ed { get; set; }
+
+        /// <summary>
         /// 溯源水印ab流处理视频输入
         /// </summary>
         [NameInMap("Input")]
