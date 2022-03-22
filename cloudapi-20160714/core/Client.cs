@@ -1216,6 +1216,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["BackendType"] = request.BackendType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateEventBridgeServiceLinkedRole))
+            {
+                query["CreateEventBridgeServiceLinkedRole"] = request.CreateEventBridgeServiceLinkedRole;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -1254,6 +1258,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackendType))
             {
                 query["BackendType"] = request.BackendType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateEventBridgeServiceLinkedRole))
+            {
+                query["CreateEventBridgeServiceLinkedRole"] = request.CreateEventBridgeServiceLinkedRole;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {

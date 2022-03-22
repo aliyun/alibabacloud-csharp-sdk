@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string BackendType { get; set; }
 
+        [NameInMap("CreateEventBridgeServiceLinkedRole")]
+        [Validation(Required=false)]
+        public bool? CreateEventBridgeServiceLinkedRole { get; set; }
+
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }

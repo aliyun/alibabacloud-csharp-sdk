@@ -22,6 +22,24 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public class DescribeBackendInfoResponseBodyBackendInfoBackendModels : TeaModel {
                 public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig BackendConfig { get; set; }
                 public class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig : TeaModel {
+                    [NameInMap("EventBridgeConfig")]
+                    [Validation(Required=false)]
+                    public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEventBridgeConfig EventBridgeConfig { get; set; }
+                    public class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEventBridgeConfig : TeaModel {
+                        [NameInMap("EventBridgeRegionId")]
+                        [Validation(Required=false)]
+                        public string EventBridgeRegionId { get; set; }
+                        [NameInMap("EventBus")]
+                        [Validation(Required=false)]
+                        public string EventBus { get; set; }
+                        [NameInMap("EventSource")]
+                        [Validation(Required=false)]
+                        public string EventSource { get; set; }
+                        [NameInMap("RoleArn")]
+                        [Validation(Required=false)]
+                        public string RoleArn { get; set; }
+                    };
+
                     [NameInMap("FunctionComputeConfig")]
                     [Validation(Required=false)]
                     public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigFunctionComputeConfig FunctionComputeConfig { get; set; }

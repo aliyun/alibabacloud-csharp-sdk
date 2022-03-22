@@ -273,6 +273,27 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [NameInMap("ContentTypeValue")]
             [Validation(Required=false)]
             public string ContentTypeValue { get; set; }
+            [NameInMap("EventBridgeConfig")]
+            [Validation(Required=false)]
+            public DescribeApiResponseBodyServiceConfigEventBridgeConfig EventBridgeConfig { get; set; }
+            public class DescribeApiResponseBodyServiceConfigEventBridgeConfig : TeaModel {
+                [NameInMap("EventBridgeRegionId")]
+                [Validation(Required=false)]
+                public string EventBridgeRegionId { get; set; }
+
+                [NameInMap("EventBus")]
+                [Validation(Required=false)]
+                public string EventBus { get; set; }
+
+                [NameInMap("EventSource")]
+                [Validation(Required=false)]
+                public string EventSource { get; set; }
+
+                [NameInMap("RoleArn")]
+                [Validation(Required=false)]
+                public string RoleArn { get; set; }
+
+            }
             [NameInMap("FunctionComputeConfig")]
             [Validation(Required=false)]
             public DescribeApiResponseBodyServiceConfigFunctionComputeConfig FunctionComputeConfig { get; set; }
