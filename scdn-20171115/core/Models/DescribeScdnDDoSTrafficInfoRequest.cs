@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Scdn20171115.Models
 {
     public class DescribeScdnDDoSTrafficInfoRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
         [NameInMap("Line")]
         [Validation(Required=false)]
         public string Line { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 

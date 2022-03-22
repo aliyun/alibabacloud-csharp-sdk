@@ -8,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Scdn20171115.Models
 {
-    public class PreloadScdnObjectCachesResponseBody : TeaModel {
-        [NameInMap("PreloadTaskId")]
-        [Validation(Required=false)]
-        public string PreloadTaskId { get; set; }
-
+    public class BatchStopScdnDomainResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

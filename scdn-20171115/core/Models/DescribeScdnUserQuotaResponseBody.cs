@@ -9,45 +9,45 @@ using Tea;
 namespace AlibabaCloud.SDK.Scdn20171115.Models
 {
     public class DescribeScdnUserQuotaResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("BlockQuota")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("RefreshUrlQuota")]
-        [Validation(Required=false)]
-        public int? RefreshUrlQuota { get; set; }
+        public int? BlockQuota { get; set; }
 
         [NameInMap("BlockRemain")]
         [Validation(Required=false)]
         public int? BlockRemain { get; set; }
 
+        [NameInMap("DomainQuota")]
+        [Validation(Required=false)]
+        public int? DomainQuota { get; set; }
+
+        [NameInMap("PreloadQuota")]
+        [Validation(Required=false)]
+        public int? PreloadQuota { get; set; }
+
         [NameInMap("PreloadRemain")]
         [Validation(Required=false)]
         public int? PreloadRemain { get; set; }
-
-        [NameInMap("RefreshDirRemain")]
-        [Validation(Required=false)]
-        public int? RefreshDirRemain { get; set; }
-
-        [NameInMap("BlockQuota")]
-        [Validation(Required=false)]
-        public int? BlockQuota { get; set; }
 
         [NameInMap("RefreshDirQuota")]
         [Validation(Required=false)]
         public int? RefreshDirQuota { get; set; }
 
-        [NameInMap("DomainQuota")]
+        [NameInMap("RefreshDirRemain")]
         [Validation(Required=false)]
-        public int? DomainQuota { get; set; }
+        public int? RefreshDirRemain { get; set; }
+
+        [NameInMap("RefreshUrlQuota")]
+        [Validation(Required=false)]
+        public int? RefreshUrlQuota { get; set; }
 
         [NameInMap("RefreshUrlRemain")]
         [Validation(Required=false)]
         public int? RefreshUrlRemain { get; set; }
 
-        [NameInMap("PreloadQuota")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? PreloadQuota { get; set; }
+        public string RequestId { get; set; }
 
     }
 

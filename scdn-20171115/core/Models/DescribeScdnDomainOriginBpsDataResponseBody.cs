@@ -9,25 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Scdn20171115.Models
 {
     public class DescribeScdnDomainOriginBpsDataResponseBody : TeaModel {
-        [NameInMap("EndTime")]
+        [NameInMap("DataInterval")]
         [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string DataInterval { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("StartTime")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        [NameInMap("DataInterval")]
-        [Validation(Required=false)]
-        public string DataInterval { get; set; }
+        public string EndTime { get; set; }
 
         [NameInMap("OriginBpsDataPerInterval")]
         [Validation(Required=false)]
@@ -38,11 +30,19 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             public List<DescribeScdnDomainOriginBpsDataResponseBodyOriginBpsDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeScdnDomainOriginBpsDataResponseBodyOriginBpsDataPerIntervalDataModule : TeaModel {
                 public string HttpOriginBpsValue { get; set; }
-                public string TimeStamp { get; set; }
                 public string HttpsOriginBpsValue { get; set; }
                 public string OriginBpsValue { get; set; }
+                public string TimeStamp { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 

@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Scdn20171115.Models
 {
-    public class DescribeScdnDomainCertificateInfoRequest : TeaModel {
-        [NameInMap("DomainName")]
+    public class DescribeScdnCcInfoResponseBody : TeaModel {
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string DomainName { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("OwnerId")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string Status { get; set; }
 
     }
 

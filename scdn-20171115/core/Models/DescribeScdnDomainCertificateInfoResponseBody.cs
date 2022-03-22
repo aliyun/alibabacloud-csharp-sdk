@@ -17,16 +17,16 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [Validation(Required=false)]
             public List<DescribeScdnDomainCertificateInfoResponseBodyCertInfosCertInfo> CertInfo { get; set; }
             public class DescribeScdnDomainCertificateInfoResponseBodyCertInfosCertInfo : TeaModel {
-                public string Status { get; set; }
-                public string CertLife { get; set; }
-                public string CertExpireTime { get; set; }
-                public string SSLPub { get; set; }
-                public string SSLProtocol { get; set; }
-                public string CertType { get; set; }
                 public string CertDomainName { get; set; }
+                public string CertExpireTime { get; set; }
+                public string CertLife { get; set; }
                 public string CertName { get; set; }
                 public string CertOrg { get; set; }
+                public string CertType { get; set; }
                 public string DomainName { get; set; }
+                public string SSLProtocol { get; set; }
+                public string SSLPub { get; set; }
+                public string Status { get; set; }
             }
         };
 

@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Scdn20171115.Models
 {
-    public class RefreshScdnObjectCachesRequest : TeaModel {
-        [NameInMap("ObjectPath")]
+    public class BatchStopScdnDomainRequest : TeaModel {
+        [NameInMap("DomainNames")]
         [Validation(Required=false)]
-        public string ObjectPath { get; set; }
-
-        [NameInMap("ObjectType")]
-        [Validation(Required=false)]
-        public string ObjectType { get; set; }
+        public string DomainNames { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]

@@ -9,25 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Scdn20171115.Models
 {
     public class SetScdnDomainCertificateRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("CertName")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
+        public string CertName { get; set; }
 
         [NameInMap("CertType")]
         [Validation(Required=false)]
         public string CertType { get; set; }
 
-        [NameInMap("CertName")]
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public string CertName { get; set; }
+        public string DomainName { get; set; }
+
+        [NameInMap("ForceSet")]
+        [Validation(Required=false)]
+        public string ForceSet { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("Region")]
+        [Validation(Required=false)]
+        public string Region { get; set; }
+
+        [NameInMap("SSLPri")]
+        [Validation(Required=false)]
+        public string SSLPri { get; set; }
 
         [NameInMap("SSLProtocol")]
         [Validation(Required=false)]
@@ -37,17 +45,9 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
         [Validation(Required=false)]
         public string SSLPub { get; set; }
 
-        [NameInMap("SSLPri")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string SSLPri { get; set; }
-
-        [NameInMap("Region")]
-        [Validation(Required=false)]
-        public string Region { get; set; }
-
-        [NameInMap("ForceSet")]
-        [Validation(Required=false)]
-        public string ForceSet { get; set; }
+        public string SecurityToken { get; set; }
 
     }
 

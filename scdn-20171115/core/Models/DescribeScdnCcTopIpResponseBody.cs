@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Scdn20171115.Models
 {
     public class DescribeScdnCcTopIpResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
-
-        [NameInMap("Total")]
-        [Validation(Required=false)]
-        public string Total { get; set; }
-
         [NameInMap("AttackIpDataList")]
         [Validation(Required=false)]
         public DescribeScdnCcTopIpResponseBodyAttackIpDataList AttackIpDataList { get; set; }
@@ -29,10 +17,22 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [Validation(Required=false)]
             public List<DescribeScdnCcTopIpResponseBodyAttackIpDataListAttackIpDatas> AttackIpDatas { get; set; }
             public class DescribeScdnCcTopIpResponseBodyAttackIpDataListAttackIpDatas : TeaModel {
-                public string Ip { get; set; }
                 public string AttackCount { get; set; }
+                public string Ip { get; set; }
             }
         };
+
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Total")]
+        [Validation(Required=false)]
+        public string Total { get; set; }
 
     }
 

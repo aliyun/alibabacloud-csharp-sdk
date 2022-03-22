@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Scdn20171115.Models
 {
     public class BatchDeleteScdnDomainConfigsRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
         [NameInMap("DomainNames")]
         [Validation(Required=false)]
         public string DomainNames { get; set; }
@@ -28,6 +16,18 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
         [NameInMap("FunctionNames")]
         [Validation(Required=false)]
         public string FunctionNames { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
     }
 

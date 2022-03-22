@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Scdn20171115.Models
 {
     public class DescribeScdnCertificateDetailResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("Cert")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Cert { get; set; }
 
         [NameInMap("CertId")]
         [Validation(Required=false)]
@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
         [Validation(Required=false)]
         public string CertName { get; set; }
 
-        [NameInMap("Cert")]
-        [Validation(Required=false)]
-        public string Cert { get; set; }
-
         [NameInMap("Key")]
         [Validation(Required=false)]
         public string Key { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

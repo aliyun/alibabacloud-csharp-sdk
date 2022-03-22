@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Scdn20171115.Models
 {
     public class DescribeScdnCertificateListResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("CertificateListModel")]
         [Validation(Required=false)]
         public DescribeScdnCertificateListResponseBodyCertificateListModel CertificateListModel { get; set; }
@@ -25,29 +21,29 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
                 [Validation(Required=false)]
                 public List<DescribeScdnCertificateListResponseBodyCertificateListModelCertListCert> Cert { get; set; }
                 public class DescribeScdnCertificateListResponseBodyCertificateListModelCertListCert : TeaModel {
-                    [NameInMap("LastTime")]
+                    [NameInMap("CertId")]
                     [Validation(Required=false)]
-                    public long? LastTime { get; set; }
-
-                    [NameInMap("Fingerprint")]
-                    [Validation(Required=false)]
-                    public string Fingerprint { get; set; }
+                    public long? CertId { get; set; }
 
                     [NameInMap("CertName")]
                     [Validation(Required=false)]
                     public string CertName { get; set; }
 
+                    [NameInMap("Common")]
+                    [Validation(Required=false)]
+                    public string Common { get; set; }
+
+                    [NameInMap("Fingerprint")]
+                    [Validation(Required=false)]
+                    public string Fingerprint { get; set; }
+
                     [NameInMap("Issuer")]
                     [Validation(Required=false)]
                     public string Issuer { get; set; }
 
-                    [NameInMap("CertId")]
+                    [NameInMap("LastTime")]
                     [Validation(Required=false)]
-                    public long? CertId { get; set; }
-
-                    [NameInMap("Common")]
-                    [Validation(Required=false)]
-                    public string Common { get; set; }
+                    public long? LastTime { get; set; }
 
                 }
 
@@ -56,6 +52,10 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [Validation(Required=false)]
             public int? Count { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

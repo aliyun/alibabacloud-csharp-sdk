@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Scdn20171115.Models
 {
     public class SetScdnBotInfoRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
         [NameInMap("Enable")]
         [Validation(Required=false)]
         public string Enable { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
         [NameInMap("Status")]
         [Validation(Required=false)]

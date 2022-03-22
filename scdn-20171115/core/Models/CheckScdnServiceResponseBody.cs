@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Scdn20171115.Models
 {
     public class CheckScdnServiceResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("Enabled")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public bool? Enabled { get; set; }
 
         [NameInMap("InDebt")]
         [Validation(Required=false)]
         public bool? InDebt { get; set; }
-
-        [NameInMap("Enabled")]
-        [Validation(Required=false)]
-        public bool? Enabled { get; set; }
 
         [NameInMap("InDebtOverdue")]
         [Validation(Required=false)]
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
         [NameInMap("OnService")]
         [Validation(Required=false)]
         public bool? OnService { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

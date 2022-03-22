@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Scdn20171115.Models
 {
     public class DescribeScdnDDoSInfoResponseBody : TeaModel {
-        [NameInMap("SecBandwidth")]
+        [NameInMap("ElasticBandwidth")]
         [Validation(Required=false)]
-        public int? SecBandwidth { get; set; }
+        public int? ElasticBandwidth { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("ElasticBandwidth")]
+        [NameInMap("SecBandwidth")]
         [Validation(Required=false)]
-        public int? ElasticBandwidth { get; set; }
+        public int? SecBandwidth { get; set; }
 
     }
 
