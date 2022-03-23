@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
     public class DeletePtsScenesRequest : TeaModel {
         [NameInMap("SceneIds")]
         [Validation(Required=false)]
-        public Dictionary<string, object> SceneIds { get; set; }
+        public List<string> SceneIds { get; set; }
 
     }
 
