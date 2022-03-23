@@ -29,6 +29,15 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [NameInMap("AppTemplateName")]
             [Validation(Required=false)]
             public string AppTemplateName { get; set; }
+            [NameInMap("Apps")]
+            [Validation(Required=false)]
+            public List<GetAppTemplateResponseBodyResultApps> Apps { get; set; }
+            public class GetAppTemplateResponseBodyResultApps : TeaModel {
+                public string AppId { get; set; }
+                public string AppKey { get; set; }
+                public string AppName { get; set; }
+                public string AppStatus { get; set; }
+            }
             [NameInMap("ComponentList")]
             [Validation(Required=false)]
             public List<string> ComponentList { get; set; }
