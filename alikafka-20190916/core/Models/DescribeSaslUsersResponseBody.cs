@@ -9,19 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class DescribeSaslUsersResponseBody : TeaModel {
-        [NameInMap("SaslUserList")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public DescribeSaslUsersResponseBodySaslUserList SaslUserList { get; set; }
-        public class DescribeSaslUsersResponseBodySaslUserList : TeaModel {
-            [NameInMap("SaslUserVO")]
-            [Validation(Required=false)]
-            public List<DescribeSaslUsersResponseBodySaslUserListSaslUserVO> SaslUserVO { get; set; }
-            public class DescribeSaslUsersResponseBodySaslUserListSaslUserVO : TeaModel {
-                public string Type { get; set; }
-                public string Password { get; set; }
-                public string Username { get; set; }
-            }
-        };
+        public int? Code { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -31,9 +21,19 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("SaslUserList")]
         [Validation(Required=false)]
-        public int? Code { get; set; }
+        public DescribeSaslUsersResponseBodySaslUserList SaslUserList { get; set; }
+        public class DescribeSaslUsersResponseBodySaslUserList : TeaModel {
+            [NameInMap("SaslUserVO")]
+            [Validation(Required=false)]
+            public List<DescribeSaslUsersResponseBodySaslUserListSaslUserVO> SaslUserVO { get; set; }
+            public class DescribeSaslUsersResponseBodySaslUserListSaslUserVO : TeaModel {
+                public string Password { get; set; }
+                public string Type { get; set; }
+                public string Username { get; set; }
+            }
+        };
 
         [NameInMap("Success")]
         [Validation(Required=false)]

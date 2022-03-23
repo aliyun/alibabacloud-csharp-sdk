@@ -8,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
-    public class GetMetaProductListRequest : TeaModel {
-        [NameInMap("ListNormal")]
-        [Validation(Required=false)]
-        public string ListNormal { get; set; }
-
+    public class GetAllInstanceIdListRequest : TeaModel {
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

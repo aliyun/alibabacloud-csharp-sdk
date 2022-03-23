@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class GetInstanceListRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public List<string> InstanceId { get; set; }
 
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
-        [NameInMap("InstanceId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public List<string> InstanceId { get; set; }
+        public string RegionId { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]

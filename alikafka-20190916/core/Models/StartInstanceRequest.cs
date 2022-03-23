@@ -9,29 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class StartInstanceRequest : TeaModel {
-        [NameInMap("InstanceId")]
+        [NameInMap("Config")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("VpcId")]
-        [Validation(Required=false)]
-        public string VpcId { get; set; }
-
-        [NameInMap("VSwitchId")]
-        [Validation(Required=false)]
-        public string VSwitchId { get; set; }
+        public string Config { get; set; }
 
         [NameInMap("DeployModule")]
         [Validation(Required=false)]
         public string DeployModule { get; set; }
 
-        [NameInMap("ZoneId")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string ZoneId { get; set; }
+        public string InstanceId { get; set; }
 
         [NameInMap("IsEipInner")]
         [Validation(Required=false)]
@@ -41,17 +29,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public bool? IsSetUserAndPassword { get; set; }
 
-        [NameInMap("Username")]
+        [NameInMap("KMSKeyId")]
         [Validation(Required=false)]
-        public string Username { get; set; }
+        public string KMSKeyId { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
 
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
 
-        [NameInMap("Name")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string RegionId { get; set; }
 
         [NameInMap("SecurityGroup")]
         [Validation(Required=false)]
@@ -61,13 +53,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public string ServiceVersion { get; set; }
 
-        [NameInMap("Config")]
+        [NameInMap("Username")]
         [Validation(Required=false)]
-        public string Config { get; set; }
+        public string Username { get; set; }
 
-        [NameInMap("KMSKeyId")]
+        [NameInMap("VSwitchId")]
         [Validation(Required=false)]
-        public string KMSKeyId { get; set; }
+        public string VSwitchId { get; set; }
+
+        [NameInMap("VpcId")]
+        [Validation(Required=false)]
+        public string VpcId { get; set; }
+
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public string ZoneId { get; set; }
 
     }
 

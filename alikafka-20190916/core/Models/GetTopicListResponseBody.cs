@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class GetTopicListResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? Code { get; set; }
+
+        [NameInMap("CurrentPage")]
+        [Validation(Required=false)]
+        public int? CurrentPage { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -21,13 +25,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("CurrentPage")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("Total")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public int? Total { get; set; }
+        public bool? Success { get; set; }
 
         [NameInMap("TopicList")]
         [Validation(Required=false)]
@@ -37,10 +41,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [Validation(Required=false)]
             public List<GetTopicListResponseBodyTopicListTopicVO> TopicVO { get; set; }
             public class GetTopicListResponseBodyTopicListTopicVO : TeaModel {
-                public int? Status { get; set; }
-                public string Remark { get; set; }
+                public bool? CompactTopic { get; set; }
                 public long? CreateTime { get; set; }
-                public string Topic { get; set; }
+                public string InstanceId { get; set; }
+                public bool? LocalTopic { get; set; }
+                public int? PartitionNum { get; set; }
+                public string RegionId { get; set; }
+                public string Remark { get; set; }
+                public int? Status { get; set; }
                 public string StatusName { get; set; }
                 public GetTopicListResponseBodyTopicListTopicVOTags Tags { get; set; }
                 public class GetTopicListResponseBodyTopicListTopicVOTags : TeaModel {
@@ -59,18 +67,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                     }
 
                 }
-                public string InstanceId { get; set; }
-                public string RegionId { get; set; }
+                public string Topic { get; set; }
             }
         };
 
-        [NameInMap("Code")]
+        [NameInMap("Total")]
         [Validation(Required=false)]
-        public int? Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public int? Total { get; set; }
 
     }
 

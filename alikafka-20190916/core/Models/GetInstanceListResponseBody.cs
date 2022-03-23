@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class GetInstanceListResponseBody : TeaModel {
-        [NameInMap("Message")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? Code { get; set; }
 
         [NameInMap("InstanceList")]
         [Validation(Required=false)]
@@ -25,9 +21,27 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [Validation(Required=false)]
             public List<GetInstanceListResponseBodyInstanceListInstanceVO> InstanceVO { get; set; }
             public class GetInstanceListResponseBodyInstanceListInstanceVO : TeaModel {
-                public string VpcId { get; set; }
+                public string AllConfig { get; set; }
                 public long? CreateTime { get; set; }
                 public int? DeployType { get; set; }
+                public int? DiskSize { get; set; }
+                public int? DiskType { get; set; }
+                public string DomainEndpoint { get; set; }
+                public int? EipMax { get; set; }
+                public string EndPoint { get; set; }
+                public long? ExpiredTime { get; set; }
+                public string InstanceId { get; set; }
+                public int? IoMax { get; set; }
+                public int? MsgRetain { get; set; }
+                public string Name { get; set; }
+                public int? PaidType { get; set; }
+                public string RegionId { get; set; }
+                public string SaslDomainEndpoint { get; set; }
+                public string SecurityGroup { get; set; }
+                public int? ServiceStatus { get; set; }
+                public string SpecType { get; set; }
+                public string SslDomainEndpoint { get; set; }
+                public string SslEndPoint { get; set; }
                 public GetInstanceListResponseBodyInstanceListInstanceVOTags Tags { get; set; }
                 public class GetInstanceListResponseBodyInstanceListInstanceVOTags : TeaModel {
                     [NameInMap("TagVO")]
@@ -45,11 +59,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                     }
 
                 }
-                public int? DiskType { get; set; }
-                public string SslEndPoint { get; set; }
-                public string AllConfig { get; set; }
-                public int? PaidType { get; set; }
-                public string Name { get; set; }
+                public int? TopicNumLimit { get; set; }
                 public GetInstanceListResponseBodyInstanceListInstanceVOUpgradeServiceDetailInfo UpgradeServiceDetailInfo { get; set; }
                 public class GetInstanceListResponseBodyInstanceListInstanceVOUpgradeServiceDetailInfo : TeaModel {
                     [NameInMap("Current2OpenSourceVersion")]
@@ -57,26 +67,19 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                     public string Current2OpenSourceVersion { get; set; }
 
                 }
-                public string SpecType { get; set; }
-                public int? DiskSize { get; set; }
-                public string SecurityGroup { get; set; }
-                public string InstanceId { get; set; }
-                public int? ServiceStatus { get; set; }
-                public int? EipMax { get; set; }
-                public string RegionId { get; set; }
-                public int? MsgRetain { get; set; }
                 public string VSwitchId { get; set; }
-                public long? ExpiredTime { get; set; }
-                public int? TopicNumLimit { get; set; }
+                public string VpcId { get; set; }
                 public string ZoneId { get; set; }
-                public int? IoMax { get; set; }
-                public string EndPoint { get; set; }
             }
         };
 
-        [NameInMap("Code")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public int? Code { get; set; }
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

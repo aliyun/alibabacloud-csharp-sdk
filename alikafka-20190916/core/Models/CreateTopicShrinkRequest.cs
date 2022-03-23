@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
-    public class CreateTopicRequest : TeaModel {
+    public class CreateTopicShrinkRequest : TeaModel {
         [NameInMap("CompactTopic")]
         [Validation(Required=false)]
         public bool? CompactTopic { get; set; }
 
         [NameInMap("Config")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Config { get; set; }
+        public string ConfigShrink { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

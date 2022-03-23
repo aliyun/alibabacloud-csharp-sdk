@@ -8,10 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
-    public class UpdateAllowedIpResponseBody : TeaModel {
+    public class GetAllInstanceIdListResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
+
+        [NameInMap("InstanceIds")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> InstanceIds { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

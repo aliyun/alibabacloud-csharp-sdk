@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
-    public class GetMetaProductListResponse : TeaModel {
+    public class GetAllInstanceIdListResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public GetMetaProductListResponseBody Body { get; set; }
+        public GetAllInstanceIdListResponseBody Body { get; set; }
 
     }
 

@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("TargetVersion")]
-        [Validation(Required=false)]
-        public string TargetVersion { get; set; }
-
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("TargetVersion")]
+        [Validation(Required=false)]
+        public string TargetVersion { get; set; }
 
     }
 

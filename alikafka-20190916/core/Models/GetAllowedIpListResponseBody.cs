@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class GetAllowedIpListResponseBody : TeaModel {
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("AllowedList")]
         [Validation(Required=false)]
         public GetAllowedIpListResponseBodyAllowedList AllowedList { get; set; }
@@ -28,21 +20,29 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [Validation(Required=false)]
             public List<GetAllowedIpListResponseBodyAllowedListInternetList> InternetList { get; set; }
             public class GetAllowedIpListResponseBodyAllowedListInternetList : TeaModel {
-                public string PortRange { get; set; }
                 public List<string> AllowedIpList { get; set; }
+                public string PortRange { get; set; }
             }
             [NameInMap("VpcList")]
             [Validation(Required=false)]
             public List<GetAllowedIpListResponseBodyAllowedListVpcList> VpcList { get; set; }
             public class GetAllowedIpListResponseBodyAllowedListVpcList : TeaModel {
-                public string PortRange { get; set; }
                 public List<string> AllowedIpList { get; set; }
+                public string PortRange { get; set; }
             }
         };
 
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

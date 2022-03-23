@@ -9,21 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class DescribeAclsResponseBody : TeaModel {
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
         [NameInMap("KafkaAclList")]
         [Validation(Required=false)]
@@ -33,14 +21,26 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [Validation(Required=false)]
             public List<DescribeAclsResponseBodyKafkaAclListKafkaAclVO> KafkaAclVO { get; set; }
             public class DescribeAclsResponseBodyKafkaAclListKafkaAclVO : TeaModel {
-                public string AclResourceType { get; set; }
-                public string Host { get; set; }
                 public string AclOperationType { get; set; }
                 public string AclResourceName { get; set; }
                 public string AclResourcePatternType { get; set; }
+                public string AclResourceType { get; set; }
+                public string Host { get; set; }
                 public string Username { get; set; }
             }
         };
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

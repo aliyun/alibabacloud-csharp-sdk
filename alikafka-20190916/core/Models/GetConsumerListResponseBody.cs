@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class GetConsumerListResponseBody : TeaModel {
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
@@ -29,6 +21,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [Validation(Required=false)]
             public List<GetConsumerListResponseBodyConsumerListConsumerVO> ConsumerVO { get; set; }
             public class GetConsumerListResponseBodyConsumerListConsumerVO : TeaModel {
+                public string ConsumerId { get; set; }
+                public string InstanceId { get; set; }
+                public string RegionId { get; set; }
                 public string Remark { get; set; }
                 public GetConsumerListResponseBodyConsumerListConsumerVOTags Tags { get; set; }
                 public class GetConsumerListResponseBodyConsumerListConsumerVOTags : TeaModel {
@@ -47,11 +42,16 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                     }
 
                 }
-                public string ConsumerId { get; set; }
-                public string InstanceId { get; set; }
-                public string RegionId { get; set; }
             }
         };
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

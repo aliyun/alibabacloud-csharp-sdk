@@ -9,18 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class GetConsumerProgressResponseBody : TeaModel {
-        [NameInMap("Message")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? Code { get; set; }
 
         [NameInMap("ConsumerProgress")]
         [Validation(Required=false)]
         public GetConsumerProgressResponseBodyConsumerProgress ConsumerProgress { get; set; }
         public class GetConsumerProgressResponseBodyConsumerProgress : TeaModel {
+            [NameInMap("LastTimestamp")]
+            [Validation(Required=false)]
+            public long? LastTimestamp { get; set; }
             [NameInMap("TopicList")]
             [Validation(Required=false)]
             public GetConsumerProgressResponseBodyConsumerProgressTopicList TopicList { get; set; }
@@ -29,17 +28,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [Validation(Required=false)]
                 public List<GetConsumerProgressResponseBodyConsumerProgressTopicListTopicList> TopicList { get; set; }
                 public class GetConsumerProgressResponseBodyConsumerProgressTopicListTopicList : TeaModel {
-                    [NameInMap("TotalDiff")]
-                    [Validation(Required=false)]
-                    public long? TotalDiff { get; set; }
-
                     [NameInMap("LastTimestamp")]
                     [Validation(Required=false)]
                     public long? LastTimestamp { get; set; }
-
-                    [NameInMap("Topic")]
-                    [Validation(Required=false)]
-                    public string Topic { get; set; }
 
                     [NameInMap("OffsetList")]
                     [Validation(Required=false)]
@@ -56,20 +47,29 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                         }
                     };
 
+                    [NameInMap("Topic")]
+                    [Validation(Required=false)]
+                    public string Topic { get; set; }
+
+                    [NameInMap("TotalDiff")]
+                    [Validation(Required=false)]
+                    public long? TotalDiff { get; set; }
+
                 }
 
             }
-            [NameInMap("LastTimestamp")]
-            [Validation(Required=false)]
-            public long? LastTimestamp { get; set; }
             [NameInMap("TotalDiff")]
             [Validation(Required=false)]
             public long? TotalDiff { get; set; }
         };
 
-        [NameInMap("Code")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public int? Code { get; set; }
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

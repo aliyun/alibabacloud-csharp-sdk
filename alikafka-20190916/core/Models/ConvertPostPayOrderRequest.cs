@@ -12,17 +12,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class ConvertPostPayOrderRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("Duration")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public int? Duration { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("Duration")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public int? Duration { get; set; }
+        public string RegionId { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class ReleaseInstanceRequest : TeaModel {
+        [NameInMap("ForceDeleteInstance")]
+        [Validation(Required=false)]
+        public bool? ForceDeleteInstance { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        [NameInMap("ForceDeleteInstance")]
-        [Validation(Required=false)]
-        public bool? ForceDeleteInstance { get; set; }
 
     }
 
