@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Ddi20200617.Models
         [Validation(Required=false)]
         public bool? Adhoc { get; set; }
 
+        [NameInMap("ExactName")]
+        [Validation(Required=false)]
+        public string ExactName { get; set; }
+
         /// <summary>
         /// 作业ID。您可以调用ListFlowJob查看作业ID。
         /// </summary>

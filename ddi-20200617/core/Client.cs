@@ -2346,6 +2346,10 @@ namespace AlibabaCloud.SDK.Ddi20200617
             {
                 query["Adhoc"] = request.Adhoc;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExactName))
+            {
+                query["ExactName"] = request.ExactName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 query["Id"] = request.Id;
@@ -2400,6 +2404,10 @@ namespace AlibabaCloud.SDK.Ddi20200617
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Adhoc))
             {
                 query["Adhoc"] = request.Adhoc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExactName))
+            {
+                query["ExactName"] = request.ExactName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
