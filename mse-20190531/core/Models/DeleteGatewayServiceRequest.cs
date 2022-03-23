@@ -8,18 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class PullServicesRequest : TeaModel {
+    public class DeleteGatewayServiceRequest : TeaModel {
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
+
+        [NameInMap("GatewayId")]
+        [Validation(Required=false)]
+        public long? GatewayId { get; set; }
 
         [NameInMap("GatewayUniqueId")]
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
 
-        [NameInMap("SourceType")]
+        [NameInMap("ServiceId")]
         [Validation(Required=false)]
-        public string SourceType { get; set; }
+        public string ServiceId { get; set; }
 
     }
 

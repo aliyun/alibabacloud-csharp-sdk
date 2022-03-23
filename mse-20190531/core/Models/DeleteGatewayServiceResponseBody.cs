@@ -8,69 +8,55 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class ListGatewayDomainResponseBody : TeaModel {
+    public class DeleteGatewayServiceResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<ListGatewayDomainResponseBodyData> Data { get; set; }
-        public class ListGatewayDomainResponseBodyData : TeaModel {
-            [NameInMap("CertBeforeDate")]
-            [Validation(Required=false)]
-            public string CertBeforeDate { get; set; }
-
-            [NameInMap("CertIdentifier")]
-            [Validation(Required=false)]
-            public string CertIdentifier { get; set; }
-
-            [NameInMap("Comment")]
-            [Validation(Required=false)]
-            public ListGatewayDomainResponseBodyDataComment Comment { get; set; }
-            public class ListGatewayDomainResponseBodyDataComment : TeaModel {
-                [NameInMap("Status")]
-                [Validation(Required=false)]
-                public string Status { get; set; }
-            };
-
+        public DeleteGatewayServiceResponseBodyData Data { get; set; }
+        public class DeleteGatewayServiceResponseBodyData : TeaModel {
             [NameInMap("GatewayId")]
             [Validation(Required=false)]
             public long? GatewayId { get; set; }
-
+            [NameInMap("GatewayUniqueId")]
+            [Validation(Required=false)]
+            public string GatewayUniqueId { get; set; }
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
-
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public string GmtModified { get; set; }
-
+            [NameInMap("GroupName")]
+            [Validation(Required=false)]
+            public string GroupName { get; set; }
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
-
-            [NameInMap("MustHttps")]
+            [NameInMap("Ips")]
             [Validation(Required=false)]
-            public bool? MustHttps { get; set; }
-
+            public List<string> Ips { get; set; }
+            [NameInMap("MetaInfo")]
+            [Validation(Required=false)]
+            public string MetaInfo { get; set; }
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
-
-            [NameInMap("Protocol")]
+            [NameInMap("Namespace")]
             [Validation(Required=false)]
-            public string Protocol { get; set; }
-
-            [NameInMap("Status")]
+            public string Namespace { get; set; }
+            [NameInMap("ServiceNameInRegistry")]
             [Validation(Required=false)]
-            public int? Status { get; set; }
-
-            [NameInMap("Type")]
+            public string ServiceNameInRegistry { get; set; }
+            [NameInMap("SourceId")]
             [Validation(Required=false)]
-            public string Type { get; set; }
-
-        }
+            public long? SourceId { get; set; }
+            [NameInMap("SourceType")]
+            [Validation(Required=false)]
+            public string SourceType { get; set; }
+        };
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]

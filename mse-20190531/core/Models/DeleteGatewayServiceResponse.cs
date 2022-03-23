@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class DeleteAlarmRuleResponse : TeaModel {
+    public class DeleteGatewayServiceResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DeleteAlarmRuleResponseBody Body { get; set; }
+        public DeleteGatewayServiceResponseBody Body { get; set; }
 
     }
 

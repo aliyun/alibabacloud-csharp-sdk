@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? BeforeDate { get; set; }
             [NameInMap("CertIdentifier")]
             [Validation(Required=false)]
-            public int? CertIdentifier { get; set; }
+            public string CertIdentifier { get; set; }
             [NameInMap("CertName")]
             [Validation(Required=false)]
             public string CertName { get; set; }

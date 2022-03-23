@@ -41,6 +41,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public long? Id { get; set; }
 
+            [NameInMap("IngressOptions")]
+            [Validation(Required=false)]
+            public ListServiceSourceResponseBodyDataIngressOptions IngressOptions { get; set; }
+            public class ListServiceSourceResponseBodyDataIngressOptions : TeaModel {
+                [NameInMap("EnableIngress")]
+                [Validation(Required=false)]
+                public bool? EnableIngress { get; set; }
+                [NameInMap("IngressClass")]
+                [Validation(Required=false)]
+                public string IngressClass { get; set; }
+                [NameInMap("WatchNamespace")]
+                [Validation(Required=false)]
+                public string WatchNamespace { get; set; }
+            };
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }

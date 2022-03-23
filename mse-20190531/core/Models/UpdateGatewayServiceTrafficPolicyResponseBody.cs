@@ -8,19 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class DeleteAlarmRuleResponseBody : TeaModel {
-        [NameInMap("ErrorCode")]
+    public class UpdateGatewayServiceTrafficPolicyResponseBody : TeaModel {
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string ErrorCode { get; set; }
+        public int? Code { get; set; }
 
-        [NameInMap("HttpCode")]
+        [NameInMap("Data")]
         [Validation(Required=false)]
-        public string HttpCode { get; set; }
+        public GatewayService Data { get; set; }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// Id of the request
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

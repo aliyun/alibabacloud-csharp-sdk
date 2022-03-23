@@ -8,69 +8,43 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class ListGatewayDomainResponseBody : TeaModel {
+    public class DeleteSecurityGroupRuleResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<ListGatewayDomainResponseBodyData> Data { get; set; }
-        public class ListGatewayDomainResponseBodyData : TeaModel {
-            [NameInMap("CertBeforeDate")]
+        public DeleteSecurityGroupRuleResponseBodyData Data { get; set; }
+        public class DeleteSecurityGroupRuleResponseBodyData : TeaModel {
+            [NameInMap("Description")]
             [Validation(Required=false)]
-            public string CertBeforeDate { get; set; }
-
-            [NameInMap("CertIdentifier")]
-            [Validation(Required=false)]
-            public string CertIdentifier { get; set; }
-
-            [NameInMap("Comment")]
-            [Validation(Required=false)]
-            public ListGatewayDomainResponseBodyDataComment Comment { get; set; }
-            public class ListGatewayDomainResponseBodyDataComment : TeaModel {
-                [NameInMap("Status")]
-                [Validation(Required=false)]
-                public string Status { get; set; }
-            };
-
+            public string Description { get; set; }
             [NameInMap("GatewayId")]
             [Validation(Required=false)]
             public long? GatewayId { get; set; }
-
+            [NameInMap("GatewayUniqueId")]
+            [Validation(Required=false)]
+            public string GatewayUniqueId { get; set; }
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
-
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public string GmtModified { get; set; }
-
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
-
-            [NameInMap("MustHttps")]
+            [NameInMap("IpProtocol")]
             [Validation(Required=false)]
-            public bool? MustHttps { get; set; }
-
-            [NameInMap("Name")]
+            public string IpProtocol { get; set; }
+            [NameInMap("PortRange")]
             [Validation(Required=false)]
-            public string Name { get; set; }
-
-            [NameInMap("Protocol")]
+            public string PortRange { get; set; }
+            [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
-            public string Protocol { get; set; }
-
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public int? Status { get; set; }
-
-            [NameInMap("Type")]
-            [Validation(Required=false)]
-            public string Type { get; set; }
-
-        }
+            public string SecurityGroupId { get; set; }
+        };
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]

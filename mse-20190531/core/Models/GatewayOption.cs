@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -25,6 +22,13 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("EnableHardwareAcceleration")]
         [Validation(Required=false)]
         public bool? EnableHardwareAcceleration { get; set; }
+
+        /// <summary>
+        /// 是否开启waf
+        /// </summary>
+        [NameInMap("EnableWaf")]
+        [Validation(Required=false)]
+        public bool? EnableWaf { get; set; }
 
         /// <summary>
         /// 日志配置详情

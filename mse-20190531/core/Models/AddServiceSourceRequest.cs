@@ -21,6 +21,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
 
+        [NameInMap("IngressOptionsRequest")]
+        [Validation(Required=false)]
+        public AddServiceSourceRequestIngressOptionsRequest IngressOptionsRequest { get; set; }
+        public class AddServiceSourceRequestIngressOptionsRequest : TeaModel {
+            [NameInMap("EnableIngress")]
+            [Validation(Required=false)]
+            public bool? EnableIngress { get; set; }
+            [NameInMap("IngressClass")]
+            [Validation(Required=false)]
+            public string IngressClass { get; set; }
+            [NameInMap("WatchNamespace")]
+            [Validation(Required=false)]
+            public string WatchNamespace { get; set; }
+        };
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

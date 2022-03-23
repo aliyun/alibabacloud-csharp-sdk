@@ -27,6 +27,13 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public List<ListGatewayRouteResponseBodyDataResult> Result { get; set; }
             public class ListGatewayRouteResponseBodyDataResult : TeaModel {
+                public ListGatewayRouteResponseBodyDataResultComment Comment { get; set; }
+                public class ListGatewayRouteResponseBodyDataResultComment : TeaModel {
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                }
                 public long? DefaultServiceId { get; set; }
                 public string DefaultServiceName { get; set; }
                 public string DestinationType { get; set; }
@@ -139,6 +146,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 }
                 public string Services { get; set; }
                 public int? Status { get; set; }
+                public string Type { get; set; }
             }
             [NameInMap("TotalSize")]
             [Validation(Required=false)]

@@ -8,22 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class ListAlarmContactGroupsRequest : TeaModel {
+    public class DeleteSecurityGroupRuleRequest : TeaModel {
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
-        [NameInMap("PageNum")]
+        [NameInMap("GatewayUniqueId")]
         [Validation(Required=false)]
-        public int? PageNum { get; set; }
+        public string GatewayUniqueId { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("Id")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("RequestPars")]
-        [Validation(Required=false)]
-        public string RequestPars { get; set; }
+        public long? Id { get; set; }
 
     }
 

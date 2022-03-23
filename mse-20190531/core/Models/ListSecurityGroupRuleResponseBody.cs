@@ -8,35 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class ListGatewayDomainResponseBody : TeaModel {
+    public class ListSecurityGroupRuleResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<ListGatewayDomainResponseBodyData> Data { get; set; }
-        public class ListGatewayDomainResponseBodyData : TeaModel {
-            [NameInMap("CertBeforeDate")]
+        public List<ListSecurityGroupRuleResponseBodyData> Data { get; set; }
+        public class ListSecurityGroupRuleResponseBodyData : TeaModel {
+            [NameInMap("Description")]
             [Validation(Required=false)]
-            public string CertBeforeDate { get; set; }
-
-            [NameInMap("CertIdentifier")]
-            [Validation(Required=false)]
-            public string CertIdentifier { get; set; }
-
-            [NameInMap("Comment")]
-            [Validation(Required=false)]
-            public ListGatewayDomainResponseBodyDataComment Comment { get; set; }
-            public class ListGatewayDomainResponseBodyDataComment : TeaModel {
-                [NameInMap("Status")]
-                [Validation(Required=false)]
-                public string Status { get; set; }
-            };
+            public string Description { get; set; }
 
             [NameInMap("GatewayId")]
             [Validation(Required=false)]
             public long? GatewayId { get; set; }
+
+            [NameInMap("GatewayUniqueId")]
+            [Validation(Required=false)]
+            public string GatewayUniqueId { get; set; }
 
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
@@ -48,27 +39,19 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
             [NameInMap("Id")]
             [Validation(Required=false)]
-            public long? Id { get; set; }
+            public string Id { get; set; }
 
-            [NameInMap("MustHttps")]
+            [NameInMap("IpProtocol")]
             [Validation(Required=false)]
-            public bool? MustHttps { get; set; }
+            public string IpProtocol { get; set; }
 
-            [NameInMap("Name")]
+            [NameInMap("PortRange")]
             [Validation(Required=false)]
-            public string Name { get; set; }
+            public string PortRange { get; set; }
 
-            [NameInMap("Protocol")]
+            [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
-            public string Protocol { get; set; }
-
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public int? Status { get; set; }
-
-            [NameInMap("Type")]
-            [Validation(Required=false)]
-            public string Type { get; set; }
+            public string SecurityGroupId { get; set; }
 
         }
 

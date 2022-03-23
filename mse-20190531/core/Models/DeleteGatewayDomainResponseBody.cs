@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public class DeleteGatewayDomainResponseBodyData : TeaModel {
             [NameInMap("CertIdentifier")]
             [Validation(Required=false)]
-            public int? CertIdentifier { get; set; }
+            public string CertIdentifier { get; set; }
             [NameInMap("GatewayId")]
             [Validation(Required=false)]
             public long? GatewayId { get; set; }

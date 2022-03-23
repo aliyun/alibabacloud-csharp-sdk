@@ -8,26 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class ListAlarmRulesRequest : TeaModel {
+    public class UpdateGatewayServiceTrafficPolicyShrinkRequest : TeaModel {
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
-        [NameInMap("AlarmMseType")]
+        [NameInMap("GatewayId")]
         [Validation(Required=false)]
-        public string AlarmMseType { get; set; }
+        public long? GatewayId { get; set; }
 
-        [NameInMap("PageNum")]
+        [NameInMap("GatewayTrafficPolicy")]
         [Validation(Required=false)]
-        public int? PageNum { get; set; }
+        public string GatewayTrafficPolicyShrink { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("GatewayUniqueId")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string GatewayUniqueId { get; set; }
 
-        [NameInMap("RequestPars")]
+        [NameInMap("ServiceId")]
         [Validation(Required=false)]
-        public string RequestPars { get; set; }
+        public long? ServiceId { get; set; }
 
     }
 

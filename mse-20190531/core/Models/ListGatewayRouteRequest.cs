@@ -27,6 +27,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("DomainId")]
             [Validation(Required=false)]
             public long? DomainId { get; set; }
+            [NameInMap("DomainName")]
+            [Validation(Required=false)]
+            public string DomainName { get; set; }
             [NameInMap("GatewayId")]
             [Validation(Required=false)]
             public long? GatewayId { get; set; }

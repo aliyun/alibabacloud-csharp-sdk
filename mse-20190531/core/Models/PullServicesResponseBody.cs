@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Namespace { get; set; }
 
+            [NameInMap("NamespaceShowName")]
+            [Validation(Required=false)]
+            public string NamespaceShowName { get; set; }
+
             [NameInMap("Services")]
             [Validation(Required=false)]
             public List<PullServicesResponseBodyDataServices> Services { get; set; }

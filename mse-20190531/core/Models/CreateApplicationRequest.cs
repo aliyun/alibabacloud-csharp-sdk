@@ -29,9 +29,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        [NameInMap("SentinelEnable")]
+        [Validation(Required=false)]
+        public string SentinelEnable { get; set; }
+
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }
+
+        [NameInMap("SwitchEnable")]
+        [Validation(Required=false)]
+        public string SwitchEnable { get; set; }
 
     }
 

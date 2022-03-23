@@ -8,18 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class DeleteAlarmRuleRequest : TeaModel {
+    public class ListSecurityGroupRuleRequest : TeaModel {
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
-        [NameInMap("AlarmRuleId")]
+        /// <summary>
+        /// 网关ID
+        /// </summary>
+        [NameInMap("GatewayUniqueId")]
         [Validation(Required=false)]
-        public string AlarmRuleId { get; set; }
-
-        [NameInMap("RequestPars")]
-        [Validation(Required=false)]
-        public string RequestPars { get; set; }
+        public string GatewayUniqueId { get; set; }
 
     }
 

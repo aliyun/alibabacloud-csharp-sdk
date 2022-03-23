@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class ListAlarmContactGroupsResponse : TeaModel {
+    public class ListSecurityGroupResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ListAlarmContactGroupsResponseBody Body { get; set; }
+        public ListSecurityGroupResponseBody Body { get; set; }
 
     }
 
