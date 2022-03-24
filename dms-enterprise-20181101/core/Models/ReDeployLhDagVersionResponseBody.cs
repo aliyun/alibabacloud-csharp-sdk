@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
-    public class CreateDataExportOrderResponseBody : TeaModel {
-        [NameInMap("CreateOrderResult")]
+    public class ReDeployLhDagVersionResponseBody : TeaModel {
+        [NameInMap("DeployId")]
         [Validation(Required=false)]
-        public List<long?> CreateOrderResult { get; set; }
+        public long? DeployId { get; set; }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -21,9 +21,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

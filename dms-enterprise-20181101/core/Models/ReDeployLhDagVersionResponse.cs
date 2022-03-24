@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
-    public class CreateDataExportOrderResponse : TeaModel {
+    public class ReDeployLhDagVersionResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public CreateDataExportOrderResponseBody Body { get; set; }
+        public ReDeployLhDagVersionResponseBody Body { get; set; }
 
     }
 
