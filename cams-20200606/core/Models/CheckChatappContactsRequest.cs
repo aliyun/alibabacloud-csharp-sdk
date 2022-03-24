@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -8,15 +11,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
-    public class CheckContactsRequest : TeaModel {
+    public class CheckChatappContactsRequest : TeaModel {
+        /// <summary>
+        /// 通道类型
+        /// </summary>
         [NameInMap("ChannelType")]
         [Validation(Required=false)]
         public string ChannelType { get; set; }
 
+        /// <summary>
+        /// 需要查询的用户列表，JSON格式，单次调用最多查询10个。注意：用户号码必须加国家码
+        /// </summary>
         [NameInMap("Contacts")]
         [Validation(Required=false)]
         public string Contacts { get; set; }
 
+        /// <summary>
+        /// 发送号码
+        /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
         public string From { get; set; }
