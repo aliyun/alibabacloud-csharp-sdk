@@ -677,6 +677,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             {
                 query["DbName"] = request.DbName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                query["Mode"] = request.Mode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -735,6 +739,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                query["Mode"] = request.Mode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
