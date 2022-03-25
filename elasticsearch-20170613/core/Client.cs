@@ -509,7 +509,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Protocol = "HTTPS",
                 Pathname = "/openapi/assist/actions/capacity-plan",
                 Method = "POST",
-                AuthType = "AK",
+                AuthType = "Anonymous",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
@@ -549,7 +549,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Protocol = "HTTPS",
                 Pathname = "/openapi/assist/actions/capacity-plan",
                 Method = "POST",
-                AuthType = "AK",
+                AuthType = "Anonymous",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
@@ -7197,6 +7197,150 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListInstanceHistoryEventsResponse ListInstanceHistoryEvents(ListInstanceHistoryEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListInstanceHistoryEventsWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ListInstanceHistoryEventsResponse> ListInstanceHistoryEventsAsync(ListInstanceHistoryEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListInstanceHistoryEventsWithOptionsAsync(request, headers, runtime);
+        }
+
+        public ListInstanceHistoryEventsResponse ListInstanceHistoryEventsWithOptions(ListInstanceHistoryEventsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventCreateEndTime))
+            {
+                query["eventCreateEndTime"] = request.EventCreateEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventCreateStartTime))
+            {
+                query["eventCreateStartTime"] = request.EventCreateStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventExecuteEndTime))
+            {
+                query["eventExecuteEndTime"] = request.EventExecuteEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventExecuteStartTime))
+            {
+                query["eventExecuteStartTime"] = request.EventExecuteStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventFinashEndTime))
+            {
+                query["eventFinashEndTime"] = request.EventFinashEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventFinashStartTime))
+            {
+                query["eventFinashStartTime"] = request.EventFinashStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventLevel))
+            {
+                query["eventLevel"] = request.EventLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventType))
+            {
+                query["eventType"] = request.EventType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["instanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeIP))
+            {
+                query["nodeIP"] = request.NodeIP;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.TeaUtil.Common.ToArray(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstanceHistoryEvents",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/events",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstanceHistoryEventsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListInstanceHistoryEventsResponse> ListInstanceHistoryEventsWithOptionsAsync(ListInstanceHistoryEventsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventCreateEndTime))
+            {
+                query["eventCreateEndTime"] = request.EventCreateEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventCreateStartTime))
+            {
+                query["eventCreateStartTime"] = request.EventCreateStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventExecuteEndTime))
+            {
+                query["eventExecuteEndTime"] = request.EventExecuteEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventExecuteStartTime))
+            {
+                query["eventExecuteStartTime"] = request.EventExecuteStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventFinashEndTime))
+            {
+                query["eventFinashEndTime"] = request.EventFinashEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventFinashStartTime))
+            {
+                query["eventFinashStartTime"] = request.EventFinashStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventLevel))
+            {
+                query["eventLevel"] = request.EventLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventType))
+            {
+                query["eventType"] = request.EventType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["instanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeIP))
+            {
+                query["nodeIP"] = request.NodeIP;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.TeaUtil.Common.ToArray(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstanceHistoryEvents",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/events",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstanceHistoryEventsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListInstanceIndicesResponse ListInstanceIndices(string InstanceId, ListInstanceIndicesRequest request)
