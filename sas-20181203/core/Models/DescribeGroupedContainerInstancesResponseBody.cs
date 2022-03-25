@@ -41,9 +41,37 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string CusterState { get; set; }
 
+            [NameInMap("HcCount")]
+            [Validation(Required=false)]
+            public int? HcCount { get; set; }
+
             [NameInMap("HostIp")]
             [Validation(Required=false)]
             public string HostIp { get; set; }
+
+            [NameInMap("Image")]
+            [Validation(Required=false)]
+            public string Image { get; set; }
+
+            [NameInMap("ImageDigest")]
+            [Validation(Required=false)]
+            public string ImageDigest { get; set; }
+
+            [NameInMap("ImageRepoName")]
+            [Validation(Required=false)]
+            public string ImageRepoName { get; set; }
+
+            [NameInMap("ImageRepoNamespace")]
+            [Validation(Required=false)]
+            public string ImageRepoNamespace { get; set; }
+
+            [NameInMap("ImageRepoTag")]
+            [Validation(Required=false)]
+            public string ImageRepoTag { get; set; }
+
+            [NameInMap("ImageUuid")]
+            [Validation(Required=false)]
+            public string ImageUuid { get; set; }
 
             [NameInMap("InstanceCount")]
             [Validation(Required=false)]
