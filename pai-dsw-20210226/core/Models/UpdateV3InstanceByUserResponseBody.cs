@@ -48,6 +48,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20210226.Models
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        [NameInMap("UserSet")]
+        [Validation(Required=false)]
+        public List<string> UserSet { get; set; }
+
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }
