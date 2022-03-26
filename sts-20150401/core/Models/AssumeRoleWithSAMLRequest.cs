@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Sts20150401.Models
 {
     public class AssumeRoleWithSAMLRequest : TeaModel {
-        [NameInMap("SAMLProviderArn")]
+        [NameInMap("DurationSeconds")]
         [Validation(Required=false)]
-        public string SAMLProviderArn { get; set; }
+        public long? DurationSeconds { get; set; }
+
+        [NameInMap("Policy")]
+        [Validation(Required=false)]
+        public string Policy { get; set; }
 
         [NameInMap("RoleArn")]
         [Validation(Required=false)]
@@ -21,13 +25,9 @@ namespace AlibabaCloud.SDK.Sts20150401.Models
         [Validation(Required=false)]
         public string SAMLAssertion { get; set; }
 
-        [NameInMap("Policy")]
+        [NameInMap("SAMLProviderArn")]
         [Validation(Required=false)]
-        public string Policy { get; set; }
-
-        [NameInMap("DurationSeconds")]
-        [Validation(Required=false)]
-        public long? DurationSeconds { get; set; }
+        public string SAMLProviderArn { get; set; }
 
     }
 

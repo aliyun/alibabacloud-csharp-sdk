@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Sts20150401.Models
 {
     public class AssumeRoleWithOIDCRequest : TeaModel {
         /// <summary>
+        /// Session过期时间，单位为秒。
+        /// </summary>
+        [NameInMap("DurationSeconds")]
+        [Validation(Required=false)]
+        public long? DurationSeconds { get; set; }
+
+        /// <summary>
         /// OIDC Provider的ARN
         /// </summary>
         [NameInMap("OIDCProviderArn")]
         [Validation(Required=false)]
         public string OIDCProviderArn { get; set; }
-
-        /// <summary>
-        /// 需要扮演的角色的ARN
-        /// </summary>
-        [NameInMap("RoleArn")]
-        [Validation(Required=false)]
-        public string RoleArn { get; set; }
 
         /// <summary>
         /// OIDC的ID Token，需输入原始Token，无需Base64解码
@@ -38,11 +38,11 @@ namespace AlibabaCloud.SDK.Sts20150401.Models
         public string Policy { get; set; }
 
         /// <summary>
-        /// Session过期时间，单位为秒。
+        /// 需要扮演的角色的ARN
         /// </summary>
-        [NameInMap("DurationSeconds")]
+        [NameInMap("RoleArn")]
         [Validation(Required=false)]
-        public long? DurationSeconds { get; set; }
+        public string RoleArn { get; set; }
 
         /// <summary>
         /// 用户自定义参数。此参数用来区分不同的令牌，可用于用户级别的访问审计。
