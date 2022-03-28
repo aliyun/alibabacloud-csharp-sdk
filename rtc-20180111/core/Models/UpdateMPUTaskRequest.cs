@@ -55,6 +55,30 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public List<UpdateMPUTaskRequestClockWidgets> ClockWidgets { get; set; }
         public class UpdateMPUTaskRequestClockWidgets : TeaModel {
+            [NameInMap("Alpha")]
+            [Validation(Required=false)]
+            public float? Alpha { get; set; }
+
+            [NameInMap("BorderColor")]
+            [Validation(Required=false)]
+            public long? BorderColor { get; set; }
+
+            [NameInMap("BorderWidth")]
+            [Validation(Required=false)]
+            public int? BorderWidth { get; set; }
+
+            [NameInMap("Box")]
+            [Validation(Required=false)]
+            public bool? Box { get; set; }
+
+            [NameInMap("BoxBorderWidth")]
+            [Validation(Required=false)]
+            public int? BoxBorderWidth { get; set; }
+
+            [NameInMap("BoxColor")]
+            [Validation(Required=false)]
+            public long? BoxColor { get; set; }
+
             [NameInMap("FontColor")]
             [Validation(Required=false)]
             public int? FontColor { get; set; }
@@ -195,6 +219,30 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [Validation(Required=false)]
             public List<UpdateMPUTaskRequestUserPanesTexts> Texts { get; set; }
             public class UpdateMPUTaskRequestUserPanesTexts : TeaModel {
+                [NameInMap("Alpha")]
+                [Validation(Required=false)]
+                public float? Alpha { get; set; }
+
+                [NameInMap("BorderColor")]
+                [Validation(Required=false)]
+                public long? BorderColor { get; set; }
+
+                [NameInMap("BorderWidth")]
+                [Validation(Required=false)]
+                public int? BorderWidth { get; set; }
+
+                [NameInMap("Box")]
+                [Validation(Required=false)]
+                public bool? Box { get; set; }
+
+                [NameInMap("BoxBorderWidth")]
+                [Validation(Required=false)]
+                public int? BoxBorderWidth { get; set; }
+
+                [NameInMap("BoxColor")]
+                [Validation(Required=false)]
+                public long? BoxColor { get; set; }
+
                 [NameInMap("FontColor")]
                 [Validation(Required=false)]
                 public int? FontColor { get; set; }
