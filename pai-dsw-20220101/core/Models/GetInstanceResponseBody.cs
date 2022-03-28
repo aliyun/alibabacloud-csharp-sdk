@@ -31,6 +31,13 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         public long? AccumulatedRunningTimeInMs { get; set; }
 
         /// <summary>
+        /// 状态码
+        /// </summary>
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        /// <summary>
         /// 数据集集合
         /// </summary>
         [NameInMap("Datasets")]
@@ -80,6 +87,13 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [NameInMap("GmtModifiedTime")]
         [Validation(Required=false)]
         public string GmtModifiedTime { get; set; }
+
+        /// <summary>
+        /// http状态码
+        /// </summary>
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
 
         /// <summary>
         /// 镜像Id
@@ -182,6 +196,13 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         };
 
         /// <summary>
+        /// 说明
+        /// </summary>
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        /// <summary>
         /// 支付类型
         /// </summary>
         [NameInMap("PaymentType")]
@@ -217,6 +238,13 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// 成功标志
+        /// </summary>
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        /// <summary>
         /// 终端url
         /// </summary>
         [NameInMap("TerminalUrl")]
@@ -229,6 +257,13 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }
+
+        /// <summary>
+        /// 用户名称
+        /// </summary>
+        [NameInMap("UserName")]
+        [Validation(Required=false)]
+        public string UserName { get; set; }
 
         /// <summary>
         /// user vpc配置

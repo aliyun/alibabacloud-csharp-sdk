@@ -10,6 +10,20 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 {
     public class ListInstancesResponseBody : TeaModel {
         /// <summary>
+        /// 状态码
+        /// </summary>
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        /// <summary>
+        /// http状态码
+        /// </summary>
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
+        /// <summary>
         /// 本分页中请求的实例列表
         /// </summary>
         [NameInMap("Instances")]
@@ -231,6 +245,13 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
             public string UserId { get; set; }
 
             /// <summary>
+            /// 用户名称
+            /// </summary>
+            [NameInMap("UserName")]
+            [Validation(Required=false)]
+            public string UserName { get; set; }
+
+            /// <summary>
             /// user vpc配置
             /// </summary>
             [NameInMap("UserVpc")]
@@ -272,11 +293,25 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         }
 
         /// <summary>
+        /// 说明
+        /// </summary>
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        /// <summary>
         /// 请求Id
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// 成功标志
+        /// </summary>
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
         /// <summary>
         /// 实例总数

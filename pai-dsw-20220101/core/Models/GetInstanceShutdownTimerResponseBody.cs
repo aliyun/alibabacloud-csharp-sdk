@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 {
     public class GetInstanceShutdownTimerResponseBody : TeaModel {
         /// <summary>
+        /// 状态码
+        /// </summary>
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        /// <summary>
         /// 设定关机时间
         /// </summary>
         [NameInMap("DueTime")]
@@ -31,11 +38,25 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
+        /// http状态码
+        /// </summary>
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
+        /// <summary>
         /// 实例Id
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        /// <summary>
+        /// 说明
+        /// </summary>
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
 
         /// <summary>
         /// 剩余关机时间（ms）
@@ -50,6 +71,13 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// 成功标志
+        /// </summary>
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 
