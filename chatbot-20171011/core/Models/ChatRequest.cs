@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class ChatRequest : TeaModel {
+        [NameInMap("AgentKey")]
+        [Validation(Required=false)]
+        public string AgentKey { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

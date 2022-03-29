@@ -299,6 +299,10 @@ namespace AlibabaCloud.SDK.Chatbot20171011
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
+            {
+                query["AgentKey"] = request.AgentKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -342,6 +346,10 @@ namespace AlibabaCloud.SDK.Chatbot20171011
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
+            {
+                query["AgentKey"] = request.AgentKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -397,6 +405,10 @@ namespace AlibabaCloud.SDK.Chatbot20171011
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
+            {
+                query["AgentKey"] = request.AgentKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -460,6 +472,10 @@ namespace AlibabaCloud.SDK.Chatbot20171011
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
+            {
+                query["AgentKey"] = request.AgentKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -4827,6 +4843,10 @@ namespace AlibabaCloud.SDK.Chatbot20171011
             {
                 query["DialogId"] = request.DialogId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntentName))
             {
                 query["IntentName"] = request.IntentName;
@@ -4869,6 +4889,10 @@ namespace AlibabaCloud.SDK.Chatbot20171011
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DialogId))
             {
                 query["DialogId"] = request.DialogId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntentName))
             {

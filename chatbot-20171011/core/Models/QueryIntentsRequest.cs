@@ -20,6 +20,13 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [Validation(Required=false)]
         public long? DialogId { get; set; }
 
+        /// <summary>
+        /// 机器人实例 ID
+        /// </summary>
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
         [NameInMap("IntentName")]
         [Validation(Required=false)]
         public string IntentName { get; set; }
