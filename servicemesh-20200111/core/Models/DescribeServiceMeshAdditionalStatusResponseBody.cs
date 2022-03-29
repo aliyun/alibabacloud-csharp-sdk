@@ -23,6 +23,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [Validation(Required=false)]
             public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusApiServerLoadBalancerStatus ApiServerLoadBalancerStatus { get; set; }
             public class DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusApiServerLoadBalancerStatus : TeaModel {
+                [NameInMap("PayType")]
+                [Validation(Required=false)]
+                public string PayType { get; set; }
+
+                [NameInMap("Reused")]
+                [Validation(Required=false)]
+                public bool? Reused { get; set; }
+
                 [NameInMap("SLBBackEndServerNumStatus")]
                 [Validation(Required=false)]
                 public string SLBBackEndServerNumStatus { get; set; }
@@ -45,6 +53,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [Validation(Required=false)]
             public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusPilotLoadBalancerStatus PilotLoadBalancerStatus { get; set; }
             public class DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusPilotLoadBalancerStatus : TeaModel {
+                [NameInMap("PayType")]
+                [Validation(Required=false)]
+                public string PayType { get; set; }
+
+                [NameInMap("Reused")]
+                [Validation(Required=false)]
+                public bool? Reused { get; set; }
+
                 [NameInMap("SLBBackEndServerNumStatus")]
                 [Validation(Required=false)]
                 public string SLBBackEndServerNumStatus { get; set; }

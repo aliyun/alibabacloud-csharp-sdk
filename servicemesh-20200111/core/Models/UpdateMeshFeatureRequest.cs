@@ -173,6 +173,22 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public bool? MysqlFilterEnabled { get; set; }
 
+        [NameInMap("OPAInjectorCPULimit")]
+        [Validation(Required=false)]
+        public string OPAInjectorCPULimit { get; set; }
+
+        [NameInMap("OPAInjectorCPURequirement")]
+        [Validation(Required=false)]
+        public string OPAInjectorCPURequirement { get; set; }
+
+        [NameInMap("OPAInjectorMemoryLimit")]
+        [Validation(Required=false)]
+        public string OPAInjectorMemoryLimit { get; set; }
+
+        [NameInMap("OPAInjectorMemoryRequirement")]
+        [Validation(Required=false)]
+        public string OPAInjectorMemoryRequirement { get; set; }
+
         [NameInMap("OPALimitCPU")]
         [Validation(Required=false)]
         public string OPALimitCPU { get; set; }
@@ -192,6 +208,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [NameInMap("OPARequestMemory")]
         [Validation(Required=false)]
         public string OPARequestMemory { get; set; }
+
+        [NameInMap("OPAScopeInjected")]
+        [Validation(Required=false)]
+        public bool? OPAScopeInjected { get; set; }
 
         [NameInMap("OpaEnabled")]
         [Validation(Required=false)]
