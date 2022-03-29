@@ -13,21 +13,21 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         [Validation(Required=false)]
         public long? AppKey { get; set; }
 
-        [NameInMap("StartTime")]
+        [NameInMap("DeviceType")]
         [Validation(Required=false)]
-        public string StartTime { get; set; }
+        public string DeviceType { get; set; }
 
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        [NameInMap("DeviceType")]
-        [Validation(Required=false)]
-        public string DeviceType { get; set; }
-
         [NameInMap("QueryType")]
         [Validation(Required=false)]
         public string QueryType { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 

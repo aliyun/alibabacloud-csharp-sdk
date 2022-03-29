@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class QueryAliasesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("AliasInfos")]
         [Validation(Required=false)]
         public QueryAliasesResponseBodyAliasInfos AliasInfos { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
                 public string AliasName { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

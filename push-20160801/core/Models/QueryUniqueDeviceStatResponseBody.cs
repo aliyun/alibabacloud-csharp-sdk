@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class QueryUniqueDeviceStatResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("AppDeviceStats")]
         [Validation(Required=false)]
         public QueryUniqueDeviceStatResponseBodyAppDeviceStats AppDeviceStats { get; set; }
@@ -21,10 +17,14 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public List<QueryUniqueDeviceStatResponseBodyAppDeviceStatsAppDeviceStat> AppDeviceStat { get; set; }
             public class QueryUniqueDeviceStatResponseBodyAppDeviceStatsAppDeviceStat : TeaModel {
-                public string Time { get; set; }
                 public long? Count { get; set; }
+                public string Time { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class MassPushResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("MessageIds")]
         [Validation(Required=false)]
         public MassPushResponseBodyMessageIds MessageIds { get; set; }
@@ -21,6 +17,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public List<string> MessageId { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

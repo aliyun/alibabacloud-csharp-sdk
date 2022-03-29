@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class QueryPushStatByMsgResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("PushStats")]
         [Validation(Required=false)]
         public QueryPushStatByMsgResponseBodyPushStats PushStats { get; set; }
@@ -21,19 +17,23 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public List<QueryPushStatByMsgResponseBodyPushStatsPushStat> PushStat { get; set; }
             public class QueryPushStatByMsgResponseBodyPushStatsPushStat : TeaModel {
-                public string MessageId { get; set; }
+                public long? AcceptCount { get; set; }
                 public long? DeletedCount { get; set; }
+                public string MessageId { get; set; }
                 public long? OpenedCount { get; set; }
-                public long? SmsReceiveSuccessCount { get; set; }
-                public long? SmsSkipCount { get; set; }
-                public long? SmsReceiveFailedCount { get; set; }
-                public long? SmsFailedCount { get; set; }
                 public long? ReceivedCount { get; set; }
                 public long? SentCount { get; set; }
+                public long? SmsFailedCount { get; set; }
+                public long? SmsReceiveFailedCount { get; set; }
+                public long? SmsReceiveSuccessCount { get; set; }
                 public long? SmsSentCount { get; set; }
-                public long? AcceptCount { get; set; }
+                public long? SmsSkipCount { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

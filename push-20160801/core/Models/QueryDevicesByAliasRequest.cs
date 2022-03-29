@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class QueryDevicesByAliasRequest : TeaModel {
-        [NameInMap("AppKey")]
-        [Validation(Required=false)]
-        public long? AppKey { get; set; }
-
         [NameInMap("Alias")]
         [Validation(Required=false)]
         public string Alias { get; set; }
+
+        [NameInMap("AppKey")]
+        [Validation(Required=false)]
+        public long? AppKey { get; set; }
 
     }
 

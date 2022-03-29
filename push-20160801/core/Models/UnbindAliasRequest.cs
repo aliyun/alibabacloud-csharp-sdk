@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class UnbindAliasRequest : TeaModel {
+        [NameInMap("AliasName")]
+        [Validation(Required=false)]
+        public string AliasName { get; set; }
+
         [NameInMap("AppKey")]
         [Validation(Required=false)]
         public long? AppKey { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         [NameInMap("DeviceId")]
         [Validation(Required=false)]
         public string DeviceId { get; set; }
-
-        [NameInMap("AliasName")]
-        [Validation(Required=false)]
-        public string AliasName { get; set; }
 
         [NameInMap("UnbindAll")]
         [Validation(Required=false)]

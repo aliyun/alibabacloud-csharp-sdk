@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         [Validation(Required=false)]
         public long? AppKey { get; set; }
 
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         [NameInMap("Granularity")]
         [Validation(Required=false)]
         public string Granularity { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 

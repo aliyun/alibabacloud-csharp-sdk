@@ -13,6 +13,18 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         [Validation(Required=false)]
         public long? AppKey { get; set; }
 
+        [NameInMap("Body")]
+        [Validation(Required=false)]
+        public string Body { get; set; }
+
+        [NameInMap("ExtParameters")]
+        [Validation(Required=false)]
+        public string ExtParameters { get; set; }
+
+        [NameInMap("JobKey")]
+        [Validation(Required=false)]
+        public string JobKey { get; set; }
+
         [NameInMap("Target")]
         [Validation(Required=false)]
         public string Target { get; set; }
@@ -24,18 +36,6 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         [NameInMap("Title")]
         [Validation(Required=false)]
         public string Title { get; set; }
-
-        [NameInMap("Body")]
-        [Validation(Required=false)]
-        public string Body { get; set; }
-
-        [NameInMap("JobKey")]
-        [Validation(Required=false)]
-        public string JobKey { get; set; }
-
-        [NameInMap("ExtParameters")]
-        [Validation(Required=false)]
-        public string ExtParameters { get; set; }
 
     }
 
