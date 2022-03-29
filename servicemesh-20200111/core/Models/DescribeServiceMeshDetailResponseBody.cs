@@ -321,6 +321,15 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             public string PollDelay { get; set; }
                         };
 
+                        [NameInMap("OPAScopeInjection")]
+                        [Validation(Required=false)]
+                        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationOPAScopeInjection OPAScopeInjection { get; set; }
+                        public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationOPAScopeInjection : TeaModel {
+                            [NameInMap("OPAScopeInjected")]
+                            [Validation(Required=false)]
+                            public bool? OPAScopeInjected { get; set; }
+                        };
+
                         [NameInMap("RateLimit")]
                         [Validation(Required=false)]
                         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationRateLimit RateLimit { get; set; }
