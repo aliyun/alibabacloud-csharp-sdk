@@ -37,96 +37,6 @@ namespace AlibabaCloud.SDK.Vs20181212
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        public AddDeviceResponse AddDeviceWithOptions(AddDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
-            {
-                query["Config"] = request.Config;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
-            {
-                query["GroupId"] = request.GroupId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
-            {
-                query["Protocol"] = request.Protocol;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "AddDevice",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<AddDeviceResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<AddDeviceResponse> AddDeviceWithOptionsAsync(AddDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
-            {
-                query["Config"] = request.Config;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
-            {
-                query["GroupId"] = request.GroupId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
-            {
-                query["Protocol"] = request.Protocol;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "AddDevice",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<AddDeviceResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public AddDeviceResponse AddDevice(AddDeviceRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return AddDeviceWithOptions(request, runtime);
-        }
-
-        public async Task<AddDeviceResponse> AddDeviceAsync(AddDeviceRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await AddDeviceWithOptionsAsync(request, runtime);
-        }
-
         public AddRegisteredDeviceResponse AddRegisteredDeviceWithOptions(AddRegisteredDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3457,104 +3367,6 @@ namespace AlibabaCloud.SDK.Vs20181212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDeviceAlarmWithOptionsAsync(request, runtime);
-        }
-
-        public CreateDeviceSnapshotResponse CreateDeviceSnapshotWithOptions(CreateDeviceSnapshotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
-            {
-                query["DeviceId"] = request.DeviceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
-            {
-                query["Mode"] = request.Mode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotConfig))
-            {
-                query["SnapshotConfig"] = request.SnapshotConfig;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StreamId))
-            {
-                query["StreamId"] = request.StreamId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateDeviceSnapshot",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateDeviceSnapshotResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<CreateDeviceSnapshotResponse> CreateDeviceSnapshotWithOptionsAsync(CreateDeviceSnapshotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
-            {
-                query["DeviceId"] = request.DeviceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
-            {
-                query["Mode"] = request.Mode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotConfig))
-            {
-                query["SnapshotConfig"] = request.SnapshotConfig;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StreamId))
-            {
-                query["StreamId"] = request.StreamId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateDeviceSnapshot",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateDeviceSnapshotResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public CreateDeviceSnapshotResponse CreateDeviceSnapshot(CreateDeviceSnapshotRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return CreateDeviceSnapshotWithOptions(request, runtime);
-        }
-
-        public async Task<CreateDeviceSnapshotResponse> CreateDeviceSnapshotAsync(CreateDeviceSnapshotRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await CreateDeviceSnapshotWithOptionsAsync(request, runtime);
         }
 
         public CreateDirectoryResponse CreateDirectoryWithOptions(CreateDirectoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8807,6 +8619,88 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeTemplatesWithOptionsAsync(request, runtime);
         }
 
+        public DescribeUserDevicesResponse DescribeUserDevicesWithOptions(DescribeUserDevicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsInstanceIds))
+            {
+                query["EnsInstanceIds"] = request.EnsInstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerName))
+            {
+                query["ServerName"] = request.ServerName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserDevices",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserDevicesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeUserDevicesResponse> DescribeUserDevicesWithOptionsAsync(DescribeUserDevicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsInstanceIds))
+            {
+                query["EnsInstanceIds"] = request.EnsInstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerName))
+            {
+                query["ServerName"] = request.ServerName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserDevices",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserDevicesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeUserDevicesResponse DescribeUserDevices(DescribeUserDevicesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeUserDevicesWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeUserDevicesResponse> DescribeUserDevicesAsync(DescribeUserDevicesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeUserDevicesWithOptionsAsync(request, runtime);
+        }
+
         public DescribeVodStreamURLResponse DescribeVodStreamURLWithOptions(DescribeVodStreamURLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11887,202 +11781,6 @@ namespace AlibabaCloud.SDK.Vs20181212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListBucketsWithOptionsAsync(request, runtime);
-        }
-
-        public ListDeviceChannelsResponse ListDeviceChannelsWithOptions(ListDeviceChannelsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
-            {
-                query["DeviceId"] = request.DeviceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
-            {
-                query["PageNum"] = request.PageNum;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListDeviceChannels",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListDeviceChannelsResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<ListDeviceChannelsResponse> ListDeviceChannelsWithOptionsAsync(ListDeviceChannelsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
-            {
-                query["DeviceId"] = request.DeviceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
-            {
-                query["PageNum"] = request.PageNum;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListDeviceChannels",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListDeviceChannelsResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public ListDeviceChannelsResponse ListDeviceChannels(ListDeviceChannelsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ListDeviceChannelsWithOptions(request, runtime);
-        }
-
-        public async Task<ListDeviceChannelsResponse> ListDeviceChannelsAsync(ListDeviceChannelsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ListDeviceChannelsWithOptionsAsync(request, runtime);
-        }
-
-        public ListDeviceRecordsResponse ListDeviceRecordsWithOptions(ListDeviceRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
-            {
-                query["DeviceId"] = request.DeviceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
-            {
-                query["PageNum"] = request.PageNum;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchCriteria))
-            {
-                query["SearchCriteria"] = request.SearchCriteria;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StreamId))
-            {
-                query["StreamId"] = request.StreamId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListDeviceRecords",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListDeviceRecordsResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<ListDeviceRecordsResponse> ListDeviceRecordsWithOptionsAsync(ListDeviceRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
-            {
-                query["DeviceId"] = request.DeviceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
-            {
-                query["PageNum"] = request.PageNum;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchCriteria))
-            {
-                query["SearchCriteria"] = request.SearchCriteria;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StreamId))
-            {
-                query["StreamId"] = request.StreamId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListDeviceRecords",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListDeviceRecordsResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public ListDeviceRecordsResponse ListDeviceRecords(ListDeviceRecordsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ListDeviceRecordsWithOptions(request, runtime);
-        }
-
-        public async Task<ListDeviceRecordsResponse> ListDeviceRecordsAsync(ListDeviceRecordsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ListDeviceRecordsWithOptionsAsync(request, runtime);
         }
 
         public ListObjectsResponse ListObjectsWithOptions(ListObjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -15443,80 +15141,6 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await SyncCatalogsWithOptionsAsync(request, runtime);
         }
 
-        public SyncDeviceChannelsResponse SyncDeviceChannelsWithOptions(SyncDeviceChannelsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
-            {
-                query["DeviceId"] = request.DeviceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "SyncDeviceChannels",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<SyncDeviceChannelsResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<SyncDeviceChannelsResponse> SyncDeviceChannelsWithOptionsAsync(SyncDeviceChannelsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
-            {
-                query["DeviceId"] = request.DeviceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "SyncDeviceChannels",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<SyncDeviceChannelsResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public SyncDeviceChannelsResponse SyncDeviceChannels(SyncDeviceChannelsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return SyncDeviceChannelsWithOptions(request, runtime);
-        }
-
-        public async Task<SyncDeviceChannelsResponse> SyncDeviceChannelsAsync(SyncDeviceChannelsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await SyncDeviceChannelsWithOptionsAsync(request, runtime);
-        }
-
         public UnbindDirectoryResponse UnbindDirectoryWithOptions(UnbindDirectoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16691,128 +16315,6 @@ namespace AlibabaCloud.SDK.Vs20181212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpgradeRenderingDevicesImageWithOptionsAsync(request, runtime);
-        }
-
-        public UploadDeviceRecordResponse UploadDeviceRecordWithOptions(UploadDeviceRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
-            {
-                query["DeviceId"] = request.DeviceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchCriteria))
-            {
-                query["SearchCriteria"] = request.SearchCriteria;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StreamId))
-            {
-                query["StreamId"] = request.StreamId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadId))
-            {
-                query["UploadId"] = request.UploadId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadMode))
-            {
-                query["UploadMode"] = request.UploadMode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadParams))
-            {
-                query["UploadParams"] = request.UploadParams;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadType))
-            {
-                query["UploadType"] = request.UploadType;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UploadDeviceRecord",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<UploadDeviceRecordResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<UploadDeviceRecordResponse> UploadDeviceRecordWithOptionsAsync(UploadDeviceRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
-            {
-                query["DeviceId"] = request.DeviceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchCriteria))
-            {
-                query["SearchCriteria"] = request.SearchCriteria;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StreamId))
-            {
-                query["StreamId"] = request.StreamId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadId))
-            {
-                query["UploadId"] = request.UploadId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadMode))
-            {
-                query["UploadMode"] = request.UploadMode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadParams))
-            {
-                query["UploadParams"] = request.UploadParams;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadType))
-            {
-                query["UploadType"] = request.UploadType;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UploadDeviceRecord",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<UploadDeviceRecordResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public UploadDeviceRecordResponse UploadDeviceRecord(UploadDeviceRecordRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return UploadDeviceRecordWithOptions(request, runtime);
-        }
-
-        public async Task<UploadDeviceRecordResponse> UploadDeviceRecordAsync(UploadDeviceRecordRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await UploadDeviceRecordWithOptionsAsync(request, runtime);
         }
 
     }

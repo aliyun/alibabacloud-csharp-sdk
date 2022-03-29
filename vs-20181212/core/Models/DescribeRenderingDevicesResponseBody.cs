@@ -115,9 +115,21 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                     [Validation(Required=false)]
                     public string ExternalIp { get; set; }
 
+                    [NameInMap("ExternalIsp")]
+                    [Validation(Required=false)]
+                    public string ExternalIsp { get; set; }
+
                     [NameInMap("ExternalPorts")]
                     [Validation(Required=false)]
                     public string ExternalPorts { get; set; }
+
+                    [NameInMap("OutgoingIp")]
+                    [Validation(Required=false)]
+                    public string OutgoingIp { get; set; }
+
+                    [NameInMap("OutgoingIsp")]
+                    [Validation(Required=false)]
+                    public string OutgoingIsp { get; set; }
 
                 }
 
