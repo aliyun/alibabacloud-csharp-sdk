@@ -15,11 +15,11 @@ namespace AlibabaCloud.SDK.Image_detect20211221.Models
 
         [NameInMap("PageIndex")]
         [Validation(Required=false)]
-        public string PageIndex { get; set; }
+        public long? PageIndex { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string PageSize { get; set; }
+        public long? PageSize { get; set; }
 
     }
 
