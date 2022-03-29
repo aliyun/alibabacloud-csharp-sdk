@@ -3547,7 +3547,7 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = request.Body,
-                Stream = request.Body,
+                Stream = tmpReq.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3602,7 +3602,7 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = request.Body,
-                Stream = request.Body,
+                Stream = tmpReq.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
