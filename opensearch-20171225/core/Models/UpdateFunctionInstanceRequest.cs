@@ -46,6 +46,23 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// 使用参数
+        /// </summary>
+        [NameInMap("usageParameters")]
+        [Validation(Required=false)]
+        public List<UpdateFunctionInstanceRequestUsageParameters> UsageParameters { get; set; }
+        public class UpdateFunctionInstanceRequestUsageParameters : TeaModel {
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
     }
 
 }
