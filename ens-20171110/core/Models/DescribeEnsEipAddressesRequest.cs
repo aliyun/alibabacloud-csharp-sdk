@@ -32,6 +32,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EipAddress { get; set; }
 
         /// <summary>
+        /// ENS节点ID
+        /// </summary>
+        [NameInMap("EnsRegionId")]
+        [Validation(Required=false)]
+        public string EnsRegionId { get; set; }
+
+        /// <summary>
         /// 列表的页码，默认值为1。
         /// </summary>
         [NameInMap("PageNumber")]

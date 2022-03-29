@@ -8,20 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class ExportBillDetailDataRequest : TeaModel {
+    public class ModifyPrepayInstanceSpecRequest : TeaModel {
         /// <summary>
-        /// 结束时间UTC格式
+        /// 变配实例id
         /// </summary>
-        [NameInMap("EndDate")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string EndDate { get; set; }
+        public string InstanceId { get; set; }
 
         /// <summary>
-        /// 开始时间，UTC格式
+        /// 更新的配置
         /// </summary>
-        [NameInMap("StartDate")]
+        [NameInMap("InstanceType")]
         [Validation(Required=false)]
-        public string StartDate { get; set; }
+        public string InstanceType { get; set; }
 
     }
 

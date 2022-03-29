@@ -129,6 +129,15 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public long? Period { get; set; }
 
         /// <summary>
+        /// 查询云服务器ENS不同计费周期的价格。取值范围：
+        /// Month（默认）：按月计费的价格单位。
+        /// Day：按天计费的价格单位。
+        /// </summary>
+        [NameInMap("PeriodUnit")]
+        [Validation(Required=false)]
+        public string PeriodUnit { get; set; }
+
+        /// <summary>
         /// 私网ip
         /// </summary>
         [NameInMap("PrivateIpAddress")]

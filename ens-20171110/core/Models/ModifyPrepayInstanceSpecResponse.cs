@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class CreateDiskBuyOrderResponse : TeaModel {
+    public class ModifyPrepayInstanceSpecResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public CreateDiskBuyOrderResponseBody Body { get; set; }
+        public ModifyPrepayInstanceSpecResponseBody Body { get; set; }
 
     }
 

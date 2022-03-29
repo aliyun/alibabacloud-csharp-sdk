@@ -8,10 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class CreateElbBuyOrderRequest : TeaModel {
-        [NameInMap("OrderDetails")]
+    public class ModifyPrepayInstanceSpecResponseBody : TeaModel {
+        /// <summary>
+        /// Id of the request
+        /// </summary>
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string OrderDetails { get; set; }
+        public string RequestId { get; set; }
 
     }
 

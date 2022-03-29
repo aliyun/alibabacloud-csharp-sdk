@@ -8,11 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class DescribePriceRequest : TeaModel {
+    public class DescribePriceShrinkRequest : TeaModel {
         [NameInMap("DataDisk")]
         [Validation(Required=false)]
-        public List<DescribePriceRequestDataDisk> DataDisk { get; set; }
-        public class DescribePriceRequestDataDisk : TeaModel {
+        public List<DescribePriceShrinkRequestDataDisk> DataDisk { get; set; }
+        public class DescribePriceShrinkRequestDataDisk : TeaModel {
             /// <summary>
             /// 数据盘大小，单位GB。如果此字段不为空，则以此段为准。
             /// </summary>
@@ -24,8 +24,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         [NameInMap("SystemDisk")]
         [Validation(Required=false)]
-        public DescribePriceRequestSystemDisk SystemDisk { get; set; }
-        public class DescribePriceRequestSystemDisk : TeaModel {
+        public DescribePriceShrinkRequestSystemDisk SystemDisk { get; set; }
+        public class DescribePriceShrinkRequestSystemDisk : TeaModel {
             [NameInMap("Size")]
             [Validation(Required=false)]
             public int? Size { get; set; }
@@ -36,20 +36,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// </summary>
         [NameInMap("DataDisks")]
         [Validation(Required=false)]
-        public List<DescribePriceRequestDataDisks> DataDisks { get; set; }
-        public class DescribePriceRequestDataDisks : TeaModel {
-            /// <summary>
-            /// 磁盘类型
-            /// </summary>
-            [NameInMap("Category")]
-            [Validation(Required=false)]
-            public string Category { get; set; }
-
-            [NameInMap("Size")]
-            [Validation(Required=false)]
-            public long? Size { get; set; }
-
-        }
+        public string DataDisksShrink { get; set; }
 
         /// <summary>
         /// 节点ID。

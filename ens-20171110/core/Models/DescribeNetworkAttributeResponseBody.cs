@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("RouterTableId")]
+        [Validation(Required=false)]
+        public string RouterTableId { get; set; }
+
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }

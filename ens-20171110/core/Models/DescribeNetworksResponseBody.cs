@@ -23,6 +23,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string EnsRegionId { get; set; }
                 public string NetworkId { get; set; }
                 public string NetworkName { get; set; }
+                public string RouterTableId { get; set; }
                 public string Status { get; set; }
                 public DescribeNetworksResponseBodyNetworksNetworkVSwitchIds VSwitchIds { get; set; }
                 public class DescribeNetworksResponseBodyNetworksNetworkVSwitchIds : TeaModel {
