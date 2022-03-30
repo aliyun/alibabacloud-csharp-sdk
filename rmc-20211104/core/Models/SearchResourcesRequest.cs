@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -41,6 +38,18 @@ namespace AlibabaCloud.SDK.RMC20211104.Models
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("SortCriterion")]
+        [Validation(Required=false)]
+        public SearchResourcesRequestSortCriterion SortCriterion { get; set; }
+        public class SearchResourcesRequestSortCriterion : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+            [NameInMap("Order")]
+            [Validation(Required=false)]
+            public string Order { get; set; }
+        };
 
     }
 
