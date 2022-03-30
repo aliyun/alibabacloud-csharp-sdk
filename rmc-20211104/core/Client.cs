@@ -49,10 +49,6 @@ namespace AlibabaCloud.SDK.RMC20211104
             {
                 query["NextToken"] = request.NextToken;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
-            {
-                query["Scene"] = request.Scene;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
             {
                 query["SourceRegionId"] = request.SourceRegionId;
@@ -99,10 +95,6 @@ namespace AlibabaCloud.SDK.RMC20211104
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["NextToken"] = request.NextToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
-            {
-                query["Scene"] = request.Scene;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
             {

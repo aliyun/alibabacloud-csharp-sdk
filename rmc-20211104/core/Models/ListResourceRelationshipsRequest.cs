@@ -20,10 +20,6 @@ namespace AlibabaCloud.SDK.RMC20211104.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        [NameInMap("Scene")]
-        [Validation(Required=false)]
-        public string Scene { get; set; }
-
         [NameInMap("SourceRegionId")]
         [Validation(Required=false)]
         public string SourceRegionId { get; set; }
