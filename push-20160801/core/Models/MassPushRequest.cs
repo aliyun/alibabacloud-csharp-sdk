@@ -117,6 +117,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public string AndroidRenderStyle { get; set; }
 
+            [NameInMap("AndroidVivoPushMode")]
+            [Validation(Required=false)]
+            public int? AndroidVivoPushMode { get; set; }
+
             [NameInMap("AndroidXiaoMiActivity")]
             [Validation(Required=false)]
             public string AndroidXiaoMiActivity { get; set; }
@@ -185,6 +189,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public string Title { get; set; }
 
+            [NameInMap("Trim")]
+            [Validation(Required=false)]
+            public bool? Trim { get; set; }
+
             [NameInMap("iOSApnsEnv")]
             [Validation(Required=false)]
             public string IOSApnsEnv { get; set; }
@@ -200,6 +208,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [NameInMap("iOSExtParameters")]
             [Validation(Required=false)]
             public string IOSExtParameters { get; set; }
+
+            [NameInMap("iOSInterruptionLevel")]
+            [Validation(Required=false)]
+            public string IOSInterruptionLevel { get; set; }
 
             [NameInMap("iOSMusic")]
             [Validation(Required=false)]
@@ -220,6 +232,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [NameInMap("iOSNotificationThreadId")]
             [Validation(Required=false)]
             public string IOSNotificationThreadId { get; set; }
+
+            [NameInMap("iOSRelevanceScore")]
+            [Validation(Required=false)]
+            public double? IOSRelevanceScore { get; set; }
 
             [NameInMap("iOSRemind")]
             [Validation(Required=false)]

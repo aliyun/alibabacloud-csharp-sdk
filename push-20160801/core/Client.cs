@@ -1096,6 +1096,10 @@ namespace AlibabaCloud.SDK.Push20160801
             {
                 query["AndroidRenderStyle"] = request.AndroidRenderStyle;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidVivoPushMode))
+            {
+                query["AndroidVivoPushMode"] = request.AndroidVivoPushMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidXiaoMiActivity))
             {
                 query["AndroidXiaoMiActivity"] = request.AndroidXiaoMiActivity;
@@ -1188,6 +1192,10 @@ namespace AlibabaCloud.SDK.Push20160801
             {
                 query["Title"] = request.Title;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Trim))
+            {
+                query["Trim"] = request.Trim;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSApnsEnv))
             {
                 query["iOSApnsEnv"] = request.IOSApnsEnv;
@@ -1203,6 +1211,10 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSExtParameters))
             {
                 query["iOSExtParameters"] = request.IOSExtParameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSInterruptionLevel))
+            {
+                query["iOSInterruptionLevel"] = request.IOSInterruptionLevel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSMusic))
             {
@@ -1223,6 +1235,10 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSNotificationThreadId))
             {
                 query["iOSNotificationThreadId"] = request.IOSNotificationThreadId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSRelevanceScore))
+            {
+                query["iOSRelevanceScore"] = request.IOSRelevanceScore;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSRemind))
             {
@@ -1363,6 +1379,10 @@ namespace AlibabaCloud.SDK.Push20160801
             {
                 query["AndroidRenderStyle"] = request.AndroidRenderStyle;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidVivoPushMode))
+            {
+                query["AndroidVivoPushMode"] = request.AndroidVivoPushMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidXiaoMiActivity))
             {
                 query["AndroidXiaoMiActivity"] = request.AndroidXiaoMiActivity;
@@ -1455,6 +1475,10 @@ namespace AlibabaCloud.SDK.Push20160801
             {
                 query["Title"] = request.Title;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Trim))
+            {
+                query["Trim"] = request.Trim;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSApnsEnv))
             {
                 query["iOSApnsEnv"] = request.IOSApnsEnv;
@@ -1470,6 +1494,10 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSExtParameters))
             {
                 query["iOSExtParameters"] = request.IOSExtParameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSInterruptionLevel))
+            {
+                query["iOSInterruptionLevel"] = request.IOSInterruptionLevel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSMusic))
             {
@@ -1490,6 +1518,10 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSNotificationThreadId))
             {
                 query["iOSNotificationThreadId"] = request.IOSNotificationThreadId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSRelevanceScore))
+            {
+                query["iOSRelevanceScore"] = request.IOSRelevanceScore;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSRemind))
             {
