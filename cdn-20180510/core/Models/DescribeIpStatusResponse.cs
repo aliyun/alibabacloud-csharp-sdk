@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
-    public class ModifyDomainCustomLogConfigResponse : TeaModel {
+    public class DescribeIpStatusResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ModifyDomainCustomLogConfigResponseBody Body { get; set; }
+        public DescribeIpStatusResponseBody Body { get; set; }
 
     }
 
