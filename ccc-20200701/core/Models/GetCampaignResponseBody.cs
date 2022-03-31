@@ -35,6 +35,9 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [NameInMap("CasesUncompleted")]
             [Validation(Required=false)]
             public long? CasesUncompleted { get; set; }
+            [NameInMap("CasesUncompletedAfterAttempted")]
+            [Validation(Required=false)]
+            public long? CasesUncompletedAfterAttempted { get; set; }
             [NameInMap("MaxAttemptCount")]
             [Validation(Required=false)]
             public long? MaxAttemptCount { get; set; }

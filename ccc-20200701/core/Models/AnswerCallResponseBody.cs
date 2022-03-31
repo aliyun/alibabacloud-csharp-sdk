@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public AnswerCallResponseBodyDataCallContext CallContext { get; set; }
             public class AnswerCallResponseBodyDataCallContext : TeaModel {
+                [NameInMap("CallType")]
+                [Validation(Required=false)]
+                public string CallType { get; set; }
+
                 [NameInMap("ChannelContexts")]
                 [Validation(Required=false)]
                 public List<AnswerCallResponseBodyDataCallContextChannelContexts> ChannelContexts { get; set; }

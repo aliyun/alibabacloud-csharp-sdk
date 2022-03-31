@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public long? Duration { get; set; }
 
+            [NameInMap("OutboundScenario")]
+            [Validation(Required=false)]
+            public bool? OutboundScenario { get; set; }
+
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public long? StartTime { get; set; }

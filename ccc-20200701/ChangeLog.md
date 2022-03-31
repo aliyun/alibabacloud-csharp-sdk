@@ -1,3 +1,6 @@
+2022-03-31 Version: 2.3.9
+- Supported Audios.
+
 2022-03-02 Version: 2.3.1
 - Support SIP phone management.
 

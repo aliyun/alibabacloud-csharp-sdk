@@ -67,6 +67,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     [Validation(Required=false)]
                     public long? CallsOffered { get; set; }
 
+                    [NameInMap("CallsServiceLevel20")]
+                    [Validation(Required=false)]
+                    public long? CallsServiceLevel20 { get; set; }
+
+                    [NameInMap("CallsServiceLevel30")]
+                    [Validation(Required=false)]
+                    public long? CallsServiceLevel30 { get; set; }
+
                     [NameInMap("GiveUpByAgentOfQueueCount")]
                     [Validation(Required=false)]
                     public long? GiveUpByAgentOfQueueCount { get; set; }

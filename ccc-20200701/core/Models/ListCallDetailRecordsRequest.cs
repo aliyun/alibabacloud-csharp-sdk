@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string ContactDisposition { get; set; }
 
+        [NameInMap("ContactDispositionList")]
+        [Validation(Required=false)]
+        public string ContactDispositionList { get; set; }
+
         [NameInMap("ContactId")]
         [Validation(Required=false)]
         public string ContactId { get; set; }
@@ -32,6 +36,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("ContactType")]
         [Validation(Required=false)]
         public string ContactType { get; set; }
+
+        [NameInMap("ContactTypeList")]
+        [Validation(Required=false)]
+        public string ContactTypeList { get; set; }
 
         [NameInMap("Criteria")]
         [Validation(Required=false)]

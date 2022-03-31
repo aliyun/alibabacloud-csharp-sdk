@@ -8,18 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
-    public class RemovePhoneNumbersRequest : TeaModel {
-        [NameInMap("Force")]
+    public class ListMultiChannelRecordingsRequest : TeaModel {
+        [NameInMap("ContactId")]
         [Validation(Required=false)]
-        public bool? Force { get; set; }
+        public string ContactId { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
-
-        [NameInMap("NumberList")]
-        [Validation(Required=false)]
-        public string NumberList { get; set; }
 
     }
 

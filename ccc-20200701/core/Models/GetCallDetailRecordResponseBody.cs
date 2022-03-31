@@ -25,6 +25,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string AgentName { get; set; }
                 public List<GetCallDetailRecordResponseBodyDataAgentEventsEventSequence> EventSequence { get; set; }
                 public class GetCallDetailRecordResponseBodyDataAgentEventsEventSequence : TeaModel {
+                    public long? Duration { get; set; }
                     public string Event { get; set; }
                     public long? EventTime { get; set; }
                 }
