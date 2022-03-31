@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Mts20210728.Models
 {
     public class SubmitTracemuRequest : TeaModel {
         /// <summary>
+        /// 密钥服务器uri
+        /// </summary>
+        [NameInMap("KeyUri")]
+        [Validation(Required=false)]
+        public string KeyUri { get; set; }
+
+        /// <summary>
         /// ab流处理后的媒体id
         /// </summary>
         [NameInMap("MediaId")]

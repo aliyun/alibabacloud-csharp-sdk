@@ -1112,6 +1112,10 @@ namespace AlibabaCloud.SDK.Mts20210728
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyUri))
+            {
+                body["KeyUri"] = request.KeyUri;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaId))
             {
                 body["MediaId"] = request.MediaId;
@@ -1148,6 +1152,10 @@ namespace AlibabaCloud.SDK.Mts20210728
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyUri))
+            {
+                body["KeyUri"] = request.KeyUri;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaId))
             {
                 body["MediaId"] = request.MediaId;
