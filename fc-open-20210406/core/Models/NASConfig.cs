@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         /// </summary>
         [NameInMap("groupId")]
         [Validation(Required=false)]
-        public string GroupId { get; set; }
+        public int? GroupId { get; set; }
 
         /// <summary>
         /// 挂载点
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         /// </summary>
         [NameInMap("userId")]
         [Validation(Required=false)]
-        public string UserId { get; set; }
+        public int? UserId { get; set; }
 
     }
 

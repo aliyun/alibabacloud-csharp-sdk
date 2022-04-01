@@ -24,6 +24,13 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public List<ListProvisionConfigsResponseBodyProvisionConfigs> ProvisionConfigs { get; set; }
         public class ListProvisionConfigsResponseBodyProvisionConfigs : TeaModel {
             /// <summary>
+            /// 是否始终分配CPU给函数实例。
+            /// </summary>
+            [NameInMap("alwaysAllocateCPU")]
+            [Validation(Required=false)]
+            public bool? AlwaysAllocateCPU { get; set; }
+
+            /// <summary>
             /// 实际资源个数
             /// </summary>
             [NameInMap("current")]

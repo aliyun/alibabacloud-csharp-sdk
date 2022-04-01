@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class PutProvisionConfigRequest : TeaModel {
         /// <summary>
+        /// 当实例进入空闲状态时，是否继续分配CPU。
+        /// </summary>
+        [NameInMap("alwaysAllocateCPU")]
+        [Validation(Required=false)]
+        public bool? AlwaysAllocateCPU { get; set; }
+
+        /// <summary>
         /// 定时策略配置
         /// </summary>
         [NameInMap("scheduledActions")]

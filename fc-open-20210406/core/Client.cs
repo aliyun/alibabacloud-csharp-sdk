@@ -6280,6 +6280,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 query["qualifier"] = request.Qualifier;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlwaysAllocateCPU))
+            {
+                body["alwaysAllocateCPU"] = request.AlwaysAllocateCPU;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduledActions))
             {
                 body["scheduledActions"] = request.ScheduledActions;
@@ -6341,6 +6345,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 query["qualifier"] = request.Qualifier;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlwaysAllocateCPU))
+            {
+                body["alwaysAllocateCPU"] = request.AlwaysAllocateCPU;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduledActions))
             {
                 body["scheduledActions"] = request.ScheduledActions;
