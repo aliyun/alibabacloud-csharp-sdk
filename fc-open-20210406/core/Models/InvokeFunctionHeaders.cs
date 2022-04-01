@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public string XFcAccountId { get; set; }
 
-        [NameInMap("X-Fc-Code-Checksum")]
-        [Validation(Required=false)]
-        public string XFcCodeChecksum { get; set; }
-
         [NameInMap("X-Fc-Date")]
         [Validation(Required=false)]
         public string XFcDate { get; set; }

@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public string Qualifier { get; set; }
 
         /// <summary>
-        /// trigger配置，针对不同的trigger类型，trigger配置会有所不同	
+        /// trigger配置，针对不同的trigger类型，trigger配置会有所不同
         /// </summary>
         [NameInMap("triggerConfig")]
         [Validation(Required=false)]

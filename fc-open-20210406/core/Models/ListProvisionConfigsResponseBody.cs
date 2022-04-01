@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class ListProvisionConfigsResponseBody : TeaModel {
         /// <summary>
-        /// 下次查询的起始token	
+        /// 下次查询的起始token
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]

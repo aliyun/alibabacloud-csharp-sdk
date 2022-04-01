@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         /// <summary>
         /// tag key 值列表， 最大为 20，当 all=false， length 至少为 1. 当 length 大于 1 时， 可以忽略 all 值
         /// </summary>
-        [NameInMap("tagKeys	")]
+        [NameInMap("tagKeys")]
         [Validation(Required=false)]
         public List<string> TagKeys { get; set; }
 

@@ -25,14 +25,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public string XFcDate { get; set; }
 
-        [NameInMap("X-Fc-Invocation-Type")]
-        [Validation(Required=false)]
-        public string XFcInvocationType { get; set; }
-
-        [NameInMap("X-Fc-Log-Type")]
-        [Validation(Required=false)]
-        public string XFcLogType { get; set; }
-
         [NameInMap("X-Fc-Trace-Id")]
         [Validation(Required=false)]
         public string XFcTraceId { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class ListProvisionConfigsRequest : TeaModel {
         /// <summary>
-        /// 限定此次返回资源的数量。如果不设定，默认返回20，最大不能超过100。返回结果可能小于指定的数量，但不会多于指定的数量	
+        /// 限定此次返回资源的数量。如果不设定，默认返回20，最大不能超过100。返回结果可能小于指定的数量，但不会多于指定的数量
         /// </summary>
         [NameInMap("limit")]
         [Validation(Required=false)]

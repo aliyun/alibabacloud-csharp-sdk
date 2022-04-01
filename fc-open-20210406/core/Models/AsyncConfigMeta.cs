@@ -8,27 +8,27 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
-    public class Code : TeaModel {
+    public class AsyncConfigMeta : TeaModel {
         /// <summary>
-        /// 函数代码包的OSS bucket name
+        /// 异步配置所属函数名称。
         /// </summary>
-        [NameInMap("ossBucketName")]
+        [NameInMap("functionName")]
         [Validation(Required=false)]
-        public string OssBucketName { get; set; }
+        public string FunctionName { get; set; }
 
         /// <summary>
-        /// 函数代码包的OSS对象名
+        /// 异步配置所属服务版本/别名。
         /// </summary>
-        [NameInMap("ossObjectName")]
+        [NameInMap("qualifier")]
         [Validation(Required=false)]
-        public string OssObjectName { get; set; }
+        public string Qualifier { get; set; }
 
         /// <summary>
-        /// 直接在request body中上传code zip包的base64编码
+        /// 异步配置所属服务名称。
         /// </summary>
-        [NameInMap("zipFile")]
+        [NameInMap("serviceName")]
         [Validation(Required=false)]
-        public string ZipFile { get; set; }
+        public string ServiceName { get; set; }
 
     }
 

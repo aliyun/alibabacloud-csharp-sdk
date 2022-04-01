@@ -8,10 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
-    public class PublishLayerAsPublicResponse : TeaModel {
+    public class ListStatefulAsyncInvocationFunctionsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
+
+        [NameInMap("body")]
+        [Validation(Required=true)]
+        public ListStatefulAsyncInvocationFunctionsResponseBody Body { get; set; }
 
     }
 
