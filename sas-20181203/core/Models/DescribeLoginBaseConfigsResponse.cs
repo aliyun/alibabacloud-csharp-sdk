@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class DescribeDialogMessagesResponse : TeaModel {
+    public class DescribeLoginBaseConfigsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeDialogMessagesResponseBody Body { get; set; }
+        public DescribeLoginBaseConfigsResponseBody Body { get; set; }
 
     }
 
