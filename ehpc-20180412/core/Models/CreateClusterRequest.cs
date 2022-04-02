@@ -92,6 +92,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public string VolumeId { get; set; }
 
+            [NameInMap("VolumeMountOption")]
+            [Validation(Required=false)]
+            public string VolumeMountOption { get; set; }
+
             [NameInMap("VolumeMountpoint")]
             [Validation(Required=false)]
             public string VolumeMountpoint { get; set; }
@@ -155,6 +159,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        [NameInMap("Domain")]
+        [Validation(Required=false)]
+        public string Domain { get; set; }
 
         [NameInMap("EcsChargeType")]
         [Validation(Required=false)]
@@ -285,6 +293,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [NameInMap("VolumeId")]
         [Validation(Required=false)]
         public string VolumeId { get; set; }
+
+        [NameInMap("VolumeMountOption")]
+        [Validation(Required=false)]
+        public string VolumeMountOption { get; set; }
 
         [NameInMap("VolumeMountpoint")]
         [Validation(Required=false)]

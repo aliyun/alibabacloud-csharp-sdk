@@ -133,7 +133,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 
                 }
                 public int? MaxNodesInQueue { get; set; }
+                public long? MaxNodesPerCycle { get; set; }
                 public int? MinNodesInQueue { get; set; }
+                public long? MinNodesPerCycle { get; set; }
                 public string QueueImageId { get; set; }
                 public string QueueName { get; set; }
                 public string ResourceGroupId { get; set; }

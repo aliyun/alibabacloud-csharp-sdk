@@ -133,9 +133,17 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public int? MaxNodesInQueue { get; set; }
 
+            [NameInMap("MaxNodesPerCycle")]
+            [Validation(Required=false)]
+            public long? MaxNodesPerCycle { get; set; }
+
             [NameInMap("MinNodesInQueue")]
             [Validation(Required=false)]
             public int? MinNodesInQueue { get; set; }
+
+            [NameInMap("MinNodesPerCycle")]
+            [Validation(Required=false)]
+            public long? MinNodesPerCycle { get; set; }
 
             [NameInMap("QueueImageId")]
             [Validation(Required=false)]
