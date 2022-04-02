@@ -25,24 +25,18 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public AddWebhookResponseBodyResult Result { get; set; }
         public class AddWebhookResponseBodyResult : TeaModel {
-            [NameInMap("EnableSslVerification")]
-            [Validation(Required=false)]
-            public bool? EnableSslVerification { get; set; }
-            [NameInMap("buildEvents")]
-            [Validation(Required=false)]
-            public bool? BuildEvents { get; set; }
             [NameInMap("createdAt")]
             [Validation(Required=false)]
             public string CreatedAt { get; set; }
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+            [NameInMap("enableSslVerification")]
+            [Validation(Required=false)]
+            public bool? EnableSslVerification { get; set; }
             [NameInMap("id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
-            [NameInMap("issuesEvents")]
-            [Validation(Required=false)]
-            public bool? IssuesEvents { get; set; }
             [NameInMap("lastTestResult")]
             [Validation(Required=false)]
             public string LastTestResult { get; set; }

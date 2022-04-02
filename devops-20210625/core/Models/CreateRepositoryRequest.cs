@@ -56,51 +56,6 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         public string ImportRepoType { get; set; }
 
         /// <summary>
-        /// 导入SVN库的设置
-        /// </summary>
-        [NameInMap("importSvnRepoConfig")]
-        [Validation(Required=false)]
-        public CreateRepositoryRequestImportSvnRepoConfig ImportSvnRepoConfig { get; set; }
-        public class CreateRepositoryRequestImportSvnRepoConfig : TeaModel {
-            [NameInMap("authorMapping")]
-            [Validation(Required=false)]
-            public string AuthorMapping { get; set; }
-            [NameInMap("branchMapping")]
-            [Validation(Required=false)]
-            public string BranchMapping { get; set; }
-            [NameInMap("noBranches")]
-            [Validation(Required=false)]
-            public bool? NoBranches { get; set; }
-            [NameInMap("noTags")]
-            [Validation(Required=false)]
-            public bool? NoTags { get; set; }
-            [NameInMap("password")]
-            [Validation(Required=false)]
-            public string Password { get; set; }
-            [NameInMap("path")]
-            [Validation(Required=false)]
-            public string Path { get; set; }
-            [NameInMap("rootIsTrunk")]
-            [Validation(Required=false)]
-            public bool? RootIsTrunk { get; set; }
-            [NameInMap("standardLayout")]
-            [Validation(Required=false)]
-            public bool? StandardLayout { get; set; }
-            [NameInMap("svnImportUrl")]
-            [Validation(Required=false)]
-            public string SvnImportUrl { get; set; }
-            [NameInMap("tagMapping")]
-            [Validation(Required=false)]
-            public string TagMapping { get; set; }
-            [NameInMap("trunkMapping")]
-            [Validation(Required=false)]
-            public string TrunkMapping { get; set; }
-            [NameInMap("username")]
-            [Validation(Required=false)]
-            public string Username { get; set; }
-        };
-
-        /// <summary>
         /// 导入时账号的token
         /// </summary>
         [NameInMap("importToken")]
