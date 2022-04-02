@@ -8,13 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
-    public class ListChatappTemplateRequest : TeaModel {
+    public class CreateChatappTemplateShrinkRequest : TeaModel {
         /// <summary>
-        /// 审核状态
+        /// 模板分类
         /// </summary>
-        [NameInMap("AuditStatus")]
+        [NameInMap("Category")]
         [Validation(Required=false)]
-        public string AuditStatus { get; set; }
+        public string Category { get; set; }
+
+        [NameInMap("Components")]
+        [Validation(Required=false)]
+        public string ComponentsShrink { get; set; }
+
+        /// <summary>
+        /// 变量，KEY-VALUE结构
+        /// </summary>
+        [NameInMap("Example")]
+        [Validation(Required=false)]
+        public string ExampleShrink { get; set; }
 
         /// <summary>
         /// 语言
@@ -30,17 +41,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("Page")]
+        /// <summary>
+        /// 模板类型
+        /// </summary>
+        [NameInMap("TemplateType")]
         [Validation(Required=false)]
-        public ListChatappTemplateRequestPage Page { get; set; }
-        public class ListChatappTemplateRequestPage : TeaModel {
-            [NameInMap("Index")]
-            [Validation(Required=false)]
-            public int? Index { get; set; }
-            [NameInMap("Size")]
-            [Validation(Required=false)]
-            public int? Size { get; set; }
-        };
+        public string TemplateType { get; set; }
 
     }
 

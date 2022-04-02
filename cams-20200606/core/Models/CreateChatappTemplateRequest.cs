@@ -16,21 +16,93 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string Category { get; set; }
 
-        /// <summary>
-        /// 消息模板组件
-        /// 值需要通过把json结构转成String的方式传入
-        /// </summary>
         [NameInMap("Components")]
         [Validation(Required=false)]
-        public string Components { get; set; }
+        public List<CreateChatappTemplateRequestComponents> Components { get; set; }
+        public class CreateChatappTemplateRequestComponents : TeaModel {
+            /// <summary>
+            /// 按钮
+            /// </summary>
+            [NameInMap("Buttons")]
+            [Validation(Required=false)]
+            public List<CreateChatappTemplateRequestComponentsButtons> Buttons { get; set; }
+            public class CreateChatappTemplateRequestComponentsButtons : TeaModel {
+                /// <summary>
+                /// 号码
+                /// </summary>
+                [NameInMap("PhoneNumber")]
+                [Validation(Required=false)]
+                public string PhoneNumber { get; set; }
+
+                /// <summary>
+                /// 所发送消息的文本
+                /// </summary>
+                [NameInMap("Text")]
+                [Validation(Required=false)]
+                public string Text { get; set; }
+
+                /// <summary>
+                /// 按钮类型
+                /// PHONE_NUMBER（电话）,URL（网页按钮）和QUICK_REPLY（快速回复）
+                /// </summary>
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+                /// <summary>
+                /// 点击按钮后将访问的网址
+                /// </summary>
+                [NameInMap("Url")]
+                [Validation(Required=false)]
+                public string Url { get; set; }
+
+                /// <summary>
+                /// 网址类型 static-静态dynamic-动态
+                /// </summary>
+                [NameInMap("UrlType")]
+                [Validation(Required=false)]
+                public string UrlType { get; set; }
+
+            }
+
+            /// <summary>
+            /// 格式
+            /// TEXT-文本 IMGAGE-图片 DOCUMENT-文档 VIDEO-视频
+            /// </summary>
+            [NameInMap("Format")]
+            [Validation(Required=false)]
+            public string Format { get; set; }
+
+            /// <summary>
+            /// 所发送消息的文本
+            /// </summary>
+            [NameInMap("Text")]
+            [Validation(Required=false)]
+            public string Text { get; set; }
+
+            /// <summary>
+            /// 组件类型
+            /// 值：BODY、HEADER、FOOTER 和 BUTTONS
+            /// </summary>
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+            /// <summary>
+            /// 素材路径
+            /// </summary>
+            [NameInMap("Url")]
+            [Validation(Required=false)]
+            public string Url { get; set; }
+
+        }
 
         /// <summary>
-        /// 变量例子
-        /// 值需要通过把json结构转成String的方式传入
+        /// 变量，KEY-VALUE结构
         /// </summary>
         [NameInMap("Example")]
         [Validation(Required=false)]
-        public string Example { get; set; }
+        public Dictionary<string, string> Example { get; set; }
 
         /// <summary>
         /// 语言
@@ -45,18 +117,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
 
         /// <summary>
         /// 模板类型

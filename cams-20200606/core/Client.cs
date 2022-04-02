@@ -37,37 +37,31 @@ namespace AlibabaCloud.SDK.Cams20200606
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        public CheckChatappContactsResponse CheckChatappContactsWithOptions(CheckChatappContactsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CheckChatappContactsResponse CheckChatappContactsWithOptions(CheckChatappContactsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CheckChatappContactsShrinkRequest request = new CheckChatappContactsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Contacts))
+            {
+                request.ContactsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Contacts, "Contacts", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelType))
             {
-                query["ChannelType"] = request.ChannelType;
+                body["ChannelType"] = request.ChannelType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Contacts))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactsShrink))
             {
-                query["Contacts"] = request.Contacts;
+                body["Contacts"] = request.ContactsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
-                query["From"] = request.From;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
+                body["From"] = request.From;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -84,37 +78,31 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<CheckChatappContactsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CheckChatappContactsResponse> CheckChatappContactsWithOptionsAsync(CheckChatappContactsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CheckChatappContactsResponse> CheckChatappContactsWithOptionsAsync(CheckChatappContactsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CheckChatappContactsShrinkRequest request = new CheckChatappContactsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Contacts))
+            {
+                request.ContactsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Contacts, "Contacts", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelType))
             {
-                query["ChannelType"] = request.ChannelType;
+                body["ChannelType"] = request.ChannelType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Contacts))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactsShrink))
             {
-                query["Contacts"] = request.Contacts;
+                body["Contacts"] = request.ContactsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
-                query["From"] = request.From;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
+                body["From"] = request.From;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -253,49 +241,47 @@ namespace AlibabaCloud.SDK.Cams20200606
             return await CheckContactsWithOptionsAsync(request, runtime);
         }
 
-        public CreateChatappTemplateResponse CreateChatappTemplateWithOptions(CreateChatappTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateChatappTemplateResponse CreateChatappTemplateWithOptions(CreateChatappTemplateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateChatappTemplateShrinkRequest request = new CreateChatappTemplateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Components))
+            {
+                request.ComponentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Components, "Components", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Example))
+            {
+                request.ExampleShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Example, "Example", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
             {
-                query["Category"] = request.Category;
+                body["Category"] = request.Category;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Components))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentsShrink))
             {
-                query["Components"] = request.Components;
+                body["Components"] = request.ComponentsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Example))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExampleShrink))
             {
-                query["Example"] = request.Example;
+                body["Example"] = request.ExampleShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
-                query["Language"] = request.Language;
+                body["Language"] = request.Language;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
-                query["Name"] = request.Name;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
+                body["Name"] = request.Name;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
             {
-                query["TemplateType"] = request.TemplateType;
+                body["TemplateType"] = request.TemplateType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -312,49 +298,47 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<CreateChatappTemplateResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CreateChatappTemplateResponse> CreateChatappTemplateWithOptionsAsync(CreateChatappTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateChatappTemplateResponse> CreateChatappTemplateWithOptionsAsync(CreateChatappTemplateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateChatappTemplateShrinkRequest request = new CreateChatappTemplateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Components))
+            {
+                request.ComponentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Components, "Components", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Example))
+            {
+                request.ExampleShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Example, "Example", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
             {
-                query["Category"] = request.Category;
+                body["Category"] = request.Category;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Components))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentsShrink))
             {
-                query["Components"] = request.Components;
+                body["Components"] = request.ComponentsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Example))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExampleShrink))
             {
-                query["Example"] = request.Example;
+                body["Example"] = request.ExampleShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
-                query["Language"] = request.Language;
+                body["Language"] = request.Language;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
-                query["Name"] = request.Name;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
+                body["Name"] = request.Name;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
             {
-                query["TemplateType"] = request.TemplateType;
+                body["TemplateType"] = request.TemplateType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -387,18 +371,6 @@ namespace AlibabaCloud.SDK.Cams20200606
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
             {
                 query["TemplateCode"] = request.TemplateCode;
@@ -426,18 +398,6 @@ namespace AlibabaCloud.SDK.Cams20200606
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
             {
                 query["TemplateCode"] = request.TemplateCode;
@@ -485,14 +445,6 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 query["OwnerId"] = request.OwnerId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
             {
                 query["TemplateCode"] = request.TemplateCode;
@@ -527,14 +479,6 @@ namespace AlibabaCloud.SDK.Cams20200606
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
             {
@@ -571,9 +515,15 @@ namespace AlibabaCloud.SDK.Cams20200606
             return await GetChatappTemplateDetailWithOptionsAsync(request, runtime);
         }
 
-        public ListChatappTemplateResponse ListChatappTemplateWithOptions(ListChatappTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListChatappTemplateResponse ListChatappTemplateWithOptions(ListChatappTemplateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListChatappTemplateShrinkRequest request = new ListChatappTemplateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Page.ToMap()))
+            {
+                request.PageShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Page.ToMap(), "Page", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditStatus))
             {
@@ -587,21 +537,9 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 query["Name"] = request.Name;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageShrink))
             {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
-            {
-                query["Page"] = request.Page;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
+                query["Page"] = request.PageShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -622,9 +560,15 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<ListChatappTemplateResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListChatappTemplateResponse> ListChatappTemplateWithOptionsAsync(ListChatappTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListChatappTemplateResponse> ListChatappTemplateWithOptionsAsync(ListChatappTemplateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListChatappTemplateShrinkRequest request = new ListChatappTemplateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Page.ToMap()))
+            {
+                request.PageShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Page.ToMap(), "Page", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditStatus))
             {
@@ -638,21 +582,9 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 query["Name"] = request.Name;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageShrink))
             {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
-            {
-                query["Page"] = request.Page;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
+                query["Page"] = request.PageShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -685,65 +617,65 @@ namespace AlibabaCloud.SDK.Cams20200606
             return await ListChatappTemplateWithOptionsAsync(request, runtime);
         }
 
-        public SendChatappMessageResponse SendChatappMessageWithOptions(SendChatappMessageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public SendChatappMessageResponse SendChatappMessageWithOptions(SendChatappMessageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelType))
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SendChatappMessageShrinkRequest request = new SendChatappMessageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Payload))
             {
-                query["ChannelType"] = request.ChannelType;
+                request.PayloadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Payload, "Payload", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TemplateParams))
+            {
+                request.TemplateParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TemplateParams, "TemplateParams", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
             {
                 query["Content"] = request.Content;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayloadShrink))
+            {
+                query["Payload"] = request.PayloadShrink;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelType))
+            {
+                body["ChannelType"] = request.ChannelType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
-                query["From"] = request.From;
+                body["From"] = request.From;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
-                query["Language"] = request.Language;
+                body["Language"] = request.Language;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageType))
             {
-                query["MessageType"] = request.MessageType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Payload))
-            {
-                query["Payload"] = request.Payload;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
+                body["MessageType"] = request.MessageType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
             {
-                query["TemplateCode"] = request.TemplateCode;
+                body["TemplateCode"] = request.TemplateCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateParams))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateParamsShrink))
             {
-                query["TemplateParams"] = request.TemplateParams;
+                body["TemplateParams"] = request.TemplateParamsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.To))
             {
-                query["To"] = request.To;
+                body["To"] = request.To;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
-                query["Type"] = request.Type;
+                body["Type"] = request.Type;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -760,65 +692,65 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<SendChatappMessageResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<SendChatappMessageResponse> SendChatappMessageWithOptionsAsync(SendChatappMessageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<SendChatappMessageResponse> SendChatappMessageWithOptionsAsync(SendChatappMessageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelType))
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SendChatappMessageShrinkRequest request = new SendChatappMessageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Payload))
             {
-                query["ChannelType"] = request.ChannelType;
+                request.PayloadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Payload, "Payload", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TemplateParams))
+            {
+                request.TemplateParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TemplateParams, "TemplateParams", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
             {
                 query["Content"] = request.Content;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayloadShrink))
+            {
+                query["Payload"] = request.PayloadShrink;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelType))
+            {
+                body["ChannelType"] = request.ChannelType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
-                query["From"] = request.From;
+                body["From"] = request.From;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
-                query["Language"] = request.Language;
+                body["Language"] = request.Language;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageType))
             {
-                query["MessageType"] = request.MessageType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Payload))
-            {
-                query["Payload"] = request.Payload;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
+                body["MessageType"] = request.MessageType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
             {
-                query["TemplateCode"] = request.TemplateCode;
+                body["TemplateCode"] = request.TemplateCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateParams))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateParamsShrink))
             {
-                query["TemplateParams"] = request.TemplateParams;
+                body["TemplateParams"] = request.TemplateParamsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.To))
             {
-                query["To"] = request.To;
+                body["To"] = request.To;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
-                query["Type"] = request.Type;
+                body["Type"] = request.Type;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
-    public class ListChatappTemplateRequest : TeaModel {
+    public class ListChatappTemplateShrinkRequest : TeaModel {
         /// <summary>
         /// 审核状态
         /// </summary>
@@ -32,15 +32,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         [NameInMap("Page")]
         [Validation(Required=false)]
-        public ListChatappTemplateRequestPage Page { get; set; }
-        public class ListChatappTemplateRequestPage : TeaModel {
-            [NameInMap("Index")]
-            [Validation(Required=false)]
-            public int? Index { get; set; }
-            [NameInMap("Size")]
-            [Validation(Required=false)]
-            public int? Size { get; set; }
-        };
+        public string PageShrink { get; set; }
 
     }
 

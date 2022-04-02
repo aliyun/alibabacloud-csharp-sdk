@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -11,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
-    public class CheckChatappContactsRequest : TeaModel {
+    public class CheckChatappContactsShrinkRequest : TeaModel {
         /// <summary>
         /// 通道类型
         /// </summary>
@@ -24,7 +21,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// </summary>
         [NameInMap("Contacts")]
         [Validation(Required=false)]
-        public List<string> Contacts { get; set; }
+        public string ContactsShrink { get; set; }
 
         /// <summary>
         /// 发送号码,所选择ChannelType下的Business账号，即在控制台上审核通过的Number

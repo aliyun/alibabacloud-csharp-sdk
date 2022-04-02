@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
-    public class SendChatappMessageRequest : TeaModel {
+    public class SendChatappMessageShrinkRequest : TeaModel {
         /// <summary>
         /// 通道类型 whatsapp/viber/line
         /// </summary>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         [NameInMap("Payload")]
         [Validation(Required=false)]
-        public List<string> Payload { get; set; }
+        public string PayloadShrink { get; set; }
 
         /// <summary>
         /// 模板编码
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         [NameInMap("TemplateParams")]
         [Validation(Required=false)]
-        public Dictionary<string, string> TemplateParams { get; set; }
+        public string TemplateParamsShrink { get; set; }
 
         /// <summary>
         /// 接收号码

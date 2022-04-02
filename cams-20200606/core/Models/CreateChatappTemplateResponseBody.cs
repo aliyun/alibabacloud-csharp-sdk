@@ -16,13 +16,17 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// 返回数据结点
-        /// {"templateCode": "744c4b5c79c9432497a075bdfca36bf5"，"templateName": "hello_whatsapp"}
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public string Data { get; set; }
+        public CreateChatappTemplateResponseBodyData Data { get; set; }
+        public class CreateChatappTemplateResponseBodyData : TeaModel {
+            [NameInMap("TemplateCode")]
+            [Validation(Required=false)]
+            public string TemplateCode { get; set; }
+            [NameInMap("TemplateName")]
+            [Validation(Required=false)]
+            public string TemplateName { get; set; }
+        };
 
         /// <summary>
         /// 提示信息，当返回异常时有值

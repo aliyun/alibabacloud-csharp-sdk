@@ -13,13 +13,16 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public string Data { get; set; }
-
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
+
+        /// <summary>
+        /// 消息ID
+        /// </summary>
+        [NameInMap("MessageId")]
+        [Validation(Required=false)]
+        public string MessageId { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
