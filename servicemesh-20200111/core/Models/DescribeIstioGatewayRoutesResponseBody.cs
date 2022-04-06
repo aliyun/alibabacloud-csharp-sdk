@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("Namespace")]
+            [Validation(Required=false)]
+            public string Namespace { get; set; }
+
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }

@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [Validation(Required=false)]
             public List<string> Domains { get; set; }
 
+            [NameInMap("Namespace")]
+            [Validation(Required=false)]
+            public string Namespace { get; set; }
+
             [NameInMap("PortName")]
             [Validation(Required=false)]
             public string PortName { get; set; }

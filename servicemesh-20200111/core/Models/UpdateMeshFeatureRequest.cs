@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public bool? CRAggregationEnabled { get; set; }
 
+        [NameInMap("CanaryUpgradeEnabled")]
+        [Validation(Required=false)]
+        public bool? CanaryUpgradeEnabled { get; set; }
+
         [NameInMap("ClusterSpec")]
         [Validation(Required=false)]
         public string ClusterSpec { get; set; }

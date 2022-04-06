@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string IstioGatewayName { get; set; }
 
+        [NameInMap("Limit")]
+        [Validation(Required=false)]
+        public string Limit { get; set; }
+
+        [NameInMap("Namespace")]
+        [Validation(Required=false)]
+        public string Namespace { get; set; }
+
         [NameInMap("Number")]
         [Validation(Required=false)]
         public int? Number { get; set; }

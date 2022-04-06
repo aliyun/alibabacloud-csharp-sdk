@@ -385,6 +385,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["IstioGatewayName"] = request.IstioGatewayName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Number))
             {
                 body["Number"] = request.Number;
@@ -439,6 +447,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IstioGatewayName))
             {
                 body["IstioGatewayName"] = request.IstioGatewayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Number))
             {
@@ -1367,6 +1383,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["IstioGatewayName"] = request.IstioGatewayName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PortName))
             {
                 body["PortName"] = request.PortName;
@@ -1405,6 +1429,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IstioGatewayName))
             {
                 body["IstioGatewayName"] = request.IstioGatewayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PortName))
             {
@@ -2547,6 +2579,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["IstioGatewayName"] = request.IstioGatewayName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
             {
                 body["ServiceMeshId"] = request.ServiceMeshId;
@@ -2577,6 +2617,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IstioGatewayName))
             {
                 body["IstioGatewayName"] = request.IstioGatewayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
             {
@@ -3343,9 +3391,19 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 query["ServiceMeshId"] = request.ServiceMeshId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                body["Offset"] = request.Offset;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3370,9 +3428,19 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 query["ServiceMeshId"] = request.ServiceMeshId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                body["Offset"] = request.Offset;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5787,6 +5855,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["CRAggregationEnabled"] = request.CRAggregationEnabled;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CanaryUpgradeEnabled))
+            {
+                body["CanaryUpgradeEnabled"] = request.CanaryUpgradeEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterSpec))
             {
                 body["ClusterSpec"] = request.ClusterSpec;
@@ -6113,6 +6185,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CRAggregationEnabled))
             {
                 body["CRAggregationEnabled"] = request.CRAggregationEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CanaryUpgradeEnabled))
+            {
+                body["CanaryUpgradeEnabled"] = request.CanaryUpgradeEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterSpec))
             {

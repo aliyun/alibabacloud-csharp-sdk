@@ -205,6 +205,9 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 };
 
             }
+            [NameInMap("Namespace")]
+            [Validation(Required=false)]
+            public string Namespace { get; set; }
             [NameInMap("RouteDestinations")]
             [Validation(Required=false)]
             public List<UpdateIstioGatewayRoutesRequestGatewayRouteRouteDestinations> RouteDestinations { get; set; }
