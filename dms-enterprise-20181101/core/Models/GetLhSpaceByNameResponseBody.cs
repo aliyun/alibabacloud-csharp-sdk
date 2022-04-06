@@ -24,15 +24,15 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [NameInMap("CreatorId")]
             [Validation(Required=false)]
             public string CreatorId { get; set; }
-            [NameInMap("DbType")]
-            [Validation(Required=false)]
-            public string DbType { get; set; }
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
             [NameInMap("DevDbId")]
             [Validation(Required=false)]
             public int? DevDbId { get; set; }
+            [NameInMap("DwDbType")]
+            [Validation(Required=false)]
+            public string DwDbType { get; set; }
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }

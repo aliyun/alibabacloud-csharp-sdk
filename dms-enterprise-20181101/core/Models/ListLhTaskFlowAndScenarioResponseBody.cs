@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public bool? CanEdit { get; set; }
                 public string CreatorId { get; set; }
                 public string CreatorNickName { get; set; }
+                public string DagName { get; set; }
+                public string DagOwnerId { get; set; }
                 public string DagOwnerNickName { get; set; }
                 public long? DataFlowId { get; set; }
                 public string DemoId { get; set; }
@@ -71,6 +73,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                         [NameInMap("CreatorNickName")]
                         [Validation(Required=false)]
                         public string CreatorNickName { get; set; }
+
+                        [NameInMap("DagName")]
+                        [Validation(Required=false)]
+                        public string DagName { get; set; }
+
+                        [NameInMap("DagOwnerId")]
+                        [Validation(Required=false)]
+                        public string DagOwnerId { get; set; }
 
                         [NameInMap("DagOwnerNickName")]
                         [Validation(Required=false)]
