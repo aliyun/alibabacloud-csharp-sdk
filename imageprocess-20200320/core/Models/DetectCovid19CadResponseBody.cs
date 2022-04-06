@@ -9,30 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 {
     public class DetectCovid19CadResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DetectCovid19CadResponseBodyData Data { get; set; }
         public class DetectCovid19CadResponseBodyData : TeaModel {
-            [NameInMap("NormalProbability")]
-            [Validation(Required=false)]
-            public string NormalProbability { get; set; }
-            [NameInMap("NewProbability")]
-            [Validation(Required=false)]
-            public string NewProbability { get; set; }
             [NameInMap("LesionRatio")]
             [Validation(Required=false)]
             public string LesionRatio { get; set; }
-            [NameInMap("OtherProbability")]
-            [Validation(Required=false)]
-            public string OtherProbability { get; set; }
             [NameInMap("Mask")]
             [Validation(Required=false)]
             public string Mask { get; set; }
+            [NameInMap("NewProbability")]
+            [Validation(Required=false)]
+            public string NewProbability { get; set; }
+            [NameInMap("NormalProbability")]
+            [Validation(Required=false)]
+            public string NormalProbability { get; set; }
+            [NameInMap("OtherProbability")]
+            [Validation(Required=false)]
+            public string OtherProbability { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

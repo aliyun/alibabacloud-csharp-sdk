@@ -9,13 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 {
     public class AnalyzeChestVesselResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AnalyzeChestVesselResponseBodyData Data { get; set; }
@@ -24,58 +17,58 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             [Validation(Required=false)]
             public AnalyzeChestVesselResponseBodyDataAortaInfo AortaInfo { get; set; }
             public class AnalyzeChestVesselResponseBodyDataAortaInfo : TeaModel {
-                [NameInMap("MaxAreaIndex")]
+                [NameInMap("Area")]
                 [Validation(Required=false)]
-                public long? MaxAreaIndex { get; set; }
-
-                [NameInMap("MaxArea")]
-                [Validation(Required=false)]
-                public float? MaxArea { get; set; }
-
-                [NameInMap("MaxDiameter")]
-                [Validation(Required=false)]
-                public float? MaxDiameter { get; set; }
-
-                [NameInMap("LabelValue")]
-                [Validation(Required=false)]
-                public long? LabelValue { get; set; }
+                public List<float?> Area { get; set; }
 
                 [NameInMap("Coordinates")]
                 [Validation(Required=false)]
                 public List<List<float?>> Coordinates { get; set; }
 
-                [NameInMap("Area")]
+                [NameInMap("LabelValue")]
                 [Validation(Required=false)]
-                public List<float?> Area { get; set; }
+                public long? LabelValue { get; set; }
+
+                [NameInMap("MaxArea")]
+                [Validation(Required=false)]
+                public float? MaxArea { get; set; }
+
+                [NameInMap("MaxAreaIndex")]
+                [Validation(Required=false)]
+                public long? MaxAreaIndex { get; set; }
+
+                [NameInMap("MaxDiameter")]
+                [Validation(Required=false)]
+                public float? MaxDiameter { get; set; }
 
             }
             [NameInMap("PulmonaryInfo")]
             [Validation(Required=false)]
             public AnalyzeChestVesselResponseBodyDataPulmonaryInfo PulmonaryInfo { get; set; }
             public class AnalyzeChestVesselResponseBodyDataPulmonaryInfo : TeaModel {
-                [NameInMap("MaxAreaIndex")]
+                [NameInMap("Area")]
                 [Validation(Required=false)]
-                public long? MaxAreaIndex { get; set; }
-
-                [NameInMap("MaxArea")]
-                [Validation(Required=false)]
-                public float? MaxArea { get; set; }
-
-                [NameInMap("MaxDiameter")]
-                [Validation(Required=false)]
-                public float? MaxDiameter { get; set; }
-
-                [NameInMap("LabelValue")]
-                [Validation(Required=false)]
-                public long? LabelValue { get; set; }
+                public List<float?> Area { get; set; }
 
                 [NameInMap("Coordinates")]
                 [Validation(Required=false)]
                 public List<List<float?>> Coordinates { get; set; }
 
-                [NameInMap("Area")]
+                [NameInMap("LabelValue")]
                 [Validation(Required=false)]
-                public List<float?> Area { get; set; }
+                public long? LabelValue { get; set; }
+
+                [NameInMap("MaxArea")]
+                [Validation(Required=false)]
+                public float? MaxArea { get; set; }
+
+                [NameInMap("MaxAreaIndex")]
+                [Validation(Required=false)]
+                public long? MaxAreaIndex { get; set; }
+
+                [NameInMap("MaxDiameter")]
+                [Validation(Required=false)]
+                public float? MaxDiameter { get; set; }
 
                 [NameInMap("NearestAortaArea")]
                 [Validation(Required=false)]
@@ -86,6 +79,13 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             [Validation(Required=false)]
             public string ResultURL { get; set; }
         };
+
+        /// <summary>
+        /// Id of the request
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

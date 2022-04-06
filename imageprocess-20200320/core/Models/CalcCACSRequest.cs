@@ -13,17 +13,17 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
         [Validation(Required=false)]
         public string DataFormat { get; set; }
 
-        [NameInMap("OrgName")]
+        [NameInMap("DataSourceType")]
         [Validation(Required=false)]
-        public string OrgName { get; set; }
+        public string DataSourceType { get; set; }
 
         [NameInMap("OrgId")]
         [Validation(Required=false)]
         public string OrgId { get; set; }
 
-        [NameInMap("DataSourceType")]
+        [NameInMap("OrgName")]
         [Validation(Required=false)]
-        public string DataSourceType { get; set; }
+        public string OrgName { get; set; }
 
         [NameInMap("URLList")]
         [Validation(Required=false)]

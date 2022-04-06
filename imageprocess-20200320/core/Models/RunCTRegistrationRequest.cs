@@ -13,27 +13,9 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
         [Validation(Required=false)]
         public string DataFormat { get; set; }
 
-        [NameInMap("OrgName")]
-        [Validation(Required=false)]
-        public string OrgName { get; set; }
-
-        [NameInMap("OrgId")]
-        [Validation(Required=false)]
-        public string OrgId { get; set; }
-
         [NameInMap("DataSourceType")]
         [Validation(Required=false)]
         public string DataSourceType { get; set; }
-
-        [NameInMap("ReferenceList")]
-        [Validation(Required=false)]
-        public List<RunCTRegistrationRequestReferenceList> ReferenceList { get; set; }
-        public class RunCTRegistrationRequestReferenceList : TeaModel {
-            [NameInMap("ReferenceURL")]
-            [Validation(Required=false)]
-            public string ReferenceURL { get; set; }
-
-        }
 
         [NameInMap("FloatingList")]
         [Validation(Required=false)]
@@ -42,6 +24,24 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             [NameInMap("FloatingURL")]
             [Validation(Required=false)]
             public string FloatingURL { get; set; }
+
+        }
+
+        [NameInMap("OrgId")]
+        [Validation(Required=false)]
+        public string OrgId { get; set; }
+
+        [NameInMap("OrgName")]
+        [Validation(Required=false)]
+        public string OrgName { get; set; }
+
+        [NameInMap("ReferenceList")]
+        [Validation(Required=false)]
+        public List<RunCTRegistrationRequestReferenceList> ReferenceList { get; set; }
+        public class RunCTRegistrationRequestReferenceList : TeaModel {
+            [NameInMap("ReferenceURL")]
+            [Validation(Required=false)]
+            public string ReferenceURL { get; set; }
 
         }
 

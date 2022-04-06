@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
         [Validation(Required=false)]
         public string FromLanguage { get; set; }
 
-        [NameInMap("ToLanguage")]
-        [Validation(Required=false)]
-        public string ToLanguage { get; set; }
-
         [NameInMap("Text")]
         [Validation(Required=false)]
         public string Text { get; set; }
+
+        [NameInMap("ToLanguage")]
+        [Validation(Required=false)]
+        public string ToLanguage { get; set; }
 
     }
 

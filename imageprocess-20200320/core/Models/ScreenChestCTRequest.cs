@@ -13,13 +13,17 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
         [Validation(Required=false)]
         public string DataFormat { get; set; }
 
-        [NameInMap("OrgName")]
+        [NameInMap("Mask")]
         [Validation(Required=false)]
-        public string OrgName { get; set; }
+        public long? Mask { get; set; }
 
         [NameInMap("OrgId")]
         [Validation(Required=false)]
         public string OrgId { get; set; }
+
+        [NameInMap("OrgName")]
+        [Validation(Required=false)]
+        public string OrgName { get; set; }
 
         [NameInMap("URLList")]
         [Validation(Required=false)]
@@ -30,10 +34,6 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             public string URL { get; set; }
 
         }
-
-        [NameInMap("Mask")]
-        [Validation(Required=false)]
-        public long? Mask { get; set; }
 
     }
 

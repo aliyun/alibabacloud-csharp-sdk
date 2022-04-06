@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 {
     public class CalcCACSResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CalcCACSResponseBodyData Data { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             [Validation(Required=false)]
             public string Score { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

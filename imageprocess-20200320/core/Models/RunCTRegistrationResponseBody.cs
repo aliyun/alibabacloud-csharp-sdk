@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 {
     public class RunCTRegistrationResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public RunCTRegistrationResponseBodyData Data { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             [Validation(Required=false)]
             public string NUrl { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

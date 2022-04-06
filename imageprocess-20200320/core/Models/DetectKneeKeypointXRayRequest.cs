@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 {
     public class DetectKneeKeypointXRayRequest : TeaModel {
-        [NameInMap("ImageUrl")]
-        [Validation(Required=false)]
-        public string ImageUrl { get; set; }
-
         [NameInMap("DataFormat")]
         [Validation(Required=false)]
         public string DataFormat { get; set; }
+
+        [NameInMap("ImageUrl")]
+        [Validation(Required=false)]
+        public string ImageUrl { get; set; }
 
         [NameInMap("OrgId")]
         [Validation(Required=false)]

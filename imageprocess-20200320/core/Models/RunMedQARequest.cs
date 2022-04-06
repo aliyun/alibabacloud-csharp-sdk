@@ -9,25 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 {
     public class RunMedQARequest : TeaModel {
-        [NameInMap("OrgId")]
+        [NameInMap("AnswerImageDataList")]
         [Validation(Required=false)]
-        public string OrgId { get; set; }
+        public List<RunMedQARequestAnswerImageDataList> AnswerImageDataList { get; set; }
+        public class RunMedQARequestAnswerImageDataList : TeaModel {
+            [NameInMap("AnswerImageData")]
+            [Validation(Required=false)]
+            public byte[] AnswerImageData { get; set; }
 
-        [NameInMap("OrgName")]
-        [Validation(Required=false)]
-        public string OrgName { get; set; }
-
-        [NameInMap("SessionId")]
-        [Validation(Required=false)]
-        public string SessionId { get; set; }
-
-        [NameInMap("Department")]
-        [Validation(Required=false)]
-        public string Department { get; set; }
-
-        [NameInMap("QuestionType")]
-        [Validation(Required=false)]
-        public string QuestionType { get; set; }
+        }
 
         [NameInMap("AnswerImageURLList")]
         [Validation(Required=false)]
@@ -36,16 +26,6 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             [NameInMap("AnswerImageURL")]
             [Validation(Required=false)]
             public string AnswerImageURL { get; set; }
-
-        }
-
-        [NameInMap("AnswerImageDataList")]
-        [Validation(Required=false)]
-        public List<RunMedQARequestAnswerImageDataList> AnswerImageDataList { get; set; }
-        public class RunMedQARequestAnswerImageDataList : TeaModel {
-            [NameInMap("AnswerImageData")]
-            [Validation(Required=false)]
-            public byte[] AnswerImageData { get; set; }
 
         }
 
@@ -58,6 +38,26 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             public string AnswerText { get; set; }
 
         }
+
+        [NameInMap("Department")]
+        [Validation(Required=false)]
+        public string Department { get; set; }
+
+        [NameInMap("OrgId")]
+        [Validation(Required=false)]
+        public string OrgId { get; set; }
+
+        [NameInMap("OrgName")]
+        [Validation(Required=false)]
+        public string OrgName { get; set; }
+
+        [NameInMap("QuestionType")]
+        [Validation(Required=false)]
+        public string QuestionType { get; set; }
+
+        [NameInMap("SessionId")]
+        [Validation(Required=false)]
+        public string SessionId { get; set; }
 
     }
 

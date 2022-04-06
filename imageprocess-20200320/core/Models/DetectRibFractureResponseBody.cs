@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 {
     public class DetectRibFractureResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DetectRibFractureResponseBodyData Data { get; set; }
@@ -21,11 +17,11 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             [Validation(Required=false)]
             public List<DetectRibFractureResponseBodyDataDetections> Detections { get; set; }
             public class DetectRibFractureResponseBodyDataDetections : TeaModel {
-                public List<string> Coordinates { get; set; }
-                public int? FractureId { get; set; }
                 public List<string> CoordinateImage { get; set; }
-                public float? FractureConfidence { get; set; }
+                public List<string> Coordinates { get; set; }
                 public string FractureCategory { get; set; }
+                public float? FractureConfidence { get; set; }
+                public int? FractureId { get; set; }
                 public string FractureLocation { get; set; }
                 public long? FractureSegment { get; set; }
             }
@@ -39,6 +35,10 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             [Validation(Required=false)]
             public List<string> Spacing { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 
