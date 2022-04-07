@@ -32,6 +32,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string GmtCreate { get; set; }
                 public string GmtModified { get; set; }
                 public string GroupName { get; set; }
+                public string HealehStatus { get; set; }
                 public long? Id { get; set; }
                 public List<string> Ips { get; set; }
                 public string MetaInfo { get; set; }

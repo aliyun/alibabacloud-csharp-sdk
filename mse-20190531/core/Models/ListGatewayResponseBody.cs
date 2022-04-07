@@ -37,6 +37,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string GmtCreate { get; set; }
                 public string GmtModified { get; set; }
                 public long? Id { get; set; }
+                public ListGatewayResponseBodyDataResultInitConfig InitConfig { get; set; }
+                public class ListGatewayResponseBodyDataResultInitConfig : TeaModel {
+                    [NameInMap("EnableWaf")]
+                    [Validation(Required=false)]
+                    public bool? EnableWaf { get; set; }
+
+                    [NameInMap("SupportWaf")]
+                    [Validation(Required=false)]
+                    public bool? SupportWaf { get; set; }
+
+                }
                 public string InstanceId { get; set; }
                 public List<ListGatewayResponseBodyDataResultInternetSlb> InternetSlb { get; set; }
                 public class ListGatewayResponseBodyDataResultInternetSlb : TeaModel {

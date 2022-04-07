@@ -8,19 +8,19 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class GetGatewayRouteDetailResponseBody : TeaModel {
+    public class UpdateGatewayRouteWafStatusResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public GetGatewayRouteDetailResponseBodyData Data { get; set; }
-        public class GetGatewayRouteDetailResponseBodyData : TeaModel {
+        public UpdateGatewayRouteWafStatusResponseBodyData Data { get; set; }
+        public class UpdateGatewayRouteWafStatusResponseBodyData : TeaModel {
             [NameInMap("Cors")]
             [Validation(Required=false)]
-            public GetGatewayRouteDetailResponseBodyDataCors Cors { get; set; }
-            public class GetGatewayRouteDetailResponseBodyDataCors : TeaModel {
+            public UpdateGatewayRouteWafStatusResponseBodyDataCors Cors { get; set; }
+            public class UpdateGatewayRouteWafStatusResponseBodyDataCors : TeaModel {
                 [NameInMap("AllowCredentials")]
                 [Validation(Required=false)]
                 public bool? AllowCredentials { get; set; }
@@ -65,8 +65,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string DestinationType { get; set; }
             [NameInMap("DirectResponse")]
             [Validation(Required=false)]
-            public GetGatewayRouteDetailResponseBodyDataDirectResponse DirectResponse { get; set; }
-            public class GetGatewayRouteDetailResponseBodyDataDirectResponse : TeaModel {
+            public UpdateGatewayRouteWafStatusResponseBodyDataDirectResponse DirectResponse { get; set; }
+            public class UpdateGatewayRouteWafStatusResponseBodyDataDirectResponse : TeaModel {
                 [NameInMap("Body")]
                 [Validation(Required=false)]
                 public string Body { get; set; }
@@ -105,8 +105,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GmtModified { get; set; }
             [NameInMap("HTTPRewrite")]
             [Validation(Required=false)]
-            public GetGatewayRouteDetailResponseBodyDataHTTPRewrite HTTPRewrite { get; set; }
-            public class GetGatewayRouteDetailResponseBodyDataHTTPRewrite : TeaModel {
+            public UpdateGatewayRouteWafStatusResponseBodyDataHTTPRewrite HTTPRewrite { get; set; }
+            public class UpdateGatewayRouteWafStatusResponseBodyDataHTTPRewrite : TeaModel {
                 [NameInMap("Host")]
                 [Validation(Required=false)]
                 public string Host { get; set; }
@@ -134,12 +134,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
             [NameInMap("HeaderOp")]
             [Validation(Required=false)]
-            public GetGatewayRouteDetailResponseBodyDataHeaderOp HeaderOp { get; set; }
-            public class GetGatewayRouteDetailResponseBodyDataHeaderOp : TeaModel {
+            public UpdateGatewayRouteWafStatusResponseBodyDataHeaderOp HeaderOp { get; set; }
+            public class UpdateGatewayRouteWafStatusResponseBodyDataHeaderOp : TeaModel {
                 [NameInMap("HeaderOpItems")]
                 [Validation(Required=false)]
-                public List<GetGatewayRouteDetailResponseBodyDataHeaderOpHeaderOpItems> HeaderOpItems { get; set; }
-                public class GetGatewayRouteDetailResponseBodyDataHeaderOpHeaderOpItems : TeaModel {
+                public List<UpdateGatewayRouteWafStatusResponseBodyDataHeaderOpHeaderOpItems> HeaderOpItems { get; set; }
+                public class UpdateGatewayRouteWafStatusResponseBodyDataHeaderOpHeaderOpItems : TeaModel {
                     [NameInMap("DirectionType")]
                     [Validation(Required=false)]
                     public string DirectionType { get; set; }
@@ -174,8 +174,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Predicates { get; set; }
             [NameInMap("Redirect")]
             [Validation(Required=false)]
-            public GetGatewayRouteDetailResponseBodyDataRedirect Redirect { get; set; }
-            public class GetGatewayRouteDetailResponseBodyDataRedirect : TeaModel {
+            public UpdateGatewayRouteWafStatusResponseBodyDataRedirect Redirect { get; set; }
+            public class UpdateGatewayRouteWafStatusResponseBodyDataRedirect : TeaModel {
                 [NameInMap("Code")]
                 [Validation(Required=false)]
                 public int? Code { get; set; }
@@ -191,8 +191,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
             [NameInMap("Retry")]
             [Validation(Required=false)]
-            public GetGatewayRouteDetailResponseBodyDataRetry Retry { get; set; }
-            public class GetGatewayRouteDetailResponseBodyDataRetry : TeaModel {
+            public UpdateGatewayRouteWafStatusResponseBodyDataRetry Retry { get; set; }
+            public class UpdateGatewayRouteWafStatusResponseBodyDataRetry : TeaModel {
                 [NameInMap("Attempts")]
                 [Validation(Required=false)]
                 public int? Attempts { get; set; }
@@ -215,12 +215,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? RouteOrder { get; set; }
             [NameInMap("RoutePredicates")]
             [Validation(Required=false)]
-            public GetGatewayRouteDetailResponseBodyDataRoutePredicates RoutePredicates { get; set; }
-            public class GetGatewayRouteDetailResponseBodyDataRoutePredicates : TeaModel {
+            public UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicates RoutePredicates { get; set; }
+            public class UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicates : TeaModel {
                 [NameInMap("HeaderPredicates")]
                 [Validation(Required=false)]
-                public List<GetGatewayRouteDetailResponseBodyDataRoutePredicatesHeaderPredicates> HeaderPredicates { get; set; }
-                public class GetGatewayRouteDetailResponseBodyDataRoutePredicatesHeaderPredicates : TeaModel {
+                public List<UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesHeaderPredicates> HeaderPredicates { get; set; }
+                public class UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesHeaderPredicates : TeaModel {
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
@@ -241,8 +241,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
                 [NameInMap("PathPredicates")]
                 [Validation(Required=false)]
-                public GetGatewayRouteDetailResponseBodyDataRoutePredicatesPathPredicates PathPredicates { get; set; }
-                public class GetGatewayRouteDetailResponseBodyDataRoutePredicatesPathPredicates : TeaModel {
+                public UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesPathPredicates PathPredicates { get; set; }
+                public class UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesPathPredicates : TeaModel {
                     [NameInMap("IgnoreCase")]
                     [Validation(Required=false)]
                     public bool? IgnoreCase { get; set; }
@@ -256,8 +256,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
                 [NameInMap("QueryPredicates")]
                 [Validation(Required=false)]
-                public List<GetGatewayRouteDetailResponseBodyDataRoutePredicatesQueryPredicates> QueryPredicates { get; set; }
-                public class GetGatewayRouteDetailResponseBodyDataRoutePredicatesQueryPredicates : TeaModel {
+                public List<UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesQueryPredicates> QueryPredicates { get; set; }
+                public class UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesQueryPredicates : TeaModel {
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
@@ -275,8 +275,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
             [NameInMap("RouteServices")]
             [Validation(Required=false)]
-            public List<GetGatewayRouteDetailResponseBodyDataRouteServices> RouteServices { get; set; }
-            public class GetGatewayRouteDetailResponseBodyDataRouteServices : TeaModel {
+            public List<UpdateGatewayRouteWafStatusResponseBodyDataRouteServices> RouteServices { get; set; }
+            public class UpdateGatewayRouteWafStatusResponseBodyDataRouteServices : TeaModel {
                 public string GroupName { get; set; }
                 public string Name { get; set; }
                 public string Namespace { get; set; }
@@ -294,8 +294,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? Status { get; set; }
             [NameInMap("Timeout")]
             [Validation(Required=false)]
-            public GetGatewayRouteDetailResponseBodyDataTimeout Timeout { get; set; }
-            public class GetGatewayRouteDetailResponseBodyDataTimeout : TeaModel {
+            public UpdateGatewayRouteWafStatusResponseBodyDataTimeout Timeout { get; set; }
+            public class UpdateGatewayRouteWafStatusResponseBodyDataTimeout : TeaModel {
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }

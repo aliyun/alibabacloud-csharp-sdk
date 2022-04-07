@@ -52,6 +52,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public List<string> DomainIdList { get; set; }
                 public string DomainName { get; set; }
                 public List<string> DomainNameList { get; set; }
+                public string EnableWaf { get; set; }
                 public long? GatewayId { get; set; }
                 public string GatewayUniqueId { get; set; }
                 public string GmtCreate { get; set; }

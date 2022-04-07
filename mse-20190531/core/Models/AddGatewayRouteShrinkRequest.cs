@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string DomainIdListJSON { get; set; }
 
+        [NameInMap("EnableWaf")]
+        [Validation(Required=false)]
+        public bool? EnableWaf { get; set; }
+
         [NameInMap("GatewayId")]
         [Validation(Required=false)]
         public long? GatewayId { get; set; }
