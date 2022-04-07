@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public List<DescribeServiceCronScalerResponseBodyScaleJobs> ScaleJobs { get; set; }
         public class DescribeServiceCronScalerResponseBodyScaleJobs : TeaModel {
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
             [NameInMap("LastProbeTime")]
             [Validation(Required=false)]
             public string LastProbeTime { get; set; }

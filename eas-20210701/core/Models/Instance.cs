@@ -55,6 +55,13 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public List<Dictionary<string, object>> LastState { get; set; }
 
         /// <summary>
+        /// 实例的命名空间
+        /// </summary>
+        [NameInMap("Namespace")]
+        [Validation(Required=false)]
+        public string Namespace { get; set; }
+
+        /// <summary>
         /// 实例已经启动完成的进程数
         /// </summary>
         [NameInMap("ReadyProcesses")]

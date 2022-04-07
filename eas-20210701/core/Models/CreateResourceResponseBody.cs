@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <summary>
         /// 资源组ID
         /// </summary>
-        [NameInMap("ResourceID")]
+        [NameInMap("ResourceId")]
         [Validation(Required=false)]
-        public string ResourceID { get; set; }
+        public string ResourceId { get; set; }
 
         /// <summary>
         /// 资源组名称
