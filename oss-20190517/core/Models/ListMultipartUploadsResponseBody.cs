@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
         [Validation(Required=false)]
         public string Bucket { get; set; }
 
+        [NameInMap("CommonPrefixes")]
+        [Validation(Required=false)]
+        public List<CommonPrefix> CommonPrefixes { get; set; }
+
+        [NameInMap("Delimiter")]
+        [Validation(Required=false)]
+        public string Delimiter { get; set; }
+
         [NameInMap("EncodingType")]
         [Validation(Required=false)]
         public string EncodingType { get; set; }
@@ -33,9 +41,13 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
         [Validation(Required=false)]
         public string NextKeyMarker { get; set; }
 
-        [NameInMap("NextUploadMarker")]
+        [NameInMap("NextUploadIdMarker")]
         [Validation(Required=false)]
-        public string NextUploadMarker { get; set; }
+        public string NextUploadIdMarker { get; set; }
+
+        [NameInMap("Prefix")]
+        [Validation(Required=false)]
+        public string Prefix { get; set; }
 
         [NameInMap("Upload")]
         [Validation(Required=false)]

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
         [Validation(Required=false)]
         public List<DeletedObject> Deleted { get; set; }
 
+        [NameInMap("EncodingType")]
+        [Validation(Required=false)]
+        public string EncodingType { get; set; }
+
     }
 
 }

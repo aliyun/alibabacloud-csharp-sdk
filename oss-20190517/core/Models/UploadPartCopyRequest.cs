@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
     public class UploadPartCopyRequest : TeaModel {
         [NameInMap("partNumber")]
         [Validation(Required=false)]
-        public string PartNumber { get; set; }
+        public long? PartNumber { get; set; }
 
         [NameInMap("uploadId")]
         [Validation(Required=false)]

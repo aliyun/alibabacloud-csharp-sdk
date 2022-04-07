@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
         public bool? AllowEmptyReferer { get; set; }
 
         /// <summary>
+        /// description
+        /// </summary>
+        [NameInMap("AllowTruncateQueryString")]
+        [Validation(Required=false)]
+        public bool? AllowTruncateQueryString { get; set; }
+
+        /// <summary>
         /// 保存Referer访问白名单
         /// </summary>
         [NameInMap("RefererList")]

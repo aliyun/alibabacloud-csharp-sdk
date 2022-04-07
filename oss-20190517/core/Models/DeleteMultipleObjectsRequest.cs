@@ -9,11 +9,7 @@ using Tea;
 namespace AlibabaCloud.SDK.Oss20190517.Models
 {
     public class DeleteMultipleObjectsRequest : TeaModel {
-        [NameInMap("body")]
-        [Validation(Required=false)]
-        public Delete Body { get; set; }
-
-        [NameInMap("delete")]
+        [NameInMap("Delete")]
         [Validation(Required=false)]
         public Delete Delete { get; set; }
 

@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
     public class GetBucketLifecycleResponseBody : TeaModel {
         [NameInMap("Rule")]
         [Validation(Required=false)]
-        public LifecycleRule Rule { get; set; }
+        public List<LifecycleRule> Rules { get; set; }
 
     }
 

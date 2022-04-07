@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
         /// </summary>
         [NameInMap("PassQueryString")]
         [Validation(Required=false)]
-        public string PassQueryString { get; set; }
+        public bool? PassQueryString { get; set; }
 
         /// <summary>
         /// description

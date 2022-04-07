@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Oss20190517.Models
 {
-    public class GetServiceRequest : TeaModel {
-        [NameInMap("marker")]
+    public class InputSerialization : TeaModel {
+        [NameInMap("CSV")]
         [Validation(Required=false)]
-        public string Marker { get; set; }
+        public CSVInput Csv { get; set; }
 
-        [NameInMap("max-keys")]
+        [NameInMap("CompressionType")]
         [Validation(Required=false)]
-        public long? MaxKeys { get; set; }
+        public string CompressionType { get; set; }
 
-        [NameInMap("prefix")]
+        [NameInMap("JSON")]
         [Validation(Required=false)]
-        public string Prefix { get; set; }
+        public JSONInput Json { get; set; }
 
     }
 

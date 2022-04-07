@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
 
         [NameInMap("max-uploads")]
         [Validation(Required=false)]
-        public string MaxUploads { get; set; }
+        public long? MaxUploads { get; set; }
 
         [NameInMap("prefix")]
         [Validation(Required=false)]

@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
 
         [NameInMap("RetentionPeriodInDays")]
         [Validation(Required=false)]
-        public long? RetentionPeriodInDays { get; set; }
+        public int? RetentionPeriodInDays { get; set; }
 
         [NameInMap("State")]
         [Validation(Required=false)]

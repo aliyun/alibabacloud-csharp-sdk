@@ -8,13 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Oss20190517.Models
 {
-    public class LifecycleConfiguration : TeaModel {
+    public class SelectMetaRequest : TeaModel {
+        [NameInMap("InputSerialization")]
+        [Validation(Required=false)]
+        public InputSerialization InputSerialization { get; set; }
+
         /// <summary>
         /// description
         /// </summary>
-        [NameInMap("Rule")]
+        [NameInMap("OverwriteIfExists")]
         [Validation(Required=false)]
-        public List<LifecycleRule> Rule { get; set; }
+        public bool? OverwriteIfExists { get; set; }
 
     }
 

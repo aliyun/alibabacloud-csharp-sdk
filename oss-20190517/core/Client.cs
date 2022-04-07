@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<AbortBucketWormResponse>(Execute(params_, req, runtime));
         }
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<AbortBucketWormResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<AbortMultipartUploadResponse>(Execute(params_, req, runtime));
         }
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<AbortMultipartUploadResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "binary",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<AppendObjectResponse>(Execute(params_, req, runtime));
         }
@@ -324,7 +324,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "binary",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<AppendObjectResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -369,7 +369,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<CompleteBucketWormResponse>(Execute(params_, req, runtime));
         }
@@ -400,7 +400,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<CompleteBucketWormResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -589,9 +589,9 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 realHeaders["x-oss-object-acl"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Acl);
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Sse))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.ServerSideEncryption))
             {
-                realHeaders["x-oss-server-side-encryption"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Sse);
+                realHeaders["x-oss-server-side-encryption"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.ServerSideEncryption);
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.SseKeyId))
             {
@@ -605,9 +605,9 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 realHeaders["x-oss-tagging"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Tagging);
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XOssTaggingDirective))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.TaggingDirective))
             {
-                realHeaders["x-oss-tagging-directive"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XOssTaggingDirective);
+                realHeaders["x-oss-tagging-directive"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.TaggingDirective);
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -623,7 +623,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "binary",
+                ReqBodyType = "xml",
                 BodyType = "xml",
             };
             return TeaModel.ToObject<CopyObjectResponse>(Execute(params_, req, runtime));
@@ -675,9 +675,9 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 realHeaders["x-oss-object-acl"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Acl);
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Sse))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.ServerSideEncryption))
             {
-                realHeaders["x-oss-server-side-encryption"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Sse);
+                realHeaders["x-oss-server-side-encryption"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.ServerSideEncryption);
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.SseKeyId))
             {
@@ -691,9 +691,9 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 realHeaders["x-oss-tagging"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Tagging);
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XOssTaggingDirective))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.TaggingDirective))
             {
-                realHeaders["x-oss-tagging-directive"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XOssTaggingDirective);
+                realHeaders["x-oss-tagging-directive"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.TaggingDirective);
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -709,10 +709,78 @@ namespace AlibabaCloud.SDK.Oss20190517
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "binary",
+                ReqBodyType = "xml",
                 BodyType = "xml",
             };
             return TeaModel.ToObject<CopyObjectResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public CreateSelectObjectMetaResponse CreateSelectObjectMeta(string bucket, string key, CreateSelectObjectMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateSelectObjectMetaWithOptions(bucket, key, request, headers, runtime);
+        }
+
+        public async Task<CreateSelectObjectMetaResponse> CreateSelectObjectMetaAsync(string bucket, string key, CreateSelectObjectMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateSelectObjectMetaWithOptionsAsync(bucket, key, request, headers, runtime);
+        }
+
+        public CreateSelectObjectMetaResponse CreateSelectObjectMetaWithOptions(string bucket, string key, CreateSelectObjectMetaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["bucket"] = bucket;
+            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.SelectMetaRequest.ToMap()),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSelectObjectMeta",
+                Version = "2019-05-17",
+                Protocol = "HTTPS",
+                Pathname = "/" + key,
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "xml",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSelectObjectMetaResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<CreateSelectObjectMetaResponse> CreateSelectObjectMetaWithOptionsAsync(string bucket, string key, CreateSelectObjectMetaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["bucket"] = bucket;
+            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.SelectMetaRequest.ToMap()),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSelectObjectMeta",
+                Version = "2019-05-17",
+                Protocol = "HTTPS",
+                Pathname = "/" + key,
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "xml",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSelectObjectMetaResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         public DeleteBucketResponse DeleteBucket(string bucket)
@@ -748,7 +816,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<DeleteBucketResponse>(Execute(params_, req, runtime));
         }
@@ -772,7 +840,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<DeleteBucketResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -810,7 +878,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<DeleteBucketCorsResponse>(Execute(params_, req, runtime));
         }
@@ -834,7 +902,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<DeleteBucketCorsResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -872,7 +940,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<DeleteBucketEncryptionResponse>(Execute(params_, req, runtime));
         }
@@ -896,7 +964,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<DeleteBucketEncryptionResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -941,7 +1009,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<DeleteBucketInventoryResponse>(Execute(params_, req, runtime));
         }
@@ -972,7 +1040,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<DeleteBucketInventoryResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -1010,7 +1078,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<DeleteBucketLifecycleResponse>(Execute(params_, req, runtime));
         }
@@ -1034,7 +1102,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<DeleteBucketLifecycleResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -1072,7 +1140,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<DeleteBucketLoggingResponse>(Execute(params_, req, runtime));
         }
@@ -1096,7 +1164,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<DeleteBucketLoggingResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -1134,7 +1202,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<DeleteBucketPolicyResponse>(Execute(params_, req, runtime));
         }
@@ -1158,7 +1226,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<DeleteBucketPolicyResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -1182,16 +1250,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body.ToMap()))
-            {
-                body["body"] = request.Body;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1203,7 +1266,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<DeleteBucketReplicationResponse>(Execute(params_, req, runtime));
         }
@@ -1213,16 +1276,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body.ToMap()))
-            {
-                body["body"] = request.Body;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1234,7 +1292,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<DeleteBucketReplicationResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -1272,7 +1330,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<DeleteBucketTagsResponse>(Execute(params_, req, runtime));
         }
@@ -1296,7 +1354,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<DeleteBucketTagsResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -1334,7 +1392,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<DeleteBucketWebsiteResponse>(Execute(params_, req, runtime));
         }
@@ -1358,7 +1416,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<DeleteBucketWebsiteResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -1397,7 +1455,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<DeleteLiveChannelResponse>(Execute(params_, req, runtime));
         }
@@ -1422,43 +1480,41 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<DeleteLiveChannelResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public DeleteMultipleObjectsResponse DeleteMultipleObjects(DeleteMultipleObjectsRequest request)
+        public DeleteMultipleObjectsResponse DeleteMultipleObjects(string bucket, DeleteMultipleObjectsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteMultipleObjectsWithOptions(request, headers, runtime);
+            return DeleteMultipleObjectsWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<DeleteMultipleObjectsResponse> DeleteMultipleObjectsAsync(DeleteMultipleObjectsRequest request)
+        public async Task<DeleteMultipleObjectsResponse> DeleteMultipleObjectsAsync(string bucket, DeleteMultipleObjectsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteMultipleObjectsWithOptionsAsync(request, headers, runtime);
+            return await DeleteMultipleObjectsWithOptionsAsync(bucket, request, headers, runtime);
         }
 
-        public DeleteMultipleObjectsResponse DeleteMultipleObjectsWithOptions(DeleteMultipleObjectsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteMultipleObjectsResponse DeleteMultipleObjectsWithOptions(string bucket, DeleteMultipleObjectsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["bucket"] = bucket;
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncodingType))
             {
                 query["encoding-type"] = request.EncodingType;
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Delete.ToMap()))
-            {
-                body["delete"] = request.Delete;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                HostMap = hostMap,
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Delete.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1475,24 +1531,22 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<DeleteMultipleObjectsResponse>(Execute(params_, req, runtime));
         }
 
-        public async Task<DeleteMultipleObjectsResponse> DeleteMultipleObjectsWithOptionsAsync(DeleteMultipleObjectsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteMultipleObjectsResponse> DeleteMultipleObjectsWithOptionsAsync(string bucket, DeleteMultipleObjectsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["bucket"] = bucket;
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncodingType))
             {
                 query["encoding-type"] = request.EncodingType;
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Delete.ToMap()))
-            {
-                body["delete"] = request.Delete;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                HostMap = hostMap,
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Delete.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1549,7 +1603,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "binary",
+                ReqBodyType = "xml",
                 BodyType = "none",
             };
             return TeaModel.ToObject<DeleteObjectResponse>(Execute(params_, req, runtime));
@@ -1581,7 +1635,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "binary",
+                ReqBodyType = "xml",
                 BodyType = "none",
             };
             return TeaModel.ToObject<DeleteObjectResponse>(await ExecuteAsync(params_, req, runtime));
@@ -1628,7 +1682,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<DeleteObjectTaggingResponse>(Execute(params_, req, runtime));
         }
@@ -1660,7 +1714,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<DeleteObjectTaggingResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -1781,7 +1835,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<ExtendBucketWormResponse>(Execute(params_, req, runtime));
         }
@@ -1818,117 +1872,9 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<ExtendBucketWormResponse>(await ExecuteAsync(params_, req, runtime));
-        }
-
-        public GetBucketResponse GetBucket(string bucket, GetBucketRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetBucketWithOptions(bucket, request, headers, runtime);
-        }
-
-        public async Task<GetBucketResponse> GetBucketAsync(string bucket, GetBucketRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetBucketWithOptionsAsync(bucket, request, headers, runtime);
-        }
-
-        public GetBucketResponse GetBucketWithOptions(string bucket, GetBucketRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
-            hostMap["bucket"] = bucket;
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Delimiter))
-            {
-                query["delimiter"] = request.Delimiter;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncodingType))
-            {
-                query["encoding-type"] = request.EncodingType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
-            {
-                query["marker"] = request.Marker;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxKeys))
-            {
-                query["max-keys"] = request.MaxKeys;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prefix))
-            {
-                query["prefix"] = request.Prefix;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                HostMap = hostMap,
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetBucket",
-                Version = "2019-05-17",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "xml",
-                BodyType = "xml",
-            };
-            return TeaModel.ToObject<GetBucketResponse>(Execute(params_, req, runtime));
-        }
-
-        public async Task<GetBucketResponse> GetBucketWithOptionsAsync(string bucket, GetBucketRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
-            hostMap["bucket"] = bucket;
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Delimiter))
-            {
-                query["delimiter"] = request.Delimiter;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncodingType))
-            {
-                query["encoding-type"] = request.EncodingType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
-            {
-                query["marker"] = request.Marker;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxKeys))
-            {
-                query["max-keys"] = request.MaxKeys;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prefix))
-            {
-                query["prefix"] = request.Prefix;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                HostMap = hostMap,
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetBucket",
-                Version = "2019-05-17",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "xml",
-                BodyType = "xml",
-            };
-            return TeaModel.ToObject<GetBucketResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         public GetBucketAclResponse GetBucketAcl(string bucket)
@@ -3623,7 +3569,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 Method = "HEAD",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "binary",
+                ReqBodyType = "xml",
                 BodyType = "none",
             };
             return TeaModel.ToObject<GetObjectMetaResponse>(Execute(params_, req, runtime));
@@ -3655,7 +3601,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 Method = "HEAD",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "binary",
+                ReqBodyType = "xml",
                 BodyType = "none",
             };
             return TeaModel.ToObject<GetObjectMetaResponse>(await ExecuteAsync(params_, req, runtime));
@@ -3739,92 +3685,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetObjectTaggingResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetServiceResponse GetService(GetServiceRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetServiceWithOptions(request, headers, runtime);
-        }
-
-        public async Task<GetServiceResponse> GetServiceAsync(GetServiceRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetServiceWithOptionsAsync(request, headers, runtime);
-        }
-
-        public GetServiceResponse GetServiceWithOptions(GetServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
-            {
-                query["marker"] = request.Marker;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxKeys))
-            {
-                query["max-keys"] = request.MaxKeys;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prefix))
-            {
-                query["prefix"] = request.Prefix;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetService",
-                Version = "2019-05-17",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "xml",
-                BodyType = "xml",
-            };
-            return TeaModel.ToObject<GetServiceResponse>(Execute(params_, req, runtime));
-        }
-
-        public async Task<GetServiceResponse> GetServiceWithOptionsAsync(GetServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
-            {
-                query["marker"] = request.Marker;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxKeys))
-            {
-                query["max-keys"] = request.MaxKeys;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prefix))
-            {
-                query["prefix"] = request.Prefix;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetService",
-                Version = "2019-05-17",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "xml",
-                BodyType = "xml",
-            };
-            return TeaModel.ToObject<GetServiceResponse>(await ExecuteAsync(params_, req, runtime));
-        }
-
         public GetSymlinkResponse GetSymlink(string bucket, string key, GetSymlinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3866,7 +3726,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<GetSymlinkResponse>(Execute(params_, req, runtime));
         }
@@ -3898,7 +3758,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<GetSymlinkResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -4128,16 +3988,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitiateWormConfiguration.ToMap()))
-            {
-                body["InitiateWormConfiguration"] = request.InitiateWormConfiguration;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.InitiateWormConfiguration.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4149,7 +4004,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<InitiateBucketWormResponse>(Execute(params_, req, runtime));
         }
@@ -4159,16 +4014,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitiateWormConfiguration.ToMap()))
-            {
-                body["InitiateWormConfiguration"] = request.InitiateWormConfiguration;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.InitiateWormConfiguration.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4180,7 +4030,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<InitiateBucketWormResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -5236,7 +5086,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<OptionObjectResponse>(Execute(params_, req, runtime));
         }
@@ -5278,7 +5128,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<OptionObjectResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -5316,7 +5166,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "none",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PostObjectResponse>(Execute(params_, req, runtime));
         }
@@ -5340,7 +5190,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "none",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PostObjectResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -5391,7 +5241,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PostVodPlaylistResponse>(Execute(params_, req, runtime));
         }
@@ -5428,7 +5278,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PostVodPlaylistResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -5452,11 +5302,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateBucketConfiguration.ToMap()))
-            {
-                body["CreateBucketConfiguration"] = request.CreateBucketConfiguration;
-            }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -5470,7 +5315,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = realHeaders,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.CreateBucketConfiguration.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5482,7 +5327,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketResponse>(Execute(params_, req, runtime));
         }
@@ -5492,11 +5337,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateBucketConfiguration.ToMap()))
-            {
-                body["CreateBucketConfiguration"] = request.CreateBucketConfiguration;
-            }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -5510,7 +5350,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = realHeaders,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.CreateBucketConfiguration.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5522,7 +5362,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -5569,7 +5409,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketAclResponse>(Execute(params_, req, runtime));
         }
@@ -5602,7 +5442,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketAclResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -5626,16 +5466,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CORSConfiguration.ToMap()))
-            {
-                body["CORSConfiguration"] = request.CORSConfiguration;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.CORSConfiguration.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5647,7 +5482,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketCorsResponse>(Execute(params_, req, runtime));
         }
@@ -5657,16 +5492,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CORSConfiguration.ToMap()))
-            {
-                body["CORSConfiguration"] = request.CORSConfiguration;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.CORSConfiguration.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5678,7 +5508,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketCorsResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -5702,16 +5532,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerSideEncryptionRule.ToMap()))
-            {
-                body["ServerSideEncryptionRule"] = request.ServerSideEncryptionRule;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.ServerSideEncryptionRule.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5723,7 +5548,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketEncryptionResponse>(Execute(params_, req, runtime));
         }
@@ -5733,16 +5558,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerSideEncryptionRule.ToMap()))
-            {
-                body["ServerSideEncryptionRule"] = request.ServerSideEncryptionRule;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.ServerSideEncryptionRule.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5754,7 +5574,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketEncryptionResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -5783,17 +5603,12 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 query["inventoryId"] = request.InventoryId;
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InventoryConfiguration.ToMap()))
-            {
-                body["InventoryConfiguration"] = request.InventoryConfiguration;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.InventoryConfiguration.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5805,7 +5620,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketInventoryResponse>(Execute(params_, req, runtime));
         }
@@ -5820,17 +5635,12 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 query["inventoryId"] = request.InventoryId;
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InventoryConfiguration.ToMap()))
-            {
-                body["InventoryConfiguration"] = request.InventoryConfiguration;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.InventoryConfiguration.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5842,7 +5652,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketInventoryResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -5866,16 +5676,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifecycleConfiguration.ToMap()))
-            {
-                body["LifecycleConfiguration"] = request.LifecycleConfiguration;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.LifecycleConfiguration.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5887,7 +5692,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketLifecycleResponse>(Execute(params_, req, runtime));
         }
@@ -5897,16 +5702,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifecycleConfiguration.ToMap()))
-            {
-                body["LifecycleConfiguration"] = request.LifecycleConfiguration;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.LifecycleConfiguration.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5918,7 +5718,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketLifecycleResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -5942,16 +5742,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketLoggingStatus.ToMap()))
-            {
-                body["BucketLoggingStatus"] = request.BucketLoggingStatus;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.BucketLoggingStatus.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5963,7 +5758,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketLoggingResponse>(Execute(params_, req, runtime));
         }
@@ -5973,16 +5768,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketLoggingStatus.ToMap()))
-            {
-                body["BucketLoggingStatus"] = request.BucketLoggingStatus;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.BucketLoggingStatus.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5994,7 +5784,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketLoggingResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -6034,7 +5824,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<PutBucketPolicyResponse>(Execute(params_, req, runtime));
         }
@@ -6060,7 +5850,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<PutBucketPolicyResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -6084,16 +5874,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefererConfiguration.ToMap()))
-            {
-                body["RefererConfiguration"] = request.RefererConfiguration;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.RefererConfiguration.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6105,7 +5890,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketRefererResponse>(Execute(params_, req, runtime));
         }
@@ -6115,16 +5900,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefererConfiguration.ToMap()))
-            {
-                body["RefererConfiguration"] = request.RefererConfiguration;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.RefererConfiguration.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6136,7 +5916,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketRefererResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -6160,16 +5940,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplicationConfiguration.ToMap()))
-            {
-                body["ReplicationConfiguration"] = request.ReplicationConfiguration;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.ReplicationConfiguration.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6181,7 +5956,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketReplicationResponse>(Execute(params_, req, runtime));
         }
@@ -6191,16 +5966,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplicationConfiguration.ToMap()))
-            {
-                body["ReplicationConfiguration"] = request.ReplicationConfiguration;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.ReplicationConfiguration.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6212,7 +5982,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketReplicationResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -6236,16 +6006,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestPaymentConfiguration.ToMap()))
-            {
-                body["RequestPaymentConfiguration"] = request.RequestPaymentConfiguration;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.RequestPaymentConfiguration.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6257,7 +6022,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketRequestPaymentResponse>(Execute(params_, req, runtime));
         }
@@ -6267,16 +6032,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestPaymentConfiguration.ToMap()))
-            {
-                body["RequestPaymentConfiguration"] = request.RequestPaymentConfiguration;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.RequestPaymentConfiguration.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6288,7 +6048,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketRequestPaymentResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -6312,16 +6072,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tagging.ToMap()))
-            {
-                body["Tagging"] = request.Tagging;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Tagging.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6333,7 +6088,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketTagsResponse>(Execute(params_, req, runtime));
         }
@@ -6343,16 +6098,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tagging.ToMap()))
-            {
-                body["Tagging"] = request.Tagging;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Tagging.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6364,7 +6114,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketTagsResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -6388,16 +6138,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransferAccelerationConfiguration.ToMap()))
-            {
-                body["TransferAccelerationConfiguration"] = request.TransferAccelerationConfiguration;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.TransferAccelerationConfiguration.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6409,7 +6154,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketTransferAccelerationResponse>(Execute(params_, req, runtime));
         }
@@ -6419,16 +6164,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransferAccelerationConfiguration.ToMap()))
-            {
-                body["TransferAccelerationConfiguration"] = request.TransferAccelerationConfiguration;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.TransferAccelerationConfiguration.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6440,7 +6180,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketTransferAccelerationResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -6464,16 +6204,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersioningConfiguration.ToMap()))
-            {
-                body["VersioningConfiguration"] = request.VersioningConfiguration;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.VersioningConfiguration.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6485,7 +6220,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketVersioningResponse>(Execute(params_, req, runtime));
         }
@@ -6495,16 +6230,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersioningConfiguration.ToMap()))
-            {
-                body["VersioningConfiguration"] = request.VersioningConfiguration;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.VersioningConfiguration.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6516,7 +6246,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketVersioningResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -6540,16 +6270,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebsiteConfiguration.ToMap()))
-            {
-                body["WebsiteConfiguration"] = request.WebsiteConfiguration;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.WebsiteConfiguration.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6561,7 +6286,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketWebsiteResponse>(Execute(params_, req, runtime));
         }
@@ -6571,16 +6296,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebsiteConfiguration.ToMap()))
-            {
-                body["WebsiteConfiguration"] = request.WebsiteConfiguration;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.WebsiteConfiguration.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6592,7 +6312,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutBucketWebsiteResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -6617,16 +6337,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
             channel = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(channel);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiveChannelConfiguration.ToMap()))
-            {
-                body["LiveChannelConfiguration"] = request.LiveChannelConfiguration;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.LiveChannelConfiguration.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6649,16 +6364,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
             channel = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(channel);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiveChannelConfiguration.ToMap()))
-            {
-                body["LiveChannelConfiguration"] = request.LiveChannelConfiguration;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.LiveChannelConfiguration.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6716,7 +6426,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutLiveChannelStatusResponse>(Execute(params_, req, runtime));
         }
@@ -6748,7 +6458,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutLiveChannelStatusResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -6947,7 +6657,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutObjectAclResponse>(Execute(params_, req, runtime));
         }
@@ -6988,7 +6698,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutObjectAclResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -7018,17 +6728,12 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 query["versionId"] = request.VersionId;
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tagging.ToMap()))
-            {
-                body["Tagging"] = request.Tagging;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Tagging.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7040,7 +6745,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutObjectTaggingResponse>(Execute(params_, req, runtime));
         }
@@ -7056,17 +6761,12 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 query["versionId"] = request.VersionId;
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tagging.ToMap()))
-            {
-                body["Tagging"] = request.Tagging;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Tagging.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7078,7 +6778,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutObjectTaggingResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -7138,7 +6838,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutSymlinkResponse>(Execute(params_, req, runtime));
         }
@@ -7184,7 +6884,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<PutSymlinkResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -7214,17 +6914,12 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 query["versionId"] = request.VersionId;
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body.ToMap()))
-            {
-                body["body"] = request.Body;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.RestoreRequest.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7236,7 +6931,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<RestoreObjectResponse>(Execute(params_, req, runtime));
         }
@@ -7252,17 +6947,12 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 query["versionId"] = request.VersionId;
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body.ToMap()))
-            {
-                body["body"] = request.Body;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.RestoreRequest.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7274,7 +6964,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<RestoreObjectResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -7299,16 +6989,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
             key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectRequest.ToMap()))
-            {
-                body["SelectRequest"] = request.SelectRequest;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.SelectRequest.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7331,16 +7016,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
             key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectRequest.ToMap()))
-            {
-                body["SelectRequest"] = request.SelectRequest;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.SelectRequest.ToMap()),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7404,7 +7084,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "binary",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<UploadPartResponse>(Execute(params_, req, runtime));
         }
@@ -7442,7 +7122,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "binary",
-                BodyType = "none",
+                BodyType = "xml",
             };
             return TeaModel.ToObject<UploadPartResponse>(await ExecuteAsync(params_, req, runtime));
         }

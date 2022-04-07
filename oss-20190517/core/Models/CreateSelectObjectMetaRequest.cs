@@ -8,13 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Oss20190517.Models
 {
-    public class LifecycleConfiguration : TeaModel {
-        /// <summary>
-        /// description
-        /// </summary>
-        [NameInMap("Rule")]
+    public class CreateSelectObjectMetaRequest : TeaModel {
+        [NameInMap("body")]
         [Validation(Required=false)]
-        public List<LifecycleRule> Rule { get; set; }
+        public SelectMetaRequest SelectMetaRequest { get; set; }
 
     }
 

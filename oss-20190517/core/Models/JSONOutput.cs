@@ -8,13 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Oss20190517.Models
 {
-    public class LifecycleConfiguration : TeaModel {
+    public class JSONOutput : TeaModel {
         /// <summary>
         /// description
         /// </summary>
-        [NameInMap("Rule")]
+        [NameInMap("RecordDelimiter")]
         [Validation(Required=false)]
-        public List<LifecycleRule> Rule { get; set; }
+        public string RecordDelimiter { get; set; }
 
     }
 

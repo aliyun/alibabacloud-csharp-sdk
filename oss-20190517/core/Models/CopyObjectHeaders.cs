@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
 
         [NameInMap("x-oss-server-side-encryption")]
         [Validation(Required=false)]
-        public string Sse { get; set; }
+        public string ServerSideEncryption { get; set; }
 
         [NameInMap("x-oss-server-side-encryption-key-id")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
 
         [NameInMap("x-oss-tagging-directive")]
         [Validation(Required=false)]
-        public string XOssTaggingDirective { get; set; }
+        public string TaggingDirective { get; set; }
 
     }
 

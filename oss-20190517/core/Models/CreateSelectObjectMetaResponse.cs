@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Oss20190517.Models
 {
-    public class GetBucketResponse : TeaModel {
+    public class CreateSelectObjectMetaResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public GetBucketResponseBody Body { get; set; }
+        public SelectMetaStatus Body { get; set; }
 
     }
 

@@ -9,7 +9,7 @@ using Tea;
 namespace AlibabaCloud.SDK.Oss20190517.Models
 {
     public class DeleteBucketReplicationRequest : TeaModel {
-        [NameInMap("body")]
+        [NameInMap("ReplicationRules")]
         [Validation(Required=false)]
         public ReplicationRules Body { get; set; }
 

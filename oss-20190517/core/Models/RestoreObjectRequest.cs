@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Oss20190517.Models
 {
     public class RestoreObjectRequest : TeaModel {
-        [NameInMap("body")]
+        [NameInMap("RestoreRequest")]
         [Validation(Required=false)]
-        public RestoreRequest Body { get; set; }
+        public RestoreRequest RestoreRequest { get; set; }
 
         [NameInMap("versionId")]
         [Validation(Required=false)]
