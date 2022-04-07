@@ -68,6 +68,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string InstanceChargeType { get; set; }
 
+        [NameInMap("IpSetConfig")]
+        [Validation(Required=false)]
+        public DescribeAcceleratorResponseBodyIpSetConfig IpSetConfig { get; set; }
+        public class DescribeAcceleratorResponseBodyIpSetConfig : TeaModel {
+            [NameInMap("AccessMode")]
+            [Validation(Required=false)]
+            public string AccessMode { get; set; }
+        };
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

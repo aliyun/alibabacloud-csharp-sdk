@@ -33,6 +33,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public int? Duration { get; set; }
 
+        [NameInMap("IpSetConfig")]
+        [Validation(Required=false)]
+        public CreateAcceleratorRequestIpSetConfig IpSetConfig { get; set; }
+        public class CreateAcceleratorRequestIpSetConfig : TeaModel {
+            [NameInMap("AccessMode")]
+            [Validation(Required=false)]
+            public string AccessMode { get; set; }
+        };
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

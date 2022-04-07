@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public List<ListForwardingRulesResponseBodyForwardingRules> ForwardingRules { get; set; }
         public class ListForwardingRulesResponseBodyForwardingRules : TeaModel {
+            [NameInMap("ForwardingRuleDirection")]
+            [Validation(Required=false)]
+            public string ForwardingRuleDirection { get; set; }
+
             [NameInMap("ForwardingRuleId")]
             [Validation(Required=false)]
             public string ForwardingRuleId { get; set; }
@@ -57,6 +61,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 [Validation(Required=false)]
                 public string RuleActionType { get; set; }
 
+                [NameInMap("RuleActionValue")]
+                [Validation(Required=false)]
+                public string RuleActionValue { get; set; }
+
             }
 
             [NameInMap("RuleConditions")]
@@ -84,6 +92,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 [NameInMap("RuleConditionType")]
                 [Validation(Required=false)]
                 public string RuleConditionType { get; set; }
+
+                [NameInMap("RuleConditionValue")]
+                [Validation(Required=false)]
+                public string RuleConditionValue { get; set; }
 
             }
 

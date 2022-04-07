@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 [Validation(Required=false)]
                 public string RuleActionType { get; set; }
 
+                [NameInMap("RuleActionValue")]
+                [Validation(Required=false)]
+                public string RuleActionValue { get; set; }
+
             }
 
             [NameInMap("RuleConditions")]
@@ -81,7 +85,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 [Validation(Required=false)]
                 public string RuleConditionType { get; set; }
 
+                [NameInMap("RuleConditionValue")]
+                [Validation(Required=false)]
+                public string RuleConditionValue { get; set; }
+
             }
+
+            [NameInMap("RuleDirection")]
+            [Validation(Required=false)]
+            public string RuleDirection { get; set; }
 
         }
 

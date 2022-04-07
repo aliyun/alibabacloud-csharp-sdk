@@ -865,6 +865,10 @@ namespace AlibabaCloud.SDK.Ga20191120
             {
                 query["Duration"] = request.Duration;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpSetConfig.ToMap()))
+            {
+                query["IpSetConfig"] = request.IpSetConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
@@ -927,6 +931,10 @@ namespace AlibabaCloud.SDK.Ga20191120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
             {
                 query["Duration"] = request.Duration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpSetConfig.ToMap()))
+            {
+                query["IpSetConfig"] = request.IpSetConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
