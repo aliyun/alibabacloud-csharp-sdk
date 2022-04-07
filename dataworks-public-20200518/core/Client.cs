@@ -20928,5 +20928,95 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await UpdateUdfFileWithOptionsAsync(request, runtime);
         }
 
+        public UpdateWorkbenchEventResultResponse UpdateWorkbenchEventResultWithOptions(UpdateWorkbenchEventResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckResult))
+            {
+                query["CheckResult"] = request.CheckResult;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckResultTip))
+            {
+                query["CheckResultTip"] = request.CheckResultTip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtensionCode))
+            {
+                query["ExtensionCode"] = request.ExtensionCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageId))
+            {
+                query["MessageId"] = request.MessageId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWorkbenchEventResult",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWorkbenchEventResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateWorkbenchEventResultResponse> UpdateWorkbenchEventResultWithOptionsAsync(UpdateWorkbenchEventResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckResult))
+            {
+                query["CheckResult"] = request.CheckResult;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckResultTip))
+            {
+                query["CheckResultTip"] = request.CheckResultTip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtensionCode))
+            {
+                query["ExtensionCode"] = request.ExtensionCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageId))
+            {
+                query["MessageId"] = request.MessageId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWorkbenchEventResult",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWorkbenchEventResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateWorkbenchEventResultResponse UpdateWorkbenchEventResult(UpdateWorkbenchEventResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateWorkbenchEventResultWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateWorkbenchEventResultResponse> UpdateWorkbenchEventResultAsync(UpdateWorkbenchEventResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateWorkbenchEventResultWithOptionsAsync(request, runtime);
+        }
+
     }
 }
