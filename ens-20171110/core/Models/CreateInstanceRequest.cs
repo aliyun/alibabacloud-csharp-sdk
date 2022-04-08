@@ -76,6 +76,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string Password { get; set; }
 
+        /// <summary>
+        /// 是否使用镜像预设的密码。使用该参数时，Password参数必须为空，同时您需要确保使用的镜像已经设置了密码。
+        /// </summary>
+        [NameInMap("PasswordInherit")]
+        [Validation(Required=false)]
+        public bool? PasswordInherit { get; set; }
+
         [NameInMap("PaymentType")]
         [Validation(Required=false)]
         public string PaymentType { get; set; }
