@@ -24,6 +24,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ComponentName { get; set; }
 
             /// <summary>
+            /// 组件自定义参数
+            /// </summary>
+            [NameInMap("config")]
+            [Validation(Required=false)]
+            public string Config { get; set; }
+
+            /// <summary>
             /// 可升级版本
             /// </summary>
             [NameInMap("next_version")]

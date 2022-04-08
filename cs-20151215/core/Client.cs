@@ -2005,27 +2005,34 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DeleteClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DeleteClusterNodepoolResponse DeleteClusterNodepool(string ClusterId, string NodepoolId)
+        public DeleteClusterNodepoolResponse DeleteClusterNodepool(string ClusterId, string NodepoolId, DeleteClusterNodepoolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteClusterNodepoolWithOptions(ClusterId, NodepoolId, headers, runtime);
+            return DeleteClusterNodepoolWithOptions(ClusterId, NodepoolId, request, headers, runtime);
         }
 
-        public async Task<DeleteClusterNodepoolResponse> DeleteClusterNodepoolAsync(string ClusterId, string NodepoolId)
+        public async Task<DeleteClusterNodepoolResponse> DeleteClusterNodepoolAsync(string ClusterId, string NodepoolId, DeleteClusterNodepoolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteClusterNodepoolWithOptionsAsync(ClusterId, NodepoolId, headers, runtime);
+            return await DeleteClusterNodepoolWithOptionsAsync(ClusterId, NodepoolId, request, headers, runtime);
         }
 
-        public DeleteClusterNodepoolResponse DeleteClusterNodepoolWithOptions(string ClusterId, string NodepoolId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteClusterNodepoolResponse DeleteClusterNodepoolWithOptions(string ClusterId, string NodepoolId, DeleteClusterNodepoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             NodepoolId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                body["force"] = request.Force;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2042,13 +2049,20 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DeleteClusterNodepoolResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DeleteClusterNodepoolResponse> DeleteClusterNodepoolWithOptionsAsync(string ClusterId, string NodepoolId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteClusterNodepoolResponse> DeleteClusterNodepoolWithOptionsAsync(string ClusterId, string NodepoolId, DeleteClusterNodepoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             NodepoolId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                body["force"] = request.Force;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
