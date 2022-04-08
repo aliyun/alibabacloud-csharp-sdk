@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Address_purification20191118.Models
 {
     public class GetAddressSimilarityResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Address_purification20191118.Models
 {
     public class ExtractAddressRequest : TeaModel {
-        [NameInMap("ServiceCode")]
+        [NameInMap("AppKey")]
         [Validation(Required=false)]
-        public string ServiceCode { get; set; }
-
-        [NameInMap("Text")]
-        [Validation(Required=false)]
-        public string Text { get; set; }
-
-        [NameInMap("DefaultProvince")]
-        [Validation(Required=false)]
-        public string DefaultProvince { get; set; }
+        public string AppKey { get; set; }
 
         [NameInMap("DefaultCity")]
         [Validation(Required=false)]
@@ -29,9 +21,17 @@ namespace AlibabaCloud.SDK.Address_purification20191118.Models
         [Validation(Required=false)]
         public string DefaultDistrict { get; set; }
 
-        [NameInMap("AppKey")]
+        [NameInMap("DefaultProvince")]
         [Validation(Required=false)]
-        public string AppKey { get; set; }
+        public string DefaultProvince { get; set; }
+
+        [NameInMap("ServiceCode")]
+        [Validation(Required=false)]
+        public string ServiceCode { get; set; }
+
+        [NameInMap("Text")]
+        [Validation(Required=false)]
+        public string Text { get; set; }
 
     }
 
