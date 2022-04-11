@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
+        [NameInMap("TotalTraffic")]
+        [Validation(Required=false)]
+        public string TotalTraffic { get; set; }
+
         [NameInMap("TrafficDataPerInterval")]
         [Validation(Required=false)]
         public DescribeVodDomainTrafficDataResponseBodyTrafficDataPerInterval TrafficDataPerInterval { get; set; }

@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
-    public class DescribeVodUserTagsResponse : TeaModel {
+    public class RefreshMediaPlayUrlsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeVodUserTagsResponseBody Body { get; set; }
+        public RefreshMediaPlayUrlsResponseBody Body { get; set; }
 
     }
 

@@ -8,17 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
-    public class DeleteMediaInfoRequest : TeaModel {
-        [NameInMap("AppId")]
-        [Validation(Required=false)]
-        public string AppId { get; set; }
-
+    public class GetMediaRefreshJobsRequest : TeaModel {
         /// <summary>
-        /// 媒资Id
+        /// 媒资ID
         /// </summary>
         [NameInMap("MediaId")]
         [Validation(Required=false)]
         public string MediaId { get; set; }
+
+        /// <summary>
+        /// 媒资刷新预热任务ID
+        /// </summary>
+        [NameInMap("MediaRefreshJobId")]
+        [Validation(Required=false)]
+        public string MediaRefreshJobId { get; set; }
 
     }
 
