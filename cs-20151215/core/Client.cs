@@ -456,9 +456,17 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["cool_down_duration"] = request.CoolDownDuration;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expander))
+            {
+                body["expander"] = request.Expander;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuUtilizationThreshold))
             {
                 body["gpu_utilization_threshold"] = request.GpuUtilizationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaleDownEnabled))
+            {
+                body["scale_down_enabled"] = request.ScaleDownEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanInterval))
             {
@@ -501,9 +509,17 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["cool_down_duration"] = request.CoolDownDuration;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expander))
+            {
+                body["expander"] = request.Expander;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuUtilizationThreshold))
             {
                 body["gpu_utilization_threshold"] = request.GpuUtilizationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaleDownEnabled))
+            {
+                body["scale_down_enabled"] = request.ScaleDownEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanInterval))
             {
@@ -3205,64 +3221,6 @@ namespace AlibabaCloud.SDK.CS20151215
                 BodyType = "array",
             };
             return TeaModel.ToObject<DescribeClusterLogsResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public DescribeClusterNamespacesResponse DescribeClusterNamespaces(string ClusterId)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeClusterNamespacesWithOptions(ClusterId, headers, runtime);
-        }
-
-        public async Task<DescribeClusterNamespacesResponse> DescribeClusterNamespacesAsync(string ClusterId)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeClusterNamespacesWithOptionsAsync(ClusterId, headers, runtime);
-        }
-
-        public DescribeClusterNamespacesResponse DescribeClusterNamespacesWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeClusterNamespaces",
-                Version = "2015-12-15",
-                Protocol = "HTTPS",
-                Pathname = "/k8s/" + ClusterId + "/namespaces",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "array",
-            };
-            return TeaModel.ToObject<DescribeClusterNamespacesResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<DescribeClusterNamespacesResponse> DescribeClusterNamespacesWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeClusterNamespaces",
-                Version = "2015-12-15",
-                Protocol = "HTTPS",
-                Pathname = "/k8s/" + ClusterId + "/namespaces",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "array",
-            };
-            return TeaModel.ToObject<DescribeClusterNamespacesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeClusterNodePoolDetailResponse DescribeClusterNodePoolDetail(string ClusterId, string NodepoolId)
