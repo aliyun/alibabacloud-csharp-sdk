@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Desc { get; set; }
 
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
