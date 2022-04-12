@@ -156,6 +156,13 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
                 public int? Increment { get; set; }
 
                 /// <summary>
+                /// 是否为VPC测试。默认为false，表示公网测试。当此值为true时，VPC相关配置才会生效。
+                /// </summary>
+                [NameInMap("IsVpcTest")]
+                [Validation(Required=false)]
+                public string IsVpcTest { get; set; }
+
+                /// <summary>
                 /// 单量级持续时长，单位分钟，一定是小于施压时长 maxRunningTime
                 /// </summary>
                 [NameInMap("KeepTime")]

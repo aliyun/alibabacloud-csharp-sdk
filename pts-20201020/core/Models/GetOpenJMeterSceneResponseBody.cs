@@ -135,6 +135,15 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
             [NameInMap("IsVpcTest")]
             [Validation(Required=false)]
             public bool? IsVpcTest { get; set; }
+            [NameInMap("MaxRps")]
+            [Validation(Required=false)]
+            public int? MaxRps { get; set; }
+            [NameInMap("Mode")]
+            [Validation(Required=false)]
+            public string Mode { get; set; }
+            [NameInMap("Pool")]
+            [Validation(Required=false)]
+            public string Pool { get; set; }
             [NameInMap("RampUp")]
             [Validation(Required=false)]
             public int? RampUp { get; set; }
@@ -150,6 +159,12 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
             public string SecurityGroupId { get; set; }
+            [NameInMap("StartConcurrency")]
+            [Validation(Required=false)]
+            public int? StartConcurrency { get; set; }
+            [NameInMap("StartRps")]
+            [Validation(Required=false)]
+            public int? StartRps { get; set; }
             [NameInMap("Steps")]
             [Validation(Required=false)]
             public int? Steps { get; set; }
