@@ -8,18 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
-    public class DescribeRegionsRequest : TeaModel {
-        [NameInMap("AcceptLanguage")]
-        [Validation(Required=false)]
-        public string AcceptLanguage { get; set; }
-
+    public class DescribeDiskReplicaPairProgressRequest : TeaModel {
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("ResourceType")]
+        [NameInMap("ReplicaPairId")]
         [Validation(Required=false)]
-        public string ResourceType { get; set; }
+        public string ReplicaPairId { get; set; }
 
     }
 

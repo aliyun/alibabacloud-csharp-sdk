@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
-    public class DescribeRegionsRequest : TeaModel {
-        [NameInMap("AcceptLanguage")]
+    public class DeleteDiskReplicaGroupRequest : TeaModel {
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string AcceptLanguage { get; set; }
+        public string ClientToken { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("ResourceType")]
+        [NameInMap("ReplicaGroupId")]
         [Validation(Required=false)]
-        public string ResourceType { get; set; }
+        public string ReplicaGroupId { get; set; }
 
     }
 

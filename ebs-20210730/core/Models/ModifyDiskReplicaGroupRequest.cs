@@ -8,18 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
-    public class DescribeDiskReplicaPairsRequest : TeaModel {
-        [NameInMap("MaxResults")]
+    public class ModifyDiskReplicaGroupRequest : TeaModel {
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public long? MaxResults { get; set; }
+        public string ClientToken { get; set; }
 
-        [NameInMap("NextToken")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
+        public string Description { get; set; }
 
-        [NameInMap("PairIds")]
+        [NameInMap("GroupName")]
         [Validation(Required=false)]
-        public string PairIds { get; set; }
+        public string GroupName { get; set; }
+
+        [NameInMap("RPO")]
+        [Validation(Required=false)]
+        public long? RPO { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -28,13 +32,6 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [NameInMap("ReplicaGroupId")]
         [Validation(Required=false)]
         public string ReplicaGroupId { get; set; }
-
-        /// <summary>
-        /// production或backup，表示数据从主或备站点获取，默认为production。
-        /// </summary>
-        [NameInMap("Site")]
-        [Validation(Required=false)]
-        public string Site { get; set; }
 
     }
 

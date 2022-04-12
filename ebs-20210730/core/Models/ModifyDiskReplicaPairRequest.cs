@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class ModifyDiskReplicaPairRequest : TeaModel {
+        [NameInMap("Bandwidth")]
+        [Validation(Required=false)]
+        public long? Bandwidth { get; set; }
+
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -20,6 +24,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [NameInMap("PairName")]
         [Validation(Required=false)]
         public string PairName { get; set; }
+
+        [NameInMap("RPO")]
+        [Validation(Required=false)]
+        public long? RPO { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]

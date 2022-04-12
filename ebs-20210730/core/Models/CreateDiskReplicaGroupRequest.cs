@@ -8,15 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
-    public class CreateDiskReplicaPairRequest : TeaModel {
-        [NameInMap("Bandwidth")]
-        [Validation(Required=false)]
-        public long? Bandwidth { get; set; }
-
-        [NameInMap("ChargeType")]
-        [Validation(Required=false)]
-        public string ChargeType { get; set; }
-
+    public class CreateDiskReplicaGroupRequest : TeaModel {
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -24,10 +16,6 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
-
-        [NameInMap("DestinationDiskId")]
-        [Validation(Required=false)]
-        public string DestinationDiskId { get; set; }
 
         [NameInMap("DestinationRegionId")]
         [Validation(Required=false)]
@@ -37,21 +25,9 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [Validation(Required=false)]
         public string DestinationZoneId { get; set; }
 
-        [NameInMap("DiskId")]
+        [NameInMap("GroupName")]
         [Validation(Required=false)]
-        public string DiskId { get; set; }
-
-        [NameInMap("PairName")]
-        [Validation(Required=false)]
-        public string PairName { get; set; }
-
-        [NameInMap("Period")]
-        [Validation(Required=false)]
-        public long? Period { get; set; }
-
-        [NameInMap("PeriodUnit")]
-        [Validation(Required=false)]
-        public string PeriodUnit { get; set; }
+        public string GroupName { get; set; }
 
         [NameInMap("RPO")]
         [Validation(Required=false)]
