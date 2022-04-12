@@ -73,6 +73,13 @@ namespace AlibabaCloud.SDK.Mts20210728.Models
             public string Output { get; set; }
 
             /// <summary>
+            /// 任务结果
+            /// </summary>
+            [NameInMap("Result")]
+            [Validation(Required=false)]
+            public string Result { get; set; }
+
+            /// <summary>
             /// 任务状态
             /// </summary>
             [NameInMap("Status")]
