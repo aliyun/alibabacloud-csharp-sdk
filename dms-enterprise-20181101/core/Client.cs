@@ -6509,6 +6509,96 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await ListColumnsWithOptionsAsync(request, runtime);
         }
 
+        public ListDAGVersionsResponse ListDAGVersionsWithOptions(ListDAGVersionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DagId))
+            {
+                query["DagId"] = request.DagId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
+            {
+                query["PageIndex"] = request.PageIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDAGVersions",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDAGVersionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListDAGVersionsResponse> ListDAGVersionsWithOptionsAsync(ListDAGVersionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DagId))
+            {
+                query["DagId"] = request.DagId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
+            {
+                query["PageIndex"] = request.PageIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDAGVersions",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDAGVersionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListDAGVersionsResponse ListDAGVersions(ListDAGVersionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDAGVersionsWithOptions(request, runtime);
+        }
+
+        public async Task<ListDAGVersionsResponse> ListDAGVersionsAsync(ListDAGVersionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDAGVersionsWithOptionsAsync(request, runtime);
+        }
+
         public ListDBTaskSQLJobResponse ListDBTaskSQLJobWithOptions(ListDBTaskSQLJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8967,14 +9057,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DagId))
-            {
-                query["DagId"] = request.DagId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DagInstanceId))
-            {
-                query["DagInstanceId"] = request.DagInstanceId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
             {
                 query["Tid"] = request.Tid;
@@ -9002,14 +9084,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DagId))
-            {
-                query["DagId"] = request.DagId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DagInstanceId))
-            {
-                query["DagInstanceId"] = request.DagInstanceId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
             {
                 query["Tid"] = request.Tid;
