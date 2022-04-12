@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ListPublishedServicesResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public int? Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
         [NameInMap("PublishedServicesList")]
         [Validation(Required=false)]
@@ -25,8 +25,9 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             [Validation(Required=false)]
             public List<ListPublishedServicesResponseBodyPublishedServicesListListPublishedServices> ListPublishedServices { get; set; }
             public class ListPublishedServicesResponseBodyPublishedServicesListListPublishedServices : TeaModel {
+                public string AppId { get; set; }
                 public bool? DockerApplication { get; set; }
-                public string Type { get; set; }
+                public string Group2Ip { get; set; }
                 public ListPublishedServicesResponseBodyPublishedServicesListListPublishedServicesGroups Groups { get; set; }
                 public class ListPublishedServicesResponseBodyPublishedServicesListListPublishedServicesGroups : TeaModel {
                     [NameInMap("group")]
@@ -34,9 +35,6 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                     public List<string> Group { get; set; }
 
                 }
-                public string Version { get; set; }
-                public string AppId { get; set; }
-                public string Group2Ip { get; set; }
                 public ListPublishedServicesResponseBodyPublishedServicesListListPublishedServicesIps Ips { get; set; }
                 public class ListPublishedServicesResponseBodyPublishedServicesListListPublishedServicesIps : TeaModel {
                     [NameInMap("ip")]
@@ -45,12 +43,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 
                 }
                 public string Name { get; set; }
+                public string Type { get; set; }
+                public string Version { get; set; }
             }
         };
 
-        [NameInMap("Code")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? Code { get; set; }
+        public string RequestId { get; set; }
 
     }
 

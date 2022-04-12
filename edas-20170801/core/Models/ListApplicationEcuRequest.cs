@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        [NameInMap("LogicalRegionId")]
+        [Validation(Required=false)]
+        public string LogicalRegionId { get; set; }
+
     }
 
 }

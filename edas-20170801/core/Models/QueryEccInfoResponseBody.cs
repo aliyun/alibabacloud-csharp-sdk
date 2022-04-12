@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class QueryEccInfoResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public int? Code { get; set; }
+
         [NameInMap("EccInfo")]
         [Validation(Required=false)]
         public QueryEccInfoResponseBodyEccInfo EccInfo { get; set; }
         public class QueryEccInfoResponseBodyEccInfo : TeaModel {
-            [NameInMap("VpcId")]
+            [NameInMap("AppId")]
             [Validation(Required=false)]
-            public string VpcId { get; set; }
+            public string AppId { get; set; }
             [NameInMap("EccId")]
             [Validation(Required=false)]
             public string EccId { get; set; }
@@ -31,12 +35,12 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             [NameInMap("PackageMd5")]
             [Validation(Required=false)]
             public string PackageMd5 { get; set; }
-            [NameInMap("AppId")]
-            [Validation(Required=false)]
-            public string AppId { get; set; }
             [NameInMap("PackageVersion")]
             [Validation(Required=false)]
             public string PackageVersion { get; set; }
+            [NameInMap("VpcId")]
+            [Validation(Required=false)]
+            public string VpcId { get; set; }
         };
 
         [NameInMap("Message")]
@@ -46,10 +50,6 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public int? Code { get; set; }
 
     }
 

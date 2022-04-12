@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("ServicePorts")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> ServicePorts { get; set; }
+
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
-
-        [NameInMap("ServicePorts")]
-        [Validation(Required=false)]
-        public string ServicePorts { get; set; }
 
     }
 

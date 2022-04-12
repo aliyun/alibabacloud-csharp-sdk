@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string InstanceIds { get; set; }
 
-        [NameInMap("TargetClusterId")]
-        [Validation(Required=false)]
-        public string TargetClusterId { get; set; }
-
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
+
+        [NameInMap("TargetClusterId")]
+        [Validation(Required=false)]
+        public string TargetClusterId { get; set; }
 
     }
 

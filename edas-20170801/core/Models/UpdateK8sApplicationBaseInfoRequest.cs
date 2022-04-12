@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("Email")]
+        [Validation(Required=false)]
+        public string Email { get; set; }
+
         [NameInMap("Owner")]
         [Validation(Required=false)]
         public string Owner { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]
         public string PhoneNumber { get; set; }
-
-        [NameInMap("Email")]
-        [Validation(Required=false)]
-        public string Email { get; set; }
 
     }
 

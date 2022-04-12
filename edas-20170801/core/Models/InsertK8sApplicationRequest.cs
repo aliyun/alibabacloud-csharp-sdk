@@ -9,45 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class InsertK8sApplicationRequest : TeaModel {
-        [NameInMap("IntranetTargetPort")]
+        [NameInMap("AppName")]
         [Validation(Required=false)]
-        public int? IntranetTargetPort { get; set; }
-
-        [NameInMap("IntranetSlbPort")]
-        [Validation(Required=false)]
-        public int? IntranetSlbPort { get; set; }
-
-        [NameInMap("ImageUrl")]
-        [Validation(Required=false)]
-        public string ImageUrl { get; set; }
+        public string AppName { get; set; }
 
         [NameInMap("ApplicationDescription")]
         [Validation(Required=false)]
         public string ApplicationDescription { get; set; }
 
-        [NameInMap("RepoId")]
+        [NameInMap("BuildPackId")]
         [Validation(Required=false)]
-        public string RepoId { get; set; }
+        public string BuildPackId { get; set; }
 
-        [NameInMap("Replicas")]
+        [NameInMap("ClusterId")]
         [Validation(Required=false)]
-        public int? Replicas { get; set; }
-
-        [NameInMap("LimitCpu")]
-        [Validation(Required=false)]
-        public int? LimitCpu { get; set; }
-
-        [NameInMap("LimitMem")]
-        [Validation(Required=false)]
-        public int? LimitMem { get; set; }
-
-        [NameInMap("RequestsCpu")]
-        [Validation(Required=false)]
-        public int? RequestsCpu { get; set; }
-
-        [NameInMap("RequestsMem")]
-        [Validation(Required=false)]
-        public int? RequestsMem { get; set; }
+        public string ClusterId { get; set; }
 
         [NameInMap("Command")]
         [Validation(Required=false)]
@@ -57,81 +33,137 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string CommandArgs { get; set; }
 
-        [NameInMap("AppName")]
+        [NameInMap("ConfigMountDescs")]
         [Validation(Required=false)]
-        public string AppName { get; set; }
+        public string ConfigMountDescs { get; set; }
 
-        [NameInMap("IntranetSlbProtocol")]
+        [NameInMap("CsClusterId")]
         [Validation(Required=false)]
-        public string IntranetSlbProtocol { get; set; }
+        public string CsClusterId { get; set; }
 
-        [NameInMap("IntranetSlbId")]
+        [NameInMap("CustomAffinity")]
         [Validation(Required=false)]
-        public string IntranetSlbId { get; set; }
+        public string CustomAffinity { get; set; }
 
-        [NameInMap("ClusterId")]
+        [NameInMap("CustomTolerations")]
         [Validation(Required=false)]
-        public string ClusterId { get; set; }
+        public string CustomTolerations { get; set; }
 
-        [NameInMap("InternetSlbId")]
+        [NameInMap("DeployAcrossNodes")]
         [Validation(Required=false)]
-        public string InternetSlbId { get; set; }
+        public string DeployAcrossNodes { get; set; }
 
-        [NameInMap("InternetSlbProtocol")]
+        [NameInMap("DeployAcrossZones")]
         [Validation(Required=false)]
-        public string InternetSlbProtocol { get; set; }
+        public string DeployAcrossZones { get; set; }
 
-        [NameInMap("InternetSlbPort")]
+        [NameInMap("EdasContainerVersion")]
         [Validation(Required=false)]
-        public int? InternetSlbPort { get; set; }
+        public string EdasContainerVersion { get; set; }
 
-        [NameInMap("InternetTargetPort")]
+        [NameInMap("EmptyDirs")]
         [Validation(Required=false)]
-        public int? InternetTargetPort { get; set; }
+        public string EmptyDirs { get; set; }
+
+        [NameInMap("EnableAhas")]
+        [Validation(Required=false)]
+        public bool? EnableAhas { get; set; }
+
+        [NameInMap("EnableAsm")]
+        [Validation(Required=false)]
+        public bool? EnableAsm { get; set; }
+
+        [NameInMap("EnvFroms")]
+        [Validation(Required=false)]
+        public string EnvFroms { get; set; }
 
         [NameInMap("Envs")]
         [Validation(Required=false)]
         public string Envs { get; set; }
 
-        [NameInMap("PreStop")]
+        [NameInMap("ImageUrl")]
         [Validation(Required=false)]
-        public string PreStop { get; set; }
+        public string ImageUrl { get; set; }
 
-        [NameInMap("PostStart")]
+        [NameInMap("InternetSlbId")]
         [Validation(Required=false)]
-        public string PostStart { get; set; }
+        public string InternetSlbId { get; set; }
+
+        [NameInMap("InternetSlbPort")]
+        [Validation(Required=false)]
+        public int? InternetSlbPort { get; set; }
+
+        [NameInMap("InternetSlbProtocol")]
+        [Validation(Required=false)]
+        public string InternetSlbProtocol { get; set; }
+
+        [NameInMap("InternetTargetPort")]
+        [Validation(Required=false)]
+        public int? InternetTargetPort { get; set; }
+
+        [NameInMap("IntranetSlbId")]
+        [Validation(Required=false)]
+        public string IntranetSlbId { get; set; }
+
+        [NameInMap("IntranetSlbPort")]
+        [Validation(Required=false)]
+        public int? IntranetSlbPort { get; set; }
+
+        [NameInMap("IntranetSlbProtocol")]
+        [Validation(Required=false)]
+        public string IntranetSlbProtocol { get; set; }
+
+        [NameInMap("IntranetTargetPort")]
+        [Validation(Required=false)]
+        public int? IntranetTargetPort { get; set; }
+
+        [NameInMap("IsMultilingualApp")]
+        [Validation(Required=false)]
+        public bool? IsMultilingualApp { get; set; }
+
+        [NameInMap("JDK")]
+        [Validation(Required=false)]
+        public string JDK { get; set; }
+
+        [NameInMap("JavaStartUpConfig")]
+        [Validation(Required=false)]
+        public string JavaStartUpConfig { get; set; }
+
+        [NameInMap("LimitCpu")]
+        [Validation(Required=false)]
+        public int? LimitCpu { get; set; }
+
+        [NameInMap("LimitMem")]
+        [Validation(Required=false)]
+        public int? LimitMem { get; set; }
+
+        [NameInMap("LimitmCpu")]
+        [Validation(Required=false)]
+        public int? LimitmCpu { get; set; }
 
         [NameInMap("Liveness")]
         [Validation(Required=false)]
         public string Liveness { get; set; }
 
-        [NameInMap("Readiness")]
+        [NameInMap("LocalVolume")]
         [Validation(Required=false)]
-        public string Readiness { get; set; }
+        public string LocalVolume { get; set; }
 
-        [NameInMap("NasId")]
+        [NameInMap("LogicalRegionId")]
         [Validation(Required=false)]
-        public string NasId { get; set; }
+        public string LogicalRegionId { get; set; }
 
         [NameInMap("MountDescs")]
         [Validation(Required=false)]
         public string MountDescs { get; set; }
 
-        [NameInMap("StorageType")]
-        [Validation(Required=false)]
-        public string StorageType { get; set; }
-
-        [NameInMap("LocalVolume")]
-        [Validation(Required=false)]
-        public string LocalVolume { get; set; }
-
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
-        [NameInMap("LogicalRegionId")]
+        [NameInMap("NasId")]
         [Validation(Required=false)]
-        public string LogicalRegionId { get; set; }
+        public string NasId { get; set; }
 
         [NameInMap("PackageType")]
         [Validation(Required=false)]
@@ -145,17 +177,57 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string PackageVersion { get; set; }
 
-        [NameInMap("JDK")]
+        [NameInMap("PostStart")]
         [Validation(Required=false)]
-        public string JDK { get; set; }
+        public string PostStart { get; set; }
 
-        [NameInMap("WebContainer")]
+        [NameInMap("PreStop")]
         [Validation(Required=false)]
-        public string WebContainer { get; set; }
+        public string PreStop { get; set; }
 
-        [NameInMap("EdasContainerVersion")]
+        [NameInMap("PvcMountDescs")]
         [Validation(Required=false)]
-        public string EdasContainerVersion { get; set; }
+        public string PvcMountDescs { get; set; }
+
+        [NameInMap("Readiness")]
+        [Validation(Required=false)]
+        public string Readiness { get; set; }
+
+        [NameInMap("Replicas")]
+        [Validation(Required=false)]
+        public int? Replicas { get; set; }
+
+        [NameInMap("RepoId")]
+        [Validation(Required=false)]
+        public string RepoId { get; set; }
+
+        [NameInMap("RequestsCpu")]
+        [Validation(Required=false)]
+        public int? RequestsCpu { get; set; }
+
+        [NameInMap("RequestsMem")]
+        [Validation(Required=false)]
+        public int? RequestsMem { get; set; }
+
+        [NameInMap("RequestsmCpu")]
+        [Validation(Required=false)]
+        public int? RequestsmCpu { get; set; }
+
+        [NameInMap("RuntimeClassName")]
+        [Validation(Required=false)]
+        public string RuntimeClassName { get; set; }
+
+        [NameInMap("SlsConfigs")]
+        [Validation(Required=false)]
+        public string SlsConfigs { get; set; }
+
+        [NameInMap("StorageType")]
+        [Validation(Required=false)]
+        public string StorageType { get; set; }
+
+        [NameInMap("Timeout")]
+        [Validation(Required=false)]
+        public int? Timeout { get; set; }
 
         [NameInMap("UriEncoding")]
         [Validation(Required=false)]
@@ -165,49 +237,13 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public bool? UseBodyEncoding { get; set; }
 
-        [NameInMap("RequestsmCpu")]
+        [NameInMap("WebContainer")]
         [Validation(Required=false)]
-        public int? RequestsmCpu { get; set; }
-
-        [NameInMap("LimitmCpu")]
-        [Validation(Required=false)]
-        public int? LimitmCpu { get; set; }
-
-        [NameInMap("RuntimeClassName")]
-        [Validation(Required=false)]
-        public string RuntimeClassName { get; set; }
-
-        [NameInMap("DeployAcrossZones")]
-        [Validation(Required=false)]
-        public string DeployAcrossZones { get; set; }
-
-        [NameInMap("Timeout")]
-        [Validation(Required=false)]
-        public int? Timeout { get; set; }
-
-        [NameInMap("EnableAhas")]
-        [Validation(Required=false)]
-        public bool? EnableAhas { get; set; }
+        public string WebContainer { get; set; }
 
         [NameInMap("WebContainerConfig")]
         [Validation(Required=false)]
         public string WebContainerConfig { get; set; }
-
-        [NameInMap("JavaStartUpConfig")]
-        [Validation(Required=false)]
-        public string JavaStartUpConfig { get; set; }
-
-        [NameInMap("SlsConfigs")]
-        [Validation(Required=false)]
-        public string SlsConfigs { get; set; }
-
-        [NameInMap("IsMultilingualApp")]
-        [Validation(Required=false)]
-        public bool? IsMultilingualApp { get; set; }
-
-        [NameInMap("DeployAcrossNodes")]
-        [Validation(Required=false)]
-        public string DeployAcrossNodes { get; set; }
 
     }
 

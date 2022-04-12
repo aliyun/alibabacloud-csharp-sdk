@@ -9,17 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ListK8sIngressRulesRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        [NameInMap("Condition")]
+        [Validation(Required=false)]
+        public string Condition { get; set; }
+
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

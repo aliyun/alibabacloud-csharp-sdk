@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
-        [NameInMap("Options")]
+        [NameInMap("MaxHeapSize")]
         [Validation(Required=false)]
-        public string Options { get; set; }
-
-        [NameInMap("MinHeapSize")]
-        [Validation(Required=false)]
-        public int? MinHeapSize { get; set; }
+        public int? MaxHeapSize { get; set; }
 
         [NameInMap("MaxPermSize")]
         [Validation(Required=false)]
         public int? MaxPermSize { get; set; }
 
-        [NameInMap("MaxHeapSize")]
+        [NameInMap("MinHeapSize")]
         [Validation(Required=false)]
-        public int? MaxHeapSize { get; set; }
+        public int? MinHeapSize { get; set; }
+
+        [NameInMap("Options")]
+        [Validation(Required=false)]
+        public string Options { get; set; }
 
     }
 

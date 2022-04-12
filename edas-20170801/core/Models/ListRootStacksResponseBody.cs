@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ListRootStacksResponseBody : TeaModel {
-        [NameInMap("Message")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -24,6 +20,9 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<ListRootStacksResponseBodyDataResult> Result { get; set; }
@@ -32,32 +31,33 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public class ListRootStacksResponseBodyDataResultChildren : TeaModel {
                     public string Comment { get; set; }
                     public string Icon { get; set; }
-                    public string Name { get; set; }
                     public long? Id { get; set; }
+                    public string Name { get; set; }
                 }
                 public ListRootStacksResponseBodyDataResultRoot Root { get; set; }
                 public class ListRootStacksResponseBodyDataResultRoot : TeaModel {
-                    [NameInMap("Name")]
-                    [Validation(Required=false)]
-                    public string Name { get; set; }
-
                     [NameInMap("Id")]
                     [Validation(Required=false)]
                     public long? Id { get; set; }
+
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
 
                 }
             }
             [NameInMap("TotalSize")]
             [Validation(Required=false)]
             public int? TotalSize { get; set; }
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
         };
 
-        [NameInMap("Code")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public int? Code { get; set; }
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

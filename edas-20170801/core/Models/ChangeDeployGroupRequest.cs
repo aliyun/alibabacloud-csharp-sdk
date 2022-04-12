@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string EccInfo { get; set; }
 
-        [NameInMap("GroupName")]
-        [Validation(Required=false)]
-        public string GroupName { get; set; }
-
         [NameInMap("ForceStatus")]
         [Validation(Required=false)]
         public bool? ForceStatus { get; set; }
+
+        [NameInMap("GroupName")]
+        [Validation(Required=false)]
+        public string GroupName { get; set; }
 
     }
 

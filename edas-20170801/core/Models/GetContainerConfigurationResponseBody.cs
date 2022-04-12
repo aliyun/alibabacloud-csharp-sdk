@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class GetContainerConfigurationResponseBody : TeaModel {
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
@@ -28,19 +20,27 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             [NameInMap("ContextPath")]
             [Validation(Required=false)]
             public string ContextPath { get; set; }
-            [NameInMap("URIEncoding")]
-            [Validation(Required=false)]
-            public string URIEncoding { get; set; }
             [NameInMap("HttpPort")]
             [Validation(Required=false)]
             public int? HttpPort { get; set; }
-            [NameInMap("UseBodyEncoding")]
-            [Validation(Required=false)]
-            public bool? UseBodyEncoding { get; set; }
             [NameInMap("MaxThreads")]
             [Validation(Required=false)]
             public int? MaxThreads { get; set; }
+            [NameInMap("URIEncoding")]
+            [Validation(Required=false)]
+            public string URIEncoding { get; set; }
+            [NameInMap("UseBodyEncoding")]
+            [Validation(Required=false)]
+            public bool? UseBodyEncoding { get; set; }
         };
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

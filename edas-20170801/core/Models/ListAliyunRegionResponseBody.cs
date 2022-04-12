@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ListAliyunRegionResponseBody : TeaModel {
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
 
         [NameInMap("RegionEntityList")]
         [Validation(Required=false)]
@@ -29,10 +25,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             [Validation(Required=false)]
             public List<ListAliyunRegionResponseBodyRegionEntityListRegionEntity> RegionEntity { get; set; }
             public class ListAliyunRegionResponseBodyRegionEntityListRegionEntity : TeaModel {
-                public string Name { get; set; }
                 public string Id { get; set; }
+                public string Name { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

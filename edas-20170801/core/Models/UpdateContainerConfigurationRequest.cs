@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
-        [NameInMap("GroupId")]
-        [Validation(Required=false)]
-        public string GroupId { get; set; }
-
         [NameInMap("ContextPath")]
         [Validation(Required=false)]
         public string ContextPath { get; set; }
+
+        [NameInMap("GroupId")]
+        [Validation(Required=false)]
+        public string GroupId { get; set; }
 
         [NameInMap("HttpPort")]
         [Validation(Required=false)]

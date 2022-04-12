@@ -9,6 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class UpdateJvmConfigurationResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public int? Code { get; set; }
+
+        [NameInMap("JvmConfiguration")]
+        [Validation(Required=false)]
+        public UpdateJvmConfigurationResponseBodyJvmConfiguration JvmConfiguration { get; set; }
+        public class UpdateJvmConfigurationResponseBodyJvmConfiguration : TeaModel {
+            [NameInMap("MaxHeapSize")]
+            [Validation(Required=false)]
+            public int? MaxHeapSize { get; set; }
+            [NameInMap("MaxPermSize")]
+            [Validation(Required=false)]
+            public int? MaxPermSize { get; set; }
+            [NameInMap("MinHeapSize")]
+            [Validation(Required=false)]
+            public int? MinHeapSize { get; set; }
+            [NameInMap("Options")]
+            [Validation(Required=false)]
+            public string Options { get; set; }
+        };
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -16,28 +38,6 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("JvmConfiguration")]
-        [Validation(Required=false)]
-        public UpdateJvmConfigurationResponseBodyJvmConfiguration JvmConfiguration { get; set; }
-        public class UpdateJvmConfigurationResponseBodyJvmConfiguration : TeaModel {
-            [NameInMap("MaxPermSize")]
-            [Validation(Required=false)]
-            public int? MaxPermSize { get; set; }
-            [NameInMap("Options")]
-            [Validation(Required=false)]
-            public string Options { get; set; }
-            [NameInMap("MaxHeapSize")]
-            [Validation(Required=false)]
-            public int? MaxHeapSize { get; set; }
-            [NameInMap("MinHeapSize")]
-            [Validation(Required=false)]
-            public int? MinHeapSize { get; set; }
-        };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public int? Code { get; set; }
 
     }
 

@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("Namespace")]
-        [Validation(Required=false)]
-        public string Namespace { get; set; }
-
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("Namespace")]
+        [Validation(Required=false)]
+        public string Namespace { get; set; }
 
     }
 

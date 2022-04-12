@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ListTagResourcesRequest : TeaModel {
-        [NameInMap("ResourceType")]
-        [Validation(Required=false)]
-        public string ResourceType { get; set; }
-
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
-        public string ResourceIds { get; set; }
-
-        [NameInMap("Tags")]
-        [Validation(Required=false)]
-        public string Tags { get; set; }
+        public Dictionary<string, object> ResourceIds { get; set; }
 
         [NameInMap("ResourceRegionId")]
         [Validation(Required=false)]
         public string ResourceRegionId { get; set; }
+
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Tags { get; set; }
 
     }
 

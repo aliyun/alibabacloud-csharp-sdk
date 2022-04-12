@@ -9,33 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class GetAccountMockRuleRequest : TeaModel {
-        [NameInMap("Region")]
+        [NameInMap("ConsumerAppName")]
         [Validation(Required=false)]
-        public string Region { get; set; }
+        public string ConsumerAppName { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("MockType")]
         [Validation(Required=false)]
-        public string PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public string PageNumber { get; set; }
+        public long? MockType { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("ConsumerAppName")]
+        [NameInMap("Namespace")]
         [Validation(Required=false)]
-        public string ConsumerAppName { get; set; }
+        public string Namespace { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public string PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public string PageSize { get; set; }
 
         [NameInMap("ProviderAppName")]
         [Validation(Required=false)]
         public string ProviderAppName { get; set; }
 
-        [NameInMap("Namespace")]
+        [NameInMap("Region")]
         [Validation(Required=false)]
-        public string Namespace { get; set; }
+        public string Region { get; set; }
 
     }
 

@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ListComponentsResponseBody : TeaModel {
-        [NameInMap("Message")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Message { get; set; }
+        public int? Code { get; set; }
 
         [NameInMap("ComponentList")]
         [Validation(Required=false)]
@@ -21,18 +21,18 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             [Validation(Required=false)]
             public List<ListComponentsResponseBodyComponentListComponent> Component { get; set; }
             public class ListComponentsResponseBodyComponentListComponent : TeaModel {
-                public string Type { get; set; }
-                public string ComponentKey { get; set; }
-                public string Version { get; set; }
-                public bool? Expired { get; set; }
                 public string ComponentId { get; set; }
+                public string ComponentKey { get; set; }
                 public string Desc { get; set; }
+                public bool? Expired { get; set; }
+                public string Type { get; set; }
+                public string Version { get; set; }
             }
         };
 
-        [NameInMap("Code")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public int? Code { get; set; }
+        public string Message { get; set; }
 
     }
 

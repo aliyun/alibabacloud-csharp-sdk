@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class AuthorizeResourceGroupRequest : TeaModel {
-        [NameInMap("TargetUserId")]
-        [Validation(Required=false)]
-        public string TargetUserId { get; set; }
-
         [NameInMap("ResourceGroupIds")]
         [Validation(Required=false)]
         public string ResourceGroupIds { get; set; }
+
+        [NameInMap("TargetUserId")]
+        [Validation(Required=false)]
+        public string TargetUserId { get; set; }
 
     }
 

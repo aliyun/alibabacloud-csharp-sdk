@@ -13,17 +13,17 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
-        [NameInMap("Type")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public int? CurrentPage { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("CurrentPage")]
+        [NameInMap("Type")]
         [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
+        public string Type { get; set; }
 
     }
 

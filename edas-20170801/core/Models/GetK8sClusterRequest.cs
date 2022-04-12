@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class GetK8sClusterRequest : TeaModel {
-        [NameInMap("RegionTag")]
+        [NameInMap("ClusterType")]
         [Validation(Required=false)]
-        public string RegionTag { get; set; }
+        public int? ClusterType { get; set; }
 
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("ClusterType")]
+        [NameInMap("RegionTag")]
         [Validation(Required=false)]
-        public int? ClusterType { get; set; }
+        public string RegionTag { get; set; }
 
     }
 

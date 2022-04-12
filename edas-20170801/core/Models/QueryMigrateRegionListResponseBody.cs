@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class QueryMigrateRegionListResponseBody : TeaModel {
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
 
         [NameInMap("RegionEntityList")]
         [Validation(Required=false)]
@@ -33,6 +29,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string RegionNo { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

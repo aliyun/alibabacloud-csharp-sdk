@@ -17,37 +17,41 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("Type")]
+        [NameInMap("DisableForceOverride")]
         [Validation(Required=false)]
-        public string Type { get; set; }
-
-        [NameInMap("SlbProtocol")]
-        [Validation(Required=false)]
-        public string SlbProtocol { get; set; }
-
-        [NameInMap("TargetPort")]
-        [Validation(Required=false)]
-        public string TargetPort { get; set; }
+        public bool? DisableForceOverride { get; set; }
 
         [NameInMap("Port")]
         [Validation(Required=false)]
         public string Port { get; set; }
 
+        [NameInMap("Scheduler")]
+        [Validation(Required=false)]
+        public string Scheduler { get; set; }
+
         [NameInMap("ServicePortInfos")]
         [Validation(Required=false)]
         public string ServicePortInfos { get; set; }
+
+        [NameInMap("SlbName")]
+        [Validation(Required=false)]
+        public string SlbName { get; set; }
+
+        [NameInMap("SlbProtocol")]
+        [Validation(Required=false)]
+        public string SlbProtocol { get; set; }
 
         [NameInMap("Specification")]
         [Validation(Required=false)]
         public string Specification { get; set; }
 
-        [NameInMap("Scheduler")]
+        [NameInMap("TargetPort")]
         [Validation(Required=false)]
-        public string Scheduler { get; set; }
+        public string TargetPort { get; set; }
 
-        [NameInMap("SlbName")]
+        [NameInMap("Type")]
         [Validation(Required=false)]
-        public string SlbName { get; set; }
+        public string Type { get; set; }
 
     }
 

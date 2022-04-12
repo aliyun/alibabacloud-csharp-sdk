@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class UpdateMockRuleRequest : TeaModel {
+        [NameInMap("DubboMockItemJson")]
+        [Validation(Required=false)]
+        public string DubboMockItemJson { get; set; }
+
+        [NameInMap("ExtraJson")]
+        [Validation(Required=false)]
+        public string ExtraJson { get; set; }
+
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -17,21 +29,9 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
-        [NameInMap("ExtraJson")]
-        [Validation(Required=false)]
-        public string ExtraJson { get; set; }
-
         [NameInMap("ScMockItemJson")]
         [Validation(Required=false)]
         public string ScMockItemJson { get; set; }
-
-        [NameInMap("DubboMockItemJson")]
-        [Validation(Required=false)]
-        public string DubboMockItemJson { get; set; }
-
-        [NameInMap("Id")]
-        [Validation(Required=false)]
-        public string Id { get; set; }
 
     }
 

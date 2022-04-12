@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        [NameInMap("DeleteListener")]
+        [Validation(Required=false)]
+        public string DeleteListener { get; set; }
+
         [NameInMap("SlbId")]
         [Validation(Required=false)]
         public string SlbId { get; set; }

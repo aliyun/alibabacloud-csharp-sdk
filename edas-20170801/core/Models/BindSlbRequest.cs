@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        [NameInMap("ListenerPort")]
+        [Validation(Required=false)]
+        public int? ListenerPort { get; set; }
+
         [NameInMap("SlbId")]
         [Validation(Required=false)]
         public string SlbId { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
-
-        [NameInMap("ListenerPort")]
-        [Validation(Required=false)]
-        public int? ListenerPort { get; set; }
 
         [NameInMap("VServerGroupId")]
         [Validation(Required=false)]

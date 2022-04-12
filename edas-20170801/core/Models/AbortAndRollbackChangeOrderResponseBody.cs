@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class AbortAndRollbackChangeOrderResponseBody : TeaModel {
-        [NameInMap("Message")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("TraceId")]
-        [Validation(Required=false)]
-        public string TraceId { get; set; }
+        public int? Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -34,9 +26,17 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public int? Code { get; set; }
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TraceId")]
+        [Validation(Required=false)]
+        public string TraceId { get; set; }
 
     }
 

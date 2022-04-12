@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ListEcuByRegionRequest : TeaModel {
-        [NameInMap("LogicalRegionId")]
-        [Validation(Required=false)]
-        public string LogicalRegionId { get; set; }
-
         [NameInMap("Act")]
         [Validation(Required=false)]
         public string Act { get; set; }
+
+        [NameInMap("LogicalRegionId")]
+        [Validation(Required=false)]
+        public string LogicalRegionId { get; set; }
 
     }
 

@@ -21,21 +21,21 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string CpuLimit { get; set; }
 
-        [NameInMap("MemoryLimit")]
+        [NameInMap("CpuRequest")]
         [Validation(Required=false)]
-        public string MemoryLimit { get; set; }
+        public string CpuRequest { get; set; }
 
         [NameInMap("McpuLimit")]
         [Validation(Required=false)]
         public string McpuLimit { get; set; }
 
-        [NameInMap("CpuRequest")]
-        [Validation(Required=false)]
-        public string CpuRequest { get; set; }
-
         [NameInMap("McpuRequest")]
         [Validation(Required=false)]
         public string McpuRequest { get; set; }
+
+        [NameInMap("MemoryLimit")]
+        [Validation(Required=false)]
+        public string MemoryLimit { get; set; }
 
         [NameInMap("MemoryRequest")]
         [Validation(Required=false)]

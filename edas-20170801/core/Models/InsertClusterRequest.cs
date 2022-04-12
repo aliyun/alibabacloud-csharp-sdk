@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class InsertClusterRequest : TeaModel {
-        [NameInMap("LogicalRegionId")]
-        [Validation(Required=false)]
-        public string LogicalRegionId { get; set; }
-
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
         public string ClusterName { get; set; }
@@ -21,21 +17,25 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public int? ClusterType { get; set; }
 
+        [NameInMap("IaasProvider")]
+        [Validation(Required=false)]
+        public string IaasProvider { get; set; }
+
+        [NameInMap("LogicalRegionId")]
+        [Validation(Required=false)]
+        public string LogicalRegionId { get; set; }
+
         [NameInMap("NetworkMode")]
         [Validation(Required=false)]
         public int? NetworkMode { get; set; }
-
-        [NameInMap("VpcId")]
-        [Validation(Required=false)]
-        public string VpcId { get; set; }
 
         [NameInMap("OversoldFactor")]
         [Validation(Required=false)]
         public int? OversoldFactor { get; set; }
 
-        [NameInMap("IaasProvider")]
+        [NameInMap("VpcId")]
         [Validation(Required=false)]
-        public string IaasProvider { get; set; }
+        public string VpcId { get; set; }
 
     }
 

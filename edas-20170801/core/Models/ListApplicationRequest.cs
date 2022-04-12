@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ListApplicationRequest : TeaModel {
+        [NameInMap("AppName")]
+        [Validation(Required=false)]
+        public string AppName { get; set; }
+
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
@@ -17,17 +21,13 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string LogicalRegionId { get; set; }
 
-        [NameInMap("AppName")]
+        [NameInMap("LogicalRegionIdFilter")]
         [Validation(Required=false)]
-        public string AppName { get; set; }
+        public string LogicalRegionIdFilter { get; set; }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
-
-        [NameInMap("LogicalRegionIdFilter")]
-        [Validation(Required=false)]
-        public string LogicalRegionIdFilter { get; set; }
 
     }
 

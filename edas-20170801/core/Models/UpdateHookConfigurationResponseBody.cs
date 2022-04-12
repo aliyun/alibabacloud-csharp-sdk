@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class UpdateHookConfigurationResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public int? Code { get; set; }
+
         [NameInMap("HooksConfiguration")]
         [Validation(Required=false)]
         public List<UpdateHookConfigurationResponseBodyHooksConfiguration> HooksConfiguration { get; set; }
@@ -34,10 +38,6 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public int? Code { get; set; }
 
     }
 

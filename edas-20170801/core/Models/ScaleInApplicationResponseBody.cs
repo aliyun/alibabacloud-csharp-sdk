@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ScaleInApplicationResponseBody : TeaModel {
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
         [NameInMap("ChangeOrderId")]
         [Validation(Required=false)]
         public string ChangeOrderId { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
 
     }
 

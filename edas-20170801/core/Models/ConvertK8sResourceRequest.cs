@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ConvertK8sResourceRequest : TeaModel {
-        [NameInMap("ResourceType")]
+        [NameInMap("ClusterId")]
         [Validation(Required=false)]
-        public string ResourceType { get; set; }
-
-        [NameInMap("ResourceName")]
-        [Validation(Required=false)]
-        public string ResourceName { get; set; }
+        public string ClusterId { get; set; }
 
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
-        [NameInMap("ClusterId")]
+        [NameInMap("ResourceName")]
         [Validation(Required=false)]
-        public string ClusterId { get; set; }
+        public string ResourceName { get; set; }
+
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
 
     }
 

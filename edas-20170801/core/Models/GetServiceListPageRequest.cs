@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class GetServiceListPageRequest : TeaModel {
-        [NameInMap("region")]
-        [Validation(Required=false)]
-        public string Region { get; set; }
-
         [NameInMap("namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
@@ -21,9 +17,13 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string Origin { get; set; }
 
-        [NameInMap("serviceType")]
+        [NameInMap("page")]
         [Validation(Required=false)]
-        public string ServiceType { get; set; }
+        public int? Page { get; set; }
+
+        [NameInMap("region")]
+        [Validation(Required=false)]
+        public string Region { get; set; }
 
         [NameInMap("searchType")]
         [Validation(Required=false)]
@@ -33,13 +33,13 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string SearchValue { get; set; }
 
+        [NameInMap("serviceType")]
+        [Validation(Required=false)]
+        public string ServiceType { get; set; }
+
         [NameInMap("side")]
         [Validation(Required=false)]
         public string Side { get; set; }
-
-        [NameInMap("page")]
-        [Validation(Required=false)]
-        public int? Page { get; set; }
 
         [NameInMap("size")]
         [Validation(Required=false)]

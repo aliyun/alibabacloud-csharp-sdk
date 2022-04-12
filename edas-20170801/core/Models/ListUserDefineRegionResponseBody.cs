@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ListUserDefineRegionResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public int? Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -26,18 +30,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public List<ListUserDefineRegionResponseBodyUserDefineRegionListUserDefineRegionEntity> UserDefineRegionEntity { get; set; }
             public class ListUserDefineRegionResponseBodyUserDefineRegionListUserDefineRegionEntity : TeaModel {
                 public string BelongRegion { get; set; }
-                public string RegionName { get; set; }
-                public string Description { get; set; }
                 public bool? DebugEnable { get; set; }
-                public string UserId { get; set; }
+                public string Description { get; set; }
                 public long? Id { get; set; }
                 public string RegionId { get; set; }
+                public string RegionName { get; set; }
+                public string UserId { get; set; }
             }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public int? Code { get; set; }
 
     }
 

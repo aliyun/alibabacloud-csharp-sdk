@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class InstallAgentResponseBody : TeaModel {
-        [NameInMap("Message")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? Code { get; set; }
 
         [NameInMap("ExecutionResultList")]
         [Validation(Required=false)]
@@ -25,17 +21,21 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             [Validation(Required=false)]
             public List<InstallAgentResponseBodyExecutionResultListExecutionResult> ExecutionResult { get; set; }
             public class InstallAgentResponseBodyExecutionResultListExecutionResult : TeaModel {
-                public string Status { get; set; }
-                public bool? Success { get; set; }
                 public string FinishedTime { get; set; }
                 public string InstanceId { get; set; }
                 public string InvokeRecordStatus { get; set; }
+                public string Status { get; set; }
+                public bool? Success { get; set; }
             }
         };
 
-        [NameInMap("Code")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public int? Code { get; set; }
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class AuthorizeApplicationRequest : TeaModel {
-        [NameInMap("TargetUserId")]
-        [Validation(Required=false)]
-        public string TargetUserId { get; set; }
-
         [NameInMap("AppIds")]
         [Validation(Required=false)]
         public string AppIds { get; set; }
+
+        [NameInMap("TargetUserId")]
+        [Validation(Required=false)]
+        public string TargetUserId { get; set; }
 
     }
 

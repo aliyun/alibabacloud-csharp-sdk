@@ -13,17 +13,17 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("NamespaceId")]
+        [NameInMap("EnableAsm")]
         [Validation(Required=false)]
-        public string NamespaceId { get; set; }
+        public bool? EnableAsm { get; set; }
 
         [NameInMap("Mode")]
         [Validation(Required=false)]
         public int? Mode { get; set; }
 
-        [NameInMap("EnableAsm")]
+        [NameInMap("NamespaceId")]
         [Validation(Required=false)]
-        public bool? EnableAsm { get; set; }
+        public string NamespaceId { get; set; }
 
     }
 

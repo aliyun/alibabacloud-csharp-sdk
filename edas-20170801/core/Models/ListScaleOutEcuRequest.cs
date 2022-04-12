@@ -9,33 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ListScaleOutEcuRequest : TeaModel {
-        [NameInMap("LogicalRegionId")]
+        [NameInMap("AppId")]
         [Validation(Required=false)]
-        public string LogicalRegionId { get; set; }
+        public string AppId { get; set; }
 
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("AppId")]
+        [NameInMap("Cpu")]
         [Validation(Required=false)]
-        public string AppId { get; set; }
+        public int? Cpu { get; set; }
 
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
-        [NameInMap("Cpu")]
+        [NameInMap("InstanceNum")]
         [Validation(Required=false)]
-        public int? Cpu { get; set; }
+        public int? InstanceNum { get; set; }
+
+        [NameInMap("LogicalRegionId")]
+        [Validation(Required=false)]
+        public string LogicalRegionId { get; set; }
 
         [NameInMap("Mem")]
         [Validation(Required=false)]
         public int? Mem { get; set; }
-
-        [NameInMap("InstanceNum")]
-        [Validation(Required=false)]
-        public int? InstanceNum { get; set; }
 
     }
 

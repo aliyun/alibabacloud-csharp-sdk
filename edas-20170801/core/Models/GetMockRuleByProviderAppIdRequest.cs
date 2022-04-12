@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class GetMockRuleByProviderAppIdRequest : TeaModel {
-        [NameInMap("Region")]
-        [Validation(Required=false)]
-        public string Region { get; set; }
-
         [NameInMap("ProviderAppId")]
         [Validation(Required=false)]
         public string ProviderAppId { get; set; }
+
+        [NameInMap("Region")]
+        [Validation(Required=false)]
+        public string Region { get; set; }
 
     }
 

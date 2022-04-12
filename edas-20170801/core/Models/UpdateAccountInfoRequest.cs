@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class UpdateAccountInfoRequest : TeaModel {
+        [NameInMap("Email")]
+        [Validation(Required=false)]
+        public string Email { get; set; }
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [NameInMap("Telephone")]
         [Validation(Required=false)]
         public string Telephone { get; set; }
-
-        [NameInMap("Email")]
-        [Validation(Required=false)]
-        public string Email { get; set; }
 
     }
 
