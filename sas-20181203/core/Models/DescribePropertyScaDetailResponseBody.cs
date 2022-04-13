@@ -51,10 +51,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string ContainerName { get; set; }
 
-            [NameInMap("Create")]
-            [Validation(Required=false)]
-            public string Create { get; set; }
-
             [NameInMap("CreateTimestamp")]
             [Validation(Required=false)]
             public long? CreateTimestamp { get; set; }
@@ -126,6 +122,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Proof")]
             [Validation(Required=false)]
             public string Proof { get; set; }
+
+            [NameInMap("RuntimeEnvVersion")]
+            [Validation(Required=false)]
+            public string RuntimeEnvVersion { get; set; }
 
             [NameInMap("Type")]
             [Validation(Required=false)]

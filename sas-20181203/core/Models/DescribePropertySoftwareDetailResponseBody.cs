@@ -31,10 +31,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<DescribePropertySoftwareDetailResponseBodyPropertys> Propertys { get; set; }
         public class DescribePropertySoftwareDetailResponseBodyPropertys : TeaModel {
-            [NameInMap("Create")]
-            [Validation(Required=false)]
-            public long? Create { get; set; }
-
             [NameInMap("CreateTimestamp")]
             [Validation(Required=false)]
             public long? CreateTimestamp { get; set; }

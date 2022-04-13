@@ -35,10 +35,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string AccountsExpirationDate { get; set; }
 
-            [NameInMap("Create")]
-            [Validation(Required=false)]
-            public string Create { get; set; }
-
             [NameInMap("CreateTimestamp")]
             [Validation(Required=false)]
             public long? CreateTimestamp { get; set; }

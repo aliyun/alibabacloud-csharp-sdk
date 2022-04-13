@@ -201,6 +201,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Level { get; set; }
 
+            [NameInMap("MaliciousRuleStatus")]
+            [Validation(Required=false)]
+            public string MaliciousRuleStatus { get; set; }
+
             [NameInMap("MarkMisRules")]
             [Validation(Required=false)]
             public string MarkMisRules { get; set; }

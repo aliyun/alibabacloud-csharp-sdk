@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Digest { get; set; }
 
+            [NameInMap("DownloadUrl")]
+            [Validation(Required=false)]
+            public string DownloadUrl { get; set; }
+
             [NameInMap("FilePath")]
             [Validation(Required=false)]
             public string FilePath { get; set; }
@@ -24,6 +28,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("FirstScanTimestamp")]
             [Validation(Required=false)]
             public long? FirstScanTimestamp { get; set; }
+
+            [NameInMap("HighLight")]
+            [Validation(Required=false)]
+            public string HighLight { get; set; }
 
             [NameInMap("ImageUuid")]
             [Validation(Required=false)]

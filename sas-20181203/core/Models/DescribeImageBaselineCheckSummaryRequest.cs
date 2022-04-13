@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageBaselineCheckSummaryRequest : TeaModel {
+        [NameInMap("ClusterId")]
+        [Validation(Required=false)]
+        public string ClusterId { get; set; }
+
         [NameInMap("Criteria")]
         [Validation(Required=false)]
         public string Criteria { get; set; }

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string BaselineNameKey { get; set; }
 
+        [NameInMap("ClusterId")]
+        [Validation(Required=false)]
+        public string ClusterId { get; set; }
+
         [NameInMap("Criteria")]
         [Validation(Required=false)]
         public string Criteria { get; set; }
