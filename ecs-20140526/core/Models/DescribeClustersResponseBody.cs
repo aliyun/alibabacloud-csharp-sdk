@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeClustersResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Clusters")]
         [Validation(Required=false)]
         public DescribeClustersResponseBodyClusters Clusters { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ClusterId { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class EipFillParamsRequest : TeaModel {
-        [NameInMap("data")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string Data { get; set; }
+        public string ClientToken { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -25,17 +29,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
         [NameInMap("UserCidr")]
         [Validation(Required=false)]
         public string UserCidr { get; set; }
+
+        [NameInMap("data")]
+        [Validation(Required=false)]
+        public string Data { get; set; }
 
     }
 

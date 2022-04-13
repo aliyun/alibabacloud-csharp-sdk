@@ -9,22 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeEipAddressesResponseBody : TeaModel {
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("EipAddresses")]
         [Validation(Required=false)]
         public DescribeEipAddressesResponseBodyEipAddresses EipAddresses { get; set; }
@@ -33,18 +17,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeEipAddressesResponseBodyEipAddressesEipAddress> EipAddress { get; set; }
             public class DescribeEipAddressesResponseBodyEipAddressesEipAddress : TeaModel {
-                public string Status { get; set; }
+                public string AllocationId { get; set; }
                 public string AllocationTime { get; set; }
+                public string Bandwidth { get; set; }
                 public string ChargeType { get; set; }
+                public string EipBandwidth { get; set; }
+                public string ExpiredTime { get; set; }
                 public string InstanceId { get; set; }
                 public string InstanceType { get; set; }
-                public string RegionId { get; set; }
-                public string IpAddress { get; set; }
-                public string Bandwidth { get; set; }
-                public string ExpiredTime { get; set; }
-                public string AllocationId { get; set; }
                 public string InternetChargeType { get; set; }
-                public string EipBandwidth { get; set; }
+                public string IpAddress { get; set; }
                 public DescribeEipAddressesResponseBodyEipAddressesEipAddressOperationLocks OperationLocks { get; set; }
                 public class DescribeEipAddressesResponseBodyEipAddressesEipAddressOperationLocks : TeaModel {
                     [NameInMap("LockReason")]
@@ -58,8 +40,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+                public string RegionId { get; set; }
+                public string Status { get; set; }
             }
         };
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

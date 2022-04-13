@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceAutoRenewAttributeResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("InstanceRenewAttributes")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes InstanceRenewAttributes { get; set; }
+        public class DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes : TeaModel {
+            [NameInMap("InstanceRenewAttribute")]
+            [Validation(Required=false)]
+            public List<DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute> InstanceRenewAttribute { get; set; }
+            public class DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute : TeaModel {
+                public bool? AutoRenewEnabled { get; set; }
+                public int? Duration { get; set; }
+                public string InstanceId { get; set; }
+                public string PeriodUnit { get; set; }
+                public string RenewalStatus { get; set; }
+            }
+        };
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -21,25 +33,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
-
-        [NameInMap("InstanceRenewAttributes")]
-        [Validation(Required=false)]
-        public DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes InstanceRenewAttributes { get; set; }
-        public class DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes : TeaModel {
-            [NameInMap("InstanceRenewAttribute")]
-            [Validation(Required=false)]
-            public List<DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute> InstanceRenewAttribute { get; set; }
-            public class DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute : TeaModel {
-                public string PeriodUnit { get; set; }
-                public int? Duration { get; set; }
-                public string RenewalStatus { get; set; }
-                public string InstanceId { get; set; }
-                public bool? AutoRenewEnabled { get; set; }
-            }
-        };
 
     }
 

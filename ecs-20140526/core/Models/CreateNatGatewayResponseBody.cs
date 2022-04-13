@@ -9,13 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateNatGatewayResponseBody : TeaModel {
-        [NameInMap("NatGatewayId")]
+        [NameInMap("BandwidthPackageIds")]
         [Validation(Required=false)]
-        public string NatGatewayId { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public CreateNatGatewayResponseBodyBandwidthPackageIds BandwidthPackageIds { get; set; }
+        public class CreateNatGatewayResponseBodyBandwidthPackageIds : TeaModel {
+            [NameInMap("BandwidthPackageId")]
+            [Validation(Required=false)]
+            public List<string> BandwidthPackageId { get; set; }
+        };
 
         [NameInMap("ForwardTableIds")]
         [Validation(Required=false)]
@@ -26,14 +27,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<string> ForwardTableId { get; set; }
         };
 
-        [NameInMap("BandwidthPackageIds")]
+        [NameInMap("NatGatewayId")]
         [Validation(Required=false)]
-        public CreateNatGatewayResponseBodyBandwidthPackageIds BandwidthPackageIds { get; set; }
-        public class CreateNatGatewayResponseBodyBandwidthPackageIds : TeaModel {
-            [NameInMap("BandwidthPackageId")]
-            [Validation(Required=false)]
-            public List<string> BandwidthPackageId { get; set; }
-        };
+        public string NatGatewayId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

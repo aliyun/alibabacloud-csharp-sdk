@@ -21,25 +21,47 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeZonesResponseBodyZonesZone> Zone { get; set; }
             public class DescribeZonesResponseBodyZonesZone : TeaModel {
-                public string ZoneId { get; set; }
-                public string LocalName { get; set; }
+                public DescribeZonesResponseBodyZonesZoneAvailableDedicatedHostTypes AvailableDedicatedHostTypes { get; set; }
+                public class DescribeZonesResponseBodyZonesZoneAvailableDedicatedHostTypes : TeaModel {
+                    [NameInMap("DedicatedHostType")]
+                    [Validation(Required=false)]
+                    public List<string> DedicatedHostType { get; set; }
+
+                }
+                public DescribeZonesResponseBodyZonesZoneAvailableDiskCategories AvailableDiskCategories { get; set; }
+                public class DescribeZonesResponseBodyZonesZoneAvailableDiskCategories : TeaModel {
+                    [NameInMap("DiskCategories")]
+                    [Validation(Required=false)]
+                    public List<string> DiskCategories { get; set; }
+
+                }
+                public DescribeZonesResponseBodyZonesZoneAvailableInstanceTypes AvailableInstanceTypes { get; set; }
+                public class DescribeZonesResponseBodyZonesZoneAvailableInstanceTypes : TeaModel {
+                    [NameInMap("InstanceTypes")]
+                    [Validation(Required=false)]
+                    public List<string> InstanceTypes { get; set; }
+
+                }
+                public DescribeZonesResponseBodyZonesZoneAvailableResourceCreation AvailableResourceCreation { get; set; }
+                public class DescribeZonesResponseBodyZonesZoneAvailableResourceCreation : TeaModel {
+                    [NameInMap("ResourceTypes")]
+                    [Validation(Required=false)]
+                    public List<string> ResourceTypes { get; set; }
+
+                }
                 public DescribeZonesResponseBodyZonesZoneAvailableResources AvailableResources { get; set; }
                 public class DescribeZonesResponseBodyZonesZoneAvailableResources : TeaModel {
                     [NameInMap("ResourcesInfo")]
                     [Validation(Required=false)]
                     public List<DescribeZonesResponseBodyZonesZoneAvailableResourcesResourcesInfo> ResourcesInfo { get; set; }
                     public class DescribeZonesResponseBodyZonesZoneAvailableResourcesResourcesInfo : TeaModel {
-                        [NameInMap("IoOptimized")]
+                        [NameInMap("DataDiskCategories")]
                         [Validation(Required=false)]
-                        public bool? IoOptimized { get; set; }
-
-                        [NameInMap("SystemDiskCategories")]
-                        [Validation(Required=false)]
-                        public DescribeZonesResponseBodyZonesZoneAvailableResourcesResourcesInfoSystemDiskCategories SystemDiskCategories { get; set; }
-                        public class DescribeZonesResponseBodyZonesZoneAvailableResourcesResourcesInfoSystemDiskCategories : TeaModel {
-                            [NameInMap("supportedSystemDiskCategory")]
+                        public DescribeZonesResponseBodyZonesZoneAvailableResourcesResourcesInfoDataDiskCategories DataDiskCategories { get; set; }
+                        public class DescribeZonesResponseBodyZonesZoneAvailableResourcesResourcesInfoDataDiskCategories : TeaModel {
+                            [NameInMap("supportedDataDiskCategory")]
                             [Validation(Required=false)]
-                            public List<string> SupportedSystemDiskCategory { get; set; }
+                            public List<string> SupportedDataDiskCategory { get; set; }
                         };
 
                         [NameInMap("InstanceGenerations")]
@@ -51,13 +73,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public List<string> SupportedInstanceGeneration { get; set; }
                         };
 
-                        [NameInMap("DataDiskCategories")]
+                        [NameInMap("InstanceTypeFamilies")]
                         [Validation(Required=false)]
-                        public DescribeZonesResponseBodyZonesZoneAvailableResourcesResourcesInfoDataDiskCategories DataDiskCategories { get; set; }
-                        public class DescribeZonesResponseBodyZonesZoneAvailableResourcesResourcesInfoDataDiskCategories : TeaModel {
-                            [NameInMap("supportedDataDiskCategory")]
+                        public DescribeZonesResponseBodyZonesZoneAvailableResourcesResourcesInfoInstanceTypeFamilies InstanceTypeFamilies { get; set; }
+                        public class DescribeZonesResponseBodyZonesZoneAvailableResourcesResourcesInfoInstanceTypeFamilies : TeaModel {
+                            [NameInMap("supportedInstanceTypeFamily")]
                             [Validation(Required=false)]
-                            public List<string> SupportedDataDiskCategory { get; set; }
+                            public List<string> SupportedInstanceTypeFamily { get; set; }
                         };
 
                         [NameInMap("InstanceTypes")]
@@ -69,14 +91,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public List<string> SupportedInstanceType { get; set; }
                         };
 
-                        [NameInMap("InstanceTypeFamilies")]
+                        [NameInMap("IoOptimized")]
                         [Validation(Required=false)]
-                        public DescribeZonesResponseBodyZonesZoneAvailableResourcesResourcesInfoInstanceTypeFamilies InstanceTypeFamilies { get; set; }
-                        public class DescribeZonesResponseBodyZonesZoneAvailableResourcesResourcesInfoInstanceTypeFamilies : TeaModel {
-                            [NameInMap("supportedInstanceTypeFamily")]
-                            [Validation(Required=false)]
-                            public List<string> SupportedInstanceTypeFamily { get; set; }
-                        };
+                        public bool? IoOptimized { get; set; }
 
                         [NameInMap("NetworkTypes")]
                         [Validation(Required=false)]
@@ -87,42 +104,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public List<string> SupportedNetworkCategory { get; set; }
                         };
 
+                        [NameInMap("SystemDiskCategories")]
+                        [Validation(Required=false)]
+                        public DescribeZonesResponseBodyZonesZoneAvailableResourcesResourcesInfoSystemDiskCategories SystemDiskCategories { get; set; }
+                        public class DescribeZonesResponseBodyZonesZoneAvailableResourcesResourcesInfoSystemDiskCategories : TeaModel {
+                            [NameInMap("supportedSystemDiskCategory")]
+                            [Validation(Required=false)]
+                            public List<string> SupportedSystemDiskCategory { get; set; }
+                        };
+
                     }
-
-                }
-                public DescribeZonesResponseBodyZonesZoneAvailableResourceCreation AvailableResourceCreation { get; set; }
-                public class DescribeZonesResponseBodyZonesZoneAvailableResourceCreation : TeaModel {
-                    [NameInMap("ResourceTypes")]
-                    [Validation(Required=false)]
-                    public List<string> ResourceTypes { get; set; }
-
-                }
-                public DescribeZonesResponseBodyZonesZoneDedicatedHostGenerations DedicatedHostGenerations { get; set; }
-                public class DescribeZonesResponseBodyZonesZoneDedicatedHostGenerations : TeaModel {
-                    [NameInMap("DedicatedHostGeneration")]
-                    [Validation(Required=false)]
-                    public List<string> DedicatedHostGeneration { get; set; }
-
-                }
-                public DescribeZonesResponseBodyZonesZoneAvailableInstanceTypes AvailableInstanceTypes { get; set; }
-                public class DescribeZonesResponseBodyZonesZoneAvailableInstanceTypes : TeaModel {
-                    [NameInMap("InstanceTypes")]
-                    [Validation(Required=false)]
-                    public List<string> InstanceTypes { get; set; }
-
-                }
-                public DescribeZonesResponseBodyZonesZoneAvailableDiskCategories AvailableDiskCategories { get; set; }
-                public class DescribeZonesResponseBodyZonesZoneAvailableDiskCategories : TeaModel {
-                    [NameInMap("DiskCategories")]
-                    [Validation(Required=false)]
-                    public List<string> DiskCategories { get; set; }
-
-                }
-                public DescribeZonesResponseBodyZonesZoneAvailableDedicatedHostTypes AvailableDedicatedHostTypes { get; set; }
-                public class DescribeZonesResponseBodyZonesZoneAvailableDedicatedHostTypes : TeaModel {
-                    [NameInMap("DedicatedHostType")]
-                    [Validation(Required=false)]
-                    public List<string> DedicatedHostType { get; set; }
 
                 }
                 public DescribeZonesResponseBodyZonesZoneAvailableVolumeCategories AvailableVolumeCategories { get; set; }
@@ -132,6 +123,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<string> VolumeCategories { get; set; }
 
                 }
+                public DescribeZonesResponseBodyZonesZoneDedicatedHostGenerations DedicatedHostGenerations { get; set; }
+                public class DescribeZonesResponseBodyZonesZoneDedicatedHostGenerations : TeaModel {
+                    [NameInMap("DedicatedHostGeneration")]
+                    [Validation(Required=false)]
+                    public List<string> DedicatedHostGeneration { get; set; }
+
+                }
+                public string LocalName { get; set; }
+                public string ZoneId { get; set; }
+                public string ZoneType { get; set; }
             }
         };
 

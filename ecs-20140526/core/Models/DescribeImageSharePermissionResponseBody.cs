@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImageSharePermissionResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("Accounts")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public DescribeImageSharePermissionResponseBodyAccounts Accounts { get; set; }
+        public class DescribeImageSharePermissionResponseBodyAccounts : TeaModel {
+            [NameInMap("Account")]
+            [Validation(Required=false)]
+            public List<DescribeImageSharePermissionResponseBodyAccountsAccount> Account { get; set; }
+            public class DescribeImageSharePermissionResponseBodyAccountsAccount : TeaModel {
+                public string AliyunId { get; set; }
+            }
+        };
+
+        [NameInMap("ImageId")]
+        [Validation(Required=false)]
+        public string ImageId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -21,17 +33,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("ImageId")]
-        [Validation(Required=false)]
-        public string ImageId { get; set; }
-
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("ShareGroups")]
         [Validation(Required=false)]
@@ -45,17 +53,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
         };
 
-        [NameInMap("Accounts")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public DescribeImageSharePermissionResponseBodyAccounts Accounts { get; set; }
-        public class DescribeImageSharePermissionResponseBodyAccounts : TeaModel {
-            [NameInMap("Account")]
-            [Validation(Required=false)]
-            public List<DescribeImageSharePermissionResponseBodyAccountsAccount> Account { get; set; }
-            public class DescribeImageSharePermissionResponseBodyAccountsAccount : TeaModel {
-                public string AliyunId { get; set; }
-            }
-        };
+        public int? TotalCount { get; set; }
 
     }
 

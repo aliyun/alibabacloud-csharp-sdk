@@ -21,24 +21,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReference> SecurityGroupReference { get; set; }
             public class DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReference : TeaModel {
-                public string SecurityGroupId { get; set; }
                 public DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroups ReferencingSecurityGroups { get; set; }
                 public class DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroups : TeaModel {
                     [NameInMap("ReferencingSecurityGroup")]
                     [Validation(Required=false)]
                     public List<DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroupsReferencingSecurityGroup> ReferencingSecurityGroup { get; set; }
                     public class DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroupsReferencingSecurityGroup : TeaModel {
-                        [NameInMap("SecurityGroupId")]
-                        [Validation(Required=false)]
-                        public string SecurityGroupId { get; set; }
-
                         [NameInMap("AliUid")]
                         [Validation(Required=false)]
                         public string AliUid { get; set; }
 
+                        [NameInMap("SecurityGroupId")]
+                        [Validation(Required=false)]
+                        public string SecurityGroupId { get; set; }
+
                     }
 
                 }
+                public string SecurityGroupId { get; set; }
             }
         };
 

@@ -9,34 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateSnapshotRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("DiskId")]
-        [Validation(Required=false)]
-        public string DiskId { get; set; }
-
-        [NameInMap("SnapshotName")]
-        [Validation(Required=false)]
-        public string SnapshotName { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("RetentionDays")]
-        [Validation(Required=false)]
-        public int? RetentionDays { get; set; }
-
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
@@ -45,13 +17,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public string Description { get; set; }
 
-        [NameInMap("ResourceGroupId")]
+        [NameInMap("DiskId")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public string DiskId { get; set; }
 
         [NameInMap("InstantAccess")]
         [Validation(Required=false)]
@@ -61,11 +33,39 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? InstantAccessRetentionDays { get; set; }
 
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("RetentionDays")]
+        [Validation(Required=false)]
+        public int? RetentionDays { get; set; }
+
+        [NameInMap("SnapshotName")]
+        [Validation(Required=false)]
+        public string SnapshotName { get; set; }
+
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateSnapshotRequestTag> Tag { get; set; }
         public class CreateSnapshotRequestTag : TeaModel {
-            [NameInMap("key")]
+            [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 

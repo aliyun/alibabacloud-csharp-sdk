@@ -9,37 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeManagedInstancesResponseBody : TeaModel {
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public long? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public long? PageNumber { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<DescribeManagedInstancesResponseBodyInstances> Instances { get; set; }
         public class DescribeManagedInstancesResponseBodyInstances : TeaModel {
-            [NameInMap("LastInvokedTime")]
+            [NameInMap("ActivationId")]
             [Validation(Required=false)]
-            public string LastInvokedTime { get; set; }
+            public string ActivationId { get; set; }
+
+            [NameInMap("AgentVersion")]
+            [Validation(Required=false)]
+            public string AgentVersion { get; set; }
 
             [NameInMap("Connected")]
             [Validation(Required=false)]
             public bool? Connected { get; set; }
-
-            [NameInMap("InternetIp")]
-            [Validation(Required=false)]
-            public string InternetIp { get; set; }
 
             [NameInMap("Hostname")]
             [Validation(Required=false)]
@@ -49,25 +33,29 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
-            [NameInMap("ActivationId")]
+            [NameInMap("InstanceName")]
             [Validation(Required=false)]
-            public string ActivationId { get; set; }
+            public string InstanceName { get; set; }
+
+            [NameInMap("InternetIp")]
+            [Validation(Required=false)]
+            public string InternetIp { get; set; }
 
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
-            [NameInMap("AgentVersion")]
+            [NameInMap("InvocationCount")]
             [Validation(Required=false)]
-            public string AgentVersion { get; set; }
+            public long? InvocationCount { get; set; }
 
-            [NameInMap("RegistrationTime")]
+            [NameInMap("LastInvokedTime")]
             [Validation(Required=false)]
-            public string RegistrationTime { get; set; }
+            public string LastInvokedTime { get; set; }
 
-            [NameInMap("InstanceName")]
+            [NameInMap("MachineId")]
             [Validation(Required=false)]
-            public string InstanceName { get; set; }
+            public string MachineId { get; set; }
 
             [NameInMap("OsType")]
             [Validation(Required=false)]
@@ -77,15 +65,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public string OsVersion { get; set; }
 
-            [NameInMap("InvocationCount")]
+            [NameInMap("RegistrationTime")]
             [Validation(Required=false)]
-            public long? InvocationCount { get; set; }
-
-            [NameInMap("MachineId")]
-            [Validation(Required=false)]
-            public string MachineId { get; set; }
+            public string RegistrationTime { get; set; }
 
         }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public long? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

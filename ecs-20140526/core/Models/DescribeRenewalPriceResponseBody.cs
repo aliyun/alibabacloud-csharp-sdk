@@ -9,14 +9,63 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeRenewalPriceResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("PriceInfo")]
         [Validation(Required=false)]
         public DescribeRenewalPriceResponseBodyPriceInfo PriceInfo { get; set; }
         public class DescribeRenewalPriceResponseBodyPriceInfo : TeaModel {
+            [NameInMap("Price")]
+            [Validation(Required=false)]
+            public DescribeRenewalPriceResponseBodyPriceInfoPrice Price { get; set; }
+            public class DescribeRenewalPriceResponseBodyPriceInfoPrice : TeaModel {
+                [NameInMap("Currency")]
+                [Validation(Required=false)]
+                public string Currency { get; set; }
+
+                [NameInMap("DetailInfos")]
+                [Validation(Required=false)]
+                public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfos DetailInfos { get; set; }
+                public class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfos : TeaModel {
+                    [NameInMap("ResourcePriceModel")]
+                    [Validation(Required=false)]
+                    public List<DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel> ResourcePriceModel { get; set; }
+                    public class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel : TeaModel {
+                        public float? DiscountPrice { get; set; }
+                        public float? OriginalPrice { get; set; }
+                        public string Resource { get; set; }
+                        public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRules SubRules { get; set; }
+                        public class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRules : TeaModel {
+                            [NameInMap("Rule")]
+                            [Validation(Required=false)]
+                            public List<DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRulesRule> Rule { get; set; }
+                            public class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRulesRule : TeaModel {
+                                [NameInMap("Description")]
+                                [Validation(Required=false)]
+                                public string Description { get; set; }
+
+                                [NameInMap("RuleId")]
+                                [Validation(Required=false)]
+                                public long? RuleId { get; set; }
+
+                            }
+
+                        }
+                        public float? TradePrice { get; set; }
+                    }
+                };
+
+                [NameInMap("DiscountPrice")]
+                [Validation(Required=false)]
+                public float? DiscountPrice { get; set; }
+
+                [NameInMap("OriginalPrice")]
+                [Validation(Required=false)]
+                public float? OriginalPrice { get; set; }
+
+                [NameInMap("TradePrice")]
+                [Validation(Required=false)]
+                public float? TradePrice { get; set; }
+
+            }
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public DescribeRenewalPriceResponseBodyPriceInfoRules Rules { get; set; }
@@ -36,60 +85,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
             }
-            [NameInMap("Price")]
-            [Validation(Required=false)]
-            public DescribeRenewalPriceResponseBodyPriceInfoPrice Price { get; set; }
-            public class DescribeRenewalPriceResponseBodyPriceInfoPrice : TeaModel {
-                [NameInMap("OriginalPrice")]
-                [Validation(Required=false)]
-                public float? OriginalPrice { get; set; }
-
-                [NameInMap("DiscountPrice")]
-                [Validation(Required=false)]
-                public float? DiscountPrice { get; set; }
-
-                [NameInMap("Currency")]
-                [Validation(Required=false)]
-                public string Currency { get; set; }
-
-                [NameInMap("TradePrice")]
-                [Validation(Required=false)]
-                public float? TradePrice { get; set; }
-
-                [NameInMap("DetailInfos")]
-                [Validation(Required=false)]
-                public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfos DetailInfos { get; set; }
-                public class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfos : TeaModel {
-                    [NameInMap("ResourcePriceModel")]
-                    [Validation(Required=false)]
-                    public List<DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel> ResourcePriceModel { get; set; }
-                    public class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel : TeaModel {
-                        public string Resource { get; set; }
-                        public float? OriginalPrice { get; set; }
-                        public float? DiscountPrice { get; set; }
-                        public float? TradePrice { get; set; }
-                        public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRules SubRules { get; set; }
-                        public class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRules : TeaModel {
-                            [NameInMap("Rule")]
-                            [Validation(Required=false)]
-                            public List<DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRulesRule> Rule { get; set; }
-                            public class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRulesRule : TeaModel {
-                                [NameInMap("Description")]
-                                [Validation(Required=false)]
-                                public string Description { get; set; }
-
-                                [NameInMap("RuleId")]
-                                [Validation(Required=false)]
-                                public long? RuleId { get; set; }
-
-                            }
-
-                        }
-                    }
-                };
-
-            }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

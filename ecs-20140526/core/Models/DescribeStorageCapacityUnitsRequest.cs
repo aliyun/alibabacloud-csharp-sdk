@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeStorageCapacityUnitsRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("AllocationType")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string AllocationType { get; set; }
 
-        [NameInMap("ResourceOwnerAccount")]
+        [NameInMap("Capacity")]
         [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
+        public int? Capacity { get; set; }
 
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string Name { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public long? OwnerId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -37,25 +37,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("Name")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string RegionId { get; set; }
 
-        [NameInMap("Capacity")]
+        [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
-        public int? Capacity { get; set; }
+        public string ResourceOwnerAccount { get; set; }
 
-        [NameInMap("AllocationType")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public string AllocationType { get; set; }
-
-        [NameInMap("StorageCapacityUnitId")]
-        [Validation(Required=false)]
-        public List<string> StorageCapacityUnitId { get; set; }
+        public long? ResourceOwnerId { get; set; }
 
         [NameInMap("Status")]
         [Validation(Required=false)]
         public List<string> Status { get; set; }
+
+        [NameInMap("StorageCapacityUnitId")]
+        [Validation(Required=false)]
+        public List<string> StorageCapacityUnitId { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]

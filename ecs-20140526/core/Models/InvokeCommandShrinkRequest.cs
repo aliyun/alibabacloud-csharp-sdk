@@ -9,9 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class InvokeCommandShrinkRequest : TeaModel {
+        [NameInMap("CommandId")]
+        [Validation(Required=false)]
+        public string CommandId { get; set; }
+
+        [NameInMap("Frequency")]
+        [Validation(Required=false)]
+        public string Frequency { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public List<string> InstanceId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("Parameters")]
+        [Validation(Required=false)]
+        public string ParametersShrink { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("RepeatMode")]
+        [Validation(Required=false)]
+        public string RepeatMode { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -21,37 +49,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public List<string> InstanceId { get; set; }
-
-        [NameInMap("CommandId")]
-        [Validation(Required=false)]
-        public string CommandId { get; set; }
-
-        [NameInMap("RepeatMode")]
-        [Validation(Required=false)]
-        public string RepeatMode { get; set; }
-
         [NameInMap("Timed")]
         [Validation(Required=false)]
         public bool? Timed { get; set; }
-
-        [NameInMap("Frequency")]
-        [Validation(Required=false)]
-        public string Frequency { get; set; }
-
-        [NameInMap("Parameters")]
-        [Validation(Required=false)]
-        public string ParametersShrink { get; set; }
 
         [NameInMap("Username")]
         [Validation(Required=false)]

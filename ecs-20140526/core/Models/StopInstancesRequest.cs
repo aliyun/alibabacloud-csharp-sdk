@@ -9,9 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class StopInstancesRequest : TeaModel {
+        [NameInMap("BatchOptimization")]
+        [Validation(Required=false)]
+        public string BatchOptimization { get; set; }
+
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        [NameInMap("ForceStop")]
+        [Validation(Required=false)]
+        public bool? ForceStop { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public List<string> InstanceId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -21,33 +45,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("DryRun")]
-        [Validation(Required=false)]
-        public bool? DryRun { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public List<string> InstanceId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("ForceStop")]
-        [Validation(Required=false)]
-        public bool? ForceStop { get; set; }
-
         [NameInMap("StoppedMode")]
         [Validation(Required=false)]
         public string StoppedMode { get; set; }
-
-        [NameInMap("BatchOptimization")]
-        [Validation(Required=false)]
-        public string BatchOptimization { get; set; }
 
     }
 

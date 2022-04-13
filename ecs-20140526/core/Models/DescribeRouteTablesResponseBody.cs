@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeRouteTablesResponseBody : TeaModel {
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -16,14 +20,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
 
         [NameInMap("RouteTables")]
         [Validation(Required=false)]
@@ -34,28 +30,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeRouteTablesResponseBodyRouteTablesRouteTable> RouteTable { get; set; }
             public class DescribeRouteTablesResponseBodyRouteTablesRouteTable : TeaModel {
                 public string CreationTime { get; set; }
-                public string VRouterId { get; set; }
-                public string RouteTableId { get; set; }
                 public string ResourceGroupId { get; set; }
-                public string RouteTableType { get; set; }
                 public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrys RouteEntrys { get; set; }
                 public class DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrys : TeaModel {
                     [NameInMap("RouteEntry")]
                     [Validation(Required=false)]
                     public List<DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry> RouteEntry { get; set; }
                     public class DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry : TeaModel {
-                        [NameInMap("Type")]
-                        [Validation(Required=false)]
-                        public string Type { get; set; }
-
-                        [NameInMap("Status")]
-                        [Validation(Required=false)]
-                        public string Status { get; set; }
-
-                        [NameInMap("NextHopType")]
-                        [Validation(Required=false)]
-                        public string NextHopType { get; set; }
-
                         [NameInMap("DestinationCidrBlock")]
                         [Validation(Required=false)]
                         public string DestinationCidrBlock { get; set; }
@@ -64,9 +45,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [Validation(Required=false)]
                         public string InstanceId { get; set; }
 
-                        [NameInMap("RouteTableId")]
+                        [NameInMap("NextHopType")]
                         [Validation(Required=false)]
-                        public string RouteTableId { get; set; }
+                        public string NextHopType { get; set; }
 
                         [NameInMap("NextHops")]
                         [Validation(Required=false)]
@@ -76,18 +57,37 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             [Validation(Required=false)]
                             public List<DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHopsNextHop> NextHop { get; set; }
                             public class DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHopsNextHop : TeaModel {
-                                public int? Weight { get; set; }
+                                public int? Enabled { get; set; }
                                 public string NextHopId { get; set; }
                                 public string NextHopType { get; set; }
-                                public int? Enabled { get; set; }
+                                public int? Weight { get; set; }
                             }
                         };
+
+                        [NameInMap("RouteTableId")]
+                        [Validation(Required=false)]
+                        public string RouteTableId { get; set; }
+
+                        [NameInMap("Status")]
+                        [Validation(Required=false)]
+                        public string Status { get; set; }
+
+                        [NameInMap("Type")]
+                        [Validation(Required=false)]
+                        public string Type { get; set; }
 
                     }
 
                 }
+                public string RouteTableId { get; set; }
+                public string RouteTableType { get; set; }
+                public string VRouterId { get; set; }
             }
         };
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

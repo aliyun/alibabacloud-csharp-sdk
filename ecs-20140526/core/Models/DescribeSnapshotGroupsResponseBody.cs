@@ -25,42 +25,73 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroup> SnapshotGroup { get; set; }
             public class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroup : TeaModel {
-                public string Status { get; set; }
                 public string CreationTime { get; set; }
                 public string Description { get; set; }
-                public string ProgressStatus { get; set; }
-                public string SnapshotGroupId { get; set; }
                 public string InstanceId { get; set; }
                 public string Name { get; set; }
+                public string ProgressStatus { get; set; }
+                public string ResourceGroupId { get; set; }
+                public string SnapshotGroupId { get; set; }
                 public DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshots Snapshots { get; set; }
                 public class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshots : TeaModel {
                     [NameInMap("Snapshot")]
                     [Validation(Required=false)]
                     public List<DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshot> Snapshot { get; set; }
                     public class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshot : TeaModel {
-                        [NameInMap("SourceDiskId")]
+                        [NameInMap("InstantAccess")]
                         [Validation(Required=false)]
-                        public string SourceDiskId { get; set; }
-
-                        [NameInMap("Progress")]
-                        [Validation(Required=false)]
-                        public string Progress { get; set; }
+                        public bool? InstantAccess { get; set; }
 
                         [NameInMap("InstantAccessRetentionDays")]
                         [Validation(Required=false)]
                         public int? InstantAccessRetentionDays { get; set; }
 
+                        [NameInMap("Progress")]
+                        [Validation(Required=false)]
+                        public string Progress { get; set; }
+
                         [NameInMap("SnapshotId")]
                         [Validation(Required=false)]
                         public string SnapshotId { get; set; }
 
-                        [NameInMap("InstantAccess")]
+                        [NameInMap("SourceDiskId")]
                         [Validation(Required=false)]
-                        public bool? InstantAccess { get; set; }
+                        public string SourceDiskId { get; set; }
 
                         [NameInMap("SourceDiskType")]
                         [Validation(Required=false)]
                         public string SourceDiskType { get; set; }
+
+                        [NameInMap("Tags")]
+                        [Validation(Required=false)]
+                        public DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshotTags Tags { get; set; }
+                        public class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshotTags : TeaModel {
+                            [NameInMap("Tag")]
+                            [Validation(Required=false)]
+                            public List<DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshotTagsTag> Tag { get; set; }
+                            public class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshotTagsTag : TeaModel {
+                                public string Key { get; set; }
+                                public string Value { get; set; }
+                            }
+                        };
+
+                    }
+
+                }
+                public string Status { get; set; }
+                public DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupTags Tags { get; set; }
+                public class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupTagsTag> Tag { get; set; }
+                    public class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupTagsTag : TeaModel {
+                        [NameInMap("Key")]
+                        [Validation(Required=false)]
+                        public string Key { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
 
                     }
 

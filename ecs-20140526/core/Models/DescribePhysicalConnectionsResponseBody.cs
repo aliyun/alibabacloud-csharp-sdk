@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribePhysicalConnectionsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -20,10 +16,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
 
         [NameInMap("PhysicalConnectionSet")]
         [Validation(Required=false)]
@@ -33,26 +25,34 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType> PhysicalConnectionType { get; set; }
             public class DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType : TeaModel {
+                public string AccessPointId { get; set; }
                 public string AdLocation { get; set; }
-                public string CreationTime { get; set; }
-                public string Status { get; set; }
-                public string Type { get; set; }
-                public string PortNumber { get; set; }
-                public string CircuitCode { get; set; }
-                public string Spec { get; set; }
                 public long? Bandwidth { get; set; }
-                public string Description { get; set; }
-                public string PortType { get; set; }
-                public string EnabledTime { get; set; }
                 public string BusinessStatus { get; set; }
+                public string CircuitCode { get; set; }
+                public string CreationTime { get; set; }
+                public string Description { get; set; }
+                public string EnabledTime { get; set; }
                 public string LineOperator { get; set; }
                 public string Name { get; set; }
-                public string RedundantPhysicalConnectionId { get; set; }
                 public string PeerLocation { get; set; }
-                public string AccessPointId { get; set; }
                 public string PhysicalConnectionId { get; set; }
+                public string PortNumber { get; set; }
+                public string PortType { get; set; }
+                public string RedundantPhysicalConnectionId { get; set; }
+                public string Spec { get; set; }
+                public string Status { get; set; }
+                public string Type { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSpotPriceHistoryResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Currency")]
         [Validation(Required=false)]
         public string Currency { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("NextOffset")]
         [Validation(Required=false)]
         public int? NextOffset { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("SpotPrices")]
         [Validation(Required=false)]
@@ -29,13 +29,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType> SpotPriceType { get; set; }
             public class DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType : TeaModel {
+                public string InstanceType { get; set; }
                 public string IoOptimized { get; set; }
-                public string ZoneId { get; set; }
+                public string NetworkType { get; set; }
+                public float? OriginPrice { get; set; }
                 public float? SpotPrice { get; set; }
                 public string Timestamp { get; set; }
-                public string NetworkType { get; set; }
-                public string InstanceType { get; set; }
-                public float? OriginPrice { get; set; }
+                public string ZoneId { get; set; }
             }
         };
 

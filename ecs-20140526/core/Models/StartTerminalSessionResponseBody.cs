@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("SessionId")]
-        [Validation(Required=false)]
-        public string SessionId { get; set; }
-
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
+
+        [NameInMap("SessionId")]
+        [Validation(Required=false)]
+        public string SessionId { get; set; }
 
         [NameInMap("WebSocketUrl")]
         [Validation(Required=false)]

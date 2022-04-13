@@ -9,42 +9,42 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteActivationResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Activation")]
         [Validation(Required=false)]
         public DeleteActivationResponseBodyActivation Activation { get; set; }
         public class DeleteActivationResponseBodyActivation : TeaModel {
+            [NameInMap("ActivationId")]
+            [Validation(Required=false)]
+            public string ActivationId { get; set; }
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
             [NameInMap("DeregisteredCount")]
             [Validation(Required=false)]
             public int? DeregisteredCount { get; set; }
-            [NameInMap("InstanceCount")]
-            [Validation(Required=false)]
-            public int? InstanceCount { get; set; }
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
-            [NameInMap("RegisteredCount")]
+            [NameInMap("InstanceCount")]
             [Validation(Required=false)]
-            public int? RegisteredCount { get; set; }
+            public int? InstanceCount { get; set; }
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
             [NameInMap("IpAddressRange")]
             [Validation(Required=false)]
             public string IpAddressRange { get; set; }
+            [NameInMap("RegisteredCount")]
+            [Validation(Required=false)]
+            public int? RegisteredCount { get; set; }
             [NameInMap("TimeToLiveInHours")]
             [Validation(Required=false)]
             public long? TimeToLiveInHours { get; set; }
-            [NameInMap("ActivationId")]
-            [Validation(Required=false)]
-            public string ActivationId { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

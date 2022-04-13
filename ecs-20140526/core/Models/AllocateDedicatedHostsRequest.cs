@@ -21,9 +21,85 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? UdpTimeout { get; set; }
         };
 
+        [NameInMap("ActionOnMaintenance")]
+        [Validation(Required=false)]
+        public string ActionOnMaintenance { get; set; }
+
+        [NameInMap("AutoPlacement")]
+        [Validation(Required=false)]
+        public string AutoPlacement { get; set; }
+
+        [NameInMap("AutoReleaseTime")]
+        [Validation(Required=false)]
+        public string AutoReleaseTime { get; set; }
+
+        [NameInMap("AutoRenew")]
+        [Validation(Required=false)]
+        public bool? AutoRenew { get; set; }
+
+        [NameInMap("AutoRenewPeriod")]
+        [Validation(Required=false)]
+        public int? AutoRenewPeriod { get; set; }
+
+        [NameInMap("ChargeType")]
+        [Validation(Required=false)]
+        public string ChargeType { get; set; }
+
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        [NameInMap("CpuOverCommitRatio")]
+        [Validation(Required=false)]
+        public float? CpuOverCommitRatio { get; set; }
+
+        [NameInMap("DedicatedHostClusterId")]
+        [Validation(Required=false)]
+        public string DedicatedHostClusterId { get; set; }
+
+        [NameInMap("DedicatedHostName")]
+        [Validation(Required=false)]
+        public string DedicatedHostName { get; set; }
+
+        [NameInMap("DedicatedHostType")]
+        [Validation(Required=false)]
+        public string DedicatedHostType { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("MinQuantity")]
+        [Validation(Required=false)]
+        public int? MinQuantity { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("Period")]
+        [Validation(Required=false)]
+        public int? Period { get; set; }
+
+        [NameInMap("PeriodUnit")]
+        [Validation(Required=false)]
+        public string PeriodUnit { get; set; }
+
+        [NameInMap("Quantity")]
+        [Validation(Required=false)]
+        public int? Quantity { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -32,14 +108,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -55,77 +123,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
-
         [NameInMap("ZoneId")]
         [Validation(Required=false)]
         public string ZoneId { get; set; }
-
-        [NameInMap("DedicatedHostName")]
-        [Validation(Required=false)]
-        public string DedicatedHostName { get; set; }
-
-        [NameInMap("DedicatedHostClusterId")]
-        [Validation(Required=false)]
-        public string DedicatedHostClusterId { get; set; }
-
-        [NameInMap("DedicatedHostType")]
-        [Validation(Required=false)]
-        public string DedicatedHostType { get; set; }
-
-        [NameInMap("ActionOnMaintenance")]
-        [Validation(Required=false)]
-        public string ActionOnMaintenance { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("AutoPlacement")]
-        [Validation(Required=false)]
-        public string AutoPlacement { get; set; }
-
-        [NameInMap("CpuOverCommitRatio")]
-        [Validation(Required=false)]
-        public float? CpuOverCommitRatio { get; set; }
-
-        [NameInMap("MinQuantity")]
-        [Validation(Required=false)]
-        public int? MinQuantity { get; set; }
-
-        [NameInMap("ChargeType")]
-        [Validation(Required=false)]
-        public string ChargeType { get; set; }
-
-        [NameInMap("Quantity")]
-        [Validation(Required=false)]
-        public int? Quantity { get; set; }
-
-        [NameInMap("Period")]
-        [Validation(Required=false)]
-        public int? Period { get; set; }
-
-        [NameInMap("PeriodUnit")]
-        [Validation(Required=false)]
-        public string PeriodUnit { get; set; }
-
-        [NameInMap("AutoRenew")]
-        [Validation(Required=false)]
-        public bool? AutoRenew { get; set; }
-
-        [NameInMap("AutoRenewPeriod")]
-        [Validation(Required=false)]
-        public int? AutoRenewPeriod { get; set; }
-
-        [NameInMap("AutoReleaseTime")]
-        [Validation(Required=false)]
-        public string AutoReleaseTime { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
 
     }
 

@@ -9,6 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyAutoSnapshotPolicyRequest : TeaModel {
+        [NameInMap("DataDiskPolicyEnabled")]
+        [Validation(Required=false)]
+        public bool? DataDiskPolicyEnabled { get; set; }
+
+        [NameInMap("DataDiskPolicyRetentionDays")]
+        [Validation(Required=false)]
+        public int? DataDiskPolicyRetentionDays { get; set; }
+
+        [NameInMap("DataDiskPolicyRetentionLastWeek")]
+        [Validation(Required=false)]
+        public bool? DataDiskPolicyRetentionLastWeek { get; set; }
+
+        [NameInMap("DataDiskPolicyTimePeriod")]
+        [Validation(Required=false)]
+        public int? DataDiskPolicyTimePeriod { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -25,10 +45,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public bool? SystemDiskPolicyEnabled { get; set; }
 
-        [NameInMap("SystemDiskPolicyTimePeriod")]
-        [Validation(Required=false)]
-        public int? SystemDiskPolicyTimePeriod { get; set; }
-
         [NameInMap("SystemDiskPolicyRetentionDays")]
         [Validation(Required=false)]
         public int? SystemDiskPolicyRetentionDays { get; set; }
@@ -37,25 +53,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public bool? SystemDiskPolicyRetentionLastWeek { get; set; }
 
-        [NameInMap("DataDiskPolicyEnabled")]
+        [NameInMap("SystemDiskPolicyTimePeriod")]
         [Validation(Required=false)]
-        public bool? DataDiskPolicyEnabled { get; set; }
-
-        [NameInMap("DataDiskPolicyTimePeriod")]
-        [Validation(Required=false)]
-        public int? DataDiskPolicyTimePeriod { get; set; }
-
-        [NameInMap("DataDiskPolicyRetentionDays")]
-        [Validation(Required=false)]
-        public int? DataDiskPolicyRetentionDays { get; set; }
-
-        [NameInMap("DataDiskPolicyRetentionLastWeek")]
-        [Validation(Required=false)]
-        public bool? DataDiskPolicyRetentionLastWeek { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public int? SystemDiskPolicyTimePeriod { get; set; }
 
     }
 

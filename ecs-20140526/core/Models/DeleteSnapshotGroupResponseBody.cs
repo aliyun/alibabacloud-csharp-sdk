@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteSnapshotGroupResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("OperationProgressSet")]
         [Validation(Required=false)]
         public DeleteSnapshotGroupResponseBodyOperationProgressSet OperationProgressSet { get; set; }
@@ -21,8 +17,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgress> OperationProgress { get; set; }
             public class DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgress : TeaModel {
-                public string ErrorMsg { get; set; }
                 public string ErrorCode { get; set; }
+                public string ErrorMsg { get; set; }
                 public string OperationStatus { get; set; }
                 public DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgressRelatedItemSet RelatedItemSet { get; set; }
                 public class DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgressRelatedItemSet : TeaModel {
@@ -43,6 +39,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class StartInstanceRequest : TeaModel {
-        [NameInMap("SourceRegionId")]
+        [NameInMap("DryRun")]
         [Validation(Required=false)]
-        public string SourceRegionId { get; set; }
+        public bool? DryRun { get; set; }
+
+        [NameInMap("InitLocalDisk")]
+        [Validation(Required=false)]
+        public bool? InitLocalDisk { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -25,21 +37,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("InstanceId")]
+        [NameInMap("SourceRegionId")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("InitLocalDisk")]
-        [Validation(Required=false)]
-        public bool? InitLocalDisk { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("DryRun")]
-        [Validation(Required=false)]
-        public bool? DryRun { get; set; }
+        public string SourceRegionId { get; set; }
 
     }
 

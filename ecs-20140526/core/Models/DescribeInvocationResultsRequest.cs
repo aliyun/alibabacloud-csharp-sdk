@@ -9,49 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInvocationResultsRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("InvokeId")]
-        [Validation(Required=false)]
-        public string InvokeId { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
         [NameInMap("CommandId")]
         [Validation(Required=false)]
         public string CommandId { get; set; }
 
-        [NameInMap("InvokeRecordStatus")]
+        [NameInMap("ContentEncoding")]
         [Validation(Required=false)]
-        public string InvokeRecordStatus { get; set; }
+        public string ContentEncoding { get; set; }
 
         [NameInMap("IncludeHistory")]
         [Validation(Required=false)]
         public bool? IncludeHistory { get; set; }
 
-        [NameInMap("ContentEncoding")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string ContentEncoding { get; set; }
+        public string InstanceId { get; set; }
+
+        [NameInMap("InvokeId")]
+        [Validation(Required=false)]
+        public string InvokeId { get; set; }
+
+        [NameInMap("InvokeRecordStatus")]
+        [Validation(Required=false)]
+        public string InvokeRecordStatus { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -60,6 +48,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
     }
 

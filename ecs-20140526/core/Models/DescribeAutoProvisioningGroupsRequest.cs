@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeAutoProvisioningGroupsRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("AutoProvisioningGroupId")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public List<string> AutoProvisioningGroupId { get; set; }
 
-        [NameInMap("ResourceOwnerAccount")]
+        [NameInMap("AutoProvisioningGroupName")]
         [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
+        public string AutoProvisioningGroupName { get; set; }
 
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("AutoProvisioningGroupStatus")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public List<string> AutoProvisioningGroupStatus { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public long? OwnerId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("AutoProvisioningGroupId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public List<string> AutoProvisioningGroupId { get; set; }
+        public string RegionId { get; set; }
 
-        [NameInMap("AutoProvisioningGroupStatus")]
+        [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
-        public List<string> AutoProvisioningGroupStatus { get; set; }
+        public string ResourceOwnerAccount { get; set; }
 
-        [NameInMap("AutoProvisioningGroupName")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public string AutoProvisioningGroupName { get; set; }
+        public long? ResourceOwnerId { get; set; }
 
     }
 

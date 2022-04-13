@@ -9,9 +9,57 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class RunCommandShrinkRequest : TeaModel {
+        [NameInMap("CommandContent")]
+        [Validation(Required=false)]
+        public string CommandContent { get; set; }
+
+        [NameInMap("ContentEncoding")]
+        [Validation(Required=false)]
+        public string ContentEncoding { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("EnableParameter")]
+        [Validation(Required=false)]
+        public bool? EnableParameter { get; set; }
+
+        [NameInMap("Frequency")]
+        [Validation(Required=false)]
+        public string Frequency { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public List<string> InstanceId { get; set; }
+
+        [NameInMap("KeepCommand")]
+        [Validation(Required=false)]
+        public bool? KeepCommand { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("Parameters")]
+        [Validation(Required=false)]
+        public string ParametersShrink { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("RepeatMode")]
+        [Validation(Required=false)]
+        public string RepeatMode { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -21,69 +69,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("Timed")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public List<string> InstanceId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
-        [NameInMap("CommandContent")]
-        [Validation(Required=false)]
-        public string CommandContent { get; set; }
-
-        [NameInMap("WorkingDir")]
-        [Validation(Required=false)]
-        public string WorkingDir { get; set; }
+        public bool? Timed { get; set; }
 
         [NameInMap("Timeout")]
         [Validation(Required=false)]
         public long? Timeout { get; set; }
 
-        [NameInMap("EnableParameter")]
+        [NameInMap("Type")]
         [Validation(Required=false)]
-        public bool? EnableParameter { get; set; }
-
-        [NameInMap("RepeatMode")]
-        [Validation(Required=false)]
-        public string RepeatMode { get; set; }
-
-        [NameInMap("Timed")]
-        [Validation(Required=false)]
-        public bool? Timed { get; set; }
-
-        [NameInMap("Frequency")]
-        [Validation(Required=false)]
-        public string Frequency { get; set; }
-
-        [NameInMap("Parameters")]
-        [Validation(Required=false)]
-        public string ParametersShrink { get; set; }
-
-        [NameInMap("KeepCommand")]
-        [Validation(Required=false)]
-        public bool? KeepCommand { get; set; }
-
-        [NameInMap("ContentEncoding")]
-        [Validation(Required=false)]
-        public string ContentEncoding { get; set; }
+        public string Type { get; set; }
 
         [NameInMap("Username")]
         [Validation(Required=false)]
@@ -92,6 +88,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("WindowsPasswordName")]
         [Validation(Required=false)]
         public string WindowsPasswordName { get; set; }
+
+        [NameInMap("WorkingDir")]
+        [Validation(Required=false)]
+        public string WorkingDir { get; set; }
 
     }
 

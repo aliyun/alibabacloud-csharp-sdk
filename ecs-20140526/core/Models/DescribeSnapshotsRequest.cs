@@ -23,37 +23,45 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
-        [NameInMap("OwnerId")]
+        [NameInMap("Category")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string Category { get; set; }
 
         [NameInMap("DiskId")]
         [Validation(Required=false)]
         public string DiskId { get; set; }
 
-        [NameInMap("SnapshotLinkId")]
+        [NameInMap("DryRun")]
         [Validation(Required=false)]
-        public string SnapshotLinkId { get; set; }
+        public bool? DryRun { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("Encrypted")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public bool? Encrypted { get; set; }
 
-        [NameInMap("SnapshotIds")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string SnapshotIds { get; set; }
+        public string InstanceId { get; set; }
+
+        [NameInMap("KMSKeyId")]
+        [Validation(Required=false)]
+        public string KMSKeyId { get; set; }
+
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -63,63 +71,51 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("NextToken")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("SnapshotName")]
-        [Validation(Required=false)]
-        public string SnapshotName { get; set; }
-
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
-
-        [NameInMap("SnapshotType")]
-        [Validation(Required=false)]
-        public string SnapshotType { get; set; }
-
-        [NameInMap("Usage")]
-        [Validation(Required=false)]
-        public string Usage { get; set; }
-
-        [NameInMap("SourceDiskType")]
-        [Validation(Required=false)]
-        public string SourceDiskType { get; set; }
-
-        [NameInMap("Encrypted")]
-        [Validation(Required=false)]
-        public bool? Encrypted { get; set; }
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
-        [NameInMap("DryRun")]
+        [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
-        public bool? DryRun { get; set; }
+        public string ResourceOwnerAccount { get; set; }
 
-        [NameInMap("KMSKeyId")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public string KMSKeyId { get; set; }
+        public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("Category")]
+        [NameInMap("SnapshotIds")]
         [Validation(Required=false)]
-        public string Category { get; set; }
+        public string SnapshotIds { get; set; }
+
+        [NameInMap("SnapshotLinkId")]
+        [Validation(Required=false)]
+        public string SnapshotLinkId { get; set; }
+
+        [NameInMap("SnapshotName")]
+        [Validation(Required=false)]
+        public string SnapshotName { get; set; }
+
+        [NameInMap("SnapshotType")]
+        [Validation(Required=false)]
+        public string SnapshotType { get; set; }
+
+        [NameInMap("SourceDiskType")]
+        [Validation(Required=false)]
+        public string SourceDiskType { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeSnapshotsRequestTag> Tag { get; set; }
         public class DescribeSnapshotsRequestTag : TeaModel {
-            [NameInMap("key")]
+            [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
@@ -128,6 +124,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("Usage")]
+        [Validation(Required=false)]
+        public string Usage { get; set; }
 
     }
 

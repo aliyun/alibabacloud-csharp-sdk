@@ -16,79 +16,45 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
-            [NameInMap("Size")]
+            [NameInMap("DeleteWithInstance")]
             [Validation(Required=false)]
-            public int? Size { get; set; }
-            [NameInMap("DiskName")]
-            [Validation(Required=false)]
-            public string DiskName { get; set; }
+            public bool? DeleteWithInstance { get; set; }
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+            [NameInMap("DiskName")]
+            [Validation(Required=false)]
+            public string DiskName { get; set; }
             [NameInMap("Iops")]
             [Validation(Required=false)]
             public int? Iops { get; set; }
             [NameInMap("PerformanceLevel")]
             [Validation(Required=false)]
             public string PerformanceLevel { get; set; }
-            [NameInMap("DeleteWithInstance")]
+            [NameInMap("Size")]
             [Validation(Required=false)]
-            public bool? DeleteWithInstance { get; set; }
+            public int? Size { get; set; }
         };
 
-        [NameInMap("TemplateTag")]
+        [NameInMap("AutoReleaseTime")]
         [Validation(Required=false)]
-        public List<CreateLaunchTemplateRequestTemplateTag> TemplateTag { get; set; }
-        public class CreateLaunchTemplateRequestTemplateTag : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string AutoReleaseTime { get; set; }
 
         [NameInMap("DataDisk")]
         [Validation(Required=false)]
         public List<CreateLaunchTemplateRequestDataDisk> DataDisk { get; set; }
         public class CreateLaunchTemplateRequestDataDisk : TeaModel {
-            [NameInMap("PerformanceLevel")]
+            [NameInMap("Category")]
             [Validation(Required=false)]
-            public string PerformanceLevel { get; set; }
+            public string Category { get; set; }
+
+            [NameInMap("DeleteWithInstance")]
+            [Validation(Required=false)]
+            public bool? DeleteWithInstance { get; set; }
 
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
-
-            [NameInMap("SnapshotId")]
-            [Validation(Required=false)]
-            public string SnapshotId { get; set; }
-
-            [NameInMap("Size")]
-            [Validation(Required=false)]
-            public int? Size { get; set; }
 
             [NameInMap("Device")]
             [Validation(Required=false)]
@@ -98,49 +64,185 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public string DiskName { get; set; }
 
-            [NameInMap("Category")]
-            [Validation(Required=false)]
-            public string Category { get; set; }
-
-            [NameInMap("DeleteWithInstance")]
-            [Validation(Required=false)]
-            public bool? DeleteWithInstance { get; set; }
-
             [NameInMap("Encrypted")]
             [Validation(Required=false)]
             public string Encrypted { get; set; }
 
+            [NameInMap("PerformanceLevel")]
+            [Validation(Required=false)]
+            public string PerformanceLevel { get; set; }
+
+            [NameInMap("Size")]
+            [Validation(Required=false)]
+            public int? Size { get; set; }
+
+            [NameInMap("SnapshotId")]
+            [Validation(Required=false)]
+            public string SnapshotId { get; set; }
+
         }
+
+        [NameInMap("DeploymentSetId")]
+        [Validation(Required=false)]
+        public string DeploymentSetId { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("EnableVmOsConfig")]
+        [Validation(Required=false)]
+        public bool? EnableVmOsConfig { get; set; }
+
+        [NameInMap("HostName")]
+        [Validation(Required=false)]
+        public string HostName { get; set; }
+
+        [NameInMap("ImageId")]
+        [Validation(Required=false)]
+        public string ImageId { get; set; }
+
+        [NameInMap("ImageOwnerAlias")]
+        [Validation(Required=false)]
+        public string ImageOwnerAlias { get; set; }
+
+        [NameInMap("InstanceChargeType")]
+        [Validation(Required=false)]
+        public string InstanceChargeType { get; set; }
+
+        [NameInMap("InstanceName")]
+        [Validation(Required=false)]
+        public string InstanceName { get; set; }
+
+        [NameInMap("InstanceType")]
+        [Validation(Required=false)]
+        public string InstanceType { get; set; }
+
+        [NameInMap("InternetChargeType")]
+        [Validation(Required=false)]
+        public string InternetChargeType { get; set; }
+
+        [NameInMap("InternetMaxBandwidthIn")]
+        [Validation(Required=false)]
+        public int? InternetMaxBandwidthIn { get; set; }
+
+        [NameInMap("InternetMaxBandwidthOut")]
+        [Validation(Required=false)]
+        public int? InternetMaxBandwidthOut { get; set; }
+
+        [NameInMap("IoOptimized")]
+        [Validation(Required=false)]
+        public string IoOptimized { get; set; }
+
+        [NameInMap("Ipv6AddressCount")]
+        [Validation(Required=false)]
+        public int? Ipv6AddressCount { get; set; }
+
+        [NameInMap("KeyPairName")]
+        [Validation(Required=false)]
+        public string KeyPairName { get; set; }
+
+        [NameInMap("LaunchTemplateName")]
+        [Validation(Required=false)]
+        public string LaunchTemplateName { get; set; }
 
         [NameInMap("NetworkInterface")]
         [Validation(Required=false)]
         public List<CreateLaunchTemplateRequestNetworkInterface> NetworkInterface { get; set; }
         public class CreateLaunchTemplateRequestNetworkInterface : TeaModel {
-            [NameInMap("VSwitchId")]
+            [NameInMap("Description")]
             [Validation(Required=false)]
-            public string VSwitchId { get; set; }
+            public string Description { get; set; }
 
             [NameInMap("NetworkInterfaceName")]
             [Validation(Required=false)]
             public string NetworkInterfaceName { get; set; }
 
-            [NameInMap("Description")]
+            [NameInMap("PrimaryIpAddress")]
             [Validation(Required=false)]
-            public string Description { get; set; }
+            public string PrimaryIpAddress { get; set; }
 
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
             public string SecurityGroupId { get; set; }
 
-            [NameInMap("PrimaryIpAddress")]
-            [Validation(Required=false)]
-            public string PrimaryIpAddress { get; set; }
-
             [NameInMap("SecurityGroupIds")]
             [Validation(Required=false)]
             public List<string> SecurityGroupIds { get; set; }
 
+            [NameInMap("VSwitchId")]
+            [Validation(Required=false)]
+            public string VSwitchId { get; set; }
+
         }
+
+        [NameInMap("NetworkType")]
+        [Validation(Required=false)]
+        public string NetworkType { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("PasswordInherit")]
+        [Validation(Required=false)]
+        public bool? PasswordInherit { get; set; }
+
+        [NameInMap("Period")]
+        [Validation(Required=false)]
+        public int? Period { get; set; }
+
+        [NameInMap("PrivateIpAddress")]
+        [Validation(Required=false)]
+        public string PrivateIpAddress { get; set; }
+
+        [NameInMap("RamRoleName")]
+        [Validation(Required=false)]
+        public string RamRoleName { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("SecurityEnhancementStrategy")]
+        [Validation(Required=false)]
+        public string SecurityEnhancementStrategy { get; set; }
+
+        [NameInMap("SecurityGroupId")]
+        [Validation(Required=false)]
+        public string SecurityGroupId { get; set; }
+
+        [NameInMap("SecurityGroupIds")]
+        [Validation(Required=false)]
+        public List<string> SecurityGroupIds { get; set; }
+
+        [NameInMap("SpotDuration")]
+        [Validation(Required=false)]
+        public int? SpotDuration { get; set; }
+
+        [NameInMap("SpotPriceLimit")]
+        [Validation(Required=false)]
+        public float? SpotPriceLimit { get; set; }
+
+        [NameInMap("SpotStrategy")]
+        [Validation(Required=false)]
+        public string SpotStrategy { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -156,141 +258,43 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
-        [NameInMap("SecurityGroupIds")]
+        [NameInMap("TemplateResourceGroupId")]
         [Validation(Required=false)]
-        public List<string> SecurityGroupIds { get; set; }
+        public string TemplateResourceGroupId { get; set; }
 
-        [NameInMap("LaunchTemplateName")]
+        [NameInMap("TemplateTag")]
         [Validation(Required=false)]
-        public string LaunchTemplateName { get; set; }
+        public List<CreateLaunchTemplateRequestTemplateTag> TemplateTag { get; set; }
+        public class CreateLaunchTemplateRequestTemplateTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
 
-        [NameInMap("VersionDescription")]
-        [Validation(Required=false)]
-        public string VersionDescription { get; set; }
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
 
-        [NameInMap("ImageId")]
-        [Validation(Required=false)]
-        public string ImageId { get; set; }
-
-        [NameInMap("ImageOwnerAlias")]
-        [Validation(Required=false)]
-        public string ImageOwnerAlias { get; set; }
-
-        [NameInMap("PasswordInherit")]
-        [Validation(Required=false)]
-        public bool? PasswordInherit { get; set; }
-
-        [NameInMap("InstanceType")]
-        [Validation(Required=false)]
-        public string InstanceType { get; set; }
-
-        [NameInMap("SecurityGroupId")]
-        [Validation(Required=false)]
-        public string SecurityGroupId { get; set; }
-
-        [NameInMap("VpcId")]
-        [Validation(Required=false)]
-        public string VpcId { get; set; }
-
-        [NameInMap("VSwitchId")]
-        [Validation(Required=false)]
-        public string VSwitchId { get; set; }
-
-        [NameInMap("InstanceName")]
-        [Validation(Required=false)]
-        public string InstanceName { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("InternetMaxBandwidthIn")]
-        [Validation(Required=false)]
-        public int? InternetMaxBandwidthIn { get; set; }
-
-        [NameInMap("InternetMaxBandwidthOut")]
-        [Validation(Required=false)]
-        public int? InternetMaxBandwidthOut { get; set; }
-
-        [NameInMap("HostName")]
-        [Validation(Required=false)]
-        public string HostName { get; set; }
-
-        [NameInMap("ZoneId")]
-        [Validation(Required=false)]
-        public string ZoneId { get; set; }
-
-        [NameInMap("IoOptimized")]
-        [Validation(Required=false)]
-        public string IoOptimized { get; set; }
-
-        [NameInMap("InstanceChargeType")]
-        [Validation(Required=false)]
-        public string InstanceChargeType { get; set; }
-
-        [NameInMap("Period")]
-        [Validation(Required=false)]
-        public int? Period { get; set; }
-
-        [NameInMap("InternetChargeType")]
-        [Validation(Required=false)]
-        public string InternetChargeType { get; set; }
-
-        [NameInMap("EnableVmOsConfig")]
-        [Validation(Required=false)]
-        public bool? EnableVmOsConfig { get; set; }
-
-        [NameInMap("NetworkType")]
-        [Validation(Required=false)]
-        public string NetworkType { get; set; }
+        }
 
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }
 
-        [NameInMap("KeyPairName")]
+        [NameInMap("VSwitchId")]
         [Validation(Required=false)]
-        public string KeyPairName { get; set; }
+        public string VSwitchId { get; set; }
 
-        [NameInMap("RamRoleName")]
+        [NameInMap("VersionDescription")]
         [Validation(Required=false)]
-        public string RamRoleName { get; set; }
+        public string VersionDescription { get; set; }
 
-        [NameInMap("AutoReleaseTime")]
+        [NameInMap("VpcId")]
         [Validation(Required=false)]
-        public string AutoReleaseTime { get; set; }
+        public string VpcId { get; set; }
 
-        [NameInMap("SpotStrategy")]
+        [NameInMap("ZoneId")]
         [Validation(Required=false)]
-        public string SpotStrategy { get; set; }
-
-        [NameInMap("SpotPriceLimit")]
-        [Validation(Required=false)]
-        public float? SpotPriceLimit { get; set; }
-
-        [NameInMap("SpotDuration")]
-        [Validation(Required=false)]
-        public int? SpotDuration { get; set; }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
-
-        [NameInMap("TemplateResourceGroupId")]
-        [Validation(Required=false)]
-        public string TemplateResourceGroupId { get; set; }
-
-        [NameInMap("SecurityEnhancementStrategy")]
-        [Validation(Required=false)]
-        public string SecurityEnhancementStrategy { get; set; }
-
-        [NameInMap("PrivateIpAddress")]
-        [Validation(Required=false)]
-        public string PrivateIpAddress { get; set; }
-
-        [NameInMap("DeploymentSetId")]
-        [Validation(Required=false)]
-        public string DeploymentSetId { get; set; }
+        public string ZoneId { get; set; }
 
     }
 

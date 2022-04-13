@@ -18,37 +18,37 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? Size { get; set; }
         };
 
-        [NameInMap("OwnerId")]
+        [NameInMap("Architecture")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("ImageId")]
-        [Validation(Required=false)]
-        public string ImageId { get; set; }
+        public string Architecture { get; set; }
 
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("DiskId")]
+        [Validation(Required=false)]
+        public string DiskId { get; set; }
+
+        [NameInMap("ImageId")]
+        [Validation(Required=false)]
+        public string ImageId { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("KeyPairName")]
+        [Validation(Required=false)]
+        public string KeyPairName { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
-        [NameInMap("UseAdditionalService")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public bool? UseAdditionalService { get; set; }
+        public long? OwnerId { get; set; }
 
         [NameInMap("Password")]
         [Validation(Required=false)]
@@ -58,25 +58,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public bool? PasswordInherit { get; set; }
 
-        [NameInMap("KeyPairName")]
-        [Validation(Required=false)]
-        public string KeyPairName { get; set; }
-
-        [NameInMap("DiskId")]
-        [Validation(Required=false)]
-        public string DiskId { get; set; }
-
         [NameInMap("Platform")]
         [Validation(Required=false)]
         public string Platform { get; set; }
 
-        [NameInMap("Architecture")]
+        [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
-        public string Architecture { get; set; }
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
         [NameInMap("SecurityEnhancementStrategy")]
         [Validation(Required=false)]
         public string SecurityEnhancementStrategy { get; set; }
+
+        [NameInMap("UseAdditionalService")]
+        [Validation(Required=false)]
+        public bool? UseAdditionalService { get; set; }
 
     }
 

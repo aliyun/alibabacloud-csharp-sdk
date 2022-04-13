@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateActivationResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ActivationCode")]
         [Validation(Required=false)]
         public string ActivationCode { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("ActivationId")]
         [Validation(Required=false)]
         public string ActivationId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -9,25 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreatePhysicalConnectionRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("AccessPointId")]
         [Validation(Required=false)]
         public string AccessPointId { get; set; }
 
-        [NameInMap("Type")]
+        [NameInMap("CircuitCode")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public string CircuitCode { get; set; }
+
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
 
         [NameInMap("LineOperator")]
         [Validation(Required=false)]
         public string LineOperator { get; set; }
 
-        [NameInMap("bandwidth")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public int? Bandwidth { get; set; }
+        public string Name { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
         [NameInMap("PeerLocation")]
         [Validation(Required=false)]
@@ -41,25 +53,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RedundantPhysicalConnectionId { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("CircuitCode")]
-        [Validation(Required=false)]
-        public string CircuitCode { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -69,13 +65,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("Type")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public string Type { get; set; }
 
         [NameInMap("UserCidr")]
         [Validation(Required=false)]
         public string UserCidr { get; set; }
+
+        [NameInMap("bandwidth")]
+        [Validation(Required=false)]
+        public int? Bandwidth { get; set; }
 
     }
 

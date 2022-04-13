@@ -9,21 +9,39 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyReservedInstancesRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("Configuration")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public List<ModifyReservedInstancesRequestConfiguration> Configuration { get; set; }
+        public class ModifyReservedInstancesRequestConfiguration : TeaModel {
+            [NameInMap("InstanceAmount")]
+            [Validation(Required=false)]
+            public int? InstanceAmount { get; set; }
 
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
+            [NameInMap("InstanceType")]
+            [Validation(Required=false)]
+            public string InstanceType { get; set; }
 
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+            [NameInMap("ReservedInstanceName")]
+            [Validation(Required=false)]
+            public string ReservedInstanceName { get; set; }
+
+            [NameInMap("Scope")]
+            [Validation(Required=false)]
+            public string Scope { get; set; }
+
+            [NameInMap("ZoneId")]
+            [Validation(Required=false)]
+            public string ZoneId { get; set; }
+
+        }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -33,31 +51,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public List<string> ReservedInstanceId { get; set; }
 
-        [NameInMap("Configuration")]
+        [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
-        public List<ModifyReservedInstancesRequestConfiguration> Configuration { get; set; }
-        public class ModifyReservedInstancesRequestConfiguration : TeaModel {
-            [NameInMap("ReservedInstanceName")]
-            [Validation(Required=false)]
-            public string ReservedInstanceName { get; set; }
+        public string ResourceOwnerAccount { get; set; }
 
-            [NameInMap("ZoneId")]
-            [Validation(Required=false)]
-            public string ZoneId { get; set; }
-
-            [NameInMap("Scope")]
-            [Validation(Required=false)]
-            public string Scope { get; set; }
-
-            [NameInMap("InstanceType")]
-            [Validation(Required=false)]
-            public string InstanceType { get; set; }
-
-            [NameInMap("InstanceAmount")]
-            [Validation(Required=false)]
-            public int? InstanceAmount { get; set; }
-
-        }
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
     }
 

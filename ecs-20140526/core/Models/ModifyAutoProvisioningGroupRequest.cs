@@ -9,33 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyAutoProvisioningGroupRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("AutoProvisioningGroupId")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string AutoProvisioningGroupId { get; set; }
 
-        [NameInMap("ResourceOwnerAccount")]
+        [NameInMap("AutoProvisioningGroupName")]
         [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
+        public string AutoProvisioningGroupName { get; set; }
 
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("DefaultTargetCapacityType")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string DefaultTargetCapacityType { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("ExcessCapacityTerminationPolicy")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string ExcessCapacityTerminationPolicy { get; set; }
 
         [NameInMap("LaunchTemplateConfig")]
         [Validation(Required=false)]
         public List<ModifyAutoProvisioningGroupRequestLaunchTemplateConfig> LaunchTemplateConfig { get; set; }
         public class ModifyAutoProvisioningGroupRequestLaunchTemplateConfig : TeaModel {
-            [NameInMap("VSwitchId")]
+            [NameInMap("InstanceType")]
             [Validation(Required=false)]
-            public string VSwitchId { get; set; }
+            public string InstanceType { get; set; }
 
             [NameInMap("MaxPrice")]
             [Validation(Required=false)]
@@ -45,9 +41,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public int? Priority { get; set; }
 
-            [NameInMap("InstanceType")]
+            [NameInMap("VSwitchId")]
             [Validation(Required=false)]
-            public string InstanceType { get; set; }
+            public string VSwitchId { get; set; }
 
             [NameInMap("WeightedCapacity")]
             [Validation(Required=false)]
@@ -55,41 +51,45 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
-        [NameInMap("AutoProvisioningGroupId")]
-        [Validation(Required=false)]
-        public string AutoProvisioningGroupId { get; set; }
-
-        [NameInMap("ExcessCapacityTerminationPolicy")]
-        [Validation(Required=false)]
-        public string ExcessCapacityTerminationPolicy { get; set; }
-
-        [NameInMap("DefaultTargetCapacityType")]
-        [Validation(Required=false)]
-        public string DefaultTargetCapacityType { get; set; }
-
-        [NameInMap("TerminateInstancesWithExpiration")]
-        [Validation(Required=false)]
-        public bool? TerminateInstancesWithExpiration { get; set; }
-
         [NameInMap("MaxSpotPrice")]
         [Validation(Required=false)]
         public float? MaxSpotPrice { get; set; }
 
-        [NameInMap("TotalTargetCapacity")]
+        [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
-        public string TotalTargetCapacity { get; set; }
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
         [NameInMap("PayAsYouGoTargetCapacity")]
         [Validation(Required=false)]
         public string PayAsYouGoTargetCapacity { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
         [NameInMap("SpotTargetCapacity")]
         [Validation(Required=false)]
         public string SpotTargetCapacity { get; set; }
 
-        [NameInMap("AutoProvisioningGroupName")]
+        [NameInMap("TerminateInstancesWithExpiration")]
         [Validation(Required=false)]
-        public string AutoProvisioningGroupName { get; set; }
+        public bool? TerminateInstancesWithExpiration { get; set; }
+
+        [NameInMap("TotalTargetCapacity")]
+        [Validation(Required=false)]
+        public string TotalTargetCapacity { get; set; }
 
     }
 

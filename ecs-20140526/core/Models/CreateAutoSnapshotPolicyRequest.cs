@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateAutoSnapshotPolicyRequest : TeaModel {
+        [NameInMap("CopiedSnapshotsRetentionDays")]
+        [Validation(Required=false)]
+        public int? CopiedSnapshotsRetentionDays { get; set; }
+
+        [NameInMap("EnableCrossRegionCopy")]
+        [Validation(Required=false)]
+        public bool? EnableCrossRegionCopy { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -20,38 +32,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("regionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("autoSnapshotPolicyName")]
-        [Validation(Required=false)]
-        public string AutoSnapshotPolicyName { get; set; }
-
-        [NameInMap("timePoints")]
-        [Validation(Required=false)]
-        public string TimePoints { get; set; }
-
-        [NameInMap("repeatWeekdays")]
-        [Validation(Required=false)]
-        public string RepeatWeekdays { get; set; }
-
-        [NameInMap("retentionDays")]
-        [Validation(Required=false)]
-        public int? RetentionDays { get; set; }
-
-        [NameInMap("EnableCrossRegionCopy")]
-        [Validation(Required=false)]
-        public bool? EnableCrossRegionCopy { get; set; }
-
-        [NameInMap("TargetCopyRegions")]
-        [Validation(Required=false)]
-        public string TargetCopyRegions { get; set; }
-
-        [NameInMap("CopiedSnapshotsRetentionDays")]
-        [Validation(Required=false)]
-        public int? CopiedSnapshotsRetentionDays { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -67,9 +47,29 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
-        [NameInMap("ResourceGroupId")]
+        [NameInMap("TargetCopyRegions")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public string TargetCopyRegions { get; set; }
+
+        [NameInMap("autoSnapshotPolicyName")]
+        [Validation(Required=false)]
+        public string AutoSnapshotPolicyName { get; set; }
+
+        [NameInMap("regionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("repeatWeekdays")]
+        [Validation(Required=false)]
+        public string RepeatWeekdays { get; set; }
+
+        [NameInMap("retentionDays")]
+        [Validation(Required=false)]
+        public int? RetentionDays { get; set; }
+
+        [NameInMap("timePoints")]
+        [Validation(Required=false)]
+        public string TimePoints { get; set; }
 
     }
 

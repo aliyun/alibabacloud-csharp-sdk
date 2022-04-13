@@ -9,22 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstancesFullStatusResponseBody : TeaModel {
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("InstanceFullStatusSet")]
         [Validation(Required=false)]
         public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSet InstanceFullStatusSet { get; set; }
@@ -33,6 +17,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusType> InstanceFullStatusType { get; set; }
             public class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusType : TeaModel {
+                public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeHealthStatus HealthStatus { get; set; }
+                public class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeHealthStatus : TeaModel {
+                    [NameInMap("Code")]
+                    [Validation(Required=false)]
+                    public int? Code { get; set; }
+
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                }
                 public string InstanceId { get; set; }
                 public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSet ScheduledSystemEventSet { get; set; }
                 public class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSet : TeaModel {
@@ -40,48 +35,36 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventType> ScheduledSystemEventType { get; set; }
                     public class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventType : TeaModel {
-                        [NameInMap("EventPublishTime")]
+                        [NameInMap("EventCycleStatus")]
                         [Validation(Required=false)]
-                        public string EventPublishTime { get; set; }
+                        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventCycleStatus EventCycleStatus { get; set; }
+                        public class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventCycleStatus : TeaModel {
+                            [NameInMap("Code")]
+                            [Validation(Required=false)]
+                            public int? Code { get; set; }
+                            [NameInMap("Name")]
+                            [Validation(Required=false)]
+                            public string Name { get; set; }
+                        };
 
                         [NameInMap("EventId")]
                         [Validation(Required=false)]
                         public string EventId { get; set; }
 
-                        [NameInMap("NotBefore")]
+                        [NameInMap("EventPublishTime")]
                         [Validation(Required=false)]
-                        public string NotBefore { get; set; }
-
-                        [NameInMap("ImpactLevel")]
-                        [Validation(Required=false)]
-                        public string ImpactLevel { get; set; }
-
-                        [NameInMap("Reason")]
-                        [Validation(Required=false)]
-                        public string Reason { get; set; }
-
-                        [NameInMap("EventCycleStatus")]
-                        [Validation(Required=false)]
-                        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventCycleStatus EventCycleStatus { get; set; }
-                        public class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventCycleStatus : TeaModel {
-                            [NameInMap("Name")]
-                            [Validation(Required=false)]
-                            public string Name { get; set; }
-                            [NameInMap("Code")]
-                            [Validation(Required=false)]
-                            public int? Code { get; set; }
-                        };
+                        public string EventPublishTime { get; set; }
 
                         [NameInMap("EventType")]
                         [Validation(Required=false)]
                         public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventType EventType { get; set; }
                         public class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventType : TeaModel {
-                            [NameInMap("Name")]
-                            [Validation(Required=false)]
-                            public string Name { get; set; }
                             [NameInMap("Code")]
                             [Validation(Required=false)]
                             public int? Code { get; set; }
+                            [NameInMap("Name")]
+                            [Validation(Required=false)]
+                            public string Name { get; set; }
                         };
 
                         [NameInMap("ExtendedAttribute")]
@@ -106,13 +89,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                                     [Validation(Required=false)]
                                     public string CreationTime { get; set; }
 
-                                    [NameInMap("DeviceSize")]
-                                    [Validation(Required=false)]
-                                    public string DeviceSize { get; set; }
-
                                     [NameInMap("DeviceCategory")]
                                     [Validation(Required=false)]
                                     public string DeviceCategory { get; set; }
+
+                                    [NameInMap("DeviceSize")]
+                                    [Validation(Required=false)]
+                                    public string DeviceSize { get; set; }
 
                                     [NameInMap("DeviceType")]
                                     [Validation(Required=false)]
@@ -127,33 +110,50 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             }
                         };
 
+                        [NameInMap("ImpactLevel")]
+                        [Validation(Required=false)]
+                        public string ImpactLevel { get; set; }
+
+                        [NameInMap("NotBefore")]
+                        [Validation(Required=false)]
+                        public string NotBefore { get; set; }
+
+                        [NameInMap("Reason")]
+                        [Validation(Required=false)]
+                        public string Reason { get; set; }
+
                     }
 
                 }
                 public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeStatus Status { get; set; }
                 public class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeStatus : TeaModel {
-                    [NameInMap("Name")]
-                    [Validation(Required=false)]
-                    public string Name { get; set; }
-
                     [NameInMap("Code")]
                     [Validation(Required=false)]
                     public int? Code { get; set; }
 
-                }
-                public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeHealthStatus HealthStatus { get; set; }
-                public class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeHealthStatus : TeaModel {
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
-
-                    [NameInMap("Code")]
-                    [Validation(Required=false)]
-                    public int? Code { get; set; }
 
                 }
             }
         };
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

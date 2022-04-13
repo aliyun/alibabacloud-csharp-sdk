@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeTasksRequest : TeaModel {
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -29,33 +29,33 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("TaskIds")]
+        [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
-        public string TaskIds { get; set; }
+        public string ResourceOwnerAccount { get; set; }
 
-        [NameInMap("TaskAction")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public string TaskAction { get; set; }
-
-        [NameInMap("TaskStatus")]
-        [Validation(Required=false)]
-        public string TaskStatus { get; set; }
+        public long? ResourceOwnerId { get; set; }
 
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
-        [NameInMap("EndTime")]
+        [NameInMap("TaskAction")]
         [Validation(Required=false)]
-        public string EndTime { get; set; }
+        public string TaskAction { get; set; }
+
+        [NameInMap("TaskIds")]
+        [Validation(Required=false)]
+        public string TaskIds { get; set; }
+
+        [NameInMap("TaskStatus")]
+        [Validation(Required=false)]
+        public string TaskStatus { get; set; }
 
     }
 

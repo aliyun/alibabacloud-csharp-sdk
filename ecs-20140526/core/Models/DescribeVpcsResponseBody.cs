@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeVpcsResponseBody : TeaModel {
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
@@ -33,22 +33,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeVpcsResponseBodyVpcsVpc> Vpc { get; set; }
             public class DescribeVpcsResponseBodyVpcsVpc : TeaModel {
-                public string CreationTime { get; set; }
-                public string VpcName { get; set; }
-                public string Status { get; set; }
-                public string VpcId { get; set; }
-                public string VRouterId { get; set; }
-                public bool? IsDefault { get; set; }
                 public string CidrBlock { get; set; }
+                public string CreationTime { get; set; }
                 public string Description { get; set; }
+                public bool? IsDefault { get; set; }
                 public string RegionId { get; set; }
-                public DescribeVpcsResponseBodyVpcsVpcVSwitchIds VSwitchIds { get; set; }
-                public class DescribeVpcsResponseBodyVpcsVpcVSwitchIds : TeaModel {
-                    [NameInMap("VSwitchId")]
-                    [Validation(Required=false)]
-                    public List<string> VSwitchId { get; set; }
-
-                }
+                public string Status { get; set; }
                 public DescribeVpcsResponseBodyVpcsVpcUserCidrs UserCidrs { get; set; }
                 public class DescribeVpcsResponseBodyVpcsVpcUserCidrs : TeaModel {
                     [NameInMap("UserCidr")]
@@ -56,6 +46,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<string> UserCidr { get; set; }
 
                 }
+                public string VRouterId { get; set; }
+                public DescribeVpcsResponseBodyVpcsVpcVSwitchIds VSwitchIds { get; set; }
+                public class DescribeVpcsResponseBodyVpcsVpcVSwitchIds : TeaModel {
+                    [NameInMap("VSwitchId")]
+                    [Validation(Required=false)]
+                    public List<string> VSwitchId { get; set; }
+
+                }
+                public string VpcId { get; set; }
+                public string VpcName { get; set; }
             }
         };
 

@@ -9,54 +9,54 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeregisterManagedInstanceResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Instance")]
         [Validation(Required=false)]
         public DeregisterManagedInstanceResponseBodyInstance Instance { get; set; }
         public class DeregisterManagedInstanceResponseBodyInstance : TeaModel {
-            [NameInMap("LastInvokedTime")]
+            [NameInMap("ActivationId")]
             [Validation(Required=false)]
-            public string LastInvokedTime { get; set; }
-            [NameInMap("InternetIp")]
+            public string ActivationId { get; set; }
+            [NameInMap("AgentVersion")]
             [Validation(Required=false)]
-            public string InternetIp { get; set; }
+            public string AgentVersion { get; set; }
             [NameInMap("Hostname")]
             [Validation(Required=false)]
             public string Hostname { get; set; }
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
-            [NameInMap("ActivationId")]
-            [Validation(Required=false)]
-            public string ActivationId { get; set; }
-            [NameInMap("IntranetIp")]
-            [Validation(Required=false)]
-            public string IntranetIp { get; set; }
-            [NameInMap("AgentVersion")]
-            [Validation(Required=false)]
-            public string AgentVersion { get; set; }
-            [NameInMap("RegistrationTime")]
-            [Validation(Required=false)]
-            public string RegistrationTime { get; set; }
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
+            [NameInMap("InternetIp")]
+            [Validation(Required=false)]
+            public string InternetIp { get; set; }
+            [NameInMap("IntranetIp")]
+            [Validation(Required=false)]
+            public string IntranetIp { get; set; }
+            [NameInMap("InvocationCount")]
+            [Validation(Required=false)]
+            public long? InvocationCount { get; set; }
+            [NameInMap("LastInvokedTime")]
+            [Validation(Required=false)]
+            public string LastInvokedTime { get; set; }
+            [NameInMap("MachineId")]
+            [Validation(Required=false)]
+            public string MachineId { get; set; }
             [NameInMap("OsType")]
             [Validation(Required=false)]
             public string OsType { get; set; }
             [NameInMap("OsVersion")]
             [Validation(Required=false)]
             public string OsVersion { get; set; }
-            [NameInMap("InvocationCount")]
+            [NameInMap("RegistrationTime")]
             [Validation(Required=false)]
-            public long? InvocationCount { get; set; }
-            [NameInMap("MachineId")]
-            [Validation(Required=false)]
-            public string MachineId { get; set; }
+            public string RegistrationTime { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

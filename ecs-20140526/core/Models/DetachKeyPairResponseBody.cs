@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DetachKeyPairResponseBody : TeaModel {
+        [NameInMap("FailCount")]
+        [Validation(Required=false)]
+        public string FailCount { get; set; }
+
         [NameInMap("KeyPairName")]
         [Validation(Required=false)]
         public string KeyPairName { get; set; }
@@ -16,14 +20,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public string TotalCount { get; set; }
-
-        [NameInMap("FailCount")]
-        [Validation(Required=false)]
-        public string FailCount { get; set; }
 
         [NameInMap("Results")]
         [Validation(Required=false)]
@@ -34,11 +30,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DetachKeyPairResponseBodyResultsResult> Result { get; set; }
             public class DetachKeyPairResponseBodyResultsResult : TeaModel {
                 public string Code { get; set; }
-                public string Message { get; set; }
                 public string InstanceId { get; set; }
+                public string Message { get; set; }
                 public string Success { get; set; }
             }
         };
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public string TotalCount { get; set; }
 
     }
 

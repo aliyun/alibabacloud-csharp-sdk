@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AssignIpv6AddressesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("NetworkInterfaceId")]
-        [Validation(Required=false)]
-        public string NetworkInterfaceId { get; set; }
-
         [NameInMap("Ipv6Sets")]
         [Validation(Required=false)]
         public AssignIpv6AddressesResponseBodyIpv6Sets Ipv6Sets { get; set; }
@@ -25,6 +17,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<string> Ipv6Address { get; set; }
         };
+
+        [NameInMap("NetworkInterfaceId")]
+        [Validation(Required=false)]
+        public string NetworkInterfaceId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -9,6 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribePriceRequest : TeaModel {
+        [NameInMap("DataDisk")]
+        [Validation(Required=false)]
+        public List<DescribePriceRequestDataDisk> DataDisk { get; set; }
+        public class DescribePriceRequestDataDisk : TeaModel {
+            [NameInMap("Category")]
+            [Validation(Required=false)]
+            public string Category { get; set; }
+
+            [NameInMap("PerformanceLevel")]
+            [Validation(Required=false)]
+            public string PerformanceLevel { get; set; }
+
+            [NameInMap("Size")]
+            [Validation(Required=false)]
+            public int? Size { get; set; }
+
+        }
+
         [NameInMap("SystemDisk")]
         [Validation(Required=false)]
         public DescribePriceRequestSystemDisk SystemDisk { get; set; }
@@ -16,75 +34,53 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
-            [NameInMap("Size")]
-            [Validation(Required=false)]
-            public int? Size { get; set; }
             [NameInMap("PerformanceLevel")]
             [Validation(Required=false)]
             public string PerformanceLevel { get; set; }
+            [NameInMap("Size")]
+            [Validation(Required=false)]
+            public int? Size { get; set; }
         };
 
-        [NameInMap("DataDisk")]
+        [NameInMap("Amount")]
         [Validation(Required=false)]
-        public List<DescribePriceRequestDataDisk> DataDisk { get; set; }
-        public class DescribePriceRequestDataDisk : TeaModel {
-            [NameInMap("Size")]
-            [Validation(Required=false)]
-            public int? Size { get; set; }
+        public int? Amount { get; set; }
 
-            [NameInMap("Category")]
-            [Validation(Required=false)]
-            public string Category { get; set; }
-
-            [NameInMap("PerformanceLevel")]
-            [Validation(Required=false)]
-            public string PerformanceLevel { get; set; }
-
-        }
-
-        [NameInMap("OwnerId")]
+        [NameInMap("AssuranceTimes")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string AssuranceTimes { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("Capacity")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("ResourceType")]
-        [Validation(Required=false)]
-        public string ResourceType { get; set; }
-
-        [NameInMap("ImageId")]
-        [Validation(Required=false)]
-        public string ImageId { get; set; }
-
-        [NameInMap("InstanceType")]
-        [Validation(Required=false)]
-        public string InstanceType { get; set; }
+        public int? Capacity { get; set; }
 
         [NameInMap("DedicatedHostType")]
         [Validation(Required=false)]
         public string DedicatedHostType { get; set; }
 
-        [NameInMap("IoOptimized")]
+        [NameInMap("ImageId")]
         [Validation(Required=false)]
-        public string IoOptimized { get; set; }
+        public string ImageId { get; set; }
+
+        [NameInMap("InstanceAmount")]
+        [Validation(Required=false)]
+        public int? InstanceAmount { get; set; }
+
+        [NameInMap("InstanceCpuCoreCount")]
+        [Validation(Required=false)]
+        public int? InstanceCpuCoreCount { get; set; }
 
         [NameInMap("InstanceNetworkType")]
         [Validation(Required=false)]
         public string InstanceNetworkType { get; set; }
+
+        [NameInMap("InstanceType")]
+        [Validation(Required=false)]
+        public string InstanceType { get; set; }
+
+        [NameInMap("InstanceTypeList")]
+        [Validation(Required=false)]
+        public List<string> InstanceTypeList { get; set; }
 
         [NameInMap("InternetChargeType")]
         [Validation(Required=false)]
@@ -94,61 +90,65 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? InternetMaxBandwidthOut { get; set; }
 
-        [NameInMap("Period")]
+        [NameInMap("IoOptimized")]
         [Validation(Required=false)]
-        public int? Period { get; set; }
-
-        [NameInMap("PriceUnit")]
-        [Validation(Required=false)]
-        public string PriceUnit { get; set; }
-
-        [NameInMap("Amount")]
-        [Validation(Required=false)]
-        public int? Amount { get; set; }
-
-        [NameInMap("OfferingType")]
-        [Validation(Required=false)]
-        public string OfferingType { get; set; }
-
-        [NameInMap("InstanceAmount")]
-        [Validation(Required=false)]
-        public int? InstanceAmount { get; set; }
-
-        [NameInMap("Scope")]
-        [Validation(Required=false)]
-        public string Scope { get; set; }
-
-        [NameInMap("Platform")]
-        [Validation(Required=false)]
-        public string Platform { get; set; }
-
-        [NameInMap("Capacity")]
-        [Validation(Required=false)]
-        public int? Capacity { get; set; }
-
-        [NameInMap("AssuranceTimes")]
-        [Validation(Required=false)]
-        public string AssuranceTimes { get; set; }
-
-        [NameInMap("InstanceCpuCoreCount")]
-        [Validation(Required=false)]
-        public int? InstanceCpuCoreCount { get; set; }
+        public string IoOptimized { get; set; }
 
         [NameInMap("Isp")]
         [Validation(Required=false)]
         public string Isp { get; set; }
 
-        [NameInMap("InstanceTypeList")]
+        [NameInMap("OfferingType")]
         [Validation(Required=false)]
-        public List<string> InstanceTypeList { get; set; }
+        public string OfferingType { get; set; }
 
-        [NameInMap("SpotStrategy")]
+        [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
-        public string SpotStrategy { get; set; }
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("Period")]
+        [Validation(Required=false)]
+        public int? Period { get; set; }
+
+        [NameInMap("Platform")]
+        [Validation(Required=false)]
+        public string Platform { get; set; }
+
+        [NameInMap("PriceUnit")]
+        [Validation(Required=false)]
+        public string PriceUnit { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
+
+        [NameInMap("Scope")]
+        [Validation(Required=false)]
+        public string Scope { get; set; }
 
         [NameInMap("SpotDuration")]
         [Validation(Required=false)]
         public int? SpotDuration { get; set; }
+
+        [NameInMap("SpotStrategy")]
+        [Validation(Required=false)]
+        public string SpotStrategy { get; set; }
 
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

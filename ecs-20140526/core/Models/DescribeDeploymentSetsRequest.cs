@@ -9,21 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDeploymentSetsRequest : TeaModel {
+        [NameInMap("DeploymentSetIds")]
+        [Validation(Required=false)]
+        public string DeploymentSetIds { get; set; }
+
+        [NameInMap("DeploymentSetName")]
+        [Validation(Required=false)]
+        public string DeploymentSetName { get; set; }
+
+        [NameInMap("Domain")]
+        [Validation(Required=false)]
+        public string Domain { get; set; }
+
+        [NameInMap("Granularity")]
+        [Validation(Required=false)]
+        public string Granularity { get; set; }
+
+        [NameInMap("NetworkType")]
+        [Validation(Required=false)]
+        public string NetworkType { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -33,33 +45,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public string RegionId { get; set; }
 
-        [NameInMap("DeploymentSetIds")]
+        [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
-        public string DeploymentSetIds { get; set; }
+        public string ResourceOwnerAccount { get; set; }
 
-        [NameInMap("NetworkType")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public string NetworkType { get; set; }
+        public long? ResourceOwnerId { get; set; }
 
         [NameInMap("Strategy")]
         [Validation(Required=false)]
         public string Strategy { get; set; }
-
-        [NameInMap("DeploymentSetName")]
-        [Validation(Required=false)]
-        public string DeploymentSetName { get; set; }
-
-        [NameInMap("Granularity")]
-        [Validation(Required=false)]
-        public string Granularity { get; set; }
-
-        [NameInMap("Domain")]
-        [Validation(Required=false)]
-        public string Domain { get; set; }
 
     }
 

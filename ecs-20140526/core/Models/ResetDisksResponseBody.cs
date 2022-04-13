@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ResetDisksResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("OperationProgressSet")]
         [Validation(Required=false)]
         public ResetDisksResponseBodyOperationProgressSet OperationProgressSet { get; set; }
@@ -21,8 +17,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<ResetDisksResponseBodyOperationProgressSetOperationProgress> OperationProgress { get; set; }
             public class ResetDisksResponseBodyOperationProgressSetOperationProgress : TeaModel {
-                public string ErrorMsg { get; set; }
                 public string ErrorCode { get; set; }
+                public string ErrorMsg { get; set; }
                 public string OperationStatus { get; set; }
                 public ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSet RelatedItemSet { get; set; }
                 public class ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSet : TeaModel {
@@ -43,6 +39,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

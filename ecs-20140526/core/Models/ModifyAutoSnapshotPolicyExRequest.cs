@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyAutoSnapshotPolicyExRequest : TeaModel {
+        [NameInMap("CopiedSnapshotsRetentionDays")]
+        [Validation(Required=false)]
+        public int? CopiedSnapshotsRetentionDays { get; set; }
+
+        [NameInMap("EnableCrossRegionCopy")]
+        [Validation(Required=false)]
+        public bool? EnableCrossRegionCopy { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -21,9 +29,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("regionId")]
+        [NameInMap("TargetCopyRegions")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string TargetCopyRegions { get; set; }
 
         [NameInMap("autoSnapshotPolicyId")]
         [Validation(Required=false)]
@@ -33,9 +41,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string AutoSnapshotPolicyName { get; set; }
 
-        [NameInMap("timePoints")]
+        [NameInMap("regionId")]
         [Validation(Required=false)]
-        public string TimePoints { get; set; }
+        public string RegionId { get; set; }
 
         [NameInMap("repeatWeekdays")]
         [Validation(Required=false)]
@@ -45,17 +53,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? RetentionDays { get; set; }
 
-        [NameInMap("EnableCrossRegionCopy")]
+        [NameInMap("timePoints")]
         [Validation(Required=false)]
-        public bool? EnableCrossRegionCopy { get; set; }
-
-        [NameInMap("TargetCopyRegions")]
-        [Validation(Required=false)]
-        public string TargetCopyRegions { get; set; }
-
-        [NameInMap("CopiedSnapshotsRetentionDays")]
-        [Validation(Required=false)]
-        public int? CopiedSnapshotsRetentionDays { get; set; }
+        public string TimePoints { get; set; }
 
     }
 

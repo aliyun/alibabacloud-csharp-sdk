@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeVRoutersResponseBody : TeaModel {
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
@@ -33,11 +33,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeVRoutersResponseBodyVRoutersVRouter> VRouter { get; set; }
             public class DescribeVRoutersResponseBodyVRoutersVRouter : TeaModel {
-                public string VpcId { get; set; }
                 public string CreationTime { get; set; }
-                public string VRouterId { get; set; }
                 public string Description { get; set; }
-                public string VRouterName { get; set; }
                 public string RegionId { get; set; }
                 public DescribeVRoutersResponseBodyVRoutersVRouterRouteTableIds RouteTableIds { get; set; }
                 public class DescribeVRoutersResponseBodyVRoutersVRouterRouteTableIds : TeaModel {
@@ -46,6 +43,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<string> RouteTableId { get; set; }
 
                 }
+                public string VRouterId { get; set; }
+                public string VRouterName { get; set; }
+                public string VpcId { get; set; }
             }
         };
 

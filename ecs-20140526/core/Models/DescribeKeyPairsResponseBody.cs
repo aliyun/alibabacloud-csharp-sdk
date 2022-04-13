@@ -9,22 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeKeyPairsResponseBody : TeaModel {
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("KeyPairs")]
         [Validation(Required=false)]
         public DescribeKeyPairsResponseBodyKeyPairs KeyPairs { get; set; }
@@ -34,8 +18,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeKeyPairsResponseBodyKeyPairsKeyPair> KeyPair { get; set; }
             public class DescribeKeyPairsResponseBodyKeyPairsKeyPair : TeaModel {
                 public string CreationTime { get; set; }
-                public string KeyPairName { get; set; }
                 public string KeyPairFingerPrint { get; set; }
+                public string KeyPairName { get; set; }
                 public string ResourceGroupId { get; set; }
                 public DescribeKeyPairsResponseBodyKeyPairsKeyPairTags Tags { get; set; }
                 public class DescribeKeyPairsResponseBodyKeyPairsKeyPairTags : TeaModel {
@@ -43,19 +27,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeKeyPairsResponseBodyKeyPairsKeyPairTagsTag> Tag { get; set; }
                     public class DescribeKeyPairsResponseBodyKeyPairsKeyPairTagsTag : TeaModel {
-                        [NameInMap("TagValue")]
-                        [Validation(Required=false)]
-                        public string TagValue { get; set; }
-
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
+
+                        [NameInMap("TagValue")]
+                        [Validation(Required=false)]
+                        public string TagValue { get; set; }
 
                     }
 
                 }
             }
         };
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

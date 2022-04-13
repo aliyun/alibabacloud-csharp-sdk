@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeAccountAttributesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("AccountAttributeItems")]
         [Validation(Required=false)]
         public DescribeAccountAttributesResponseBodyAccountAttributeItems AccountAttributeItems { get; set; }
@@ -28,39 +24,43 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem> ValueItem { get; set; }
                     public class DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem : TeaModel {
+                        [NameInMap("Count")]
+                        [Validation(Required=false)]
+                        public int? Count { get; set; }
+
                         [NameInMap("DiskCategory")]
                         [Validation(Required=false)]
                         public string DiskCategory { get; set; }
-
-                        [NameInMap("Value")]
-                        [Validation(Required=false)]
-                        public string Value { get; set; }
 
                         [NameInMap("ExpiredTime")]
                         [Validation(Required=false)]
                         public string ExpiredTime { get; set; }
 
-                        [NameInMap("ZoneId")]
+                        [NameInMap("InstanceChargeType")]
                         [Validation(Required=false)]
-                        public string ZoneId { get; set; }
+                        public string InstanceChargeType { get; set; }
 
                         [NameInMap("InstanceType")]
                         [Validation(Required=false)]
                         public string InstanceType { get; set; }
 
-                        [NameInMap("Count")]
+                        [NameInMap("Value")]
                         [Validation(Required=false)]
-                        public int? Count { get; set; }
+                        public string Value { get; set; }
 
-                        [NameInMap("InstanceChargeType")]
+                        [NameInMap("ZoneId")]
                         [Validation(Required=false)]
-                        public string InstanceChargeType { get; set; }
+                        public string ZoneId { get; set; }
 
                     }
 
                 }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

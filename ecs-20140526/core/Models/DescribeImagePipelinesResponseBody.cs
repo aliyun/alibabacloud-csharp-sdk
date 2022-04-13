@@ -9,22 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImagePipelinesResponseBody : TeaModel {
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
-
         [NameInMap("ImagePipeline")]
         [Validation(Required=false)]
         public DescribeImagePipelinesResponseBodyImagePipeline ImagePipeline { get; set; }
@@ -33,33 +17,39 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet> ImagePipelineSet { get; set; }
             public class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet : TeaModel {
+                public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts AddAccounts { get; set; }
+                public class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts : TeaModel {
+                    [NameInMap("AddAccount")]
+                    [Validation(Required=false)]
+                    public List<string> AddAccount { get; set; }
+
+                }
+                public string BaseImage { get; set; }
+                public string BaseImageType { get; set; }
+                public string BuildContent { get; set; }
                 public string CreationTime { get; set; }
                 public bool? DeleteInstanceOnFailure { get; set; }
+                public string Description { get; set; }
+                public string ImageName { get; set; }
+                public string ImagePipelineId { get; set; }
                 public string InstanceType { get; set; }
                 public int? InternetMaxBandwidthOut { get; set; }
-                public string ImagePipelineId { get; set; }
-                public string VSwitchId { get; set; }
-                public int? SystemDiskSize { get; set; }
-                public string Description { get; set; }
-                public string BaseImage { get; set; }
-                public string ResourceGroupId { get; set; }
-                public string ImageName { get; set; }
-                public string BaseImageType { get; set; }
                 public string Name { get; set; }
-                public string BuildContent { get; set; }
+                public string ResourceGroupId { get; set; }
+                public int? SystemDiskSize { get; set; }
                 public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTags Tags { get; set; }
                 public class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTags : TeaModel {
                     [NameInMap("Tag")]
                     [Validation(Required=false)]
                     public List<DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTagsTag> Tag { get; set; }
                     public class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTagsTag : TeaModel {
-                        [NameInMap("TagValue")]
-                        [Validation(Required=false)]
-                        public string TagValue { get; set; }
-
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
+
+                        [NameInMap("TagValue")]
+                        [Validation(Required=false)]
+                        public string TagValue { get; set; }
 
                     }
 
@@ -71,15 +61,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<string> ToRegionId { get; set; }
 
                 }
-                public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts AddAccounts { get; set; }
-                public class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts : TeaModel {
-                    [NameInMap("AddAccount")]
-                    [Validation(Required=false)]
-                    public List<string> AddAccount { get; set; }
-
-                }
+                public string VSwitchId { get; set; }
             }
         };
+
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

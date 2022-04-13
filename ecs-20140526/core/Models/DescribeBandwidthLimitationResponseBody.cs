@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeBandwidthLimitationResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Bandwidths")]
         [Validation(Required=false)]
         public DescribeBandwidthLimitationResponseBodyBandwidths Bandwidths { get; set; }
@@ -27,6 +23,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Unit { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

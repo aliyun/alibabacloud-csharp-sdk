@@ -18,25 +18,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Category { get; set; }
         };
 
-        [NameInMap("OwnerId")]
+        [NameInMap("DataDisk")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public List<DescribeInstanceModificationPriceRequestDataDisk> DataDisk { get; set; }
+        public class DescribeInstanceModificationPriceRequestDataDisk : TeaModel {
+            [NameInMap("Category")]
+            [Validation(Required=false)]
+            public string Category { get; set; }
 
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
+            [NameInMap("PerformanceLevel")]
+            [Validation(Required=false)]
+            public string PerformanceLevel { get; set; }
 
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+            [NameInMap("Size")]
+            [Validation(Required=false)]
+            public int? Size { get; set; }
 
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
+        }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -46,23 +44,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
-        [NameInMap("DataDisk")]
+        [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
-        public List<DescribeInstanceModificationPriceRequestDataDisk> DataDisk { get; set; }
-        public class DescribeInstanceModificationPriceRequestDataDisk : TeaModel {
-            [NameInMap("PerformanceLevel")]
-            [Validation(Required=false)]
-            public string PerformanceLevel { get; set; }
+        public string OwnerAccount { get; set; }
 
-            [NameInMap("Size")]
-            [Validation(Required=false)]
-            public int? Size { get; set; }
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
-            [NameInMap("Category")]
-            [Validation(Required=false)]
-            public string Category { get; set; }
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
-        }
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
     }
 
