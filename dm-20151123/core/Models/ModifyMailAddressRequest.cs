@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class ModifyMailAddressRequest : TeaModel {
+        [NameInMap("MailAddressId")]
+        [Validation(Required=false)]
+        public int? MailAddressId { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("Password")]
+        [Validation(Required=false)]
+        public string Password { get; set; }
+
+        [NameInMap("ReplyAddress")]
+        [Validation(Required=false)]
+        public string ReplyAddress { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -20,18 +32,6 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("MailAddressId")]
-        [Validation(Required=false)]
-        public int? MailAddressId { get; set; }
-
-        [NameInMap("ReplyAddress")]
-        [Validation(Required=false)]
-        public string ReplyAddress { get; set; }
-
-        [NameInMap("Password")]
-        [Validation(Required=false)]
-        public string Password { get; set; }
 
     }
 

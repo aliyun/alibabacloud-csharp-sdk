@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
-    public class ApproveSmsTemplateResponse : TeaModel {
+    public class QueryMailAddressByParamResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ApproveSmsTemplateResponseBody Body { get; set; }
+        public QueryMailAddressByParamResponseBody Body { get; set; }
 
     }
 

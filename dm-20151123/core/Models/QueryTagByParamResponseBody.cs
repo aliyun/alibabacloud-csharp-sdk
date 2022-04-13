@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class QueryTagByParamResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
         [NameInMap("data")]
         [Validation(Required=false)]
         public QueryTagByParamResponseBodyData Data { get; set; }
@@ -29,14 +33,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             [Validation(Required=false)]
             public List<QueryTagByParamResponseBodyDataTag> Tag { get; set; }
             public class QueryTagByParamResponseBodyDataTag : TeaModel {
-                public string TagName { get; set; }
                 public string TagId { get; set; }
+                public string TagName { get; set; }
             }
         };
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
 
     }
 

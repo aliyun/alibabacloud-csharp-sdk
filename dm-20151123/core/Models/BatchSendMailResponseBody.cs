@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class BatchSendMailResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("EnvId")]
         [Validation(Required=false)]
         public string EnvId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

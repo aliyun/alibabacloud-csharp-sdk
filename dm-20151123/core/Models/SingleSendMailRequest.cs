@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class SingleSendMailRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
@@ -29,33 +17,21 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public int? AddressType { get; set; }
 
-        [NameInMap("TagName")]
+        [NameInMap("ClickTrace")]
         [Validation(Required=false)]
-        public string TagName { get; set; }
+        public string ClickTrace { get; set; }
 
-        [NameInMap("ReplyToAddress")]
+        [NameInMap("FromAlias")]
         [Validation(Required=false)]
-        public bool? ReplyToAddress { get; set; }
-
-        [NameInMap("ToAddress")]
-        [Validation(Required=false)]
-        public string ToAddress { get; set; }
-
-        [NameInMap("Subject")]
-        [Validation(Required=false)]
-        public string Subject { get; set; }
+        public string FromAlias { get; set; }
 
         [NameInMap("HtmlBody")]
         [Validation(Required=false)]
         public string HtmlBody { get; set; }
 
-        [NameInMap("TextBody")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string TextBody { get; set; }
-
-        [NameInMap("FromAlias")]
-        [Validation(Required=false)]
-        public string FromAlias { get; set; }
+        public long? OwnerId { get; set; }
 
         [NameInMap("ReplyAddress")]
         [Validation(Required=false)]
@@ -65,9 +41,33 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public string ReplyAddressAlias { get; set; }
 
-        [NameInMap("ClickTrace")]
+        [NameInMap("ReplyToAddress")]
         [Validation(Required=false)]
-        public string ClickTrace { get; set; }
+        public bool? ReplyToAddress { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("Subject")]
+        [Validation(Required=false)]
+        public string Subject { get; set; }
+
+        [NameInMap("TagName")]
+        [Validation(Required=false)]
+        public string TagName { get; set; }
+
+        [NameInMap("TextBody")]
+        [Validation(Required=false)]
+        public string TextBody { get; set; }
+
+        [NameInMap("ToAddress")]
+        [Validation(Required=false)]
+        public string ToAddress { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class DeleteMailAddressRequest : TeaModel {
+        [NameInMap("MailAddressId")]
+        [Validation(Required=false)]
+        public int? MailAddressId { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("MailAddressId")]
-        [Validation(Required=false)]
-        public int? MailAddressId { get; set; }
 
     }
 

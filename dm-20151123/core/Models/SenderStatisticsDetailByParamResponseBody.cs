@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class SenderStatisticsDetailByParamResponseBody : TeaModel {
+        [NameInMap("NextStart")]
+        [Validation(Required=false)]
+        public int? NextStart { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -21,18 +25,14 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             [Validation(Required=false)]
             public List<SenderStatisticsDetailByParamResponseBodyDataMailDetail> MailDetail { get; set; }
             public class SenderStatisticsDetailByParamResponseBodyDataMailDetail : TeaModel {
-                public int? Status { get; set; }
+                public string AccountName { get; set; }
                 public string LastUpdateTime { get; set; }
                 public string Message { get; set; }
+                public int? Status { get; set; }
                 public string ToAddress { get; set; }
                 public string UtcLastUpdateTime { get; set; }
-                public string AccountName { get; set; }
             }
         };
-
-        [NameInMap("NextStart")]
-        [Validation(Required=false)]
-        public int? NextStart { get; set; }
 
     }
 

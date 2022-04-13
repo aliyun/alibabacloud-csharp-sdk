@@ -8,10 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
-    public class ApproveMailTemplateRequest : TeaModel {
+    public class QueryMailAddressByParamRequest : TeaModel {
+        [NameInMap("KeyWord")]
+        [Validation(Required=false)]
+        public string KeyWord { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PageNo")]
+        [Validation(Required=false)]
+        public int? PageNo { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -21,13 +33,9 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("TemplateId")]
+        [NameInMap("Sendtype")]
         [Validation(Required=false)]
-        public int? TemplateId { get; set; }
-
-        [NameInMap("FromType")]
-        [Validation(Required=false)]
-        public int? FromType { get; set; }
+        public string Sendtype { get; set; }
 
     }
 

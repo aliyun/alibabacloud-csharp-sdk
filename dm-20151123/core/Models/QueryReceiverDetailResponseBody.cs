@@ -13,13 +13,17 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public string DataSchema { get; set; }
 
-        [NameInMap("TotalCount")]
+        [NameInMap("NextStart")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public string NextStart { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -29,16 +33,12 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             [Validation(Required=false)]
             public List<QueryReceiverDetailResponseBodyDataDetail> Detail { get; set; }
             public class QueryReceiverDetailResponseBodyDataDetail : TeaModel {
+                public string CreateTime { get; set; }
                 public string Data { get; set; }
                 public string Email { get; set; }
-                public string CreateTime { get; set; }
                 public long? UtcCreateTime { get; set; }
             }
         };
-
-        [NameInMap("NextStart")]
-        [Validation(Required=false)]
-        public string NextStart { get; set; }
 
     }
 

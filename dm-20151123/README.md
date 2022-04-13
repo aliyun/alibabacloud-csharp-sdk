@@ -6,10 +6,10 @@ English | [简体中文](README-CN.md)
 
 ## Installation
 
-### Composer
+### Nuget
 
 ```bash
-composer require AlibabaCloud.SDK.Dm20151123
+dotnet add package AlibabaCloud.SDK.Dm20151123
 ```
 
 ## Issues

@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class SaveReceiverDetailRequest : TeaModel {
+        [NameInMap("Detail")]
+        [Validation(Required=false)]
+        public string Detail { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("ReceiverId")]
+        [Validation(Required=false)]
+        public string ReceiverId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -20,14 +28,6 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("ReceiverId")]
-        [Validation(Required=false)]
-        public string ReceiverId { get; set; }
-
-        [NameInMap("Detail")]
-        [Validation(Required=false)]
-        public string Detail { get; set; }
 
     }
 

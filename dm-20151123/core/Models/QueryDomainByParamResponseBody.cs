@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class QueryDomainByParamResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
         [NameInMap("data")]
         [Validation(Required=false)]
         public QueryDomainByParamResponseBodyData Data { get; set; }
@@ -29,23 +33,19 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             [Validation(Required=false)]
             public List<QueryDomainByParamResponseBodyDataDomain> Domain { get; set; }
             public class QueryDomainByParamResponseBodyDataDomain : TeaModel {
-                public string DomainRecord { get; set; }
-                public string SpfAuthStatus { get; set; }
-                public string MxAuthStatus { get; set; }
-                public string CreateTime { get; set; }
                 public string CnameAuthStatus { get; set; }
                 public string ConfirmStatus { get; set; }
-                public string IcpStatus { get; set; }
-                public long? UtcCreateTime { get; set; }
-                public string DomainStatus { get; set; }
-                public string DomainName { get; set; }
+                public string CreateTime { get; set; }
                 public string DomainId { get; set; }
+                public string DomainName { get; set; }
+                public string DomainRecord { get; set; }
+                public string DomainStatus { get; set; }
+                public string IcpStatus { get; set; }
+                public string MxAuthStatus { get; set; }
+                public string SpfAuthStatus { get; set; }
+                public long? UtcCreateTime { get; set; }
             }
         };
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
 
     }
 

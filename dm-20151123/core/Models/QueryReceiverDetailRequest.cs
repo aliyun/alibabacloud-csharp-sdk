@@ -9,9 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class QueryReceiverDetailRequest : TeaModel {
+        [NameInMap("KeyWord")]
+        [Validation(Required=false)]
+        public string KeyWord { get; set; }
+
+        [NameInMap("NextStart")]
+        [Validation(Required=false)]
+        public string NextStart { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("ReceiverId")]
+        [Validation(Required=false)]
+        public string ReceiverId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -20,22 +36,6 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("ReceiverId")]
-        [Validation(Required=false)]
-        public string ReceiverId { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("KeyWord")]
-        [Validation(Required=false)]
-        public string KeyWord { get; set; }
-
-        [NameInMap("NextStart")]
-        [Validation(Required=false)]
-        public string NextStart { get; set; }
 
     }
 

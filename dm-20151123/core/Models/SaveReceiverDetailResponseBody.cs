@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class SaveReceiverDetailResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SaveReceiverDetailResponseBodyData Data { get; set; }
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [NameInMap("ErrorCount")]
         [Validation(Required=false)]
         public int? ErrorCount { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("SuccessCount")]
         [Validation(Required=false)]
