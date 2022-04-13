@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class CreateStoryRequest : TeaModel {
+    public class CreateStoryShrinkRequest : TeaModel {
         [NameInMap("CustomId")]
         [Validation(Required=false)]
         public string CustomId { get; set; }
 
         [NameInMap("CustomLabels")]
         [Validation(Required=false)]
-        public Dictionary<string, object> CustomLabels { get; set; }
+        public string CustomLabelsShrink { get; set; }
 
         [NameInMap("DatasetName")]
         [Validation(Required=false)]

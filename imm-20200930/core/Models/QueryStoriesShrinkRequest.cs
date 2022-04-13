@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string CreateTimeRangeShrink { get; set; }
 
+        [NameInMap("CustomLabels")]
+        [Validation(Required=false)]
+        public string CustomLabels { get; set; }
+
         [NameInMap("DatasetName")]
         [Validation(Required=false)]
         public string DatasetName { get; set; }
@@ -56,6 +60,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("StoryType")]
         [Validation(Required=false)]
         public string StoryType { get; set; }
+
+        [NameInMap("WithEmptyStories")]
+        [Validation(Required=false)]
+        public bool? WithEmptyStories { get; set; }
 
     }
 

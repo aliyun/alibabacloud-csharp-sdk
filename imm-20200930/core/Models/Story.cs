@@ -21,11 +21,18 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// CustomFields
+        /// CustomId
         /// </summary>
-        [NameInMap("CustomFields")]
+        [NameInMap("CustomId")]
         [Validation(Required=false)]
-        public string CustomFields { get; set; }
+        public string CustomId { get; set; }
+
+        /// <summary>
+        /// CustomLabels
+        /// </summary>
+        [NameInMap("CustomLabels")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> CustomLabels { get; set; }
 
         /// <summary>
         /// DatasetName

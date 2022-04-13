@@ -78,6 +78,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string Sort { get; set; }
 
+        /// <summary>
+        /// 仅返回哪些字段
+        /// </summary>
+        [NameInMap("WithFields")]
+        [Validation(Required=false)]
+        public List<string> WithFields { get; set; }
+
     }
 
 }

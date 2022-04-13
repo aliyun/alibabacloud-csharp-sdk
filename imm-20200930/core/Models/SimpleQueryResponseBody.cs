@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
             [NameInMap("Value")]
             [Validation(Required=false)]
-            public string Value { get; set; }
+            public double? Value { get; set; }
 
         }
 
