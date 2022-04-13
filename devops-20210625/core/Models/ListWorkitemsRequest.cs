@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         public string Category { get; set; }
 
         /// <summary>
+        /// 过滤条件
+        /// </summary>
+        [NameInMap("conditions")]
+        [Validation(Required=false)]
+        public string Conditions { get; set; }
+
+        /// <summary>
         /// 每页最大返回数量，0-200，默认值20
         /// </summary>
         [NameInMap("maxResults")]

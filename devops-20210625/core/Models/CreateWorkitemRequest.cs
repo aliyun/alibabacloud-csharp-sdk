@@ -68,6 +68,13 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         }
 
         /// <summary>
+        /// 所属父工作项的唯一标识
+        /// </summary>
+        [NameInMap("parent")]
+        [Validation(Required=false)]
+        public string Parent { get; set; }
+
+        /// <summary>
         /// 参与人id列表，或者企业名称列表
         /// </summary>
         [NameInMap("participant")]
