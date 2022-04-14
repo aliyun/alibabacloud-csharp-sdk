@@ -15,12 +15,9 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 {
     public class Client : AlibabaCloud.OpenApiClient.Client
     {
-        protected AlibabaCloud.GatewaySpi.Client _client;
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._client = new AlibabaCloud.GatewayFc.Client();
-            this._spi = _client;
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -133,7 +130,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateAliasResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<CreateAliasResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateAliasResponse> CreateAliasWithOptionsAsync(string serviceName, CreateAliasRequest request, CreateAliasHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -191,7 +188,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateAliasResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<CreateAliasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateCustomDomainResponse CreateCustomDomain(CreateCustomDomainRequest request)
@@ -266,7 +263,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateCustomDomainResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<CreateCustomDomainResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateCustomDomainResponse> CreateCustomDomainWithOptionsAsync(CreateCustomDomainRequest request, CreateCustomDomainHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -327,7 +324,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateCustomDomainResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<CreateCustomDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateFunctionResponse CreateFunction(string serviceName, CreateFunctionRequest request)
@@ -459,7 +456,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateFunctionResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<CreateFunctionResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateFunctionResponse> CreateFunctionWithOptionsAsync(string serviceName, CreateFunctionRequest request, CreateFunctionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -577,7 +574,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateFunctionResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<CreateFunctionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateLayerVersionResponse CreateLayerVersion(string layerName, CreateLayerVersionRequest request)
@@ -645,7 +642,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateLayerVersionResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<CreateLayerVersionResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateLayerVersionResponse> CreateLayerVersionWithOptionsAsync(string layerName, CreateLayerVersionRequest request, CreateLayerVersionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -699,7 +696,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateLayerVersionResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<CreateLayerVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateServiceResponse CreateService(CreateServiceRequest request)
@@ -786,7 +783,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateServiceResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<CreateServiceResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateServiceResponse> CreateServiceWithOptionsAsync(CreateServiceRequest request, CreateServiceHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -859,7 +856,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateServiceResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<CreateServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateTriggerResponse CreateTrigger(string serviceName, string functionName, CreateTriggerRequest request)
@@ -944,7 +941,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateTriggerResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<CreateTriggerResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateTriggerResponse> CreateTriggerWithOptionsAsync(string serviceName, string functionName, CreateTriggerRequest request, CreateTriggerHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1015,7 +1012,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateTriggerResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<CreateTriggerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateVpcBindingResponse CreateVpcBinding(string serviceName, CreateVpcBindingRequest request)
@@ -1075,7 +1072,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<CreateVpcBindingResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<CreateVpcBindingResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateVpcBindingResponse> CreateVpcBindingWithOptionsAsync(string serviceName, CreateVpcBindingRequest request, CreateVpcBindingHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1121,7 +1118,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<CreateVpcBindingResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<CreateVpcBindingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteAliasResponse DeleteAlias(string serviceName, string aliasName)
@@ -1179,7 +1176,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<DeleteAliasResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<DeleteAliasResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteAliasResponse> DeleteAliasWithOptionsAsync(string serviceName, string aliasName, DeleteAliasHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1223,7 +1220,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<DeleteAliasResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<DeleteAliasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteCustomDomainResponse DeleteCustomDomain(string domainName)
@@ -1276,7 +1273,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<DeleteCustomDomainResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<DeleteCustomDomainResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteCustomDomainResponse> DeleteCustomDomainWithOptionsAsync(string domainName, DeleteCustomDomainHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1315,7 +1312,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<DeleteCustomDomainResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<DeleteCustomDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteFunctionResponse DeleteFunction(string serviceName, string functionName)
@@ -1373,7 +1370,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<DeleteFunctionResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<DeleteFunctionResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteFunctionResponse> DeleteFunctionWithOptionsAsync(string serviceName, string functionName, DeleteFunctionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1417,7 +1414,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<DeleteFunctionResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<DeleteFunctionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteFunctionAsyncInvokeConfigResponse DeleteFunctionAsyncInvokeConfig(string serviceName, string functionName, DeleteFunctionAsyncInvokeConfigRequest request)
@@ -1478,7 +1475,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<DeleteFunctionAsyncInvokeConfigResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<DeleteFunctionAsyncInvokeConfigResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteFunctionAsyncInvokeConfigResponse> DeleteFunctionAsyncInvokeConfigWithOptionsAsync(string serviceName, string functionName, DeleteFunctionAsyncInvokeConfigRequest request, DeleteFunctionAsyncInvokeConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1525,7 +1522,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<DeleteFunctionAsyncInvokeConfigResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<DeleteFunctionAsyncInvokeConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteFunctionOnDemandConfigResponse DeleteFunctionOnDemandConfig(string serviceName, string functionName, DeleteFunctionOnDemandConfigRequest request)
@@ -1590,7 +1587,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<DeleteFunctionOnDemandConfigResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<DeleteFunctionOnDemandConfigResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteFunctionOnDemandConfigResponse> DeleteFunctionOnDemandConfigWithOptionsAsync(string serviceName, string functionName, DeleteFunctionOnDemandConfigRequest request, DeleteFunctionOnDemandConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1641,7 +1638,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<DeleteFunctionOnDemandConfigResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<DeleteFunctionOnDemandConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteLayerVersionResponse DeleteLayerVersion(string layerName, string version)
@@ -1695,7 +1692,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<DeleteLayerVersionResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<DeleteLayerVersionResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteLayerVersionResponse> DeleteLayerVersionWithOptionsAsync(string layerName, string version, DeleteLayerVersionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1735,7 +1732,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<DeleteLayerVersionResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<DeleteLayerVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteServiceResponse DeleteService(string serviceName)
@@ -1792,7 +1789,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<DeleteServiceResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<DeleteServiceResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteServiceResponse> DeleteServiceWithOptionsAsync(string serviceName, DeleteServiceHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1835,7 +1832,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<DeleteServiceResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<DeleteServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteServiceVersionResponse DeleteServiceVersion(string serviceName, string versionId)
@@ -1889,7 +1886,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<DeleteServiceVersionResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<DeleteServiceVersionResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteServiceVersionResponse> DeleteServiceVersionWithOptionsAsync(string serviceName, string versionId, DeleteServiceVersionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1929,7 +1926,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<DeleteServiceVersionResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<DeleteServiceVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteTriggerResponse DeleteTrigger(string serviceName, string functionName, string triggerName)
@@ -1988,7 +1985,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<DeleteTriggerResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<DeleteTriggerResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteTriggerResponse> DeleteTriggerWithOptionsAsync(string serviceName, string functionName, string triggerName, DeleteTriggerHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2033,7 +2030,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<DeleteTriggerResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<DeleteTriggerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteVpcBindingResponse DeleteVpcBinding(string serviceName, string vpcId)
@@ -2087,7 +2084,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<DeleteVpcBindingResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<DeleteVpcBindingResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteVpcBindingResponse> DeleteVpcBindingWithOptionsAsync(string serviceName, string vpcId, DeleteVpcBindingHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2127,7 +2124,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<DeleteVpcBindingResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<DeleteVpcBindingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeregisterEventSourceResponse DeregisterEventSource(string serviceName, string functionName, string sourceArn, DeregisterEventSourceRequest request)
@@ -2189,7 +2186,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<DeregisterEventSourceResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<DeregisterEventSourceResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeregisterEventSourceResponse> DeregisterEventSourceWithOptionsAsync(string serviceName, string functionName, string sourceArn, DeregisterEventSourceRequest request, DeregisterEventSourceHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2237,7 +2234,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<DeregisterEventSourceResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<DeregisterEventSourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetAccountSettingsResponse GetAccountSettings()
@@ -2289,7 +2286,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetAccountSettingsResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<GetAccountSettingsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetAccountSettingsResponse> GetAccountSettingsWithOptionsAsync(GetAccountSettingsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2327,7 +2324,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetAccountSettingsResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetAccountSettingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetAliasResponse GetAlias(string serviceName, string aliasName)
@@ -2381,7 +2378,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetAliasResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<GetAliasResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetAliasResponse> GetAliasWithOptionsAsync(string serviceName, string aliasName, GetAliasHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2421,7 +2418,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetAliasResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetAliasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetCustomDomainResponse GetCustomDomain(string domainName)
@@ -2474,7 +2471,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetCustomDomainResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<GetCustomDomainResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetCustomDomainResponse> GetCustomDomainWithOptionsAsync(string domainName, GetCustomDomainHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2513,7 +2510,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetCustomDomainResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetCustomDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetFunctionResponse GetFunction(string serviceName, string functionName, GetFunctionRequest request)
@@ -2574,7 +2571,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetFunctionResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<GetFunctionResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetFunctionResponse> GetFunctionWithOptionsAsync(string serviceName, string functionName, GetFunctionRequest request, GetFunctionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2621,7 +2618,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetFunctionResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetFunctionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetFunctionAsyncInvokeConfigResponse GetFunctionAsyncInvokeConfig(string serviceName, string functionName, GetFunctionAsyncInvokeConfigRequest request)
@@ -2682,7 +2679,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetFunctionAsyncInvokeConfigResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<GetFunctionAsyncInvokeConfigResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetFunctionAsyncInvokeConfigResponse> GetFunctionAsyncInvokeConfigWithOptionsAsync(string serviceName, string functionName, GetFunctionAsyncInvokeConfigRequest request, GetFunctionAsyncInvokeConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2729,7 +2726,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetFunctionAsyncInvokeConfigResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetFunctionAsyncInvokeConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetFunctionCodeResponse GetFunctionCode(string serviceName, string functionName, GetFunctionCodeRequest request)
@@ -2790,7 +2787,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetFunctionCodeResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<GetFunctionCodeResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetFunctionCodeResponse> GetFunctionCodeWithOptionsAsync(string serviceName, string functionName, GetFunctionCodeRequest request, GetFunctionCodeHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2837,7 +2834,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetFunctionCodeResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetFunctionCodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetFunctionOnDemandConfigResponse GetFunctionOnDemandConfig(string serviceName, string functionName, GetFunctionOnDemandConfigRequest request)
@@ -2898,7 +2895,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetFunctionOnDemandConfigResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<GetFunctionOnDemandConfigResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetFunctionOnDemandConfigResponse> GetFunctionOnDemandConfigWithOptionsAsync(string serviceName, string functionName, GetFunctionOnDemandConfigRequest request, GetFunctionOnDemandConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2945,7 +2942,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetFunctionOnDemandConfigResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetFunctionOnDemandConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetLayerVersionResponse GetLayerVersion(string layerName, string version)
@@ -2999,7 +2996,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetLayerVersionResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<GetLayerVersionResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetLayerVersionResponse> GetLayerVersionWithOptionsAsync(string layerName, string version, GetLayerVersionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3039,7 +3036,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetLayerVersionResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetLayerVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetProvisionConfigResponse GetProvisionConfig(string serviceName, string functionName, GetProvisionConfigRequest request)
@@ -3100,7 +3097,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetProvisionConfigResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<GetProvisionConfigResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetProvisionConfigResponse> GetProvisionConfigWithOptionsAsync(string serviceName, string functionName, GetProvisionConfigRequest request, GetProvisionConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3147,7 +3144,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetProvisionConfigResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetProvisionConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetResourceTagsResponse GetResourceTags(GetResourceTagsRequest request)
@@ -3206,7 +3203,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetResourceTagsResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<GetResourceTagsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetResourceTagsResponse> GetResourceTagsWithOptionsAsync(GetResourceTagsRequest request, GetResourceTagsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3251,7 +3248,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetResourceTagsResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetResourceTagsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetServiceResponse GetService(string serviceName, GetServiceRequest request)
@@ -3311,7 +3308,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetServiceResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<GetServiceResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetServiceResponse> GetServiceWithOptionsAsync(string serviceName, GetServiceRequest request, GetServiceHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3357,7 +3354,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetServiceResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetStatefulAsyncInvocationResponse GetStatefulAsyncInvocation(string serviceName, string functionName, string invocationId, GetStatefulAsyncInvocationRequest request)
@@ -3431,7 +3428,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetStatefulAsyncInvocationResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<GetStatefulAsyncInvocationResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetStatefulAsyncInvocationResponse> GetStatefulAsyncInvocationWithOptionsAsync(string serviceName, string functionName, string invocationId, GetStatefulAsyncInvocationRequest request, GetStatefulAsyncInvocationHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3491,7 +3488,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetStatefulAsyncInvocationResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetStatefulAsyncInvocationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetTriggerResponse GetTrigger(string serviceName, string functionName, string triggerName)
@@ -3546,7 +3543,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetTriggerResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<GetTriggerResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetTriggerResponse> GetTriggerWithOptionsAsync(string serviceName, string functionName, string triggerName, GetTriggerHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3587,7 +3584,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetTriggerResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetTriggerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public InvokeFunctionResponse InvokeFunction(string serviceName, string functionName, InvokeFunctionRequest request)
@@ -3661,7 +3658,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "byte",
             };
-            return TeaModel.ToObject<InvokeFunctionResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<InvokeFunctionResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<InvokeFunctionResponse> InvokeFunctionWithOptionsAsync(string serviceName, string functionName, InvokeFunctionRequest request, InvokeFunctionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3721,7 +3718,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "byte",
             };
-            return TeaModel.ToObject<InvokeFunctionResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<InvokeFunctionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListAliasesResponse ListAliases(string serviceName, ListAliasesRequest request)
@@ -3793,7 +3790,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListAliasesResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<ListAliasesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListAliasesResponse> ListAliasesWithOptionsAsync(string serviceName, ListAliasesRequest request, ListAliasesHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3851,7 +3848,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListAliasesResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListAliasesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListCustomDomainsResponse ListCustomDomains(ListCustomDomainsRequest request)
@@ -3922,7 +3919,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListCustomDomainsResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<ListCustomDomainsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListCustomDomainsResponse> ListCustomDomainsWithOptionsAsync(ListCustomDomainsRequest request, ListCustomDomainsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3979,7 +3976,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListCustomDomainsResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListCustomDomainsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListEventSourcesResponse ListEventSources(string serviceName, string functionName, ListEventSourcesRequest request)
@@ -4040,7 +4037,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListEventSourcesResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<ListEventSourcesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListEventSourcesResponse> ListEventSourcesWithOptionsAsync(string serviceName, string functionName, ListEventSourcesRequest request, ListEventSourcesHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4087,7 +4084,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListEventSourcesResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListEventSourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListFunctionAsyncInvokeConfigsResponse ListFunctionAsyncInvokeConfigs(string serviceName, string functionName, ListFunctionAsyncInvokeConfigsRequest request)
@@ -4164,7 +4161,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListFunctionAsyncInvokeConfigsResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<ListFunctionAsyncInvokeConfigsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListFunctionAsyncInvokeConfigsResponse> ListFunctionAsyncInvokeConfigsWithOptionsAsync(string serviceName, string functionName, ListFunctionAsyncInvokeConfigsRequest request, ListFunctionAsyncInvokeConfigsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4227,7 +4224,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListFunctionAsyncInvokeConfigsResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListFunctionAsyncInvokeConfigsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListFunctionsResponse ListFunctions(string serviceName, ListFunctionsRequest request)
@@ -4303,7 +4300,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListFunctionsResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<ListFunctionsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListFunctionsResponse> ListFunctionsWithOptionsAsync(string serviceName, ListFunctionsRequest request, ListFunctionsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4365,7 +4362,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListFunctionsResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListFunctionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListLayerVersionsResponse ListLayerVersions(string layerName, ListLayerVersionsRequest request)
@@ -4429,7 +4426,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListLayerVersionsResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<ListLayerVersionsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListLayerVersionsResponse> ListLayerVersionsWithOptionsAsync(string layerName, ListLayerVersionsRequest request, ListLayerVersionsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4479,7 +4476,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListLayerVersionsResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListLayerVersionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListLayersResponse ListLayers(ListLayersRequest request)
@@ -4550,7 +4547,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListLayersResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<ListLayersResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListLayersResponse> ListLayersWithOptionsAsync(ListLayersRequest request, ListLayersHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4607,7 +4604,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListLayersResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListLayersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListOnDemandConfigsResponse ListOnDemandConfigs(ListOnDemandConfigsRequest request)
@@ -4678,7 +4675,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListOnDemandConfigsResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<ListOnDemandConfigsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListOnDemandConfigsResponse> ListOnDemandConfigsWithOptionsAsync(ListOnDemandConfigsRequest request, ListOnDemandConfigsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4735,7 +4732,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListOnDemandConfigsResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListOnDemandConfigsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListProvisionConfigsResponse ListProvisionConfigs(ListProvisionConfigsRequest request)
@@ -4806,7 +4803,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListProvisionConfigsResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<ListProvisionConfigsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListProvisionConfigsResponse> ListProvisionConfigsWithOptionsAsync(ListProvisionConfigsRequest request, ListProvisionConfigsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4863,7 +4860,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListProvisionConfigsResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListProvisionConfigsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListReservedCapacitiesResponse ListReservedCapacities(ListReservedCapacitiesRequest request)
@@ -4926,7 +4923,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListReservedCapacitiesResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<ListReservedCapacitiesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListReservedCapacitiesResponse> ListReservedCapacitiesWithOptionsAsync(ListReservedCapacitiesRequest request, ListReservedCapacitiesHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4975,7 +4972,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListReservedCapacitiesResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListReservedCapacitiesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListServiceVersionsResponse ListServiceVersions(string serviceName, ListServiceVersionsRequest request)
@@ -5047,7 +5044,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListServiceVersionsResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<ListServiceVersionsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListServiceVersionsResponse> ListServiceVersionsWithOptionsAsync(string serviceName, ListServiceVersionsRequest request, ListServiceVersionsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5105,7 +5102,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListServiceVersionsResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListServiceVersionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListServicesResponse ListServices(ListServicesRequest request)
@@ -5176,7 +5173,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListServicesResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<ListServicesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListServicesResponse> ListServicesWithOptionsAsync(ListServicesRequest request, ListServicesHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5233,7 +5230,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListServicesResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListServicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListStatefulAsyncInvocationFunctionsResponse ListStatefulAsyncInvocationFunctions(ListStatefulAsyncInvocationFunctionsRequest request)
@@ -5296,7 +5293,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListStatefulAsyncInvocationFunctionsResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<ListStatefulAsyncInvocationFunctionsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListStatefulAsyncInvocationFunctionsResponse> ListStatefulAsyncInvocationFunctionsWithOptionsAsync(ListStatefulAsyncInvocationFunctionsRequest request, ListStatefulAsyncInvocationFunctionsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5345,7 +5342,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListStatefulAsyncInvocationFunctionsResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListStatefulAsyncInvocationFunctionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListStatefulAsyncInvocationsResponse ListStatefulAsyncInvocations(string serviceName, string functionName, ListStatefulAsyncInvocationsRequest request)
@@ -5450,7 +5447,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListStatefulAsyncInvocationsResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<ListStatefulAsyncInvocationsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListStatefulAsyncInvocationsResponse> ListStatefulAsyncInvocationsWithOptionsAsync(string serviceName, string functionName, ListStatefulAsyncInvocationsRequest request, ListStatefulAsyncInvocationsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5541,7 +5538,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListStatefulAsyncInvocationsResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListStatefulAsyncInvocationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListTaggedResourcesResponse ListTaggedResources(ListTaggedResourcesRequest request)
@@ -5604,7 +5601,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTaggedResourcesResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<ListTaggedResourcesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListTaggedResourcesResponse> ListTaggedResourcesWithOptionsAsync(ListTaggedResourcesRequest request, ListTaggedResourcesHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5653,7 +5650,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTaggedResourcesResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListTaggedResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListTriggersResponse ListTriggers(string serviceName, string functionName, ListTriggersRequest request)
@@ -5726,7 +5723,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTriggersResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<ListTriggersResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListTriggersResponse> ListTriggersWithOptionsAsync(string serviceName, string functionName, ListTriggersRequest request, ListTriggersHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5785,7 +5782,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTriggersResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListTriggersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListVpcBindingsResponse ListVpcBindings(string serviceName)
@@ -5838,7 +5835,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListVpcBindingsResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<ListVpcBindingsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListVpcBindingsResponse> ListVpcBindingsWithOptionsAsync(string serviceName, ListVpcBindingsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5877,7 +5874,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListVpcBindingsResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListVpcBindingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public PublishServiceVersionResponse PublishServiceVersion(string serviceName, PublishServiceVersionRequest request)
@@ -5941,7 +5938,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<PublishServiceVersionResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<PublishServiceVersionResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<PublishServiceVersionResponse> PublishServiceVersionWithOptionsAsync(string serviceName, PublishServiceVersionRequest request, PublishServiceVersionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5991,7 +5988,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<PublishServiceVersionResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<PublishServiceVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public PutFunctionAsyncInvokeConfigResponse PutFunctionAsyncInvokeConfig(string serviceName, string functionName, PutFunctionAsyncInvokeConfigRequest request)
@@ -6070,7 +6067,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<PutFunctionAsyncInvokeConfigResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<PutFunctionAsyncInvokeConfigResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<PutFunctionAsyncInvokeConfigResponse> PutFunctionAsyncInvokeConfigWithOptionsAsync(string serviceName, string functionName, PutFunctionAsyncInvokeConfigRequest request, PutFunctionAsyncInvokeConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6135,7 +6132,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<PutFunctionAsyncInvokeConfigResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<PutFunctionAsyncInvokeConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public PutFunctionOnDemandConfigResponse PutFunctionOnDemandConfig(string serviceName, string functionName, PutFunctionOnDemandConfigRequest request)
@@ -6206,7 +6203,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<PutFunctionOnDemandConfigResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<PutFunctionOnDemandConfigResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<PutFunctionOnDemandConfigResponse> PutFunctionOnDemandConfigWithOptionsAsync(string serviceName, string functionName, PutFunctionOnDemandConfigRequest request, PutFunctionOnDemandConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6263,7 +6260,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<PutFunctionOnDemandConfigResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<PutFunctionOnDemandConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public PutProvisionConfigResponse PutProvisionConfig(string serviceName, string functionName, PutProvisionConfigRequest request)
@@ -6342,7 +6339,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<PutProvisionConfigResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<PutProvisionConfigResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<PutProvisionConfigResponse> PutProvisionConfigWithOptionsAsync(string serviceName, string functionName, PutProvisionConfigRequest request, PutProvisionConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6407,7 +6404,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<PutProvisionConfigResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<PutProvisionConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public RegisterEventSourceResponse RegisterEventSource(string serviceName, string functionName, RegisterEventSourceRequest request)
@@ -6474,7 +6471,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RegisterEventSourceResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<RegisterEventSourceResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<RegisterEventSourceResponse> RegisterEventSourceWithOptionsAsync(string serviceName, string functionName, RegisterEventSourceRequest request, RegisterEventSourceHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6527,7 +6524,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RegisterEventSourceResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<RegisterEventSourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public StopStatefulAsyncInvocationResponse StopStatefulAsyncInvocation(string serviceName, string functionName, string invocationId, StopStatefulAsyncInvocationRequest request)
@@ -6589,7 +6586,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<StopStatefulAsyncInvocationResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<StopStatefulAsyncInvocationResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<StopStatefulAsyncInvocationResponse> StopStatefulAsyncInvocationWithOptionsAsync(string serviceName, string functionName, string invocationId, StopStatefulAsyncInvocationRequest request, StopStatefulAsyncInvocationHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6637,7 +6634,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<StopStatefulAsyncInvocationResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<StopStatefulAsyncInvocationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public TagResourceResponse TagResource(TagResourceRequest request)
@@ -6700,7 +6697,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<TagResourceResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<TagResourceResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<TagResourceResponse> TagResourceWithOptionsAsync(TagResourceRequest request, TagResourceHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6749,7 +6746,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<TagResourceResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<TagResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UntagResourceResponse UntagResource(UntagResourceRequest request)
@@ -6816,7 +6813,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<UntagResourceResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<UntagResourceResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UntagResourceResponse> UntagResourceWithOptionsAsync(UntagResourceRequest request, UntagResourceHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6869,7 +6866,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "none",
             };
-            return TeaModel.ToObject<UntagResourceResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<UntagResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateAliasResponse UpdateAlias(string serviceName, string aliasName, UpdateAliasRequest request)
@@ -6942,7 +6939,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateAliasResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<UpdateAliasResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateAliasResponse> UpdateAliasWithOptionsAsync(string serviceName, string aliasName, UpdateAliasRequest request, UpdateAliasHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7001,7 +6998,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateAliasResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<UpdateAliasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateCustomDomainResponse UpdateCustomDomain(string domainName, UpdateCustomDomainRequest request)
@@ -7073,7 +7070,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateCustomDomainResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<UpdateCustomDomainResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateCustomDomainResponse> UpdateCustomDomainWithOptionsAsync(string domainName, UpdateCustomDomainRequest request, UpdateCustomDomainHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7131,7 +7128,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateCustomDomainResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<UpdateCustomDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateFunctionResponse UpdateFunction(string serviceName, string functionName, UpdateFunctionRequest request)
@@ -7264,7 +7261,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateFunctionResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<UpdateFunctionResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateFunctionResponse> UpdateFunctionWithOptionsAsync(string serviceName, string functionName, UpdateFunctionRequest request, UpdateFunctionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7383,7 +7380,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateFunctionResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<UpdateFunctionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateServiceResponse UpdateService(string serviceName, UpdateServiceRequest request)
@@ -7471,7 +7468,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateServiceResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<UpdateServiceResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateServiceResponse> UpdateServiceWithOptionsAsync(string serviceName, UpdateServiceRequest request, UpdateServiceHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7545,7 +7542,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateServiceResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<UpdateServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateTriggerResponse UpdateTrigger(string serviceName, string functionName, string triggerName, UpdateTriggerRequest request)
@@ -7623,7 +7620,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateTriggerResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<UpdateTriggerResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateTriggerResponse> UpdateTriggerWithOptionsAsync(string serviceName, string functionName, string triggerName, UpdateTriggerRequest request, UpdateTriggerHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7687,21 +7684,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateTriggerResponse>(await ExecuteAsync(params_, req, runtime));
-        }
-
-        public Dictionary<string, object> SignRequest(AlibabaCloud.GatewayFc.Models.HttpRequest request)
-        {
-            Aliyun.Credentials.Client cred = _credential;
-            AlibabaCloud.GatewayFc.Client gateway = new AlibabaCloud.GatewayFc.Client();
-            return gateway.SignRequest(request, cred);
-        }
-
-        public async Task<Dictionary<string, object>> SignRequestAsync(AlibabaCloud.GatewayFc.Models.HttpRequest request)
-        {
-            Aliyun.Credentials.Client cred = _credential;
-            AlibabaCloud.GatewayFc.Client gateway = new AlibabaCloud.GatewayFc.Client();
-            return await gateway.SignRequestAsync(request, cred);
+            return TeaModel.ToObject<UpdateTriggerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
     }
