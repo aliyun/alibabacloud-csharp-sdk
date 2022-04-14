@@ -3473,6 +3473,10 @@ namespace AlibabaCloud.SDK.Edas20170801
             {
                 query["BatchWaitTime"] = request.BatchWaitTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BuildPackId))
+            {
+                query["BuildPackId"] = request.BuildPackId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeOrderDesc))
             {
                 query["ChangeOrderDesc"] = request.ChangeOrderDesc;
@@ -3688,6 +3692,10 @@ namespace AlibabaCloud.SDK.Edas20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchWaitTime))
             {
                 query["BatchWaitTime"] = request.BatchWaitTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BuildPackId))
+            {
+                query["BuildPackId"] = request.BuildPackId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeOrderDesc))
             {

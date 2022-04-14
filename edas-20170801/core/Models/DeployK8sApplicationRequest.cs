@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public int? BatchWaitTime { get; set; }
 
+        [NameInMap("BuildPackId")]
+        [Validation(Required=false)]
+        public string BuildPackId { get; set; }
+
         [NameInMap("ChangeOrderDesc")]
         [Validation(Required=false)]
         public string ChangeOrderDesc { get; set; }
