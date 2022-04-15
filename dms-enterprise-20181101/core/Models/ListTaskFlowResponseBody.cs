@@ -29,10 +29,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public ListTaskFlowResponseBodyTaskFlowList TaskFlowList { get; set; }
         public class ListTaskFlowResponseBodyTaskFlowList : TeaModel {
-            [NameInMap("DAGInstance")]
+            [NameInMap("TaskFlow")]
             [Validation(Required=false)]
-            public List<ListTaskFlowResponseBodyTaskFlowListDAGInstance> DAGInstance { get; set; }
-            public class ListTaskFlowResponseBodyTaskFlowListDAGInstance : TeaModel {
+            public List<ListTaskFlowResponseBodyTaskFlowListTaskFlow> TaskFlow { get; set; }
+            public class ListTaskFlowResponseBodyTaskFlowListTaskFlow : TeaModel {
                 public string CreatorId { get; set; }
                 public string CreatorNickName { get; set; }
                 public string DagOwnerNickName { get; set; }
