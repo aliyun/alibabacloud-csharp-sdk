@@ -8,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
-    public class CreateTransitRouterRequest : TeaModel {
-        [NameInMap("CenId")]
-        [Validation(Required=false)]
-        public string CenId { get; set; }
-
+    public class ModifyTransitRouterMulticastDomainRequest : TeaModel {
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -29,10 +25,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -41,17 +33,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("SupportMulticast")]
+        [NameInMap("TransitRouterMulticastDomainDescription")]
         [Validation(Required=false)]
-        public bool? SupportMulticast { get; set; }
+        public string TransitRouterMulticastDomainDescription { get; set; }
 
-        [NameInMap("TransitRouterDescription")]
+        [NameInMap("TransitRouterMulticastDomainId")]
         [Validation(Required=false)]
-        public string TransitRouterDescription { get; set; }
+        public string TransitRouterMulticastDomainId { get; set; }
 
-        [NameInMap("TransitRouterName")]
+        [NameInMap("TransitRouterMulticastDomainName")]
         [Validation(Required=false)]
-        public string TransitRouterName { get; set; }
+        public string TransitRouterMulticastDomainName { get; set; }
 
     }
 

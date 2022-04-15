@@ -8,7 +8,19 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
-    public class ListTransitRouterAvailableResourceRequest : TeaModel {
+    public class CreateTransitRouterMulticastDomainRequest : TeaModel {
+        [NameInMap("CenId")]
+        [Validation(Required=false)]
+        public string CenId { get; set; }
+
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -29,9 +41,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("SupportMulticast")]
+        [NameInMap("TransitRouterId")]
         [Validation(Required=false)]
-        public bool? SupportMulticast { get; set; }
+        public string TransitRouterId { get; set; }
+
+        [NameInMap("TransitRouterMulticastDomainDescription")]
+        [Validation(Required=false)]
+        public string TransitRouterMulticastDomainDescription { get; set; }
+
+        [NameInMap("TransitRouterMulticastDomainName")]
+        [Validation(Required=false)]
+        public string TransitRouterMulticastDomainName { get; set; }
 
     }
 

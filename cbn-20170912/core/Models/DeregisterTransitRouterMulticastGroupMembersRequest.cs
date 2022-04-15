@@ -8,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
-    public class CreateTransitRouterRequest : TeaModel {
-        [NameInMap("CenId")]
-        [Validation(Required=false)]
-        public string CenId { get; set; }
-
+    public class DeregisterTransitRouterMulticastGroupMembersRequest : TeaModel {
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -20,6 +16,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
+
+        [NameInMap("GroupIpAddress")]
+        [Validation(Required=false)]
+        public string GroupIpAddress { get; set; }
+
+        [NameInMap("NetworkInterfaceIds")]
+        [Validation(Required=false)]
+        public List<string> NetworkInterfaceIds { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -29,9 +33,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("PeerTransitRouterMulticastDomains")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public List<string> PeerTransitRouterMulticastDomains { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -41,17 +45,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("SupportMulticast")]
+        [NameInMap("TransitRouterMulticastDomainId")]
         [Validation(Required=false)]
-        public bool? SupportMulticast { get; set; }
-
-        [NameInMap("TransitRouterDescription")]
-        [Validation(Required=false)]
-        public string TransitRouterDescription { get; set; }
-
-        [NameInMap("TransitRouterName")]
-        [Validation(Required=false)]
-        public string TransitRouterName { get; set; }
+        public string TransitRouterMulticastDomainId { get; set; }
 
     }
 

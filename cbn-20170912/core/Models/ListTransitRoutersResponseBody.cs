@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("SupportMulticast")]
+            [Validation(Required=false)]
+            public bool? SupportMulticast { get; set; }
+
             [NameInMap("TransitRouterDescription")]
             [Validation(Required=false)]
             public string TransitRouterDescription { get; set; }

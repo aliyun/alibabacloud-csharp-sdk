@@ -27,8 +27,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string CenId { get; set; }
                 public string CreationTime { get; set; }
                 public string Description { get; set; }
+                public string Ipv6Level { get; set; }
                 public string Name { get; set; }
                 public string ProtectionLevel { get; set; }
+                public string ResourceGroupId { get; set; }
                 public string Status { get; set; }
                 public DescribeCensResponseBodyCensCenTags Tags { get; set; }
                 public class DescribeCensResponseBodyCensCenTags : TeaModel {
