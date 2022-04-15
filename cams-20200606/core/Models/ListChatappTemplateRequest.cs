@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AuditStatus { get; set; }
 
         /// <summary>
+        /// ISV客户WabaId
+        /// </summary>
+        [NameInMap("CustWabaId")]
+        [Validation(Required=false)]
+        public string CustWabaId { get; set; }
+
+        /// <summary>
         /// 语言
         /// </summary>
         [NameInMap("Language")]

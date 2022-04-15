@@ -66,6 +66,20 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             }
 
             /// <summary>
+            /// 描述，当Type为Header，且Format为IMGAGE/DOCUMENT/VIDEO 可以增加描述
+            /// </summary>
+            [NameInMap("Caption")]
+            [Validation(Required=false)]
+            public string Caption { get; set; }
+
+            /// <summary>
+            /// 文件名称，当Type为Header，且Format为DOCUMENT时可以给文件指定名称
+            /// </summary>
+            [NameInMap("FileName")]
+            [Validation(Required=false)]
+            public string FileName { get; set; }
+
+            /// <summary>
             /// 格式
             /// TEXT-文本 IMGAGE-图片 DOCUMENT-文档 VIDEO-视频
             /// </summary>
@@ -96,6 +110,13 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Url { get; set; }
 
         }
+
+        /// <summary>
+        /// ISV客户WabaId
+        /// </summary>
+        [NameInMap("CustWabaId")]
+        [Validation(Required=false)]
+        public string CustWabaId { get; set; }
 
         /// <summary>
         /// 变量，KEY-VALUE结构

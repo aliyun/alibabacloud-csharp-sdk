@@ -41,6 +41,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     public string Url { get; set; }
                     public string UrlType { get; set; }
                 }
+                public string Caption { get; set; }
+                public string FileName { get; set; }
                 public string Text { get; set; }
                 public string Type { get; set; }
                 public string Url { get; set; }
