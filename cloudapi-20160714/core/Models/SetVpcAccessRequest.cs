@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
+        [NameInMap("VpcTargetHostName")]
+        [Validation(Required=false)]
+        public string VpcTargetHostName { get; set; }
+
     }
 
 }

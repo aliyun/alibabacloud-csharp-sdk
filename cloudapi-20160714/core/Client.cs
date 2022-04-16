@@ -13306,6 +13306,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["VpcId"] = request.VpcId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcTargetHostName))
+            {
+                query["VpcTargetHostName"] = request.VpcTargetHostName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -13352,6 +13356,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
             {
                 query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcTargetHostName))
+            {
+                query["VpcTargetHostName"] = request.VpcTargetHostName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
