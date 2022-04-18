@@ -51,10 +51,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                     public class DescribeEventDetailResponseBodyEventDetailChartData : TeaModel {
                         [NameInMap("X")]
                         [Validation(Required=false)]
-                        public string X { get; set; }
+                        public List<string> X { get; set; }
                         [NameInMap("Y")]
                         [Validation(Required=false)]
-                        public string Y { get; set; }
+                        public List<string> Y { get; set; }
                     };
 
                     [NameInMap("Label")]

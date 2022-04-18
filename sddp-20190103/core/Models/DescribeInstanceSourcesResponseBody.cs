@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public bool? CanModifyUserName { get; set; }
 
+            [NameInMap("CheckStatus")]
+            [Validation(Required=false)]
+            public int? CheckStatus { get; set; }
+
+            [NameInMap("DatamaskStatus")]
+            [Validation(Required=false)]
+            public int? DatamaskStatus { get; set; }
+
             [NameInMap("DbName")]
             [Validation(Required=false)]
             public string DbName { get; set; }
@@ -40,6 +48,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [NameInMap("EngineType")]
             [Validation(Required=false)]
             public string EngineType { get; set; }
+
+            [NameInMap("ErrorMessage")]
+            [Validation(Required=false)]
+            public string ErrorMessage { get; set; }
 
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
@@ -88,6 +100,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [NameInMap("RegionName")]
             [Validation(Required=false)]
             public string RegionName { get; set; }
+
+            [NameInMap("SamplingSize")]
+            [Validation(Required=false)]
+            public int? SamplingSize { get; set; }
 
             [NameInMap("TenantId")]
             [Validation(Required=false)]
