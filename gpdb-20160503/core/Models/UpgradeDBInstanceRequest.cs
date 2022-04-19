@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        [NameInMap("InstanceSpec")]
+        [Validation(Required=false)]
+        public string InstanceSpec { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -32,6 +36,22 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("SegNodeNum")]
+        [Validation(Required=false)]
+        public string SegNodeNum { get; set; }
+
+        [NameInMap("StorageSize")]
+        [Validation(Required=false)]
+        public string StorageSize { get; set; }
+
+        [NameInMap("masterNodeNum")]
+        [Validation(Required=false)]
+        public string MasterNodeNum { get; set; }
+
+        [NameInMap("upgradeType")]
+        [Validation(Required=false)]
+        public long? UpgradeType { get; set; }
 
     }
 

@@ -20,6 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string AvailabilityValue { get; set; }
                 public string ConnectionMode { get; set; }
                 public string ConnectionString { get; set; }
+                public string CoreVersion { get; set; }
                 public int? CpuCores { get; set; }
                 public int? CpuCoresPerNode { get; set; }
                 public string CreationTime { get; set; }
