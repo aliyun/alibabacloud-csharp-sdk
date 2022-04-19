@@ -65,10 +65,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
-        [NameInMap("HiddenZoneId")]
-        [Validation(Required=false)]
-        public string HiddenZoneId { get; set; }
-
         [NameInMap("NetworkType")]
         [Validation(Required=false)]
         public string NetworkType { get; set; }
@@ -112,10 +108,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("RestoreTime")]
         [Validation(Required=false)]
         public string RestoreTime { get; set; }
-
-        [NameInMap("SecondaryZoneId")]
-        [Validation(Required=false)]
-        public string SecondaryZoneId { get; set; }
 
         [NameInMap("SecurityIPList")]
         [Validation(Required=false)]

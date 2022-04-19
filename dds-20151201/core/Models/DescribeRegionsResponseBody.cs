@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribeRegionsResponseBodyRegionsDdsRegion> DdsRegion { get; set; }
             public class DescribeRegionsResponseBodyRegionsDdsRegion : TeaModel {
                 public string RegionId { get; set; }
+                public string RegionName { get; set; }
                 public DescribeRegionsResponseBodyRegionsDdsRegionZones Zones { get; set; }
                 public class DescribeRegionsResponseBodyRegionsDdsRegionZones : TeaModel {
                     [NameInMap("Zone")]
