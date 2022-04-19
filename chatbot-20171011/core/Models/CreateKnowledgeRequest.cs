@@ -37,6 +37,7 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
             public List<CreateKnowledgeRequestKnowledgeOutlines> Outlines { get; set; }
             public class CreateKnowledgeRequestKnowledgeOutlines : TeaModel {
                 public long? KnowledgeId { get; set; }
+                public long? OutlineId { get; set; }
                 public string Title { get; set; }
             }
             [NameInMap("SimQuestions")]
