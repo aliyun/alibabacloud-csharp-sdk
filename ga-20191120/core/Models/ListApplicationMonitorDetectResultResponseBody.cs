@@ -17,9 +17,17 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string AcceleratorId { get; set; }
 
+            [NameInMap("Content")]
+            [Validation(Required=false)]
+            public string Content { get; set; }
+
             [NameInMap("Detail")]
             [Validation(Required=false)]
             public string Detail { get; set; }
+
+            [NameInMap("DetectTime")]
+            [Validation(Required=false)]
+            public string DetectTime { get; set; }
 
             [NameInMap("DiagStatus")]
             [Validation(Required=false)]
@@ -36,6 +44,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [NameInMap("Protocol")]
             [Validation(Required=false)]
             public string Protocol { get; set; }
+
+            [NameInMap("StatusCode")]
+            [Validation(Required=false)]
+            public string StatusCode { get; set; }
 
             [NameInMap("TaskId")]
             [Validation(Required=false)]

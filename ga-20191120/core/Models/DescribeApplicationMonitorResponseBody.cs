@@ -17,9 +17,17 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string Address { get; set; }
 
+        [NameInMap("DetectEnable")]
+        [Validation(Required=false)]
+        public bool? DetectEnable { get; set; }
+
         [NameInMap("DetectThreshold")]
         [Validation(Required=false)]
-        public string DetectThreshold { get; set; }
+        public int? DetectThreshold { get; set; }
+
+        [NameInMap("DetectTimes")]
+        [Validation(Required=false)]
+        public int? DetectTimes { get; set; }
 
         [NameInMap("IspCityList")]
         [Validation(Required=false)]
@@ -58,6 +66,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("SilenceTime")]
+        [Validation(Required=false)]
+        public int? SilenceTime { get; set; }
 
         [NameInMap("TaskId")]
         [Validation(Required=false)]
