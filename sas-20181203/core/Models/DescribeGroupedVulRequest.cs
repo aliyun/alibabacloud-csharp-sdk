@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string AliasName { get; set; }
 
+        [NameInMap("AttachTypes")]
+        [Validation(Required=false)]
+        public string AttachTypes { get; set; }
+
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
