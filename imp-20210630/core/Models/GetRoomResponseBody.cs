@@ -28,6 +28,13 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             public GetRoomResponseBodyResultRoomInfo RoomInfo { get; set; }
             public class GetRoomResponseBodyResultRoomInfo : TeaModel {
                 /// <summary>
+                /// 管理员ID列表。
+                /// </summary>
+                [NameInMap("AdminIdList")]
+                [Validation(Required=false)]
+                public List<string> AdminIdList { get; set; }
+
+                /// <summary>
                 /// 应用唯一标识，由6位小写字母、数字组成。
                 /// </summary>
                 [NameInMap("AppId")]

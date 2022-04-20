@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
-    public class AttachStandardRoomHttpsCertificateResponse : TeaModel {
+    public class SetUserAdminResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public AttachStandardRoomHttpsCertificateResponseBody Body { get; set; }
+        public SetUserAdminResponseBody Body { get; set; }
 
     }
 

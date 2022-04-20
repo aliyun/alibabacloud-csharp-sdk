@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
-    public class GetImpProductStatusResponse : TeaModel {
+    public class ListSensitiveWordResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public GetImpProductStatusResponseBody Body { get; set; }
+        public ListSensitiveWordResponseBody Body { get; set; }
 
     }
 

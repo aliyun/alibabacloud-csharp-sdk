@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
 {
     public class ListAppsRequest : TeaModel {
         /// <summary>
+        /// 过滤的应用id列表
+        /// </summary>
+        [NameInMap("AppIds")]
+        [Validation(Required=false)]
+        public string AppIds { get; set; }
+
+        /// <summary>
         /// 集成方式：- 一体化SDK：paasSDK - 样板间：standardRoom
         /// </summary>
         [NameInMap("IntegrationMode")]

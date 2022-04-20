@@ -8,13 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
-    public class GetUserInfoRequest : TeaModel {
+    public class SetUserAdminResponseBody : TeaModel {
         /// <summary>
-        /// 云账号id
+        /// Id of the request
         /// </summary>
-        [NameInMap("CloudUid")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string CloudUid { get; set; }
+        public string RequestId { get; set; }
 
     }
 

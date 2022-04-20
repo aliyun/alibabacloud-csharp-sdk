@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public string CoverUrl { get; set; }
 
         /// <summary>
-        /// 拓展字段，按需传递，需要额外记录的房间属性。
+        /// 拓展字段，按需传递，需要额外记录的房间属性。最大支持4096个字节。
         /// </summary>
         [NameInMap("Extension")]
         [Validation(Required=false)]

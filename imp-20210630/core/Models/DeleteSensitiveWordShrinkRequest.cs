@@ -8,20 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
-    public class GetImpProductStatusResponseBody : TeaModel {
+    public class DeleteSensitiveWordShrinkRequest : TeaModel {
         /// <summary>
-        /// 请求ID
+        /// 弹幕发送者的用户ID，最大长度不超过32个字节。
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("AppId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string AppId { get; set; }
 
-        /// <summary>
-        /// 开通状态
-        /// </summary>
-        [NameInMap("Result")]
+        [NameInMap("WordList")]
         [Validation(Required=false)]
-        public bool? Result { get; set; }
+        public string WordListShrink { get; set; }
 
     }
 

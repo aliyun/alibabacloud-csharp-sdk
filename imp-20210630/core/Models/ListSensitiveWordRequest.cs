@@ -8,13 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
-    public class GetPageConfigRequest : TeaModel {
+    public class ListSensitiveWordRequest : TeaModel {
         /// <summary>
-        /// 云账号id
+        /// 弹幕发送者的用户ID，最大长度不超过32个字节。
         /// </summary>
-        [NameInMap("CloudUid")]
+        [NameInMap("AppId")]
         [Validation(Required=false)]
-        public string CloudUid { get; set; }
+        public string AppId { get; set; }
 
     }
 

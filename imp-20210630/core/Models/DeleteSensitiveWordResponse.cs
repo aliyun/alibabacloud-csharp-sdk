@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
-    public class ListRoomLivesResponse : TeaModel {
+    public class DeleteSensitiveWordResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ListRoomLivesResponseBody Body { get; set; }
+        public DeleteSensitiveWordResponseBody Body { get; set; }
 
     }
 

@@ -8,24 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
-    public class AttachStandardRoomHttpsCertificateResponseBody : TeaModel {
+    public class ListSensitiveWordResponseBody : TeaModel {
         /// <summary>
-        /// 请求ID
+        /// 请求ID。
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// 返回结果
+        /// 调用发送直播间弹幕的返回结果。
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
-        public AttachStandardRoomHttpsCertificateResponseBodyResult Result { get; set; }
-        public class AttachStandardRoomHttpsCertificateResponseBodyResult : TeaModel {
-            [NameInMap("CertificateId")]
+        public ListSensitiveWordResponseBodyResult Result { get; set; }
+        public class ListSensitiveWordResponseBodyResult : TeaModel {
+            [NameInMap("WordList")]
             [Validation(Required=false)]
-            public string CertificateId { get; set; }
+            public List<string> WordList { get; set; }
         };
 
     }

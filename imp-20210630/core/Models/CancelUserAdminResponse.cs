@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
-    public class GetPageConfigResponse : TeaModel {
+    public class CancelUserAdminResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public GetPageConfigResponseBody Body { get; set; }
+        public CancelUserAdminResponseBody Body { get; set; }
 
     }
 
