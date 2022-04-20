@@ -143,6 +143,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             {
                 query["AutoScan"] = request.AutoScan;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                query["Enable"] = request.Enable;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineType))
             {
                 query["EngineType"] = request.EngineType;
@@ -217,6 +221,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoScan))
             {
                 query["AutoScan"] = request.AutoScan;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                query["Enable"] = request.Enable;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineType))
             {

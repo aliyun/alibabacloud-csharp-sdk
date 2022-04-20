@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? AutoScan { get; set; }
 
+        [NameInMap("Enable")]
+        [Validation(Required=false)]
+        public int? Enable { get; set; }
+
         [NameInMap("EngineType")]
         [Validation(Required=false)]
         public string EngineType { get; set; }
