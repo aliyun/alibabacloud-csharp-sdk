@@ -46,6 +46,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 public string ReverseTunnelEndpoint { get; set; }
             };
 
+            [NameInMap("OwnerId")]
+            [Validation(Required=false)]
+            public string OwnerId { get; set; }
+
+            [NameInMap("OwnerType")]
+            [Validation(Required=false)]
+            public string OwnerType { get; set; }
+
             [NameInMap("ServiceMeshInfo")]
             [Validation(Required=false)]
             public DescribeServiceMeshesResponseBodyServiceMeshesServiceMeshInfo ServiceMeshInfo { get; set; }

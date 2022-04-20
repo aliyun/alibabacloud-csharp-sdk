@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class UpdateNamespaceScopeSidecarConfigRequest : TeaModel {
+        [NameInMap("Concurrency")]
+        [Validation(Required=false)]
+        public int? Concurrency { get; set; }
+
         [NameInMap("ExcludeIPRanges")]
         [Validation(Required=false)]
         public string ExcludeIPRanges { get; set; }
@@ -20,6 +24,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [NameInMap("ExcludeOutboundPorts")]
         [Validation(Required=false)]
         public string ExcludeOutboundPorts { get; set; }
+
+        [NameInMap("HoldApplicationUntilProxyStarts")]
+        [Validation(Required=false)]
+        public bool? HoldApplicationUntilProxyStarts { get; set; }
 
         [NameInMap("IncludeIPRanges")]
         [Validation(Required=false)]
@@ -41,9 +49,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string Lifecycle { get; set; }
 
+        [NameInMap("LogLevel")]
+        [Validation(Required=false)]
+        public string LogLevel { get; set; }
+
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
+
+        [NameInMap("PostStart")]
+        [Validation(Required=false)]
+        public string PostStart { get; set; }
+
+        [NameInMap("PreStop")]
+        [Validation(Required=false)]
+        public string PreStop { get; set; }
 
         [NameInMap("ProxyInitCPUResourceLimit")]
         [Validation(Required=false)]
@@ -60,6 +80,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [NameInMap("ProxyInitMemoryResourceRequest")]
         [Validation(Required=false)]
         public string ProxyInitMemoryResourceRequest { get; set; }
+
+        [NameInMap("ProxyStatsMatcher")]
+        [Validation(Required=false)]
+        public string ProxyStatsMatcher { get; set; }
 
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

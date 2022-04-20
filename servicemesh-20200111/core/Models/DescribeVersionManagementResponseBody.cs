@@ -57,6 +57,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 [Validation(Required=false)]
                 public string PodName { get; set; }
 
+                [NameInMap("RestartTime")]
+                [Validation(Required=false)]
+                public int? RestartTime { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
             }
 
             [NameInMap("ReadyReplicas")]
@@ -66,6 +74,24 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [NameInMap("Replicas")]
             [Validation(Required=false)]
             public int? Replicas { get; set; }
+
+            [NameInMap("Resource")]
+            [Validation(Required=false)]
+            public DescribeVersionManagementResponseBodyVersionDetailsResource Resource { get; set; }
+            public class DescribeVersionManagementResponseBodyVersionDetailsResource : TeaModel {
+                [NameInMap("CPULimit")]
+                [Validation(Required=false)]
+                public string CPULimit { get; set; }
+                [NameInMap("CPURequest")]
+                [Validation(Required=false)]
+                public string CPURequest { get; set; }
+                [NameInMap("MemoryLimit")]
+                [Validation(Required=false)]
+                public string MemoryLimit { get; set; }
+                [NameInMap("MemoryRequest")]
+                [Validation(Required=false)]
+                public string MemoryRequest { get; set; }
+            };
 
             [NameInMap("Version")]
             [Validation(Required=false)]

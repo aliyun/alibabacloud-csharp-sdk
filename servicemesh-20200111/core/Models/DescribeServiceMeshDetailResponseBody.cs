@@ -44,6 +44,12 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 public string PublicPilotEndpoint { get; set; }
 
             }
+            [NameInMap("OwnerId")]
+            [Validation(Required=false)]
+            public string OwnerId { get; set; }
+            [NameInMap("OwnerType")]
+            [Validation(Required=false)]
+            public string OwnerType { get; set; }
             [NameInMap("ServiceMeshInfo")]
             [Validation(Required=false)]
             public DescribeServiceMeshDetailResponseBodyServiceMeshServiceMeshInfo ServiceMeshInfo { get; set; }
@@ -211,97 +217,97 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         [Validation(Required=false)]
                         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecycle Lifecycle { get; set; }
                         public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecycle : TeaModel {
-                            [NameInMap("PostStart")]
+                            [NameInMap("postStart")]
                             [Validation(Required=false)]
                             public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStart PostStart { get; set; }
                             public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStart : TeaModel {
-                                [NameInMap("Exec")]
+                                [NameInMap("exec")]
                                 [Validation(Required=false)]
                                 public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartExec Exec { get; set; }
                                 public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartExec : TeaModel {
-                                    [NameInMap("Command")]
+                                    [NameInMap("command")]
                                     [Validation(Required=false)]
                                     public List<string> Command { get; set; }
                                 };
 
-                                [NameInMap("HTTPGet")]
+                                [NameInMap("httpGet")]
                                 [Validation(Required=false)]
-                                public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGet HTTPGet { get; set; }
-                                public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGet : TeaModel {
-                                    [NameInMap("HTTPHeaders")]
+                                public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGet HttpGet { get; set; }
+                                public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGet : TeaModel {
+                                    [NameInMap("host")]
                                     [Validation(Required=false)]
-                                    public List<DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGetHTTPHeaders> HTTPHeaders { get; set; }
-                                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGetHTTPHeaders : TeaModel {
+                                    public string Host { get; set; }
+                                    [NameInMap("httpHeaders")]
+                                    [Validation(Required=false)]
+                                    public List<DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGetHttpHeaders> HttpHeaders { get; set; }
+                                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGetHttpHeaders : TeaModel {
                                         public string Name { get; set; }
                                         public string Value { get; set; }
                                     }
-                                    [NameInMap("Host")]
-                                    [Validation(Required=false)]
-                                    public string Host { get; set; }
-                                    [NameInMap("Port")]
+                                    [NameInMap("port")]
                                     [Validation(Required=false)]
                                     public string Port { get; set; }
-                                    [NameInMap("Scheme")]
+                                    [NameInMap("scheme")]
                                     [Validation(Required=false)]
                                     public string Scheme { get; set; }
                                 };
 
-                                [NameInMap("TCPSocket")]
+                                [NameInMap("tcpSocket")]
                                 [Validation(Required=false)]
-                                public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartTCPSocket TCPSocket { get; set; }
-                                public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartTCPSocket : TeaModel {
-                                    [NameInMap("Host")]
+                                public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartTcpSocket TcpSocket { get; set; }
+                                public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartTcpSocket : TeaModel {
+                                    [NameInMap("host")]
                                     [Validation(Required=false)]
                                     public string Host { get; set; }
-                                    [NameInMap("Port")]
+                                    [NameInMap("port")]
                                     [Validation(Required=false)]
                                     public string Port { get; set; }
                                 };
 
                             }
-                            [NameInMap("PreStop")]
+                            [NameInMap("preStop")]
                             [Validation(Required=false)]
                             public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStop PreStop { get; set; }
                             public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStop : TeaModel {
-                                [NameInMap("Exec")]
+                                [NameInMap("exec")]
                                 [Validation(Required=false)]
                                 public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopExec Exec { get; set; }
                                 public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopExec : TeaModel {
-                                    [NameInMap("Command")]
+                                    [NameInMap("command")]
                                     [Validation(Required=false)]
                                     public List<string> Command { get; set; }
                                 };
 
-                                [NameInMap("HTTPGet")]
+                                [NameInMap("httpGet")]
                                 [Validation(Required=false)]
-                                public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGet HTTPGet { get; set; }
-                                public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGet : TeaModel {
-                                    [NameInMap("HTTPHeaders")]
+                                public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGet HttpGet { get; set; }
+                                public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGet : TeaModel {
+                                    [NameInMap("host")]
                                     [Validation(Required=false)]
-                                    public List<DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGetHTTPHeaders> HTTPHeaders { get; set; }
-                                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGetHTTPHeaders : TeaModel {
+                                    public string Host { get; set; }
+                                    [NameInMap("httpHeaders")]
+                                    [Validation(Required=false)]
+                                    public List<DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGetHttpHeaders> HttpHeaders { get; set; }
+                                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGetHttpHeaders : TeaModel {
                                         public string Name { get; set; }
                                         public string Value { get; set; }
                                     }
-                                    [NameInMap("Host")]
-                                    [Validation(Required=false)]
-                                    public string Host { get; set; }
-                                    [NameInMap("Port")]
+                                    [NameInMap("port")]
                                     [Validation(Required=false)]
                                     public string Port { get; set; }
-                                    [NameInMap("Scheme")]
+                                    [NameInMap("scheme")]
                                     [Validation(Required=false)]
                                     public string Scheme { get; set; }
                                 };
 
-                                [NameInMap("TCPSocket")]
+                                [NameInMap("tcpSocket")]
                                 [Validation(Required=false)]
-                                public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopTCPSocket TCPSocket { get; set; }
-                                public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopTCPSocket : TeaModel {
-                                    [NameInMap("Host")]
+                                public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopTcpSocket TcpSocket { get; set; }
+                                public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopTcpSocket : TeaModel {
+                                    [NameInMap("host")]
                                     [Validation(Required=false)]
                                     public string Host { get; set; }
-                                    [NameInMap("Port")]
+                                    [NameInMap("port")]
                                     [Validation(Required=false)]
                                     public string Port { get; set; }
                                 };

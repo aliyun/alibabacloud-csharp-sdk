@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches ConfigPatches { get; set; }
         public class DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches : TeaModel {
+            [NameInMap("Concurrency")]
+            [Validation(Required=false)]
+            public int? Concurrency { get; set; }
             [NameInMap("ExcludeInboundPorts")]
             [Validation(Required=false)]
             public string ExcludeInboundPorts { get; set; }
@@ -22,6 +25,9 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [NameInMap("ExcludeOutboundPorts")]
             [Validation(Required=false)]
             public string ExcludeOutboundPorts { get; set; }
+            [NameInMap("HoldApplicationUntilProxyStarts")]
+            [Validation(Required=false)]
+            public bool? HoldApplicationUntilProxyStarts { get; set; }
             [NameInMap("IncludeInboundPorts")]
             [Validation(Required=false)]
             public string IncludeInboundPorts { get; set; }
@@ -37,6 +43,26 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [NameInMap("LifecycleStr")]
             [Validation(Required=false)]
             public string LifecycleStr { get; set; }
+            [NameInMap("LogLevel")]
+            [Validation(Required=false)]
+            public string LogLevel { get; set; }
+            [NameInMap("ProxyStatsMatcher")]
+            [Validation(Required=false)]
+            public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesProxyStatsMatcher ProxyStatsMatcher { get; set; }
+            public class DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesProxyStatsMatcher : TeaModel {
+                [NameInMap("InclusionPrefixes")]
+                [Validation(Required=false)]
+                public List<string> InclusionPrefixes { get; set; }
+
+                [NameInMap("InclusionRegexps")]
+                [Validation(Required=false)]
+                public List<string> InclusionRegexps { get; set; }
+
+                [NameInMap("InclusionSuffixes")]
+                [Validation(Required=false)]
+                public List<string> InclusionSuffixes { get; set; }
+
+            }
             [NameInMap("SidecarProxyInitResourceLimit")]
             [Validation(Required=false)]
             public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyInitResourceLimit SidecarProxyInitResourceLimit { get; set; }

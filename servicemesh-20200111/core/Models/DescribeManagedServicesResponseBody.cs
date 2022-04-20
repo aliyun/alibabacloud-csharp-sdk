@@ -51,6 +51,24 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [Validation(Required=false)]
             public string SidecarInjectStatus { get; set; }
 
+            [NameInMap("SidecarResource")]
+            [Validation(Required=false)]
+            public DescribeManagedServicesResponseBodyManagedServiceInfoSidecarResource SidecarResource { get; set; }
+            public class DescribeManagedServicesResponseBodyManagedServiceInfoSidecarResource : TeaModel {
+                [NameInMap("LimitCPU")]
+                [Validation(Required=false)]
+                public string LimitCPU { get; set; }
+                [NameInMap("LimitMemory")]
+                [Validation(Required=false)]
+                public string LimitMemory { get; set; }
+                [NameInMap("RequestCPU")]
+                [Validation(Required=false)]
+                public string RequestCPU { get; set; }
+                [NameInMap("RequestMemory")]
+                [Validation(Required=false)]
+                public string RequestMemory { get; set; }
+            };
+
         }
 
         [NameInMap("Mark")]
