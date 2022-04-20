@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
-    public class CancelCallRequest : TeaModel {
-        [NameInMap("CallId")]
+    public class StopCallInConfigRequest : TeaModel {
+        [NameInMap("Number")]
         [Validation(Required=false)]
-        public string CallId { get; set; }
+        public string Number { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]

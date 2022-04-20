@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
-    public class CancelCallResponse : TeaModel {
+    public class StopCallInConfigResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public CancelCallResponseBody Body { get; set; }
+        public StopCallInConfigResponseBody Body { get; set; }
 
     }
 
