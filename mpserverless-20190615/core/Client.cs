@@ -3705,9 +3705,15 @@ namespace AlibabaCloud.SDK.MPServerless20190615
             return await ListOpenPlatformConfigWithOptionsAsync(request, runtime);
         }
 
-        public ListSpaceResponse ListSpaceWithOptions(ListSpaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListSpaceResponse ListSpaceWithOptions(ListSpaceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListSpaceShrinkRequest request = new ListSpaceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SpaceIds))
+            {
+                request.SpaceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SpaceIds, "SpaceIds", "simple");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
             {
@@ -3716,6 +3722,10 @@ namespace AlibabaCloud.SDK.MPServerless20190615
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpaceIdsShrink))
+            {
+                body["SpaceIds"] = request.SpaceIdsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3736,9 +3746,15 @@ namespace AlibabaCloud.SDK.MPServerless20190615
             return TeaModel.ToObject<ListSpaceResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListSpaceResponse> ListSpaceWithOptionsAsync(ListSpaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListSpaceResponse> ListSpaceWithOptionsAsync(ListSpaceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListSpaceShrinkRequest request = new ListSpaceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SpaceIds))
+            {
+                request.SpaceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SpaceIds, "SpaceIds", "simple");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
             {
@@ -3747,6 +3763,10 @@ namespace AlibabaCloud.SDK.MPServerless20190615
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpaceIdsShrink))
+            {
+                body["SpaceIds"] = request.SpaceIdsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

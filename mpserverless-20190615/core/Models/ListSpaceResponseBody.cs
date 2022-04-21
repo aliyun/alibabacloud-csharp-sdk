@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
             [Validation(Required=false)]
             public long? GmtCreate { get; set; }
 
+            [NameInMap("GmtLastAccess")]
+            [Validation(Required=false)]
+            public long? GmtLastAccess { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }

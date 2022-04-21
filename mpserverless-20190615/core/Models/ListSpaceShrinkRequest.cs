@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
-    public class ListSpaceRequest : TeaModel {
+    public class ListSpaceShrinkRequest : TeaModel {
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
 
         [NameInMap("SpaceIds")]
         [Validation(Required=false)]
-        public List<string> SpaceIds { get; set; }
+        public string SpaceIdsShrink { get; set; }
 
     }
 
