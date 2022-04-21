@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
     public class SenderStatisticsDetailByParamResponseBody : TeaModel {
         [NameInMap("NextStart")]
         [Validation(Required=false)]
-        public int? NextStart { get; set; }
+        public string NextStart { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
