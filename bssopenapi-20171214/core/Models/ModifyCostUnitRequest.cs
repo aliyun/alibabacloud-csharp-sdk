@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public List<ModifyCostUnitRequestUnitEntityList> UnitEntityList { get; set; }
         public class ModifyCostUnitRequestUnitEntityList : TeaModel {
-            [NameInMap("UnitId")]
-            [Validation(Required=false)]
-            public long? UnitId { get; set; }
-
             [NameInMap("NewUnitName")]
             [Validation(Required=false)]
             public string NewUnitName { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [NameInMap("OwnerUid")]
             [Validation(Required=false)]
             public long? OwnerUid { get; set; }
+
+            [NameInMap("UnitId")]
+            [Validation(Required=false)]
+            public long? UnitId { get; set; }
 
         }
 

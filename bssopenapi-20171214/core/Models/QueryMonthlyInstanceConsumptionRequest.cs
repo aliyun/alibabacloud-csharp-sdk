@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryMonthlyInstanceConsumptionRequest : TeaModel {
-        [NameInMap("ProductCode")]
+        [NameInMap("BillingCycle")]
         [Validation(Required=false)]
-        public string ProductCode { get; set; }
+        public string BillingCycle { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("BillingCycle")]
+        [NameInMap("ProductCode")]
         [Validation(Required=false)]
-        public string BillingCycle { get; set; }
+        public string ProductCode { get; set; }
 
         [NameInMap("ProductType")]
         [Validation(Required=false)]

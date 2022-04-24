@@ -9,9 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryEvaluateListRequest : TeaModel {
-        [NameInMap("Type")]
+        [NameInMap("BillCycle")]
         [Validation(Required=false)]
-        public int? Type { get; set; }
+        public string BillCycle { get; set; }
+
+        [NameInMap("BizTypeList")]
+        [Validation(Required=false)]
+        public List<string> BizTypeList { get; set; }
+
+        [NameInMap("EndAmount")]
+        [Validation(Required=false)]
+        public long? EndAmount { get; set; }
+
+        [NameInMap("EndBizTime")]
+        [Validation(Required=false)]
+        public string EndBizTime { get; set; }
+
+        [NameInMap("EndSearchTime")]
+        [Validation(Required=false)]
+        public string EndSearchTime { get; set; }
 
         [NameInMap("OutBizId")]
         [Validation(Required=false)]
@@ -29,41 +45,25 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("SortType")]
+        [Validation(Required=false)]
+        public int? SortType { get; set; }
+
         [NameInMap("StartAmount")]
         [Validation(Required=false)]
         public long? StartAmount { get; set; }
-
-        [NameInMap("EndAmount")]
-        [Validation(Required=false)]
-        public long? EndAmount { get; set; }
 
         [NameInMap("StartBizTime")]
         [Validation(Required=false)]
         public string StartBizTime { get; set; }
 
-        [NameInMap("EndBizTime")]
-        [Validation(Required=false)]
-        public string EndBizTime { get; set; }
-
-        [NameInMap("SortType")]
-        [Validation(Required=false)]
-        public int? SortType { get; set; }
-
         [NameInMap("StartSearchTime")]
         [Validation(Required=false)]
         public string StartSearchTime { get; set; }
 
-        [NameInMap("EndSearchTime")]
+        [NameInMap("Type")]
         [Validation(Required=false)]
-        public string EndSearchTime { get; set; }
-
-        [NameInMap("BillCycle")]
-        [Validation(Required=false)]
-        public string BillCycle { get; set; }
-
-        [NameInMap("BizTypeList")]
-        [Validation(Required=false)]
-        public List<string> BizTypeList { get; set; }
+        public int? Type { get; set; }
 
     }
 

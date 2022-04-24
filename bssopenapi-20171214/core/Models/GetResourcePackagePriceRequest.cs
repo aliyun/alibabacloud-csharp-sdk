@@ -9,41 +9,41 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class GetResourcePackagePriceRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("Duration")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("ProductCode")]
-        [Validation(Required=false)]
-        public string ProductCode { get; set; }
-
-        [NameInMap("PackageType")]
-        [Validation(Required=false)]
-        public string PackageType { get; set; }
+        public int? Duration { get; set; }
 
         [NameInMap("EffectiveDate")]
         [Validation(Required=false)]
         public string EffectiveDate { get; set; }
 
-        [NameInMap("Specification")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string Specification { get; set; }
-
-        [NameInMap("Duration")]
-        [Validation(Required=false)]
-        public int? Duration { get; set; }
-
-        [NameInMap("PricingCycle")]
-        [Validation(Required=false)]
-        public string PricingCycle { get; set; }
+        public string InstanceId { get; set; }
 
         [NameInMap("OrderType")]
         [Validation(Required=false)]
         public string OrderType { get; set; }
 
-        [NameInMap("InstanceId")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public long? OwnerId { get; set; }
+
+        [NameInMap("PackageType")]
+        [Validation(Required=false)]
+        public string PackageType { get; set; }
+
+        [NameInMap("PricingCycle")]
+        [Validation(Required=false)]
+        public string PricingCycle { get; set; }
+
+        [NameInMap("ProductCode")]
+        [Validation(Required=false)]
+        public string ProductCode { get; set; }
+
+        [NameInMap("Specification")]
+        [Validation(Required=false)]
+        public string Specification { get; set; }
 
     }
 

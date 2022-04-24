@@ -1,3 +1,6 @@
+2022-04-24 Version: 1.0.9
+- Bill api add query conditions and return data field.
+
 2021-08-12 Version: 1.0.8
 - Generated csharp 2017-12-14 for BssOpenApi.
 

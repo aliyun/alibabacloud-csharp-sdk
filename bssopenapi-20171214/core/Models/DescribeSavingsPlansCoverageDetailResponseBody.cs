@@ -13,6 +13,35 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public DescribeSavingsPlansCoverageDetailResponseBodyData Data { get; set; }
+        public class DescribeSavingsPlansCoverageDetailResponseBodyData : TeaModel {
+            [NameInMap("Items")]
+            [Validation(Required=false)]
+            public List<DescribeSavingsPlansCoverageDetailResponseBodyDataItems> Items { get; set; }
+            public class DescribeSavingsPlansCoverageDetailResponseBodyDataItems : TeaModel {
+                public float? CoveragePercentage { get; set; }
+                public string Currency { get; set; }
+                public float? DeductAmount { get; set; }
+                public string EndPeriod { get; set; }
+                public string InstanceId { get; set; }
+                public string InstanceSpec { get; set; }
+                public float? PostpaidCost { get; set; }
+                public string Region { get; set; }
+                public string StartPeriod { get; set; }
+                public float? TotalAmount { get; set; }
+                public long? UserId { get; set; }
+                public string UserName { get; set; }
+            }
+            [NameInMap("NextToken")]
+            [Validation(Required=false)]
+            public string NextToken { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
+        };
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,35 +53,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public DescribeSavingsPlansCoverageDetailResponseBodyData Data { get; set; }
-        public class DescribeSavingsPlansCoverageDetailResponseBodyData : TeaModel {
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
-            [NameInMap("NextToken")]
-            [Validation(Required=false)]
-            public string NextToken { get; set; }
-            [NameInMap("Items")]
-            [Validation(Required=false)]
-            public List<DescribeSavingsPlansCoverageDetailResponseBodyDataItems> Items { get; set; }
-            public class DescribeSavingsPlansCoverageDetailResponseBodyDataItems : TeaModel {
-                public long? UserId { get; set; }
-                public string InstanceId { get; set; }
-                public string Currency { get; set; }
-                public string InstanceSpec { get; set; }
-                public float? PostpaidCost { get; set; }
-                public float? CoveragePercentage { get; set; }
-                public string Region { get; set; }
-                public float? DeductAmount { get; set; }
-                public string StartPeriod { get; set; }
-                public float? TotalAmount { get; set; }
-                public string UserName { get; set; }
-                public string EndPeriod { get; set; }
-            }
-        };
 
     }
 

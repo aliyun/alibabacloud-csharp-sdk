@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class SetRenewalRequest : TeaModel {
-        [NameInMap("RenewalPeriod")]
-        [Validation(Required=false)]
-        public int? RenewalPeriod { get; set; }
-
         [NameInMap("InstanceIDs")]
         [Validation(Required=false)]
         public string InstanceIDs { get; set; }
@@ -29,9 +25,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string ProductType { get; set; }
 
-        [NameInMap("SubscriptionType")]
+        [NameInMap("RenewalPeriod")]
         [Validation(Required=false)]
-        public string SubscriptionType { get; set; }
+        public int? RenewalPeriod { get; set; }
 
         [NameInMap("RenewalPeriodUnit")]
         [Validation(Required=false)]
@@ -40,6 +36,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("RenewalStatus")]
         [Validation(Required=false)]
         public string RenewalStatus { get; set; }
+
+        [NameInMap("SubscriptionType")]
+        [Validation(Required=false)]
+        public string SubscriptionType { get; set; }
 
     }
 

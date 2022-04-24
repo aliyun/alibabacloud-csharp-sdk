@@ -9,9 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryAvailableInstancesRequest : TeaModel {
-        [NameInMap("Region")]
+        [NameInMap("CreateTimeEnd")]
         [Validation(Required=false)]
-        public string Region { get; set; }
+        public string CreateTimeEnd { get; set; }
+
+        [NameInMap("CreateTimeStart")]
+        [Validation(Required=false)]
+        public string CreateTimeStart { get; set; }
+
+        [NameInMap("EndTimeEnd")]
+        [Validation(Required=false)]
+        public string EndTimeEnd { get; set; }
+
+        [NameInMap("EndTimeStart")]
+        [Validation(Required=false)]
+        public string EndTimeStart { get; set; }
+
+        [NameInMap("InstanceIDs")]
+        [Validation(Required=false)]
+        public string InstanceIDs { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -33,33 +49,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string ProductType { get; set; }
 
-        [NameInMap("SubscriptionType")]
+        [NameInMap("Region")]
         [Validation(Required=false)]
-        public string SubscriptionType { get; set; }
-
-        [NameInMap("InstanceIDs")]
-        [Validation(Required=false)]
-        public string InstanceIDs { get; set; }
-
-        [NameInMap("EndTimeStart")]
-        [Validation(Required=false)]
-        public string EndTimeStart { get; set; }
-
-        [NameInMap("EndTimeEnd")]
-        [Validation(Required=false)]
-        public string EndTimeEnd { get; set; }
-
-        [NameInMap("CreateTimeStart")]
-        [Validation(Required=false)]
-        public string CreateTimeStart { get; set; }
-
-        [NameInMap("CreateTimeEnd")]
-        [Validation(Required=false)]
-        public string CreateTimeEnd { get; set; }
+        public string Region { get; set; }
 
         [NameInMap("RenewStatus")]
         [Validation(Required=false)]
         public string RenewStatus { get; set; }
+
+        [NameInMap("SubscriptionType")]
+        [Validation(Required=false)]
+        public string SubscriptionType { get; set; }
 
     }
 

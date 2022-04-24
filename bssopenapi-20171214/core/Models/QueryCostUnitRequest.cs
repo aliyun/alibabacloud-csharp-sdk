@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public long? OwnerUid { get; set; }
 
-        [NameInMap("ParentUnitId")]
-        [Validation(Required=false)]
-        public long? ParentUnitId { get; set; }
-
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("ParentUnitId")]
+        [Validation(Required=false)]
+        public long? ParentUnitId { get; set; }
 
     }
 

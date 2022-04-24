@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryInstanceGaapCostRequest : TeaModel {
+        [NameInMap("BillingCycle")]
+        [Validation(Required=false)]
+        public string BillingCycle { get; set; }
+
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
-
-        [NameInMap("BillingCycle")]
-        [Validation(Required=false)]
-        public string BillingCycle { get; set; }
 
         [NameInMap("ProductCode")]
         [Validation(Required=false)]

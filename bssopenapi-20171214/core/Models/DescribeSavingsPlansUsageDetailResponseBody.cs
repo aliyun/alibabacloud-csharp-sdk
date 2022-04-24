@@ -13,6 +13,36 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public DescribeSavingsPlansUsageDetailResponseBodyData Data { get; set; }
+        public class DescribeSavingsPlansUsageDetailResponseBodyData : TeaModel {
+            [NameInMap("Items")]
+            [Validation(Required=false)]
+            public List<DescribeSavingsPlansUsageDetailResponseBodyDataItems> Items { get; set; }
+            public class DescribeSavingsPlansUsageDetailResponseBodyDataItems : TeaModel {
+                public string Currency { get; set; }
+                public float? DeductValue { get; set; }
+                public string EndPeriod { get; set; }
+                public string InstanceId { get; set; }
+                public float? PoolValue { get; set; }
+                public float? PostpaidCost { get; set; }
+                public float? SavedCost { get; set; }
+                public string StartPeriod { get; set; }
+                public string Status { get; set; }
+                public string Type { get; set; }
+                public float? UsagePercentage { get; set; }
+                public long? UserId { get; set; }
+                public string UserName { get; set; }
+            }
+            [NameInMap("NextToken")]
+            [Validation(Required=false)]
+            public string NextToken { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
+        };
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,36 +54,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public DescribeSavingsPlansUsageDetailResponseBodyData Data { get; set; }
-        public class DescribeSavingsPlansUsageDetailResponseBodyData : TeaModel {
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
-            [NameInMap("NextToken")]
-            [Validation(Required=false)]
-            public string NextToken { get; set; }
-            [NameInMap("Items")]
-            [Validation(Required=false)]
-            public List<DescribeSavingsPlansUsageDetailResponseBodyDataItems> Items { get; set; }
-            public class DescribeSavingsPlansUsageDetailResponseBodyDataItems : TeaModel {
-                public string Status { get; set; }
-                public string Type { get; set; }
-                public float? UsagePercentage { get; set; }
-                public long? UserId { get; set; }
-                public string InstanceId { get; set; }
-                public string Currency { get; set; }
-                public float? PostpaidCost { get; set; }
-                public float? DeductValue { get; set; }
-                public string StartPeriod { get; set; }
-                public float? SavedCost { get; set; }
-                public float? PoolValue { get; set; }
-                public string UserName { get; set; }
-                public string EndPeriod { get; set; }
-            }
-        };
 
     }
 

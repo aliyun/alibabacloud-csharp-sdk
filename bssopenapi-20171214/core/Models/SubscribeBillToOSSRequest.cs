@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class SubscribeBillToOSSRequest : TeaModel {
+        [NameInMap("BeginBillingCycle")]
+        [Validation(Required=false)]
+        public string BeginBillingCycle { get; set; }
+
+        [NameInMap("BucketOwnerId")]
+        [Validation(Required=false)]
+        public long? BucketOwnerId { get; set; }
+
+        [NameInMap("MultAccountRelSubscribe")]
+        [Validation(Required=false)]
+        public string MultAccountRelSubscribe { get; set; }
+
         [NameInMap("SubscribeBucket")]
         [Validation(Required=false)]
         public string SubscribeBucket { get; set; }
@@ -16,18 +28,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("SubscribeType")]
         [Validation(Required=false)]
         public string SubscribeType { get; set; }
-
-        [NameInMap("MultAccountRelSubscribe")]
-        [Validation(Required=false)]
-        public string MultAccountRelSubscribe { get; set; }
-
-        [NameInMap("BucketOwnerId")]
-        [Validation(Required=false)]
-        public long? BucketOwnerId { get; set; }
-
-        [NameInMap("BeginBillingCycle")]
-        [Validation(Required=false)]
-        public string BeginBillingCycle { get; set; }
 
     }
 

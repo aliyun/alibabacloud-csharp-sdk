@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QuerySettlementBillRequest : TeaModel {
-        [NameInMap("PageSize")]
+        [NameInMap("BillingCycle")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string BillingCycle { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
+        [NameInMap("IsHideZeroCharge")]
+        [Validation(Required=false)]
+        public bool? IsHideZeroCharge { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -21,21 +29,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public int? PageNum { get; set; }
 
-        [NameInMap("BillingCycle")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string BillingCycle { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
+        public int? PageSize { get; set; }
 
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
@@ -45,13 +41,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string ProductType { get; set; }
 
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
+
         [NameInMap("SubscriptionType")]
         [Validation(Required=false)]
         public string SubscriptionType { get; set; }
 
-        [NameInMap("IsHideZeroCharge")]
+        [NameInMap("Type")]
         [Validation(Required=false)]
-        public bool? IsHideZeroCharge { get; set; }
+        public string Type { get; set; }
 
     }
 

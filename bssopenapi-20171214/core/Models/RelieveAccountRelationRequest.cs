@@ -9,17 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class RelieveAccountRelationRequest : TeaModel {
-        [NameInMap("RelationType")]
+        [NameInMap("ChildUserId")]
         [Validation(Required=false)]
-        public string RelationType { get; set; }
+        public long? ChildUserId { get; set; }
 
         [NameInMap("ParentUserId")]
         [Validation(Required=false)]
         public long? ParentUserId { get; set; }
 
-        [NameInMap("ChildUserId")]
+        [NameInMap("RelationId")]
         [Validation(Required=false)]
-        public long? ChildUserId { get; set; }
+        public long? RelationId { get; set; }
+
+        [NameInMap("RelationType")]
+        [Validation(Required=false)]
+        public string RelationType { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -13,18 +13,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeResourceCoverageTotalResponseBodyData Data { get; set; }
@@ -44,13 +32,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public string CapacityUnit { get; set; }
 
-                [NameInMap("DeductQuantity")]
-                [Validation(Required=false)]
-                public float? DeductQuantity { get; set; }
-
                 [NameInMap("CoveragePercentage")]
                 [Validation(Required=false)]
                 public float? CoveragePercentage { get; set; }
+
+                [NameInMap("DeductQuantity")]
+                [Validation(Required=false)]
+                public float? DeductQuantity { get; set; }
 
                 [NameInMap("TotalQuantity")]
                 [Validation(Required=false)]
@@ -58,6 +46,18 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
             }
         };
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

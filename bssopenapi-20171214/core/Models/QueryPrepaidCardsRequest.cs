@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryPrepaidCardsRequest : TeaModel {
+        [NameInMap("EffectiveOrNot")]
+        [Validation(Required=false)]
+        public bool? EffectiveOrNot { get; set; }
+
         [NameInMap("ExpiryTimeEnd")]
         [Validation(Required=false)]
         public string ExpiryTimeEnd { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("ExpiryTimeStart")]
         [Validation(Required=false)]
         public string ExpiryTimeStart { get; set; }
-
-        [NameInMap("EffectiveOrNot")]
-        [Validation(Required=false)]
-        public bool? EffectiveOrNot { get; set; }
 
     }
 

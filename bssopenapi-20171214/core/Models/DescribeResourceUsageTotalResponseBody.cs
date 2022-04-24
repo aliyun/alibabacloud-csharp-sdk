@@ -13,6 +13,44 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public DescribeResourceUsageTotalResponseBodyData Data { get; set; }
+        public class DescribeResourceUsageTotalResponseBodyData : TeaModel {
+            [NameInMap("PeriodCoverage")]
+            [Validation(Required=false)]
+            public List<DescribeResourceUsageTotalResponseBodyDataPeriodCoverage> PeriodCoverage { get; set; }
+            public class DescribeResourceUsageTotalResponseBodyDataPeriodCoverage : TeaModel {
+                public string Period { get; set; }
+                public float? UsagePercentage { get; set; }
+            }
+            [NameInMap("TotalUsage")]
+            [Validation(Required=false)]
+            public DescribeResourceUsageTotalResponseBodyDataTotalUsage TotalUsage { get; set; }
+            public class DescribeResourceUsageTotalResponseBodyDataTotalUsage : TeaModel {
+                [NameInMap("PostpaidCost")]
+                [Validation(Required=false)]
+                public float? PostpaidCost { get; set; }
+
+                [NameInMap("PotentialSavedCost")]
+                [Validation(Required=false)]
+                public float? PotentialSavedCost { get; set; }
+
+                [NameInMap("ReservationCost")]
+                [Validation(Required=false)]
+                public float? ReservationCost { get; set; }
+
+                [NameInMap("SavedCost")]
+                [Validation(Required=false)]
+                public float? SavedCost { get; set; }
+
+                [NameInMap("UsagePercentage")]
+                [Validation(Required=false)]
+                public float? UsagePercentage { get; set; }
+
+            }
+        };
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,44 +62,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public DescribeResourceUsageTotalResponseBodyData Data { get; set; }
-        public class DescribeResourceUsageTotalResponseBodyData : TeaModel {
-            [NameInMap("PeriodCoverage")]
-            [Validation(Required=false)]
-            public List<DescribeResourceUsageTotalResponseBodyDataPeriodCoverage> PeriodCoverage { get; set; }
-            public class DescribeResourceUsageTotalResponseBodyDataPeriodCoverage : TeaModel {
-                public float? UsagePercentage { get; set; }
-                public string Period { get; set; }
-            }
-            [NameInMap("TotalUsage")]
-            [Validation(Required=false)]
-            public DescribeResourceUsageTotalResponseBodyDataTotalUsage TotalUsage { get; set; }
-            public class DescribeResourceUsageTotalResponseBodyDataTotalUsage : TeaModel {
-                [NameInMap("PostpaidCost")]
-                [Validation(Required=false)]
-                public float? PostpaidCost { get; set; }
-
-                [NameInMap("SavedCost")]
-                [Validation(Required=false)]
-                public float? SavedCost { get; set; }
-
-                [NameInMap("UsagePercentage")]
-                [Validation(Required=false)]
-                public float? UsagePercentage { get; set; }
-
-                [NameInMap("PotentialSavedCost")]
-                [Validation(Required=false)]
-                public float? PotentialSavedCost { get; set; }
-
-                [NameInMap("ReservationCost")]
-                [Validation(Required=false)]
-                public float? ReservationCost { get; set; }
-
-            }
-        };
 
     }
 

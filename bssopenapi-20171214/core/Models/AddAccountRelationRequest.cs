@@ -12,14 +12,6 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class AddAccountRelationRequest : TeaModel {
-        [NameInMap("RelationType")]
-        [Validation(Required=false)]
-        public string RelationType { get; set; }
-
-        [NameInMap("ParentUserId")]
-        [Validation(Required=false)]
-        public long? ParentUserId { get; set; }
-
         [NameInMap("ChildNick")]
         [Validation(Required=false)]
         public string ChildNick { get; set; }
@@ -28,13 +20,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public long? ChildUserId { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("ParentUserId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public long? ParentUserId { get; set; }
 
         [NameInMap("PermissionCodes")]
         [Validation(Required=false)]
         public List<string> PermissionCodes { get; set; }
+
+        [NameInMap("RelationType")]
+        [Validation(Required=false)]
+        public string RelationType { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("RoleCodes")]
         [Validation(Required=false)]

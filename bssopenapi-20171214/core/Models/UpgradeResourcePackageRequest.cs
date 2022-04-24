@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class UpgradeResourcePackageRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("EffectiveDate")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string EffectiveDate { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("EffectiveDate")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string EffectiveDate { get; set; }
+        public long? OwnerId { get; set; }
 
         [NameInMap("Specification")]
         [Validation(Required=false)]

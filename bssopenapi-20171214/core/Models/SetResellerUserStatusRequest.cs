@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class SetResellerUserStatusRequest : TeaModel {
+        [NameInMap("BusinessType")]
+        [Validation(Required=false)]
+        public string BusinessType { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public string OwnerId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
-
-        [NameInMap("BusinessType")]
-        [Validation(Required=false)]
-        public string BusinessType { get; set; }
 
     }
 

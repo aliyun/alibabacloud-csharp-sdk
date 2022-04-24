@@ -13,6 +13,30 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public QueryCostUnitResponseBodyData Data { get; set; }
+        public class QueryCostUnitResponseBodyData : TeaModel {
+            [NameInMap("CostUnitDtoList")]
+            [Validation(Required=false)]
+            public List<QueryCostUnitResponseBodyDataCostUnitDtoList> CostUnitDtoList { get; set; }
+            public class QueryCostUnitResponseBodyDataCostUnitDtoList : TeaModel {
+                public long? OwnerUid { get; set; }
+                public long? ParentUnitId { get; set; }
+                public long? UnitId { get; set; }
+                public string UnitName { get; set; }
+            }
+            [NameInMap("PageNum")]
+            [Validation(Required=false)]
+            public int? PageNum { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
+        };
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,30 +48,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public QueryCostUnitResponseBodyData Data { get; set; }
-        public class QueryCostUnitResponseBodyData : TeaModel {
-            [NameInMap("PageNum")]
-            [Validation(Required=false)]
-            public int? PageNum { get; set; }
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
-            [NameInMap("CostUnitDtoList")]
-            [Validation(Required=false)]
-            public List<QueryCostUnitResponseBodyDataCostUnitDtoList> CostUnitDtoList { get; set; }
-            public class QueryCostUnitResponseBodyDataCostUnitDtoList : TeaModel {
-                public long? ParentUnitId { get; set; }
-                public string UnitName { get; set; }
-                public long? UnitId { get; set; }
-                public long? OwnerUid { get; set; }
-            }
-        };
 
     }
 

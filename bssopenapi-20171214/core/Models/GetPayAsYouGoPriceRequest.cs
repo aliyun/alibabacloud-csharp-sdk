@@ -9,6 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class GetPayAsYouGoPriceRequest : TeaModel {
+        [NameInMap("ModuleList")]
+        [Validation(Required=false)]
+        public List<GetPayAsYouGoPriceRequestModuleList> ModuleList { get; set; }
+        public class GetPayAsYouGoPriceRequestModuleList : TeaModel {
+            [NameInMap("Config")]
+            [Validation(Required=false)]
+            public string Config { get; set; }
+
+            [NameInMap("ModuleCode")]
+            [Validation(Required=false)]
+            public string ModuleCode { get; set; }
+
+            [NameInMap("PriceType")]
+            [Validation(Required=false)]
+            public string PriceType { get; set; }
+
+        }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -21,31 +39,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string ProductType { get; set; }
 
-        [NameInMap("SubscriptionType")]
-        [Validation(Required=false)]
-        public string SubscriptionType { get; set; }
-
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
-        [NameInMap("ModuleList")]
+        [NameInMap("SubscriptionType")]
         [Validation(Required=false)]
-        public List<GetPayAsYouGoPriceRequestModuleList> ModuleList { get; set; }
-        public class GetPayAsYouGoPriceRequestModuleList : TeaModel {
-            [NameInMap("ModuleCode")]
-            [Validation(Required=false)]
-            public string ModuleCode { get; set; }
-
-            [NameInMap("PriceType")]
-            [Validation(Required=false)]
-            public string PriceType { get; set; }
-
-            [NameInMap("Config")]
-            [Validation(Required=false)]
-            public string Config { get; set; }
-
-        }
+        public string SubscriptionType { get; set; }
 
     }
 

@@ -9,29 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryRIUtilizationDetailRequest : TeaModel {
-        [NameInMap("RIInstanceId")]
-        [Validation(Required=false)]
-        public string RIInstanceId { get; set; }
-
-        [NameInMap("InstanceSpec")]
-        [Validation(Required=false)]
-        public string InstanceSpec { get; set; }
-
-        [NameInMap("RICommodityCode")]
-        [Validation(Required=false)]
-        public string RICommodityCode { get; set; }
-
         [NameInMap("DeductedInstanceId")]
         [Validation(Required=false)]
         public string DeductedInstanceId { get; set; }
 
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
+
+        [NameInMap("InstanceSpec")]
+        [Validation(Required=false)]
+        public string InstanceSpec { get; set; }
 
         [NameInMap("PageNum")]
         [Validation(Required=false)]
@@ -40,6 +28,18 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("RICommodityCode")]
+        [Validation(Required=false)]
+        public string RICommodityCode { get; set; }
+
+        [NameInMap("RIInstanceId")]
+        [Validation(Required=false)]
+        public string RIInstanceId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 

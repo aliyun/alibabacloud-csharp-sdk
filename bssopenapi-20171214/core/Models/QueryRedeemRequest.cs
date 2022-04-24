@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryRedeemRequest : TeaModel {
-        [NameInMap("ExpiryTimeStart")]
+        [NameInMap("EffectiveOrNot")]
         [Validation(Required=false)]
-        public string ExpiryTimeStart { get; set; }
+        public bool? EffectiveOrNot { get; set; }
 
         [NameInMap("ExpiryTimeEnd")]
         [Validation(Required=false)]
         public string ExpiryTimeEnd { get; set; }
 
-        [NameInMap("EffectiveOrNot")]
+        [NameInMap("ExpiryTimeStart")]
         [Validation(Required=false)]
-        public bool? EffectiveOrNot { get; set; }
+        public string ExpiryTimeStart { get; set; }
 
         [NameInMap("PageNum")]
         [Validation(Required=false)]

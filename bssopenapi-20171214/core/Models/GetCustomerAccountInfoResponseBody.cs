@@ -13,6 +13,30 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public GetCustomerAccountInfoResponseBodyData Data { get; set; }
+        public class GetCustomerAccountInfoResponseBodyData : TeaModel {
+            [NameInMap("AccountType")]
+            [Validation(Required=false)]
+            public string AccountType { get; set; }
+            [NameInMap("CreditLimitStatus")]
+            [Validation(Required=false)]
+            public string CreditLimitStatus { get; set; }
+            [NameInMap("HostingStatus")]
+            [Validation(Required=false)]
+            public string HostingStatus { get; set; }
+            [NameInMap("IsCertified")]
+            [Validation(Required=false)]
+            public bool? IsCertified { get; set; }
+            [NameInMap("LoginEmail")]
+            [Validation(Required=false)]
+            public string LoginEmail { get; set; }
+            [NameInMap("Mpk")]
+            [Validation(Required=false)]
+            public long? Mpk { get; set; }
+        };
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,30 +48,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public GetCustomerAccountInfoResponseBodyData Data { get; set; }
-        public class GetCustomerAccountInfoResponseBodyData : TeaModel {
-            [NameInMap("Mpk")]
-            [Validation(Required=false)]
-            public long? Mpk { get; set; }
-            [NameInMap("LoginEmail")]
-            [Validation(Required=false)]
-            public string LoginEmail { get; set; }
-            [NameInMap("HostingStatus")]
-            [Validation(Required=false)]
-            public string HostingStatus { get; set; }
-            [NameInMap("AccountType")]
-            [Validation(Required=false)]
-            public string AccountType { get; set; }
-            [NameInMap("CreditLimitStatus")]
-            [Validation(Required=false)]
-            public string CreditLimitStatus { get; set; }
-            [NameInMap("IsCertified")]
-            [Validation(Required=false)]
-            public bool? IsCertified { get; set; }
-        };
 
     }
 

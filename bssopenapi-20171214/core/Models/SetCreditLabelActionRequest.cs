@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string ActionType { get; set; }
 
-        [NameInMap("Uid")]
-        [Validation(Required=false)]
-        public string Uid { get; set; }
-
         [NameInMap("ClearCycle")]
         [Validation(Required=false)]
         public string ClearCycle { get; set; }
@@ -76,6 +72,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }
+
+        [NameInMap("Uid")]
+        [Validation(Required=false)]
+        public string Uid { get; set; }
 
     }
 

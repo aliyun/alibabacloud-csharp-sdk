@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class DescribeResourceCoverageTotalRequest : TeaModel {
-        [NameInMap("StartPeriod")]
+        [NameInMap("BillOwnerId")]
         [Validation(Required=false)]
-        public string StartPeriod { get; set; }
+        public long? BillOwnerId { get; set; }
 
         [NameInMap("EndPeriod")]
         [Validation(Required=false)]
@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string PeriodType { get; set; }
 
-        [NameInMap("BillOwnerId")]
-        [Validation(Required=false)]
-        public long? BillOwnerId { get; set; }
-
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
+
+        [NameInMap("StartPeriod")]
+        [Validation(Required=false)]
+        public string StartPeriod { get; set; }
 
     }
 

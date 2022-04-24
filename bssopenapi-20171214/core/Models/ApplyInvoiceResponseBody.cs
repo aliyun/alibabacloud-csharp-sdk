@@ -13,6 +13,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public ApplyInvoiceResponseBodyData Data { get; set; }
+        public class ApplyInvoiceResponseBodyData : TeaModel {
+            [NameInMap("InvoiceApplyId")]
+            [Validation(Required=false)]
+            public long? InvoiceApplyId { get; set; }
+        };
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,15 +33,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public ApplyInvoiceResponseBodyData Data { get; set; }
-        public class ApplyInvoiceResponseBodyData : TeaModel {
-            [NameInMap("InvoiceApplyId")]
-            [Validation(Required=false)]
-            public long? InvoiceApplyId { get; set; }
-        };
 
     }
 

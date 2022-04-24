@@ -9,13 +9,39 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class ModifyInstanceRequest : TeaModel {
-        [NameInMap("ProductCode")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string ProductCode { get; set; }
+        public string ClientToken { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("ModifyType")]
+        [Validation(Required=false)]
+        public string ModifyType { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("Parameter")]
+        [Validation(Required=false)]
+        public List<ModifyInstanceRequestParameter> Parameter { get; set; }
+        public class ModifyInstanceRequestParameter : TeaModel {
+            [NameInMap("Code")]
+            [Validation(Required=false)]
+            public string Code { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
+        [NameInMap("ProductCode")]
+        [Validation(Required=false)]
+        public string ProductCode { get; set; }
 
         [NameInMap("ProductType")]
         [Validation(Required=false)]
@@ -24,32 +50,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("SubscriptionType")]
         [Validation(Required=false)]
         public string SubscriptionType { get; set; }
-
-        [NameInMap("ModifyType")]
-        [Validation(Required=false)]
-        public string ModifyType { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        [NameInMap("Parameter")]
-        [Validation(Required=false)]
-        public List<ModifyInstanceRequestParameter> Parameter { get; set; }
-        public class ModifyInstanceRequestParameter : TeaModel {
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-            [NameInMap("Code")]
-            [Validation(Required=false)]
-            public string Code { get; set; }
-
-        }
 
     }
 

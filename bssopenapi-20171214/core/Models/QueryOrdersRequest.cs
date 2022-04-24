@@ -13,6 +13,18 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string CreateTimeEnd { get; set; }
 
+        [NameInMap("CreateTimeStart")]
+        [Validation(Required=false)]
+        public string CreateTimeStart { get; set; }
+
+        [NameInMap("OrderType")]
+        [Validation(Required=false)]
+        public string OrderType { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }
@@ -20,6 +32,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("PaymentStatus")]
+        [Validation(Required=false)]
+        public string PaymentStatus { get; set; }
 
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
@@ -32,22 +48,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("SubscriptionType")]
         [Validation(Required=false)]
         public string SubscriptionType { get; set; }
-
-        [NameInMap("OrderType")]
-        [Validation(Required=false)]
-        public string OrderType { get; set; }
-
-        [NameInMap("PaymentStatus")]
-        [Validation(Required=false)]
-        public string PaymentStatus { get; set; }
-
-        [NameInMap("CreateTimeStart")]
-        [Validation(Required=false)]
-        public string CreateTimeStart { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
 
     }
 

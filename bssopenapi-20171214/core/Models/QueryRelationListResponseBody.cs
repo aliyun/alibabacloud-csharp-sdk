@@ -13,6 +13,36 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public QueryRelationListResponseBodyData Data { get; set; }
+        public class QueryRelationListResponseBodyData : TeaModel {
+            [NameInMap("FinancialRelationInfoList")]
+            [Validation(Required=false)]
+            public List<QueryRelationListResponseBodyDataFinancialRelationInfoList> FinancialRelationInfoList { get; set; }
+            public class QueryRelationListResponseBodyDataFinancialRelationInfoList : TeaModel {
+                public long? AccountId { get; set; }
+                public string AccountName { get; set; }
+                public string AccountNickName { get; set; }
+                public string AccountType { get; set; }
+                public string EndTime { get; set; }
+                public long? RelationId { get; set; }
+                public string RelationType { get; set; }
+                public string SetupTime { get; set; }
+                public string StartTime { get; set; }
+                public string State { get; set; }
+            }
+            [NameInMap("PageNum")]
+            [Validation(Required=false)]
+            public int? PageNum { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
+        };
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,36 +54,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public QueryRelationListResponseBodyData Data { get; set; }
-        public class QueryRelationListResponseBodyData : TeaModel {
-            [NameInMap("PageNum")]
-            [Validation(Required=false)]
-            public int? PageNum { get; set; }
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
-            [NameInMap("FinancialRelationInfoList")]
-            [Validation(Required=false)]
-            public List<QueryRelationListResponseBodyDataFinancialRelationInfoList> FinancialRelationInfoList { get; set; }
-            public class QueryRelationListResponseBodyDataFinancialRelationInfoList : TeaModel {
-                public string EndTime { get; set; }
-                public string RelationType { get; set; }
-                public string AccountNickName { get; set; }
-                public string StartTime { get; set; }
-                public string State { get; set; }
-                public long? AccountId { get; set; }
-                public string SetupTime { get; set; }
-                public string AccountType { get; set; }
-                public string AccountName { get; set; }
-                public long? RelationId { get; set; }
-            }
-        };
 
     }
 

@@ -13,18 +13,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeSavingsPlansUsageTotalResponseBodyData Data { get; set; }
@@ -40,6 +28,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [Validation(Required=false)]
             public DescribeSavingsPlansUsageTotalResponseBodyDataTotalUsage TotalUsage { get; set; }
             public class DescribeSavingsPlansUsageTotalResponseBodyDataTotalUsage : TeaModel {
+                [NameInMap("PoolValue")]
+                [Validation(Required=false)]
+                public float? PoolValue { get; set; }
+
                 [NameInMap("PostpaidCost")]
                 [Validation(Required=false)]
                 public float? PostpaidCost { get; set; }
@@ -52,12 +44,20 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public float? UsagePercentage { get; set; }
 
-                [NameInMap("PoolValue")]
-                [Validation(Required=false)]
-                public float? PoolValue { get; set; }
-
             }
         };
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

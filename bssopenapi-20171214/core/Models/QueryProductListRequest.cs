@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryProductListRequest : TeaModel {
-        [NameInMap("QueryTotalCount")]
-        [Validation(Required=false)]
-        public bool? QueryTotalCount { get; set; }
-
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("QueryTotalCount")]
+        [Validation(Required=false)]
+        public bool? QueryTotalCount { get; set; }
 
     }
 

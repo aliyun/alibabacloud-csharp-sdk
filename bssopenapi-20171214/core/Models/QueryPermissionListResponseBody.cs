@@ -13,6 +13,42 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public QueryPermissionListResponseBodyData Data { get; set; }
+        public class QueryPermissionListResponseBodyData : TeaModel {
+            [NameInMap("EndTime")]
+            [Validation(Required=false)]
+            public string EndTime { get; set; }
+            [NameInMap("MasterId")]
+            [Validation(Required=false)]
+            public long? MasterId { get; set; }
+            [NameInMap("MemberId")]
+            [Validation(Required=false)]
+            public long? MemberId { get; set; }
+            [NameInMap("PermissionList")]
+            [Validation(Required=false)]
+            public List<QueryPermissionListResponseBodyDataPermissionList> PermissionList { get; set; }
+            public class QueryPermissionListResponseBodyDataPermissionList : TeaModel {
+                public string EndTime { get; set; }
+                public string PermissionCode { get; set; }
+                public string PermissionName { get; set; }
+                public string StartTime { get; set; }
+            }
+            [NameInMap("RelationType")]
+            [Validation(Required=false)]
+            public string RelationType { get; set; }
+            [NameInMap("SetupTime")]
+            [Validation(Required=false)]
+            public string SetupTime { get; set; }
+            [NameInMap("StartTime")]
+            [Validation(Required=false)]
+            public string StartTime { get; set; }
+            [NameInMap("State")]
+            [Validation(Required=false)]
+            public string State { get; set; }
+        };
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,42 +60,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public QueryPermissionListResponseBodyData Data { get; set; }
-        public class QueryPermissionListResponseBodyData : TeaModel {
-            [NameInMap("EndTime")]
-            [Validation(Required=false)]
-            public string EndTime { get; set; }
-            [NameInMap("RelationType")]
-            [Validation(Required=false)]
-            public string RelationType { get; set; }
-            [NameInMap("StartTime")]
-            [Validation(Required=false)]
-            public string StartTime { get; set; }
-            [NameInMap("State")]
-            [Validation(Required=false)]
-            public string State { get; set; }
-            [NameInMap("MasterId")]
-            [Validation(Required=false)]
-            public long? MasterId { get; set; }
-            [NameInMap("MemberId")]
-            [Validation(Required=false)]
-            public long? MemberId { get; set; }
-            [NameInMap("SetupTime")]
-            [Validation(Required=false)]
-            public string SetupTime { get; set; }
-            [NameInMap("PermissionList")]
-            [Validation(Required=false)]
-            public List<QueryPermissionListResponseBodyDataPermissionList> PermissionList { get; set; }
-            public class QueryPermissionListResponseBodyDataPermissionList : TeaModel {
-                public string EndTime { get; set; }
-                public string StartTime { get; set; }
-                public string PermissionCode { get; set; }
-                public string PermissionName { get; set; }
-            }
-        };
 
     }
 

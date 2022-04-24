@@ -9,13 +9,35 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class GetSubscriptionPriceRequest : TeaModel {
-        [NameInMap("ServicePeriodUnit")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string ServicePeriodUnit { get; set; }
+        public string InstanceId { get; set; }
 
-        [NameInMap("SubscriptionType")]
+        [NameInMap("ModuleList")]
         [Validation(Required=false)]
-        public string SubscriptionType { get; set; }
+        public List<GetSubscriptionPriceRequestModuleList> ModuleList { get; set; }
+        public class GetSubscriptionPriceRequestModuleList : TeaModel {
+            [NameInMap("Config")]
+            [Validation(Required=false)]
+            public string Config { get; set; }
+
+            [NameInMap("ModuleCode")]
+            [Validation(Required=false)]
+            public string ModuleCode { get; set; }
+
+            [NameInMap("ModuleStatus")]
+            [Validation(Required=false)]
+            public int? ModuleStatus { get; set; }
+
+            [NameInMap("Tag")]
+            [Validation(Required=false)]
+            public string Tag { get; set; }
+
+        }
+
+        [NameInMap("OrderType")]
+        [Validation(Required=false)]
+        public string OrderType { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -25,51 +47,29 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
-        [NameInMap("OrderType")]
-        [Validation(Required=false)]
-        public string OrderType { get; set; }
-
-        [NameInMap("ServicePeriodQuantity")]
-        [Validation(Required=false)]
-        public int? ServicePeriodQuantity { get; set; }
-
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }
-
-        [NameInMap("Region")]
-        [Validation(Required=false)]
-        public string Region { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
 
         [NameInMap("Quantity")]
         [Validation(Required=false)]
         public int? Quantity { get; set; }
 
-        [NameInMap("ModuleList")]
+        [NameInMap("Region")]
         [Validation(Required=false)]
-        public List<GetSubscriptionPriceRequestModuleList> ModuleList { get; set; }
-        public class GetSubscriptionPriceRequestModuleList : TeaModel {
-            [NameInMap("ModuleStatus")]
-            [Validation(Required=false)]
-            public int? ModuleStatus { get; set; }
+        public string Region { get; set; }
 
-            [NameInMap("ModuleCode")]
-            [Validation(Required=false)]
-            public string ModuleCode { get; set; }
+        [NameInMap("ServicePeriodQuantity")]
+        [Validation(Required=false)]
+        public int? ServicePeriodQuantity { get; set; }
 
-            [NameInMap("Tag")]
-            [Validation(Required=false)]
-            public string Tag { get; set; }
+        [NameInMap("ServicePeriodUnit")]
+        [Validation(Required=false)]
+        public string ServicePeriodUnit { get; set; }
 
-            [NameInMap("Config")]
-            [Validation(Required=false)]
-            public string Config { get; set; }
-
-        }
+        [NameInMap("SubscriptionType")]
+        [Validation(Required=false)]
+        public string SubscriptionType { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryBillOverviewRequest : TeaModel {
+        [NameInMap("BillOwnerId")]
+        [Validation(Required=false)]
+        public long? BillOwnerId { get; set; }
+
         [NameInMap("BillingCycle")]
         [Validation(Required=false)]
         public string BillingCycle { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("SubscriptionType")]
         [Validation(Required=false)]
         public string SubscriptionType { get; set; }
-
-        [NameInMap("BillOwnerId")]
-        [Validation(Required=false)]
-        public long? BillOwnerId { get; set; }
 
     }
 

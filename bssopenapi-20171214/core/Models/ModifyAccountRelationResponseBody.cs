@@ -13,6 +13,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public ModifyAccountRelationResponseBodyData Data { get; set; }
+        public class ModifyAccountRelationResponseBodyData : TeaModel {
+            [NameInMap("HostId")]
+            [Validation(Required=false)]
+            public string HostId { get; set; }
+        };
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,15 +33,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public ModifyAccountRelationResponseBodyData Data { get; set; }
-        public class ModifyAccountRelationResponseBodyData : TeaModel {
-            [NameInMap("HostId")]
-            [Validation(Required=false)]
-            public string HostId { get; set; }
-        };
 
     }
 

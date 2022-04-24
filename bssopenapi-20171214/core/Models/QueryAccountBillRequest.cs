@@ -9,9 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryAccountBillRequest : TeaModel {
+        [NameInMap("BillOwnerId")]
+        [Validation(Required=false)]
+        public long? BillOwnerId { get; set; }
+
         [NameInMap("BillingCycle")]
         [Validation(Required=false)]
         public string BillingCycle { get; set; }
+
+        [NameInMap("BillingDate")]
+        [Validation(Required=false)]
+        public string BillingDate { get; set; }
+
+        [NameInMap("Granularity")]
+        [Validation(Required=false)]
+        public string Granularity { get; set; }
+
+        [NameInMap("IsGroupByProduct")]
+        [Validation(Required=false)]
+        public bool? IsGroupByProduct { get; set; }
+
+        [NameInMap("OwnerID")]
+        [Validation(Required=false)]
+        public long? OwnerID { get; set; }
 
         [NameInMap("PageNum")]
         [Validation(Required=false)]
@@ -21,29 +41,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("OwnerID")]
-        [Validation(Required=false)]
-        public long? OwnerID { get; set; }
-
-        [NameInMap("IsGroupByProduct")]
-        [Validation(Required=false)]
-        public bool? IsGroupByProduct { get; set; }
-
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
-
-        [NameInMap("BillOwnerId")]
-        [Validation(Required=false)]
-        public long? BillOwnerId { get; set; }
-
-        [NameInMap("Granularity")]
-        [Validation(Required=false)]
-        public string Granularity { get; set; }
-
-        [NameInMap("BillingDate")]
-        [Validation(Required=false)]
-        public string BillingDate { get; set; }
 
     }
 
