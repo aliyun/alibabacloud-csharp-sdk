@@ -36,6 +36,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string CheckingCode { get; set; }
                 public string ForceModify { get; set; }
                 public string ForceRestart { get; set; }
+                public string IsNodeAvailable { get; set; }
+                public string ParamRelyRule { get; set; }
                 public string ParameterDescription { get; set; }
                 public string ParameterName { get; set; }
                 public string ParameterValue { get; set; }

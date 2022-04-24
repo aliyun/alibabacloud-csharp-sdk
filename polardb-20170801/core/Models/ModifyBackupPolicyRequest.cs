@@ -21,9 +21,25 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        [NameInMap("DataLevel1BackupFrequency")]
+        [Validation(Required=false)]
+        public string DataLevel1BackupFrequency { get; set; }
+
+        [NameInMap("DataLevel1BackupPeriod")]
+        [Validation(Required=false)]
+        public string DataLevel1BackupPeriod { get; set; }
+
         [NameInMap("DataLevel1BackupRetentionPeriod")]
         [Validation(Required=false)]
         public string DataLevel1BackupRetentionPeriod { get; set; }
+
+        [NameInMap("DataLevel1BackupTime")]
+        [Validation(Required=false)]
+        public string DataLevel1BackupTime { get; set; }
+
+        [NameInMap("DataLevel2BackupPeriod")]
+        [Validation(Required=false)]
+        public string DataLevel2BackupPeriod { get; set; }
 
         [NameInMap("DataLevel2BackupRetentionPeriod")]
         [Validation(Required=false)]

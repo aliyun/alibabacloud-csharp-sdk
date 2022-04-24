@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
-    public class ModifyDBNodeHotReplicaModeResponse : TeaModel {
+    public class ModifyDBClusterAndNodesParametersResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ModifyDBNodeHotReplicaModeResponseBody Body { get; set; }
+        public ModifyDBClusterAndNodesParametersResponseBody Body { get; set; }
 
     }
 

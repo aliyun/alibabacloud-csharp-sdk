@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
-    public class ModifyDBNodeHotReplicaModeRequest : TeaModel {
+    public class DescribeSlowLogsRequest : TeaModel {
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
-        [NameInMap("DBNodeId")]
+        [NameInMap("DBName")]
         [Validation(Required=false)]
-        public string DBNodeId { get; set; }
+        public string DBName { get; set; }
 
-        [NameInMap("HotReplicaMode")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string HotReplicaMode { get; set; }
+        public string EndTime { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -29,6 +29,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -36,6 +48,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 

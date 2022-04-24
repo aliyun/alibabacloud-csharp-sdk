@@ -8,7 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
-    public class RefreshProxyLevelResponseBody : TeaModel {
+    public class ModifyDBNodesClassResponseBody : TeaModel {
+        [NameInMap("DBClusterId")]
+        [Validation(Required=false)]
+        public string DBClusterId { get; set; }
+
+        [NameInMap("OrderId")]
+        [Validation(Required=false)]
+        public string OrderId { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

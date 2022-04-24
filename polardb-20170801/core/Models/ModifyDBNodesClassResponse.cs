@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
-    public class RefreshProxyLevelResponse : TeaModel {
+    public class ModifyDBNodesClassResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public RefreshProxyLevelResponseBody Body { get; set; }
+        public ModifyDBNodesClassResponseBody Body { get; set; }
 
     }
 

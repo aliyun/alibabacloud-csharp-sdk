@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public List<DescribeDBClusterAttributeResponseBodyDBNodes> DBNodes { get; set; }
         public class DescribeDBClusterAttributeResponseBodyDBNodes : TeaModel {
+            [NameInMap("AddedCpuCores")]
+            [Validation(Required=false)]
+            public string AddedCpuCores { get; set; }
+
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
@@ -68,6 +72,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [NameInMap("ImciSwitch")]
             [Validation(Required=false)]
             public string ImciSwitch { get; set; }
+
+            [NameInMap("MasterId")]
+            [Validation(Required=false)]
+            public string MasterId { get; set; }
 
             [NameInMap("MaxConnections")]
             [Validation(Required=false)]
@@ -138,6 +146,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("ProxyCpuCores")]
         [Validation(Required=false)]
         public string ProxyCpuCores { get; set; }
+
+        [NameInMap("ProxyStandardCpuCores")]
+        [Validation(Required=false)]
+        public string ProxyStandardCpuCores { get; set; }
 
         [NameInMap("ProxyStatus")]
         [Validation(Required=false)]
