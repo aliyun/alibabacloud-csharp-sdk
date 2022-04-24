@@ -39,6 +39,8 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [Validation(Required=false)]
             public List<GetLiveRoomUserStatisticsResponseBodyResultUserStatisticsList> UserStatisticsList { get; set; }
             public class GetLiveRoomUserStatisticsResponseBodyResultUserStatisticsList : TeaModel {
+                public int? CommentCount { get; set; }
+                public int? LikeCount { get; set; }
                 public string UserId { get; set; }
                 public long? WatchLiveTime { get; set; }
             }
