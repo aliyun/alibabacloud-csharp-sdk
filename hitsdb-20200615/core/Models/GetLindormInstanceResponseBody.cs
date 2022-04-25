@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public string DiskUsage { get; set; }
 
+        [NameInMap("EnableCdc")]
+        [Validation(Required=false)]
+        public bool? EnableCdc { get; set; }
+
         [NameInMap("EnableCompute")]
         [Validation(Required=false)]
         public bool? EnableCompute { get; set; }
@@ -52,6 +56,18 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [NameInMap("EnableKms")]
         [Validation(Required=false)]
         public bool? EnableKms { get; set; }
+
+        [NameInMap("EnableSSL")]
+        [Validation(Required=false)]
+        public bool? EnableSSL { get; set; }
+
+        [NameInMap("EnableShs")]
+        [Validation(Required=false)]
+        public bool? EnableShs { get; set; }
+
+        [NameInMap("EnableStream")]
+        [Validation(Required=false)]
+        public bool? EnableStream { get; set; }
 
         [NameInMap("EngineList")]
         [Validation(Required=false)]
@@ -114,6 +130,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [NameInMap("InstanceStorage")]
         [Validation(Required=false)]
         public string InstanceStorage { get; set; }
+
+        [NameInMap("MaintainEndTime")]
+        [Validation(Required=false)]
+        public string MaintainEndTime { get; set; }
+
+        [NameInMap("MaintainStartTime")]
+        [Validation(Required=false)]
+        public string MaintainStartTime { get; set; }
 
         [NameInMap("NetworkType")]
         [Validation(Required=false)]

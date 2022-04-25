@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
-    public class UpdateInstanceIpWhiteListRequest : TeaModel {
-        [NameInMap("GroupName")]
+    public class UntagResourcesRequest : TeaModel {
+        [NameInMap("All")]
         [Validation(Required=false)]
-        public string GroupName { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public bool? All { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -25,6 +21,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("ResourceId")]
+        [Validation(Required=false)]
+        public List<string> ResourceId { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -33,13 +33,17 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("SecurityIpList")]
+        [NameInMap("ResourceType")]
         [Validation(Required=false)]
-        public string SecurityIpList { get; set; }
+        public string ResourceType { get; set; }
 
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
+
+        [NameInMap("TagKey")]
+        [Validation(Required=false)]
+        public List<string> TagKey { get; set; }
 
     }
 

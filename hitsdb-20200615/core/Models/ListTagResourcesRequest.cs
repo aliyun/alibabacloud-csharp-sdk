@@ -8,7 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
-    public class GetLindormInstanceListRequest : TeaModel {
+    public class ListTagResourcesRequest : TeaModel {
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -17,21 +21,13 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("QueryStr")]
-        [Validation(Required=false)]
-        public string QueryStr { get; set; }
-
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ResourceId")]
+        [Validation(Required=false)]
+        public List<string> ResourceId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -41,22 +37,18 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
+
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
-        [NameInMap("ServiceType")]
-        [Validation(Required=false)]
-        public string ServiceType { get; set; }
-
-        [NameInMap("SupportEngine")]
-        [Validation(Required=false)]
-        public int? SupportEngine { get; set; }
-
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<GetLindormInstanceListRequestTag> Tag { get; set; }
-        public class GetLindormInstanceListRequestTag : TeaModel {
+        public List<ListTagResourcesRequestTag> Tag { get; set; }
+        public class ListTagResourcesRequestTag : TeaModel {
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }

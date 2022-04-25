@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            [NameInMap("EnableStream")]
+            [Validation(Required=false)]
+            public bool? EnableStream { get; set; }
+
             [NameInMap("EngineType")]
             [Validation(Required=false)]
             public string EngineType { get; set; }
@@ -68,6 +72,20 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             [NameInMap("ServiceType")]
             [Validation(Required=false)]
             public string ServiceType { get; set; }
+
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<GetLindormInstanceListResponseBodyInstanceListTags> Tags { get; set; }
+            public class GetLindormInstanceListResponseBodyInstanceListTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
             [NameInMap("VpcId")]
             [Validation(Required=false)]
