@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string ReplacementOption { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("StackId")]
         [Validation(Required=false)]
         public string StackId { get; set; }

@@ -13,6 +13,22 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("TemplateScratch")]
+        [Validation(Required=false)]
+        public GetFeatureDetailsResponseBodyTemplateScratch TemplateScratch { get; set; }
+        public class GetFeatureDetailsResponseBodyTemplateScratch : TeaModel {
+            [NameInMap("SupportedResourceTypes")]
+            [Validation(Required=false)]
+            public List<GetFeatureDetailsResponseBodyTemplateScratchSupportedResourceTypes> SupportedResourceTypes { get; set; }
+            public class GetFeatureDetailsResponseBodyTemplateScratchSupportedResourceTypes : TeaModel {
+                public string ResourceType { get; set; }
+                public bool? SourceResourceGroupSupported { get; set; }
+                public bool? SourceResourcesSupported { get; set; }
+                public bool? SourceSupported { get; set; }
+                public bool? SourceTagSupported { get; set; }
+            }
+        };
+
         [NameInMap("Terraform")]
         [Validation(Required=false)]
         public GetFeatureDetailsResponseBodyTerraform Terraform { get; set; }
