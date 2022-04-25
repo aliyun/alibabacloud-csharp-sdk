@@ -152,6 +152,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 }
 
+                [NameInMap("InputParameters")]
+                [Validation(Required=false)]
+                public List<GetFileResponseBodyDataNodeConfigurationInputParameters> InputParameters { get; set; }
+                public class GetFileResponseBodyDataNodeConfigurationInputParameters : TeaModel {
+                    [NameInMap("ParameterName")]
+                    [Validation(Required=false)]
+                    public string ParameterName { get; set; }
+
+                    [NameInMap("ValueSource")]
+                    [Validation(Required=false)]
+                    public string ValueSource { get; set; }
+
+                }
+
                 [NameInMap("OutputList")]
                 [Validation(Required=false)]
                 public List<GetFileResponseBodyDataNodeConfigurationOutputList> OutputList { get; set; }
@@ -163,6 +177,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     [NameInMap("RefTableName")]
                     [Validation(Required=false)]
                     public string RefTableName { get; set; }
+
+                }
+
+                [NameInMap("OutputParameters")]
+                [Validation(Required=false)]
+                public List<GetFileResponseBodyDataNodeConfigurationOutputParameters> OutputParameters { get; set; }
+                public class GetFileResponseBodyDataNodeConfigurationOutputParameters : TeaModel {
+                    [NameInMap("Description")]
+                    [Validation(Required=false)]
+                    public string Description { get; set; }
+
+                    [NameInMap("ParameterName")]
+                    [Validation(Required=false)]
+                    public string ParameterName { get; set; }
+
+                    [NameInMap("Type")]
+                    [Validation(Required=false)]
+                    public string Type { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
 
                 }
 

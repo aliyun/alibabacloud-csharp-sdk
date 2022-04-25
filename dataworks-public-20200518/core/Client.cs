@@ -2016,6 +2016,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["InputList"] = request.InputList;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputParameters))
+            {
+                body["InputParameters"] = request.InputParameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputParameters))
+            {
+                body["OutputParameters"] = request.OutputParameters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
             {
                 body["Owner"] = request.Owner;
@@ -2146,6 +2154,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputList))
             {
                 body["InputList"] = request.InputList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputParameters))
+            {
+                body["InputParameters"] = request.InputParameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputParameters))
+            {
+                body["OutputParameters"] = request.OutputParameters;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
             {
@@ -18850,9 +18866,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["InputList"] = request.InputList;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputParameters))
+            {
+                body["InputParameters"] = request.InputParameters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputList))
             {
                 body["OutputList"] = request.OutputList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputParameters))
+            {
+                body["OutputParameters"] = request.OutputParameters;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
             {
@@ -18981,9 +19005,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["InputList"] = request.InputList;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputParameters))
+            {
+                body["InputParameters"] = request.InputParameters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputList))
             {
                 body["OutputList"] = request.OutputList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputParameters))
+            {
+                body["OutputParameters"] = request.OutputParameters;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
             {

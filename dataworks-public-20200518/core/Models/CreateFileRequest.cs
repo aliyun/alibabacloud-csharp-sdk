@@ -73,6 +73,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string InputList { get; set; }
 
+        [NameInMap("InputParameters")]
+        [Validation(Required=false)]
+        public string InputParameters { get; set; }
+
+        [NameInMap("OutputParameters")]
+        [Validation(Required=false)]
+        public string OutputParameters { get; set; }
+
         [NameInMap("Owner")]
         [Validation(Required=false)]
         public string Owner { get; set; }
