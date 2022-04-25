@@ -213,6 +213,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public int? RequestsmCpu { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("RuntimeClassName")]
         [Validation(Required=false)]
         public string RuntimeClassName { get; set; }

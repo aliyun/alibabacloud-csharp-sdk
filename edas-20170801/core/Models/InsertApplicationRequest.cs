@@ -93,6 +93,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string ReservedPortStr { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("WebContainer")]
         [Validation(Required=false)]
         public string WebContainer { get; set; }

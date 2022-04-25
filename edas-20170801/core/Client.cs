@@ -6683,6 +6683,10 @@ namespace AlibabaCloud.SDK.Edas20170801
             {
                 query["ReservedPortStr"] = request.ReservedPortStr;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebContainer))
             {
                 query["WebContainer"] = request.WebContainer;
@@ -6794,6 +6798,10 @@ namespace AlibabaCloud.SDK.Edas20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReservedPortStr))
             {
                 query["ReservedPortStr"] = request.ReservedPortStr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebContainer))
             {
@@ -7331,6 +7339,10 @@ namespace AlibabaCloud.SDK.Edas20170801
             {
                 query["RequestsmCpu"] = request.RequestsmCpu;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeClassName))
             {
                 query["RuntimeClassName"] = request.RuntimeClassName;
@@ -7590,6 +7602,10 @@ namespace AlibabaCloud.SDK.Edas20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestsmCpu))
             {
                 query["RequestsmCpu"] = request.RequestsmCpu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeClassName))
             {
