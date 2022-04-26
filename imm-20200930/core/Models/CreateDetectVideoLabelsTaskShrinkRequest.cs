@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class CreateDetectVideoLabelsTaskRequest : TeaModel {
+    public class CreateDetectVideoLabelsTaskShrinkRequest : TeaModel {
         /// <summary>
         /// NotifyEndpoint
         /// </summary>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         [NameInMap("Tags")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Tags { get; set; }
+        public string TagsShrink { get; set; }
 
         /// <summary>
         /// UserData

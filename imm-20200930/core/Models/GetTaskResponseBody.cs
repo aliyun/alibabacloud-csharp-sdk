@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Tags { get; set; }
+
         /// <summary>
         /// 任务唯一ID
         /// </summary>

@@ -73,6 +73,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public float? Duration { get; set; }
 
         /// <summary>
+        /// FrameCount
+        /// </summary>
+        [NameInMap("FrameCount")]
+        [Validation(Required=false)]
+        public long? FrameCount { get; set; }
+
+        /// <summary>
         /// Index
         /// </summary>
         [NameInMap("Index")]

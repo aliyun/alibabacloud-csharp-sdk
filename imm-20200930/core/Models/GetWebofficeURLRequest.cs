@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public AssumeRoleChain AssumeRoleChain { get; set; }
 
         /// <summary>
+        /// 缓存预览标识
+        /// </summary>
+        [NameInMap("CachePreview")]
+        [Validation(Required=false)]
+        public bool? CachePreview { get; set; }
+
+        /// <summary>
         /// 是否支持外部上传
         /// </summary>
         [NameInMap("ExternalUploaded")]

@@ -65,6 +65,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string StoryType { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Tags { get; set; }
+
+        [NameInMap("UserData")]
+        [Validation(Required=false)]
+        public string UserData { get; set; }
+
     }
 
 }

@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string AverageFrameRate { get; set; }
 
         /// <summary>
+        /// BitDepth
+        /// </summary>
+        [NameInMap("BitDepth")]
+        [Validation(Required=false)]
+        public long? BitDepth { get; set; }
+
+        /// <summary>
         /// Bitrate
         /// </summary>
         [NameInMap("Bitrate")]
@@ -57,6 +64,34 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("CodecTimeBase")]
         [Validation(Required=false)]
         public string CodecTimeBase { get; set; }
+
+        /// <summary>
+        /// ColorPrimaries
+        /// </summary>
+        [NameInMap("ColorPrimaries")]
+        [Validation(Required=false)]
+        public string ColorPrimaries { get; set; }
+
+        /// <summary>
+        /// ColorRange
+        /// </summary>
+        [NameInMap("ColorRange")]
+        [Validation(Required=false)]
+        public string ColorRange { get; set; }
+
+        /// <summary>
+        /// ColorSpace
+        /// </summary>
+        [NameInMap("ColorSpace")]
+        [Validation(Required=false)]
+        public string ColorSpace { get; set; }
+
+        /// <summary>
+        /// ColorTransfer
+        /// </summary>
+        [NameInMap("ColorTransfer")]
+        [Validation(Required=false)]
+        public string ColorTransfer { get; set; }
 
         /// <summary>
         /// DisplayAspectRatio

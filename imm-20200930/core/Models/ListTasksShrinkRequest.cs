@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class ListTasksRequest : TeaModel {
+    public class ListTasksShrinkRequest : TeaModel {
         /// <summary>
         /// MaxResults
         /// </summary>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         [NameInMap("TaskTypes")]
         [Validation(Required=false)]
-        public List<string> TaskTypes { get; set; }
+        public string TaskTypesShrink { get; set; }
 
     }
 

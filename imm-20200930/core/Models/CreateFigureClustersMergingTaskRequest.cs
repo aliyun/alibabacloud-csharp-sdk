@@ -32,6 +32,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Tags { get; set; }
+
         /// <summary>
         /// 目的cluster
         /// </summary>
