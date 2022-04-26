@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public List<ListMultiChannelRecordingsResponseBodyData> Data { get; set; }
         public class ListMultiChannelRecordingsResponseBodyData : TeaModel {
+            [NameInMap("AgentChannelId")]
+            [Validation(Required=false)]
+            public string AgentChannelId { get; set; }
+
             [NameInMap("AgentId")]
             [Validation(Required=false)]
             public string AgentId { get; set; }

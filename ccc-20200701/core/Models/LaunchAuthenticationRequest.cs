@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string ContactFlowId { get; set; }
 
+        [NameInMap("ContactFlowVariables")]
+        [Validation(Required=false)]
+        public string ContactFlowVariables { get; set; }
+
         [NameInMap("DeviceId")]
         [Validation(Required=false)]
         public string DeviceId { get; set; }

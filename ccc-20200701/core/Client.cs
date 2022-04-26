@@ -3966,6 +3966,80 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await HoldCallWithOptionsAsync(request, runtime);
         }
 
+        public ImportAdminsResponse ImportAdminsWithOptions(ImportAdminsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamIdList))
+            {
+                query["RamIdList"] = request.RamIdList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportAdmins",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportAdminsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ImportAdminsResponse> ImportAdminsWithOptionsAsync(ImportAdminsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamIdList))
+            {
+                query["RamIdList"] = request.RamIdList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportAdmins",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportAdminsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ImportAdminsResponse ImportAdmins(ImportAdminsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ImportAdminsWithOptions(request, runtime);
+        }
+
+        public async Task<ImportAdminsResponse> ImportAdminsAsync(ImportAdminsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ImportAdminsWithOptionsAsync(request, runtime);
+        }
+
         public ImportCustomCallTaggingResponse ImportCustomCallTaggingWithOptions(ImportCustomCallTaggingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4358,6 +4432,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             {
                 query["ContactFlowId"] = request.ContactFlowId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactFlowVariables))
+            {
+                query["ContactFlowVariables"] = request.ContactFlowVariables;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
             {
                 query["DeviceId"] = request.DeviceId;
@@ -4400,6 +4478,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactFlowId))
             {
                 query["ContactFlowId"] = request.ContactFlowId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactFlowVariables))
+            {
+                query["ContactFlowVariables"] = request.ContactFlowVariables;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
             {
@@ -4456,6 +4538,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             {
                 query["ContactFlowId"] = request.ContactFlowId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactFlowVariables))
+            {
+                query["ContactFlowVariables"] = request.ContactFlowVariables;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
             {
                 query["DeviceId"] = request.DeviceId;
@@ -4467,6 +4553,14 @@ namespace AlibabaCloud.SDK.CCC20200701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
             {
                 query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SmsMetadataId))
+            {
+                query["SmsMetadataId"] = request.SmsMetadataId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SurveyChannel))
+            {
+                query["SurveyChannel"] = request.SurveyChannel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
@@ -4499,6 +4593,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             {
                 query["ContactFlowId"] = request.ContactFlowId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactFlowVariables))
+            {
+                query["ContactFlowVariables"] = request.ContactFlowVariables;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
             {
                 query["DeviceId"] = request.DeviceId;
@@ -4510,6 +4608,14 @@ namespace AlibabaCloud.SDK.CCC20200701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
             {
                 query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SmsMetadataId))
+            {
+                query["SmsMetadataId"] = request.SmsMetadataId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SurveyChannel))
+            {
+                query["SurveyChannel"] = request.SurveyChannel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {

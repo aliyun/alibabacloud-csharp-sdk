@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string ContactFlowId { get; set; }
 
+        [NameInMap("ContactFlowVariables")]
+        [Validation(Required=false)]
+        public string ContactFlowVariables { get; set; }
+
         [NameInMap("DeviceId")]
         [Validation(Required=false)]
         public string DeviceId { get; set; }
@@ -24,6 +28,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
+
+        [NameInMap("SmsMetadataId")]
+        [Validation(Required=false)]
+        public string SmsMetadataId { get; set; }
+
+        [NameInMap("SurveyChannel")]
+        [Validation(Required=false)]
+        public string SurveyChannel { get; set; }
 
         [NameInMap("UserId")]
         [Validation(Required=false)]

@@ -15,11 +15,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public string Data { get; set; }
-
-        [NameInMap("FailureList")]
-        [Validation(Required=false)]
-        public List<string> FailureList { get; set; }
+        public List<string> Data { get; set; }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
