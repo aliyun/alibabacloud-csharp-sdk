@@ -6915,6 +6915,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["RouteMapId"] = request.RouteMapId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterRouteTableId))
+            {
+                query["TransitRouterRouteTableId"] = request.TransitRouterRouteTableId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransmitDirection))
             {
                 query["TransmitDirection"] = request.TransmitDirection;
@@ -6977,6 +6981,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteMapId))
             {
                 query["RouteMapId"] = request.RouteMapId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterRouteTableId))
+            {
+                query["TransitRouterRouteTableId"] = request.TransitRouterRouteTableId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransmitDirection))
             {
@@ -15431,6 +15439,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPublishRouteEnabled))
+            {
+                query["AutoPublishRouteEnabled"] = request.AutoPublishRouteEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -15490,6 +15502,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPublishRouteEnabled))
+            {
+                query["AutoPublishRouteEnabled"] = request.AutoPublishRouteEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;

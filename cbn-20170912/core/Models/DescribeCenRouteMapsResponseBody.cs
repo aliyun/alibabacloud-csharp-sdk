@@ -135,6 +135,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
                 }
                 public string Status { get; set; }
+                public string TransitRouterRouteTableId { get; set; }
                 public string TransmitDirection { get; set; }
             }
         };

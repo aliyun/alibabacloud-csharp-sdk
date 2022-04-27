@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string RouteMapId { get; set; }
 
+        [NameInMap("TransitRouterRouteTableId")]
+        [Validation(Required=false)]
+        public string TransitRouterRouteTableId { get; set; }
+
         [NameInMap("TransmitDirection")]
         [Validation(Required=false)]
         public string TransmitDirection { get; set; }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class UpdateTransitRouterVbrAttachmentAttributeRequest : TeaModel {
+        [NameInMap("AutoPublishRouteEnabled")]
+        [Validation(Required=false)]
+        public bool? AutoPublishRouteEnabled { get; set; }
+
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
