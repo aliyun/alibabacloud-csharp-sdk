@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string InstanceChargeType { get; set; }
 
+        [NameInMap("InstanceFeatureOptions")]
+        [Validation(Required=false)]
+        public List<string> InstanceFeatureOptions { get; set; }
+
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
@@ -40,6 +44,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("Memory")]
         [Validation(Required=false)]
         public float? Memory { get; set; }
+
+        [NameInMap("NeedInventoryScore")]
+        [Validation(Required=false)]
+        public bool? NeedInventoryScore { get; set; }
 
         [NameInMap("NetworkCategory")]
         [Validation(Required=false)]

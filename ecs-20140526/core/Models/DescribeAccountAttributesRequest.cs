@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public List<string> AttributeName { get; set; }
 
+        [NameInMap("BizAliUid")]
+        [Validation(Required=false)]
+        public string BizAliUid { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }

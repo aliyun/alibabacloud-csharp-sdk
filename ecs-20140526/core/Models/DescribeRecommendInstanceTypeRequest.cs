@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public List<string> InstanceTypeFamily { get; set; }
 
+        [NameInMap("InstanceTypeSupportIPv6")]
+        [Validation(Required=false)]
+        public bool? InstanceTypeSupportIPv6 { get; set; }
+
         [NameInMap("IoOptimized")]
         [Validation(Required=false)]
         public string IoOptimized { get; set; }

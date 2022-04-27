@@ -89,6 +89,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public string OnlineRepairPolicy { get; set; }
 
+                    [NameInMap("Rack")]
+                    [Validation(Required=false)]
+                    public string Rack { get; set; }
+
                 }
                 public string ImpactLevel { get; set; }
                 public string InstanceId { get; set; }

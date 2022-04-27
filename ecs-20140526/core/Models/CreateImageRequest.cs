@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Architecture { get; set; }
 
+        [NameInMap("BootMode")]
+        [Validation(Required=false)]
+        public string BootMode { get; set; }
+
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }

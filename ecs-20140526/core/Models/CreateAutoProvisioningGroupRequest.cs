@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public CreateAutoProvisioningGroupRequestLaunchConfiguration LaunchConfiguration { get; set; }
         public class CreateAutoProvisioningGroupRequestLaunchConfiguration : TeaModel {
+            [NameInMap("Arn")]
+            [Validation(Required=false)]
+            public List<CreateAutoProvisioningGroupRequestLaunchConfigurationArn> Arn { get; set; }
+            public class CreateAutoProvisioningGroupRequestLaunchConfigurationArn : TeaModel {
+                public long? AssumeRoleFor { get; set; }
+                public string RoleType { get; set; }
+                public string Rolearn { get; set; }
+            }
             [NameInMap("CreditSpecification")]
             [Validation(Required=false)]
             public string CreditSpecification { get; set; }
@@ -85,6 +93,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("SecurityGroupIds")]
             [Validation(Required=false)]
             public List<string> SecurityGroupIds { get; set; }
+            [NameInMap("SystemDisk")]
+            [Validation(Required=false)]
+            public CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk SystemDisk { get; set; }
+            public class CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk : TeaModel {
+                [NameInMap("EncryptAlgorithm")]
+                [Validation(Required=false)]
+                public string EncryptAlgorithm { get; set; }
+
+                [NameInMap("Encrypted")]
+                [Validation(Required=false)]
+                public string Encrypted { get; set; }
+
+                [NameInMap("KMSKeyId")]
+                [Validation(Required=false)]
+                public string KMSKeyId { get; set; }
+
+            }
             [NameInMap("SystemDiskCategory")]
             [Validation(Required=false)]
             public string SystemDiskCategory { get; set; }

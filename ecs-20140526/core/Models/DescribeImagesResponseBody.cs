@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeImagesResponseBodyImagesImage> Image { get; set; }
             public class DescribeImagesResponseBodyImagesImage : TeaModel {
                 public string Architecture { get; set; }
+                public string BootMode { get; set; }
                 public string CreationTime { get; set; }
                 public string Description { get; set; }
                 public DescribeImagesResponseBodyImagesImageDiskDeviceMappings DiskDeviceMappings { get; set; }

@@ -49,6 +49,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("Size")]
             [Validation(Required=false)]
             public int? Size { get; set; }
+            [NameInMap("EncryptAlgorithm")]
+            [Validation(Required=false)]
+            public string EncryptAlgorithm { get; set; }
+            [NameInMap("Encrypted")]
+            [Validation(Required=false)]
+            public bool? Encrypted { get; set; }
+            [NameInMap("KMSKeyId")]
+            [Validation(Required=false)]
+            public string KMSKeyId { get; set; }
             [NameInMap("StorageClusterId")]
             [Validation(Required=false)]
             public string StorageClusterId { get; set; }
