@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("FunctionName")]
-        [Validation(Required=false)]
-        public string FunctionName { get; set; }
-
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }

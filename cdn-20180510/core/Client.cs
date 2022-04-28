@@ -1187,88 +1187,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return await CreateCdnCertificateSigningRequestWithOptionsAsync(request, runtime);
         }
 
-        public CreateCdnComputeDomainResponse CreateCdnComputeDomainWithOptions(CreateCdnComputeDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Coverage))
-            {
-                query["Coverage"] = request.Coverage;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
-            {
-                query["DomainName"] = request.DomainName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateCdnComputeDomain",
-                Version = "2018-05-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateCdnComputeDomainResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<CreateCdnComputeDomainResponse> CreateCdnComputeDomainWithOptionsAsync(CreateCdnComputeDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Coverage))
-            {
-                query["Coverage"] = request.Coverage;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
-            {
-                query["DomainName"] = request.DomainName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateCdnComputeDomain",
-                Version = "2018-05-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateCdnComputeDomainResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public CreateCdnComputeDomainResponse CreateCdnComputeDomain(CreateCdnComputeDomainRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return CreateCdnComputeDomainWithOptions(request, runtime);
-        }
-
-        public async Task<CreateCdnComputeDomainResponse> CreateCdnComputeDomainAsync(CreateCdnComputeDomainRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await CreateCdnComputeDomainWithOptionsAsync(request, runtime);
-        }
-
         public CreateCdnDeliverTaskResponse CreateCdnDeliverTaskWithOptions(CreateCdnDeliverTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2817,88 +2735,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCdnCertificateListWithOptionsAsync(request, runtime);
-        }
-
-        public DescribeCdnComputeUserDomainResponse DescribeCdnComputeUserDomainWithOptions(DescribeCdnComputeUserDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
-            {
-                query["PageNumber"] = request.PageNumber;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeCdnComputeUserDomain",
-                Version = "2018-05-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeCdnComputeUserDomainResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<DescribeCdnComputeUserDomainResponse> DescribeCdnComputeUserDomainWithOptionsAsync(DescribeCdnComputeUserDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
-            {
-                query["PageNumber"] = request.PageNumber;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeCdnComputeUserDomain",
-                Version = "2018-05-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeCdnComputeUserDomainResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public DescribeCdnComputeUserDomainResponse DescribeCdnComputeUserDomain(DescribeCdnComputeUserDomainRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeCdnComputeUserDomainWithOptions(request, runtime);
-        }
-
-        public async Task<DescribeCdnComputeUserDomainResponse> DescribeCdnComputeUserDomainAsync(DescribeCdnComputeUserDomainRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeCdnComputeUserDomainWithOptionsAsync(request, runtime);
         }
 
         public DescribeCdnDeletedDomainsResponse DescribeCdnDeletedDomainsWithOptions(DescribeCdnDeletedDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -12237,10 +12073,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
             {
                 query["DomainName"] = request.DomainName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FunctionName))
-            {
-                query["FunctionName"] = request.FunctionName;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
@@ -12271,10 +12103,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
             {
                 query["DomainName"] = request.DomainName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FunctionName))
-            {
-                query["FunctionName"] = request.FunctionName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
@@ -12507,10 +12335,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
             {
                 query["DomainName"] = request.DomainName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FunctionName))
-            {
-                query["FunctionName"] = request.FunctionName;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
@@ -12541,10 +12365,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
             {
                 query["DomainName"] = request.DomainName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FunctionName))
-            {
-                query["FunctionName"] = request.FunctionName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
