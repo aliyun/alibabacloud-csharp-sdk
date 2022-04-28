@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [Validation(Required=false)]
             public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusApiServerLoadBalancerStatus ApiServerLoadBalancerStatus { get; set; }
             public class DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusApiServerLoadBalancerStatus : TeaModel {
+                [NameInMap("Locked")]
+                [Validation(Required=false)]
+                public bool? Locked { get; set; }
+
                 [NameInMap("PayType")]
                 [Validation(Required=false)]
                 public string PayType { get; set; }
@@ -53,6 +57,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [Validation(Required=false)]
             public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusPilotLoadBalancerStatus PilotLoadBalancerStatus { get; set; }
             public class DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusPilotLoadBalancerStatus : TeaModel {
+                [NameInMap("Locked")]
+                [Validation(Required=false)]
+                public bool? Locked { get; set; }
+
                 [NameInMap("PayType")]
                 [Validation(Required=false)]
                 public string PayType { get; set; }
