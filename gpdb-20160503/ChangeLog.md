@@ -1,3 +1,6 @@
+2022-04-28 Version: 1.0.10
+- Support upgrade instance.
+
 2022-04-19 Version: 1.0.9
 - Support set datashare.
 

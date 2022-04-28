@@ -6465,6 +6465,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["InstanceSpec"] = request.InstanceSpec;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterNodeNum))
+            {
+                query["MasterNodeNum"] = request.MasterNodeNum;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
@@ -6485,13 +6489,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["StorageSize"] = request.StorageSize;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterNodeNum))
-            {
-                query["masterNodeNum"] = request.MasterNodeNum;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpgradeType))
             {
-                query["upgradeType"] = request.UpgradeType;
+                query["UpgradeType"] = request.UpgradeType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6532,6 +6532,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["InstanceSpec"] = request.InstanceSpec;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterNodeNum))
+            {
+                query["MasterNodeNum"] = request.MasterNodeNum;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
@@ -6552,13 +6556,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["StorageSize"] = request.StorageSize;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterNodeNum))
-            {
-                query["masterNodeNum"] = request.MasterNodeNum;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpgradeType))
             {
-                query["upgradeType"] = request.UpgradeType;
+                query["UpgradeType"] = request.UpgradeType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
