@@ -24,6 +24,20 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         public string Conditions { get; set; }
 
         /// <summary>
+        /// 额外条件
+        /// </summary>
+        [NameInMap("extraConditions")]
+        [Validation(Required=false)]
+        public string ExtraConditions { get; set; }
+
+        /// <summary>
+        /// 分组条件
+        /// </summary>
+        [NameInMap("groupCondition")]
+        [Validation(Required=false)]
+        public string GroupCondition { get; set; }
+
+        /// <summary>
         /// 每页最大返回数量，0-200，默认值20
         /// </summary>
         [NameInMap("maxResults")]
@@ -36,6 +50,13 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
+
+        /// <summary>
+        /// 排序顺序
+        /// </summary>
+        [NameInMap("orderBy")]
+        [Validation(Required=false)]
+        public string OrderBy { get; set; }
 
         /// <summary>
         /// 项目id
