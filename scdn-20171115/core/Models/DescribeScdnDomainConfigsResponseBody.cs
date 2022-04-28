@@ -36,6 +36,7 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
 
                 }
                 public string FunctionName { get; set; }
+                public long? ParentId { get; set; }
                 public string Status { get; set; }
             }
         };
