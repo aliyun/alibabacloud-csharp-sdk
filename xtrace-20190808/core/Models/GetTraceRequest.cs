@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Xtrace20190808.Models
 {
     public class GetTraceRequest : TeaModel {
-        [NameInMap("TraceID")]
-        [Validation(Required=false)]
-        public string TraceID { get; set; }
-
         [NameInMap("AppType")]
         [Validation(Required=false)]
         public string AppType { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("TraceID")]
+        [Validation(Required=false)]
+        public string TraceID { get; set; }
 
     }
 

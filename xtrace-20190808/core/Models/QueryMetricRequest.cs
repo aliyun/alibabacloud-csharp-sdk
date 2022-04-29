@@ -9,37 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Xtrace20190808.Models
 {
     public class QueryMetricRequest : TeaModel {
-        [NameInMap("IntervalInSec")]
+        [NameInMap("Dimensions")]
         [Validation(Required=false)]
-        public int? IntervalInSec { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public long? StartTime { get; set; }
+        public List<string> Dimensions { get; set; }
 
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
-
-        [NameInMap("OrderBy")]
-        [Validation(Required=false)]
-        public string OrderBy { get; set; }
-
-        [NameInMap("Limit")]
-        [Validation(Required=false)]
-        public int? Limit { get; set; }
-
-        [NameInMap("Metric")]
-        [Validation(Required=false)]
-        public string Metric { get; set; }
-
-        [NameInMap("Order")]
-        [Validation(Required=false)]
-        public string Order { get; set; }
-
-        [NameInMap("ProxyUserId")]
-        [Validation(Required=false)]
-        public string ProxyUserId { get; set; }
 
         [NameInMap("Filters")]
         [Validation(Required=false)]
@@ -55,13 +31,37 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
 
         }
 
-        [NameInMap("Dimensions")]
+        [NameInMap("IntervalInSec")]
         [Validation(Required=false)]
-        public List<string> Dimensions { get; set; }
+        public int? IntervalInSec { get; set; }
+
+        [NameInMap("Limit")]
+        [Validation(Required=false)]
+        public int? Limit { get; set; }
 
         [NameInMap("Measures")]
         [Validation(Required=false)]
         public List<string> Measures { get; set; }
+
+        [NameInMap("Metric")]
+        [Validation(Required=false)]
+        public string Metric { get; set; }
+
+        [NameInMap("Order")]
+        [Validation(Required=false)]
+        public string Order { get; set; }
+
+        [NameInMap("OrderBy")]
+        [Validation(Required=false)]
+        public string OrderBy { get; set; }
+
+        [NameInMap("ProxyUserId")]
+        [Validation(Required=false)]
+        public string ProxyUserId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
 
     }
 

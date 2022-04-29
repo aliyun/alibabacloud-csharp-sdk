@@ -12,6 +12,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Xtrace20190808.Models
 {
     public class GetTagKeyRequest : TeaModel {
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public long? EndTime { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -27,10 +31,6 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public long? EndTime { get; set; }
 
     }
 

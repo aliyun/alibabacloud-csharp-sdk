@@ -9,33 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Xtrace20190808.Models
 {
     public class SearchTracesRequest : TeaModel {
-        [NameInMap("StartTime")]
+        [NameInMap("AppType")]
         [Validation(Required=false)]
-        public long? StartTime { get; set; }
+        public string AppType { get; set; }
 
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("ServiceName")]
-        [Validation(Required=false)]
-        public string ServiceName { get; set; }
-
-        [NameInMap("OperationName")]
-        [Validation(Required=false)]
-        public string OperationName { get; set; }
-
         [NameInMap("MinDuration")]
         [Validation(Required=false)]
         public long? MinDuration { get; set; }
 
-        [NameInMap("AppType")]
+        [NameInMap("OperationName")]
         [Validation(Required=false)]
-        public string AppType { get; set; }
+        public string OperationName { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -45,6 +33,10 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("Reverse")]
         [Validation(Required=false)]
         public bool? Reverse { get; set; }
@@ -52,6 +44,14 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
         [NameInMap("ServiceIp")]
         [Validation(Required=false)]
         public string ServiceIp { get; set; }
+
+        [NameInMap("ServiceName")]
+        [Validation(Required=false)]
+        public string ServiceName { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]

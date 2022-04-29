@@ -21,27 +21,8 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
             [Validation(Required=false)]
             public List<GetTraceResponseBodySpansSpan> Span { get; set; }
             public class GetTraceResponseBodySpansSpan : TeaModel {
-                public string SpanId { get; set; }
-                public string OperationName { get; set; }
-                public string ResultCode { get; set; }
-                public long? Timestamp { get; set; }
-                public GetTraceResponseBodySpansSpanTagEntryList TagEntryList { get; set; }
-                public class GetTraceResponseBodySpansSpanTagEntryList : TeaModel {
-                    [NameInMap("TagEntry")]
-                    [Validation(Required=false)]
-                    public List<GetTraceResponseBodySpansSpanTagEntryListTagEntry> TagEntry { get; set; }
-                    public class GetTraceResponseBodySpansSpanTagEntryListTagEntry : TeaModel {
-                        [NameInMap("Key")]
-                        [Validation(Required=false)]
-                        public string Key { get; set; }
-
-                        [NameInMap("Value")]
-                        [Validation(Required=false)]
-                        public string Value { get; set; }
-
-                    }
-
-                }
+                public long? Duration { get; set; }
+                public bool? HaveStack { get; set; }
                 public GetTraceResponseBodySpansSpanLogEventList LogEventList { get; set; }
                 public class GetTraceResponseBodySpansSpanLogEventList : TeaModel {
                     [NameInMap("LogEvent")]
@@ -68,12 +49,31 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
                     }
 
                 }
-                public bool? HaveStack { get; set; }
-                public string ServiceIp { get; set; }
+                public string OperationName { get; set; }
                 public string ParentSpanId { get; set; }
-                public long? Duration { get; set; }
+                public string ResultCode { get; set; }
                 public string RpcId { get; set; }
+                public string ServiceIp { get; set; }
                 public string ServiceName { get; set; }
+                public string SpanId { get; set; }
+                public GetTraceResponseBodySpansSpanTagEntryList TagEntryList { get; set; }
+                public class GetTraceResponseBodySpansSpanTagEntryList : TeaModel {
+                    [NameInMap("TagEntry")]
+                    [Validation(Required=false)]
+                    public List<GetTraceResponseBodySpansSpanTagEntryListTagEntry> TagEntry { get; set; }
+                    public class GetTraceResponseBodySpansSpanTagEntryListTagEntry : TeaModel {
+                        [NameInMap("Key")]
+                        [Validation(Required=false)]
+                        public string Key { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                }
+                public long? Timestamp { get; set; }
                 public string TraceID { get; set; }
             }
         };

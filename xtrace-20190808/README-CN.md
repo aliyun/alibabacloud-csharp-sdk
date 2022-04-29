@@ -6,10 +6,10 @@
 
 ## 安装
 
-### Composer
+### Nuget
 
 ```bash
-composer require AlibabaCloud.SDK.Xtrace20190808
+dotnet add package AlibabaCloud.SDK.Xtrace20190808
 ```
 
 ## 问题

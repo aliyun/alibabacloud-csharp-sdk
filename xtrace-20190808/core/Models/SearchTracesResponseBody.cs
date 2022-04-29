@@ -13,6 +13,15 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
         [Validation(Required=false)]
         public SearchTracesResponseBodyPageBean PageBean { get; set; }
         public class SearchTracesResponseBodyPageBean : TeaModel {
+            [NameInMap("PageNumber")]
+            [Validation(Required=false)]
+            public int? PageNumber { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public long? TotalCount { get; set; }
             [NameInMap("TraceInfos")]
             [Validation(Required=false)]
             public SearchTracesResponseBodyPageBeanTraceInfos TraceInfos { get; set; }
@@ -21,6 +30,10 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
                 [Validation(Required=false)]
                 public List<SearchTracesResponseBodyPageBeanTraceInfosTraceInfo> TraceInfo { get; set; }
                 public class SearchTracesResponseBodyPageBeanTraceInfosTraceInfo : TeaModel {
+                    [NameInMap("Duration")]
+                    [Validation(Required=false)]
+                    public long? Duration { get; set; }
+
                     [NameInMap("OperationName")]
                     [Validation(Required=false)]
                     public string OperationName { get; set; }
@@ -29,17 +42,17 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
                     [Validation(Required=false)]
                     public string ServiceIp { get; set; }
 
-                    [NameInMap("Duration")]
+                    [NameInMap("ServiceName")]
                     [Validation(Required=false)]
-                    public long? Duration { get; set; }
+                    public string ServiceName { get; set; }
+
+                    [NameInMap("TagMap")]
+                    [Validation(Required=false)]
+                    public Dictionary<string, object> TagMap { get; set; }
 
                     [NameInMap("Timestamp")]
                     [Validation(Required=false)]
                     public long? Timestamp { get; set; }
-
-                    [NameInMap("ServiceName")]
-                    [Validation(Required=false)]
-                    public string ServiceName { get; set; }
 
                     [NameInMap("TraceID")]
                     [Validation(Required=false)]
@@ -48,15 +61,6 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
                 }
 
             }
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
-            [NameInMap("PageNumber")]
-            [Validation(Required=false)]
-            public int? PageNumber { get; set; }
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public long? TotalCount { get; set; }
         };
 
         [NameInMap("RequestId")]
