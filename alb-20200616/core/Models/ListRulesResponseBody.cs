@@ -173,6 +173,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 [Validation(Required=false)]
                 public ListRulesResponseBodyRulesRuleActionsTrafficLimitConfig TrafficLimitConfig { get; set; }
                 public class ListRulesResponseBodyRulesRuleActionsTrafficLimitConfig : TeaModel {
+                    [NameInMap("QPS")]
+                    [Validation(Required=false)]
+                    public int? QPS { get; set; }
                 };
 
                 /// <summary>
@@ -182,6 +185,25 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 [Validation(Required=false)]
                 public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig TrafficMirrorConfig { get; set; }
                 public class ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig : TeaModel {
+                    [NameInMap("MirrorGroupConfig")]
+                    [Validation(Required=false)]
+                    public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig MirrorGroupConfig { get; set; }
+                    public class ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig : TeaModel {
+                        [NameInMap("ServerGroupTuples")]
+                        [Validation(Required=false)]
+                        public List<ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples> ServerGroupTuples { get; set; }
+                        public class ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples : TeaModel {
+                            [NameInMap("ServerGroupId")]
+                            [Validation(Required=false)]
+                            public string ServerGroupId { get; set; }
+
+                            [NameInMap("Weight")]
+                            [Validation(Required=false)]
+                            public int? Weight { get; set; }
+
+                        }
+
+                    }
                 };
 
                 /// <summary>
@@ -281,6 +303,18 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                         public string Key { get; set; }
                         public string Value { get; set; }
                     }
+                };
+
+                /// <summary>
+                /// 源IP业务流量匹配
+                /// </summary>
+                [NameInMap("SourceIpConfig")]
+                [Validation(Required=false)]
+                public ListRulesResponseBodyRulesRuleConditionsSourceIpConfig SourceIpConfig { get; set; }
+                public class ListRulesResponseBodyRulesRuleConditionsSourceIpConfig : TeaModel {
+                    [NameInMap("Values")]
+                    [Validation(Required=false)]
+                    public List<string> Values { get; set; }
                 };
 
                 /// <summary>

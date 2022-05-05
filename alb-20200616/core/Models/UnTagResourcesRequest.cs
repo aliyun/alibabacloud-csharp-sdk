@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class UnTagResourcesRequest : TeaModel {
         /// <summary>
+        /// 是否删除全部
+        /// </summary>
+        [NameInMap("All")]
+        [Validation(Required=false)]
+        public bool? All { get; set; }
+
+        /// <summary>
         /// 资源实例Id
         /// </summary>
         [NameInMap("ResourceId")]

@@ -5563,6 +5563,10 @@ namespace AlibabaCloud.SDK.Alb20200616
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.All))
+            {
+                query["All"] = request.All;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
             {
                 query["ResourceId"] = request.ResourceId;
@@ -5602,6 +5606,10 @@ namespace AlibabaCloud.SDK.Alb20200616
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.All))
+            {
+                query["All"] = request.All;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
             {
                 query["ResourceId"] = request.ResourceId;
