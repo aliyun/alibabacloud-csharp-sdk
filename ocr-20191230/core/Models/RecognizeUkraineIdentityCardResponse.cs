@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
-    public class RecognizeStructuredTaxiInvoicesResponse : TeaModel {
+    public class RecognizeUkraineIdentityCardResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public RecognizeStructuredTaxiInvoicesResponseBody Body { get; set; }
+        public RecognizeUkraineIdentityCardResponseBody Body { get; set; }
 
     }
 

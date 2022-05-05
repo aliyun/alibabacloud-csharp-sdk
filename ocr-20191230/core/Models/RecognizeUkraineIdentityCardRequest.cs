@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
-    public class RecognizeStructuredTaxiInvoicesRequest : TeaModel {
-        [NameInMap("ImageURL")]
+    public class RecognizeUkraineIdentityCardRequest : TeaModel {
+        [NameInMap("ImageUrl")]
         [Validation(Required=false)]
-        public string ImageURL { get; set; }
+        public string ImageUrl { get; set; }
 
     }
 

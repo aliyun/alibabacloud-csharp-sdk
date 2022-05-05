@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.Ocr20191230</AssemblyName>
-    <Version>2.0.7</Version>
+    <Version>2.0.8</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud OCR (20191230) SDK Library for .NET</Description>
@@ -45,11 +45,11 @@
     <PackageReference Include="AlibabaCloud.SDK.Common" Version="0.2.5"/>
     <PackageReference Include="AlibabaCloud.RPCClient" Version="1.0.1"/>
     <PackageReference Include="AlibabaCloud.OSSUtil" Version="0.0.3"/>
-    <PackageReference Include="AlibabaCloud.TeaUtil" Version="0.1.12"/>
+    <PackageReference Include="AlibabaCloud.TeaUtil" Version="0.1.13"/>
     <PackageReference Include="AlibabaCloud.SDK.TeaFileform" Version="0.0.2"/>
     <PackageReference Include="AlibabaCloud.EndpointUtil" Version="0.1.1"/>
     <PackageReference Include="Tea" Version="1.0.11"/>
     <PackageReference Include="AlibabaCloud.OpenApiClient" Version="0.1.1"/>
-    <PackageReference Include="AlibabaCloud.OpenApiUtil" Version="1.0.13"/>
+    <PackageReference Include="AlibabaCloud.OpenApiUtil" Version="1.0.14"/>
   </ItemGroup>
 </Project>
