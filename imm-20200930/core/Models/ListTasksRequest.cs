@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class ListTasksRequest : TeaModel {
+        [NameInMap("EndTimeRange")]
+        [Validation(Required=false)]
+        public TimeRange EndTimeRange { get; set; }
+
         /// <summary>
         /// MaxResults
         /// </summary>
@@ -37,6 +41,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("Sort")]
         [Validation(Required=false)]
         public string Sort { get; set; }
+
+        [NameInMap("StartTimeRange")]
+        [Validation(Required=false)]
+        public TimeRange StartTimeRange { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
         [NameInMap("TagSelector")]
         [Validation(Required=false)]
