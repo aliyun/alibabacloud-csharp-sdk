@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyParameterGroupRequest : TeaModel {
+        [NameInMap("ModifyMode")]
+        [Validation(Required=false)]
+        public string ModifyMode { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("ResourceOwnerAccount")]
+        [NameInMap("ParameterGroupDesc")]
         [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string ParameterGroupDesc { get; set; }
 
         [NameInMap("ParameterGroupId")]
         [Validation(Required=false)]
@@ -29,10 +29,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ParameterGroupName { get; set; }
 
-        [NameInMap("ParameterGroupDesc")]
-        [Validation(Required=false)]
-        public string ParameterGroupDesc { get; set; }
-
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public string Parameters { get; set; }
@@ -40,6 +36,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
     }
 

@@ -9,9 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ImportUserBackupFileRequest : TeaModel {
+        [NameInMap("BackupFile")]
+        [Validation(Required=false)]
+        public string BackupFile { get; set; }
+
+        [NameInMap("BucketRegion")]
+        [Validation(Required=false)]
+        public string BucketRegion { get; set; }
+
+        [NameInMap("Comment")]
+        [Validation(Required=false)]
+        public string Comment { get; set; }
+
+        [NameInMap("EngineVersion")]
+        [Validation(Required=false)]
+        public string EngineVersion { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -20,26 +40,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("EngineVersion")]
-        [Validation(Required=false)]
-        public string EngineVersion { get; set; }
-
-        [NameInMap("BucketRegion")]
-        [Validation(Required=false)]
-        public string BucketRegion { get; set; }
-
-        [NameInMap("BackupFile")]
-        [Validation(Required=false)]
-        public string BackupFile { get; set; }
-
-        [NameInMap("Comment")]
-        [Validation(Required=false)]
-        public string Comment { get; set; }
 
         [NameInMap("RestoreSize")]
         [Validation(Required=false)]

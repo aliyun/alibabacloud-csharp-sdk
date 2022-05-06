@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceProxyConfigurationResponseBody : TeaModel {
-        [NameInMap("PersistentConnectionsConfiguration")]
-        [Validation(Required=false)]
-        public string PersistentConnectionsConfiguration { get; set; }
-
         [NameInMap("AttacksProtectionConfiguration")]
         [Validation(Required=false)]
         public string AttacksProtectionConfiguration { get; set; }
+
+        [NameInMap("PersistentConnectionsConfiguration")]
+        [Validation(Required=false)]
+        public string PersistentConnectionsConfiguration { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

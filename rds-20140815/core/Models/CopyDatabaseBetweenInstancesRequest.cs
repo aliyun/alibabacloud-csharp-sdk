@@ -9,25 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CopyDatabaseBetweenInstancesRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("BackupId")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string BackupId { get; set; }
 
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
-        [NameInMap("TargetDBInstanceId")]
-        [Validation(Required=false)]
-        public string TargetDBInstanceId { get; set; }
-
         [NameInMap("DbNames")]
         [Validation(Required=false)]
         public string DbNames { get; set; }
 
-        [NameInMap("BackupId")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public string BackupId { get; set; }
+        public long? ResourceOwnerId { get; set; }
 
         [NameInMap("RestoreTime")]
         [Validation(Required=false)]
@@ -36,6 +32,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("SyncUserPrivilege")]
         [Validation(Required=false)]
         public string SyncUserPrivilege { get; set; }
+
+        [NameInMap("TargetDBInstanceId")]
+        [Validation(Required=false)]
+        public string TargetDBInstanceId { get; set; }
 
     }
 

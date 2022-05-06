@@ -9,9 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBProxyRequest : TeaModel {
+        [NameInMap("ConfigDBProxyService")]
+        [Validation(Required=false)]
+        public string ConfigDBProxyService { get; set; }
+
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
+        [NameInMap("DBProxyInstanceNum")]
+        [Validation(Required=false)]
+        public string DBProxyInstanceNum { get; set; }
+
+        [NameInMap("InstanceNetworkType")]
+        [Validation(Required=false)]
+        public string InstanceNetworkType { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -20,26 +40,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
-        [NameInMap("ConfigDBProxyService")]
-        [Validation(Required=false)]
-        public string ConfigDBProxyService { get; set; }
-
-        [NameInMap("DBProxyInstanceNum")]
-        [Validation(Required=false)]
-        public string DBProxyInstanceNum { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("InstanceNetworkType")]
-        [Validation(Required=false)]
-        public string InstanceNetworkType { get; set; }
 
         [NameInMap("VPCId")]
         [Validation(Required=false)]

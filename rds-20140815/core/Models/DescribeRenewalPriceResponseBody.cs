@@ -9,62 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRenewalPriceResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("PriceInfo")]
         [Validation(Required=false)]
         public DescribeRenewalPriceResponseBodyPriceInfo PriceInfo { get; set; }
         public class DescribeRenewalPriceResponseBodyPriceInfo : TeaModel {
-            [NameInMap("OriginalPrice")]
-            [Validation(Required=false)]
-            public float? OriginalPrice { get; set; }
-            [NameInMap("DiscountPrice")]
-            [Validation(Required=false)]
-            public float? DiscountPrice { get; set; }
-            [NameInMap("Currency")]
-            [Validation(Required=false)]
-            public string Currency { get; set; }
-            [NameInMap("TradePrice")]
-            [Validation(Required=false)]
-            public float? TradePrice { get; set; }
-            [NameInMap("Coupons")]
-            [Validation(Required=false)]
-            public DescribeRenewalPriceResponseBodyPriceInfoCoupons Coupons { get; set; }
-            public class DescribeRenewalPriceResponseBodyPriceInfoCoupons : TeaModel {
-                [NameInMap("Coupon")]
-                [Validation(Required=false)]
-                public List<DescribeRenewalPriceResponseBodyPriceInfoCouponsCoupon> Coupon { get; set; }
-                public class DescribeRenewalPriceResponseBodyPriceInfoCouponsCoupon : TeaModel {
-                    [NameInMap("IsSelected")]
-                    [Validation(Required=false)]
-                    public string IsSelected { get; set; }
-
-                    [NameInMap("CouponNo")]
-                    [Validation(Required=false)]
-                    public string CouponNo { get; set; }
-
-                    [NameInMap("Name")]
-                    [Validation(Required=false)]
-                    public string Name { get; set; }
-
-                    [NameInMap("Description")]
-                    [Validation(Required=false)]
-                    public string Description { get; set; }
-
-                }
-
-            }
-            [NameInMap("RuleIds")]
-            [Validation(Required=false)]
-            public DescribeRenewalPriceResponseBodyPriceInfoRuleIds RuleIds { get; set; }
-            public class DescribeRenewalPriceResponseBodyPriceInfoRuleIds : TeaModel {
-                [NameInMap("RuleId")]
-                [Validation(Required=false)]
-                public List<string> RuleId { get; set; }
-
-            }
             [NameInMap("ActivityInfo")]
             [Validation(Required=false)]
             public DescribeRenewalPriceResponseBodyPriceInfoActivityInfo ActivityInfo { get; set; }
@@ -82,7 +30,59 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Success { get; set; }
 
             }
+            [NameInMap("Coupons")]
+            [Validation(Required=false)]
+            public DescribeRenewalPriceResponseBodyPriceInfoCoupons Coupons { get; set; }
+            public class DescribeRenewalPriceResponseBodyPriceInfoCoupons : TeaModel {
+                [NameInMap("Coupon")]
+                [Validation(Required=false)]
+                public List<DescribeRenewalPriceResponseBodyPriceInfoCouponsCoupon> Coupon { get; set; }
+                public class DescribeRenewalPriceResponseBodyPriceInfoCouponsCoupon : TeaModel {
+                    [NameInMap("CouponNo")]
+                    [Validation(Required=false)]
+                    public string CouponNo { get; set; }
+
+                    [NameInMap("Description")]
+                    [Validation(Required=false)]
+                    public string Description { get; set; }
+
+                    [NameInMap("IsSelected")]
+                    [Validation(Required=false)]
+                    public string IsSelected { get; set; }
+
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                }
+
+            }
+            [NameInMap("Currency")]
+            [Validation(Required=false)]
+            public string Currency { get; set; }
+            [NameInMap("DiscountPrice")]
+            [Validation(Required=false)]
+            public float? DiscountPrice { get; set; }
+            [NameInMap("OriginalPrice")]
+            [Validation(Required=false)]
+            public float? OriginalPrice { get; set; }
+            [NameInMap("RuleIds")]
+            [Validation(Required=false)]
+            public DescribeRenewalPriceResponseBodyPriceInfoRuleIds RuleIds { get; set; }
+            public class DescribeRenewalPriceResponseBodyPriceInfoRuleIds : TeaModel {
+                [NameInMap("RuleId")]
+                [Validation(Required=false)]
+                public List<string> RuleId { get; set; }
+
+            }
+            [NameInMap("TradePrice")]
+            [Validation(Required=false)]
+            public float? TradePrice { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Rules")]
         [Validation(Required=false)]
@@ -92,8 +92,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeRenewalPriceResponseBodyRulesRule> Rule { get; set; }
             public class DescribeRenewalPriceResponseBodyRulesRule : TeaModel {
-                public string Name { get; set; }
                 public string Description { get; set; }
+                public string Name { get; set; }
                 public long? RuleId { get; set; }
             }
         };

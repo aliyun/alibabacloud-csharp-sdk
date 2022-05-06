@@ -9,9 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBProxyInstanceRequest : TeaModel {
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
+        [NameInMap("DBProxyInstanceNum")]
+        [Validation(Required=false)]
+        public string DBProxyInstanceNum { get; set; }
+
+        [NameInMap("DBProxyInstanceType")]
+        [Validation(Required=false)]
+        public string DBProxyInstanceType { get; set; }
+
+        [NameInMap("EffectiveSpecificTime")]
+        [Validation(Required=false)]
+        public string EffectiveSpecificTime { get; set; }
+
+        [NameInMap("EffectiveTime")]
+        [Validation(Required=false)]
+        public string EffectiveTime { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -20,30 +44,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
-        [NameInMap("DBProxyInstanceType")]
-        [Validation(Required=false)]
-        public string DBProxyInstanceType { get; set; }
-
-        [NameInMap("DBProxyInstanceNum")]
-        [Validation(Required=false)]
-        public string DBProxyInstanceNum { get; set; }
-
-        [NameInMap("EffectiveTime")]
-        [Validation(Required=false)]
-        public string EffectiveTime { get; set; }
-
-        [NameInMap("EffectiveSpecificTime")]
-        [Validation(Required=false)]
-        public string EffectiveSpecificTime { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
 
     }
 

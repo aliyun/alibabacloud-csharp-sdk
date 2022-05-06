@@ -9,6 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceNetInfoRequest : TeaModel {
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
+        [NameInMap("DBInstanceNetRWSplitType")]
+        [Validation(Required=false)]
+        public string DBInstanceNetRWSplitType { get; set; }
+
+        [NameInMap("Flag")]
+        [Validation(Required=false)]
+        public int? Flag { get; set; }
+
+        [NameInMap("GeneralGroupName")]
+        [Validation(Required=false)]
+        public string GeneralGroupName { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -20,26 +44,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
-        [NameInMap("Flag")]
-        [Validation(Required=false)]
-        public int? Flag { get; set; }
-
-        [NameInMap("DBInstanceNetRWSplitType")]
-        [Validation(Required=false)]
-        public string DBInstanceNetRWSplitType { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
 
     }
 

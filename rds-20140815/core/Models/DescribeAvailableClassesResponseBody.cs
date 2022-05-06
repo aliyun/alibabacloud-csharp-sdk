@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeAvailableClassesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DBInstanceClasses")]
         [Validation(Required=false)]
         public List<DescribeAvailableClassesResponseBodyDBInstanceClasses> DBInstanceClasses { get; set; }
@@ -25,18 +21,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public DescribeAvailableClassesResponseBodyDBInstanceClassesDBInstanceStorageRange DBInstanceStorageRange { get; set; }
             public class DescribeAvailableClassesResponseBodyDBInstanceClassesDBInstanceStorageRange : TeaModel {
-                [NameInMap("Step")]
-                [Validation(Required=false)]
-                public int? Step { get; set; }
-                [NameInMap("MinValue")]
-                [Validation(Required=false)]
-                public int? MinValue { get; set; }
                 [NameInMap("MaxValue")]
                 [Validation(Required=false)]
                 public int? MaxValue { get; set; }
+                [NameInMap("MinValue")]
+                [Validation(Required=false)]
+                public int? MinValue { get; set; }
+                [NameInMap("Step")]
+                [Validation(Required=false)]
+                public int? Step { get; set; }
             };
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

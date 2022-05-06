@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class SwitchDBInstanceVpcRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
+
+        [NameInMap("PrivateIpAddress")]
+        [Validation(Required=false)]
+        public string PrivateIpAddress { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
         [NameInMap("VPCId")]
         [Validation(Required=false)]
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
-
-        [NameInMap("PrivateIpAddress")]
-        [Validation(Required=false)]
-        public string PrivateIpAddress { get; set; }
 
     }
 

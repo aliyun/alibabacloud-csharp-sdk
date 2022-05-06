@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        [NameInMap("ReadSQLReplicationTime")]
+        [Validation(Required=false)]
+        public string ReadSQLReplicationTime { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
-
-        [NameInMap("ReadSQLReplicationTime")]
-        [Validation(Required=false)]
-        public string ReadSQLReplicationTime { get; set; }
 
     }
 

@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBProxyPerformanceResponseBody : TeaModel {
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string EndTime { get; set; }
 
         [NameInMap("PerformanceKeys")]
         [Validation(Required=false)]
@@ -33,8 +25,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKey> PerformanceKey { get; set; }
             public class DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKey : TeaModel {
-                public string ValueFormat { get; set; }
                 public string Key { get; set; }
+                public string ValueFormat { get; set; }
                 public DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKeyValues Values { get; set; }
                 public class DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKeyValues : TeaModel {
                     [NameInMap("PerformanceValue")]
@@ -54,6 +46,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 

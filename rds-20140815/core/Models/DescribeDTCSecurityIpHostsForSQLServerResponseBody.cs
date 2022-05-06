@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("IpHostPairNum")]
         [Validation(Required=false)]
         public string IpHostPairNum { get; set; }
@@ -33,6 +29,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string WhitelistGroupName { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

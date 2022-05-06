@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstancePayTypeRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
-
-        [NameInMap("UsedTime")]
-        [Validation(Required=false)]
-        public int? UsedTime { get; set; }
 
         [NameInMap("PayType")]
         [Validation(Required=false)]
@@ -28,6 +20,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("Period")]
         [Validation(Required=false)]
         public string Period { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("UsedTime")]
+        [Validation(Required=false)]
+        public int? UsedTime { get; set; }
 
     }
 

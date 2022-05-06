@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeAvailableClassesRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("Category")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string Category { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("CommodityCode")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string CommodityCode { get; set; }
 
-        [NameInMap("ZoneId")]
+        [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
-        public string ZoneId { get; set; }
+        public string DBInstanceId { get; set; }
 
-        [NameInMap("InstanceChargeType")]
+        [NameInMap("DBInstanceStorageType")]
         [Validation(Required=false)]
-        public string InstanceChargeType { get; set; }
+        public string DBInstanceStorageType { get; set; }
 
         [NameInMap("Engine")]
         [Validation(Required=false)]
@@ -33,25 +33,25 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
-        [NameInMap("DBInstanceId")]
+        [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
+        public string InstanceChargeType { get; set; }
 
         [NameInMap("OrderType")]
         [Validation(Required=false)]
         public string OrderType { get; set; }
 
-        [NameInMap("DBInstanceStorageType")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string DBInstanceStorageType { get; set; }
+        public string RegionId { get; set; }
 
-        [NameInMap("Category")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public string Category { get; set; }
+        public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("CommodityCode")]
+        [NameInMap("ZoneId")]
         [Validation(Required=false)]
-        public string CommodityCode { get; set; }
+        public string ZoneId { get; set; }
 
     }
 

@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBProxyEndpointRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("ConfigDBProxyFeatures")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string ConfigDBProxyFeatures { get; set; }
 
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -29,41 +21,49 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBProxyEndpointId { get; set; }
 
-        [NameInMap("ConfigDBProxyFeatures")]
+        [NameInMap("DbEndpointAliases")]
         [Validation(Required=false)]
-        public string ConfigDBProxyFeatures { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("ReadOnlyInstanceMaxDelayTime")]
-        [Validation(Required=false)]
-        public string ReadOnlyInstanceMaxDelayTime { get; set; }
-
-        [NameInMap("ReadOnlyInstanceDistributionType")]
-        [Validation(Required=false)]
-        public string ReadOnlyInstanceDistributionType { get; set; }
-
-        [NameInMap("ReadOnlyInstanceWeight")]
-        [Validation(Required=false)]
-        public string ReadOnlyInstanceWeight { get; set; }
+        public string DbEndpointAliases { get; set; }
 
         [NameInMap("DbEndpointOperator")]
         [Validation(Required=false)]
         public string DbEndpointOperator { get; set; }
 
-        [NameInMap("DbEndpointAliases")]
+        [NameInMap("DbEndpointReadWriteMode")]
         [Validation(Required=false)]
-        public string DbEndpointAliases { get; set; }
+        public string DbEndpointReadWriteMode { get; set; }
 
         [NameInMap("DbEndpointType")]
         [Validation(Required=false)]
         public string DbEndpointType { get; set; }
 
-        [NameInMap("DbEndpointReadWriteMode")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string DbEndpointReadWriteMode { get; set; }
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ReadOnlyInstanceDistributionType")]
+        [Validation(Required=false)]
+        public string ReadOnlyInstanceDistributionType { get; set; }
+
+        [NameInMap("ReadOnlyInstanceMaxDelayTime")]
+        [Validation(Required=false)]
+        public string ReadOnlyInstanceMaxDelayTime { get; set; }
+
+        [NameInMap("ReadOnlyInstanceWeight")]
+        [Validation(Required=false)]
+        public string ReadOnlyInstanceWeight { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
     }
 

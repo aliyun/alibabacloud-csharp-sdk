@@ -9,6 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeBackupTasksRequest : TeaModel {
+        [NameInMap("BackupJobId")]
+        [Validation(Required=false)]
+        public int? BackupJobId { get; set; }
+
+        [NameInMap("BackupJobStatus")]
+        [Validation(Required=false)]
+        public string BackupJobStatus { get; set; }
+
+        [NameInMap("BackupMode")]
+        [Validation(Required=false)]
+        public string BackupMode { get; set; }
+
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
+        [NameInMap("Flag")]
+        [Validation(Required=false)]
+        public string Flag { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -20,34 +48,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        [NameInMap("Flag")]
-        [Validation(Required=false)]
-        public string Flag { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
-        [NameInMap("BackupJobId")]
-        [Validation(Required=false)]
-        public int? BackupJobId { get; set; }
-
-        [NameInMap("BackupMode")]
-        [Validation(Required=false)]
-        public string BackupMode { get; set; }
-
-        [NameInMap("BackupJobStatus")]
-        [Validation(Required=false)]
-        public string BackupJobStatus { get; set; }
 
     }
 

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCollationTimeZonesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("CollationTimeZones")]
         [Validation(Required=false)]
         public DescribeCollationTimeZonesResponseBodyCollationTimeZones CollationTimeZones { get; set; }
@@ -21,11 +17,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeCollationTimeZonesResponseBodyCollationTimeZonesCollationTimeZone> CollationTimeZone { get; set; }
             public class DescribeCollationTimeZonesResponseBodyCollationTimeZonesCollationTimeZone : TeaModel {
-                public string TimeZone { get; set; }
-                public string StandardTimeOffset { get; set; }
                 public string Description { get; set; }
+                public string StandardTimeOffset { get; set; }
+                public string TimeZone { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

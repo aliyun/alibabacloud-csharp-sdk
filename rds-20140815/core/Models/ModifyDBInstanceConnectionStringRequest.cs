@@ -9,9 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceConnectionStringRequest : TeaModel {
+        [NameInMap("ConnectionStringPrefix")]
+        [Validation(Required=false)]
+        public string ConnectionStringPrefix { get; set; }
+
+        [NameInMap("CurrentConnectionString")]
+        [Validation(Required=false)]
+        public string CurrentConnectionString { get; set; }
+
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
+        [NameInMap("GeneralGroupName")]
+        [Validation(Required=false)]
+        public string GeneralGroupName { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("Port")]
+        [Validation(Required=false)]
+        public string Port { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -20,30 +44,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
-        [NameInMap("CurrentConnectionString")]
-        [Validation(Required=false)]
-        public string CurrentConnectionString { get; set; }
-
-        [NameInMap("ConnectionStringPrefix")]
-        [Validation(Required=false)]
-        public string ConnectionStringPrefix { get; set; }
-
-        [NameInMap("Port")]
-        [Validation(Required=false)]
-        public string Port { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("GeneralGroupName")]
-        [Validation(Required=false)]
-        public string GeneralGroupName { get; set; }
 
     }
 

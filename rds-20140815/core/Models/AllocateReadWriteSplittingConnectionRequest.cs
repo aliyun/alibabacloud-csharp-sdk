@@ -9,33 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class AllocateReadWriteSplittingConnectionRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("ConnectionStringPrefix")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public string ConnectionStringPrefix { get; set; }
 
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
-        [NameInMap("ConnectionStringPrefix")]
+        [NameInMap("DistributionType")]
         [Validation(Required=false)]
-        public string ConnectionStringPrefix { get; set; }
-
-        [NameInMap("Port")]
-        [Validation(Required=false)]
-        public string Port { get; set; }
+        public string DistributionType { get; set; }
 
         [NameInMap("MaxDelayTime")]
         [Validation(Required=false)]
@@ -45,9 +29,25 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string NetType { get; set; }
 
-        [NameInMap("DistributionType")]
+        [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
-        public string DistributionType { get; set; }
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("Port")]
+        [Validation(Required=false)]
+        public string Port { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
         [NameInMap("Weight")]
         [Validation(Required=false)]

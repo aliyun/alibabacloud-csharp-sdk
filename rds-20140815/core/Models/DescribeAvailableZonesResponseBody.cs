@@ -9,18 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeAvailableZonesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("AvailableZones")]
         [Validation(Required=false)]
         public List<DescribeAvailableZonesResponseBodyAvailableZones> AvailableZones { get; set; }
         public class DescribeAvailableZonesResponseBodyAvailableZones : TeaModel {
-            [NameInMap("ZoneId")]
-            [Validation(Required=false)]
-            public string ZoneId { get; set; }
-
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
@@ -37,10 +29,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersions> SupportedEngineVersions { get; set; }
                 public class DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersions : TeaModel {
-                    [NameInMap("Version")]
-                    [Validation(Required=false)]
-                    public string Version { get; set; }
-
                     [NameInMap("SupportedCategorys")]
                     [Validation(Required=false)]
                     public List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorys> SupportedCategorys { get; set; }
@@ -61,11 +49,23 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
                     }
 
+                    [NameInMap("Version")]
+                    [Validation(Required=false)]
+                    public string Version { get; set; }
+
                 }
 
             }
 
+            [NameInMap("ZoneId")]
+            [Validation(Required=false)]
+            public string ZoneId { get; set; }
+
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

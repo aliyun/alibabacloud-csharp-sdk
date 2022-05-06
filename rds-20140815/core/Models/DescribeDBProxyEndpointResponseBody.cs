@@ -9,49 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBProxyEndpointResponseBody : TeaModel {
+        [NameInMap("DBProxyConnectString")]
+        [Validation(Required=false)]
+        public string DBProxyConnectString { get; set; }
+
         [NameInMap("DBProxyConnectStringNetType")]
         [Validation(Required=false)]
         public string DBProxyConnectStringNetType { get; set; }
-
-        [NameInMap("DBProxyFeatures")]
-        [Validation(Required=false)]
-        public string DBProxyFeatures { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("ReadOnlyInstanceWeight")]
-        [Validation(Required=false)]
-        public string ReadOnlyInstanceWeight { get; set; }
-
-        [NameInMap("ReadOnlyInstanceDistributionType")]
-        [Validation(Required=false)]
-        public string ReadOnlyInstanceDistributionType { get; set; }
-
-        [NameInMap("ReadOnlyInstanceMaxDelayTime")]
-        [Validation(Required=false)]
-        public string ReadOnlyInstanceMaxDelayTime { get; set; }
-
-        [NameInMap("DbProxyEndpointReadWriteMode")]
-        [Validation(Required=false)]
-        public string DbProxyEndpointReadWriteMode { get; set; }
-
-        [NameInMap("DbProxyEndpointAliases")]
-        [Validation(Required=false)]
-        public string DbProxyEndpointAliases { get; set; }
-
-        [NameInMap("DBProxyEndpointId")]
-        [Validation(Required=false)]
-        public string DBProxyEndpointId { get; set; }
 
         [NameInMap("DBProxyConnectStringPort")]
         [Validation(Required=false)]
         public string DBProxyConnectStringPort { get; set; }
 
-        [NameInMap("DBProxyConnectString")]
+        [NameInMap("DBProxyEndpointId")]
         [Validation(Required=false)]
-        public string DBProxyConnectString { get; set; }
+        public string DBProxyEndpointId { get; set; }
+
+        [NameInMap("DBProxyFeatures")]
+        [Validation(Required=false)]
+        public string DBProxyFeatures { get; set; }
+
+        [NameInMap("DbProxyEndpointAliases")]
+        [Validation(Required=false)]
+        public string DbProxyEndpointAliases { get; set; }
+
+        [NameInMap("DbProxyEndpointReadWriteMode")]
+        [Validation(Required=false)]
+        public string DbProxyEndpointReadWriteMode { get; set; }
 
         [NameInMap("EndpointConnectItems")]
         [Validation(Required=false)]
@@ -61,11 +45,27 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBProxyEndpointResponseBodyEndpointConnectItemsEndpointConnectItems> EndpointConnectItems { get; set; }
             public class DescribeDBProxyEndpointResponseBodyEndpointConnectItemsEndpointConnectItems : TeaModel {
-                public string DbProxyEndpointPort { get; set; }
                 public string DbProxyEndpointConnectString { get; set; }
                 public string DbProxyEndpointNetType { get; set; }
+                public string DbProxyEndpointPort { get; set; }
             }
         };
+
+        [NameInMap("ReadOnlyInstanceDistributionType")]
+        [Validation(Required=false)]
+        public string ReadOnlyInstanceDistributionType { get; set; }
+
+        [NameInMap("ReadOnlyInstanceMaxDelayTime")]
+        [Validation(Required=false)]
+        public string ReadOnlyInstanceMaxDelayTime { get; set; }
+
+        [NameInMap("ReadOnlyInstanceWeight")]
+        [Validation(Required=false)]
+        public string ReadOnlyInstanceWeight { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

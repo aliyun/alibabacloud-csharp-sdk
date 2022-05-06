@@ -9,9 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class StartDBInstanceRequest : TeaModel {
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
+        [NameInMap("DBInstanceTransType")]
+        [Validation(Required=false)]
+        public int? DBInstanceTransType { get; set; }
+
+        [NameInMap("DedicatedHostGroupId")]
+        [Validation(Required=false)]
+        public string DedicatedHostGroupId { get; set; }
+
+        [NameInMap("EffectiveTime")]
+        [Validation(Required=false)]
+        public string EffectiveTime { get; set; }
+
+        [NameInMap("EngineVersion")]
+        [Validation(Required=false)]
+        public string EngineVersion { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -21,17 +45,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("SpecifiedTime")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string SpecifiedTime { get; set; }
 
-        [NameInMap("DedicatedHostGroupId")]
+        [NameInMap("Storage")]
         [Validation(Required=false)]
-        public string DedicatedHostGroupId { get; set; }
+        public int? Storage { get; set; }
 
-        [NameInMap("DBInstanceId")]
+        [NameInMap("TargetDBInstanceClass")]
         [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
+        public string TargetDBInstanceClass { get; set; }
+
+        [NameInMap("TargetDedicatedHostIdForLog")]
+        [Validation(Required=false)]
+        public string TargetDedicatedHostIdForLog { get; set; }
 
         [NameInMap("TargetDedicatedHostIdForMaster")]
         [Validation(Required=false)]
@@ -40,34 +68,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("TargetDedicatedHostIdForSlave")]
         [Validation(Required=false)]
         public string TargetDedicatedHostIdForSlave { get; set; }
-
-        [NameInMap("TargetDedicatedHostIdForLog")]
-        [Validation(Required=false)]
-        public string TargetDedicatedHostIdForLog { get; set; }
-
-        [NameInMap("EffectiveTime")]
-        [Validation(Required=false)]
-        public string EffectiveTime { get; set; }
-
-        [NameInMap("SpecifiedTime")]
-        [Validation(Required=false)]
-        public string SpecifiedTime { get; set; }
-
-        [NameInMap("TargetDBInstanceClass")]
-        [Validation(Required=false)]
-        public string TargetDBInstanceClass { get; set; }
-
-        [NameInMap("EngineVersion")]
-        [Validation(Required=false)]
-        public string EngineVersion { get; set; }
-
-        [NameInMap("DBInstanceTransType")]
-        [Validation(Required=false)]
-        public int? DBInstanceTransType { get; set; }
-
-        [NameInMap("Storage")]
-        [Validation(Required=false)]
-        public int? Storage { get; set; }
 
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

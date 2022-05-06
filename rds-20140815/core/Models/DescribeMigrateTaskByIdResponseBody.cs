@@ -9,45 +9,45 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeMigrateTaskByIdResponseBody : TeaModel {
-        [NameInMap("Status")]
+        [NameInMap("BackupMode")]
         [Validation(Required=false)]
-        public string Status { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        [NameInMap("DBInstanceName")]
-        [Validation(Required=false)]
-        public string DBInstanceName { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
+        public string BackupMode { get; set; }
 
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
+        [NameInMap("DBInstanceName")]
+        [Validation(Required=false)]
+        public string DBInstanceName { get; set; }
+
         [NameInMap("DBName")]
         [Validation(Required=false)]
         public string DBName { get; set; }
 
-        [NameInMap("BackupMode")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public string BackupMode { get; set; }
+        public string Description { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
+        [NameInMap("IsDBReplaced")]
+        [Validation(Required=false)]
+        public string IsDBReplaced { get; set; }
 
         [NameInMap("MigrateTaskId")]
         [Validation(Required=false)]
         public string MigrateTaskId { get; set; }
 
-        [NameInMap("IsDBReplaced")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string IsDBReplaced { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

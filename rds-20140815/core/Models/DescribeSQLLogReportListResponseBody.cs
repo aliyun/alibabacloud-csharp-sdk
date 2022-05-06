@@ -9,22 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSQLLogReportListResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageRecordCount")]
-        [Validation(Required=false)]
-        public int? PageRecordCount { get; set; }
-
-        [NameInMap("TotalRecordCount")]
-        [Validation(Required=false)]
-        public int? TotalRecordCount { get; set; }
-
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeSQLLogReportListResponseBodyItems Items { get; set; }
@@ -33,24 +17,23 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeSQLLogReportListResponseBodyItemsItem> Item { get; set; }
             public class DescribeSQLLogReportListResponseBodyItemsItem : TeaModel {
-                public string ReportTime { get; set; }
                 public DescribeSQLLogReportListResponseBodyItemsItemLatencyTopNItems LatencyTopNItems { get; set; }
                 public class DescribeSQLLogReportListResponseBodyItemsItemLatencyTopNItems : TeaModel {
                     [NameInMap("LatencyTopNItem")]
                     [Validation(Required=false)]
                     public List<DescribeSQLLogReportListResponseBodyItemsItemLatencyTopNItemsLatencyTopNItem> LatencyTopNItem { get; set; }
                     public class DescribeSQLLogReportListResponseBodyItemsItemLatencyTopNItemsLatencyTopNItem : TeaModel {
-                        [NameInMap("SQLText")]
+                        [NameInMap("AvgLatency")]
                         [Validation(Required=false)]
-                        public string SQLText { get; set; }
+                        public long? AvgLatency { get; set; }
 
                         [NameInMap("SQLExecuteTimes")]
                         [Validation(Required=false)]
                         public long? SQLExecuteTimes { get; set; }
 
-                        [NameInMap("AvgLatency")]
+                        [NameInMap("SQLText")]
                         [Validation(Required=false)]
-                        public long? AvgLatency { get; set; }
+                        public string SQLText { get; set; }
 
                     }
 
@@ -72,8 +55,25 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     }
 
                 }
+                public string ReportTime { get; set; }
             }
         };
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageRecordCount")]
+        [Validation(Required=false)]
+        public int? PageRecordCount { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalRecordCount")]
+        [Validation(Required=false)]
+        public int? TotalRecordCount { get; set; }
 
     }
 

@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ImportUserBackupFileResponseBody : TeaModel {
-        [NameInMap("Status")]
+        [NameInMap("BackupId")]
         [Validation(Required=false)]
-        public bool? Status { get; set; }
+        public string BackupId { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("BackupId")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public string BackupId { get; set; }
+        public bool? Status { get; set; }
 
     }
 

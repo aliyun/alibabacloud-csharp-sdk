@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -21,17 +25,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("StorageType")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string StorageType { get; set; }
 
         [NameInMap("ZoneId")]
         [Validation(Required=false)]
         public string ZoneId { get; set; }
-
-        [NameInMap("StorageType")]
-        [Validation(Required=false)]
-        public string StorageType { get; set; }
 
     }
 

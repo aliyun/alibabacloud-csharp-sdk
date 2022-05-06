@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class MigrateToOtherZoneResponseBody : TeaModel {
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
+        [NameInMap("OrderId")]
+        [Validation(Required=false)]
+        public long? OrderId { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

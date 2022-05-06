@@ -9,9 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class RestoreDdrTableRequest : TeaModel {
+        [NameInMap("BackupId")]
+        [Validation(Required=false)]
+        public string BackupId { get; set; }
+
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -21,37 +37,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("DBInstanceId")]
+        [NameInMap("RestoreTime")]
         [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string RestoreTime { get; set; }
 
         [NameInMap("RestoreType")]
         [Validation(Required=false)]
         public string RestoreType { get; set; }
 
-        [NameInMap("BackupId")]
+        [NameInMap("SourceDBInstanceName")]
         [Validation(Required=false)]
-        public string BackupId { get; set; }
-
-        [NameInMap("RestoreTime")]
-        [Validation(Required=false)]
-        public string RestoreTime { get; set; }
+        public string SourceDBInstanceName { get; set; }
 
         [NameInMap("SourceRegion")]
         [Validation(Required=false)]
         public string SourceRegion { get; set; }
-
-        [NameInMap("SourceDBInstanceName")]
-        [Validation(Required=false)]
-        public string SourceDBInstanceName { get; set; }
 
         [NameInMap("TableMeta")]
         [Validation(Required=false)]

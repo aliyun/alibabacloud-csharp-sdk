@@ -9,37 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceMetricsResponseBody : TeaModel {
-        [NameInMap("TotalRecordCount")]
-        [Validation(Required=false)]
-        public int? TotalRecordCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeDBInstanceMetricsResponseBodyItems> Items { get; set; }
         public class DescribeDBInstanceMetricsResponseBodyItems : TeaModel {
-            [NameInMap("GroupKey")]
-            [Validation(Required=false)]
-            public string GroupKey { get; set; }
-
-            [NameInMap("SortRule")]
-            [Validation(Required=false)]
-            public int? SortRule { get; set; }
-
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
-            [NameInMap("Unit")]
+            [NameInMap("Dimension")]
             [Validation(Required=false)]
-            public string Unit { get; set; }
+            public string Dimension { get; set; }
 
-            [NameInMap("MetricsKey")]
+            [NameInMap("GroupKey")]
             [Validation(Required=false)]
-            public string MetricsKey { get; set; }
+            public string GroupKey { get; set; }
 
             [NameInMap("GroupKeyType")]
             [Validation(Required=false)]
@@ -49,15 +33,31 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string Method { get; set; }
 
-            [NameInMap("Dimension")]
+            [NameInMap("MetricsKey")]
             [Validation(Required=false)]
-            public string Dimension { get; set; }
+            public string MetricsKey { get; set; }
 
             [NameInMap("MetricsKeyAlias")]
             [Validation(Required=false)]
             public string MetricsKeyAlias { get; set; }
 
+            [NameInMap("SortRule")]
+            [Validation(Required=false)]
+            public int? SortRule { get; set; }
+
+            [NameInMap("Unit")]
+            [Validation(Required=false)]
+            public string Unit { get; set; }
+
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalRecordCount")]
+        [Validation(Required=false)]
+        public int? TotalRecordCount { get; set; }
 
     }
 

@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateBackupRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("BackupMethod")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string BackupMethod { get; set; }
+
+        [NameInMap("BackupStrategy")]
+        [Validation(Required=false)]
+        public string BackupStrategy { get; set; }
+
+        [NameInMap("BackupType")]
+        [Validation(Required=false)]
+        public string BackupType { get; set; }
 
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -21,17 +29,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBName { get; set; }
 
-        [NameInMap("BackupStrategy")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public string BackupStrategy { get; set; }
-
-        [NameInMap("BackupMethod")]
-        [Validation(Required=false)]
-        public string BackupMethod { get; set; }
-
-        [NameInMap("BackupType")]
-        [Validation(Required=false)]
-        public string BackupType { get; set; }
+        public long? ResourceOwnerId { get; set; }
 
     }
 

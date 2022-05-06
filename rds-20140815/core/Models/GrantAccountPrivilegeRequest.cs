@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class GrantAccountPrivilegeRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("AccountName")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string AccountName { get; set; }
+
+        [NameInMap("AccountPrivilege")]
+        [Validation(Required=false)]
+        public string AccountPrivilege { get; set; }
 
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
-        [NameInMap("AccountName")]
-        [Validation(Required=false)]
-        public string AccountName { get; set; }
-
         [NameInMap("DBName")]
         [Validation(Required=false)]
         public string DBName { get; set; }
 
-        [NameInMap("AccountPrivilege")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public string AccountPrivilege { get; set; }
+        public long? ResourceOwnerId { get; set; }
 
     }
 

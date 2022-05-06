@@ -9,6 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class MigrateToOtherZoneRequest : TeaModel {
+        [NameInMap("Category")]
+        [Validation(Required=false)]
+        public string Category { get; set; }
+
+        [NameInMap("DBInstanceClass")]
+        [Validation(Required=false)]
+        public string DBInstanceClass { get; set; }
+
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
+        [NameInMap("DBInstanceStorage")]
+        [Validation(Required=false)]
+        public long? DBInstanceStorage { get; set; }
+
+        [NameInMap("EffectiveTime")]
+        [Validation(Required=false)]
+        public string EffectiveTime { get; set; }
+
+        [NameInMap("IsModifySpec")]
+        [Validation(Required=false)]
+        public string IsModifySpec { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -21,33 +49,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("DBInstanceId")]
+        [NameInMap("SwitchTime")]
         [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
+        public string SwitchTime { get; set; }
 
         [NameInMap("VPCId")]
         [Validation(Required=false)]
         public string VPCId { get; set; }
 
-        [NameInMap("ZoneId")]
-        [Validation(Required=false)]
-        public string ZoneId { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("EffectiveTime")]
-        [Validation(Required=false)]
-        public string EffectiveTime { get; set; }
-
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
-        [NameInMap("Category")]
+        [NameInMap("ZoneId")]
         [Validation(Required=false)]
-        public string Category { get; set; }
+        public string ZoneId { get; set; }
 
         [NameInMap("ZoneIdSlave1")]
         [Validation(Required=false)]

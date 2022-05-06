@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateDdrInstanceResponseBody : TeaModel {
+        [NameInMap("ConnectionString")]
+        [Validation(Required=false)]
+        public string ConnectionString { get; set; }
+
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("OrderId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string OrderId { get; set; }
 
         [NameInMap("Port")]
         [Validation(Required=false)]
         public string Port { get; set; }
 
-        [NameInMap("ConnectionString")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string ConnectionString { get; set; }
-
-        [NameInMap("OrderId")]
-        [Validation(Required=false)]
-        public string OrderId { get; set; }
+        public string RequestId { get; set; }
 
     }
 

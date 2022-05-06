@@ -9,9 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceNetworkTypeRequest : TeaModel {
+        [NameInMap("ClassicExpiredDays")]
+        [Validation(Required=false)]
+        public string ClassicExpiredDays { get; set; }
+
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
+        [NameInMap("InstanceNetworkType")]
+        [Validation(Required=false)]
+        public string InstanceNetworkType { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PrivateIpAddress")]
+        [Validation(Required=false)]
+        public string PrivateIpAddress { get; set; }
+
+        [NameInMap("ReadWriteSplittingClassicExpiredDays")]
+        [Validation(Required=false)]
+        public int? ReadWriteSplittingClassicExpiredDays { get; set; }
+
+        [NameInMap("ReadWriteSplittingPrivateIpAddress")]
+        [Validation(Required=false)]
+        public string ReadWriteSplittingPrivateIpAddress { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -21,25 +49,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
         [NameInMap("RetainClassic")]
         [Validation(Required=false)]
         public string RetainClassic { get; set; }
-
-        [NameInMap("ClassicExpiredDays")]
-        [Validation(Required=false)]
-        public string ClassicExpiredDays { get; set; }
-
-        [NameInMap("InstanceNetworkType")]
-        [Validation(Required=false)]
-        public string InstanceNetworkType { get; set; }
-
-        [NameInMap("ReadWriteSplittingClassicExpiredDays")]
-        [Validation(Required=false)]
-        public int? ReadWriteSplittingClassicExpiredDays { get; set; }
 
         [NameInMap("VPCId")]
         [Validation(Required=false)]
@@ -48,18 +60,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
-
-        [NameInMap("PrivateIpAddress")]
-        [Validation(Required=false)]
-        public string PrivateIpAddress { get; set; }
-
-        [NameInMap("ReadWriteSplittingPrivateIpAddress")]
-        [Validation(Required=false)]
-        public string ReadWriteSplittingPrivateIpAddress { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
 
     }
 

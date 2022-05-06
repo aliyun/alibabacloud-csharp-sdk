@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceHAConfigRequest : TeaModel {
+        [NameInMap("DbInstanceId")]
+        [Validation(Required=false)]
+        public string DbInstanceId { get; set; }
+
+        [NameInMap("HAMode")]
+        [Validation(Required=false)]
+        public string HAMode { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -24,18 +36,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("SyncMode")]
         [Validation(Required=false)]
         public string SyncMode { get; set; }
-
-        [NameInMap("HAMode")]
-        [Validation(Required=false)]
-        public string HAMode { get; set; }
-
-        [NameInMap("DbInstanceId")]
-        [Validation(Required=false)]
-        public string DbInstanceId { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
 
     }
 

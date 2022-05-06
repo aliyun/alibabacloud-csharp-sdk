@@ -9,9 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceTDERequest : TeaModel {
+        [NameInMap("Certificate")]
+        [Validation(Required=false)]
+        public string Certificate { get; set; }
+
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
+        [NameInMap("DBName")]
+        [Validation(Required=false)]
+        public string DBName { get; set; }
+
+        [NameInMap("EncryptionKey")]
+        [Validation(Required=false)]
+        public string EncryptionKey { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PassWord")]
+        [Validation(Required=false)]
+        public string PassWord { get; set; }
+
+        [NameInMap("PrivateKey")]
+        [Validation(Required=false)]
+        public string PrivateKey { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -21,41 +49,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
-        [NameInMap("TDEStatus")]
-        [Validation(Required=false)]
-        public string TDEStatus { get; set; }
-
-        [NameInMap("DBName")]
-        [Validation(Required=false)]
-        public string DBName { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("EncryptionKey")]
-        [Validation(Required=false)]
-        public string EncryptionKey { get; set; }
-
         [NameInMap("RoleArn")]
         [Validation(Required=false)]
         public string RoleArn { get; set; }
 
-        [NameInMap("Certificate")]
+        [NameInMap("TDEStatus")]
         [Validation(Required=false)]
-        public string Certificate { get; set; }
-
-        [NameInMap("PrivateKey")]
-        [Validation(Required=false)]
-        public string PrivateKey { get; set; }
-
-        [NameInMap("PassWord")]
-        [Validation(Required=false)]
-        public string PassWord { get; set; }
+        public string TDEStatus { get; set; }
 
     }
 

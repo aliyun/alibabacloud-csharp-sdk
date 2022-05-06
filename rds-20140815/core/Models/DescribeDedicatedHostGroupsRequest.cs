@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDedicatedHostGroupsRequest : TeaModel {
+        [NameInMap("DedicatedHostGroupId")]
+        [Validation(Required=false)]
+        public string DedicatedHostGroupId { get; set; }
+
+        [NameInMap("ImageCategory")]
+        [Validation(Required=false)]
+        public string ImageCategory { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -20,18 +32,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("DedicatedHostGroupId")]
-        [Validation(Required=false)]
-        public string DedicatedHostGroupId { get; set; }
-
-        [NameInMap("ImageCategory")]
-        [Validation(Required=false)]
-        public string ImageCategory { get; set; }
 
     }
 

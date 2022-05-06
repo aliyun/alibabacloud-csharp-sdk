@@ -9,9 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeBackupPolicyRequest : TeaModel {
+        [NameInMap("BackupPolicyMode")]
+        [Validation(Required=false)]
+        public string BackupPolicyMode { get; set; }
+
+        [NameInMap("CompressType")]
+        [Validation(Required=false)]
+        public string CompressType { get; set; }
+
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("ReleasedKeepPolicy")]
+        [Validation(Required=false)]
+        public string ReleasedKeepPolicy { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -20,26 +40,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
-        [NameInMap("BackupPolicyMode")]
-        [Validation(Required=false)]
-        public string BackupPolicyMode { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("CompressType")]
-        [Validation(Required=false)]
-        public string CompressType { get; set; }
-
-        [NameInMap("ReleasedKeepPolicy")]
-        [Validation(Required=false)]
-        public string ReleasedKeepPolicy { get; set; }
 
     }
 

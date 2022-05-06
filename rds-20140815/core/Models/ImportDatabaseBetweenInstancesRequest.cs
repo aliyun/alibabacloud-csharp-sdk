@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ImportDatabaseBetweenInstancesRequest : TeaModel {
+        [NameInMap("DBInfo")]
+        [Validation(Required=false)]
+        public string DBInfo { get; set; }
+
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -21,21 +33,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
         [NameInMap("SourceDBInstanceId")]
         [Validation(Required=false)]
         public string SourceDBInstanceId { get; set; }
-
-        [NameInMap("DBInfo")]
-        [Validation(Required=false)]
-        public string DBInfo { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class TransformDBInstancePayTypeResponseBody : TeaModel {
+        [NameInMap("ChargeType")]
+        [Validation(Required=false)]
+        public string ChargeType { get; set; }
+
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
         [NameInMap("ExpiredTime")]
         [Validation(Required=false)]
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
-        [NameInMap("ChargeType")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string ChargeType { get; set; }
+        public string RequestId { get; set; }
 
     }
 

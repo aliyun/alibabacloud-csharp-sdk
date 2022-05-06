@@ -13,26 +13,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
-        [NameInMap("TotalPageCount")]
-        [Validation(Required=false)]
-        public int? TotalPageCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageRecordCount")]
-        [Validation(Required=false)]
-        public int? PageRecordCount { get; set; }
-
-        [NameInMap("TotalRecordCount")]
-        [Validation(Required=false)]
-        public int? TotalRecordCount { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeCrossBackupMetaListResponseBodyItems Items { get; set; }
@@ -41,11 +21,31 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeCrossBackupMetaListResponseBodyItemsMeta> Meta { get; set; }
             public class DescribeCrossBackupMetaListResponseBodyItemsMeta : TeaModel {
-                public string Tables { get; set; }
                 public string Database { get; set; }
                 public string Size { get; set; }
+                public string Tables { get; set; }
             }
         };
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageRecordCount")]
+        [Validation(Required=false)]
+        public int? PageRecordCount { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalPageCount")]
+        [Validation(Required=false)]
+        public int? TotalPageCount { get; set; }
+
+        [NameInMap("TotalRecordCount")]
+        [Validation(Required=false)]
+        public int? TotalRecordCount { get; set; }
 
     }
 

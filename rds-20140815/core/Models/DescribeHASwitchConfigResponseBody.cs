@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeHASwitchConfigResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("HAConfig")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string HAConfig { get; set; }
 
         [NameInMap("ManualHATime")]
         [Validation(Required=false)]
         public string ManualHATime { get; set; }
 
-        [NameInMap("HAConfig")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string HAConfig { get; set; }
+        public string RequestId { get; set; }
 
     }
 

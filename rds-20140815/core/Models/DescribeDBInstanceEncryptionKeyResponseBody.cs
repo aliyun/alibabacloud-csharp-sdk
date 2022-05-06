@@ -9,25 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceEncryptionKeyResponseBody : TeaModel {
+        [NameInMap("Creator")]
+        [Validation(Required=false)]
+        public string Creator { get; set; }
+
         [NameInMap("DeleteDate")]
         [Validation(Required=false)]
         public string DeleteDate { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("Origin")]
+        [NameInMap("EncryptionKey")]
         [Validation(Required=false)]
-        public string Origin { get; set; }
-
-        [NameInMap("MaterialExpireTime")]
-        [Validation(Required=false)]
-        public string MaterialExpireTime { get; set; }
+        public string EncryptionKey { get; set; }
 
         [NameInMap("EncryptionKeyStatus")]
         [Validation(Required=false)]
@@ -37,13 +33,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string KeyUsage { get; set; }
 
-        [NameInMap("EncryptionKey")]
+        [NameInMap("MaterialExpireTime")]
         [Validation(Required=false)]
-        public string EncryptionKey { get; set; }
+        public string MaterialExpireTime { get; set; }
 
-        [NameInMap("Creator")]
+        [NameInMap("Origin")]
         [Validation(Required=false)]
-        public string Creator { get; set; }
+        public string Origin { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class AllocateInstancePublicConnectionResponseBody : TeaModel {
+        [NameInMap("ConnectionString")]
+        [Validation(Required=false)]
+        public string ConnectionString { get; set; }
+
         [NameInMap("DbInstanceName")]
         [Validation(Required=false)]
         public string DbInstanceName { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("ConnectionString")]
-        [Validation(Required=false)]
-        public string ConnectionString { get; set; }
 
     }
 
