@@ -8,46 +8,46 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
-    public class QuerySoundCodeListResponseBody : TeaModel {
+    public class QuerySoundCodeLabelBatchListResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public QuerySoundCodeListResponseBodyData Data { get; set; }
-        public class QuerySoundCodeListResponseBodyData : TeaModel {
+        public QuerySoundCodeLabelBatchListResponseBodyData Data { get; set; }
+        public class QuerySoundCodeLabelBatchListResponseBodyData : TeaModel {
             [NameInMap("List")]
             [Validation(Required=false)]
-            public QuerySoundCodeListResponseBodyDataList List { get; set; }
-            public class QuerySoundCodeListResponseBodyDataList : TeaModel {
+            public QuerySoundCodeLabelBatchListResponseBodyDataList List { get; set; }
+            public class QuerySoundCodeLabelBatchListResponseBodyDataList : TeaModel {
                 [NameInMap("Items")]
                 [Validation(Required=false)]
-                public List<QuerySoundCodeListResponseBodyDataListItems> Items { get; set; }
-                public class QuerySoundCodeListResponseBodyDataListItems : TeaModel {
-                    [NameInMap("Duration")]
+                public List<QuerySoundCodeLabelBatchListResponseBodyDataListItems> Items { get; set; }
+                public class QuerySoundCodeLabelBatchListResponseBodyDataListItems : TeaModel {
+                    [NameInMap("BatchCode")]
                     [Validation(Required=false)]
-                    public int? Duration { get; set; }
+                    public string BatchCode { get; set; }
+
+                    [NameInMap("Description")]
+                    [Validation(Required=false)]
+                    public string Description { get; set; }
 
                     [NameInMap("GmtCreate")]
                     [Validation(Required=false)]
                     public long? GmtCreate { get; set; }
 
-                    [NameInMap("Name")]
+                    [NameInMap("Status")]
                     [Validation(Required=false)]
-                    public string Name { get; set; }
+                    public string Status { get; set; }
 
-                    [NameInMap("OpenType")]
+                    [NameInMap("SuccessNum")]
                     [Validation(Required=false)]
-                    public string OpenType { get; set; }
+                    public int? SuccessNum { get; set; }
 
-                    [NameInMap("SoundCode")]
+                    [NameInMap("Total")]
                     [Validation(Required=false)]
-                    public string SoundCode { get; set; }
-
-                    [NameInMap("SoundCodeContent")]
-                    [Validation(Required=false)]
-                    public string SoundCodeContent { get; set; }
+                    public int? Total { get; set; }
 
                 }
 

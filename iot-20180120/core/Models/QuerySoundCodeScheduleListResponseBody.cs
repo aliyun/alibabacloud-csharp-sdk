@@ -8,26 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
-    public class QuerySoundCodeListResponseBody : TeaModel {
+    public class QuerySoundCodeScheduleListResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public QuerySoundCodeListResponseBodyData Data { get; set; }
-        public class QuerySoundCodeListResponseBodyData : TeaModel {
+        public QuerySoundCodeScheduleListResponseBodyData Data { get; set; }
+        public class QuerySoundCodeScheduleListResponseBodyData : TeaModel {
             [NameInMap("List")]
             [Validation(Required=false)]
-            public QuerySoundCodeListResponseBodyDataList List { get; set; }
-            public class QuerySoundCodeListResponseBodyDataList : TeaModel {
+            public QuerySoundCodeScheduleListResponseBodyDataList List { get; set; }
+            public class QuerySoundCodeScheduleListResponseBodyDataList : TeaModel {
                 [NameInMap("Items")]
                 [Validation(Required=false)]
-                public List<QuerySoundCodeListResponseBodyDataListItems> Items { get; set; }
-                public class QuerySoundCodeListResponseBodyDataListItems : TeaModel {
-                    [NameInMap("Duration")]
+                public List<QuerySoundCodeScheduleListResponseBodyDataListItems> Items { get; set; }
+                public class QuerySoundCodeScheduleListResponseBodyDataListItems : TeaModel {
+                    [NameInMap("Description")]
                     [Validation(Required=false)]
-                    public int? Duration { get; set; }
+                    public string Description { get; set; }
+
+                    [NameInMap("EndDate")]
+                    [Validation(Required=false)]
+                    public string EndDate { get; set; }
+
+                    [NameInMap("EndTime")]
+                    [Validation(Required=false)]
+                    public string EndTime { get; set; }
 
                     [NameInMap("GmtCreate")]
                     [Validation(Required=false)]
@@ -41,13 +49,21 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                     [Validation(Required=false)]
                     public string OpenType { get; set; }
 
-                    [NameInMap("SoundCode")]
+                    [NameInMap("ScheduleCode")]
                     [Validation(Required=false)]
-                    public string SoundCode { get; set; }
+                    public string ScheduleCode { get; set; }
 
-                    [NameInMap("SoundCodeContent")]
+                    [NameInMap("StartDate")]
                     [Validation(Required=false)]
-                    public string SoundCodeContent { get; set; }
+                    public string StartDate { get; set; }
+
+                    [NameInMap("StartTime")]
+                    [Validation(Required=false)]
+                    public string StartTime { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
 
                 }
 

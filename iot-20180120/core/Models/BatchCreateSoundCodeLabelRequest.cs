@@ -8,26 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
-    public class CreateSoundCodeRequest : TeaModel {
-        [NameInMap("Duration")]
+    public class BatchCreateSoundCodeLabelRequest : TeaModel {
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public int? Duration { get; set; }
+        public string Description { get; set; }
 
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
-        [NameInMap("Name")]
+        [NameInMap("ScheduleCode")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string ScheduleCode { get; set; }
 
-        [NameInMap("OpenType")]
+        [NameInMap("Total")]
         [Validation(Required=false)]
-        public string OpenType { get; set; }
-
-        [NameInMap("SoundCodeContent")]
-        [Validation(Required=false)]
-        public string SoundCodeContent { get; set; }
+        public int? Total { get; set; }
 
     }
 

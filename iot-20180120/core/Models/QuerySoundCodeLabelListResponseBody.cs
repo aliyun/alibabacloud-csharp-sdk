@@ -8,46 +8,30 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
-    public class QuerySoundCodeListResponseBody : TeaModel {
+    public class QuerySoundCodeLabelListResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public QuerySoundCodeListResponseBodyData Data { get; set; }
-        public class QuerySoundCodeListResponseBodyData : TeaModel {
+        public QuerySoundCodeLabelListResponseBodyData Data { get; set; }
+        public class QuerySoundCodeLabelListResponseBodyData : TeaModel {
             [NameInMap("List")]
             [Validation(Required=false)]
-            public QuerySoundCodeListResponseBodyDataList List { get; set; }
-            public class QuerySoundCodeListResponseBodyDataList : TeaModel {
+            public QuerySoundCodeLabelListResponseBodyDataList List { get; set; }
+            public class QuerySoundCodeLabelListResponseBodyDataList : TeaModel {
                 [NameInMap("Items")]
                 [Validation(Required=false)]
-                public List<QuerySoundCodeListResponseBodyDataListItems> Items { get; set; }
-                public class QuerySoundCodeListResponseBodyDataListItems : TeaModel {
-                    [NameInMap("Duration")]
+                public List<QuerySoundCodeLabelListResponseBodyDataListItems> Items { get; set; }
+                public class QuerySoundCodeLabelListResponseBodyDataListItems : TeaModel {
+                    [NameInMap("Label")]
                     [Validation(Required=false)]
-                    public int? Duration { get; set; }
-
-                    [NameInMap("GmtCreate")]
-                    [Validation(Required=false)]
-                    public long? GmtCreate { get; set; }
-
-                    [NameInMap("Name")]
-                    [Validation(Required=false)]
-                    public string Name { get; set; }
-
-                    [NameInMap("OpenType")]
-                    [Validation(Required=false)]
-                    public string OpenType { get; set; }
+                    public string Label { get; set; }
 
                     [NameInMap("SoundCode")]
                     [Validation(Required=false)]
                     public string SoundCode { get; set; }
-
-                    [NameInMap("SoundCodeContent")]
-                    [Validation(Required=false)]
-                    public string SoundCodeContent { get; set; }
 
                 }
 

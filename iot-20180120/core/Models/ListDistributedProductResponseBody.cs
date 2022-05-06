@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 public class ListDistributedProductResponseBodyDataInfoItems : TeaModel {
                     [NameInMap("GmtCreate")]
                     [Validation(Required=false)]
-                    public int? GmtCreate { get; set; }
+                    public long? GmtCreate { get; set; }
 
                     [NameInMap("ProductKey")]
                     [Validation(Required=false)]
