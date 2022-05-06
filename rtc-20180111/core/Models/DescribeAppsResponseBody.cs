@@ -22,6 +22,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
                 public string AppType { get; set; }
                 public string BillType { get; set; }
                 public string CreateTime { get; set; }
+                public string Region { get; set; }
                 public DescribeAppsResponseBodyAppListAppServiceAreas ServiceAreas { get; set; }
                 public class DescribeAppsResponseBodyAppListAppServiceAreas : TeaModel {
                     [NameInMap("ServiceArea")]
