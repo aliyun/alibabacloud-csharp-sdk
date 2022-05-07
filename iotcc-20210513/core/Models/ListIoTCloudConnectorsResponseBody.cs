@@ -49,6 +49,14 @@ namespace AlibabaCloud.SDK.IoTCC20210513.Models
             [Validation(Required=false)]
             public string IoTCloudConnectorStatus { get; set; }
 
+            [NameInMap("IpFeature")]
+            [Validation(Required=false)]
+            public string IpFeature { get; set; }
+
+            [NameInMap("Mode")]
+            [Validation(Required=false)]
+            public string Mode { get; set; }
+
             [NameInMap("ModifyTime")]
             [Validation(Required=false)]
             public long? ModifyTime { get; set; }

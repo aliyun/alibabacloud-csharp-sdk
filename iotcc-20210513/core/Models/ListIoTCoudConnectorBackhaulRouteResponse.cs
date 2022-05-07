@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.IoTCC20210513.Models
 {
-    public class ListIoTCloudConnectorGroupsResponse : TeaModel {
+    public class ListIoTCoudConnectorBackhaulRouteResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.IoTCC20210513.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ListIoTCloudConnectorGroupsResponseBody Body { get; set; }
+        public ListIoTCoudConnectorBackhaulRouteResponseBody Body { get; set; }
 
     }
 
