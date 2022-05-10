@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
-    public class GetDataServicePublishedApiResponse : TeaModel {
+    public class ListMigrationsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public GetDataServicePublishedApiResponseBody Body { get; set; }
+        public ListMigrationsResponseBody Body { get; set; }
 
     }
 
