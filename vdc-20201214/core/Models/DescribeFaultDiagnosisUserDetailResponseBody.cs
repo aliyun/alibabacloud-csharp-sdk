@@ -78,6 +78,14 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
                     [Validation(Required=false)]
                     public List<DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItemsEventList> EventList { get; set; }
                     public class DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItemsEventList : TeaModel {
+                        [NameInMap("Acs")]
+                        [Validation(Required=false)]
+                        public string Acs { get; set; }
+
+                        [NameInMap("EventCode")]
+                        [Validation(Required=false)]
+                        public string EventCode { get; set; }
+
                         /// <summary>
                         /// 事件名称。
                         /// </summary>
@@ -92,12 +100,40 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
                         [Validation(Required=false)]
                         public string EventType { get; set; }
 
+                        [NameInMap("Os")]
+                        [Validation(Required=false)]
+                        public string Os { get; set; }
+
+                        [NameInMap("Sdk")]
+                        [Validation(Required=false)]
+                        public string Sdk { get; set; }
+
+                        [NameInMap("StreamName")]
+                        [Validation(Required=false)]
+                        public string StreamName { get; set; }
+
+                        [NameInMap("StreamType")]
+                        [Validation(Required=false)]
+                        public string StreamType { get; set; }
+
+                        [NameInMap("TrackCode")]
+                        [Validation(Required=false)]
+                        public string TrackCode { get; set; }
+
+                        [NameInMap("TrackName")]
+                        [Validation(Required=false)]
+                        public string TrackName { get; set; }
+
                         /// <summary>
                         /// 事件发生的时间，使用UNIX时间戳表示，单位：秒。
                         /// </summary>
                         [NameInMap("Ts")]
                         [Validation(Required=false)]
                         public long? Ts { get; set; }
+
+                        [NameInMap("UserId")]
+                        [Validation(Required=false)]
+                        public string UserId { get; set; }
 
                     }
 

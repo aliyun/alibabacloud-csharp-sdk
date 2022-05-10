@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vdc20201214.Models
 {
-    public class DescribeRtcChannelUsersResponse : TeaModel {
+    public class DescribeCallInfoResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeRtcChannelUsersResponseBody Body { get; set; }
+        public DescribeCallInfoResponseBody Body { get; set; }
 
     }
 

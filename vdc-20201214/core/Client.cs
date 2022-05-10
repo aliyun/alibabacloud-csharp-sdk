@@ -609,6 +609,100 @@ namespace AlibabaCloud.SDK.Vdc20201214
             return TeaModel.ToObject<DescribeCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        public DescribeCallInfoResponse DescribeCallInfo(DescribeCallInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeCallInfoWithOptions(request, headers, runtime);
+        }
+
+        public async Task<DescribeCallInfoResponse> DescribeCallInfoAsync(DescribeCallInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeCallInfoWithOptionsAsync(request, headers, runtime);
+        }
+
+        public DescribeCallInfoResponse DescribeCallInfoWithOptions(DescribeCallInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                query["ChannelId"] = request.ChannelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreatedTs))
+            {
+                query["CreatedTs"] = request.CreatedTs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestroyedTs))
+            {
+                query["DestroyedTs"] = request.DestroyedTs;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCallInfo",
+                Version = "2020-12-14",
+                Protocol = "HTTPS",
+                Pathname = "/api/call/describeCallInfo",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCallInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeCallInfoResponse> DescribeCallInfoWithOptionsAsync(DescribeCallInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                query["ChannelId"] = request.ChannelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreatedTs))
+            {
+                query["CreatedTs"] = request.CreatedTs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestroyedTs))
+            {
+                query["DestroyedTs"] = request.DestroyedTs;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCallInfo",
+                Version = "2020-12-14",
+                Protocol = "HTTPS",
+                Pathname = "/api/call/describeCallInfo",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCallInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public DescribeCallListResponse DescribeCallList(DescribeCallListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -929,6 +1023,148 @@ namespace AlibabaCloud.SDK.Vdc20201214
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeCallUserExpResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeCallUserListResponse DescribeCallUserList(DescribeCallUserListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeCallUserListWithOptions(request, headers, runtime);
+        }
+
+        public async Task<DescribeCallUserListResponse> DescribeCallUserListAsync(DescribeCallUserListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeCallUserListWithOptionsAsync(request, headers, runtime);
+        }
+
+        public DescribeCallUserListResponse DescribeCallUserListWithOptions(DescribeCallUserListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                query["ChannelId"] = request.ChannelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreatedTs))
+            {
+                query["CreatedTs"] = request.CreatedTs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestroyedTs))
+            {
+                query["DestroyedTs"] = request.DestroyedTs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtDataType))
+            {
+                query["ExtDataType"] = request.ExtDataType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryExpInfo))
+            {
+                query["QueryExpInfo"] = request.QueryExpInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                query["RoleType"] = request.RoleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCallUserList",
+                Version = "2020-12-14",
+                Protocol = "HTTPS",
+                Pathname = "/api/call/describeCallUserList",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCallUserListResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeCallUserListResponse> DescribeCallUserListWithOptionsAsync(DescribeCallUserListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                query["ChannelId"] = request.ChannelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreatedTs))
+            {
+                query["CreatedTs"] = request.CreatedTs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestroyedTs))
+            {
+                query["DestroyedTs"] = request.DestroyedTs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtDataType))
+            {
+                query["ExtDataType"] = request.ExtDataType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryExpInfo))
+            {
+                query["QueryExpInfo"] = request.QueryExpInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                query["RoleType"] = request.RoleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCallUserList",
+                Version = "2020-12-14",
+                Protocol = "HTTPS",
+                Pathname = "/api/call/describeCallUserList",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCallUserListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeChannelAreaDistributionStatDataResponse DescribeChannelAreaDistributionStatData(DescribeChannelAreaDistributionStatDataRequest request)
