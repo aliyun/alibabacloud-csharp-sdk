@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class StartImageVulScanResponse : TeaModel {
+    public class PublicSyncAndCreateImageScanTaskResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
-        public StartImageVulScanResponseBody Body { get; set; }
+        public PublicSyncAndCreateImageScanTaskResponseBody Body { get; set; }
 
     }
 

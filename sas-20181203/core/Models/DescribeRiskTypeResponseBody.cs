@@ -49,10 +49,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     [Validation(Required=false)]
                     public List<DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetailsRules> Rules { get; set; }
                     public class DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetailsRules : TeaModel {
-                        [NameInMap("DefaultValue")]
-                        [Validation(Required=false)]
-                        public int? DefaultValue { get; set; }
-
                         [NameInMap("Optional")]
                         [Validation(Required=false)]
                         public int? Optional { get; set; }

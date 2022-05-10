@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
-
         [NameInMap("List")]
         [Validation(Required=false)]
         public List<QueryGroupedSecurityEventMarkMissListResponseBodyList> List { get; set; }
@@ -78,20 +74,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string FiledAliasName { get; set; }
 
             /// <summary>
-            /// 创建时间
-            /// </summary>
-            [NameInMap("GmtCreate")]
-            [Validation(Required=false)]
-            public long? GmtCreate { get; set; }
-
-            /// <summary>
-            /// 修改时间
-            /// </summary>
-            [NameInMap("GmtModified")]
-            [Validation(Required=false)]
-            public long? GmtModified { get; set; }
-
-            /// <summary>
             /// 操作符
             /// </summary>
             [NameInMap("Operate")]
@@ -136,10 +118,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("TimeCost")]
-        [Validation(Required=false)]
-        public long? TimeCost { get; set; }
 
     }
 
