@@ -103,6 +103,10 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
 
                 }
 
+                [NameInMap("AutoStep")]
+                [Validation(Required=false)]
+                public bool? AutoStep { get; set; }
+
                 [NameInMap("Configuration")]
                 [Validation(Required=false)]
                 public GetPtsSceneResponseBodySceneLoadConfigConfiguration Configuration { get; set; }
@@ -120,6 +124,14 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
                     [Validation(Required=false)]
                     public int? AllRpsLimit { get; set; }
                 };
+
+                [NameInMap("Increment")]
+                [Validation(Required=false)]
+                public int? Increment { get; set; }
+
+                [NameInMap("KeepTime")]
+                [Validation(Required=false)]
+                public int? KeepTime { get; set; }
 
                 [NameInMap("MaxRunningTime")]
                 [Validation(Required=false)]
@@ -146,6 +158,24 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
                 [NameInMap("TestMode")]
                 [Validation(Required=false)]
                 public string TestMode { get; set; }
+
+                [NameInMap("VpcLoadConfig")]
+                [Validation(Required=false)]
+                public GetPtsSceneResponseBodySceneLoadConfigVpcLoadConfig VpcLoadConfig { get; set; }
+                public class GetPtsSceneResponseBodySceneLoadConfigVpcLoadConfig : TeaModel {
+                    [NameInMap("RegionId")]
+                    [Validation(Required=false)]
+                    public string RegionId { get; set; }
+                    [NameInMap("SecurityGroupId")]
+                    [Validation(Required=false)]
+                    public string SecurityGroupId { get; set; }
+                    [NameInMap("VSwitchId")]
+                    [Validation(Required=false)]
+                    public string VSwitchId { get; set; }
+                    [NameInMap("VpcId")]
+                    [Validation(Required=false)]
+                    public string VpcId { get; set; }
+                };
 
             }
             [NameInMap("ModifiedTime")]

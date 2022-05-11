@@ -41,25 +41,9 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
         [Validation(Required=false)]
         public List<GetUserVpcSecurityGroupResponseBodySecurityGroupList> SecurityGroupList { get; set; }
         public class GetUserVpcSecurityGroupResponseBodySecurityGroupList : TeaModel {
-            [NameInMap("AvailableInstanceAmount")]
-            [Validation(Required=false)]
-            public int? AvailableInstanceAmount { get; set; }
-
-            [NameInMap("CreationTime")]
-            [Validation(Required=false)]
-            public string CreationTime { get; set; }
-
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
-
-            [NameInMap("EcsCount")]
-            [Validation(Required=false)]
-            public int? EcsCount { get; set; }
-
-            [NameInMap("ResourceGroupId")]
-            [Validation(Required=false)]
-            public string ResourceGroupId { get; set; }
 
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
@@ -68,20 +52,6 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
             [NameInMap("SecurityGroupName")]
             [Validation(Required=false)]
             public string SecurityGroupName { get; set; }
-
-            [NameInMap("Tags")]
-            [Validation(Required=false)]
-            public List<GetUserVpcSecurityGroupResponseBodySecurityGroupListTags> Tags { get; set; }
-            public class GetUserVpcSecurityGroupResponseBodySecurityGroupListTags : TeaModel {
-                [NameInMap("Key")]
-                [Validation(Required=false)]
-                public string Key { get; set; }
-
-                [NameInMap("Value")]
-                [Validation(Required=false)]
-                public string Value { get; set; }
-
-            }
 
             [NameInMap("VpcId")]
             [Validation(Required=false)]

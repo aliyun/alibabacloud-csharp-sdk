@@ -49,25 +49,9 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
             [Validation(Required=false)]
             public string CidrBlock { get; set; }
 
-            [NameInMap("CreationTime")]
-            [Validation(Required=false)]
-            public string CreationTime { get; set; }
-
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
-
-            [NameInMap("Ipv6CidrBlock")]
-            [Validation(Required=false)]
-            public string Ipv6CidrBlock { get; set; }
-
-            [NameInMap("IsDefault")]
-            [Validation(Required=false)]
-            public bool? IsDefault { get; set; }
-
-            [NameInMap("NatGatewayIds")]
-            [Validation(Required=false)]
-            public List<string> NatGatewayIds { get; set; }
 
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -80,32 +64,6 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
             [NameInMap("RouterTableIds")]
             [Validation(Required=false)]
             public List<string> RouterTableIds { get; set; }
-
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
-            [NameInMap("Tags")]
-            [Validation(Required=false)]
-            public List<GetUserVpcsResponseBodyVpcsTags> Tags { get; set; }
-            public class GetUserVpcsResponseBodyVpcsTags : TeaModel {
-                [NameInMap("Key")]
-                [Validation(Required=false)]
-                public string Key { get; set; }
-
-                [NameInMap("Value")]
-                [Validation(Required=false)]
-                public string Value { get; set; }
-
-            }
-
-            [NameInMap("UserCidrs")]
-            [Validation(Required=false)]
-            public List<string> UserCidrs { get; set; }
-
-            [NameInMap("VRouterId")]
-            [Validation(Required=false)]
-            public string VRouterId { get; set; }
 
             [NameInMap("VSwitchIds")]
             [Validation(Required=false)]
