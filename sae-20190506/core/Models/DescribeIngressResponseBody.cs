@@ -46,6 +46,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [NameInMap("ListenerPort")]
             [Validation(Required=false)]
             public int? ListenerPort { get; set; }
+            [NameInMap("ListenerProtocol")]
+            [Validation(Required=false)]
+            public string ListenerProtocol { get; set; }
+            [NameInMap("LoadBalanceType")]
+            [Validation(Required=false)]
+            public string LoadBalanceType { get; set; }
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }

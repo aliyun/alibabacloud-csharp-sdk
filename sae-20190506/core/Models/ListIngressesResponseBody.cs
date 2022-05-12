@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string Description { get; set; }
                 public long? Id { get; set; }
                 public string ListenerPort { get; set; }
+                public string ListenerProtocol { get; set; }
+                public string LoadBalanceType { get; set; }
                 public string Name { get; set; }
                 public string NamespaceId { get; set; }
                 public string SlbId { get; set; }

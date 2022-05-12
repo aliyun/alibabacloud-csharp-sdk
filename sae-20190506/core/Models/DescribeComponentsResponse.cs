@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
         public DescribeComponentsResponseBody Body { get; set; }

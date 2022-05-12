@@ -20,6 +20,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [NameInMap("AcrAssumeRoleArn")]
             [Validation(Required=false)]
             public string AcrAssumeRoleArn { get; set; }
+            [NameInMap("AcrInstanceId")]
+            [Validation(Required=false)]
+            public string AcrInstanceId { get; set; }
             [NameInMap("AppDescription")]
             [Validation(Required=false)]
             public string AppDescription { get; set; }
@@ -153,6 +156,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [NameInMap("PreStop")]
             [Validation(Required=false)]
             public string PreStop { get; set; }
+            [NameInMap("ProgrammingLanguage")]
+            [Validation(Required=false)]
+            public string ProgrammingLanguage { get; set; }
             [NameInMap("Readiness")]
             [Validation(Required=false)]
             public string Readiness { get; set; }

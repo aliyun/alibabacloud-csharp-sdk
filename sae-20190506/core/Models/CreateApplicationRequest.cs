@@ -87,6 +87,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Jdk { get; set; }
 
+        [NameInMap("KafkaConfigs")]
+        [Validation(Required=false)]
+        public string KafkaConfigs { get; set; }
+
         [NameInMap("KafkaEndpoint")]
         [Validation(Required=false)]
         public string KafkaEndpoint { get; set; }
@@ -179,6 +183,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("PreStop")]
         [Validation(Required=false)]
         public string PreStop { get; set; }
+
+        [NameInMap("ProgrammingLanguage")]
+        [Validation(Required=false)]
+        public string ProgrammingLanguage { get; set; }
 
         [NameInMap("Readiness")]
         [Validation(Required=false)]

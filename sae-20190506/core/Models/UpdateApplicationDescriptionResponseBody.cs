@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
-    public class UploadFilesResponseBody : TeaModel {
+    public class UpdateApplicationDescriptionResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public string Data { get; set; }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

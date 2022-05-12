@@ -8,18 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
-    public class DownloadFilesRequest : TeaModel {
+    public class UpdateApplicationVswitchesRequest : TeaModel {
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
-        [NameInMap("InstanceId")]
+        [NameInMap("VSwitchId")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("Localpath")]
-        [Validation(Required=false)]
-        public string Localpath { get; set; }
+        public string VSwitchId { get; set; }
 
     }
 

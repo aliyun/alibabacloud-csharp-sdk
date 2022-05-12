@@ -94,6 +94,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Jdk { get; set; }
 
+        [NameInMap("KafkaConfigs")]
+        [Validation(Required=false)]
+        public string KafkaConfigs { get; set; }
+
         [NameInMap("KafkaEndpoint")]
         [Validation(Required=false)]
         public string KafkaEndpoint { get; set; }

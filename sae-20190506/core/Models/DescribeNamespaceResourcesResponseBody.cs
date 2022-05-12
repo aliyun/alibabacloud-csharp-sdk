@@ -26,6 +26,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+            [NameInMap("JumpServerAppId")]
+            [Validation(Required=false)]
+            public string JumpServerAppId { get; set; }
+            [NameInMap("JumpServerIp")]
+            [Validation(Required=false)]
+            public string JumpServerIp { get; set; }
             [NameInMap("LastChangeOrderId")]
             [Validation(Required=false)]
             public string LastChangeOrderId { get; set; }

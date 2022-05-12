@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
-    public class DownloadFilesResponse : TeaModel {
+    public class UpdateApplicationVswitchesResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DownloadFilesResponseBody Body { get; set; }
+        public UpdateApplicationVswitchesResponseBody Body { get; set; }
 
     }
 
