@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class CreatePickUpWaybillShrinkRequest : TeaModel {
+        [NameInMap("AppointGotEndTime")]
+        [Validation(Required=false)]
+        public string AppointGotEndTime { get; set; }
+
+        [NameInMap("AppointGotStartTime")]
+        [Validation(Required=false)]
+        public string AppointGotStartTime { get; set; }
+
+        [NameInMap("BizType")]
+        [Validation(Required=false)]
+        public int? BizType { get; set; }
+
         [NameInMap("ConsigneeAddress")]
         [Validation(Required=false)]
         public string ConsigneeAddressShrink { get; set; }

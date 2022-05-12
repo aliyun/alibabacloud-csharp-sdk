@@ -1523,6 +1523,18 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 request.SendAddressShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SendAddress.ToMap(), "SendAddress", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppointGotEndTime))
+            {
+                query["AppointGotEndTime"] = request.AppointGotEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppointGotStartTime))
+            {
+                query["AppointGotStartTime"] = request.AppointGotStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsigneeAddressShrink))
             {
                 query["ConsigneeAddress"] = request.ConsigneeAddressShrink;
@@ -1612,6 +1624,18 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 request.SendAddressShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SendAddress.ToMap(), "SendAddress", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppointGotEndTime))
+            {
+                query["AppointGotEndTime"] = request.AppointGotEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppointGotStartTime))
+            {
+                query["AppointGotStartTime"] = request.AppointGotStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsigneeAddressShrink))
             {
                 query["ConsigneeAddress"] = request.ConsigneeAddressShrink;
