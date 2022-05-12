@@ -86,6 +86,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [NameInMap("spaceType")]
             [Validation(Required=false)]
             public string SpaceType { get; set; }
+            [NameInMap("sprintIdentifier")]
+            [Validation(Required=false)]
+            public string SprintIdentifier { get; set; }
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }

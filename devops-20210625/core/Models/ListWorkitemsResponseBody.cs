@@ -164,6 +164,13 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             public string SpaceType { get; set; }
 
             /// <summary>
+            /// 迭代id
+            /// </summary>
+            [NameInMap("sprintIdentifier")]
+            [Validation(Required=false)]
+            public string SprintIdentifier { get; set; }
+
+            /// <summary>
             /// 状态名称
             /// </summary>
             [NameInMap("status")]

@@ -44,39 +44,6 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public GetWorkItemInfoResponseBodyWorkitem Workitem { get; set; }
         public class GetWorkItemInfoResponseBodyWorkitem : TeaModel {
-            [NameInMap("ak")]
-            [Validation(Required=true)]
-            public GetWorkItemInfoResponseBodyWorkitemAk Ak { get; set; }
-            public class GetWorkItemInfoResponseBodyWorkitemAk : TeaModel {
-                [NameInMap("issue")]
-                [Validation(Required=true)]
-                public GetWorkItemInfoResponseBodyWorkitemAkIssue Issue { get; set; }
-                public class GetWorkItemInfoResponseBodyWorkitemAkIssue : TeaModel {
-                    [NameInMap("member")]
-                    [Validation(Required=false)]
-                    public List<string> Member { get; set; }
-                };
-
-            }
-            [NameInMap("workitem")]
-            [Validation(Required=true)]
-            public GetWorkItemInfoResponseBodyWorkitemWorkitem Workitem { get; set; }
-            public class GetWorkItemInfoResponseBodyWorkitemWorkitem : TeaModel {
-                /// <summary>
-                /// 抄送人的account id列表
-                /// </summary>
-                [NameInMap("tracker")]
-                [Validation(Required=false)]
-                public List<string> Tracker { get; set; }
-
-                /// <summary>
-                /// 验证者的account id列表
-                /// </summary>
-                [NameInMap("verifier")]
-                [Validation(Required=false)]
-                public List<string> Verifier { get; set; }
-
-            }
             [NameInMap("assignedTo")]
             [Validation(Required=false)]
             public string AssignedTo { get; set; }
@@ -128,6 +95,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [NameInMap("parentIdentifier")]
             [Validation(Required=false)]
             public string ParentIdentifier { get; set; }
+            [NameInMap("participant")]
+            [Validation(Required=false)]
+            public List<string> Participant { get; set; }
             [NameInMap("serialNumber")]
             [Validation(Required=false)]
             public string SerialNumber { get; set; }
@@ -158,9 +128,15 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [NameInMap("tag")]
             [Validation(Required=false)]
             public List<string> Tag { get; set; }
+            [NameInMap("tracker")]
+            [Validation(Required=false)]
+            public List<string> Tracker { get; set; }
             [NameInMap("updateStatusAt")]
             [Validation(Required=false)]
             public long? UpdateStatusAt { get; set; }
+            [NameInMap("verifier")]
+            [Validation(Required=false)]
+            public List<string> Verifier { get; set; }
             [NameInMap("workitemTypeIdentifier")]
             [Validation(Required=false)]
             public string WorkitemTypeIdentifier { get; set; }

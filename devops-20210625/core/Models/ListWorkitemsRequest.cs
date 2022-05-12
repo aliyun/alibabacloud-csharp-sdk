@@ -59,6 +59,13 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         public string OrderBy { get; set; }
 
         /// <summary>
+        /// 查询类型
+        /// </summary>
+        [NameInMap("searchType")]
+        [Validation(Required=false)]
+        public string SearchType { get; set; }
+
+        /// <summary>
         /// 项目id
         /// </summary>
         [NameInMap("spaceIdentifier")]

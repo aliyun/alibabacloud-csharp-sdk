@@ -9,36 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class CreateWorkitemRequest : TeaModel {
-        [NameInMap("ak")]
-        [Validation(Required=true)]
-        public CreateWorkitemRequestAk Ak { get; set; }
-        public class CreateWorkitemRequestAk : TeaModel {
-            [NameInMap("issue")]
-            [Validation(Required=true)]
-            public CreateWorkitemRequestAkIssue Issue { get; set; }
-            public class CreateWorkitemRequestAkIssue : TeaModel {
-                /// <summary>
-                /// 参与人account id列表，或者企业名称列表
-                /// </summary>
-                [NameInMap("member")]
-                [Validation(Required=false)]
-                public List<string> Member { get; set; }
-
-            }
-        };
-
-        [NameInMap("workitem")]
-        [Validation(Required=true)]
-        public CreateWorkitemRequestWorkitem Workitem { get; set; }
-        public class CreateWorkitemRequestWorkitem : TeaModel {
-            [NameInMap("tracker")]
-            [Validation(Required=false)]
-            public List<string> Tracker { get; set; }
-            [NameInMap("verifier")]
-            [Validation(Required=false)]
-            public List<string> Verifier { get; set; }
-        };
-
         /// <summary>
         /// 工作项负责人的account id，或者企业中的用户名
         /// </summary>
@@ -105,6 +75,13 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         public string Parent { get; set; }
 
         /// <summary>
+        /// 参与人account id列表，或者企业名称列表
+        /// </summary>
+        [NameInMap("participant")]
+        [Validation(Required=false)]
+        public List<string> Participant { get; set; }
+
+        /// <summary>
         /// 项目id
         /// </summary>
         [NameInMap("space")]
@@ -138,6 +115,20 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [NameInMap("subject")]
         [Validation(Required=false)]
         public string Subject { get; set; }
+
+        /// <summary>
+        /// 抄送人account id列表
+        /// </summary>
+        [NameInMap("tracker")]
+        [Validation(Required=false)]
+        public List<string> Tracker { get; set; }
+
+        /// <summary>
+        /// 验证者account id列表，或者企业名称列表
+        /// </summary>
+        [NameInMap("verifier")]
+        [Validation(Required=false)]
+        public List<string> Verifier { get; set; }
 
         /// <summary>
         /// 工作项小类型id
