@@ -49,6 +49,18 @@ namespace AlibabaCloud.SDK.UniMkt20181212.Models
         [Validation(Required=false)]
         public int? IndustryLabelBagId { get; set; }
 
+        [NameInMap("MediaIdBlackList")]
+        [Validation(Required=false)]
+        public List<string> MediaIdBlackList { get; set; }
+
+        [NameInMap("MediaIdWhiteList")]
+        [Validation(Required=false)]
+        public List<string> MediaIdWhiteList { get; set; }
+
+        [NameInMap("MediaIndustry")]
+        [Validation(Required=false)]
+        public string MediaIndustry { get; set; }
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

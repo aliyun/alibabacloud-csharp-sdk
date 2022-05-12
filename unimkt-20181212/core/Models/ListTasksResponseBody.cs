@@ -29,7 +29,27 @@ namespace AlibabaCloud.SDK.UniMkt20181212.Models
             public class ListTasksResponseBodyDataList : TeaModel {
                 public string AccountNo { get; set; }
                 public long? AccountStatus { get; set; }
+                public ListTasksResponseBodyDataListActualBankRegisterVO ActualBankRegisterVO { get; set; }
+                public class ListTasksResponseBodyDataListActualBankRegisterVO : TeaModel {
+                    [NameInMap("InComingPartsNumber")]
+                    [Validation(Required=false)]
+                    public long? InComingPartsNumber { get; set; }
+
+                    [NameInMap("SwipingCardNumber")]
+                    [Validation(Required=false)]
+                    public long? SwipingCardNumber { get; set; }
+
+                    [NameInMap("VerificationCardNumber")]
+                    [Validation(Required=false)]
+                    public long? VerificationCardNumber { get; set; }
+
+                    [NameInMap("VisaInterviewNumber")]
+                    [Validation(Required=false)]
+                    public long? VisaInterviewNumber { get; set; }
+
+                }
                 public long? ActualConsumeAmount { get; set; }
+                public string ActualInfo { get; set; }
                 public long? BrandActualResultNumber { get; set; }
                 public long? BrandPredictResultNumber { get; set; }
                 public long? BrandUserId { get; set; }
@@ -40,6 +60,7 @@ namespace AlibabaCloud.SDK.UniMkt20181212.Models
                 public long? CouponOldActualResultNumber { get; set; }
                 public long? CouponOldPredictResultNumber { get; set; }
                 public long? CouponOldPriceStep { get; set; }
+                public long? CurrencyType { get; set; }
                 public long? EndTime { get; set; }
                 public long? GmtCreate { get; set; }
                 public long? GmtModified { get; set; }
@@ -51,7 +72,27 @@ namespace AlibabaCloud.SDK.UniMkt20181212.Models
                 public string OpNick { get; set; }
                 public long? OrderActualResultNumber { get; set; }
                 public long? OrderPredictResultNumber { get; set; }
+                public ListTasksResponseBodyDataListPredictBankRegisterVO PredictBankRegisterVO { get; set; }
+                public class ListTasksResponseBodyDataListPredictBankRegisterVO : TeaModel {
+                    [NameInMap("InComingPartsNumber")]
+                    [Validation(Required=false)]
+                    public long? InComingPartsNumber { get; set; }
+
+                    [NameInMap("SwipingCardNumber")]
+                    [Validation(Required=false)]
+                    public long? SwipingCardNumber { get; set; }
+
+                    [NameInMap("VerificationCardNumber")]
+                    [Validation(Required=false)]
+                    public long? VerificationCardNumber { get; set; }
+
+                    [NameInMap("VisaInterviewNumber")]
+                    [Validation(Required=false)]
+                    public long? VisaInterviewNumber { get; set; }
+
+                }
                 public long? PredictConsumeAmount { get; set; }
+                public string PredictInfo { get; set; }
                 public long? PriceType { get; set; }
                 public long? ProxyUserId { get; set; }
                 public string ProxyUserNick { get; set; }

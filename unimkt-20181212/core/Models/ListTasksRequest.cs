@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.UniMkt20181212.Models
         [Validation(Required=false)]
         public string BrandUserNick { get; set; }
 
+        [NameInMap("CurrencyType")]
+        [Validation(Required=false)]
+        public long? CurrencyType { get; set; }
+
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }

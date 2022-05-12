@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.UniMkt20181212.Models
         [Validation(Required=false)]
         public long? BrandUserId { get; set; }
 
+        [NameInMap("BrandUserNick")]
+        [Validation(Required=false)]
+        public string BrandUserNick { get; set; }
+
         [NameInMap("ChannelId")]
         [Validation(Required=false)]
         public string ChannelId { get; set; }
