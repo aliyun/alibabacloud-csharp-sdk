@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string AliasName { get; set; }
 
+            [NameInMap("CheckType")]
+            [Validation(Required=false)]
+            public int? CheckType { get; set; }
+
             [NameInMap("GmtLastCheck")]
             [Validation(Required=false)]
             public long? GmtLastCheck { get; set; }

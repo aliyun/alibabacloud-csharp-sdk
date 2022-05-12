@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeEmgVulItemRequest : TeaModel {
+        /// <summary>
+        /// 检测方式
+        /// </summary>
+        [NameInMap("CheckType")]
+        [Validation(Required=false)]
+        public int? CheckType { get; set; }
+
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
