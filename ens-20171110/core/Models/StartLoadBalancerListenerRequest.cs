@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public int? ListenerPort { get; set; }
 
+        [NameInMap("ListenerProtocol")]
+        [Validation(Required=false)]
+        public string ListenerProtocol { get; set; }
+
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
         public string LoadBalancerId { get; set; }

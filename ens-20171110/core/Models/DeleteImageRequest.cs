@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class ReleasePrePaidInstanceRequest : TeaModel {
-        [NameInMap("InstanceId")]
+    public class DeleteImageRequest : TeaModel {
+        [NameInMap("ImageId")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string ImageId { get; set; }
 
     }
 
