@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string IntranetDomain { get; set; }
 
+            [NameInMap("MseVersion")]
+            [Validation(Required=false)]
+            public string MseVersion { get; set; }
+
             [NameInMap("VersionCode")]
             [Validation(Required=false)]
             public string VersionCode { get; set; }

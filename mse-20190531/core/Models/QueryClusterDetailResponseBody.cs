@@ -81,6 +81,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string PodName { get; set; }
                 public string Role { get; set; }
                 public string SingleTunnelVip { get; set; }
+                public string Zone { get; set; }
             }
             [NameInMap("InternetAddress")]
             [Validation(Required=false)]

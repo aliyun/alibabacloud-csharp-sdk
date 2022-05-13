@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Md5 { get; set; }
 
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
         }
 
         [NameInMap("Message")]

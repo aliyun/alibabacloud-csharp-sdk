@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        [NameInMap("AclSwitch")]
+        [Validation(Required=false)]
+        public bool? AclSwitch { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

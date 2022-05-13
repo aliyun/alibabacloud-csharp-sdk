@@ -28,6 +28,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public List<ListGatewayResponseBodyDataResult> Result { get; set; }
             public class ListGatewayResponseBodyDataResult : TeaModel {
                 public bool? AhasOn { get; set; }
+                public string AppVersion { get; set; }
                 public bool? ArmsOn { get; set; }
                 public string ChargeType { get; set; }
                 public string CurrentVersion { get; set; }
@@ -81,6 +82,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Spec { get; set; }
                 public int? Status { get; set; }
                 public string StatusDesc { get; set; }
+                public bool? SupportWasm { get; set; }
                 public string Tag { get; set; }
                 public bool? Upgrade { get; set; }
                 public string Vswitch2 { get; set; }
