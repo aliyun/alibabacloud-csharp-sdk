@@ -1,0 +1,64 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Ddi20200617.Models
+{
+    public class ListTagResourcesRequest : TeaModel {
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        /// <summary>
+        /// 资源组ID
+        /// </summary>
+        [NameInMap("ResourceId")]
+        [Validation(Required=false)]
+        public List<string> ResourceId { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
+
+        /// <summary>
+        /// 标签
+        /// </summary>
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<ListTagResourcesRequestTag> Tag { get; set; }
+        public class ListTagResourcesRequestTag : TeaModel {
+            /// <summary>
+            /// 标签键
+            /// </summary>
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// 标签值
+            /// </summary>
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
+    }
+
+}

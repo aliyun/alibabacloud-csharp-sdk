@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ddi20200617.Models
 {
-    public class DescribeClusterV2Response : TeaModel {
+    public class ListTagResourcesResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ddi20200617.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeClusterV2ResponseBody Body { get; set; }
+        public ListTagResourcesResponseBody Body { get; set; }
 
     }
 
