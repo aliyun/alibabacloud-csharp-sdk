@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
 {
     public class ListTemplatesRequest : TeaModel {
         /// <summary>
-        /// 内容类型过滤。
+        /// 模板内容过滤。
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -39,6 +39,9 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
 
         /// <summary>
         /// 审核状态过滤。
+        /// - 0 : 审核中。
+        /// - 1 : 审核通过。
+        /// - 2 : 审核不通过。
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
@@ -46,6 +49,9 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
 
         /// <summary>
         /// 模板类型过滤。
+        /// - 0 : 验证码。
+        /// - 1 : 短信通知。
+        /// - 2 : 推广短信。
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
