@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Linkcard20210520.Models
 {
-    public class GetCredentialPoolStatisticsResponse : TeaModel {
+    public class ListCardInfoResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Linkcard20210520.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public GetCredentialPoolStatisticsResponseBody Body { get; set; }
+        public ListCardInfoResponseBody Body { get; set; }
 
     }
 

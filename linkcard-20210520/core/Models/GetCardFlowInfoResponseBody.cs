@@ -43,7 +43,9 @@ namespace AlibabaCloud.SDK.Linkcard20210520.Models
             public List<GetCardFlowInfoResponseBodyDataListVendorDetail> ListVendorDetail { get; set; }
             public class GetCardFlowInfoResponseBodyDataListVendorDetail : TeaModel {
                 public string NetWorkDelay { get; set; }
+                public string Ratio { get; set; }
                 public string SignalStrength { get; set; }
+                public string UsedFlow { get; set; }
                 public string Vendor { get; set; }
             }
         };

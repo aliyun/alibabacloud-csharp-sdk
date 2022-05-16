@@ -25,7 +25,9 @@ namespace AlibabaCloud.SDK.Linkcard20210520.Models
                 public string CertifyStatus { get; set; }
                 public string Iccid { get; set; }
                 public List<string> Imsi { get; set; }
+                public List<string> Ip { get; set; }
                 public List<string> Msisdn { get; set; }
+                public bool? OpenSms { get; set; }
                 public string OsStatus { get; set; }
                 public string PeriodAddFlow { get; set; }
                 public string PeriodSmsUse { get; set; }
@@ -137,6 +139,10 @@ namespace AlibabaCloud.SDK.Linkcard20210520.Models
                 [Validation(Required=false)]
                 public List<string> Imsi { get; set; }
 
+                [NameInMap("Ip")]
+                [Validation(Required=false)]
+                public List<string> Ip { get; set; }
+
                 [NameInMap("IsAutoRecharge")]
                 [Validation(Required=false)]
                 public bool? IsAutoRecharge { get; set; }
@@ -152,6 +158,10 @@ namespace AlibabaCloud.SDK.Linkcard20210520.Models
                 [NameInMap("OpenAccountTime")]
                 [Validation(Required=false)]
                 public string OpenAccountTime { get; set; }
+
+                [NameInMap("OpenSms")]
+                [Validation(Required=false)]
+                public bool? OpenSms { get; set; }
 
                 [NameInMap("OsStatus")]
                 [Validation(Required=false)]
