@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudGameAPI20200728.Models
 {
     public class GetGameStockResponseBody : TeaModel {
+        [NameInMap("AvailableTotal")]
+        [Validation(Required=false)]
+        public long? AvailableTotal { get; set; }
+
         [NameInMap("GameId")]
         [Validation(Required=false)]
         public string GameId { get; set; }
@@ -25,13 +29,17 @@ namespace AlibabaCloud.SDK.CloudGameAPI20200728.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
-            [NameInMap("InstanceSpec")]
+            [NameInMap("QuotaSlots")]
             [Validation(Required=false)]
-            public string InstanceSpec { get; set; }
+            public long? QuotaSlots { get; set; }
 
             [NameInMap("ReginName")]
             [Validation(Required=false)]
             public string ReginName { get; set; }
+
+            [NameInMap("UsedSlots")]
+            [Validation(Required=false)]
+            public long? UsedSlots { get; set; }
 
             [NameInMap("UserLevel")]
             [Validation(Required=false)]
@@ -43,9 +51,17 @@ namespace AlibabaCloud.SDK.CloudGameAPI20200728.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        [NameInMap("QuotaTotal")]
+        [Validation(Required=false)]
+        public long? QuotaTotal { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("UsedTotal")]
+        [Validation(Required=false)]
+        public long? UsedTotal { get; set; }
 
     }
 

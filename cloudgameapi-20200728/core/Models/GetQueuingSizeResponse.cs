@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CloudGameAPI20200728.Models
 {
-    public class QueryProjectResponse : TeaModel {
+    public class GetQueuingSizeResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.CloudGameAPI20200728.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public QueryProjectResponseBody Body { get; set; }
+        public GetQueuingSizeResponseBody Body { get; set; }
 
     }
 

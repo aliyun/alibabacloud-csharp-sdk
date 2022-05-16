@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CloudGameAPI20200728.Models
 {
-    public class GetGameStockRequest : TeaModel {
-        [NameInMap("AccessKey")]
-        [Validation(Required=false)]
-        public string AccessKey { get; set; }
-
+    public class GetQueuingSizeRequest : TeaModel {
         [NameInMap("GameId")]
         [Validation(Required=false)]
         public string GameId { get; set; }
+
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public string ProjectId { get; set; }
+
+        [NameInMap("UserLevel")]
+        [Validation(Required=false)]
+        public int? UserLevel { get; set; }
 
     }
 

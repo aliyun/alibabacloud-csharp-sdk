@@ -1629,10 +1629,6 @@ namespace AlibabaCloud.SDK.CloudGameAPI20200728
             {
                 query["GameId"] = request.GameId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserLevel))
-            {
-                query["UserLevel"] = request.UserLevel;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1663,10 +1659,6 @@ namespace AlibabaCloud.SDK.CloudGameAPI20200728
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GameId))
             {
                 query["GameId"] = request.GameId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserLevel))
-            {
-                query["UserLevel"] = request.UserLevel;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2059,6 +2051,88 @@ namespace AlibabaCloud.SDK.CloudGameAPI20200728
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetOutAccountBindDetailWithOptionsAsync(request, runtime);
+        }
+
+        public GetQueuingSizeResponse GetQueuingSizeWithOptions(GetQueuingSizeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GameId))
+            {
+                query["GameId"] = request.GameId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserLevel))
+            {
+                query["UserLevel"] = request.UserLevel;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetQueuingSize",
+                Version = "2020-07-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetQueuingSizeResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetQueuingSizeResponse> GetQueuingSizeWithOptionsAsync(GetQueuingSizeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GameId))
+            {
+                query["GameId"] = request.GameId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserLevel))
+            {
+                query["UserLevel"] = request.UserLevel;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetQueuingSize",
+                Version = "2020-07-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetQueuingSizeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetQueuingSizeResponse GetQueuingSize(GetQueuingSizeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetQueuingSizeWithOptions(request, runtime);
+        }
+
+        public async Task<GetQueuingSizeResponse> GetQueuingSizeAsync(GetQueuingSizeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetQueuingSizeWithOptionsAsync(request, runtime);
         }
 
         public GetSessionResponse GetSessionWithOptions(GetSessionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
