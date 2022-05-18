@@ -2321,6 +2321,170 @@ namespace AlibabaCloud.SDK.Imp20210630
             return await DeleteSensitiveWordWithOptionsAsync(request, runtime);
         }
 
+        public DescribeMeterImpPlayBackTimeByLiveIdResponse DescribeMeterImpPlayBackTimeByLiveIdWithOptions(DescribeMeterImpPlayBackTimeByLiveIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTs))
+            {
+                query["EndTs"] = request.EndTs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiveId))
+            {
+                query["LiveId"] = request.LiveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTs))
+            {
+                query["StartTs"] = request.StartTs;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeMeterImpPlayBackTimeByLiveId",
+                Version = "2021-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeMeterImpPlayBackTimeByLiveIdResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeMeterImpPlayBackTimeByLiveIdResponse> DescribeMeterImpPlayBackTimeByLiveIdWithOptionsAsync(DescribeMeterImpPlayBackTimeByLiveIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTs))
+            {
+                query["EndTs"] = request.EndTs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiveId))
+            {
+                query["LiveId"] = request.LiveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTs))
+            {
+                query["StartTs"] = request.StartTs;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeMeterImpPlayBackTimeByLiveId",
+                Version = "2021-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeMeterImpPlayBackTimeByLiveIdResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeMeterImpPlayBackTimeByLiveIdResponse DescribeMeterImpPlayBackTimeByLiveId(DescribeMeterImpPlayBackTimeByLiveIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeMeterImpPlayBackTimeByLiveIdWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeMeterImpPlayBackTimeByLiveIdResponse> DescribeMeterImpPlayBackTimeByLiveIdAsync(DescribeMeterImpPlayBackTimeByLiveIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeMeterImpPlayBackTimeByLiveIdWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeMeterImpWatchLiveTimeByLiveIdResponse DescribeMeterImpWatchLiveTimeByLiveIdWithOptions(DescribeMeterImpWatchLiveTimeByLiveIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiveId))
+            {
+                query["LiveId"] = request.LiveId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeMeterImpWatchLiveTimeByLiveId",
+                Version = "2021-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeMeterImpWatchLiveTimeByLiveIdResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeMeterImpWatchLiveTimeByLiveIdResponse> DescribeMeterImpWatchLiveTimeByLiveIdWithOptionsAsync(DescribeMeterImpWatchLiveTimeByLiveIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiveId))
+            {
+                query["LiveId"] = request.LiveId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeMeterImpWatchLiveTimeByLiveId",
+                Version = "2021-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeMeterImpWatchLiveTimeByLiveIdResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeMeterImpWatchLiveTimeByLiveIdResponse DescribeMeterImpWatchLiveTimeByLiveId(DescribeMeterImpWatchLiveTimeByLiveIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeMeterImpWatchLiveTimeByLiveIdWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeMeterImpWatchLiveTimeByLiveIdResponse> DescribeMeterImpWatchLiveTimeByLiveIdAsync(DescribeMeterImpWatchLiveTimeByLiveIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeMeterImpWatchLiveTimeByLiveIdWithOptionsAsync(request, runtime);
+        }
+
         public GetAppResponse GetAppWithOptions(GetAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
