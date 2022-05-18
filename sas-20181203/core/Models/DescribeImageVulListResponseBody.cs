@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string AliasName { get; set; }
 
+            [NameInMap("CanFix")]
+            [Validation(Required=false)]
+            public string CanFix { get; set; }
+
             [NameInMap("CanUpdate")]
             [Validation(Required=false)]
             public bool? CanUpdate { get; set; }
