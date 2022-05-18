@@ -75,6 +75,44 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// 优先级，在分配资源给实例时，优先级越高的实例越优先
+        /// </summary>
+        [NameInMap("Priority")]
+        [Validation(Required=false)]
+        public long? Priority { get; set; }
+
+        /// <summary>
+        /// 资源配置，弹内或者轻量化时使用
+        /// </summary>
+        [NameInMap("RequestedResource")]
+        [Validation(Required=false)]
+        public CreateInstanceRequestRequestedResource RequestedResource { get; set; }
+        public class CreateInstanceRequestRequestedResource : TeaModel {
+            [NameInMap("CPU")]
+            [Validation(Required=false)]
+            public string CPU { get; set; }
+            [NameInMap("GPU")]
+            [Validation(Required=false)]
+            public string GPU { get; set; }
+            [NameInMap("GPUType")]
+            [Validation(Required=false)]
+            public string GPUType { get; set; }
+            [NameInMap("Memory")]
+            [Validation(Required=false)]
+            public string Memory { get; set; }
+            [NameInMap("SharedMemory")]
+            [Validation(Required=false)]
+            public string SharedMemory { get; set; }
+        };
+
+        /// <summary>
+        /// 资源Id,预付费时填写
+        /// </summary>
+        [NameInMap("ResourceId")]
+        [Validation(Required=false)]
+        public string ResourceId { get; set; }
+
+        /// <summary>
         /// user vpc配置
         /// </summary>
         [NameInMap("UserVpc")]

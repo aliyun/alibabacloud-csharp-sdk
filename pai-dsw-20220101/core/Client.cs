@@ -83,6 +83,18 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             {
                 body["InstanceName"] = request.InstanceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                body["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestedResource.ToMap()))
+            {
+                body["RequestedResource"] = request.RequestedResource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                body["ResourceId"] = request.ResourceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserVpc.ToMap()))
             {
                 body["UserVpc"] = request.UserVpc;
@@ -142,6 +154,18 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 body["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                body["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestedResource.ToMap()))
+            {
+                body["RequestedResource"] = request.RequestedResource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                body["ResourceId"] = request.ResourceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserVpc.ToMap()))
             {
