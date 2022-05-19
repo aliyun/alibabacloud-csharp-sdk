@@ -7894,6 +7894,120 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return await RefundInstanceWithOptionsAsync(request, runtime);
         }
 
+        public ReleaseInstanceResponse ReleaseInstanceWithOptions(ReleaseInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenewStatus))
+            {
+                query["RenewStatus"] = request.RenewStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionType))
+            {
+                query["SubscriptionType"] = request.SubscriptionType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReleaseInstance",
+                Version = "2017-12-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReleaseInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ReleaseInstanceResponse> ReleaseInstanceWithOptionsAsync(ReleaseInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenewStatus))
+            {
+                query["RenewStatus"] = request.RenewStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionType))
+            {
+                query["SubscriptionType"] = request.SubscriptionType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReleaseInstance",
+                Version = "2017-12-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReleaseInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ReleaseInstanceResponse ReleaseInstance(ReleaseInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ReleaseInstanceWithOptions(request, runtime);
+        }
+
+        public async Task<ReleaseInstanceResponse> ReleaseInstanceAsync(ReleaseInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ReleaseInstanceWithOptionsAsync(request, runtime);
+        }
+
         public RelieveAccountRelationResponse RelieveAccountRelationWithOptions(RelieveAccountRelationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8974,6 +9088,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             {
                 query["BucketOwnerId"] = request.BucketOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketPath))
+            {
+                query["BucketPath"] = request.BucketPath;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultAccountRelSubscribe))
             {
                 query["MultAccountRelSubscribe"] = request.MultAccountRelSubscribe;
@@ -9016,6 +9134,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketOwnerId))
             {
                 query["BucketOwnerId"] = request.BucketOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketPath))
+            {
+                query["BucketPath"] = request.BucketPath;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultAccountRelSubscribe))
             {

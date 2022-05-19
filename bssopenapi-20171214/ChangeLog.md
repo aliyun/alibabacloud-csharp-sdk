@@ -1,3 +1,6 @@
+2022-05-19 Version: 1.0.10
+- Update SubscribeBillToOSS and QueryBillToOSSSubscription to support BucketPath.
+
 2022-04-24 Version: 1.0.9
 - Bill api add query conditions and return data field.
 

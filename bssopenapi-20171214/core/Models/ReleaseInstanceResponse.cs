@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
-    public class SubscribeBillToOSSResponse : TeaModel {
+    public class ReleaseInstanceResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public SubscribeBillToOSSResponseBody Body { get; set; }
+        public ReleaseInstanceResponseBody Body { get; set; }
 
     }
 
