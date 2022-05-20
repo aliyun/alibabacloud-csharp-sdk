@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
-    public class ApproveReplyMailAddressRequest : TeaModel {
+    public class GetIpProtectionRequest : TeaModel {
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -20,10 +20,6 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("Ticket")]
-        [Validation(Required=false)]
-        public string Ticket { get; set; }
 
     }
 
