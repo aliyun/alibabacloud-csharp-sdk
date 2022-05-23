@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class InsertK8sApplicationRequest : TeaModel {
+        [NameInMap("Annotations")]
+        [Validation(Required=false)]
+        public string Annotations { get; set; }
+
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
@@ -73,6 +77,20 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public bool? EnableAsm { get; set; }
 
+        /// <summary>
+        /// 是否开启推空保护
+        /// </summary>
+        [NameInMap("EnableEmptyPushReject")]
+        [Validation(Required=false)]
+        public bool? EnableEmptyPushReject { get; set; }
+
+        /// <summary>
+        /// 是否启用无损上线规则
+        /// </summary>
+        [NameInMap("EnableLosslessRule")]
+        [Validation(Required=false)]
+        public bool? EnableLosslessRule { get; set; }
+
         [NameInMap("EnvFroms")]
         [Validation(Required=false)]
         public string EnvFroms { get; set; }
@@ -129,6 +147,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string JavaStartUpConfig { get; set; }
 
+        [NameInMap("Labels")]
+        [Validation(Required=false)]
+        public string Labels { get; set; }
+
         [NameInMap("LimitCpu")]
         [Validation(Required=false)]
         public int? LimitCpu { get; set; }
@@ -152,6 +174,41 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [NameInMap("LogicalRegionId")]
         [Validation(Required=false)]
         public string LogicalRegionId { get; set; }
+
+        /// <summary>
+        /// 是否启用无损滚动发布模式配置通过就绪检查前完成服务注册
+        /// </summary>
+        [NameInMap("LosslessRuleAligned")]
+        [Validation(Required=false)]
+        public bool? LosslessRuleAligned { get; set; }
+
+        /// <summary>
+        /// 无损上线延迟注册时长
+        /// </summary>
+        [NameInMap("LosslessRuleDelayTime")]
+        [Validation(Required=false)]
+        public int? LosslessRuleDelayTime { get; set; }
+
+        /// <summary>
+        /// 无损上线服务预热曲线
+        /// </summary>
+        [NameInMap("LosslessRuleFuncType")]
+        [Validation(Required=false)]
+        public int? LosslessRuleFuncType { get; set; }
+
+        /// <summary>
+        /// 是否启用无损滚动发布模式配置通过就绪检查前完成服务预热
+        /// </summary>
+        [NameInMap("LosslessRuleRelated")]
+        [Validation(Required=false)]
+        public bool? LosslessRuleRelated { get; set; }
+
+        /// <summary>
+        /// 无损上线服务预热时长
+        /// </summary>
+        [NameInMap("LosslessRuleWarmupTime")]
+        [Validation(Required=false)]
+        public int? LosslessRuleWarmupTime { get; set; }
 
         [NameInMap("MountDescs")]
         [Validation(Required=false)]

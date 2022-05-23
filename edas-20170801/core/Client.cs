@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._signatureAlgorithm = "v2";
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -3457,6 +3458,10 @@ namespace AlibabaCloud.SDK.Edas20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Annotations))
+            {
+                query["Annotations"] = request.Annotations;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 query["AppId"] = request.AppId;
@@ -3525,6 +3530,14 @@ namespace AlibabaCloud.SDK.Edas20170801
             {
                 query["EnableAhas"] = request.EnableAhas;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableEmptyPushReject))
+            {
+                query["EnableEmptyPushReject"] = request.EnableEmptyPushReject;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableLosslessRule))
+            {
+                query["EnableLosslessRule"] = request.EnableLosslessRule;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvFroms))
             {
                 query["EnvFroms"] = request.EnvFroms;
@@ -3549,6 +3562,10 @@ namespace AlibabaCloud.SDK.Edas20170801
             {
                 query["JavaStartUpConfig"] = request.JavaStartUpConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
+            {
+                query["Labels"] = request.Labels;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Liveness))
             {
                 query["Liveness"] = request.Liveness;
@@ -3556,6 +3573,26 @@ namespace AlibabaCloud.SDK.Edas20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalVolume))
             {
                 query["LocalVolume"] = request.LocalVolume;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LosslessRuleAligned))
+            {
+                query["LosslessRuleAligned"] = request.LosslessRuleAligned;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LosslessRuleDelayTime))
+            {
+                query["LosslessRuleDelayTime"] = request.LosslessRuleDelayTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LosslessRuleFuncType))
+            {
+                query["LosslessRuleFuncType"] = request.LosslessRuleFuncType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LosslessRuleRelated))
+            {
+                query["LosslessRuleRelated"] = request.LosslessRuleRelated;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LosslessRuleWarmupTime))
+            {
+                query["LosslessRuleWarmupTime"] = request.LosslessRuleWarmupTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McpuLimit))
             {
@@ -3677,6 +3714,10 @@ namespace AlibabaCloud.SDK.Edas20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Annotations))
+            {
+                query["Annotations"] = request.Annotations;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 query["AppId"] = request.AppId;
@@ -3745,6 +3786,14 @@ namespace AlibabaCloud.SDK.Edas20170801
             {
                 query["EnableAhas"] = request.EnableAhas;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableEmptyPushReject))
+            {
+                query["EnableEmptyPushReject"] = request.EnableEmptyPushReject;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableLosslessRule))
+            {
+                query["EnableLosslessRule"] = request.EnableLosslessRule;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvFroms))
             {
                 query["EnvFroms"] = request.EnvFroms;
@@ -3769,6 +3818,10 @@ namespace AlibabaCloud.SDK.Edas20170801
             {
                 query["JavaStartUpConfig"] = request.JavaStartUpConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
+            {
+                query["Labels"] = request.Labels;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Liveness))
             {
                 query["Liveness"] = request.Liveness;
@@ -3776,6 +3829,26 @@ namespace AlibabaCloud.SDK.Edas20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalVolume))
             {
                 query["LocalVolume"] = request.LocalVolume;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LosslessRuleAligned))
+            {
+                query["LosslessRuleAligned"] = request.LosslessRuleAligned;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LosslessRuleDelayTime))
+            {
+                query["LosslessRuleDelayTime"] = request.LosslessRuleDelayTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LosslessRuleFuncType))
+            {
+                query["LosslessRuleFuncType"] = request.LosslessRuleFuncType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LosslessRuleRelated))
+            {
+                query["LosslessRuleRelated"] = request.LosslessRuleRelated;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LosslessRuleWarmupTime))
+            {
+                query["LosslessRuleWarmupTime"] = request.LosslessRuleWarmupTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McpuLimit))
             {
@@ -7135,6 +7208,10 @@ namespace AlibabaCloud.SDK.Edas20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Annotations))
+            {
+                query["Annotations"] = request.Annotations;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
                 query["AppName"] = request.AppName;
@@ -7199,6 +7276,14 @@ namespace AlibabaCloud.SDK.Edas20170801
             {
                 query["EnableAsm"] = request.EnableAsm;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableEmptyPushReject))
+            {
+                query["EnableEmptyPushReject"] = request.EnableEmptyPushReject;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableLosslessRule))
+            {
+                query["EnableLosslessRule"] = request.EnableLosslessRule;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvFroms))
             {
                 query["EnvFroms"] = request.EnvFroms;
@@ -7255,6 +7340,10 @@ namespace AlibabaCloud.SDK.Edas20170801
             {
                 query["JavaStartUpConfig"] = request.JavaStartUpConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
+            {
+                query["Labels"] = request.Labels;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LimitCpu))
             {
                 query["LimitCpu"] = request.LimitCpu;
@@ -7278,6 +7367,26 @@ namespace AlibabaCloud.SDK.Edas20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogicalRegionId))
             {
                 query["LogicalRegionId"] = request.LogicalRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LosslessRuleAligned))
+            {
+                query["LosslessRuleAligned"] = request.LosslessRuleAligned;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LosslessRuleDelayTime))
+            {
+                query["LosslessRuleDelayTime"] = request.LosslessRuleDelayTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LosslessRuleFuncType))
+            {
+                query["LosslessRuleFuncType"] = request.LosslessRuleFuncType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LosslessRuleRelated))
+            {
+                query["LosslessRuleRelated"] = request.LosslessRuleRelated;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LosslessRuleWarmupTime))
+            {
+                query["LosslessRuleWarmupTime"] = request.LosslessRuleWarmupTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MountDescs))
             {
@@ -7399,6 +7508,10 @@ namespace AlibabaCloud.SDK.Edas20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Annotations))
+            {
+                query["Annotations"] = request.Annotations;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
                 query["AppName"] = request.AppName;
@@ -7463,6 +7576,14 @@ namespace AlibabaCloud.SDK.Edas20170801
             {
                 query["EnableAsm"] = request.EnableAsm;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableEmptyPushReject))
+            {
+                query["EnableEmptyPushReject"] = request.EnableEmptyPushReject;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableLosslessRule))
+            {
+                query["EnableLosslessRule"] = request.EnableLosslessRule;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvFroms))
             {
                 query["EnvFroms"] = request.EnvFroms;
@@ -7519,6 +7640,10 @@ namespace AlibabaCloud.SDK.Edas20170801
             {
                 query["JavaStartUpConfig"] = request.JavaStartUpConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
+            {
+                query["Labels"] = request.Labels;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LimitCpu))
             {
                 query["LimitCpu"] = request.LimitCpu;
@@ -7542,6 +7667,26 @@ namespace AlibabaCloud.SDK.Edas20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogicalRegionId))
             {
                 query["LogicalRegionId"] = request.LogicalRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LosslessRuleAligned))
+            {
+                query["LosslessRuleAligned"] = request.LosslessRuleAligned;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LosslessRuleDelayTime))
+            {
+                query["LosslessRuleDelayTime"] = request.LosslessRuleDelayTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LosslessRuleFuncType))
+            {
+                query["LosslessRuleFuncType"] = request.LosslessRuleFuncType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LosslessRuleRelated))
+            {
+                query["LosslessRuleRelated"] = request.LosslessRuleRelated;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LosslessRuleWarmupTime))
+            {
+                query["LosslessRuleWarmupTime"] = request.LosslessRuleWarmupTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MountDescs))
             {
