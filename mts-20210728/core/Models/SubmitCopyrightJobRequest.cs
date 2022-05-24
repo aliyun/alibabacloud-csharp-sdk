@@ -79,6 +79,13 @@ namespace AlibabaCloud.SDK.Mts20210728.Models
         [Validation(Required=false)]
         public string UserData { get; set; }
 
+        /// <summary>
+        /// 可见水印(必须是英文字符)
+        /// </summary>
+        [NameInMap("VisibleMessage")]
+        [Validation(Required=false)]
+        public string VisibleMessage { get; set; }
+
     }
 
 }

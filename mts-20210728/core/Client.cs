@@ -680,6 +680,10 @@ namespace AlibabaCloud.SDK.Mts20210728
             {
                 body["UserData"] = request.UserData;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisibleMessage))
+            {
+                body["VisibleMessage"] = request.VisibleMessage;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -743,6 +747,10 @@ namespace AlibabaCloud.SDK.Mts20210728
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
             {
                 body["UserData"] = request.UserData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisibleMessage))
+            {
+                body["VisibleMessage"] = request.VisibleMessage;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
