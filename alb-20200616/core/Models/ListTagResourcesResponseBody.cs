@@ -67,13 +67,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         }
 
-        /// <summary>
-        /// 总记录数
-        /// </summary>
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
     }
 
 }

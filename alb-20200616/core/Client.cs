@@ -1055,6 +1055,10 @@ namespace AlibabaCloud.SDK.Alb20200616
             {
                 query["AddressAllocatedMode"] = request.AddressAllocatedMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressIpVersion))
+            {
+                query["AddressIpVersion"] = request.AddressIpVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressType))
             {
                 query["AddressType"] = request.AddressType;
@@ -1125,6 +1129,10 @@ namespace AlibabaCloud.SDK.Alb20200616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressAllocatedMode))
             {
                 query["AddressAllocatedMode"] = request.AddressAllocatedMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressIpVersion))
+            {
+                query["AddressIpVersion"] = request.AddressIpVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressType))
             {

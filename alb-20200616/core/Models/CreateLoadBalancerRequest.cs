@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string AddressAllocatedMode { get; set; }
 
         /// <summary>
+        /// 协议版本
+        /// </summary>
+        [NameInMap("AddressIpVersion")]
+        [Validation(Required=false)]
+        public string AddressIpVersion { get; set; }
+
+        /// <summary>
         /// 负载均衡的地址类型
         /// </summary>
         [NameInMap("AddressType")]
