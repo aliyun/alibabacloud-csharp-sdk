@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
-    public class GetBasicAcceleratorResponse : TeaModel {
+    public class UpdateBandwidthPackagaAutoRenewAttributeResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public GetBasicAcceleratorResponseBody Body { get; set; }
+        public UpdateBandwidthPackagaAutoRenewAttributeResponseBody Body { get; set; }
 
     }
 

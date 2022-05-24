@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
+        [NameInMap("AutoRenew")]
+        [Validation(Required=false)]
+        public bool? AutoRenew { get; set; }
+
+        [NameInMap("AutoRenewDuration")]
+        [Validation(Required=false)]
+        public int? AutoRenewDuration { get; set; }
+
         [NameInMap("AutoUseCoupon")]
         [Validation(Required=false)]
         public string AutoUseCoupon { get; set; }
