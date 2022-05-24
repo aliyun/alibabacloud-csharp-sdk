@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DeleteEdgeMachineResponse : TeaModel {
+    public class FixNodePoolVulsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("statusCode")]
         [Validation(Required=true)]
         public int? StatusCode { get; set; }
+
+        [NameInMap("body")]
+        [Validation(Required=true)]
+        public FixNodePoolVulsResponseBody Body { get; set; }
 
     }
 
