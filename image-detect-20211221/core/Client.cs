@@ -107,6 +107,10 @@ namespace AlibabaCloud.SDK.Image_detect20211221
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
+            {
+                query["Level"] = request.Level;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucketName))
             {
                 query["OssBucketName"] = request.OssBucketName;
@@ -162,6 +166,10 @@ namespace AlibabaCloud.SDK.Image_detect20211221
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
+            {
+                query["Level"] = request.Level;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucketName))
             {
                 query["OssBucketName"] = request.OssBucketName;

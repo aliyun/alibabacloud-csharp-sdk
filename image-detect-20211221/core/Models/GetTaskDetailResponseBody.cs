@@ -46,6 +46,9 @@ namespace AlibabaCloud.SDK.Image_detect20211221.Models
             [NameInMap("ImageTotal")]
             [Validation(Required=false)]
             public int? ImageTotal { get; set; }
+            [NameInMap("Level")]
+            [Validation(Required=false)]
+            public int? Level { get; set; }
             [NameInMap("OssAccessKeyId")]
             [Validation(Required=false)]
             public string OssAccessKeyId { get; set; }

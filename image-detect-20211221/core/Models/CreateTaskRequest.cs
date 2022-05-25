@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Image_detect20211221.Models
 {
     public class CreateTaskRequest : TeaModel {
+        [NameInMap("Level")]
+        [Validation(Required=false)]
+        public int? Level { get; set; }
+
         [NameInMap("OssBucketName")]
         [Validation(Required=false)]
         public string OssBucketName { get; set; }

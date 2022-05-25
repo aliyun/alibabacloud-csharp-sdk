@@ -40,6 +40,7 @@ namespace AlibabaCloud.SDK.Image_detect20211221.Models
             public class GetTaskListResponseBodyResponseTaskList : TeaModel {
                 public string GmtCreate { get; set; }
                 public string GmtModified { get; set; }
+                public int? Level { get; set; }
                 public string Priority { get; set; }
                 public string TaskDescription { get; set; }
                 public string TaskName { get; set; }
