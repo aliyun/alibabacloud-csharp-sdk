@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
-    public class TrimDocumentResponse : TeaModel {
+    public class RecognizeIndonesiaIdentityCardResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public TrimDocumentResponseBody Body { get; set; }
+        public RecognizeIndonesiaIdentityCardResponseBody Body { get; set; }
 
     }
 
