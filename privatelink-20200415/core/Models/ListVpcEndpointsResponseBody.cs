@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public string MaxResults { get; set; }
+        public int? MaxResults { get; set; }
 
         [NameInMap("NextToken")]
         [Validation(Required=false)]
