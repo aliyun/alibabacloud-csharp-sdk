@@ -506,10 +506,6 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
             instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             applicationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(applicationId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
-            {
-                query["client_id"] = request.ClientId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
             {
                 query["scope"] = request.Scope;
@@ -540,10 +536,6 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
             instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             applicationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(applicationId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
-            {
-                query["client_id"] = request.ClientId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
             {
                 query["scope"] = request.Scope;
