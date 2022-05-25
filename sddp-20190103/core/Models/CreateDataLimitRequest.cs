@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? ResourceType { get; set; }
 
+        [NameInMap("SamplingSize")]
+        [Validation(Required=false)]
+        public int? SamplingSize { get; set; }
+
         [NameInMap("ServiceRegionId")]
         [Validation(Required=false)]
         public string ServiceRegionId { get; set; }

@@ -26,6 +26,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [NameInMap("ChargeType")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
+            [NameInMap("DataManagerRole")]
+            [Validation(Required=false)]
+            public int? DataManagerRole { get; set; }
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
