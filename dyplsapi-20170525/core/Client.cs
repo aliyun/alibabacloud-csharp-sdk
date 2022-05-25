@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._signatureAlgorithm = "v2";
             this._endpointRule = "central";
             CheckConfig(config);
             this._endpoint = GetEndpoint("dyplsapi", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1717,6 +1718,132 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreatePickUpWaybillWithOptionsAsync(request, runtime);
+        }
+
+        public CreatePickUpWaybillPreQueryResponse CreatePickUpWaybillPreQueryWithOptions(CreatePickUpWaybillPreQueryRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePickUpWaybillPreQueryShrinkRequest request = new CreatePickUpWaybillPreQueryShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ConsigneeInfo.ToMap()))
+            {
+                request.ConsigneeInfoShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConsigneeInfo.ToMap(), "ConsigneeInfo", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SenderInfo.ToMap()))
+            {
+                request.SenderInfoShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SenderInfo.ToMap(), "SenderInfo", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsigneeInfoShrink))
+            {
+                query["ConsigneeInfo"] = request.ConsigneeInfoShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpCode))
+            {
+                query["CpCode"] = request.CpCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderChannels))
+            {
+                query["OrderChannels"] = request.OrderChannels;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OuterOrderCode))
+            {
+                query["OuterOrderCode"] = request.OuterOrderCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreWeight))
+            {
+                query["PreWeight"] = request.PreWeight;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SenderInfoShrink))
+            {
+                query["SenderInfo"] = request.SenderInfoShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePickUpWaybillPreQuery",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePickUpWaybillPreQueryResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreatePickUpWaybillPreQueryResponse> CreatePickUpWaybillPreQueryWithOptionsAsync(CreatePickUpWaybillPreQueryRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePickUpWaybillPreQueryShrinkRequest request = new CreatePickUpWaybillPreQueryShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ConsigneeInfo.ToMap()))
+            {
+                request.ConsigneeInfoShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConsigneeInfo.ToMap(), "ConsigneeInfo", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SenderInfo.ToMap()))
+            {
+                request.SenderInfoShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SenderInfo.ToMap(), "SenderInfo", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsigneeInfoShrink))
+            {
+                query["ConsigneeInfo"] = request.ConsigneeInfoShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpCode))
+            {
+                query["CpCode"] = request.CpCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderChannels))
+            {
+                query["OrderChannels"] = request.OrderChannels;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OuterOrderCode))
+            {
+                query["OuterOrderCode"] = request.OuterOrderCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreWeight))
+            {
+                query["PreWeight"] = request.PreWeight;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SenderInfoShrink))
+            {
+                query["SenderInfo"] = request.SenderInfoShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePickUpWaybillPreQuery",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePickUpWaybillPreQueryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreatePickUpWaybillPreQueryResponse CreatePickUpWaybillPreQuery(CreatePickUpWaybillPreQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreatePickUpWaybillPreQueryWithOptions(request, runtime);
+        }
+
+        public async Task<CreatePickUpWaybillPreQueryResponse> CreatePickUpWaybillPreQueryAsync(CreatePickUpWaybillPreQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreatePickUpWaybillPreQueryWithOptionsAsync(request, runtime);
         }
 
         public DeleteSecretBlacklistResponse DeleteSecretBlacklistWithOptions(DeleteSecretBlacklistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
