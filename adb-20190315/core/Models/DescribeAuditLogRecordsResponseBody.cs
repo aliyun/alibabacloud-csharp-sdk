@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public string TotalTime { get; set; }
 
+            [NameInMap("User")]
+            [Validation(Required=false)]
+            public string User { get; set; }
+
         }
 
         [NameInMap("PageNumber")]

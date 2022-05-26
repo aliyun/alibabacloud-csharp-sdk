@@ -1,3 +1,6 @@
+2022-05-26 Version: 1.0.4
+- Support ModifyDBClusterPayType.
+
 2022-01-05 Version: 1.0.3
 - Move to perth for DescribeAuditLogRecords.
 - Move to perth for DescribeAuditLogConfig.
