@@ -24,6 +24,15 @@ namespace AlibabaCloud.SDK.Image_detect20211221.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Response")]
+        [Validation(Required=false)]
+        public CreateTaskResponseBodyResponse Response { get; set; }
+        public class CreateTaskResponseBodyResponse : TeaModel {
+            [NameInMap("TaskUid")]
+            [Validation(Required=false)]
+            public string TaskUid { get; set; }
+        };
+
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }
