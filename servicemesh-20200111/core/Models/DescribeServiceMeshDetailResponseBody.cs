@@ -196,6 +196,15 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     [Validation(Required=false)]
                     public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration ExtraConfiguration { get; set; }
                     public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration : TeaModel {
+                        [NameInMap("CRAggregationConfiguration")]
+                        [Validation(Required=false)]
+                        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationCRAggregationConfiguration CRAggregationConfiguration { get; set; }
+                        public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationCRAggregationConfiguration : TeaModel {
+                            [NameInMap("Enabled")]
+                            [Validation(Required=false)]
+                            public bool? Enabled { get; set; }
+                        };
+
                         [NameInMap("CRAggregationEnabled")]
                         [Validation(Required=false)]
                         public bool? CRAggregationEnabled { get; set; }
@@ -616,6 +625,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         [NameInMap("RequestMemory")]
                         [Validation(Required=false)]
                         public string RequestMemory { get; set; }
+
+                        [NameInMap("SidecarInjectorNum")]
+                        [Validation(Required=false)]
+                        public int? SidecarInjectorNum { get; set; }
 
                         [NameInMap("SidecarInjectorWebhookAsYaml")]
                         [Validation(Required=false)]

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public bool? ASMGatewayContinue { get; set; }
 
+        [NameInMap("ExpectedVersion")]
+        [Validation(Required=false)]
+        public string ExpectedVersion { get; set; }
+
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]
         public string ServiceMeshId { get; set; }
