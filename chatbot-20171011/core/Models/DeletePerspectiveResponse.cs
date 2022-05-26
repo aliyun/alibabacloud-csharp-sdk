@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
-    public class CreateDSEntityResponse : TeaModel {
+    public class DeletePerspectiveResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
-        public CreateDSEntityResponseBody Body { get; set; }
+        public DeletePerspectiveResponseBody Body { get; set; }
 
     }
 
