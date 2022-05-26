@@ -8,18 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
-    public class SetDcdnFullDomainsBlockIPRequest : TeaModel {
-        [NameInMap("BlockInterval")]
+    public class EditWasmConfRequest : TeaModel {
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public int? BlockInterval { get; set; }
+        public string Description { get; set; }
 
-        [NameInMap("IPList")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public string IPList { get; set; }
-
-        [NameInMap("OperationType")]
-        [Validation(Required=false)]
-        public string OperationType { get; set; }
+        public string Name { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]

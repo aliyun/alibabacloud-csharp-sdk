@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
-    public class SetDcdnFullDomainsBlockIPResponseBody : TeaModel {
-        [NameInMap("Code")]
+    public class DeleteWasmCodeRevisionResponseBody : TeaModel {
+        [NameInMap("Content")]
         [Validation(Required=false)]
-        public int? Code { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
+        public Dictionary<string, object> Content { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
