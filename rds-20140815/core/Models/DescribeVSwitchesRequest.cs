@@ -23,11 +23,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public long? PageNumber { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public long? PageSize { get; set; }
+        public int? PageSize { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]

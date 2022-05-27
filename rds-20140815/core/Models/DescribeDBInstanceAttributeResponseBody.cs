@@ -21,6 +21,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string AdvancedFeatures { get; set; }
                 public string AutoUpgradeMinorVersion { get; set; }
                 public string AvailabilityValue { get; set; }
+                public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeBabelfishConfig BabelfishConfig { get; set; }
+                public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeBabelfishConfig : TeaModel {
+                    [NameInMap("BabelfishEnabled")]
+                    [Validation(Required=false)]
+                    public string BabelfishEnabled { get; set; }
+
+                    [NameInMap("MigrationMode")]
+                    [Validation(Required=false)]
+                    public string MigrationMode { get; set; }
+
+                }
                 public string Category { get; set; }
                 public string Collation { get; set; }
                 public string ConnectionMode { get; set; }

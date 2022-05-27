@@ -11,11 +11,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class DescribeVSwitchesResponseBody : TeaModel {
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public long? PageNumber { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public long? PageSize { get; set; }
+        public int? PageSize { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -23,20 +23,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public long? TotalCount { get; set; }
+        public int? TotalCount { get; set; }
 
         [NameInMap("VSwitchs")]
         [Validation(Required=false)]
         public List<DescribeVSwitchesResponseBodyVSwitchs> VSwitchs { get; set; }
         public class DescribeVSwitchesResponseBodyVSwitchs : TeaModel {
-            [NameInMap("AliUid")]
-            [Validation(Required=false)]
-            public string AliUid { get; set; }
-
-            [NameInMap("Bid")]
-            [Validation(Required=false)]
-            public string Bid { get; set; }
-
             [NameInMap("CidrBlock")]
             [Validation(Required=false)]
             public string CidrBlock { get; set; }
@@ -45,14 +37,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
-            [NameInMap("GmtCreate")]
-            [Validation(Required=false)]
-            public string GmtCreate { get; set; }
-
-            [NameInMap("GmtModified")]
-            [Validation(Required=false)]
-            public string GmtModified { get; set; }
-
             [NameInMap("IsDefault")]
             [Validation(Required=false)]
             public bool? IsDefault { get; set; }
@@ -60,10 +44,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [NameInMap("IzNo")]
             [Validation(Required=false)]
             public string IzNo { get; set; }
-
-            [NameInMap("RegionNo")]
-            [Validation(Required=false)]
-            public string RegionNo { get; set; }
 
             [NameInMap("Status")]
             [Validation(Required=false)]

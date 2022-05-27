@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceConnectionStringRequest : TeaModel {
+        [NameInMap("BabelfishPort")]
+        [Validation(Required=false)]
+        public string BabelfishPort { get; set; }
+
         [NameInMap("ConnectionStringPrefix")]
         [Validation(Required=false)]
         public string ConnectionStringPrefix { get; set; }

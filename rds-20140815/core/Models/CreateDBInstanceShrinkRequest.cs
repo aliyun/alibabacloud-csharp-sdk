@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
-    public class CreateDBInstanceRequest : TeaModel {
+    public class CreateDBInstanceShrinkRequest : TeaModel {
         [NameInMap("Amount")]
         [Validation(Required=false)]
         public int? Amount { get; set; }
@@ -135,15 +135,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         [NameInMap("ServerlessConfig")]
         [Validation(Required=false)]
-        public CreateDBInstanceRequestServerlessConfig ServerlessConfig { get; set; }
-        public class CreateDBInstanceRequestServerlessConfig : TeaModel {
-            [NameInMap("MaxCapacity")]
-            [Validation(Required=false)]
-            public double? MaxCapacity { get; set; }
-            [NameInMap("MinCapacity")]
-            [Validation(Required=false)]
-            public double? MinCapacity { get; set; }
-        };
+        public string ServerlessConfigShrink { get; set; }
 
         [NameInMap("StorageAutoScale")]
         [Validation(Required=false)]
@@ -163,8 +155,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<CreateDBInstanceRequestTag> Tag { get; set; }
-        public class CreateDBInstanceRequestTag : TeaModel {
+        public List<CreateDBInstanceShrinkRequestTag> Tag { get; set; }
+        public class CreateDBInstanceShrinkRequestTag : TeaModel {
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
