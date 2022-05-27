@@ -1,0 +1,18 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
+{
+    public class DownloadLabelFileRequest : TeaModel {
+        [NameInMap("LabelId")]
+        [Validation(Required=false)]
+        public long? LabelId { get; set; }
+
+    }
+
+}
