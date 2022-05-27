@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
-    public class CreateCdnDeliverTaskResponseBody : TeaModel {
-        [NameInMap("DeliverId")]
+    public class DescribeCdnOrderCommodityCodeResponseBody : TeaModel {
+        [NameInMap("OrderCommodityCode")]
         [Validation(Required=false)]
-        public string DeliverId { get; set; }
+        public string OrderCommodityCode { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
