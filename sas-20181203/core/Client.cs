@@ -1461,6 +1461,72 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await DeleteVpcHoneyPotWithOptionsAsync(request, runtime);
         }
 
+        public DescribeAccessKeyLeakDetailResponse DescribeAccessKeyLeakDetailWithOptions(DescribeAccessKeyLeakDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAccessKeyLeakDetail",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAccessKeyLeakDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeAccessKeyLeakDetailResponse> DescribeAccessKeyLeakDetailWithOptionsAsync(DescribeAccessKeyLeakDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAccessKeyLeakDetail",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAccessKeyLeakDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeAccessKeyLeakDetailResponse DescribeAccessKeyLeakDetail(DescribeAccessKeyLeakDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeAccessKeyLeakDetailWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeAccessKeyLeakDetailResponse> DescribeAccessKeyLeakDetailAsync(DescribeAccessKeyLeakDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeAccessKeyLeakDetailWithOptionsAsync(request, runtime);
+        }
+
         public DescribeAccesskeyLeakListResponse DescribeAccesskeyLeakListWithOptions(DescribeAccesskeyLeakListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1871,6 +1937,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["TacticId"] = request.TacticId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UniqueInfo))
+            {
+                query["UniqueInfo"] = request.UniqueInfo;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1949,6 +2019,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TacticId))
             {
                 query["TacticId"] = request.TacticId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UniqueInfo))
+            {
+                query["UniqueInfo"] = request.UniqueInfo;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

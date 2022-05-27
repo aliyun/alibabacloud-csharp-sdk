@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string AliasName { get; set; }
 
+            [NameInMap("AuthVersion")]
+            [Validation(Required=false)]
+            public string AuthVersion { get; set; }
+
+            [NameInMap("Bind")]
+            [Validation(Required=false)]
+            public bool? Bind { get; set; }
+
             [NameInMap("ExtendContentJson")]
             [Validation(Required=false)]
             public DescribeVulListResponseBodyVulRecordsExtendContentJson ExtendContentJson { get; set; }
@@ -163,6 +171,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Online")]
             [Validation(Required=false)]
             public bool? Online { get; set; }
+
+            [NameInMap("OsName")]
+            [Validation(Required=false)]
+            public string OsName { get; set; }
 
             [NameInMap("OsVersion")]
             [Validation(Required=false)]
