@@ -13,12 +13,23 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
         [Validation(Required=false)]
         public CalcCACSResponseBodyData Data { get; set; }
         public class CalcCACSResponseBodyData : TeaModel {
+            [NameInMap("Detections")]
+            [Validation(Required=false)]
+            public List<CalcCACSResponseBodyDataDetections> Detections { get; set; }
+            public class CalcCACSResponseBodyDataDetections : TeaModel {
+                public long? CalciumId { get; set; }
+                public float? CalciumScore { get; set; }
+                public float? CalciumVolume { get; set; }
+            }
             [NameInMap("ResultUrl")]
             [Validation(Required=false)]
             public string ResultUrl { get; set; }
             [NameInMap("Score")]
             [Validation(Required=false)]
             public string Score { get; set; }
+            [NameInMap("VolumeScore")]
+            [Validation(Required=false)]
+            public string VolumeScore { get; set; }
         };
 
         [NameInMap("RequestId")]

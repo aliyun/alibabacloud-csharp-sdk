@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 {
-    public class ScreenChestCTResponse : TeaModel {
+    public class DetectPancResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ScreenChestCTResponseBody Body { get; set; }
+        public DetectPancResponseBody Body { get; set; }
 
     }
 
