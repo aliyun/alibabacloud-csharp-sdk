@@ -1,3 +1,6 @@
+2022-05-30 Version: 1.0.11
+- Support rebalance instance.
+
 2022-04-28 Version: 1.0.10
 - Support upgrade instance.
 

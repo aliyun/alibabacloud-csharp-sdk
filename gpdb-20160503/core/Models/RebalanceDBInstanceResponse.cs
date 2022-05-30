@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
-    public class DescribeDataSharePerformanceResponse : TeaModel {
+    public class RebalanceDBInstanceResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeDataSharePerformanceResponseBody Body { get; set; }
+        public RebalanceDBInstanceResponseBody Body { get; set; }
 
     }
 
