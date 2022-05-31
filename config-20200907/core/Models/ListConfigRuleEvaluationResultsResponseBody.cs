@@ -38,6 +38,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                         [NameInMap("ConfigRuleName")]
                         [Validation(Required=false)]
                         public string ConfigRuleName { get; set; }
+                        [NameInMap("IgnoreDate")]
+                        [Validation(Required=false)]
+                        public string IgnoreDate { get; set; }
                         [NameInMap("RegionId")]
                         [Validation(Required=false)]
                         public string RegionId { get; set; }

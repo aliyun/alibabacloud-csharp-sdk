@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [NameInMap("NextToken")]
             [Validation(Required=false)]
             public string NextToken { get; set; }
-            [NameInMap("PreviousToken")]
+            [NameInMap("TotalCount")]
             [Validation(Required=false)]
-            public string PreviousToken { get; set; }
+            public int? TotalCount { get; set; }
         };
 
         [NameInMap("RequestId")]

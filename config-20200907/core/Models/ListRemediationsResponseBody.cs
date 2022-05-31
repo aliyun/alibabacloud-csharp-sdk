@@ -37,10 +37,6 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [Validation(Required=false)]
             public string LastSuccessfulInvocationType { get; set; }
 
-            [NameInMap("RemediationDynamicParams")]
-            [Validation(Required=false)]
-            public string RemediationDynamicParams { get; set; }
-
             [NameInMap("RemediationId")]
             [Validation(Required=false)]
             public string RemediationId { get; set; }

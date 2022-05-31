@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public class GetManagedRuleResponseBodyManagedRule : TeaModel {
             [NameInMap("CompulsoryInputParameterDetails")]
             [Validation(Required=false)]
-            public List<string> CompulsoryInputParameterDetails { get; set; }
+            public Dictionary<string, string> CompulsoryInputParameterDetails { get; set; }
             [NameInMap("ConfigRuleName")]
             [Validation(Required=false)]
             public string ConfigRuleName { get; set; }
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public List<string> Labels { get; set; }
             [NameInMap("OptionalInputParameterDetails")]
             [Validation(Required=false)]
-            public List<string> OptionalInputParameterDetails { get; set; }
+            public Dictionary<string, string> OptionalInputParameterDetails { get; set; }
             [NameInMap("RiskLevel")]
             [Validation(Required=false)]
             public int? RiskLevel { get; set; }
