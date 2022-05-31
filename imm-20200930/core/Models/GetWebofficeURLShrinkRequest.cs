@@ -10,18 +10,15 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class GetWebofficeURLShrinkRequest : TeaModel {
         /// <summary>
-        /// 链式授权
-        /// </summary>
-        [NameInMap("AssumeRoleChain")]
-        [Validation(Required=false)]
-        public string AssumeRoleChainShrink { get; set; }
-
-        /// <summary>
         /// 缓存预览标识
         /// </summary>
         [NameInMap("CachePreview")]
         [Validation(Required=false)]
         public bool? CachePreview { get; set; }
+
+        [NameInMap("CredentialConfig")]
+        [Validation(Required=false)]
+        public string CredentialConfigShrink { get; set; }
 
         /// <summary>
         /// 是否支持外部上传

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string AspectRatios { get; set; }
 
+        [NameInMap("CredentialConfig")]
+        [Validation(Required=false)]
+        public CredentialConfig CredentialConfig { get; set; }
+
         /// <summary>
         /// 项目名称
         /// </summary>

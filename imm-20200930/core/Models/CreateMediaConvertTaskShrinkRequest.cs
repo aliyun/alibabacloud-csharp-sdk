@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateMediaConvertTaskShrinkRequest : TeaModel {
-        [NameInMap("DatasetName")]
+        [NameInMap("CredentialConfig")]
         [Validation(Required=false)]
-        public string DatasetName { get; set; }
+        public string CredentialConfigShrink { get; set; }
 
         [NameInMap("NotifyEndpoint")]
         [Validation(Required=false)]

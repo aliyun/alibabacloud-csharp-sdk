@@ -16,12 +16,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string AccessToken { get; set; }
 
-        /// <summary>
-        /// 链式授权
-        /// </summary>
-        [NameInMap("AssumeRoleChain")]
+        [NameInMap("CredentialConfig")]
         [Validation(Required=false)]
-        public string AssumeRoleChainShrink { get; set; }
+        public string CredentialConfigShrink { get; set; }
 
         /// <summary>
         /// 项目名称

@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateMediaConvertTaskRequest : TeaModel {
-        [NameInMap("DatasetName")]
+        [NameInMap("CredentialConfig")]
         [Validation(Required=false)]
-        public string DatasetName { get; set; }
+        public CredentialConfig CredentialConfig { get; set; }
 
         [NameInMap("NotifyEndpoint")]
         [Validation(Required=false)]
@@ -93,6 +93,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
                     [Validation(Required=false)]
                     public int? Bitrate { get; set; }
 
+                    [NameInMap("BitrateOption")]
+                    [Validation(Required=false)]
+                    public string BitrateOption { get; set; }
+
                     [NameInMap("Channel")]
                     [Validation(Required=false)]
                     public int? Channel { get; set; }
@@ -108,6 +112,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
                     [NameInMap("SampleRate")]
                     [Validation(Required=false)]
                     public int? SampleRate { get; set; }
+
+                    [NameInMap("SampleRateOption")]
+                    [Validation(Required=false)]
+                    public string SampleRateOption { get; set; }
 
                 }
             };
@@ -152,9 +160,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
                 }
             };
 
-            [NameInMap("PresetId")]
+            [NameInMap("Preset")]
             [Validation(Required=false)]
-            public string PresetId { get; set; }
+            public PresetReference Preset { get; set; }
 
             [NameInMap("Segment")]
             [Validation(Required=false)]
@@ -166,6 +174,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
                 [NameInMap("Format")]
                 [Validation(Required=false)]
                 public string Format { get; set; }
+                [NameInMap("StartNumber")]
+                [Validation(Required=false)]
+                public int? StartNumber { get; set; }
             };
 
             [NameInMap("Speed")]
@@ -330,6 +341,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
                     [Validation(Required=false)]
                     public int? Bitrate { get; set; }
 
+                    [NameInMap("BitrateOption")]
+                    [Validation(Required=false)]
+                    public string BitrateOption { get; set; }
+
                     [NameInMap("BufferSize")]
                     [Validation(Required=false)]
                     public int? BufferSize { get; set; }
@@ -345,6 +360,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
                     [NameInMap("FrameRate")]
                     [Validation(Required=false)]
                     public float? FrameRate { get; set; }
+
+                    [NameInMap("FrameRateOption")]
+                    [Validation(Required=false)]
+                    public string FrameRateOption { get; set; }
 
                     [NameInMap("GOPSize")]
                     [Validation(Required=false)]
@@ -365,6 +384,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
                     [NameInMap("Resolution")]
                     [Validation(Required=false)]
                     public string Resolution { get; set; }
+
+                    [NameInMap("ResolutionOption")]
+                    [Validation(Required=false)]
+                    public string ResolutionOption { get; set; }
 
                     [NameInMap("Rotation")]
                     [Validation(Required=false)]

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class DetectImageFacesRequest : TeaModel {
+        [NameInMap("CredentialConfig")]
+        [Validation(Required=false)]
+        public CredentialConfig CredentialConfig { get; set; }
+
         /// <summary>
         /// 项目名称
         /// </summary>

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateDetectVideoLabelsTaskShrinkRequest : TeaModel {
+        [NameInMap("CredentialConfig")]
+        [Validation(Required=false)]
+        public string CredentialConfigShrink { get; set; }
+
         /// <summary>
         /// NotifyEndpoint
         /// </summary>

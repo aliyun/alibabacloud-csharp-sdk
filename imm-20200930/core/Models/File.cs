@@ -66,6 +66,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public List<AudioStream> AudioStreams { get; set; }
 
         /// <summary>
+        /// Bitrate
+        /// </summary>
+        [NameInMap("Bitrate")]
+        [Validation(Required=false)]
+        public long? Bitrate { get; set; }
+
+        /// <summary>
         /// CacheControl
         /// </summary>
         [NameInMap("CacheControl")]
@@ -164,6 +171,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DocumentLanguage { get; set; }
 
         /// <summary>
+        /// Duration
+        /// </summary>
+        [NameInMap("Duration")]
+        [Validation(Required=false)]
+        public double? Duration { get; set; }
+
+        /// <summary>
         /// ETag
         /// </summary>
         [NameInMap("ETag")]
@@ -225,6 +239,20 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("Filename")]
         [Validation(Required=false)]
         public string Filename { get; set; }
+
+        /// <summary>
+        /// FormatLongName
+        /// </summary>
+        [NameInMap("FormatLongName")]
+        [Validation(Required=false)]
+        public string FormatLongName { get; set; }
+
+        /// <summary>
+        /// FormatName
+        /// </summary>
+        [NameInMap("FormatName")]
+        [Validation(Required=false)]
+        public string FormatName { get; set; }
 
         /// <summary>
         /// ImageHeight
@@ -406,6 +434,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProduceTime { get; set; }
 
         /// <summary>
+        /// ProgramCount
+        /// </summary>
+        [NameInMap("ProgramCount")]
+        [Validation(Required=false)]
+        public long? ProgramCount { get; set; }
+
+        /// <summary>
         /// ProjectName
         /// </summary>
         [NameInMap("ProjectName")]
@@ -446,6 +481,20 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("Size")]
         [Validation(Required=false)]
         public long? Size { get; set; }
+
+        /// <summary>
+        /// StartTime
+        /// </summary>
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
+
+        /// <summary>
+        /// StreamCount
+        /// </summary>
+        [NameInMap("StreamCount")]
+        [Validation(Required=false)]
+        public long? StreamCount { get; set; }
 
         /// <summary>
         /// Subtitles

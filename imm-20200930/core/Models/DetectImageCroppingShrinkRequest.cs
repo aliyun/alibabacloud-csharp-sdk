@@ -8,10 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class DetectImageLabelsRequest : TeaModel {
+    public class DetectImageCroppingShrinkRequest : TeaModel {
+        [NameInMap("AspectRatios")]
+        [Validation(Required=false)]
+        public string AspectRatios { get; set; }
+
         [NameInMap("CredentialConfig")]
         [Validation(Required=false)]
-        public CredentialConfig CredentialConfig { get; set; }
+        public string CredentialConfigShrink { get; set; }
 
         /// <summary>
         /// 项目名称
@@ -26,13 +30,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("SourceURI")]
         [Validation(Required=false)]
         public string SourceURI { get; set; }
-
-        /// <summary>
-        /// Threshold
-        /// </summary>
-        [NameInMap("Threshold")]
-        [Validation(Required=false)]
-        public float? Threshold { get; set; }
 
     }
 

@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class DetectImageLabelsRequest : TeaModel {
+    public class DetectImageLabelsShrinkRequest : TeaModel {
         [NameInMap("CredentialConfig")]
         [Validation(Required=false)]
-        public CredentialConfig CredentialConfig { get; set; }
+        public string CredentialConfigShrink { get; set; }
 
         /// <summary>
         /// 项目名称

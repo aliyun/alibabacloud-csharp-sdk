@@ -9,12 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateOfficeConversionTaskRequest : TeaModel {
-        /// <summary>
-        /// 链式授权
-        /// </summary>
-        [NameInMap("AssumeRoleChain")]
+        [NameInMap("CredentialConfig")]
         [Validation(Required=false)]
-        public AssumeRoleChain AssumeRoleChain { get; set; }
+        public CredentialConfig CredentialConfig { get; set; }
 
         /// <summary>
         /// 转换终止页，包含终止页，默认转换到最后一页，表格转图片时需要指定 SheetIndex 才有效
@@ -50,6 +47,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("HoldLineFeed")]
         [Validation(Required=false)]
         public bool? HoldLineFeed { get; set; }
+
+        /// <summary>
+        /// 输出图片 DPI，允许范围 96-600，默认 96
+        /// </summary>
+        [NameInMap("ImageDPI")]
+        [Validation(Required=false)]
+        public long? ImageDPI { get; set; }
 
         /// <summary>
         /// 转图片时是否转换成一张长图，最多支持将 20 页合成一张长图，超过可能报错，默认为不转成长图
@@ -92,6 +96,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("NotifyTopicName")]
         [Validation(Required=false)]
         public string NotifyTopicName { get; set; }
+
+        /// <summary>
+        /// 指定转换页码，优先级高于 StartPage/EndPage，格式：多个页码用 “," 拼接，连续页码用 "-" 连接，样例参考: 1,2-4,7
+        /// </summary>
+        [NameInMap("Pages")]
+        [Validation(Required=false)]
+        public string Pages { get; set; }
 
         /// <summary>
         /// 表格转图片纸张是否水平放置，默认为否
