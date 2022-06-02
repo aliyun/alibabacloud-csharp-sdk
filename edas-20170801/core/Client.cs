@@ -9458,6 +9458,76 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListK8sIngressRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        public ListK8sNamespacesResponse ListK8sNamespaces(ListK8sNamespacesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListK8sNamespacesWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ListK8sNamespacesResponse> ListK8sNamespacesAsync(ListK8sNamespacesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListK8sNamespacesWithOptionsAsync(request, headers, runtime);
+        }
+
+        public ListK8sNamespacesResponse ListK8sNamespacesWithOptions(ListK8sNamespacesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListK8sNamespaces",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v5/k8s/acs/k8s_namespace",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListK8sNamespacesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListK8sNamespacesResponse> ListK8sNamespacesWithOptionsAsync(ListK8sNamespacesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListK8sNamespaces",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v5/k8s/acs/k8s_namespace",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListK8sNamespacesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public ListK8sSecretsResponse ListK8sSecrets(ListK8sSecretsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

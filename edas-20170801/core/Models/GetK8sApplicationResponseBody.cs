@@ -214,6 +214,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                         }
                     };
 
+                    [NameInMap("Env")]
+                    [Validation(Required=false)]
+                    public string Env { get; set; }
+
                 }
 
             }
