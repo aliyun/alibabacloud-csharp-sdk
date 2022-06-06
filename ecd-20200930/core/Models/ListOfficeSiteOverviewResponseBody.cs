@@ -13,47 +13,67 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("OfficeSiteOverviewResults")]
         [Validation(Required=false)]
         public List<ListOfficeSiteOverviewResponseBodyOfficeSiteOverviewResults> OfficeSiteOverviewResults { get; set; }
         public class ListOfficeSiteOverviewResponseBodyOfficeSiteOverviewResults : TeaModel {
-            [NameInMap("OfficeSiteStatus")]
+            [NameInMap("HasExpiredEdsCount")]
             [Validation(Required=false)]
-            public string OfficeSiteStatus { get; set; }
+            public int? HasExpiredEdsCount { get; set; }
 
-            [NameInMap("TotalEdsCount")]
+            [NameInMap("HasExpiredEdsCountForGroup")]
             [Validation(Required=false)]
-            public int? TotalEdsCount { get; set; }
-
-            [NameInMap("WillExpiredEdsCount")]
-            [Validation(Required=false)]
-            public int? WillExpiredEdsCount { get; set; }
+            public int? HasExpiredEdsCountForGroup { get; set; }
 
             [NameInMap("OfficeSiteId")]
             [Validation(Required=false)]
             public string OfficeSiteId { get; set; }
 
-            [NameInMap("RunningEdsCount")]
-            [Validation(Required=false)]
-            public int? RunningEdsCount { get; set; }
-
             [NameInMap("OfficeSiteName")]
             [Validation(Required=false)]
             public string OfficeSiteName { get; set; }
 
-            [NameInMap("HasExpiredEdsCount")]
+            [NameInMap("OfficeSiteStatus")]
             [Validation(Required=false)]
-            public int? HasExpiredEdsCount { get; set; }
+            public string OfficeSiteStatus { get; set; }
 
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            [NameInMap("RunningEdsCount")]
+            [Validation(Required=false)]
+            public int? RunningEdsCount { get; set; }
+
+            [NameInMap("RunningEdsCountForGroup")]
+            [Validation(Required=false)]
+            public int? RunningEdsCountForGroup { get; set; }
+
+            [NameInMap("TotalEdsCount")]
+            [Validation(Required=false)]
+            public int? TotalEdsCount { get; set; }
+
+            [NameInMap("TotalEdsCountForGroup")]
+            [Validation(Required=false)]
+            public int? TotalEdsCountForGroup { get; set; }
+
+            [NameInMap("VpcType")]
+            [Validation(Required=false)]
+            public string VpcType { get; set; }
+
+            [NameInMap("WillExpiredEdsCount")]
+            [Validation(Required=false)]
+            public int? WillExpiredEdsCount { get; set; }
+
+            [NameInMap("WillExpiredEdsCountForGroup")]
+            [Validation(Required=false)]
+            public int? WillExpiredEdsCountForGroup { get; set; }
+
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

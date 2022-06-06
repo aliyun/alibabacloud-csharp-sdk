@@ -25,33 +25,33 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
-            [NameInMap("Status")]
+            [NameInMap("Description")]
             [Validation(Required=false)]
-            public string Status { get; set; }
+            public string Description { get; set; }
 
-            [NameInMap("SnapshotType")]
+            [NameInMap("DesktopId")]
             [Validation(Required=false)]
-            public string SnapshotType { get; set; }
-
-            [NameInMap("SnapshotName")]
-            [Validation(Required=false)]
-            public string SnapshotName { get; set; }
+            public string DesktopId { get; set; }
 
             [NameInMap("Progress")]
             [Validation(Required=false)]
             public string Progress { get; set; }
 
-            [NameInMap("Description")]
+            [NameInMap("RemainTime")]
             [Validation(Required=false)]
-            public string Description { get; set; }
+            public int? RemainTime { get; set; }
 
             [NameInMap("SnapshotId")]
             [Validation(Required=false)]
             public string SnapshotId { get; set; }
 
-            [NameInMap("RemainTime")]
+            [NameInMap("SnapshotName")]
             [Validation(Required=false)]
-            public int? RemainTime { get; set; }
+            public string SnapshotName { get; set; }
+
+            [NameInMap("SnapshotType")]
+            [Validation(Required=false)]
+            public string SnapshotType { get; set; }
 
             [NameInMap("SourceDiskSize")]
             [Validation(Required=false)]
@@ -61,9 +61,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string SourceDiskType { get; set; }
 
-            [NameInMap("DesktopId")]
+            [NameInMap("Status")]
             [Validation(Required=false)]
-            public string DesktopId { get; set; }
+            public string Status { get; set; }
+
+            [NameInMap("VolumeEncryptionEnabled")]
+            [Validation(Required=false)]
+            public bool? VolumeEncryptionEnabled { get; set; }
+
+            [NameInMap("VolumeEncryptionKey")]
+            [Validation(Required=false)]
+            public string VolumeEncryptionKey { get; set; }
 
         }
 

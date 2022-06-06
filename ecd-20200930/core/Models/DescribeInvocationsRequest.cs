@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeInvocationsRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("InvokeId")]
-        [Validation(Required=false)]
-        public string InvokeId { get; set; }
-
         [NameInMap("CommandType")]
         [Validation(Required=false)]
         public string CommandType { get; set; }
 
-        [NameInMap("InvokeStatus")]
+        [NameInMap("ContentEncoding")]
         [Validation(Required=false)]
-        public string InvokeStatus { get; set; }
+        public string ContentEncoding { get; set; }
 
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
@@ -33,9 +25,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public bool? IncludeOutput { get; set; }
 
-        [NameInMap("ContentEncoding")]
+        [NameInMap("InvokeId")]
         [Validation(Required=false)]
-        public string ContentEncoding { get; set; }
+        public string InvokeId { get; set; }
+
+        [NameInMap("InvokeStatus")]
+        [Validation(Required=false)]
+        public string InvokeStatus { get; set; }
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -44,6 +40,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

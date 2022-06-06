@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyImageAttributeRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string Description { get; set; }
 
         [NameInMap("ImageId")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public string RegionId { get; set; }
 
     }
 

@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyNetworkPackageEnabledRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("Enabled")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public bool? Enabled { get; set; }
 
         [NameInMap("NetworkPackageId")]
         [Validation(Required=false)]
         public string NetworkPackageId { get; set; }
 
-        [NameInMap("Enabled")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public bool? Enabled { get; set; }
+        public string RegionId { get; set; }
 
     }
 

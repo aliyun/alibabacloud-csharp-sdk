@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopIdsByVulNamesRequest : TeaModel {
+        [NameInMap("Necessity")]
+        [Validation(Required=false)]
+        public string Necessity { get; set; }
+
+        [NameInMap("OfficeSiteId")]
+        [Validation(Required=false)]
+        public string OfficeSiteId { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -16,14 +24,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
-
-        [NameInMap("OfficeSiteId")]
-        [Validation(Required=false)]
-        public string OfficeSiteId { get; set; }
-
-        [NameInMap("Necessity")]
-        [Validation(Required=false)]
-        public string Necessity { get; set; }
 
         [NameInMap("VulName")]
         [Validation(Required=false)]

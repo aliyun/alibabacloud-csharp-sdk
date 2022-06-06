@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyNASDefaultMountTargetRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("MountTargetDomain")]
         [Validation(Required=false)]
         public string MountTargetDomain { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

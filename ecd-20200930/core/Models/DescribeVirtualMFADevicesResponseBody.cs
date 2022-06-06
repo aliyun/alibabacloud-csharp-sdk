@@ -21,37 +21,37 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<DescribeVirtualMFADevicesResponseBodyVirtualMFADevices> VirtualMFADevices { get; set; }
         public class DescribeVirtualMFADevicesResponseBodyVirtualMFADevices : TeaModel {
-            [NameInMap("SerialNumber")]
-            [Validation(Required=false)]
-            public string SerialNumber { get; set; }
-
-            [NameInMap("GmtUnlock")]
-            [Validation(Required=false)]
-            public string GmtUnlock { get; set; }
-
-            [NameInMap("EndUserId")]
-            [Validation(Required=false)]
-            public string EndUserId { get; set; }
-
             [NameInMap("ConsecutiveFails")]
             [Validation(Required=false)]
             public int? ConsecutiveFails { get; set; }
-
-            [NameInMap("OfficeSiteId")]
-            [Validation(Required=false)]
-            public string OfficeSiteId { get; set; }
-
-            [NameInMap("status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
 
             [NameInMap("DirectoryId")]
             [Validation(Required=false)]
             public string DirectoryId { get; set; }
 
+            [NameInMap("EndUserId")]
+            [Validation(Required=false)]
+            public string EndUserId { get; set; }
+
             [NameInMap("GmtEnabled")]
             [Validation(Required=false)]
             public string GmtEnabled { get; set; }
+
+            [NameInMap("GmtUnlock")]
+            [Validation(Required=false)]
+            public string GmtUnlock { get; set; }
+
+            [NameInMap("OfficeSiteId")]
+            [Validation(Required=false)]
+            public string OfficeSiteId { get; set; }
+
+            [NameInMap("SerialNumber")]
+            [Validation(Required=false)]
+            public string SerialNumber { get; set; }
+
+            [NameInMap("status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
 
         }
 

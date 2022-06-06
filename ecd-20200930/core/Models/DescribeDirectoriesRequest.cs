@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDirectoriesRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("DirectoryId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("DirectoryType")]
-        [Validation(Required=false)]
-        public string DirectoryType { get; set; }
+        public List<string> DirectoryId { get; set; }
 
         [NameInMap("DirectoryStatus")]
         [Validation(Required=false)]
         public string DirectoryStatus { get; set; }
+
+        [NameInMap("DirectoryType")]
+        [Validation(Required=false)]
+        public string DirectoryType { get; set; }
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -29,9 +29,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        [NameInMap("DirectoryId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public List<string> DirectoryId { get; set; }
+        public string RegionId { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

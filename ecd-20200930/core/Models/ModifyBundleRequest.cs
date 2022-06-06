@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyBundleRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("BundleId")]
         [Validation(Required=false)]
         public string BundleId { get; set; }
-
-        [NameInMap("ImageId")]
-        [Validation(Required=false)]
-        public string ImageId { get; set; }
 
         [NameInMap("BundleName")]
         [Validation(Required=false)]
@@ -28,6 +20,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        [NameInMap("ImageId")]
+        [Validation(Required=false)]
+        public string ImageId { get; set; }
+
+        [NameInMap("Language")]
+        [Validation(Required=false)]
+        public string Language { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

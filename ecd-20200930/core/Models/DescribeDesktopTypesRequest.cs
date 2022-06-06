@@ -9,29 +9,41 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopTypesRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("AppliedScope")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("DesktopTypeId")]
-        [Validation(Required=false)]
-        public string DesktopTypeId { get; set; }
-
-        [NameInMap("InstanceTypeFamily")]
-        [Validation(Required=false)]
-        public string InstanceTypeFamily { get; set; }
+        public string AppliedScope { get; set; }
 
         [NameInMap("CpuCount")]
         [Validation(Required=false)]
         public int? CpuCount { get; set; }
 
-        [NameInMap("MemorySize")]
+        [NameInMap("DesktopIdForModify")]
         [Validation(Required=false)]
-        public int? MemorySize { get; set; }
+        public string DesktopIdForModify { get; set; }
+
+        [NameInMap("DesktopTypeId")]
+        [Validation(Required=false)]
+        public string DesktopTypeId { get; set; }
 
         [NameInMap("GpuCount")]
         [Validation(Required=false)]
         public float? GpuCount { get; set; }
+
+        [NameInMap("InstanceTypeFamily")]
+        [Validation(Required=false)]
+        public string InstanceTypeFamily { get; set; }
+
+        [NameInMap("MemorySize")]
+        [Validation(Required=false)]
+        public int? MemorySize { get; set; }
+
+        [NameInMap("OrderType")]
+        [Validation(Required=false)]
+        public string OrderType { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

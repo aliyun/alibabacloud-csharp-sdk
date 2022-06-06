@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ListOfficeSiteOverviewRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("ForceRefresh")]
         [Validation(Required=false)]
         public bool? ForceRefresh { get; set; }
@@ -28,6 +24,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public List<string> OfficeSiteId { get; set; }
+
+        [NameInMap("QueryRange")]
+        [Validation(Required=false)]
+        public int? QueryRange { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

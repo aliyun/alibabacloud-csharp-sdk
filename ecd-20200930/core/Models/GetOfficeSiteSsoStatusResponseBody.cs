@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class GetOfficeSiteSsoStatusResponseBody : TeaModel {
-        [NameInMap("SsoStatus")]
-        [Validation(Required=false)]
-        public bool? SsoStatus { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("SsoStatus")]
+        [Validation(Required=false)]
+        public bool? SsoStatus { get; set; }
 
     }
 

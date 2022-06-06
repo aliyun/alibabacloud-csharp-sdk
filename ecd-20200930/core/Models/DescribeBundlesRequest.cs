@@ -9,53 +9,61 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeBundlesRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("BundleId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
+        public List<string> BundleId { get; set; }
 
         [NameInMap("BundleType")]
         [Validation(Required=false)]
         public string BundleType { get; set; }
 
-        [NameInMap("DesktopTypeFamily")]
+        [NameInMap("CheckStock")]
         [Validation(Required=false)]
-        public string DesktopTypeFamily { get; set; }
+        public bool? CheckStock { get; set; }
 
         [NameInMap("CpuCount")]
         [Validation(Required=false)]
         public int? CpuCount { get; set; }
 
-        [NameInMap("MemorySize")]
+        [NameInMap("DesktopTypeFamily")]
         [Validation(Required=false)]
-        public int? MemorySize { get; set; }
-
-        [NameInMap("GpuCount")]
-        [Validation(Required=false)]
-        public float? GpuCount { get; set; }
-
-        [NameInMap("CheckStock")]
-        [Validation(Required=false)]
-        public bool? CheckStock { get; set; }
+        public string DesktopTypeFamily { get; set; }
 
         [NameInMap("FromDesktopGroup")]
         [Validation(Required=false)]
         public bool? FromDesktopGroup { get; set; }
 
+        [NameInMap("GpuCount")]
+        [Validation(Required=false)]
+        public float? GpuCount { get; set; }
+
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        [NameInMap("MemorySize")]
+        [Validation(Required=false)]
+        public int? MemorySize { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         [NameInMap("ProtocolType")]
         [Validation(Required=false)]
         public string ProtocolType { get; set; }
 
-        [NameInMap("BundleId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public List<string> BundleId { get; set; }
+        public string RegionId { get; set; }
+
+        [NameInMap("SupportMultiSession")]
+        [Validation(Required=false)]
+        public bool? SupportMultiSession { get; set; }
+
+        [NameInMap("VolumeEncryptionEnabled")]
+        [Validation(Required=false)]
+        public bool? VolumeEncryptionEnabled { get; set; }
 
     }
 

@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeVirtualMFADevicesRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("DirectoryId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string DirectoryId { get; set; }
+
+        [NameInMap("EndUserId")]
+        [Validation(Required=false)]
+        public List<string> EndUserId { get; set; }
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -21,17 +25,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        [NameInMap("DirectoryId")]
-        [Validation(Required=false)]
-        public string DirectoryId { get; set; }
-
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
 
-        [NameInMap("EndUserId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public List<string> EndUserId { get; set; }
+        public string RegionId { get; set; }
 
     }
 

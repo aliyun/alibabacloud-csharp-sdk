@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ZoneType")]
+        [Validation(Required=false)]
+        public string ZoneType { get; set; }
+
     }
 
 }

@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ClonePolicyGroupRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string Name { get; set; }
 
         [NameInMap("PolicyGroupId")]
         [Validation(Required=false)]
         public string PolicyGroupId { get; set; }
 
-        [NameInMap("Name")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string RegionId { get; set; }
 
     }
 

@@ -9,29 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopTypesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DesktopTypes")]
         [Validation(Required=false)]
         public List<DescribeDesktopTypesResponseBodyDesktopTypes> DesktopTypes { get; set; }
         public class DescribeDesktopTypesResponseBodyDesktopTypes : TeaModel {
-            [NameInMap("SystemDiskSize")]
+            [NameInMap("CpuCount")]
             [Validation(Required=false)]
-            public string SystemDiskSize { get; set; }
-
-            [NameInMap("DesktopTypeId")]
-            [Validation(Required=false)]
-            public string DesktopTypeId { get; set; }
+            public string CpuCount { get; set; }
 
             [NameInMap("DataDiskSize")]
             [Validation(Required=false)]
             public string DataDiskSize { get; set; }
 
-            [NameInMap("CpuCount")]
+            [NameInMap("DesktopTypeId")]
             [Validation(Required=false)]
-            public string CpuCount { get; set; }
+            public string DesktopTypeId { get; set; }
+
+            [NameInMap("DesktopTypeStatus")]
+            [Validation(Required=false)]
+            public string DesktopTypeStatus { get; set; }
 
             [NameInMap("GpuCount")]
             [Validation(Required=false)]
@@ -49,21 +45,15 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string MemorySize { get; set; }
 
-            [NameInMap("AllowDiskSize")]
+            [NameInMap("SystemDiskSize")]
             [Validation(Required=false)]
-            public List<DescribeDesktopTypesResponseBodyDesktopTypesAllowDiskSize> AllowDiskSize { get; set; }
-            public class DescribeDesktopTypesResponseBodyDesktopTypesAllowDiskSize : TeaModel {
-                [NameInMap("DataDiskSize")]
-                [Validation(Required=false)]
-                public int? DataDiskSize { get; set; }
-
-                [NameInMap("SystemDiskSize")]
-                [Validation(Required=false)]
-                public int? SystemDiskSize { get; set; }
-
-            }
+            public string SystemDiskSize { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -1,3 +1,6 @@
+2022-06-06 Version: 2.0.2
+- Support security check for UploadImage.
+
 2021-08-03 Version: 2.0.1
 - Generated csharp 2020-09-30 for ecd.
 

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeFrontVulPatchListResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("FrontPatchList")]
         [Validation(Required=false)]
         public List<DescribeFrontVulPatchListResponseBodyFrontPatchList> FrontPatchList { get; set; }
@@ -25,17 +21,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public List<DescribeFrontVulPatchListResponseBodyFrontPatchListPatchList> PatchList { get; set; }
             public class DescribeFrontVulPatchListResponseBodyFrontPatchListPatchList : TeaModel {
-                [NameInMap("Name")]
-                [Validation(Required=false)]
-                public string Name { get; set; }
-
                 [NameInMap("AliasName")]
                 [Validation(Required=false)]
                 public string AliasName { get; set; }
 
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
             }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

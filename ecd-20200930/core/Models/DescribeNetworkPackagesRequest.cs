@@ -9,21 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeNetworkPackagesRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("InternetChargeType")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string InternetChargeType { get; set; }
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        [NameInMap("NetworkPackageId")]
+        [Validation(Required=false)]
+        public List<string> NetworkPackageId { get; set; }
+
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        [NameInMap("NetworkPackageId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public List<string> NetworkPackageId { get; set; }
+        public string RegionId { get; set; }
 
     }
 

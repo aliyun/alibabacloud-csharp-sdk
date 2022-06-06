@@ -9,17 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class AttachCenRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
 
+        [NameInMap("CenOwnerId")]
+        [Validation(Required=false)]
+        public long? CenOwnerId { get; set; }
+
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("VerifyCode")]
+        [Validation(Required=false)]
+        public string VerifyCode { get; set; }
 
     }
 

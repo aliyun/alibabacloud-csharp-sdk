@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyOfficeSiteMfaEnabledRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("MfaEnabled")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public bool? MfaEnabled { get; set; }
 
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
 
-        [NameInMap("MfaEnabled")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public bool? MfaEnabled { get; set; }
+        public string RegionId { get; set; }
 
     }
 

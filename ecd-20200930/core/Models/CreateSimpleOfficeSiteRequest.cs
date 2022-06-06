@@ -9,37 +9,57 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateSimpleOfficeSiteRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("Bandwidth")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("CidrBlock")]
-        [Validation(Required=false)]
-        public string CidrBlock { get; set; }
+        public int? Bandwidth { get; set; }
 
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
 
-        [NameInMap("Bandwidth")]
+        [NameInMap("CenOwnerId")]
         [Validation(Required=false)]
-        public int? Bandwidth { get; set; }
+        public long? CenOwnerId { get; set; }
 
-        [NameInMap("OfficeSiteName")]
+        [NameInMap("CidrBlock")]
         [Validation(Required=false)]
-        public string OfficeSiteName { get; set; }
+        public string CidrBlock { get; set; }
 
-        [NameInMap("EnableInternetAccess")]
+        [NameInMap("CloudBoxOfficeSite")]
         [Validation(Required=false)]
-        public bool? EnableInternetAccess { get; set; }
+        public bool? CloudBoxOfficeSite { get; set; }
+
+        [NameInMap("DesktopAccessType")]
+        [Validation(Required=false)]
+        public string DesktopAccessType { get; set; }
 
         [NameInMap("EnableAdminAccess")]
         [Validation(Required=false)]
         public bool? EnableAdminAccess { get; set; }
 
-        [NameInMap("DesktopAccessType")]
+        [NameInMap("EnableInternetAccess")]
         [Validation(Required=false)]
-        public string DesktopAccessType { get; set; }
+        public bool? EnableInternetAccess { get; set; }
+
+        [NameInMap("NeedVerifyZeroDevice")]
+        [Validation(Required=false)]
+        public bool? NeedVerifyZeroDevice { get; set; }
+
+        [NameInMap("OfficeSiteName")]
+        [Validation(Required=false)]
+        public string OfficeSiteName { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("VSwitchId")]
+        [Validation(Required=false)]
+        public List<string> VSwitchId { get; set; }
+
+        [NameInMap("VerifyCode")]
+        [Validation(Required=false)]
+        public string VerifyCode { get; set; }
 
     }
 

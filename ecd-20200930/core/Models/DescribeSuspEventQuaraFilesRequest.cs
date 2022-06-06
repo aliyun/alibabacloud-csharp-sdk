@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeSuspEventQuaraFilesRequest : TeaModel {
+        [NameInMap("CurrentPage")]
+        [Validation(Required=false)]
+        public int? CurrentPage { get; set; }
+
+        [NameInMap("OfficeSiteId")]
+        [Validation(Required=false)]
+        public string OfficeSiteId { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -16,18 +28,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
-
-        [NameInMap("OfficeSiteId")]
-        [Validation(Required=false)]
-        public string OfficeSiteId { get; set; }
-
-        [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
 
     }
 

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeVulDetailsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Cves")]
         [Validation(Required=false)]
         public List<DescribeVulDetailsResponseBodyCves> Cves { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("CveId")]
             [Validation(Required=false)]
             public string CveId { get; set; }
+
+            [NameInMap("CvssScore")]
+            [Validation(Required=false)]
+            public string CvssScore { get; set; }
 
             [NameInMap("Summary")]
             [Validation(Required=false)]
@@ -29,11 +29,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string Title { get; set; }
 
-            [NameInMap("CvssScore")]
-            [Validation(Required=false)]
-            public string CvssScore { get; set; }
-
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

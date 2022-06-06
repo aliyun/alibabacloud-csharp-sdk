@@ -9,17 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class SetOfficeSiteSsoStatusRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("EnableSso")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public bool? EnableSso { get; set; }
 
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
 
-        [NameInMap("EnableSso")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public bool? EnableSso { get; set; }
+        public string RegionId { get; set; }
+
+        [NameInMap("SsoType")]
+        [Validation(Required=false)]
+        public string SsoType { get; set; }
 
     }
 

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyDesktopsPolicyGroupResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ModifyResults")]
         [Validation(Required=false)]
         public List<ModifyDesktopsPolicyGroupResponseBodyModifyResults> ModifyResults { get; set; }
@@ -21,15 +17,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string Code { get; set; }
 
-            [NameInMap("Message")]
-            [Validation(Required=false)]
-            public string Message { get; set; }
-
             [NameInMap("DesktopId")]
             [Validation(Required=false)]
             public string DesktopId { get; set; }
 
+            [NameInMap("Message")]
+            [Validation(Required=false)]
+            public string Message { get; set; }
+
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

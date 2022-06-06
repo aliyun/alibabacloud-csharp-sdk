@@ -9,9 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeImagesRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("DesktopInstanceType")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string DesktopInstanceType { get; set; }
+
+        [NameInMap("GpuCategory")]
+        [Validation(Required=false)]
+        public bool? GpuCategory { get; set; }
+
+        [NameInMap("GpuDriverVersion")]
+        [Validation(Required=false)]
+        public string GpuDriverVersion { get; set; }
+
+        [NameInMap("ImageId")]
+        [Validation(Required=false)]
+        public List<string> ImageId { get; set; }
+
+        [NameInMap("ImageStatus")]
+        [Validation(Required=false)]
+        public string ImageStatus { get; set; }
+
+        [NameInMap("ImageType")]
+        [Validation(Required=false)]
+        public string ImageType { get; set; }
+
+        [NameInMap("LanguageType")]
+        [Validation(Required=false)]
+        public string LanguageType { get; set; }
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -21,25 +45,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        [NameInMap("ImageType")]
+        [NameInMap("OsType")]
         [Validation(Required=false)]
-        public string ImageType { get; set; }
-
-        [NameInMap("ImageStatus")]
-        [Validation(Required=false)]
-        public string ImageStatus { get; set; }
-
-        [NameInMap("GpuCategory")]
-        [Validation(Required=false)]
-        public bool? GpuCategory { get; set; }
+        public string OsType { get; set; }
 
         [NameInMap("ProtocolType")]
         [Validation(Required=false)]
         public string ProtocolType { get; set; }
 
-        [NameInMap("ImageId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public List<string> ImageId { get; set; }
+        public string RegionId { get; set; }
 
     }
 

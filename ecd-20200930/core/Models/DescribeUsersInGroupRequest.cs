@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeUsersInGroupRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("ConnectState")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public int? ConnectState { get; set; }
 
         [NameInMap("DesktopGroupId")]
         [Validation(Required=false)]
         public string DesktopGroupId { get; set; }
+
+        [NameInMap("EndUserId")]
+        [Validation(Required=false)]
+        public string EndUserId { get; set; }
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -24,6 +28,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
+
+        [NameInMap("QueryUserDetail")]
+        [Validation(Required=false)]
+        public bool? QueryUserDetail { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

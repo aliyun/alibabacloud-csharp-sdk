@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<ListOfficeSiteUsersResponseBodyUsers> Users { get; set; }
         public class ListOfficeSiteUsersResponseBodyUsers : TeaModel {
+            [NameInMap("DisplayName")]
+            [Validation(Required=false)]
+            public string DisplayName { get; set; }
+
             [NameInMap("EndUser")]
             [Validation(Required=false)]
             public string EndUser { get; set; }

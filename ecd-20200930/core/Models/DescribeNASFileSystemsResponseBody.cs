@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeNASFileSystemsResponseBody : TeaModel {
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("FileSystems")]
         [Validation(Required=false)]
         public List<DescribeNASFileSystemsResponseBodyFileSystems> FileSystems { get; set; }
@@ -25,45 +17,33 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public long? Capacity { get; set; }
 
-            [NameInMap("MountTargetStatus")]
-            [Validation(Required=false)]
-            public string MountTargetStatus { get; set; }
-
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
-            [NameInMap("OfficeSiteId")]
+            [NameInMap("Description")]
             [Validation(Required=false)]
-            public string OfficeSiteId { get; set; }
+            public string Description { get; set; }
 
-            [NameInMap("SupportAcl")]
+            [NameInMap("EncryptionEnabled")]
             [Validation(Required=false)]
-            public bool? SupportAcl { get; set; }
-
-            [NameInMap("StorageType")]
-            [Validation(Required=false)]
-            public string StorageType { get; set; }
-
-            [NameInMap("OfficeSiteName")]
-            [Validation(Required=false)]
-            public string OfficeSiteName { get; set; }
-
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
+            public bool? EncryptionEnabled { get; set; }
 
             [NameInMap("FileSystemId")]
             [Validation(Required=false)]
             public string FileSystemId { get; set; }
 
-            [NameInMap("FileSystemType")]
-            [Validation(Required=false)]
-            public string FileSystemType { get; set; }
-
             [NameInMap("FileSystemName")]
             [Validation(Required=false)]
             public string FileSystemName { get; set; }
+
+            [NameInMap("FileSystemStatus")]
+            [Validation(Required=false)]
+            public string FileSystemStatus { get; set; }
+
+            [NameInMap("FileSystemType")]
+            [Validation(Required=false)]
+            public string FileSystemType { get; set; }
 
             [NameInMap("MeteredSize")]
             [Validation(Required=false)]
@@ -73,19 +53,43 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string MountTargetDomain { get; set; }
 
-            [NameInMap("Description")]
+            [NameInMap("MountTargetStatus")]
             [Validation(Required=false)]
-            public string Description { get; set; }
+            public string MountTargetStatus { get; set; }
+
+            [NameInMap("OfficeSiteId")]
+            [Validation(Required=false)]
+            public string OfficeSiteId { get; set; }
+
+            [NameInMap("OfficeSiteName")]
+            [Validation(Required=false)]
+            public string OfficeSiteName { get; set; }
+
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
+
+            [NameInMap("StorageType")]
+            [Validation(Required=false)]
+            public string StorageType { get; set; }
+
+            [NameInMap("SupportAcl")]
+            [Validation(Required=false)]
+            public bool? SupportAcl { get; set; }
 
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
             public string ZoneId { get; set; }
 
-            [NameInMap("FileSystemStatus")]
-            [Validation(Required=false)]
-            public string FileSystemStatus { get; set; }
-
         }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

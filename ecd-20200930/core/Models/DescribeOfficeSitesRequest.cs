@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeOfficeSitesRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("OfficeSiteType")]
-        [Validation(Required=false)]
-        public string OfficeSiteType { get; set; }
-
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
@@ -28,6 +20,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public List<string> OfficeSiteId { get; set; }
+
+        [NameInMap("OfficeSiteType")]
+        [Validation(Required=false)]
+        public string OfficeSiteType { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

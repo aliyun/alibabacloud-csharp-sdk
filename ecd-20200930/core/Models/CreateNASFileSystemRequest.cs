@@ -9,21 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateNASFileSystemRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string Description { get; set; }
 
-        [NameInMap("OfficeSiteId")]
+        [NameInMap("EncryptType")]
         [Validation(Required=false)]
-        public string OfficeSiteId { get; set; }
+        public string EncryptType { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public string OfficeSiteId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("StorageType")]
+        [Validation(Required=false)]
+        public string StorageType { get; set; }
 
     }
 

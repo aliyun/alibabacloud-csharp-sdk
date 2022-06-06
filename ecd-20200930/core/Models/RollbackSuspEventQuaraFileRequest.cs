@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class RollbackSuspEventQuaraFileRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("DesktopId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string DesktopId { get; set; }
 
         [NameInMap("QuaraFieldId")]
         [Validation(Required=false)]
         public int? QuaraFieldId { get; set; }
 
-        [NameInMap("DesktopId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string DesktopId { get; set; }
+        public string RegionId { get; set; }
 
     }
 

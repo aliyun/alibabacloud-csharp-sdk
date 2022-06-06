@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeNASFileSystemsRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("FileSystemId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("OfficeSiteId")]
-        [Validation(Required=false)]
-        public string OfficeSiteId { get; set; }
+        public List<string> FileSystemId { get; set; }
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -25,9 +21,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        [NameInMap("FileSystemId")]
+        [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
-        public List<string> FileSystemId { get; set; }
+        public string OfficeSiteId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

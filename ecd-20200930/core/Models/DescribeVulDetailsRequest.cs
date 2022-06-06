@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeVulDetailsRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("AliasName")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string AliasName { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("AliasName")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string AliasName { get; set; }
+        public string RegionId { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

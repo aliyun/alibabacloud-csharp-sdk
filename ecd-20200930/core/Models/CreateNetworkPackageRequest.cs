@@ -9,21 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateNetworkPackageRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("AutoPay")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public bool? AutoPay { get; set; }
+
+        [NameInMap("AutoRenew")]
+        [Validation(Required=false)]
+        public bool? AutoRenew { get; set; }
 
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public int? Bandwidth { get; set; }
 
-        [NameInMap("OfficeSiteId")]
-        [Validation(Required=false)]
-        public string OfficeSiteId { get; set; }
-
         [NameInMap("InternetChargeType")]
         [Validation(Required=false)]
         public string InternetChargeType { get; set; }
+
+        [NameInMap("OfficeSiteId")]
+        [Validation(Required=false)]
+        public string OfficeSiteId { get; set; }
 
         [NameInMap("Period")]
         [Validation(Required=false)]
@@ -33,13 +37,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
 
-        [NameInMap("AutoPay")]
+        [NameInMap("PromotionId")]
         [Validation(Required=false)]
-        public bool? AutoPay { get; set; }
+        public string PromotionId { get; set; }
 
-        [NameInMap("AutoRenew")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public bool? AutoRenew { get; set; }
+        public string RegionId { get; set; }
 
     }
 

@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class RenewDesktopsRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("AutoPay")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public bool? AutoPay { get; set; }
+
+        [NameInMap("DesktopId")]
+        [Validation(Required=false)]
+        public List<string> DesktopId { get; set; }
 
         [NameInMap("Period")]
         [Validation(Required=false)]
@@ -21,13 +25,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
 
-        [NameInMap("AutoPay")]
+        [NameInMap("PromotionId")]
         [Validation(Required=false)]
-        public bool? AutoPay { get; set; }
+        public string PromotionId { get; set; }
 
-        [NameInMap("DesktopId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public List<string> DesktopId { get; set; }
+        public string RegionId { get; set; }
 
     }
 

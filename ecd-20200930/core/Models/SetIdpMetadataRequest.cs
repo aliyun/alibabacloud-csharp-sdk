@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class SetIdpMetadataRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
         public string DirectoryId { get; set; }
+
+        [NameInMap("IdpMetadata")]
+        [Validation(Required=false)]
+        public string IdpMetadata { get; set; }
 
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
 
-        [NameInMap("IdpMetadata")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string IdpMetadata { get; set; }
+        public string RegionId { get; set; }
 
     }
 
