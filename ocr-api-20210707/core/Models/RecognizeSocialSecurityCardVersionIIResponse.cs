@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ocr_api20210707.Models
 {
-    public class RecognizeMedicalDeviceProduceLicenseResponse : TeaModel {
+    public class RecognizeSocialSecurityCardVersionIIResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public RecognizeMedicalDeviceProduceLicenseResponseBody Body { get; set; }
+        public RecognizeSocialSecurityCardVersionIIResponseBody Body { get; set; }
 
     }
 

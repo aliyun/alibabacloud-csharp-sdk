@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
         public RecognizeTaxClearanceCertificateResponseBody Body { get; set; }

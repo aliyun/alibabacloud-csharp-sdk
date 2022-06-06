@@ -8,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ocr_api20210707.Models
 {
-    public class RecognizeHouseholdRequest : TeaModel {
-        [NameInMap("IsResidentPage")]
-        [Validation(Required=false)]
-        public bool? IsResidentPage { get; set; }
-
+    public class RecognizeSocialSecurityCardVersionIIRequest : TeaModel {
         /// <summary>
         /// 图片链接（长度不超 2048，不支持 base64）
         /// </summary>
