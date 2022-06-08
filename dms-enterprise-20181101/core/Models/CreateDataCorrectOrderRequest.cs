@@ -37,6 +37,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [NameInMap("EstimateAffectRows")]
             [Validation(Required=false)]
             public long? EstimateAffectRows { get; set; }
+            [NameInMap("ExecMode")]
+            [Validation(Required=false)]
+            public string ExecMode { get; set; }
             [NameInMap("ExecSQL")]
             [Validation(Required=false)]
             public string ExecSQL { get; set; }
