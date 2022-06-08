@@ -111,6 +111,10 @@ namespace AlibabaCloud.SDK.Image_detect20211221
             {
                 query["Level"] = request.Level;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MqConfigName))
+            {
+                query["MqConfigName"] = request.MqConfigName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucketName))
             {
                 query["OssBucketName"] = request.OssBucketName;
@@ -169,6 +173,10 @@ namespace AlibabaCloud.SDK.Image_detect20211221
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
             {
                 query["Level"] = request.Level;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MqConfigName))
+            {
+                query["MqConfigName"] = request.MqConfigName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucketName))
             {
@@ -231,6 +239,72 @@ namespace AlibabaCloud.SDK.Image_detect20211221
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateTaskWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteMqConfigResponse DeleteMqConfigWithOptions(DeleteMqConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigName))
+            {
+                query["ConfigName"] = request.ConfigName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMqConfig",
+                Version = "2021-12-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMqConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteMqConfigResponse> DeleteMqConfigWithOptionsAsync(DeleteMqConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigName))
+            {
+                query["ConfigName"] = request.ConfigName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMqConfig",
+                Version = "2021-12-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMqConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteMqConfigResponse DeleteMqConfig(DeleteMqConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteMqConfigWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteMqConfigResponse> DeleteMqConfigAsync(DeleteMqConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteMqConfigWithOptionsAsync(request, runtime);
         }
 
         public DeleteOssConfigResponse DeleteOssConfigWithOptions(DeleteOssConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -363,6 +437,64 @@ namespace AlibabaCloud.SDK.Image_detect20211221
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetectImageWithOptionsAsync(request, runtime);
+        }
+
+        public GetMqConfigListResponse GetMqConfigListWithOptions(GetMqConfigListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMqConfigList",
+                Version = "2021-12-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMqConfigListResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetMqConfigListResponse> GetMqConfigListWithOptionsAsync(GetMqConfigListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMqConfigList",
+                Version = "2021-12-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMqConfigListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetMqConfigListResponse GetMqConfigList(GetMqConfigListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetMqConfigListWithOptions(request, runtime);
+        }
+
+        public async Task<GetMqConfigListResponse> GetMqConfigListAsync(GetMqConfigListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetMqConfigListWithOptionsAsync(request, runtime);
         }
 
         public GetOssConfigListResponse GetOssConfigListWithOptions(GetOssConfigListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -593,6 +725,112 @@ namespace AlibabaCloud.SDK.Image_detect20211221
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetTaskListWithOptionsAsync(request, runtime);
+        }
+
+        public SaveMqConfigResponse SaveMqConfigWithOptions(SaveMqConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigName))
+            {
+                query["ConfigName"] = request.ConfigName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MqAccessKey))
+            {
+                query["MqAccessKey"] = request.MqAccessKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MqAccessSecret))
+            {
+                query["MqAccessSecret"] = request.MqAccessSecret;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MqEndpoint))
+            {
+                query["MqEndpoint"] = request.MqEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MqGroupId))
+            {
+                query["MqGroupId"] = request.MqGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MqTopic))
+            {
+                query["MqTopic"] = request.MqTopic;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SaveMqConfig",
+                Version = "2021-12-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SaveMqConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SaveMqConfigResponse> SaveMqConfigWithOptionsAsync(SaveMqConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigName))
+            {
+                query["ConfigName"] = request.ConfigName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MqAccessKey))
+            {
+                query["MqAccessKey"] = request.MqAccessKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MqAccessSecret))
+            {
+                query["MqAccessSecret"] = request.MqAccessSecret;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MqEndpoint))
+            {
+                query["MqEndpoint"] = request.MqEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MqGroupId))
+            {
+                query["MqGroupId"] = request.MqGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MqTopic))
+            {
+                query["MqTopic"] = request.MqTopic;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SaveMqConfig",
+                Version = "2021-12-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SaveMqConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SaveMqConfigResponse SaveMqConfig(SaveMqConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SaveMqConfigWithOptions(request, runtime);
+        }
+
+        public async Task<SaveMqConfigResponse> SaveMqConfigAsync(SaveMqConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SaveMqConfigWithOptionsAsync(request, runtime);
         }
 
         public SaveOssConfigResponse SaveOssConfigWithOptions(SaveOssConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

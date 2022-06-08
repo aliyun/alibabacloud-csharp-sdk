@@ -49,12 +49,30 @@ namespace AlibabaCloud.SDK.Image_detect20211221.Models
             [NameInMap("Level")]
             [Validation(Required=false)]
             public int? Level { get; set; }
+            [NameInMap("MqAccessKey")]
+            [Validation(Required=false)]
+            public string MqAccessKey { get; set; }
+            [NameInMap("MqConfigName")]
+            [Validation(Required=false)]
+            public string MqConfigName { get; set; }
+            [NameInMap("MqEndpoint")]
+            [Validation(Required=false)]
+            public string MqEndpoint { get; set; }
+            [NameInMap("MqGroupId")]
+            [Validation(Required=false)]
+            public string MqGroupId { get; set; }
+            [NameInMap("MqTopic")]
+            [Validation(Required=false)]
+            public string MqTopic { get; set; }
             [NameInMap("OssAccessKeyId")]
             [Validation(Required=false)]
             public string OssAccessKeyId { get; set; }
             [NameInMap("OssBucketName")]
             [Validation(Required=false)]
             public string OssBucketName { get; set; }
+            [NameInMap("OssConfigName")]
+            [Validation(Required=false)]
+            public string OssConfigName { get; set; }
             [NameInMap("OssEndpoint")]
             [Validation(Required=false)]
             public string OssEndpoint { get; set; }

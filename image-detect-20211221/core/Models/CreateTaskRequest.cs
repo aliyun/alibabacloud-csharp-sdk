@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Image_detect20211221.Models
         [Validation(Required=false)]
         public int? Level { get; set; }
 
+        [NameInMap("MqConfigName")]
+        [Validation(Required=false)]
+        public string MqConfigName { get; set; }
+
         [NameInMap("OssBucketName")]
         [Validation(Required=false)]
         public string OssBucketName { get; set; }
