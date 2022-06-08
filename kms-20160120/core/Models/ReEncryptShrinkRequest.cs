@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [Validation(Required=false)]
         public string CiphertextBlob { get; set; }
 
-        [NameInMap("SourceKeyId")]
+        [NameInMap("DestinationEncryptionContext")]
         [Validation(Required=false)]
-        public string SourceKeyId { get; set; }
+        public string DestinationEncryptionContextShrink { get; set; }
 
-        [NameInMap("SourceKeyVersionId")]
+        [NameInMap("DestinationKeyId")]
         [Validation(Required=false)]
-        public string SourceKeyVersionId { get; set; }
+        public string DestinationKeyId { get; set; }
 
         [NameInMap("SourceEncryptionAlgorithm")]
         [Validation(Required=false)]
@@ -29,13 +29,13 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [Validation(Required=false)]
         public string SourceEncryptionContextShrink { get; set; }
 
-        [NameInMap("DestinationKeyId")]
+        [NameInMap("SourceKeyId")]
         [Validation(Required=false)]
-        public string DestinationKeyId { get; set; }
+        public string SourceKeyId { get; set; }
 
-        [NameInMap("DestinationEncryptionContext")]
+        [NameInMap("SourceKeyVersionId")]
         [Validation(Required=false)]
-        public string DestinationEncryptionContextShrink { get; set; }
+        public string SourceKeyVersionId { get; set; }
 
     }
 

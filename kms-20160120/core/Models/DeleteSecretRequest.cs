@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class DeleteSecretRequest : TeaModel {
-        [NameInMap("SecretName")]
-        [Validation(Required=false)]
-        public string SecretName { get; set; }
-
         [NameInMap("ForceDeleteWithoutRecovery")]
         [Validation(Required=false)]
         public string ForceDeleteWithoutRecovery { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [NameInMap("RecoveryWindowInDays")]
         [Validation(Required=false)]
         public string RecoveryWindowInDays { get; set; }
+
+        [NameInMap("SecretName")]
+        [Validation(Required=false)]
+        public string SecretName { get; set; }
 
     }
 

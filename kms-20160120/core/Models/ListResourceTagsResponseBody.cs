@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             public List<ListResourceTagsResponseBodyTagsTag> Tag { get; set; }
             public class ListResourceTagsResponseBodyTagsTag : TeaModel {
                 public string KeyId { get; set; }
-                public string TagValue { get; set; }
                 public string TagKey { get; set; }
+                public string TagValue { get; set; }
             }
         };
 

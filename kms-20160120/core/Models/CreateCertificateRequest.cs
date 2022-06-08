@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class CreateCertificateRequest : TeaModel {
+        [NameInMap("ExportablePrivateKey")]
+        [Validation(Required=false)]
+        public bool? ExportablePrivateKey { get; set; }
+
+        [NameInMap("KeySpec")]
+        [Validation(Required=false)]
+        public string KeySpec { get; set; }
+
         [NameInMap("Subject")]
         [Validation(Required=false)]
         public string Subject { get; set; }
@@ -16,14 +24,6 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [NameInMap("SubjectAlternativeNames")]
         [Validation(Required=false)]
         public Dictionary<string, object> SubjectAlternativeNames { get; set; }
-
-        [NameInMap("KeySpec")]
-        [Validation(Required=false)]
-        public string KeySpec { get; set; }
-
-        [NameInMap("ProtectionLevel")]
-        [Validation(Required=false)]
-        public string ProtectionLevel { get; set; }
 
     }
 

@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class AsymmetricEncryptRequest : TeaModel {
-        [NameInMap("Plaintext")]
+        [NameInMap("Algorithm")]
         [Validation(Required=false)]
-        public string Plaintext { get; set; }
+        public string Algorithm { get; set; }
 
         [NameInMap("KeyId")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [Validation(Required=false)]
         public string KeyVersionId { get; set; }
 
-        [NameInMap("Algorithm")]
+        [NameInMap("Plaintext")]
         [Validation(Required=false)]
-        public string Algorithm { get; set; }
+        public string Plaintext { get; set; }
 
     }
 

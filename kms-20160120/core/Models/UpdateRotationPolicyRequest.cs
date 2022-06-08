@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class UpdateRotationPolicyRequest : TeaModel {
-        [NameInMap("KeyId")]
-        [Validation(Required=false)]
-        public string KeyId { get; set; }
-
         [NameInMap("EnableAutomaticRotation")]
         [Validation(Required=false)]
         public bool? EnableAutomaticRotation { get; set; }
+
+        [NameInMap("KeyId")]
+        [Validation(Required=false)]
+        public string KeyId { get; set; }
 
         [NameInMap("RotationInterval")]
         [Validation(Required=false)]

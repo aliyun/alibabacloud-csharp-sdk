@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class GenerateDataKeyWithoutPlaintextShrinkRequest : TeaModel {
+        [NameInMap("EncryptionContext")]
+        [Validation(Required=false)]
+        public string EncryptionContextShrink { get; set; }
+
         [NameInMap("KeyId")]
         [Validation(Required=false)]
         public string KeyId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [NameInMap("NumberOfBytes")]
         [Validation(Required=false)]
         public int? NumberOfBytes { get; set; }
-
-        [NameInMap("EncryptionContext")]
-        [Validation(Required=false)]
-        public string EncryptionContextShrink { get; set; }
 
     }
 

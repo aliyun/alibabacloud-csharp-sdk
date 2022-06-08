@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class ListSecretVersionIdsResponseBody : TeaModel {
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("SecretName")]
         [Validation(Required=false)]
         public string SecretName { get; set; }
@@ -16,18 +28,6 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
 
         [NameInMap("VersionIds")]
         [Validation(Required=false)]

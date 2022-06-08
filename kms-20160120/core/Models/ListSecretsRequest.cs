@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [Validation(Required=false)]
         public string FetchTags { get; set; }
 
+        [NameInMap("Filters")]
+        [Validation(Required=false)]
+        public string Filters { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
-
-        [NameInMap("Filters")]
-        [Validation(Required=false)]
-        public string Filters { get; set; }
 
     }
 

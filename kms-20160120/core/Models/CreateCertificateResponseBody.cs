@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class CreateCertificateResponseBody : TeaModel {
+        [NameInMap("Arn")]
+        [Validation(Required=false)]
+        public string Arn { get; set; }
+
+        [NameInMap("CertificateId")]
+        [Validation(Required=false)]
+        public string CertificateId { get; set; }
+
         [NameInMap("Csr")]
         [Validation(Required=false)]
         public string Csr { get; set; }
@@ -16,14 +24,6 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("CertificateId")]
-        [Validation(Required=false)]
-        public string CertificateId { get; set; }
-
-        [NameInMap("Arn")]
-        [Validation(Required=false)]
-        public string Arn { get; set; }
 
     }
 

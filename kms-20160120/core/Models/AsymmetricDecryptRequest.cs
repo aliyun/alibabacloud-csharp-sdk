@@ -12,6 +12,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class AsymmetricDecryptRequest : TeaModel {
+        [NameInMap("Algorithm")]
+        [Validation(Required=false)]
+        public string Algorithm { get; set; }
+
         [NameInMap("CiphertextBlob")]
         [Validation(Required=false)]
         public string CiphertextBlob { get; set; }
@@ -23,10 +27,6 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [NameInMap("KeyVersionId")]
         [Validation(Required=false)]
         public string KeyVersionId { get; set; }
-
-        [NameInMap("Algorithm")]
-        [Validation(Required=false)]
-        public string Algorithm { get; set; }
 
     }
 

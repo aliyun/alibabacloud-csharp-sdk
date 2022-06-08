@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class CertificatePrivateKeySignResponseBody : TeaModel {
-        [NameInMap("SignatureValue")]
+        [NameInMap("CertificateId")]
         [Validation(Required=false)]
-        public string SignatureValue { get; set; }
+        public string CertificateId { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("CertificateId")]
+        [NameInMap("SignatureValue")]
         [Validation(Required=false)]
-        public string CertificateId { get; set; }
+        public string SignatureValue { get; set; }
 
     }
 

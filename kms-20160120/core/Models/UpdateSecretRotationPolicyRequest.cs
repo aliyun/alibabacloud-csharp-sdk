@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class UpdateSecretRotationPolicyRequest : TeaModel {
-        [NameInMap("SecretName")]
-        [Validation(Required=false)]
-        public string SecretName { get; set; }
-
         [NameInMap("EnableAutomaticRotation")]
         [Validation(Required=false)]
         public bool? EnableAutomaticRotation { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [NameInMap("RotationInterval")]
         [Validation(Required=false)]
         public string RotationInterval { get; set; }
+
+        [NameInMap("SecretName")]
+        [Validation(Required=false)]
+        public string SecretName { get; set; }
 
     }
 

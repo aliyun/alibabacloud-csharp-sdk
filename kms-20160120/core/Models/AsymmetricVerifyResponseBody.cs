@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class AsymmetricVerifyResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Value")]
-        [Validation(Required=false)]
-        public bool? Value { get; set; }
-
         [NameInMap("KeyId")]
         [Validation(Required=false)]
         public string KeyId { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [NameInMap("KeyVersionId")]
         [Validation(Required=false)]
         public string KeyVersionId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Value")]
+        [Validation(Required=false)]
+        public bool? Value { get; set; }
 
     }
 

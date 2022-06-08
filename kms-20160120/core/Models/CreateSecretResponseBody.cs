@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class CreateSecretResponseBody : TeaModel {
-        [NameInMap("SecretName")]
+        [NameInMap("Arn")]
         [Validation(Required=false)]
-        public string SecretName { get; set; }
+        public string Arn { get; set; }
 
-        [NameInMap("VersionId")]
+        [NameInMap("AutomaticRotation")]
         [Validation(Required=false)]
-        public string VersionId { get; set; }
+        public string AutomaticRotation { get; set; }
+
+        [NameInMap("ExtendedConfig")]
+        [Validation(Required=false)]
+        public string ExtendedConfig { get; set; }
 
         [NameInMap("NextRotationDate")]
         [Validation(Required=false)]
@@ -25,25 +29,21 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("SecretType")]
-        [Validation(Required=false)]
-        public string SecretType { get; set; }
-
         [NameInMap("RotationInterval")]
         [Validation(Required=false)]
         public string RotationInterval { get; set; }
 
-        [NameInMap("ExtendedConfig")]
+        [NameInMap("SecretName")]
         [Validation(Required=false)]
-        public string ExtendedConfig { get; set; }
+        public string SecretName { get; set; }
 
-        [NameInMap("Arn")]
+        [NameInMap("SecretType")]
         [Validation(Required=false)]
-        public string Arn { get; set; }
+        public string SecretType { get; set; }
 
-        [NameInMap("AutomaticRotation")]
+        [NameInMap("VersionId")]
         [Validation(Required=false)]
-        public string AutomaticRotation { get; set; }
+        public string VersionId { get; set; }
 
     }
 

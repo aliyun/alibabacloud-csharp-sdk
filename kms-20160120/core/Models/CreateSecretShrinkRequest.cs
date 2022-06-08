@@ -9,17 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class CreateSecretShrinkRequest : TeaModel {
-        [NameInMap("SecretName")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public string SecretName { get; set; }
+        public string Description { get; set; }
 
-        [NameInMap("VersionId")]
+        [NameInMap("EnableAutomaticRotation")]
         [Validation(Required=false)]
-        public string VersionId { get; set; }
+        public bool? EnableAutomaticRotation { get; set; }
 
         [NameInMap("EncryptionKeyId")]
         [Validation(Required=false)]
         public string EncryptionKeyId { get; set; }
+
+        [NameInMap("ExtendedConfig")]
+        [Validation(Required=false)]
+        public string ExtendedConfigShrink { get; set; }
+
+        [NameInMap("RotationInterval")]
+        [Validation(Required=false)]
+        public string RotationInterval { get; set; }
 
         [NameInMap("SecretData")]
         [Validation(Required=false)]
@@ -29,29 +37,21 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [Validation(Required=false)]
         public string SecretDataType { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("SecretName")]
         [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("Tags")]
-        [Validation(Required=false)]
-        public string Tags { get; set; }
+        public string SecretName { get; set; }
 
         [NameInMap("SecretType")]
         [Validation(Required=false)]
         public string SecretType { get; set; }
 
-        [NameInMap("ExtendedConfig")]
+        [NameInMap("Tags")]
         [Validation(Required=false)]
-        public string ExtendedConfigShrink { get; set; }
+        public string Tags { get; set; }
 
-        [NameInMap("EnableAutomaticRotation")]
+        [NameInMap("VersionId")]
         [Validation(Required=false)]
-        public bool? EnableAutomaticRotation { get; set; }
-
-        [NameInMap("RotationInterval")]
-        [Validation(Required=false)]
-        public string RotationInterval { get; set; }
+        public string VersionId { get; set; }
 
     }
 

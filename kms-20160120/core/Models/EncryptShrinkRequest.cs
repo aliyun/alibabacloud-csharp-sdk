@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class EncryptShrinkRequest : TeaModel {
+        [NameInMap("EncryptionContext")]
+        [Validation(Required=false)]
+        public string EncryptionContextShrink { get; set; }
+
         [NameInMap("KeyId")]
         [Validation(Required=false)]
         public string KeyId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [NameInMap("Plaintext")]
         [Validation(Required=false)]
         public string Plaintext { get; set; }
-
-        [NameInMap("EncryptionContext")]
-        [Validation(Required=false)]
-        public string EncryptionContextShrink { get; set; }
 
     }
 

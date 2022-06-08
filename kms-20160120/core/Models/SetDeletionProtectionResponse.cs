@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
-    public class ListCertificatesResponse : TeaModel {
+    public class SetDeletionProtectionResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ListCertificatesResponseBody Body { get; set; }
+        public SetDeletionProtectionResponseBody Body { get; set; }
 
     }
 

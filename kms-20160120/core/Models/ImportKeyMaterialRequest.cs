@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class ImportKeyMaterialRequest : TeaModel {
-        [NameInMap("KeyId")]
-        [Validation(Required=false)]
-        public string KeyId { get; set; }
-
         [NameInMap("EncryptedKeyMaterial")]
         [Validation(Required=false)]
         public string EncryptedKeyMaterial { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [NameInMap("ImportToken")]
         [Validation(Required=false)]
         public string ImportToken { get; set; }
+
+        [NameInMap("KeyId")]
+        [Validation(Required=false)]
+        public string KeyId { get; set; }
 
         [NameInMap("KeyMaterialExpireUnix")]
         [Validation(Required=false)]

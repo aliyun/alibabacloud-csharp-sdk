@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class ListSecretVersionIdsRequest : TeaModel {
-        [NameInMap("SecretName")]
-        [Validation(Required=false)]
-        public string SecretName { get; set; }
-
         [NameInMap("IncludeDeprecated")]
         [Validation(Required=false)]
         public string IncludeDeprecated { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("SecretName")]
+        [Validation(Required=false)]
+        public string SecretName { get; set; }
 
     }
 

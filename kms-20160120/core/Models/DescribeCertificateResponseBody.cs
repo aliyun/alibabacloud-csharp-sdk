@@ -9,21 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class DescribeCertificateResponseBody : TeaModel {
-        [NameInMap("Status")]
+        [NameInMap("Arn")]
         [Validation(Required=false)]
-        public string Status { get; set; }
-
-        [NameInMap("ProtectionLevel")]
-        [Validation(Required=false)]
-        public string ProtectionLevel { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Issuer")]
-        [Validation(Required=false)]
-        public string Issuer { get; set; }
+        public string Arn { get; set; }
 
         [NameInMap("CertificateId")]
         [Validation(Required=false)]
@@ -33,53 +21,65 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [Validation(Required=false)]
         public string CreatedAt { get; set; }
 
+        [NameInMap("ExportablePrivateKey")]
+        [Validation(Required=false)]
+        public bool? ExportablePrivateKey { get; set; }
+
+        [NameInMap("Issuer")]
+        [Validation(Required=false)]
+        public string Issuer { get; set; }
+
         [NameInMap("KeySpec")]
         [Validation(Required=false)]
         public string KeySpec { get; set; }
-
-        [NameInMap("SubjectAlternativeNames")]
-        [Validation(Required=false)]
-        public List<string> SubjectAlternativeNames { get; set; }
-
-        [NameInMap("SignatureAlgorithm")]
-        [Validation(Required=false)]
-        public string SignatureAlgorithm { get; set; }
-
-        [NameInMap("SubjectKeyIdentifier")]
-        [Validation(Required=false)]
-        public string SubjectKeyIdentifier { get; set; }
 
         [NameInMap("NotAfter")]
         [Validation(Required=false)]
         public string NotAfter { get; set; }
 
-        [NameInMap("UpdatedAt")]
+        [NameInMap("NotBefore")]
         [Validation(Required=false)]
-        public string UpdatedAt { get; set; }
+        public string NotBefore { get; set; }
 
-        [NameInMap("Subject")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Subject { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("Serial")]
         [Validation(Required=false)]
         public string Serial { get; set; }
 
+        [NameInMap("SignatureAlgorithm")]
+        [Validation(Required=false)]
+        public string SignatureAlgorithm { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
+        [NameInMap("Subject")]
+        [Validation(Required=false)]
+        public string Subject { get; set; }
+
+        [NameInMap("SubjectAlternativeNames")]
+        [Validation(Required=false)]
+        public List<string> SubjectAlternativeNames { get; set; }
+
+        [NameInMap("SubjectKeyIdentifier")]
+        [Validation(Required=false)]
+        public string SubjectKeyIdentifier { get; set; }
+
         [NameInMap("SubjectPublicKey")]
         [Validation(Required=false)]
         public string SubjectPublicKey { get; set; }
 
-        [NameInMap("Arn")]
-        [Validation(Required=false)]
-        public string Arn { get; set; }
-
-        [NameInMap("NotBefore")]
-        [Validation(Required=false)]
-        public string NotBefore { get; set; }
-
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public Dictionary<string, object> Tags { get; set; }
+
+        [NameInMap("UpdatedAt")]
+        [Validation(Required=false)]
+        public string UpdatedAt { get; set; }
 
     }
 

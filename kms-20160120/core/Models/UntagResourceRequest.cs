@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class UntagResourceRequest : TeaModel {
+        [NameInMap("CertificateId")]
+        [Validation(Required=false)]
+        public string CertificateId { get; set; }
+
         [NameInMap("KeyId")]
         [Validation(Required=false)]
         public string KeyId { get; set; }
-
-        [NameInMap("TagKeys")]
-        [Validation(Required=false)]
-        public string TagKeys { get; set; }
 
         [NameInMap("SecretName")]
         [Validation(Required=false)]
         public string SecretName { get; set; }
 
-        [NameInMap("CertificateId")]
+        [NameInMap("TagKeys")]
         [Validation(Required=false)]
-        public string CertificateId { get; set; }
+        public string TagKeys { get; set; }
 
     }
 

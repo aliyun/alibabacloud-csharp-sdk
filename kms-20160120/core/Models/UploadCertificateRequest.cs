@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class UploadCertificateRequest : TeaModel {
-        [NameInMap("CertificateId")]
-        [Validation(Required=false)]
-        public string CertificateId { get; set; }
-
         [NameInMap("Certificate")]
         [Validation(Required=false)]
         public string Certificate { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [NameInMap("CertificateChain")]
         [Validation(Required=false)]
         public string CertificateChain { get; set; }
+
+        [NameInMap("CertificateId")]
+        [Validation(Required=false)]
+        public string CertificateId { get; set; }
 
     }
 

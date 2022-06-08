@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
-    public class ImportCertificateRequest : TeaModel {
-        [NameInMap("PKCS12Blob")]
+    public class UpdateSecretResponseBody : TeaModel {
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string PKCS12Blob { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("Passphrase")]
+        [NameInMap("SecretName")]
         [Validation(Required=false)]
-        public string Passphrase { get; set; }
+        public string SecretName { get; set; }
 
     }
 

@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("EnableAutomaticRotation")]
+        [Validation(Required=false)]
+        public bool? EnableAutomaticRotation { get; set; }
+
+        [NameInMap("KeySpec")]
+        [Validation(Required=false)]
+        public string KeySpec { get; set; }
+
         [NameInMap("KeyUsage")]
         [Validation(Required=false)]
         public string KeyUsage { get; set; }
@@ -25,17 +33,9 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [Validation(Required=false)]
         public string ProtectionLevel { get; set; }
 
-        [NameInMap("EnableAutomaticRotation")]
-        [Validation(Required=false)]
-        public bool? EnableAutomaticRotation { get; set; }
-
         [NameInMap("RotationInterval")]
         [Validation(Required=false)]
         public string RotationInterval { get; set; }
-
-        [NameInMap("KeySpec")]
-        [Validation(Required=false)]
-        public string KeySpec { get; set; }
 
     }
 

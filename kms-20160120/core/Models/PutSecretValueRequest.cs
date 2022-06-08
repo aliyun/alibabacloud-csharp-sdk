@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class PutSecretValueRequest : TeaModel {
-        [NameInMap("VersionId")]
-        [Validation(Required=false)]
-        public string VersionId { get; set; }
-
-        [NameInMap("SecretName")]
-        [Validation(Required=false)]
-        public string SecretName { get; set; }
-
         [NameInMap("SecretData")]
         [Validation(Required=false)]
         public string SecretData { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [NameInMap("SecretDataType")]
         [Validation(Required=false)]
         public string SecretDataType { get; set; }
+
+        [NameInMap("SecretName")]
+        [Validation(Required=false)]
+        public string SecretName { get; set; }
+
+        [NameInMap("VersionId")]
+        [Validation(Required=false)]
+        public string VersionId { get; set; }
 
         [NameInMap("VersionStages")]
         [Validation(Required=false)]

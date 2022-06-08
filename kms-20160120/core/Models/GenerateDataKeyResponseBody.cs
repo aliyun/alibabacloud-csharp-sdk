@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class GenerateDataKeyResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("CiphertextBlob")]
         [Validation(Required=false)]
         public string CiphertextBlob { get; set; }
-
-        [NameInMap("Plaintext")]
-        [Validation(Required=false)]
-        public string Plaintext { get; set; }
 
         [NameInMap("KeyId")]
         [Validation(Required=false)]
@@ -28,6 +20,14 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [NameInMap("KeyVersionId")]
         [Validation(Required=false)]
         public string KeyVersionId { get; set; }
+
+        [NameInMap("Plaintext")]
+        [Validation(Required=false)]
+        public string Plaintext { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

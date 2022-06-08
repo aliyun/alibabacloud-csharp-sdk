@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [Validation(Required=false)]
         public string PublicKeyBlob { get; set; }
 
-        [NameInMap("WrappingKeySpec")]
-        [Validation(Required=false)]
-        public string WrappingKeySpec { get; set; }
-
         [NameInMap("WrappingAlgorithm")]
         [Validation(Required=false)]
         public string WrappingAlgorithm { get; set; }
+
+        [NameInMap("WrappingKeySpec")]
+        [Validation(Required=false)]
+        public string WrappingKeySpec { get; set; }
 
     }
 

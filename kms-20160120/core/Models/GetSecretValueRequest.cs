@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class GetSecretValueRequest : TeaModel {
+        [NameInMap("FetchExtendedConfig")]
+        [Validation(Required=false)]
+        public bool? FetchExtendedConfig { get; set; }
+
         [NameInMap("SecretName")]
         [Validation(Required=false)]
         public string SecretName { get; set; }
-
-        [NameInMap("VersionStage")]
-        [Validation(Required=false)]
-        public string VersionStage { get; set; }
 
         [NameInMap("VersionId")]
         [Validation(Required=false)]
         public string VersionId { get; set; }
 
-        [NameInMap("FetchExtendedConfig")]
+        [NameInMap("VersionStage")]
         [Validation(Required=false)]
-        public bool? FetchExtendedConfig { get; set; }
+        public string VersionStage { get; set; }
 
     }
 
