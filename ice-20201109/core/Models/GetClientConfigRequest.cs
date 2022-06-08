@@ -8,27 +8,27 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
-    public class DeleteEditingProjectMaterialsRequest : TeaModel {
+    public class GetClientConfigRequest : TeaModel {
         /// <summary>
-        /// 素材ID
+        /// 云端配置所对应的IOS BundleId
         /// </summary>
-        [NameInMap("MaterialIds")]
+        [NameInMap("BundleId")]
         [Validation(Required=false)]
-        public string MaterialIds { get; set; }
+        public string BundleId { get; set; }
 
         /// <summary>
-        /// 素材类型
+        /// 云端配置所对应的包名。
         /// </summary>
-        [NameInMap("MaterialType")]
+        [NameInMap("PkgName")]
         [Validation(Required=false)]
-        public string MaterialType { get; set; }
+        public string PkgName { get; set; }
 
         /// <summary>
-        /// 云剪辑工程ID
+        /// 云端配置所对应的包签名
         /// </summary>
-        [NameInMap("ProjectId")]
+        [NameInMap("PkgSignature")]
         [Validation(Required=false)]
-        public string ProjectId { get; set; }
+        public string PkgSignature { get; set; }
 
     }
 

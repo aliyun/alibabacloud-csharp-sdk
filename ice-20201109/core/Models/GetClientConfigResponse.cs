@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
-    public class ListSysTemplatesResponse : TeaModel {
+    public class GetClientConfigResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ListSysTemplatesResponseBody Body { get; set; }
+        public GetClientConfigResponseBody Body { get; set; }
 
     }
 

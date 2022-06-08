@@ -45,6 +45,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// 媒资ID，单个媒资ID支持前缀匹配
+        /// </summary>
+        [NameInMap("MediaId")]
+        [Validation(Required=false)]
+        public string MediaId { get; set; }
+
+        /// <summary>
         /// 媒资媒体类型
         /// </summary>
         [NameInMap("MediaType")]
@@ -57,10 +64,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
 
         /// <summary>
         /// 排序

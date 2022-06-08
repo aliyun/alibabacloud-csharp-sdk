@@ -24,6 +24,20 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Keyword { get; set; }
 
         /// <summary>
+        /// 当前页码。默认值为1。
+        /// </summary>
+        [NameInMap("PageNo")]
+        [Validation(Required=false)]
+        public long? PageNo { get; set; }
+
+        /// <summary>
+        /// 分页大小，每页显示条数。默认值为10，最大值为100。
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
+
+        /// <summary>
         /// 排序参数，默认根据创建时间倒序
         /// </summary>
         [NameInMap("SortType")]
