@@ -3801,6 +3801,146 @@ namespace AlibabaCloud.SDK.CloudGameAPI20200728
             return await SkipTrialPolicyWithOptionsAsync(request, runtime);
         }
 
+        public StartGameLiveResponse StartGameLiveWithOptions(StartGameLiveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GameSession))
+            {
+                query["GameSession"] = request.GameSession;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoPushAddress))
+            {
+                query["VideoPushAddress"] = request.VideoPushAddress;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartGameLive",
+                Version = "2020-07-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartGameLiveResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<StartGameLiveResponse> StartGameLiveWithOptionsAsync(StartGameLiveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GameSession))
+            {
+                query["GameSession"] = request.GameSession;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoPushAddress))
+            {
+                query["VideoPushAddress"] = request.VideoPushAddress;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartGameLive",
+                Version = "2020-07-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartGameLiveResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public StartGameLiveResponse StartGameLive(StartGameLiveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StartGameLiveWithOptions(request, runtime);
+        }
+
+        public async Task<StartGameLiveResponse> StartGameLiveAsync(StartGameLiveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StartGameLiveWithOptionsAsync(request, runtime);
+        }
+
+        public StopGameLiveResponse StopGameLiveWithOptions(StopGameLiveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GameSession))
+            {
+                query["GameSession"] = request.GameSession;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopGameLive",
+                Version = "2020-07-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopGameLiveResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<StopGameLiveResponse> StopGameLiveWithOptionsAsync(StopGameLiveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GameSession))
+            {
+                query["GameSession"] = request.GameSession;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopGameLive",
+                Version = "2020-07-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopGameLiveResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public StopGameLiveResponse StopGameLive(StopGameLiveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StopGameLiveWithOptions(request, runtime);
+        }
+
+        public async Task<StopGameLiveResponse> StopGameLiveAsync(StopGameLiveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StopGameLiveWithOptionsAsync(request, runtime);
+        }
+
         public StopGameSessionResponse StopGameSessionWithOptions(StopGameSessionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
