@@ -1,3 +1,6 @@
+2022-06-09 Version: 2.0.2
+- Update Facebody.
+
 2022-01-24 Version: 2.0.1
 - Update DetectFace.
 
