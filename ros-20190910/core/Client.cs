@@ -3551,6 +3551,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["IncludePermission"] = request.IncludePermission;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeTags))
+            {
+                query["IncludeTags"] = request.IncludeTags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -3605,6 +3609,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludePermission))
             {
                 query["IncludePermission"] = request.IncludePermission;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeTags))
+            {
+                query["IncludeTags"] = request.IncludeTags;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -5709,6 +5717,10 @@ namespace AlibabaCloud.SDK.ROS20190910
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeTags))
+            {
+                query["IncludeTags"] = request.IncludeTags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -5756,6 +5768,10 @@ namespace AlibabaCloud.SDK.ROS20190910
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeTags))
+            {
+                query["IncludeTags"] = request.IncludeTags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;

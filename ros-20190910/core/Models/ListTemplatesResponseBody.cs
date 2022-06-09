@@ -45,6 +45,20 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public string ShareType { get; set; }
 
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<ListTemplatesResponseBodyTemplatesTags> Tags { get; set; }
+            public class ListTemplatesResponseBodyTemplatesTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
             [NameInMap("TemplateARN")]
             [Validation(Required=false)]
             public string TemplateARN { get; set; }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListTemplatesRequest : TeaModel {
+        [NameInMap("IncludeTags")]
+        [Validation(Required=false)]
+        public string IncludeTags { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }

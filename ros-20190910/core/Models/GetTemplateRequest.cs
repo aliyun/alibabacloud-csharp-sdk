@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string IncludePermission { get; set; }
 
+        [NameInMap("IncludeTags")]
+        [Validation(Required=false)]
+        public string IncludeTags { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
