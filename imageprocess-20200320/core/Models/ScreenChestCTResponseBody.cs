@@ -254,6 +254,9 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 }
 
             }
+            [NameInMap("URLList")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> URLList { get; set; }
         };
 
         [NameInMap("RequestId")]

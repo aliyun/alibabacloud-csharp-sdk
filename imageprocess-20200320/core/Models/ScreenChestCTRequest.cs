@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 
         }
 
+        [NameInMap("Verbose")]
+        [Validation(Required=false)]
+        public long? Verbose { get; set; }
+
     }
 
 }

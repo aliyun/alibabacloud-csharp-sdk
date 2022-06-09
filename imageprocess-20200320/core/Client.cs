@@ -2425,6 +2425,10 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
             {
                 body["URLList"] = request.URLList;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Verbose))
+            {
+                body["Verbose"] = request.Verbose;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -2467,6 +2471,10 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.URLList))
             {
                 body["URLList"] = request.URLList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Verbose))
+            {
+                body["Verbose"] = request.Verbose;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

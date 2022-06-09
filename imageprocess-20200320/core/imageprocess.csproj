@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.Imageprocess20200320</AssemblyName>
-    <Version>2.0.10</Version>
+    <Version>2.0.11</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud imageprocess (20200320) SDK Library for .NET</Description>
@@ -50,6 +50,6 @@
     <PackageReference Include="AlibabaCloud.EndpointUtil" Version="0.1.1"/>
     <PackageReference Include="Tea" Version="1.0.11"/>
     <PackageReference Include="AlibabaCloud.OpenApiClient" Version="0.1.3"/>
-    <PackageReference Include="AlibabaCloud.OpenApiUtil" Version="1.0.14"/>
+    <PackageReference Include="AlibabaCloud.OpenApiUtil" Version="1.0.15"/>
   </ItemGroup>
 </Project>
