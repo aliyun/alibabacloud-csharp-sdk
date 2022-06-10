@@ -129,6 +129,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public string HttpMethod { get; set; }
 
+                [NameInMap("isBase64Encode")]
+                [Validation(Required=false)]
+                public string IsBase64Encode { get; set; }
+
                 [NameInMap("match_rule")]
                 [Validation(Required=false)]
                 public int? MatchRule { get; set; }

@@ -1,3 +1,6 @@
+2022-06-10 Version: 2.0.4
+- Release C api.
+
 2022-01-21 Version: 2.0.3
 - AMP Version Change.
 

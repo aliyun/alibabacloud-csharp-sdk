@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string Id { get; set; }
 
+            [NameInMap("JsonParams")]
+            [Validation(Required=false)]
+            public string JsonParams { get; set; }
+
             [NameInMap("Level")]
             [Validation(Required=false)]
             public string Level { get; set; }

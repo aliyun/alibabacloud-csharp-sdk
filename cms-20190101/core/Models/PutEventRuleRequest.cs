@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string Product { get; set; }
 
+            [NameInMap("SQLFilter")]
+            [Validation(Required=false)]
+            public string SQLFilter { get; set; }
+
             [NameInMap("StatusList")]
             [Validation(Required=false)]
             public List<string> StatusList { get; set; }

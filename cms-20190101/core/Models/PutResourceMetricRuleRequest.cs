@@ -78,6 +78,34 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
         };
 
+        [NameInMap("CompositeExpression")]
+        [Validation(Required=false)]
+        public PutResourceMetricRuleRequestCompositeExpression CompositeExpression { get; set; }
+        public class PutResourceMetricRuleRequestCompositeExpression : TeaModel {
+            [NameInMap("ExpressionList")]
+            [Validation(Required=false)]
+            public List<PutResourceMetricRuleRequestCompositeExpressionExpressionList> ExpressionList { get; set; }
+            public class PutResourceMetricRuleRequestCompositeExpressionExpressionList : TeaModel {
+                public string ComparisonOperator { get; set; }
+                public string MetricName { get; set; }
+                public long? Period { get; set; }
+                public string Statistics { get; set; }
+                public string Threshold { get; set; }
+            }
+            [NameInMap("ExpressionListJoin")]
+            [Validation(Required=false)]
+            public string ExpressionListJoin { get; set; }
+            [NameInMap("ExpressionRaw")]
+            [Validation(Required=false)]
+            public string ExpressionRaw { get; set; }
+            [NameInMap("Level")]
+            [Validation(Required=false)]
+            public string Level { get; set; }
+            [NameInMap("Times")]
+            [Validation(Required=false)]
+            public int? Times { get; set; }
+        };
+
         [NameInMap("ContactGroups")]
         [Validation(Required=false)]
         public string ContactGroups { get; set; }
@@ -127,6 +155,28 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [NameInMap("Period")]
         [Validation(Required=false)]
         public string Period { get; set; }
+
+        [NameInMap("Prometheus")]
+        [Validation(Required=false)]
+        public PutResourceMetricRuleRequestPrometheus Prometheus { get; set; }
+        public class PutResourceMetricRuleRequestPrometheus : TeaModel {
+            [NameInMap("Annotations")]
+            [Validation(Required=false)]
+            public List<PutResourceMetricRuleRequestPrometheusAnnotations> Annotations { get; set; }
+            public class PutResourceMetricRuleRequestPrometheusAnnotations : TeaModel {
+                public string Key { get; set; }
+                public string Value { get; set; }
+            }
+            [NameInMap("Level")]
+            [Validation(Required=false)]
+            public string Level { get; set; }
+            [NameInMap("PromQL")]
+            [Validation(Required=false)]
+            public string PromQL { get; set; }
+            [NameInMap("Times")]
+            [Validation(Required=false)]
+            public int? Times { get; set; }
+        };
 
         [NameInMap("Resources")]
         [Validation(Required=false)]

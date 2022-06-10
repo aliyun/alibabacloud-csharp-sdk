@@ -35,6 +35,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public class DescribeMetricRuleTargetsResponseBodyTargetsTarget : TeaModel {
                 public string Arn { get; set; }
                 public string Id { get; set; }
+                public string JsonParams { get; set; }
                 public string Level { get; set; }
             }
         };

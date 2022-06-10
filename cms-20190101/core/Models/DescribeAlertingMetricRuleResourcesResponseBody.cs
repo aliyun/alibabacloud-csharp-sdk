@@ -45,6 +45,26 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         [Validation(Required=false)]
                         public string Expression { get; set; }
 
+                        [NameInMap("ExpressionList")]
+                        [Validation(Required=false)]
+                        public DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionList ExpressionList { get; set; }
+                        public class DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionList : TeaModel {
+                            [NameInMap("ExpressionList")]
+                            [Validation(Required=false)]
+                            public List<DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionListExpressionList> ExpressionList { get; set; }
+                            public class DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionListExpressionList : TeaModel {
+                                public string ComparisonOperator { get; set; }
+                                public string MetricName { get; set; }
+                                public string Period { get; set; }
+                                public string Statistics { get; set; }
+                                public string Threshold { get; set; }
+                            }
+                        };
+
+                        [NameInMap("ExpressionListJoin")]
+                        [Validation(Required=false)]
+                        public string ExpressionListJoin { get; set; }
+
                         [NameInMap("Level")]
                         [Validation(Required=false)]
                         public int? Level { get; set; }

@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
-    public class DescribeSiteInstantMonitorLogResponse : TeaModel {
+    public class ModifyHybridMonitorSLSGroupResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeSiteInstantMonitorLogResponseBody Body { get; set; }
+        public ModifyHybridMonitorSLSGroupResponseBody Body { get; set; }
 
     }
 

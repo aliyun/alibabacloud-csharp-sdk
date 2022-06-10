@@ -18,6 +18,41 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeMetricRuleListResponseBodyAlarmsAlarm> Alarm { get; set; }
             public class DescribeMetricRuleListResponseBodyAlarmsAlarm : TeaModel {
                 public string AlertState { get; set; }
+                public DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpression CompositeExpression { get; set; }
+                public class DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpression : TeaModel {
+                    [NameInMap("ExpressionList")]
+                    [Validation(Required=false)]
+                    public DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpressionExpressionList ExpressionList { get; set; }
+                    public class DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpressionExpressionList : TeaModel {
+                        [NameInMap("ExpressionList")]
+                        [Validation(Required=false)]
+                        public List<DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpressionExpressionListExpressionList> ExpressionList { get; set; }
+                        public class DescribeMetricRuleListResponseBodyAlarmsAlarmCompositeExpressionExpressionListExpressionList : TeaModel {
+                            public string ComparisonOperator { get; set; }
+                            public string MetricName { get; set; }
+                            public int? Period { get; set; }
+                            public string Statistics { get; set; }
+                            public string Threshold { get; set; }
+                        }
+                    };
+
+                    [NameInMap("ExpressionListJoin")]
+                    [Validation(Required=false)]
+                    public string ExpressionListJoin { get; set; }
+
+                    [NameInMap("ExpressionRaw")]
+                    [Validation(Required=false)]
+                    public string ExpressionRaw { get; set; }
+
+                    [NameInMap("Level")]
+                    [Validation(Required=false)]
+                    public string Level { get; set; }
+
+                    [NameInMap("Times")]
+                    [Validation(Required=false)]
+                    public int? Times { get; set; }
+
+                }
                 public string ContactGroups { get; set; }
                 public string Dimensions { get; set; }
                 public string EffectiveInterval { get; set; }
@@ -113,6 +148,34 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string NoDataPolicy { get; set; }
                 public string NoEffectiveInterval { get; set; }
                 public string Period { get; set; }
+                public DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheus Prometheus { get; set; }
+                public class DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheus : TeaModel {
+                    [NameInMap("Annotations")]
+                    [Validation(Required=false)]
+                    public DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheusAnnotations Annotations { get; set; }
+                    public class DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheusAnnotations : TeaModel {
+                        [NameInMap("Annotations")]
+                        [Validation(Required=false)]
+                        public List<DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheusAnnotationsAnnotations> Annotations { get; set; }
+                        public class DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheusAnnotationsAnnotations : TeaModel {
+                            public string Key { get; set; }
+                            public string Value { get; set; }
+                        }
+                    };
+
+                    [NameInMap("Level")]
+                    [Validation(Required=false)]
+                    public string Level { get; set; }
+
+                    [NameInMap("PromQL")]
+                    [Validation(Required=false)]
+                    public string PromQL { get; set; }
+
+                    [NameInMap("Times")]
+                    [Validation(Required=false)]
+                    public long? Times { get; set; }
+
+                }
                 public string Resources { get; set; }
                 public string RuleId { get; set; }
                 public string RuleName { get; set; }

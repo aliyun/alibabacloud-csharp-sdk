@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string Region { get; set; }
 
+            [NameInMap("Topic")]
+            [Validation(Required=false)]
+            public string Topic { get; set; }
+
         }
 
         [NameInMap("OpenApiParameters")]
@@ -82,6 +86,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
+
+            [NameInMap("JsonParams")]
+            [Validation(Required=false)]
+            public string JsonParams { get; set; }
 
             [NameInMap("Product")]
             [Validation(Required=false)]

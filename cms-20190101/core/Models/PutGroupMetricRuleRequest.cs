@@ -110,6 +110,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Interval { get; set; }
 
+        [NameInMap("Labels")]
+        [Validation(Required=false)]
+        public List<PutGroupMetricRuleRequestLabels> Labels { get; set; }
+        public class PutGroupMetricRuleRequestLabels : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("MetricName")]
         [Validation(Required=false)]
         public string MetricName { get; set; }

@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
+        [NameInMap("SilenceTime")]
+        [Validation(Required=false)]
+        public string SilenceTime { get; set; }
+
     }
 
 }

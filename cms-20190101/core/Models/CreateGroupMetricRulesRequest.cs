@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public string ComparisonOperator { get; set; }
 
+                    [NameInMap("PreCondition")]
+                    [Validation(Required=false)]
+                    public string PreCondition { get; set; }
+
                     [NameInMap("Statistics")]
                     [Validation(Required=false)]
                     public string Statistics { get; set; }
@@ -49,6 +53,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [NameInMap("ComparisonOperator")]
                     [Validation(Required=false)]
                     public string ComparisonOperator { get; set; }
+
+                    [NameInMap("PreCondition")]
+                    [Validation(Required=false)]
+                    public string PreCondition { get; set; }
 
                     [NameInMap("Statistics")]
                     [Validation(Required=false)]
@@ -71,6 +79,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public string ComparisonOperator { get; set; }
 
+                    [NameInMap("PreCondition")]
+                    [Validation(Required=false)]
+                    public string PreCondition { get; set; }
+
                     [NameInMap("Statistics")]
                     [Validation(Required=false)]
                     public string Statistics { get; set; }
@@ -90,6 +102,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string Category { get; set; }
 
+            [NameInMap("ContactGroups")]
+            [Validation(Required=false)]
+            public string ContactGroups { get; set; }
+
             [NameInMap("Dimensions")]
             [Validation(Required=false)]
             public string Dimensions { get; set; }
@@ -105,6 +121,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [NameInMap("Interval")]
             [Validation(Required=false)]
             public string Interval { get; set; }
+
+            [NameInMap("Labels")]
+            [Validation(Required=false)]
+            public List<CreateGroupMetricRulesRequestGroupMetricRulesLabels> Labels { get; set; }
+            public class CreateGroupMetricRulesRequestGroupMetricRulesLabels : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
             [NameInMap("MetricName")]
             [Validation(Required=false)]

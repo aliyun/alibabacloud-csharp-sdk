@@ -59,6 +59,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Id { get; set; }
                 public string Queue { get; set; }
                 public string Region { get; set; }
+                public string Topic { get; set; }
             }
         };
 

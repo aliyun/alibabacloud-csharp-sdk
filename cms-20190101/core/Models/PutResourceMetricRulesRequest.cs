@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public string ComparisonOperator { get; set; }
 
+                    [NameInMap("PreCondition")]
+                    [Validation(Required=false)]
+                    public string PreCondition { get; set; }
+
                     [NameInMap("Statistics")]
                     [Validation(Required=false)]
                     public string Statistics { get; set; }
@@ -46,6 +50,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public string ComparisonOperator { get; set; }
 
+                    [NameInMap("PreCondition")]
+                    [Validation(Required=false)]
+                    public string PreCondition { get; set; }
+
                     [NameInMap("Statistics")]
                     [Validation(Required=false)]
                     public string Statistics { get; set; }
@@ -66,6 +74,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [NameInMap("ComparisonOperator")]
                     [Validation(Required=false)]
                     public string ComparisonOperator { get; set; }
+
+                    [NameInMap("PreCondition")]
+                    [Validation(Required=false)]
+                    public string PreCondition { get; set; }
 
                     [NameInMap("Statistics")]
                     [Validation(Required=false)]
@@ -97,6 +109,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [NameInMap("Interval")]
             [Validation(Required=false)]
             public string Interval { get; set; }
+
+            [NameInMap("Labels")]
+            [Validation(Required=false)]
+            public List<PutResourceMetricRulesRequestRulesLabels> Labels { get; set; }
+            public class PutResourceMetricRulesRequestRulesLabels : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
             [NameInMap("MetricName")]
             [Validation(Required=false)]

@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         }
 
+        [NameInMap("IsAsync")]
+        [Validation(Required=false)]
+        public bool? IsAsync { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

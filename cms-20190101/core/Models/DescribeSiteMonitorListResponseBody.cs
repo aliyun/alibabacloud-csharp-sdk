@@ -42,6 +42,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Interval { get; set; }
                 public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson OptionsJson { get; set; }
                 public class DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson : TeaModel {
+                    [NameInMap("acceptable_response_code")]
+                    [Validation(Required=false)]
+                    public string AcceptableResponseCode { get; set; }
+
                     [NameInMap("attempts")]
                     [Validation(Required=false)]
                     public long? Attempts { get; set; }
@@ -49,6 +53,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [NameInMap("authentication")]
                     [Validation(Required=false)]
                     public int? Authentication { get; set; }
+
+                    [NameInMap("cert_verify")]
+                    [Validation(Required=false)]
+                    public bool? CertVerify { get; set; }
 
                     [NameInMap("cookie")]
                     [Validation(Required=false)]
@@ -78,6 +86,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public string HttpMethod { get; set; }
 
+                    [NameInMap("isBase64Encode")]
+                    [Validation(Required=false)]
+                    public string IsBase64Encode { get; set; }
+
                     [NameInMap("match_rule")]
                     [Validation(Required=false)]
                     public int? MatchRule { get; set; }
@@ -98,6 +110,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public string Protocol { get; set; }
 
+                    [NameInMap("proxy_protocol")]
+                    [Validation(Required=false)]
+                    public bool? ProxyProtocol { get; set; }
+
                     [NameInMap("request_content")]
                     [Validation(Required=false)]
                     public string RequestContent { get; set; }
@@ -117,6 +133,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [NameInMap("time_out")]
                     [Validation(Required=false)]
                     public long? TimeOut { get; set; }
+
+                    [NameInMap("unfollow_redirect")]
+                    [Validation(Required=false)]
+                    public bool? UnfollowRedirect { get; set; }
 
                     [NameInMap("username")]
                     [Validation(Required=false)]
