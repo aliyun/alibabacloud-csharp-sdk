@@ -8,27 +8,27 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
-    public class TLSConfig : TeaModel {
+    public class MeteringConfig : TeaModel {
         /// <summary>
-        /// TLS加密套件列表
+        /// 日志仓库
         /// </summary>
-        [NameInMap("cipherSuites")]
+        [NameInMap("logConfig")]
         [Validation(Required=false)]
-        public List<string> CipherSuites { get; set; }
+        public LogConfig LogConfig { get; set; }
 
         /// <summary>
-        /// TLS最大版本号
+        /// 支付用户
         /// </summary>
-        [NameInMap("maxVersion")]
+        [NameInMap("payerId")]
         [Validation(Required=false)]
-        public string MaxVersion { get; set; }
+        public string PayerId { get; set; }
 
         /// <summary>
-        /// TLS最小版本号
+        /// 权限
         /// </summary>
-        [NameInMap("minVersion")]
+        [NameInMap("role")]
         [Validation(Required=false)]
-        public string MinVersion { get; set; }
+        public string Role { get; set; }
 
     }
 

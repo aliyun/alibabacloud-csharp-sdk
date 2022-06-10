@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
-        public int? NextToken { get; set; }
+        public string NextToken { get; set; }
 
         /// <summary>
         /// 限定返回的资源名称必须以prefix作为前缀

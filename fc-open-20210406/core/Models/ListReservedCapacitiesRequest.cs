@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class ListReservedCapacitiesRequest : TeaModel {
+        /// <summary>
+        /// 一次返回的数量，取值范围[1, 100]
+        /// </summary>
         [NameInMap("limit")]
         [Validation(Required=false)]
         public string Limit { get; set; }

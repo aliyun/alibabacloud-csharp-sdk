@@ -4365,6 +4365,114 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             return TeaModel.ToObject<ListFunctionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        public ListInstancesResponse ListInstances(string serviceName, string functionName, ListInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ListInstancesHeaders headers = new ListInstancesHeaders();
+            return ListInstancesWithOptions(serviceName, functionName, request, headers, runtime);
+        }
+
+        public async Task<ListInstancesResponse> ListInstancesAsync(string serviceName, string functionName, ListInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ListInstancesHeaders headers = new ListInstancesHeaders();
+            return await ListInstancesWithOptionsAsync(serviceName, functionName, request, headers, runtime);
+        }
+
+        public ListInstancesResponse ListInstancesWithOptions(string serviceName, string functionName, ListInstancesRequest request, ListInstancesHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
+            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["instanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                query["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
+            {
+                query["qualifier"] = request.Qualifier;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XFcAccountId))
+            {
+                realHeaders["X-Fc-Account-Id"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XFcAccountId);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstances",
+                Version = "2021-04-06",
+                Protocol = "HTTPS",
+                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/instances",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstancesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListInstancesResponse> ListInstancesWithOptionsAsync(string serviceName, string functionName, ListInstancesRequest request, ListInstancesHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
+            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["instanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                query["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
+            {
+                query["qualifier"] = request.Qualifier;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XFcAccountId))
+            {
+                realHeaders["X-Fc-Account-Id"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XFcAccountId);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstances",
+                Version = "2021-04-06",
+                Protocol = "HTTPS",
+                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/instances",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstancesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public ListLayerVersionsResponse ListLayerVersions(string layerName, ListLayerVersionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6807,7 +6915,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
                 Pathname = "/2021-04-06/tag",
-                Method = "DELETE",
+                Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
@@ -6860,7 +6968,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
                 Pathname = "/2021-04-06/tag",
-                Method = "DELETE",
+                Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",

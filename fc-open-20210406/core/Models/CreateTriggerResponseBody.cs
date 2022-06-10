@@ -80,6 +80,20 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public string TriggerType { get; set; }
 
+        /// <summary>
+        /// 公网域名地址。在互联网可以通过HTTP协议或者HTTPS协议访问HTTP Trigger。
+        /// </summary>
+        [NameInMap("urlInternet")]
+        [Validation(Required=false)]
+        public string UrlInternet { get; set; }
+
+        /// <summary>
+        /// 私网域名地址。在VPC可以通过HTTP协议或者HTTPS协议访问HTTP Trigger。
+        /// </summary>
+        [NameInMap("urlIntranet")]
+        [Validation(Required=false)]
+        public string UrlIntranet { get; set; }
+
     }
 
 }

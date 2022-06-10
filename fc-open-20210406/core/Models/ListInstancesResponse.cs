@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
-    public class DeleteServiceResponse : TeaModel {
+    public class ListInstancesResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [NameInMap("statusCode")]
         [Validation(Required=true)]
         public int? StatusCode { get; set; }
+
+        [NameInMap("body")]
+        [Validation(Required=true)]
+        public ListInstancesResponseBody Body { get; set; }
 
     }
 

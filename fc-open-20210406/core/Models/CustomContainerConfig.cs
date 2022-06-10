@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class CustomContainerConfig : TeaModel {
         /// <summary>
-        /// 镜像加速类型，取值Default为开启加速，None为关闭加速，默认关闭
+        /// 镜像加速类型，取值Default为开启加速，None为关闭加速，默认开启
         /// </summary>
         [NameInMap("accelerationType")]
         [Validation(Required=false)]
@@ -36,6 +36,13 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [NameInMap("image")]
         [Validation(Required=false)]
         public string Image { get; set; }
+
+        /// <summary>
+        /// ACR企业版镜像仓库ID，使用ACR企业版镜像时须传入
+        /// </summary>
+        [NameInMap("instanceID")]
+        [Validation(Required=false)]
+        public string InstanceID { get; set; }
 
     }
 
