@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpdatePublicNetworkRequest : TeaModel {
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public string Body { get; set; }
+
         [NameInMap("clientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }

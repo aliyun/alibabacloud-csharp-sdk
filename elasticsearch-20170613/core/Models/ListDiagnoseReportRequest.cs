@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListDiagnoseReportRequest : TeaModel {
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public string Body { get; set; }
+
         [NameInMap("detail")]
         [Validation(Required=false)]
         public bool? Detail { get; set; }

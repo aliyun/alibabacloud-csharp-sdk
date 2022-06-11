@@ -23,15 +23,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
-            [NameInMap("dictList")]
-            [Validation(Required=false)]
-            public List<UpdateInstanceResponseBodyResultDictList> DictList { get; set; }
-            public class UpdateInstanceResponseBodyResultDictList : TeaModel {
-                public long? FileSize { get; set; }
-                public string Name { get; set; }
-                public string SourceType { get; set; }
-                public string Type { get; set; }
-            }
             [NameInMap("domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
@@ -62,12 +53,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Spec { get; set; }
 
             }
-            [NameInMap("kibanaDomain")]
-            [Validation(Required=false)]
-            public string KibanaDomain { get; set; }
-            [NameInMap("kibanaPort")]
-            [Validation(Required=false)]
-            public int? KibanaPort { get; set; }
             [NameInMap("masterConfiguration")]
             [Validation(Required=false)]
             public UpdateInstanceResponseBodyResultMasterConfiguration MasterConfiguration { get; set; }
@@ -87,27 +72,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 [NameInMap("spec")]
                 [Validation(Required=false)]
                 public string Spec { get; set; }
-
-            }
-            [NameInMap("networkConfig")]
-            [Validation(Required=false)]
-            public UpdateInstanceResponseBodyResultNetworkConfig NetworkConfig { get; set; }
-            public class UpdateInstanceResponseBodyResultNetworkConfig : TeaModel {
-                [NameInMap("type")]
-                [Validation(Required=false)]
-                public string Type { get; set; }
-
-                [NameInMap("vpcId")]
-                [Validation(Required=false)]
-                public string VpcId { get; set; }
-
-                [NameInMap("vsArea")]
-                [Validation(Required=false)]
-                public string VsArea { get; set; }
-
-                [NameInMap("vswitchId")]
-                [Validation(Required=false)]
-                public string VswitchId { get; set; }
 
             }
             [NameInMap("nodeAmount")]
@@ -133,27 +97,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("paymentType")]
             [Validation(Required=false)]
             public string PaymentType { get; set; }
-            [NameInMap("publicDomain")]
-            [Validation(Required=false)]
-            public string PublicDomain { get; set; }
-            [NameInMap("publicPort")]
-            [Validation(Required=false)]
-            public int? PublicPort { get; set; }
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-            [NameInMap("synonymsDicts")]
-            [Validation(Required=false)]
-            public List<UpdateInstanceResponseBodyResultSynonymsDicts> SynonymsDicts { get; set; }
-            public class UpdateInstanceResponseBodyResultSynonymsDicts : TeaModel {
-                public long? FileSize { get; set; }
-                public string Name { get; set; }
-                public string SourceType { get; set; }
-                public string Type { get; set; }
-            }
-            [NameInMap("updatedAt")]
-            [Validation(Required=false)]
-            public string UpdatedAt { get; set; }
         };
 
     }

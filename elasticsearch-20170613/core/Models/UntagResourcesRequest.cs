@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string TagKeys { get; set; }
 
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public string Body { get; set; }
+
     }
 
 }

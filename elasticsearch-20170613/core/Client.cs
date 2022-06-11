@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._signatureAlgorithm = "v2";
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("elasticsearch", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -64,6 +65,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -93,6 +95,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -136,6 +139,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -165,6 +169,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -181,26 +186,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<AddConnectableClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public AddSnapshotRepoResponse AddSnapshotRepo(string InstanceId)
+        public AddSnapshotRepoResponse AddSnapshotRepo(string InstanceId, AddSnapshotRepoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return AddSnapshotRepoWithOptions(InstanceId, headers, runtime);
+            return AddSnapshotRepoWithOptions(InstanceId, request, headers, runtime);
         }
 
-        public async Task<AddSnapshotRepoResponse> AddSnapshotRepoAsync(string InstanceId)
+        public async Task<AddSnapshotRepoResponse> AddSnapshotRepoAsync(string InstanceId, AddSnapshotRepoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await AddSnapshotRepoWithOptionsAsync(InstanceId, headers, runtime);
+            return await AddSnapshotRepoWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        public AddSnapshotRepoResponse AddSnapshotRepoWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public AddSnapshotRepoResponse AddSnapshotRepoWithOptions(string InstanceId, AddSnapshotRepoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -217,12 +224,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<AddSnapshotRepoResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<AddSnapshotRepoResponse> AddSnapshotRepoWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<AddSnapshotRepoResponse> AddSnapshotRepoWithOptionsAsync(string InstanceId, AddSnapshotRepoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -266,6 +275,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -295,6 +305,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -338,6 +349,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -367,6 +379,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -414,6 +427,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -447,6 +461,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -588,6 +603,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -621,6 +637,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -664,6 +681,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -693,6 +711,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -737,6 +756,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -767,6 +787,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -809,6 +830,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -837,6 +859,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -962,6 +985,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -991,6 +1015,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1034,6 +1059,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1063,6 +1089,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1106,6 +1133,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1135,6 +1163,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1178,6 +1207,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1207,6 +1237,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1384,6 +1415,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1417,6 +1449,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1460,6 +1493,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1489,6 +1523,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1632,6 +1667,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1661,6 +1697,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1704,6 +1741,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1733,6 +1771,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1749,27 +1788,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteCollectorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DeleteComponentIndexResponse DeleteComponentIndex(string InstanceId, string name)
+        public DeleteComponentIndexResponse DeleteComponentIndex(string InstanceId, string name, DeleteComponentIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteComponentIndexWithOptions(InstanceId, name, headers, runtime);
+            return DeleteComponentIndexWithOptions(InstanceId, name, request, headers, runtime);
         }
 
-        public async Task<DeleteComponentIndexResponse> DeleteComponentIndexAsync(string InstanceId, string name)
+        public async Task<DeleteComponentIndexResponse> DeleteComponentIndexAsync(string InstanceId, string name, DeleteComponentIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteComponentIndexWithOptionsAsync(InstanceId, name, headers, runtime);
+            return await DeleteComponentIndexWithOptionsAsync(InstanceId, name, request, headers, runtime);
         }
 
-        public DeleteComponentIndexResponse DeleteComponentIndexWithOptions(string InstanceId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteComponentIndexResponse DeleteComponentIndexWithOptions(string InstanceId, string name, DeleteComponentIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             name = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1786,13 +1827,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteComponentIndexResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DeleteComponentIndexResponse> DeleteComponentIndexWithOptionsAsync(string InstanceId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteComponentIndexResponse> DeleteComponentIndexWithOptionsAsync(string InstanceId, string name, DeleteComponentIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             name = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1840,6 +1883,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1873,6 +1917,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1917,6 +1962,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1947,6 +1993,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1994,6 +2041,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2027,6 +2075,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2043,27 +2092,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteDataTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DeleteDeprecatedTemplateResponse DeleteDeprecatedTemplate(string InstanceId, string name)
+        public DeleteDeprecatedTemplateResponse DeleteDeprecatedTemplate(string InstanceId, string name, DeleteDeprecatedTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteDeprecatedTemplateWithOptions(InstanceId, name, headers, runtime);
+            return DeleteDeprecatedTemplateWithOptions(InstanceId, name, request, headers, runtime);
         }
 
-        public async Task<DeleteDeprecatedTemplateResponse> DeleteDeprecatedTemplateAsync(string InstanceId, string name)
+        public async Task<DeleteDeprecatedTemplateResponse> DeleteDeprecatedTemplateAsync(string InstanceId, string name, DeleteDeprecatedTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteDeprecatedTemplateWithOptionsAsync(InstanceId, name, headers, runtime);
+            return await DeleteDeprecatedTemplateWithOptionsAsync(InstanceId, name, request, headers, runtime);
         }
 
-        public DeleteDeprecatedTemplateResponse DeleteDeprecatedTemplateWithOptions(string InstanceId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteDeprecatedTemplateResponse DeleteDeprecatedTemplateWithOptions(string InstanceId, string name, DeleteDeprecatedTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             name = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2080,13 +2131,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteDeprecatedTemplateResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DeleteDeprecatedTemplateResponse> DeleteDeprecatedTemplateWithOptionsAsync(string InstanceId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteDeprecatedTemplateResponse> DeleteDeprecatedTemplateWithOptionsAsync(string InstanceId, string name, DeleteDeprecatedTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             name = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2103,27 +2156,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteDeprecatedTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DeleteILMPolicyResponse DeleteILMPolicy(string InstanceId, string PolicyName)
+        public DeleteILMPolicyResponse DeleteILMPolicy(string InstanceId, string PolicyName, DeleteILMPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteILMPolicyWithOptions(InstanceId, PolicyName, headers, runtime);
+            return DeleteILMPolicyWithOptions(InstanceId, PolicyName, request, headers, runtime);
         }
 
-        public async Task<DeleteILMPolicyResponse> DeleteILMPolicyAsync(string InstanceId, string PolicyName)
+        public async Task<DeleteILMPolicyResponse> DeleteILMPolicyAsync(string InstanceId, string PolicyName, DeleteILMPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteILMPolicyWithOptionsAsync(InstanceId, PolicyName, headers, runtime);
+            return await DeleteILMPolicyWithOptionsAsync(InstanceId, PolicyName, request, headers, runtime);
         }
 
-        public DeleteILMPolicyResponse DeleteILMPolicyWithOptions(string InstanceId, string PolicyName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteILMPolicyResponse DeleteILMPolicyWithOptions(string InstanceId, string PolicyName, DeleteILMPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             PolicyName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PolicyName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2140,13 +2195,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteILMPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DeleteILMPolicyResponse> DeleteILMPolicyWithOptionsAsync(string InstanceId, string PolicyName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteILMPolicyResponse> DeleteILMPolicyWithOptionsAsync(string InstanceId, string PolicyName, DeleteILMPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             PolicyName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PolicyName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2163,27 +2220,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteILMPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DeleteIndexTemplateResponse DeleteIndexTemplate(string InstanceId, string IndexTemplate)
+        public DeleteIndexTemplateResponse DeleteIndexTemplate(string InstanceId, string IndexTemplate, DeleteIndexTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteIndexTemplateWithOptions(InstanceId, IndexTemplate, headers, runtime);
+            return DeleteIndexTemplateWithOptions(InstanceId, IndexTemplate, request, headers, runtime);
         }
 
-        public async Task<DeleteIndexTemplateResponse> DeleteIndexTemplateAsync(string InstanceId, string IndexTemplate)
+        public async Task<DeleteIndexTemplateResponse> DeleteIndexTemplateAsync(string InstanceId, string IndexTemplate, DeleteIndexTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteIndexTemplateWithOptionsAsync(InstanceId, IndexTemplate, headers, runtime);
+            return await DeleteIndexTemplateWithOptionsAsync(InstanceId, IndexTemplate, request, headers, runtime);
         }
 
-        public DeleteIndexTemplateResponse DeleteIndexTemplateWithOptions(string InstanceId, string IndexTemplate, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteIndexTemplateResponse DeleteIndexTemplateWithOptions(string InstanceId, string IndexTemplate, DeleteIndexTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             IndexTemplate = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(IndexTemplate);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2200,13 +2259,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteIndexTemplateResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DeleteIndexTemplateResponse> DeleteIndexTemplateWithOptionsAsync(string InstanceId, string IndexTemplate, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteIndexTemplateResponse> DeleteIndexTemplateWithOptionsAsync(string InstanceId, string IndexTemplate, DeleteIndexTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             IndexTemplate = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(IndexTemplate);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2254,6 +2315,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2287,6 +2349,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2334,6 +2397,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2367,6 +2431,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2414,6 +2479,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2447,6 +2513,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2494,6 +2561,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2527,6 +2595,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2571,6 +2640,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2601,6 +2671,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2617,26 +2688,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteVpcEndpointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeAckOperatorResponse DescribeAckOperator(string ClusterId)
+        public DescribeAckOperatorResponse DescribeAckOperator(string ClusterId, DescribeAckOperatorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeAckOperatorWithOptions(ClusterId, headers, runtime);
+            return DescribeAckOperatorWithOptions(ClusterId, request, headers, runtime);
         }
 
-        public async Task<DescribeAckOperatorResponse> DescribeAckOperatorAsync(string ClusterId)
+        public async Task<DescribeAckOperatorResponse> DescribeAckOperatorAsync(string ClusterId, DescribeAckOperatorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeAckOperatorWithOptionsAsync(ClusterId, headers, runtime);
+            return await DescribeAckOperatorWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
-        public DescribeAckOperatorResponse DescribeAckOperatorWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeAckOperatorResponse DescribeAckOperatorWithOptions(string ClusterId, DescribeAckOperatorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2653,12 +2726,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeAckOperatorResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeAckOperatorResponse> DescribeAckOperatorWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeAckOperatorResponse> DescribeAckOperatorWithOptionsAsync(string ClusterId, DescribeAckOperatorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2675,26 +2750,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeAckOperatorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeApmResponse DescribeApm(string instanceId)
+        public DescribeApmResponse DescribeApm(string instanceId, DescribeApmRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeApmWithOptions(instanceId, headers, runtime);
+            return DescribeApmWithOptions(instanceId, request, headers, runtime);
         }
 
-        public async Task<DescribeApmResponse> DescribeApmAsync(string instanceId)
+        public async Task<DescribeApmResponse> DescribeApmAsync(string instanceId, DescribeApmRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeApmWithOptionsAsync(instanceId, headers, runtime);
+            return await DescribeApmWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        public DescribeApmResponse DescribeApmWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeApmResponse DescribeApmWithOptions(string instanceId, DescribeApmRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2711,12 +2788,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeApmResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeApmResponse> DescribeApmWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeApmResponse> DescribeApmWithOptionsAsync(string instanceId, DescribeApmRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2733,26 +2812,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeApmResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeCollectorResponse DescribeCollector(string ResId)
+        public DescribeCollectorResponse DescribeCollector(string ResId, DescribeCollectorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeCollectorWithOptions(ResId, headers, runtime);
+            return DescribeCollectorWithOptions(ResId, request, headers, runtime);
         }
 
-        public async Task<DescribeCollectorResponse> DescribeCollectorAsync(string ResId)
+        public async Task<DescribeCollectorResponse> DescribeCollectorAsync(string ResId, DescribeCollectorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeCollectorWithOptionsAsync(ResId, headers, runtime);
+            return await DescribeCollectorWithOptionsAsync(ResId, request, headers, runtime);
         }
 
-        public DescribeCollectorResponse DescribeCollectorWithOptions(string ResId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeCollectorResponse DescribeCollectorWithOptions(string ResId, DescribeCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             ResId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2769,12 +2850,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeCollectorResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeCollectorResponse> DescribeCollectorWithOptionsAsync(string ResId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeCollectorResponse> DescribeCollectorWithOptionsAsync(string ResId, DescribeCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             ResId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2791,27 +2874,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeCollectorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeComponentIndexResponse DescribeComponentIndex(string InstanceId, string name)
+        public DescribeComponentIndexResponse DescribeComponentIndex(string InstanceId, string name, DescribeComponentIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeComponentIndexWithOptions(InstanceId, name, headers, runtime);
+            return DescribeComponentIndexWithOptions(InstanceId, name, request, headers, runtime);
         }
 
-        public async Task<DescribeComponentIndexResponse> DescribeComponentIndexAsync(string InstanceId, string name)
+        public async Task<DescribeComponentIndexResponse> DescribeComponentIndexAsync(string InstanceId, string name, DescribeComponentIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeComponentIndexWithOptionsAsync(InstanceId, name, headers, runtime);
+            return await DescribeComponentIndexWithOptionsAsync(InstanceId, name, request, headers, runtime);
         }
 
-        public DescribeComponentIndexResponse DescribeComponentIndexWithOptions(string InstanceId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeComponentIndexResponse DescribeComponentIndexWithOptions(string InstanceId, string name, DescribeComponentIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             name = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2828,13 +2913,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeComponentIndexResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeComponentIndexResponse> DescribeComponentIndexWithOptionsAsync(string InstanceId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeComponentIndexResponse> DescribeComponentIndexWithOptionsAsync(string InstanceId, string name, DescribeComponentIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             name = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2878,6 +2965,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2907,6 +2995,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2923,27 +3012,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeConnectableClustersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeDeprecatedTemplateResponse DescribeDeprecatedTemplate(string InstanceId, string name)
+        public DescribeDeprecatedTemplateResponse DescribeDeprecatedTemplate(string InstanceId, string name, DescribeDeprecatedTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeDeprecatedTemplateWithOptions(InstanceId, name, headers, runtime);
+            return DescribeDeprecatedTemplateWithOptions(InstanceId, name, request, headers, runtime);
         }
 
-        public async Task<DescribeDeprecatedTemplateResponse> DescribeDeprecatedTemplateAsync(string InstanceId, string name)
+        public async Task<DescribeDeprecatedTemplateResponse> DescribeDeprecatedTemplateAsync(string InstanceId, string name, DescribeDeprecatedTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeDeprecatedTemplateWithOptionsAsync(InstanceId, name, headers, runtime);
+            return await DescribeDeprecatedTemplateWithOptionsAsync(InstanceId, name, request, headers, runtime);
         }
 
-        public DescribeDeprecatedTemplateResponse DescribeDeprecatedTemplateWithOptions(string InstanceId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeDeprecatedTemplateResponse DescribeDeprecatedTemplateWithOptions(string InstanceId, string name, DescribeDeprecatedTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             name = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2960,13 +3051,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeDeprecatedTemplateResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeDeprecatedTemplateResponse> DescribeDeprecatedTemplateWithOptionsAsync(string InstanceId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeDeprecatedTemplateResponse> DescribeDeprecatedTemplateWithOptionsAsync(string InstanceId, string name, DescribeDeprecatedTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             name = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3011,6 +3104,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3041,6 +3135,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3084,6 +3179,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3113,6 +3209,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3129,26 +3226,90 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeDiagnosisSettingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeElasticsearchHealthResponse DescribeElasticsearchHealth(string InstanceId)
+        public DescribeDynamicSettingsResponse DescribeDynamicSettings(string InstanceId, DescribeDynamicSettingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeElasticsearchHealthWithOptions(InstanceId, headers, runtime);
+            return DescribeDynamicSettingsWithOptions(InstanceId, request, headers, runtime);
         }
 
-        public async Task<DescribeElasticsearchHealthResponse> DescribeElasticsearchHealthAsync(string InstanceId)
+        public async Task<DescribeDynamicSettingsResponse> DescribeDynamicSettingsAsync(string InstanceId, DescribeDynamicSettingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeElasticsearchHealthWithOptionsAsync(InstanceId, headers, runtime);
+            return await DescribeDynamicSettingsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        public DescribeElasticsearchHealthResponse DescribeElasticsearchHealthWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeDynamicSettingsResponse DescribeDynamicSettingsWithOptions(string InstanceId, DescribeDynamicSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDynamicSettings",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/instances/" + InstanceId + "/dynamic-settings",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDynamicSettingsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeDynamicSettingsResponse> DescribeDynamicSettingsWithOptionsAsync(string InstanceId, DescribeDynamicSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = request.Body,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDynamicSettings",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/instances/" + InstanceId + "/dynamic-settings",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDynamicSettingsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeElasticsearchHealthResponse DescribeElasticsearchHealth(string InstanceId, DescribeElasticsearchHealthRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeElasticsearchHealthWithOptions(InstanceId, request, headers, runtime);
+        }
+
+        public async Task<DescribeElasticsearchHealthResponse> DescribeElasticsearchHealthAsync(string InstanceId, DescribeElasticsearchHealthRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeElasticsearchHealthWithOptionsAsync(InstanceId, request, headers, runtime);
+        }
+
+        public DescribeElasticsearchHealthResponse DescribeElasticsearchHealthWithOptions(string InstanceId, DescribeElasticsearchHealthRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3165,12 +3326,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeElasticsearchHealthResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeElasticsearchHealthResponse> DescribeElasticsearchHealthWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeElasticsearchHealthResponse> DescribeElasticsearchHealthWithOptionsAsync(string InstanceId, DescribeElasticsearchHealthRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3187,27 +3350,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeElasticsearchHealthResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeILMPolicyResponse DescribeILMPolicy(string InstanceId, string PolicyName)
+        public DescribeILMPolicyResponse DescribeILMPolicy(string InstanceId, string PolicyName, DescribeILMPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeILMPolicyWithOptions(InstanceId, PolicyName, headers, runtime);
+            return DescribeILMPolicyWithOptions(InstanceId, PolicyName, request, headers, runtime);
         }
 
-        public async Task<DescribeILMPolicyResponse> DescribeILMPolicyAsync(string InstanceId, string PolicyName)
+        public async Task<DescribeILMPolicyResponse> DescribeILMPolicyAsync(string InstanceId, string PolicyName, DescribeILMPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeILMPolicyWithOptionsAsync(InstanceId, PolicyName, headers, runtime);
+            return await DescribeILMPolicyWithOptionsAsync(InstanceId, PolicyName, request, headers, runtime);
         }
 
-        public DescribeILMPolicyResponse DescribeILMPolicyWithOptions(string InstanceId, string PolicyName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeILMPolicyResponse DescribeILMPolicyWithOptions(string InstanceId, string PolicyName, DescribeILMPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             PolicyName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PolicyName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3224,13 +3389,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeILMPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeILMPolicyResponse> DescribeILMPolicyWithOptionsAsync(string InstanceId, string PolicyName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeILMPolicyResponse> DescribeILMPolicyWithOptionsAsync(string InstanceId, string PolicyName, DescribeILMPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             PolicyName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PolicyName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3247,27 +3414,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeILMPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeIndexTemplateResponse DescribeIndexTemplate(string InstanceId, string IndexTemplate)
+        public DescribeIndexTemplateResponse DescribeIndexTemplate(string InstanceId, string IndexTemplate, DescribeIndexTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeIndexTemplateWithOptions(InstanceId, IndexTemplate, headers, runtime);
+            return DescribeIndexTemplateWithOptions(InstanceId, IndexTemplate, request, headers, runtime);
         }
 
-        public async Task<DescribeIndexTemplateResponse> DescribeIndexTemplateAsync(string InstanceId, string IndexTemplate)
+        public async Task<DescribeIndexTemplateResponse> DescribeIndexTemplateAsync(string InstanceId, string IndexTemplate, DescribeIndexTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeIndexTemplateWithOptionsAsync(InstanceId, IndexTemplate, headers, runtime);
+            return await DescribeIndexTemplateWithOptionsAsync(InstanceId, IndexTemplate, request, headers, runtime);
         }
 
-        public DescribeIndexTemplateResponse DescribeIndexTemplateWithOptions(string InstanceId, string IndexTemplate, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeIndexTemplateResponse DescribeIndexTemplateWithOptions(string InstanceId, string IndexTemplate, DescribeIndexTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             IndexTemplate = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(IndexTemplate);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3284,13 +3453,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeIndexTemplateResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeIndexTemplateResponse> DescribeIndexTemplateWithOptionsAsync(string InstanceId, string IndexTemplate, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeIndexTemplateResponse> DescribeIndexTemplateWithOptionsAsync(string InstanceId, string IndexTemplate, DescribeIndexTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             IndexTemplate = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(IndexTemplate);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3307,26 +3478,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeIndexTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeInstanceResponse DescribeInstance(string InstanceId)
+        public DescribeInstanceResponse DescribeInstance(string InstanceId, DescribeInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeInstanceWithOptions(InstanceId, headers, runtime);
+            return DescribeInstanceWithOptions(InstanceId, request, headers, runtime);
         }
 
-        public async Task<DescribeInstanceResponse> DescribeInstanceAsync(string InstanceId)
+        public async Task<DescribeInstanceResponse> DescribeInstanceAsync(string InstanceId, DescribeInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeInstanceWithOptionsAsync(InstanceId, headers, runtime);
+            return await DescribeInstanceWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        public DescribeInstanceResponse DescribeInstanceWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeInstanceResponse DescribeInstanceWithOptions(string InstanceId, DescribeInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3343,12 +3516,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeInstanceResponse> DescribeInstanceWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeInstanceResponse> DescribeInstanceWithOptionsAsync(string InstanceId, DescribeInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3365,26 +3540,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeKibanaSettingsResponse DescribeKibanaSettings(string InstanceId)
+        public DescribeKibanaSettingsResponse DescribeKibanaSettings(string InstanceId, DescribeKibanaSettingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeKibanaSettingsWithOptions(InstanceId, headers, runtime);
+            return DescribeKibanaSettingsWithOptions(InstanceId, request, headers, runtime);
         }
 
-        public async Task<DescribeKibanaSettingsResponse> DescribeKibanaSettingsAsync(string InstanceId)
+        public async Task<DescribeKibanaSettingsResponse> DescribeKibanaSettingsAsync(string InstanceId, DescribeKibanaSettingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeKibanaSettingsWithOptionsAsync(InstanceId, headers, runtime);
+            return await DescribeKibanaSettingsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        public DescribeKibanaSettingsResponse DescribeKibanaSettingsWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeKibanaSettingsResponse DescribeKibanaSettingsWithOptions(string InstanceId, DescribeKibanaSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3401,12 +3578,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeKibanaSettingsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeKibanaSettingsResponse> DescribeKibanaSettingsWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeKibanaSettingsResponse> DescribeKibanaSettingsWithOptionsAsync(string InstanceId, DescribeKibanaSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3423,26 +3602,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeKibanaSettingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeLogstashResponse DescribeLogstash(string InstanceId)
+        public DescribeLogstashResponse DescribeLogstash(string InstanceId, DescribeLogstashRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeLogstashWithOptions(InstanceId, headers, runtime);
+            return DescribeLogstashWithOptions(InstanceId, request, headers, runtime);
         }
 
-        public async Task<DescribeLogstashResponse> DescribeLogstashAsync(string InstanceId)
+        public async Task<DescribeLogstashResponse> DescribeLogstashAsync(string InstanceId, DescribeLogstashRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeLogstashWithOptionsAsync(InstanceId, headers, runtime);
+            return await DescribeLogstashWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        public DescribeLogstashResponse DescribeLogstashWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeLogstashResponse DescribeLogstashWithOptions(string InstanceId, DescribeLogstashRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3459,12 +3640,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeLogstashResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeLogstashResponse> DescribeLogstashWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeLogstashResponse> DescribeLogstashWithOptionsAsync(string InstanceId, DescribeLogstashRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3481,27 +3664,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeLogstashResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribePipelineResponse DescribePipeline(string InstanceId, string PipelineId)
+        public DescribePipelineResponse DescribePipeline(string InstanceId, string PipelineId, DescribePipelineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribePipelineWithOptions(InstanceId, PipelineId, headers, runtime);
+            return DescribePipelineWithOptions(InstanceId, PipelineId, request, headers, runtime);
         }
 
-        public async Task<DescribePipelineResponse> DescribePipelineAsync(string InstanceId, string PipelineId)
+        public async Task<DescribePipelineResponse> DescribePipelineAsync(string InstanceId, string PipelineId, DescribePipelineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribePipelineWithOptionsAsync(InstanceId, PipelineId, headers, runtime);
+            return await DescribePipelineWithOptionsAsync(InstanceId, PipelineId, request, headers, runtime);
         }
 
-        public DescribePipelineResponse DescribePipelineWithOptions(string InstanceId, string PipelineId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribePipelineResponse DescribePipelineWithOptions(string InstanceId, string PipelineId, DescribePipelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             PipelineId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PipelineId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3518,13 +3703,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribePipelineResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribePipelineResponse> DescribePipelineWithOptionsAsync(string InstanceId, string PipelineId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribePipelineResponse> DescribePipelineWithOptionsAsync(string InstanceId, string PipelineId, DescribePipelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             PipelineId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PipelineId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3568,6 +3755,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3597,6 +3785,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3613,25 +3802,27 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribePipelineManagementConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeRegionsResponse DescribeRegions()
+        public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeRegionsWithOptions(headers, runtime);
+            return DescribeRegionsWithOptions(request, headers, runtime);
         }
 
-        public async Task<DescribeRegionsResponse> DescribeRegionsAsync()
+        public async Task<DescribeRegionsResponse> DescribeRegionsAsync(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeRegionsWithOptionsAsync(headers, runtime);
+            return await DescribeRegionsWithOptionsAsync(request, headers, runtime);
         }
 
-        public DescribeRegionsResponse DescribeRegionsWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3648,11 +3839,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(DescribeRegionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3669,26 +3862,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeSnapshotSettingResponse DescribeSnapshotSetting(string InstanceId)
+        public DescribeSnapshotSettingResponse DescribeSnapshotSetting(string InstanceId, DescribeSnapshotSettingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeSnapshotSettingWithOptions(InstanceId, headers, runtime);
+            return DescribeSnapshotSettingWithOptions(InstanceId, request, headers, runtime);
         }
 
-        public async Task<DescribeSnapshotSettingResponse> DescribeSnapshotSettingAsync(string InstanceId)
+        public async Task<DescribeSnapshotSettingResponse> DescribeSnapshotSettingAsync(string InstanceId, DescribeSnapshotSettingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeSnapshotSettingWithOptionsAsync(InstanceId, headers, runtime);
+            return await DescribeSnapshotSettingWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        public DescribeSnapshotSettingResponse DescribeSnapshotSettingWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeSnapshotSettingResponse DescribeSnapshotSettingWithOptions(string InstanceId, DescribeSnapshotSettingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3705,12 +3900,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeSnapshotSettingResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeSnapshotSettingResponse> DescribeSnapshotSettingWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeSnapshotSettingResponse> DescribeSnapshotSettingWithOptionsAsync(string InstanceId, DescribeSnapshotSettingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3727,26 +3924,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeSnapshotSettingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeTemplatesResponse DescribeTemplates(string InstanceId)
+        public DescribeTemplatesResponse DescribeTemplates(string InstanceId, DescribeTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeTemplatesWithOptions(InstanceId, headers, runtime);
+            return DescribeTemplatesWithOptions(InstanceId, request, headers, runtime);
         }
 
-        public async Task<DescribeTemplatesResponse> DescribeTemplatesAsync(string InstanceId)
+        public async Task<DescribeTemplatesResponse> DescribeTemplatesAsync(string InstanceId, DescribeTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeTemplatesWithOptionsAsync(InstanceId, headers, runtime);
+            return await DescribeTemplatesWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        public DescribeTemplatesResponse DescribeTemplatesWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeTemplatesResponse DescribeTemplatesWithOptions(string InstanceId, DescribeTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3763,12 +3962,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeTemplatesResponse> DescribeTemplatesWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeTemplatesResponse> DescribeTemplatesWithOptionsAsync(string InstanceId, DescribeTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3785,26 +3986,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeXpackMonitorConfigResponse DescribeXpackMonitorConfig(string InstanceId)
+        public DescribeXpackMonitorConfigResponse DescribeXpackMonitorConfig(string InstanceId, DescribeXpackMonitorConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeXpackMonitorConfigWithOptions(InstanceId, headers, runtime);
+            return DescribeXpackMonitorConfigWithOptions(InstanceId, request, headers, runtime);
         }
 
-        public async Task<DescribeXpackMonitorConfigResponse> DescribeXpackMonitorConfigAsync(string InstanceId)
+        public async Task<DescribeXpackMonitorConfigResponse> DescribeXpackMonitorConfigAsync(string InstanceId, DescribeXpackMonitorConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeXpackMonitorConfigWithOptionsAsync(InstanceId, headers, runtime);
+            return await DescribeXpackMonitorConfigWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        public DescribeXpackMonitorConfigResponse DescribeXpackMonitorConfigWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeXpackMonitorConfigResponse DescribeXpackMonitorConfigWithOptions(string InstanceId, DescribeXpackMonitorConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3821,12 +4024,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeXpackMonitorConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeXpackMonitorConfigResponse> DescribeXpackMonitorConfigWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeXpackMonitorConfigResponse> DescribeXpackMonitorConfigWithOptionsAsync(string InstanceId, DescribeXpackMonitorConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3874,6 +4079,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3907,6 +4113,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3950,6 +4157,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3979,6 +4187,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4022,6 +4231,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4051,6 +4261,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4067,25 +4278,27 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<EstimatedRestartTimeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetClusterDataInformationResponse GetClusterDataInformation()
+        public GetClusterDataInformationResponse GetClusterDataInformation(GetClusterDataInformationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetClusterDataInformationWithOptions(headers, runtime);
+            return GetClusterDataInformationWithOptions(request, headers, runtime);
         }
 
-        public async Task<GetClusterDataInformationResponse> GetClusterDataInformationAsync()
+        public async Task<GetClusterDataInformationResponse> GetClusterDataInformationAsync(GetClusterDataInformationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetClusterDataInformationWithOptionsAsync(headers, runtime);
+            return await GetClusterDataInformationWithOptionsAsync(request, headers, runtime);
         }
 
-        public GetClusterDataInformationResponse GetClusterDataInformationWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetClusterDataInformationResponse GetClusterDataInformationWithOptions(GetClusterDataInformationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4102,11 +4315,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetClusterDataInformationResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<GetClusterDataInformationResponse> GetClusterDataInformationWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetClusterDataInformationResponse> GetClusterDataInformationWithOptionsAsync(GetClusterDataInformationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4123,26 +4338,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetClusterDataInformationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetElastictaskResponse GetElastictask(string InstanceId)
+        public GetElastictaskResponse GetElastictask(string InstanceId, GetElastictaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetElastictaskWithOptions(InstanceId, headers, runtime);
+            return GetElastictaskWithOptions(InstanceId, request, headers, runtime);
         }
 
-        public async Task<GetElastictaskResponse> GetElastictaskAsync(string InstanceId)
+        public async Task<GetElastictaskResponse> GetElastictaskAsync(string InstanceId, GetElastictaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetElastictaskWithOptionsAsync(InstanceId, headers, runtime);
+            return await GetElastictaskWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        public GetElastictaskResponse GetElastictaskWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetElastictaskResponse GetElastictaskWithOptions(string InstanceId, GetElastictaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4159,12 +4376,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetElastictaskResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<GetElastictaskResponse> GetElastictaskWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetElastictaskResponse> GetElastictaskWithOptionsAsync(string InstanceId, GetElastictaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4181,26 +4400,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetElastictaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetEmonGrafanaAlertsResponse GetEmonGrafanaAlerts(string ProjectId)
+        public GetEmonGrafanaAlertsResponse GetEmonGrafanaAlerts(string ProjectId, GetEmonGrafanaAlertsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetEmonGrafanaAlertsWithOptions(ProjectId, headers, runtime);
+            return GetEmonGrafanaAlertsWithOptions(ProjectId, request, headers, runtime);
         }
 
-        public async Task<GetEmonGrafanaAlertsResponse> GetEmonGrafanaAlertsAsync(string ProjectId)
+        public async Task<GetEmonGrafanaAlertsResponse> GetEmonGrafanaAlertsAsync(string ProjectId, GetEmonGrafanaAlertsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetEmonGrafanaAlertsWithOptionsAsync(ProjectId, headers, runtime);
+            return await GetEmonGrafanaAlertsWithOptionsAsync(ProjectId, request, headers, runtime);
         }
 
-        public GetEmonGrafanaAlertsResponse GetEmonGrafanaAlertsWithOptions(string ProjectId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetEmonGrafanaAlertsResponse GetEmonGrafanaAlertsWithOptions(string ProjectId, GetEmonGrafanaAlertsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             ProjectId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4217,12 +4438,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetEmonGrafanaAlertsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<GetEmonGrafanaAlertsResponse> GetEmonGrafanaAlertsWithOptionsAsync(string ProjectId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetEmonGrafanaAlertsResponse> GetEmonGrafanaAlertsWithOptionsAsync(string ProjectId, GetEmonGrafanaAlertsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             ProjectId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4239,26 +4462,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetEmonGrafanaAlertsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetEmonGrafanaDashboardsResponse GetEmonGrafanaDashboards(string ProjectId)
+        public GetEmonGrafanaDashboardsResponse GetEmonGrafanaDashboards(string ProjectId, GetEmonGrafanaDashboardsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetEmonGrafanaDashboardsWithOptions(ProjectId, headers, runtime);
+            return GetEmonGrafanaDashboardsWithOptions(ProjectId, request, headers, runtime);
         }
 
-        public async Task<GetEmonGrafanaDashboardsResponse> GetEmonGrafanaDashboardsAsync(string ProjectId)
+        public async Task<GetEmonGrafanaDashboardsResponse> GetEmonGrafanaDashboardsAsync(string ProjectId, GetEmonGrafanaDashboardsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetEmonGrafanaDashboardsWithOptionsAsync(ProjectId, headers, runtime);
+            return await GetEmonGrafanaDashboardsWithOptionsAsync(ProjectId, request, headers, runtime);
         }
 
-        public GetEmonGrafanaDashboardsResponse GetEmonGrafanaDashboardsWithOptions(string ProjectId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetEmonGrafanaDashboardsResponse GetEmonGrafanaDashboardsWithOptions(string ProjectId, GetEmonGrafanaDashboardsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             ProjectId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4275,12 +4500,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetEmonGrafanaDashboardsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<GetEmonGrafanaDashboardsResponse> GetEmonGrafanaDashboardsWithOptionsAsync(string ProjectId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetEmonGrafanaDashboardsResponse> GetEmonGrafanaDashboardsWithOptionsAsync(string ProjectId, GetEmonGrafanaDashboardsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             ProjectId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4297,26 +4524,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetEmonGrafanaDashboardsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetEmonMonitorDataResponse GetEmonMonitorData(string ProjectId)
+        public GetEmonMonitorDataResponse GetEmonMonitorData(string ProjectId, GetEmonMonitorDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetEmonMonitorDataWithOptions(ProjectId, headers, runtime);
+            return GetEmonMonitorDataWithOptions(ProjectId, request, headers, runtime);
         }
 
-        public async Task<GetEmonMonitorDataResponse> GetEmonMonitorDataAsync(string ProjectId)
+        public async Task<GetEmonMonitorDataResponse> GetEmonMonitorDataAsync(string ProjectId, GetEmonMonitorDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetEmonMonitorDataWithOptionsAsync(ProjectId, headers, runtime);
+            return await GetEmonMonitorDataWithOptionsAsync(ProjectId, request, headers, runtime);
         }
 
-        public GetEmonMonitorDataResponse GetEmonMonitorDataWithOptions(string ProjectId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetEmonMonitorDataResponse GetEmonMonitorDataWithOptions(string ProjectId, GetEmonMonitorDataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             ProjectId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4333,12 +4562,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetEmonMonitorDataResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<GetEmonMonitorDataResponse> GetEmonMonitorDataWithOptionsAsync(string ProjectId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetEmonMonitorDataResponse> GetEmonMonitorDataWithOptionsAsync(string ProjectId, GetEmonMonitorDataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             ProjectId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4355,26 +4586,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetEmonMonitorDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetOpenStoreUsageResponse GetOpenStoreUsage(string InstanceId)
+        public GetOpenStoreUsageResponse GetOpenStoreUsage(string InstanceId, GetOpenStoreUsageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetOpenStoreUsageWithOptions(InstanceId, headers, runtime);
+            return GetOpenStoreUsageWithOptions(InstanceId, request, headers, runtime);
         }
 
-        public async Task<GetOpenStoreUsageResponse> GetOpenStoreUsageAsync(string InstanceId)
+        public async Task<GetOpenStoreUsageResponse> GetOpenStoreUsageAsync(string InstanceId, GetOpenStoreUsageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetOpenStoreUsageWithOptionsAsync(InstanceId, headers, runtime);
+            return await GetOpenStoreUsageWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        public GetOpenStoreUsageResponse GetOpenStoreUsageWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetOpenStoreUsageResponse GetOpenStoreUsageWithOptions(string InstanceId, GetOpenStoreUsageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4391,12 +4624,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetOpenStoreUsageResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<GetOpenStoreUsageResponse> GetOpenStoreUsageWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetOpenStoreUsageResponse> GetOpenStoreUsageWithOptionsAsync(string InstanceId, GetOpenStoreUsageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4439,6 +4674,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4467,6 +4703,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4518,6 +4755,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4555,6 +4793,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4602,6 +4841,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4635,6 +4875,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4677,6 +4918,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4705,6 +4947,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4748,6 +4991,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4777,6 +5021,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4820,6 +5065,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4849,6 +5095,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4892,6 +5139,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4921,6 +5169,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4964,6 +5213,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4993,6 +5243,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5009,26 +5260,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<InstallSystemPluginResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public InstallUserPluginsResponse InstallUserPlugins(string InstanceId)
+        public InstallUserPluginsResponse InstallUserPlugins(string InstanceId, InstallUserPluginsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return InstallUserPluginsWithOptions(InstanceId, headers, runtime);
+            return InstallUserPluginsWithOptions(InstanceId, request, headers, runtime);
         }
 
-        public async Task<InstallUserPluginsResponse> InstallUserPluginsAsync(string InstanceId)
+        public async Task<InstallUserPluginsResponse> InstallUserPluginsAsync(string InstanceId, InstallUserPluginsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await InstallUserPluginsWithOptionsAsync(InstanceId, headers, runtime);
+            return await InstallUserPluginsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        public InstallUserPluginsResponse InstallUserPluginsWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public InstallUserPluginsResponse InstallUserPluginsWithOptions(string InstanceId, InstallUserPluginsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5045,12 +5298,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<InstallUserPluginsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<InstallUserPluginsResponse> InstallUserPluginsWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<InstallUserPluginsResponse> InstallUserPluginsWithOptionsAsync(string InstanceId, InstallUserPluginsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5094,6 +5349,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5123,6 +5379,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5166,6 +5423,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5195,6 +5453,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5245,6 +5504,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5281,6 +5541,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5328,6 +5589,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5361,6 +5623,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5375,6 +5638,136 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListAckNamespacesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListActionRecordsResponse ListActionRecords(string InstanceId, ListActionRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListActionRecordsWithOptions(InstanceId, request, headers, runtime);
+        }
+
+        public async Task<ListActionRecordsResponse> ListActionRecordsAsync(string InstanceId, ListActionRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListActionRecordsWithOptionsAsync(InstanceId, request, headers, runtime);
+        }
+
+        public ListActionRecordsResponse ListActionRecordsWithOptions(string InstanceId, ListActionRecordsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActionNames))
+            {
+                query["actionNames"] = request.ActionNames;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                query["requestId"] = request.RequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListActionRecords",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/instances/" + InstanceId + "/action-records",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListActionRecordsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListActionRecordsResponse> ListActionRecordsWithOptionsAsync(string InstanceId, ListActionRecordsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActionNames))
+            {
+                query["actionNames"] = request.ActionNames;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                query["requestId"] = request.RequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListActionRecords",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/instances/" + InstanceId + "/action-records",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListActionRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListAllNodeResponse ListAllNode(string InstanceId, ListAllNodeRequest request)
@@ -5404,6 +5797,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5433,6 +5827,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5476,6 +5871,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5505,6 +5901,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5563,6 +5960,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5607,6 +6005,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5623,26 +6022,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListApmResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListAvailableEsInstanceIdsResponse ListAvailableEsInstanceIds(string InstanceId)
+        public ListAvailableEsInstanceIdsResponse ListAvailableEsInstanceIds(string InstanceId, ListAvailableEsInstanceIdsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListAvailableEsInstanceIdsWithOptions(InstanceId, headers, runtime);
+            return ListAvailableEsInstanceIdsWithOptions(InstanceId, request, headers, runtime);
         }
 
-        public async Task<ListAvailableEsInstanceIdsResponse> ListAvailableEsInstanceIdsAsync(string InstanceId)
+        public async Task<ListAvailableEsInstanceIdsResponse> ListAvailableEsInstanceIdsAsync(string InstanceId, ListAvailableEsInstanceIdsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListAvailableEsInstanceIdsWithOptionsAsync(InstanceId, headers, runtime);
+            return await ListAvailableEsInstanceIdsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        public ListAvailableEsInstanceIdsResponse ListAvailableEsInstanceIdsWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListAvailableEsInstanceIdsResponse ListAvailableEsInstanceIdsWithOptions(string InstanceId, ListAvailableEsInstanceIdsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5659,12 +6060,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListAvailableEsInstanceIdsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListAvailableEsInstanceIdsResponse> ListAvailableEsInstanceIdsWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListAvailableEsInstanceIdsResponse> ListAvailableEsInstanceIdsWithOptionsAsync(string InstanceId, ListAvailableEsInstanceIdsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5727,6 +6130,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5775,6 +6179,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5826,6 +6231,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5863,6 +6269,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5879,26 +6286,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListComponentIndicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListConnectedClustersResponse ListConnectedClusters(string InstanceId)
+        public ListConnectedClustersResponse ListConnectedClusters(string InstanceId, ListConnectedClustersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListConnectedClustersWithOptions(InstanceId, headers, runtime);
+            return ListConnectedClustersWithOptions(InstanceId, request, headers, runtime);
         }
 
-        public async Task<ListConnectedClustersResponse> ListConnectedClustersAsync(string InstanceId)
+        public async Task<ListConnectedClustersResponse> ListConnectedClustersAsync(string InstanceId, ListConnectedClustersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListConnectedClustersWithOptionsAsync(InstanceId, headers, runtime);
+            return await ListConnectedClustersWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        public ListConnectedClustersResponse ListConnectedClustersWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListConnectedClustersResponse ListConnectedClustersWithOptions(string InstanceId, ListConnectedClustersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5915,12 +6324,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListConnectedClustersResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListConnectedClustersResponse> ListConnectedClustersWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListConnectedClustersResponse> ListConnectedClustersWithOptionsAsync(string InstanceId, ListConnectedClustersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5968,6 +6379,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6001,6 +6413,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6017,26 +6430,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDataStreamsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListDataTasksResponse ListDataTasks(string InstanceId)
+        public ListDataTasksResponse ListDataTasks(string InstanceId, ListDataTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListDataTasksWithOptions(InstanceId, headers, runtime);
+            return ListDataTasksWithOptions(InstanceId, request, headers, runtime);
         }
 
-        public async Task<ListDataTasksResponse> ListDataTasksAsync(string InstanceId)
+        public async Task<ListDataTasksResponse> ListDataTasksAsync(string InstanceId, ListDataTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListDataTasksWithOptionsAsync(InstanceId, headers, runtime);
+            return await ListDataTasksWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        public ListDataTasksResponse ListDataTasksWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListDataTasksResponse ListDataTasksWithOptions(string InstanceId, ListDataTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6053,12 +6468,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDataTasksResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListDataTasksResponse> ListDataTasksWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListDataTasksResponse> ListDataTasksWithOptionsAsync(string InstanceId, ListDataTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6109,6 +6526,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6145,6 +6563,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6196,6 +6615,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6233,6 +6653,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6276,6 +6697,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6305,6 +6727,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6372,6 +6795,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6425,6 +6849,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6488,6 +6913,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6537,6 +6963,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6588,6 +7015,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6625,6 +7053,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6672,6 +7101,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6705,6 +7135,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6767,6 +7198,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6815,6 +7247,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6831,26 +7264,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListEcsInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListExtendfilesResponse ListExtendfiles(string InstanceId)
+        public ListExtendfilesResponse ListExtendfiles(string InstanceId, ListExtendfilesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListExtendfilesWithOptions(InstanceId, headers, runtime);
+            return ListExtendfilesWithOptions(InstanceId, request, headers, runtime);
         }
 
-        public async Task<ListExtendfilesResponse> ListExtendfilesAsync(string InstanceId)
+        public async Task<ListExtendfilesResponse> ListExtendfilesAsync(string InstanceId, ListExtendfilesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListExtendfilesWithOptionsAsync(InstanceId, headers, runtime);
+            return await ListExtendfilesWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        public ListExtendfilesResponse ListExtendfilesWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListExtendfilesResponse ListExtendfilesWithOptions(string InstanceId, ListExtendfilesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6867,12 +7302,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListExtendfilesResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListExtendfilesResponse> ListExtendfilesWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListExtendfilesResponse> ListExtendfilesWithOptionsAsync(string InstanceId, ListExtendfilesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6916,6 +7353,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6945,6 +7383,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6996,6 +7435,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7033,6 +7473,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7115,6 +7556,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7183,6 +7625,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7197,150 +7640,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListInstanceResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public ListInstanceHistoryEventsResponse ListInstanceHistoryEvents(ListInstanceHistoryEventsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListInstanceHistoryEventsWithOptions(request, headers, runtime);
-        }
-
-        public async Task<ListInstanceHistoryEventsResponse> ListInstanceHistoryEventsAsync(ListInstanceHistoryEventsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListInstanceHistoryEventsWithOptionsAsync(request, headers, runtime);
-        }
-
-        public ListInstanceHistoryEventsResponse ListInstanceHistoryEventsWithOptions(ListInstanceHistoryEventsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventCreateEndTime))
-            {
-                query["eventCreateEndTime"] = request.EventCreateEndTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventCreateStartTime))
-            {
-                query["eventCreateStartTime"] = request.EventCreateStartTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventExecuteEndTime))
-            {
-                query["eventExecuteEndTime"] = request.EventExecuteEndTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventExecuteStartTime))
-            {
-                query["eventExecuteStartTime"] = request.EventExecuteStartTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventFinashEndTime))
-            {
-                query["eventFinashEndTime"] = request.EventFinashEndTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventFinashStartTime))
-            {
-                query["eventFinashStartTime"] = request.EventFinashStartTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventLevel))
-            {
-                query["eventLevel"] = request.EventLevel;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventType))
-            {
-                query["eventType"] = request.EventType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["instanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeIP))
-            {
-                query["nodeIP"] = request.NodeIP;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToArray(request.Body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListInstanceHistoryEvents",
-                Version = "2017-06-13",
-                Protocol = "HTTPS",
-                Pathname = "/openapi/events",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListInstanceHistoryEventsResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<ListInstanceHistoryEventsResponse> ListInstanceHistoryEventsWithOptionsAsync(ListInstanceHistoryEventsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventCreateEndTime))
-            {
-                query["eventCreateEndTime"] = request.EventCreateEndTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventCreateStartTime))
-            {
-                query["eventCreateStartTime"] = request.EventCreateStartTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventExecuteEndTime))
-            {
-                query["eventExecuteEndTime"] = request.EventExecuteEndTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventExecuteStartTime))
-            {
-                query["eventExecuteStartTime"] = request.EventExecuteStartTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventFinashEndTime))
-            {
-                query["eventFinashEndTime"] = request.EventFinashEndTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventFinashStartTime))
-            {
-                query["eventFinashStartTime"] = request.EventFinashStartTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventLevel))
-            {
-                query["eventLevel"] = request.EventLevel;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventType))
-            {
-                query["eventType"] = request.EventType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["instanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeIP))
-            {
-                query["nodeIP"] = request.NodeIP;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToArray(request.Body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListInstanceHistoryEvents",
-                Version = "2017-06-13",
-                Protocol = "HTTPS",
-                Pathname = "/openapi/events",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListInstanceHistoryEventsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListInstanceIndicesResponse ListInstanceIndices(string InstanceId, ListInstanceIndicesRequest request)
@@ -7390,6 +7689,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7439,6 +7739,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7486,6 +7787,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7519,6 +7821,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7585,6 +7888,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7637,6 +7941,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7700,6 +8005,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7749,6 +8055,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7804,6 +8111,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7845,6 +8153,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7904,6 +8213,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7949,6 +8259,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8000,6 +8311,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8037,6 +8349,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8053,26 +8366,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListPipelineResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListPipelineIdsResponse ListPipelineIds(string InstanceId)
+        public ListPipelineIdsResponse ListPipelineIds(string InstanceId, ListPipelineIdsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListPipelineIdsWithOptions(InstanceId, headers, runtime);
+            return ListPipelineIdsWithOptions(InstanceId, request, headers, runtime);
         }
 
-        public async Task<ListPipelineIdsResponse> ListPipelineIdsAsync(string InstanceId)
+        public async Task<ListPipelineIdsResponse> ListPipelineIdsAsync(string InstanceId, ListPipelineIdsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListPipelineIdsWithOptionsAsync(InstanceId, headers, runtime);
+            return await ListPipelineIdsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        public ListPipelineIdsResponse ListPipelineIdsWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListPipelineIdsResponse ListPipelineIdsWithOptions(string InstanceId, ListPipelineIdsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8089,12 +8404,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListPipelineIdsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListPipelineIdsResponse> ListPipelineIdsWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListPipelineIdsResponse> ListPipelineIdsWithOptionsAsync(string InstanceId, ListPipelineIdsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8150,6 +8467,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8191,6 +8509,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8254,6 +8573,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8303,6 +8623,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8346,6 +8667,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8375,6 +8697,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8391,26 +8714,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListShardRecoveriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListSnapshotReposByInstanceIdResponse ListSnapshotReposByInstanceId(string InstanceId)
+        public ListSnapshotReposByInstanceIdResponse ListSnapshotReposByInstanceId(string InstanceId, ListSnapshotReposByInstanceIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListSnapshotReposByInstanceIdWithOptions(InstanceId, headers, runtime);
+            return ListSnapshotReposByInstanceIdWithOptions(InstanceId, request, headers, runtime);
         }
 
-        public async Task<ListSnapshotReposByInstanceIdResponse> ListSnapshotReposByInstanceIdAsync(string InstanceId)
+        public async Task<ListSnapshotReposByInstanceIdResponse> ListSnapshotReposByInstanceIdAsync(string InstanceId, ListSnapshotReposByInstanceIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListSnapshotReposByInstanceIdWithOptionsAsync(InstanceId, headers, runtime);
+            return await ListSnapshotReposByInstanceIdWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        public ListSnapshotReposByInstanceIdResponse ListSnapshotReposByInstanceIdWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListSnapshotReposByInstanceIdResponse ListSnapshotReposByInstanceIdWithOptions(string InstanceId, ListSnapshotReposByInstanceIdRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8427,12 +8752,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListSnapshotReposByInstanceIdResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListSnapshotReposByInstanceIdResponse> ListSnapshotReposByInstanceIdWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListSnapshotReposByInstanceIdResponse> ListSnapshotReposByInstanceIdWithOptionsAsync(string InstanceId, ListSnapshotReposByInstanceIdRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8495,6 +8822,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8543,6 +8871,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8589,6 +8918,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8621,6 +8951,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8668,6 +8999,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8701,6 +9033,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8744,6 +9077,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8773,6 +9107,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8816,6 +9151,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8845,6 +9181,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8861,26 +9198,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ModifyDeployMachineResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ModifyElastictaskResponse ModifyElastictask(string InstanceId)
+        public ModifyElastictaskResponse ModifyElastictask(string InstanceId, ModifyElastictaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ModifyElastictaskWithOptions(InstanceId, headers, runtime);
+            return ModifyElastictaskWithOptions(InstanceId, request, headers, runtime);
         }
 
-        public async Task<ModifyElastictaskResponse> ModifyElastictaskAsync(string InstanceId)
+        public async Task<ModifyElastictaskResponse> ModifyElastictaskAsync(string InstanceId, ModifyElastictaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ModifyElastictaskWithOptionsAsync(InstanceId, headers, runtime);
+            return await ModifyElastictaskWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        public ModifyElastictaskResponse ModifyElastictaskWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ModifyElastictaskResponse ModifyElastictaskWithOptions(string InstanceId, ModifyElastictaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8897,12 +9236,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ModifyElastictaskResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ModifyElastictaskResponse> ModifyElastictaskWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ModifyElastictaskResponse> ModifyElastictaskWithOptionsAsync(string InstanceId, ModifyElastictaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8946,6 +9287,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8975,6 +9317,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9130,16 +9473,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["clientToken"] = request.ClientToken;
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
-            {
-                body["resourceGroupId"] = request.ResourceGroupId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9165,16 +9503,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["clientToken"] = request.ClientToken;
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
-            {
-                body["resourceGroupId"] = request.ResourceGroupId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9222,6 +9555,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9255,6 +9589,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9298,6 +9633,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9327,6 +9663,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9343,27 +9680,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<OpenHttpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public PostEmonTryAlarmRuleResponse PostEmonTryAlarmRule(string ProjectId, string AlarmGroupId)
+        public PostEmonTryAlarmRuleResponse PostEmonTryAlarmRule(string ProjectId, string AlarmGroupId, PostEmonTryAlarmRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return PostEmonTryAlarmRuleWithOptions(ProjectId, AlarmGroupId, headers, runtime);
+            return PostEmonTryAlarmRuleWithOptions(ProjectId, AlarmGroupId, request, headers, runtime);
         }
 
-        public async Task<PostEmonTryAlarmRuleResponse> PostEmonTryAlarmRuleAsync(string ProjectId, string AlarmGroupId)
+        public async Task<PostEmonTryAlarmRuleResponse> PostEmonTryAlarmRuleAsync(string ProjectId, string AlarmGroupId, PostEmonTryAlarmRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await PostEmonTryAlarmRuleWithOptionsAsync(ProjectId, AlarmGroupId, headers, runtime);
+            return await PostEmonTryAlarmRuleWithOptionsAsync(ProjectId, AlarmGroupId, request, headers, runtime);
         }
 
-        public PostEmonTryAlarmRuleResponse PostEmonTryAlarmRuleWithOptions(string ProjectId, string AlarmGroupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public PostEmonTryAlarmRuleResponse PostEmonTryAlarmRuleWithOptions(string ProjectId, string AlarmGroupId, PostEmonTryAlarmRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             ProjectId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId);
             AlarmGroupId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(AlarmGroupId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9380,13 +9719,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<PostEmonTryAlarmRuleResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<PostEmonTryAlarmRuleResponse> PostEmonTryAlarmRuleWithOptionsAsync(string ProjectId, string AlarmGroupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<PostEmonTryAlarmRuleResponse> PostEmonTryAlarmRuleWithOptionsAsync(string ProjectId, string AlarmGroupId, PostEmonTryAlarmRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             ProjectId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId);
             AlarmGroupId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(AlarmGroupId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9430,6 +9771,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9459,6 +9801,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9502,6 +9845,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9531,6 +9875,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9547,26 +9892,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ReinstallCollectorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public RemoveApmResponse RemoveApm(string instanceId)
+        public RemoveApmResponse RemoveApm(string instanceId, RemoveApmRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return RemoveApmWithOptions(instanceId, headers, runtime);
+            return RemoveApmWithOptions(instanceId, request, headers, runtime);
         }
 
-        public async Task<RemoveApmResponse> RemoveApmAsync(string instanceId)
+        public async Task<RemoveApmResponse> RemoveApmAsync(string instanceId, RemoveApmRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await RemoveApmWithOptionsAsync(instanceId, headers, runtime);
+            return await RemoveApmWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        public RemoveApmResponse RemoveApmWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public RemoveApmResponse RemoveApmWithOptions(string instanceId, RemoveApmRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9583,12 +9930,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<RemoveApmResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<RemoveApmResponse> RemoveApmWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<RemoveApmResponse> RemoveApmWithOptionsAsync(string instanceId, RemoveApmRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9632,6 +9981,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9661,6 +10011,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9704,6 +10055,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9733,6 +10085,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9776,6 +10129,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9805,6 +10159,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9852,6 +10207,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9885,6 +10241,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9932,6 +10289,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9965,6 +10323,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -10008,6 +10367,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -10037,6 +10397,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -10080,6 +10441,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -10109,6 +10471,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -10153,6 +10516,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -10183,6 +10547,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -10226,6 +10591,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -10255,6 +10621,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -10361,26 +10728,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ShrinkNodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public StartApmResponse StartApm(string instanceId)
+        public StartApmResponse StartApm(string instanceId, StartApmRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return StartApmWithOptions(instanceId, headers, runtime);
+            return StartApmWithOptions(instanceId, request, headers, runtime);
         }
 
-        public async Task<StartApmResponse> StartApmAsync(string instanceId)
+        public async Task<StartApmResponse> StartApmAsync(string instanceId, StartApmRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await StartApmWithOptionsAsync(instanceId, headers, runtime);
+            return await StartApmWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        public StartApmResponse StartApmWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public StartApmResponse StartApmWithOptions(string instanceId, StartApmRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -10397,12 +10766,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<StartApmResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<StartApmResponse> StartApmWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<StartApmResponse> StartApmWithOptionsAsync(string instanceId, StartApmRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -10446,6 +10817,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -10475,6 +10847,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -10491,26 +10864,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<StartCollectorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public StopApmResponse StopApm(string instanceId)
+        public StopApmResponse StopApm(string instanceId, StopApmRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return StopApmWithOptions(instanceId, headers, runtime);
+            return StopApmWithOptions(instanceId, request, headers, runtime);
         }
 
-        public async Task<StopApmResponse> StopApmAsync(string instanceId)
+        public async Task<StopApmResponse> StopApmAsync(string instanceId, StopApmRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await StopApmWithOptionsAsync(instanceId, headers, runtime);
+            return await StopApmWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        public StopApmResponse StopApmWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public StopApmResponse StopApmWithOptions(string instanceId, StopApmRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -10527,12 +10902,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<StopApmResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<StopApmResponse> StopApmWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<StopApmResponse> StopApmWithOptionsAsync(string instanceId, StopApmRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -10576,6 +10953,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -10605,6 +10983,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -10648,6 +11027,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -10677,6 +11057,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -10710,23 +11091,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIds))
-            {
-                body["ResourceIds"] = request.ResourceIds;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
-            {
-                body["ResourceType"] = request.ResourceType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
-            {
-                body["Tags"] = request.Tags;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -10746,23 +11114,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIds))
-            {
-                body["ResourceIds"] = request.ResourceIds;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
-            {
-                body["ResourceType"] = request.ResourceType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
-            {
-                body["Tags"] = request.Tags;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -10988,6 +11343,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -11017,6 +11373,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -11060,6 +11417,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -11089,6 +11447,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -11132,6 +11491,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -11161,6 +11521,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -11215,6 +11576,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -11255,6 +11617,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -11298,6 +11661,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -11327,6 +11691,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -11370,6 +11735,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -11399,6 +11765,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -11442,6 +11809,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -11471,6 +11839,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -11702,6 +12071,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -11731,6 +12101,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -11774,6 +12145,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -11803,6 +12175,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12016,6 +12389,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12049,6 +12423,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12092,6 +12467,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12121,6 +12497,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12135,6 +12512,96 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 BodyType = "json",
             };
             return TeaModel.ToObject<UpdateDictResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateDynamicSettingsResponse UpdateDynamicSettings(string InstanceId, UpdateDynamicSettingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateDynamicSettingsWithOptions(InstanceId, request, headers, runtime);
+        }
+
+        public async Task<UpdateDynamicSettingsResponse> UpdateDynamicSettingsAsync(string InstanceId, UpdateDynamicSettingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateDynamicSettingsWithOptionsAsync(InstanceId, request, headers, runtime);
+        }
+
+        public UpdateDynamicSettingsResponse UpdateDynamicSettingsWithOptions(string InstanceId, UpdateDynamicSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                query["mode"] = request.Mode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDynamicSettings",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/instances/" + InstanceId + "/dynamic-settings",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDynamicSettingsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateDynamicSettingsResponse> UpdateDynamicSettingsWithOptionsAsync(string InstanceId, UpdateDynamicSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                query["mode"] = request.Mode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDynamicSettings",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/instances/" + InstanceId + "/dynamic-settings",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDynamicSettingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateExtendConfigResponse UpdateExtendConfig(string InstanceId, UpdateExtendConfigRequest request)
@@ -12164,6 +12631,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12193,6 +12661,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12236,6 +12705,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12265,6 +12735,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12308,6 +12779,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12337,6 +12809,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12381,6 +12854,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12411,6 +12885,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12455,6 +12930,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12485,6 +12961,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12524,10 +13001,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["clientToken"] = request.ClientToken;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreStatus))
-            {
-                query["ignoreStatus"] = request.IgnoreStatus;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderActionType))
             {
                 query["orderActionType"] = request.OrderActionType;
@@ -12536,6 +13009,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12561,10 +13035,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["clientToken"] = request.ClientToken;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreStatus))
-            {
-                query["ignoreStatus"] = request.IgnoreStatus;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderActionType))
             {
                 query["orderActionType"] = request.OrderActionType;
@@ -12573,6 +13043,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12616,6 +13087,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12645,6 +13117,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12688,6 +13161,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12717,6 +13191,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12760,6 +13235,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12789,6 +13265,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12836,6 +13313,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12869,6 +13347,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12908,24 +13387,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["clientToken"] = request.ClientToken;
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
-            {
-                body["description"] = request.Description;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeAmount))
-            {
-                body["nodeAmount"] = request.NodeAmount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeSpec.ToMap()))
-            {
-                body["nodeSpec"] = request.NodeSpec;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12951,24 +13417,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["clientToken"] = request.ClientToken;
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
-            {
-                body["description"] = request.Description;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeAmount))
-            {
-                body["nodeAmount"] = request.NodeAmount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeSpec.ToMap()))
-            {
-                body["nodeSpec"] = request.NodeSpec;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13008,20 +13461,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["clientToken"] = request.ClientToken;
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentInfo.ToMap()))
-            {
-                body["paymentInfo"] = request.PaymentInfo;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentType))
-            {
-                body["paymentType"] = request.PaymentType;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13047,20 +13491,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["clientToken"] = request.ClientToken;
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentInfo.ToMap()))
-            {
-                body["paymentInfo"] = request.PaymentInfo;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentType))
-            {
-                body["paymentType"] = request.PaymentType;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13100,16 +13535,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["clientToken"] = request.ClientToken;
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
-            {
-                body["description"] = request.Description;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13135,16 +13565,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["clientToken"] = request.ClientToken;
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
-            {
-                body["description"] = request.Description;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13184,16 +13609,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["clientToken"] = request.ClientToken;
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
-            {
-                body["body"] = request.Body;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13219,16 +13639,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["clientToken"] = request.ClientToken;
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
-            {
-                body["body"] = request.Body;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13272,6 +13687,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13301,6 +13717,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13348,6 +13765,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13381,6 +13799,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13428,6 +13847,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13461,6 +13881,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13504,6 +13925,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13533,6 +13955,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13580,6 +14003,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13613,6 +14037,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13656,6 +14081,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13685,6 +14111,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13701,26 +14128,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateReadWritePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public UpdateSnapshotSettingResponse UpdateSnapshotSetting(string InstanceId)
+        public UpdateSnapshotSettingResponse UpdateSnapshotSetting(string InstanceId, UpdateSnapshotSettingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UpdateSnapshotSettingWithOptions(InstanceId, headers, runtime);
+            return UpdateSnapshotSettingWithOptions(InstanceId, request, headers, runtime);
         }
 
-        public async Task<UpdateSnapshotSettingResponse> UpdateSnapshotSettingAsync(string InstanceId)
+        public async Task<UpdateSnapshotSettingResponse> UpdateSnapshotSettingAsync(string InstanceId, UpdateSnapshotSettingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UpdateSnapshotSettingWithOptionsAsync(InstanceId, headers, runtime);
+            return await UpdateSnapshotSettingWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        public UpdateSnapshotSettingResponse UpdateSnapshotSettingWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateSnapshotSettingResponse UpdateSnapshotSettingWithOptions(string InstanceId, UpdateSnapshotSettingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13737,12 +14166,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateSnapshotSettingResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<UpdateSnapshotSettingResponse> UpdateSnapshotSettingWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateSnapshotSettingResponse> UpdateSnapshotSettingWithOptionsAsync(string InstanceId, UpdateSnapshotSettingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13786,6 +14217,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13815,6 +14247,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13859,6 +14292,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13889,6 +14323,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -14032,6 +14467,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -14061,6 +14497,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -14204,6 +14641,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -14233,6 +14671,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -14361,6 +14800,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -14393,6 +14833,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -14509,6 +14950,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -14537,6 +14979,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {

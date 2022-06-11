@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
     public class UpdateLogstashSettingsRequest : TeaModel {
         [NameInMap("body")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Body { get; set; }
+        public string Body { get; set; }
 
         [NameInMap("clientToken")]
         [Validation(Required=false)]

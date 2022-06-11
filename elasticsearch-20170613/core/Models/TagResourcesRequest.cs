@@ -9,27 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class TagResourcesRequest : TeaModel {
-        [NameInMap("ResourceIds")]
+        [NameInMap("body")]
         [Validation(Required=false)]
-        public List<string> ResourceIds { get; set; }
-
-        [NameInMap("ResourceType")]
-        [Validation(Required=false)]
-        public string ResourceType { get; set; }
-
-        [NameInMap("Tags")]
-        [Validation(Required=false)]
-        public List<TagResourcesRequestTags> Tags { get; set; }
-        public class TagResourcesRequestTags : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        public string Body { get; set; }
 
     }
 

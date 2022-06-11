@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string AnalyzerType { get; set; }
 
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public string Body { get; set; }
+
         [NameInMap("bucketName")]
         [Validation(Required=false)]
         public string BucketName { get; set; }

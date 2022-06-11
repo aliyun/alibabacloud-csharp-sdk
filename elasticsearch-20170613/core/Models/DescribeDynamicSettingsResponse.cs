@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
-    public class ListInstanceHistoryEventsResponse : TeaModel {
+    public class DescribeDynamicSettingsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ListInstanceHistoryEventsResponseBody Body { get; set; }
+        public DescribeDynamicSettingsResponseBody Body { get; set; }
 
     }
 

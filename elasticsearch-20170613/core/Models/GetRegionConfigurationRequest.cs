@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class GetRegionConfigurationRequest : TeaModel {
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public string Body { get; set; }
+
         [NameInMap("zoneId")]
         [Validation(Required=false)]
         public string ZoneId { get; set; }
