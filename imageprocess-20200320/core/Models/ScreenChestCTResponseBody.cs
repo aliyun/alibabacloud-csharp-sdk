@@ -77,6 +77,24 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             [Validation(Required=false)]
             public ScreenChestCTResponseBodyDataCACS CACS { get; set; }
             public class ScreenChestCTResponseBodyDataCACS : TeaModel {
+                [NameInMap("Detections")]
+                [Validation(Required=false)]
+                public List<ScreenChestCTResponseBodyDataCACSDetections> Detections { get; set; }
+                public class ScreenChestCTResponseBodyDataCACSDetections : TeaModel {
+                    [NameInMap("CalciumId")]
+                    [Validation(Required=false)]
+                    public long? CalciumId { get; set; }
+
+                    [NameInMap("CalciumScore")]
+                    [Validation(Required=false)]
+                    public float? CalciumScore { get; set; }
+
+                    [NameInMap("CalciumVolume")]
+                    [Validation(Required=false)]
+                    public float? CalciumVolume { get; set; }
+
+                }
+
                 [NameInMap("ResultUrl")]
                 [Validation(Required=false)]
                 public string ResultUrl { get; set; }
@@ -84,6 +102,10 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 [NameInMap("Score")]
                 [Validation(Required=false)]
                 public string Score { get; set; }
+
+                [NameInMap("VolumeScore")]
+                [Validation(Required=false)]
+                public string VolumeScore { get; set; }
 
             }
             [NameInMap("Covid")]
@@ -109,6 +131,63 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 [NameInMap("OtherProbability")]
                 [Validation(Required=false)]
                 public string OtherProbability { get; set; }
+
+            }
+            [NameInMap("DetectLymph")]
+            [Validation(Required=false)]
+            public ScreenChestCTResponseBodyDataDetectLymph DetectLymph { get; set; }
+            public class ScreenChestCTResponseBodyDataDetectLymph : TeaModel {
+                [NameInMap("Lesions")]
+                [Validation(Required=false)]
+                public List<ScreenChestCTResponseBodyDataDetectLymphLesions> Lesions { get; set; }
+                public class ScreenChestCTResponseBodyDataDetectLymphLesions : TeaModel {
+                    [NameInMap("Boxes")]
+                    [Validation(Required=false)]
+                    public List<float?> Boxes { get; set; }
+
+                    [NameInMap("Diametermm")]
+                    [Validation(Required=false)]
+                    public List<float?> Diametermm { get; set; }
+
+                    [NameInMap("KeySlice")]
+                    [Validation(Required=false)]
+                    public long? KeySlice { get; set; }
+
+                    [NameInMap("Recist")]
+                    [Validation(Required=false)]
+                    public List<List<float?>> Recist { get; set; }
+
+                    [NameInMap("Score")]
+                    [Validation(Required=false)]
+                    public float? Score { get; set; }
+
+                }
+
+            }
+            [NameInMap("DetectPdac")]
+            [Validation(Required=false)]
+            public ScreenChestCTResponseBodyDataDetectPdac DetectPdac { get; set; }
+            public class ScreenChestCTResponseBodyDataDetectPdac : TeaModel {
+                [NameInMap("Lesion")]
+                [Validation(Required=false)]
+                public ScreenChestCTResponseBodyDataDetectPdacLesion Lesion { get; set; }
+                public class ScreenChestCTResponseBodyDataDetectPdacLesion : TeaModel {
+                    [NameInMap("Mask")]
+                    [Validation(Required=false)]
+                    public string Mask { get; set; }
+                    [NameInMap("NonPdacVol")]
+                    [Validation(Required=false)]
+                    public string NonPdacVol { get; set; }
+                    [NameInMap("PancVol")]
+                    [Validation(Required=false)]
+                    public string PancVol { get; set; }
+                    [NameInMap("PdacVol")]
+                    [Validation(Required=false)]
+                    public string PdacVol { get; set; }
+                    [NameInMap("Possibilities")]
+                    [Validation(Required=false)]
+                    public List<string> Possibilities { get; set; }
+                };
 
             }
             [NameInMap("DetectRibFracture")]
