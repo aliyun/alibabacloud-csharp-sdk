@@ -31,6 +31,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? RobotEnv { get; set; }
 
         /// <summary>
+        /// 业务来源标识：
+        /// 1-集团内部aliyun域名；2-外部使用4service域名（默认）
+        /// </summary>
+        [NameInMap("Source")]
+        [Validation(Required=false)]
+        public int? Source { get; set; }
+
+        /// <summary>
         /// 功能标识，为空表示所有；支持的tag有：Dialog / Intent / Entity / Var / TaskCenter；传入多个时通过英文逗号分隔
         /// </summary>
         [NameInMap("Tags")]
