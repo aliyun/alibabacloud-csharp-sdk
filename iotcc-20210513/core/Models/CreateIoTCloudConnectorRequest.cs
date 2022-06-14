@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.IoTCC20210513.Models
         [Validation(Required=false)]
         public long? ResourceUid { get; set; }
 
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
+
         [NameInMap("WildcardDomainEnabled")]
         [Validation(Required=false)]
         public bool? WildcardDomainEnabled { get; set; }

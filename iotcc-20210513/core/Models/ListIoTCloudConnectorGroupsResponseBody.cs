@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.IoTCC20210513.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
         }
 
         [NameInMap("MaxResults")]

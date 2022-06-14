@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.IoTCC20210513.Models
             [Validation(Required=false)]
             public long? RateLimit { get; set; }
 
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
             [NameInMap("VSwitchList")]
             [Validation(Required=false)]
             public List<string> VSwitchList { get; set; }
