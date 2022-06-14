@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         [Validation(Required=false)]
                         public bool? VpcEnabled { get; set; }
 
+                        [NameInMap("ZoneId")]
+                        [Validation(Required=false)]
+                        public string ZoneId { get; set; }
+
                         [NameInMap("ZoneName")]
                         [Validation(Required=false)]
                         public string ZoneName { get; set; }

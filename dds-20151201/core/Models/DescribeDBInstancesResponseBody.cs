@@ -87,6 +87,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     }
 
                 }
+                public string StorageType { get; set; }
                 public DescribeDBInstancesResponseBodyDBInstancesDBInstanceTags Tags { get; set; }
                 public class DescribeDBInstancesResponseBodyDBInstancesDBInstanceTags : TeaModel {
                     [NameInMap("Tag")]

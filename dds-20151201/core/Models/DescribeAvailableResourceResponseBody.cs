@@ -63,6 +63,21 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                                                     [Validation(Required=false)]
                                                     public List<DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEnginesSupportedEngineSupportedNodeTypesSupportedNodeTypeAvailableResourcesAvailableResource> AvailableResource { get; set; }
                                                     public class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEnginesSupportedEngineSupportedNodeTypesSupportedNodeTypeAvailableResourcesAvailableResource : TeaModel {
+                                                        [NameInMap("DBInstanceStorageRange")]
+                                                        [Validation(Required=false)]
+                                                        public DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEnginesSupportedEngineSupportedNodeTypesSupportedNodeTypeAvailableResourcesAvailableResourceDBInstanceStorageRange DBInstanceStorageRange { get; set; }
+                                                        public class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEnginesSupportedEngineSupportedNodeTypesSupportedNodeTypeAvailableResourcesAvailableResourceDBInstanceStorageRange : TeaModel {
+                                                            [NameInMap("Max")]
+                                                            [Validation(Required=false)]
+                                                            public int? Max { get; set; }
+                                                            [NameInMap("Min")]
+                                                            [Validation(Required=false)]
+                                                            public int? Min { get; set; }
+                                                            [NameInMap("Step")]
+                                                            [Validation(Required=false)]
+                                                            public int? Step { get; set; }
+                                                        };
+
                                                         [NameInMap("InstanceClass")]
                                                         [Validation(Required=false)]
                                                         public string InstanceClass { get; set; }
