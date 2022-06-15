@@ -28,6 +28,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public long? Connections { get; set; }
                 public string CreateTime { get; set; }
                 public string DestroyTime { get; set; }
+                public string EditionType { get; set; }
                 public string EndTime { get; set; }
                 public string EngineVersion { get; set; }
                 public string GlobalInstanceId { get; set; }
@@ -47,7 +48,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string RegionId { get; set; }
                 public string ReplacateId { get; set; }
                 public string ResourceGroupId { get; set; }
-                public string SearchKey { get; set; }
                 public string SecondaryZoneId { get; set; }
                 public int? ShardCount { get; set; }
                 public DescribeInstancesResponseBodyInstancesKVStoreInstanceTags Tags { get; set; }

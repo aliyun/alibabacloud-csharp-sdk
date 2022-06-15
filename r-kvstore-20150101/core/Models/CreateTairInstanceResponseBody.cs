@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string InstanceStatus { get; set; }
 
+        [NameInMap("OrderId")]
+        [Validation(Required=false)]
+        public long? OrderId { get; set; }
+
         [NameInMap("Port")]
         [Validation(Required=false)]
         public int? Port { get; set; }

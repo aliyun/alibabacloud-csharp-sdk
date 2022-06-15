@@ -29,10 +29,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public string ConnectionDomain { get; set; }
 
-            [NameInMap("ConnectionMode")]
-            [Validation(Required=false)]
-            public string ConnectionMode { get; set; }
-
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
@@ -72,10 +68,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [NameInMap("NetworkType")]
             [Validation(Required=false)]
             public string NetworkType { get; set; }
-
-            [NameInMap("Port")]
-            [Validation(Required=false)]
-            public long? Port { get; set; }
 
             [NameInMap("PrivateIp")]
             [Validation(Required=false)]

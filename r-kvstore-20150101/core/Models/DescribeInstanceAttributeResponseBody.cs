@@ -49,6 +49,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public long? Port { get; set; }
                 public string PrivateIp { get; set; }
                 public long? QPS { get; set; }
+                public int? ReadOnlyCount { get; set; }
                 public string RegionId { get; set; }
                 public string ReplicaId { get; set; }
                 public string ReplicationMode { get; set; }
