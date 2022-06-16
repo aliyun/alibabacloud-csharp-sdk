@@ -8,10 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
-    public class PvrCallbackFCUResponse : TeaModel {
+    public class ThreeElementsVerificationResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
+
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
+        [NameInMap("body")]
+        [Validation(Required=true)]
+        public ThreeElementsVerificationResponseBody Body { get; set; }
 
     }
 
