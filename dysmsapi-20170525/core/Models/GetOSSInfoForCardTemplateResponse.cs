@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
-    public class QueryShortUrlResponse : TeaModel {
+    public class GetOSSInfoForCardTemplateResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public QueryShortUrlResponseBody Body { get; set; }
+        public GetOSSInfoForCardTemplateResponseBody Body { get; set; }
 
     }
 
