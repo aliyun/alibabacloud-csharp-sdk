@@ -28,6 +28,18 @@ namespace AlibabaCloud.SDK.Image_detect20211221.Models
         [Validation(Required=false)]
         public GetTaskDetailResponseBodyResponse Response { get; set; }
         public class GetTaskDetailResponseBodyResponse : TeaModel {
+            [NameInMap("DeduplicateProcessInfos")]
+            [Validation(Required=false)]
+            public List<GetTaskDetailResponseBodyResponseDeduplicateProcessInfos> DeduplicateProcessInfos { get; set; }
+            public class GetTaskDetailResponseBodyResponseDeduplicateProcessInfos : TeaModel {
+                public bool? Flag { get; set; }
+                public int? JsonNum { get; set; }
+                public int? ResultNum { get; set; }
+                public string VideoName { get; set; }
+            }
+            [NameInMap("DeduplicateResultOssPath")]
+            [Validation(Required=false)]
+            public string DeduplicateResultOssPath { get; set; }
             [NameInMap("ErrorCode")]
             [Validation(Required=false)]
             public int? ErrorCode { get; set; }
@@ -49,6 +61,9 @@ namespace AlibabaCloud.SDK.Image_detect20211221.Models
             [NameInMap("Level")]
             [Validation(Required=false)]
             public int? Level { get; set; }
+            [NameInMap("MidResultOssPath")]
+            [Validation(Required=false)]
+            public string MidResultOssPath { get; set; }
             [NameInMap("MqAccessKey")]
             [Validation(Required=false)]
             public string MqAccessKey { get; set; }
