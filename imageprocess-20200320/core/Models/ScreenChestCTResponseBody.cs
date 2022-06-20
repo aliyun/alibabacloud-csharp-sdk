@@ -81,6 +81,10 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 [Validation(Required=false)]
                 public List<ScreenChestCTResponseBodyDataCACSDetections> Detections { get; set; }
                 public class ScreenChestCTResponseBodyDataCACSDetections : TeaModel {
+                    [NameInMap("CalciumCenter")]
+                    [Validation(Required=false)]
+                    public List<long?> CalciumCenter { get; set; }
+
                     [NameInMap("CalciumId")]
                     [Validation(Required=false)]
                     public long? CalciumId { get; set; }

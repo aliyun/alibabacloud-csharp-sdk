@@ -17,6 +17,7 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             [Validation(Required=false)]
             public List<CalcCACSResponseBodyDataDetections> Detections { get; set; }
             public class CalcCACSResponseBodyDataDetections : TeaModel {
+                public List<string> CalciumCenter { get; set; }
                 public long? CalciumId { get; set; }
                 public float? CalciumScore { get; set; }
                 public float? CalciumVolume { get; set; }
