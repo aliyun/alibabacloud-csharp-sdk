@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? Vul { get; set; }
 
+            [NameInMap("WeakPWNum")]
+            [Validation(Required=false)]
+            public int? WeakPWNum { get; set; }
+
         }
 
         [NameInMap("RequestId")]

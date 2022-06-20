@@ -25,6 +25,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? AliUid { get; set; }
 
             /// <summary>
+            /// 处置方式
+            /// </summary>
+            [NameInMap("DisposalWay")]
+            [Validation(Required=false)]
+            public string DisposalWay { get; set; }
+
+            /// <summary>
             /// 告警事件名称（子类型）
             /// </summary>
             [NameInMap("EventName")]
