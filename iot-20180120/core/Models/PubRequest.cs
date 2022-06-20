@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string CorrelationData { get; set; }
 
+        [NameInMap("DeviceName")]
+        [Validation(Required=false)]
+        public string DeviceName { get; set; }
+
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
