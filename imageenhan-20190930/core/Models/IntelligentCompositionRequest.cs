@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageenhan20190930.Models
 {
     public class IntelligentCompositionRequest : TeaModel {
-        [NameInMap("NumBoxes")]
-        [Validation(Required=false)]
-        public int? NumBoxes { get; set; }
-
         [NameInMap("ImageURL")]
         [Validation(Required=false)]
         public string ImageURL { get; set; }
+
+        [NameInMap("NumBoxes")]
+        [Validation(Required=false)]
+        public int? NumBoxes { get; set; }
 
     }
 

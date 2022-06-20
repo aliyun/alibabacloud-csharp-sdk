@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
         [Validation(Required=true)]
         public Stream ImageURLObject { get; set; }
 
-        [NameInMap("OutputFormat")]
-        [Validation(Required=false)]
-        public string OutputFormat { get; set; }
-
         [NameInMap("Mode")]
         [Validation(Required=false)]
         public string Mode { get; set; }
+
+        [NameInMap("OutputFormat")]
+        [Validation(Required=false)]
+        public string OutputFormat { get; set; }
 
     }
 

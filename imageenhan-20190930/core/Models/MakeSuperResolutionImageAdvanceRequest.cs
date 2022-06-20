@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
         [Validation(Required=false)]
         public string Mode { get; set; }
 
+        [NameInMap("OutputFormat")]
+        [Validation(Required=false)]
+        public string OutputFormat { get; set; }
+
+        [NameInMap("OutputQuality")]
+        [Validation(Required=false)]
+        public long? OutputQuality { get; set; }
+
         [NameInMap("UpscaleFactor")]
         [Validation(Required=false)]
         public long? UpscaleFactor { get; set; }

@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
         [Validation(Required=true)]
         public Stream ImageURLObject { get; set; }
 
+        [NameInMap("BH")]
+        [Validation(Required=false)]
+        public float? BH { get; set; }
+
+        [NameInMap("BW")]
+        [Validation(Required=false)]
+        public float? BW { get; set; }
+
         [NameInMap("BX")]
         [Validation(Required=false)]
         public float? BX { get; set; }
@@ -20,14 +28,6 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
         [NameInMap("BY")]
         [Validation(Required=false)]
         public float? BY { get; set; }
-
-        [NameInMap("BW")]
-        [Validation(Required=false)]
-        public float? BW { get; set; }
-
-        [NameInMap("BH")]
-        [Validation(Required=false)]
-        public float? BH { get; set; }
 
     }
 

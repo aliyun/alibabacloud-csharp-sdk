@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageenhan20190930.Models
 {
     public class RecolorImageRequest : TeaModel {
-        [NameInMap("Url")]
-        [Validation(Required=false)]
-        public string Url { get; set; }
-
-        [NameInMap("Mode")]
-        [Validation(Required=false)]
-        public string Mode { get; set; }
-
-        [NameInMap("RefUrl")]
-        [Validation(Required=false)]
-        public string RefUrl { get; set; }
-
         [NameInMap("ColorCount")]
         [Validation(Required=false)]
         public int? ColorCount { get; set; }
@@ -34,6 +22,18 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
             public string Color { get; set; }
 
         }
+
+        [NameInMap("Mode")]
+        [Validation(Required=false)]
+        public string Mode { get; set; }
+
+        [NameInMap("RefUrl")]
+        [Validation(Required=false)]
+        public string RefUrl { get; set; }
+
+        [NameInMap("Url")]
+        [Validation(Required=false)]
+        public string Url { get; set; }
 
     }
 

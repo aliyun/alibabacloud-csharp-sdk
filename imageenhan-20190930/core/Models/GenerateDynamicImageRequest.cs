@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageenhan20190930.Models
 {
     public class GenerateDynamicImageRequest : TeaModel {
-        [NameInMap("Url")]
-        [Validation(Required=false)]
-        public string Url { get; set; }
-
         [NameInMap("Operation")]
         [Validation(Required=false)]
         public string Operation { get; set; }
+
+        [NameInMap("Url")]
+        [Validation(Required=false)]
+        public string Url { get; set; }
 
     }
 

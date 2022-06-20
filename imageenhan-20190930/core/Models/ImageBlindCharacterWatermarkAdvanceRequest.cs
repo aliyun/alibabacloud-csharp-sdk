@@ -17,14 +17,6 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
         [Validation(Required=false)]
         public string FunctionType { get; set; }
 
-        [NameInMap("Text")]
-        [Validation(Required=false)]
-        public string Text { get; set; }
-
-        [NameInMap("WatermarkImageURL")]
-        [Validation(Required=false)]
-        public string WatermarkImageURL { get; set; }
-
         [NameInMap("OutputFileType")]
         [Validation(Required=false)]
         public string OutputFileType { get; set; }
@@ -32,6 +24,14 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
         [NameInMap("QualityFactor")]
         [Validation(Required=false)]
         public int? QualityFactor { get; set; }
+
+        [NameInMap("Text")]
+        [Validation(Required=false)]
+        public string Text { get; set; }
+
+        [NameInMap("WatermarkImageURL")]
+        [Validation(Required=false)]
+        public string WatermarkImageURL { get; set; }
 
     }
 

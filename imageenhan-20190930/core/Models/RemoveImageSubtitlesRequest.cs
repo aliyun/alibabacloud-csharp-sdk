@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageenhan20190930.Models
 {
     public class RemoveImageSubtitlesRequest : TeaModel {
-        [NameInMap("ImageURL")]
+        [NameInMap("BH")]
         [Validation(Required=false)]
-        public string ImageURL { get; set; }
+        public float? BH { get; set; }
+
+        [NameInMap("BW")]
+        [Validation(Required=false)]
+        public float? BW { get; set; }
 
         [NameInMap("BX")]
         [Validation(Required=false)]
@@ -21,13 +25,9 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
         [Validation(Required=false)]
         public float? BY { get; set; }
 
-        [NameInMap("BW")]
+        [NameInMap("ImageURL")]
         [Validation(Required=false)]
-        public float? BW { get; set; }
-
-        [NameInMap("BH")]
-        [Validation(Required=false)]
-        public float? BH { get; set; }
+        public string ImageURL { get; set; }
 
     }
 
