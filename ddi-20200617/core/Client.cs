@@ -3048,6 +3048,224 @@ namespace AlibabaCloud.SDK.Ddi20200617
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
+        public ModifyFlowForWebResponse ModifyFlowForWebWithOptions(ModifyFlowForWebRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertConf))
+            {
+                query["AlertConf"] = request.AlertConf;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertDingDingGroupBizId))
+            {
+                query["AlertDingDingGroupBizId"] = request.AlertDingDingGroupBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertUserGroupBizId))
+            {
+                query["AlertUserGroupBizId"] = request.AlertUserGroupBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateCluster))
+            {
+                query["CreateCluster"] = request.CreateCluster;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CronExpr))
+            {
+                query["CronExpr"] = request.CronExpr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndSchedule))
+            {
+                query["EndSchedule"] = request.EndSchedule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Graph))
+            {
+                query["Graph"] = request.Graph;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostName))
+            {
+                query["HostName"] = request.HostName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentCategory))
+            {
+                query["ParentCategory"] = request.ParentCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentFlowList))
+            {
+                query["ParentFlowList"] = request.ParentFlowList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Periodic))
+            {
+                query["Periodic"] = request.Periodic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartSchedule))
+            {
+                query["StartSchedule"] = request.StartSchedule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyFlowForWeb",
+                Version = "2020-06-17",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyFlowForWebResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyFlowForWebResponse> ModifyFlowForWebWithOptionsAsync(ModifyFlowForWebRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertConf))
+            {
+                query["AlertConf"] = request.AlertConf;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertDingDingGroupBizId))
+            {
+                query["AlertDingDingGroupBizId"] = request.AlertDingDingGroupBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertUserGroupBizId))
+            {
+                query["AlertUserGroupBizId"] = request.AlertUserGroupBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateCluster))
+            {
+                query["CreateCluster"] = request.CreateCluster;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CronExpr))
+            {
+                query["CronExpr"] = request.CronExpr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndSchedule))
+            {
+                query["EndSchedule"] = request.EndSchedule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Graph))
+            {
+                query["Graph"] = request.Graph;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostName))
+            {
+                query["HostName"] = request.HostName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentCategory))
+            {
+                query["ParentCategory"] = request.ParentCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentFlowList))
+            {
+                query["ParentFlowList"] = request.ParentFlowList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Periodic))
+            {
+                query["Periodic"] = request.Periodic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartSchedule))
+            {
+                query["StartSchedule"] = request.StartSchedule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyFlowForWeb",
+                Version = "2020-06-17",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyFlowForWebResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyFlowForWebResponse ModifyFlowForWeb(ModifyFlowForWebRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyFlowForWebWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyFlowForWebResponse> ModifyFlowForWebAsync(ModifyFlowForWebRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyFlowForWebWithOptionsAsync(request, runtime);
+        }
+
         public ModifyFlowJobResponse ModifyFlowJobWithOptions(ModifyFlowJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);

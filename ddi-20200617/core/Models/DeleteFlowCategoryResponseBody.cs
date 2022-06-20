@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddi20200617.Models
 {
     public class DeleteFlowCategoryResponseBody : TeaModel {
-        [NameInMap("Data")]
+        [NameInMap("FlowId")]
         [Validation(Required=false)]
-        public bool? Data { get; set; }
+        public string FlowId { get; set; }
+
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public string JobId { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Result")]
+        [Validation(Required=false)]
+        public bool? Result { get; set; }
 
     }
 
