@@ -879,9 +879,15 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return await CreateDSEntityWithOptionsAsync(request, runtime);
         }
 
-        public CreateDSEntityValueResponse CreateDSEntityValueWithOptions(CreateDSEntityValueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateDSEntityValueResponse CreateDSEntityValueWithOptions(CreateDSEntityValueRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDSEntityValueShrinkRequest request = new CreateDSEntityValueShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Synonyms))
+            {
+                request.SynonymsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Synonyms, "Synonyms", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
             {
@@ -899,13 +905,15 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             {
                 query["InstanceId"] = request.InstanceId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Synonyms))
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SynonymsShrink))
             {
-                query["Synonyms"] = request.Synonyms;
+                body["Synonyms"] = request.SynonymsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -922,9 +930,15 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<CreateDSEntityValueResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CreateDSEntityValueResponse> CreateDSEntityValueWithOptionsAsync(CreateDSEntityValueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateDSEntityValueResponse> CreateDSEntityValueWithOptionsAsync(CreateDSEntityValueRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDSEntityValueShrinkRequest request = new CreateDSEntityValueShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Synonyms))
+            {
+                request.SynonymsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Synonyms, "Synonyms", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
             {
@@ -942,13 +956,15 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             {
                 query["InstanceId"] = request.InstanceId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Synonyms))
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SynonymsShrink))
             {
-                query["Synonyms"] = request.Synonyms;
+                body["Synonyms"] = request.SynonymsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4229,104 +4245,6 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return await ListDSEntityValueWithOptionsAsync(request, runtime);
         }
 
-        public ListDsMenusResponse ListDsMenusWithOptions(ListDsMenusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
-            {
-                query["AgentKey"] = request.AgentKey;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RobotEnv))
-            {
-                query["RobotEnv"] = request.RobotEnv;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
-            {
-                query["Source"] = request.Source;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
-            {
-                query["Tags"] = request.Tags;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListDsMenus",
-                Version = "2022-04-08",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListDsMenusResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<ListDsMenusResponse> ListDsMenusWithOptionsAsync(ListDsMenusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
-            {
-                query["AgentKey"] = request.AgentKey;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RobotEnv))
-            {
-                query["RobotEnv"] = request.RobotEnv;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
-            {
-                query["Source"] = request.Source;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
-            {
-                query["Tags"] = request.Tags;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListDsMenus",
-                Version = "2022-04-08",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListDsMenusResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public ListDsMenusResponse ListDsMenus(ListDsMenusRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ListDsMenusWithOptions(request, runtime);
-        }
-
-        public async Task<ListDsMenusResponse> ListDsMenusAsync(ListDsMenusRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ListDsMenusWithOptionsAsync(request, runtime);
-        }
-
         public ListInstanceResponse ListInstanceWithOptions(ListInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4441,6 +4359,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             {
                 query["IntentName"] = request.IntentName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4475,6 +4401,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntentName))
             {
                 query["IntentName"] = request.IntentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5503,9 +5437,15 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return await UpdateDSEntityWithOptionsAsync(request, runtime);
         }
 
-        public UpdateDSEntityValueResponse UpdateDSEntityValueWithOptions(UpdateDSEntityValueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateDSEntityValueResponse UpdateDSEntityValueWithOptions(UpdateDSEntityValueRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateDSEntityValueShrinkRequest request = new UpdateDSEntityValueShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Synonyms))
+            {
+                request.SynonymsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Synonyms, "Synonyms", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
             {
@@ -5527,13 +5467,15 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             {
                 query["InstanceId"] = request.InstanceId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Synonyms))
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SynonymsShrink))
             {
-                query["Synonyms"] = request.Synonyms;
+                body["Synonyms"] = request.SynonymsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5550,9 +5492,15 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return TeaModel.ToObject<UpdateDSEntityValueResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<UpdateDSEntityValueResponse> UpdateDSEntityValueWithOptionsAsync(UpdateDSEntityValueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateDSEntityValueResponse> UpdateDSEntityValueWithOptionsAsync(UpdateDSEntityValueRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateDSEntityValueShrinkRequest request = new UpdateDSEntityValueShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Synonyms))
+            {
+                request.SynonymsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Synonyms, "Synonyms", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
             {
@@ -5574,13 +5522,15 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             {
                 query["InstanceId"] = request.InstanceId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Synonyms))
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SynonymsShrink))
             {
-                query["Synonyms"] = request.Synonyms;
+                body["Synonyms"] = request.SynonymsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {

@@ -38,36 +38,6 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string AnswerType { get; set; }
 
             /// <summary>
-            /// 当AnswerType为CardAnswer时，此字段包含机器人返回的Card的列表
-            /// </summary>
-            [NameInMap("CardList")]
-            [Validation(Required=false)]
-            public List<ChatResponseBodyMessagesCardList> CardList { get; set; }
-            public class ChatResponseBodyMessagesCardList : TeaModel {
-                /// <summary>
-                /// 区分答案类型：cardAnswer
-                /// </summary>
-                [NameInMap("AnswerSource")]
-                [Validation(Required=false)]
-                public string AnswerSource { get; set; }
-
-                /// <summary>
-                /// 消息类型：card
-                /// </summary>
-                [NameInMap("MsgType")]
-                [Validation(Required=false)]
-                public string MsgType { get; set; }
-
-                /// <summary>
-                /// 平台类型：beebot
-                /// </summary>
-                [NameInMap("Platform")]
-                [Validation(Required=false)]
-                public string Platform { get; set; }
-
-            }
-
-            /// <summary>
             /// 当AnswerType为Knowledge时，此字段包含机器人返回的Knowledge对象
             /// </summary>
             [NameInMap("Knowledge")]
