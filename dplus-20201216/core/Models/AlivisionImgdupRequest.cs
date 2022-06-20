@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Dplus20201216.Models
         [Validation(Required=false)]
         public int? OutputImageNum { get; set; }
 
-        [NameInMap("PicNum")]
+        [NameInMap("PicNumList")]
         [Validation(Required=false)]
-        public int? PicNum { get; set; }
+        public string PicNumList { get; set; }
 
-        [NameInMap("PicUrl")]
+        [NameInMap("PicUrlList")]
         [Validation(Required=false)]
-        public string PicUrl { get; set; }
+        public string PicUrlList { get; set; }
 
     }
 

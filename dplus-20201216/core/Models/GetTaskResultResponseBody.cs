@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.Dplus20201216.Models
         [Validation(Required=false)]
         public GetTaskResultResponseBodyData Data { get; set; }
         public class GetTaskResultResponseBodyData : TeaModel {
-            [NameInMap("Resuslt")]
+            [NameInMap("Result")]
             [Validation(Required=false)]
-            public string Resuslt { get; set; }
+            public string Result { get; set; }
             [NameInMap("Status")]
             [Validation(Required=false)]
             public long? Status { get; set; }
