@@ -14,6 +14,27 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// 是否开启硬件加速
+        /// </summary>
+        [NameInMap("EnableHardwareAcceleration")]
+        [Validation(Required=false)]
+        public bool? EnableHardwareAcceleration { get; set; }
+
+        /// <summary>
+        /// 是否开启SLS日志投递
+        /// </summary>
+        [NameInMap("EnableSls")]
+        [Validation(Required=false)]
+        public bool? EnableSls { get; set; }
+
+        /// <summary>
+        /// 是否开启xtrace
+        /// </summary>
+        [NameInMap("EnableXtrace")]
+        [Validation(Required=false)]
+        public bool? EnableXtrace { get; set; }
+
+        /// <summary>
         /// 是否企业安全组类型
         /// </summary>
         [NameInMap("EnterpriseSecurityGroup")]
@@ -82,6 +103,13 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("Vpc")]
         [Validation(Required=false)]
         public string Vpc { get; set; }
+
+        /// <summary>
+        /// xtrace采样率，取值[0,100]
+        /// </summary>
+        [NameInMap("XtraceRatio")]
+        [Validation(Required=false)]
+        public string XtraceRatio { get; set; }
 
     }
 

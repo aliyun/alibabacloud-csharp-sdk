@@ -8,38 +8,31 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class CreateVGroupRequest : TeaModel {
+    public class UpdateGatewaySpecRequest : TeaModel {
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// 集群名称
+        /// 网关名称
         /// </summary>
-        [NameInMap("Name")]
+        [NameInMap("GatewayUniqueId")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// 用户ID
+        /// 节点数量
         /// </summary>
-        [NameInMap("PrimaryUser")]
+        [NameInMap("Replica")]
         [Validation(Required=false)]
-        public string PrimaryUser { get; set; }
+        public int? Replica { get; set; }
 
         /// <summary>
-        /// 地域
+        /// 节点规格
         /// </summary>
-        [NameInMap("Region")]
+        [NameInMap("Spec")]
         [Validation(Required=false)]
-        public string Region { get; set; }
-
-        /// <summary>
-        /// 实例ID
-        /// </summary>
-        [NameInMap("SeataServerUniqueId")]
-        [Validation(Required=false)]
-        public string SeataServerUniqueId { get; set; }
+        public string Spec { get; set; }
 
     }
 

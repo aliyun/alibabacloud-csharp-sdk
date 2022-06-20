@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class AddSeataServerResponseBody : TeaModel {
+    public class UpdateServiceSourceResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public string Data { get; set; }
+        public long? Data { get; set; }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]

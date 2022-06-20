@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public GetGatewayRouteDetailResponseBodyData Data { get; set; }
         public class GetGatewayRouteDetailResponseBodyData : TeaModel {
+            [NameInMap("AhasStatus")]
+            [Validation(Required=false)]
+            public int? AhasStatus { get; set; }
             [NameInMap("Cors")]
             [Validation(Required=false)]
             public GetGatewayRouteDetailResponseBodyDataCors Cors { get; set; }

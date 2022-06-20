@@ -110,6 +110,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("NetType")]
             [Validation(Required=false)]
             public string NetType { get; set; }
+            [NameInMap("OrderClusterVersion")]
+            [Validation(Required=false)]
+            public string OrderClusterVersion { get; set; }
             [NameInMap("PayInfo")]
             [Validation(Required=false)]
             public string PayInfo { get; set; }

@@ -8,26 +8,35 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class GetGovernanceKubernetesClusterListRequest : TeaModel {
+    public class UpdateClusterSpecRequest : TeaModel {
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        /// <summary>
+        /// 网关名称
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("ClusterName")]
+        [NameInMap("ClusterSpecification")]
         [Validation(Required=false)]
-        public string ClusterName { get; set; }
+        public string ClusterSpecification { get; set; }
 
-        [NameInMap("PageNumber")]
+        /// <summary>
+        /// 节点数量
+        /// </summary>
+        [NameInMap("InstanceCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public int? InstanceCount { get; set; }
 
-        [NameInMap("PageSize")]
+        /// <summary>
+        /// 节点规格
+        /// </summary>
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string InstanceId { get; set; }
 
     }
 

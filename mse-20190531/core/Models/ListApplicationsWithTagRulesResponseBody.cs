@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public class ListApplicationsWithTagRulesResponseBodyDataResultRouteRules : TeaModel {
                     public bool? CarryData { get; set; }
                     public bool? Enable { get; set; }
-                    public long? GmtModified { get; set; }
+                    public string GmtModified { get; set; }
                     public long? Id { get; set; }
                     public int? InstanceNum { get; set; }
                     public string Name { get; set; }

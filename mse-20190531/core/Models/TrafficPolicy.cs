@@ -56,6 +56,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("LoadbalancerType")]
             [Validation(Required=false)]
             public string LoadbalancerType { get; set; }
+            [NameInMap("WarmupDuration")]
+            [Validation(Required=false)]
+            public long? WarmupDuration { get; set; }
         };
 
         /// <summary>

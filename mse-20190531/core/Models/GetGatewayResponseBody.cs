@@ -76,6 +76,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
+            [NameInMap("StatusDesc")]
+            [Validation(Required=false)]
+            public string StatusDesc { get; set; }
             [NameInMap("Vpc")]
             [Validation(Required=false)]
             public string Vpc { get; set; }

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class ListInstancesResponse : TeaModel {
+    public class CreateMseServiceApplicationResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ListInstancesResponseBody Body { get; set; }
+        public CreateMseServiceApplicationResponseBody Body { get; set; }
 
     }
 

@@ -35,6 +35,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string EndDate { get; set; }
                 public string GatewayType { get; set; }
                 public string GatewayUniqueId { get; set; }
+                public string GatewayVersion { get; set; }
                 public string GmtCreate { get; set; }
                 public string GmtModified { get; set; }
                 public long? Id { get; set; }
@@ -68,6 +69,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string PrimaryUser { get; set; }
                 public string Region { get; set; }
                 public int? Replica { get; set; }
+                public bool? RollBack { get; set; }
                 public List<ListGatewayResponseBodyDataResultSlb> Slb { get; set; }
                 public class ListGatewayResponseBodyDataResultSlb : TeaModel {
                     public string GatewaySlbMode { get; set; }
