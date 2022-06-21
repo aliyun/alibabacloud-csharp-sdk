@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
     public class RecognizeTurkeyIdentityCardResponseBody : TeaModel {
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public RecognizeTurkeyIdentityCardResponseBodyData Data { get; set; }
@@ -1206,10 +1202,6 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
 
             }
         };
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
 
         /// <summary>
         /// Id of the request
