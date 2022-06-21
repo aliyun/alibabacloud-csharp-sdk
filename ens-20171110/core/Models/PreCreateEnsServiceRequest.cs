@@ -65,10 +65,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string UserData { get; set; }
 
-        [NameInMap("Version")]
-        [Validation(Required=false)]
-        public string Version { get; set; }
-
     }
 
 }

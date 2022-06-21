@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class JoinSecurityGroupRequest : TeaModel {
-        [NameInMap("InstanceId")]
+    public class AssignPrivateIpAddressesRequest : TeaModel {
+        [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string NetworkInterfaceId { get; set; }
 
-        [NameInMap("SecurityGroupId")]
+        [NameInMap("VSwitchId")]
         [Validation(Required=false)]
-        public string SecurityGroupId { get; set; }
+        public string VSwitchId { get; set; }
 
     }
 

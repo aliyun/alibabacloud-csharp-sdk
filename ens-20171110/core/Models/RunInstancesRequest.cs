@@ -154,6 +154,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string PrivateIpAddress { get; set; }
 
+        [NameInMap("PublicIpIdentification")]
+        [Validation(Required=false)]
+        public bool? PublicIpIdentification { get; set; }
+
         /// <summary>
         /// 调度层级
         /// </summary>

@@ -24,6 +24,23 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string NetworkInterfaceId { get; set; }
                 public string PrimaryIp { get; set; }
                 public string PrimaryIpType { get; set; }
+                public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSets PrivateIpSets { get; set; }
+                public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSets : TeaModel {
+                    [NameInMap("PrivateIpSet")]
+                    [Validation(Required=false)]
+                    public List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet> PrivateIpSet { get; set; }
+                    public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet : TeaModel {
+                        [NameInMap("Primary")]
+                        [Validation(Required=false)]
+                        public bool? Primary { get; set; }
+
+                        [NameInMap("PrivateIpAddress")]
+                        [Validation(Required=false)]
+                        public string PrivateIpAddress { get; set; }
+
+                    }
+
+                }
                 public string Status { get; set; }
                 public string VSwitchId { get; set; }
             }

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class CreateVSwitchRequest : TeaModel {
+    public class CreateClassicNetworkRequest : TeaModel {
         [NameInMap("CidrBlock")]
         [Validation(Required=false)]
         public string CidrBlock { get; set; }
@@ -21,13 +21,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
-        [NameInMap("NetworkId")]
+        [NameInMap("NetworkName")]
         [Validation(Required=false)]
-        public string NetworkId { get; set; }
-
-        [NameInMap("VSwitchName")]
-        [Validation(Required=false)]
-        public string VSwitchName { get; set; }
+        public string NetworkName { get; set; }
 
     }
 
