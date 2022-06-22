@@ -13,6 +13,22 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public GetAggregateConfigRuleResponseBodyConfigRule ConfigRule { get; set; }
         public class GetAggregateConfigRuleResponseBodyConfigRule : TeaModel {
+            [NameInMap("AccountId")]
+            [Validation(Required=false)]
+            public long? AccountId { get; set; }
+            [NameInMap("Compliance")]
+            [Validation(Required=false)]
+            public GetAggregateConfigRuleResponseBodyConfigRuleCompliance Compliance { get; set; }
+            public class GetAggregateConfigRuleResponseBodyConfigRuleCompliance : TeaModel {
+                [NameInMap("ComplianceType")]
+                [Validation(Required=false)]
+                public string ComplianceType { get; set; }
+
+                [NameInMap("Count")]
+                [Validation(Required=false)]
+                public int? Count { get; set; }
+
+            }
             [NameInMap("ConfigRuleArn")]
             [Validation(Required=false)]
             public string ConfigRuleArn { get; set; }
