@@ -54,12 +54,18 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [NameInMap("ChatId")]
             [Validation(Required=false)]
             public string ChatId { get; set; }
+            [NameInMap("ConfId")]
+            [Validation(Required=false)]
+            public string ConfId { get; set; }
             [NameInMap("CoverUrl")]
             [Validation(Required=false)]
             public string CoverUrl { get; set; }
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
+            [NameInMap("EnableLinkMic")]
+            [Validation(Required=false)]
+            public bool? EnableLinkMic { get; set; }
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public long? EndTime { get; set; }

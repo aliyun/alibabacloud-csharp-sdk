@@ -16,6 +16,14 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        [NameInMap("PageNum")]
+        [Validation(Required=false)]
+        public int? PageNum { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
     }
 
 }
