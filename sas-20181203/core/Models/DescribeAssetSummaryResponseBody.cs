@@ -13,6 +13,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public DescribeAssetSummaryResponseBodyAssetsSummary AssetsSummary { get; set; }
         public class DescribeAssetSummaryResponseBodyAssetsSummary : TeaModel {
+            [NameInMap("TotalAssetAllRegion")]
+            [Validation(Required=false)]
+            public int? TotalAssetAllRegion { get; set; }
+            [NameInMap("TotalCoreAllRegion")]
+            [Validation(Required=false)]
+            public int? TotalCoreAllRegion { get; set; }
             [NameInMap("TotalCoreNum")]
             [Validation(Required=false)]
             public int? TotalCoreNum { get; set; }

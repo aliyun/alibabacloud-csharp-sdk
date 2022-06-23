@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("IsNewContainerVersion")]
+        [Validation(Required=false)]
+        public bool? IsNewContainerVersion { get; set; }
+
         [NameInMap("IsOverBalance")]
         [Validation(Required=false)]
         public bool? IsOverBalance { get; set; }
@@ -60,6 +64,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("MVUnusedAuthCount")]
         [Validation(Required=false)]
         public int? MVUnusedAuthCount { get; set; }
+
+        [NameInMap("OpenTime")]
+        [Validation(Required=false)]
+        public long? OpenTime { get; set; }
 
         [NameInMap("ReleaseTime")]
         [Validation(Required=false)]

@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string UniqueInfo { get; set; }
 
+        [NameInMap("Uuids")]
+        [Validation(Required=false)]
+        public string Uuids { get; set; }
+
     }
 
 }

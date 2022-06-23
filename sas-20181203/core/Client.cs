@@ -543,6 +543,170 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await CreateBackupPolicyWithOptionsAsync(request, runtime);
         }
 
+        public CreateFileDetectResponse CreateFileDetectWithOptions(CreateFileDetectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HashKey))
+            {
+                query["HashKey"] = request.HashKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssKey))
+            {
+                query["OssKey"] = request.OssKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateFileDetect",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateFileDetectResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateFileDetectResponse> CreateFileDetectWithOptionsAsync(CreateFileDetectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HashKey))
+            {
+                query["HashKey"] = request.HashKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssKey))
+            {
+                query["OssKey"] = request.OssKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateFileDetect",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateFileDetectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateFileDetectResponse CreateFileDetect(CreateFileDetectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateFileDetectWithOptions(request, runtime);
+        }
+
+        public async Task<CreateFileDetectResponse> CreateFileDetectAsync(CreateFileDetectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateFileDetectWithOptionsAsync(request, runtime);
+        }
+
+        public CreateFileDetectUploadUrlResponse CreateFileDetectUploadUrlWithOptions(CreateFileDetectUploadUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HashKeyList))
+            {
+                query["HashKeyList"] = request.HashKeyList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateFileDetectUploadUrl",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateFileDetectUploadUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateFileDetectUploadUrlResponse> CreateFileDetectUploadUrlWithOptionsAsync(CreateFileDetectUploadUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HashKeyList))
+            {
+                query["HashKeyList"] = request.HashKeyList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateFileDetectUploadUrl",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateFileDetectUploadUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateFileDetectUploadUrlResponse CreateFileDetectUploadUrl(CreateFileDetectUploadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateFileDetectUploadUrlWithOptions(request, runtime);
+        }
+
+        public async Task<CreateFileDetectUploadUrlResponse> CreateFileDetectUploadUrlAsync(CreateFileDetectUploadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateFileDetectUploadUrlWithOptionsAsync(request, runtime);
+        }
+
         public CreateOrUpdateAssetGroupResponse CreateOrUpdateAssetGroupWithOptions(CreateOrUpdateAssetGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1941,6 +2105,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["UniqueInfo"] = request.UniqueInfo;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuids))
+            {
+                query["Uuids"] = request.Uuids;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2023,6 +2191,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UniqueInfo))
             {
                 query["UniqueInfo"] = request.UniqueInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuids))
+            {
+                query["Uuids"] = request.Uuids;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10921,6 +11093,14 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["OperateErrorCodeList"] = request.OperateErrorCodeList;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateTimeEnd))
+            {
+                query["OperateTimeEnd"] = request.OperateTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateTimeStart))
+            {
+                query["OperateTimeStart"] = request.OperateTimeStart;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
@@ -11041,6 +11221,14 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateErrorCodeList))
             {
                 query["OperateErrorCodeList"] = request.OperateErrorCodeList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateTimeEnd))
+            {
+                query["OperateTimeEnd"] = request.OperateTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateTimeStart))
+            {
+                query["OperateTimeStart"] = request.OperateTimeStart;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
@@ -13091,6 +13279,88 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetBackupStorageCountWithOptionsAsync(runtime);
+        }
+
+        public GetFileDetectResultResponse GetFileDetectResultWithOptions(GetFileDetectResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HashKeyList))
+            {
+                query["HashKeyList"] = request.HashKeyList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetFileDetectResult",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetFileDetectResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetFileDetectResultResponse> GetFileDetectResultWithOptionsAsync(GetFileDetectResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HashKeyList))
+            {
+                query["HashKeyList"] = request.HashKeyList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetFileDetectResult",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetFileDetectResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetFileDetectResultResponse GetFileDetectResult(GetFileDetectResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetFileDetectResultWithOptions(request, runtime);
+        }
+
+        public async Task<GetFileDetectResultResponse> GetFileDetectResultAsync(GetFileDetectResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetFileDetectResultWithOptionsAsync(request, runtime);
         }
 
         public GetSuspiciousStatisticsResponse GetSuspiciousStatisticsWithOptions(GetSuspiciousStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

@@ -65,6 +65,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<string> OperateErrorCodeList { get; set; }
 
+        /// <summary>
+        /// 处理时间结束时间
+        /// </summary>
+        [NameInMap("OperateTimeEnd")]
+        [Validation(Required=false)]
+        public long? OperateTimeEnd { get; set; }
+
+        /// <summary>
+        /// 处理时间开始时间
+        /// </summary>
+        [NameInMap("OperateTimeStart")]
+        [Validation(Required=false)]
+        public long? OperateTimeStart { get; set; }
+
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
