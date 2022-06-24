@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeInstancesResponseBodyInstancesInstanceAttribute> InstanceAttribute { get; set; }
             public class DescribeInstancesResponseBodyInstancesInstanceAttribute : TeaModel {
+                public string AclId { get; set; }
+                public string AclName { get; set; }
+                public string AclStatus { get; set; }
+                public string AclType { get; set; }
                 public string ClassicEgressAddress { get; set; }
                 public string CreatedTime { get; set; }
                 public bool? EgressIpv6Enable { get; set; }
