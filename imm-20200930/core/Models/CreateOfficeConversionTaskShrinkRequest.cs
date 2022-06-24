@@ -203,6 +203,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string TargetType { get; set; }
 
         /// <summary>
+        /// 文档转换输出地址模式
+        /// </summary>
+        [NameInMap("TargetURI")]
+        [Validation(Required=false)]
+        public string TargetURI { get; set; }
+
+        /// <summary>
         /// 文档转换输出文件地址前缀
         /// </summary>
         [NameInMap("TargetURIPrefix")]
