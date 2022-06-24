@@ -232,6 +232,10 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 
                 }
 
+                [NameInMap("FractureMaskURL")]
+                [Validation(Required=false)]
+                public string FractureMaskURL { get; set; }
+
                 [NameInMap("Origin")]
                 [Validation(Required=false)]
                 public List<float?> Origin { get; set; }
@@ -239,6 +243,10 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 [NameInMap("ResultURL")]
                 [Validation(Required=false)]
                 public string ResultURL { get; set; }
+
+                [NameInMap("RibSegmentMaskURL")]
+                [Validation(Required=false)]
+                public string RibSegmentMaskURL { get; set; }
 
                 [NameInMap("Spacing")]
                 [Validation(Required=false)]
