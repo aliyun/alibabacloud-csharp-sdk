@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class CreateNodeBatchRequest : TeaModel {
+        [NameInMap("AccountName")]
+        [Validation(Required=false)]
+        public string AccountName { get; set; }
+
+        [NameInMap("AccountPassword")]
+        [Validation(Required=false)]
+        public string AccountPassword { get; set; }
+
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
@@ -56,6 +64,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
+
+        [NameInMap("ShardDirect")]
+        [Validation(Required=false)]
+        public bool? ShardDirect { get; set; }
 
     }
 

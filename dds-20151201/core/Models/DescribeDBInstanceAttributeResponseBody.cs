@@ -76,6 +76,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string Engine { get; set; }
                 public string EngineVersion { get; set; }
                 public string ExpireTime { get; set; }
+                public string HiddenZoneId { get; set; }
                 public string KindCode { get; set; }
                 public string LastDowngradeTime { get; set; }
                 public string LockMode { get; set; }
@@ -181,6 +182,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 }
                 public string ReplicationFactor { get; set; }
                 public string ResourceGroupId { get; set; }
+                public string SecondaryZoneId { get; set; }
                 public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardList ShardList { get; set; }
                 public class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardList : TeaModel {
                     [NameInMap("ShardAttribute")]
