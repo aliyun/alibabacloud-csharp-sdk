@@ -86,6 +86,32 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public float? Value { get; set; }
 
             }
+            [NameInMap("adbpg_master_status")]
+            [Validation(Required=false)]
+            public DescribeHealthStatusResponseBodyStatusAdbpgMasterStatus AdbpgMasterStatus { get; set; }
+            public class DescribeHealthStatusResponseBodyStatusAdbpgMasterStatus : TeaModel {
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public float? Value { get; set; }
+
+            }
+            [NameInMap("adbpg_segment_status")]
+            [Validation(Required=false)]
+            public DescribeHealthStatusResponseBodyStatusAdbpgSegmentStatus AdbpgSegmentStatus { get; set; }
+            public class DescribeHealthStatusResponseBodyStatusAdbpgSegmentStatus : TeaModel {
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public float? Value { get; set; }
+
+            }
             [NameInMap("adbpg_status")]
             [Validation(Required=false)]
             public DescribeHealthStatusResponseBodyStatusAdbpgStatus AdbpgStatus { get; set; }

@@ -58,9 +58,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string Port { get; set; }
                 public string ReadDelayTime { get; set; }
                 public string RegionId { get; set; }
+                public string RunningTime { get; set; }
                 public string SecurityIPList { get; set; }
                 public int? SegNodeNum { get; set; }
                 public int? SegmentCounts { get; set; }
+                public string StartTime { get; set; }
                 public int? StoragePerNode { get; set; }
                 public long? StorageSize { get; set; }
                 public string StorageType { get; set; }
