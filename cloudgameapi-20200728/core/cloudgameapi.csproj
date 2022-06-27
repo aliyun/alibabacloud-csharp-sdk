@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.CloudGameAPI20200728</AssemblyName>
-    <Version>2.5.2</Version>
+    <Version>2.5.4</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud CloudGameAPI (20200728) SDK Library for .NET</Description>
