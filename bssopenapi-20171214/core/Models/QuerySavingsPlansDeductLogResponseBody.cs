@@ -29,6 +29,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string DiscountRate { get; set; }
                 public string EndTime { get; set; }
                 public string InstanceId { get; set; }
+                public long? OwnerId { get; set; }
                 public string SavingsType { get; set; }
                 public string StartTime { get; set; }
                 public long? UserId { get; set; }

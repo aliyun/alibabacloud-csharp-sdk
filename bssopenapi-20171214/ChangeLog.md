@@ -1,3 +1,6 @@
+2022-06-28 Version: 1.0.11
+- Update QuerySavingsPlansDeductLog add field OwnerId.
+
 2022-05-19 Version: 1.0.10
 - Update SubscribeBillToOSS and QueryBillToOSSSubscription to support BucketPath.
 
