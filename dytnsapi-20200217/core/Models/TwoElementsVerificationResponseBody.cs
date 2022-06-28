@@ -15,17 +15,15 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<TwoElementsVerificationResponseBodyData> Data { get; set; }
+        public TwoElementsVerificationResponseBodyData Data { get; set; }
         public class TwoElementsVerificationResponseBodyData : TeaModel {
             [NameInMap("BasicCarrier")]
             [Validation(Required=false)]
             public string BasicCarrier { get; set; }
-
             [NameInMap("IsConsistent")]
             [Validation(Required=false)]
             public int? IsConsistent { get; set; }
-
-        }
+        };
 
         [NameInMap("Message")]
         [Validation(Required=false)]
