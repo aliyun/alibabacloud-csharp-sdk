@@ -16,10 +16,6 @@ namespace AlibabaCloud.SDK.Videorecog20200320.Models
         [Validation(Required=false)]
         public string VideoURL { get; set; }
 
-        [NameInMap("Async")]
-        [Validation(Required=false)]
-        public bool? Async { get; set; }
-
     }
 
 }

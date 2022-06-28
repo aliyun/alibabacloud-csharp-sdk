@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Videorecog20200320.Models
 {
-    public class GenerateVideoCoverAdvanceRequest : TeaModel {
+    public class SplitVideoPartsAdvanceRequest : TeaModel {
         [NameInMap("VideoUrlObject")]
         [Validation(Required=true)]
         public Stream VideoUrlObject { get; set; }
-
-        [NameInMap("IsGif")]
-        [Validation(Required=false)]
-        public bool? IsGif { get; set; }
 
     }
 

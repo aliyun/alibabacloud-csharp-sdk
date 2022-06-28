@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Videorecog20200320.Models
 {
-    public class UnderstandVideoContentResponse : TeaModel {
+    public class RecognizeVideoCastCrewListResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Videorecog20200320.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public UnderstandVideoContentResponseBody Body { get; set; }
+        public RecognizeVideoCastCrewListResponseBody Body { get; set; }
 
     }
 

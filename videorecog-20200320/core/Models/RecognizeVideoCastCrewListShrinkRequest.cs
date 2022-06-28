@@ -8,10 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Videorecog20200320.Models
 {
-    public class GenerateVideoCoverRequest : TeaModel {
-        [NameInMap("IsGif")]
+    public class RecognizeVideoCastCrewListShrinkRequest : TeaModel {
+        [NameInMap("Params")]
         [Validation(Required=false)]
-        public bool? IsGif { get; set; }
+        public string ParamsShrink { get; set; }
+
+        [NameInMap("RegisterUrl")]
+        [Validation(Required=false)]
+        public string RegisterUrl { get; set; }
 
         [NameInMap("VideoUrl")]
         [Validation(Required=false)]
