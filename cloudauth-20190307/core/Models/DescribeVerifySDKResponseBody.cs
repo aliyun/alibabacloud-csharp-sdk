@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
-    public class DetectFaceAttributesRequest : TeaModel {
-        [NameInMap("BizType")]
+    public class DescribeVerifySDKResponseBody : TeaModel {
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string BizType { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("MaterialValue")]
+        [NameInMap("SdkUrl")]
         [Validation(Required=false)]
-        public string MaterialValue { get; set; }
+        public string SdkUrl { get; set; }
 
     }
 

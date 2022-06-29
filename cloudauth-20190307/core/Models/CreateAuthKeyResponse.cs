@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class CreateAuthKeyResponse : TeaModel {
-        [NameInMap("AuthKey")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string AuthKey { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public int? StatusCode { get; set; }
+
+        [NameInMap("body")]
+        [Validation(Required=true)]
+        public CreateAuthKeyResponseBody Body { get; set; }
 
     }
 

@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class VerifyMaterialRequest : TeaModel {
         [NameInMap("BizId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BizId { get; set; }
 
         [NameInMap("BizType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BizType { get; set; }
 
         [NameInMap("FaceImageUrl")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FaceImageUrl { get; set; }
 
         [NameInMap("IdCardBackImageUrl")]
@@ -30,11 +30,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string IdCardFrontImageUrl { get; set; }
 
         [NameInMap("IdCardNumber")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string IdCardNumber { get; set; }
 
         [NameInMap("Name")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Name { get; set; }
 
         [NameInMap("UserId")]

@@ -8,7 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
-    public class ModifyDeviceInfoRequest : TeaModel {
+    public class ModifyDeviceInfoResponseBody : TeaModel {
+        [NameInMap("BeginDay")]
+        [Validation(Required=false)]
+        public string BeginDay { get; set; }
+
         [NameInMap("BizType")]
         [Validation(Required=false)]
         public string BizType { get; set; }
@@ -17,13 +21,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string DeviceId { get; set; }
 
-        [NameInMap("Duration")]
-        [Validation(Required=false)]
-        public string Duration { get; set; }
-
         [NameInMap("ExpiredDay")]
         [Validation(Required=false)]
         public string ExpiredDay { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("UserDeviceId")]
         [Validation(Required=false)]

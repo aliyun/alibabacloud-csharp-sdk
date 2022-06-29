@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string Crop { get; set; }
 
+        [NameInMap("EncryptType")]
+        [Validation(Required=false)]
+        public string EncryptType { get; set; }
+
         [NameInMap("FaceContrastPicture")]
         [Validation(Required=false)]
         public string FaceContrastPicture { get; set; }

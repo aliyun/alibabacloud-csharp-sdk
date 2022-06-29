@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string DeviceToken { get; set; }
 
+        [NameInMap("EncryptType")]
+        [Validation(Required=false)]
+        public string EncryptType { get; set; }
+
         [NameInMap("FaceContrastFile")]
         [Validation(Required=false)]
         public string FaceContrastFile { get; set; }

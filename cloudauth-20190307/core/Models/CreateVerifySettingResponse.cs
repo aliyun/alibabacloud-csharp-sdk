@@ -9,25 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class CreateVerifySettingResponse : TeaModel {
-        [NameInMap("BizName")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string BizName { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("BizType")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string BizType { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Solution")]
-        [Validation(Required=true)]
-        public string Solution { get; set; }
-
-        [NameInMap("StepList")]
-        [Validation(Required=true)]
-        public List<string> StepList { get; set; }
+        public CreateVerifySettingResponseBody Body { get; set; }
 
     }
 
