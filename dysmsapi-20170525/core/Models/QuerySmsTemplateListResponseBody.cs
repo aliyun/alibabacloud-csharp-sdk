@@ -13,9 +13,17 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("CurrentPage")]
+        [Validation(Required=false)]
+        public int? CurrentPage { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -69,6 +77,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public int? TemplateType { get; set; }
 
         }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 
