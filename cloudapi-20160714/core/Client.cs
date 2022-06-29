@@ -13888,6 +13888,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["IsForce"] = request.IsForce;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsHttpRedirectToHttps))
+            {
+                query["IsHttpRedirectToHttps"] = request.IsHttpRedirectToHttps;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -13930,6 +13934,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsForce))
             {
                 query["IsForce"] = request.IsForce;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsHttpRedirectToHttps))
+            {
+                query["IsHttpRedirectToHttps"] = request.IsHttpRedirectToHttps;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

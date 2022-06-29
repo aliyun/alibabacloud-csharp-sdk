@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public bool? IsForce { get; set; }
 
+        [NameInMap("IsHttpRedirectToHttps")]
+        [Validation(Required=false)]
+        public bool? IsHttpRedirectToHttps { get; set; }
+
     }
 
 }
