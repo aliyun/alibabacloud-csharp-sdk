@@ -4406,6 +4406,14 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             {
                 realHeaders["X-Fc-Account-Id"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XFcAccountId);
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XFcDate))
+            {
+                realHeaders["X-Fc-Date"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XFcDate);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XFcTraceId))
+            {
+                realHeaders["X-Fc-Trace-Id"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XFcTraceId);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = realHeaders,
@@ -4452,6 +4460,14 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XFcAccountId))
             {
                 realHeaders["X-Fc-Account-Id"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XFcAccountId);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XFcDate))
+            {
+                realHeaders["X-Fc-Date"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XFcDate);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XFcTraceId))
+            {
+                realHeaders["X-Fc-Trace-Id"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XFcTraceId);
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
