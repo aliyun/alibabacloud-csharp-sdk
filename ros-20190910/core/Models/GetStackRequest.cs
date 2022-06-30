@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("LogOption")]
+        [Validation(Required=false)]
+        public string LogOption { get; set; }
+
         [NameInMap("OutputOption")]
         [Validation(Required=false)]
         public string OutputOption { get; set; }

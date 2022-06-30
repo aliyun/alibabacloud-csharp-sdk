@@ -37,6 +37,17 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public GetStackResponseBodyLog Log { get; set; }
         public class GetStackResponseBodyLog : TeaModel {
+            [NameInMap("ResourceLogs")]
+            [Validation(Required=false)]
+            public List<GetStackResponseBodyLogResourceLogs> ResourceLogs { get; set; }
+            public class GetStackResponseBodyLogResourceLogs : TeaModel {
+                public List<GetStackResponseBodyLogResourceLogsLogs> Logs { get; set; }
+                public class GetStackResponseBodyLogResourceLogsLogs : TeaModel {
+                    public string Content { get; set; }
+                    public List<string> Keys { get; set; }
+                }
+                public string ResourceName { get; set; }
+            }
             [NameInMap("TerraformLogs")]
             [Validation(Required=false)]
             public List<GetStackResponseBodyLogTerraformLogs> TerraformLogs { get; set; }

@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResourceAttributes")]
+        [Validation(Required=false)]
+        public List<string> ResourceAttributes { get; set; }
+
         [NameInMap("ShowResourceAttributes")]
         [Validation(Required=false)]
         public bool? ShowResourceAttributes { get; set; }
