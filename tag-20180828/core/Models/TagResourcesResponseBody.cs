@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Tag20180828.Models
 {
     public class TagResourcesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("FailedResources")]
         [Validation(Required=false)]
         public TagResourcesResponseBodyFailedResources FailedResources { get; set; }
@@ -35,6 +31,10 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
                 }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

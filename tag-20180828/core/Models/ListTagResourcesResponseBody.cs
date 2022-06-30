@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
             [Validation(Required=false)]
             public List<ListTagResourcesResponseBodyTagResourcesTags> Tags { get; set; }
             public class ListTagResourcesResponseBodyTagResourcesTags : TeaModel {
+                [NameInMap("Category")]
+                [Validation(Required=false)]
+                public string Category { get; set; }
+
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
@@ -36,10 +40,6 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
-
-                [NameInMap("Category")]
-                [Validation(Required=false)]
-                public string Category { get; set; }
 
             }
 

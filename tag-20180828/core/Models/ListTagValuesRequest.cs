@@ -9,21 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Tag20180828.Models
 {
     public class ListTagValuesRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("TagFilter")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public ListTagValuesRequestTagFilter TagFilter { get; set; }
+        public class ListTagValuesRequestTagFilter : TeaModel {
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+        };
 
-        [NameInMap("ResourceOwnerAccount")]
+        [NameInMap("FuzzyType")]
         [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string FuzzyType { get; set; }
 
         [NameInMap("Key")]
         [Validation(Required=false)]
@@ -33,17 +30,33 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("ResourceType")]
-        [Validation(Required=false)]
-        public string ResourceType { get; set; }
-
         [NameInMap("QueryType")]
         [Validation(Required=false)]
         public string QueryType { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
 
     }
 
