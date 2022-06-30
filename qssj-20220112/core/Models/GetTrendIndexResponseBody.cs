@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Qssj20220112.Models
             [Validation(Required=false)]
             public float? SocialIndex { get; set; }
 
+            [NameInMap("TrendIndex")]
+            [Validation(Required=false)]
+            public float? TrendIndex { get; set; }
+
             [NameInMap("YearMonth")]
             [Validation(Required=false)]
             public string YearMonth { get; set; }
