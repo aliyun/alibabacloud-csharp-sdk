@@ -7723,9 +7723,22 @@ namespace AlibabaCloud.SDK.Facebody20191230
             return await ListBodyPersonWithOptionsAsync(request, runtime);
         }
 
-        public ListFaceDbsResponse ListFaceDbsWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListFaceDbsResponse ListFaceDbsWithOptions(ListFaceDbsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                body["Offset"] = request.Offset;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListFaceDbs",
@@ -7741,9 +7754,22 @@ namespace AlibabaCloud.SDK.Facebody20191230
             return TeaModel.ToObject<ListFaceDbsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListFaceDbsResponse> ListFaceDbsWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListFaceDbsResponse> ListFaceDbsWithOptionsAsync(ListFaceDbsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                body["Offset"] = request.Offset;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListFaceDbs",
@@ -7759,16 +7785,16 @@ namespace AlibabaCloud.SDK.Facebody20191230
             return TeaModel.ToObject<ListFaceDbsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListFaceDbsResponse ListFaceDbs()
+        public ListFaceDbsResponse ListFaceDbs(ListFaceDbsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ListFaceDbsWithOptions(runtime);
+            return ListFaceDbsWithOptions(request, runtime);
         }
 
-        public async Task<ListFaceDbsResponse> ListFaceDbsAsync()
+        public async Task<ListFaceDbsResponse> ListFaceDbsAsync(ListFaceDbsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ListFaceDbsWithOptionsAsync(runtime);
+            return await ListFaceDbsWithOptionsAsync(request, runtime);
         }
 
         public ListFaceEntitiesResponse ListFaceEntitiesWithOptions(ListFaceEntitiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
