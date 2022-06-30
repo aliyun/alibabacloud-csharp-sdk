@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class ConfigL7RsPolicyRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
-
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
@@ -24,6 +16,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [NameInMap("Policy")]
         [Validation(Required=false)]
         public string Policy { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
     }
 

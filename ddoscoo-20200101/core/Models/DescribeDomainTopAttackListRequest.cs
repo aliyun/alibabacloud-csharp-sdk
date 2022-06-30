@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeDomainTopAttackListRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public long? EndTime { get; set; }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -20,10 +20,6 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public long? EndTime { get; set; }
 
     }
 

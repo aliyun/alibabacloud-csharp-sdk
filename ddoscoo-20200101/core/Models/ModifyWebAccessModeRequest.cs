@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class ModifyWebAccessModeRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("AccessMode")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public int? AccessMode { get; set; }
 
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
-
-        [NameInMap("AccessMode")]
-        [Validation(Required=false)]
-        public int? AccessMode { get; set; }
 
     }
 

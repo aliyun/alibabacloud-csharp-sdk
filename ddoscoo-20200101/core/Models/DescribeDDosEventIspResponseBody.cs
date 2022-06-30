@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeDDosEventIspResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Isps")]
         [Validation(Required=false)]
         public List<DescribeDDosEventIspResponseBodyIsps> Isps { get; set; }
@@ -26,6 +22,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             public string Isp { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

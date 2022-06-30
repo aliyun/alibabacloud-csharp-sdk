@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeDomainOverviewResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("MaxHttp")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public long? MaxHttp { get; set; }
 
         [NameInMap("MaxHttps")]
         [Validation(Required=false)]
         public long? MaxHttps { get; set; }
 
-        [NameInMap("MaxHttp")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public long? MaxHttp { get; set; }
+        public string RequestId { get; set; }
 
     }
 

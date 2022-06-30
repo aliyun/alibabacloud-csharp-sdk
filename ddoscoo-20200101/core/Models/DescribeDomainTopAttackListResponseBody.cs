@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             [Validation(Required=false)]
             public long? Attack { get; set; }
 
-            [NameInMap("Domain")]
-            [Validation(Required=false)]
-            public string Domain { get; set; }
-
             [NameInMap("Count")]
             [Validation(Required=false)]
             public long? Count { get; set; }
+
+            [NameInMap("Domain")]
+            [Validation(Required=false)]
+            public string Domain { get; set; }
 
         }
 

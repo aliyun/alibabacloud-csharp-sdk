@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribePortAttackMaxFlowResponseBody : TeaModel {
+        [NameInMap("Bps")]
+        [Validation(Required=false)]
+        public long? Bps { get; set; }
+
         [NameInMap("Pps")]
         [Validation(Required=false)]
         public long? Pps { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Bps")]
-        [Validation(Required=false)]
-        public long? Bps { get; set; }
 
     }
 

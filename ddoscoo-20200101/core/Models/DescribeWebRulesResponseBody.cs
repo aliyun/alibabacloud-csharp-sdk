@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeWebRulesResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public long? TotalCount { get; set; }
@@ -17,39 +21,76 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public List<DescribeWebRulesResponseBodyWebRules> WebRules { get; set; }
         public class DescribeWebRulesResponseBodyWebRules : TeaModel {
-            [NameInMap("Domain")]
+            [NameInMap("BlackList")]
             [Validation(Required=false)]
-            public string Domain { get; set; }
+            public List<string> BlackList { get; set; }
 
-            [NameInMap("Http2HttpsEnable")]
+            [NameInMap("CcEnabled")]
             [Validation(Required=false)]
-            public bool? Http2HttpsEnable { get; set; }
+            public bool? CcEnabled { get; set; }
+
+            [NameInMap("CcRuleEnabled")]
+            [Validation(Required=false)]
+            public bool? CcRuleEnabled { get; set; }
+
+            [NameInMap("CcTemplate")]
+            [Validation(Required=false)]
+            public string CcTemplate { get; set; }
+
+            [NameInMap("CertName")]
+            [Validation(Required=false)]
+            public string CertName { get; set; }
+
+            [NameInMap("Cname")]
+            [Validation(Required=false)]
+            public string Cname { get; set; }
 
             [NameInMap("CustomCiphers")]
             [Validation(Required=false)]
             public List<string> CustomCiphers { get; set; }
 
-            [NameInMap("BlackList")]
+            [NameInMap("Domain")]
             [Validation(Required=false)]
-            public List<string> BlackList { get; set; }
+            public string Domain { get; set; }
 
-            [NameInMap("WhiteList")]
+            [NameInMap("GmCert")]
             [Validation(Required=false)]
-            public List<string> WhiteList { get; set; }
-
-            [NameInMap("RealServers")]
-            [Validation(Required=false)]
-            public List<DescribeWebRulesResponseBodyWebRulesRealServers> RealServers { get; set; }
-            public class DescribeWebRulesResponseBodyWebRulesRealServers : TeaModel {
-                [NameInMap("RsType")]
+            public DescribeWebRulesResponseBodyWebRulesGmCert GmCert { get; set; }
+            public class DescribeWebRulesResponseBodyWebRulesGmCert : TeaModel {
+                [NameInMap("CertId")]
                 [Validation(Required=false)]
-                public int? RsType { get; set; }
-
-                [NameInMap("RealServer")]
+                public string CertId { get; set; }
+                [NameInMap("GmEnable")]
                 [Validation(Required=false)]
-                public string RealServer { get; set; }
+                public long? GmEnable { get; set; }
+                [NameInMap("GmOnly")]
+                [Validation(Required=false)]
+                public long? GmOnly { get; set; }
+            };
 
-            }
+            [NameInMap("Http2Enable")]
+            [Validation(Required=false)]
+            public bool? Http2Enable { get; set; }
+
+            [NameInMap("Http2HttpsEnable")]
+            [Validation(Required=false)]
+            public bool? Http2HttpsEnable { get; set; }
+
+            [NameInMap("Https2HttpEnable")]
+            [Validation(Required=false)]
+            public bool? Https2HttpEnable { get; set; }
+
+            [NameInMap("OcspEnabled")]
+            [Validation(Required=false)]
+            public bool? OcspEnabled { get; set; }
+
+            [NameInMap("PolicyMode")]
+            [Validation(Required=false)]
+            public string PolicyMode { get; set; }
+
+            [NameInMap("ProxyEnabled")]
+            [Validation(Required=false)]
+            public bool? ProxyEnabled { get; set; }
 
             [NameInMap("ProxyTypes")]
             [Validation(Required=false)]
@@ -65,59 +106,45 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 
             }
 
-            [NameInMap("SslProtocols")]
+            [NameInMap("PunishReason")]
             [Validation(Required=false)]
-            public string SslProtocols { get; set; }
+            public int? PunishReason { get; set; }
 
-            [NameInMap("CcTemplate")]
+            [NameInMap("PunishStatus")]
             [Validation(Required=false)]
-            public string CcTemplate { get; set; }
+            public bool? PunishStatus { get; set; }
 
-            [NameInMap("CcEnabled")]
+            [NameInMap("RealServers")]
             [Validation(Required=false)]
-            public bool? CcEnabled { get; set; }
+            public List<DescribeWebRulesResponseBodyWebRulesRealServers> RealServers { get; set; }
+            public class DescribeWebRulesResponseBodyWebRulesRealServers : TeaModel {
+                [NameInMap("RealServer")]
+                [Validation(Required=false)]
+                public string RealServer { get; set; }
 
-            [NameInMap("SslCiphers")]
-            [Validation(Required=false)]
-            public string SslCiphers { get; set; }
+                [NameInMap("RsType")]
+                [Validation(Required=false)]
+                public int? RsType { get; set; }
 
-            [NameInMap("CcRuleEnabled")]
-            [Validation(Required=false)]
-            public bool? CcRuleEnabled { get; set; }
+            }
 
             [NameInMap("Ssl13Enabled")]
             [Validation(Required=false)]
             public bool? Ssl13Enabled { get; set; }
 
-            [NameInMap("ProxyEnabled")]
+            [NameInMap("SslCiphers")]
             [Validation(Required=false)]
-            public bool? ProxyEnabled { get; set; }
+            public string SslCiphers { get; set; }
 
-            [NameInMap("CertName")]
+            [NameInMap("SslProtocols")]
             [Validation(Required=false)]
-            public string CertName { get; set; }
+            public string SslProtocols { get; set; }
 
-            [NameInMap("PolicyMode")]
+            [NameInMap("WhiteList")]
             [Validation(Required=false)]
-            public string PolicyMode { get; set; }
-
-            [NameInMap("Cname")]
-            [Validation(Required=false)]
-            public string Cname { get; set; }
-
-            [NameInMap("Http2Enable")]
-            [Validation(Required=false)]
-            public bool? Http2Enable { get; set; }
-
-            [NameInMap("Https2HttpEnable")]
-            [Validation(Required=false)]
-            public bool? Https2HttpEnable { get; set; }
+            public List<string> WhiteList { get; set; }
 
         }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

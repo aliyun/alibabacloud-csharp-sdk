@@ -9,13 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeInstancesRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("Edition")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public int? Edition { get; set; }
 
-        [NameInMap("ResourceGroupId")]
+        [NameInMap("Enabled")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public int? Enabled { get; set; }
+
+        [NameInMap("ExpireEndTime")]
+        [Validation(Required=false)]
+        public long? ExpireEndTime { get; set; }
+
+        [NameInMap("ExpireStartTime")]
+        [Validation(Required=false)]
+        public long? ExpireStartTime { get; set; }
+
+        [NameInMap("InstanceIds")]
+        [Validation(Required=false)]
+        public List<string> InstanceIds { get; set; }
+
+        [NameInMap("Ip")]
+        [Validation(Required=false)]
+        public string Ip { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -25,33 +41,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
-        [NameInMap("Ip")]
-        [Validation(Required=false)]
-        public string Ip { get; set; }
-
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
 
-        [NameInMap("Edition")]
+        [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
-        public int? Edition { get; set; }
-
-        [NameInMap("Enabled")]
-        [Validation(Required=false)]
-        public int? Enabled { get; set; }
-
-        [NameInMap("ExpireStartTime")]
-        [Validation(Required=false)]
-        public long? ExpireStartTime { get; set; }
-
-        [NameInMap("ExpireEndTime")]
-        [Validation(Required=false)]
-        public long? ExpireEndTime { get; set; }
-
-        [NameInMap("InstanceIds")]
-        [Validation(Required=false)]
-        public List<string> InstanceIds { get; set; }
+        public string ResourceGroupId { get; set; }
 
         [NameInMap("Status")]
         [Validation(Required=false)]

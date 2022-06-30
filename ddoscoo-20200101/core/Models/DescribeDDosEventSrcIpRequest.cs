@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeDDosEventSrcIpRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
         [NameInMap("EventType")]
         [Validation(Required=false)]
         public string EventType { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public long? StartTime { get; set; }
 
         [NameInMap("Ip")]
         [Validation(Required=false)]
@@ -28,6 +20,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [NameInMap("Range")]
         [Validation(Required=false)]
         public long? Range { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
 
     }
 

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeWebAccessModeResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DomainModes")]
         [Validation(Required=false)]
         public List<DescribeWebAccessModeResponseBodyDomainModes> DomainModes { get; set; }
@@ -26,6 +22,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             public string Domain { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

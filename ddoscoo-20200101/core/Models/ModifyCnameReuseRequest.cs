@@ -9,25 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class ModifyCnameReuseRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("Cname")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public string Cname { get; set; }
 
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
-        [NameInMap("Cname")]
-        [Validation(Required=false)]
-        public string Cname { get; set; }
-
         [NameInMap("Enable")]
         [Validation(Required=false)]
         public int? Enable { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
     }
 

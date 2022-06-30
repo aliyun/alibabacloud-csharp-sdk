@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             [Validation(Required=false)]
             public long? ActConns { get; set; }
 
+            [NameInMap("Conns")]
+            [Validation(Required=false)]
+            public long? Conns { get; set; }
+
+            [NameInMap("Cps")]
+            [Validation(Required=false)]
+            public long? Cps { get; set; }
+
             [NameInMap("InActConns")]
             [Validation(Required=false)]
             public long? InActConns { get; set; }
@@ -24,18 +32,6 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             [NameInMap("Index")]
             [Validation(Required=false)]
             public long? Index { get; set; }
-
-            [NameInMap("Time")]
-            [Validation(Required=false)]
-            public long? Time { get; set; }
-
-            [NameInMap("Cps")]
-            [Validation(Required=false)]
-            public long? Cps { get; set; }
-
-            [NameInMap("Conns")]
-            [Validation(Required=false)]
-            public long? Conns { get; set; }
 
         }
 

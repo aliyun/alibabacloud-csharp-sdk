@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeDDosAllEventListRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public long? EndTime { get; set; }
 
         [NameInMap("EventType")]
         [Validation(Required=false)]
         public string EventType { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public long? StartTime { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public long? EndTime { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -32,6 +24,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
 
     }
 

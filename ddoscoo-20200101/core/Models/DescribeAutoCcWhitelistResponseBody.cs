@@ -13,9 +13,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public List<DescribeAutoCcWhitelistResponseBodyAutoCcWhitelist> AutoCcWhitelist { get; set; }
         public class DescribeAutoCcWhitelistResponseBodyAutoCcWhitelist : TeaModel {
-            [NameInMap("Type")]
+            [NameInMap("DestIp")]
             [Validation(Required=false)]
-            public string Type { get; set; }
+            public string DestIp { get; set; }
 
             [NameInMap("EndTime")]
             [Validation(Required=false)]
@@ -25,19 +25,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             [Validation(Required=false)]
             public string SourceIp { get; set; }
 
-            [NameInMap("DestIp")]
+            [NameInMap("Type")]
             [Validation(Required=false)]
-            public string DestIp { get; set; }
+            public string Type { get; set; }
 
         }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

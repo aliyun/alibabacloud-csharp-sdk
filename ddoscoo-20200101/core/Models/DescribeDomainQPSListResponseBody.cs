@@ -13,41 +13,41 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public List<DescribeDomainQPSListResponseBodyDomainQPSList> DomainQPSList { get; set; }
         public class DescribeDomainQPSListResponseBodyDomainQPSList : TeaModel {
+            [NameInMap("AttackQps")]
+            [Validation(Required=false)]
+            public long? AttackQps { get; set; }
+
+            [NameInMap("CacheHits")]
+            [Validation(Required=false)]
+            public long? CacheHits { get; set; }
+
             [NameInMap("Index")]
             [Validation(Required=false)]
             public long? Index { get; set; }
-
-            [NameInMap("Time")]
-            [Validation(Required=false)]
-            public long? Time { get; set; }
 
             [NameInMap("MaxAttackQps")]
             [Validation(Required=false)]
             public long? MaxAttackQps { get; set; }
 
-            [NameInMap("AttackQps")]
+            [NameInMap("MaxNormalQps")]
             [Validation(Required=false)]
-            public long? AttackQps { get; set; }
+            public long? MaxNormalQps { get; set; }
 
             [NameInMap("MaxQps")]
             [Validation(Required=false)]
             public long? MaxQps { get; set; }
 
-            [NameInMap("MaxNormalQps")]
+            [NameInMap("Time")]
             [Validation(Required=false)]
-            public long? MaxNormalQps { get; set; }
-
-            [NameInMap("TotalQps")]
-            [Validation(Required=false)]
-            public long? TotalQps { get; set; }
+            public long? Time { get; set; }
 
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public long? TotalCount { get; set; }
 
-            [NameInMap("CacheHits")]
+            [NameInMap("TotalQps")]
             [Validation(Required=false)]
-            public long? CacheHits { get; set; }
+            public long? TotalQps { get; set; }
 
         }
 

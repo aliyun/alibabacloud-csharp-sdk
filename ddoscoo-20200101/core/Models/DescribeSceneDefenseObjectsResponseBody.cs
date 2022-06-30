@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeSceneDefenseObjectsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Objects")]
         [Validation(Required=false)]
         public List<DescribeSceneDefenseObjectsResponseBodyObjects> Objects { get; set; }
@@ -30,6 +26,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             public string Vip { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

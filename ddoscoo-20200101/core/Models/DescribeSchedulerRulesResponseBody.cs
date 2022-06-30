@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeSchedulerRulesResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public string TotalCount { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -21,9 +17,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public List<DescribeSchedulerRulesResponseBodySchedulerRules> SchedulerRules { get; set; }
         public class DescribeSchedulerRulesResponseBodySchedulerRules : TeaModel {
-            [NameInMap("RuleType")]
+            [NameInMap("Cname")]
             [Validation(Required=false)]
-            public string RuleType { get; set; }
+            public string Cname { get; set; }
 
             [NameInMap("Param")]
             [Validation(Required=false)]
@@ -43,21 +39,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
                 public string ParamType { get; set; }
             };
 
-            [NameInMap("Cname")]
+            [NameInMap("RuleName")]
             [Validation(Required=false)]
-            public string Cname { get; set; }
+            public string RuleName { get; set; }
+
+            [NameInMap("RuleType")]
+            [Validation(Required=false)]
+            public string RuleType { get; set; }
 
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public List<DescribeSchedulerRulesResponseBodySchedulerRulesRules> Rules { get; set; }
             public class DescribeSchedulerRulesResponseBodySchedulerRulesRules : TeaModel {
-                [NameInMap("Type")]
+                [NameInMap("Priority")]
                 [Validation(Required=false)]
-                public string Type { get; set; }
+                public int? Priority { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
+                public string RegionId { get; set; }
+
+                [NameInMap("RestoreDelay")]
+                [Validation(Required=false)]
+                public int? RestoreDelay { get; set; }
 
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public int? Status { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
 
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -67,25 +79,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
                 [Validation(Required=false)]
                 public int? ValueType { get; set; }
 
-                [NameInMap("Priority")]
-                [Validation(Required=false)]
-                public int? Priority { get; set; }
-
-                [NameInMap("RestoreDelay")]
-                [Validation(Required=false)]
-                public int? RestoreDelay { get; set; }
-
-                [NameInMap("RegionId")]
-                [Validation(Required=false)]
-                public string RegionId { get; set; }
-
             }
 
-            [NameInMap("RuleName")]
-            [Validation(Required=false)]
-            public string RuleName { get; set; }
-
         }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public string TotalCount { get; set; }
 
     }
 

@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DeleteAutoCcBlacklistRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("Blacklist")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public string Blacklist { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
-
-        [NameInMap("Blacklist")]
-        [Validation(Required=false)]
-        public string Blacklist { get; set; }
 
     }
 

@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class ModifyWebAreaBlockSwitchRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("Config")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public string Config { get; set; }
 
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
-        [NameInMap("Config")]
+        [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
-        public string Config { get; set; }
+        public string ResourceGroupId { get; set; }
 
     }
 

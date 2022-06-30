@@ -9,25 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeDefenseRecordsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
         [NameInMap("DefenseRecords")]
         [Validation(Required=false)]
         public List<DescribeDefenseRecordsResponseBodyDefenseRecords> DefenseRecords { get; set; }
         public class DescribeDefenseRecordsResponseBodyDefenseRecords : TeaModel {
+            [NameInMap("AttackPeak")]
+            [Validation(Required=false)]
+            public long? AttackPeak { get; set; }
+
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public long? EndTime { get; set; }
-
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public int? Status { get; set; }
-
-            [NameInMap("StartTime")]
-            [Validation(Required=false)]
-            public long? StartTime { get; set; }
 
             [NameInMap("EventCount")]
             [Validation(Required=false)]
@@ -37,15 +29,23 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
-            [NameInMap("AttackPeak")]
+            [NameInMap("StartTime")]
             [Validation(Required=false)]
-            public long? AttackPeak { get; set; }
+            public long? StartTime { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public int? Status { get; set; }
 
         }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

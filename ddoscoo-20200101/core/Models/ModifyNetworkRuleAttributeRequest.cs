@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class ModifyNetworkRuleAttributeRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("Config")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string Config { get; set; }
 
         [NameInMap("ForwardProtocol")]
         [Validation(Required=false)]
@@ -25,9 +21,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public int? FrontendPort { get; set; }
 
-        [NameInMap("Config")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string Config { get; set; }
+        public string InstanceId { get; set; }
 
     }
 

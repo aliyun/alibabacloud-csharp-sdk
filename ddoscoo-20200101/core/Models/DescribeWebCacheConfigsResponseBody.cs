@@ -9,18 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeWebCacheConfigsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DomainCacheConfigs")]
         [Validation(Required=false)]
         public List<DescribeWebCacheConfigsResponseBodyDomainCacheConfigs> DomainCacheConfigs { get; set; }
         public class DescribeWebCacheConfigsResponseBodyDomainCacheConfigs : TeaModel {
-            [NameInMap("Domain")]
-            [Validation(Required=false)]
-            public string Domain { get; set; }
-
             [NameInMap("CustomRules")]
             [Validation(Required=false)]
             public List<DescribeWebCacheConfigsResponseBodyDomainCacheConfigsCustomRules> CustomRules { get; set; }
@@ -43,15 +35,23 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 
             }
 
-            [NameInMap("Mode")]
+            [NameInMap("Domain")]
             [Validation(Required=false)]
-            public string Mode { get; set; }
+            public string Domain { get; set; }
 
             [NameInMap("Enable")]
             [Validation(Required=false)]
             public int? Enable { get; set; }
 
+            [NameInMap("Mode")]
+            [Validation(Required=false)]
+            public string Mode { get; set; }
+
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

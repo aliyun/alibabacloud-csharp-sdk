@@ -13,25 +13,25 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public List<DescribeInstanceStatisticsResponseBodyInstanceStatistics> InstanceStatistics { get; set; }
         public class DescribeInstanceStatisticsResponseBodyInstanceStatistics : TeaModel {
-            [NameInMap("DomainUsage")]
-            [Validation(Required=false)]
-            public int? DomainUsage { get; set; }
-
             [NameInMap("DefenseCountUsage")]
             [Validation(Required=false)]
             public int? DefenseCountUsage { get; set; }
+
+            [NameInMap("DomainUsage")]
+            [Validation(Required=false)]
+            public int? DomainUsage { get; set; }
 
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
-            [NameInMap("SiteUsage")]
-            [Validation(Required=false)]
-            public int? SiteUsage { get; set; }
-
             [NameInMap("PortUsage")]
             [Validation(Required=false)]
             public int? PortUsage { get; set; }
+
+            [NameInMap("SiteUsage")]
+            [Validation(Required=false)]
+            public int? SiteUsage { get; set; }
 
         }
 

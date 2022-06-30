@@ -21,42 +21,22 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             [Validation(Required=false)]
             public long? EndTime { get; set; }
 
-            [NameInMap("Status")]
+            [NameInMap("Name")]
             [Validation(Required=false)]
-            public int? Status { get; set; }
-
-            [NameInMap("StartTime")]
-            [Validation(Required=false)]
-            public long? StartTime { get; set; }
+            public string Name { get; set; }
 
             [NameInMap("ObjectCount")]
             [Validation(Required=false)]
             public int? ObjectCount { get; set; }
 
-            [NameInMap("Template")]
-            [Validation(Required=false)]
-            public string Template { get; set; }
-
             [NameInMap("PolicyId")]
             [Validation(Required=false)]
             public string PolicyId { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
 
             [NameInMap("RuntimePolicies")]
             [Validation(Required=false)]
             public List<DescribeSceneDefensePoliciesResponseBodyPoliciesRuntimePolicies> RuntimePolicies { get; set; }
             public class DescribeSceneDefensePoliciesResponseBodyPoliciesRuntimePolicies : TeaModel {
-                [NameInMap("Status")]
-                [Validation(Required=false)]
-                public int? Status { get; set; }
-
-                [NameInMap("oldValue")]
-                [Validation(Required=false)]
-                public string OldValue { get; set; }
-
                 [NameInMap("NewValue")]
                 [Validation(Required=false)]
                 public string NewValue { get; set; }
@@ -65,7 +45,27 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
                 [Validation(Required=false)]
                 public int? PolicyType { get; set; }
 
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public int? Status { get; set; }
+
+                [NameInMap("oldValue")]
+                [Validation(Required=false)]
+                public string OldValue { get; set; }
+
             }
+
+            [NameInMap("StartTime")]
+            [Validation(Required=false)]
+            public long? StartTime { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public int? Status { get; set; }
+
+            [NameInMap("Template")]
+            [Validation(Required=false)]
+            public string Template { get; set; }
 
         }
 

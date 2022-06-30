@@ -25,10 +25,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             [Validation(Required=false)]
             public List<DescribeTagResourcesResponseBodyTagResourcesTagResource> TagResource { get; set; }
             public class DescribeTagResourcesResponseBodyTagResourcesTagResource : TeaModel {
-                public string ResourceType { get; set; }
-                public string TagValue { get; set; }
                 public string ResourceId { get; set; }
+                public string ResourceType { get; set; }
                 public string TagKey { get; set; }
+                public string TagValue { get; set; }
             }
         };
 

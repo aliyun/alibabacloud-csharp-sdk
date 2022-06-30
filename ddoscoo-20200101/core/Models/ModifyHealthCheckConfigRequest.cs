@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class ModifyHealthCheckConfigRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
         [NameInMap("ForwardProtocol")]
         [Validation(Required=false)]
         public string ForwardProtocol { get; set; }
@@ -28,6 +20,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [NameInMap("HealthCheck")]
         [Validation(Required=false)]
         public string HealthCheck { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
     }
 

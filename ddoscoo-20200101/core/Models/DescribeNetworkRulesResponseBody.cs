@@ -9,17 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeNetworkRulesResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
         [NameInMap("NetworkRules")]
         [Validation(Required=false)]
         public List<DescribeNetworkRulesResponseBodyNetworkRules> NetworkRules { get; set; }
         public class DescribeNetworkRulesResponseBodyNetworkRules : TeaModel {
+            [NameInMap("BackendPort")]
+            [Validation(Required=false)]
+            public int? BackendPort { get; set; }
+
             [NameInMap("FrontendPort")]
             [Validation(Required=false)]
             public int? FrontendPort { get; set; }
+
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
 
             [NameInMap("IsAutoCreate")]
             [Validation(Required=false)]
@@ -33,19 +37,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             [Validation(Required=false)]
             public List<string> RealServers { get; set; }
 
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-            [NameInMap("BackendPort")]
-            [Validation(Required=false)]
-            public int? BackendPort { get; set; }
-
         }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

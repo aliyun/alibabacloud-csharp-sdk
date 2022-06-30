@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeBackSourceCidrRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("Line")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public string Line { get; set; }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
-
-        [NameInMap("Line")]
-        [Validation(Required=false)]
-        public string Line { get; set; }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribePortConnsCountResponseBody : TeaModel {
+        [NameInMap("ActConns")]
+        [Validation(Required=false)]
+        public long? ActConns { get; set; }
+
         [NameInMap("Conns")]
         [Validation(Required=false)]
         public long? Conns { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
         [NameInMap("Cps")]
         [Validation(Required=false)]
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public long? InActConns { get; set; }
 
-        [NameInMap("ActConns")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public long? ActConns { get; set; }
+        public string RequestId { get; set; }
 
     }
 

@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeWebAreaBlockConfigsRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("Domains")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public List<string> Domains { get; set; }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
-
-        [NameInMap("Domains")]
-        [Validation(Required=false)]
-        public List<string> Domains { get; set; }
 
     }
 

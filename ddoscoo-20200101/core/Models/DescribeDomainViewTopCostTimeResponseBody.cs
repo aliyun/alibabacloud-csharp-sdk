@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public List<DescribeDomainViewTopCostTimeResponseBodyUrlList> UrlList { get; set; }
         public class DescribeDomainViewTopCostTimeResponseBodyUrlList : TeaModel {
-            [NameInMap("Domain")]
-            [Validation(Required=false)]
-            public string Domain { get; set; }
-
             [NameInMap("CostTime")]
             [Validation(Required=false)]
             public float? CostTime { get; set; }
+
+            [NameInMap("Domain")]
+            [Validation(Required=false)]
+            public string Domain { get; set; }
 
             [NameInMap("Url")]
             [Validation(Required=false)]

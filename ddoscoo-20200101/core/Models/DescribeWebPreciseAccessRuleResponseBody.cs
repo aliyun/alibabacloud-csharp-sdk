@@ -25,9 +25,27 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
                 [Validation(Required=false)]
                 public string Action { get; set; }
 
-                [NameInMap("Owner")]
+                [NameInMap("ConditionList")]
                 [Validation(Required=false)]
-                public string Owner { get; set; }
+                public List<DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList> ConditionList { get; set; }
+                public class DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList : TeaModel {
+                    [NameInMap("Content")]
+                    [Validation(Required=false)]
+                    public string Content { get; set; }
+
+                    [NameInMap("Field")]
+                    [Validation(Required=false)]
+                    public string Field { get; set; }
+
+                    [NameInMap("HeaderName")]
+                    [Validation(Required=false)]
+                    public string HeaderName { get; set; }
+
+                    [NameInMap("MatchMethod")]
+                    [Validation(Required=false)]
+                    public string MatchMethod { get; set; }
+
+                }
 
                 [NameInMap("Expires")]
                 [Validation(Required=false)]
@@ -37,27 +55,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
-                [NameInMap("ConditionList")]
+                [NameInMap("Owner")]
                 [Validation(Required=false)]
-                public List<DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList> ConditionList { get; set; }
-                public class DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList : TeaModel {
-                    [NameInMap("MatchMethod")]
-                    [Validation(Required=false)]
-                    public string MatchMethod { get; set; }
-
-                    [NameInMap("Field")]
-                    [Validation(Required=false)]
-                    public string Field { get; set; }
-
-                    [NameInMap("Content")]
-                    [Validation(Required=false)]
-                    public string Content { get; set; }
-
-                    [NameInMap("HeaderName")]
-                    [Validation(Required=false)]
-                    public string HeaderName { get; set; }
-
-                }
+                public string Owner { get; set; }
 
             }
 

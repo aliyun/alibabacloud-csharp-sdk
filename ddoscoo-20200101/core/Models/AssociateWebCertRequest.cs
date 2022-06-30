@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class AssociateWebCertRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("Cert")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
-
-        [NameInMap("Domain")]
-        [Validation(Required=false)]
-        public string Domain { get; set; }
+        public string Cert { get; set; }
 
         [NameInMap("CertId")]
         [Validation(Required=false)]
@@ -29,13 +21,17 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public string CertName { get; set; }
 
-        [NameInMap("Cert")]
+        [NameInMap("Domain")]
         [Validation(Required=false)]
-        public string Cert { get; set; }
+        public string Domain { get; set; }
 
         [NameInMap("Key")]
         [Validation(Required=false)]
         public string Key { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
     }
 

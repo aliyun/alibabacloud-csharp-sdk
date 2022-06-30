@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeDDosEventAttackTypeResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("AttackTypes")]
         [Validation(Required=false)]
         public List<DescribeDDosEventAttackTypeResponseBodyAttackTypes> AttackTypes { get; set; }
@@ -26,6 +22,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             public long? InPkts { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

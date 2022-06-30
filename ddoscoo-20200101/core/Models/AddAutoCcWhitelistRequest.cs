@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class AddAutoCcWhitelistRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("ExpireTime")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public int? ExpireTime { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -20,10 +20,6 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [NameInMap("Whitelist")]
         [Validation(Required=false)]
         public string Whitelist { get; set; }
-
-        [NameInMap("ExpireTime")]
-        [Validation(Required=false)]
-        public int? ExpireTime { get; set; }
 
     }
 

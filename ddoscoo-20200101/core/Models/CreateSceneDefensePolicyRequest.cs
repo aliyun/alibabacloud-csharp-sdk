@@ -9,25 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class CreateSceneDefensePolicyRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public long? EndTime { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("Template")]
-        [Validation(Required=false)]
-        public string Template { get; set; }
-
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
-        [NameInMap("EndTime")]
+        [NameInMap("Template")]
         [Validation(Required=false)]
-        public long? EndTime { get; set; }
+        public string Template { get; set; }
 
     }
 

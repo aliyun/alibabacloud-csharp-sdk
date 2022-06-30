@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public List<DescribeDomainViewTopUrlResponseBodyUrlList> UrlList { get; set; }
         public class DescribeDomainViewTopUrlResponseBodyUrlList : TeaModel {
+            [NameInMap("Count")]
+            [Validation(Required=false)]
+            public long? Count { get; set; }
+
             [NameInMap("Domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             [NameInMap("Url")]
             [Validation(Required=false)]
             public string Url { get; set; }
-
-            [NameInMap("Count")]
-            [Validation(Required=false)]
-            public long? Count { get; set; }
 
         }
 

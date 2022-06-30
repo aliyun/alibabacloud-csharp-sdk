@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeDomainAttackEventsRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("Domain")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public long? StartTime { get; set; }
+        public string Domain { get; set; }
 
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
-
-        [NameInMap("Domain")]
-        [Validation(Required=false)]
-        public string Domain { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -36,6 +24,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
 
     }
 

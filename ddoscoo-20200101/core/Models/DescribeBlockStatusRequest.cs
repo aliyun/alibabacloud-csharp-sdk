@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeBlockStatusRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("InstanceIds")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
+        public List<string> InstanceIds { get; set; }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
-
-        [NameInMap("InstanceIds")]
-        [Validation(Required=false)]
-        public List<string> InstanceIds { get; set; }
 
     }
 

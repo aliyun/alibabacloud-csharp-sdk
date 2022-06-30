@@ -13,17 +13,21 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public List<DescribeCertsResponseBodyCerts> Certs { get; set; }
         public class DescribeCertsResponseBodyCerts : TeaModel {
-            [NameInMap("EndDate")]
+            [NameInMap("Common")]
             [Validation(Required=false)]
-            public string EndDate { get; set; }
+            public string Common { get; set; }
 
             [NameInMap("DomainRelated")]
             [Validation(Required=false)]
             public bool? DomainRelated { get; set; }
 
-            [NameInMap("StartDate")]
+            [NameInMap("EndDate")]
             [Validation(Required=false)]
-            public string StartDate { get; set; }
+            public string EndDate { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public int? Id { get; set; }
 
             [NameInMap("Issuer")]
             [Validation(Required=false)]
@@ -33,13 +37,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
-            [NameInMap("Common")]
+            [NameInMap("StartDate")]
             [Validation(Required=false)]
-            public string Common { get; set; }
-
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public int? Id { get; set; }
+            public string StartDate { get; set; }
 
         }
 

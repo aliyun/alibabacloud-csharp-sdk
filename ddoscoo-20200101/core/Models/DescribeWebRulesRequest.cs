@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeWebRulesRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("Cname")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public string Cname { get; set; }
 
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
-        [NameInMap("QueryDomainPattern")]
+        [NameInMap("InstanceIds")]
         [Validation(Required=false)]
-        public string QueryDomainPattern { get; set; }
+        public List<string> InstanceIds { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -33,9 +29,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("InstanceIds")]
+        [NameInMap("QueryDomainPattern")]
         [Validation(Required=false)]
-        public List<string> InstanceIds { get; set; }
+        public string QueryDomainPattern { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
     }
 

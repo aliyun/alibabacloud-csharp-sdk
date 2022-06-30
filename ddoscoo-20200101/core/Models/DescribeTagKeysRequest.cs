@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeTagKeysRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -24,14 +28,6 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
 
     }
 
