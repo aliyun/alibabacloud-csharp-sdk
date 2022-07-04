@@ -3483,6 +3483,72 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return await QueryEmbeddedInfoWithOptionsAsync(runtime);
         }
 
+        public QueryEmbeddedStatusResponse QueryEmbeddedStatusWithOptions(QueryEmbeddedStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorksId))
+            {
+                query["WorksId"] = request.WorksId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryEmbeddedStatus",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryEmbeddedStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<QueryEmbeddedStatusResponse> QueryEmbeddedStatusWithOptionsAsync(QueryEmbeddedStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorksId))
+            {
+                query["WorksId"] = request.WorksId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryEmbeddedStatus",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryEmbeddedStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public QueryEmbeddedStatusResponse QueryEmbeddedStatus(QueryEmbeddedStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryEmbeddedStatusWithOptions(request, runtime);
+        }
+
+        public async Task<QueryEmbeddedStatusResponse> QueryEmbeddedStatusAsync(QueryEmbeddedStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryEmbeddedStatusWithOptionsAsync(request, runtime);
+        }
+
         public QueryOrganizationWorkspaceListResponse QueryOrganizationWorkspaceListWithOptions(QueryOrganizationWorkspaceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
