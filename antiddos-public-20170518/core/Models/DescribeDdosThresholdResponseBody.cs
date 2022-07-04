@@ -25,6 +25,7 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
                 public string DdosType { get; set; }
                 public int? ElasticBps { get; set; }
                 public string InstanceId { get; set; }
+                public string InternetIp { get; set; }
                 public bool? IsAuto { get; set; }
                 public int? MaxBps { get; set; }
                 public int? MaxPps { get; set; }

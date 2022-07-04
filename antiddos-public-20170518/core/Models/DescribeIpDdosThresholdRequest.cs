@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
 {
-    public class DescribeDdosEventListRequest : TeaModel {
-        [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
-
+    public class DescribeIpDdosThresholdRequest : TeaModel {
         [NameInMap("DdosRegionId")]
         [Validation(Required=false)]
         public string DdosRegionId { get; set; }
+
+        [NameInMap("DdosType")]
+        [Validation(Required=false)]
+        public string DdosType { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -28,10 +28,6 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         [NameInMap("InternetIp")]
         [Validation(Required=false)]
         public string InternetIp { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
 
     }
 

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
 {
-    public class DescribeBgpPackByIpResponse : TeaModel {
+    public class DescribeIpLocationServiceResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeBgpPackByIpResponseBody Body { get; set; }
+        public DescribeIpLocationServiceResponseBody Body { get; set; }
 
     }
 
