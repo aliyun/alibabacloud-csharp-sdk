@@ -12427,6 +12427,72 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await DescribeVulWhitelistWithOptionsAsync(request, runtime);
         }
 
+        public DescribeWarningExportInfoResponse DescribeWarningExportInfoWithOptions(DescribeWarningExportInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExportId))
+            {
+                query["ExportId"] = request.ExportId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeWarningExportInfo",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeWarningExportInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeWarningExportInfoResponse> DescribeWarningExportInfoWithOptionsAsync(DescribeWarningExportInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExportId))
+            {
+                query["ExportId"] = request.ExportId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeWarningExportInfo",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeWarningExportInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeWarningExportInfoResponse DescribeWarningExportInfo(DescribeWarningExportInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeWarningExportInfoWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeWarningExportInfoResponse> DescribeWarningExportInfoAsync(DescribeWarningExportInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeWarningExportInfoWithOptionsAsync(request, runtime);
+        }
+
         public DescribeWarningMachinesResponse DescribeWarningMachinesWithOptions(DescribeWarningMachinesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
