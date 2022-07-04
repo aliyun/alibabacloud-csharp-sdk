@@ -470,6 +470,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
                 request.TemplateShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Template, "Template", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Factorys))
+            {
+                query["Factorys"] = request.Factorys;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Memo))
             {
                 query["Memo"] = request.Memo;
@@ -511,6 +515,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
                 request.TemplateShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Template, "Template", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Factorys))
+            {
+                query["Factorys"] = request.Factorys;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Memo))
             {
                 query["Memo"] = request.Memo;
@@ -832,6 +840,14 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CardCodeType))
+            {
+                query["CardCodeType"] = request.CardCodeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CardLinkType))
+            {
+                query["CardLinkType"] = request.CardLinkType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CardTemplateCode))
             {
                 query["CardTemplateCode"] = request.CardTemplateCode;
@@ -839,6 +855,14 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CardTemplateParamJson))
             {
                 query["CardTemplateParamJson"] = request.CardTemplateParamJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomShortCodeJson))
+            {
+                query["CustomShortCodeJson"] = request.CustomShortCodeJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
             {
@@ -875,6 +899,14 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CardCodeType))
+            {
+                query["CardCodeType"] = request.CardCodeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CardLinkType))
+            {
+                query["CardLinkType"] = request.CardLinkType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CardTemplateCode))
             {
                 query["CardTemplateCode"] = request.CardTemplateCode;
@@ -882,6 +914,14 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CardTemplateParamJson))
             {
                 query["CardTemplateParamJson"] = request.CardTemplateParamJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomShortCodeJson))
+            {
+                query["CustomShortCodeJson"] = request.CustomShortCodeJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
             {

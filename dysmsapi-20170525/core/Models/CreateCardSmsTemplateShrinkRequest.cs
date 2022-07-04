@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class CreateCardSmsTemplateShrinkRequest : TeaModel {
+        [NameInMap("Factorys")]
+        [Validation(Required=false)]
+        public string Factorys { get; set; }
+
         [NameInMap("Memo")]
         [Validation(Required=false)]
         public string Memo { get; set; }

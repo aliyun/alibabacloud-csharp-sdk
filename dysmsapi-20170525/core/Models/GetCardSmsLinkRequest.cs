@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class GetCardSmsLinkRequest : TeaModel {
+        [NameInMap("CardCodeType")]
+        [Validation(Required=false)]
+        public int? CardCodeType { get; set; }
+
+        [NameInMap("CardLinkType")]
+        [Validation(Required=false)]
+        public int? CardLinkType { get; set; }
+
         [NameInMap("CardTemplateCode")]
         [Validation(Required=false)]
         public string CardTemplateCode { get; set; }
@@ -16,6 +24,14 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [NameInMap("CardTemplateParamJson")]
         [Validation(Required=false)]
         public string CardTemplateParamJson { get; set; }
+
+        [NameInMap("CustomShortCodeJson")]
+        [Validation(Required=false)]
+        public string CustomShortCodeJson { get; set; }
+
+        [NameInMap("Domain")]
+        [Validation(Required=false)]
+        public string Domain { get; set; }
 
         [NameInMap("OutId")]
         [Validation(Required=false)]
