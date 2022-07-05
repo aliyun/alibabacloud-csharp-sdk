@@ -1,3 +1,7 @@
+2022-07-05 Version: 1.0.3
+- Add resource index and domain.
+- Add api GetProjectLogs.
+
 2022-02-22 Version: 1.0.2
 - Generated csharp 2020-12-30 for Sls.
 

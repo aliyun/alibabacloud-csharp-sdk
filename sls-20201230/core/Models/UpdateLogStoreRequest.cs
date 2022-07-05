@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public EncryptConf EncryptConf { get; set; }
 
-        [NameInMap("logstore")]
+        [NameInMap("hot_ttl")]
         [Validation(Required=false)]
-        public string Logstore { get; set; }
+        public int? HotTtl { get; set; }
 
         [NameInMap("logstoreName")]
         [Validation(Required=false)]
@@ -40,6 +40,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [NameInMap("shardCount")]
         [Validation(Required=false)]
         public int? ShardCount { get; set; }
+
+        [NameInMap("telemetryType")]
+        [Validation(Required=false)]
+        public string TelemetryType { get; set; }
 
         [NameInMap("ttl")]
         [Validation(Required=false)]

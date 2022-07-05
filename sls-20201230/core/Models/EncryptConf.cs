@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// encrypt_type
+        /// 加密算法，只支持default和m4。当 enable 为 true 时，此项必选。
         /// </summary>
         [NameInMap("encrypt_type")]
         [Validation(Required=false)]

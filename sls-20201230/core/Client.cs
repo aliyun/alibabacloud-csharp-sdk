@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Sls20201230
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<CreateConsumerGroupResponse>(Execute(params_, req, runtime));
         }
@@ -125,9 +125,135 @@ namespace AlibabaCloud.SDK.Sls20201230
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<CreateConsumerGroupResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public CreateIndexResponse CreateIndex(string project, string logstore, CreateIndexRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateIndexWithOptions(project, logstore, request, headers, runtime);
+        }
+
+        public async Task<CreateIndexResponse> CreateIndexAsync(string project, string logstore, CreateIndexRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateIndexWithOptionsAsync(project, logstore, request, headers, runtime);
+        }
+
+        public CreateIndexResponse CreateIndexWithOptions(string project, string logstore, CreateIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keys))
+            {
+                body["keys"] = request.Keys;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Line.ToMap()))
+            {
+                body["line"] = request.Line;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogReduce))
+            {
+                body["log_reduce"] = request.LogReduce;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogReduceBlackList))
+            {
+                body["log_reduce_black_list"] = request.LogReduceBlackList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogReduceWhiteList))
+            {
+                body["log_reduce_white_list"] = request.LogReduceWhiteList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTextLen))
+            {
+                body["max_text_len"] = request.MaxTextLen;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ttl))
+            {
+                body["ttl"] = request.Ttl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateIndex",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/index",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateIndexResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<CreateIndexResponse> CreateIndexWithOptionsAsync(string project, string logstore, CreateIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keys))
+            {
+                body["keys"] = request.Keys;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Line.ToMap()))
+            {
+                body["line"] = request.Line;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogReduce))
+            {
+                body["log_reduce"] = request.LogReduce;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogReduceBlackList))
+            {
+                body["log_reduce_black_list"] = request.LogReduceBlackList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogReduceWhiteList))
+            {
+                body["log_reduce_white_list"] = request.LogReduceWhiteList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTextLen))
+            {
+                body["max_text_len"] = request.MaxTextLen;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ttl))
+            {
+                body["ttl"] = request.Ttl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateIndex",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/index",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateIndexResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         public CreateLogStoreResponse CreateLogStore(string project, CreateLogStoreRequest request)
@@ -166,6 +292,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             {
                 body["encrypt_conf"] = request.EncryptConf;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotTtl))
+            {
+                body["hot_ttl"] = request.HotTtl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogstoreName))
             {
                 body["logstoreName"] = request.LogstoreName;
@@ -177,6 +307,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardCount))
             {
                 body["shardCount"] = request.ShardCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TelemetryType))
+            {
+                body["telemetryType"] = request.TelemetryType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ttl))
             {
@@ -198,7 +332,7 @@ namespace AlibabaCloud.SDK.Sls20201230
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<CreateLogStoreResponse>(Execute(params_, req, runtime));
         }
@@ -225,6 +359,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             {
                 body["encrypt_conf"] = request.EncryptConf;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotTtl))
+            {
+                body["hot_ttl"] = request.HotTtl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogstoreName))
             {
                 body["logstoreName"] = request.LogstoreName;
@@ -236,6 +374,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardCount))
             {
                 body["shardCount"] = request.ShardCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TelemetryType))
+            {
+                body["telemetryType"] = request.TelemetryType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ttl))
             {
@@ -257,7 +399,7 @@ namespace AlibabaCloud.SDK.Sls20201230
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<CreateLogStoreResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -303,7 +445,7 @@ namespace AlibabaCloud.SDK.Sls20201230
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<CreateProjectResponse>(Execute(params_, req, runtime));
         }
@@ -335,28 +477,30 @@ namespace AlibabaCloud.SDK.Sls20201230
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<CreateProjectResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public CreateSavedSearchResponse CreateSavedSearch(CreateSavedSearchRequest request)
+        public CreateSavedSearchResponse CreateSavedSearch(string project, CreateSavedSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateSavedSearchWithOptions(request, headers, runtime);
+            return CreateSavedSearchWithOptions(project, request, headers, runtime);
         }
 
-        public async Task<CreateSavedSearchResponse> CreateSavedSearchAsync(CreateSavedSearchRequest request)
+        public async Task<CreateSavedSearchResponse> CreateSavedSearchAsync(string project, CreateSavedSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateSavedSearchWithOptionsAsync(request, headers, runtime);
+            return await CreateSavedSearchWithOptionsAsync(project, request, headers, runtime);
         }
 
-        public CreateSavedSearchResponse CreateSavedSearchWithOptions(CreateSavedSearchRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateSavedSearchResponse CreateSavedSearchWithOptions(string project, CreateSavedSearchRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
             {
@@ -380,6 +524,7 @@ namespace AlibabaCloud.SDK.Sls20201230
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                HostMap = hostMap,
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
@@ -393,14 +538,16 @@ namespace AlibabaCloud.SDK.Sls20201230
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<CreateSavedSearchResponse>(Execute(params_, req, runtime));
         }
 
-        public async Task<CreateSavedSearchResponse> CreateSavedSearchWithOptionsAsync(CreateSavedSearchRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateSavedSearchResponse> CreateSavedSearchWithOptionsAsync(string project, CreateSavedSearchRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
             {
@@ -424,6 +571,7 @@ namespace AlibabaCloud.SDK.Sls20201230
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                HostMap = hostMap,
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
@@ -437,7 +585,7 @@ namespace AlibabaCloud.SDK.Sls20201230
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<CreateSavedSearchResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -477,7 +625,7 @@ namespace AlibabaCloud.SDK.Sls20201230
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteConsumerGroupResponse>(Execute(params_, req, runtime));
         }
@@ -503,9 +651,137 @@ namespace AlibabaCloud.SDK.Sls20201230
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteConsumerGroupResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public DeleteIndexResponse DeleteIndex(string project, string logstore)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteIndexWithOptions(project, logstore, headers, runtime);
+        }
+
+        public async Task<DeleteIndexResponse> DeleteIndexAsync(string project, string logstore)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteIndexWithOptionsAsync(project, logstore, headers, runtime);
+        }
+
+        public DeleteIndexResponse DeleteIndexWithOptions(string project, string logstore, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteIndex",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/index",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteIndexResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<DeleteIndexResponse> DeleteIndexWithOptionsAsync(string project, string logstore, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteIndex",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/index",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteIndexResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public DeleteLogStoreResponse DeleteLogStore(string project, string logstore)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteLogStoreWithOptions(project, logstore, headers, runtime);
+        }
+
+        public async Task<DeleteLogStoreResponse> DeleteLogStoreAsync(string project, string logstore)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteLogStoreWithOptionsAsync(project, logstore, headers, runtime);
+        }
+
+        public DeleteLogStoreResponse DeleteLogStoreWithOptions(string project, string logstore, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLogStore",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteLogStoreResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<DeleteLogStoreResponse> DeleteLogStoreWithOptionsAsync(string project, string logstore, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLogStore",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteLogStoreResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         public DeleteProjectResponse DeleteProject(string project)
@@ -541,7 +817,7 @@ namespace AlibabaCloud.SDK.Sls20201230
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteProjectResponse>(Execute(params_, req, runtime));
         }
@@ -565,30 +841,140 @@ namespace AlibabaCloud.SDK.Sls20201230
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteProjectResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public DeleteSavedSearchResponse DeleteSavedSearch(string project, string savedsearchName)
+        public GetHistogramsResponse GetHistograms(string project, string logstore, GetHistogramsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteSavedSearchWithOptions(project, savedsearchName, headers, runtime);
+            return GetHistogramsWithOptions(project, logstore, request, headers, runtime);
         }
 
-        public async Task<DeleteSavedSearchResponse> DeleteSavedSearchAsync(string project, string savedsearchName)
+        public async Task<GetHistogramsResponse> GetHistogramsAsync(string project, string logstore, GetHistogramsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteSavedSearchWithOptionsAsync(project, savedsearchName, headers, runtime);
+            return await GetHistogramsWithOptionsAsync(project, logstore, request, headers, runtime);
         }
 
-        public DeleteSavedSearchResponse DeleteSavedSearchWithOptions(string project, string savedsearchName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetHistogramsResponse GetHistogramsWithOptions(string project, string logstore, GetHistogramsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
+            {
+                query["from"] = request.From;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.To))
+            {
+                query["to"] = request.To;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                query["topic"] = request.Topic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetHistograms",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/index",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "array",
+            };
+            return TeaModel.ToObject<GetHistogramsResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<GetHistogramsResponse> GetHistogramsWithOptionsAsync(string project, string logstore, GetHistogramsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
+            {
+                query["from"] = request.From;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.To))
+            {
+                query["to"] = request.To;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                query["topic"] = request.Topic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetHistograms",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/index",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "array",
+            };
+            return TeaModel.ToObject<GetHistogramsResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public GetIndexResponse GetIndex(string project, string logstore)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetIndexWithOptions(project, logstore, headers, runtime);
+        }
+
+        public async Task<GetIndexResponse> GetIndexAsync(string project, string logstore)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetIndexWithOptionsAsync(project, logstore, headers, runtime);
+        }
+
+        public GetIndexResponse GetIndexWithOptions(string project, string logstore, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            savedsearchName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(savedsearchName);
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -596,24 +982,24 @@ namespace AlibabaCloud.SDK.Sls20201230
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "DeleteSavedSearch",
+                Action = "GetIndex",
                 Version = "2020-12-30",
                 Protocol = "HTTPS",
-                Pathname = "/savedsearches/" + savedsearchName,
-                Method = "DELETE",
+                Pathname = "/logstores/" + logstore + "/index",
+                Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteSavedSearchResponse>(Execute(params_, req, runtime));
+            return TeaModel.ToObject<GetIndexResponse>(Execute(params_, req, runtime));
         }
 
-        public async Task<DeleteSavedSearchResponse> DeleteSavedSearchWithOptionsAsync(string project, string savedsearchName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetIndexResponse> GetIndexWithOptionsAsync(string project, string logstore, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            savedsearchName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(savedsearchName);
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -621,17 +1007,17 @@ namespace AlibabaCloud.SDK.Sls20201230
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "DeleteSavedSearch",
+                Action = "GetIndex",
                 Version = "2020-12-30",
                 Protocol = "HTTPS",
-                Pathname = "/savedsearches/" + savedsearchName,
-                Method = "DELETE",
+                Pathname = "/logstores/" + logstore + "/index",
+                Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteSavedSearchResponse>(await ExecuteAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetIndexResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         public GetLogStoreResponse GetLogStore(string project, string logstore)
@@ -758,6 +1144,90 @@ namespace AlibabaCloud.SDK.Sls20201230
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetProjectResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public GetProjectLogsResponse GetProjectLogs(string project, GetProjectLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetProjectLogsWithOptions(project, request, headers, runtime);
+        }
+
+        public async Task<GetProjectLogsResponse> GetProjectLogsAsync(string project, GetProjectLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetProjectLogsWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        public GetProjectLogsResponse GetProjectLogsWithOptions(string project, GetProjectLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PowerSql))
+            {
+                query["powerSql"] = request.PowerSql;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["query"] = request.Query;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetProjectLogs",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "array",
+            };
+            return TeaModel.ToObject<GetProjectLogsResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<GetProjectLogsResponse> GetProjectLogsWithOptionsAsync(string project, GetProjectLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PowerSql))
+            {
+                query["powerSql"] = request.PowerSql;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["query"] = request.Query;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetProjectLogs",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "array",
+            };
+            return TeaModel.ToObject<GetProjectLogsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         public GetSavedSearchResponse GetSavedSearch(string project, string savedsearchName)
@@ -1204,7 +1674,7 @@ namespace AlibabaCloud.SDK.Sls20201230
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<UpdateConsumerGroupResponse>(Execute(params_, req, runtime));
         }
@@ -1241,9 +1711,135 @@ namespace AlibabaCloud.SDK.Sls20201230
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<UpdateConsumerGroupResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public UpdateIndexResponse UpdateIndex(string project, string logstore, UpdateIndexRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateIndexWithOptions(project, logstore, request, headers, runtime);
+        }
+
+        public async Task<UpdateIndexResponse> UpdateIndexAsync(string project, string logstore, UpdateIndexRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateIndexWithOptionsAsync(project, logstore, request, headers, runtime);
+        }
+
+        public UpdateIndexResponse UpdateIndexWithOptions(string project, string logstore, UpdateIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keys))
+            {
+                body["keys"] = request.Keys;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Line.ToMap()))
+            {
+                body["line"] = request.Line;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogReduce))
+            {
+                body["log_reduce"] = request.LogReduce;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogReduceBlackList))
+            {
+                body["log_reduce_black_list"] = request.LogReduceBlackList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogReduceWhiteList))
+            {
+                body["log_reduce_white_list"] = request.LogReduceWhiteList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTextLen))
+            {
+                body["max_text_len"] = request.MaxTextLen;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ttl))
+            {
+                body["ttl"] = request.Ttl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateIndex",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/index",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateIndexResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<UpdateIndexResponse> UpdateIndexWithOptionsAsync(string project, string logstore, UpdateIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keys))
+            {
+                body["keys"] = request.Keys;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Line.ToMap()))
+            {
+                body["line"] = request.Line;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogReduce))
+            {
+                body["log_reduce"] = request.LogReduce;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogReduceBlackList))
+            {
+                body["log_reduce_black_list"] = request.LogReduceBlackList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogReduceWhiteList))
+            {
+                body["log_reduce_white_list"] = request.LogReduceWhiteList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTextLen))
+            {
+                body["max_text_len"] = request.MaxTextLen;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ttl))
+            {
+                body["ttl"] = request.Ttl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateIndex",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/index",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateIndexResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         public UpdateLogStoreResponse UpdateLogStore(string project, string logstore, UpdateLogStoreRequest request)
@@ -1283,9 +1879,9 @@ namespace AlibabaCloud.SDK.Sls20201230
             {
                 body["encrypt_conf"] = request.EncryptConf;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Logstore))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotTtl))
             {
-                body["logstore"] = request.Logstore;
+                body["hot_ttl"] = request.HotTtl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogstoreName))
             {
@@ -1298,6 +1894,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardCount))
             {
                 body["shardCount"] = request.ShardCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TelemetryType))
+            {
+                body["telemetryType"] = request.TelemetryType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ttl))
             {
@@ -1319,7 +1919,7 @@ namespace AlibabaCloud.SDK.Sls20201230
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<UpdateLogStoreResponse>(Execute(params_, req, runtime));
         }
@@ -1347,9 +1947,9 @@ namespace AlibabaCloud.SDK.Sls20201230
             {
                 body["encrypt_conf"] = request.EncryptConf;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Logstore))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotTtl))
             {
-                body["logstore"] = request.Logstore;
+                body["hot_ttl"] = request.HotTtl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogstoreName))
             {
@@ -1362,6 +1962,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardCount))
             {
                 body["shardCount"] = request.ShardCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TelemetryType))
+            {
+                body["telemetryType"] = request.TelemetryType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ttl))
             {
@@ -1383,7 +1987,7 @@ namespace AlibabaCloud.SDK.Sls20201230
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<UpdateLogStoreResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -1428,7 +2032,7 @@ namespace AlibabaCloud.SDK.Sls20201230
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<UpdateProjectResponse>(Execute(params_, req, runtime));
         }
@@ -1459,9 +2063,119 @@ namespace AlibabaCloud.SDK.Sls20201230
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<UpdateProjectResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public UpdateSavedSearchResponse UpdateSavedSearch(string project, string savedsearchName, UpdateSavedSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateSavedSearchWithOptions(project, savedsearchName, request, headers, runtime);
+        }
+
+        public async Task<UpdateSavedSearchResponse> UpdateSavedSearchAsync(string project, string savedsearchName, UpdateSavedSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateSavedSearchWithOptionsAsync(project, savedsearchName, request, headers, runtime);
+        }
+
+        public UpdateSavedSearchResponse UpdateSavedSearchWithOptions(string project, string savedsearchName, UpdateSavedSearchRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            savedsearchName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(savedsearchName);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                body["displayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Logstore))
+            {
+                body["logstore"] = request.Logstore;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SavedsearchName))
+            {
+                body["savedsearchName"] = request.SavedsearchName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchQuery))
+            {
+                body["searchQuery"] = request.SearchQuery;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                body["topic"] = request.Topic;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSavedSearch",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/savedsearches/" + savedsearchName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateSavedSearchResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<UpdateSavedSearchResponse> UpdateSavedSearchWithOptionsAsync(string project, string savedsearchName, UpdateSavedSearchRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            savedsearchName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(savedsearchName);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                body["displayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Logstore))
+            {
+                body["logstore"] = request.Logstore;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SavedsearchName))
+            {
+                body["savedsearchName"] = request.SavedsearchName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchQuery))
+            {
+                body["searchQuery"] = request.SearchQuery;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                body["topic"] = request.Topic;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSavedSearch",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/savedsearches/" + savedsearchName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateSavedSearchResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
     }

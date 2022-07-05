@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class ListConsumerGroupResponse : TeaModel {
+    public class DeleteLogStoreResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -16,10 +16,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [NameInMap("statusCode")]
         [Validation(Required=true)]
         public int? StatusCode { get; set; }
-
-        [NameInMap("body")]
-        [Validation(Required=true)]
-        public List<ConsumerGroup> Body { get; set; }
 
     }
 
