@@ -2151,6 +2151,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115
                 query["OwnerId"] = request.OwnerId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
+            {
+                body["BusinessType"] = request.BusinessType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 body["Region"] = request.Region;
@@ -2184,6 +2188,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115
                 query["OwnerId"] = request.OwnerId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
+            {
+                body["BusinessType"] = request.BusinessType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 body["Region"] = request.Region;
@@ -2654,10 +2662,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
-            {
-                query["BusinessType"] = request.BusinessType;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
@@ -2689,10 +2693,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
-            {
-                query["BusinessType"] = request.BusinessType;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
@@ -9826,14 +9826,68 @@ namespace AlibabaCloud.SDK.Dcdn20180115
             return await DescribeDcdnReportListWithOptionsAsync(request, runtime);
         }
 
+        public DescribeDcdnSLSRealTimeLogTypeResponse DescribeDcdnSLSRealTimeLogTypeWithOptions(DescribeDcdnSLSRealTimeLogTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDcdnSLSRealTimeLogType",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDcdnSLSRealTimeLogTypeResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeDcdnSLSRealTimeLogTypeResponse> DescribeDcdnSLSRealTimeLogTypeWithOptionsAsync(DescribeDcdnSLSRealTimeLogTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDcdnSLSRealTimeLogType",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDcdnSLSRealTimeLogTypeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeDcdnSLSRealTimeLogTypeResponse DescribeDcdnSLSRealTimeLogType(DescribeDcdnSLSRealTimeLogTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDcdnSLSRealTimeLogTypeWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeDcdnSLSRealTimeLogTypeResponse> DescribeDcdnSLSRealTimeLogTypeAsync(DescribeDcdnSLSRealTimeLogTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDcdnSLSRealTimeLogTypeWithOptionsAsync(request, runtime);
+        }
+
         public DescribeDcdnSLSRealtimeLogDeliveryResponse DescribeDcdnSLSRealtimeLogDeliveryWithOptions(DescribeDcdnSLSRealtimeLogDeliveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
-            {
-                query["BusinessType"] = request.BusinessType;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
@@ -9865,10 +9919,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
-            {
-                query["BusinessType"] = request.BusinessType;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;

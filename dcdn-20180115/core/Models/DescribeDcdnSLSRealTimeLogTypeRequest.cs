@@ -8,18 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
-    public class CreateSlrAndSlsProjectRequest : TeaModel {
-        [NameInMap("BusinessType")]
-        [Validation(Required=false)]
-        public string BusinessType { get; set; }
-
+    public class DescribeDcdnSLSRealTimeLogTypeRequest : TeaModel {
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
-
-        [NameInMap("Region")]
-        [Validation(Required=false)]
-        public string Region { get; set; }
 
     }
 

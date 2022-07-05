@@ -40,6 +40,9 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [NameInMap("SamplingRate")]
             [Validation(Required=false)]
             public string SamplingRate { get; set; }
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
