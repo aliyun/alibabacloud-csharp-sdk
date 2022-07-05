@@ -34,9 +34,12 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public string SourceArn { get; set; }
 
+        /// <summary>
+        /// trigger配置，针对不同的trigger类型，trigger配置会有所不同
+        /// </summary>
         [NameInMap("triggerConfig")]
         [Validation(Required=false)]
-        public object TriggerConfig { get; set; }
+        public string TriggerConfig { get; set; }
 
         /// <summary>
         /// trigger名称
