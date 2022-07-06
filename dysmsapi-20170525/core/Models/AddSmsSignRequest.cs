@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("SceneType")]
+        [Validation(Required=false)]
+        public int? SceneType { get; set; }
+
         [NameInMap("SignFileList")]
         [Validation(Required=false)]
         public List<AddSmsSignRequestSignFileList> SignFileList { get; set; }
