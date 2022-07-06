@@ -174,10 +174,6 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneType))
-            {
-                query["SceneType"] = request.SceneType;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignName))
             {
                 query["SignName"] = request.SignName;
@@ -185,6 +181,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignSource))
             {
                 query["SignSource"] = request.SignSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignType))
+            {
+                query["SignType"] = request.SignType;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignFileList))
@@ -231,10 +231,6 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneType))
-            {
-                query["SceneType"] = request.SceneType;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignName))
             {
                 query["SignName"] = request.SignName;
@@ -242,6 +238,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignSource))
             {
                 query["SignSource"] = request.SignSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignType))
+            {
+                query["SignType"] = request.SignType;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignFileList))
@@ -1278,10 +1278,6 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneType))
-            {
-                query["SceneType"] = request.SceneType;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignName))
             {
                 query["SignName"] = request.SignName;
@@ -1289,6 +1285,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignSource))
             {
                 query["SignSource"] = request.SignSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignType))
+            {
+                query["SignType"] = request.SignType;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignFileList))
@@ -1335,10 +1335,6 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneType))
-            {
-                query["SceneType"] = request.SceneType;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignName))
             {
                 query["SignName"] = request.SignName;
@@ -1346,6 +1342,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignSource))
             {
                 query["SignSource"] = request.SignSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignType))
+            {
+                query["SignType"] = request.SignType;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignFileList))
