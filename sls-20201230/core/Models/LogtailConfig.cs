@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class Config : TeaModel {
+    public class LogtailConfig : TeaModel {
         /// <summary>
         /// configName
         /// </summary>
@@ -28,8 +28,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// </summary>
         [NameInMap("inputDetail")]
         [Validation(Required=false)]
-        public ConfigInputDetail InputDetail { get; set; }
-        public class ConfigInputDetail : TeaModel {
+        public LogtailConfigInputDetail InputDetail { get; set; }
+        public class LogtailConfigInputDetail : TeaModel {
             [NameInMap("adjustTimezone")]
             [Validation(Required=false)]
             public bool? AdjustTimezone { get; set; }
@@ -77,8 +77,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public int? SendRateExpire { get; set; }
             [NameInMap("sensitive_keys")]
             [Validation(Required=false)]
-            public List<ConfigInputDetailSensitiveKeys> SensitiveKeys { get; set; }
-            public class ConfigInputDetailSensitiveKeys : TeaModel {
+            public List<LogtailConfigInputDetailSensitiveKeys> SensitiveKeys { get; set; }
+            public class LogtailConfigInputDetailSensitiveKeys : TeaModel {
                 public bool? All { get; set; }
                 public string Key { get; set; }
                 public string RegexBegin { get; set; }
@@ -122,8 +122,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// </summary>
         [NameInMap("outputDetail")]
         [Validation(Required=false)]
-        public ConfigOutputDetail OutputDetail { get; set; }
-        public class ConfigOutputDetail : TeaModel {
+        public LogtailConfigOutputDetail OutputDetail { get; set; }
+        public class LogtailConfigOutputDetail : TeaModel {
             [NameInMap("endpoint")]
             [Validation(Required=false)]
             public string Endpoint { get; set; }
