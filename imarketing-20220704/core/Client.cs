@@ -37,6 +37,188 @@ namespace AlibabaCloud.SDK.Imarketing20220704
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        public CreateDeviceResponse CreateDeviceWithOptions(CreateDeviceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDeviceShrinkRequest request = new CreateDeviceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExtraMap))
+            {
+                request.ExtraMapShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExtraMap, "ExtraMap", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                body["ChannelId"] = request.ChannelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.City))
+            {
+                body["City"] = request.City;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceModelNumber))
+            {
+                body["DeviceModelNumber"] = request.DeviceModelNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                body["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceType))
+            {
+                body["DeviceType"] = request.DeviceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.District))
+            {
+                body["District"] = request.District;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraMapShrink))
+            {
+                body["ExtraMap"] = request.ExtraMapShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirstScene))
+            {
+                body["FirstScene"] = request.FirstScene;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Floor))
+            {
+                body["Floor"] = request.Floor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocationName))
+            {
+                body["LocationName"] = request.LocationName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaId))
+            {
+                body["MediaId"] = request.MediaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OuterCode))
+            {
+                body["OuterCode"] = request.OuterCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Province))
+            {
+                body["Province"] = request.Province;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecondScene))
+            {
+                body["SecondScene"] = request.SecondScene;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDevice",
+                Version = "2022-07-04",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDeviceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateDeviceResponse> CreateDeviceWithOptionsAsync(CreateDeviceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDeviceShrinkRequest request = new CreateDeviceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExtraMap))
+            {
+                request.ExtraMapShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExtraMap, "ExtraMap", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                body["ChannelId"] = request.ChannelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.City))
+            {
+                body["City"] = request.City;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceModelNumber))
+            {
+                body["DeviceModelNumber"] = request.DeviceModelNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                body["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceType))
+            {
+                body["DeviceType"] = request.DeviceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.District))
+            {
+                body["District"] = request.District;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraMapShrink))
+            {
+                body["ExtraMap"] = request.ExtraMapShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirstScene))
+            {
+                body["FirstScene"] = request.FirstScene;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Floor))
+            {
+                body["Floor"] = request.Floor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocationName))
+            {
+                body["LocationName"] = request.LocationName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaId))
+            {
+                body["MediaId"] = request.MediaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OuterCode))
+            {
+                body["OuterCode"] = request.OuterCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Province))
+            {
+                body["Province"] = request.Province;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecondScene))
+            {
+                body["SecondScene"] = request.SecondScene;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDevice",
+                Version = "2022-07-04",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDeviceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateDeviceResponse CreateDevice(CreateDeviceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDeviceWithOptions(request, runtime);
+        }
+
+        public async Task<CreateDeviceResponse> CreateDeviceAsync(CreateDeviceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDeviceWithOptionsAsync(request, runtime);
+        }
+
         public GetUserFinishedAdResponse GetUserFinishedAdWithOptions(GetUserFinishedAdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
