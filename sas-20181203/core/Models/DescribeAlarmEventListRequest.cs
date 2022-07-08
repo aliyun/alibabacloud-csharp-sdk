@@ -49,6 +49,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<string> OperateErrorCodeList { get; set; }
 
+        [NameInMap("OperateTimeEnd")]
+        [Validation(Required=false)]
+        public string OperateTimeEnd { get; set; }
+
+        [NameInMap("OperateTimeStart")]
+        [Validation(Required=false)]
+        public string OperateTimeStart { get; set; }
+
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
@@ -64,6 +72,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("TacticId")]
         [Validation(Required=false)]
         public string TacticId { get; set; }
+
+        [NameInMap("TimeEnd")]
+        [Validation(Required=false)]
+        public string TimeEnd { get; set; }
+
+        [NameInMap("TimeStart")]
+        [Validation(Required=false)]
+        public string TimeStart { get; set; }
 
         [NameInMap("UniqueInfo")]
         [Validation(Required=false)]

@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </summary>
         [NameInMap("OperateTimeEnd")]
         [Validation(Required=false)]
-        public long? OperateTimeEnd { get; set; }
+        public string OperateTimeEnd { get; set; }
 
         /// <summary>
         /// 处理时间开始时间
         /// </summary>
         [NameInMap("OperateTimeStart")]
         [Validation(Required=false)]
-        public long? OperateTimeStart { get; set; }
+        public string OperateTimeStart { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -110,6 +110,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("TargetType")]
         [Validation(Required=false)]
         public string TargetType { get; set; }
+
+        /// <summary>
+        /// 最新发生结束时间
+        /// </summary>
+        [NameInMap("TimeEnd")]
+        [Validation(Required=false)]
+        public string TimeEnd { get; set; }
+
+        /// <summary>
+        /// 最新发生开始时间
+        /// </summary>
+        [NameInMap("TimeStart")]
+        [Validation(Required=false)]
+        public string TimeStart { get; set; }
 
         [NameInMap("UniqueInfo")]
         [Validation(Required=false)]
