@@ -3875,10 +3875,20 @@ namespace AlibabaCloud.SDK.CloudGameAPI20200728
             return await SkipTrialPolicyWithOptionsAsync(request, runtime);
         }
 
-        public StartGameLiveResponse StartGameLiveWithOptions(StartGameLiveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public StartGameLiveResponse StartGameLiveWithOptions(StartGameLiveRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            StartGameLiveShrinkRequest request = new StartGameLiveShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Extension))
+            {
+                request.ExtensionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Extension, "Extension", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtensionShrink))
+            {
+                query["Extension"] = request.ExtensionShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GameSession))
             {
                 query["GameSession"] = request.GameSession;
@@ -3906,10 +3916,20 @@ namespace AlibabaCloud.SDK.CloudGameAPI20200728
             return TeaModel.ToObject<StartGameLiveResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<StartGameLiveResponse> StartGameLiveWithOptionsAsync(StartGameLiveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<StartGameLiveResponse> StartGameLiveWithOptionsAsync(StartGameLiveRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            StartGameLiveShrinkRequest request = new StartGameLiveShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Extension))
+            {
+                request.ExtensionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Extension, "Extension", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtensionShrink))
+            {
+                query["Extension"] = request.ExtensionShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GameSession))
             {
                 query["GameSession"] = request.GameSession;

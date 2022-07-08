@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CloudGameAPI20200728.Models
 {
-    public class StartGameLiveRequest : TeaModel {
+    public class StartGameLiveShrinkRequest : TeaModel {
         [NameInMap("Extension")]
         [Validation(Required=false)]
-        public Dictionary<string, string> Extension { get; set; }
+        public string ExtensionShrink { get; set; }
 
         [NameInMap("GameSession")]
         [Validation(Required=false)]
