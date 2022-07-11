@@ -21,15 +21,20 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public List<ListSkillGroupStatesResponseBodyDataList> List { get; set; }
             public class ListSkillGroupStatesResponseBodyDataList : TeaModel {
+                public long? AverageWaitingTime { get; set; }
                 public long? BreakingAgents { get; set; }
                 public string InstanceId { get; set; }
                 public long? LoggedInAgents { get; set; }
                 public long? LongestCall { get; set; }
+                public long? OutboundScenarioReadyAgents { get; set; }
                 public long? ReadyAgents { get; set; }
                 public string SkillGroupId { get; set; }
                 public string SkillGroupName { get; set; }
                 public long? TalkingAgents { get; set; }
                 public long? WaitingCalls { get; set; }
+                public long? WaitingCallsLevel10 { get; set; }
+                public long? WaitingCallsLevel20 { get; set; }
+                public long? WaitingCallsLevel30 { get; set; }
                 public long? WorkingAgents { get; set; }
             }
             [NameInMap("PageNumber")]

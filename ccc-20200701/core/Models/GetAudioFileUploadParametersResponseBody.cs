@@ -8,44 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
-    public class ListSipTracesResponseBody : TeaModel {
+    public class GetAudioFileUploadParametersResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<ListSipTracesResponseBodyData> Data { get; set; }
-        public class ListSipTracesResponseBodyData : TeaModel {
-            [NameInMap("CallId")]
+        public GetAudioFileUploadParametersResponseBodyData Data { get; set; }
+        public class GetAudioFileUploadParametersResponseBodyData : TeaModel {
+            [NameInMap("AccessKeyId")]
             [Validation(Required=false)]
-            public string CallId { get; set; }
-
-            [NameInMap("ContactId")]
+            public string AccessKeyId { get; set; }
+            [NameInMap("ExpireTime")]
             [Validation(Required=false)]
-            public string ContactId { get; set; }
-
-            [NameInMap("DestinationNodeIp")]
+            public int? ExpireTime { get; set; }
+            [NameInMap("FilePath")]
             [Validation(Required=false)]
-            public string DestinationNodeIp { get; set; }
-
-            [NameInMap("FirstLine")]
+            public string FilePath { get; set; }
+            [NameInMap("Host")]
             [Validation(Required=false)]
-            public string FirstLine { get; set; }
-
-            [NameInMap("Payload")]
+            public string Host { get; set; }
+            [NameInMap("Policy")]
             [Validation(Required=false)]
-            public string Payload { get; set; }
-
-            [NameInMap("SourceNodeIp")]
+            public string Policy { get; set; }
+            [NameInMap("Signature")]
             [Validation(Required=false)]
-            public string SourceNodeIp { get; set; }
-
-            [NameInMap("Timestamp")]
-            [Validation(Required=false)]
-            public long? Timestamp { get; set; }
-
-        }
+            public string Signature { get; set; }
+        };
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
@@ -58,6 +48,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

@@ -59,6 +59,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     [Validation(Required=false)]
                     public long? AverageWorkTime { get; set; }
 
+                    [NameInMap("CallsAttendedTransferOut")]
+                    [Validation(Required=false)]
+                    public long? CallsAttendedTransferOut { get; set; }
+
+                    [NameInMap("CallsBlindTransferOut")]
+                    [Validation(Required=false)]
+                    public long? CallsBlindTransferOut { get; set; }
+
                     [NameInMap("CallsHandled")]
                     [Validation(Required=false)]
                     public long? CallsHandled { get; set; }
@@ -66,6 +74,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     [NameInMap("CallsOffered")]
                     [Validation(Required=false)]
                     public long? CallsOffered { get; set; }
+
+                    [NameInMap("CallsServiceLevel10")]
+                    [Validation(Required=false)]
+                    public long? CallsServiceLevel10 { get; set; }
 
                     [NameInMap("CallsServiceLevel20")]
                     [Validation(Required=false)]

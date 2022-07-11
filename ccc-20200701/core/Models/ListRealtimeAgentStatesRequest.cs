@@ -17,9 +17,17 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string AgentName { get; set; }
 
+        [NameInMap("CallTypeList")]
+        [Validation(Required=false)]
+        public string CallTypeList { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("OutboundScenario")]
+        [Validation(Required=false)]
+        public bool? OutboundScenario { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -29,6 +37,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("Query")]
+        [Validation(Required=false)]
+        public string Query { get; set; }
+
         [NameInMap("SkillGroupId")]
         [Validation(Required=false)]
         public string SkillGroupId { get; set; }
@@ -36,6 +48,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("StateList")]
         [Validation(Required=false)]
         public string StateList { get; set; }
+
+        [NameInMap("WorkModeList")]
+        [Validation(Required=false)]
+        public string WorkModeList { get; set; }
 
     }
 

@@ -1,3 +1,6 @@
+2022-07-11 Version: 2.6.6
+- Supported legacy api.
+
 2022-04-26 Version: 2.4.1
 - Support to pass variables to authentication IVR.
 

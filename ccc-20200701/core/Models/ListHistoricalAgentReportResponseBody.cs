@@ -333,6 +333,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalWorkTime { get; set; }
 
                 }
+                public string SkillGroupIds { get; set; }
+                public string SkillGroupNames { get; set; }
             }
             [NameInMap("PageNumber")]
             [Validation(Required=false)]

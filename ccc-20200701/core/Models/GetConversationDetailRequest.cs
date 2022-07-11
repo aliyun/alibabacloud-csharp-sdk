@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
-    public class ListSipTracesRequest : TeaModel {
-        [NameInMap("CallId")]
+    public class GetConversationDetailRequest : TeaModel {
+        [NameInMap("ContactId")]
         [Validation(Required=false)]
-        public string CallId { get; set; }
+        public string ContactId { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

@@ -23,14 +23,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public class ListRealtimeAgentStatesResponseBodyDataList : TeaModel {
                 public string AgentId { get; set; }
                 public string AgentName { get; set; }
+                public string CallType { get; set; }
                 public string CounterParty { get; set; }
+                public long? Duration { get; set; }
                 public string Extension { get; set; }
                 public string InstanceId { get; set; }
+                public string Mobile { get; set; }
+                public bool? OutboundScenario { get; set; }
                 public List<string> SkillGroupIdList { get; set; }
                 public List<string> SkillGroupNameList { get; set; }
                 public string State { get; set; }
                 public string StateCode { get; set; }
                 public long? StateTime { get; set; }
+                public string WorkMode { get; set; }
             }
             [NameInMap("PageNumber")]
             [Validation(Required=false)]

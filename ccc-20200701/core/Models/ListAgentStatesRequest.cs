@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string AgentIds { get; set; }
 
+        [NameInMap("ExcludeOfflineUsers")]
+        [Validation(Required=false)]
+        public bool? ExcludeOfflineUsers { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

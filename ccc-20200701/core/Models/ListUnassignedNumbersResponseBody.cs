@@ -21,11 +21,9 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public List<ListUnassignedNumbersResponseBodyDataList> List { get; set; }
             public class ListUnassignedNumbersResponseBodyDataList : TeaModel {
-                public bool? Active { get; set; }
                 public string City { get; set; }
                 public string Number { get; set; }
                 public string Province { get; set; }
-                public bool? Usage { get; set; }
             }
             [NameInMap("PageNumber")]
             [Validation(Required=false)]

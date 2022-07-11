@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
-    public class ListSipCallRecordsRequest : TeaModel {
-        [NameInMap("ContactIdList")]
-        [Validation(Required=false)]
-        public string ContactIdList { get; set; }
-
+    public class ListAudioFilesRequest : TeaModel {
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
     }
 

@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
-    public class ListSipCallRecordsResponse : TeaModel {
+    public class GetConversationDetailResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ListSipCallRecordsResponseBody Body { get; set; }
+        public GetConversationDetailResponseBody Body { get; set; }
 
     }
 

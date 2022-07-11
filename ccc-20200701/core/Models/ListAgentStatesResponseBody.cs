@@ -23,9 +23,11 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public class ListAgentStatesResponseBodyDataList : TeaModel {
                 public string AgentId { get; set; }
                 public string AgentName { get; set; }
+                public string BreakCode { get; set; }
                 public string Dn { get; set; }
                 public string InstanceId { get; set; }
                 public string LoginName { get; set; }
+                public bool? OutboundScenario { get; set; }
                 public string State { get; set; }
                 public string StateDuration { get; set; }
             }
