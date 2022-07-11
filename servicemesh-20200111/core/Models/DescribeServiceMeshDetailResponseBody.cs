@@ -336,6 +336,18 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             public string PollDelay { get; set; }
                         };
 
+                        [NameInMap("NFDConfiguration")]
+                        [Validation(Required=false)]
+                        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationNFDConfiguration NFDConfiguration { get; set; }
+                        public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationNFDConfiguration : TeaModel {
+                            [NameInMap("Enabled")]
+                            [Validation(Required=false)]
+                            public bool? Enabled { get; set; }
+                            [NameInMap("NFDLabelPruned")]
+                            [Validation(Required=false)]
+                            public bool? NFDLabelPruned { get; set; }
+                        };
+
                         [NameInMap("OPAScopeInjection")]
                         [Validation(Required=false)]
                         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationOPAScopeInjection OPAScopeInjection { get; set; }

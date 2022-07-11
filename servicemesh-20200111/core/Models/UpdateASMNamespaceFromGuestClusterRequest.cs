@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
-    public class ServiceLabelsValue : TeaModel {
-        [NameInMap("Labels")]
+    public class UpdateASMNamespaceFromGuestClusterRequest : TeaModel {
+        [NameInMap("K8sClusterId")]
         [Validation(Required=false)]
-        public Dictionary<string, string> Labels { get; set; }
+        public string K8sClusterId { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string ServiceMeshId { get; set; }
 
     }
 

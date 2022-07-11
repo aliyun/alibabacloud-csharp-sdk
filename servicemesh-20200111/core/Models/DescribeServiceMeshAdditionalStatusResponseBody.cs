@@ -47,27 +47,6 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [NameInMap("AuditProjectStatus")]
             [Validation(Required=false)]
             public string AuditProjectStatus { get; set; }
-            [NameInMap("ConfigSourceStatus")]
-            [Validation(Required=false)]
-            public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusConfigSourceStatus ConfigSourceStatus { get; set; }
-            public class DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusConfigSourceStatus : TeaModel {
-                [NameInMap("Address")]
-                [Validation(Required=false)]
-                public string Address { get; set; }
-
-                [NameInMap("Message")]
-                [Validation(Required=false)]
-                public string Message { get; set; }
-
-                [NameInMap("Status")]
-                [Validation(Required=false)]
-                public string Status { get; set; }
-
-                [NameInMap("Valid")]
-                [Validation(Required=false)]
-                public bool? Valid { get; set; }
-
-            }
             [NameInMap("ControlPlaneProjectStatus")]
             [Validation(Required=false)]
             public string ControlPlaneProjectStatus { get; set; }

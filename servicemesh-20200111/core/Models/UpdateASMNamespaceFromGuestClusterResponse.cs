@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
-    public class DescribeMeshWorkloadVersionStatusResponse : TeaModel {
+    public class UpdateASMNamespaceFromGuestClusterResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeMeshWorkloadVersionStatusResponseBody Body { get; set; }
+        public UpdateASMNamespaceFromGuestClusterResponseBody Body { get; set; }
 
     }
 

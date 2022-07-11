@@ -177,6 +177,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public bool? MysqlFilterEnabled { get; set; }
 
+        [NameInMap("NFDEnabled")]
+        [Validation(Required=false)]
+        public bool? NFDEnabled { get; set; }
+
+        [NameInMap("NFDLabelPruned")]
+        [Validation(Required=false)]
+        public bool? NFDLabelPruned { get; set; }
+
         [NameInMap("OPAInjectorCPULimit")]
         [Validation(Required=false)]
         public string OPAInjectorCPULimit { get; set; }
@@ -312,6 +320,22 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [NameInMap("Tracing")]
         [Validation(Required=false)]
         public bool? Tracing { get; set; }
+
+        [NameInMap("TracingOnExtZipkinLimitCPU")]
+        [Validation(Required=false)]
+        public string TracingOnExtZipkinLimitCPU { get; set; }
+
+        [NameInMap("TracingOnExtZipkinLimitMemory")]
+        [Validation(Required=false)]
+        public string TracingOnExtZipkinLimitMemory { get; set; }
+
+        [NameInMap("TracingOnExtZipkinRequestCPU")]
+        [Validation(Required=false)]
+        public string TracingOnExtZipkinRequestCPU { get; set; }
+
+        [NameInMap("TracingOnExtZipkinRequestMemory")]
+        [Validation(Required=false)]
+        public string TracingOnExtZipkinRequestMemory { get; set; }
 
         [NameInMap("WebAssemblyFilterEnabled")]
         [Validation(Required=false)]
