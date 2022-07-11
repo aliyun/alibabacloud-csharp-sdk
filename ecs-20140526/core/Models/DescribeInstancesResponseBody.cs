@@ -256,7 +256,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
                 public string SerialNumber { get; set; }
                 public int? SpotDuration { get; set; }
-                public string SpotInterruptionBehavior { get; set; }
                 public float? SpotPriceLimit { get; set; }
                 public string SpotStrategy { get; set; }
                 public string StartTime { get; set; }

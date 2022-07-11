@@ -18,9 +18,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeImagesResponseBodyImagesImage> Image { get; set; }
             public class DescribeImagesResponseBodyImagesImage : TeaModel {
                 public string Architecture { get; set; }
-                public string BootMode { get; set; }
                 public string CreationTime { get; set; }
                 public string Description { get; set; }
+                public DescribeImagesResponseBodyImagesImageDetectionOptions DetectionOptions { get; set; }
+                public class DescribeImagesResponseBodyImagesImageDetectionOptions : TeaModel {
+                    [NameInMap("Items")]
+                    [Validation(Required=false)]
+                    public DescribeImagesResponseBodyImagesImageDetectionOptionsItems Items { get; set; }
+                    public class DescribeImagesResponseBodyImagesImageDetectionOptionsItems : TeaModel {
+                        [NameInMap("Item")]
+                        [Validation(Required=false)]
+                        public List<DescribeImagesResponseBodyImagesImageDetectionOptionsItemsItem> Item { get; set; }
+                        public class DescribeImagesResponseBodyImagesImageDetectionOptionsItemsItem : TeaModel {
+                            public string Name { get; set; }
+                            public string RiskCode { get; set; }
+                            public string RiskLevel { get; set; }
+                            public string Value { get; set; }
+                        }
+                    };
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                }
                 public DescribeImagesResponseBodyImagesImageDiskDeviceMappings DiskDeviceMappings { get; set; }
                 public class DescribeImagesResponseBodyImagesImageDiskDeviceMappings : TeaModel {
                     [NameInMap("DiskDeviceMapping")]
@@ -64,6 +85,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public string Type { get; set; }
 
                     }
+
+                }
+                public DescribeImagesResponseBodyImagesImageFeatures Features { get; set; }
+                public class DescribeImagesResponseBodyImagesImageFeatures : TeaModel {
+                    [NameInMap("NvmeSupport")]
+                    [Validation(Required=false)]
+                    public string NvmeSupport { get; set; }
 
                 }
                 public string ImageFamily { get; set; }

@@ -17,6 +17,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("Features")]
+        [Validation(Required=false)]
+        public ModifyImageAttributeRequestFeatures Features { get; set; }
+        public class ModifyImageAttributeRequestFeatures : TeaModel {
+            [NameInMap("NvmeSupport")]
+            [Validation(Required=false)]
+            public string NvmeSupport { get; set; }
+        };
+
         [NameInMap("ImageFamily")]
         [Validation(Required=false)]
         public string ImageFamily { get; set; }

@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribePriceRequest : TeaModel {
-        [NameInMap("Amount")]
-        [Validation(Required=false)]
-        public int? Amount { get; set; }
-
-        [NameInMap("AssuranceTimes")]
-        [Validation(Required=false)]
-        public string AssuranceTimes { get; set; }
-
-        [NameInMap("Capacity")]
-        [Validation(Required=false)]
-        public int? Capacity { get; set; }
-
         [NameInMap("DataDisk")]
         [Validation(Required=false)]
         public List<DescribePriceRequestDataDisk> DataDisk { get; set; }
@@ -38,6 +26,33 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? Size { get; set; }
 
         }
+
+        [NameInMap("SystemDisk")]
+        [Validation(Required=false)]
+        public DescribePriceRequestSystemDisk SystemDisk { get; set; }
+        public class DescribePriceRequestSystemDisk : TeaModel {
+            [NameInMap("Category")]
+            [Validation(Required=false)]
+            public string Category { get; set; }
+            [NameInMap("PerformanceLevel")]
+            [Validation(Required=false)]
+            public string PerformanceLevel { get; set; }
+            [NameInMap("Size")]
+            [Validation(Required=false)]
+            public int? Size { get; set; }
+        };
+
+        [NameInMap("Amount")]
+        [Validation(Required=false)]
+        public int? Amount { get; set; }
+
+        [NameInMap("AssuranceTimes")]
+        [Validation(Required=false)]
+        public string AssuranceTimes { get; set; }
+
+        [NameInMap("Capacity")]
+        [Validation(Required=false)]
+        public int? Capacity { get; set; }
 
         [NameInMap("DedicatedHostType")]
         [Validation(Required=false)]
@@ -134,21 +149,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("SpotStrategy")]
         [Validation(Required=false)]
         public string SpotStrategy { get; set; }
-
-        [NameInMap("SystemDisk")]
-        [Validation(Required=false)]
-        public DescribePriceRequestSystemDisk SystemDisk { get; set; }
-        public class DescribePriceRequestSystemDisk : TeaModel {
-            [NameInMap("Category")]
-            [Validation(Required=false)]
-            public string Category { get; set; }
-            [NameInMap("PerformanceLevel")]
-            [Validation(Required=false)]
-            public string PerformanceLevel { get; set; }
-            [NameInMap("Size")]
-            [Validation(Required=false)]
-            public int? Size { get; set; }
-        };
 
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

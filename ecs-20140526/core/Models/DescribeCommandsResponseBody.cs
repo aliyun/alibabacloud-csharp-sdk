@@ -26,6 +26,40 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? InvokeTimes { get; set; }
                 public bool? Latest { get; set; }
                 public string Name { get; set; }
+                public DescribeCommandsResponseBodyCommandsCommandParameterDefinitions ParameterDefinitions { get; set; }
+                public class DescribeCommandsResponseBodyCommandsCommandParameterDefinitions : TeaModel {
+                    [NameInMap("ParameterDefinition")]
+                    [Validation(Required=false)]
+                    public List<DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinition> ParameterDefinition { get; set; }
+                    public class DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinition : TeaModel {
+                        [NameInMap("DefaultValue")]
+                        [Validation(Required=false)]
+                        public string DefaultValue { get; set; }
+
+                        [NameInMap("Description")]
+                        [Validation(Required=false)]
+                        public string Description { get; set; }
+
+                        [NameInMap("ParameterName")]
+                        [Validation(Required=false)]
+                        public string ParameterName { get; set; }
+
+                        [NameInMap("PossibleValues")]
+                        [Validation(Required=false)]
+                        public DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinitionPossibleValues PossibleValues { get; set; }
+                        public class DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinitionPossibleValues : TeaModel {
+                            [NameInMap("PossibleValue")]
+                            [Validation(Required=false)]
+                            public List<string> PossibleValue { get; set; }
+                        };
+
+                        [NameInMap("Required")]
+                        [Validation(Required=false)]
+                        public bool? Required { get; set; }
+
+                    }
+
+                }
                 public DescribeCommandsResponseBodyCommandsCommandParameterNames ParameterNames { get; set; }
                 public class DescribeCommandsResponseBodyCommandsCommandParameterNames : TeaModel {
                     [NameInMap("ParameterName")]

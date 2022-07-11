@@ -13,6 +13,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public CreateLaunchTemplateVersionRequestSystemDisk SystemDisk { get; set; }
         public class CreateLaunchTemplateVersionRequestSystemDisk : TeaModel {
+            [NameInMap("AutoSnapshotPolicyId")]
+            [Validation(Required=false)]
+            public string AutoSnapshotPolicyId { get; set; }
+            [NameInMap("BurstingEnabled")]
+            [Validation(Required=false)]
+            public bool? BurstingEnabled { get; set; }
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
@@ -31,6 +37,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("PerformanceLevel")]
             [Validation(Required=false)]
             public string PerformanceLevel { get; set; }
+            [NameInMap("ProvisionedIops")]
+            [Validation(Required=false)]
+            public long? ProvisionedIops { get; set; }
             [NameInMap("Size")]
             [Validation(Required=false)]
             public int? Size { get; set; }
@@ -44,6 +53,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public List<CreateLaunchTemplateVersionRequestDataDisk> DataDisk { get; set; }
         public class CreateLaunchTemplateVersionRequestDataDisk : TeaModel {
+            [NameInMap("AutoSnapshotPolicyId")]
+            [Validation(Required=false)]
+            public string AutoSnapshotPolicyId { get; set; }
+
+            [NameInMap("BurstingEnabled")]
+            [Validation(Required=false)]
+            public bool? BurstingEnabled { get; set; }
+
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
@@ -71,6 +88,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("PerformanceLevel")]
             [Validation(Required=false)]
             public string PerformanceLevel { get; set; }
+
+            [NameInMap("ProvisionedIops")]
+            [Validation(Required=false)]
+            public long? ProvisionedIops { get; set; }
 
             [NameInMap("Size")]
             [Validation(Required=false)]
@@ -158,9 +179,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("InstanceType")]
+            [Validation(Required=false)]
+            public string InstanceType { get; set; }
+
             [NameInMap("NetworkInterfaceName")]
             [Validation(Required=false)]
             public string NetworkInterfaceName { get; set; }
+
+            [NameInMap("NetworkInterfaceTrafficMode")]
+            [Validation(Required=false)]
+            public string NetworkInterfaceTrafficMode { get; set; }
 
             [NameInMap("PrimaryIpAddress")]
             [Validation(Required=false)]

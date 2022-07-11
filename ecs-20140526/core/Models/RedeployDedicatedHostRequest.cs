@@ -33,10 +33,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("WaiveLocalDiskData")]
-        [Validation(Required=false)]
-        public bool? WaiveLocalDiskData { get; set; }
-
     }
 
 }

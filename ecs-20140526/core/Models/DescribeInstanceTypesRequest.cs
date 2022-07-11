@@ -9,20 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceTypesRequest : TeaModel {
-        [NameInMap("Filters")]
-        [Validation(Required=false)]
-        public List<DescribeInstanceTypesRequestFilters> Filters { get; set; }
-        public class DescribeInstanceTypesRequestFilters : TeaModel {
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
-
         [NameInMap("InstanceTypeFamily")]
         [Validation(Required=false)]
         public string InstanceTypeFamily { get; set; }

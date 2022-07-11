@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeInvocationsResponseBodyInvocationsInvocation> Invocation { get; set; }
             public class DescribeInvocationsResponseBodyInvocationsInvocation : TeaModel {
                 public string CommandContent { get; set; }
+                public string CommandDescription { get; set; }
                 public string CommandId { get; set; }
                 public string CommandName { get; set; }
                 public string CommandType { get; set; }
@@ -98,7 +99,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Parameters { get; set; }
                 public string RepeatMode { get; set; }
                 public bool? Timed { get; set; }
+                public long? Timeout { get; set; }
                 public string Username { get; set; }
+                public string WorkingDir { get; set; }
             }
         };
 

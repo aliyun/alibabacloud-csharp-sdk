@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("DetectionStrategy")]
+        [Validation(Required=false)]
+        public string DetectionStrategy { get; set; }
+
         [NameInMap("DiskDeviceMapping")]
         [Validation(Required=false)]
         public List<ImportImageRequestDiskDeviceMapping> DiskDeviceMapping { get; set; }

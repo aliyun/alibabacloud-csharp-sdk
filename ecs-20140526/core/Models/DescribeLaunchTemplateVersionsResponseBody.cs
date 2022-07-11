@@ -26,6 +26,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=true)]
                     public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk SystemDisk { get; set; }
                     public class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk : TeaModel {
+                        [NameInMap("AutoSnapshotPolicyId")]
+                        [Validation(Required=false)]
+                        public string AutoSnapshotPolicyId { get; set; }
+                        [NameInMap("BurstingEnabled")]
+                        [Validation(Required=false)]
+                        public bool? BurstingEnabled { get; set; }
                         [NameInMap("Category")]
                         [Validation(Required=false)]
                         public string Category { get; set; }
@@ -44,6 +50,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [NameInMap("PerformanceLevel")]
                         [Validation(Required=false)]
                         public string PerformanceLevel { get; set; }
+                        [NameInMap("ProvisionedIops")]
+                        [Validation(Required=false)]
+                        public long? ProvisionedIops { get; set; }
                         [NameInMap("Size")]
                         [Validation(Required=false)]
                         public int? Size { get; set; }
@@ -61,6 +70,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [Validation(Required=false)]
                         public List<DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk> DataDisk { get; set; }
                         public class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk : TeaModel {
+                            public string AutoSnapshotPolicyId { get; set; }
+                            public bool? BurstingEnabled { get; set; }
                             public string Category { get; set; }
                             public bool? DeleteWithInstance { get; set; }
                             public string Description { get; set; }
@@ -68,6 +79,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public string DiskName { get; set; }
                             public string Encrypted { get; set; }
                             public string PerformanceLevel { get; set; }
+                            public long? ProvisionedIops { get; set; }
                             public int? Size { get; set; }
                             public string SnapshotId { get; set; }
                         }
@@ -142,7 +154,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public List<DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterface> NetworkInterface { get; set; }
                         public class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterface : TeaModel {
                             public string Description { get; set; }
+                            public string InstanceType { get; set; }
                             public string NetworkInterfaceName { get; set; }
+                            public string NetworkInterfaceTrafficMode { get; set; }
                             public string PrimaryIpAddress { get; set; }
                             public string SecurityGroupId { get; set; }
                             public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterfaceSecurityGroupIds SecurityGroupIds { get; set; }

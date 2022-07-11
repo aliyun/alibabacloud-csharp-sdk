@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public bool? DisableInstantAccess { get; set; }
 
-        [NameInMap("InstantAccessRetentionDays")]
-        [Validation(Required=false)]
-        public long? InstantAccessRetentionDays { get; set; }
-
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -36,10 +32,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RetentionDays")]
-        [Validation(Required=false)]
-        public long? RetentionDays { get; set; }
 
         [NameInMap("SnapshotId")]
         [Validation(Required=false)]

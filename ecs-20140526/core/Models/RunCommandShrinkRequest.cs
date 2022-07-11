@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("DryRun")]
-        [Validation(Required=false)]
-        public bool? DryRun { get; set; }
-
         [NameInMap("EnableParameter")]
         [Validation(Required=false)]
         public bool? EnableParameter { get; set; }

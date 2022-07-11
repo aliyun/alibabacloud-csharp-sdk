@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string AutoSnapshotPolicyId { get; set; }
 
+        [NameInMap("AutoSnapshotPolicyName")]
+        [Validation(Required=false)]
+        public string AutoSnapshotPolicyName { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
