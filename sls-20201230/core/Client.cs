@@ -22,19 +22,338 @@ namespace AlibabaCloud.SDK.Sls20201230
             this._client = new AlibabaCloud.GatewaySls.Client();
             this._spi = _client;
             this._endpointRule = "central";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"ap-southeast-1", "sls.ap-southeast-1.aliyuncs.com"},
-                {"cn-hangzhou", "sls.cn-hangzhou.aliyuncs.com"},
-                {"cn-hongkong", "sls.cn-hongkong.aliyuncs.com"},
-                {"cn-huhehaote", "sls.cn-huhehaote.aliyuncs.com"},
-                {"cn-shanghai", "sls.cn-shanghai.aliyuncs.com"},
-                {"cn-shenzhen", "sls.cn-shenzhen.aliyuncs.com"},
-                {"cn-zhangjiakou", "sls.cn-zhangjiakou.aliyuncs.com"},
-                {"eu-central-1", "sls.eu-central-1.aliyuncs.com"},
-            };
         }
 
+
+        public ApplyConfigToMachineGroupResponse ApplyConfigToMachineGroup(string project, string machineGroup, string configName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ApplyConfigToMachineGroupWithOptions(project, machineGroup, configName, headers, runtime);
+        }
+
+        public async Task<ApplyConfigToMachineGroupResponse> ApplyConfigToMachineGroupAsync(string project, string machineGroup, string configName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ApplyConfigToMachineGroupWithOptionsAsync(project, machineGroup, configName, headers, runtime);
+        }
+
+        public ApplyConfigToMachineGroupResponse ApplyConfigToMachineGroupWithOptions(string project, string machineGroup, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            machineGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(machineGroup);
+            configName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(configName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ApplyConfigToMachineGroup",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/machinegroups/" + machineGroup + "/configs/" + configName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<ApplyConfigToMachineGroupResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<ApplyConfigToMachineGroupResponse> ApplyConfigToMachineGroupWithOptionsAsync(string project, string machineGroup, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            machineGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(machineGroup);
+            configName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(configName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ApplyConfigToMachineGroup",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/machinegroups/" + machineGroup + "/configs/" + configName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<ApplyConfigToMachineGroupResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public BatchCreateEtlMetaResponse BatchCreateEtlMeta(string project, BatchCreateEtlMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BatchCreateEtlMetaWithOptions(project, request, headers, runtime);
+        }
+
+        public async Task<BatchCreateEtlMetaResponse> BatchCreateEtlMetaAsync(string project, BatchCreateEtlMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BatchCreateEtlMetaWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        public BatchCreateEtlMetaResponse BatchCreateEtlMetaWithOptions(string project, BatchCreateEtlMetaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaList))
+            {
+                body["etlMetaList"] = request.EtlMetaList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchCreateEtlMeta",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etlmetas",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<BatchCreateEtlMetaResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<BatchCreateEtlMetaResponse> BatchCreateEtlMetaWithOptionsAsync(string project, BatchCreateEtlMetaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaList))
+            {
+                body["etlMetaList"] = request.EtlMetaList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchCreateEtlMeta",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etlmetas",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<BatchCreateEtlMetaResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public BatchModifyEtlMetaStatusResponse BatchModifyEtlMetaStatus(string project, BatchModifyEtlMetaStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BatchModifyEtlMetaStatusWithOptions(project, request, headers, runtime);
+        }
+
+        public async Task<BatchModifyEtlMetaStatusResponse> BatchModifyEtlMetaStatusAsync(string project, BatchModifyEtlMetaStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BatchModifyEtlMetaStatusWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        public BatchModifyEtlMetaStatusResponse BatchModifyEtlMetaStatusWithOptions(string project, BatchModifyEtlMetaStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaKeyList))
+            {
+                body["etlMetaKeyList"] = request.EtlMetaKeyList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaName))
+            {
+                body["etlMetaName"] = request.EtlMetaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaTag))
+            {
+                body["etlMetaTag"] = request.EtlMetaTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Range))
+            {
+                body["range"] = request.Range;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchModifyEtlMetaStatus",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etlmetas",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<BatchModifyEtlMetaStatusResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<BatchModifyEtlMetaStatusResponse> BatchModifyEtlMetaStatusWithOptionsAsync(string project, BatchModifyEtlMetaStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaKeyList))
+            {
+                body["etlMetaKeyList"] = request.EtlMetaKeyList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaName))
+            {
+                body["etlMetaName"] = request.EtlMetaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaTag))
+            {
+                body["etlMetaTag"] = request.EtlMetaTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Range))
+            {
+                body["range"] = request.Range;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchModifyEtlMetaStatus",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etlmetas",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<BatchModifyEtlMetaStatusResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public BatchUpdateEtlMetaResponse BatchUpdateEtlMeta(string project, BatchUpdateEtlMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BatchUpdateEtlMetaWithOptions(project, request, headers, runtime);
+        }
+
+        public async Task<BatchUpdateEtlMetaResponse> BatchUpdateEtlMetaAsync(string project, BatchUpdateEtlMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BatchUpdateEtlMetaWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        public BatchUpdateEtlMetaResponse BatchUpdateEtlMetaWithOptions(string project, BatchUpdateEtlMetaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaList.ToMap()))
+            {
+                body["etlMetaList"] = request.EtlMetaList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchUpdateEtlMeta",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etlmetas",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<BatchUpdateEtlMetaResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<BatchUpdateEtlMetaResponse> BatchUpdateEtlMetaWithOptionsAsync(string project, BatchUpdateEtlMetaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaList.ToMap()))
+            {
+                body["etlMetaList"] = request.EtlMetaList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchUpdateEtlMeta",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etlmetas",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<BatchUpdateEtlMetaResponse>(await ExecuteAsync(params_, req, runtime));
+        }
 
         public CreateConsumerGroupResponse CreateConsumerGroup(string project, string logstore, CreateConsumerGroupRequest request)
         {
@@ -128,6 +447,190 @@ namespace AlibabaCloud.SDK.Sls20201230
                 BodyType = "none",
             };
             return TeaModel.ToObject<CreateConsumerGroupResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public CreateDomainResponse CreateDomain(string project, CreateDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateDomainWithOptions(project, request, headers, runtime);
+        }
+
+        public async Task<CreateDomainResponse> CreateDomainAsync(string project, CreateDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateDomainWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        public CreateDomainResponse CreateDomainWithOptions(string project, CreateDomainRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                body["domainName"] = request.DomainName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDomain",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/domains",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateDomainResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<CreateDomainResponse> CreateDomainWithOptionsAsync(string project, CreateDomainRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                body["domainName"] = request.DomainName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDomain",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/domains",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateDomainResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public CreateEtlMetaResponse CreateEtlMeta(string project, CreateEtlMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateEtlMetaWithOptions(project, request, headers, runtime);
+        }
+
+        public async Task<CreateEtlMetaResponse> CreateEtlMetaAsync(string project, CreateEtlMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateEtlMetaWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        public CreateEtlMetaResponse CreateEtlMetaWithOptions(string project, CreateEtlMetaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                body["enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaKey))
+            {
+                body["etlMetaKey"] = request.EtlMetaKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaName))
+            {
+                body["etlMetaName"] = request.EtlMetaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaTag))
+            {
+                body["etlMetaTag"] = request.EtlMetaTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaValue))
+            {
+                body["etlMetaValue"] = request.EtlMetaValue;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateEtlMeta",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etlmetas",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateEtlMetaResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<CreateEtlMetaResponse> CreateEtlMetaWithOptionsAsync(string project, CreateEtlMetaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                body["enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaKey))
+            {
+                body["etlMetaKey"] = request.EtlMetaKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaName))
+            {
+                body["etlMetaName"] = request.EtlMetaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaTag))
+            {
+                body["etlMetaTag"] = request.EtlMetaTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaValue))
+            {
+                body["etlMetaValue"] = request.EtlMetaValue;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateEtlMeta",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etlmetas",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateEtlMetaResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         public CreateIndexResponse CreateIndex(string project, string logstore, CreateIndexRequest request)
@@ -404,6 +907,198 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<CreateLogStoreResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        public CreateLoggingResponse CreateLogging(string project, CreateLoggingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateLoggingWithOptions(project, request, headers, runtime);
+        }
+
+        public async Task<CreateLoggingResponse> CreateLoggingAsync(string project, CreateLoggingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateLoggingWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        public CreateLoggingResponse CreateLoggingWithOptions(string project, CreateLoggingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoggingDetails))
+            {
+                body["loggingDetails"] = request.LoggingDetails;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoggingProject))
+            {
+                body["loggingProject"] = request.LoggingProject;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLogging",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logging",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateLoggingResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<CreateLoggingResponse> CreateLoggingWithOptionsAsync(string project, CreateLoggingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoggingDetails))
+            {
+                body["loggingDetails"] = request.LoggingDetails;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoggingProject))
+            {
+                body["loggingProject"] = request.LoggingProject;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLogging",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logging",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateLoggingResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public CreateMachineGroupResponse CreateMachineGroup(string project, CreateMachineGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateMachineGroupWithOptions(project, request, headers, runtime);
+        }
+
+        public async Task<CreateMachineGroupResponse> CreateMachineGroupAsync(string project, CreateMachineGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateMachineGroupWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        public CreateMachineGroupResponse CreateMachineGroupWithOptions(string project, CreateMachineGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupAttribute.ToMap()))
+            {
+                body["groupAttribute"] = request.GroupAttribute;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
+            {
+                body["groupName"] = request.GroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupType))
+            {
+                body["groupType"] = request.GroupType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MachineIdentifyType))
+            {
+                body["machineIdentifyType"] = request.MachineIdentifyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MachineList))
+            {
+                body["machineList"] = request.MachineList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMachineGroup",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/machinegroups",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateMachineGroupResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<CreateMachineGroupResponse> CreateMachineGroupWithOptionsAsync(string project, CreateMachineGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupAttribute.ToMap()))
+            {
+                body["groupAttribute"] = request.GroupAttribute;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
+            {
+                body["groupName"] = request.GroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupType))
+            {
+                body["groupType"] = request.GroupType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MachineIdentifyType))
+            {
+                body["machineIdentifyType"] = request.MachineIdentifyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MachineList))
+            {
+                body["machineList"] = request.MachineList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMachineGroup",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/machinegroups",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateMachineGroupResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
         public CreateProjectResponse CreateProject(CreateProjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -656,6 +1351,162 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteConsumerGroupResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        public DeleteDomainResponse DeleteDomain(string project, string domainName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteDomainWithOptions(project, domainName, headers, runtime);
+        }
+
+        public async Task<DeleteDomainResponse> DeleteDomainAsync(string project, string domainName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteDomainWithOptionsAsync(project, domainName, headers, runtime);
+        }
+
+        public DeleteDomainResponse DeleteDomainWithOptions(string project, string domainName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            domainName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(domainName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDomain",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/domains/" + domainName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteDomainResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<DeleteDomainResponse> DeleteDomainWithOptionsAsync(string project, string domainName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            domainName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(domainName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDomain",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/domains/" + domainName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteDomainResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public DeleteEtlMetaResponse DeleteEtlMeta(string project, DeleteEtlMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteEtlMetaWithOptions(project, request, headers, runtime);
+        }
+
+        public async Task<DeleteEtlMetaResponse> DeleteEtlMetaAsync(string project, DeleteEtlMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteEtlMetaWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        public DeleteEtlMetaResponse DeleteEtlMetaWithOptions(string project, DeleteEtlMetaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaKey))
+            {
+                query["etlMetaKey"] = request.EtlMetaKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaName))
+            {
+                query["etlMetaName"] = request.EtlMetaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaTag))
+            {
+                query["etlMetaTag"] = request.EtlMetaTag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEtlMeta",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etlmetas",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteEtlMetaResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<DeleteEtlMetaResponse> DeleteEtlMetaWithOptionsAsync(string project, DeleteEtlMetaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaKey))
+            {
+                query["etlMetaKey"] = request.EtlMetaKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaName))
+            {
+                query["etlMetaName"] = request.EtlMetaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaTag))
+            {
+                query["etlMetaTag"] = request.EtlMetaTag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEtlMeta",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etlmetas",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteEtlMetaResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
         public DeleteIndexResponse DeleteIndex(string project, string logstore)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -784,6 +1635,132 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteLogStoreResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        public DeleteLoggingResponse DeleteLogging(string project)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteLoggingWithOptions(project, headers, runtime);
+        }
+
+        public async Task<DeleteLoggingResponse> DeleteLoggingAsync(string project)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteLoggingWithOptionsAsync(project, headers, runtime);
+        }
+
+        public DeleteLoggingResponse DeleteLoggingWithOptions(string project, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLogging",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logging",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteLoggingResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<DeleteLoggingResponse> DeleteLoggingWithOptionsAsync(string project, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLogging",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logging",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteLoggingResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public DeleteMachineGroupResponse DeleteMachineGroup(string project, string machineGroup)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteMachineGroupWithOptions(project, machineGroup, headers, runtime);
+        }
+
+        public async Task<DeleteMachineGroupResponse> DeleteMachineGroupAsync(string project, string machineGroup)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteMachineGroupWithOptionsAsync(project, machineGroup, headers, runtime);
+        }
+
+        public DeleteMachineGroupResponse DeleteMachineGroupWithOptions(string project, string machineGroup, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            machineGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(machineGroup);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMachineGroup",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/machinegroups/" + machineGroup,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteMachineGroupResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<DeleteMachineGroupResponse> DeleteMachineGroupWithOptionsAsync(string project, string machineGroup, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            machineGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(machineGroup);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMachineGroup",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/machinegroups/" + machineGroup,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteMachineGroupResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
         public DeleteProjectResponse DeleteProject(string project)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -844,6 +1821,214 @@ namespace AlibabaCloud.SDK.Sls20201230
                 BodyType = "none",
             };
             return TeaModel.ToObject<DeleteProjectResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public DeleteSavedSearchResponse DeleteSavedSearch(string project, string savedsearchName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteSavedSearchWithOptions(project, savedsearchName, headers, runtime);
+        }
+
+        public async Task<DeleteSavedSearchResponse> DeleteSavedSearchAsync(string project, string savedsearchName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteSavedSearchWithOptionsAsync(project, savedsearchName, headers, runtime);
+        }
+
+        public DeleteSavedSearchResponse DeleteSavedSearchWithOptions(string project, string savedsearchName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            savedsearchName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(savedsearchName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSavedSearch",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/savedsearches/" + savedsearchName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteSavedSearchResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<DeleteSavedSearchResponse> DeleteSavedSearchWithOptionsAsync(string project, string savedsearchName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            savedsearchName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(savedsearchName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSavedSearch",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/savedsearches/" + savedsearchName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteSavedSearchResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public GetAppliedConfigsResponse GetAppliedConfigs(string project, string machineGroup)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAppliedConfigsWithOptions(project, machineGroup, headers, runtime);
+        }
+
+        public async Task<GetAppliedConfigsResponse> GetAppliedConfigsAsync(string project, string machineGroup)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAppliedConfigsWithOptionsAsync(project, machineGroup, headers, runtime);
+        }
+
+        public GetAppliedConfigsResponse GetAppliedConfigsWithOptions(string project, string machineGroup, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            machineGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(machineGroup);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAppliedConfigs",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/machinegroups/" + machineGroup + "/configs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAppliedConfigsResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<GetAppliedConfigsResponse> GetAppliedConfigsWithOptionsAsync(string project, string machineGroup, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            machineGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(machineGroup);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAppliedConfigs",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/machinegroups/" + machineGroup + "/configs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAppliedConfigsResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public GetCheckPointResponse GetCheckPoint(string project, string logstore, string consumerGroup, GetCheckPointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetCheckPointWithOptions(project, logstore, consumerGroup, request, headers, runtime);
+        }
+
+        public async Task<GetCheckPointResponse> GetCheckPointAsync(string project, string logstore, string consumerGroup, GetCheckPointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetCheckPointWithOptionsAsync(project, logstore, consumerGroup, request, headers, runtime);
+        }
+
+        public GetCheckPointResponse GetCheckPointWithOptions(string project, string logstore, string consumerGroup, GetCheckPointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            consumerGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroup);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Shard))
+            {
+                query["shard"] = request.Shard;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCheckPoint",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/consumergroups/" + consumerGroup,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "array",
+            };
+            return TeaModel.ToObject<GetCheckPointResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<GetCheckPointResponse> GetCheckPointWithOptionsAsync(string project, string logstore, string consumerGroup, GetCheckPointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            consumerGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroup);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Shard))
+            {
+                query["shard"] = request.Shard;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCheckPoint",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/consumergroups/" + consumerGroup,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "array",
+            };
+            return TeaModel.ToObject<GetCheckPointResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         public GetContextLogsResponse GetContextLogs(string project, string logstore, GetContextLogsRequest request)
@@ -1132,6 +2317,98 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetCursorTimeResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        public GetEtlMetaResponse GetEtlMeta(string project, GetEtlMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetEtlMetaWithOptions(project, request, headers, runtime);
+        }
+
+        public async Task<GetEtlMetaResponse> GetEtlMetaAsync(string project, GetEtlMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetEtlMetaWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        public GetEtlMetaResponse GetEtlMetaWithOptions(string project, GetEtlMetaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ElMetaName))
+            {
+                query["elMetaName"] = request.ElMetaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaKey))
+            {
+                query["etlMetaKey"] = request.EtlMetaKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaTag))
+            {
+                query["etlMetaTag"] = request.EtlMetaTag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEtlMeta",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etlmetas",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEtlMetaResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<GetEtlMetaResponse> GetEtlMetaWithOptionsAsync(string project, GetEtlMetaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ElMetaName))
+            {
+                query["elMetaName"] = request.ElMetaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaKey))
+            {
+                query["etlMetaKey"] = request.EtlMetaKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaTag))
+            {
+                query["etlMetaTag"] = request.EtlMetaTag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEtlMeta",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etlmetas",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEtlMetaResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
         public GetHistogramsResponse GetHistograms(string project, string logstore, GetHistogramsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1370,6 +2647,68 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetLogStoreResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        public GetLoggingResponse GetLogging(string project)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetLoggingWithOptions(project, headers, runtime);
+        }
+
+        public async Task<GetLoggingResponse> GetLoggingAsync(string project)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetLoggingWithOptionsAsync(project, headers, runtime);
+        }
+
+        public GetLoggingResponse GetLoggingWithOptions(string project, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLogging",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logging",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLoggingResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<GetLoggingResponse> GetLoggingWithOptionsAsync(string project, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLogging",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logging",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLoggingResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
         public GetLogsResponse GetLogs(string project, string logstore, GetLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1510,6 +2849,70 @@ namespace AlibabaCloud.SDK.Sls20201230
                 BodyType = "array",
             };
             return TeaModel.ToObject<GetLogsResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public GetMachineGroupResponse GetMachineGroup(string project, string machineGroup)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetMachineGroupWithOptions(project, machineGroup, headers, runtime);
+        }
+
+        public async Task<GetMachineGroupResponse> GetMachineGroupAsync(string project, string machineGroup)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetMachineGroupWithOptionsAsync(project, machineGroup, headers, runtime);
+        }
+
+        public GetMachineGroupResponse GetMachineGroupWithOptions(string project, string machineGroup, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            machineGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(machineGroup);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMachineGroup",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/machinegroups/" + machineGroup,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMachineGroupResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<GetMachineGroupResponse> GetMachineGroupWithOptionsAsync(string project, string machineGroup, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            machineGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(machineGroup);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMachineGroup",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/machinegroups/" + machineGroup,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMachineGroupResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         public GetProjectResponse GetProject(string project)
@@ -1786,6 +3189,290 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ListConsumerGroupResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        public ListDomainsResponse ListDomains(string project, ListDomainsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListDomainsWithOptions(project, request, headers, runtime);
+        }
+
+        public async Task<ListDomainsResponse> ListDomainsAsync(string project, ListDomainsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListDomainsWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        public ListDomainsResponse ListDomainsWithOptions(string project, ListDomainsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["domainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDomains",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/domains",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDomainsResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<ListDomainsResponse> ListDomainsWithOptionsAsync(string project, ListDomainsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["domainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDomains",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/domains",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDomainsResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public ListEtlMetaResponse ListEtlMeta(string project, ListEtlMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListEtlMetaWithOptions(project, request, headers, runtime);
+        }
+
+        public async Task<ListEtlMetaResponse> ListEtlMetaAsync(string project, ListEtlMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListEtlMetaWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        public ListEtlMetaResponse ListEtlMetaWithOptions(string project, ListEtlMetaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaKey))
+            {
+                query["etlMetaKey"] = request.EtlMetaKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaName))
+            {
+                query["etlMetaName"] = request.EtlMetaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaTag))
+            {
+                query["etlMetaTag"] = request.EtlMetaTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEtlMeta",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etlmetas",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEtlMetaResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<ListEtlMetaResponse> ListEtlMetaWithOptionsAsync(string project, ListEtlMetaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaKey))
+            {
+                query["etlMetaKey"] = request.EtlMetaKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaName))
+            {
+                query["etlMetaName"] = request.EtlMetaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaTag))
+            {
+                query["etlMetaTag"] = request.EtlMetaTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEtlMeta",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etlmetas",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEtlMetaResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public ListEtlMetaNameResponse ListEtlMetaName(string project, ListEtlMetaNameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListEtlMetaNameWithOptions(project, request, headers, runtime);
+        }
+
+        public async Task<ListEtlMetaNameResponse> ListEtlMetaNameAsync(string project, ListEtlMetaNameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListEtlMetaNameWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        public ListEtlMetaNameResponse ListEtlMetaNameWithOptions(string project, ListEtlMetaNameRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEtlMetaName",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etlmetanames",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEtlMetaNameResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<ListEtlMetaNameResponse> ListEtlMetaNameWithOptionsAsync(string project, ListEtlMetaNameRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEtlMetaName",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etlmetanames",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEtlMetaNameResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
         public ListLogStoresResponse ListLogStores(string project, ListLogStoresRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1884,6 +3571,184 @@ namespace AlibabaCloud.SDK.Sls20201230
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListLogStoresResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public ListMachineGroupResponse ListMachineGroup(string project, ListMachineGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListMachineGroupWithOptions(project, request, headers, runtime);
+        }
+
+        public async Task<ListMachineGroupResponse> ListMachineGroupAsync(string project, ListMachineGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListMachineGroupWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        public ListMachineGroupResponse ListMachineGroupWithOptions(string project, ListMachineGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
+            {
+                query["groupName"] = request.GroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMachineGroup",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/machinegroups",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMachineGroupResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<ListMachineGroupResponse> ListMachineGroupWithOptionsAsync(string project, ListMachineGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
+            {
+                query["groupName"] = request.GroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMachineGroup",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/machinegroups",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMachineGroupResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public ListMachinesResponse ListMachines(string project, string machineGroup, ListMachinesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListMachinesWithOptions(project, machineGroup, request, headers, runtime);
+        }
+
+        public async Task<ListMachinesResponse> ListMachinesAsync(string project, string machineGroup, ListMachinesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListMachinesWithOptionsAsync(project, machineGroup, request, headers, runtime);
+        }
+
+        public ListMachinesResponse ListMachinesWithOptions(string project, string machineGroup, ListMachinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            machineGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(machineGroup);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMachines",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/machinegroups/" + machineGroup + "/machines",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMachinesResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<ListMachinesResponse> ListMachinesWithOptionsAsync(string project, string machineGroup, ListMachinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            machineGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(machineGroup);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMachines",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/machinegroups/" + machineGroup + "/machines",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMachinesResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         public ListProjectResponse ListProject(ListProjectRequest request)
@@ -2306,6 +4171,72 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<MergeShardsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        public RemoveConfigFromMachineGroupResponse RemoveConfigFromMachineGroup(string project, string machineGroup, string configName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RemoveConfigFromMachineGroupWithOptions(project, machineGroup, configName, headers, runtime);
+        }
+
+        public async Task<RemoveConfigFromMachineGroupResponse> RemoveConfigFromMachineGroupAsync(string project, string machineGroup, string configName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RemoveConfigFromMachineGroupWithOptionsAsync(project, machineGroup, configName, headers, runtime);
+        }
+
+        public RemoveConfigFromMachineGroupResponse RemoveConfigFromMachineGroupWithOptions(string project, string machineGroup, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            machineGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(machineGroup);
+            configName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(configName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveConfigFromMachineGroup",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/machinegroups/" + machineGroup + "/configs/" + configName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<RemoveConfigFromMachineGroupResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<RemoveConfigFromMachineGroupResponse> RemoveConfigFromMachineGroupWithOptionsAsync(string project, string machineGroup, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            machineGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(machineGroup);
+            configName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(configName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveConfigFromMachineGroup",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/machinegroups/" + machineGroup + "/configs/" + configName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<RemoveConfigFromMachineGroupResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
         public SplitShardResponse SplitShard(string project, string logstore, string shardID, SplitShardRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2582,6 +4513,122 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UnTagResourcesResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        public UpdateCheckPointResponse UpdateCheckPoint(string project, string logstore, string consumerGroup, UpdateCheckPointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateCheckPointWithOptions(project, logstore, consumerGroup, request, headers, runtime);
+        }
+
+        public async Task<UpdateCheckPointResponse> UpdateCheckPointAsync(string project, string logstore, string consumerGroup, UpdateCheckPointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateCheckPointWithOptionsAsync(project, logstore, consumerGroup, request, headers, runtime);
+        }
+
+        public UpdateCheckPointResponse UpdateCheckPointWithOptions(string project, string logstore, string consumerGroup, UpdateCheckPointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            consumerGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroup);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Consumer))
+            {
+                query["consumer"] = request.Consumer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceSuccess))
+            {
+                query["forceSuccess"] = request.ForceSuccess;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Checkpoint))
+            {
+                body["checkpoint"] = request.Checkpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Shard))
+            {
+                body["shard"] = request.Shard;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCheckPoint",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/consumergroups/" + consumerGroup,
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateCheckPointResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<UpdateCheckPointResponse> UpdateCheckPointWithOptionsAsync(string project, string logstore, string consumerGroup, UpdateCheckPointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            consumerGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroup);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Consumer))
+            {
+                query["consumer"] = request.Consumer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceSuccess))
+            {
+                query["forceSuccess"] = request.ForceSuccess;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Checkpoint))
+            {
+                body["checkpoint"] = request.Checkpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Shard))
+            {
+                body["shard"] = request.Shard;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCheckPoint",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/consumergroups/" + consumerGroup,
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateCheckPointResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
         public UpdateConsumerGroupResponse UpdateConsumerGroup(string project, string logstore, string consumerGroup, UpdateConsumerGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2668,6 +4715,114 @@ namespace AlibabaCloud.SDK.Sls20201230
                 BodyType = "none",
             };
             return TeaModel.ToObject<UpdateConsumerGroupResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public UpdateEtlMetaResponse UpdateEtlMeta(string project, UpdateEtlMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateEtlMetaWithOptions(project, request, headers, runtime);
+        }
+
+        public async Task<UpdateEtlMetaResponse> UpdateEtlMetaAsync(string project, UpdateEtlMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateEtlMetaWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        public UpdateEtlMetaResponse UpdateEtlMetaWithOptions(string project, UpdateEtlMetaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                body["enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaKey))
+            {
+                body["etlMetaKey"] = request.EtlMetaKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaName))
+            {
+                body["etlMetaName"] = request.EtlMetaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaTag))
+            {
+                body["etlMetaTag"] = request.EtlMetaTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaValue))
+            {
+                body["etlMetaValue"] = request.EtlMetaValue;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateEtlMeta",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etlmetas",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateEtlMetaResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<UpdateEtlMetaResponse> UpdateEtlMetaWithOptionsAsync(string project, UpdateEtlMetaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                body["enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaKey))
+            {
+                body["etlMetaKey"] = request.EtlMetaKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaName))
+            {
+                body["etlMetaName"] = request.EtlMetaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaTag))
+            {
+                body["etlMetaTag"] = request.EtlMetaTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaValue))
+            {
+                body["etlMetaValue"] = request.EtlMetaValue;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateEtlMeta",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etlmetas",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateEtlMetaResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         public UpdateIndexResponse UpdateIndex(string project, string logstore, UpdateIndexRequest request)
@@ -2944,6 +5099,200 @@ namespace AlibabaCloud.SDK.Sls20201230
                 BodyType = "none",
             };
             return TeaModel.ToObject<UpdateLogStoreResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public UpdateLoggingResponse UpdateLogging(string project, UpdateLoggingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateLoggingWithOptions(project, request, headers, runtime);
+        }
+
+        public async Task<UpdateLoggingResponse> UpdateLoggingAsync(string project, UpdateLoggingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateLoggingWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        public UpdateLoggingResponse UpdateLoggingWithOptions(string project, UpdateLoggingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoggingDetails))
+            {
+                body["loggingDetails"] = request.LoggingDetails;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoggingProject))
+            {
+                body["loggingProject"] = request.LoggingProject;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateLogging",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logging",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateLoggingResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<UpdateLoggingResponse> UpdateLoggingWithOptionsAsync(string project, UpdateLoggingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoggingDetails))
+            {
+                body["loggingDetails"] = request.LoggingDetails;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoggingProject))
+            {
+                body["loggingProject"] = request.LoggingProject;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateLogging",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logging",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateLoggingResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public UpdateMachineGroupResponse UpdateMachineGroup(string project, string groupName, UpdateMachineGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateMachineGroupWithOptions(project, groupName, request, headers, runtime);
+        }
+
+        public async Task<UpdateMachineGroupResponse> UpdateMachineGroupAsync(string project, string groupName, UpdateMachineGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateMachineGroupWithOptionsAsync(project, groupName, request, headers, runtime);
+        }
+
+        public UpdateMachineGroupResponse UpdateMachineGroupWithOptions(string project, string groupName, UpdateMachineGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            groupName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(groupName);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupAttribute.ToMap()))
+            {
+                body["groupAttribute"] = request.GroupAttribute;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
+            {
+                body["groupName"] = request.GroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupType))
+            {
+                body["groupType"] = request.GroupType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MachineIdentifyType))
+            {
+                body["machineIdentifyType"] = request.MachineIdentifyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MachineList))
+            {
+                body["machineList"] = request.MachineList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMachineGroup",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/machinegroups/" + groupName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateMachineGroupResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<UpdateMachineGroupResponse> UpdateMachineGroupWithOptionsAsync(string project, string groupName, UpdateMachineGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            groupName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(groupName);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupAttribute.ToMap()))
+            {
+                body["groupAttribute"] = request.GroupAttribute;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
+            {
+                body["groupName"] = request.GroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupType))
+            {
+                body["groupType"] = request.GroupType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MachineIdentifyType))
+            {
+                body["machineIdentifyType"] = request.MachineIdentifyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MachineList))
+            {
+                body["machineList"] = request.MachineList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMachineGroup",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/machinegroups/" + groupName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateMachineGroupResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         public UpdateProjectResponse UpdateProject(string project, UpdateProjectRequest request)

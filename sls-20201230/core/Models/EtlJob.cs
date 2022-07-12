@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// </summary>
         [NameInMap("functionParameter")]
         [Validation(Required=false)]
-        public Dictionary<string, string> FunctionParameter { get; set; }
+        public Dictionary<string, object> FunctionParameter { get; set; }
 
         /// <summary>
         /// 日志配置

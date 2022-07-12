@@ -8,27 +8,27 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class ExternalStore : TeaModel {
+    public class ListMachineGroupResponseBody : TeaModel {
         /// <summary>
-        /// 外部存储的名称。
+        /// 当前页返回的机器组数量。
         /// </summary>
-        [NameInMap("externalStoreName")]
+        [NameInMap("count")]
         [Validation(Required=false)]
-        public string ExternalStoreName { get; set; }
+        public int? Count { get; set; }
 
         /// <summary>
-        /// 参数
+        /// 机器组名称列表。
         /// </summary>
-        [NameInMap("parameter")]
+        [NameInMap("machinegroups")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Parameter { get; set; }
+        public List<string> Machinegroups { get; set; }
 
         /// <summary>
-        /// 类型。可选 rds-vpc 或者 oss
+        /// 机器组总数量。
         /// </summary>
-        [NameInMap("storeType")]
+        [NameInMap("total")]
         [Validation(Required=false)]
-        public string StoreType { get; set; }
+        public int? Total { get; set; }
 
     }
 

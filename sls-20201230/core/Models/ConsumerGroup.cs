@@ -13,21 +13,21 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ConsumerGroup : TeaModel {
         /// <summary>
-        /// consumerGroup
+        /// 消费者名称。
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// order
+        /// 是否有序消费
         /// </summary>
         [NameInMap("order")]
         [Validation(Required=false)]
         public bool? Order { get; set; }
 
         /// <summary>
-        /// timeout
+        /// 消费超时时长，单位为妙
         /// </summary>
         [NameInMap("timeout")]
         [Validation(Required=false)]

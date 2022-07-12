@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// </summary>
         [NameInMap("action")]
         [Validation(Required=false)]
-        public Dictionary<string, string> Action { get; set; }
+        public Dictionary<string, object> Action { get; set; }
 
         /// <summary>
         /// 图表的显示配置
@@ -68,14 +68,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         };
 
         /// <summary>
-        /// 图表标题
+        /// 图表标题。支持大小写英文字母、数字、下划线_、连字符-，连字符与下划线不能作为名称开头与结尾，长度必须在[2,64] 之间。
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]
         public string Title { get; set; }
 
         /// <summary>
-        /// 图标类型
+        /// 图表的类型。
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

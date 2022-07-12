@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class MachineGroup : TeaModel {
+    public class CreateMachineGroupRequest : TeaModel {
         /// <summary>
         /// 机器组属性。
         /// </summary>
         [NameInMap("groupAttribute")]
         [Validation(Required=false)]
-        public MachineGroupGroupAttribute GroupAttribute { get; set; }
-        public class MachineGroupGroupAttribute : TeaModel {
+        public CreateMachineGroupRequestGroupAttribute GroupAttribute { get; set; }
+        public class CreateMachineGroupRequestGroupAttribute : TeaModel {
             [NameInMap("externalName")]
             [Validation(Required=false)]
             public string ExternalName { get; set; }
@@ -32,21 +32,21 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// 机器组种类。目前固定为空字符串。
+        /// 机器组类型，可选值，默认为空。
         /// </summary>
         [NameInMap("groupType")]
         [Validation(Required=false)]
         public string GroupType { get; set; }
 
         /// <summary>
-        /// 机器组标识种类，支持 IP 标识或者用户自定义标识，即 ip 、userdefined。
+        /// 机器组标识种类，支持 ip 、userdefined 两种。
         /// </summary>
         [NameInMap("machineIdentifyType")]
         [Validation(Required=false)]
         public string MachineIdentifyType { get; set; }
 
         /// <summary>
-        /// 机器组标识列表。
+        /// 机器列表。
         /// </summary>
         [NameInMap("machineList")]
         [Validation(Required=false)]

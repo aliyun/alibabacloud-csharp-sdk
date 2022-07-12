@@ -1,3 +1,7 @@
+2022-07-12 Version: 1.3.0
+- Add DeleteSavedsearch.
+- Add EtlMeta.
+
 2022-07-06 Version: 1.2.0
 - Rename config to LogtailConfig, fix conflict.
 - Add Get Delete Create List Update MachineGroup.

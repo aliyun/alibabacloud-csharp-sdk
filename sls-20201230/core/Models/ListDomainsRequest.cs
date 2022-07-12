@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class ListSavedSearchRequest : TeaModel {
+    public class ListDomainsRequest : TeaModel {
+        /// <summary>
+        /// 用于搜索匹配的自定义域名
+        /// </summary>
+        [NameInMap("domainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
+
         [NameInMap("offset")]
         [Validation(Required=false)]
         public int? Offset { get; set; }
 
-        /// <summary>
-        /// 默认值为 500。
-        /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]
         public int? Size { get; set; }

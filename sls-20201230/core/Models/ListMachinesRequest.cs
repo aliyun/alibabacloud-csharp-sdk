@@ -8,13 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class ListSavedSearchRequest : TeaModel {
+    public class ListMachinesRequest : TeaModel {
+        /// <summary>
+        /// 查询开始行。默认值为0。
+        /// </summary>
         [NameInMap("offset")]
         [Validation(Required=false)]
         public int? Offset { get; set; }
 
         /// <summary>
-        /// 默认值为 500。
+        /// 分页查询时，设置的每页行数。默认值为2000。
         /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]
