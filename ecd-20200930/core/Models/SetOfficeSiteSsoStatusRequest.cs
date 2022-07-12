@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("SsoType")]
-        [Validation(Required=false)]
-        public string SsoType { get; set; }
-
     }
 
 }

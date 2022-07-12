@@ -103,6 +103,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("NetRedirect")]
+        [Validation(Required=false)]
+        public string NetRedirect { get; set; }
+
         [NameInMap("PreemptLogin")]
         [Validation(Required=false)]
         public string PreemptLogin { get; set; }
@@ -180,10 +184,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("Watermark")]
         [Validation(Required=false)]
         public string Watermark { get; set; }
-
-        [NameInMap("WatermarkCustomText")]
-        [Validation(Required=false)]
-        public string WatermarkCustomText { get; set; }
 
         [NameInMap("WatermarkTransparency")]
         [Validation(Required=false)]

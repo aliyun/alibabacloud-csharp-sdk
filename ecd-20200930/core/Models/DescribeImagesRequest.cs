@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string DesktopInstanceType { get; set; }
 
+        [NameInMap("FotaChannel")]
+        [Validation(Required=false)]
+        public string FotaChannel { get; set; }
+
         [NameInMap("GpuCategory")]
         [Validation(Required=false)]
         public bool? GpuCategory { get; set; }

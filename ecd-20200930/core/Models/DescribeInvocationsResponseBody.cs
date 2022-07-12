@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
+            [NameInMap("EndUserId")]
+            [Validation(Required=false)]
+            public string EndUserId { get; set; }
+
             [NameInMap("InvocationStatus")]
             [Validation(Required=false)]
             public string InvocationStatus { get; set; }

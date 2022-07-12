@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateImageRequest : TeaModel {
+        [NameInMap("AutoCleanUserdata")]
+        [Validation(Required=false)]
+        public bool? AutoCleanUserdata { get; set; }
+
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
@@ -16,6 +20,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public string DesktopId { get; set; }
+
+        [NameInMap("DiskType")]
+        [Validation(Required=false)]
+        public string DiskType { get; set; }
 
         [NameInMap("ImageName")]
         [Validation(Required=false)]

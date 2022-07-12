@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string ProtocolType { get; set; }
 
+            [NameInMap("SessionType")]
+            [Validation(Required=false)]
+            public string SessionType { get; set; }
+
             [NameInMap("SharedCount")]
             [Validation(Required=false)]
             public int? SharedCount { get; set; }

@@ -61,6 +61,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<ExportDesktopListInfoRequestTag> Tag { get; set; }
+        public class ExportDesktopListInfoRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("UserName")]
         [Validation(Required=false)]
         public string UserName { get; set; }

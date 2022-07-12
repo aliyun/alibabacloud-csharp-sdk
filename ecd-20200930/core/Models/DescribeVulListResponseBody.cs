@@ -33,10 +33,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string AliasName { get; set; }
 
-            [NameInMap("DesktopGroupId")]
-            [Validation(Required=false)]
-            public string DesktopGroupId { get; set; }
-
             [NameInMap("DesktopId")]
             [Validation(Required=false)]
             public string DesktopId { get; set; }
@@ -88,10 +84,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("OsVersion")]
             [Validation(Required=false)]
             public string OsVersion { get; set; }
-
-            [NameInMap("Progress")]
-            [Validation(Required=false)]
-            public int? Progress { get; set; }
 
             [NameInMap("Related")]
             [Validation(Required=false)]

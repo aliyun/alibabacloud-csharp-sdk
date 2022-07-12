@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string DesktopTypeFamily { get; set; }
 
+        [NameInMap("FotaChannel")]
+        [Validation(Required=false)]
+        public string FotaChannel { get; set; }
+
         [NameInMap("FromDesktopGroup")]
         [Validation(Required=false)]
         public bool? FromDesktopGroup { get; set; }

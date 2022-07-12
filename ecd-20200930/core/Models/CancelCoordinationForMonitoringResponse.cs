@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
-    public class SetDirectorySsoStatusResponse : TeaModel {
+    public class CancelCoordinationForMonitoringResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public SetDirectorySsoStatusResponseBody Body { get; set; }
+        public CancelCoordinationForMonitoringResponseBody Body { get; set; }
 
     }
 

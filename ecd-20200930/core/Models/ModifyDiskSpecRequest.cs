@@ -8,26 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
-    public class CreateBandwidthResourcePackagesRequest : TeaModel {
-        [NameInMap("Amount")]
-        [Validation(Required=false)]
-        public int? Amount { get; set; }
-
+    public class ModifyDiskSpecRequest : TeaModel {
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
-        [NameInMap("PackageSize")]
+        [NameInMap("DesktopId")]
         [Validation(Required=false)]
-        public int? PackageSize { get; set; }
-
-        [NameInMap("Period")]
-        [Validation(Required=false)]
-        public int? Period { get; set; }
-
-        [NameInMap("PeriodUnit")]
-        [Validation(Required=false)]
-        public string PeriodUnit { get; set; }
+        public string DesktopId { get; set; }
 
         [NameInMap("PromotionId")]
         [Validation(Required=false)]
@@ -36,6 +24,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("RootDiskPerformanceLevel")]
+        [Validation(Required=false)]
+        public string RootDiskPerformanceLevel { get; set; }
+
+        [NameInMap("UserDiskPerformanceLevel")]
+        [Validation(Required=false)]
+        public string UserDiskPerformanceLevel { get; set; }
 
     }
 

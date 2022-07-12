@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
-    public class DescribeModificationPriceResponse : TeaModel {
+    public class ApplyCoordinationForMonitoringResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeModificationPriceResponseBody Body { get; set; }
+        public ApplyCoordinationForMonitoringResponseBody Body { get; set; }
 
     }
 

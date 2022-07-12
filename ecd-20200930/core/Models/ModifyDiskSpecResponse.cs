@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
-    public class DescribeSavingPlanPriceResponse : TeaModel {
+    public class ModifyDiskSpecResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeSavingPlanPriceResponseBody Body { get; set; }
+        public ModifyDiskSpecResponseBody Body { get; set; }
 
     }
 

@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
-    public class DownloadRecordingsRequest : TeaModel {
-        [NameInMap("FilePath")]
+    public class ModifyDiskSpecResponseBody : TeaModel {
+        [NameInMap("OrderId")]
         [Validation(Required=false)]
-        public List<string> FilePath { get; set; }
+        public string OrderId { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string RequestId { get; set; }
 
     }
 

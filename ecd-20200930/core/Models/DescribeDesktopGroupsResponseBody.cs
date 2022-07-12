@@ -49,14 +49,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string DesktopGroupName { get; set; }
 
-            [NameInMap("DirectoryId")]
-            [Validation(Required=false)]
-            public string DirectoryId { get; set; }
-
-            [NameInMap("DirectoryType")]
-            [Validation(Required=false)]
-            public string DirectoryType { get; set; }
-
             [NameInMap("EndUserCount")]
             [Validation(Required=false)]
             public int? EndUserCount { get; set; }
