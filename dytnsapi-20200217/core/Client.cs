@@ -967,6 +967,54 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             return await PhoneNumberEncryptWithOptionsAsync(request, runtime);
         }
 
+        public PvrCallbackFCUResponse PvrCallbackFCUWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PvrCallbackFCU",
+                Version = "2020-02-17",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<PvrCallbackFCUResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<PvrCallbackFCUResponse> PvrCallbackFCUWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PvrCallbackFCU",
+                Version = "2020-02-17",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<PvrCallbackFCUResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public PvrCallbackFCUResponse PvrCallbackFCU()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return PvrCallbackFCUWithOptions(runtime);
+        }
+
+        public async Task<PvrCallbackFCUResponse> PvrCallbackFCUAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await PvrCallbackFCUWithOptionsAsync(runtime);
+        }
+
         public ThreeElementsVerificationResponse ThreeElementsVerificationWithOptions(ThreeElementsVerificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);

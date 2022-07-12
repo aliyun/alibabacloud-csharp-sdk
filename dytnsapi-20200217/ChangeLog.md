@@ -1,3 +1,6 @@
+2022-07-12 Version: 1.0.13
+- AMP version.
+
 2022-06-28 Version: 1.0.12
 - Support Service of number analysis.
 
