@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
 {
     public class DescribeBgpPackByIpResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public int? Code { get; set; }
+
         [NameInMap("DdosbgpInfo")]
         [Validation(Required=false)]
         public DescribeBgpPackByIpResponseBodyDdosbgpInfo DdosbgpInfo { get; set; }
@@ -33,6 +37,10 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

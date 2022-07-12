@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
+        [NameInMap("InternetIp")]
+        [Validation(Required=false)]
+        public string InternetIp { get; set; }
+
     }
 
 }

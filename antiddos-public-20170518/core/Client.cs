@@ -1017,6 +1017,10 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518
             {
                 query["InstanceType"] = request.InstanceType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetIp))
+            {
+                query["InternetIp"] = request.InternetIp;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1051,6 +1055,10 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
             {
                 query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetIp))
+            {
+                query["InternetIp"] = request.InternetIp;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
