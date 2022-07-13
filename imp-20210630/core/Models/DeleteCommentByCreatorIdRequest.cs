@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
-    public class DeleteCommentRequest : TeaModel {
+    public class DeleteCommentByCreatorIdRequest : TeaModel {
         /// <summary>
         /// 应用唯一标识，可以包含小写字母、数字，长度为6个字符。
         /// </summary>

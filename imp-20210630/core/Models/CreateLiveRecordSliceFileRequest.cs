@@ -8,41 +8,41 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
-    public class DeleteCommentRequest : TeaModel {
+    public class CreateLiveRecordSliceFileRequest : TeaModel {
         /// <summary>
-        /// 应用唯一标识，可以包含小写字母、数字，长度为6个字符。
+        /// 应用唯一标识，由6位小写字母、数字组成。
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// 需要删除的弹幕id列表
+        /// 片段结束时间，时间戳。
         /// </summary>
-        [NameInMap("CommentIdList")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public List<string> CommentIdList { get; set; }
+        public long? EndTime { get; set; }
 
         /// <summary>
-        /// 弹幕的创建者ID。
+        /// 自定义文件名称。
         /// </summary>
-        [NameInMap("CreatorId")]
+        [NameInMap("FileName")]
         [Validation(Required=false)]
-        public string CreatorId { get; set; }
+        public string FileName { get; set; }
 
         /// <summary>
-        /// 直播间唯一标识，在调用CreateRoom返回。
+        /// 直播ID。
         /// </summary>
-        [NameInMap("RoomId")]
+        [NameInMap("LiveId")]
         [Validation(Required=false)]
-        public string RoomId { get; set; }
+        public string LiveId { get; set; }
 
         /// <summary>
-        /// 删除的操作人ID。
+        /// 片段开始时间，时间戳。
         /// </summary>
-        [NameInMap("UserId")]
+        [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public string UserId { get; set; }
+        public long? StartTime { get; set; }
 
     }
 

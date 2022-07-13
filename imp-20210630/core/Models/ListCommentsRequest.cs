@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// 弹幕创建者ID。
+        /// </summary>
+        [NameInMap("CreatorId")]
+        [Validation(Required=false)]
+        public string CreatorId { get; set; }
+
+        /// <summary>
         /// 查询弹幕消息列表的分页页数。应该从1开始，每次分页拉取时递增。
         /// </summary>
         [NameInMap("PageNum")]
