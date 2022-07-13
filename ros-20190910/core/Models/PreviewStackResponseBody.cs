@@ -60,9 +60,11 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public List<PreviewStackResponseBodyStackResources> Resources { get; set; }
             public class PreviewStackResponseBodyStackResources : TeaModel {
+                public string Action { get; set; }
                 public string Description { get; set; }
                 public string LogicalResourceId { get; set; }
                 public Dictionary<string, string> Properties { get; set; }
+                public string Replacement { get; set; }
                 public List<string> RequiredBy { get; set; }
                 public string ResourceType { get; set; }
                 public Dictionary<string, string> Stack { get; set; }

@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("StackId")]
+        [Validation(Required=false)]
+        public string StackId { get; set; }
+
         [NameInMap("StackName")]
         [Validation(Required=false)]
         public string StackName { get; set; }
