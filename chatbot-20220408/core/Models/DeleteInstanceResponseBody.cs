@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public byte[] RequestId { get; set; }
+        public string RequestId { get; set; }
 
         /// <summary>
         /// 任务id

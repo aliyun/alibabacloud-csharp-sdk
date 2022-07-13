@@ -3475,6 +3475,120 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return await FeedbackWithOptionsAsync(request, runtime);
         }
 
+        public GenerateUserAccessTokenResponse GenerateUserAccessTokenWithOptions(GenerateUserAccessTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
+            {
+                query["AgentKey"] = request.AgentKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
+            {
+                query["ExpireTime"] = request.ExpireTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraInfo))
+            {
+                query["ExtraInfo"] = request.ExtraInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForeignId))
+            {
+                query["ForeignId"] = request.ForeignId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nick))
+            {
+                query["Nick"] = request.Nick;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Telephone))
+            {
+                query["Telephone"] = request.Telephone;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateUserAccessToken",
+                Version = "2022-04-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateUserAccessTokenResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GenerateUserAccessTokenResponse> GenerateUserAccessTokenWithOptionsAsync(GenerateUserAccessTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
+            {
+                query["AgentKey"] = request.AgentKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
+            {
+                query["ExpireTime"] = request.ExpireTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraInfo))
+            {
+                query["ExtraInfo"] = request.ExtraInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForeignId))
+            {
+                query["ForeignId"] = request.ForeignId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nick))
+            {
+                query["Nick"] = request.Nick;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Telephone))
+            {
+                query["Telephone"] = request.Telephone;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateUserAccessToken",
+                Version = "2022-04-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateUserAccessTokenResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GenerateUserAccessTokenResponse GenerateUserAccessToken(GenerateUserAccessTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GenerateUserAccessTokenWithOptions(request, runtime);
+        }
+
+        public async Task<GenerateUserAccessTokenResponse> GenerateUserAccessTokenAsync(GenerateUserAccessTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GenerateUserAccessTokenWithOptionsAsync(request, runtime);
+        }
+
         public GetAsyncResultResponse GetAsyncResultWithOptions(GetAsyncResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
