@@ -1,3 +1,6 @@
+2022-07-13 Version: 1.0.14
+- Generated csharp 2020-02-17 for Dytnsapi.
+
 2022-07-12 Version: 1.0.13
 - AMP version.
 
