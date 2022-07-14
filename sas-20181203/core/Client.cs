@@ -22,62 +22,62 @@ namespace AlibabaCloud.SDK.Sas20181203
             this._endpointMap = new Dictionary<string, string>
             {
                 {"cn-hangzhou", "tds.aliyuncs.com"},
-                {"ap-southeast-3", "tds.ap-southeast-3.aliyuncs.com"},
-                {"ap-northeast-1", "tds.aliyuncs.com"},
-                {"ap-northeast-2-pop", "tds.aliyuncs.com"},
-                {"ap-south-1", "tds.aliyuncs.com"},
                 {"ap-southeast-1", "tds.ap-southeast-1.aliyuncs.com"},
-                {"ap-southeast-2", "tds.aliyuncs.com"},
-                {"ap-southeast-5", "tds.aliyuncs.com"},
-                {"cn-beijing", "tds.aliyuncs.com"},
-                {"cn-beijing-finance-1", "tds.aliyuncs.com"},
-                {"cn-beijing-finance-pop", "tds.aliyuncs.com"},
-                {"cn-beijing-gov-1", "tds.aliyuncs.com"},
-                {"cn-beijing-nu16-b01", "tds.aliyuncs.com"},
-                {"cn-chengdu", "tds.aliyuncs.com"},
-                {"cn-edge-1", "tds.aliyuncs.com"},
-                {"cn-fujian", "tds.aliyuncs.com"},
-                {"cn-haidian-cm12-c01", "tds.aliyuncs.com"},
-                {"cn-hangzhou-bj-b01", "tds.aliyuncs.com"},
-                {"cn-hangzhou-finance", "tds.aliyuncs.com"},
-                {"cn-hangzhou-internal-prod-1", "tds.aliyuncs.com"},
-                {"cn-hangzhou-internal-test-1", "tds.aliyuncs.com"},
-                {"cn-hangzhou-internal-test-2", "tds.aliyuncs.com"},
-                {"cn-hangzhou-internal-test-3", "tds.aliyuncs.com"},
-                {"cn-hangzhou-test-306", "tds.aliyuncs.com"},
-                {"cn-hongkong", "tds.aliyuncs.com"},
-                {"cn-hongkong-finance-pop", "tds.aliyuncs.com"},
-                {"cn-huhehaote", "tds.aliyuncs.com"},
-                {"cn-huhehaote-nebula-1", "tds.aliyuncs.com"},
-                {"cn-north-2-gov-1", "tds.aliyuncs.com"},
-                {"cn-qingdao", "tds.aliyuncs.com"},
-                {"cn-qingdao-nebula", "tds.aliyuncs.com"},
-                {"cn-shanghai", "tds.aliyuncs.com"},
-                {"cn-shanghai-et15-b01", "tds.aliyuncs.com"},
-                {"cn-shanghai-et2-b01", "tds.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "tds.aliyuncs.com"},
-                {"cn-shanghai-inner", "tds.aliyuncs.com"},
-                {"cn-shanghai-internal-test-1", "tds.aliyuncs.com"},
-                {"cn-shenzhen", "tds.aliyuncs.com"},
-                {"cn-shenzhen-finance-1", "tds.aliyuncs.com"},
-                {"cn-shenzhen-inner", "tds.aliyuncs.com"},
-                {"cn-shenzhen-st4-d01", "tds.aliyuncs.com"},
-                {"cn-shenzhen-su18-b01", "tds.aliyuncs.com"},
-                {"cn-wuhan", "tds.aliyuncs.com"},
-                {"cn-wulanchabu", "tds.aliyuncs.com"},
-                {"cn-yushanfang", "tds.aliyuncs.com"},
-                {"cn-zhangbei", "tds.aliyuncs.com"},
-                {"cn-zhangbei-na61-b01", "tds.aliyuncs.com"},
-                {"cn-zhangjiakou", "tds.aliyuncs.com"},
-                {"cn-zhangjiakou-na62-a01", "tds.aliyuncs.com"},
-                {"cn-zhengzhou-nebula-1", "tds.aliyuncs.com"},
-                {"eu-central-1", "tds.aliyuncs.com"},
-                {"eu-west-1", "tds.aliyuncs.com"},
-                {"eu-west-1-oxs", "tds.aliyuncs.com"},
-                {"me-east-1", "tds.aliyuncs.com"},
-                {"rus-west-1-pop", "tds.aliyuncs.com"},
-                {"us-east-1", "tds.aliyuncs.com"},
-                {"us-west-1", "tds.aliyuncs.com"},
+                {"ap-southeast-3", "tds.ap-southeast-3.aliyuncs.com"},
+                {"ap-northeast-1", "sas.aliyuncs.com"},
+                {"ap-northeast-2-pop", "sas.aliyuncs.com"},
+                {"ap-south-1", "sas.aliyuncs.com"},
+                {"ap-southeast-2", "sas.aliyuncs.com"},
+                {"ap-southeast-5", "sas.aliyuncs.com"},
+                {"cn-beijing", "sas.aliyuncs.com"},
+                {"cn-beijing-finance-1", "sas.aliyuncs.com"},
+                {"cn-beijing-finance-pop", "sas.aliyuncs.com"},
+                {"cn-beijing-gov-1", "sas.aliyuncs.com"},
+                {"cn-beijing-nu16-b01", "sas.aliyuncs.com"},
+                {"cn-chengdu", "sas.aliyuncs.com"},
+                {"cn-edge-1", "sas.aliyuncs.com"},
+                {"cn-fujian", "sas.aliyuncs.com"},
+                {"cn-haidian-cm12-c01", "sas.aliyuncs.com"},
+                {"cn-hangzhou-bj-b01", "sas.aliyuncs.com"},
+                {"cn-hangzhou-finance", "sas.aliyuncs.com"},
+                {"cn-hangzhou-internal-prod-1", "sas.aliyuncs.com"},
+                {"cn-hangzhou-internal-test-1", "sas.aliyuncs.com"},
+                {"cn-hangzhou-internal-test-2", "sas.aliyuncs.com"},
+                {"cn-hangzhou-internal-test-3", "sas.aliyuncs.com"},
+                {"cn-hangzhou-test-306", "sas.aliyuncs.com"},
+                {"cn-hongkong", "sas.aliyuncs.com"},
+                {"cn-hongkong-finance-pop", "sas.aliyuncs.com"},
+                {"cn-huhehaote", "sas.aliyuncs.com"},
+                {"cn-huhehaote-nebula-1", "sas.aliyuncs.com"},
+                {"cn-north-2-gov-1", "sas.aliyuncs.com"},
+                {"cn-qingdao", "sas.aliyuncs.com"},
+                {"cn-qingdao-nebula", "sas.aliyuncs.com"},
+                {"cn-shanghai", "sas.aliyuncs.com"},
+                {"cn-shanghai-et15-b01", "sas.aliyuncs.com"},
+                {"cn-shanghai-et2-b01", "sas.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "sas.aliyuncs.com"},
+                {"cn-shanghai-inner", "sas.aliyuncs.com"},
+                {"cn-shanghai-internal-test-1", "sas.aliyuncs.com"},
+                {"cn-shenzhen", "sas.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "sas.aliyuncs.com"},
+                {"cn-shenzhen-inner", "sas.aliyuncs.com"},
+                {"cn-shenzhen-st4-d01", "sas.aliyuncs.com"},
+                {"cn-shenzhen-su18-b01", "sas.aliyuncs.com"},
+                {"cn-wuhan", "sas.aliyuncs.com"},
+                {"cn-wulanchabu", "sas.aliyuncs.com"},
+                {"cn-yushanfang", "sas.aliyuncs.com"},
+                {"cn-zhangbei", "sas.aliyuncs.com"},
+                {"cn-zhangbei-na61-b01", "sas.aliyuncs.com"},
+                {"cn-zhangjiakou", "sas.aliyuncs.com"},
+                {"cn-zhangjiakou-na62-a01", "sas.aliyuncs.com"},
+                {"cn-zhengzhou-nebula-1", "sas.aliyuncs.com"},
+                {"eu-central-1", "sas.aliyuncs.com"},
+                {"eu-west-1", "sas.aliyuncs.com"},
+                {"eu-west-1-oxs", "sas.aliyuncs.com"},
+                {"me-east-1", "sas.aliyuncs.com"},
+                {"rus-west-1-pop", "sas.aliyuncs.com"},
+                {"us-east-1", "sas.aliyuncs.com"},
+                {"us-west-1", "sas.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("sas", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -7039,6 +7039,72 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeInstanceAntiBruteForceRulesWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeInstanceRebootStatusResponse DescribeInstanceRebootStatusWithOptions(DescribeInstanceRebootStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuids))
+            {
+                query["Uuids"] = request.Uuids;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInstanceRebootStatus",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInstanceRebootStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeInstanceRebootStatusResponse> DescribeInstanceRebootStatusWithOptionsAsync(DescribeInstanceRebootStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuids))
+            {
+                query["Uuids"] = request.Uuids;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInstanceRebootStatus",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInstanceRebootStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeInstanceRebootStatusResponse DescribeInstanceRebootStatus(DescribeInstanceRebootStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeInstanceRebootStatusWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeInstanceRebootStatusResponse> DescribeInstanceRebootStatusAsync(DescribeInstanceRebootStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeInstanceRebootStatusWithOptionsAsync(request, runtime);
         }
 
         public DescribeInstanceStatisticsResponse DescribeInstanceStatisticsWithOptions(DescribeInstanceStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -17945,6 +18011,72 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryGroupedSecurityEventMarkMissListWithOptionsAsync(request, runtime);
+        }
+
+        public RebootMachineResponse RebootMachineWithOptions(RebootMachineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
+            {
+                query["Uuid"] = request.Uuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RebootMachine",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RebootMachineResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<RebootMachineResponse> RebootMachineWithOptionsAsync(RebootMachineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
+            {
+                query["Uuid"] = request.Uuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RebootMachine",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RebootMachineResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public RebootMachineResponse RebootMachine(RebootMachineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RebootMachineWithOptions(request, runtime);
+        }
+
+        public async Task<RebootMachineResponse> RebootMachineAsync(RebootMachineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RebootMachineWithOptionsAsync(request, runtime);
         }
 
         public RefreshAssetsResponse RefreshAssetsWithOptions(RefreshAssetsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

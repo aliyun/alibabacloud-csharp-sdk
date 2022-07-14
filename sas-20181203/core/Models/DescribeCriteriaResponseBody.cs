@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<DescribeCriteriaResponseBodyCriteriaList> CriteriaList { get; set; }
         public class DescribeCriteriaResponseBodyCriteriaList : TeaModel {
+            [NameInMap("MultiValues")]
+            [Validation(Required=false)]
+            public string MultiValues { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
