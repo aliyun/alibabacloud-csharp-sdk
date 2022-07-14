@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("VpcFirewallId")]
-        [Validation(Required=false)]
-        public string VpcFirewallId { get; set; }
-
         [NameInMap("NewOrder")]
         [Validation(Required=false)]
         public string NewOrder { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [NameInMap("OldOrder")]
         [Validation(Required=false)]
         public string OldOrder { get; set; }
+
+        [NameInMap("VpcFirewallId")]
+        [Validation(Required=false)]
+        public string VpcFirewallId { get; set; }
 
     }
 

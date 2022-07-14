@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyPolicyAdvancedConfigRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("InternetSwitch")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public string InternetSwitch { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("InternetSwitch")]
+        [NameInMap("SourceIp")]
         [Validation(Required=false)]
-        public string InternetSwitch { get; set; }
+        public string SourceIp { get; set; }
 
     }
 

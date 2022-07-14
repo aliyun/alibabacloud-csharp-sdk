@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyControlPolicyPositionRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("Direction")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public string Direction { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
-
-        [NameInMap("Direction")]
-        [Validation(Required=false)]
-        public string Direction { get; set; }
 
         [NameInMap("NewOrder")]
         [Validation(Required=false)]
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [NameInMap("OldOrder")]
         [Validation(Required=false)]
         public string OldOrder { get; set; }
+
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
 
     }
 

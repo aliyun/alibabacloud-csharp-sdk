@@ -9,9 +9,35 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInstanceMembersResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("Members")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public List<DescribeInstanceMembersResponseBodyMembers> Members { get; set; }
+        public class DescribeInstanceMembersResponseBodyMembers : TeaModel {
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public int? CreateTime { get; set; }
+
+            [NameInMap("MemberDesc")]
+            [Validation(Required=false)]
+            public string MemberDesc { get; set; }
+
+            [NameInMap("MemberDisplayName")]
+            [Validation(Required=false)]
+            public string MemberDisplayName { get; set; }
+
+            [NameInMap("MemberStatus")]
+            [Validation(Required=false)]
+            public string MemberStatus { get; set; }
+
+            [NameInMap("MemberUid")]
+            [Validation(Required=false)]
+            public long? MemberUid { get; set; }
+
+            [NameInMap("ModifyTime")]
+            [Validation(Required=false)]
+            public int? ModifyTime { get; set; }
+
+        }
 
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
@@ -28,35 +54,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? TotalCount { get; set; }
         };
 
-        [NameInMap("Members")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public List<DescribeInstanceMembersResponseBodyMembers> Members { get; set; }
-        public class DescribeInstanceMembersResponseBodyMembers : TeaModel {
-            [NameInMap("MemberDesc")]
-            [Validation(Required=false)]
-            public string MemberDesc { get; set; }
-
-            [NameInMap("MemberDisplayName")]
-            [Validation(Required=false)]
-            public string MemberDisplayName { get; set; }
-
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public int? CreateTime { get; set; }
-
-            [NameInMap("MemberUid")]
-            [Validation(Required=false)]
-            public long? MemberUid { get; set; }
-
-            [NameInMap("MemberStatus")]
-            [Validation(Required=false)]
-            public string MemberStatus { get; set; }
-
-            [NameInMap("ModifyTime")]
-            [Validation(Required=false)]
-            public int? ModifyTime { get; set; }
-
-        }
+        public string RequestId { get; set; }
 
     }
 

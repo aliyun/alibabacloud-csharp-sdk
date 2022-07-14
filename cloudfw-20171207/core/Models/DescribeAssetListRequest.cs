@@ -9,17 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAssetListRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public string CurrentPage { get; set; }
+
+        [NameInMap("IpVersion")]
+        [Validation(Required=false)]
+        public string IpVersion { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("CurrentPage")]
+        [NameInMap("MemberUid")]
         [Validation(Required=false)]
-        public string CurrentPage { get; set; }
+        public long? MemberUid { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -29,33 +33,29 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string RegionNo { get; set; }
 
-        [NameInMap("Status")]
+        [NameInMap("ResourceType")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string ResourceType { get; set; }
 
         [NameInMap("SearchItem")]
         [Validation(Required=false)]
         public string SearchItem { get; set; }
 
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
-        [NameInMap("ResourceType")]
-        [Validation(Required=false)]
-        public string ResourceType { get; set; }
-
         [NameInMap("SgStatus")]
         [Validation(Required=false)]
         public string SgStatus { get; set; }
 
-        [NameInMap("IpVersion")]
+        [NameInMap("SourceIp")]
         [Validation(Required=false)]
-        public string IpVersion { get; set; }
+        public string SourceIp { get; set; }
 
-        [NameInMap("MemberUid")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public long? MemberUid { get; set; }
+        public string Status { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
         [NameInMap("UserType")]
         [Validation(Required=false)]

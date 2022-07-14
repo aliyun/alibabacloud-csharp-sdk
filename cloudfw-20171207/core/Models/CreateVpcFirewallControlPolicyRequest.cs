@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateVpcFirewallControlPolicyRequest : TeaModel {
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
         [NameInMap("AclAction")]
         [Validation(Required=false)]
         public string AclAction { get; set; }
@@ -29,6 +25,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string DestPort { get; set; }
 
+        [NameInMap("DestPortGroup")]
+        [Validation(Required=false)]
+        public string DestPortGroup { get; set; }
+
+        [NameInMap("DestPortType")]
+        [Validation(Required=false)]
+        public string DestPortType { get; set; }
+
         [NameInMap("Destination")]
         [Validation(Required=false)]
         public string Destination { get; set; }
@@ -37,13 +41,25 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string DestinationType { get; set; }
 
-        [NameInMap("VpcFirewallId")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public string VpcFirewallId { get; set; }
+        public string Lang { get; set; }
+
+        [NameInMap("MemberUid")]
+        [Validation(Required=false)]
+        public string MemberUid { get; set; }
+
+        [NameInMap("NewOrder")]
+        [Validation(Required=false)]
+        public string NewOrder { get; set; }
 
         [NameInMap("Proto")]
         [Validation(Required=false)]
         public string Proto { get; set; }
+
+        [NameInMap("Release")]
+        [Validation(Required=false)]
+        public string Release { get; set; }
 
         [NameInMap("Source")]
         [Validation(Required=false)]
@@ -53,17 +69,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string SourceType { get; set; }
 
-        [NameInMap("NewOrder")]
+        [NameInMap("VpcFirewallId")]
         [Validation(Required=false)]
-        public string NewOrder { get; set; }
-
-        [NameInMap("DestPortType")]
-        [Validation(Required=false)]
-        public string DestPortType { get; set; }
-
-        [NameInMap("DestPortGroup")]
-        [Validation(Required=false)]
-        public string DestPortGroup { get; set; }
+        public string VpcFirewallId { get; set; }
 
     }
 

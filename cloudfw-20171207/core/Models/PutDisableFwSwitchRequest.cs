@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class PutDisableFwSwitchRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("IpaddrList")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public List<string> IpaddrList { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
-
-        [NameInMap("IpaddrList")]
-        [Validation(Required=false)]
-        public List<string> IpaddrList { get; set; }
 
         [NameInMap("RegionList")]
         [Validation(Required=false)]
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [NameInMap("ResourceTypeList")]
         [Validation(Required=false)]
         public List<string> ResourceTypeList { get; set; }
+
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
 
     }
 

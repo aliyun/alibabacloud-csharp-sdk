@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallAclGroupListRequest : TeaModel {
-        [NameInMap("Lang")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public string Lang { get; set; }
+        public string CurrentPage { get; set; }
 
         [NameInMap("FirewallConfigureStatus")]
         [Validation(Required=false)]
         public string FirewallConfigureStatus { get; set; }
 
-        [NameInMap("CurrentPage")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public string CurrentPage { get; set; }
+        public string Lang { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]

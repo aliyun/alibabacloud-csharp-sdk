@@ -13,21 +13,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string CurrentPage { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("MemberDesc")]
         [Validation(Required=false)]
-        public string PageSize { get; set; }
-
-        [NameInMap("MemberUid")]
-        [Validation(Required=false)]
-        public string MemberUid { get; set; }
+        public string MemberDesc { get; set; }
 
         [NameInMap("MemberDisplayName")]
         [Validation(Required=false)]
         public string MemberDisplayName { get; set; }
 
-        [NameInMap("MemberDesc")]
+        [NameInMap("MemberUid")]
         [Validation(Required=false)]
-        public string MemberDesc { get; set; }
+        public string MemberUid { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public string PageSize { get; set; }
 
     }
 

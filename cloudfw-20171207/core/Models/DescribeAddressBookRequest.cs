@@ -9,17 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAddressBookRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("ContainPort")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
+        public string ContainPort { get; set; }
 
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public string CurrentPage { get; set; }
+
+        [NameInMap("GroupType")]
+        [Validation(Required=false)]
+        public string GroupType { get; set; }
+
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -29,13 +33,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string Query { get; set; }
 
-        [NameInMap("GroupType")]
+        [NameInMap("SourceIp")]
         [Validation(Required=false)]
-        public string GroupType { get; set; }
-
-        [NameInMap("ContainPort")]
-        [Validation(Required=false)]
-        public string ContainPort { get; set; }
+        public string SourceIp { get; set; }
 
     }
 

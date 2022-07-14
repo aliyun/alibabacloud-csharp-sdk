@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class AddControlPolicyRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
         [NameInMap("AclAction")]
         [Validation(Required=false)]
         public string AclAction { get; set; }
@@ -25,6 +17,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string ApplicationName { get; set; }
 
+        [NameInMap("ApplicationNameList")]
+        [Validation(Required=false)]
+        public List<string> ApplicationNameList { get; set; }
+
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
@@ -32,6 +28,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [NameInMap("DestPort")]
         [Validation(Required=false)]
         public string DestPort { get; set; }
+
+        [NameInMap("DestPortGroup")]
+        [Validation(Required=false)]
+        public string DestPortGroup { get; set; }
+
+        [NameInMap("DestPortType")]
+        [Validation(Required=false)]
+        public string DestPortType { get; set; }
 
         [NameInMap("Destination")]
         [Validation(Required=false)]
@@ -45,37 +49,37 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string Direction { get; set; }
 
-        [NameInMap("Proto")]
+        [NameInMap("IpVersion")]
         [Validation(Required=false)]
-        public string Proto { get; set; }
+        public string IpVersion { get; set; }
 
-        [NameInMap("Source")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public string Source { get; set; }
-
-        [NameInMap("SourceType")]
-        [Validation(Required=false)]
-        public string SourceType { get; set; }
+        public string Lang { get; set; }
 
         [NameInMap("NewOrder")]
         [Validation(Required=false)]
         public string NewOrder { get; set; }
 
-        [NameInMap("DestPortType")]
+        [NameInMap("Proto")]
         [Validation(Required=false)]
-        public string DestPortType { get; set; }
-
-        [NameInMap("DestPortGroup")]
-        [Validation(Required=false)]
-        public string DestPortGroup { get; set; }
+        public string Proto { get; set; }
 
         [NameInMap("Release")]
         [Validation(Required=false)]
         public string Release { get; set; }
 
-        [NameInMap("IpVersion")]
+        [NameInMap("Source")]
         [Validation(Required=false)]
-        public string IpVersion { get; set; }
+        public string Source { get; set; }
+
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
+
+        [NameInMap("SourceType")]
+        [Validation(Required=false)]
+        public string SourceType { get; set; }
 
     }
 

@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public int? End { get; set; }
 
-        [NameInMap("Start")]
-        [Validation(Required=false)]
-        public int? Start { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Start")]
+        [Validation(Required=false)]
+        public int? Start { get; set; }
 
     }
 

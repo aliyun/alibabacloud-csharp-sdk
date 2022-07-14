@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class PutDisableAllFwSwitchRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public string InstanceId { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("InstanceId")]
+        [NameInMap("SourceIp")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string SourceIp { get; set; }
 
     }
 

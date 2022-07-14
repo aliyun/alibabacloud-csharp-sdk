@@ -9,41 +9,53 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallControlPolicyRequest : TeaModel {
-        [NameInMap("Lang")]
+        [NameInMap("AclAction")]
         [Validation(Required=false)]
-        public string Lang { get; set; }
+        public string AclAction { get; set; }
 
-        [NameInMap("VpcFirewallId")]
+        [NameInMap("AclUuid")]
         [Validation(Required=false)]
-        public string VpcFirewallId { get; set; }
+        public string AclUuid { get; set; }
 
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public string CurrentPage { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public string PageSize { get; set; }
-
-        [NameInMap("Source")]
-        [Validation(Required=false)]
-        public string Source { get; set; }
+        public string Description { get; set; }
 
         [NameInMap("Destination")]
         [Validation(Required=false)]
         public string Destination { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public string Lang { get; set; }
+
+        [NameInMap("MemberUid")]
+        [Validation(Required=false)]
+        public string MemberUid { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public string PageSize { get; set; }
 
         [NameInMap("Proto")]
         [Validation(Required=false)]
         public string Proto { get; set; }
 
-        [NameInMap("AclAction")]
+        [NameInMap("Release")]
         [Validation(Required=false)]
-        public string AclAction { get; set; }
+        public string Release { get; set; }
+
+        [NameInMap("Source")]
+        [Validation(Required=false)]
+        public string Source { get; set; }
+
+        [NameInMap("VpcFirewallId")]
+        [Validation(Required=false)]
+        public string VpcFirewallId { get; set; }
 
     }
 

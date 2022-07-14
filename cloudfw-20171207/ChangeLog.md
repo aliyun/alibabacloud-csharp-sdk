@@ -1,3 +1,6 @@
+2022-07-14 Version: 1.1.1
+- Automatically generate sdk tasks.
+
 2021-10-19 Version: 1.1.0
 - Generated csharp 2017-12-07 for Cloudfw.
 
