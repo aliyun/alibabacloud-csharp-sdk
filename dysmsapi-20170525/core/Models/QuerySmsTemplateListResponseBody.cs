@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             [Validation(Required=false)]
             public string OrderId { get; set; }
 
+            [NameInMap("OuterTemplateType")]
+            [Validation(Required=false)]
+            public int? OuterTemplateType { get; set; }
+
             [NameInMap("Reason")]
             [Validation(Required=false)]
             public QuerySmsTemplateListResponseBodySmsTemplateListReason Reason { get; set; }
