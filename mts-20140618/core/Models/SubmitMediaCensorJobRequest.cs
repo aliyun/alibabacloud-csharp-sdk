@@ -9,9 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class SubmitMediaCensorJobRequest : TeaModel {
+        [NameInMap("Barrages")]
+        [Validation(Required=false)]
+        public string Barrages { get; set; }
+
+        [NameInMap("CoverImages")]
+        [Validation(Required=false)]
+        public string CoverImages { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("ExternalUrl")]
+        [Validation(Required=false)]
+        public string ExternalUrl { get; set; }
+
+        [NameInMap("Input")]
+        [Validation(Required=false)]
+        public string Input { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PipelineId")]
+        [Validation(Required=false)]
+        public string PipelineId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -21,41 +49,17 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("Input")]
-        [Validation(Required=false)]
-        public string Input { get; set; }
-
-        [NameInMap("CoverImages")]
-        [Validation(Required=false)]
-        public string CoverImages { get; set; }
-
         [NameInMap("Title")]
         [Validation(Required=false)]
         public string Title { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("Barrages")]
-        [Validation(Required=false)]
-        public string Barrages { get; set; }
-
-        [NameInMap("PipelineId")]
-        [Validation(Required=false)]
-        public string PipelineId { get; set; }
-
-        [NameInMap("VideoCensorConfig")]
-        [Validation(Required=false)]
-        public string VideoCensorConfig { get; set; }
 
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("VideoCensorConfig")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public string VideoCensorConfig { get; set; }
 
     }
 

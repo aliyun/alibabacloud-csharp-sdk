@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class UpdateMediaCoverRequest : TeaModel {
+        [NameInMap("CoverURL")]
+        [Validation(Required=false)]
+        public string CoverURL { get; set; }
+
+        [NameInMap("MediaId")]
+        [Validation(Required=false)]
+        public string MediaId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -20,18 +32,6 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("MediaId")]
-        [Validation(Required=false)]
-        public string MediaId { get; set; }
-
-        [NameInMap("CoverURL")]
-        [Validation(Required=false)]
-        public string CoverURL { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
 
     }
 

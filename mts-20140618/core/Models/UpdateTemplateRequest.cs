@@ -9,6 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class UpdateTemplateRequest : TeaModel {
+        [NameInMap("Audio")]
+        [Validation(Required=false)]
+        public string Audio { get; set; }
+
+        [NameInMap("Container")]
+        [Validation(Required=false)]
+        public string Container { get; set; }
+
+        [NameInMap("MuxConfig")]
+        [Validation(Required=false)]
+        public string MuxConfig { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -25,33 +45,13 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("Container")]
-        [Validation(Required=false)]
-        public string Container { get; set; }
-
-        [NameInMap("Video")]
-        [Validation(Required=false)]
-        public string Video { get; set; }
-
-        [NameInMap("Audio")]
-        [Validation(Required=false)]
-        public string Audio { get; set; }
-
-        [NameInMap("MuxConfig")]
-        [Validation(Required=false)]
-        public string MuxConfig { get; set; }
-
         [NameInMap("TransConfig")]
         [Validation(Required=false)]
         public string TransConfig { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("Video")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public string Video { get; set; }
 
     }
 

@@ -9,9 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class QueryPipelineListResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("NonExistPids")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public QueryPipelineListResponseBodyNonExistPids NonExistPids { get; set; }
+        public class QueryPipelineListResponseBodyNonExistPids : TeaModel {
+            [NameInMap("String")]
+            [Validation(Required=false)]
+            public List<string> String { get; set; }
+        };
 
         [NameInMap("PipelineList")]
         [Validation(Required=false)]
@@ -21,11 +26,14 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             [Validation(Required=false)]
             public List<QueryPipelineListResponseBodyPipelineListPipeline> Pipeline { get; set; }
             public class QueryPipelineListResponseBodyPipelineListPipeline : TeaModel {
-                public string Speed { get; set; }
-                public string State { get; set; }
-                public long? SpeedLevel { get; set; }
+                public string Id { get; set; }
+                public string Name { get; set; }
                 public QueryPipelineListResponseBodyPipelineListPipelineNotifyConfig NotifyConfig { get; set; }
                 public class QueryPipelineListResponseBodyPipelineListPipelineNotifyConfig : TeaModel {
+                    [NameInMap("MqTag")]
+                    [Validation(Required=false)]
+                    public string MqTag { get; set; }
+
                     [NameInMap("MqTopic")]
                     [Validation(Required=false)]
                     public string MqTopic { get; set; }
@@ -34,30 +42,22 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                     [Validation(Required=false)]
                     public string QueueName { get; set; }
 
-                    [NameInMap("MqTag")]
-                    [Validation(Required=false)]
-                    public string MqTag { get; set; }
-
                     [NameInMap("Topic")]
                     [Validation(Required=false)]
                     public string Topic { get; set; }
 
                 }
-                public string Role { get; set; }
-                public string Name { get; set; }
-                public string Id { get; set; }
                 public long? QuotaAllocate { get; set; }
+                public string Role { get; set; }
+                public string Speed { get; set; }
+                public long? SpeedLevel { get; set; }
+                public string State { get; set; }
             }
         };
 
-        [NameInMap("NonExistPids")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public QueryPipelineListResponseBodyNonExistPids NonExistPids { get; set; }
-        public class QueryPipelineListResponseBodyNonExistPids : TeaModel {
-            [NameInMap("String")]
-            [Validation(Required=false)]
-            public List<string> String { get; set; }
-        };
+        public string RequestId { get; set; }
 
     }
 

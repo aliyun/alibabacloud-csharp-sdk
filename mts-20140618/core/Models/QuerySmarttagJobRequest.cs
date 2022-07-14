@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class QuerySmarttagJobRequest : TeaModel {
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public string JobId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("Params")]
+        [Validation(Required=false)]
+        public string Params { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -20,14 +32,6 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("JobId")]
-        [Validation(Required=false)]
-        public string JobId { get; set; }
 
     }
 

@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class ListFpShotFilesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("NextPageToken")]
-        [Validation(Required=false)]
-        public string NextPageToken { get; set; }
-
         [NameInMap("FpShotFileList")]
         [Validation(Required=false)]
         public ListFpShotFilesResponseBodyFpShotFileList FpShotFileList { get; set; }
@@ -25,25 +17,33 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             [Validation(Required=false)]
             public List<ListFpShotFilesResponseBodyFpShotFileListFpShotFile> FpShotFile { get; set; }
             public class ListFpShotFilesResponseBodyFpShotFileListFpShotFile : TeaModel {
-                public string PrimaryKey { get; set; }
+                public string FileId { get; set; }
                 public ListFpShotFilesResponseBodyFpShotFileListFpShotFileInputFile InputFile { get; set; }
                 public class ListFpShotFilesResponseBodyFpShotFileListFpShotFileInputFile : TeaModel {
-                    [NameInMap("Object")]
+                    [NameInMap("Bucket")]
                     [Validation(Required=false)]
-                    public string Object { get; set; }
+                    public string Bucket { get; set; }
 
                     [NameInMap("Location")]
                     [Validation(Required=false)]
                     public string Location { get; set; }
 
-                    [NameInMap("Bucket")]
+                    [NameInMap("Object")]
                     [Validation(Required=false)]
-                    public string Bucket { get; set; }
+                    public string Object { get; set; }
 
                 }
-                public string FileId { get; set; }
+                public string PrimaryKey { get; set; }
             }
         };
+
+        [NameInMap("NextPageToken")]
+        [Validation(Required=false)]
+        public string NextPageToken { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

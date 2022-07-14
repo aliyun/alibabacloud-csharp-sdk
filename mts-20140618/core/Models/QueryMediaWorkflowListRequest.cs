@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class QueryMediaWorkflowListRequest : TeaModel {
+        [NameInMap("MediaWorkflowIds")]
+        [Validation(Required=false)]
+        public string MediaWorkflowIds { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -20,14 +28,6 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("MediaWorkflowIds")]
-        [Validation(Required=false)]
-        public string MediaWorkflowIds { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
 
     }
 

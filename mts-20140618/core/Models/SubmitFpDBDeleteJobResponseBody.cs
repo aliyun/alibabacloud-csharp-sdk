@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class SubmitFpDBDeleteJobResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

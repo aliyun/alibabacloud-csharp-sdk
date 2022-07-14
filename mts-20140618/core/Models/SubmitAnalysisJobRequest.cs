@@ -9,29 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class SubmitAnalysisJobRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("AnalysisConfig")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string AnalysisConfig { get; set; }
 
         [NameInMap("Input")]
         [Validation(Required=false)]
         public string Input { get; set; }
 
-        [NameInMap("AnalysisConfig")]
+        [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
-        public string AnalysisConfig { get; set; }
+        public string OwnerAccount { get; set; }
 
-        [NameInMap("UserData")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string UserData { get; set; }
+        public long? OwnerId { get; set; }
 
         [NameInMap("PipelineId")]
         [Validation(Required=false)]
@@ -41,9 +33,17 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public string Priority { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("UserData")]
+        [Validation(Required=false)]
+        public string UserData { get; set; }
 
     }
 

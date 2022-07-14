@@ -9,45 +9,45 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class SubmitVideoQualityJobRequest : TeaModel {
-        [NameInMap("UserId")]
-        [Validation(Required=false)]
-        public long? UserId { get; set; }
-
-        [NameInMap("PipelineId")]
-        [Validation(Required=false)]
-        public string PipelineId { get; set; }
-
-        [NameInMap("SourceType")]
-        [Validation(Required=false)]
-        public string SourceType { get; set; }
-
-        [NameInMap("ModelId")]
-        [Validation(Required=false)]
-        public string ModelId { get; set; }
-
         [NameInMap("Input")]
         [Validation(Required=false)]
         public string Input { get; set; }
-
-        [NameInMap("Output")]
-        [Validation(Required=false)]
-        public string Output { get; set; }
 
         [NameInMap("JobParams")]
         [Validation(Required=false)]
         public string JobParams { get; set; }
 
+        [NameInMap("ModelId")]
+        [Validation(Required=false)]
+        public string ModelId { get; set; }
+
+        [NameInMap("NotifyUrl")]
+        [Validation(Required=false)]
+        public string NotifyUrl { get; set; }
+
+        [NameInMap("Output")]
+        [Validation(Required=false)]
+        public string Output { get; set; }
+
+        [NameInMap("PipelineId")]
+        [Validation(Required=false)]
+        public string PipelineId { get; set; }
+
         [NameInMap("ScheduleParams")]
         [Validation(Required=false)]
         public string ScheduleParams { get; set; }
+
+        [NameInMap("SourceType")]
+        [Validation(Required=false)]
+        public string SourceType { get; set; }
 
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }
 
-        [NameInMap("NotifyUrl")]
+        [NameInMap("UserId")]
         [Validation(Required=false)]
-        public string NotifyUrl { get; set; }
+        public long? UserId { get; set; }
 
     }
 

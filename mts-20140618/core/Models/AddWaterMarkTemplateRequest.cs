@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class AddWaterMarkTemplateRequest : TeaModel {
+        [NameInMap("Config")]
+        [Validation(Required=false)]
+        public string Config { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -20,18 +32,6 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("Config")]
-        [Validation(Required=false)]
-        public string Config { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
 
     }
 

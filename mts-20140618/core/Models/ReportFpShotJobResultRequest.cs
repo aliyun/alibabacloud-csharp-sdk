@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class ReportFpShotJobResultRequest : TeaModel {
+        [NameInMap("Details")]
+        [Validation(Required=false)]
+        public string Details { get; set; }
+
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public string JobId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -21,21 +33,9 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("JobId")]
-        [Validation(Required=false)]
-        public string JobId { get; set; }
-
         [NameInMap("Result")]
         [Validation(Required=false)]
         public string Result { get; set; }
-
-        [NameInMap("Details")]
-        [Validation(Required=false)]
-        public string Details { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
 
     }
 

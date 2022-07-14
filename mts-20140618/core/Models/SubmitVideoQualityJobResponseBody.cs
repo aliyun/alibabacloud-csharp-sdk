@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class SubmitVideoQualityJobResponseBody : TeaModel {
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

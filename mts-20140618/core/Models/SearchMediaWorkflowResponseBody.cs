@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class SearchMediaWorkflowResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
         [NameInMap("MediaWorkflowList")]
         [Validation(Required=false)]
         public SearchMediaWorkflowResponseBodyMediaWorkflowList MediaWorkflowList { get; set; }
@@ -23,12 +19,16 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             public class SearchMediaWorkflowResponseBodyMediaWorkflowListMediaWorkflow : TeaModel {
                 public string CreationTime { get; set; }
                 public string MediaWorkflowId { get; set; }
-                public string State { get; set; }
-                public string TriggerMode { get; set; }
                 public string Name { get; set; }
+                public string State { get; set; }
                 public string Topology { get; set; }
+                public string TriggerMode { get; set; }
             }
         };
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public long? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public long? PageNumber { get; set; }
+        public long? TotalCount { get; set; }
 
     }
 

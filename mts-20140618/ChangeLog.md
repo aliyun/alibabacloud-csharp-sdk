@@ -1,3 +1,6 @@
+2022-07-14 Version: 1.0.2
+- AMP version.
+
 2021-03-16 Version: 1.0.1
 - Generated csharp 2014-06-18 for Mts.
 

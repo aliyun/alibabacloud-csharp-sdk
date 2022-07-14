@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class AddPipelineRequest : TeaModel {
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("NotifyConfig")]
+        [Validation(Required=false)]
+        public string NotifyConfig { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -21,9 +33,9 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("Name")]
+        [NameInMap("Role")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string Role { get; set; }
 
         [NameInMap("Speed")]
         [Validation(Required=false)]
@@ -32,18 +44,6 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [NameInMap("SpeedLevel")]
         [Validation(Required=false)]
         public long? SpeedLevel { get; set; }
-
-        [NameInMap("NotifyConfig")]
-        [Validation(Required=false)]
-        public string NotifyConfig { get; set; }
-
-        [NameInMap("Role")]
-        [Validation(Required=false)]
-        public string Role { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
 
     }
 

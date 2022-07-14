@@ -17,17 +17,13 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             [Validation(Required=false)]
             public List<ListFpShotDBResponseBodyFpShotDBListFpShotDB> FpShotDB { get; set; }
             public class ListFpShotDBResponseBodyFpShotDBListFpShotDB : TeaModel {
-                public string Status { get; set; }
                 public string Description { get; set; }
-                public string Name { get; set; }
-                public int? ModelId { get; set; }
                 public string FpDBId { get; set; }
+                public int? ModelId { get; set; }
+                public string Name { get; set; }
+                public string Status { get; set; }
             }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
         [NameInMap("NonExistIds")]
         [Validation(Required=false)]
@@ -37,6 +33,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             [Validation(Required=false)]
             public List<string> String { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

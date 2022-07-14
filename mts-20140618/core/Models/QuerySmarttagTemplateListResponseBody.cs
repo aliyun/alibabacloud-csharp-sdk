@@ -22,12 +22,17 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             public List<QuerySmarttagTemplateListResponseBodyTemplatesTemplate> Template { get; set; }
             public class QuerySmarttagTemplateListResponseBodyTemplatesTemplate : TeaModel {
                 public string AnalyseTypes { get; set; }
+                public string FaceCategoryIds { get; set; }
+                public string FaceCustomParamsConfig { get; set; }
                 public string Industry { get; set; }
                 public bool? IsDefault { get; set; }
-                public string TemplateName { get; set; }
-                public string TemplateId { get; set; }
-                public string FaceCategoryIds { get; set; }
+                public string KeywordConfig { get; set; }
+                public string KnowledgeConfig { get; set; }
+                public string LabelType { get; set; }
+                public string LabelVersion { get; set; }
                 public string Scene { get; set; }
+                public string TemplateId { get; set; }
+                public string TemplateName { get; set; }
             }
         };
 

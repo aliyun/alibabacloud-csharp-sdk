@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class QueryFpFileDeleteJobListResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("FpFileDeleteJobList")]
         [Validation(Required=false)]
         public QueryFpFileDeleteJobListResponseBodyFpFileDeleteJobList FpFileDeleteJobList { get; set; }
@@ -21,16 +17,16 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             [Validation(Required=false)]
             public List<QueryFpFileDeleteJobListResponseBodyFpFileDeleteJobListFpFileDeleteJob> FpFileDeleteJob { get; set; }
             public class QueryFpFileDeleteJobListResponseBodyFpFileDeleteJobListFpFileDeleteJob : TeaModel {
-                public string CreationTime { get; set; }
-                public string Status { get; set; }
-                public string FinishTime { get; set; }
-                public string UserData { get; set; }
                 public string Code { get; set; }
-                public string Message { get; set; }
-                public string PipelineId { get; set; }
+                public string CreationTime { get; set; }
+                public string FileIds { get; set; }
+                public string FinishTime { get; set; }
                 public string FpDBId { get; set; }
                 public string Id { get; set; }
-                public string FileIds { get; set; }
+                public string Message { get; set; }
+                public string PipelineId { get; set; }
+                public string Status { get; set; }
+                public string UserData { get; set; }
             }
         };
 
@@ -42,6 +38,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             [Validation(Required=false)]
             public List<string> String { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

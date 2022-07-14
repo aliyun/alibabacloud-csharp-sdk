@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class ListAllMediaBucketResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("NextPageToken")]
-        [Validation(Required=false)]
-        public string NextPageToken { get; set; }
-
         [NameInMap("MediaBucketList")]
         [Validation(Required=false)]
         public ListAllMediaBucketResponseBodyMediaBucketList MediaBucketList { get; set; }
@@ -25,10 +17,19 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             [Validation(Required=false)]
             public List<ListAllMediaBucketResponseBodyMediaBucketListMediaBucket> MediaBucket { get; set; }
             public class ListAllMediaBucketResponseBodyMediaBucketListMediaBucket : TeaModel {
-                public string Type { get; set; }
                 public string Bucket { get; set; }
+                public string Referer { get; set; }
+                public string Type { get; set; }
             }
         };
+
+        [NameInMap("NextPageToken")]
+        [Validation(Required=false)]
+        public string NextPageToken { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

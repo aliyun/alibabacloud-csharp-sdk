@@ -17,17 +17,13 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public string Input { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("JobId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string JobId { get; set; }
 
-        [NameInMap("UserData")]
+        [NameInMap("JobParams")]
         [Validation(Required=false)]
-        public string UserData { get; set; }
-
-        [NameInMap("State")]
-        [Validation(Required=false)]
-        public string State { get; set; }
+        public string JobParams { get; set; }
 
         [NameInMap("Output")]
         [Validation(Required=false)]
@@ -37,17 +33,21 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public string PipelineId { get; set; }
 
-        [NameInMap("JobParams")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string JobParams { get; set; }
-
-        [NameInMap("JobId")]
-        [Validation(Required=false)]
-        public string JobId { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("Result")]
         [Validation(Required=false)]
         public string Result { get; set; }
+
+        [NameInMap("State")]
+        [Validation(Required=false)]
+        public string State { get; set; }
+
+        [NameInMap("UserData")]
+        [Validation(Required=false)]
+        public string UserData { get; set; }
 
     }
 

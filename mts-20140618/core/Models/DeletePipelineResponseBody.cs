@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class DeletePipelineResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("PipelineId")]
         [Validation(Required=false)]
         public string PipelineId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

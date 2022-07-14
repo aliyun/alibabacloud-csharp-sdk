@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class DeleteTemplateRequest : TeaModel {
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
 
     }
 

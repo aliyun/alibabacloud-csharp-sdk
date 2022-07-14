@@ -9,6 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class QueryMediaListByURLRequest : TeaModel {
+        [NameInMap("FileURLs")]
+        [Validation(Required=false)]
+        public string FileURLs { get; set; }
+
+        [NameInMap("IncludeMediaInfo")]
+        [Validation(Required=false)]
+        public bool? IncludeMediaInfo { get; set; }
+
+        [NameInMap("IncludePlayList")]
+        [Validation(Required=false)]
+        public bool? IncludePlayList { get; set; }
+
+        [NameInMap("IncludeSnapshotList")]
+        [Validation(Required=false)]
+        public bool? IncludeSnapshotList { get; set; }
+
+        [NameInMap("IncludeSummaryList")]
+        [Validation(Required=false)]
+        public bool? IncludeSummaryList { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -20,30 +44,6 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("FileURLs")]
-        [Validation(Required=false)]
-        public string FileURLs { get; set; }
-
-        [NameInMap("IncludePlayList")]
-        [Validation(Required=false)]
-        public bool? IncludePlayList { get; set; }
-
-        [NameInMap("IncludeSnapshotList")]
-        [Validation(Required=false)]
-        public bool? IncludeSnapshotList { get; set; }
-
-        [NameInMap("IncludeMediaInfo")]
-        [Validation(Required=false)]
-        public bool? IncludeMediaInfo { get; set; }
-
-        [NameInMap("IncludeSummaryList")]
-        [Validation(Required=false)]
-        public bool? IncludeSummaryList { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
 
     }
 

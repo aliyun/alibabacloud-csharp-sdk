@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("UserData")]
-        [Validation(Required=false)]
-        public string UserData { get; set; }
-
         [NameInMap("Results")]
         [Validation(Required=false)]
         public QuerySmarttagJobResponseBodyResults Results { get; set; }
@@ -29,10 +25,14 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             [Validation(Required=false)]
             public List<QuerySmarttagJobResponseBodyResultsResult> Result { get; set; }
             public class QuerySmarttagJobResponseBodyResultsResult : TeaModel {
-                public string Type { get; set; }
                 public string Data { get; set; }
+                public string Type { get; set; }
             }
         };
+
+        [NameInMap("UserData")]
+        [Validation(Required=false)]
+        public string UserData { get; set; }
 
     }
 
