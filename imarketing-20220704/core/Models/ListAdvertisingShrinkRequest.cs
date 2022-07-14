@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Imarketing20220704.Models
         [Validation(Required=false)]
         public int? Dealtype { get; set; }
 
+        [NameInMap("Device")]
+        [Validation(Required=false)]
+        public string DeviceShrink { get; set; }
+
         [NameInMap("Ext")]
         [Validation(Required=false)]
         public string ExtShrink { get; set; }
