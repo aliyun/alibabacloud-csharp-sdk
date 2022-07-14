@@ -8,10 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class DescribeEnsRegionsRequest : TeaModel {
-        [NameInMap("EnsRegionId")]
+    public class RenewARMServerInstanceResponseBody : TeaModel {
+        /// <summary>
+        /// Id of the request
+        /// </summary>
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string EnsRegionId { get; set; }
+        public string RequestId { get; set; }
 
     }
 
