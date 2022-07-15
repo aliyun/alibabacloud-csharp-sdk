@@ -1230,10 +1230,6 @@ namespace AlibabaCloud.SDK.Imp20210630
             {
                 bodyFlat["CommentIdList"] = request.CommentIdList;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreatorId))
-            {
-                body["CreatorId"] = request.CreatorId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoomId))
             {
                 body["RoomId"] = request.RoomId;
@@ -1278,10 +1274,6 @@ namespace AlibabaCloud.SDK.Imp20210630
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommentIdList))
             {
                 bodyFlat["CommentIdList"] = request.CommentIdList;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreatorId))
-            {
-                body["CreatorId"] = request.CreatorId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoomId))
             {
@@ -1673,88 +1665,6 @@ namespace AlibabaCloud.SDK.Imp20210630
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteLiveRoomWithOptionsAsync(request, runtime);
-        }
-
-        public DeleteRecordFileInfoResponse DeleteRecordFileInfoWithOptions(DeleteRecordFileInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
-            {
-                query["AppId"] = request.AppId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
-            {
-                query["MaxResults"] = request.MaxResults;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
-            {
-                query["NextToken"] = request.NextToken;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DeleteRecordFileInfo",
-                Version = "2021-06-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DeleteRecordFileInfoResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<DeleteRecordFileInfoResponse> DeleteRecordFileInfoWithOptionsAsync(DeleteRecordFileInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
-            {
-                query["AppId"] = request.AppId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
-            {
-                query["MaxResults"] = request.MaxResults;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
-            {
-                query["NextToken"] = request.NextToken;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DeleteRecordFileInfo",
-                Version = "2021-06-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DeleteRecordFileInfoResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public DeleteRecordFileInfoResponse DeleteRecordFileInfo(DeleteRecordFileInfoRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DeleteRecordFileInfoWithOptions(request, runtime);
-        }
-
-        public async Task<DeleteRecordFileInfoResponse> DeleteRecordFileInfoAsync(DeleteRecordFileInfoRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DeleteRecordFileInfoWithOptionsAsync(request, runtime);
         }
 
         public DeleteRoomResponse DeleteRoomWithOptions(DeleteRoomRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2787,88 +2697,6 @@ namespace AlibabaCloud.SDK.Imp20210630
             return await GetLiveRoomUserStatisticsWithOptionsAsync(request, runtime);
         }
 
-        public GetRecordFileInfoResponse GetRecordFileInfoWithOptions(GetRecordFileInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
-            {
-                query["AppId"] = request.AppId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
-            {
-                query["MaxResults"] = request.MaxResults;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
-            {
-                query["NextToken"] = request.NextToken;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetRecordFileInfo",
-                Version = "2021-06-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetRecordFileInfoResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<GetRecordFileInfoResponse> GetRecordFileInfoWithOptionsAsync(GetRecordFileInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
-            {
-                query["AppId"] = request.AppId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
-            {
-                query["MaxResults"] = request.MaxResults;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
-            {
-                query["NextToken"] = request.NextToken;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetRecordFileInfo",
-                Version = "2021-06-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetRecordFileInfoResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public GetRecordFileInfoResponse GetRecordFileInfo(GetRecordFileInfoRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return GetRecordFileInfoWithOptions(request, runtime);
-        }
-
-        public async Task<GetRecordFileInfoResponse> GetRecordFileInfoAsync(GetRecordFileInfoRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await GetRecordFileInfoWithOptionsAsync(request, runtime);
-        }
-
         public GetRoomResponse GetRoomWithOptions(GetRoomRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3439,112 +3267,6 @@ namespace AlibabaCloud.SDK.Imp20210630
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListConferenceUsersWithOptionsAsync(request, runtime);
-        }
-
-        public ListLiveFilesResponse ListLiveFilesWithOptions(ListLiveFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
-            {
-                query["AppId"] = request.AppId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiveId))
-            {
-                query["LiveId"] = request.LiveId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
-            {
-                query["MaxResults"] = request.MaxResults;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
-            {
-                query["NextToken"] = request.NextToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
-            {
-                query["PageNumber"] = request.PageNumber;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListLiveFiles",
-                Version = "2021-06-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListLiveFilesResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<ListLiveFilesResponse> ListLiveFilesWithOptionsAsync(ListLiveFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
-            {
-                query["AppId"] = request.AppId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiveId))
-            {
-                query["LiveId"] = request.LiveId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
-            {
-                query["MaxResults"] = request.MaxResults;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
-            {
-                query["NextToken"] = request.NextToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
-            {
-                query["PageNumber"] = request.PageNumber;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListLiveFiles",
-                Version = "2021-06-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListLiveFilesResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public ListLiveFilesResponse ListLiveFiles(ListLiveFilesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ListLiveFilesWithOptions(request, runtime);
-        }
-
-        public async Task<ListLiveFilesResponse> ListLiveFilesAsync(ListLiveFilesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ListLiveFilesWithOptionsAsync(request, runtime);
         }
 
         public ListLiveRoomsResponse ListLiveRoomsWithOptions(ListLiveRoomsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

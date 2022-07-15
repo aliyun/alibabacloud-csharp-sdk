@@ -24,13 +24,6 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public List<string> CommentIdList { get; set; }
 
         /// <summary>
-        /// 弹幕的创建者ID。
-        /// </summary>
-        [NameInMap("CreatorId")]
-        [Validation(Required=false)]
-        public string CreatorId { get; set; }
-
-        /// <summary>
         /// 直播间唯一标识，在调用CreateRoom返回。
         /// </summary>
         [NameInMap("RoomId")]

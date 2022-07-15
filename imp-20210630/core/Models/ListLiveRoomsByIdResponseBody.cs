@@ -32,12 +32,15 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
                 public string AppId { get; set; }
                 public string ChatId { get; set; }
                 public string CoverUrl { get; set; }
+                public long? CreateTime { get; set; }
+                public long? EndTime { get; set; }
                 public Dictionary<string, string> Extension { get; set; }
                 public string LiveId { get; set; }
                 public string Notice { get; set; }
                 public long? OnlineCount { get; set; }
                 public long? Pv { get; set; }
                 public string RoomId { get; set; }
+                public long? StartTime { get; set; }
                 public int? Status { get; set; }
                 public string Title { get; set; }
                 public long? Uv { get; set; }
