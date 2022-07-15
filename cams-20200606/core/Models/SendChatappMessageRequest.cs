@@ -31,6 +31,20 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustWabaId { get; set; }
 
         /// <summary>
+        /// 回落消息内容
+        /// </summary>
+        [NameInMap("FallBackContent")]
+        [Validation(Required=false)]
+        public string FallBackContent { get; set; }
+
+        /// <summary>
+        /// 回落策略ID，可在控制台创建策略并查看
+        /// </summary>
+        [NameInMap("FallBackId")]
+        [Validation(Required=false)]
+        public string FallBackId { get; set; }
+
+        /// <summary>
         /// 发送方
         /// </summary>
         [NameInMap("From")]
