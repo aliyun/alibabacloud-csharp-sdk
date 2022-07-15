@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
-    public class ResetAppCodeRequest : TeaModel {
-        [NameInMap("AppCode")]
+    public class SetAccessControlListAttributeRequest : TeaModel {
+        [NameInMap("AclId")]
         [Validation(Required=false)]
-        public string AppCode { get; set; }
+        public string AclId { get; set; }
 
-        [NameInMap("NewAppCode")]
+        [NameInMap("AclName")]
         [Validation(Required=false)]
-        public string NewAppCode { get; set; }
+        public string AclName { get; set; }
 
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]

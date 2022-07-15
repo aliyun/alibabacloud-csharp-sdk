@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string AppKey { get; set; }
 
+        [NameInMap("NewAppSecret")]
+        [Validation(Required=false)]
+        public string NewAppSecret { get; set; }
+
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }

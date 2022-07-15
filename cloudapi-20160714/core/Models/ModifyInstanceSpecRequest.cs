@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string InstanceSpec { get; set; }
 
+        [NameInMap("ModifyAction")]
+        [Validation(Required=false)]
+        public string ModifyAction { get; set; }
+
         [NameInMap("Token")]
         [Validation(Required=false)]
         public string Token { get; set; }

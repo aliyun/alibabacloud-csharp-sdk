@@ -51,6 +51,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string DomainName { get; set; }
                 public string DomainRemark { get; set; }
                 public string DomainWebSocketStatus { get; set; }
+                public bool? IsHttpRedirectToHttps { get; set; }
                 public string WildcardDomainPatterns { get; set; }
             }
         };

@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class CreateAppRequest : TeaModel {
+        [NameInMap("AppCode")]
+        [Validation(Required=false)]
+        public string AppCode { get; set; }
+
+        [NameInMap("AppKey")]
+        [Validation(Required=false)]
+        public string AppKey { get; set; }
+
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
+
+        [NameInMap("AppSecret")]
+        [Validation(Required=false)]
+        public string AppSecret { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
