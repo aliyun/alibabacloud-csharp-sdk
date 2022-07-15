@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? CheckWarningId { get; set; }
 
+            [NameInMap("FixStatus")]
+            [Validation(Required=false)]
+            public int? FixStatus { get; set; }
+
             [NameInMap("Item")]
             [Validation(Required=false)]
             public string Item { get; set; }
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Level")]
             [Validation(Required=false)]
             public string Level { get; set; }
+
+            [NameInMap("Reason")]
+            [Validation(Required=false)]
+            public string Reason { get; set; }
 
             [NameInMap("Status")]
             [Validation(Required=false)]

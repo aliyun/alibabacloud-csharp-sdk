@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<DescribeWarningMachinesResponseBodyWarningMachines> WarningMachines { get; set; }
         public class DescribeWarningMachinesResponseBodyWarningMachines : TeaModel {
+            [NameInMap("AuthVersion")]
+            [Validation(Required=false)]
+            public int? AuthVersion { get; set; }
+
+            [NameInMap("Bind")]
+            [Validation(Required=false)]
+            public bool? Bind { get; set; }
+
             [NameInMap("HighWarningCount")]
             [Validation(Required=false)]
             public int? HighWarningCount { get; set; }

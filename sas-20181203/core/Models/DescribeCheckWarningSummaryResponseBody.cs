@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? CheckCount { get; set; }
 
+            [NameInMap("CheckExploit")]
+            [Validation(Required=false)]
+            public bool? CheckExploit { get; set; }
+
+            [NameInMap("DatabaseRisk")]
+            [Validation(Required=false)]
+            public bool? DatabaseRisk { get; set; }
+
             [NameInMap("HighWarningCount")]
             [Validation(Required=false)]
             public int? HighWarningCount { get; set; }
