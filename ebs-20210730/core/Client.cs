@@ -1359,14 +1359,6 @@ namespace AlibabaCloud.SDK.Ebs20210730
             {
                 query["ReplicaGroupId"] = request.ReplicaGroupId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
-            {
-                query["SourceRegionId"] = request.SourceRegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceZoneId))
-            {
-                query["SourceZoneId"] = request.SourceZoneId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1401,14 +1393,6 @@ namespace AlibabaCloud.SDK.Ebs20210730
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplicaGroupId))
             {
                 query["ReplicaGroupId"] = request.ReplicaGroupId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
-            {
-                query["SourceRegionId"] = request.SourceRegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceZoneId))
-            {
-                query["SourceZoneId"] = request.SourceZoneId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

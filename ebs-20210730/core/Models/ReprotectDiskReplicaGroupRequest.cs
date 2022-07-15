@@ -21,14 +21,6 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [Validation(Required=false)]
         public string ReplicaGroupId { get; set; }
 
-        [NameInMap("SourceRegionId")]
-        [Validation(Required=false)]
-        public string SourceRegionId { get; set; }
-
-        [NameInMap("SourceZoneId")]
-        [Validation(Required=false)]
-        public string SourceZoneId { get; set; }
-
     }
 
 }

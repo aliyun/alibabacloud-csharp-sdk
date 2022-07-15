@@ -48,6 +48,20 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             [Validation(Required=false)]
             public long? PairNumber { get; set; }
 
+            /// <summary>
+            /// 复制组的初始源地域。
+            /// </summary>
+            [NameInMap("PrimaryRegion")]
+            [Validation(Required=false)]
+            public string PrimaryRegion { get; set; }
+
+            /// <summary>
+            /// 复制组的初始源可用区。
+            /// </summary>
+            [NameInMap("PrimaryZone")]
+            [Validation(Required=false)]
+            public string PrimaryZone { get; set; }
+
             [NameInMap("RPO")]
             [Validation(Required=false)]
             public long? RPO { get; set; }
@@ -70,6 +84,20 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             [NameInMap("SourceZoneId")]
             [Validation(Required=false)]
             public string SourceZoneId { get; set; }
+
+            /// <summary>
+            /// 复制组的初始目的地域。
+            /// </summary>
+            [NameInMap("StandbyRegion")]
+            [Validation(Required=false)]
+            public string StandbyRegion { get; set; }
+
+            /// <summary>
+            /// 复制组的初始目的可用区。
+            /// </summary>
+            [NameInMap("StandbyZone")]
+            [Validation(Required=false)]
+            public string StandbyZone { get; set; }
 
             [NameInMap("Status")]
             [Validation(Required=false)]
