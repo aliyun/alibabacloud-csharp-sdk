@@ -268,6 +268,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
+        [NameInMap("ResourceName")]
+        [Validation(Required=false)]
+        public string ResourceName { get; set; }
+
         /// <summary>
         /// 实例状态
         /// </summary>

@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public string PaymentType { get; set; }
 
+        [NameInMap("ResourceId")]
+        [Validation(Required=false)]
+        public string ResourceId { get; set; }
+
         /// <summary>
         /// 排序字段
         /// </summary>

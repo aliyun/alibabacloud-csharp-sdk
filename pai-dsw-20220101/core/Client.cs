@@ -1235,6 +1235,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             {
                 query["PaymentType"] = request.PaymentType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
             {
                 query["SortBy"] = request.SortBy;
@@ -1298,6 +1302,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentType))
             {
                 query["PaymentType"] = request.PaymentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
             {
