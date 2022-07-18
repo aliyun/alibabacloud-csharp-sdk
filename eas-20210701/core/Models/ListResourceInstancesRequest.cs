@@ -10,6 +10,15 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListResourceInstancesRequest : TeaModel {
         /// <summary>
+        /// 付费类型
+        /// PrePaid预付费
+        /// PostPaid后付费
+        /// </summary>
+        [NameInMap("ChargeType")]
+        [Validation(Required=false)]
+        public string ChargeType { get; set; }
+
+        /// <summary>
         /// 请求的页码（默认为1）
         /// </summary>
         [NameInMap("PageNumber")]

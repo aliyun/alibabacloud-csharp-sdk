@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
-    public class DescribeRegionsResponse : TeaModel {
+    public class ReportStressResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeRegionsResponseBody Body { get; set; }
+        public ReportStressResponseBody Body { get; set; }
 
     }
 

@@ -171,6 +171,13 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ServiceName { get; set; }
 
         /// <summary>
+        /// 服务的部署来源
+        /// </summary>
+        [NameInMap("Source")]
+        [Validation(Required=false)]
+        public string Source { get; set; }
+
+        /// <summary>
         /// 服务的状态
         /// </summary>
         [NameInMap("Status")]

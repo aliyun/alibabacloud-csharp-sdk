@@ -55,6 +55,66 @@ namespace AlibabaCloud.SDK.Eas20210701
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        public CreateBenchmarkTaskResponse CreateBenchmarkTask(CreateBenchmarkTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateBenchmarkTaskWithOptions(request, headers, runtime);
+        }
+
+        public async Task<CreateBenchmarkTaskResponse> CreateBenchmarkTaskAsync(CreateBenchmarkTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateBenchmarkTaskWithOptionsAsync(request, headers, runtime);
+        }
+
+        public CreateBenchmarkTaskResponse CreateBenchmarkTaskWithOptions(CreateBenchmarkTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = request.Body,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateBenchmarkTask",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/benchmark-tasks",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateBenchmarkTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateBenchmarkTaskResponse> CreateBenchmarkTaskWithOptionsAsync(CreateBenchmarkTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = request.Body,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateBenchmarkTask",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/benchmark-tasks",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateBenchmarkTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public CreateResourceResponse CreateResource(CreateResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -651,6 +711,126 @@ namespace AlibabaCloud.SDK.Eas20210701
             return TeaModel.ToObject<CreateServiceMirrorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        public CreateStressResponse CreateStress(CreateStressRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateStressWithOptions(request, headers, runtime);
+        }
+
+        public async Task<CreateStressResponse> CreateStressAsync(CreateStressRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateStressWithOptionsAsync(request, headers, runtime);
+        }
+
+        public CreateStressResponse CreateStressWithOptions(CreateStressRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = request.Body,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateStress",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/stress",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateStressResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateStressResponse> CreateStressWithOptionsAsync(CreateStressRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = request.Body,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateStress",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/stress",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateStressResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteBenchmarkTaskResponse DeleteBenchmarkTask(string ClusterId, string TaskName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteBenchmarkTaskWithOptions(ClusterId, TaskName, headers, runtime);
+        }
+
+        public async Task<DeleteBenchmarkTaskResponse> DeleteBenchmarkTaskAsync(string ClusterId, string TaskName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteBenchmarkTaskWithOptionsAsync(ClusterId, TaskName, headers, runtime);
+        }
+
+        public DeleteBenchmarkTaskResponse DeleteBenchmarkTaskWithOptions(string ClusterId, string TaskName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            TaskName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TaskName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteBenchmarkTask",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/benchmark-tasks/" + ClusterId + "/" + TaskName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteBenchmarkTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteBenchmarkTaskResponse> DeleteBenchmarkTaskWithOptionsAsync(string ClusterId, string TaskName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            TaskName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TaskName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteBenchmarkTask",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/benchmark-tasks/" + ClusterId + "/" + TaskName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteBenchmarkTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public DeleteResourceResponse DeleteResource(string ClusterId, string ResourceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1227,60 +1407,184 @@ namespace AlibabaCloud.SDK.Eas20210701
             return TeaModel.ToObject<DeleteServiceMirrorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeRegionsResponse DescribeRegions()
+        public DeleteStressResponse DeleteStress(string ClusterId, string StressName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeRegionsWithOptions(headers, runtime);
+            return DeleteStressWithOptions(ClusterId, StressName, headers, runtime);
         }
 
-        public async Task<DescribeRegionsResponse> DescribeRegionsAsync()
+        public async Task<DeleteStressResponse> DeleteStressAsync(string ClusterId, string StressName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeRegionsWithOptionsAsync(headers, runtime);
+            return await DeleteStressWithOptionsAsync(ClusterId, StressName, headers, runtime);
         }
 
-        public DescribeRegionsResponse DescribeRegionsWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteStressResponse DeleteStressWithOptions(string ClusterId, string StressName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            StressName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(StressName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "DescribeRegions",
+                Action = "DeleteStress",
                 Version = "2021-07-01",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/regions",
-                Method = "GET",
+                Pathname = "/api/v2/stress/" + ClusterId + "/" + StressName,
+                Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<DeleteStressResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteStressResponse> DeleteStressWithOptionsAsync(string ClusterId, string StressName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            StressName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(StressName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "DescribeRegions",
+                Action = "DeleteStress",
                 Version = "2021-07-01",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/regions",
+                Pathname = "/api/v2/stress/" + ClusterId + "/" + StressName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteStressResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeBenchmarkTaskResponse DescribeBenchmarkTask(string ClusterId, string TaskName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeBenchmarkTaskWithOptions(ClusterId, TaskName, headers, runtime);
+        }
+
+        public async Task<DescribeBenchmarkTaskResponse> DescribeBenchmarkTaskAsync(string ClusterId, string TaskName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeBenchmarkTaskWithOptionsAsync(ClusterId, TaskName, headers, runtime);
+        }
+
+        public DescribeBenchmarkTaskResponse DescribeBenchmarkTaskWithOptions(string ClusterId, string TaskName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            TaskName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TaskName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeBenchmarkTask",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/benchmark-tasks/" + ClusterId + "/" + TaskName,
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<DescribeBenchmarkTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeBenchmarkTaskResponse> DescribeBenchmarkTaskWithOptionsAsync(string ClusterId, string TaskName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            TaskName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TaskName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeBenchmarkTask",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/benchmark-tasks/" + ClusterId + "/" + TaskName,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeBenchmarkTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeBenchmarkTaskReportResponse DescribeBenchmarkTaskReport(string ClusterId, string TaskName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeBenchmarkTaskReportWithOptions(ClusterId, TaskName, headers, runtime);
+        }
+
+        public async Task<DescribeBenchmarkTaskReportResponse> DescribeBenchmarkTaskReportAsync(string ClusterId, string TaskName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeBenchmarkTaskReportWithOptionsAsync(ClusterId, TaskName, headers, runtime);
+        }
+
+        public DescribeBenchmarkTaskReportResponse DescribeBenchmarkTaskReportWithOptions(string ClusterId, string TaskName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            TaskName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TaskName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeBenchmarkTaskReport",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/benchmark-tasks/" + ClusterId + "/" + TaskName + "/report",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeBenchmarkTaskReportResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeBenchmarkTaskReportResponse> DescribeBenchmarkTaskReportWithOptionsAsync(string ClusterId, string TaskName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            TaskName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TaskName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeBenchmarkTaskReport",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/benchmark-tasks/" + ClusterId + "/" + TaskName + "/report",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeBenchmarkTaskReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeResourceResponse DescribeResource(string ClusterId, string ResourceId)
@@ -1817,6 +2121,122 @@ namespace AlibabaCloud.SDK.Eas20210701
             return TeaModel.ToObject<DescribeServiceMirrorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        public DescribeStressResponse DescribeStress(string ClusterId, string StressName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeStressWithOptions(ClusterId, StressName, headers, runtime);
+        }
+
+        public async Task<DescribeStressResponse> DescribeStressAsync(string ClusterId, string StressName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeStressWithOptionsAsync(ClusterId, StressName, headers, runtime);
+        }
+
+        public DescribeStressResponse DescribeStressWithOptions(string ClusterId, string StressName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            StressName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(StressName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeStress",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/stress/" + ClusterId + "/" + StressName,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeStressResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeStressResponse> DescribeStressWithOptionsAsync(string ClusterId, string StressName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            StressName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(StressName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeStress",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/stress/" + ClusterId + "/" + StressName,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeStressResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListBenchmarkTaskResponse ListBenchmarkTask()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListBenchmarkTaskWithOptions(headers, runtime);
+        }
+
+        public async Task<ListBenchmarkTaskResponse> ListBenchmarkTaskAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListBenchmarkTaskWithOptionsAsync(headers, runtime);
+        }
+
+        public ListBenchmarkTaskResponse ListBenchmarkTaskWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListBenchmarkTask",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/benchmark-tasks",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListBenchmarkTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListBenchmarkTaskResponse> ListBenchmarkTaskWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListBenchmarkTask",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/benchmark-tasks",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListBenchmarkTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public ListResourceInstanceWorkerResponse ListResourceInstanceWorker(string ClusterId, string ResourceId, string InstanceName, ListResourceInstanceWorkerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1921,6 +2341,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             ResourceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
+            {
+                query["ChargeType"] = request.ChargeType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -1955,6 +2379,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             ResourceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
+            {
+                query["ChargeType"] = request.ChargeType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -2327,6 +2755,62 @@ namespace AlibabaCloud.SDK.Eas20210701
             return TeaModel.ToObject<ListServicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        public ListStressesResponse ListStresses()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListStressesWithOptions(headers, runtime);
+        }
+
+        public async Task<ListStressesResponse> ListStressesAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListStressesWithOptionsAsync(headers, runtime);
+        }
+
+        public ListStressesResponse ListStressesWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListStresses",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/stress",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListStressesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListStressesResponse> ListStressesWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListStresses",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/stress",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListStressesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public ReleaseServiceResponse ReleaseService(string ClusterId, string ServiceName, ReleaseServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2401,6 +2885,126 @@ namespace AlibabaCloud.SDK.Eas20210701
             return TeaModel.ToObject<ReleaseServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        public ReportStressResponse ReportStress(string ClusterId, string StressName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ReportStressWithOptions(ClusterId, StressName, headers, runtime);
+        }
+
+        public async Task<ReportStressResponse> ReportStressAsync(string ClusterId, string StressName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ReportStressWithOptionsAsync(ClusterId, StressName, headers, runtime);
+        }
+
+        public ReportStressResponse ReportStressWithOptions(string ClusterId, string StressName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            StressName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(StressName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReportStress",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/stress/" + ClusterId + "/" + StressName + "/report",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReportStressResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ReportStressResponse> ReportStressWithOptionsAsync(string ClusterId, string StressName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            StressName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(StressName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReportStress",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/stress/" + ClusterId + "/" + StressName + "/report",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReportStressResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public StartBenchmarkTaskResponse StartBenchmarkTask(string ClusterId, string TaskName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return StartBenchmarkTaskWithOptions(ClusterId, TaskName, headers, runtime);
+        }
+
+        public async Task<StartBenchmarkTaskResponse> StartBenchmarkTaskAsync(string ClusterId, string TaskName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await StartBenchmarkTaskWithOptionsAsync(ClusterId, TaskName, headers, runtime);
+        }
+
+        public StartBenchmarkTaskResponse StartBenchmarkTaskWithOptions(string ClusterId, string TaskName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            TaskName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TaskName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartBenchmarkTask",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/benchmark-tasks/" + ClusterId + "/" + TaskName + "/start",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartBenchmarkTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<StartBenchmarkTaskResponse> StartBenchmarkTaskWithOptionsAsync(string ClusterId, string TaskName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            TaskName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TaskName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartBenchmarkTask",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/benchmark-tasks/" + ClusterId + "/" + TaskName + "/start",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartBenchmarkTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public StartServiceResponse StartService(string ClusterId, string ServiceName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2461,6 +3065,126 @@ namespace AlibabaCloud.SDK.Eas20210701
             return TeaModel.ToObject<StartServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        public StartStressResponse StartStress(string ClusterId, string StressName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return StartStressWithOptions(ClusterId, StressName, headers, runtime);
+        }
+
+        public async Task<StartStressResponse> StartStressAsync(string ClusterId, string StressName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await StartStressWithOptionsAsync(ClusterId, StressName, headers, runtime);
+        }
+
+        public StartStressResponse StartStressWithOptions(string ClusterId, string StressName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            StressName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(StressName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartStress",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/stress/" + ClusterId + "/" + StressName + "/start",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartStressResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<StartStressResponse> StartStressWithOptionsAsync(string ClusterId, string StressName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            StressName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(StressName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartStress",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/stress/" + ClusterId + "/" + StressName + "/start",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartStressResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public StopBenchmarkTaskResponse StopBenchmarkTask(string ClusterId, string TaskName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return StopBenchmarkTaskWithOptions(ClusterId, TaskName, headers, runtime);
+        }
+
+        public async Task<StopBenchmarkTaskResponse> StopBenchmarkTaskAsync(string ClusterId, string TaskName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await StopBenchmarkTaskWithOptionsAsync(ClusterId, TaskName, headers, runtime);
+        }
+
+        public StopBenchmarkTaskResponse StopBenchmarkTaskWithOptions(string ClusterId, string TaskName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            TaskName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TaskName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopBenchmarkTask",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/benchmark-tasks/" + ClusterId + "/" + TaskName + "/stop",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopBenchmarkTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<StopBenchmarkTaskResponse> StopBenchmarkTaskWithOptionsAsync(string ClusterId, string TaskName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            TaskName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TaskName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopBenchmarkTask",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/benchmark-tasks/" + ClusterId + "/" + TaskName + "/stop",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopBenchmarkTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public StopServiceResponse StopService(string ClusterId, string ServiceName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2519,6 +3243,130 @@ namespace AlibabaCloud.SDK.Eas20210701
                 BodyType = "json",
             };
             return TeaModel.ToObject<StopServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public StopStressResponse StopStress(string ClusterId, string StressName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return StopStressWithOptions(ClusterId, StressName, headers, runtime);
+        }
+
+        public async Task<StopStressResponse> StopStressAsync(string ClusterId, string StressName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await StopStressWithOptionsAsync(ClusterId, StressName, headers, runtime);
+        }
+
+        public StopStressResponse StopStressWithOptions(string ClusterId, string StressName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            StressName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(StressName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopStress",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/stress/" + ClusterId + "/" + StressName + "/stop",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopStressResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<StopStressResponse> StopStressWithOptionsAsync(string ClusterId, string StressName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            StressName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(StressName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopStress",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/stress/" + ClusterId + "/" + StressName + "/stop",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopStressResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateBenchmarkTaskResponse UpdateBenchmarkTask(string ClusterId, string TaskName, UpdateBenchmarkTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateBenchmarkTaskWithOptions(ClusterId, TaskName, request, headers, runtime);
+        }
+
+        public async Task<UpdateBenchmarkTaskResponse> UpdateBenchmarkTaskAsync(string ClusterId, string TaskName, UpdateBenchmarkTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateBenchmarkTaskWithOptionsAsync(ClusterId, TaskName, request, headers, runtime);
+        }
+
+        public UpdateBenchmarkTaskResponse UpdateBenchmarkTaskWithOptions(string ClusterId, string TaskName, UpdateBenchmarkTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            TaskName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TaskName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = request.Body,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateBenchmarkTask",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/benchmark-tasks/" + ClusterId + "/" + TaskName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateBenchmarkTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateBenchmarkTaskResponse> UpdateBenchmarkTaskWithOptionsAsync(string ClusterId, string TaskName, UpdateBenchmarkTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            TaskName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TaskName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = request.Body,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateBenchmarkTask",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/benchmark-tasks/" + ClusterId + "/" + TaskName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateBenchmarkTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateResourceResponse UpdateResource(string ClusterId, string ResourceId, UpdateResourceRequest request)
@@ -3083,6 +3931,70 @@ namespace AlibabaCloud.SDK.Eas20210701
                 BodyType = "json",
             };
             return TeaModel.ToObject<UpdateServiceVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateStressResponse UpdateStress(string ClusterId, string StressName, UpdateStressRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateStressWithOptions(ClusterId, StressName, request, headers, runtime);
+        }
+
+        public async Task<UpdateStressResponse> UpdateStressAsync(string ClusterId, string StressName, UpdateStressRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateStressWithOptionsAsync(ClusterId, StressName, request, headers, runtime);
+        }
+
+        public UpdateStressResponse UpdateStressWithOptions(string ClusterId, string StressName, UpdateStressRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            StressName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(StressName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = request.Body,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateStress",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/stress/" + ClusterId + "/" + StressName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateStressResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateStressResponse> UpdateStressWithOptionsAsync(string ClusterId, string StressName, UpdateStressRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            StressName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(StressName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = request.Body,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateStress",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/stress/" + ClusterId + "/" + StressName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateStressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
     }
