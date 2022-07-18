@@ -8,24 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
-    public class ListDataSourceItemResponseBody : TeaModel {
+    public class ListDestinationResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("DataSourceItems")]
+        [NameInMap("Destinations")]
         [Validation(Required=false)]
-        public ListDataSourceItemResponseBodyDataSourceItems DataSourceItems { get; set; }
-        public class ListDataSourceItemResponseBodyDataSourceItems : TeaModel {
-            [NameInMap("dataSourceItem")]
+        public ListDestinationResponseBodyDestinations Destinations { get; set; }
+        public class ListDestinationResponseBodyDestinations : TeaModel {
+            [NameInMap("destinations")]
             [Validation(Required=false)]
-            public List<ListDataSourceItemResponseBodyDataSourceItemsDataSourceItem> DataSourceItem { get; set; }
-            public class ListDataSourceItemResponseBodyDataSourceItemsDataSourceItem : TeaModel {
-                public long? DataSourceItemId { get; set; }
-                public string DeviceName { get; set; }
-                public string ProductKey { get; set; }
-                public string ScopeType { get; set; }
-                public string Topic { get; set; }
+            public List<ListDestinationResponseBodyDestinationsDestinations> Destinations { get; set; }
+            public class ListDestinationResponseBodyDestinationsDestinations : TeaModel {
+                public string Configuration { get; set; }
+                public string Description { get; set; }
+                public long? DestinationId { get; set; }
+                public bool? IsFailover { get; set; }
+                public string Name { get; set; }
+                public string Type { get; set; }
+                public string UtcCreated { get; set; }
             }
         };
 

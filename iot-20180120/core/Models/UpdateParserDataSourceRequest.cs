@@ -8,30 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
-    public class CreateDataSourceItemRequest : TeaModel {
+    public class UpdateParserDataSourceRequest : TeaModel {
         [NameInMap("DataSourceId")]
         [Validation(Required=false)]
         public long? DataSourceId { get; set; }
 
-        [NameInMap("DeviceName")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public string DeviceName { get; set; }
+        public string Description { get; set; }
 
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
-        [NameInMap("ProductKey")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public string ProductKey { get; set; }
-
-        [NameInMap("ScopeType")]
-        [Validation(Required=false)]
-        public string ScopeType { get; set; }
-
-        [NameInMap("Topic")]
-        [Validation(Required=false)]
-        public string Topic { get; set; }
+        public string Name { get; set; }
 
     }
 
