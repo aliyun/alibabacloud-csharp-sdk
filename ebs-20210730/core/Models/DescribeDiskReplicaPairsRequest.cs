@@ -19,11 +19,25 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// 查询凭证（Token）。取值为上一次调用该接口返回的NextToken参数值，初次调用接口时无需设置该参数。
+        /// 查询凭证（Token）。取值为上一次调用该接口返回的NextToken参数值，初次调用接口时无需设置该参数。如果设置了NextToken，则请求参数PageSize和PageNumber将失效，且返回数据中的TotalCount无效。
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
+
+        /// <summary>
+        /// 分页查询时的页码。
+        /// </summary>
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        /// <summary>
+        /// 分页查询时设置的每页行数。
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         /// <summary>
         /// 异步复制关系ID列表。您可以指定一个或多个异步复制关系ID进行查询。格式为：pair-cn-dsa****,pair-cn-asd****。
@@ -46,7 +60,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string ReplicaGroupId { get; set; }
 
         /// <summary>
-        /// production或backup，表示获取本地为主站点或备站点的复制对数据，默认为production。
+        /// production或backup，表示获取本地为生产站点或灾备站点的复制对数据，默认为production。
         /// </summary>
         [NameInMap("Site")]
         [Validation(Required=false)]

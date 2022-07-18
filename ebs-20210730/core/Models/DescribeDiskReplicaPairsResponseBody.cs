@@ -9,9 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class DescribeDiskReplicaPairsResponseBody : TeaModel {
+        /// <summary>
+        /// 查询凭证（Token）。取值为上一次调用该接口返回的NextToken参数值，初次调用接口时无需设置该参数。如果设置了NextToken，则请求参数PageSize和PageNumber将失效，且返回数据中的TotalCount无效。
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
+
+        /// <summary>
+        /// 参数页码。
+        /// </summary>
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        /// <summary>
+        /// 参数页行数。
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         [NameInMap("ReplicaPairs")]
         [Validation(Required=false)]
@@ -189,6 +206,13 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// 分页查询时的结果总条数。
+        /// </summary>
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 
