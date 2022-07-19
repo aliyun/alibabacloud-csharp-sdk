@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
-        [NameInMap("InstanceSubTypes")]
-        [Validation(Required=false)]
-        public List<string> InstanceSubTypes { get; set; }
-
         [NameInMap("InstanceTypes")]
         [Validation(Required=false)]
         public List<string> InstanceTypes { get; set; }

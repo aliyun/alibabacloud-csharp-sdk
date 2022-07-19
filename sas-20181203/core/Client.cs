@@ -14221,10 +14221,6 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["InstanceIds"] = request.InstanceIds;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceSubTypes))
-            {
-                query["InstanceSubTypes"] = request.InstanceSubTypes;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceTypes))
             {
                 query["InstanceTypes"] = request.InstanceTypes;
@@ -14295,10 +14291,6 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
             {
                 query["InstanceIds"] = request.InstanceIds;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceSubTypes))
-            {
-                query["InstanceSubTypes"] = request.InstanceSubTypes;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceTypes))
             {
@@ -14867,6 +14859,96 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyBackupPolicyStatusWithOptionsAsync(request, runtime);
+        }
+
+        public ModifyClearLogstoreStorageResponse ModifyClearLogstoreStorageWithOptions(ModifyClearLogstoreStorageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
+            {
+                query["From"] = request.From;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserLogStore))
+            {
+                query["UserLogStore"] = request.UserLogStore;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserProject))
+            {
+                query["UserProject"] = request.UserProject;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyClearLogstoreStorage",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyClearLogstoreStorageResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyClearLogstoreStorageResponse> ModifyClearLogstoreStorageWithOptionsAsync(ModifyClearLogstoreStorageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
+            {
+                query["From"] = request.From;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserLogStore))
+            {
+                query["UserLogStore"] = request.UserLogStore;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserProject))
+            {
+                query["UserProject"] = request.UserProject;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyClearLogstoreStorage",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyClearLogstoreStorageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyClearLogstoreStorageResponse ModifyClearLogstoreStorage(ModifyClearLogstoreStorageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyClearLogstoreStorageWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyClearLogstoreStorageResponse> ModifyClearLogstoreStorageAsync(ModifyClearLogstoreStorageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyClearLogstoreStorageWithOptionsAsync(request, runtime);
         }
 
         public ModifyCreateVulWhitelistResponse ModifyCreateVulWhitelistWithOptions(ModifyCreateVulWhitelistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
