@@ -31,6 +31,13 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// 公网质量类型
+        /// </summary>
+        [NameInMap("IspType")]
+        [Validation(Required=false)]
+        public string IspType { get; set; }
+
+        /// <summary>
         /// RegionId
         /// </summary>
         [NameInMap("RegionId")]

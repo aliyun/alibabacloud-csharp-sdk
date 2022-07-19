@@ -52,6 +52,13 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string IpVersion { get; set; }
 
         /// <summary>
+        /// 公网质量类型
+        /// </summary>
+        [NameInMap("IspType")]
+        [Validation(Required=false)]
+        public string IspType { get; set; }
+
+        /// <summary>
         /// 请求Id
         /// </summary>
         [NameInMap("RequestId")]

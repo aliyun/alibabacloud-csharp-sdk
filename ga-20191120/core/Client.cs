@@ -1681,6 +1681,10 @@ namespace AlibabaCloud.SDK.Ga20191120
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IspType))
+            {
+                query["IspType"] = request.IspType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -1719,6 +1723,10 @@ namespace AlibabaCloud.SDK.Ga20191120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IspType))
+            {
+                query["IspType"] = request.IspType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
