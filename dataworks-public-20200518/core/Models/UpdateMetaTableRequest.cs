@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string RemovedLabels { get; set; }
 
+        [NameInMap("Schema")]
+        [Validation(Required=false)]
+        public string Schema { get; set; }
+
         [NameInMap("TableGuid")]
         [Validation(Required=false)]
         public string TableGuid { get; set; }

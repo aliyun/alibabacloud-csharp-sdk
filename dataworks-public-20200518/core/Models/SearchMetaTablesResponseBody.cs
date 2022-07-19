@@ -24,6 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string OwnerId { get; set; }
                 public long? ProjectId { get; set; }
                 public string ProjectName { get; set; }
+                public string Schema { get; set; }
                 public string TableGuid { get; set; }
                 public string TableName { get; set; }
                 public long? TenantId { get; set; }

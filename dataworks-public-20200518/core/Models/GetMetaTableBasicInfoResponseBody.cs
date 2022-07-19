@@ -79,6 +79,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("ReadCount")]
             [Validation(Required=false)]
             public long? ReadCount { get; set; }
+            [NameInMap("Schema")]
+            [Validation(Required=false)]
+            public string Schema { get; set; }
             [NameInMap("TableGuid")]
             [Validation(Required=false)]
             public string TableGuid { get; set; }

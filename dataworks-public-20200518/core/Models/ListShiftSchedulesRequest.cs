@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
-    public class ListDutyRostersRequest : TeaModel {
-        [NameInMap("DutyRosterName")]
+    public class ListShiftSchedulesRequest : TeaModel {
+        [NameInMap("Owner")]
         [Validation(Required=false)]
-        public string DutyRosterName { get; set; }
-
-        [NameInMap("DutyRosterOwner")]
-        [Validation(Required=false)]
-        public string DutyRosterOwner { get; set; }
+        public string Owner { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("ShiftScheduleName")]
+        [Validation(Required=false)]
+        public string ShiftScheduleName { get; set; }
 
     }
 

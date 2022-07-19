@@ -75,6 +75,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("ProjectName")]
             [Validation(Required=false)]
             public string ProjectName { get; set; }
+            [NameInMap("Schema")]
+            [Validation(Required=false)]
+            public string Schema { get; set; }
             [NameInMap("TableGuid")]
             [Validation(Required=false)]
             public string TableGuid { get; set; }
