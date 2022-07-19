@@ -31,11 +31,11 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public class CreateMediaConvertTaskRequestSources : TeaModel {
             [NameInMap("Duration")]
             [Validation(Required=false)]
-            public float? Duration { get; set; }
+            public double? Duration { get; set; }
 
             [NameInMap("StartTime")]
             [Validation(Required=false)]
-            public float? StartTime { get; set; }
+            public double? StartTime { get; set; }
 
             [NameInMap("Subtitles")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
                 [NameInMap("TimeOffset")]
                 [Validation(Required=false)]
-                public float? TimeOffset { get; set; }
+                public double? TimeOffset { get; set; }
 
                 [NameInMap("URI")]
                 [Validation(Required=false)]
@@ -134,10 +134,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
                 public class CreateMediaConvertTaskRequestTargetsImageSnapshots : TeaModel {
                     public string Format { get; set; }
                     public int? Height { get; set; }
-                    public float? Interval { get; set; }
+                    public double? Interval { get; set; }
                     public int? Number { get; set; }
                     public string ScaleType { get; set; }
-                    public float? StartTime { get; set; }
+                    public double? StartTime { get; set; }
                     public string URI { get; set; }
                     public int? Width { get; set; }
                 }
@@ -146,14 +146,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
                 public List<CreateMediaConvertTaskRequestTargetsImageSprites> Sprites { get; set; }
                 public class CreateMediaConvertTaskRequestTargetsImageSprites : TeaModel {
                     public string Format { get; set; }
-                    public float? Interval { get; set; }
+                    public double? Interval { get; set; }
                     public int? Margin { get; set; }
                     public int? Number { get; set; }
                     public int? Pad { get; set; }
                     public float? ScaleHeight { get; set; }
                     public string ScaleType { get; set; }
                     public float? ScaleWidth { get; set; }
-                    public float? StartTime { get; set; }
+                    public double? StartTime { get; set; }
                     public int? TileHeight { get; set; }
                     public int? TileWidth { get; set; }
                     public string URI { get; set; }
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public class CreateMediaConvertTaskRequestTargetsSegment : TeaModel {
                 [NameInMap("Duration")]
                 [Validation(Required=false)]
-                public float? Duration { get; set; }
+                public double? Duration { get; set; }
                 [NameInMap("Format")]
                 [Validation(Required=false)]
                 public string Format { get; set; }
@@ -224,9 +224,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
                     [Validation(Required=false)]
                     public List<CreateMediaConvertTaskRequestTargetsVideoFilterVideoDelogos> Delogos { get; set; }
                     public class CreateMediaConvertTaskRequestTargetsVideoFilterVideoDelogos : TeaModel {
-                        [NameInMap("Durtion")]
+                        [NameInMap("Duration")]
                         [Validation(Required=false)]
-                        public float? Durtion { get; set; }
+                        public double? Duration { get; set; }
 
                         [NameInMap("Dx")]
                         [Validation(Required=false)]
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
                         [NameInMap("StartTime")]
                         [Validation(Required=false)]
-                        public float? StartTime { get; set; }
+                        public double? StartTime { get; set; }
 
                         [NameInMap("Width")]
                         [Validation(Required=false)]
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
                         [NameInMap("Duration")]
                         [Validation(Required=false)]
-                        public float? Duration { get; set; }
+                        public double? Duration { get; set; }
 
                         [NameInMap("Dx")]
                         [Validation(Required=false)]
@@ -308,7 +308,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
                         [NameInMap("StartTime")]
                         [Validation(Required=false)]
-                        public float? StartTime { get; set; }
+                        public double? StartTime { get; set; }
 
                         [NameInMap("Type")]
                         [Validation(Required=false)]

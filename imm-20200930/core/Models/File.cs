@@ -487,7 +487,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public string StartTime { get; set; }
+        public double? StartTime { get; set; }
 
         /// <summary>
         /// StreamCount
@@ -544,13 +544,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("VideoHeight")]
         [Validation(Required=false)]
         public long? VideoHeight { get; set; }
-
-        /// <summary>
-        /// VideoStartTime
-        /// </summary>
-        [NameInMap("VideoStartTime")]
-        [Validation(Required=false)]
-        public float? VideoStartTime { get; set; }
 
         /// <summary>
         /// VideoStreams

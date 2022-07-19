@@ -1,3 +1,6 @@
+2022-07-19 Version: 1.27.4
+- Add Body Detection and Image Splicing API.
+
 2022-06-24 Version: 1.27.3
 - CreateOfficeConversionTask support TargetURI pattern.
 

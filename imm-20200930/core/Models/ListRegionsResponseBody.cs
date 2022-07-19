@@ -1,0 +1,25 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Imm20200930.Models
+{
+    public class ListRegionsResponseBody : TeaModel {
+        [NameInMap("Regions")]
+        [Validation(Required=false)]
+        public List<RegionType> Regions { get; set; }
+
+        /// <summary>
+        /// RequestId
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+    }
+
+}

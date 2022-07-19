@@ -9,6 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class UpdateStoryRequest : TeaModel {
+        [NameInMap("Cover")]
+        [Validation(Required=false)]
+        public UpdateStoryRequestCover Cover { get; set; }
+        public class UpdateStoryRequestCover : TeaModel {
+            [NameInMap("URI")]
+            [Validation(Required=false)]
+            public string URI { get; set; }
+        };
+
         [NameInMap("CustomId")]
         [Validation(Required=false)]
         public string CustomId { get; set; }

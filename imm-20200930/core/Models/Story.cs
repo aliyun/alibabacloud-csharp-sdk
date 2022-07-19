@@ -56,13 +56,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public List<File> Files { get; set; }
 
         /// <summary>
-        /// MIILCustomFields
-        /// </summary>
-        [NameInMap("MIILCustomFields")]
-        [Validation(Required=false)]
-        public List<Dictionary<string, object>> MIILCustomFields { get; set; }
-
-        /// <summary>
         /// ObjectId
         /// </summary>
         [NameInMap("ObjectId")]

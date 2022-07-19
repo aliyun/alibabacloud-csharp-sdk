@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// </summary>
         [NameInMap("Duration")]
         [Validation(Required=false)]
-        public float? Duration { get; set; }
+        public double? Duration { get; set; }
 
         /// <summary>
         /// FrameCount
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public float? StartTime { get; set; }
+        public double? StartTime { get; set; }
 
         /// <summary>
         /// TimeBase

@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Size")]
+        [Validation(Required=false)]
+        public long? Size { get; set; }
+
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public double? StartTime { get; set; }
@@ -92,10 +96,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("VideoHeight")]
         [Validation(Required=false)]
         public long? VideoHeight { get; set; }
-
-        [NameInMap("VideoStartTime")]
-        [Validation(Required=false)]
-        public double? VideoStartTime { get; set; }
 
         [NameInMap("VideoStreams")]
         [Validation(Required=false)]
