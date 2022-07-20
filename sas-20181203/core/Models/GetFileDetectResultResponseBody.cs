@@ -34,6 +34,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? Result { get; set; }
 
+            [NameInMap("Score")]
+            [Validation(Required=false)]
+            public int? Score { get; set; }
+
+            [NameInMap("VirusType")]
+            [Validation(Required=false)]
+            public string VirusType { get; set; }
+
         }
 
     }
