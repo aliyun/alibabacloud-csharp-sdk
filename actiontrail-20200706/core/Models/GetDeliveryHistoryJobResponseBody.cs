@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("HomeRegion")]
+        [Validation(Required=false)]
+        public string HomeRegion { get; set; }
+
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public long? JobId { get; set; }

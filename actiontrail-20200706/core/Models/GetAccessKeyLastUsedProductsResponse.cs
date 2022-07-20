@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
-    public class DeleteDeliveryHistoryJobResponse : TeaModel {
+    public class GetAccessKeyLastUsedProductsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DeleteDeliveryHistoryJobResponseBody Body { get; set; }
+        public GetAccessKeyLastUsedProductsResponseBody Body { get; set; }
 
     }
 
