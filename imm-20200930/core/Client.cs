@@ -1419,6 +1419,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 query["ImageFormat"] = request.ImageFormat;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Margin))
+            {
+                query["Margin"] = request.Margin;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyEndpoint))
             {
                 query["NotifyEndpoint"] = request.NotifyEndpoint;
@@ -1515,6 +1519,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageFormat))
             {
                 query["ImageFormat"] = request.ImageFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Margin))
+            {
+                query["Margin"] = request.Margin;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyEndpoint))
             {

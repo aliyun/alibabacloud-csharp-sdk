@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string ImageFormat { get; set; }
 
+        [NameInMap("Margin")]
+        [Validation(Required=false)]
+        public long? Margin { get; set; }
+
         [NameInMap("NotifyEndpoint")]
         [Validation(Required=false)]
         public string NotifyEndpoint { get; set; }
