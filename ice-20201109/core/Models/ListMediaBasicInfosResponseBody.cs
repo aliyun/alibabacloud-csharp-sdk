@@ -37,6 +37,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     [NameInMap("Bitrate")]
                     [Validation(Required=false)]
                     public string Bitrate { get; set; }
+                    [NameInMap("CreateTime")]
+                    [Validation(Required=false)]
+                    public string CreateTime { get; set; }
                     [NameInMap("Duration")]
                     [Validation(Required=false)]
                     public string Duration { get; set; }
@@ -61,6 +64,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     [NameInMap("Height")]
                     [Validation(Required=false)]
                     public string Height { get; set; }
+                    [NameInMap("ModifiedTime")]
+                    [Validation(Required=false)]
+                    public string ModifiedTime { get; set; }
                     [NameInMap("Region")]
                     [Validation(Required=false)]
                     public string Region { get; set; }
@@ -78,9 +84,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public ListMediaBasicInfosResponseBodyMediaInfosMediaBasicInfo MediaBasicInfo { get; set; }
             public class ListMediaBasicInfosResponseBodyMediaInfosMediaBasicInfo : TeaModel {
+                [NameInMap("Biz")]
+                [Validation(Required=false)]
+                public string Biz { get; set; }
                 [NameInMap("BusinessType")]
                 [Validation(Required=false)]
                 public string BusinessType { get; set; }
+                [NameInMap("CateId")]
+                [Validation(Required=false)]
+                public long? CateId { get; set; }
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
@@ -129,6 +141,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [NameInMap("TranscodeStatus")]
                 [Validation(Required=false)]
                 public string TranscodeStatus { get; set; }
+                [NameInMap("UploadSource")]
+                [Validation(Required=false)]
+                public string UploadSource { get; set; }
                 [NameInMap("UserData")]
                 [Validation(Required=false)]
                 public string UserData { get; set; }

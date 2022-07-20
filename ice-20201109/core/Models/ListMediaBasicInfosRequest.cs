@@ -17,13 +17,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string BusinessType { get; set; }
 
         /// <summary>
-        /// 分类
-        /// </summary>
-        [NameInMap("Category")]
-        [Validation(Required=false)]
-        public string Category { get; set; }
-
-        /// <summary>
         /// 结束时间
         /// </summary>
         [NameInMap("EndTime")]

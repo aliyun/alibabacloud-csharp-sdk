@@ -38,13 +38,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string PreviewMedia { get; set; }
 
         /// <summary>
-        /// 模板相关素材，模板编辑器使用
-        /// </summary>
-        [NameInMap("RelatedMediaids")]
-        [Validation(Required=false)]
-        public string RelatedMediaids { get; set; }
-
-        /// <summary>
         /// 模板创建来源，默认OpenAPI
         /// </summary>
         [NameInMap("Source")]

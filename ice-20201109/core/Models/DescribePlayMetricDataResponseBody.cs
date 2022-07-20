@@ -1,0 +1,35 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.ICE20201109.Models
+{
+    public class DescribePlayMetricDataResponseBody : TeaModel {
+        [NameInMap("Nodes")]
+        [Validation(Required=false)]
+        public List<DescribePlayMetricDataResponseBodyNodes> Nodes { get; set; }
+        public class DescribePlayMetricDataResponseBodyNodes : TeaModel {
+            [NameInMap("X")]
+            [Validation(Required=false)]
+            public long? X { get; set; }
+
+            [NameInMap("Y")]
+            [Validation(Required=false)]
+            public long? Y { get; set; }
+
+        }
+
+        /// <summary>
+        /// Id
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+    }
+
+}

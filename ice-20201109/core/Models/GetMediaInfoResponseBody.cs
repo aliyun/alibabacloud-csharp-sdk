@@ -13,32 +13,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public GetMediaInfoResponseBodyMediaInfo MediaInfo { get; set; }
         public class GetMediaInfoResponseBodyMediaInfo : TeaModel {
-            [NameInMap("AiRoughDataList")]
-            [Validation(Required=false)]
-            public List<GetMediaInfoResponseBodyMediaInfoAiRoughDataList> AiRoughDataList { get; set; }
-            public class GetMediaInfoResponseBodyMediaInfoAiRoughDataList : TeaModel {
-                public string Result { get; set; }
-                public string Type { get; set; }
-            }
-            [NameInMap("DynamicMetaData")]
-            [Validation(Required=false)]
-            public GetMediaInfoResponseBodyMediaInfoDynamicMetaData DynamicMetaData { get; set; }
-            public class GetMediaInfoResponseBodyMediaInfoDynamicMetaData : TeaModel {
-                /// <summary>
-                /// 元数据json
-                /// </summary>
-                [NameInMap("Data")]
-                [Validation(Required=false)]
-                public string Data { get; set; }
-
-                /// <summary>
-                /// 类型
-                /// </summary>
-                [NameInMap("Type")]
-                [Validation(Required=false)]
-                public string Type { get; set; }
-
-            }
             [NameInMap("FileInfoList")]
             [Validation(Required=false)]
             public List<GetMediaInfoResponseBodyMediaInfoFileInfoList> FileInfoList { get; set; }
@@ -72,6 +46,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     [NameInMap("Bitrate")]
                     [Validation(Required=false)]
                     public string Bitrate { get; set; }
+
+                    [NameInMap("CreateTime")]
+                    [Validation(Required=false)]
+                    public string CreateTime { get; set; }
 
                     /// <summary>
                     /// 时长
@@ -128,6 +106,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     [NameInMap("Height")]
                     [Validation(Required=false)]
                     public string Height { get; set; }
+
+                    [NameInMap("ModifiedTime")]
+                    [Validation(Required=false)]
+                    public string ModifiedTime { get; set; }
 
                     /// <summary>
                     /// 文件存储区域
@@ -189,12 +171,24 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo MediaBasicInfo { get; set; }
             public class GetMediaInfoResponseBodyMediaInfoMediaBasicInfo : TeaModel {
+                [NameInMap("Biz")]
+                [Validation(Required=false)]
+                public string Biz { get; set; }
+
                 /// <summary>
                 /// 媒资业务类型
                 /// </summary>
                 [NameInMap("BusinessType")]
                 [Validation(Required=false)]
                 public string BusinessType { get; set; }
+
+                [NameInMap("CateId")]
+                [Validation(Required=false)]
+                public long? CateId { get; set; }
+
+                [NameInMap("CateName")]
+                [Validation(Required=false)]
+                public string CateName { get; set; }
 
                 /// <summary>
                 /// 分类
@@ -293,6 +287,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [NameInMap("Title")]
                 [Validation(Required=false)]
                 public string Title { get; set; }
+
+                [NameInMap("UploadSource")]
+                [Validation(Required=false)]
+                public string UploadSource { get; set; }
 
                 /// <summary>
                 /// 用户数据

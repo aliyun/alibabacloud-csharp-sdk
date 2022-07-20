@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class UpdateMediaInfoRequest : TeaModel {
         /// <summary>
-        /// 是否以append的形式更新DynamicMetaDataList字段
-        /// </summary>
-        [NameInMap("AppendDynamicMeta")]
-        [Validation(Required=false)]
-        public bool? AppendDynamicMeta { get; set; }
-
-        /// <summary>
         /// 是否以append的形式更新Tags字段
         /// </summary>
         [NameInMap("AppendTags")]
@@ -29,6 +22,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("BusinessType")]
         [Validation(Required=false)]
         public string BusinessType { get; set; }
+
+        [NameInMap("CateId")]
+        [Validation(Required=false)]
+        public long? CateId { get; set; }
 
         /// <summary>
         /// 分类
@@ -50,13 +47,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
-
-        /// <summary>
-        /// 用户自定义元数据
-        /// </summary>
-        [NameInMap("DynamicMetaDataList")]
-        [Validation(Required=false)]
-        public string DynamicMetaDataList { get; set; }
 
         /// <summary>
         /// 媒资媒体类型

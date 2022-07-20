@@ -16,12 +16,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string BusinessType { get; set; }
 
-        /// <summary>
-        /// 分类
-        /// </summary>
-        [NameInMap("Category")]
+        [NameInMap("CateId")]
         [Validation(Required=false)]
-        public string Category { get; set; }
+        public long? CateId { get; set; }
 
         /// <summary>
         /// 客户端token
@@ -43,13 +40,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
-
-        /// <summary>
-        /// 用户自定义元数据
-        /// </summary>
-        [NameInMap("DynamicMetaDataList")]
-        [Validation(Required=false)]
-        public string DynamicMetaDataList { get; set; }
 
         /// <summary>
         /// 媒资媒体url
