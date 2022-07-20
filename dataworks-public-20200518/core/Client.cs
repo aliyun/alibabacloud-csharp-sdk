@@ -18690,6 +18690,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["ProjectIdentifier"] = request.ProjectIdentifier;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkipAllDeployFileExtensions))
+            {
+                body["SkipAllDeployFileExtensions"] = request.SkipAllDeployFileExtensions;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -18728,6 +18732,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectIdentifier))
             {
                 body["ProjectIdentifier"] = request.ProjectIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkipAllDeployFileExtensions))
+            {
+                body["SkipAllDeployFileExtensions"] = request.SkipAllDeployFileExtensions;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
