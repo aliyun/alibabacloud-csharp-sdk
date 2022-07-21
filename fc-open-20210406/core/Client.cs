@@ -398,6 +398,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             {
                 body["instanceLifecycleConfig"] = request.InstanceLifecycleConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceSoftConcurrency))
+            {
+                body["instanceSoftConcurrency"] = request.InstanceSoftConcurrency;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
             {
                 body["instanceType"] = request.InstanceType;
@@ -515,6 +519,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceLifecycleConfig.ToMap()))
             {
                 body["instanceLifecycleConfig"] = request.InstanceLifecycleConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceSoftConcurrency))
+            {
+                body["instanceSoftConcurrency"] = request.InstanceSoftConcurrency;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
             {
@@ -4406,6 +4414,14 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             {
                 realHeaders["X-Fc-Account-Id"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XFcAccountId);
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XFcDate))
+            {
+                realHeaders["X-Fc-Date"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XFcDate);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XFcTraceId))
+            {
+                realHeaders["X-Fc-Trace-Id"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XFcTraceId);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = realHeaders,
@@ -4452,6 +4468,14 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XFcAccountId))
             {
                 realHeaders["X-Fc-Account-Id"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XFcAccountId);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XFcDate))
+            {
+                realHeaders["X-Fc-Date"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XFcDate);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XFcTraceId))
+            {
+                realHeaders["X-Fc-Trace-Id"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XFcTraceId);
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7307,6 +7331,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             {
                 body["instanceLifecycleConfig"] = request.InstanceLifecycleConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceSoftConcurrency))
+            {
+                body["instanceSoftConcurrency"] = request.InstanceSoftConcurrency;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
             {
                 body["instanceType"] = request.InstanceType;
@@ -7425,6 +7453,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceLifecycleConfig.ToMap()))
             {
                 body["instanceLifecycleConfig"] = request.InstanceLifecycleConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceSoftConcurrency))
+            {
+                body["instanceSoftConcurrency"] = request.InstanceSoftConcurrency;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
             {

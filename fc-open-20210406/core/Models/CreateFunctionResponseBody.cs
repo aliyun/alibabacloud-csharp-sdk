@@ -109,6 +109,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public InstanceLifecycleConfig InstanceLifecycleConfig { get; set; }
 
+        [NameInMap("instanceSoftConcurrency")]
+        [Validation(Required=false)]
+        public int? InstanceSoftConcurrency { get; set; }
+
         [NameInMap("instanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }

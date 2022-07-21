@@ -70,6 +70,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public TracingConfig TracingConfig { get; set; }
 
+        [NameInMap("vendorConfig")]
+        [Validation(Required=false)]
+        public VendorConfig VendorConfig { get; set; }
+
         [NameInMap("vpcConfig")]
         [Validation(Required=false)]
         public VPCConfig VpcConfig { get; set; }
