@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class EmailVerifiedRequest : TeaModel {
+        [NameInMap("Email")]
+        [Validation(Required=false)]
+        public string Email { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]
         public string UserClientIp { get; set; }
-
-        [NameInMap("Email")]
-        [Validation(Required=false)]
-        public string Email { get; set; }
 
     }
 

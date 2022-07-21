@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SaveSingleTaskForDeletingDnsHostRequest : TeaModel {
+        [NameInMap("DnsName")]
+        [Validation(Required=false)]
+        public string DnsName { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
-
-        [NameInMap("DnsName")]
-        [Validation(Required=false)]
-        public string DnsName { get; set; }
 
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]

@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryContactInfoRequest : TeaModel {
-        [NameInMap("UserClientIp")]
+        [NameInMap("ContactType")]
         [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
+        public string ContactType { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("ContactType")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public string ContactType { get; set; }
+        public string Lang { get; set; }
+
+        [NameInMap("UserClientIp")]
+        [Validation(Required=false)]
+        public string UserClientIp { get; set; }
 
     }
 

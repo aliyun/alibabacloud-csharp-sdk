@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class TransferInCheckMailTokenRequest : TeaModel {
-        [NameInMap("Token")]
-        [Validation(Required=false)]
-        public string Token { get; set; }
-
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
+
+        [NameInMap("Token")]
+        [Validation(Required=false)]
+        public string Token { get; set; }
 
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]

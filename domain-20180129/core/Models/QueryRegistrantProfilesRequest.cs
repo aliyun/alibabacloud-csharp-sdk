@@ -9,25 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryRegistrantProfilesRequest : TeaModel {
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        [NameInMap("RegistrantOrganization")]
-        [Validation(Required=false)]
-        public string RegistrantOrganization { get; set; }
-
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
-        [NameInMap("RegistrantProfileId")]
-        [Validation(Required=false)]
-        public long? RegistrantProfileId { get; set; }
-
         [NameInMap("DefaultRegistrantProfile")]
         [Validation(Required=false)]
         public bool? DefaultRegistrantProfile { get; set; }
+
+        [NameInMap("Email")]
+        [Validation(Required=false)]
+        public string Email { get; set; }
+
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
 
         [NameInMap("PageNum")]
         [Validation(Required=false)]
@@ -37,25 +29,33 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("ZhRegistrantOrganization")]
+        [NameInMap("RealNameStatus")]
         [Validation(Required=false)]
-        public string ZhRegistrantOrganization { get; set; }
+        public string RealNameStatus { get; set; }
+
+        [NameInMap("RegistrantOrganization")]
+        [Validation(Required=false)]
+        public string RegistrantOrganization { get; set; }
+
+        [NameInMap("RegistrantProfileId")]
+        [Validation(Required=false)]
+        public long? RegistrantProfileId { get; set; }
+
+        [NameInMap("RegistrantProfileType")]
+        [Validation(Required=false)]
+        public string RegistrantProfileType { get; set; }
 
         [NameInMap("RegistrantType")]
         [Validation(Required=false)]
         public string RegistrantType { get; set; }
 
-        [NameInMap("RealNameStatus")]
+        [NameInMap("UserClientIp")]
         [Validation(Required=false)]
-        public string RealNameStatus { get; set; }
+        public string UserClientIp { get; set; }
 
-        [NameInMap("Email")]
+        [NameInMap("ZhRegistrantOrganization")]
         [Validation(Required=false)]
-        public string Email { get; set; }
-
-        [NameInMap("RegistrantProfileType")]
-        [Validation(Required=false)]
-        public string RegistrantProfileType { get; set; }
+        public string ZhRegistrantOrganization { get; set; }
 
     }
 

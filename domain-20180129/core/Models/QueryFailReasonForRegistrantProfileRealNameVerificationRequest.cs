@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryFailReasonForRegistrantProfileRealNameVerificationRequest : TeaModel {
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [NameInMap("RegistrantProfileID")]
         [Validation(Required=false)]
         public long? RegistrantProfileID { get; set; }
+
+        [NameInMap("UserClientIp")]
+        [Validation(Required=false)]
+        public string UserClientIp { get; set; }
 
     }
 

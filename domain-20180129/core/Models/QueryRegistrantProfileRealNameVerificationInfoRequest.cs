@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryRegistrantProfileRealNameVerificationInfoRequest : TeaModel {
-        [NameInMap("UserClientIp")]
+        [NameInMap("FetchImage")]
         [Validation(Required=false)]
-        public string UserClientIp { get; set; }
+        public bool? FetchImage { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public long? RegistrantProfileId { get; set; }
 
-        [NameInMap("FetchImage")]
+        [NameInMap("UserClientIp")]
         [Validation(Required=false)]
-        public bool? FetchImage { get; set; }
+        public string UserClientIp { get; set; }
 
     }
 

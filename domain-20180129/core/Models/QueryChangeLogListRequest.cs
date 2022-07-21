@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryChangeLogListRequest : TeaModel {
-        [NameInMap("UserClientIp")]
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public string UserClientIp { get; set; }
+        public string DomainName { get; set; }
+
+        [NameInMap("EndDate")]
+        [Validation(Required=false)]
+        public long? EndDate { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
-
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
 
         [NameInMap("PageNum")]
         [Validation(Required=false)]
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public long? StartDate { get; set; }
 
-        [NameInMap("EndDate")]
+        [NameInMap("UserClientIp")]
         [Validation(Required=false)]
-        public long? EndDate { get; set; }
+        public string UserClientIp { get; set; }
 
     }
 

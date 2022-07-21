@@ -9,25 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class ListServerLockRequest : TeaModel {
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
-
-        [NameInMap("EndStartDate")]
-        [Validation(Required=false)]
-        public long? EndStartDate { get; set; }
-
         [NameInMap("BeginStartDate")]
         [Validation(Required=false)]
         public long? BeginStartDate { get; set; }
 
-        [NameInMap("PageNum")]
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public int? PageNum { get; set; }
+        public string DomainName { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("EndExpireDate")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public long? EndExpireDate { get; set; }
+
+        [NameInMap("EndStartDate")]
+        [Validation(Required=false)]
+        public long? EndStartDate { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
@@ -37,6 +33,14 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string LockProductId { get; set; }
 
+        [NameInMap("PageNum")]
+        [Validation(Required=false)]
+        public int? PageNum { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         [NameInMap("ServerLockStatus")]
         [Validation(Required=false)]
         public int? ServerLockStatus { get; set; }
@@ -44,10 +48,6 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [NameInMap("StartExpireDate")]
         [Validation(Required=false)]
         public long? StartExpireDate { get; set; }
-
-        [NameInMap("EndExpireDate")]
-        [Validation(Required=false)]
-        public long? EndExpireDate { get; set; }
 
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]

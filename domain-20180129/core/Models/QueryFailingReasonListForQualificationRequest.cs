@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryFailingReasonListForQualificationRequest : TeaModel {
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
+        [NameInMap("Limit")]
+        [Validation(Required=false)]
+        public int? Limit { get; set; }
+
         [NameInMap("QualificationType")]
         [Validation(Required=false)]
         public string QualificationType { get; set; }
@@ -16,18 +28,6 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]
         public string UserClientIp { get; set; }
-
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("Limit")]
-        [Validation(Required=false)]
-        public int? Limit { get; set; }
 
     }
 

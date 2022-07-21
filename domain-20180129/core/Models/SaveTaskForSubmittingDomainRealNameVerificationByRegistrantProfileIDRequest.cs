@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileIDRequest : TeaModel {
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
@@ -25,9 +17,17 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
         [NameInMap("RegistrantProfileId")]
         [Validation(Required=false)]
         public long? RegistrantProfileId { get; set; }
+
+        [NameInMap("UserClientIp")]
+        [Validation(Required=false)]
+        public string UserClientIp { get; set; }
 
     }
 

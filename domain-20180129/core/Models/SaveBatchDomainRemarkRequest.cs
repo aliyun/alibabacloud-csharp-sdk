@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SaveBatchDomainRemarkRequest : TeaModel {
+        [NameInMap("InstanceIds")]
+        [Validation(Required=false)]
+        public string InstanceIds { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
-
-        [NameInMap("InstanceIds")]
-        [Validation(Required=false)]
-        public string InstanceIds { get; set; }
 
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]

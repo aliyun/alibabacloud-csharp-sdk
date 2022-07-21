@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class ConfirmTransferInEmailRequest : TeaModel {
-        [NameInMap("UserClientIp")]
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
+        public List<string> DomainName { get; set; }
 
         [NameInMap("Email")]
         [Validation(Required=false)]
         public string Email { get; set; }
 
-        [NameInMap("DomainName")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public List<string> DomainName { get; set; }
+        public string Lang { get; set; }
+
+        [NameInMap("UserClientIp")]
+        [Validation(Required=false)]
+        public string UserClientIp { get; set; }
 
     }
 

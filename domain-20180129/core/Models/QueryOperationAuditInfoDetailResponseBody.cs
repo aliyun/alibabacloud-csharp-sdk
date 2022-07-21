@@ -17,29 +17,21 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public int? AuditStatus { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("AuditType")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? AuditType { get; set; }
 
         [NameInMap("BusinessName")]
         [Validation(Required=false)]
         public string BusinessName { get; set; }
 
-        [NameInMap("AuditType")]
-        [Validation(Required=false)]
-        public int? AuditType { get; set; }
-
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
-
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public long? CreateTime { get; set; }
 
-        [NameInMap("UpdateTime")]
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public long? UpdateTime { get; set; }
+        public string DomainName { get; set; }
 
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -48,6 +40,14 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("UpdateTime")]
+        [Validation(Required=false)]
+        public long? UpdateTime { get; set; }
 
     }
 

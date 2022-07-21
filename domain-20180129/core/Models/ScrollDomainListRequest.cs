@@ -9,30 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class ScrollDomainListRequest : TeaModel {
-        [NameInMap("EndExpirationDate")]
-        [Validation(Required=false)]
-        public long? EndExpirationDate { get; set; }
-
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        [NameInMap("StartExpirationDate")]
-        [Validation(Required=false)]
-        public long? StartExpirationDate { get; set; }
-
-        [NameInMap("ProductDomainType")]
-        [Validation(Required=false)]
-        public string ProductDomainType { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
         [NameInMap("DomainGroupId")]
         [Validation(Required=false)]
         public long? DomainGroupId { get; set; }
@@ -41,9 +17,17 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public int? DomainStatus { get; set; }
 
+        [NameInMap("EndExpirationDate")]
+        [Validation(Required=false)]
+        public long? EndExpirationDate { get; set; }
+
         [NameInMap("EndLength")]
         [Validation(Required=false)]
         public int? EndLength { get; set; }
+
+        [NameInMap("EndRegistrationDate")]
+        [Validation(Required=false)]
+        public long? EndRegistrationDate { get; set; }
 
         [NameInMap("Excluded")]
         [Validation(Required=false)]
@@ -73,29 +57,45 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public bool? KeyWordSuffix { get; set; }
 
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("ProductDomainType")]
+        [Validation(Required=false)]
+        public string ProductDomainType { get; set; }
+
+        [NameInMap("ScrollId")]
+        [Validation(Required=false)]
+        public string ScrollId { get; set; }
+
+        [NameInMap("StartExpirationDate")]
+        [Validation(Required=false)]
+        public long? StartExpirationDate { get; set; }
+
         [NameInMap("StartLength")]
         [Validation(Required=false)]
         public int? StartLength { get; set; }
-
-        [NameInMap("TradeType")]
-        [Validation(Required=false)]
-        public int? TradeType { get; set; }
-
-        [NameInMap("Suffixs")]
-        [Validation(Required=false)]
-        public string Suffixs { get; set; }
 
         [NameInMap("StartRegistrationDate")]
         [Validation(Required=false)]
         public long? StartRegistrationDate { get; set; }
 
-        [NameInMap("EndRegistrationDate")]
+        [NameInMap("Suffixs")]
         [Validation(Required=false)]
-        public long? EndRegistrationDate { get; set; }
+        public string Suffixs { get; set; }
 
-        [NameInMap("ScrollId")]
+        [NameInMap("TradeType")]
         [Validation(Required=false)]
-        public string ScrollId { get; set; }
+        public int? TradeType { get; set; }
+
+        [NameInMap("UserClientIp")]
+        [Validation(Required=false)]
+        public string UserClientIp { get; set; }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SaveSingleTaskForUpdatingContactInfoRequest : TeaModel {
-        [NameInMap("UserClientIp")]
+        [NameInMap("AddTransferLock")]
         [Validation(Required=false)]
-        public string UserClientIp { get; set; }
+        public bool? AddTransferLock { get; set; }
 
-        [NameInMap("Lang")]
+        [NameInMap("ContactType")]
         [Validation(Required=false)]
-        public string Lang { get; set; }
+        public string ContactType { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -25,17 +25,17 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
         [NameInMap("RegistrantProfileId")]
         [Validation(Required=false)]
         public long? RegistrantProfileId { get; set; }
 
-        [NameInMap("ContactType")]
+        [NameInMap("UserClientIp")]
         [Validation(Required=false)]
-        public string ContactType { get; set; }
-
-        [NameInMap("AddTransferLock")]
-        [Validation(Required=false)]
-        public bool? AddTransferLock { get; set; }
+        public string UserClientIp { get; set; }
 
     }
 

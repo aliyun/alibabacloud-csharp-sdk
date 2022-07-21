@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class PollTaskResultRequest : TeaModel {
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        [NameInMap("TaskNo")]
-        [Validation(Required=false)]
-        public string TaskNo { get; set; }
-
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
@@ -29,9 +17,9 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("TaskResultStatus")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public int? TaskResultStatus { get; set; }
+        public string Lang { get; set; }
 
         [NameInMap("PageNum")]
         [Validation(Required=false)]
@@ -40,6 +28,18 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("TaskNo")]
+        [Validation(Required=false)]
+        public string TaskNo { get; set; }
+
+        [NameInMap("TaskResultStatus")]
+        [Validation(Required=false)]
+        public int? TaskResultStatus { get; set; }
+
+        [NameInMap("UserClientIp")]
+        [Validation(Required=false)]
+        public string UserClientIp { get; set; }
 
     }
 

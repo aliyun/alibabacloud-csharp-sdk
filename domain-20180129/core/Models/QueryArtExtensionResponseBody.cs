@@ -9,26 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryArtExtensionResponseBody : TeaModel {
-        [NameInMap("ObjectType")]
-        [Validation(Required=false)]
-        public string ObjectType { get; set; }
-
-        [NameInMap("MaterialsAndTechniques")]
-        [Validation(Required=false)]
-        public string MaterialsAndTechniques { get; set; }
-
-        [NameInMap("InscriptionsAndMarkings")]
-        [Validation(Required=false)]
-        public string InscriptionsAndMarkings { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Reference")]
-        [Validation(Required=false)]
-        public string Reference { get; set; }
-
         [NameInMap("DateOrPeriod")]
         [Validation(Required=false)]
         public string DateOrPeriod { get; set; }
@@ -37,21 +17,41 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string Dimensions { get; set; }
 
-        [NameInMap("Title")]
-        [Validation(Required=false)]
-        public string Title { get; set; }
-
         [NameInMap("Features")]
         [Validation(Required=false)]
         public string Features { get; set; }
+
+        [NameInMap("InscriptionsAndMarkings")]
+        [Validation(Required=false)]
+        public string InscriptionsAndMarkings { get; set; }
+
+        [NameInMap("Maker")]
+        [Validation(Required=false)]
+        public string Maker { get; set; }
+
+        [NameInMap("MaterialsAndTechniques")]
+        [Validation(Required=false)]
+        public string MaterialsAndTechniques { get; set; }
+
+        [NameInMap("ObjectType")]
+        [Validation(Required=false)]
+        public string ObjectType { get; set; }
+
+        [NameInMap("Reference")]
+        [Validation(Required=false)]
+        public string Reference { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Subject")]
         [Validation(Required=false)]
         public string Subject { get; set; }
 
-        [NameInMap("Maker")]
+        [NameInMap("Title")]
         [Validation(Required=false)]
-        public string Maker { get; set; }
+        public string Title { get; set; }
 
     }
 

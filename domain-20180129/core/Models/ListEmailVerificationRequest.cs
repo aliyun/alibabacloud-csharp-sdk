@@ -9,25 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class ListEmailVerificationRequest : TeaModel {
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
         [NameInMap("BeginCreateTime")]
         [Validation(Required=false)]
         public long? BeginCreateTime { get; set; }
-
-        [NameInMap("EndCreateTime")]
-        [Validation(Required=false)]
-        public long? EndCreateTime { get; set; }
 
         [NameInMap("Email")]
         [Validation(Required=false)]
         public string Email { get; set; }
 
-        [NameInMap("VerificationStatus")]
+        [NameInMap("EndCreateTime")]
         [Validation(Required=false)]
-        public int? VerificationStatus { get; set; }
+        public long? EndCreateTime { get; set; }
+
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
 
         [NameInMap("PageNum")]
         [Validation(Required=false)]
@@ -40,6 +36,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]
         public string UserClientIp { get; set; }
+
+        [NameInMap("VerificationStatus")]
+        [Validation(Required=false)]
+        public int? VerificationStatus { get; set; }
 
     }
 

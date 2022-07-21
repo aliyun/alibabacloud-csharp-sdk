@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class DeleteContactTemplatesRequest : TeaModel {
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
         [NameInMap("RegistrantProfileIds")]
         [Validation(Required=false)]
         public string RegistrantProfileIds { get; set; }
+
+        [NameInMap("UserClientIp")]
+        [Validation(Required=false)]
+        public string UserClientIp { get; set; }
 
     }
 

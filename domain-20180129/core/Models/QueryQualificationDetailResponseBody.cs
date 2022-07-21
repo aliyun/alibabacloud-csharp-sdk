@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public int? AuditStatus { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Credentials")]
         [Validation(Required=false)]
         public QueryQualificationDetailResponseBodyCredentials Credentials { get; set; }
@@ -25,11 +21,15 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             [Validation(Required=false)]
             public List<QueryQualificationDetailResponseBodyCredentialsQualificationCredential> QualificationCredential { get; set; }
             public class QueryQualificationDetailResponseBodyCredentialsQualificationCredential : TeaModel {
-                public string CredentialType { get; set; }
                 public string CredentialNo { get; set; }
+                public string CredentialType { get; set; }
                 public string CredentialUrl { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("TrackId")]
         [Validation(Required=false)]

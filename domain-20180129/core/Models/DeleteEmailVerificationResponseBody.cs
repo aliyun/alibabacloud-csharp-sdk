@@ -9,6 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class DeleteEmailVerificationResponseBody : TeaModel {
+        [NameInMap("FailList")]
+        [Validation(Required=false)]
+        public List<DeleteEmailVerificationResponseBodyFailList> FailList { get; set; }
+        public class DeleteEmailVerificationResponseBodyFailList : TeaModel {
+            [NameInMap("Code")]
+            [Validation(Required=false)]
+            public string Code { get; set; }
+
+            [NameInMap("Email")]
+            [Validation(Required=false)]
+            public string Email { get; set; }
+
+            [NameInMap("Message")]
+            [Validation(Required=false)]
+            public string Message { get; set; }
+
+        }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -17,31 +35,13 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public List<DeleteEmailVerificationResponseBodySuccessList> SuccessList { get; set; }
         public class DeleteEmailVerificationResponseBodySuccessList : TeaModel {
-            [NameInMap("Email")]
-            [Validation(Required=false)]
-            public string Email { get; set; }
-
             [NameInMap("Code")]
             [Validation(Required=false)]
             public string Code { get; set; }
 
-            [NameInMap("Message")]
-            [Validation(Required=false)]
-            public string Message { get; set; }
-
-        }
-
-        [NameInMap("FailList")]
-        [Validation(Required=false)]
-        public List<DeleteEmailVerificationResponseBodyFailList> FailList { get; set; }
-        public class DeleteEmailVerificationResponseBodyFailList : TeaModel {
             [NameInMap("Email")]
             [Validation(Required=false)]
             public string Email { get; set; }
-
-            [NameInMap("Code")]
-            [Validation(Required=false)]
-            public string Code { get; set; }
 
             [NameInMap("Message")]
             [Validation(Required=false)]

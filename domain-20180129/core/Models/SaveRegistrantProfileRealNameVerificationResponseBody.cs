@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SaveRegistrantProfileRealNameVerificationResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("RegistrantProfileId")]
         [Validation(Required=false)]
         public long? RegistrantProfileId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

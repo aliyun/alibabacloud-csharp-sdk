@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SubmitOperationCredentialsRequest : TeaModel {
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
         [NameInMap("AuditRecordId")]
         [Validation(Required=false)]
         public long? AuditRecordId { get; set; }
-
-        [NameInMap("RegType")]
-        [Validation(Required=false)]
-        public int? RegType { get; set; }
 
         [NameInMap("AuditType")]
         [Validation(Required=false)]
@@ -28,6 +20,14 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [NameInMap("Credentials")]
         [Validation(Required=false)]
         public string Credentials { get; set; }
+
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
+        [NameInMap("RegType")]
+        [Validation(Required=false)]
+        public int? RegType { get; set; }
 
     }
 

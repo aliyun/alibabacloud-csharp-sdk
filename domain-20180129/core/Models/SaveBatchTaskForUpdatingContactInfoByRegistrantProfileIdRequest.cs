@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SaveBatchTaskForUpdatingContactInfoByRegistrantProfileIdRequest : TeaModel {
-        [NameInMap("UserClientIp")]
+        [NameInMap("ContactType")]
         [Validation(Required=false)]
-        public string UserClientIp { get; set; }
+        public string ContactType { get; set; }
+
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public List<string> DomainName { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
@@ -21,17 +25,13 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public long? RegistrantProfileId { get; set; }
 
-        [NameInMap("ContactType")]
-        [Validation(Required=false)]
-        public string ContactType { get; set; }
-
         [NameInMap("TransferOutProhibited")]
         [Validation(Required=false)]
         public bool? TransferOutProhibited { get; set; }
 
-        [NameInMap("DomainName")]
+        [NameInMap("UserClientIp")]
         [Validation(Required=false)]
-        public List<string> DomainName { get; set; }
+        public string UserClientIp { get; set; }
 
     }
 

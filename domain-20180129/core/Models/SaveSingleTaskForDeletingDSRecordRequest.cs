@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
         [NameInMap("KeyTag")]
         [Validation(Required=false)]
         public int? KeyTag { get; set; }
+
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
 
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]

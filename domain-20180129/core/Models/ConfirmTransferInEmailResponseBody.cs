@@ -9,6 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class ConfirmTransferInEmailResponseBody : TeaModel {
+        [NameInMap("FailList")]
+        [Validation(Required=false)]
+        public ConfirmTransferInEmailResponseBodyFailList FailList { get; set; }
+        public class ConfirmTransferInEmailResponseBodyFailList : TeaModel {
+            [NameInMap("FailDomain")]
+            [Validation(Required=false)]
+            public List<string> FailDomain { get; set; }
+        };
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -20,15 +29,6 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             [NameInMap("SuccessDomain")]
             [Validation(Required=false)]
             public List<string> SuccessDomain { get; set; }
-        };
-
-        [NameInMap("FailList")]
-        [Validation(Required=false)]
-        public ConfirmTransferInEmailResponseBodyFailList FailList { get; set; }
-        public class ConfirmTransferInEmailResponseBodyFailList : TeaModel {
-            [NameInMap("FailDomain")]
-            [Validation(Required=false)]
-            public List<string> FailDomain { get; set; }
         };
 
     }

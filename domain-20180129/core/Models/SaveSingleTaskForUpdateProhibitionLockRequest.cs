@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SaveSingleTaskForUpdateProhibitionLockRequest : TeaModel {
-        [NameInMap("UserClientIp")]
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public string UserClientIp { get; set; }
+        public string DomainName { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
-
         [NameInMap("Status")]
         [Validation(Required=false)]
         public bool? Status { get; set; }
+
+        [NameInMap("UserClientIp")]
+        [Validation(Required=false)]
+        public string UserClientIp { get; set; }
 
     }
 

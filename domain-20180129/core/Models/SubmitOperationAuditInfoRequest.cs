@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SubmitOperationAuditInfoRequest : TeaModel {
-        [NameInMap("Lang")]
+        [NameInMap("AuditInfo")]
         [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
+        public string AuditInfo { get; set; }
 
         [NameInMap("AuditType")]
         [Validation(Required=false)]
         public int? AuditType { get; set; }
 
-        [NameInMap("AuditInfo")]
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public string AuditInfo { get; set; }
+        public string DomainName { get; set; }
 
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
+
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
 
     }
 

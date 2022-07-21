@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryDomainRealNameVerificationInfoResponseBody : TeaModel {
-        [NameInMap("IdentityCredentialType")]
-        [Validation(Required=false)]
-        public string IdentityCredentialType { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
@@ -29,17 +17,29 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string IdentityCredential { get; set; }
 
-        [NameInMap("SubmissionDate")]
-        [Validation(Required=false)]
-        public string SubmissionDate { get; set; }
-
         [NameInMap("IdentityCredentialNo")]
         [Validation(Required=false)]
         public string IdentityCredentialNo { get; set; }
 
+        [NameInMap("IdentityCredentialType")]
+        [Validation(Required=false)]
+        public string IdentityCredentialType { get; set; }
+
         [NameInMap("IdentityCredentialUrl")]
         [Validation(Required=false)]
         public string IdentityCredentialUrl { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("SubmissionDate")]
+        [Validation(Required=false)]
+        public string SubmissionDate { get; set; }
 
     }
 

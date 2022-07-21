@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryDomainByDomainNameRequest : TeaModel {
-        [NameInMap("UserClientIp")]
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public string UserClientIp { get; set; }
+        public string DomainName { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("DomainName")]
+        [NameInMap("UserClientIp")]
         [Validation(Required=false)]
-        public string DomainName { get; set; }
+        public string UserClientIp { get; set; }
 
     }
 

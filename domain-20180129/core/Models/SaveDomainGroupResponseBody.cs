@@ -17,25 +17,25 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string CreationDate { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("DomainGroupId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public long? DomainGroupId { get; set; }
 
         [NameInMap("DomainGroupName")]
         [Validation(Required=false)]
         public string DomainGroupName { get; set; }
 
-        [NameInMap("ModificationDate")]
-        [Validation(Required=false)]
-        public string ModificationDate { get; set; }
-
         [NameInMap("DomainGroupStatus")]
         [Validation(Required=false)]
         public string DomainGroupStatus { get; set; }
 
-        [NameInMap("DomainGroupId")]
+        [NameInMap("ModificationDate")]
         [Validation(Required=false)]
-        public long? DomainGroupId { get; set; }
+        public string ModificationDate { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("TotalNumber")]
         [Validation(Required=false)]

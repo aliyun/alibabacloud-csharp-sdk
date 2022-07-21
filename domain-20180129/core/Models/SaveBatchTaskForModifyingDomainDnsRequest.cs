@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SaveBatchTaskForModifyingDomainDnsRequest : TeaModel {
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
         [NameInMap("AliyunDns")]
         [Validation(Required=false)]
         public bool? AliyunDns { get; set; }
@@ -28,6 +20,14 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [NameInMap("DomainNameServer")]
         [Validation(Required=false)]
         public List<string> DomainNameServer { get; set; }
+
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
+        [NameInMap("UserClientIp")]
+        [Validation(Required=false)]
+        public string UserClientIp { get; set; }
 
     }
 

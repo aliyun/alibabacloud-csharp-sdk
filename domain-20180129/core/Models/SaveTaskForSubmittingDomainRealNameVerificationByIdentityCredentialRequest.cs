@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest : TeaModel {
-        [NameInMap("UserClientIp")]
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
+        public List<string> DomainName { get; set; }
 
         [NameInMap("IdentityCredential")]
         [Validation(Required=false)]
@@ -29,9 +25,13 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string IdentityCredentialType { get; set; }
 
-        [NameInMap("DomainName")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public List<string> DomainName { get; set; }
+        public string Lang { get; set; }
+
+        [NameInMap("UserClientIp")]
+        [Validation(Required=false)]
+        public string UserClientIp { get; set; }
 
     }
 

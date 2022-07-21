@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryDomainAdminDivisionResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("AdminDivisions")]
         [Validation(Required=false)]
         public QueryDomainAdminDivisionResponseBodyAdminDivisions AdminDivisions { get; set; }
@@ -21,7 +17,6 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             [Validation(Required=false)]
             public List<QueryDomainAdminDivisionResponseBodyAdminDivisionsAdminDivision> AdminDivision { get; set; }
             public class QueryDomainAdminDivisionResponseBodyAdminDivisionsAdminDivision : TeaModel {
-                public string DivisionName { get; set; }
                 public QueryDomainAdminDivisionResponseBodyAdminDivisionsAdminDivisionChildren Children { get; set; }
                 public class QueryDomainAdminDivisionResponseBodyAdminDivisionsAdminDivisionChildren : TeaModel {
                     [NameInMap("Children")]
@@ -35,8 +30,13 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                     }
 
                 }
+                public string DivisionName { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

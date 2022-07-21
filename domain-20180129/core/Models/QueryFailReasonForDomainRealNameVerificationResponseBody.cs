@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryFailReasonForDomainRealNameVerificationResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<QueryFailReasonForDomainRealNameVerificationResponseBodyData> Data { get; set; }
@@ -21,15 +17,19 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             [Validation(Required=false)]
             public string Date { get; set; }
 
-            [NameInMap("FailReason")]
-            [Validation(Required=false)]
-            public string FailReason { get; set; }
-
             [NameInMap("DomainNameVerificationStatus")]
             [Validation(Required=false)]
             public string DomainNameVerificationStatus { get; set; }
 
+            [NameInMap("FailReason")]
+            [Validation(Required=false)]
+            public string FailReason { get; set; }
+
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

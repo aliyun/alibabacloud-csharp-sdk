@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public bool? Exist { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
@@ -32,6 +28,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                 public string Word { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

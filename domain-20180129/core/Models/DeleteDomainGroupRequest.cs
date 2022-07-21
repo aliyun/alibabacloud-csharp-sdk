@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class DeleteDomainGroupRequest : TeaModel {
-        [NameInMap("UserClientIp")]
+        [NameInMap("DomainGroupId")]
         [Validation(Required=false)]
-        public string UserClientIp { get; set; }
+        public long? DomainGroupId { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("DomainGroupId")]
+        [NameInMap("UserClientIp")]
         [Validation(Required=false)]
-        public long? DomainGroupId { get; set; }
+        public string UserClientIp { get; set; }
 
     }
 

@@ -12,10 +12,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class AcknowledgeTaskResultRequest : TeaModel {
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
@@ -23,6 +19,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [NameInMap("TaskDetailNo")]
         [Validation(Required=false)]
         public List<string> TaskDetailNo { get; set; }
+
+        [NameInMap("UserClientIp")]
+        [Validation(Required=false)]
+        public string UserClientIp { get; set; }
 
     }
 

@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest : TeaModel {
-        [NameInMap("UserClientIp")]
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public string UserClientIp { get; set; }
+        public List<string> DomainName { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public bool? TransferOutProhibited { get; set; }
 
-        [NameInMap("DomainName")]
+        [NameInMap("UserClientIp")]
         [Validation(Required=false)]
-        public List<string> DomainName { get; set; }
+        public string UserClientIp { get; set; }
 
     }
 

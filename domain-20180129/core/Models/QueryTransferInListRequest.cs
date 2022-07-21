@@ -9,29 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryTransferInListRequest : TeaModel {
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
-        [NameInMap("SubmissionStartDate")]
-        [Validation(Required=false)]
-        public long? SubmissionStartDate { get; set; }
-
-        [NameInMap("SubmissionEndDate")]
-        [Validation(Required=false)]
-        public long? SubmissionEndDate { get; set; }
-
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("SimpleTransferInStatus")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public string SimpleTransferInStatus { get; set; }
+        public string Lang { get; set; }
 
         [NameInMap("PageNum")]
         [Validation(Required=false)]
@@ -40,6 +24,22 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("SimpleTransferInStatus")]
+        [Validation(Required=false)]
+        public string SimpleTransferInStatus { get; set; }
+
+        [NameInMap("SubmissionEndDate")]
+        [Validation(Required=false)]
+        public long? SubmissionEndDate { get; set; }
+
+        [NameInMap("SubmissionStartDate")]
+        [Validation(Required=false)]
+        public long? SubmissionStartDate { get; set; }
+
+        [NameInMap("UserClientIp")]
+        [Validation(Required=false)]
+        public string UserClientIp { get; set; }
 
     }
 

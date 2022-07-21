@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class CheckMaxYearOfServerLockRequest : TeaModel {
+        [NameInMap("CheckAction")]
+        [Validation(Required=false)]
+        public string CheckAction { get; set; }
+
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]
         public string UserClientIp { get; set; }
-
-        [NameInMap("CheckAction")]
-        [Validation(Required=false)]
-        public string CheckAction { get; set; }
 
     }
 

@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             [Validation(Required=false)]
             public List<BatchFuzzyMatchDomainSensitiveWordResponseBodySensitiveWordMatchResultListSensitiveWordMatchResult> SensitiveWordMatchResult { get; set; }
             public class BatchFuzzyMatchDomainSensitiveWordResponseBodySensitiveWordMatchResultListSensitiveWordMatchResult : TeaModel {
-                public string Keyword { get; set; }
                 public bool? Exist { get; set; }
+                public string Keyword { get; set; }
                 public BatchFuzzyMatchDomainSensitiveWordResponseBodySensitiveWordMatchResultListSensitiveWordMatchResultMatchedSentiveWords MatchedSentiveWords { get; set; }
                 public class BatchFuzzyMatchDomainSensitiveWordResponseBodySensitiveWordMatchResultListSensitiveWordMatchResultMatchedSentiveWords : TeaModel {
                     [NameInMap("MatchedSensitiveWord")]

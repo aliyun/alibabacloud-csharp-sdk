@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SaveSingleTaskForAssociatingEnsRequest : TeaModel {
-        [NameInMap("UserClientIp")]
+        [NameInMap("Address")]
         [Validation(Required=false)]
-        public string UserClientIp { get; set; }
+        public string Address { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("Address")]
+        [NameInMap("UserClientIp")]
         [Validation(Required=false)]
-        public string Address { get; set; }
+        public string UserClientIp { get; set; }
 
     }
 

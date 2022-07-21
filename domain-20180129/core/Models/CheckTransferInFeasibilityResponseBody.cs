@@ -13,21 +13,21 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public bool? CanTransfer { get; set; }
 
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
         [NameInMap("ProductId")]
         [Validation(Required=false)]
         public string ProductId { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string RequestId { get; set; }
 
     }
 
