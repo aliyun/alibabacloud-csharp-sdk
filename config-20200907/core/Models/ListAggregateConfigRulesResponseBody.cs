@@ -69,6 +69,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public int? RiskLevel { get; set; }
                 public string SourceIdentifier { get; set; }
                 public string SourceOwner { get; set; }
+                public List<ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListTags> Tags { get; set; }
+                public class ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListTags : TeaModel {
+                    public string Key { get; set; }
+                    public string Value { get; set; }
+                }
             }
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
