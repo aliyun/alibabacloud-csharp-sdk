@@ -281,6 +281,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         }
 
         /// <summary>
+        /// 任务的优先级
+        /// </summary>
+        [NameInMap("Priority")]
+        [Validation(Required=false)]
+        public int? Priority { get; set; }
+
+        /// <summary>
         /// 状态详情码
         /// </summary>
         [NameInMap("ReasonCode")]

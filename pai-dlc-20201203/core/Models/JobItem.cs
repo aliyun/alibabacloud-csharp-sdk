@@ -89,11 +89,46 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
+        /// 作业失败时间（UTC）
+        /// </summary>
+        [NameInMap("GmtFailedTime")]
+        [Validation(Required=false)]
+        public string GmtFailedTime { get; set; }
+
+        /// <summary>
         /// 作业结束时间（UTC）
         /// </summary>
         [NameInMap("GmtFinishTime")]
         [Validation(Required=false)]
         public string GmtFinishTime { get; set; }
+
+        /// <summary>
+        /// 作业开始运行时间（UTC）
+        /// </summary>
+        [NameInMap("GmtRunningTime")]
+        [Validation(Required=false)]
+        public string GmtRunningTime { get; set; }
+
+        /// <summary>
+        /// 作业停止时间（UTC）
+        /// </summary>
+        [NameInMap("GmtStoppedTime")]
+        [Validation(Required=false)]
+        public string GmtStoppedTime { get; set; }
+
+        /// <summary>
+        /// 作业提交时间（UTC）
+        /// </summary>
+        [NameInMap("GmtSubmittedTime")]
+        [Validation(Required=false)]
+        public string GmtSubmittedTime { get; set; }
+
+        /// <summary>
+        /// 作业成功完成时间（UTC）
+        /// </summary>
+        [NameInMap("GmtSuccessedTime")]
+        [Validation(Required=false)]
+        public string GmtSuccessedTime { get; set; }
 
         /// <summary>
         /// 作业Id
@@ -115,6 +150,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [NameInMap("JobType")]
         [Validation(Required=false)]
         public string JobType { get; set; }
+
+        /// <summary>
+        /// 任务优先级
+        /// </summary>
+        [NameInMap("Priority")]
+        [Validation(Required=false)]
+        public int? Priority { get; set; }
 
         /// <summary>
         /// 状态详情码
