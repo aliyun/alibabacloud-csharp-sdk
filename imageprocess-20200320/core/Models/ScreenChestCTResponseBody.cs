@@ -107,6 +107,10 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 [Validation(Required=false)]
                 public string Score { get; set; }
 
+                [NameInMap("SeriesInstanceUID")]
+                [Validation(Required=false)]
+                public string SeriesInstanceUID { get; set; }
+
                 [NameInMap("VolumeScore")]
                 [Validation(Required=false)]
                 public string VolumeScore { get; set; }
@@ -135,6 +139,10 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 [NameInMap("OtherProbability")]
                 [Validation(Required=false)]
                 public string OtherProbability { get; set; }
+
+                [NameInMap("SeriesInstanceUID")]
+                [Validation(Required=false)]
+                public string SeriesInstanceUID { get; set; }
 
             }
             [NameInMap("DetectLymph")]
@@ -167,6 +175,10 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 
                 }
 
+                [NameInMap("SeriesInstanceUID")]
+                [Validation(Required=false)]
+                public string SeriesInstanceUID { get; set; }
+
             }
             [NameInMap("DetectPdac")]
             [Validation(Required=false)]
@@ -192,6 +204,10 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                     [Validation(Required=false)]
                     public List<string> Possibilities { get; set; }
                 };
+
+                [NameInMap("SeriesInstanceUID")]
+                [Validation(Required=false)]
+                public string SeriesInstanceUID { get; set; }
 
             }
             [NameInMap("DetectRibFracture")]
@@ -247,6 +263,10 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 [NameInMap("RibSegmentMaskURL")]
                 [Validation(Required=false)]
                 public string RibSegmentMaskURL { get; set; }
+
+                [NameInMap("SeriesInstanceUID")]
+                [Validation(Required=false)]
+                public string SeriesInstanceUID { get; set; }
 
                 [NameInMap("Spacing")]
                 [Validation(Required=false)]
@@ -345,6 +365,9 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 }
 
             }
+            [NameInMap("NestedUrlList")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> NestedUrlList { get; set; }
             [NameInMap("URLList")]
             [Validation(Required=false)]
             public Dictionary<string, string> URLList { get; set; }
