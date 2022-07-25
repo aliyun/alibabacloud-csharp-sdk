@@ -2507,6 +2507,120 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
             return await ScreenChestCTWithOptionsAsync(request, runtime);
         }
 
+        public SegmentOARResponse SegmentOARWithOptions(SegmentOARRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyPart))
+            {
+                body["BodyPart"] = request.BodyPart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Contrast))
+            {
+                body["Contrast"] = request.Contrast;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataFormat))
+            {
+                body["DataFormat"] = request.DataFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaskList))
+            {
+                body["MaskList"] = request.MaskList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
+            {
+                body["OrgId"] = request.OrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgName))
+            {
+                body["OrgName"] = request.OrgName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.URLList))
+            {
+                body["URLList"] = request.URLList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SegmentOAR",
+                Version = "2020-03-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SegmentOARResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SegmentOARResponse> SegmentOARWithOptionsAsync(SegmentOARRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyPart))
+            {
+                body["BodyPart"] = request.BodyPart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Contrast))
+            {
+                body["Contrast"] = request.Contrast;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataFormat))
+            {
+                body["DataFormat"] = request.DataFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaskList))
+            {
+                body["MaskList"] = request.MaskList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
+            {
+                body["OrgId"] = request.OrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgName))
+            {
+                body["OrgName"] = request.OrgName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.URLList))
+            {
+                body["URLList"] = request.URLList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SegmentOAR",
+                Version = "2020-03-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SegmentOARResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SegmentOARResponse SegmentOAR(SegmentOARRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SegmentOARWithOptions(request, runtime);
+        }
+
+        public async Task<SegmentOARResponse> SegmentOARAsync(SegmentOARRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SegmentOARWithOptionsAsync(request, runtime);
+        }
+
         public TranslateMedResponse TranslateMedWithOptions(TranslateMedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
