@@ -41,9 +41,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [Validation(Required=false)]
                 public List<string> SupportedMisType { get; set; }
 
-                /// <summary>
-                /// 资产uuid
-                /// </summary>
                 [NameInMap("Uuid")]
                 [Validation(Required=false)]
                 public string Uuid { get; set; }

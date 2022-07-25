@@ -65,16 +65,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<string> OperateErrorCodeList { get; set; }
 
-        /// <summary>
-        /// 处理时间结束时间
-        /// </summary>
         [NameInMap("OperateTimeEnd")]
         [Validation(Required=false)]
         public string OperateTimeEnd { get; set; }
 
-        /// <summary>
-        /// 处理时间开始时间
-        /// </summary>
         [NameInMap("OperateTimeStart")]
         [Validation(Required=false)]
         public string OperateTimeStart { get; set; }
@@ -111,16 +105,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string TargetType { get; set; }
 
-        /// <summary>
-        /// 最新发生结束时间
-        /// </summary>
         [NameInMap("TimeEnd")]
         [Validation(Required=false)]
         public string TimeEnd { get; set; }
 
-        /// <summary>
-        /// 最新发生开始时间
-        /// </summary>
         [NameInMap("TimeStart")]
         [Validation(Required=false)]
         public string TimeStart { get; set; }

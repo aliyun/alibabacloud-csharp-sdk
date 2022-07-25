@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         [NameInMap("Checks")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Checks { get; set; }
+        public List<Dictionary<string, object>> Checks { get; set; }
 
         [NameInMap("Columns")]
         [Validation(Required=false)]
@@ -104,10 +104,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
 
     }
 

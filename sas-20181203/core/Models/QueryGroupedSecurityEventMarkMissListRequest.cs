@@ -13,16 +13,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
-        /// <summary>
-        /// 加白方式
-        /// </summary>
         [NameInMap("DisposalWay")]
         [Validation(Required=false)]
         public string DisposalWay { get; set; }
 
-        /// <summary>
-        /// 告警事件名称（子类型）
-        /// </summary>
         [NameInMap("EventName")]
         [Validation(Required=false)]
         public string EventName { get; set; }
@@ -39,9 +33,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// 资产名
-        /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }

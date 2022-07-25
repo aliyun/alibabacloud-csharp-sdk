@@ -135,9 +135,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? SuspiciousEventCount { get; set; }
 
-            /// <summary>
-            /// 攻击阶段展示名
-            /// </summary>
             [NameInMap("TacticItems")]
             [Validation(Required=false)]
             public List<DescribeAlarmEventListResponseBodySuspEventsTacticItems> TacticItems { get; set; }
