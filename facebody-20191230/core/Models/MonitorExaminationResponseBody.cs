@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             public class MonitorExaminationResponseBodyDataFaceInfo : TeaModel {
                 [NameInMap("Completeness")]
                 [Validation(Required=false)]
-                public long? Completeness { get; set; }
+                public float? Completeness { get; set; }
 
                 [NameInMap("FaceNumber")]
                 [Validation(Required=false)]
