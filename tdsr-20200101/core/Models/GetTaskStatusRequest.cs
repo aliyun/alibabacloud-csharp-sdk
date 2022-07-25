@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
     public class GetTaskStatusRequest : TeaModel {
-        /// <summary>
-        /// 任务ID
-        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }

@@ -1,3 +1,6 @@
+2022-07-25 Version: 3.1.4
+- Add  Hotspot Interface.
+
 2022-03-10 Version: 3.0.7
 - Add CheckUserProperty Interface.
 

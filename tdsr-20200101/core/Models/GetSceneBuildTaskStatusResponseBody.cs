@@ -9,58 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
     public class GetSceneBuildTaskStatusResponseBody : TeaModel {
-        /// <summary>
-        /// 返回码
-        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public long? Code { get; set; }
 
-        /// <summary>
-        /// 任务失败错误码
-        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
-        /// <summary>
-        /// 任务失败错误消息
-        /// </summary>
         [NameInMap("ErrorMsg")]
         [Validation(Required=false)]
         public string ErrorMsg { get; set; }
 
-        /// <summary>
-        /// 错误消息
-        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// 请求ID，与入参requestId对应
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 场景ID
-        /// </summary>
         [NameInMap("SceneId")]
         [Validation(Required=false)]
         public string SceneId { get; set; }
 
-        /// <summary>
-        /// 未开始  init 处理中 失败     failed   processing  完成     succeed 取消     canceled
-        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
-        /// <summary>
-        /// 是否请求成功
-        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

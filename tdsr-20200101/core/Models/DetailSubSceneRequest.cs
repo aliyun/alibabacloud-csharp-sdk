@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
     public class DetailSubSceneRequest : TeaModel {
-        /// <summary>
-        /// 子场景ID
-        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }

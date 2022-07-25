@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
     public class GetRectifyImageRequest : TeaModel {
-        /// <summary>
-        /// 子场景ID
-        /// </summary>
         [NameInMap("SubSceneId")]
         [Validation(Required=false)]
         public string SubSceneId { get; set; }

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
     public class CheckUserPropertyRequest : TeaModel {
-        /// <summary>
-        /// 用户uid
-        /// </summary>
         [NameInMap("Uid")]
         [Validation(Required=false)]
         public string Uid { get; set; }

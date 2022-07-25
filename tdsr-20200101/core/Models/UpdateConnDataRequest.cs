@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
     public class UpdateConnDataRequest : TeaModel {
-        /// <summary>
-        /// 关联数据
-        /// </summary>
         [NameInMap("ConnData")]
         [Validation(Required=false)]
         public string ConnData { get; set; }
 
-        /// <summary>
-        /// 场景ID
-        /// </summary>
         [NameInMap("SceneId")]
         [Validation(Required=false)]
         public string SceneId { get; set; }

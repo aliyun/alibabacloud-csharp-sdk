@@ -13,12 +13,25 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         [Validation(Required=false)]
         public string Mode { get; set; }
 
-        /// <summary>
-        /// 场景ID
-        /// </summary>
+        [NameInMap("ModelStyle")]
+        [Validation(Required=false)]
+        public string ModelStyle { get; set; }
+
+        [NameInMap("OptimizeWallWidth")]
+        [Validation(Required=false)]
+        public string OptimizeWallWidth { get; set; }
+
+        [NameInMap("PlanStyle")]
+        [Validation(Required=false)]
+        public string PlanStyle { get; set; }
+
         [NameInMap("SceneId")]
         [Validation(Required=false)]
         public string SceneId { get; set; }
+
+        [NameInMap("WallHeight")]
+        [Validation(Required=false)]
+        public long? WallHeight { get; set; }
 
     }
 
