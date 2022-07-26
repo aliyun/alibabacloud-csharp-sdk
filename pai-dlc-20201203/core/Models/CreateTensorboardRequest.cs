@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class CreateTensorboardRequest : TeaModel {
-        /// <summary>
-        /// DataSource Id
-        /// </summary>
         [NameInMap("DataSourceId")]
         [Validation(Required=false)]
         public string DataSourceId { get; set; }
@@ -24,23 +21,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public List<DataSourceItem> DataSources { get; set; }
 
-        /// <summary>
-        /// Tensorboard名称
-        /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
-        /// <summary>
-        /// 任务Id
-        /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
-        /// <summary>
-        /// 最长运行时长
-        /// </summary>
         [NameInMap("MaxRunningTimeMinutes")]
         [Validation(Required=false)]
         public long? MaxRunningTimeMinutes { get; set; }
@@ -57,9 +45,6 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string SourceType { get; set; }
 
-        /// <summary>
-        /// Summary 目录
-        /// </summary>
         [NameInMap("SummaryPath")]
         [Validation(Required=false)]
         public string SummaryPath { get; set; }
