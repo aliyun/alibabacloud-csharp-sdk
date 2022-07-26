@@ -12619,6 +12619,18 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContainerFieldName))
+            {
+                query["ContainerFieldName"] = request.ContainerFieldName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContainerFieldValue))
+            {
+                query["ContainerFieldValue"] = request.ContainerFieldValue;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
                 query["CurrentPage"] = request.CurrentPage;
@@ -12646,6 +12658,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyId))
             {
                 query["StrategyId"] = request.StrategyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["TargetType"] = request.TargetType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuids))
             {
@@ -12674,6 +12690,18 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContainerFieldName))
+            {
+                query["ContainerFieldName"] = request.ContainerFieldName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContainerFieldValue))
+            {
+                query["ContainerFieldValue"] = request.ContainerFieldValue;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
                 query["CurrentPage"] = request.CurrentPage;
@@ -12701,6 +12729,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyId))
             {
                 query["StrategyId"] = request.StrategyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["TargetType"] = request.TargetType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuids))
             {

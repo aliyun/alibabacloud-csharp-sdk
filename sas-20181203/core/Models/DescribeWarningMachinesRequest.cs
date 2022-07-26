@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeWarningMachinesRequest : TeaModel {
+        [NameInMap("ClusterId")]
+        [Validation(Required=false)]
+        public string ClusterId { get; set; }
+
+        [NameInMap("ContainerFieldName")]
+        [Validation(Required=false)]
+        public string ContainerFieldName { get; set; }
+
+        [NameInMap("ContainerFieldValue")]
+        [Validation(Required=false)]
+        public string ContainerFieldValue { get; set; }
+
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
@@ -36,6 +48,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("StrategyId")]
         [Validation(Required=false)]
         public long? StrategyId { get; set; }
+
+        [NameInMap("TargetType")]
+        [Validation(Required=false)]
+        public string TargetType { get; set; }
 
         [NameInMap("Uuids")]
         [Validation(Required=false)]
