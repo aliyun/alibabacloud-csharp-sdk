@@ -21,9 +21,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<string> PrivateIpSet { get; set; }
         };
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

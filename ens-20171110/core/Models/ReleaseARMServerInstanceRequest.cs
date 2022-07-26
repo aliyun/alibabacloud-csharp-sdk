@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ReleaseARMServerInstanceRequest : TeaModel {
-        /// <summary>
-        /// AIC实例ID.
-        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

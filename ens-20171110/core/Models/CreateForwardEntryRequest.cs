@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string ForwardEntryName { get; set; }
 
+        [NameInMap("HealthCheckPort")]
+        [Validation(Required=false)]
+        public int? HealthCheckPort { get; set; }
+
         [NameInMap("InternalIp")]
         [Validation(Required=false)]
         public string InternalIp { get; set; }

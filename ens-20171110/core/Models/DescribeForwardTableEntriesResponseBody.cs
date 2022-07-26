@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string ForwardEntryName { get; set; }
 
+            [NameInMap("HealthCheckPort")]
+            [Validation(Required=false)]
+            public string HealthCheckPort { get; set; }
+
             [NameInMap("InternalIp")]
             [Validation(Required=false)]
             public string InternalIp { get; set; }
@@ -59,9 +63,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
