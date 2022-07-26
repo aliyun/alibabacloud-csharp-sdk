@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
-    public class TagResourcesResponse : TeaModel {
+    public class ChangeResourceGroupResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public TagResourcesResponseBody Body { get; set; }
+        public ChangeResourceGroupResponseBody Body { get; set; }
 
     }
 

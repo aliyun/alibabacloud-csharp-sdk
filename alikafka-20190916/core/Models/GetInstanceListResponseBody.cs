@@ -36,6 +36,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public string Name { get; set; }
                 public int? PaidType { get; set; }
                 public string RegionId { get; set; }
+                public string ResourceGroupId { get; set; }
                 public string SaslDomainEndpoint { get; set; }
                 public string SecurityGroup { get; set; }
                 public int? ServiceStatus { get; set; }

@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public bool? IsEipInner { get; set; }
 
+        [NameInMap("IsForceSelectedZones")]
+        [Validation(Required=false)]
+        public bool? IsForceSelectedZones { get; set; }
+
         [NameInMap("IsSetUserAndPassword")]
         [Validation(Required=false)]
         public bool? IsSetUserAndPassword { get; set; }
@@ -36,6 +40,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("Notifier")]
+        [Validation(Required=false)]
+        public string Notifier { get; set; }
 
         [NameInMap("Password")]
         [Validation(Required=false)]
@@ -49,9 +57,17 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public string SecurityGroup { get; set; }
 
+        [NameInMap("SelectedZones")]
+        [Validation(Required=false)]
+        public string SelectedZones { get; set; }
+
         [NameInMap("ServiceVersion")]
         [Validation(Required=false)]
         public string ServiceVersion { get; set; }
+
+        [NameInMap("UserPhoneNum")]
+        [Validation(Required=false)]
+        public string UserPhoneNum { get; set; }
 
         [NameInMap("Username")]
         [Validation(Required=false)]

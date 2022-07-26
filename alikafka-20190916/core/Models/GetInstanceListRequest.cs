@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<GetInstanceListRequestTag> Tag { get; set; }
