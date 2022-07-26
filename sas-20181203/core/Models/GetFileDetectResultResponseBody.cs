@@ -19,12 +19,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public class GetFileDetectResultResponseBodyResultList : TeaModel {
             [NameInMap("Ext")]
             [Validation(Required=false)]
-            public GetFileDetectResultResponseBodyResultListExt Ext { get; set; }
-            public class GetFileDetectResultResponseBodyResultListExt : TeaModel {
-                [NameInMap("VirusName")]
-                [Validation(Required=false)]
-                public string VirusName { get; set; }
-            };
+            public string Ext { get; set; }
 
             [NameInMap("HashKey")]
             [Validation(Required=false)]
