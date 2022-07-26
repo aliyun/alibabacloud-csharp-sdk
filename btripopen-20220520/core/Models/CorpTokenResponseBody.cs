@@ -8,15 +8,19 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
-    public class AccessTokenResponseBody : TeaModel {
+    public class CorpTokenResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         [NameInMap("data")]
         [Validation(Required=false)]
-        public AccessTokenResponseBodyData Data { get; set; }
-        public class AccessTokenResponseBodyData : TeaModel {
+        public CorpTokenResponseBodyData Data { get; set; }
+        public class CorpTokenResponseBodyData : TeaModel {
             [NameInMap("expire")]
             [Validation(Required=false)]
             public long? Expire { get; set; }
@@ -28,10 +32,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
-
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
         [NameInMap("traceId")]
         [Validation(Required=false)]

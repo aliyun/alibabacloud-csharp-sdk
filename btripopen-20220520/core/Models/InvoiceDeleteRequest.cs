@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -11,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
-    public class AccessTokenRequest : TeaModel {
-        [NameInMap("app_key")]
+    public class InvoiceDeleteRequest : TeaModel {
+        [NameInMap("third_part_id")]
         [Validation(Required=false)]
-        public string AppKey { get; set; }
+        public string ThirdPartId { get; set; }
 
-        [NameInMap("app_secret")]
+        [NameInMap("user_id")]
         [Validation(Required=false)]
-        public string AppSecret { get; set; }
+        public string UserId { get; set; }
 
     }
 
