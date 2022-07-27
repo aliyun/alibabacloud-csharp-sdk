@@ -37,10 +37,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public long? InstanceId { get; set; }
 
-            [NameInMap("MysqlPort")]
-            [Validation(Required=false)]
-            public int? MysqlPort { get; set; }
-
             [NameInMap("PrivateEnable")]
             [Validation(Required=false)]
             public bool? PrivateEnable { get; set; }
@@ -48,6 +44,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [NameInMap("PrivateHost")]
             [Validation(Required=false)]
             public string PrivateHost { get; set; }
+
+            [NameInMap("ProtocolPort")]
+            [Validation(Required=false)]
+            public int? ProtocolPort { get; set; }
+
+            [NameInMap("ProtocolType")]
+            [Validation(Required=false)]
+            public string ProtocolType { get; set; }
 
             [NameInMap("ProxyId")]
             [Validation(Required=false)]
@@ -63,9 +67,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

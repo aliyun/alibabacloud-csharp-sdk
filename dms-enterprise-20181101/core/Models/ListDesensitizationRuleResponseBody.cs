@@ -55,9 +55,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         }
 
-        /// <summary>
-        /// 表示当前调用返回读取到的位置，空代表数据已经读取完毕
-        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
@@ -66,9 +63,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -77,9 +71,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
-        /// <summary>
-        /// TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
-        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

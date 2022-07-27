@@ -129,9 +129,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public long? Seconds { get; set; }
         };
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

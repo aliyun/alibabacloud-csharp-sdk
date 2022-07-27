@@ -21,9 +21,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string FileUrl { get; set; }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

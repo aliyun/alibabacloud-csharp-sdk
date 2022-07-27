@@ -21,9 +21,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public bool? IsLogic { get; set; }
 
-        /// <summary>
-        /// 新的敏感等级
-        /// </summary>
         [NameInMap("NewLevel")]
         [Validation(Required=false)]
         public string NewLevel { get; set; }
