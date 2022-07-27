@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class UpdatePatchBaselineRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("ApprovalRules")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
+        public string ApprovalRules { get; set; }
 
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        [NameInMap("ApprovalRules")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public string ApprovalRules { get; set; }
+        public string Description { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetParameterRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [NameInMap("ParameterVersion")]
         [Validation(Required=false)]
         public int? ParameterVersion { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

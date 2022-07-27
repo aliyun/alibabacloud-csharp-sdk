@@ -9,29 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListPatchBaselinesRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public int? MaxResults { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         [NameInMap("OperationSystem")]
         [Validation(Required=false)]
         public string OperationSystem { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("ShareType")]
         [Validation(Required=false)]
         public string ShareType { get; set; }
-
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListTemplateVersionsResponseBody : TeaModel {
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
 
         [NameInMap("TemplateVersions")]
         [Validation(Required=false)]
@@ -29,25 +29,25 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
-            [NameInMap("UpdatedDate")]
+            [NameInMap("TemplateFormat")]
             [Validation(Required=false)]
-            public string UpdatedDate { get; set; }
-
-            [NameInMap("UpdatedBy")]
-            [Validation(Required=false)]
-            public string UpdatedBy { get; set; }
-
-            [NameInMap("VersionName")]
-            [Validation(Required=false)]
-            public string VersionName { get; set; }
+            public string TemplateFormat { get; set; }
 
             [NameInMap("TemplateVersion")]
             [Validation(Required=false)]
             public string TemplateVersion { get; set; }
 
-            [NameInMap("TemplateFormat")]
+            [NameInMap("UpdatedBy")]
             [Validation(Required=false)]
-            public string TemplateFormat { get; set; }
+            public string UpdatedBy { get; set; }
+
+            [NameInMap("UpdatedDate")]
+            [Validation(Required=false)]
+            public string UpdatedDate { get; set; }
+
+            [NameInMap("VersionName")]
+            [Validation(Required=false)]
+            public string VersionName { get; set; }
 
         }
 

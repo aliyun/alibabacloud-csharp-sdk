@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListTagResourcesShrinkRequest : TeaModel {
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string TagsShrink { get; set; }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
 
     }
 

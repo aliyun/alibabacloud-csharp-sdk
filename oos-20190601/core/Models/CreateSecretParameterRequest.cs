@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class CreateSecretParameterRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string ClientToken { get; set; }
 
-        [NameInMap("Name")]
+        [NameInMap("Constraints")]
         [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
-        [NameInMap("Value")]
-        [Validation(Required=false)]
-        public string Value { get; set; }
+        public string Constraints { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -33,21 +25,29 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string KeyId { get; set; }
 
-        [NameInMap("ClientToken")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string Name { get; set; }
 
-        [NameInMap("Constraints")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string Constraints { get; set; }
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string Tags { get; set; }
 
-        [NameInMap("ResourceGroupId")]
+        [NameInMap("Type")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public string Type { get; set; }
+
+        [NameInMap("Value")]
+        [Validation(Required=false)]
+        public string Value { get; set; }
 
     }
 

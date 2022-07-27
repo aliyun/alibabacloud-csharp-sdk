@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetParametersByPathRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public int? MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
         [NameInMap("Path")]
         [Validation(Required=false)]
@@ -21,13 +25,9 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public bool? Recursive { get; set; }
 
-        [NameInMap("NextToken")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
+        public string RegionId { get; set; }
 
     }
 

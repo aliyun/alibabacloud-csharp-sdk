@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
+        [NameInMap("NewResourceGroupId")]
+        [Validation(Required=false)]
+        public string NewResourceGroupId { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
-
-        [NameInMap("NewResourceGroupId")]
-        [Validation(Required=false)]
-        public string NewResourceGroupId { get; set; }
 
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListTagValuesRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("Key")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string Key { get; set; }
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
-
-        [NameInMap("Key")]
-        [Validation(Required=false)]
-        public string Key { get; set; }
 
     }
 

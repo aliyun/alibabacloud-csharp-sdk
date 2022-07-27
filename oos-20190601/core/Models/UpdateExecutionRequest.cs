@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class UpdateExecutionRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string ClientToken { get; set; }
 
         [NameInMap("ExecutionId")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string Parameters { get; set; }
 
-        [NameInMap("ClientToken")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string RegionId { get; set; }
 
     }
 

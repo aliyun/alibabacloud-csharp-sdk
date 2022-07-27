@@ -9,13 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListExecutionLogsResponseBody : TeaModel {
-        [NameInMap("NextToken")]
+        [NameInMap("ExecutionLogs")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
+        public List<ListExecutionLogsResponseBodyExecutionLogs> ExecutionLogs { get; set; }
+        public class ListExecutionLogsResponseBodyExecutionLogs : TeaModel {
+            [NameInMap("LogType")]
+            [Validation(Required=false)]
+            public string LogType { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+            [NameInMap("Message")]
+            [Validation(Required=false)]
+            public string Message { get; set; }
+
+            [NameInMap("TaskExecutionId")]
+            [Validation(Required=false)]
+            public string TaskExecutionId { get; set; }
+
+            [NameInMap("Timestamp")]
+            [Validation(Required=false)]
+            public string Timestamp { get; set; }
+
+        }
 
         [NameInMap("IsTruncated")]
         [Validation(Required=false)]
@@ -25,27 +39,13 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
-        [NameInMap("ExecutionLogs")]
+        [NameInMap("NextToken")]
         [Validation(Required=false)]
-        public List<ListExecutionLogsResponseBodyExecutionLogs> ExecutionLogs { get; set; }
-        public class ListExecutionLogsResponseBodyExecutionLogs : TeaModel {
-            [NameInMap("TaskExecutionId")]
-            [Validation(Required=false)]
-            public string TaskExecutionId { get; set; }
+        public string NextToken { get; set; }
 
-            [NameInMap("Message")]
-            [Validation(Required=false)]
-            public string Message { get; set; }
-
-            [NameInMap("LogType")]
-            [Validation(Required=false)]
-            public string LogType { get; set; }
-
-            [NameInMap("Timestamp")]
-            [Validation(Required=false)]
-            public string Timestamp { get; set; }
-
-        }
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

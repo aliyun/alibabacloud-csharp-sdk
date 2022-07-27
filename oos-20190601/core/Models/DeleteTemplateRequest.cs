@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class DeleteTemplateRequest : TeaModel {
+        [NameInMap("AutoDeleteExecutions")]
+        [Validation(Required=false)]
+        public bool? AutoDeleteExecutions { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }
-
-        [NameInMap("AutoDeleteExecutions")]
-        [Validation(Required=false)]
-        public bool? AutoDeleteExecutions { get; set; }
 
     }
 

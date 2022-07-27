@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public List<ListExecutionRiskyTasksResponseBodyRiskyTasks> RiskyTasks { get; set; }
         public class ListExecutionRiskyTasksResponseBodyRiskyTasks : TeaModel {
-            [NameInMap("Service")]
-            [Validation(Required=false)]
-            public string Service { get; set; }
-
             [NameInMap("API")]
             [Validation(Required=false)]
             public string API { get; set; }
+
+            [NameInMap("Service")]
+            [Validation(Required=false)]
+            public string Service { get; set; }
 
             [NameInMap("Task")]
             [Validation(Required=false)]

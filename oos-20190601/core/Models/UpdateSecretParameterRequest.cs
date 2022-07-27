@@ -9,29 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class UpdateSecretParameterRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string Description { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("Value")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string Value { get; set; }
+        public string RegionId { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public string ResourceGroupId { get; set; }
 
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public Dictionary<string, object> Tags { get; set; }
 
-        [NameInMap("ResourceGroupId")]
+        [NameInMap("Value")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public string Value { get; set; }
 
     }
 

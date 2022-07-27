@@ -9,17 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListStateConfigurationsRequest : TeaModel {
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("TemplateName")]
+        [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
-        public string TemplateName { get; set; }
-
-        [NameInMap("TemplateVersion")]
-        [Validation(Required=false)]
-        public string TemplateVersion { get; set; }
+        public string ResourceGroupId { get; set; }
 
         [NameInMap("StateConfigurationIds")]
         [Validation(Required=false)]
@@ -29,17 +33,13 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Tags { get; set; }
 
-        [NameInMap("MaxResults")]
+        [NameInMap("TemplateName")]
         [Validation(Required=false)]
-        public int? MaxResults { get; set; }
+        public string TemplateName { get; set; }
 
-        [NameInMap("NextToken")]
+        [NameInMap("TemplateVersion")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public string TemplateVersion { get; set; }
 
     }
 

@@ -9,49 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListTaskExecutionsRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("EndDateAfter")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("ExecutionId")]
-        [Validation(Required=false)]
-        public string ExecutionId { get; set; }
-
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
-
-        [NameInMap("StartDateBefore")]
-        [Validation(Required=false)]
-        public string StartDateBefore { get; set; }
-
-        [NameInMap("StartDateAfter")]
-        [Validation(Required=false)]
-        public string StartDateAfter { get; set; }
+        public string EndDateAfter { get; set; }
 
         [NameInMap("EndDateBefore")]
         [Validation(Required=false)]
         public string EndDateBefore { get; set; }
 
-        [NameInMap("EndDateAfter")]
+        [NameInMap("ExecutionId")]
         [Validation(Required=false)]
-        public string EndDateAfter { get; set; }
-
-        [NameInMap("TaskExecutionId")]
-        [Validation(Required=false)]
-        public string TaskExecutionId { get; set; }
-
-        [NameInMap("TaskName")]
-        [Validation(Required=false)]
-        public string TaskName { get; set; }
-
-        [NameInMap("TaskAction")]
-        [Validation(Required=false)]
-        public string TaskAction { get; set; }
-
-        [NameInMap("ParentTaskExecutionId")]
-        [Validation(Required=false)]
-        public string ParentTaskExecutionId { get; set; }
+        public string ExecutionId { get; set; }
 
         [NameInMap("IncludeChildTaskExecution")]
         [Validation(Required=false)]
@@ -65,6 +33,14 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        [NameInMap("ParentTaskExecutionId")]
+        [Validation(Required=false)]
+        public string ParentTaskExecutionId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("SortField")]
         [Validation(Required=false)]
         public string SortField { get; set; }
@@ -72,6 +48,30 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [NameInMap("SortOrder")]
         [Validation(Required=false)]
         public string SortOrder { get; set; }
+
+        [NameInMap("StartDateAfter")]
+        [Validation(Required=false)]
+        public string StartDateAfter { get; set; }
+
+        [NameInMap("StartDateBefore")]
+        [Validation(Required=false)]
+        public string StartDateBefore { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
+        [NameInMap("TaskAction")]
+        [Validation(Required=false)]
+        public string TaskAction { get; set; }
+
+        [NameInMap("TaskExecutionId")]
+        [Validation(Required=false)]
+        public string TaskExecutionId { get; set; }
+
+        [NameInMap("TaskName")]
+        [Validation(Required=false)]
+        public string TaskName { get; set; }
 
     }
 

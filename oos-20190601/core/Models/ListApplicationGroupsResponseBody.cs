@@ -9,22 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListApplicationGroupsResponseBody : TeaModel {
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
-
         [NameInMap("ApplicationGroups")]
         [Validation(Required=false)]
         public List<ListApplicationGroupsResponseBodyApplicationGroups> ApplicationGroups { get; set; }
         public class ListApplicationGroupsResponseBodyApplicationGroups : TeaModel {
+            [NameInMap("ApplicationName")]
+            [Validation(Required=false)]
+            public string ApplicationName { get; set; }
+
+            [NameInMap("CmsGroupId")]
+            [Validation(Required=false)]
+            public string CmsGroupId { get; set; }
+
+            [NameInMap("CreateDate")]
+            [Validation(Required=false)]
+            public string CreateDate { get; set; }
+
+            [NameInMap("DeployParameters")]
+            [Validation(Required=false)]
+            public string DeployParameters { get; set; }
+
             [NameInMap("DeployRegionId")]
             [Validation(Required=false)]
             public string DeployRegionId { get; set; }
@@ -33,39 +37,43 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
-            [NameInMap("UpdatedDate")]
+            [NameInMap("ImportTagKey")]
             [Validation(Required=false)]
-            public string UpdatedDate { get; set; }
+            public string ImportTagKey { get; set; }
 
-            [NameInMap("CreatedDate")]
+            [NameInMap("ImportTagValue")]
             [Validation(Required=false)]
-            public string CreatedDate { get; set; }
-
-            [NameInMap("ApplicationName")]
-            [Validation(Required=false)]
-            public string ApplicationName { get; set; }
+            public string ImportTagValue { get; set; }
 
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
-            [NameInMap("Environment")]
+            [NameInMap("Status")]
             [Validation(Required=false)]
-            public string Environment { get; set; }
+            public string Status { get; set; }
 
-            [NameInMap("CreateType")]
+            [NameInMap("StatusReason")]
             [Validation(Required=false)]
-            public string CreateType { get; set; }
+            public string StatusReason { get; set; }
 
-            [NameInMap("ScalingGroupId")]
+            [NameInMap("UpdateDate")]
             [Validation(Required=false)]
-            public string ScalingGroupId { get; set; }
-
-            [NameInMap("ImportClusterId")]
-            [Validation(Required=false)]
-            public string ImportClusterId { get; set; }
+            public string UpdateDate { get; set; }
 
         }
+
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

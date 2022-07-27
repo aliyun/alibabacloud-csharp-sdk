@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ValidateTemplateContentRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

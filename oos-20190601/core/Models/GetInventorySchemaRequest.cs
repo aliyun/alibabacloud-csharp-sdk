@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetInventorySchemaRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("Aggregator")]
         [Validation(Required=false)]
         public bool? Aggregator { get; set; }
-
-        [NameInMap("TypeName")]
-        [Validation(Required=false)]
-        public string TypeName { get; set; }
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -28,6 +20,14 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("TypeName")]
+        [Validation(Required=false)]
+        public string TypeName { get; set; }
 
     }
 

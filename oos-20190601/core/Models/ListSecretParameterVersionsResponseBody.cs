@@ -9,26 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListSecretParameterVersionsResponseBody : TeaModel {
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
-
         [NameInMap("CreatedBy")]
         [Validation(Required=false)]
         public string CreatedBy { get; set; }
@@ -37,17 +17,25 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string CreatedDate { get; set; }
 
-        [NameInMap("Name")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public string Description { get; set; }
 
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
+
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
         [NameInMap("ParameterVersions")]
         [Validation(Required=false)]
@@ -57,19 +45,31 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public int? ParameterVersion { get; set; }
 
-            [NameInMap("Value")]
+            [NameInMap("UpdatedBy")]
             [Validation(Required=false)]
-            public string Value { get; set; }
+            public string UpdatedBy { get; set; }
 
             [NameInMap("UpdatedDate")]
             [Validation(Required=false)]
             public string UpdatedDate { get; set; }
 
-            [NameInMap("UpdatedBy")]
+            [NameInMap("Value")]
             [Validation(Required=false)]
-            public string UpdatedBy { get; set; }
+            public string Value { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListInstancePatchStatesRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("InstanceIds")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string InstanceIds { get; set; }
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        [NameInMap("InstanceIds")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string InstanceIds { get; set; }
+        public string RegionId { get; set; }
 
     }
 

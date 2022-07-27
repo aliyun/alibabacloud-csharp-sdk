@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
-    public class UpdateInstanceInformationResponse : TeaModel {
+    public class ContinueDeployApplicationGroupResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
-        public UpdateInstanceInformationResponseBody Body { get; set; }
+        public ContinueDeployApplicationGroupResponseBody Body { get; set; }
 
     }
 

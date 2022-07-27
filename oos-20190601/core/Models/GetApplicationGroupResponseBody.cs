@@ -9,45 +9,54 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetApplicationGroupResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ApplicationGroup")]
         [Validation(Required=false)]
         public GetApplicationGroupResponseBodyApplicationGroup ApplicationGroup { get; set; }
         public class GetApplicationGroupResponseBodyApplicationGroup : TeaModel {
+            [NameInMap("ApplicationName")]
+            [Validation(Required=false)]
+            public string ApplicationName { get; set; }
+            [NameInMap("CmsGroupId")]
+            [Validation(Required=false)]
+            public string CmsGroupId { get; set; }
+            [NameInMap("CreateDate")]
+            [Validation(Required=false)]
+            public string CreateDate { get; set; }
+            [NameInMap("DeployOutputs")]
+            [Validation(Required=false)]
+            public string DeployOutputs { get; set; }
+            [NameInMap("DeployParameters")]
+            [Validation(Required=false)]
+            public string DeployParameters { get; set; }
             [NameInMap("DeployRegionId")]
             [Validation(Required=false)]
             public string DeployRegionId { get; set; }
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
-            [NameInMap("UpdatedDate")]
+            [NameInMap("ImportTagKey")]
             [Validation(Required=false)]
-            public string UpdatedDate { get; set; }
-            [NameInMap("CreatedDate")]
+            public string ImportTagKey { get; set; }
+            [NameInMap("ImportTagValue")]
             [Validation(Required=false)]
-            public string CreatedDate { get; set; }
-            [NameInMap("ApplicationName")]
-            [Validation(Required=false)]
-            public string ApplicationName { get; set; }
+            public string ImportTagValue { get; set; }
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
-            [NameInMap("Environment")]
+            [NameInMap("Status")]
             [Validation(Required=false)]
-            public string Environment { get; set; }
-            [NameInMap("CreateType")]
+            public string Status { get; set; }
+            [NameInMap("StatusReason")]
             [Validation(Required=false)]
-            public string CreateType { get; set; }
-            [NameInMap("ScalingGroupId")]
+            public string StatusReason { get; set; }
+            [NameInMap("UpdateDate")]
             [Validation(Required=false)]
-            public string ScalingGroupId { get; set; }
-            [NameInMap("ImportClusterId")]
-            [Validation(Required=false)]
-            public string ImportClusterId { get; set; }
+            public string UpdateDate { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -9,13 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListInventoryEntriesRequest : TeaModel {
+        [NameInMap("Filter")]
+        [Validation(Required=false)]
+        public List<ListInventoryEntriesRequestFilter> Filter { get; set; }
+        public class ListInventoryEntriesRequestFilter : TeaModel {
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("Operator")]
+            [Validation(Required=false)]
+            public string Operator { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public List<string> Value { get; set; }
+
+        }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
-
-        [NameInMap("TypeName")]
-        [Validation(Required=false)]
-        public string TypeName { get; set; }
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -25,23 +39,13 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        [NameInMap("Filter")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public List<ListInventoryEntriesRequestFilter> Filter { get; set; }
-        public class ListInventoryEntriesRequestFilter : TeaModel {
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public List<string> Value { get; set; }
+        public string RegionId { get; set; }
 
-            [NameInMap("Operator")]
-            [Validation(Required=false)]
-            public string Operator { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-        }
+        [NameInMap("TypeName")]
+        [Validation(Required=false)]
+        public string TypeName { get; set; }
 
     }
 

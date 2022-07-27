@@ -9,41 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListTemplatesShrinkRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("Category")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("TemplateName")]
-        [Validation(Required=false)]
-        public string TemplateName { get; set; }
-
-        [NameInMap("TemplateFormat")]
-        [Validation(Required=false)]
-        public string TemplateFormat { get; set; }
-
-        [NameInMap("ShareType")]
-        [Validation(Required=false)]
-        public string ShareType { get; set; }
+        public string Category { get; set; }
 
         [NameInMap("CreatedBy")]
         [Validation(Required=false)]
         public string CreatedBy { get; set; }
 
-        [NameInMap("CreatedDateBefore")]
-        [Validation(Required=false)]
-        public string CreatedDateBefore { get; set; }
-
         [NameInMap("CreatedDateAfter")]
         [Validation(Required=false)]
         public string CreatedDateAfter { get; set; }
 
-        [NameInMap("Tags")]
+        [NameInMap("CreatedDateBefore")]
         [Validation(Required=false)]
-        public string TagsShrink { get; set; }
+        public string CreatedDateBefore { get; set; }
 
-        [NameInMap("Category")]
+        [NameInMap("HasTrigger")]
         [Validation(Required=false)]
-        public string Category { get; set; }
+        public bool? HasTrigger { get; set; }
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -53,6 +37,18 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("ShareType")]
+        [Validation(Required=false)]
+        public string ShareType { get; set; }
+
         [NameInMap("SortField")]
         [Validation(Required=false)]
         public string SortField { get; set; }
@@ -61,17 +57,21 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string SortOrder { get; set; }
 
-        [NameInMap("HasTrigger")]
+        [NameInMap("Tags")]
         [Validation(Required=false)]
-        public bool? HasTrigger { get; set; }
+        public string TagsShrink { get; set; }
+
+        [NameInMap("TemplateFormat")]
+        [Validation(Required=false)]
+        public string TemplateFormat { get; set; }
+
+        [NameInMap("TemplateName")]
+        [Validation(Required=false)]
+        public string TemplateName { get; set; }
 
         [NameInMap("TemplateType")]
         [Validation(Required=false)]
         public string TemplateType { get; set; }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
 
     }
 

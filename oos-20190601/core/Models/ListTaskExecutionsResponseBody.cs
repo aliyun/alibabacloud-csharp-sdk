@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListTaskExecutionsResponseBody : TeaModel {
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
 
         [NameInMap("TaskExecutions")]
         [Validation(Required=false)]
@@ -29,41 +29,57 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string ChildExecutionId { get; set; }
 
-            [NameInMap("Outputs")]
+            [NameInMap("CreateDate")]
             [Validation(Required=false)]
-            public string Outputs { get; set; }
-
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
+            public string CreateDate { get; set; }
 
             [NameInMap("EndDate")]
             [Validation(Required=false)]
             public string EndDate { get; set; }
 
-            [NameInMap("ParentTaskExecutionId")]
+            [NameInMap("ExecutionId")]
             [Validation(Required=false)]
-            public string ParentTaskExecutionId { get; set; }
+            public string ExecutionId { get; set; }
 
-            [NameInMap("TaskName")]
+            [NameInMap("ExtraData")]
             [Validation(Required=false)]
-            public string TaskName { get; set; }
+            public Dictionary<string, object> ExtraData { get; set; }
 
-            [NameInMap("StartDate")]
+            [NameInMap("Loop")]
             [Validation(Required=false)]
-            public string StartDate { get; set; }
+            public Dictionary<string, object> Loop { get; set; }
+
+            [NameInMap("LoopBatchNumber")]
+            [Validation(Required=false)]
+            public int? LoopBatchNumber { get; set; }
 
             [NameInMap("LoopItem")]
             [Validation(Required=false)]
             public string LoopItem { get; set; }
 
-            [NameInMap("CreateDate")]
+            [NameInMap("Outputs")]
             [Validation(Required=false)]
-            public string CreateDate { get; set; }
+            public string Outputs { get; set; }
 
-            [NameInMap("ExecutionId")]
+            [NameInMap("ParentTaskExecutionId")]
             [Validation(Required=false)]
-            public string ExecutionId { get; set; }
+            public string ParentTaskExecutionId { get; set; }
+
+            [NameInMap("Properties")]
+            [Validation(Required=false)]
+            public string Properties { get; set; }
+
+            [NameInMap("StartDate")]
+            [Validation(Required=false)]
+            public string StartDate { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            [NameInMap("StatusMessage")]
+            [Validation(Required=false)]
+            public string StatusMessage { get; set; }
 
             [NameInMap("TaskAction")]
             [Validation(Required=false)]
@@ -73,33 +89,17 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string TaskExecutionId { get; set; }
 
-            [NameInMap("UpdateDate")]
+            [NameInMap("TaskName")]
             [Validation(Required=false)]
-            public string UpdateDate { get; set; }
-
-            [NameInMap("Loop")]
-            [Validation(Required=false)]
-            public Dictionary<string, object> Loop { get; set; }
+            public string TaskName { get; set; }
 
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
             public string TemplateId { get; set; }
 
-            [NameInMap("LoopBatchNumber")]
+            [NameInMap("UpdateDate")]
             [Validation(Required=false)]
-            public int? LoopBatchNumber { get; set; }
-
-            [NameInMap("StatusMessage")]
-            [Validation(Required=false)]
-            public string StatusMessage { get; set; }
-
-            [NameInMap("ExtraData")]
-            [Validation(Required=false)]
-            public Dictionary<string, object> ExtraData { get; set; }
-
-            [NameInMap("Properties")]
-            [Validation(Required=false)]
-            public string Properties { get; set; }
+            public string UpdateDate { get; set; }
 
         }
 

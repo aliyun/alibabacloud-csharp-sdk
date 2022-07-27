@@ -9,92 +9,92 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class StartExecutionResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Execution")]
         [Validation(Required=false)]
         public StartExecutionResponseBodyExecution Execution { get; set; }
         public class StartExecutionResponseBodyExecution : TeaModel {
-            [NameInMap("Outputs")]
+            [NameInMap("Counters")]
             [Validation(Required=false)]
-            public string Outputs { get; set; }
-            [NameInMap("Status")]
+            public Dictionary<string, string> Counters { get; set; }
+            [NameInMap("CreateDate")]
             [Validation(Required=false)]
-            public string Status { get; set; }
+            public string CreateDate { get; set; }
+            [NameInMap("CurrentTasks")]
+            [Validation(Required=false)]
+            public List<StartExecutionResponseBodyExecutionCurrentTasks> CurrentTasks { get; set; }
+            public class StartExecutionResponseBodyExecutionCurrentTasks : TeaModel {
+                public string TaskAction { get; set; }
+                public string TaskExecutionId { get; set; }
+                public string TaskName { get; set; }
+            }
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
             [NameInMap("EndDate")]
             [Validation(Required=false)]
             public string EndDate { get; set; }
             [NameInMap("ExecutedBy")]
             [Validation(Required=false)]
             public string ExecutedBy { get; set; }
-            [NameInMap("IsParent")]
-            [Validation(Required=false)]
-            public bool? IsParent { get; set; }
-            [NameInMap("Tags")]
-            [Validation(Required=false)]
-            public Dictionary<string, string> Tags { get; set; }
-            [NameInMap("StartDate")]
-            [Validation(Required=false)]
-            public string StartDate { get; set; }
-            [NameInMap("SafetyCheck")]
-            [Validation(Required=false)]
-            public string SafetyCheck { get; set; }
-            [NameInMap("Mode")]
-            [Validation(Required=false)]
-            public string Mode { get; set; }
-            [NameInMap("TemplateName")]
-            [Validation(Required=false)]
-            public string TemplateName { get; set; }
-            [NameInMap("CreateDate")]
-            [Validation(Required=false)]
-            public string CreateDate { get; set; }
-            [NameInMap("TemplateVersion")]
-            [Validation(Required=false)]
-            public string TemplateVersion { get; set; }
             [NameInMap("ExecutionId")]
             [Validation(Required=false)]
             public string ExecutionId { get; set; }
+            [NameInMap("IsParent")]
+            [Validation(Required=false)]
+            public bool? IsParent { get; set; }
+            [NameInMap("LoopMode")]
+            [Validation(Required=false)]
+            public string LoopMode { get; set; }
+            [NameInMap("Mode")]
+            [Validation(Required=false)]
+            public string Mode { get; set; }
+            [NameInMap("Outputs")]
+            [Validation(Required=false)]
+            public string Outputs { get; set; }
             [NameInMap("Parameters")]
             [Validation(Required=false)]
             public string Parameters { get; set; }
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-            [NameInMap("Counters")]
-            [Validation(Required=false)]
-            public Dictionary<string, string> Counters { get; set; }
-            [NameInMap("UpdateDate")]
-            [Validation(Required=false)]
-            public string UpdateDate { get; set; }
-            [NameInMap("ResourceGroupId")]
-            [Validation(Required=false)]
-            public string ResourceGroupId { get; set; }
             [NameInMap("ParentExecutionId")]
             [Validation(Required=false)]
             public string ParentExecutionId { get; set; }
             [NameInMap("RamRole")]
             [Validation(Required=false)]
             public string RamRole { get; set; }
-            [NameInMap("TemplateId")]
+            [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
-            public string TemplateId { get; set; }
+            public string ResourceGroupId { get; set; }
+            [NameInMap("SafetyCheck")]
+            [Validation(Required=false)]
+            public string SafetyCheck { get; set; }
+            [NameInMap("StartDate")]
+            [Validation(Required=false)]
+            public string StartDate { get; set; }
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
             [NameInMap("StatusMessage")]
             [Validation(Required=false)]
             public string StatusMessage { get; set; }
-            [NameInMap("LoopMode")]
+            [NameInMap("Tags")]
             [Validation(Required=false)]
-            public string LoopMode { get; set; }
-            [NameInMap("CurrentTasks")]
+            public Dictionary<string, string> Tags { get; set; }
+            [NameInMap("TemplateId")]
             [Validation(Required=false)]
-            public List<StartExecutionResponseBodyExecutionCurrentTasks> CurrentTasks { get; set; }
-            public class StartExecutionResponseBodyExecutionCurrentTasks : TeaModel {
-                public string TaskExecutionId { get; set; }
-                public string TaskName { get; set; }
-                public string TaskAction { get; set; }
-            }
+            public string TemplateId { get; set; }
+            [NameInMap("TemplateName")]
+            [Validation(Required=false)]
+            public string TemplateName { get; set; }
+            [NameInMap("TemplateVersion")]
+            [Validation(Required=false)]
+            public string TemplateVersion { get; set; }
+            [NameInMap("UpdateDate")]
+            [Validation(Required=false)]
+            public string UpdateDate { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

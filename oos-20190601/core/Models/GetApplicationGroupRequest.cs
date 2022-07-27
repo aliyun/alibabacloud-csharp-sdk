@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetApplicationGroupRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("ApplicationName")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string ApplicationName { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

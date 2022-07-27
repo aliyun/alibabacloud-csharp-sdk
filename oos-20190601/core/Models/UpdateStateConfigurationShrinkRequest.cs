@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class UpdateStateConfigurationShrinkRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string ClientToken { get; set; }
+
+        [NameInMap("ConfigureMode")]
+        [Validation(Required=false)]
+        public string ConfigureMode { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -21,25 +25,21 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string ParametersShrink { get; set; }
 
-        [NameInMap("ConfigureMode")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string ConfigureMode { get; set; }
+        public string RegionId { get; set; }
 
-        [NameInMap("ScheduleType")]
+        [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
-        public string ScheduleType { get; set; }
+        public string ResourceGroupId { get; set; }
 
         [NameInMap("ScheduleExpression")]
         [Validation(Required=false)]
         public string ScheduleExpression { get; set; }
 
-        [NameInMap("Targets")]
+        [NameInMap("ScheduleType")]
         [Validation(Required=false)]
-        public string Targets { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string ScheduleType { get; set; }
 
         [NameInMap("StateConfigurationId")]
         [Validation(Required=false)]
@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string TagsShrink { get; set; }
 
-        [NameInMap("ResourceGroupId")]
+        [NameInMap("Targets")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public string Targets { get; set; }
 
     }
 

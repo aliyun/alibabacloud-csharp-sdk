@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class SearchInventoryResponseBody : TeaModel {
+        [NameInMap("Entities")]
+        [Validation(Required=false)]
+        public List<Dictionary<string, object>> Entities { get; set; }
+
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -16,14 +24,6 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
-
-        [NameInMap("Entities")]
-        [Validation(Required=false)]
-        public List<Dictionary<string, object>> Entities { get; set; }
 
     }
 

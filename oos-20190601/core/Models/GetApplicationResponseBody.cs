@@ -9,58 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetApplicationResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Application")]
         [Validation(Required=false)]
         public GetApplicationResponseBodyApplication Application { get; set; }
         public class GetApplicationResponseBodyApplication : TeaModel {
-            [NameInMap("IsSystem")]
+            [NameInMap("CreateDate")]
             [Validation(Required=false)]
-            public string IsSystem { get; set; }
+            public string CreateDate { get; set; }
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
-            [NameInMap("UpdatedDate")]
-            [Validation(Required=false)]
-            public string UpdatedDate { get; set; }
-            [NameInMap("ResourceGroupId")]
-            [Validation(Required=false)]
-            public string ResourceGroupId { get; set; }
-            [NameInMap("CreatedDate")]
-            [Validation(Required=false)]
-            public string CreatedDate { get; set; }
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
-            [NameInMap("CloudMonitorRule")]
+            [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
-            public GetApplicationResponseBodyApplicationCloudMonitorRule CloudMonitorRule { get; set; }
-            public class GetApplicationResponseBodyApplicationCloudMonitorRule : TeaModel {
-                [NameInMap("EnableSubscribeEvent")]
-                [Validation(Required=false)]
-                public bool? EnableSubscribeEvent { get; set; }
-
-                [NameInMap("EnableInstallAgent")]
-                [Validation(Required=false)]
-                public bool? EnableInstallAgent { get; set; }
-
-                [NameInMap("Enabled")]
-                [Validation(Required=false)]
-                public bool? Enabled { get; set; }
-
-                [NameInMap("ContactGroupList")]
-                [Validation(Required=false)]
-                public List<string> ContactGroupList { get; set; }
-
-                [NameInMap("TemplateIdList")]
-                [Validation(Required=false)]
-                public List<int?> TemplateIdList { get; set; }
-
-            }
+            public string ResourceGroupId { get; set; }
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> Tags { get; set; }
+            [NameInMap("UpdateDate")]
+            [Validation(Required=false)]
+            public string UpdateDate { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

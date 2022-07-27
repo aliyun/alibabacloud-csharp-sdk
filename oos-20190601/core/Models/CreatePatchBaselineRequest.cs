@@ -9,29 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class CreatePatchBaselineRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("ApprovalRules")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
+        public string ApprovalRules { get; set; }
 
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
         [NameInMap("OperationSystem")]
         [Validation(Required=false)]
         public string OperationSystem { get; set; }
 
-        [NameInMap("ApprovalRules")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string ApprovalRules { get; set; }
+        public string RegionId { get; set; }
 
     }
 

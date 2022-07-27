@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string DeliveryOssBucketName { get; set; }
 
-            [NameInMap("DeliveryOssKeyPrefix")]
-            [Validation(Required=false)]
-            public string DeliveryOssKeyPrefix { get; set; }
-
             [NameInMap("DeliveryOssEnabled")]
             [Validation(Required=false)]
             public bool? DeliveryOssEnabled { get; set; }
+
+            [NameInMap("DeliveryOssKeyPrefix")]
+            [Validation(Required=false)]
+            public string DeliveryOssKeyPrefix { get; set; }
 
             [NameInMap("DeliverySlsEnabled")]
             [Validation(Required=false)]

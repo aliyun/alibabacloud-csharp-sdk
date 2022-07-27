@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class UntagResourcesRequest : TeaModel {
+        [NameInMap("All")]
+        [Validation(Required=false)]
+        public bool? All { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [NameInMap("TagKeys")]
         [Validation(Required=false)]
         public Dictionary<string, object> TagKeys { get; set; }
-
-        [NameInMap("All")]
-        [Validation(Required=false)]
-        public bool? All { get; set; }
 
     }
 
