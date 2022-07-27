@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class EntityDeleteResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("module")]
         [Validation(Required=false)]
         public EntityDeleteResponseBodyModule Module { get; set; }
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [NameInMap("more_page")]
         [Validation(Required=false)]
         public bool? MorePage { get; set; }
+
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("result_code")]
         [Validation(Required=false)]

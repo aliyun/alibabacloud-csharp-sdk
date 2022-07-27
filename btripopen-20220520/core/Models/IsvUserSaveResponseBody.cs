@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
-        [NameInMap("traceid")]
+        [NameInMap("traceId")]
         [Validation(Required=false)]
-        public string Traceid { get; set; }
+        public string TraceId { get; set; }
 
     }
 
