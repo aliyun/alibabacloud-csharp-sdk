@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class DescribeJobErrorCodeRequest : TeaModel {
-        [NameInMap("TaskId")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string TaskId { get; set; }
+        public string ClientToken { get; set; }
 
         [NameInMap("Language")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [Validation(Required=false)]
         public string OwnerId { get; set; }
 
-        [NameInMap("ClientToken")]
+        [NameInMap("TaskId")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string TaskId { get; set; }
 
     }
 

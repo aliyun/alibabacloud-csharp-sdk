@@ -8,26 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
-    public class CreateBackupPlanResponseBody : TeaModel {
-        [NameInMap("BackupPlanId")]
+    public class InitializeDbsServiceLinkedRoleResponseBody : TeaModel {
+        [NameInMap("Data")]
         [Validation(Required=false)]
-        public string BackupPlanId { get; set; }
-
-        [NameInMap("ErrCode")]
-        [Validation(Required=false)]
-        public string ErrCode { get; set; }
+        public string Data { get; set; }
 
         [NameInMap("ErrMessage")]
         [Validation(Required=false)]
         public string ErrMessage { get; set; }
 
-        [NameInMap("HttpStatusCode")]
+        [NameInMap("ErrorCode")]
         [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
-
-        [NameInMap("OrderId")]
-        [Validation(Required=false)]
-        public string OrderId { get; set; }
+        public string ErrorCode { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -35,7 +27,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 
         [NameInMap("Success")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string Success { get; set; }
 
     }
 

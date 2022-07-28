@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [Validation(Required=false)]
         public string BackupPlanId { get; set; }
 
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public string OwnerId { get; set; }
+
         [NameInMap("Period")]
         [Validation(Required=false)]
         public string Period { get; set; }
@@ -20,14 +28,6 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [NameInMap("UsedTime")]
         [Validation(Required=false)]
         public int? UsedTime { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public string OwnerId { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
 
     }
 

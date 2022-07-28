@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [Validation(Required=false)]
         public long? BeginTimestampForRestore { get; set; }
 
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
         [NameInMap("EndTimestampForRestore")]
         [Validation(Required=false)]
         public long? EndTimestampForRestore { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public string OwnerId { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
 
         [NameInMap("RecentlyRestore")]
         [Validation(Required=false)]

@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
-    public class CreateBackupPlanResponseBody : TeaModel {
-        [NameInMap("BackupPlanId")]
+    public class DescribeDLAServiceResponseBody : TeaModel {
+        [NameInMap("AutoAdd")]
         [Validation(Required=false)]
-        public string BackupPlanId { get; set; }
+        public bool? AutoAdd { get; set; }
 
         [NameInMap("ErrCode")]
         [Validation(Required=false)]
@@ -21,17 +21,21 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [Validation(Required=false)]
         public string ErrMessage { get; set; }
 
+        [NameInMap("HaveJobFailed")]
+        [Validation(Required=false)]
+        public bool? HaveJobFailed { get; set; }
+
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
-        [NameInMap("OrderId")]
-        [Validation(Required=false)]
-        public string OrderId { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("State")]
+        [Validation(Required=false)]
+        public string State { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class ModifyBackupStrategyRequest : TeaModel {
-        [NameInMap("BackupPlanId")]
+        [NameInMap("BackupLogIntervalSeconds")]
         [Validation(Required=false)]
-        public string BackupPlanId { get; set; }
+        public int? BackupLogIntervalSeconds { get; set; }
 
         [NameInMap("BackupPeriod")]
         [Validation(Required=false)]
         public string BackupPeriod { get; set; }
+
+        [NameInMap("BackupPlanId")]
+        [Validation(Required=false)]
+        public string BackupPlanId { get; set; }
 
         [NameInMap("BackupStartTime")]
         [Validation(Required=false)]
@@ -25,17 +29,13 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [Validation(Required=false)]
         public string BackupStrategyType { get; set; }
 
-        [NameInMap("BackupLogIntervalSeconds")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public int? BackupLogIntervalSeconds { get; set; }
+        public string ClientToken { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public string OwnerId { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
 
     }
 

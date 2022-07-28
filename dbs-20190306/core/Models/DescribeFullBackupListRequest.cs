@@ -13,29 +13,37 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [Validation(Required=false)]
         public string BackupPlanId { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("BackupSetId")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNum")]
-        [Validation(Required=false)]
-        public int? PageNum { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public string OwnerId { get; set; }
+        public string BackupSetId { get; set; }
 
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("EndTimestamp")]
+        [Validation(Required=false)]
+        public long? EndTimestamp { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public string OwnerId { get; set; }
+
+        [NameInMap("PageNum")]
+        [Validation(Required=false)]
+        public int? PageNum { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         [NameInMap("ShowStorageType")]
         [Validation(Required=false)]
         public bool? ShowStorageType { get; set; }
 
-        [NameInMap("BackupSetId")]
+        [NameInMap("StartTimestamp")]
         [Validation(Required=false)]
-        public string BackupSetId { get; set; }
+        public long? StartTimestamp { get; set; }
 
     }
 

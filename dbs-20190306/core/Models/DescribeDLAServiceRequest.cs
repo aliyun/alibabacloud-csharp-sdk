@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
-    public class StartTaskRequest : TeaModel {
-        [NameInMap("TaskId")]
+    public class DescribeDLAServiceRequest : TeaModel {
+        [NameInMap("BackupPlanId")]
         [Validation(Required=false)]
-        public string TaskId { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public string OwnerId { get; set; }
+        public string BackupPlanId { get; set; }
 
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public string OwnerId { get; set; }
 
     }
 

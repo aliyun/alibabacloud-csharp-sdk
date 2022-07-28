@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class ModifyBackupSetDownloadRulesRequest : TeaModel {
-        [NameInMap("BackupPlanId")]
-        [Validation(Required=false)]
-        public string BackupPlanId { get; set; }
-
-        [NameInMap("OpenAutoDownload")]
-        [Validation(Required=false)]
-        public bool? OpenAutoDownload { get; set; }
-
         [NameInMap("BackupGatewayId")]
         [Validation(Required=false)]
         public long? BackupGatewayId { get; set; }
 
-        [NameInMap("FullDataFormat")]
+        [NameInMap("BackupPlanId")]
         [Validation(Required=false)]
-        public string FullDataFormat { get; set; }
-
-        [NameInMap("IncrementDataFormat")]
-        [Validation(Required=false)]
-        public string IncrementDataFormat { get; set; }
+        public string BackupPlanId { get; set; }
 
         [NameInMap("BackupSetDownloadDir")]
         [Validation(Required=false)]
@@ -41,13 +29,25 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [Validation(Required=false)]
         public string BackupSetDownloadTargetTypeLocation { get; set; }
 
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public string OwnerId { get; set; }
-
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("FullDataFormat")]
+        [Validation(Required=false)]
+        public string FullDataFormat { get; set; }
+
+        [NameInMap("IncrementDataFormat")]
+        [Validation(Required=false)]
+        public string IncrementDataFormat { get; set; }
+
+        [NameInMap("OpenAutoDownload")]
+        [Validation(Required=false)]
+        public bool? OpenAutoDownload { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public string OwnerId { get; set; }
 
     }
 

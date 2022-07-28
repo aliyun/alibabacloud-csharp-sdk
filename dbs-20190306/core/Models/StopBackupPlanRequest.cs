@@ -13,17 +13,17 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [Validation(Required=false)]
         public string BackupPlanId { get; set; }
 
-        [NameInMap("StopMethod")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string StopMethod { get; set; }
+        public string ClientToken { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public string OwnerId { get; set; }
 
-        [NameInMap("ClientToken")]
+        [NameInMap("StopMethod")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string StopMethod { get; set; }
 
     }
 

@@ -9,29 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class DescribeBackupGatewayListResponseBody : TeaModel {
-        [NameInMap("PageNum")]
+        [NameInMap("ErrCode")]
         [Validation(Required=false)]
-        public int? PageNum { get; set; }
+        public string ErrCode { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("ErrMessage")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string ErrMessage { get; set; }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
-
-        [NameInMap("TotalElements")]
-        [Validation(Required=false)]
-        public int? TotalElements { get; set; }
-
-        [NameInMap("TotalPages")]
-        [Validation(Required=false)]
-        public int? TotalPages { get; set; }
 
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -41,30 +29,42 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
             [Validation(Required=false)]
             public List<DescribeBackupGatewayListResponseBodyItemsBackupGateway> BackupGateway { get; set; }
             public class DescribeBackupGatewayListResponseBodyItemsBackupGateway : TeaModel {
-                public string DisplayName { get; set; }
                 public long? BackupGatewayCreateTime { get; set; }
                 public string BackupGatewayId { get; set; }
-                public string Region { get; set; }
-                public string Identifier { get; set; }
-                public string SourceEndpointInternetIP { get; set; }
                 public string BackupGatewayStatus { get; set; }
-                public string SourceEndpointIntranetIP { get; set; }
+                public string DisplayName { get; set; }
+                public string Identifier { get; set; }
                 public long? LastHeartbeatTime { get; set; }
+                public string Region { get; set; }
                 public string SourceEndpointHostname { get; set; }
+                public string SourceEndpointInternetIP { get; set; }
+                public string SourceEndpointIntranetIP { get; set; }
             }
         };
 
-        [NameInMap("ErrMessage")]
+        [NameInMap("PageNum")]
         [Validation(Required=false)]
-        public string ErrMessage { get; set; }
+        public int? PageNum { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
-        [NameInMap("ErrCode")]
+        [NameInMap("TotalElements")]
         [Validation(Required=false)]
-        public string ErrCode { get; set; }
+        public int? TotalElements { get; set; }
+
+        [NameInMap("TotalPages")]
+        [Validation(Required=false)]
+        public int? TotalPages { get; set; }
 
     }
 

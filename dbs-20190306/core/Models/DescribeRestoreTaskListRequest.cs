@@ -13,25 +13,33 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [Validation(Required=false)]
         public string BackupPlanId { get; set; }
 
-        [NameInMap("RestoreTaskId")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string RestoreTaskId { get; set; }
+        public string ClientToken { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("EndTimestamp")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNum")]
-        [Validation(Required=false)]
-        public int? PageNum { get; set; }
+        public long? EndTimestamp { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public string OwnerId { get; set; }
 
-        [NameInMap("ClientToken")]
+        [NameInMap("PageNum")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public int? PageNum { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RestoreTaskId")]
+        [Validation(Required=false)]
+        public string RestoreTaskId { get; set; }
+
+        [NameInMap("StartTimestamp")]
+        [Validation(Required=false)]
+        public long? StartTimestamp { get; set; }
 
     }
 

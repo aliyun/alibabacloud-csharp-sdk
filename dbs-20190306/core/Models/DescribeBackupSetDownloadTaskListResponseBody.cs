@@ -9,29 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class DescribeBackupSetDownloadTaskListResponseBody : TeaModel {
-        [NameInMap("PageNum")]
+        [NameInMap("ErrCode")]
         [Validation(Required=false)]
-        public int? PageNum { get; set; }
+        public string ErrCode { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("ErrMessage")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string ErrMessage { get; set; }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
-
-        [NameInMap("TotalElements")]
-        [Validation(Required=false)]
-        public int? TotalElements { get; set; }
-
-        [NameInMap("TotalPages")]
-        [Validation(Required=false)]
-        public int? TotalPages { get; set; }
 
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -41,39 +29,51 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
             [Validation(Required=false)]
             public List<DescribeBackupSetDownloadTaskListResponseBodyItemsBackupSetDownloadTaskDetail> BackupSetDownloadTaskDetail { get; set; }
             public class DescribeBackupSetDownloadTaskListResponseBodyItemsBackupSetDownloadTaskDetail : TeaModel {
-                public string BackupSetDownloadStatus { get; set; }
-                public long? BackupSetDataSize { get; set; }
-                public string BackupSetDownloadDir { get; set; }
-                public string BackupSetDownloadTargetType { get; set; }
-                public string ErrMessage { get; set; }
-                public string BackupPlanId { get; set; }
-                public long? BackupSetDownloadCreateTime { get; set; }
-                public string BackupSetDbType { get; set; }
-                public string BackupSetDownloadInternetUrl { get; set; }
-                public string BackupSetId { get; set; }
                 public long? BackupGatewayId { get; set; }
-                public string BackupSetDownloadIntranetUrl { get; set; }
-                public string BackupSetDownloadWay { get; set; }
+                public string BackupPlanId { get; set; }
+                public string BackupSetCode { get; set; }
+                public string BackupSetDataFormat { get; set; }
+                public long? BackupSetDataSize { get; set; }
+                public string BackupSetDbType { get; set; }
+                public long? BackupSetDownloadCreateTime { get; set; }
+                public string BackupSetDownloadDir { get; set; }
                 public long? BackupSetDownloadFinishTime { get; set; }
-                public string BackupSetJobType { get; set; }
+                public string BackupSetDownloadInternetUrl { get; set; }
+                public string BackupSetDownloadIntranetUrl { get; set; }
+                public string BackupSetDownloadStatus { get; set; }
+                public string BackupSetDownloadTargetType { get; set; }
                 public string BackupSetDownloadTaskId { get; set; }
                 public string BackupSetDownloadTaskName { get; set; }
-                public string BackupSetDataFormat { get; set; }
-                public string BackupSetCode { get; set; }
+                public string BackupSetDownloadWay { get; set; }
+                public string BackupSetId { get; set; }
+                public string BackupSetJobType { get; set; }
+                public string ErrMessage { get; set; }
             }
         };
 
-        [NameInMap("ErrMessage")]
+        [NameInMap("PageNum")]
         [Validation(Required=false)]
-        public string ErrMessage { get; set; }
+        public int? PageNum { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
-        [NameInMap("ErrCode")]
+        [NameInMap("TotalElements")]
         [Validation(Required=false)]
-        public string ErrCode { get; set; }
+        public int? TotalElements { get; set; }
+
+        [NameInMap("TotalPages")]
+        [Validation(Required=false)]
+        public int? TotalPages { get; set; }
 
     }
 

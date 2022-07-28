@@ -13,13 +13,17 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [Validation(Required=false)]
         public long? BackupGatewayId { get; set; }
 
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
         [NameInMap("DatabaseType")]
         [Validation(Required=false)]
         public string DatabaseType { get; set; }
 
-        [NameInMap("SourceEndpointRegion")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string SourceEndpointRegion { get; set; }
+        public string OwnerId { get; set; }
 
         [NameInMap("SourceEndpointIP")]
         [Validation(Required=false)]
@@ -29,13 +33,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [Validation(Required=false)]
         public int? SourceEndpointPort { get; set; }
 
-        [NameInMap("OwnerId")]
+        [NameInMap("SourceEndpointRegion")]
         [Validation(Required=false)]
-        public string OwnerId { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string SourceEndpointRegion { get; set; }
 
     }
 

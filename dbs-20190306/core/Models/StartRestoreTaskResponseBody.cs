@@ -9,29 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class StartRestoreTaskResponseBody : TeaModel {
-        [NameInMap("RestoreTaskId")]
+        [NameInMap("ErrCode")]
         [Validation(Required=false)]
-        public string RestoreTaskId { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
+        public string ErrCode { get; set; }
 
         [NameInMap("ErrMessage")]
         [Validation(Required=false)]
         public string ErrMessage { get; set; }
 
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("RestoreTaskId")]
+        [Validation(Required=false)]
+        public string RestoreTaskId { get; set; }
+
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("ErrCode")]
-        [Validation(Required=false)]
-        public string ErrCode { get; set; }
 
     }
 

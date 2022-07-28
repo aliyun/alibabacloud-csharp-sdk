@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class DescribeRegionsRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public string OwnerId { get; set; }
-
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public string OwnerId { get; set; }
 
     }
 

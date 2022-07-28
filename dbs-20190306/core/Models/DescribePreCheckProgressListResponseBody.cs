@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class DescribePreCheckProgressListResponseBody : TeaModel {
-        [NameInMap("Status")]
+        [NameInMap("ErrCode")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string ErrCode { get; set; }
 
-        [NameInMap("Progress")]
+        [NameInMap("ErrMessage")]
         [Validation(Required=false)]
-        public int? Progress { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string ErrMessage { get; set; }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
@@ -33,28 +29,32 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
             [Validation(Required=false)]
             public List<DescribePreCheckProgressListResponseBodyItemsPreCheckProgressDetail> PreCheckProgressDetail { get; set; }
             public class DescribePreCheckProgressListResponseBodyItemsPreCheckProgressDetail : TeaModel {
-                public long? FinishTime { get; set; }
-                public string State { get; set; }
                 public long? BootTime { get; set; }
-                public string JobId { get; set; }
-                public string Item { get; set; }
                 public string ErrMsg { get; set; }
-                public string OrderNum { get; set; }
+                public long? FinishTime { get; set; }
+                public string Item { get; set; }
+                public string JobId { get; set; }
                 public string Names { get; set; }
+                public string OrderNum { get; set; }
+                public string State { get; set; }
             }
         };
 
-        [NameInMap("ErrMessage")]
+        [NameInMap("Progress")]
         [Validation(Required=false)]
-        public string ErrMessage { get; set; }
+        public int? Progress { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("ErrCode")]
-        [Validation(Required=false)]
-        public string ErrCode { get; set; }
 
     }
 

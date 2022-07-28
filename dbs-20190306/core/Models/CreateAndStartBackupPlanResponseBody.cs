@@ -8,10 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
-    public class CreateBackupPlanResponseBody : TeaModel {
+    public class CreateAndStartBackupPlanResponseBody : TeaModel {
         [NameInMap("BackupPlanId")]
         [Validation(Required=false)]
         public string BackupPlanId { get; set; }
+
+        [NameInMap("CreateBackupSet")]
+        [Validation(Required=false)]
+        public bool? CreateBackupSet { get; set; }
 
         [NameInMap("ErrCode")]
         [Validation(Required=false)]

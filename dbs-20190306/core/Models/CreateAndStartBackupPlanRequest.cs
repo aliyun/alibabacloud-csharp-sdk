@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -11,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
-    public class ConfigureBackupPlanRequest : TeaModel {
-        [NameInMap("AutoStartBackup")]
-        [Validation(Required=false)]
-        public bool? AutoStartBackup { get; set; }
-
+    public class CreateAndStartBackupPlanRequest : TeaModel {
         [NameInMap("BackupGatewayId")]
         [Validation(Required=false)]
         public long? BackupGatewayId { get; set; }
@@ -23,6 +16,10 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [NameInMap("BackupLogIntervalSeconds")]
         [Validation(Required=false)]
         public int? BackupLogIntervalSeconds { get; set; }
+
+        [NameInMap("BackupMethod")]
+        [Validation(Required=false)]
+        public string BackupMethod { get; set; }
 
         [NameInMap("BackupObjects")]
         [Validation(Required=false)]
@@ -76,6 +73,14 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [Validation(Required=false)]
         public string CrossRoleName { get; set; }
 
+        [NameInMap("DatabaseRegion")]
+        [Validation(Required=false)]
+        public string DatabaseRegion { get; set; }
+
+        [NameInMap("DatabaseType")]
+        [Validation(Required=false)]
+        public string DatabaseType { get; set; }
+
         [NameInMap("DuplicationArchivePeriod")]
         [Validation(Required=false)]
         public int? DuplicationArchivePeriod { get; set; }
@@ -88,6 +93,18 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [Validation(Required=false)]
         public bool? EnableBackupLog { get; set; }
 
+        [NameInMap("FromApp")]
+        [Validation(Required=false)]
+        public string FromApp { get; set; }
+
+        [NameInMap("InstanceClass")]
+        [Validation(Required=false)]
+        public string InstanceClass { get; set; }
+
+        [NameInMap("InstanceType")]
+        [Validation(Required=false)]
+        public string InstanceType { get; set; }
+
         [NameInMap("OSSBucketName")]
         [Validation(Required=false)]
         public string OSSBucketName { get; set; }
@@ -95,6 +112,18 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public string OwnerId { get; set; }
+
+        [NameInMap("PayType")]
+        [Validation(Required=false)]
+        public string PayType { get; set; }
+
+        [NameInMap("Period")]
+        [Validation(Required=false)]
+        public string Period { get; set; }
+
+        [NameInMap("Region")]
+        [Validation(Required=false)]
+        public string Region { get; set; }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -135,6 +164,18 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [NameInMap("SourceEndpointUserName")]
         [Validation(Required=false)]
         public string SourceEndpointUserName { get; set; }
+
+        [NameInMap("StorageRegion")]
+        [Validation(Required=false)]
+        public string StorageRegion { get; set; }
+
+        [NameInMap("StorageType")]
+        [Validation(Required=false)]
+        public string StorageType { get; set; }
+
+        [NameInMap("UsedTime")]
+        [Validation(Required=false)]
+        public int? UsedTime { get; set; }
 
     }
 

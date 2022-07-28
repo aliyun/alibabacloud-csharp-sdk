@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
-    public class StartTaskResponse : TeaModel {
+    public class DescribeDLAServiceResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
-        public StartTaskResponseBody Body { get; set; }
+        public DescribeDLAServiceResponseBody Body { get; set; }
 
     }
 

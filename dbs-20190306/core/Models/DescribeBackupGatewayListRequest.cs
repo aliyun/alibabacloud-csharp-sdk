@@ -9,29 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class DescribeBackupGatewayListRequest : TeaModel {
-        [NameInMap("Region")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string Region { get; set; }
+        public string ClientToken { get; set; }
 
         [NameInMap("Identifier")]
         [Validation(Required=false)]
         public string Identifier { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string OwnerId { get; set; }
 
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }
 
-        [NameInMap("OwnerId")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string OwnerId { get; set; }
+        public int? PageSize { get; set; }
 
-        [NameInMap("ClientToken")]
+        [NameInMap("Region")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string Region { get; set; }
 
     }
 

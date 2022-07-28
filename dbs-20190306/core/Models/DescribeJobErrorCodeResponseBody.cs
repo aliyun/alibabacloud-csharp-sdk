@@ -9,22 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class DescribeJobErrorCodeResponseBody : TeaModel {
+        [NameInMap("ErrCode")]
+        [Validation(Required=false)]
+        public string ErrCode { get; set; }
+
+        [NameInMap("ErrMessage")]
+        [Validation(Required=false)]
+        public string ErrMessage { get; set; }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
         [NameInMap("Item")]
         [Validation(Required=false)]
         public DescribeJobErrorCodeResponseBodyItem Item { get; set; }
         public class DescribeJobErrorCodeResponseBodyItem : TeaModel {
-            [NameInMap("JobState")]
-            [Validation(Required=false)]
-            public string JobState { get; set; }
-            [NameInMap("ErrorMessage")]
-            [Validation(Required=false)]
-            public string ErrorMessage { get; set; }
             [NameInMap("ErrorCode")]
             [Validation(Required=false)]
             public string ErrorCode { get; set; }
+            [NameInMap("ErrorMessage")]
+            [Validation(Required=false)]
+            public string ErrorMessage { get; set; }
             [NameInMap("JobId")]
             [Validation(Required=false)]
             public string JobId { get; set; }
+            [NameInMap("JobState")]
+            [Validation(Required=false)]
+            public string JobState { get; set; }
             [NameInMap("JobType")]
             [Validation(Required=false)]
             public string JobType { get; set; }
@@ -37,21 +49,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
-
-        [NameInMap("ErrMessage")]
-        [Validation(Required=false)]
-        public string ErrMessage { get; set; }
-
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("ErrCode")]
-        [Validation(Required=false)]
-        public string ErrCode { get; set; }
 
     }
 

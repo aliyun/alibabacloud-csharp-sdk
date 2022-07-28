@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
-    public class EnableBackupLogResponse : TeaModel {
+    public class InitializeDbsServiceLinkedRoleResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public EnableBackupLogResponseBody Body { get; set; }
+        public InitializeDbsServiceLinkedRoleResponseBody Body { get; set; }
 
     }
 

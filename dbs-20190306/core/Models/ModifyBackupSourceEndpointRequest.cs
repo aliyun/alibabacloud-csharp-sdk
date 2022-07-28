@@ -9,42 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class ModifyBackupSourceEndpointRequest : TeaModel {
-        [NameInMap("BackupPlanId")]
-        [Validation(Required=false)]
-        public string BackupPlanId { get; set; }
-
-        [NameInMap("SourceEndpointInstanceType")]
-        [Validation(Required=false)]
-        public string SourceEndpointInstanceType { get; set; }
-
-        [NameInMap("SourceEndpointRegion")]
-        [Validation(Required=false)]
-        public string SourceEndpointRegion { get; set; }
-
-        [NameInMap("SourceEndpointInstanceID")]
-        [Validation(Required=false)]
-        public string SourceEndpointInstanceID { get; set; }
-
-        [NameInMap("SourceEndpointIP")]
-        [Validation(Required=false)]
-        public string SourceEndpointIP { get; set; }
-
-        [NameInMap("SourceEndpointPort")]
-        [Validation(Required=false)]
-        public int? SourceEndpointPort { get; set; }
-
-        [NameInMap("SourceEndpointDatabaseName")]
-        [Validation(Required=false)]
-        public string SourceEndpointDatabaseName { get; set; }
-
-        [NameInMap("SourceEndpointUserName")]
-        [Validation(Required=false)]
-        public string SourceEndpointUserName { get; set; }
-
-        [NameInMap("SourceEndpointPassword")]
-        [Validation(Required=false)]
-        public string SourceEndpointPassword { get; set; }
-
         [NameInMap("BackupGatewayId")]
         [Validation(Required=false)]
         public long? BackupGatewayId { get; set; }
@@ -53,9 +17,13 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [Validation(Required=false)]
         public string BackupObjects { get; set; }
 
-        [NameInMap("SourceEndpointOracleSID")]
+        [NameInMap("BackupPlanId")]
         [Validation(Required=false)]
-        public string SourceEndpointOracleSID { get; set; }
+        public string BackupPlanId { get; set; }
+
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
 
         [NameInMap("CrossAliyunId")]
         [Validation(Required=false)]
@@ -69,9 +37,41 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [Validation(Required=false)]
         public string OwnerId { get; set; }
 
-        [NameInMap("ClientToken")]
+        [NameInMap("SourceEndpointDatabaseName")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string SourceEndpointDatabaseName { get; set; }
+
+        [NameInMap("SourceEndpointIP")]
+        [Validation(Required=false)]
+        public string SourceEndpointIP { get; set; }
+
+        [NameInMap("SourceEndpointInstanceID")]
+        [Validation(Required=false)]
+        public string SourceEndpointInstanceID { get; set; }
+
+        [NameInMap("SourceEndpointInstanceType")]
+        [Validation(Required=false)]
+        public string SourceEndpointInstanceType { get; set; }
+
+        [NameInMap("SourceEndpointOracleSID")]
+        [Validation(Required=false)]
+        public string SourceEndpointOracleSID { get; set; }
+
+        [NameInMap("SourceEndpointPassword")]
+        [Validation(Required=false)]
+        public string SourceEndpointPassword { get; set; }
+
+        [NameInMap("SourceEndpointPort")]
+        [Validation(Required=false)]
+        public int? SourceEndpointPort { get; set; }
+
+        [NameInMap("SourceEndpointRegion")]
+        [Validation(Required=false)]
+        public string SourceEndpointRegion { get; set; }
+
+        [NameInMap("SourceEndpointUserName")]
+        [Validation(Required=false)]
+        public string SourceEndpointUserName { get; set; }
 
     }
 

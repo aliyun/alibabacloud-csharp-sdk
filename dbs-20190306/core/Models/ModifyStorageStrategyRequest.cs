@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [Validation(Required=false)]
         public int? BackupRetentionPeriod { get; set; }
 
-        [NameInMap("DuplicationInfrequentAccessPeriod")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public int? DuplicationInfrequentAccessPeriod { get; set; }
+        public string ClientToken { get; set; }
 
         [NameInMap("DuplicationArchivePeriod")]
         [Validation(Required=false)]
         public int? DuplicationArchivePeriod { get; set; }
 
+        [NameInMap("DuplicationInfrequentAccessPeriod")]
+        [Validation(Required=false)]
+        public int? DuplicationInfrequentAccessPeriod { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public string OwnerId { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
 
     }
 
