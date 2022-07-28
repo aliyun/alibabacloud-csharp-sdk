@@ -711,66 +711,6 @@ namespace AlibabaCloud.SDK.Eas20210701
             return TeaModel.ToObject<CreateServiceMirrorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public CreateStressResponse CreateStress(CreateStressRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateStressWithOptions(request, headers, runtime);
-        }
-
-        public async Task<CreateStressResponse> CreateStressAsync(CreateStressRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateStressWithOptionsAsync(request, headers, runtime);
-        }
-
-        public CreateStressResponse CreateStressWithOptions(CreateStressRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = request.Body,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateStress",
-                Version = "2021-07-01",
-                Protocol = "HTTPS",
-                Pathname = "/api/v2/stress",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateStressResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<CreateStressResponse> CreateStressWithOptionsAsync(CreateStressRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = request.Body,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateStress",
-                Version = "2021-07-01",
-                Protocol = "HTTPS",
-                Pathname = "/api/v2/stress",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateStressResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
         public DeleteBenchmarkTaskResponse DeleteBenchmarkTask(string ClusterId, string TaskName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1405,66 +1345,6 @@ namespace AlibabaCloud.SDK.Eas20210701
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeleteServiceMirrorResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public DeleteStressResponse DeleteStress(string ClusterId, string StressName)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteStressWithOptions(ClusterId, StressName, headers, runtime);
-        }
-
-        public async Task<DeleteStressResponse> DeleteStressAsync(string ClusterId, string StressName)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteStressWithOptionsAsync(ClusterId, StressName, headers, runtime);
-        }
-
-        public DeleteStressResponse DeleteStressWithOptions(string ClusterId, string StressName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
-            StressName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(StressName);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DeleteStress",
-                Version = "2021-07-01",
-                Protocol = "HTTPS",
-                Pathname = "/api/v2/stress/" + ClusterId + "/" + StressName,
-                Method = "DELETE",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DeleteStressResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<DeleteStressResponse> DeleteStressWithOptionsAsync(string ClusterId, string StressName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
-            StressName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(StressName);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DeleteStress",
-                Version = "2021-07-01",
-                Protocol = "HTTPS",
-                Pathname = "/api/v2/stress/" + ClusterId + "/" + StressName,
-                Method = "DELETE",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DeleteStressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeBenchmarkTaskResponse DescribeBenchmarkTask(string ClusterId, string TaskName)
@@ -2121,66 +2001,6 @@ namespace AlibabaCloud.SDK.Eas20210701
             return TeaModel.ToObject<DescribeServiceMirrorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeStressResponse DescribeStress(string ClusterId, string StressName)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeStressWithOptions(ClusterId, StressName, headers, runtime);
-        }
-
-        public async Task<DescribeStressResponse> DescribeStressAsync(string ClusterId, string StressName)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeStressWithOptionsAsync(ClusterId, StressName, headers, runtime);
-        }
-
-        public DescribeStressResponse DescribeStressWithOptions(string ClusterId, string StressName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
-            StressName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(StressName);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeStress",
-                Version = "2021-07-01",
-                Protocol = "HTTPS",
-                Pathname = "/api/v2/stress/" + ClusterId + "/" + StressName,
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeStressResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<DescribeStressResponse> DescribeStressWithOptionsAsync(string ClusterId, string StressName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
-            StressName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(StressName);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeStress",
-                Version = "2021-07-01",
-                Protocol = "HTTPS",
-                Pathname = "/api/v2/stress/" + ClusterId + "/" + StressName,
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeStressResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
         public ListBenchmarkTaskResponse ListBenchmarkTask()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2755,62 +2575,6 @@ namespace AlibabaCloud.SDK.Eas20210701
             return TeaModel.ToObject<ListServicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListStressesResponse ListStresses()
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListStressesWithOptions(headers, runtime);
-        }
-
-        public async Task<ListStressesResponse> ListStressesAsync()
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListStressesWithOptionsAsync(headers, runtime);
-        }
-
-        public ListStressesResponse ListStressesWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListStresses",
-                Version = "2021-07-01",
-                Protocol = "HTTPS",
-                Pathname = "/api/v2/stress",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListStressesResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<ListStressesResponse> ListStressesWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListStresses",
-                Version = "2021-07-01",
-                Protocol = "HTTPS",
-                Pathname = "/api/v2/stress",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListStressesResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
         public ReleaseServiceResponse ReleaseService(string ClusterId, string ServiceName, ReleaseServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2883,66 +2647,6 @@ namespace AlibabaCloud.SDK.Eas20210701
                 BodyType = "json",
             };
             return TeaModel.ToObject<ReleaseServiceResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public ReportStressResponse ReportStress(string ClusterId, string StressName)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ReportStressWithOptions(ClusterId, StressName, headers, runtime);
-        }
-
-        public async Task<ReportStressResponse> ReportStressAsync(string ClusterId, string StressName)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ReportStressWithOptionsAsync(ClusterId, StressName, headers, runtime);
-        }
-
-        public ReportStressResponse ReportStressWithOptions(string ClusterId, string StressName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
-            StressName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(StressName);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ReportStress",
-                Version = "2021-07-01",
-                Protocol = "HTTPS",
-                Pathname = "/api/v2/stress/" + ClusterId + "/" + StressName + "/report",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ReportStressResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<ReportStressResponse> ReportStressWithOptionsAsync(string ClusterId, string StressName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
-            StressName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(StressName);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ReportStress",
-                Version = "2021-07-01",
-                Protocol = "HTTPS",
-                Pathname = "/api/v2/stress/" + ClusterId + "/" + StressName + "/report",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ReportStressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public StartBenchmarkTaskResponse StartBenchmarkTask(string ClusterId, string TaskName)
@@ -3065,66 +2769,6 @@ namespace AlibabaCloud.SDK.Eas20210701
             return TeaModel.ToObject<StartServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public StartStressResponse StartStress(string ClusterId, string StressName)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return StartStressWithOptions(ClusterId, StressName, headers, runtime);
-        }
-
-        public async Task<StartStressResponse> StartStressAsync(string ClusterId, string StressName)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await StartStressWithOptionsAsync(ClusterId, StressName, headers, runtime);
-        }
-
-        public StartStressResponse StartStressWithOptions(string ClusterId, string StressName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
-            StressName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(StressName);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "StartStress",
-                Version = "2021-07-01",
-                Protocol = "HTTPS",
-                Pathname = "/api/v2/stress/" + ClusterId + "/" + StressName + "/start",
-                Method = "PUT",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<StartStressResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<StartStressResponse> StartStressWithOptionsAsync(string ClusterId, string StressName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
-            StressName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(StressName);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "StartStress",
-                Version = "2021-07-01",
-                Protocol = "HTTPS",
-                Pathname = "/api/v2/stress/" + ClusterId + "/" + StressName + "/start",
-                Method = "PUT",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<StartStressResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
         public StopBenchmarkTaskResponse StopBenchmarkTask(string ClusterId, string TaskName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3243,66 +2887,6 @@ namespace AlibabaCloud.SDK.Eas20210701
                 BodyType = "json",
             };
             return TeaModel.ToObject<StopServiceResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public StopStressResponse StopStress(string ClusterId, string StressName)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return StopStressWithOptions(ClusterId, StressName, headers, runtime);
-        }
-
-        public async Task<StopStressResponse> StopStressAsync(string ClusterId, string StressName)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await StopStressWithOptionsAsync(ClusterId, StressName, headers, runtime);
-        }
-
-        public StopStressResponse StopStressWithOptions(string ClusterId, string StressName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
-            StressName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(StressName);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "StopStress",
-                Version = "2021-07-01",
-                Protocol = "HTTPS",
-                Pathname = "/api/v2/stress/" + ClusterId + "/" + StressName + "/stop",
-                Method = "PUT",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<StopStressResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<StopStressResponse> StopStressWithOptionsAsync(string ClusterId, string StressName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
-            StressName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(StressName);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "StopStress",
-                Version = "2021-07-01",
-                Protocol = "HTTPS",
-                Pathname = "/api/v2/stress/" + ClusterId + "/" + StressName + "/stop",
-                Method = "PUT",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<StopStressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateBenchmarkTaskResponse UpdateBenchmarkTask(string ClusterId, string TaskName, UpdateBenchmarkTaskRequest request)
@@ -3931,70 +3515,6 @@ namespace AlibabaCloud.SDK.Eas20210701
                 BodyType = "json",
             };
             return TeaModel.ToObject<UpdateServiceVersionResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public UpdateStressResponse UpdateStress(string ClusterId, string StressName, UpdateStressRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UpdateStressWithOptions(ClusterId, StressName, request, headers, runtime);
-        }
-
-        public async Task<UpdateStressResponse> UpdateStressAsync(string ClusterId, string StressName, UpdateStressRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UpdateStressWithOptionsAsync(ClusterId, StressName, request, headers, runtime);
-        }
-
-        public UpdateStressResponse UpdateStressWithOptions(string ClusterId, string StressName, UpdateStressRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
-            StressName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(StressName);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = request.Body,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UpdateStress",
-                Version = "2021-07-01",
-                Protocol = "HTTPS",
-                Pathname = "/api/v2/stress/" + ClusterId + "/" + StressName,
-                Method = "PUT",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<UpdateStressResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<UpdateStressResponse> UpdateStressWithOptionsAsync(string ClusterId, string StressName, UpdateStressRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
-            StressName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(StressName);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = request.Body,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UpdateStress",
-                Version = "2021-07-01",
-                Protocol = "HTTPS",
-                Pathname = "/api/v2/stress/" + ClusterId + "/" + StressName,
-                Method = "PUT",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<UpdateStressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
     }

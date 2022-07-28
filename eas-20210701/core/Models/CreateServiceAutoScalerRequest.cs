@@ -9,23 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CreateServiceAutoScalerRequest : TeaModel {
-        /// <summary>
-        /// 最大 replica 数，需要大于MinReplica
-        /// </summary>
         [NameInMap("Max")]
         [Validation(Required=false)]
         public int? Max { get; set; }
 
-        /// <summary>
-        /// 最小 replica 数，需要大于0
-        /// </summary>
         [NameInMap("Min")]
         [Validation(Required=false)]
         public int? Min { get; set; }
 
-        /// <summary>
-        /// map 类型的策略定义
-        /// </summary>
         [NameInMap("Strategies")]
         [Validation(Required=false)]
         public CreateServiceAutoScalerRequestStrategies Strategies { get; set; }

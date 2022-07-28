@@ -9,25 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListResourceInstancesRequest : TeaModel {
-        /// <summary>
-        /// 付费类型
-        /// PrePaid预付费
-        /// PostPaid后付费
-        /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
-        /// <summary>
-        /// 请求的页码（默认为1）
-        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        /// <summary>
-        /// 每页的大小（默认为100）
-        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
