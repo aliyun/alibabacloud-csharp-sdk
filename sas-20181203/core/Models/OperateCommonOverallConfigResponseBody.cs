@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class AddVpcHoneyPotRequest : TeaModel {
-        [NameInMap("VpcId")]
+    public class OperateCommonOverallConfigResponseBody : TeaModel {
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string VpcId { get; set; }
+        public string RequestId { get; set; }
 
     }
 

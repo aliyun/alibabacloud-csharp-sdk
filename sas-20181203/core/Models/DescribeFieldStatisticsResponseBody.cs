@@ -52,6 +52,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("OfflineInstanceCount")]
             [Validation(Required=false)]
             public int? OfflineInstanceCount { get; set; }
+            [NameInMap("OutMachineInstanceCount")]
+            [Validation(Required=false)]
+            public int? OutMachineInstanceCount { get; set; }
             [NameInMap("PauseInstanceCount")]
             [Validation(Required=false)]
             public int? PauseInstanceCount { get; set; }
