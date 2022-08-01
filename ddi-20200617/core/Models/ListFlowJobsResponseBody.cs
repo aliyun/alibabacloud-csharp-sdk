@@ -40,16 +40,10 @@ namespace AlibabaCloud.SDK.Ddi20200617.Models
                     [Validation(Required=false)]
                     public List<ListFlowJobsResponseBodyJobListJobResourceListResource> Resource { get; set; }
                     public class ListFlowJobsResponseBodyJobListJobResourceListResource : TeaModel {
-                        /// <summary>
-                        /// 保留参数。
-                        /// </summary>
                         [NameInMap("Alias")]
                         [Validation(Required=false)]
                         public string Alias { get; set; }
 
-                        /// <summary>
-                        /// 保留参数。
-                        /// </summary>
                         [NameInMap("Path")]
                         [Validation(Required=false)]
                         public string Path { get; set; }
@@ -63,30 +57,18 @@ namespace AlibabaCloud.SDK.Ddi20200617.Models
             }
         };
 
-        /// <summary>
-        /// 当前页数。
-        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        /// <summary>
-        /// 每页的作业数量。
-        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// 请求ID。
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 作业数量。
-        /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]
         public int? Total { get; set; }
