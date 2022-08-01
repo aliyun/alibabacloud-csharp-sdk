@@ -33,30 +33,18 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             }
         };
 
-        /// <summary>
-        /// 当前页码
-        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        /// <summary>
-        /// 每页条目
-        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// 请求ID
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 总条目数
-        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

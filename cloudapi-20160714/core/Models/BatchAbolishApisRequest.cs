@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public string StageId { get; set; }
 
+            [NameInMap("StageName")]
+            [Validation(Required=false)]
+            public string StageName { get; set; }
+
         }
 
         [NameInMap("SecurityToken")]
