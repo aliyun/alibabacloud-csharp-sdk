@@ -17,9 +17,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string EtlMetaKey { get; set; }
 
-        /// <summary>
-        /// 此处固定为 "__all_etl_meta_tag_match__"。
-        /// </summary>
         [NameInMap("etlMetaTag")]
         [Validation(Required=false)]
         public string EtlMetaTag { get; set; }

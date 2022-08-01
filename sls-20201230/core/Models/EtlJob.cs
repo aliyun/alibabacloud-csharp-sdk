@@ -9,23 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class EtlJob : TeaModel {
-        /// <summary>
-        /// 是否启用
-        /// </summary>
         [NameInMap("enable")]
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
-        /// <summary>
-        /// 任务名称
-        /// </summary>
         [NameInMap("etlJobName")]
         [Validation(Required=false)]
         public string EtlJobName { get; set; }
 
-        /// <summary>
-        /// 运行函数配置
-        /// </summary>
         [NameInMap("functionConfig")]
         [Validation(Required=false)]
         public EtlJobFunctionConfig FunctionConfig { get; set; }
@@ -53,16 +44,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string ServiceName { get; set; }
         };
 
-        /// <summary>
-        /// 参数列表
-        /// </summary>
         [NameInMap("functionParameter")]
         [Validation(Required=false)]
         public Dictionary<string, object> FunctionParameter { get; set; }
 
-        /// <summary>
-        /// 日志配置
-        /// </summary>
         [NameInMap("logConfig")]
         [Validation(Required=false)]
         public EtlJobLogConfig LogConfig { get; set; }
@@ -78,9 +63,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string ProjectName { get; set; }
         };
 
-        /// <summary>
-        /// 配置数据来源
-        /// </summary>
         [NameInMap("sourceConfig")]
         [Validation(Required=false)]
         public EtlJobSourceConfig SourceConfig { get; set; }
@@ -90,9 +72,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string LogstoreName { get; set; }
         };
 
-        /// <summary>
-        /// 触发器配置
-        /// </summary>
         [NameInMap("triggerConfig")]
         [Validation(Required=false)]
         public EtlJobTriggerConfig TriggerConfig { get; set; }

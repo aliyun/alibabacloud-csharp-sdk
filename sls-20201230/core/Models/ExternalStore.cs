@@ -9,23 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ExternalStore : TeaModel {
-        /// <summary>
-        /// 外部存储的名称。
-        /// </summary>
         [NameInMap("externalStoreName")]
         [Validation(Required=false)]
         public string ExternalStoreName { get; set; }
 
-        /// <summary>
-        /// 参数
-        /// </summary>
         [NameInMap("parameter")]
         [Validation(Required=false)]
         public Dictionary<string, object> Parameter { get; set; }
 
-        /// <summary>
-        /// 类型。可选 rds-vpc 或者 oss
-        /// </summary>
         [NameInMap("storeType")]
         [Validation(Required=false)]
         public string StoreType { get; set; }

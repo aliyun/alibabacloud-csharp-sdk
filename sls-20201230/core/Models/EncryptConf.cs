@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class EncryptConf : TeaModel {
-        /// <summary>
-        /// enable
-        /// </summary>
         [NameInMap("enable")]
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
-        /// <summary>
-        /// 加密算法，只支持default和m4。当 enable 为 true 时，此项必选。
-        /// </summary>
         [NameInMap("encrypt_type")]
         [Validation(Required=false)]
         public string EncryptType { get; set; }

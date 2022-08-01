@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class UpdateProjectRequest : TeaModel {
-        /// <summary>
-        /// Project description
-        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }

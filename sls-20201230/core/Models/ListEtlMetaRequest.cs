@@ -21,16 +21,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string EtlMetaTag { get; set; }
 
-        /// <summary>
-        /// 默认值 0。
-        /// </summary>
         [NameInMap("offset")]
         [Validation(Required=false)]
         public int? Offset { get; set; }
 
-        /// <summary>
-        /// 默认值 200.
-        /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]
         public int? Size { get; set; }

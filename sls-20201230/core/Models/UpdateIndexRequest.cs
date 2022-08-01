@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class UpdateIndexRequest : TeaModel {
-        /// <summary>
-        /// 字段索引配置，key为字段名称，value为字段索引配置。
-        /// </summary>
         [NameInMap("keys")]
         [Validation(Required=false)]
         public Dictionary<string, KeysValue> Keys { get; set; }
 
-        /// <summary>
-        /// 配置全文索引。
-        /// </summary>
         [NameInMap("line")]
         [Validation(Required=false)]
         public UpdateIndexRequestLine Line { get; set; }
@@ -40,37 +34,22 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public List<string> Token { get; set; }
         };
 
-        /// <summary>
-        /// 开启日志聚类，开启后白名单与黑名单至多生效其中一个。
-        /// </summary>
         [NameInMap("log_reduce")]
         [Validation(Required=false)]
         public bool? LogReduce { get; set; }
 
-        /// <summary>
-        /// 日志聚类的聚类字段黑名单
-        /// </summary>
         [NameInMap("log_reduce_black_list")]
         [Validation(Required=false)]
         public List<string> LogReduceBlackList { get; set; }
 
-        /// <summary>
-        /// 日志聚类的聚类字段白名单
-        /// </summary>
         [NameInMap("log_reduce_white_list")]
         [Validation(Required=false)]
         public List<string> LogReduceWhiteList { get; set; }
 
-        /// <summary>
-        /// 统计字段的最大长度
-        /// </summary>
         [NameInMap("max_text_len")]
         [Validation(Required=false)]
         public int? MaxTextLen { get; set; }
 
-        /// <summary>
-        /// 保存时间，单位为天
-        /// </summary>
         [NameInMap("ttl")]
         [Validation(Required=false)]
         public int? Ttl { get; set; }

@@ -1099,6 +1099,286 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<CreateMachineGroupResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        public CreateOdpsShipperResponse CreateOdpsShipper(string project, string logstore, CreateOdpsShipperRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateOdpsShipperWithOptions(project, logstore, request, headers, runtime);
+        }
+
+        public async Task<CreateOdpsShipperResponse> CreateOdpsShipperAsync(string project, string logstore, CreateOdpsShipperRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateOdpsShipperWithOptionsAsync(project, logstore, request, headers, runtime);
+        }
+
+        public CreateOdpsShipperResponse CreateOdpsShipperWithOptions(string project, string logstore, CreateOdpsShipperRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShipperName))
+            {
+                body["shipperName"] = request.ShipperName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetConfiguration.ToMap()))
+            {
+                body["targetConfiguration"] = request.TargetConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                body["targetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOdpsShipper",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/shipper",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateOdpsShipperResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<CreateOdpsShipperResponse> CreateOdpsShipperWithOptionsAsync(string project, string logstore, CreateOdpsShipperRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShipperName))
+            {
+                body["shipperName"] = request.ShipperName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetConfiguration.ToMap()))
+            {
+                body["targetConfiguration"] = request.TargetConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                body["targetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOdpsShipper",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/shipper",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateOdpsShipperResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public CreateOssExternalStoreResponse CreateOssExternalStore(string project, CreateOssExternalStoreRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateOssExternalStoreWithOptions(project, request, headers, runtime);
+        }
+
+        public async Task<CreateOssExternalStoreResponse> CreateOssExternalStoreAsync(string project, CreateOssExternalStoreRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateOssExternalStoreWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        public CreateOssExternalStoreResponse CreateOssExternalStoreWithOptions(string project, CreateOssExternalStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalStoreName))
+            {
+                body["externalStoreName"] = request.ExternalStoreName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameter.ToMap()))
+            {
+                body["parameter"] = request.Parameter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoreType))
+            {
+                body["storeType"] = request.StoreType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOssExternalStore",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/externalstores",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateOssExternalStoreResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<CreateOssExternalStoreResponse> CreateOssExternalStoreWithOptionsAsync(string project, CreateOssExternalStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalStoreName))
+            {
+                body["externalStoreName"] = request.ExternalStoreName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameter.ToMap()))
+            {
+                body["parameter"] = request.Parameter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoreType))
+            {
+                body["storeType"] = request.StoreType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOssExternalStore",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/externalstores",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateOssExternalStoreResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public CreateOssShipperResponse CreateOssShipper(string project, string logstore, CreateOssShipperRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateOssShipperWithOptions(project, logstore, request, headers, runtime);
+        }
+
+        public async Task<CreateOssShipperResponse> CreateOssShipperAsync(string project, string logstore, CreateOssShipperRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateOssShipperWithOptionsAsync(project, logstore, request, headers, runtime);
+        }
+
+        public CreateOssShipperResponse CreateOssShipperWithOptions(string project, string logstore, CreateOssShipperRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShipperName))
+            {
+                body["shipperName"] = request.ShipperName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetConfiguration.ToMap()))
+            {
+                body["targetConfiguration"] = request.TargetConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                body["targetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOssShipper",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/shipper",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateOssShipperResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<CreateOssShipperResponse> CreateOssShipperWithOptionsAsync(string project, string logstore, CreateOssShipperRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShipperName))
+            {
+                body["shipperName"] = request.ShipperName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetConfiguration.ToMap()))
+            {
+                body["targetConfiguration"] = request.TargetConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                body["targetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOssShipper",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/shipper",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateOssShipperResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
         public CreateProjectResponse CreateProject(CreateProjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1175,6 +1455,98 @@ namespace AlibabaCloud.SDK.Sls20201230
                 BodyType = "none",
             };
             return TeaModel.ToObject<CreateProjectResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public CreateRdsExternalStoreResponse CreateRdsExternalStore(string project, CreateRdsExternalStoreRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateRdsExternalStoreWithOptions(project, request, headers, runtime);
+        }
+
+        public async Task<CreateRdsExternalStoreResponse> CreateRdsExternalStoreAsync(string project, CreateRdsExternalStoreRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateRdsExternalStoreWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        public CreateRdsExternalStoreResponse CreateRdsExternalStoreWithOptions(string project, CreateRdsExternalStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalStoreName))
+            {
+                body["externalStoreName"] = request.ExternalStoreName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameter.ToMap()))
+            {
+                body["parameter"] = request.Parameter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoreType))
+            {
+                body["storeType"] = request.StoreType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRdsExternalStore",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/externalstores",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateRdsExternalStoreResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<CreateRdsExternalStoreResponse> CreateRdsExternalStoreWithOptionsAsync(string project, CreateRdsExternalStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalStoreName))
+            {
+                body["externalStoreName"] = request.ExternalStoreName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameter.ToMap()))
+            {
+                body["parameter"] = request.Parameter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoreType))
+            {
+                body["storeType"] = request.StoreType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRdsExternalStore",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/externalstores",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateRdsExternalStoreResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         public CreateSavedSearchResponse CreateSavedSearch(string project, CreateSavedSearchRequest request)
@@ -1505,6 +1877,70 @@ namespace AlibabaCloud.SDK.Sls20201230
                 BodyType = "none",
             };
             return TeaModel.ToObject<DeleteEtlMetaResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public DeleteExternalStoreResponse DeleteExternalStore(string project, string externalStoreName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteExternalStoreWithOptions(project, externalStoreName, headers, runtime);
+        }
+
+        public async Task<DeleteExternalStoreResponse> DeleteExternalStoreAsync(string project, string externalStoreName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteExternalStoreWithOptionsAsync(project, externalStoreName, headers, runtime);
+        }
+
+        public DeleteExternalStoreResponse DeleteExternalStoreWithOptions(string project, string externalStoreName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            externalStoreName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(externalStoreName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteExternalStore",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/externalstores/" + externalStoreName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteExternalStoreResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<DeleteExternalStoreResponse> DeleteExternalStoreWithOptionsAsync(string project, string externalStoreName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            externalStoreName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(externalStoreName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteExternalStore",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/externalstores/" + externalStoreName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteExternalStoreResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         public DeleteIndexResponse DeleteIndex(string project, string logstore)
@@ -1887,6 +2323,72 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteSavedSearchResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        public DeleteShipperResponse DeleteShipper(string project, string logstore, string shipperName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteShipperWithOptions(project, logstore, shipperName, headers, runtime);
+        }
+
+        public async Task<DeleteShipperResponse> DeleteShipperAsync(string project, string logstore, string shipperName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteShipperWithOptionsAsync(project, logstore, shipperName, headers, runtime);
+        }
+
+        public DeleteShipperResponse DeleteShipperWithOptions(string project, string logstore, string shipperName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            shipperName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shipperName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteShipper",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/shipper/" + shipperName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteShipperResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<DeleteShipperResponse> DeleteShipperWithOptionsAsync(string project, string logstore, string shipperName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            shipperName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shipperName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteShipper",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/shipper/" + shipperName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteShipperResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
         public GetAppliedConfigsResponse GetAppliedConfigs(string project, string machineGroup)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1949,6 +2451,70 @@ namespace AlibabaCloud.SDK.Sls20201230
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAppliedConfigsResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public GetAppliedMachineGroupsResponse GetAppliedMachineGroups(string project, string configName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAppliedMachineGroupsWithOptions(project, configName, headers, runtime);
+        }
+
+        public async Task<GetAppliedMachineGroupsResponse> GetAppliedMachineGroupsAsync(string project, string configName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAppliedMachineGroupsWithOptionsAsync(project, configName, headers, runtime);
+        }
+
+        public GetAppliedMachineGroupsResponse GetAppliedMachineGroupsWithOptions(string project, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            configName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(configName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAppliedMachineGroups",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/configs/" + configName + "/machinegroups",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAppliedMachineGroupsResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<GetAppliedMachineGroupsResponse> GetAppliedMachineGroupsWithOptionsAsync(string project, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            configName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(configName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAppliedMachineGroups",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/configs/" + configName + "/machinegroups",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAppliedMachineGroupsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         public GetCheckPointResponse GetCheckPoint(string project, string logstore, string consumerGroup, GetCheckPointRequest request)
@@ -2407,6 +2973,70 @@ namespace AlibabaCloud.SDK.Sls20201230
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetEtlMetaResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public GetExternalStoreResponse GetExternalStore(string project, string externalStoreName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetExternalStoreWithOptions(project, externalStoreName, headers, runtime);
+        }
+
+        public async Task<GetExternalStoreResponse> GetExternalStoreAsync(string project, string externalStoreName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetExternalStoreWithOptionsAsync(project, externalStoreName, headers, runtime);
+        }
+
+        public GetExternalStoreResponse GetExternalStoreWithOptions(string project, string externalStoreName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            externalStoreName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(externalStoreName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetExternalStore",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/externalstores/" + externalStoreName,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetExternalStoreResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<GetExternalStoreResponse> GetExternalStoreWithOptionsAsync(string project, string externalStoreName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            externalStoreName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(externalStoreName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetExternalStore",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/externalstores/" + externalStoreName,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetExternalStoreResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         public GetHistogramsResponse GetHistograms(string project, string logstore, GetHistogramsRequest request)
@@ -3125,6 +3755,184 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetSavedSearchResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        public GetShipperConfigResponse GetShipperConfig(string project, string logstore, string shipperName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetShipperConfigWithOptions(project, logstore, shipperName, headers, runtime);
+        }
+
+        public async Task<GetShipperConfigResponse> GetShipperConfigAsync(string project, string logstore, string shipperName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetShipperConfigWithOptionsAsync(project, logstore, shipperName, headers, runtime);
+        }
+
+        public GetShipperConfigResponse GetShipperConfigWithOptions(string project, string logstore, string shipperName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            shipperName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shipperName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetShipperConfig",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/shipper/" + shipperName,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetShipperConfigResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<GetShipperConfigResponse> GetShipperConfigWithOptionsAsync(string project, string logstore, string shipperName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            shipperName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shipperName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetShipperConfig",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/shipper/" + shipperName,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetShipperConfigResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public GetShipperStatusResponse GetShipperStatus(string project, string logstore, string shipperName, GetShipperStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetShipperStatusWithOptions(project, logstore, shipperName, request, headers, runtime);
+        }
+
+        public async Task<GetShipperStatusResponse> GetShipperStatusAsync(string project, string logstore, string shipperName, GetShipperStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetShipperStatusWithOptionsAsync(project, logstore, shipperName, request, headers, runtime);
+        }
+
+        public GetShipperStatusResponse GetShipperStatusWithOptions(string project, string logstore, string shipperName, GetShipperStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            shipperName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shipperName);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
+            {
+                query["from"] = request.From;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.To))
+            {
+                query["to"] = request.To;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetShipperStatus",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/shipper/" + shipperName + "/tasks",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetShipperStatusResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<GetShipperStatusResponse> GetShipperStatusWithOptionsAsync(string project, string logstore, string shipperName, GetShipperStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            shipperName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shipperName);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
+            {
+                query["from"] = request.From;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.To))
+            {
+                query["to"] = request.To;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetShipperStatus",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/shipper/" + shipperName + "/tasks",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetShipperStatusResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
         public ListConsumerGroupResponse ListConsumerGroup(string project, string logstore)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3471,6 +4279,98 @@ namespace AlibabaCloud.SDK.Sls20201230
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListEtlMetaNameResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public ListExternalStoreResponse ListExternalStore(string project, ListExternalStoreRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListExternalStoreWithOptions(project, request, headers, runtime);
+        }
+
+        public async Task<ListExternalStoreResponse> ListExternalStoreAsync(string project, ListExternalStoreRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListExternalStoreWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        public ListExternalStoreResponse ListExternalStoreWithOptions(string project, ListExternalStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalStoreName))
+            {
+                query["externalStoreName"] = request.ExternalStoreName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sizs))
+            {
+                query["sizs"] = request.Sizs;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListExternalStore",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/externalstores",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListExternalStoreResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<ListExternalStoreResponse> ListExternalStoreWithOptionsAsync(string project, ListExternalStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalStoreName))
+            {
+                query["externalStoreName"] = request.ExternalStoreName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sizs))
+            {
+                query["sizs"] = request.Sizs;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListExternalStore",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/externalstores",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListExternalStoreResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         public ListLogStoresResponse ListLogStores(string project, ListLogStoresRequest request)
@@ -3983,6 +4883,70 @@ namespace AlibabaCloud.SDK.Sls20201230
                 BodyType = "array",
             };
             return TeaModel.ToObject<ListShardsResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public ListShipperResponse ListShipper(string project, string logstore)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListShipperWithOptions(project, logstore, headers, runtime);
+        }
+
+        public async Task<ListShipperResponse> ListShipperAsync(string project, string logstore)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListShipperWithOptionsAsync(project, logstore, headers, runtime);
+        }
+
+        public ListShipperResponse ListShipperWithOptions(string project, string logstore, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListShipper",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/shipper",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListShipperResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<ListShipperResponse> ListShipperWithOptionsAsync(string project, string logstore, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListShipper",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/shipper",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListShipperResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
@@ -5295,6 +6259,292 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UpdateMachineGroupResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        public UpdateOdpsShipperResponse UpdateOdpsShipper(string project, string logstore, string shipperName, UpdateOdpsShipperRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateOdpsShipperWithOptions(project, logstore, shipperName, request, headers, runtime);
+        }
+
+        public async Task<UpdateOdpsShipperResponse> UpdateOdpsShipperAsync(string project, string logstore, string shipperName, UpdateOdpsShipperRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateOdpsShipperWithOptionsAsync(project, logstore, shipperName, request, headers, runtime);
+        }
+
+        public UpdateOdpsShipperResponse UpdateOdpsShipperWithOptions(string project, string logstore, string shipperName, UpdateOdpsShipperRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            shipperName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shipperName);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShipperName))
+            {
+                body["shipperName"] = request.ShipperName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetConfiguration.ToMap()))
+            {
+                body["targetConfiguration"] = request.TargetConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                body["targetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateOdpsShipper",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/shipper/" + shipperName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateOdpsShipperResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<UpdateOdpsShipperResponse> UpdateOdpsShipperWithOptionsAsync(string project, string logstore, string shipperName, UpdateOdpsShipperRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            shipperName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shipperName);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShipperName))
+            {
+                body["shipperName"] = request.ShipperName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetConfiguration.ToMap()))
+            {
+                body["targetConfiguration"] = request.TargetConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                body["targetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateOdpsShipper",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/shipper/" + shipperName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateOdpsShipperResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public UpdateOssExternalStoreResponse UpdateOssExternalStore(string project, string externalStoreName, UpdateOssExternalStoreRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateOssExternalStoreWithOptions(project, externalStoreName, request, headers, runtime);
+        }
+
+        public async Task<UpdateOssExternalStoreResponse> UpdateOssExternalStoreAsync(string project, string externalStoreName, UpdateOssExternalStoreRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateOssExternalStoreWithOptionsAsync(project, externalStoreName, request, headers, runtime);
+        }
+
+        public UpdateOssExternalStoreResponse UpdateOssExternalStoreWithOptions(string project, string externalStoreName, UpdateOssExternalStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            externalStoreName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(externalStoreName);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalStoreName))
+            {
+                body["externalStoreName"] = request.ExternalStoreName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameter.ToMap()))
+            {
+                body["parameter"] = request.Parameter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoreType))
+            {
+                body["storeType"] = request.StoreType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateOssExternalStore",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/externalstores/" + externalStoreName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateOssExternalStoreResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<UpdateOssExternalStoreResponse> UpdateOssExternalStoreWithOptionsAsync(string project, string externalStoreName, UpdateOssExternalStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            externalStoreName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(externalStoreName);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalStoreName))
+            {
+                body["externalStoreName"] = request.ExternalStoreName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameter.ToMap()))
+            {
+                body["parameter"] = request.Parameter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoreType))
+            {
+                body["storeType"] = request.StoreType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateOssExternalStore",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/externalstores/" + externalStoreName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateOssExternalStoreResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public UpdateOssShipperResponse UpdateOssShipper(string project, string logstore, string shipperName, UpdateOssShipperRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateOssShipperWithOptions(project, logstore, shipperName, request, headers, runtime);
+        }
+
+        public async Task<UpdateOssShipperResponse> UpdateOssShipperAsync(string project, string logstore, string shipperName, UpdateOssShipperRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateOssShipperWithOptionsAsync(project, logstore, shipperName, request, headers, runtime);
+        }
+
+        public UpdateOssShipperResponse UpdateOssShipperWithOptions(string project, string logstore, string shipperName, UpdateOssShipperRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            shipperName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shipperName);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShipperName))
+            {
+                body["shipperName"] = request.ShipperName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetConfiguration.ToMap()))
+            {
+                body["targetConfiguration"] = request.TargetConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                body["targetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateOssShipper",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/shipper/" + shipperName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateOssShipperResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<UpdateOssShipperResponse> UpdateOssShipperWithOptionsAsync(string project, string logstore, string shipperName, UpdateOssShipperRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
+            shipperName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shipperName);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShipperName))
+            {
+                body["shipperName"] = request.ShipperName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetConfiguration.ToMap()))
+            {
+                body["targetConfiguration"] = request.TargetConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                body["targetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateOssShipper",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/shipper/" + shipperName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateOssShipperResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
         public UpdateProjectResponse UpdateProject(string project, UpdateProjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5369,6 +6619,100 @@ namespace AlibabaCloud.SDK.Sls20201230
                 BodyType = "none",
             };
             return TeaModel.ToObject<UpdateProjectResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public UpdateRdsExternalStoreResponse UpdateRdsExternalStore(string project, string externalStoreName, UpdateRdsExternalStoreRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateRdsExternalStoreWithOptions(project, externalStoreName, request, headers, runtime);
+        }
+
+        public async Task<UpdateRdsExternalStoreResponse> UpdateRdsExternalStoreAsync(string project, string externalStoreName, UpdateRdsExternalStoreRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateRdsExternalStoreWithOptionsAsync(project, externalStoreName, request, headers, runtime);
+        }
+
+        public UpdateRdsExternalStoreResponse UpdateRdsExternalStoreWithOptions(string project, string externalStoreName, UpdateRdsExternalStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            externalStoreName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(externalStoreName);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalStoreName))
+            {
+                body["externalStoreName"] = request.ExternalStoreName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameter.ToMap()))
+            {
+                body["parameter"] = request.Parameter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoreType))
+            {
+                body["storeType"] = request.StoreType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRdsExternalStore",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/externalstores/" + externalStoreName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateRdsExternalStoreResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<UpdateRdsExternalStoreResponse> UpdateRdsExternalStoreWithOptionsAsync(string project, string externalStoreName, UpdateRdsExternalStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            externalStoreName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(externalStoreName);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalStoreName))
+            {
+                body["externalStoreName"] = request.ExternalStoreName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameter.ToMap()))
+            {
+                body["parameter"] = request.Parameter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoreType))
+            {
+                body["storeType"] = request.StoreType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRdsExternalStore",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/externalstores/" + externalStoreName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateRdsExternalStoreResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         public UpdateSavedSearchResponse UpdateSavedSearch(string project, string savedsearchName, UpdateSavedSearchRequest request)

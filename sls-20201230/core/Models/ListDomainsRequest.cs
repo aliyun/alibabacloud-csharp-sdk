@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListDomainsRequest : TeaModel {
-        /// <summary>
-        /// 用于搜索匹配的自定义域名
-        /// </summary>
         [NameInMap("domainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }

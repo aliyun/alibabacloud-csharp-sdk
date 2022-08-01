@@ -17,9 +17,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public int? Offset { get; set; }
 
-        /// <summary>
-        /// 默认值为 500。
-        /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]
         public int? Size { get; set; }
