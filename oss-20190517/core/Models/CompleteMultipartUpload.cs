@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Oss20190517.Models
 {
     public class CompleteMultipartUpload : TeaModel {
-        /// <summary>
-        /// description
-        /// </summary>
         [NameInMap("Part")]
         [Validation(Required=false)]
         public List<Part> Part { get; set; }

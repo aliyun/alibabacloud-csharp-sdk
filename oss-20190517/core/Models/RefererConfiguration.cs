@@ -9,23 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Oss20190517.Models
 {
     public class RefererConfiguration : TeaModel {
-        /// <summary>
-        /// 是否允许Referer字段为空的请求访问
-        /// </summary>
         [NameInMap("AllowEmptyReferer")]
         [Validation(Required=false)]
         public bool? AllowEmptyReferer { get; set; }
 
-        /// <summary>
-        /// description
-        /// </summary>
         [NameInMap("AllowTruncateQueryString")]
         [Validation(Required=false)]
         public bool? AllowTruncateQueryString { get; set; }
 
-        /// <summary>
-        /// 保存Referer访问白名单
-        /// </summary>
         [NameInMap("RefererList")]
         [Validation(Required=false)]
         public RefererConfigurationRefererList RefererList { get; set; }

@@ -13,9 +13,6 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
         [Validation(Required=false)]
         public InputSerialization InputSerialization { get; set; }
 
-        /// <summary>
-        /// description
-        /// </summary>
         [NameInMap("OverwriteIfExists")]
         [Validation(Required=false)]
         public bool? OverwriteIfExists { get; set; }

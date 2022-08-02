@@ -17,9 +17,6 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
         [Validation(Required=false)]
         public InventoryFilter Filter { get; set; }
 
-        /// <summary>
-        /// The specified inventory list name, which must be globally unique in the bucket
-        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
@@ -28,16 +25,10 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
         [Validation(Required=false)]
         public string IncludedObjectVersions { get; set; }
 
-        /// <summary>
-        /// Indicates whether the inventory function is enabled
-        /// </summary>
         [NameInMap("IsEnabled")]
         [Validation(Required=false)]
         public bool? IsEnabled { get; set; }
 
-        /// <summary>
-        /// The container that stores the configuration fields included in the inventory list
-        /// </summary>
         [NameInMap("OptionalFields")]
         [Validation(Required=false)]
         public InventoryConfigurationOptionalFields OptionalFields { get; set; }

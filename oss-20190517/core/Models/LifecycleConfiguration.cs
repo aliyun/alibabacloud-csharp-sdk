@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Oss20190517.Models
 {
     public class LifecycleConfiguration : TeaModel {
-        /// <summary>
-        /// description
-        /// </summary>
         [NameInMap("Rule")]
         [Validation(Required=false)]
         public List<LifecycleRule> Rule { get; set; }

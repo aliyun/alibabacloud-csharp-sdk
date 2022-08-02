@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Oss20190517.Models
 {
     public class TagSet : TeaModel {
-        /// <summary>
-        /// A short description of struct
-        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<Tag> Tags { get; set; }

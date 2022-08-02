@@ -13,9 +13,6 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
         [Validation(Required=false)]
         public CSVOutput Csv { get; set; }
 
-        /// <summary>
-        /// description
-        /// </summary>
         [NameInMap("EnablePayloadCrc")]
         [Validation(Required=false)]
         public bool? EnablePayloadCrc { get; set; }
@@ -24,23 +21,14 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
         [Validation(Required=false)]
         public JSONOutput Json { get; set; }
 
-        /// <summary>
-        /// description
-        /// </summary>
         [NameInMap("KeepAllColumns")]
         [Validation(Required=false)]
         public bool? KeepAllColumns { get; set; }
 
-        /// <summary>
-        /// description
-        /// </summary>
         [NameInMap("OutputHeader")]
         [Validation(Required=false)]
         public bool? OutputHeader { get; set; }
 
-        /// <summary>
-        /// description
-        /// </summary>
         [NameInMap("OutputRawData")]
         [Validation(Required=false)]
         public bool? OutputRawData { get; set; }

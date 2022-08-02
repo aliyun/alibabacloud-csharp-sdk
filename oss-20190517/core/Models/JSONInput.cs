@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Oss20190517.Models
 {
     public class JSONInput : TeaModel {
-        /// <summary>
-        /// description
-        /// </summary>
         [NameInMap("ParseJsonNumberAsString")]
         [Validation(Required=false)]
         public bool? ParseJsonNumberAsString { get; set; }
 
-        /// <summary>
-        /// description
-        /// </summary>
         [NameInMap("Range")]
         [Validation(Required=false)]
         public string Range { get; set; }

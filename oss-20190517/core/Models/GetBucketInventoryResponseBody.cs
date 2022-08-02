@@ -17,9 +17,6 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
         [Validation(Required=false)]
         public InventoryFilter Filter { get; set; }
 
-        /// <summary>
-        /// id
-        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
@@ -28,9 +25,6 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
         [Validation(Required=false)]
         public string IncludedObjectVersions { get; set; }
 
-        /// <summary>
-        /// status
-        /// </summary>
         [NameInMap("IsEnabled")]
         [Validation(Required=false)]
         public bool? IsEnabled { get; set; }

@@ -1,3 +1,6 @@
+2022-08-02 Version: 1.0.4
+- Generated csharp 2019-05-17 for Oss.
+
 2022-04-07 Version: 1.0.3
 - Generated csharp 2019-05-17 for Oss.
 

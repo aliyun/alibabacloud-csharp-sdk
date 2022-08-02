@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Oss20190517.Models
 {
     public class InventoryOSSBucketDestination : TeaModel {
-        /// <summary>
-        /// The account ID granted by the bucket owner
-        /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]
         public string AccountId { get; set; }
 
-        /// <summary>
-        /// The bucket that stores the exported inventory list
-        /// </summary>
         [NameInMap("Bucket")]
         [Validation(Required=false)]
         public string Bucket { get; set; }
@@ -31,16 +25,10 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
         [Validation(Required=false)]
         public string Format { get; set; }
 
-        /// <summary>
-        /// The path of the exported inventory list
-        /// </summary>
         [NameInMap("Prefix")]
         [Validation(Required=false)]
         public string Prefix { get; set; }
 
-        /// <summary>
-        /// The name of the role to which the bucket owner grants permissions
-        /// </summary>
         [NameInMap("RoleArn")]
         [Validation(Required=false)]
         public string RoleArn { get; set; }

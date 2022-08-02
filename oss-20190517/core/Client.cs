@@ -5165,7 +5165,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "none",
+                ReqBodyType = "multiFormData",
                 BodyType = "xml",
             };
             return TeaModel.ToObject<PostObjectResponse>(Execute(params_, req, runtime));
@@ -5189,7 +5189,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "none",
+                ReqBodyType = "multiFormData",
                 BodyType = "xml",
             };
             return TeaModel.ToObject<PostObjectResponse>(await ExecuteAsync(params_, req, runtime));

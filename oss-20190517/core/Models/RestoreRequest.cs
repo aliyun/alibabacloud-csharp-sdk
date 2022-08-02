@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Oss20190517.Models
 {
     public class RestoreRequest : TeaModel {
-        /// <summary>
-        /// description
-        /// </summary>
         [NameInMap("Days")]
         [Validation(Required=false)]
         public long? Days { get; set; }
 
-        /// <summary>
-        /// description
-        /// </summary>
         [NameInMap("JobParameters")]
         [Validation(Required=false)]
         public RestoreRequestJobParameters JobParameters { get; set; }
