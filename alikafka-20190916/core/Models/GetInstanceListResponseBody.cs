@@ -68,6 +68,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                     public string Current2OpenSourceVersion { get; set; }
 
                 }
+                public int? UsedGroupCount { get; set; }
+                public int? UsedPartitionCount { get; set; }
+                public int? UsedTopicCount { get; set; }
                 public string VSwitchId { get; set; }
                 public string VpcId { get; set; }
                 public string ZoneId { get; set; }
