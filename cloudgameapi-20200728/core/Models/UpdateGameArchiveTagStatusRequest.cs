@@ -8,18 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CloudGameAPI20200728.Models
 {
-    public class GetGameTrialSurplusDurationRequest : TeaModel {
+    public class UpdateGameArchiveTagStatusRequest : TeaModel {
         [NameInMap("AccountId")]
         [Validation(Required=false)]
         public string AccountId { get; set; }
+
+        [NameInMap("ArchiveId")]
+        [Validation(Required=false)]
+        public string ArchiveId { get; set; }
 
         [NameInMap("GameId")]
         [Validation(Required=false)]
         public string GameId { get; set; }
 
-        [NameInMap("ProjectId")]
+        [NameInMap("TagStatus")]
         [Validation(Required=false)]
-        public string ProjectId { get; set; }
+        public int? TagStatus { get; set; }
 
     }
 

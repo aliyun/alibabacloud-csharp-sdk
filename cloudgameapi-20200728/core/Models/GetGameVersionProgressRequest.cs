@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudGameAPI20200728.Models
 {
     public class GetGameVersionProgressRequest : TeaModel {
-        /// <summary>
-        /// 任务id
-        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }

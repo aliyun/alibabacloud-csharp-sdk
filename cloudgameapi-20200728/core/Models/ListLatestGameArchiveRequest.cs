@@ -8,7 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CloudGameAPI20200728.Models
 {
-    public class ListDeployableInstancesRequest : TeaModel {
+    public class ListLatestGameArchiveRequest : TeaModel {
+        [NameInMap("AccountId")]
+        [Validation(Required=false)]
+        public string AccountId { get; set; }
+
+        [NameInMap("GameId")]
+        [Validation(Required=false)]
+        public string GameId { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
@@ -17,13 +25,9 @@ namespace AlibabaCloud.SDK.CloudGameAPI20200728.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
-        [NameInMap("ProjectId")]
+        [NameInMap("TagStatus")]
         [Validation(Required=false)]
-        public string ProjectId { get; set; }
-
-        [NameInMap("VersionId")]
-        [Validation(Required=false)]
-        public string VersionId { get; set; }
+        public long? TagStatus { get; set; }
 
     }
 

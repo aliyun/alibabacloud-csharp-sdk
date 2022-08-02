@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudGameAPI20200728.Models
 {
     public class CreateGameDeployWorkflowResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 任务id
-        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }

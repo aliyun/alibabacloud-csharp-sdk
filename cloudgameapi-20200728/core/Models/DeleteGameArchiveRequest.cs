@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CloudGameAPI20200728.Models
 {
-    public class ListGameVersionsRequest : TeaModel {
+    public class DeleteGameArchiveRequest : TeaModel {
+        [NameInMap("AccountId")]
+        [Validation(Required=false)]
+        public string AccountId { get; set; }
+
+        [NameInMap("ArchiveId")]
+        [Validation(Required=false)]
+        public string ArchiveId { get; set; }
+
         [NameInMap("GameId")]
         [Validation(Required=false)]
         public string GameId { get; set; }
-
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
 
     }
 

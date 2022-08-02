@@ -8,10 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CloudGameAPI20200728.Models
 {
-    public class DeleteGameResponseBody : TeaModel {
+    public class RestoreGameArchiveResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public int? Status { get; set; }
 
     }
 

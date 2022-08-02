@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudGameAPI20200728.Models
 {
     public class DeleteProjectRequest : TeaModel {
-        /// <summary>
-        /// 项目ID
-        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public string ProjectId { get; set; }

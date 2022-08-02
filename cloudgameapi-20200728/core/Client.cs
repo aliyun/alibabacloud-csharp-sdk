@@ -1085,6 +1085,88 @@ namespace AlibabaCloud.SDK.CloudGameAPI20200728
             return await DeleteGameWithOptionsAsync(request, runtime);
         }
 
+        public DeleteGameArchiveResponse DeleteGameArchiveWithOptions(DeleteGameArchiveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArchiveId))
+            {
+                query["ArchiveId"] = request.ArchiveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GameId))
+            {
+                query["GameId"] = request.GameId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteGameArchive",
+                Version = "2020-07-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteGameArchiveResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteGameArchiveResponse> DeleteGameArchiveWithOptionsAsync(DeleteGameArchiveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArchiveId))
+            {
+                query["ArchiveId"] = request.ArchiveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GameId))
+            {
+                query["GameId"] = request.GameId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteGameArchive",
+                Version = "2020-07-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteGameArchiveResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteGameArchiveResponse DeleteGameArchive(DeleteGameArchiveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteGameArchiveWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteGameArchiveResponse> DeleteGameArchiveAsync(DeleteGameArchiveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteGameArchiveWithOptionsAsync(request, runtime);
+        }
+
         public DeleteGameVersionResponse DeleteGameVersionWithOptions(DeleteGameVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2923,6 +3005,104 @@ namespace AlibabaCloud.SDK.CloudGameAPI20200728
             return await ListHistoryContainerStatusWithOptionsAsync(request, runtime);
         }
 
+        public ListLatestGameArchiveResponse ListLatestGameArchiveWithOptions(ListLatestGameArchiveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GameId))
+            {
+                query["GameId"] = request.GameId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagStatus))
+            {
+                query["TagStatus"] = request.TagStatus;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListLatestGameArchive",
+                Version = "2020-07-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListLatestGameArchiveResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListLatestGameArchiveResponse> ListLatestGameArchiveWithOptionsAsync(ListLatestGameArchiveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GameId))
+            {
+                query["GameId"] = request.GameId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagStatus))
+            {
+                query["TagStatus"] = request.TagStatus;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListLatestGameArchive",
+                Version = "2020-07-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListLatestGameArchiveResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListLatestGameArchiveResponse ListLatestGameArchive(ListLatestGameArchiveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListLatestGameArchiveWithOptions(request, runtime);
+        }
+
+        public async Task<ListLatestGameArchiveResponse> ListLatestGameArchiveAsync(ListLatestGameArchiveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListLatestGameArchiveWithOptionsAsync(request, runtime);
+        }
+
         public ListProjectsResponse ListProjectsWithOptions(ListProjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3643,6 +3823,88 @@ namespace AlibabaCloud.SDK.CloudGameAPI20200728
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveGameFromProjectWithOptionsAsync(request, runtime);
+        }
+
+        public RestoreGameArchiveResponse RestoreGameArchiveWithOptions(RestoreGameArchiveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArchiveId))
+            {
+                query["ArchiveId"] = request.ArchiveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GameId))
+            {
+                query["GameId"] = request.GameId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RestoreGameArchive",
+                Version = "2020-07-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RestoreGameArchiveResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<RestoreGameArchiveResponse> RestoreGameArchiveWithOptionsAsync(RestoreGameArchiveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArchiveId))
+            {
+                query["ArchiveId"] = request.ArchiveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GameId))
+            {
+                query["GameId"] = request.GameId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RestoreGameArchive",
+                Version = "2020-07-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RestoreGameArchiveResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public RestoreGameArchiveResponse RestoreGameArchive(RestoreGameArchiveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RestoreGameArchiveWithOptions(request, runtime);
+        }
+
+        public async Task<RestoreGameArchiveResponse> RestoreGameArchiveAsync(RestoreGameArchiveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RestoreGameArchiveWithOptionsAsync(request, runtime);
         }
 
         public SetGameAliveResponse SetGameAliveWithOptions(SetGameAliveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4611,6 +4873,96 @@ namespace AlibabaCloud.SDK.CloudGameAPI20200728
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitInternalPurchaseReadyFlagWithOptionsAsync(request, runtime);
+        }
+
+        public UpdateGameArchiveTagStatusResponse UpdateGameArchiveTagStatusWithOptions(UpdateGameArchiveTagStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArchiveId))
+            {
+                query["ArchiveId"] = request.ArchiveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GameId))
+            {
+                query["GameId"] = request.GameId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagStatus))
+            {
+                query["TagStatus"] = request.TagStatus;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGameArchiveTagStatus",
+                Version = "2020-07-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGameArchiveTagStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateGameArchiveTagStatusResponse> UpdateGameArchiveTagStatusWithOptionsAsync(UpdateGameArchiveTagStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArchiveId))
+            {
+                query["ArchiveId"] = request.ArchiveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GameId))
+            {
+                query["GameId"] = request.GameId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagStatus))
+            {
+                query["TagStatus"] = request.TagStatus;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGameArchiveTagStatus",
+                Version = "2020-07-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGameArchiveTagStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateGameArchiveTagStatusResponse UpdateGameArchiveTagStatus(UpdateGameArchiveTagStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateGameArchiveTagStatusWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateGameArchiveTagStatusResponse> UpdateGameArchiveTagStatusAsync(UpdateGameArchiveTagStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateGameArchiveTagStatusWithOptionsAsync(request, runtime);
         }
 
         public UploadGameVersionByDownloadResponse UploadGameVersionByDownloadWithOptions(UploadGameVersionByDownloadRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

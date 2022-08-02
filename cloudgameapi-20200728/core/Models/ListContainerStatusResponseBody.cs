@@ -63,9 +63,6 @@ namespace AlibabaCloud.SDK.CloudGameAPI20200728.Models
             [Validation(Required=false)]
             public string Tags { get; set; }
 
-            /// <summary>
-            /// 系统时间戳
-            /// </summary>
             [NameInMap("Timestamp")]
             [Validation(Required=false)]
             public long? Timestamp { get; set; }

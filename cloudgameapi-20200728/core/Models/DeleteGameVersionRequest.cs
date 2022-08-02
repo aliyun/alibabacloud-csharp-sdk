@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudGameAPI20200728.Models
 {
     public class DeleteGameVersionRequest : TeaModel {
-        /// <summary>
-        /// 游戏版本ID
-        /// </summary>
         [NameInMap("VersionId")]
         [Validation(Required=false)]
         public string VersionId { get; set; }
