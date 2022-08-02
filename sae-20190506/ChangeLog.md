@@ -1,3 +1,6 @@
+2022-08-02 Version: 1.21.3
+- Delete kafka params.
+
 2022-05-16 Version: 1.20.1
 - Support UpdateApplicationVswitches and DescribeComponents.
 

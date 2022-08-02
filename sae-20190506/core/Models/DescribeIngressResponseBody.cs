@@ -32,6 +32,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
+                [NameInMap("BackendProtocol")]
+                [Validation(Required=false)]
+                public string BackendProtocol { get; set; }
+
                 [NameInMap("ContainerPort")]
                 [Validation(Required=false)]
                 public int? ContainerPort { get; set; }
@@ -64,6 +68,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public class DescribeIngressResponseBodyDataRules : TeaModel {
                 public string AppId { get; set; }
                 public string AppName { get; set; }
+                public string BackendProtocol { get; set; }
                 public int? ContainerPort { get; set; }
                 public string Domain { get; set; }
                 public string Path { get; set; }

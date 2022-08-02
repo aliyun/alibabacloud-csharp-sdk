@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public int? Memory { get; set; }
 
+        [NameInMap("Workload")]
+        [Validation(Required=false)]
+        public string Workload { get; set; }
+
     }
 
 }

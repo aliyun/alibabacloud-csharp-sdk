@@ -13,9 +13,6 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string AcrAssumeRoleArn { get; set; }
 
-        /// <summary>
-        /// ACR 企业版实例 ID
-        /// </summary>
         [NameInMap("AcrInstanceId")]
         [Validation(Required=false)]
         public string AcrInstanceId { get; set; }
@@ -28,9 +25,6 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string AppName { get; set; }
 
-        /// <summary>
-        /// 是否绑定EIP
-        /// </summary>
         [NameInMap("AssociateEip")]
         [Validation(Required=false)]
         public bool? AssociateEip { get; set; }
@@ -91,18 +85,6 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string KafkaConfigs { get; set; }
 
-        [NameInMap("KafkaEndpoint")]
-        [Validation(Required=false)]
-        public string KafkaEndpoint { get; set; }
-
-        [NameInMap("KafkaInstanceId")]
-        [Validation(Required=false)]
-        public string KafkaInstanceId { get; set; }
-
-        [NameInMap("KafkaLogfileConfig")]
-        [Validation(Required=false)]
-        public string KafkaLogfileConfig { get; set; }
-
         [NameInMap("Liveness")]
         [Validation(Required=false)]
         public string Liveness { get; set; }
@@ -127,27 +109,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string NasId { get; set; }
 
-        [NameInMap("OpenCollectToKafka")]
-        [Validation(Required=false)]
-        public bool? OpenCollectToKafka { get; set; }
-
-        /// <summary>
-        /// OSS使用的AKID
-        /// </summary>
         [NameInMap("OssAkId")]
         [Validation(Required=false)]
         public string OssAkId { get; set; }
 
-        /// <summary>
-        /// OSS AKID对应的secret
-        /// </summary>
         [NameInMap("OssAkSecret")]
         [Validation(Required=false)]
         public string OssAkSecret { get; set; }
 
-        /// <summary>
-        /// OSS挂载描述信息
-        /// </summary>
         [NameInMap("OssMountDescs")]
         [Validation(Required=false)]
         public string OssMountDescs { get; set; }

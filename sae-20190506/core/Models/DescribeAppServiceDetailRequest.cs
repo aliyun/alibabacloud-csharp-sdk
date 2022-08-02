@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeAppServiceDetailRequest : TeaModel {
-        /// <summary>
-        /// mse 的 appId
-        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }

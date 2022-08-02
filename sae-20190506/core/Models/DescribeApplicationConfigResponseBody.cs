@@ -111,6 +111,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [NameInMap("MseApplicationId")]
             [Validation(Required=false)]
             public string MseApplicationId { get; set; }
+            [NameInMap("MseFeatureConfig")]
+            [Validation(Required=false)]
+            public string MseFeatureConfig { get; set; }
             [NameInMap("NamespaceId")]
             [Validation(Required=false)]
             public string NamespaceId { get; set; }

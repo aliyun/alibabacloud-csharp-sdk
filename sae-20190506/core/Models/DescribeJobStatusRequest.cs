@@ -8,10 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
-    public class ListGreyTagRouteRequest : TeaModel {
+    public class DescribeJobStatusRequest : TeaModel {
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
+
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public string JobId { get; set; }
 
     }
 
