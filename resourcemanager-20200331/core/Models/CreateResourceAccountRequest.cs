@@ -25,6 +25,20 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=false)]
         public string PayerAccountId { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateResourceAccountRequestTag> Tag { get; set; }
+        public class CreateResourceAccountRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
     }
 
 }

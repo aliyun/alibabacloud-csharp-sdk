@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListAccountsForParentRequest : TeaModel {
+        [NameInMap("IncludeTags")]
+        [Validation(Required=false)]
+        public bool? IncludeTags { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -24,6 +28,20 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [NameInMap("QueryKeyword")]
         [Validation(Required=false)]
         public string QueryKeyword { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<ListAccountsForParentRequestTag> Tag { get; set; }
+        public class ListAccountsForParentRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

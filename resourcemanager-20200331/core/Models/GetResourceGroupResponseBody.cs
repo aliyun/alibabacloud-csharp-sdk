@@ -54,6 +54,25 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public GetResourceGroupResponseBodyResourceGroupTags Tags { get; set; }
+            public class GetResourceGroupResponseBodyResourceGroupTags : TeaModel {
+                [NameInMap("Tag")]
+                [Validation(Required=false)]
+                public List<GetResourceGroupResponseBodyResourceGroupTagsTag> Tag { get; set; }
+                public class GetResourceGroupResponseBodyResourceGroupTagsTag : TeaModel {
+                    [NameInMap("TagKey")]
+                    [Validation(Required=false)]
+                    public string TagKey { get; set; }
+
+                    [NameInMap("TagValue")]
+                    [Validation(Required=false)]
+                    public string TagValue { get; set; }
+
+                }
+
+            }
         };
 
     }

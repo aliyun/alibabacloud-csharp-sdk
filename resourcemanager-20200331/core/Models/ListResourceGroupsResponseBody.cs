@@ -35,6 +35,23 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 public string Id { get; set; }
                 public string Name { get; set; }
                 public string Status { get; set; }
+                public ListResourceGroupsResponseBodyResourceGroupsResourceGroupTags Tags { get; set; }
+                public class ListResourceGroupsResponseBodyResourceGroupsResourceGroupTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<ListResourceGroupsResponseBodyResourceGroupsResourceGroupTagsTag> Tag { get; set; }
+                    public class ListResourceGroupsResponseBodyResourceGroupsResourceGroupTagsTag : TeaModel {
+                        [NameInMap("TagKey")]
+                        [Validation(Required=false)]
+                        public string TagKey { get; set; }
+
+                        [NameInMap("TagValue")]
+                        [Validation(Required=false)]
+                        public string TagValue { get; set; }
+
+                    }
+
+                }
             }
         };
 

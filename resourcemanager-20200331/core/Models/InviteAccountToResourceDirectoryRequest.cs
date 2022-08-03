@@ -13,6 +13,20 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=false)]
         public string Note { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<InviteAccountToResourceDirectoryRequestTag> Tag { get; set; }
+        public class InviteAccountToResourceDirectoryRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("TargetEntity")]
         [Validation(Required=false)]
         public string TargetEntity { get; set; }

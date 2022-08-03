@@ -23,6 +23,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+            [NameInMap("IdentityInformation")]
+            [Validation(Required=false)]
+            public string IdentityInformation { get; set; }
             [NameInMap("MasterAccountId")]
             [Validation(Required=false)]
             public string MasterAccountId { get; set; }

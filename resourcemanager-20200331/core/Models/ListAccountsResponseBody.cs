@@ -26,6 +26,23 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 public string ResourceDirectoryId { get; set; }
                 public string ResourceDirectoryPath { get; set; }
                 public string Status { get; set; }
+                public ListAccountsResponseBodyAccountsAccountTags Tags { get; set; }
+                public class ListAccountsResponseBodyAccountsAccountTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<ListAccountsResponseBodyAccountsAccountTagsTag> Tag { get; set; }
+                    public class ListAccountsResponseBodyAccountsAccountTagsTag : TeaModel {
+                        [NameInMap("Key")]
+                        [Validation(Required=false)]
+                        public string Key { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                }
                 public string Type { get; set; }
             }
         };

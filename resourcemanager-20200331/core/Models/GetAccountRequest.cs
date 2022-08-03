@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=false)]
         public string AccountId { get; set; }
 
+        [NameInMap("IncludeTags")]
+        [Validation(Required=false)]
+        public bool? IncludeTags { get; set; }
+
     }
 
 }

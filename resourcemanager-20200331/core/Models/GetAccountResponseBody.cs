@@ -34,6 +34,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [NameInMap("JoinTime")]
             [Validation(Required=false)]
             public string JoinTime { get; set; }
+            [NameInMap("Location")]
+            [Validation(Required=false)]
+            public string Location { get; set; }
             [NameInMap("ModifyTime")]
             [Validation(Required=false)]
             public string ModifyTime { get; set; }
@@ -46,6 +49,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<GetAccountResponseBodyAccountTags> Tags { get; set; }
+            public class GetAccountResponseBodyAccountTags : TeaModel {
+                public string Key { get; set; }
+                public string Value { get; set; }
+            }
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
