@@ -37,9 +37,17 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("SignName")]
+        [Validation(Required=false)]
+        public string SignName { get; set; }
+
         [NameInMap("StartDate")]
         [Validation(Required=false)]
         public string StartDate { get; set; }
+
+        [NameInMap("TemplateType")]
+        [Validation(Required=false)]
+        public int? TemplateType { get; set; }
 
     }
 
