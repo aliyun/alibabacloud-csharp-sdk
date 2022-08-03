@@ -29,10 +29,6 @@ namespace AlibabaCloud.SDK.RMC20211104.Models
             [Validation(Required=false)]
             public string AccountId { get; set; }
 
-            [NameInMap("RelationshipType")]
-            [Validation(Required=false)]
-            public string RelationshipType { get; set; }
-
             [NameInMap("SourceRegionId")]
             [Validation(Required=false)]
             public string SourceRegionId { get; set; }
