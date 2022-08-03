@@ -106,7 +106,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadId))
             {
@@ -138,7 +137,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadId))
             {
@@ -184,7 +182,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Position))
             {
@@ -259,7 +256,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Position))
             {
@@ -424,7 +420,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncodingType))
             {
@@ -479,7 +474,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncodingType))
             {
@@ -547,7 +541,6 @@ namespace AlibabaCloud.SDK.Oss20190517
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -633,7 +626,6 @@ namespace AlibabaCloud.SDK.Oss20190517
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -734,7 +726,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -761,7 +752,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -1439,7 +1429,6 @@ namespace AlibabaCloud.SDK.Oss20190517
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            channel = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(channel);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -1464,7 +1453,6 @@ namespace AlibabaCloud.SDK.Oss20190517
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            channel = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(channel);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -1582,7 +1570,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
             {
@@ -1614,7 +1601,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
             {
@@ -1660,7 +1646,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
             {
@@ -1692,7 +1677,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
             {
@@ -3101,7 +3085,6 @@ namespace AlibabaCloud.SDK.Oss20190517
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            channel = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(channel);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -3126,7 +3109,6 @@ namespace AlibabaCloud.SDK.Oss20190517
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            channel = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(channel);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -3165,7 +3147,6 @@ namespace AlibabaCloud.SDK.Oss20190517
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            channel = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(channel);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -3190,7 +3171,6 @@ namespace AlibabaCloud.SDK.Oss20190517
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            channel = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(channel);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -3229,7 +3209,6 @@ namespace AlibabaCloud.SDK.Oss20190517
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            channel = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(channel);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -3254,7 +3233,6 @@ namespace AlibabaCloud.SDK.Oss20190517
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            channel = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(channel);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -3294,7 +3272,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseCacheControl))
             {
@@ -3375,7 +3352,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseCacheControl))
             {
@@ -3470,7 +3446,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
             {
@@ -3502,7 +3477,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
             {
@@ -3548,7 +3522,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
             {
@@ -3580,7 +3553,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
             {
@@ -3626,7 +3598,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
             {
@@ -3658,7 +3629,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
             {
@@ -3704,7 +3674,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
             {
@@ -3736,7 +3705,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
             {
@@ -3782,7 +3750,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            channel = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(channel);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -3818,7 +3785,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            channel = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(channel);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -3868,7 +3834,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
             {
@@ -3921,7 +3886,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
             {
@@ -4054,7 +4018,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncodingType))
             {
@@ -4131,7 +4094,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncodingType))
             {
@@ -4940,7 +4902,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             ListPartsShrinkRequest request = new ListPartsShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EncodingType))
@@ -4990,7 +4951,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             ListPartsShrinkRequest request = new ListPartsShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EncodingType))
@@ -5053,7 +5013,6 @@ namespace AlibabaCloud.SDK.Oss20190517
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -5095,7 +5054,6 @@ namespace AlibabaCloud.SDK.Oss20190517
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -5214,8 +5172,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            channel = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(channel);
-            playlist = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(playlist);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -5251,8 +5207,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            channel = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(channel);
-            playlist = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(playlist);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -6336,7 +6290,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            channel = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(channel);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -6363,7 +6316,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            channel = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(channel);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -6404,7 +6356,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            channel = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(channel);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -6436,7 +6387,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            channel = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(channel);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -6482,7 +6432,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -6547,7 +6496,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -6626,7 +6574,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
             {
@@ -6667,7 +6614,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
             {
@@ -6722,7 +6668,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
             {
@@ -6755,7 +6700,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
             {
@@ -6801,7 +6745,6 @@ namespace AlibabaCloud.SDK.Oss20190517
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -6847,7 +6790,6 @@ namespace AlibabaCloud.SDK.Oss20190517
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -6908,7 +6850,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
             {
@@ -6941,7 +6882,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
             {
@@ -6988,7 +6928,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -7015,7 +6954,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -7056,7 +6994,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartNumber))
             {
@@ -7094,7 +7031,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartNumber))
             {
@@ -7146,7 +7082,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartNumber))
             {
@@ -7211,7 +7146,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
-            key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartNumber))
             {
