@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ft20180713.Models
 {
     public class FtDynamicAddressDubboResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("StringValue")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string StringValue { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("IntValue")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? IntValue { get; set; }
+        public FtDynamicAddressDubboResponseBody Body { get; set; }
 
     }
 

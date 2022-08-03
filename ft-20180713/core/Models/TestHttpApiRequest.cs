@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ft20180713.Models
 {
     public class TestHttpApiRequest : TeaModel {
-        [NameInMap("StringValue")]
+        [NameInMap("BooleanParam")]
         [Validation(Required=false)]
-        public Dictionary<string, object> StringValue { get; set; }
+        public bool? BooleanParam { get; set; }
 
         [NameInMap("DefaultValue")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Ft20180713.Models
         [Validation(Required=false)]
         public Dictionary<string, object> OtherParam { get; set; }
 
-        [NameInMap("BooleanParam")]
+        [NameInMap("StringValue")]
         [Validation(Required=false)]
-        public bool? BooleanParam { get; set; }
+        public Dictionary<string, object> StringValue { get; set; }
 
     }
 

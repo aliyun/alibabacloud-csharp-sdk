@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ft20180713.Models
 {
     public class FtDynamicAddressHttpVpcResponse : TeaModel {
-        [NameInMap("Params")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Params { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ServiceRpcSign")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string ServiceRpcSign { get; set; }
+        public int? StatusCode { get; set; }
+
+        [NameInMap("body")]
+        [Validation(Required=true)]
+        public FtDynamicAddressHttpVpcResponseBody Body { get; set; }
 
     }
 

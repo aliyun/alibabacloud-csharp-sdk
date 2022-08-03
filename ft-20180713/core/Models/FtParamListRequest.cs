@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ft20180713.Models
 {
     public class FtParamListRequest : TeaModel {
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
         [NameInMap("Disk")]
         [Validation(Required=false)]
         public List<FtParamListRequestDisk> Disk { get; set; }
@@ -26,6 +22,10 @@ namespace AlibabaCloud.SDK.Ft20180713.Models
             public List<string> Type { get; set; }
 
         }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
 
     }
 

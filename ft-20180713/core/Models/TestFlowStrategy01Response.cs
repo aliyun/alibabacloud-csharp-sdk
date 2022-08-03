@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ft20180713.Models
 {
     public class TestFlowStrategy01Response : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("List")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public List<string> List { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("Names")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public List<string> Names { get; set; }
+        public TestFlowStrategy01ResponseBody Body { get; set; }
 
     }
 
