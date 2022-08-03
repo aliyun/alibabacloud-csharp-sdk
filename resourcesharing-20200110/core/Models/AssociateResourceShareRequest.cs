@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class AssociateResourceShareRequest : TeaModel {
         [NameInMap("ResourceShareId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ResourceShareId { get; set; }
 
         [NameInMap("Resources")]

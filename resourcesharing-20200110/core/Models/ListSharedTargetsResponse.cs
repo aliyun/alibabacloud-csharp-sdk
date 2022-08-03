@@ -9,35 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class ListSharedTargetsResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("NextToken")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string NextToken { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("SharedTargets")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public List<ListSharedTargetsResponseSharedTargets> SharedTargets { get; set; }
-        public class ListSharedTargetsResponseSharedTargets : TeaModel {
-            [NameInMap("ResourceShareId")]
-            [Validation(Required=true)]
-            public string ResourceShareId { get; set; }
-
-            [NameInMap("TargetId")]
-            [Validation(Required=true)]
-            public string TargetId { get; set; }
-
-            [NameInMap("CreateTime")]
-            [Validation(Required=true)]
-            public string CreateTime { get; set; }
-
-            [NameInMap("UpdateTime")]
-            [Validation(Required=true)]
-            public string UpdateTime { get; set; }
-
-        }
+        public ListSharedTargetsResponseBody Body { get; set; }
 
     }
 

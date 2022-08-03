@@ -9,47 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class ListSharedResourcesResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("NextToken")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string NextToken { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("SharedResources")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public List<ListSharedResourcesResponseSharedResources> SharedResources { get; set; }
-        public class ListSharedResourcesResponseSharedResources : TeaModel {
-            [NameInMap("ResourceShareId")]
-            [Validation(Required=true)]
-            public string ResourceShareId { get; set; }
-
-            [NameInMap("ResourceId")]
-            [Validation(Required=true)]
-            public string ResourceId { get; set; }
-
-            [NameInMap("ResourceType")]
-            [Validation(Required=true)]
-            public string ResourceType { get; set; }
-
-            [NameInMap("ResourceStatus")]
-            [Validation(Required=true)]
-            public string ResourceStatus { get; set; }
-
-            [NameInMap("ResourceStatusMessage")]
-            [Validation(Required=true)]
-            public string ResourceStatusMessage { get; set; }
-
-            [NameInMap("CreateTime")]
-            [Validation(Required=true)]
-            public string CreateTime { get; set; }
-
-            [NameInMap("UpdateTime")]
-            [Validation(Required=true)]
-            public string UpdateTime { get; set; }
-
-        }
+        public ListSharedResourcesResponseBody Body { get; set; }
 
     }
 

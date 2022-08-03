@@ -9,33 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class UpdateResourceShareResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ResourceShare")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public UpdateResourceShareResponseResourceShare ResourceShare { get; set; }
-        public class UpdateResourceShareResponseResourceShare : TeaModel {
-            [NameInMap("ResourceShareId")]
-            [Validation(Required=true)]
-            public string ResourceShareId { get; set; }
-            [NameInMap("ResourceShareName")]
-            [Validation(Required=true)]
-            public string ResourceShareName { get; set; }
-            [NameInMap("ResourceShareOwner")]
-            [Validation(Required=true)]
-            public string ResourceShareOwner { get; set; }
-            [NameInMap("ResourceShareStatus")]
-            [Validation(Required=true)]
-            public string ResourceShareStatus { get; set; }
-            [NameInMap("CreateTime")]
-            [Validation(Required=true)]
-            public string CreateTime { get; set; }
-            [NameInMap("UpdateTime")]
-            [Validation(Required=true)]
-            public string UpdateTime { get; set; }
-        };
+        public int? StatusCode { get; set; }
+
+        [NameInMap("body")]
+        [Validation(Required=true)]
+        public UpdateResourceShareResponseBody Body { get; set; }
 
     }
 

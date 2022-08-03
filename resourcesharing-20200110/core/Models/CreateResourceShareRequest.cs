@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class CreateResourceShareRequest : TeaModel {
+        [NameInMap("AllowExternalTargets")]
+        [Validation(Required=false)]
+        public bool? AllowExternalTargets { get; set; }
+
         [NameInMap("ResourceShareName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ResourceShareName { get; set; }
 
         [NameInMap("Resources")]

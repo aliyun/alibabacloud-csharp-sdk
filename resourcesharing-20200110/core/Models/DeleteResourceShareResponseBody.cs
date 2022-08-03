@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
-    public class DeleteResourceShareRequest : TeaModel {
-        [NameInMap("ResourceShareId")]
+    public class DeleteResourceShareResponseBody : TeaModel {
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string ResourceShareId { get; set; }
+        public string RequestId { get; set; }
 
     }
 

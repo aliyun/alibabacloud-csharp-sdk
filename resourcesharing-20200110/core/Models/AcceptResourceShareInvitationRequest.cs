@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -8,10 +11,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
-    public class DeleteResourceShareRequest : TeaModel {
-        [NameInMap("ResourceShareId")]
+    public class AcceptResourceShareInvitationRequest : TeaModel {
+        [NameInMap("ResourceShareInvitationId")]
         [Validation(Required=false)]
-        public string ResourceShareId { get; set; }
+        public string ResourceShareInvitationId { get; set; }
 
     }
 

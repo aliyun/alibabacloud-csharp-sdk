@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
-    public class CreateResourceShareResponse : TeaModel {
+    public class RejectResourceShareInvitationResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public CreateResourceShareResponseBody Body { get; set; }
+        public RejectResourceShareInvitationResponseBody Body { get; set; }
 
     }
 

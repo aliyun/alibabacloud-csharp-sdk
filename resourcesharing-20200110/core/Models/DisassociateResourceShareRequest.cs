@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class DisassociateResourceShareRequest : TeaModel {
+        [NameInMap("ResourceOwner")]
+        [Validation(Required=false)]
+        public string ResourceOwner { get; set; }
+
         [NameInMap("ResourceShareId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ResourceShareId { get; set; }
 
         [NameInMap("Resources")]
