@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
 {
-    public class DownloadFileNameListRequest : TeaModel {
-        [NameInMap("DatasetId")]
+    public class CustomizeInstanceSegmentImageRequest : TeaModel {
+        [NameInMap("ImageUrl")]
         [Validation(Required=false)]
-        public long? DatasetId { get; set; }
+        public string ImageUrl { get; set; }
 
-        [NameInMap("Identity")]
+        [NameInMap("ServiceId")]
         [Validation(Required=false)]
-        public string Identity { get; set; }
+        public string ServiceId { get; set; }
 
     }
 
