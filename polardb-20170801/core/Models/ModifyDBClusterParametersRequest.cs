@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        [NameInMap("FromTimeService")]
+        [Validation(Required=false)]
+        public bool? FromTimeService { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -21,19 +25,21 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        /// <summary>
-        /// Parameters与ParamGroupId二选一必传
-        /// </summary>
         [NameInMap("ParameterGroupId")]
         [Validation(Required=false)]
         public string ParameterGroupId { get; set; }
 
-        /// <summary>
-        /// Parameters与ParamGroupId二选一必传
-        /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public string Parameters { get; set; }
+
+        [NameInMap("PlannedEndTime")]
+        [Validation(Required=false)]
+        public string PlannedEndTime { get; set; }
+
+        [NameInMap("PlannedStartTime")]
+        [Validation(Required=false)]
+        public string PlannedStartTime { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

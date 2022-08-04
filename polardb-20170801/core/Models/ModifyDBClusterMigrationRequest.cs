@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterMigrationRequest : TeaModel {
+        [NameInMap("ConnectionStrings")]
+        [Validation(Required=false)]
+        public string ConnectionStrings { get; set; }
+
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }

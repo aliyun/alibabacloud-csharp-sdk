@@ -41,6 +41,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("UpgradeLabel")]
+        [Validation(Required=false)]
+        public string UpgradeLabel { get; set; }
+
+        [NameInMap("UpgradePolicy")]
+        [Validation(Required=false)]
+        public string UpgradePolicy { get; set; }
+
         [NameInMap("UpgradeType")]
         [Validation(Required=false)]
         public string UpgradeType { get; set; }

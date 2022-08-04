@@ -64,6 +64,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string PayType { get; set; }
                 public string RegionId { get; set; }
                 public string ResourceGroupId { get; set; }
+                public string StoragePayType { get; set; }
+                public long? StorageSpace { get; set; }
                 public long? StorageUsed { get; set; }
                 public DescribeDBClustersResponseBodyItemsDBClusterTags Tags { get; set; }
                 public class DescribeDBClustersResponseBodyItemsDBClusterTags : TeaModel {

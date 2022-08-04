@@ -13,9 +13,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
-        /// <summary>
-        /// 查询指定节点的参数列表
-        /// </summary>
         [NameInMap("DBNodeIds")]
         [Validation(Required=false)]
         public string DBNodeIds { get; set; }

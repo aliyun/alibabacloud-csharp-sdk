@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string BackupMode { get; set; }
 
+        [NameInMap("BackupRegion")]
+        [Validation(Required=false)]
+        public string BackupRegion { get; set; }
+
         [NameInMap("BackupStatus")]
         [Validation(Required=false)]
         public string BackupStatus { get; set; }

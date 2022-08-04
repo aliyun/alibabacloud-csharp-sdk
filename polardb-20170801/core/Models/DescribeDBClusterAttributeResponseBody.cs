@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterAttributeResponseBody : TeaModel {
+        [NameInMap("BlktagTotal")]
+        [Validation(Required=false)]
+        public long? BlktagTotal { get; set; }
+
+        [NameInMap("BlktagUsed")]
+        [Validation(Required=false)]
+        public long? BlktagUsed { get; set; }
+
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
@@ -123,6 +131,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string Expired { get; set; }
 
+        [NameInMap("InodeTotal")]
+        [Validation(Required=false)]
+        public long? InodeTotal { get; set; }
+
+        [NameInMap("InodeUsed")]
+        [Validation(Required=false)]
+        public long? InodeUsed { get; set; }
+
         [NameInMap("IsLatestVersion")]
         [Validation(Required=false)]
         public bool? IsLatestVersion { get; set; }
@@ -178,6 +194,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("StorageMax")]
         [Validation(Required=false)]
         public long? StorageMax { get; set; }
+
+        [NameInMap("StoragePayType")]
+        [Validation(Required=false)]
+        public string StoragePayType { get; set; }
+
+        [NameInMap("StorageSpace")]
+        [Validation(Required=false)]
+        public long? StorageSpace { get; set; }
 
         [NameInMap("StorageType")]
         [Validation(Required=false)]

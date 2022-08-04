@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeMetaListResponseBody : TeaModel {
+        [NameInMap("DBClusterId")]
+        [Validation(Required=false)]
+        public string DBClusterId { get; set; }
+
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeMetaListResponseBodyItems> Items { get; set; }

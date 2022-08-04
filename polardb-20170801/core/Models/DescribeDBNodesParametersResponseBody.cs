@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public string DefaultParameterValue { get; set; }
 
+                [NameInMap("Factor")]
+                [Validation(Required=false)]
+                public string Factor { get; set; }
+
                 [NameInMap("ForceRestart")]
                 [Validation(Required=false)]
                 public bool? ForceRestart { get; set; }

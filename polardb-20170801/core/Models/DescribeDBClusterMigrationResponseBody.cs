@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public int? DelayedSeconds { get; set; }
 
+        [NameInMap("DtsInstanceId")]
+        [Validation(Required=false)]
+        public string DtsInstanceId { get; set; }
+
         [NameInMap("ExpiredTime")]
         [Validation(Required=false)]
         public string ExpiredTime { get; set; }

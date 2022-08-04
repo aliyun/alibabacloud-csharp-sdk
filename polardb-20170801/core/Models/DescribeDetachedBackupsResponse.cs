@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
         public DescribeDetachedBackupsResponseBody Body { get; set; }

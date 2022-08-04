@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateStoragePlanRequest : TeaModel {
-        /// <summary>
-        /// 幂等参数
-        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }

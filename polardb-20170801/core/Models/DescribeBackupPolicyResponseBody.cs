@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DataLevel1BackupTime { get; set; }
 
+        [NameInMap("DataLevel2BackupAnotherRegionRegion")]
+        [Validation(Required=false)]
+        public string DataLevel2BackupAnotherRegionRegion { get; set; }
+
+        [NameInMap("DataLevel2BackupAnotherRegionRetentionPeriod")]
+        [Validation(Required=false)]
+        public string DataLevel2BackupAnotherRegionRetentionPeriod { get; set; }
+
         [NameInMap("DataLevel2BackupPeriod")]
         [Validation(Required=false)]
         public string DataLevel2BackupPeriod { get; set; }

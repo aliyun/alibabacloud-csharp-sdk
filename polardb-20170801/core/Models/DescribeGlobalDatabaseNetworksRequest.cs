@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        [NameInMap("GDNDescription")]
+        [Validation(Required=false)]
+        public string GDNDescription { get; set; }
+
+        [NameInMap("GDNId")]
+        [Validation(Required=false)]
+        public string GDNId { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        [NameInMap("LogBackupAnotherRegionRegion")]
+        [Validation(Required=false)]
+        public string LogBackupAnotherRegionRegion { get; set; }
+
+        [NameInMap("LogBackupAnotherRegionRetentionPeriod")]
+        [Validation(Required=false)]
+        public string LogBackupAnotherRegionRetentionPeriod { get; set; }
+
         [NameInMap("LogBackupRetentionPeriod")]
         [Validation(Required=false)]
         public string LogBackupRetentionPeriod { get; set; }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeBackupLogsRequest : TeaModel {
+        [NameInMap("BackupRegion")]
+        [Validation(Required=false)]
+        public string BackupRegion { get; set; }
+
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
