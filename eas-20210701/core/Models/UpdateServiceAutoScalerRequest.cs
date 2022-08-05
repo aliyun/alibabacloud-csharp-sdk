@@ -9,22 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class UpdateServiceAutoScalerRequest : TeaModel {
-        [NameInMap("Max")]
+        [NameInMap("max")]
         [Validation(Required=false)]
         public int? Max { get; set; }
 
-        [NameInMap("Min")]
+        [NameInMap("min")]
         [Validation(Required=false)]
         public int? Min { get; set; }
 
-        [NameInMap("Strategies")]
+        [NameInMap("strategies")]
         [Validation(Required=false)]
         public UpdateServiceAutoScalerRequestStrategies Strategies { get; set; }
         public class UpdateServiceAutoScalerRequestStrategies : TeaModel {
-            [NameInMap("Cpu")]
+            [NameInMap("cpu")]
             [Validation(Required=false)]
             public float? Cpu { get; set; }
-            [NameInMap("Qps")]
+            [NameInMap("qps")]
             [Validation(Required=false)]
             public float? Qps { get; set; }
         };

@@ -479,15 +479,15 @@ namespace AlibabaCloud.SDK.Eas20210701
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Max))
             {
-                body["Max"] = request.Max;
+                body["max"] = request.Max;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Min))
             {
-                body["Min"] = request.Min;
+                body["min"] = request.Min;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Strategies.ToMap()))
             {
-                body["Strategies"] = request.Strategies;
+                body["strategies"] = request.Strategies;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -517,15 +517,15 @@ namespace AlibabaCloud.SDK.Eas20210701
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Max))
             {
-                body["Max"] = request.Max;
+                body["max"] = request.Max;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Min))
             {
-                body["Min"] = request.Min;
+                body["min"] = request.Min;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Strategies.ToMap()))
             {
-                body["Strategies"] = request.Strategies;
+                body["strategies"] = request.Strategies;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3211,15 +3211,15 @@ namespace AlibabaCloud.SDK.Eas20210701
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Max))
             {
-                body["Max"] = request.Max;
+                body["max"] = request.Max;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Min))
             {
-                body["Min"] = request.Min;
+                body["min"] = request.Min;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Strategies.ToMap()))
             {
-                body["Strategies"] = request.Strategies;
+                body["strategies"] = request.Strategies;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3249,15 +3249,15 @@ namespace AlibabaCloud.SDK.Eas20210701
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Max))
             {
-                body["Max"] = request.Max;
+                body["max"] = request.Max;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Min))
             {
-                body["Min"] = request.Min;
+                body["min"] = request.Min;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Strategies.ToMap()))
             {
-                body["Strategies"] = request.Strategies;
+                body["strategies"] = request.Strategies;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DescribeServiceAutoScalerResponseBody : TeaModel {
+        [NameInMap("Behavior")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Behavior { get; set; }
+
         [NameInMap("CurrentValues")]
         [Validation(Required=false)]
         public Dictionary<string, object> CurrentValues { get; set; }
