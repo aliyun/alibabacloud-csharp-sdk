@@ -8,18 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 {
-    public class CreateInstanceResponseBody : TeaModel {
+    public class GetTokenResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
-
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -32,6 +24,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("Token")]
+        [Validation(Required=false)]
+        public string Token { get; set; }
 
     }
 

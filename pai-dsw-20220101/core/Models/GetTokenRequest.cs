@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 {
-    public class CreateInstanceShutdownTimerRequest : TeaModel {
-        [NameInMap("DueTime")]
+    public class GetTokenRequest : TeaModel {
+        [NameInMap("ExpireTime")]
         [Validation(Required=false)]
-        public string DueTime { get; set; }
+        public int? ExpireTime { get; set; }
 
-        [NameInMap("RemainingTimeInMs")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public long? RemainingTimeInMs { get; set; }
+        public string InstanceId { get; set; }
 
     }
 

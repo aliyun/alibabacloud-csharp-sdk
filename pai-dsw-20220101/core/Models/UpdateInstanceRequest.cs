@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 {
     public class UpdateInstanceRequest : TeaModel {
-        /// <summary>
-        /// 实例名称
-        /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }

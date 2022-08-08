@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 {
     public class ListDemosRequest : TeaModel {
-        /// <summary>
-        /// 目录
-        /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
