@@ -17,9 +17,6 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
         [Validation(Required=false)]
         public List<DescribeAnycastEipAddressResponseBodyAnycastEipBindInfoList> AnycastEipBindInfoList { get; set; }
         public class DescribeAnycastEipAddressResponseBodyAnycastEipBindInfoList : TeaModel {
-            /// <summary>
-            /// 绑定模式 Normal、Default
-            /// </summary>
             [NameInMap("AssociationMode")]
             [Validation(Required=false)]
             public string AssociationMode { get; set; }
@@ -40,25 +37,16 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
             [Validation(Required=false)]
             public string BindTime { get; set; }
 
-            /// <summary>
-            /// 关联的pop点
-            /// </summary>
             [NameInMap("PopLocations")]
             [Validation(Required=false)]
             public List<DescribeAnycastEipAddressResponseBodyAnycastEipBindInfoListPopLocations> PopLocations { get; set; }
             public class DescribeAnycastEipAddressResponseBodyAnycastEipBindInfoListPopLocations : TeaModel {
-                /// <summary>
-                /// PopLocation
-                /// </summary>
                 [NameInMap("PopLocation")]
                 [Validation(Required=false)]
                 public string PopLocation { get; set; }
 
             }
 
-            /// <summary>
-            /// ip地址
-            /// </summary>
             [NameInMap("PrivateIpAddress")]
             [Validation(Required=false)]
             public string PrivateIpAddress { get; set; }

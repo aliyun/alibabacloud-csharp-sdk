@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
         [Validation(Required=false)]
         public string AnycastId { get; set; }
 
+        [NameInMap("AnycastIds")]
+        [Validation(Required=false)]
+        public List<string> AnycastIds { get; set; }
+
         [NameInMap("BindInstanceIds")]
         [Validation(Required=false)]
         public List<string> BindInstanceIds { get; set; }

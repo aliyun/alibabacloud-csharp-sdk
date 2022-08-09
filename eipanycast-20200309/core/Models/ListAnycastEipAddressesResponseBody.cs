@@ -47,10 +47,6 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
             [Validation(Required=false)]
             public int? Bandwidth { get; set; }
 
-            [NameInMap("Bid")]
-            [Validation(Required=false)]
-            public string Bid { get; set; }
-
             [NameInMap("BusinessStatus")]
             [Validation(Required=false)]
             public string BusinessStatus { get; set; }
@@ -82,6 +78,10 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
             [NameInMap("ServiceLocation")]
             [Validation(Required=false)]
             public string ServiceLocation { get; set; }
+
+            [NameInMap("ServiceManaged")]
+            [Validation(Required=false)]
+            public int? ServiceManaged { get; set; }
 
             [NameInMap("Status")]
             [Validation(Required=false)]

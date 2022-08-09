@@ -13,9 +13,6 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
         [Validation(Required=false)]
         public string AnycastId { get; set; }
 
-        /// <summary>
-        /// 关联模式，默认模式、普通模式Default/Normal
-        /// </summary>
         [NameInMap("AssociationMode")]
         [Validation(Required=false)]
         public string AssociationMode { get; set; }
@@ -40,25 +37,16 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
-        /// <summary>
-        /// 绑定时关联的pop location，如果是绑定的第一个实例，该参数会忽略，会下发到全部pop点
-        /// </summary>
         [NameInMap("PopLocations")]
         [Validation(Required=false)]
         public List<AssociateAnycastEipAddressRequestPopLocations> PopLocations { get; set; }
         public class AssociateAnycastEipAddressRequestPopLocations : TeaModel {
-            /// <summary>
-            /// pop location
-            /// </summary>
             [NameInMap("PopLocation")]
             [Validation(Required=false)]
             public string PopLocation { get; set; }
 
         }
 
-        /// <summary>
-        /// 私网ip地址
-        /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
         public string PrivateIpAddress { get; set; }
