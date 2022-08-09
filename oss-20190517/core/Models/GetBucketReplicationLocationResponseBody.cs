@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
         public class GetBucketReplicationLocationResponseBodyLocationTransferTypeConstraint : TeaModel {
             [NameInMap("LocationTransferType")]
             [Validation(Required=false)]
-            public List<string> LocationTransferTypes { get; set; }
+            public List<LocationTransferType> LocationTransferTypes { get; set; }
         };
 
     }

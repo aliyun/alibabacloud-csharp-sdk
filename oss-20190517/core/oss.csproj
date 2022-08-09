@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.Oss20190517</AssemblyName>
-    <Version>1.0.5</Version>
+    <Version>1.0.6</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud Object Storage Service (20190517) SDK Library for .NET</Description>
@@ -42,7 +42,7 @@
     </PackageReference>
     <PackageReference Include="AlibabaCloud.TeaUtil" Version="0.1.14"/>
     <PackageReference Include="AlibabaCloud.GatewaySpi" Version="0.0.2"/>
-    <PackageReference Include="AlibabaCloud.GatewayOss" Version="0.0.7"/>
+    <PackageReference Include="AlibabaCloud.GatewayOss" Version="0.0.8"/>
     <PackageReference Include="AlibabaCloud.OpenApiClient" Version="0.1.4"/>
     <PackageReference Include="AlibabaCloud.OpenApiUtil" Version="1.0.15"/>
     <PackageReference Include="AlibabaCloud.EndpointUtil" Version="0.1.1"/>

@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
         public class GetBucketWebsiteResponseBodyRoutingRules : TeaModel {
             [NameInMap("RoutingRule")]
             [Validation(Required=false)]
-            public List<string> RoutingRules { get; set; }
+            public List<RoutingRule> RoutingRules { get; set; }
         };
 
     }

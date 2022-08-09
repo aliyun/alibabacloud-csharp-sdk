@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
         public class ListBucketsResponseBodyBuckets : TeaModel {
             [NameInMap("Bucket")]
             [Validation(Required=false)]
-            public List<string> Buckets { get; set; }
+            public List<Bucket> Buckets { get; set; }
         };
 
         [NameInMap("IsTruncated")]
