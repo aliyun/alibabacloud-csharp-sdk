@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.Linkcard20210520.Models
             [NameInMap("MonthFeatureFee")]
             [Validation(Required=false)]
             public long? MonthFeatureFee { get; set; }
+            [NameInMap("MonthUsedAmount")]
+            [Validation(Required=false)]
+            public long? MonthUsedAmount { get; set; }
             [NameInMap("PoolAvaiable")]
             [Validation(Required=false)]
             public string PoolAvaiable { get; set; }

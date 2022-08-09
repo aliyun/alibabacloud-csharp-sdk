@@ -69,6 +69,14 @@ namespace AlibabaCloud.SDK.Linkcard20210520.Models
         [Validation(Required=false)]
         public bool? IsAutoRecharge { get; set; }
 
+        [NameInMap("MaxFlow")]
+        [Validation(Required=false)]
+        public string MaxFlow { get; set; }
+
+        [NameInMap("MinFlow")]
+        [Validation(Required=false)]
+        public string MinFlow { get; set; }
+
         [NameInMap("Msisdn")]
         [Validation(Required=false)]
         public string Msisdn { get; set; }

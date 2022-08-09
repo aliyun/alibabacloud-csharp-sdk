@@ -8,22 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Linkcard20210520.Models
 {
-    public class RenewResponseBody : TeaModel {
+    public class VerifyIotCardResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public RenewResponseBodyData Data { get; set; }
-        public class RenewResponseBodyData : TeaModel {
-            [NameInMap("OrderNo")]
-            [Validation(Required=false)]
-            public string OrderNo { get; set; }
-            [NameInMap("SerialNo")]
-            [Validation(Required=false)]
-            public string SerialNo { get; set; }
-        };
+        public bool? Data { get; set; }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

@@ -32,6 +32,7 @@ namespace AlibabaCloud.SDK.Linkcard20210520.Models
                 public string CredentialType { get; set; }
                 public string DataLevel { get; set; }
                 public string DataType { get; set; }
+                public long? DirectionalGroupId { get; set; }
                 public string DirectionalGroupName { get; set; }
                 public string ExpireTime { get; set; }
                 public string Iccid { get; set; }
