@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class RebootInstanceRequest : TeaModel {
-        [NameInMap("ForceStop")]
+    public class ReinitInstanceRequest : TeaModel {
+        [NameInMap("ImageId")]
         [Validation(Required=false)]
-        public string ForceStop { get; set; }
+        public string ImageId { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("Password")]
+        [Validation(Required=false)]
+        public string Password { get; set; }
 
     }
 

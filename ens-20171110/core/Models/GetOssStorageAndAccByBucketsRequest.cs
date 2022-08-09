@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class StartInstanceRequest : TeaModel {
-        [NameInMap("InstanceId")]
+    public class GetOssStorageAndAccByBucketsRequest : TeaModel {
+        [NameInMap("BucketList")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string BucketList { get; set; }
 
     }
 

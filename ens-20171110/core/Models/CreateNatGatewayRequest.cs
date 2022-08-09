@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
+        [NameInMap("InstanceType")]
+        [Validation(Required=false)]
+        public string InstanceType { get; set; }
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

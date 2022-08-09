@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string SourceCIDR { get; set; }
 
+        [NameInMap("SourceNetworkId")]
+        [Validation(Required=false)]
+        public string SourceNetworkId { get; set; }
+
         [NameInMap("SourceVSwitchId")]
         [Validation(Required=false)]
         public string SourceVSwitchId { get; set; }

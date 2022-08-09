@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string NetworkId { get; set; }
 
+            [NameInMap("Spec")]
+            [Validation(Required=false)]
+            public string Spec { get; set; }
+
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
