@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class CostCenterSaveRequest : TeaModel {
-        [NameInMap("alipay_id")]
-        [Validation(Required=false)]
-        public string AlipayId { get; set; }
-
         [NameInMap("alipay_no")]
         [Validation(Required=false)]
         public string AlipayNo { get; set; }
@@ -36,10 +32,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [NameInMap("title")]
         [Validation(Required=false)]
         public string Title { get; set; }
-
-        [NameInMap("user_id")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
 
     }
 

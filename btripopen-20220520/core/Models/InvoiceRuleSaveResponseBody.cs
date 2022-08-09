@@ -17,36 +17,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public InvoiceRuleSaveResponseBodyModule Module { get; set; }
         public class InvoiceRuleSaveResponseBodyModule : TeaModel {
-            [NameInMap("account")]
-            [Validation(Required=false)]
-            public string Account { get; set; }
             [NameInMap("add_num")]
             [Validation(Required=false)]
             public int? AddNum { get; set; }
-            [NameInMap("havana_id")]
-            [Validation(Required=false)]
-            public string HavanaId { get; set; }
             [NameInMap("remove_num")]
             [Validation(Required=false)]
             public int? RemoveNum { get; set; }
-            [NameInMap("selected_external_user_num")]
-            [Validation(Required=false)]
-            public int? SelectedExternalUserNum { get; set; }
-            [NameInMap("selected_user_num")]
-            [Validation(Required=false)]
-            public int? SelectedUserNum { get; set; }
-            [NameInMap("suite_key")]
-            [Validation(Required=false)]
-            public string SuiteKey { get; set; }
-            [NameInMap("token_grant_type")]
-            [Validation(Required=false)]
-            public int? TokenGrantType { get; set; }
-            [NameInMap("version")]
-            [Validation(Required=false)]
-            public int? Version { get; set; }
-            [NameInMap("without_authority")]
-            [Validation(Required=false)]
-            public bool? WithoutAuthority { get; set; }
         };
 
         [NameInMap("more_page")]

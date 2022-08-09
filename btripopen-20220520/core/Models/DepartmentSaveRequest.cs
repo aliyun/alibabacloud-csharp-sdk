@@ -43,10 +43,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
-        [NameInMap("user_id")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
-
     }
 
 }

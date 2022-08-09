@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public bool? AllEmploye { get; set; }
 
-        [NameInMap("corp_id")]
-        [Validation(Required=false)]
-        public string CorpId { get; set; }
-
         [NameInMap("entities")]
         [Validation(Required=false)]
         public string EntitiesShrink { get; set; }
@@ -24,10 +20,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [NameInMap("third_part_id")]
         [Validation(Required=false)]
         public string ThirdPartId { get; set; }
-
-        [NameInMap("user_id")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
 
     }
 

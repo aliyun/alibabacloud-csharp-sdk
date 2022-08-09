@@ -21,18 +21,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string ThirdPartJobNo { get; set; }
 
-        [NameInMap("top_app_key_owner_id")]
-        [Validation(Required=false)]
-        public string TopAppKeyOwnerId { get; set; }
-
-        [NameInMap("top_authorized_havana_id")]
-        [Validation(Required=false)]
-        public string TopAuthorizedHavanaId { get; set; }
-
-        [NameInMap("top_authorized_user_nick")]
-        [Validation(Required=false)]
-        public string TopAuthorizedUserNick { get; set; }
-
     }
 
 }

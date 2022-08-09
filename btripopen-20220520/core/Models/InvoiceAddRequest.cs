@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string BankNo { get; set; }
 
-        [NameInMap("corp_id")]
-        [Validation(Required=false)]
-        public string CorpId { get; set; }
-
         [NameInMap("tax_no")]
         [Validation(Required=false)]
         public string TaxNo { get; set; }
@@ -44,10 +40,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [NameInMap("type")]
         [Validation(Required=false)]
         public int? Type { get; set; }
-
-        [NameInMap("user_id")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
 
     }
 

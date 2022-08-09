@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class IsvUserSaveRequest : TeaModel {
-        [NameInMap("user_Id")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
-
         [NameInMap("user_list")]
         [Validation(Required=false)]
         public List<IsvUserSaveRequestUserList> UserList { get; set; }
