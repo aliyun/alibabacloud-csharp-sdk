@@ -35,6 +35,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public int? MasterNodeNum { get; set; }
                 public string PayType { get; set; }
                 public string RegionId { get; set; }
+                public string ResourceGroupId { get; set; }
                 public string SegNodeNum { get; set; }
                 public string StorageSize { get; set; }
                 public string StorageType { get; set; }

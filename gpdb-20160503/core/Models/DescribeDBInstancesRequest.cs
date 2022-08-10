@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeDBInstancesRequestTag> Tag { get; set; }
