@@ -2595,6 +2595,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             ServiceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficState))
+            {
+                body["TrafficState"] = request.TrafficState;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Weight))
             {
                 body["Weight"] = request.Weight;
@@ -2625,6 +2629,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             ServiceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficState))
+            {
+                body["TrafficState"] = request.TrafficState;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Weight))
             {
                 body["Weight"] = request.Weight;

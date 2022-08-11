@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public int? CurrentVersion { get; set; }
 
+        [NameInMap("ExtraData")]
+        [Validation(Required=false)]
+        public string ExtraData { get; set; }
+
         [NameInMap("Gpu")]
         [Validation(Required=false)]
         public int? Gpu { get; set; }
@@ -85,6 +89,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string Resource { get; set; }
 
+        [NameInMap("ResourceAlias")]
+        [Validation(Required=false)]
+        public string ResourceAlias { get; set; }
+
         [NameInMap("RunningInstance")]
         [Validation(Required=false)]
         public int? RunningInstance { get; set; }
@@ -92,6 +100,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("ServiceConfig")]
         [Validation(Required=false)]
         public string ServiceConfig { get; set; }
+
+        [NameInMap("ServiceGroup")]
+        [Validation(Required=false)]
+        public string ServiceGroup { get; set; }
 
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
