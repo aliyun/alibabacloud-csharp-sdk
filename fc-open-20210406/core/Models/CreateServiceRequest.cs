@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class CreateServiceRequest : TeaModel {
-        /// <summary>
-        /// 服务描述
-        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        /// <summary>
-        /// 公网访问设置
-        /// </summary>
         [NameInMap("internetAccess")]
         [Validation(Required=false)]
         public bool? InternetAccess { get; set; }
@@ -31,16 +25,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public NASConfig NasConfig { get; set; }
 
-        /// <summary>
-        /// 服务角色
-        /// </summary>
         [NameInMap("role")]
         [Validation(Required=false)]
         public string Role { get; set; }
 
-        /// <summary>
-        /// 服务名称
-        /// </summary>
         [NameInMap("serviceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }

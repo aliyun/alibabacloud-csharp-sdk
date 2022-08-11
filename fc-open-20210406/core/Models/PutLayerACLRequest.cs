@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
-    public class DeleteFunctionOnDemandConfigRequest : TeaModel {
-        [NameInMap("qualifier")]
+    public class PutLayerACLRequest : TeaModel {
+        [NameInMap("public")]
         [Validation(Required=false)]
-        public string Qualifier { get; set; }
+        public bool? Public { get; set; }
 
     }
 

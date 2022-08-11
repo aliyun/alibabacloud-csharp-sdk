@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class OSSTriggerConfig : TeaModel {
-        /// <summary>
-        /// events
-        /// </summary>
         [NameInMap("events")]
         [Validation(Required=false)]
         public List<string> Events { get; set; }

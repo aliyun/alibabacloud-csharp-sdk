@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
-    public class InvokeFunctionHeaders : TeaModel {
+    public class PutLayerACLHeaders : TeaModel {
         [NameInMap("commonHeaders")]
         [Validation(Required=false)]
         public Dictionary<string, string> CommonHeaders { get; set; }
@@ -20,18 +20,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [NameInMap("X-Fc-Date")]
         [Validation(Required=false)]
         public string XFcDate { get; set; }
-
-        [NameInMap("X-Fc-Invocation-Type")]
-        [Validation(Required=false)]
-        public string XFcInvocationType { get; set; }
-
-        [NameInMap("X-Fc-Log-Type")]
-        [Validation(Required=false)]
-        public string XFcLogType { get; set; }
-
-        [NameInMap("X-Fc-Stateful-Async-Invocation-Id")]
-        [Validation(Required=false)]
-        public string XFcStatefulAsyncInvocationId { get; set; }
 
         [NameInMap("X-Fc-Trace-Id")]
         [Validation(Required=false)]

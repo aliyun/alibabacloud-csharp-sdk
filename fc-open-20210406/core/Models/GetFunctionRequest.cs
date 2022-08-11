@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class GetFunctionRequest : TeaModel {
-        /// <summary>
-        /// service版本, 可以是versionId或者aliasName
-        /// </summary>
         [NameInMap("qualifier")]
         [Validation(Required=false)]
         public string Qualifier { get; set; }

@@ -8,22 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
-    public class ListAliasesRequest : TeaModel {
-        [NameInMap("limit")]
+    public class PolicyItem : TeaModel {
+        [NameInMap("key")]
         [Validation(Required=false)]
-        public int? Limit { get; set; }
+        public byte[] Key { get; set; }
 
-        [NameInMap("nextToken")]
+        [NameInMap("operator")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
+        public byte[] Operator { get; set; }
 
-        [NameInMap("prefix")]
+        [NameInMap("type")]
         [Validation(Required=false)]
-        public string Prefix { get; set; }
+        public byte[] Type { get; set; }
 
-        [NameInMap("startKey")]
+        [NameInMap("value")]
         [Validation(Required=false)]
-        public string StartKey { get; set; }
+        public byte[] Value { get; set; }
 
     }
 

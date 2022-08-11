@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class GetProvisionConfigRequest : TeaModel {
-        /// <summary>
-        /// 别名名称
-        /// </summary>
         [NameInMap("qualifier")]
         [Validation(Required=false)]
         public string Qualifier { get; set; }
