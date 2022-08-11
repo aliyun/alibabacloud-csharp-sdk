@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public class QueryCardSmsTemplateResponseBodyData : TeaModel {
             [NameInMap("Templates")]
             [Validation(Required=false)]
-            public List<string> Templates { get; set; }
+            public List<Dictionary<string, object>> Templates { get; set; }
         };
 
         [NameInMap("RequestId")]

@@ -2538,10 +2538,6 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
             {
                 query["OwnerId"] = request.OwnerId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNumberJson))
-            {
-                query["PhoneNumberJson"] = request.PhoneNumberJson;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -2550,25 +2546,31 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignNameJson))
-            {
-                query["SignNameJson"] = request.SignNameJson;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SmsUpExtendCodeJson))
-            {
-                query["SmsUpExtendCodeJson"] = request.SmsUpExtendCodeJson;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
             {
                 query["TemplateCode"] = request.TemplateCode;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNumberJson))
+            {
+                body["PhoneNumberJson"] = request.PhoneNumberJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignNameJson))
+            {
+                body["SignNameJson"] = request.SignNameJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SmsUpExtendCodeJson))
+            {
+                body["SmsUpExtendCodeJson"] = request.SmsUpExtendCodeJson;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateParamJson))
             {
-                query["TemplateParamJson"] = request.TemplateParamJson;
+                body["TemplateParamJson"] = request.TemplateParamJson;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2593,10 +2595,6 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
             {
                 query["OwnerId"] = request.OwnerId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNumberJson))
-            {
-                query["PhoneNumberJson"] = request.PhoneNumberJson;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -2605,25 +2603,31 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignNameJson))
-            {
-                query["SignNameJson"] = request.SignNameJson;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SmsUpExtendCodeJson))
-            {
-                query["SmsUpExtendCodeJson"] = request.SmsUpExtendCodeJson;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
             {
                 query["TemplateCode"] = request.TemplateCode;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNumberJson))
+            {
+                body["PhoneNumberJson"] = request.PhoneNumberJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignNameJson))
+            {
+                body["SignNameJson"] = request.SignNameJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SmsUpExtendCodeJson))
+            {
+                body["SmsUpExtendCodeJson"] = request.SmsUpExtendCodeJson;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateParamJson))
             {
-                query["TemplateParamJson"] = request.TemplateParamJson;
+                body["TemplateParamJson"] = request.TemplateParamJson;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
