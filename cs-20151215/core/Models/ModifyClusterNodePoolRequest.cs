@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ModifyClusterNodePoolRequest : TeaModel {
-        /// <summary>
-        /// 自动伸缩节点池配置。
-        /// </summary>
         [NameInMap("auto_scaling")]
         [Validation(Required=false)]
         public ModifyClusterNodePoolRequestAutoScaling AutoScaling { get; set; }
@@ -39,9 +36,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Type { get; set; }
         };
 
-        /// <summary>
-        /// 集群配置。
-        /// </summary>
         [NameInMap("kubernetes_config")]
         [Validation(Required=false)]
         public ModifyClusterNodePoolRequestKubernetesConfig KubernetesConfig { get; set; }
@@ -54,7 +48,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string CpuPolicy { get; set; }
             [NameInMap("labels")]
             [Validation(Required=false)]
-            public List<string> Labels { get; set; }
+            public List<Tag> Labels { get; set; }
             [NameInMap("runtime")]
             [Validation(Required=false)]
             public string Runtime { get; set; }
@@ -63,15 +57,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string RuntimeVersion { get; set; }
             [NameInMap("taints")]
             [Validation(Required=false)]
-            public List<string> Taints { get; set; }
+            public List<Taint> Taints { get; set; }
             [NameInMap("user_data")]
             [Validation(Required=false)]
             public string UserData { get; set; }
         };
 
-        /// <summary>
-        /// 托管版节点池配置。
-        /// </summary>
         [NameInMap("management")]
         [Validation(Required=false)]
         public ModifyClusterNodePoolRequestManagement Management { get; set; }
@@ -86,30 +77,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public ModifyClusterNodePoolRequestManagementUpgradeConfig UpgradeConfig { get; set; }
             public class ModifyClusterNodePoolRequestManagementUpgradeConfig : TeaModel {
-                /// <summary>
-                /// 是否启用自动升级，自修复。
-                /// </summary>
                 [NameInMap("auto_upgrade")]
                 [Validation(Required=false)]
                 public bool? AutoUpgrade { get; set; }
 
-                /// <summary>
-                /// 最大不可用节点数量。
-                /// </summary>
                 [NameInMap("max_unavailable")]
                 [Validation(Required=false)]
                 public long? MaxUnavailable { get; set; }
 
-                /// <summary>
-                /// 额外节点数量。
-                /// </summary>
                 [NameInMap("surge")]
                 [Validation(Required=false)]
                 public long? Surge { get; set; }
 
-                /// <summary>
-                /// 额外节点比例， 和surge 二选一。
-                /// </summary>
                 [NameInMap("surge_percentage")]
                 [Validation(Required=false)]
                 public long? SurgePercentage { get; set; }
@@ -117,9 +96,78 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
         };
 
-        /// <summary>
-        /// 节点池配置。
-        /// </summary>
+        [NameInMap("node_config")]
+        [Validation(Required=false)]
+        public ModifyClusterNodePoolRequestNodeConfig NodeConfig { get; set; }
+        public class ModifyClusterNodePoolRequestNodeConfig : TeaModel {
+            [NameInMap("kubelet_configuration")]
+            [Validation(Required=false)]
+            public ModifyClusterNodePoolRequestNodeConfigKubeletConfiguration KubeletConfiguration { get; set; }
+            public class ModifyClusterNodePoolRequestNodeConfigKubeletConfiguration : TeaModel {
+                [NameInMap("cpuManagerPolicy")]
+                [Validation(Required=false)]
+                public string CpuManagerPolicy { get; set; }
+
+                [NameInMap("eventBurst")]
+                [Validation(Required=false)]
+                public long? EventBurst { get; set; }
+
+                [NameInMap("eventRecordQPS")]
+                [Validation(Required=false)]
+                public long? EventRecordQPS { get; set; }
+
+                [NameInMap("evictionHard")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> EvictionHard { get; set; }
+
+                [NameInMap("evictionSoft")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> EvictionSoft { get; set; }
+
+                [NameInMap("evictionSoftGracePeriod")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> EvictionSoftGracePeriod { get; set; }
+
+                [NameInMap("kubeAPIBurst")]
+                [Validation(Required=false)]
+                public long? KubeAPIBurst { get; set; }
+
+                [NameInMap("kubeAPIQPS")]
+                [Validation(Required=false)]
+                public long? KubeAPIQPS { get; set; }
+
+                [NameInMap("kubeReserved")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> KubeReserved { get; set; }
+
+                [NameInMap("registryBurst")]
+                [Validation(Required=false)]
+                public long? RegistryBurst { get; set; }
+
+                [NameInMap("registryPullQPS")]
+                [Validation(Required=false)]
+                public long? RegistryPullQPS { get; set; }
+
+                [NameInMap("serializeImagePulls")]
+                [Validation(Required=false)]
+                public bool? SerializeImagePulls { get; set; }
+
+                [NameInMap("systemReserved")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> SystemReserved { get; set; }
+
+            }
+            [NameInMap("rollout_policy")]
+            [Validation(Required=false)]
+            public ModifyClusterNodePoolRequestNodeConfigRolloutPolicy RolloutPolicy { get; set; }
+            public class ModifyClusterNodePoolRequestNodeConfigRolloutPolicy : TeaModel {
+                [NameInMap("max_unavailable")]
+                [Validation(Required=false)]
+                public long? MaxUnavailable { get; set; }
+
+            }
+        };
+
         [NameInMap("nodepool_info")]
         [Validation(Required=false)]
         public ModifyClusterNodePoolRequestNodepoolInfo NodepoolInfo { get; set; }
@@ -132,9 +180,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ResourceGroupId { get; set; }
         };
 
-        /// <summary>
-        /// 扩容组配置。
-        /// </summary>
         [NameInMap("scaling_group")]
         [Validation(Required=false)]
         public ModifyClusterNodePoolRequestScalingGroup ScalingGroup { get; set; }
@@ -150,7 +195,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? CompensateWithOnDemand { get; set; }
             [NameInMap("data_disks")]
             [Validation(Required=false)]
-            public List<string> DataDisks { get; set; }
+            public List<DataDisk> DataDisks { get; set; }
             [NameInMap("desired_size")]
             [Validation(Required=false)]
             public long? DesiredSize { get; set; }
@@ -226,15 +271,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? SystemDiskSize { get; set; }
             [NameInMap("tags")]
             [Validation(Required=false)]
-            public List<string> Tags { get; set; }
+            public List<Tag> Tags { get; set; }
             [NameInMap("vswitch_ids")]
             [Validation(Required=false)]
             public List<string> VswitchIds { get; set; }
         };
 
-        /// <summary>
-        /// 加密计算配置。
-        /// </summary>
         [NameInMap("tee_config")]
         [Validation(Required=false)]
         public ModifyClusterNodePoolRequestTeeConfig TeeConfig { get; set; }
@@ -244,9 +286,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? TeeEnable { get; set; }
         };
 
-        /// <summary>
-        /// 是否同步更新节点标签及污点。
-        /// </summary>
         [NameInMap("update_nodes")]
         [Validation(Required=false)]
         public bool? UpdateNodes { get; set; }

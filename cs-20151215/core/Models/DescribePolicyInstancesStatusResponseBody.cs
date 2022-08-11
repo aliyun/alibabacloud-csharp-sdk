@@ -13,9 +13,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public Dictionary<string, object> InstancesSeverityCount { get; set; }
 
-        /// <summary>
-        /// 不同策略类型下的策略实例计数列表
-        /// </summary>
         [NameInMap("policy_instances")]
         [Validation(Required=false)]
         public List<DescribePolicyInstancesStatusResponseBodyPolicyInstances> PolicyInstances { get; set; }

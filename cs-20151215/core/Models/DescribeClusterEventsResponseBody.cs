@@ -8,19 +8,19 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeEventsResponseBody : TeaModel {
+    public class DescribeClusterEventsResponseBody : TeaModel {
         [NameInMap("events")]
         [Validation(Required=false)]
-        public List<DescribeEventsResponseBodyEvents> Events { get; set; }
-        public class DescribeEventsResponseBodyEvents : TeaModel {
+        public List<DescribeClusterEventsResponseBodyEvents> Events { get; set; }
+        public class DescribeClusterEventsResponseBodyEvents : TeaModel {
             [NameInMap("cluster_id")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
             [NameInMap("data")]
             [Validation(Required=false)]
-            public DescribeEventsResponseBodyEventsData Data { get; set; }
-            public class DescribeEventsResponseBodyEventsData : TeaModel {
+            public DescribeClusterEventsResponseBodyEventsData Data { get; set; }
+            public class DescribeClusterEventsResponseBodyEventsData : TeaModel {
                 [NameInMap("level")]
                 [Validation(Required=false)]
                 public string Level { get; set; }
@@ -56,8 +56,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         [NameInMap("page_info")]
         [Validation(Required=false)]
-        public DescribeEventsResponseBodyPageInfo PageInfo { get; set; }
-        public class DescribeEventsResponseBodyPageInfo : TeaModel {
+        public DescribeClusterEventsResponseBodyPageInfo PageInfo { get; set; }
+        public class DescribeClusterEventsResponseBodyPageInfo : TeaModel {
             [NameInMap("page_number")]
             [Validation(Required=false)]
             public long? PageNumber { get; set; }

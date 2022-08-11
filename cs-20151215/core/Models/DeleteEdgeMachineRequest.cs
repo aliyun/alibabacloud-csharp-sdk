@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DeleteEdgeMachineRequest : TeaModel {
-        /// <summary>
-        /// whether force delete
-        /// </summary>
         [NameInMap("force")]
         [Validation(Required=false)]
         public string Force { get; set; }

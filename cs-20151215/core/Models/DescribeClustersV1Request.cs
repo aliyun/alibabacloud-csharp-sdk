@@ -9,51 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClustersV1Request : TeaModel {
-        /// <summary>
-        /// 集群规格。
-        /// </summary>
         [NameInMap("cluster_spec")]
         [Validation(Required=false)]
         public string ClusterSpec { get; set; }
 
-        /// <summary>
-        /// 集群类型。
-        /// </summary>
         [NameInMap("cluster_type")]
         [Validation(Required=false)]
         public string ClusterType { get; set; }
 
-        /// <summary>
-        /// 通过集群名称进行模糊查询。
-        /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        /// <summary>
-        /// 分页数。
-        /// </summary>
         [NameInMap("page_number")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
-        /// <summary>
-        /// 单页大小。
-        /// </summary>
         [NameInMap("page_size")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
-        /// <summary>
-        /// 集群标识。
-        /// </summary>
         [NameInMap("profile")]
         [Validation(Required=false)]
         public string Profile { get; set; }
 
-        /// <summary>
-        /// 地域。
-        /// </summary>
         [NameInMap("region_id")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

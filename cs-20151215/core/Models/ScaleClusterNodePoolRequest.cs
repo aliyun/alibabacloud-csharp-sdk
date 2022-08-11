@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ScaleClusterNodePoolRequest : TeaModel {
-        /// <summary>
-        /// 扩容节点数量
-        /// </summary>
         [NameInMap("count")]
         [Validation(Required=false)]
         public long? Count { get; set; }

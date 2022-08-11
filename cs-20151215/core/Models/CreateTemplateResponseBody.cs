@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CreateTemplateResponseBody : TeaModel {
-        /// <summary>
-        /// 模板ID。
-        /// </summary>
         [NameInMap("template_id")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }

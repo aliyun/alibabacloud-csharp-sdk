@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterNodePoolsResponseBody : TeaModel {
-        /// <summary>
-        /// 节点池列表
-        /// </summary>
         [NameInMap("nodepools")]
         [Validation(Required=false)]
         public List<DescribeClusterNodePoolsResponseBodyNodepools> Nodepools { get; set; }
         public class DescribeClusterNodePoolsResponseBodyNodepools : TeaModel {
-            /// <summary>
-            /// 自动伸缩配置详情
-            /// </summary>
             [NameInMap("auto_scaling")]
             [Validation(Required=false)]
             public DescribeClusterNodePoolsResponseBodyNodepoolsAutoScaling AutoScaling { get; set; }
@@ -46,9 +40,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Type { get; set; }
             };
 
-            /// <summary>
-            /// 边缘节点池网络相关的配置。该值只对edge类型的节点池有意义
-            /// </summary>
             [NameInMap("interconnect_config")]
             [Validation(Required=false)]
             public DescribeClusterNodePoolsResponseBodyNodepoolsInterconnectConfig InterconnectConfig { get; set; }
@@ -70,16 +61,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string ImprovedPeriod { get; set; }
             };
 
-            /// <summary>
-            /// 边缘节点池的网络类型。basic：基础型；improved：增强型。该值只对edge类型的节点池有意义
-            /// </summary>
             [NameInMap("interconnect_mode")]
             [Validation(Required=false)]
             public string InterconnectMode { get; set; }
 
-            /// <summary>
-            /// 集群配置信息
-            /// </summary>
             [NameInMap("kubernetes_config")]
             [Validation(Required=false)]
             public DescribeClusterNodePoolsResponseBodyNodepoolsKubernetesConfig KubernetesConfig { get; set; }
@@ -92,7 +77,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string CpuPolicy { get; set; }
                 [NameInMap("labels")]
                 [Validation(Required=false)]
-                public List<string> Labels { get; set; }
+                public List<Tag> Labels { get; set; }
                 [NameInMap("node_name_mode")]
                 [Validation(Required=false)]
                 public string NodeNameMode { get; set; }
@@ -104,15 +89,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string RuntimeVersion { get; set; }
                 [NameInMap("taints")]
                 [Validation(Required=false)]
-                public List<string> Taints { get; set; }
+                public List<Taint> Taints { get; set; }
                 [NameInMap("user_data")]
                 [Validation(Required=false)]
                 public string UserData { get; set; }
             };
 
-            /// <summary>
-            /// 托管节点池配置
-            /// </summary>
             [NameInMap("management")]
             [Validation(Required=false)]
             public DescribeClusterNodePoolsResponseBodyNodepoolsManagement Management { get; set; }
@@ -127,30 +109,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [Validation(Required=false)]
                 public DescribeClusterNodePoolsResponseBodyNodepoolsManagementUpgradeConfig UpgradeConfig { get; set; }
                 public class DescribeClusterNodePoolsResponseBodyNodepoolsManagementUpgradeConfig : TeaModel {
-                    /// <summary>
-                    /// 是否启用自动升级，自修复
-                    /// </summary>
                     [NameInMap("auto_upgrade")]
                     [Validation(Required=false)]
                     public bool? AutoUpgrade { get; set; }
 
-                    /// <summary>
-                    /// 最大不可用节点数量
-                    /// </summary>
                     [NameInMap("max_unavailable")]
                     [Validation(Required=false)]
                     public long? MaxUnavailable { get; set; }
 
-                    /// <summary>
-                    /// 额外节点数量
-                    /// </summary>
                     [NameInMap("surge")]
                     [Validation(Required=false)]
                     public long? Surge { get; set; }
 
-                    /// <summary>
-                    /// 额外节点比例， 和surge 二选一
-                    /// </summary>
                     [NameInMap("surge_percentage")]
                     [Validation(Required=false)]
                     public long? SurgePercentage { get; set; }
@@ -158,16 +128,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 }
             };
 
-            /// <summary>
-            /// 边缘节点池允许容纳的最大节点数量. 节点池内可以容纳的最大节点数量，该参数大于等于0。0表示无额外限制(仅受限于集群整体可以容纳的节点数，节点池本身无额外限制)。边缘节点池该参数值往往大于0；ess类型节点池和默认的edge类型节点池该参数值为0
-            /// </summary>
             [NameInMap("max_nodes")]
             [Validation(Required=false)]
             public long? MaxNodes { get; set; }
 
-            /// <summary>
-            /// 节点池配置详情
-            /// </summary>
             [NameInMap("nodepool_info")]
             [Validation(Required=false)]
             public DescribeClusterNodePoolsResponseBodyNodepoolsNodepoolInfo NodepoolInfo { get; set; }
@@ -198,9 +162,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Updated { get; set; }
             };
 
-            /// <summary>
-            /// 扩容组配置详情
-            /// </summary>
             [NameInMap("scaling_group")]
             [Validation(Required=false)]
             public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup ScalingGroup { get; set; }
@@ -216,7 +177,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public bool? CompensateWithOnDemand { get; set; }
                 [NameInMap("data_disks")]
                 [Validation(Required=false)]
-                public List<string> DataDisks { get; set; }
+                public List<DataDisk> DataDisks { get; set; }
                 [NameInMap("deploymentset_id")]
                 [Validation(Required=false)]
                 public string DeploymentsetId { get; set; }
@@ -307,15 +268,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public long? SystemDiskSize { get; set; }
                 [NameInMap("tags")]
                 [Validation(Required=false)]
-                public List<string> Tags { get; set; }
+                public List<Tag> Tags { get; set; }
                 [NameInMap("vswitch_ids")]
                 [Validation(Required=false)]
                 public List<string> VswitchIds { get; set; }
             };
 
-            /// <summary>
-            /// 节点池状态详情
-            /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]
             public DescribeClusterNodePoolsResponseBodyNodepoolsStatus Status { get; set; }
@@ -346,9 +304,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public long? TotalNodes { get; set; }
             };
 
-            /// <summary>
-            /// 加密计算配置详情
-            /// </summary>
             [NameInMap("tee_config")]
             [Validation(Required=false)]
             public DescribeClusterNodePoolsResponseBodyNodepoolsTeeConfig TeeConfig { get; set; }

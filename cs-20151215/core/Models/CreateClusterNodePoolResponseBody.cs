@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CreateClusterNodePoolResponseBody : TeaModel {
-        /// <summary>
-        /// 节点池ID
-        /// </summary>
         [NameInMap("nodepool_id")]
         [Validation(Required=false)]
         public string NodepoolId { get; set; }

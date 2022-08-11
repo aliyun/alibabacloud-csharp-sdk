@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class Runtime : TeaModel {
-        [NameInMap("name")]
+    public class MigrateClusterRequest : TeaModel {
+        [NameInMap("oss_bucket_endpoint")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string OssBucketEndpoint { get; set; }
 
-        [NameInMap("version")]
+        [NameInMap("oss_bucket_name")]
         [Validation(Required=false)]
-        public string Version { get; set; }
+        public string OssBucketName { get; set; }
 
     }
 

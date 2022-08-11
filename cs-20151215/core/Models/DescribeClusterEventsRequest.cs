@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class CreateClusterResponseBody : TeaModel {
-        [NameInMap("cluster_id")]
+    public class DescribeClusterEventsRequest : TeaModel {
+        [NameInMap("page_number")]
         [Validation(Required=false)]
-        public string ClusterId { get; set; }
+        public long? PageNumber { get; set; }
 
-        [NameInMap("request_id")]
+        [NameInMap("page_size")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public long? PageSize { get; set; }
 
         [NameInMap("task_id")]
         [Validation(Required=false)]
-        public string TaskId { get; set; }
+        public long? TaskId { get; set; }
 
     }
 

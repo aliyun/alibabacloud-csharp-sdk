@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterUserKubeconfigResponseBody : TeaModel {
-        /// <summary>
-        /// kubeconfig内容。
-        /// </summary>
         [NameInMap("config")]
         [Validation(Required=false)]
         public string Config { get; set; }
 
-        /// <summary>
-        /// kubeconfig过期时间。格式：RFC3339 格式的 UTC 时间。
-        /// </summary>
         [NameInMap("expiration")]
         [Validation(Required=false)]
         public string Expiration { get; set; }

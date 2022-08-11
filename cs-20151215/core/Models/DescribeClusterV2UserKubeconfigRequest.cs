@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterV2UserKubeconfigRequest : TeaModel {
-        /// <summary>
-        /// 是否为内网访问。
-        /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
         public bool? PrivateIpAddress { get; set; }
