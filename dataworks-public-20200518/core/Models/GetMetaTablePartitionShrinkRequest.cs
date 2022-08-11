@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
-    public class GetMetaTablePartitionRequest : TeaModel {
+    public class GetMetaTablePartitionShrinkRequest : TeaModel {
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
@@ -31,15 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         [NameInMap("SortCriterion")]
         [Validation(Required=false)]
-        public GetMetaTablePartitionRequestSortCriterion SortCriterion { get; set; }
-        public class GetMetaTablePartitionRequestSortCriterion : TeaModel {
-            [NameInMap("Order")]
-            [Validation(Required=false)]
-            public string Order { get; set; }
-            [NameInMap("SortField")]
-            [Validation(Required=false)]
-            public string SortField { get; set; }
-        };
+        public string SortCriterionShrink { get; set; }
 
         [NameInMap("TableGuid")]
         [Validation(Required=false)]

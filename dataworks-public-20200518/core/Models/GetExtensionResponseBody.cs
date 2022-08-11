@@ -56,9 +56,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? Status { get; set; }
         };
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

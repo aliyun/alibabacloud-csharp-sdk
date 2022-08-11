@@ -25,9 +25,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string ResourceGroupIdentifier { get; set; }
 
-        /// <summary>
-        /// 3-等待资源；4-运行中
-        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public int? Status { get; set; }

@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? ProjectId { get; set; }
             [NameInMap("Protocols")]
             [Validation(Required=false)]
-            public List<string> Protocols { get; set; }
+            public List<int?> Protocols { get; set; }
             [NameInMap("RegistrationDetails")]
             [Validation(Required=false)]
             public GetDataServicePublishedApiResponseBodyDataRegistrationDetails RegistrationDetails { get; set; }

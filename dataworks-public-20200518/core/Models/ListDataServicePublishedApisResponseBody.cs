@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ModifiedTime { get; set; }
                 public string OperatorId { get; set; }
                 public long? ProjectId { get; set; }
-                public List<string> Protocols { get; set; }
+                public List<int?> Protocols { get; set; }
                 public ListDataServicePublishedApisResponseBodyDataApisRegistrationDetails RegistrationDetails { get; set; }
                 public class ListDataServicePublishedApisResponseBodyDataApisRegistrationDetails : TeaModel {
                     [NameInMap("FailedResultSample")]

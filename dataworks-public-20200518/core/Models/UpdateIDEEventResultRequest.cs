@@ -21,9 +21,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string ExtensionCode { get; set; }
 
-        /// <summary>
-        /// 消息UUID
-        /// </summary>
         [NameInMap("MessageId")]
         [Validation(Required=false)]
         public string MessageId { get; set; }

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListUsageForResourceGroupRequest : TeaModel {
-        /// <summary>
-        /// 最晚当前时间
-        /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
@@ -24,9 +21,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string ResourceGroupIdentifier { get; set; }
 
-        /// <summary>
-        /// 7天内
-        /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }

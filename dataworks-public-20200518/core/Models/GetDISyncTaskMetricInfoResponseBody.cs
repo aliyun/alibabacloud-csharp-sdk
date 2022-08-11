@@ -45,16 +45,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? UpdateWriterRecords { get; set; }
         };
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// isSuccess
-        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

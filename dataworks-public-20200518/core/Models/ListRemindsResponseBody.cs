@@ -26,13 +26,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public List<string> AlertMethods { get; set; }
                 public List<string> AlertTargets { get; set; }
                 public string AlertUnit { get; set; }
-                public List<string> BaselineIds { get; set; }
-                public List<string> BizProcessIds { get; set; }
+                public List<long?> BaselineIds { get; set; }
+                public List<long?> BizProcessIds { get; set; }
                 public string DndEnd { get; set; }
                 public string DndStart { get; set; }
                 public string Founder { get; set; }
-                public List<string> NodeIds { get; set; }
-                public List<string> ProjectIds { get; set; }
+                public List<long?> NodeIds { get; set; }
+                public List<long?> ProjectIds { get; set; }
                 public long? RemindId { get; set; }
                 public string RemindName { get; set; }
                 public string RemindType { get; set; }

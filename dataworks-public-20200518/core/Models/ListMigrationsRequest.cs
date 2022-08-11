@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListMigrationsRequest : TeaModel {
-        /// <summary>
-        /// Migration operation type, IMPORT/EXPORT
-        /// </summary>
         [NameInMap("MigrationType")]
         [Validation(Required=false)]
         public string MigrationType { get; set; }
@@ -28,9 +25,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// Workspace Id
-        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
