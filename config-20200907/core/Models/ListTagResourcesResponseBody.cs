@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
-        /// <summary>
-        /// 下一个查询开始Token，NextToken为空说明没有下一个
-        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }

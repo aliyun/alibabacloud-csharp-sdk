@@ -13,9 +13,6 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
 
-        /// <summary>
-        /// 资源文件夹Id
-        /// </summary>
         [NameInMap("FolderId")]
         [Validation(Required=false)]
         public string FolderId { get; set; }
@@ -24,9 +21,6 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
-        /// <summary>
-        /// 资源Owner
-        /// </summary>
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
