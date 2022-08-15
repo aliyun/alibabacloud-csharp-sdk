@@ -155,6 +155,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("ServiceType")]
         [Validation(Required=false)]
         public string ServiceType { get; set; }

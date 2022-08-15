@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            [NameInMap("EnableCompute")]
+            [Validation(Required=false)]
+            public bool? EnableCompute { get; set; }
+
             [NameInMap("EnableStream")]
             [Validation(Required=false)]
             public bool? EnableStream { get; set; }
@@ -68,6 +72,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
 
             [NameInMap("ServiceType")]
             [Validation(Required=false)]
