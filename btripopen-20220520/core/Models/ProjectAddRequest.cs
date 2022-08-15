@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("corp_id")]
-        [Validation(Required=false)]
-        public string CorpId { get; set; }
-
         [NameInMap("project_name")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }

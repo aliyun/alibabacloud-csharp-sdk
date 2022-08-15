@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class CarApplyQueryRequest : TeaModel {
-        [NameInMap("corp_id")]
-        [Validation(Required=false)]
-        public string CorpId { get; set; }
-
         [NameInMap("created_end_at")]
         [Validation(Required=false)]
         public string CreatedEndAt { get; set; }

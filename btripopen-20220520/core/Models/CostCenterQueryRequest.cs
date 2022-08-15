@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class CostCenterQueryRequest : TeaModel {
-        [NameInMap("corp_id")]
-        [Validation(Required=false)]
-        public string CorpId { get; set; }
-
         [NameInMap("need_org_entity")]
         [Validation(Required=false)]
         public bool? NeedOrgEntity { get; set; }
