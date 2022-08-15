@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             [NameInMap("TransactionId")]
             [Validation(Required=false)]
             public string TransactionId { get; set; }
+            [NameInMap("clientCfg")]
+            [Validation(Required=false)]
+            public string ClientCfg { get; set; }
         };
 
     }
