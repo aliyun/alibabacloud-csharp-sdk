@@ -113,6 +113,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string ServiceName { get; set; }
 
+        [NameInMap("ServiceUid")]
+        [Validation(Required=false)]
+        public string ServiceUid { get; set; }
+
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }
