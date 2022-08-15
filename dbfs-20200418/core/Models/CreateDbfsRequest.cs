@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.DBFS20200418.Models
 {
     public class CreateDbfsRequest : TeaModel {
+        [NameInMap("AdvancedFeatures")]
+        [Validation(Required=false)]
+        public string AdvancedFeatures { get; set; }
+
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }

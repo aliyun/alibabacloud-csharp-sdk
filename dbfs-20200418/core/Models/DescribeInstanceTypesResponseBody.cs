@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.DBFS20200418.Models
 {
     public class DescribeInstanceTypesResponseBody : TeaModel {
-        /// <summary>
-        /// Array of InstanceType
-        /// </summary>
         [NameInMap("InstanceTypes")]
         [Validation(Required=false)]
         public List<DescribeInstanceTypesResponseBodyInstanceTypes> InstanceTypes { get; set; }
@@ -34,9 +31,6 @@ namespace AlibabaCloud.SDK.DBFS20200418.Models
 
         }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
