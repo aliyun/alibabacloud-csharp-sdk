@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<GetFileDetectResultResponseBodyResultList> ResultList { get; set; }
         public class GetFileDetectResultResponseBodyResultList : TeaModel {
+            [NameInMap("ErrorCode")]
+            [Validation(Required=false)]
+            public string ErrorCode { get; set; }
+
+            [NameInMap("ErrorMessage")]
+            [Validation(Required=false)]
+            public string ErrorMessage { get; set; }
+
             [NameInMap("Ext")]
             [Validation(Required=false)]
             public string Ext { get; set; }

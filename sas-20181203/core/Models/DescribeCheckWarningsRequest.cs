@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? RiskId { get; set; }
 
+        [NameInMap("RiskStatus")]
+        [Validation(Required=false)]
+        public int? RiskStatus { get; set; }
+
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
