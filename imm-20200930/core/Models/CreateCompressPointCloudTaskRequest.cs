@@ -8,34 +8,38 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class CreateImageModerationTaskRequest : TeaModel {
+    public class CreateCompressPointCloudTaskRequest : TeaModel {
+        [NameInMap("CompressMethod")]
+        [Validation(Required=false)]
+        public string CompressMethod { get; set; }
+
         [NameInMap("CredentialConfig")]
         [Validation(Required=false)]
         public CredentialConfig CredentialConfig { get; set; }
 
-        [NameInMap("Interval")]
+        [NameInMap("KdtreeOption")]
         [Validation(Required=false)]
-        public long? Interval { get; set; }
-
-        [NameInMap("MaxFrames")]
-        [Validation(Required=false)]
-        public long? MaxFrames { get; set; }
+        public KdtreeOption KdtreeOption { get; set; }
 
         [NameInMap("NotifyTopicName")]
         [Validation(Required=false)]
         public string NotifyTopicName { get; set; }
 
+        [NameInMap("OctreeOption")]
+        [Validation(Required=false)]
+        public OctreeOption OctreeOption { get; set; }
+
+        [NameInMap("PointCloudFields")]
+        [Validation(Required=false)]
+        public List<string> PointCloudFields { get; set; }
+
+        [NameInMap("PointCloudFileFormat")]
+        [Validation(Required=false)]
+        public string PointCloudFileFormat { get; set; }
+
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
-
-        [NameInMap("Reviewer")]
-        [Validation(Required=false)]
-        public string Reviewer { get; set; }
-
-        [NameInMap("Scenes")]
-        [Validation(Required=false)]
-        public List<string> Scenes { get; set; }
 
         [NameInMap("SourceURI")]
         [Validation(Required=false)]
@@ -44,6 +48,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public Dictionary<string, object> Tags { get; set; }
+
+        [NameInMap("TargetURI")]
+        [Validation(Required=false)]
+        public string TargetURI { get; set; }
 
         [NameInMap("UserData")]
         [Validation(Required=false)]

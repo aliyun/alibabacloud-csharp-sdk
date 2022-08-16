@@ -27,9 +27,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string ObjectId { get; set; }
 
-        /// <summary>
-        /// A short description of struct
-        /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }

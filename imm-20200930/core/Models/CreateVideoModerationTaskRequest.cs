@@ -21,17 +21,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public long? MaxFrames { get; set; }
 
-        [NameInMap("NotifyEndpoint")]
-        [Validation(Required=false)]
-        public string NotifyEndpoint { get; set; }
-
         [NameInMap("NotifyTopicName")]
         [Validation(Required=false)]
         public string NotifyTopicName { get; set; }
 
-        /// <summary>
-        /// 项目名称
-        /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }

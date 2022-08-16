@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class HeadPose : TeaModel {
-        [NameInMap("Pitch")]
+    public class CreateCompressPointCloudTaskResponseBody : TeaModel {
+        [NameInMap("EventId")]
         [Validation(Required=false)]
-        public float? Pitch { get; set; }
+        public string EventId { get; set; }
 
-        [NameInMap("Roll")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public float? Roll { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("Yaw")]
+        [NameInMap("TaskId")]
         [Validation(Required=false)]
-        public float? Yaw { get; set; }
+        public string TaskId { get; set; }
 
     }
 

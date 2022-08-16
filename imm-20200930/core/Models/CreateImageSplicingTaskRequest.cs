@@ -33,10 +33,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public long? Margin { get; set; }
 
-        [NameInMap("NotifyEndpoint")]
-        [Validation(Required=false)]
-        public string NotifyEndpoint { get; set; }
-
         [NameInMap("NotifyTopicName")]
         [Validation(Required=false)]
         public string NotifyTopicName { get; set; }
@@ -45,9 +41,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public long? Padding { get; set; }
 
-        /// <summary>
-        /// A short description of struct
-        /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }

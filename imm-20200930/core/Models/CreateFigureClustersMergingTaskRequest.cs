@@ -13,16 +13,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string DatasetName { get; set; }
 
-        /// <summary>
-        /// 源cluster
-        /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
         public string From { get; set; }
-
-        [NameInMap("NotifyEndpoint")]
-        [Validation(Required=false)]
-        public string NotifyEndpoint { get; set; }
 
         [NameInMap("NotifyTopicName")]
         [Validation(Required=false)]
@@ -36,9 +29,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Tags { get; set; }
 
-        /// <summary>
-        /// 目的cluster
-        /// </summary>
         [NameInMap("To")]
         [Validation(Required=false)]
         public string To { get; set; }

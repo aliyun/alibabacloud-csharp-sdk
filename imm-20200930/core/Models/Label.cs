@@ -9,44 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class Label : TeaModel {
-        /// <summary>
-        /// CentricScore
-        /// </summary>
         [NameInMap("CentricScore")]
         [Validation(Required=false)]
         public float? CentricScore { get; set; }
 
-        /// <summary>
-        /// LabelConfidence
-        /// </summary>
         [NameInMap("LabelConfidence")]
         [Validation(Required=false)]
         public float? LabelConfidence { get; set; }
 
-        /// <summary>
-        /// LabelLevel
-        /// </summary>
         [NameInMap("LabelLevel")]
         [Validation(Required=false)]
         public long? LabelLevel { get; set; }
 
-        /// <summary>
-        /// LabelName
-        /// </summary>
         [NameInMap("LabelName")]
         [Validation(Required=false)]
         public string LabelName { get; set; }
 
-        /// <summary>
-        /// Language
-        /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
         public string Language { get; set; }
 
-        /// <summary>
-        /// ParentLabelName
-        /// </summary>
         [NameInMap("ParentLabelName")]
         [Validation(Required=false)]
         public string ParentLabelName { get; set; }

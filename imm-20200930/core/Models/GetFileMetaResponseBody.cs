@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class GetFileMetaResponseBody : TeaModel {
-        /// <summary>
-        /// File list.
-        /// </summary>
         [NameInMap("Files")]
         [Validation(Required=false)]
         public List<File> Files { get; set; }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

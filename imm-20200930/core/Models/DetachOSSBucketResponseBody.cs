@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class DetachOSSBucketResponseBody : TeaModel {
-        /// <summary>
-        /// RequestId
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

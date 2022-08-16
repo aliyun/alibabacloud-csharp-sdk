@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class ImageScore : TeaModel {
-        /// <summary>
-        /// OverallQualityScore
-        /// </summary>
         [NameInMap("OverallQualityScore")]
         [Validation(Required=false)]
         public float? OverallQualityScore { get; set; }

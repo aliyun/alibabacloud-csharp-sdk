@@ -41,9 +41,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public long? ProjectMaxDatasetCount { get; set; }
 
-        /// <summary>
-        /// 项目名称
-        /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
