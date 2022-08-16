@@ -25,12 +25,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public InitializeResponseBodyResult Result { get; set; }
         public class InitializeResponseBodyResult : TeaModel {
+            [NameInMap("ClientCfg")]
+            [Validation(Required=false)]
+            public string ClientCfg { get; set; }
             [NameInMap("TransactionId")]
             [Validation(Required=false)]
             public string TransactionId { get; set; }
-            [NameInMap("clientCfg")]
-            [Validation(Required=false)]
-            public string ClientCfg { get; set; }
         };
 
     }
