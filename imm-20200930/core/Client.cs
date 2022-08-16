@@ -1029,10 +1029,6 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 query["CredentialConfig"] = request.CredentialConfigShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyEndpoint))
-            {
-                query["NotifyEndpoint"] = request.NotifyEndpoint;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
                 query["NotifyTopicName"] = request.NotifyTopicName;
@@ -1089,10 +1085,6 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialConfigShrink))
             {
                 query["CredentialConfig"] = request.CredentialConfigShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyEndpoint))
-            {
-                query["NotifyEndpoint"] = request.NotifyEndpoint;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -1159,10 +1151,6 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 query["DatasetName"] = request.DatasetName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyEndpoint))
-            {
-                query["NotifyEndpoint"] = request.NotifyEndpoint;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
                 query["NotifyTopicName"] = request.NotifyTopicName;
@@ -1211,10 +1199,6 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetName))
             {
                 query["DatasetName"] = request.DatasetName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyEndpoint))
-            {
-                query["NotifyEndpoint"] = request.NotifyEndpoint;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {

@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public CredentialConfig CredentialConfig { get; set; }
 
-        [NameInMap("NotifyEndpoint")]
-        [Validation(Required=false)]
-        public string NotifyEndpoint { get; set; }
-
         [NameInMap("NotifyTopicName")]
         [Validation(Required=false)]
         public string NotifyTopicName { get; set; }
