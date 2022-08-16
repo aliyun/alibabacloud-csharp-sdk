@@ -59,13 +59,13 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
                     public class GetScenePreviewDataResponseBodyDataModelPanoListPosition : TeaModel {
                         [NameInMap("Rotation")]
                         [Validation(Required=false)]
-                        public List<string> Rotation { get; set; }
+                        public List<double?> Rotation { get; set; }
                         [NameInMap("Spot")]
                         [Validation(Required=false)]
-                        public List<string> Spot { get; set; }
+                        public List<double?> Spot { get; set; }
                         [NameInMap("Viewpoint")]
                         [Validation(Required=false)]
-                        public List<string> Viewpoint { get; set; }
+                        public List<double?> Viewpoint { get; set; }
                     };
 
                     [NameInMap("RawName")]
@@ -187,8 +187,8 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
 
                 }
                 public string Id { get; set; }
-                public List<string> Position { get; set; }
-                public List<string> PositionPanoCube { get; set; }
+                public List<double?> Position { get; set; }
+                public List<double?> PositionPanoCube { get; set; }
                 public string Type { get; set; }
             }
         };
