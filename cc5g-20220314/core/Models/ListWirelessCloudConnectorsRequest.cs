@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CC5G20220314.Models
 {
     public class ListWirelessCloudConnectorsRequest : TeaModel {
+        [NameInMap("BusinessType")]
+        [Validation(Required=false)]
+        public string BusinessType { get; set; }
+
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public long? MaxResults { get; set; }

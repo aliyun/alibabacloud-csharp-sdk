@@ -17,16 +17,10 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        /// <summary>
-        /// 数组，返回示例目录。
-        /// </summary>
         [NameInMap("Orders")]
         [Validation(Required=false)]
         public List<ListOrdersResponseBodyOrders> Orders { get; set; }
         public class ListOrdersResponseBodyOrders : TeaModel {
-            /// <summary>
-            /// 创建时间
-            /// </summary>
             [NameInMap("Action")]
             [Validation(Required=false)]
             public string Action { get; set; }
@@ -91,18 +85,12 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
-            /// <summary>
-            /// 资源名称
-            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
         }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

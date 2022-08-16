@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CC5G20220314.Models
 {
     public class ListAuthorizationRulesResponseBody : TeaModel {
-        /// <summary>
-        /// 数组，返回示例目录。
-        /// </summary>
         [NameInMap("AuthorizationRules")]
         [Validation(Required=false)]
         public List<ListAuthorizationRulesResponseBodyAuthorizationRules> AuthorizationRules { get; set; }
         public class ListAuthorizationRulesResponseBodyAuthorizationRules : TeaModel {
-            /// <summary>
-            /// 资源一级ID
-            /// </summary>
             [NameInMap("AuthorizationRuleId")]
             [Validation(Required=false)]
             public string AuthorizationRuleId { get; set; }
@@ -41,11 +35,8 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
 
             [NameInMap("Dns")]
             [Validation(Required=false)]
-            public string Dns { get; set; }
+            public bool? Dns { get; set; }
 
-            /// <summary>
-            /// 创建时间
-            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
@@ -58,9 +49,6 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
             [Validation(Required=false)]
             public string SourceCidr { get; set; }
 
-            /// <summary>
-            /// 资源名称
-            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
@@ -79,9 +67,6 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

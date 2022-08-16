@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CC5G20220314.Models
 {
     public class AttachVpcToNetLinkResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CC5G20220314.Models
 {
     public class ListCardsResponseBody : TeaModel {
-        /// <summary>
-        /// 数组，返回示例目录。
-        /// </summary>
         [NameInMap("Cards")]
         [Validation(Required=false)]
         public List<ListCardsResponseBodyCards> Cards { get; set; }
         public class ListCardsResponseBodyCards : TeaModel {
-            /// <summary>
-            /// 创建时间
-            /// </summary>
             [NameInMap("APN")]
             [Validation(Required=false)]
             public string APN { get; set; }
@@ -26,6 +20,10 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
             [NameInMap("ActivatedTime")]
             [Validation(Required=false)]
             public string ActivatedTime { get; set; }
+
+            [NameInMap("BusinessStatus")]
+            [Validation(Required=false)]
+            public string BusinessStatus { get; set; }
 
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -35,9 +33,6 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
             [Validation(Required=false)]
             public string ISP { get; set; }
 
-            /// <summary>
-            /// 资源一级ID
-            /// </summary>
             [NameInMap("Iccid")]
             [Validation(Required=false)]
             public string Iccid { get; set; }
@@ -58,13 +53,14 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
             [Validation(Required=false)]
             public bool? Lock { get; set; }
 
+            [NameInMap("Msisdn")]
+            [Validation(Required=false)]
+            public string Msisdn { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
-            /// <summary>
-            /// 资源名称
-            /// </summary>
             [NameInMap("NetType")]
             [Validation(Required=false)]
             public string NetType { get; set; }
@@ -85,6 +81,10 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
             [Validation(Required=false)]
             public long? UsageDataMonth { get; set; }
 
+            [NameInMap("UsageDataTotal")]
+            [Validation(Required=false)]
+            public string UsageDataTotal { get; set; }
+
         }
 
         [NameInMap("MaxResults")]
@@ -95,9 +95,6 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CC5G20220314.Models
 {
     public class ListDataPackagesResponseBody : TeaModel {
-        /// <summary>
-        /// 数组，返回示例目录。
-        /// </summary>
         [NameInMap("DataPackages")]
         [Validation(Required=false)]
         public List<ListDataPackagesResponseBodyDataPackages> DataPackages { get; set; }
@@ -36,9 +33,6 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
             [Validation(Required=false)]
             public string ISP { get; set; }
 
-            /// <summary>
-            /// 创建时间
-            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
@@ -47,9 +41,6 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
             [Validation(Required=false)]
             public string Size { get; set; }
 
-            /// <summary>
-            /// 资源名称
-            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
@@ -64,9 +55,6 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

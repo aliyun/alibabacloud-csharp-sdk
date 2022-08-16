@@ -13,9 +13,9 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public string Apn { get; set; }
 
-        [NameInMap("DestinationType")]
+        [NameInMap("Iccid")]
         [Validation(Required=false)]
-        public string DestinationType { get; set; }
+        public string Iccid { get; set; }
 
         [NameInMap("Iccids")]
         [Validation(Required=false)]
@@ -48,10 +48,6 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [NameInMap("Statuses")]
         [Validation(Required=false)]
         public List<string> Statuses { get; set; }
-
-        [NameInMap("VpcId")]
-        [Validation(Required=false)]
-        public string VpcId { get; set; }
 
         [NameInMap("WirelessCloudConnectorId")]
         [Validation(Required=false)]

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CC5G20220314.Models
 {
     public class GetWirelessCloudConnectorResponseBody : TeaModel {
+        [NameInMap("BusinessType")]
+        [Validation(Required=false)]
+        public string BusinessType { get; set; }
+
         [NameInMap("CardCount")]
         [Validation(Required=false)]
         public string CardCount { get; set; }
@@ -29,13 +33,14 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("Features")]
+        [Validation(Required=false)]
+        public List<string> Features { get; set; }
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        /// <summary>
-        /// 数组，返回示例目录。
-        /// </summary>
         [NameInMap("NetLinks")]
         [Validation(Required=false)]
         public List<GetWirelessCloudConnectorResponseBodyNetLinks> NetLinks { get; set; }
@@ -56,16 +61,10 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
             [Validation(Required=false)]
             public string ISP { get; set; }
 
-            /// <summary>
-            /// 创建时间
-            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
-            /// <summary>
-            /// 资源名称
-            /// </summary>
             [NameInMap("NetLinkId")]
             [Validation(Required=false)]
             public string NetLinkId { get; set; }
@@ -92,9 +91,6 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
