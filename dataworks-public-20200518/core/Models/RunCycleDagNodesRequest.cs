@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string StartBizDate { get; set; }
 
+        [NameInMap("StartFutureInstanceImmediately")]
+        [Validation(Required=false)]
+        public bool? StartFutureInstanceImmediately { get; set; }
+
     }
 
 }

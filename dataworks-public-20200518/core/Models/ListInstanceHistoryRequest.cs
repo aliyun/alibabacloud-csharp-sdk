@@ -8,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
-    public class GetInstanceLogRequest : TeaModel {
-        [NameInMap("InstanceHistoryId")]
-        [Validation(Required=false)]
-        public long? InstanceHistoryId { get; set; }
-
+    public class ListInstanceHistoryRequest : TeaModel {
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public long? InstanceId { get; set; }
