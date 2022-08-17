@@ -41,9 +41,6 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 
         }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

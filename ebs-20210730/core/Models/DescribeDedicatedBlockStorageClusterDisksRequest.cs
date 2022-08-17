@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
-    public class DescribeDiskReplicaGroupsRequest : TeaModel {
-        [NameInMap("GroupIds")]
+    public class DescribeDedicatedBlockStorageClusterDisksRequest : TeaModel {
+        [NameInMap("DbscId")]
         [Validation(Required=false)]
-        public string GroupIds { get; set; }
+        public string DbscId { get; set; }
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -24,10 +24,6 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        [NameInMap("Site")]
-        [Validation(Required=false)]
-        public string Site { get; set; }
 
     }
 

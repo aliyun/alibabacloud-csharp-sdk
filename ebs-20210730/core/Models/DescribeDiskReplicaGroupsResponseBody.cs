@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [Validation(Required=false)]
         public List<DescribeDiskReplicaGroupsResponseBodyReplicaGroups> ReplicaGroups { get; set; }
         public class DescribeDiskReplicaGroupsResponseBodyReplicaGroups : TeaModel {
+            [NameInMap("Bandwidth")]
+            [Validation(Required=false)]
+            public long? Bandwidth { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
@@ -41,23 +45,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             [Validation(Required=false)]
             public List<byte[]> PairIds { get; set; }
 
-            /// <summary>
-            /// 复制组中的复制对个数
-            /// </summary>
             [NameInMap("PairNumber")]
             [Validation(Required=false)]
             public long? PairNumber { get; set; }
 
-            /// <summary>
-            /// 复制组的初始源地域。
-            /// </summary>
             [NameInMap("PrimaryRegion")]
             [Validation(Required=false)]
             public string PrimaryRegion { get; set; }
 
-            /// <summary>
-            /// 复制组的初始源可用区。
-            /// </summary>
             [NameInMap("PrimaryZone")]
             [Validation(Required=false)]
             public string PrimaryZone { get; set; }
@@ -70,9 +65,6 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             [Validation(Required=false)]
             public string ReplicaGroupId { get; set; }
 
-            /// <summary>
-            /// pair信息的后端站点来源，production或backup
-            /// </summary>
             [NameInMap("Site")]
             [Validation(Required=false)]
             public string Site { get; set; }
@@ -85,16 +77,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             [Validation(Required=false)]
             public string SourceZoneId { get; set; }
 
-            /// <summary>
-            /// 复制组的初始目的地域。
-            /// </summary>
             [NameInMap("StandbyRegion")]
             [Validation(Required=false)]
             public string StandbyRegion { get; set; }
 
-            /// <summary>
-            /// 复制组的初始目的可用区。
-            /// </summary>
             [NameInMap("StandbyZone")]
             [Validation(Required=false)]
             public string StandbyZone { get; set; }
@@ -105,9 +91,6 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 
         }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

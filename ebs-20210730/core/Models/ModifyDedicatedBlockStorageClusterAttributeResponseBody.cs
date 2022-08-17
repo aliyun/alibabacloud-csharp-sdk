@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
-    public class ModifyDiskReplicaGroupResponseBody : TeaModel {
+    public class ModifyDedicatedBlockStorageClusterAttributeResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

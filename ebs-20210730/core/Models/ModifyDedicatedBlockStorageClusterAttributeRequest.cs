@@ -8,34 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
-    public class ModifyDiskReplicaGroupRequest : TeaModel {
-        [NameInMap("Bandwidth")]
-        [Validation(Required=false)]
-        public long? Bandwidth { get; set; }
-
+    public class ModifyDedicatedBlockStorageClusterAttributeRequest : TeaModel {
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("DbscId")]
+        [Validation(Required=false)]
+        public string DbscId { get; set; }
+
+        [NameInMap("DbscName")]
+        [Validation(Required=false)]
+        public string DbscName { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("GroupName")]
-        [Validation(Required=false)]
-        public string GroupName { get; set; }
-
-        [NameInMap("RPO")]
-        [Validation(Required=false)]
-        public long? RPO { get; set; }
-
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        [NameInMap("ReplicaGroupId")]
-        [Validation(Required=false)]
-        public string ReplicaGroupId { get; set; }
 
     }
 

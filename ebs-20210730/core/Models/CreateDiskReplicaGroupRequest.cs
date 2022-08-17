@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class CreateDiskReplicaGroupRequest : TeaModel {
+        [NameInMap("Bandwidth")]
+        [Validation(Required=false)]
+        public long? Bandwidth { get; set; }
+
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
