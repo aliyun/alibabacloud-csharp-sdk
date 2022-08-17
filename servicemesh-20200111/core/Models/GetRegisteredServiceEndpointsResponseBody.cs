@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 public string Address { get; set; }
                 public string Hostname { get; set; }
                 public string PodName { get; set; }
-                public List<string> Ports { get; set; }
+                public List<int?> Ports { get; set; }
                 public string Region { get; set; }
                 public bool? SidecarInjected { get; set; }
             }

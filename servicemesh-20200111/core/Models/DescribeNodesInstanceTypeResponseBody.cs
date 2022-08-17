@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public List<DescribeNodesInstanceTypeResponseBodyInstanceTypes> InstanceTypes { get; set; }
         public class DescribeNodesInstanceTypeResponseBodyInstanceTypes : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
             [NameInMap("MultiBufferEnabled")]
             [Validation(Required=false)]
             public bool? MultiBufferEnabled { get; set; }
@@ -20,6 +24,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [NameInMap("NodeType")]
             [Validation(Required=false)]
             public string NodeType { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
 
         }
 

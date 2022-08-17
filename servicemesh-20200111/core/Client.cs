@@ -5666,6 +5666,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["AccessLogFormat"] = request.AccessLogFormat;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessLogGatewayLifecycle))
+            {
+                body["AccessLogGatewayLifecycle"] = request.AccessLogGatewayLifecycle;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessLogProject))
             {
                 body["AccessLogProject"] = request.AccessLogProject;
@@ -5681,6 +5685,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessLogServicePort))
             {
                 body["AccessLogServicePort"] = request.AccessLogServicePort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessLogSidecarLifecycle))
+            {
+                body["AccessLogSidecarLifecycle"] = request.AccessLogSidecarLifecycle;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditProject))
             {
@@ -5737,6 +5745,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAudit))
             {
                 body["EnableAudit"] = request.EnableAudit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAutoDiagnosis))
+            {
+                body["EnableAutoDiagnosis"] = request.EnableAutoDiagnosis;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableCRHistory))
             {
@@ -6021,6 +6033,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["AccessLogFormat"] = request.AccessLogFormat;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessLogGatewayLifecycle))
+            {
+                body["AccessLogGatewayLifecycle"] = request.AccessLogGatewayLifecycle;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessLogProject))
             {
                 body["AccessLogProject"] = request.AccessLogProject;
@@ -6036,6 +6052,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessLogServicePort))
             {
                 body["AccessLogServicePort"] = request.AccessLogServicePort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessLogSidecarLifecycle))
+            {
+                body["AccessLogSidecarLifecycle"] = request.AccessLogSidecarLifecycle;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditProject))
             {
@@ -6092,6 +6112,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAudit))
             {
                 body["EnableAudit"] = request.EnableAudit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAutoDiagnosis))
+            {
+                body["EnableAutoDiagnosis"] = request.EnableAutoDiagnosis;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableCRHistory))
             {

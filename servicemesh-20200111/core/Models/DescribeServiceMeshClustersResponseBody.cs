@@ -71,6 +71,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 
         }
 
+        [NameInMap("NumberOfClusters")]
+        [Validation(Required=false)]
+        public long? NumberOfClusters { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

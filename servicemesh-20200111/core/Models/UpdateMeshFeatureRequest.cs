@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string AccessLogFormat { get; set; }
 
+        [NameInMap("AccessLogGatewayLifecycle")]
+        [Validation(Required=false)]
+        public int? AccessLogGatewayLifecycle { get; set; }
+
         [NameInMap("AccessLogProject")]
         [Validation(Required=false)]
         public string AccessLogProject { get; set; }
@@ -36,6 +40,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [NameInMap("AccessLogServicePort")]
         [Validation(Required=false)]
         public int? AccessLogServicePort { get; set; }
+
+        [NameInMap("AccessLogSidecarLifecycle")]
+        [Validation(Required=false)]
+        public int? AccessLogSidecarLifecycle { get; set; }
 
         [NameInMap("AuditProject")]
         [Validation(Required=false)]
@@ -92,6 +100,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [NameInMap("EnableAudit")]
         [Validation(Required=false)]
         public bool? EnableAudit { get; set; }
+
+        [NameInMap("EnableAutoDiagnosis")]
+        [Validation(Required=false)]
+        public bool? EnableAutoDiagnosis { get; set; }
 
         [NameInMap("EnableCRHistory")]
         [Validation(Required=false)]

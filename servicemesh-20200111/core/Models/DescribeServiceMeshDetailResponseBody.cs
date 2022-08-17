@@ -196,6 +196,18 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     [Validation(Required=false)]
                     public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration ExtraConfiguration { get; set; }
                     public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration : TeaModel {
+                        [NameInMap("AccessLogExtraConf")]
+                        [Validation(Required=false)]
+                        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAccessLogExtraConf AccessLogExtraConf { get; set; }
+                        public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAccessLogExtraConf : TeaModel {
+                            [NameInMap("GatewayLifecycle")]
+                            [Validation(Required=false)]
+                            public int? GatewayLifecycle { get; set; }
+                            [NameInMap("SidecarLifecycle")]
+                            [Validation(Required=false)]
+                            public int? SidecarLifecycle { get; set; }
+                        };
+
                         [NameInMap("CRAggregationConfiguration")]
                         [Validation(Required=false)]
                         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationCRAggregationConfiguration CRAggregationConfiguration { get; set; }

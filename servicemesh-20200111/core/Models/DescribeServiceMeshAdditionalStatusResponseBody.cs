@@ -47,6 +47,31 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [NameInMap("AuditProjectStatus")]
             [Validation(Required=false)]
             public string AuditProjectStatus { get; set; }
+            [NameInMap("CanaryPilotLoadBalancerStatus")]
+            [Validation(Required=false)]
+            public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusCanaryPilotLoadBalancerStatus CanaryPilotLoadBalancerStatus { get; set; }
+            public class DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusCanaryPilotLoadBalancerStatus : TeaModel {
+                [NameInMap("Locked")]
+                [Validation(Required=false)]
+                public bool? Locked { get; set; }
+
+                [NameInMap("PayType")]
+                [Validation(Required=false)]
+                public string PayType { get; set; }
+
+                [NameInMap("Reused")]
+                [Validation(Required=false)]
+                public bool? Reused { get; set; }
+
+                [NameInMap("SLBBackEndServerNumStatus")]
+                [Validation(Required=false)]
+                public string SLBBackEndServerNumStatus { get; set; }
+
+                [NameInMap("SLBExistStatus")]
+                [Validation(Required=false)]
+                public string SLBExistStatus { get; set; }
+
+            }
             [NameInMap("ControlPlaneProjectStatus")]
             [Validation(Required=false)]
             public string ControlPlaneProjectStatus { get; set; }
