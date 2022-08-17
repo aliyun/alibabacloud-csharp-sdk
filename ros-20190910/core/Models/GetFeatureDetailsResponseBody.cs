@@ -63,6 +63,15 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 [Validation(Required=false)]
                 public List<string> ResourceGroup { get; set; }
 
+                [NameInMap("StackOperationRisk")]
+                [Validation(Required=false)]
+                public GetFeatureDetailsResponseBodyTerraformSupportedResourceTypesStackOperationRisk StackOperationRisk { get; set; }
+                public class GetFeatureDetailsResponseBodyTerraformSupportedResourceTypesStackOperationRisk : TeaModel {
+                    [NameInMap("DeleteStack")]
+                    [Validation(Required=false)]
+                    public List<string> DeleteStack { get; set; }
+                };
+
                 [NameInMap("SystemTag")]
                 [Validation(Required=false)]
                 public List<string> SystemTag { get; set; }
