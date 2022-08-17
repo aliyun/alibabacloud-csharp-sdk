@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class CarApplyModifyRequest : TeaModel {
-        [NameInMap("corp_id")]
-        [Validation(Required=false)]
-        public string CorpId { get; set; }
-
         [NameInMap("operate_time")]
         [Validation(Required=false)]
         public string OperateTime { get; set; }

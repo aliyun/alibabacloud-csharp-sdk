@@ -147,6 +147,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
+            [NameInMap("itinerary_rule")]
+            [Validation(Required=false)]
+            public int? ItineraryRule { get; set; }
+
             [NameInMap("status")]
             [Validation(Required=false)]
             public int? Status { get; set; }

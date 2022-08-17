@@ -31,10 +31,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
-        [NameInMap("more_page")]
-        [Validation(Required=false)]
-        public bool? MorePage { get; set; }
-
         [NameInMap("result_code")]
         [Validation(Required=false)]
         public int? ResultCode { get; set; }

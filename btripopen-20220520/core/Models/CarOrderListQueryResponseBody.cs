@@ -117,10 +117,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string Memo { get; set; }
 
-            [NameInMap("order_id")]
-            [Validation(Required=false)]
-            public string OrderId { get; set; }
-
             [NameInMap("order_status")]
             [Validation(Required=false)]
             public int? OrderStatus { get; set; }
@@ -144,6 +140,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("category_type")]
                 [Validation(Required=false)]
                 public int? CategoryType { get; set; }
+
+                [NameInMap("gmt_create")]
+                [Validation(Required=false)]
+                public string GmtCreate { get; set; }
 
                 [NameInMap("passenger_name")]
                 [Validation(Required=false)]

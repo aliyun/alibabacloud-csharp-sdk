@@ -114,6 +114,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public int? TrafficType { get; set; }
                 public int? TripWay { get; set; }
             }
+            [NameInMap("itinerary_rule")]
+            [Validation(Required=false)]
+            public int? ItineraryRule { get; set; }
             [NameInMap("limit_traveler")]
             [Validation(Required=false)]
             public int? LimitTraveler { get; set; }

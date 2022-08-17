@@ -134,7 +134,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string ProjectCode { get; set; }
                 public long? ProjectId { get; set; }
                 public string ProjectTitle { get; set; }
-                public string ThirdpartCostCenterId { get; set; }
                 public string ThirdpartProjectId { get; set; }
                 public string UserId { get; set; }
                 public string UserName { get; set; }
