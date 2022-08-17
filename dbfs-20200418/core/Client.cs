@@ -2049,5 +2049,103 @@ namespace AlibabaCloud.SDK.DBFS20200418
             return await TagDbfsWithOptionsAsync(request, runtime);
         }
 
+        public UpdateDbfsResponse UpdateDbfsWithOptions(UpdateDbfsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdvancedFeatures))
+            {
+                query["AdvancedFeatures"] = request.AdvancedFeatures;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FsId))
+            {
+                query["FsId"] = request.FsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedScene))
+            {
+                query["UsedScene"] = request.UsedScene;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDbfs",
+                Version = "2020-04-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDbfsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateDbfsResponse> UpdateDbfsWithOptionsAsync(UpdateDbfsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdvancedFeatures))
+            {
+                query["AdvancedFeatures"] = request.AdvancedFeatures;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FsId))
+            {
+                query["FsId"] = request.FsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedScene))
+            {
+                query["UsedScene"] = request.UsedScene;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDbfs",
+                Version = "2020-04-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDbfsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateDbfsResponse UpdateDbfs(UpdateDbfsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateDbfsWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateDbfsResponse> UpdateDbfsAsync(UpdateDbfsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateDbfsWithOptionsAsync(request, runtime);
+        }
+
     }
 }
