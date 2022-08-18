@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeCustomLineRequest : TeaModel {
-        [NameInMap("LineId")]
-        [Validation(Required=false)]
-        public long? LineId { get; set; }
-
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("UserClientIp")]
+        [NameInMap("LineId")]
         [Validation(Required=false)]
-        public string UserClientIp { get; set; }
+        public long? LineId { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDohUserInfoRequest : TeaModel {
+        [NameInMap("EndDate")]
+        [Validation(Required=false)]
+        public string EndDate { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [NameInMap("StartDate")]
         [Validation(Required=false)]
         public string StartDate { get; set; }
-
-        [NameInMap("EndDate")]
-        [Validation(Required=false)]
-        public string EndDate { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddCustomLineResponseBody : TeaModel {
+        [NameInMap("LineCode")]
+        [Validation(Required=false)]
+        public string LineCode { get; set; }
+
         [NameInMap("LineId")]
         [Validation(Required=false)]
         public long? LineId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("LineCode")]
-        [Validation(Required=false)]
-        public string LineCode { get; set; }
 
     }
 

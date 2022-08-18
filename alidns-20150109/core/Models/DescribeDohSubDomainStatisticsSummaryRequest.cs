@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDohSubDomainStatisticsSummaryRequest : TeaModel {
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
+
+        [NameInMap("EndDate")]
+        [Validation(Required=false)]
+        public string EndDate { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
@@ -25,25 +33,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string StartDate { get; set; }
 
-        [NameInMap("EndDate")]
-        [Validation(Required=false)]
-        public string EndDate { get; set; }
-
-        [NameInMap("OrderBy")]
-        [Validation(Required=false)]
-        public string OrderBy { get; set; }
-
-        [NameInMap("Direction")]
-        [Validation(Required=false)]
-        public string Direction { get; set; }
-
         [NameInMap("SubDomain")]
         [Validation(Required=false)]
         public string SubDomain { get; set; }
-
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
 
     }
 

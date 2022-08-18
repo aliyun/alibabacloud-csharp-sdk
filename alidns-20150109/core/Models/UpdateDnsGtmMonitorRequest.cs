@@ -9,37 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateDnsGtmMonitorRequest : TeaModel {
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        [NameInMap("MonitorConfigId")]
-        [Validation(Required=false)]
-        public string MonitorConfigId { get; set; }
-
-        [NameInMap("ProtocolType")]
-        [Validation(Required=false)]
-        public string ProtocolType { get; set; }
-
-        [NameInMap("Interval")]
-        [Validation(Required=false)]
-        public int? Interval { get; set; }
-
         [NameInMap("EvaluationCount")]
         [Validation(Required=false)]
         public int? EvaluationCount { get; set; }
 
-        [NameInMap("Timeout")]
+        [NameInMap("Interval")]
         [Validation(Required=false)]
-        public int? Timeout { get; set; }
-
-        [NameInMap("MonitorExtendInfo")]
-        [Validation(Required=false)]
-        public string MonitorExtendInfo { get; set; }
+        public int? Interval { get; set; }
 
         [NameInMap("IspCityNode")]
         [Validation(Required=false)]
@@ -54,6 +30,26 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string IspCode { get; set; }
 
         }
+
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
+        [NameInMap("MonitorConfigId")]
+        [Validation(Required=false)]
+        public string MonitorConfigId { get; set; }
+
+        [NameInMap("MonitorExtendInfo")]
+        [Validation(Required=false)]
+        public string MonitorExtendInfo { get; set; }
+
+        [NameInMap("ProtocolType")]
+        [Validation(Required=false)]
+        public string ProtocolType { get; set; }
+
+        [NameInMap("Timeout")]
+        [Validation(Required=false)]
+        public int? Timeout { get; set; }
 
     }
 

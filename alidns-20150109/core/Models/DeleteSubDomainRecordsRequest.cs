@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DeleteSubDomainRecordsRequest : TeaModel {
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
+
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
 
         [NameInMap("RR")]
         [Validation(Required=false)]
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
+
+        [NameInMap("UserClientIp")]
+        [Validation(Required=false)]
+        public string UserClientIp { get; set; }
 
     }
 

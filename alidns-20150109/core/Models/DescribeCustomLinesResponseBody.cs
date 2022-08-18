@@ -9,22 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeCustomLinesResponseBody : TeaModel {
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("TotalPages")]
-        [Validation(Required=false)]
-        public int? TotalPages { get; set; }
-
         [NameInMap("CustomLines")]
         [Validation(Required=false)]
         public List<DescribeCustomLinesResponseBodyCustomLines> CustomLines { get; set; }
@@ -33,19 +17,35 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public string Code { get; set; }
 
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
         }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("TotalItems")]
         [Validation(Required=false)]
         public int? TotalItems { get; set; }
+
+        [NameInMap("TotalPages")]
+        [Validation(Required=false)]
+        public int? TotalPages { get; set; }
 
     }
 

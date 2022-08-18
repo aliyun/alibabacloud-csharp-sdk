@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmInstanceAddressPoolResponseBody : TeaModel {
-        [NameInMap("Status")]
+        [NameInMap("AddrCount")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public int? AddrCount { get; set; }
+
+        [NameInMap("AddrPoolId")]
+        [Validation(Required=false)]
+        public string AddrPoolId { get; set; }
 
         [NameInMap("Addrs")]
         [Validation(Required=false)]
@@ -21,33 +25,49 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeGtmInstanceAddressPoolResponseBodyAddrsAddr> Addr { get; set; }
             public class DescribeGtmInstanceAddressPoolResponseBodyAddrsAddr : TeaModel {
-                public string Value { get; set; }
-                public long? UpdateTimestamp { get; set; }
-                public string UpdateTime { get; set; }
-                public string AlertStatus { get; set; }
-                public int? LbaWeight { get; set; }
-                public string CreateTime { get; set; }
                 public long? AddrId { get; set; }
-                public string Mode { get; set; }
+                public string AlertStatus { get; set; }
+                public string CreateTime { get; set; }
                 public long? CreateTimestamp { get; set; }
+                public int? LbaWeight { get; set; }
+                public string Mode { get; set; }
+                public string UpdateTime { get; set; }
+                public long? UpdateTimestamp { get; set; }
+                public string Value { get; set; }
             }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
-        [NameInMap("AddrCount")]
+        [NameInMap("CreateTimestamp")]
         [Validation(Required=false)]
-        public int? AddrCount { get; set; }
+        public long? CreateTimestamp { get; set; }
+
+        [NameInMap("MinAvailableAddrNum")]
+        [Validation(Required=false)]
+        public int? MinAvailableAddrNum { get; set; }
+
+        [NameInMap("MonitorConfigId")]
+        [Validation(Required=false)]
+        public string MonitorConfigId { get; set; }
+
+        [NameInMap("MonitorStatus")]
+        [Validation(Required=false)]
+        public string MonitorStatus { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
         [NameInMap("Type")]
         [Validation(Required=false)]
@@ -57,29 +77,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string UpdateTime { get; set; }
 
-        [NameInMap("AddrPoolId")]
-        [Validation(Required=false)]
-        public string AddrPoolId { get; set; }
-
         [NameInMap("UpdateTimestamp")]
         [Validation(Required=false)]
         public long? UpdateTimestamp { get; set; }
-
-        [NameInMap("MonitorConfigId")]
-        [Validation(Required=false)]
-        public string MonitorConfigId { get; set; }
-
-        [NameInMap("MinAvailableAddrNum")]
-        [Validation(Required=false)]
-        public int? MinAvailableAddrNum { get; set; }
-
-        [NameInMap("MonitorStatus")]
-        [Validation(Required=false)]
-        public string MonitorStatus { get; set; }
-
-        [NameInMap("CreateTimestamp")]
-        [Validation(Required=false)]
-        public long? CreateTimestamp { get; set; }
 
     }
 

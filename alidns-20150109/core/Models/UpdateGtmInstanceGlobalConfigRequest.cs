@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateGtmInstanceGlobalConfigRequest : TeaModel {
-        [NameInMap("Lang")]
+        [NameInMap("AlertGroup")]
         [Validation(Required=false)]
-        public string Lang { get; set; }
+        public string AlertGroup { get; set; }
 
-        [NameInMap("UserClientIp")]
+        [NameInMap("CnameCustomDomainName")]
         [Validation(Required=false)]
-        public string UserClientIp { get; set; }
+        public string CnameCustomDomainName { get; set; }
+
+        [NameInMap("CnameMode")]
+        [Validation(Required=false)]
+        public string CnameMode { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -25,6 +29,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
+        [NameInMap("LbaStrategy")]
+        [Validation(Required=false)]
+        public string LbaStrategy { get; set; }
+
         [NameInMap("Ttl")]
         [Validation(Required=false)]
         public int? Ttl { get; set; }
@@ -32,22 +44,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [NameInMap("UserDomainName")]
         [Validation(Required=false)]
         public string UserDomainName { get; set; }
-
-        [NameInMap("LbaStrategy")]
-        [Validation(Required=false)]
-        public string LbaStrategy { get; set; }
-
-        [NameInMap("AlertGroup")]
-        [Validation(Required=false)]
-        public string AlertGroup { get; set; }
-
-        [NameInMap("CnameMode")]
-        [Validation(Required=false)]
-        public string CnameMode { get; set; }
-
-        [NameInMap("CnameCustomDomainName")]
-        [Validation(Required=false)]
-        public string CnameCustomDomainName { get; set; }
 
     }
 

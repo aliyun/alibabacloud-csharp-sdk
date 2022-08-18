@@ -13,9 +13,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public bool? AllAliDns { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("DnsServers")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public DescribeDomainNsResponseBodyDnsServers DnsServers { get; set; }
+        public class DescribeDomainNsResponseBodyDnsServers : TeaModel {
+            [NameInMap("DnsServer")]
+            [Validation(Required=false)]
+            public List<string> DnsServer { get; set; }
+        };
 
         [NameInMap("ExpectDnsServers")]
         [Validation(Required=false)]
@@ -26,18 +31,13 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<string> ExpectDnsServer { get; set; }
         };
 
-        [NameInMap("DnsServers")]
-        [Validation(Required=false)]
-        public DescribeDomainNsResponseBodyDnsServers DnsServers { get; set; }
-        public class DescribeDomainNsResponseBodyDnsServers : TeaModel {
-            [NameInMap("DnsServer")]
-            [Validation(Required=false)]
-            public List<string> DnsServer { get; set; }
-        };
-
         [NameInMap("IncludeAliDns")]
         [Validation(Required=false)]
         public bool? IncludeAliDns { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

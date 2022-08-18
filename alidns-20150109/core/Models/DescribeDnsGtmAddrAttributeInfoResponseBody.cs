@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmAddrAttributeInfoResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Addr")]
         [Validation(Required=false)]
         public DescribeDnsGtmAddrAttributeInfoResponseBodyAddr Addr { get; set; }
@@ -21,28 +17,36 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddr> Addr { get; set; }
             public class DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddr : TeaModel {
-                [NameInMap("FatherCode")]
-                [Validation(Required=false)]
-                public string FatherCode { get; set; }
+                public string Addr { get; set; }
+                public DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddrAttributeInfo AttributeInfo { get; set; }
+                public class DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddrAttributeInfo : TeaModel {
+                    [NameInMap("FatherCode")]
+                    [Validation(Required=false)]
+                    public string FatherCode { get; set; }
 
-                [NameInMap("GroupName")]
-                [Validation(Required=false)]
-                public string GroupName { get; set; }
+                    [NameInMap("GroupCode")]
+                    [Validation(Required=false)]
+                    public string GroupCode { get; set; }
 
-                [NameInMap("LineCode")]
-                [Validation(Required=false)]
-                public string LineCode { get; set; }
+                    [NameInMap("GroupName")]
+                    [Validation(Required=false)]
+                    public string GroupName { get; set; }
 
-                [NameInMap("LineName")]
-                [Validation(Required=false)]
-                public string LineName { get; set; }
+                    [NameInMap("LineCode")]
+                    [Validation(Required=false)]
+                    public string LineCode { get; set; }
 
-                [NameInMap("GroupCode")]
-                [Validation(Required=false)]
-                public string GroupCode { get; set; }
+                    [NameInMap("LineName")]
+                    [Validation(Required=false)]
+                    public string LineName { get; set; }
 
+                }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

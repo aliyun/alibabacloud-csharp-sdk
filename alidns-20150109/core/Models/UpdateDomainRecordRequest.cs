@@ -13,37 +13,37 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("UserClientIp")]
+        [NameInMap("Line")]
         [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
-        [NameInMap("RecordId")]
-        [Validation(Required=false)]
-        public string RecordId { get; set; }
-
-        [NameInMap("RR")]
-        [Validation(Required=false)]
-        public string RR { get; set; }
-
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
-        [NameInMap("Value")]
-        [Validation(Required=false)]
-        public string Value { get; set; }
-
-        [NameInMap("TTL")]
-        [Validation(Required=false)]
-        public long? TTL { get; set; }
+        public string Line { get; set; }
 
         [NameInMap("Priority")]
         [Validation(Required=false)]
         public long? Priority { get; set; }
 
-        [NameInMap("Line")]
+        [NameInMap("RR")]
         [Validation(Required=false)]
-        public string Line { get; set; }
+        public string RR { get; set; }
+
+        [NameInMap("RecordId")]
+        [Validation(Required=false)]
+        public string RecordId { get; set; }
+
+        [NameInMap("TTL")]
+        [Validation(Required=false)]
+        public long? TTL { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
+
+        [NameInMap("UserClientIp")]
+        [Validation(Required=false)]
+        public string UserClientIp { get; set; }
+
+        [NameInMap("Value")]
+        [Validation(Required=false)]
+        public string Value { get; set; }
 
     }
 

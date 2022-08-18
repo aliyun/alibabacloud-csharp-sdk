@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeTransferDomainsRequest : TeaModel {
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
+
+        [NameInMap("FromUserId")]
+        [Validation(Required=false)]
+        public long? FromUserId { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
-
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -25,21 +29,13 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
-        [NameInMap("TransferType")]
-        [Validation(Required=false)]
-        public string TransferType { get; set; }
-
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
-
-        [NameInMap("FromUserId")]
-        [Validation(Required=false)]
-        public long? FromUserId { get; set; }
-
         [NameInMap("TargetUserId")]
         [Validation(Required=false)]
         public long? TargetUserId { get; set; }
+
+        [NameInMap("TransferType")]
+        [Validation(Required=false)]
+        public string TransferType { get; set; }
 
     }
 

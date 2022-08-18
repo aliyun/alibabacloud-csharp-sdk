@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class CopyGtmConfigRequest : TeaModel {
-        [NameInMap("UserClientIp")]
+        [NameInMap("CopyType")]
         [Validation(Required=false)]
-        public string UserClientIp { get; set; }
+        public string CopyType { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
@@ -24,10 +24,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [NameInMap("TargetId")]
         [Validation(Required=false)]
         public string TargetId { get; set; }
-
-        [NameInMap("CopyType")]
-        [Validation(Required=false)]
-        public string CopyType { get; set; }
 
     }
 

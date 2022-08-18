@@ -9,33 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeRecordStatisticsRequest : TeaModel {
-        [NameInMap("Lang")]
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public string Lang { get; set; }
+        public string DomainName { get; set; }
 
-        [NameInMap("UserClientIp")]
+        [NameInMap("DomainType")]
         [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
-        [NameInMap("StartDate")]
-        [Validation(Required=false)]
-        public string StartDate { get; set; }
+        public string DomainType { get; set; }
 
         [NameInMap("EndDate")]
         [Validation(Required=false)]
         public string EndDate { get; set; }
 
-        [NameInMap("DomainName")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public string DomainName { get; set; }
+        public string Lang { get; set; }
 
         [NameInMap("Rr")]
         [Validation(Required=false)]
         public string Rr { get; set; }
 
-        [NameInMap("DomainType")]
+        [NameInMap("StartDate")]
         [Validation(Required=false)]
-        public string DomainType { get; set; }
+        public string StartDate { get; set; }
 
     }
 

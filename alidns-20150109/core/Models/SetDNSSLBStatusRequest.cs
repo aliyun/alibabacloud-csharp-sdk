@@ -9,33 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class SetDNSSLBStatusRequest : TeaModel {
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("UserClientIp")]
+        [NameInMap("Line")]
         [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
-        [NameInMap("SubDomain")]
-        [Validation(Required=false)]
-        public string SubDomain { get; set; }
+        public string Line { get; set; }
 
         [NameInMap("Open")]
         [Validation(Required=false)]
         public bool? Open { get; set; }
 
-        [NameInMap("DomainName")]
+        [NameInMap("SubDomain")]
         [Validation(Required=false)]
-        public string DomainName { get; set; }
+        public string SubDomain { get; set; }
 
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
-        [NameInMap("Line")]
+        [NameInMap("UserClientIp")]
         [Validation(Required=false)]
-        public string Line { get; set; }
+        public string UserClientIp { get; set; }
 
     }
 

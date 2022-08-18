@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddGtmRecoveryPlanRequest : TeaModel {
+        [NameInMap("FaultAddrPool")]
+        [Validation(Required=false)]
+        public string FaultAddrPool { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
-
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -24,10 +24,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
-
-        [NameInMap("FaultAddrPool")]
-        [Validation(Required=false)]
-        public string FaultAddrPool { get; set; }
 
     }
 

@@ -9,25 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UntagResourcesRequest : TeaModel {
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
-        [NameInMap("ResourceType")]
-        [Validation(Required=false)]
-        public string ResourceType { get; set; }
-
         [NameInMap("All")]
         [Validation(Required=false)]
         public bool? All { get; set; }
 
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
+
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
 
         [NameInMap("TagKey")]
         [Validation(Required=false)]

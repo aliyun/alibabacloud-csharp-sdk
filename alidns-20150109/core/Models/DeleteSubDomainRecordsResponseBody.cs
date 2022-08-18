@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string RR { get; set; }
 
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public string TotalCount { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public string TotalCount { get; set; }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class TransferDomainRequest : TeaModel {
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
         [NameInMap("DomainNames")]
         [Validation(Required=false)]
         public string DomainNames { get; set; }
+
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
 
         [NameInMap("Remark")]
         [Validation(Required=false)]
@@ -24,10 +24,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [NameInMap("TargetUserId")]
         [Validation(Required=false)]
         public long? TargetUserId { get; set; }
-
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
 
     }
 

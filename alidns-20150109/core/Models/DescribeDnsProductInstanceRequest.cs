@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsProductInstanceRequest : TeaModel {
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]
         public string UserClientIp { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
 
     }
 

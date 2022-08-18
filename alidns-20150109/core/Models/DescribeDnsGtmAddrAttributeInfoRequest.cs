@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmAddrAttributeInfoRequest : TeaModel {
+        [NameInMap("Addrs")]
+        [Validation(Required=false)]
+        public string Addrs { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
-
-        [NameInMap("Addrs")]
-        [Validation(Required=false)]
-        public string Addrs { get; set; }
 
     }
 

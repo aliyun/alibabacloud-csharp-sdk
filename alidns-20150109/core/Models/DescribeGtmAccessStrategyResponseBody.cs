@@ -9,25 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmAccessStrategyResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("AccessMode")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("StrategyId")]
-        [Validation(Required=false)]
-        public string StrategyId { get; set; }
-
-        [NameInMap("DefaultAddrPoolStatus")]
-        [Validation(Required=false)]
-        public string DefaultAddrPoolStatus { get; set; }
-
-        [NameInMap("FailoverAddrPoolId")]
-        [Validation(Required=false)]
-        public string FailoverAddrPoolId { get; set; }
+        public string AccessMode { get; set; }
 
         [NameInMap("AccessStatus")]
         [Validation(Required=false)]
@@ -41,25 +25,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string DefaultAddrPoolName { get; set; }
 
+        [NameInMap("DefaultAddrPoolStatus")]
+        [Validation(Required=false)]
+        public string DefaultAddrPoolStatus { get; set; }
+
         [NameInMap("DefultAddrPoolId")]
         [Validation(Required=false)]
         public string DefultAddrPoolId { get; set; }
 
-        [NameInMap("StrategyName")]
+        [NameInMap("FailoverAddrPoolId")]
         [Validation(Required=false)]
-        public string StrategyName { get; set; }
-
-        [NameInMap("FailoverAddrPoolStatus")]
-        [Validation(Required=false)]
-        public string FailoverAddrPoolStatus { get; set; }
-
-        [NameInMap("AccessMode")]
-        [Validation(Required=false)]
-        public string AccessMode { get; set; }
-
-        [NameInMap("StrategyMode")]
-        [Validation(Required=false)]
-        public string StrategyMode { get; set; }
+        public string FailoverAddrPoolId { get; set; }
 
         [NameInMap("FailoverAddrPoolMonitorStatus")]
         [Validation(Required=false)]
@@ -69,6 +45,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string FailoverAddrPoolName { get; set; }
 
+        [NameInMap("FailoverAddrPoolStatus")]
+        [Validation(Required=false)]
+        public string FailoverAddrPoolStatus { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
         [NameInMap("Lines")]
         [Validation(Required=false)]
         public DescribeGtmAccessStrategyResponseBodyLines Lines { get; set; }
@@ -77,12 +61,28 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeGtmAccessStrategyResponseBodyLinesLine> Line { get; set; }
             public class DescribeGtmAccessStrategyResponseBodyLinesLine : TeaModel {
+                public string GroupCode { get; set; }
                 public string GroupName { get; set; }
                 public string LineCode { get; set; }
                 public string LineName { get; set; }
-                public string GroupCode { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("StrategyId")]
+        [Validation(Required=false)]
+        public string StrategyId { get; set; }
+
+        [NameInMap("StrategyMode")]
+        [Validation(Required=false)]
+        public string StrategyMode { get; set; }
+
+        [NameInMap("StrategyName")]
+        [Validation(Required=false)]
+        public string StrategyName { get; set; }
 
     }
 

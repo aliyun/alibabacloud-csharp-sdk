@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmInstanceAddressPoolsRequest : TeaModel {
-        [NameInMap("UserClientIp")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string UserClientIp { get; set; }
+        public string InstanceId { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

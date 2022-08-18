@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDNSSLBSubDomainsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public long? TotalCount { get; set; }
+        public long? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public long? PageNumber { get; set; }
-
         [NameInMap("SlbSubDomains")]
         [Validation(Required=false)]
         public DescribeDNSSLBSubDomainsResponseBodySlbSubDomains SlbSubDomains { get; set; }
@@ -33,10 +29,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomain> SlbSubDomain { get; set; }
             public class DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomain : TeaModel {
-                public string Type { get; set; }
-                public long? RecordCount { get; set; }
-                public bool? Open { get; set; }
-                public string SubDomain { get; set; }
                 public DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithms LineAlgorithms { get; set; }
                 public class DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithms : TeaModel {
                     [NameInMap("LineAlgorithm")]
@@ -54,8 +46,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                     }
 
                 }
+                public bool? Open { get; set; }
+                public long? RecordCount { get; set; }
+                public string SubDomain { get; set; }
+                public string Type { get; set; }
             }
         };
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

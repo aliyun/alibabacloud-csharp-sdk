@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmRecoveryPlanResponseBody : TeaModel {
-        [NameInMap("Status")]
+        [NameInMap("CreateTime")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string CreateTime { get; set; }
 
-        [NameInMap("LastRollbackTime")]
+        [NameInMap("CreateTimestamp")]
         [Validation(Required=false)]
-        public string LastRollbackTime { get; set; }
+        public long? CreateTimestamp { get; set; }
 
         [NameInMap("FaultAddrPoolNum")]
         [Validation(Required=false)]
@@ -29,24 +29,30 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPool> FaultAddrPool { get; set; }
             public class DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPool : TeaModel {
-                [NameInMap("Addr")]
-                [Validation(Required=false)]
-                public List<DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddr> Addr { get; set; }
-                public class DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddr : TeaModel {
-                    [NameInMap("Value")]
+                public string AddrPoolId { get; set; }
+                public string AddrPoolName { get; set; }
+                public DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrs Addrs { get; set; }
+                public class DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrs : TeaModel {
+                    [NameInMap("Addr")]
                     [Validation(Required=false)]
-                    public string Value { get; set; }
+                    public List<DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrsAddr> Addr { get; set; }
+                    public class DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrsAddr : TeaModel {
+                        [NameInMap("Id")]
+                        [Validation(Required=false)]
+                        public long? Id { get; set; }
 
-                    [NameInMap("Mode")]
-                    [Validation(Required=false)]
-                    public string Mode { get; set; }
+                        [NameInMap("Mode")]
+                        [Validation(Required=false)]
+                        public string Mode { get; set; }
 
-                    [NameInMap("Id")]
-                    [Validation(Required=false)]
-                    public long? Id { get; set; }
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
 
                 }
-
+                public string InstanceId { get; set; }
             }
         };
 
@@ -54,21 +60,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string LastExecuteTime { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("CreateTime")]
-        [Validation(Required=false)]
-        public string CreateTime { get; set; }
-
         [NameInMap("LastExecuteTimestamp")]
         [Validation(Required=false)]
         public long? LastExecuteTimestamp { get; set; }
 
-        [NameInMap("Remark")]
+        [NameInMap("LastRollbackTime")]
         [Validation(Required=false)]
-        public string Remark { get; set; }
+        public string LastRollbackTime { get; set; }
+
+        [NameInMap("LastRollbackTimestamp")]
+        [Validation(Required=false)]
+        public long? LastRollbackTimestamp { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -78,6 +80,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public long? RecoveryPlanId { get; set; }
 
+        [NameInMap("Remark")]
+        [Validation(Required=false)]
+        public string Remark { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
         [NameInMap("UpdateTime")]
         [Validation(Required=false)]
         public string UpdateTime { get; set; }
@@ -85,14 +99,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [NameInMap("UpdateTimestamp")]
         [Validation(Required=false)]
         public long? UpdateTimestamp { get; set; }
-
-        [NameInMap("LastRollbackTimestamp")]
-        [Validation(Required=false)]
-        public long? LastRollbackTimestamp { get; set; }
-
-        [NameInMap("CreateTimestamp")]
-        [Validation(Required=false)]
-        public long? CreateTimestamp { get; set; }
 
     }
 

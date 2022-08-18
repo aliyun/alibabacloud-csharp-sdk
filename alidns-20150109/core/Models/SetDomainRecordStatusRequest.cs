@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
         [NameInMap("RecordId")]
         [Validation(Required=false)]
         public string RecordId { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        [NameInMap("UserClientIp")]
+        [Validation(Required=false)]
+        public string UserClientIp { get; set; }
 
     }
 

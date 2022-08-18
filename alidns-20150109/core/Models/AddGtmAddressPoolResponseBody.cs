@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddGtmAddressPoolResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("AddrPoolId")]
         [Validation(Required=false)]
         public string AddrPoolId { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [NameInMap("MonitorConfigId")]
         [Validation(Required=false)]
         public string MonitorConfigId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

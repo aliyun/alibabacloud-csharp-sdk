@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeRecordStatisticsSummaryResponseBody : TeaModel {
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -16,18 +20,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("TotalPages")]
-        [Validation(Required=false)]
-        public int? TotalPages { get; set; }
-
-        [NameInMap("TotalItems")]
-        [Validation(Required=false)]
-        public int? TotalItems { get; set; }
 
         [NameInMap("Statistics")]
         [Validation(Required=false)]
@@ -37,10 +29,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeRecordStatisticsSummaryResponseBodyStatisticsStatistic> Statistic { get; set; }
             public class DescribeRecordStatisticsSummaryResponseBodyStatisticsStatistic : TeaModel {
-                public string SubDomain { get; set; }
                 public long? Count { get; set; }
+                public string SubDomain { get; set; }
             }
         };
+
+        [NameInMap("TotalItems")]
+        [Validation(Required=false)]
+        public int? TotalItems { get; set; }
+
+        [NameInMap("TotalPages")]
+        [Validation(Required=false)]
+        public int? TotalPages { get; set; }
 
     }
 

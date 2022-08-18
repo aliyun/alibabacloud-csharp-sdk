@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class BindInstanceDomainsRequest : TeaModel {
-        [NameInMap("Lang")]
+        [NameInMap("DomainNames")]
         [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
+        public string DomainNames { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("DomainNames")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public string DomainNames { get; set; }
+        public string Lang { get; set; }
 
     }
 

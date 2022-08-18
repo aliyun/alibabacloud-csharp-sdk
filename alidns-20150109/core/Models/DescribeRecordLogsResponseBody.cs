@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeRecordLogsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public long? TotalCount { get; set; }
+        public long? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public long? PageNumber { get; set; }
 
         [NameInMap("RecordLogs")]
         [Validation(Required=false)]
@@ -34,12 +26,20 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<DescribeRecordLogsResponseBodyRecordLogsRecordLog> RecordLog { get; set; }
             public class DescribeRecordLogsResponseBodyRecordLogsRecordLog : TeaModel {
                 public string Action { get; set; }
+                public string ActionTime { get; set; }
                 public long? ActionTimestamp { get; set; }
                 public string ClientIp { get; set; }
                 public string Message { get; set; }
-                public string ActionTime { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DeleteDomainGroupRequest : TeaModel {
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
+
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
 
     }
 

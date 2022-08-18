@@ -9,17 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmMonitorConfigResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("CreateTime")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string CreateTime { get; set; }
 
-        [NameInMap("Timeout")]
+        [NameInMap("CreateTimestamp")]
         [Validation(Required=false)]
-        public int? Timeout { get; set; }
+        public long? CreateTimestamp { get; set; }
 
-        [NameInMap("ProtocolType")]
+        [NameInMap("EvaluationCount")]
         [Validation(Required=false)]
-        public string ProtocolType { get; set; }
+        public int? EvaluationCount { get; set; }
+
+        [NameInMap("Interval")]
+        [Validation(Required=false)]
+        public int? Interval { get; set; }
 
         [NameInMap("IspCityNodes")]
         [Validation(Required=false)]
@@ -30,45 +34,41 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<DescribeGtmMonitorConfigResponseBodyIspCityNodesIspCityNode> IspCityNode { get; set; }
             public class DescribeGtmMonitorConfigResponseBodyIspCityNodesIspCityNode : TeaModel {
                 public string CityCode { get; set; }
-                public string CountryName { get; set; }
-                public string IspCode { get; set; }
                 public string CityName { get; set; }
                 public string CountryCode { get; set; }
+                public string CountryName { get; set; }
+                public string IspCode { get; set; }
                 public string IspName { get; set; }
             }
         };
-
-        [NameInMap("CreateTime")]
-        [Validation(Required=false)]
-        public string CreateTime { get; set; }
-
-        [NameInMap("UpdateTime")]
-        [Validation(Required=false)]
-        public string UpdateTime { get; set; }
-
-        [NameInMap("EvaluationCount")]
-        [Validation(Required=false)]
-        public int? EvaluationCount { get; set; }
-
-        [NameInMap("UpdateTimestamp")]
-        [Validation(Required=false)]
-        public long? UpdateTimestamp { get; set; }
-
-        [NameInMap("MonitorExtendInfo")]
-        [Validation(Required=false)]
-        public string MonitorExtendInfo { get; set; }
 
         [NameInMap("MonitorConfigId")]
         [Validation(Required=false)]
         public string MonitorConfigId { get; set; }
 
-        [NameInMap("CreateTimestamp")]
+        [NameInMap("MonitorExtendInfo")]
         [Validation(Required=false)]
-        public long? CreateTimestamp { get; set; }
+        public string MonitorExtendInfo { get; set; }
 
-        [NameInMap("Interval")]
+        [NameInMap("ProtocolType")]
         [Validation(Required=false)]
-        public int? Interval { get; set; }
+        public string ProtocolType { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Timeout")]
+        [Validation(Required=false)]
+        public int? Timeout { get; set; }
+
+        [NameInMap("UpdateTime")]
+        [Validation(Required=false)]
+        public string UpdateTime { get; set; }
+
+        [NameInMap("UpdateTimestamp")]
+        [Validation(Required=false)]
+        public long? UpdateTimestamp { get; set; }
 
     }
 

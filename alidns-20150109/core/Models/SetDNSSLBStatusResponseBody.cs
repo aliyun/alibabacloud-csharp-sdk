@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class SetDNSSLBStatusResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("Open")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public bool? Open { get; set; }
 
         [NameInMap("RecordCount")]
         [Validation(Required=false)]
         public long? RecordCount { get; set; }
 
-        [NameInMap("Open")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public bool? Open { get; set; }
+        public string RequestId { get; set; }
 
     }
 

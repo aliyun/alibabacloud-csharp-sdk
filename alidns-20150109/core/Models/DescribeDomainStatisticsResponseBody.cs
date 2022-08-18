@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDomainStatisticsResponseBodyStatisticsStatistic> Statistic { get; set; }
             public class DescribeDomainStatisticsResponseBodyStatisticsStatistic : TeaModel {
-                public long? Timestamp { get; set; }
                 public long? Count { get; set; }
+                public long? Timestamp { get; set; }
             }
         };
 

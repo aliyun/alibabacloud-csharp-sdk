@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeSupportLinesRequest : TeaModel {
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]
         public string UserClientIp { get; set; }
-
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
 
     }
 

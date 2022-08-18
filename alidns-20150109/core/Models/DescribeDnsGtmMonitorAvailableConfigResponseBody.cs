@@ -9,24 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmMonitorAvailableConfigResponseBody : TeaModel {
-        [NameInMap("Ipv4IspCityNodes")]
-        [Validation(Required=false)]
-        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodes Ipv4IspCityNodes { get; set; }
-        public class DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodes : TeaModel {
-            [NameInMap("Ipv4IspCityNode")]
-            [Validation(Required=false)]
-            public List<DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode> Ipv4IspCityNode { get; set; }
-            public class DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode : TeaModel {
-                public string CityCode { get; set; }
-                public string GroupName { get; set; }
-                public string IspCode { get; set; }
-                public string CityName { get; set; }
-                public string IspName { get; set; }
-                public string GroupType { get; set; }
-                public bool? DefaultSelected { get; set; }
-            }
-        };
-
         [NameInMap("DomainIpv4IspCityNodes")]
         [Validation(Required=false)]
         public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodes DomainIpv4IspCityNodes { get; set; }
@@ -36,18 +18,21 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNode> DomainIpv4IspCityNode { get; set; }
             public class DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNode : TeaModel {
                 public string CityCode { get; set; }
-                public string GroupName { get; set; }
-                public string IspCode { get; set; }
                 public string CityName { get; set; }
-                public string IspName { get; set; }
-                public string GroupType { get; set; }
                 public bool? DefaultSelected { get; set; }
+                public string GroupName { get; set; }
+                public string GroupType { get; set; }
+                public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNodeIps Ips { get; set; }
+                public class DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNodeIps : TeaModel {
+                    [NameInMap("Ip")]
+                    [Validation(Required=false)]
+                    public List<string> Ip { get; set; }
+
+                }
+                public string IspCode { get; set; }
+                public string IspName { get; set; }
             }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
         [NameInMap("DomainIpv6IspCityNodes")]
         [Validation(Required=false)]
@@ -58,12 +43,44 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNode> DomainIpv6IspCityNode { get; set; }
             public class DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNode : TeaModel {
                 public string CityCode { get; set; }
-                public string GroupName { get; set; }
-                public string IspCode { get; set; }
                 public string CityName { get; set; }
-                public string IspName { get; set; }
-                public string GroupType { get; set; }
                 public bool? DefaultSelected { get; set; }
+                public string GroupName { get; set; }
+                public string GroupType { get; set; }
+                public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNodeIps Ips { get; set; }
+                public class DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNodeIps : TeaModel {
+                    [NameInMap("ip")]
+                    [Validation(Required=false)]
+                    public List<string> Ip { get; set; }
+
+                }
+                public string IspCode { get; set; }
+                public string IspName { get; set; }
+            }
+        };
+
+        [NameInMap("Ipv4IspCityNodes")]
+        [Validation(Required=false)]
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodes Ipv4IspCityNodes { get; set; }
+        public class DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodes : TeaModel {
+            [NameInMap("Ipv4IspCityNode")]
+            [Validation(Required=false)]
+            public List<DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode> Ipv4IspCityNode { get; set; }
+            public class DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode : TeaModel {
+                public string CityCode { get; set; }
+                public string CityName { get; set; }
+                public bool? DefaultSelected { get; set; }
+                public string GroupName { get; set; }
+                public string GroupType { get; set; }
+                public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNodeIps Ips { get; set; }
+                public class DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNodeIps : TeaModel {
+                    [NameInMap("Ip")]
+                    [Validation(Required=false)]
+                    public List<string> Ip { get; set; }
+
+                }
+                public string IspCode { get; set; }
+                public string IspName { get; set; }
             }
         };
 
@@ -76,14 +93,25 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNode> Ipv6IspCityNode { get; set; }
             public class DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNode : TeaModel {
                 public string CityCode { get; set; }
-                public string GroupName { get; set; }
-                public string IspCode { get; set; }
                 public string CityName { get; set; }
-                public string IspName { get; set; }
-                public string GroupType { get; set; }
                 public bool? DefaultSelected { get; set; }
+                public string GroupName { get; set; }
+                public string GroupType { get; set; }
+                public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNodeIps Ips { get; set; }
+                public class DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNodeIps : TeaModel {
+                    [NameInMap("Ip")]
+                    [Validation(Required=false)]
+                    public List<string> Ip { get; set; }
+
+                }
+                public string IspCode { get; set; }
+                public string IspName { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

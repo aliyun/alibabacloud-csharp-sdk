@@ -9,37 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeBatchResultCountResponseBody : TeaModel {
-        [NameInMap("Status")]
+        [NameInMap("BatchType")]
         [Validation(Required=false)]
-        public int? Status { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("TaskId")]
-        [Validation(Required=false)]
-        public long? TaskId { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string BatchType { get; set; }
 
         [NameInMap("FailedCount")]
         [Validation(Required=false)]
         public int? FailedCount { get; set; }
 
+        [NameInMap("Reason")]
+        [Validation(Required=false)]
+        public string Reason { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public int? Status { get; set; }
+
         [NameInMap("SuccessCount")]
         [Validation(Required=false)]
         public int? SuccessCount { get; set; }
 
-        [NameInMap("BatchType")]
+        [NameInMap("TaskId")]
         [Validation(Required=false)]
-        public string BatchType { get; set; }
+        public long? TaskId { get; set; }
 
-        [NameInMap("Reason")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public string Reason { get; set; }
+        public int? TotalCount { get; set; }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsProductInstancesRequest : TeaModel {
+        [NameInMap("DomainType")]
+        [Validation(Required=false)]
+        public string DomainType { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
-
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -25,13 +25,13 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        [NameInMap("UserClientIp")]
+        [Validation(Required=false)]
+        public string UserClientIp { get; set; }
+
         [NameInMap("VersionCode")]
         [Validation(Required=false)]
         public string VersionCode { get; set; }
-
-        [NameInMap("DomainType")]
-        [Validation(Required=false)]
-        public string DomainType { get; set; }
 
     }
 

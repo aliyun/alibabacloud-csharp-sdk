@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmLogsRequest : TeaModel {
-        [NameInMap("UserClientIp")]
+        [NameInMap("EndTimestamp")]
         [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
+        public long? EndTimestamp { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
+
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -36,10 +36,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [NameInMap("StartTimestamp")]
         [Validation(Required=false)]
         public long? StartTimestamp { get; set; }
-
-        [NameInMap("EndTimestamp")]
-        [Validation(Required=false)]
-        public long? EndTimestamp { get; set; }
 
     }
 

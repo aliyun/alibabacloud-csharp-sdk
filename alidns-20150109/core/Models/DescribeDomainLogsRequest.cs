@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainLogsRequest : TeaModel {
-        [NameInMap("Lang")]
+        [NameInMap("GroupId")]
         [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
+        public string GroupId { get; set; }
 
         [NameInMap("KeyWord")]
         [Validation(Required=false)]
         public string KeyWord { get; set; }
 
-        [NameInMap("GroupId")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public string GroupId { get; set; }
+        public string Lang { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -37,13 +33,13 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string StartDate { get; set; }
 
-        [NameInMap("endDate")]
-        [Validation(Required=false)]
-        public string EndDate { get; set; }
-
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
+
+        [NameInMap("endDate")]
+        [Validation(Required=false)]
+        public string EndDate { get; set; }
 
     }
 

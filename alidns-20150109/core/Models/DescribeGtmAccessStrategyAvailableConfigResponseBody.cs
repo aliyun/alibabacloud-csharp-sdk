@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmAccessStrategyAvailableConfigResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("AddrPools")]
         [Validation(Required=false)]
         public DescribeGtmAccessStrategyAvailableConfigResponseBodyAddrPools AddrPools { get; set; }
@@ -34,14 +30,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeGtmAccessStrategyAvailableConfigResponseBodyLinesLine> Line { get; set; }
             public class DescribeGtmAccessStrategyAvailableConfigResponseBodyLinesLine : TeaModel {
-                public string Status { get; set; }
                 public string FatherCode { get; set; }
-                public string LineCode { get; set; }
-                public string GroupName { get; set; }
-                public string LineName { get; set; }
                 public string GroupCode { get; set; }
+                public string GroupName { get; set; }
+                public string LineCode { get; set; }
+                public string LineName { get; set; }
+                public string Status { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

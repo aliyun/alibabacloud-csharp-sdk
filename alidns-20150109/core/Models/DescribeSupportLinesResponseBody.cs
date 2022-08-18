@@ -18,8 +18,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<DescribeSupportLinesResponseBodyRecordLinesRecordLine> RecordLine { get; set; }
             public class DescribeSupportLinesResponseBodyRecordLinesRecordLine : TeaModel {
                 public string FatherCode { get; set; }
-                public string LineDisplayName { get; set; }
                 public string LineCode { get; set; }
+                public string LineDisplayName { get; set; }
                 public string LineName { get; set; }
             }
         };

@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class SetDnsGtmAccessModeRequest : TeaModel {
+        [NameInMap("AccessMode")]
+        [Validation(Required=false)]
+        public string AccessMode { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
         [NameInMap("StrategyId")]
         [Validation(Required=false)]
         public string StrategyId { get; set; }
-
-        [NameInMap("AccessMode")]
-        [Validation(Required=false)]
-        public string AccessMode { get; set; }
 
     }
 

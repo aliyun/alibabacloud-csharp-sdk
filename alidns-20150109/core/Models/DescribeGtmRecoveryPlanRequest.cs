@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmRecoveryPlanRequest : TeaModel {
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }

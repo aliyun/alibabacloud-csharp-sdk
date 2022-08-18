@@ -9,21 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddGtmAccessStrategyRequest : TeaModel {
-        [NameInMap("Lang")]
+        [NameInMap("AccessLines")]
         [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("StrategyName")]
-        [Validation(Required=false)]
-        public string StrategyName { get; set; }
+        public string AccessLines { get; set; }
 
         [NameInMap("DefaultAddrPoolId")]
         [Validation(Required=false)]
@@ -33,9 +21,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string FailoverAddrPoolId { get; set; }
 
-        [NameInMap("AccessLines")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string AccessLines { get; set; }
+        public string InstanceId { get; set; }
+
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
+        [NameInMap("StrategyName")]
+        [Validation(Required=false)]
+        public string StrategyName { get; set; }
 
     }
 

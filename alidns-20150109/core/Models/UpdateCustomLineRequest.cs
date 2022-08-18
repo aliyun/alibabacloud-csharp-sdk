@@ -9,22 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateCustomLineRequest : TeaModel {
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
-        [NameInMap("LineName")]
-        [Validation(Required=false)]
-        public string LineName { get; set; }
-
-        [NameInMap("LineId")]
-        [Validation(Required=false)]
-        public long? LineId { get; set; }
-
         [NameInMap("IpSegment")]
         [Validation(Required=false)]
         public List<UpdateCustomLineRequestIpSegment> IpSegment { get; set; }
@@ -38,6 +22,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string StartIp { get; set; }
 
         }
+
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
+        [NameInMap("LineId")]
+        [Validation(Required=false)]
+        public long? LineId { get; set; }
+
+        [NameInMap("LineName")]
+        [Validation(Required=false)]
+        public string LineName { get; set; }
 
     }
 

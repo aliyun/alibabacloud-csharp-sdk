@@ -9,69 +9,73 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmInstanceResponseBody : TeaModel {
-        [NameInMap("ExpireTimestamp")]
+        [NameInMap("AccessStrategyNum")]
         [Validation(Required=false)]
-        public long? ExpireTimestamp { get; set; }
-
-        [NameInMap("UserDomainName")]
-        [Validation(Required=false)]
-        public string UserDomainName { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("LbaStrategy")]
-        [Validation(Required=false)]
-        public string LbaStrategy { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("CreateTime")]
-        [Validation(Required=false)]
-        public string CreateTime { get; set; }
-
-        [NameInMap("CnameMode")]
-        [Validation(Required=false)]
-        public string CnameMode { get; set; }
-
-        [NameInMap("Ttl")]
-        [Validation(Required=false)]
-        public int? Ttl { get; set; }
-
-        [NameInMap("Cname")]
-        [Validation(Required=false)]
-        public string Cname { get; set; }
-
-        [NameInMap("InstanceName")]
-        [Validation(Required=false)]
-        public string InstanceName { get; set; }
-
-        [NameInMap("VersionCode")]
-        [Validation(Required=false)]
-        public string VersionCode { get; set; }
-
-        [NameInMap("AlertGroup")]
-        [Validation(Required=false)]
-        public string AlertGroup { get; set; }
+        public int? AccessStrategyNum { get; set; }
 
         [NameInMap("AddressPoolNum")]
         [Validation(Required=false)]
         public int? AddressPoolNum { get; set; }
 
-        [NameInMap("AccessStrategyNum")]
+        [NameInMap("AlertGroup")]
         [Validation(Required=false)]
-        public int? AccessStrategyNum { get; set; }
+        public string AlertGroup { get; set; }
+
+        [NameInMap("Cname")]
+        [Validation(Required=false)]
+        public string Cname { get; set; }
+
+        [NameInMap("CnameMode")]
+        [Validation(Required=false)]
+        public string CnameMode { get; set; }
+
+        [NameInMap("CreateTime")]
+        [Validation(Required=false)]
+        public string CreateTime { get; set; }
+
+        [NameInMap("CreateTimestamp")]
+        [Validation(Required=false)]
+        public long? CreateTimestamp { get; set; }
 
         [NameInMap("ExpireTime")]
         [Validation(Required=false)]
         public string ExpireTime { get; set; }
 
-        [NameInMap("CreateTimestamp")]
+        [NameInMap("ExpireTimestamp")]
         [Validation(Required=false)]
-        public long? CreateTimestamp { get; set; }
+        public long? ExpireTimestamp { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("InstanceName")]
+        [Validation(Required=false)]
+        public string InstanceName { get; set; }
+
+        [NameInMap("LbaStrategy")]
+        [Validation(Required=false)]
+        public string LbaStrategy { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("Ttl")]
+        [Validation(Required=false)]
+        public int? Ttl { get; set; }
+
+        [NameInMap("UserDomainName")]
+        [Validation(Required=false)]
+        public string UserDomainName { get; set; }
+
+        [NameInMap("VersionCode")]
+        [Validation(Required=false)]
+        public string VersionCode { get; set; }
 
     }
 

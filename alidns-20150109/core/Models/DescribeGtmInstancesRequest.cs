@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmInstancesRequest : TeaModel {
+        [NameInMap("Keyword")]
+        [Validation(Required=false)]
+        public string Keyword { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("UserClientIp")]
+        [NameInMap("NeedDetailAttributes")]
         [Validation(Required=false)]
-        public string UserClientIp { get; set; }
+        public bool? NeedDetailAttributes { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -25,17 +29,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("Keyword")]
-        [Validation(Required=false)]
-        public string Keyword { get; set; }
-
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
-
-        [NameInMap("NeedDetailAttributes")]
-        [Validation(Required=false)]
-        public bool? NeedDetailAttributes { get; set; }
 
     }
 

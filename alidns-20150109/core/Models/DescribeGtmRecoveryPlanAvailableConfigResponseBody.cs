@@ -17,20 +17,25 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstance> Instance { get; set; }
             public class DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstance : TeaModel {
-                [NameInMap("AddrPool")]
-                [Validation(Required=false)]
-                public List<DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstanceAddrPool> AddrPool { get; set; }
-                public class DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstanceAddrPool : TeaModel {
-                    [NameInMap("AddrPoolId")]
+                public DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstanceAddrPools AddrPools { get; set; }
+                public class DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstanceAddrPools : TeaModel {
+                    [NameInMap("AddrPool")]
                     [Validation(Required=false)]
-                    public string AddrPoolId { get; set; }
+                    public List<DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstanceAddrPoolsAddrPool> AddrPool { get; set; }
+                    public class DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstanceAddrPoolsAddrPool : TeaModel {
+                        [NameInMap("AddrPoolId")]
+                        [Validation(Required=false)]
+                        public string AddrPoolId { get; set; }
 
-                    [NameInMap("Name")]
-                    [Validation(Required=false)]
-                    public string Name { get; set; }
+                        [NameInMap("Name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                    }
 
                 }
-
+                public string InstanceId { get; set; }
+                public string InstanceName { get; set; }
             }
         };
 

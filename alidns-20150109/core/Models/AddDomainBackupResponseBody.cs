@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddDomainBackupResponseBody : TeaModel {
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
+
         [NameInMap("PeriodType")]
         [Validation(Required=false)]
         public string PeriodType { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
 
     }
 

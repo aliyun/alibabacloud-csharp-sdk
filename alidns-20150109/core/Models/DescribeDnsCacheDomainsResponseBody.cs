@@ -13,50 +13,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public List<DescribeDnsCacheDomainsResponseBodyDomains> Domains { get; set; }
         public class DescribeDnsCacheDomainsResponseBodyDomains : TeaModel {
-            [NameInMap("SourceProtocol")]
-            [Validation(Required=false)]
-            public string SourceProtocol { get; set; }
-
-            [NameInMap("UpdateTime")]
-            [Validation(Required=false)]
-            public string UpdateTime { get; set; }
-
-            [NameInMap("Remark")]
-            [Validation(Required=false)]
-            public string Remark { get; set; }
-
-            [NameInMap("ExpireTime")]
-            [Validation(Required=false)]
-            public string ExpireTime { get; set; }
-
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-            [NameInMap("SourceEdns")]
-            [Validation(Required=false)]
-            public string SourceEdns { get; set; }
-
-            [NameInMap("DomainName")]
-            [Validation(Required=false)]
-            public string DomainName { get; set; }
-
-            [NameInMap("DomainId")]
-            [Validation(Required=false)]
-            public string DomainId { get; set; }
-
-            [NameInMap("UpdateTimestamp")]
-            [Validation(Required=false)]
-            public long? UpdateTimestamp { get; set; }
-
-            [NameInMap("ExpireTimestamp")]
-            [Validation(Required=false)]
-            public long? ExpireTimestamp { get; set; }
-
             [NameInMap("CacheTtlMax")]
             [Validation(Required=false)]
             public int? CacheTtlMax { get; set; }
@@ -65,9 +21,37 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public int? CacheTtlMin { get; set; }
 
-            [NameInMap("VersionCode")]
+            [NameInMap("CreateTime")]
             [Validation(Required=false)]
-            public string VersionCode { get; set; }
+            public string CreateTime { get; set; }
+
+            [NameInMap("CreateTimestamp")]
+            [Validation(Required=false)]
+            public long? CreateTimestamp { get; set; }
+
+            [NameInMap("DomainId")]
+            [Validation(Required=false)]
+            public string DomainId { get; set; }
+
+            [NameInMap("DomainName")]
+            [Validation(Required=false)]
+            public string DomainName { get; set; }
+
+            [NameInMap("ExpireTime")]
+            [Validation(Required=false)]
+            public string ExpireTime { get; set; }
+
+            [NameInMap("ExpireTimestamp")]
+            [Validation(Required=false)]
+            public long? ExpireTimestamp { get; set; }
+
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
+            [NameInMap("Remark")]
+            [Validation(Required=false)]
+            public string Remark { get; set; }
 
             [NameInMap("SourceDnsServers")]
             [Validation(Required=false)]
@@ -83,15 +67,31 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
             }
 
-            [NameInMap("CreateTimestamp")]
+            [NameInMap("SourceEdns")]
             [Validation(Required=false)]
-            public long? CreateTimestamp { get; set; }
+            public string SourceEdns { get; set; }
+
+            [NameInMap("SourceProtocol")]
+            [Validation(Required=false)]
+            public string SourceProtocol { get; set; }
+
+            [NameInMap("UpdateTime")]
+            [Validation(Required=false)]
+            public string UpdateTime { get; set; }
+
+            [NameInMap("UpdateTimestamp")]
+            [Validation(Required=false)]
+            public long? UpdateTimestamp { get; set; }
+
+            [NameInMap("VersionCode")]
+            [Validation(Required=false)]
+            public string VersionCode { get; set; }
 
         }
 
-        [NameInMap("TotalCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public long? TotalCount { get; set; }
+        public long? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -101,9 +101,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public long? PageNumber { get; set; }
+        public long? TotalCount { get; set; }
 
     }
 

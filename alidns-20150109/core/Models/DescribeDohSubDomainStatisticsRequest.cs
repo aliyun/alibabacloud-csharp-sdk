@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDohSubDomainStatisticsRequest : TeaModel {
+        [NameInMap("EndDate")]
+        [Validation(Required=false)]
+        public string EndDate { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
-
-        [NameInMap("SubDomain")]
-        [Validation(Required=false)]
-        public string SubDomain { get; set; }
 
         [NameInMap("StartDate")]
         [Validation(Required=false)]
         public string StartDate { get; set; }
 
-        [NameInMap("EndDate")]
+        [NameInMap("SubDomain")]
         [Validation(Required=false)]
-        public string EndDate { get; set; }
+        public string SubDomain { get; set; }
 
     }
 

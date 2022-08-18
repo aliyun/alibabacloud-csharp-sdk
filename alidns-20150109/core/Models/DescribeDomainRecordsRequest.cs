@@ -9,17 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainRecordsRequest : TeaModel {
-        [NameInMap("Lang")]
+        [NameInMap("Direction")]
         [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
+        public string Direction { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
+
+        [NameInMap("GroupId")]
+        [Validation(Required=false)]
+        public long? GroupId { get; set; }
+
+        [NameInMap("KeyWord")]
+        [Validation(Required=false)]
+        public string KeyWord { get; set; }
+
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
+        [NameInMap("Line")]
+        [Validation(Required=false)]
+        public string Line { get; set; }
+
+        [NameInMap("OrderBy")]
+        [Validation(Required=false)]
+        public string OrderBy { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -29,13 +45,21 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
-        [NameInMap("KeyWord")]
-        [Validation(Required=false)]
-        public string KeyWord { get; set; }
-
         [NameInMap("RRKeyWord")]
         [Validation(Required=false)]
         public string RRKeyWord { get; set; }
+
+        [NameInMap("SearchMode")]
+        [Validation(Required=false)]
+        public string SearchMode { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
         [NameInMap("TypeKeyWord")]
         [Validation(Required=false)]
@@ -44,34 +68,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [NameInMap("ValueKeyWord")]
         [Validation(Required=false)]
         public string ValueKeyWord { get; set; }
-
-        [NameInMap("OrderBy")]
-        [Validation(Required=false)]
-        public string OrderBy { get; set; }
-
-        [NameInMap("Direction")]
-        [Validation(Required=false)]
-        public string Direction { get; set; }
-
-        [NameInMap("SearchMode")]
-        [Validation(Required=false)]
-        public string SearchMode { get; set; }
-
-        [NameInMap("GroupId")]
-        [Validation(Required=false)]
-        public long? GroupId { get; set; }
-
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
-        [NameInMap("Line")]
-        [Validation(Required=false)]
-        public string Line { get; set; }
-
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
 
     }
 

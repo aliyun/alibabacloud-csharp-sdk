@@ -9,37 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateDnsGtmInstanceGlobalConfigRequest : TeaModel {
-        [NameInMap("Lang")]
+        [NameInMap("AlertConfig")]
         [Validation(Required=false)]
-        public string Lang { get; set; }
+        public List<UpdateDnsGtmInstanceGlobalConfigRequestAlertConfig> AlertConfig { get; set; }
+        public class UpdateDnsGtmInstanceGlobalConfigRequestAlertConfig : TeaModel {
+            [NameInMap("DingtalkNotice")]
+            [Validation(Required=false)]
+            public bool? DingtalkNotice { get; set; }
 
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
+            [NameInMap("EmailNotice")]
+            [Validation(Required=false)]
+            public bool? EmailNotice { get; set; }
 
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
+            [NameInMap("NoticeType")]
+            [Validation(Required=false)]
+            public string NoticeType { get; set; }
 
-        [NameInMap("InstanceName")]
-        [Validation(Required=false)]
-        public string InstanceName { get; set; }
+            [NameInMap("SmsNotice")]
+            [Validation(Required=false)]
+            public bool? SmsNotice { get; set; }
 
-        [NameInMap("Ttl")]
-        [Validation(Required=false)]
-        public int? Ttl { get; set; }
-
-        [NameInMap("PublicCnameMode")]
-        [Validation(Required=false)]
-        public string PublicCnameMode { get; set; }
-
-        [NameInMap("PublicUserDomainName")]
-        [Validation(Required=false)]
-        public string PublicUserDomainName { get; set; }
-
-        [NameInMap("PublicZoneName")]
-        [Validation(Required=false)]
-        public string PublicZoneName { get; set; }
+        }
 
         [NameInMap("AlertGroup")]
         [Validation(Required=false)]
@@ -49,23 +39,41 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string CnameType { get; set; }
 
-        [NameInMap("AlertConfig")]
+        [NameInMap("ForceUpdate")]
         [Validation(Required=false)]
-        public List<UpdateDnsGtmInstanceGlobalConfigRequestAlertConfig> AlertConfig { get; set; }
-        public class UpdateDnsGtmInstanceGlobalConfigRequestAlertConfig : TeaModel {
-            [NameInMap("SmsNotice")]
-            [Validation(Required=false)]
-            public bool? SmsNotice { get; set; }
+        public bool? ForceUpdate { get; set; }
 
-            [NameInMap("NoticeType")]
-            [Validation(Required=false)]
-            public string NoticeType { get; set; }
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
-            [NameInMap("EmailNotice")]
-            [Validation(Required=false)]
-            public bool? EmailNotice { get; set; }
+        [NameInMap("InstanceName")]
+        [Validation(Required=false)]
+        public string InstanceName { get; set; }
 
-        }
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
+        [NameInMap("PublicCnameMode")]
+        [Validation(Required=false)]
+        public string PublicCnameMode { get; set; }
+
+        [NameInMap("PublicRr")]
+        [Validation(Required=false)]
+        public string PublicRr { get; set; }
+
+        [NameInMap("PublicUserDomainName")]
+        [Validation(Required=false)]
+        public string PublicUserDomainName { get; set; }
+
+        [NameInMap("PublicZoneName")]
+        [Validation(Required=false)]
+        public string PublicZoneName { get; set; }
+
+        [NameInMap("Ttl")]
+        [Validation(Required=false)]
+        public int? Ttl { get; set; }
 
     }
 

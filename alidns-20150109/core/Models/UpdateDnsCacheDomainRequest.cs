@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateDnsCacheDomainRequest : TeaModel {
-        [NameInMap("Lang")]
+        [NameInMap("CacheTtlMax")]
         [Validation(Required=false)]
-        public string Lang { get; set; }
+        public int? CacheTtlMax { get; set; }
 
-        [NameInMap("UserClientIp")]
+        [NameInMap("CacheTtlMin")]
         [Validation(Required=false)]
-        public string UserClientIp { get; set; }
+        public int? CacheTtlMin { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -25,21 +25,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("CacheTtlMin")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public int? CacheTtlMin { get; set; }
-
-        [NameInMap("CacheTtlMax")]
-        [Validation(Required=false)]
-        public int? CacheTtlMax { get; set; }
-
-        [NameInMap("SourceProtocol")]
-        [Validation(Required=false)]
-        public string SourceProtocol { get; set; }
-
-        [NameInMap("SourceEdns")]
-        [Validation(Required=false)]
-        public string SourceEdns { get; set; }
+        public string Lang { get; set; }
 
         [NameInMap("SourceDnsServer")]
         [Validation(Required=false)]
@@ -54,6 +42,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string Port { get; set; }
 
         }
+
+        [NameInMap("SourceEdns")]
+        [Validation(Required=false)]
+        public string SourceEdns { get; set; }
+
+        [NameInMap("SourceProtocol")]
+        [Validation(Required=false)]
+        public string SourceProtocol { get; set; }
 
     }
 

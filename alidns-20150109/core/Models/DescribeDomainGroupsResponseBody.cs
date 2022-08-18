@@ -17,15 +17,15 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDomainGroupsResponseBodyDomainGroupsDomainGroup> DomainGroup { get; set; }
             public class DescribeDomainGroupsResponseBodyDomainGroupsDomainGroup : TeaModel {
+                public long? DomainCount { get; set; }
                 public string GroupId { get; set; }
                 public string GroupName { get; set; }
-                public long? DomainCount { get; set; }
             }
         };
 
-        [NameInMap("TotalCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public long? TotalCount { get; set; }
+        public long? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -35,9 +35,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public long? PageNumber { get; set; }
+        public long? TotalCount { get; set; }
 
     }
 

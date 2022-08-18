@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDohDomainStatisticsSummaryResponseBody : TeaModel {
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -17,29 +21,21 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("TotalPages")]
-        [Validation(Required=false)]
-        public int? TotalPages { get; set; }
-
-        [NameInMap("TotalItems")]
-        [Validation(Required=false)]
-        public int? TotalItems { get; set; }
-
         [NameInMap("Statistics")]
         [Validation(Required=false)]
         public List<DescribeDohDomainStatisticsSummaryResponseBodyStatistics> Statistics { get; set; }
         public class DescribeDohDomainStatisticsSummaryResponseBodyStatistics : TeaModel {
-            [NameInMap("V6HttpCount")]
+            [NameInMap("DomainName")]
             [Validation(Required=false)]
-            public long? V6HttpCount { get; set; }
+            public string DomainName { get; set; }
 
-            [NameInMap("V4HttpsCount")]
+            [NameInMap("HttpCount")]
             [Validation(Required=false)]
-            public long? V4HttpsCount { get; set; }
+            public long? HttpCount { get; set; }
+
+            [NameInMap("HttpsCount")]
+            [Validation(Required=false)]
+            public long? HttpsCount { get; set; }
 
             [NameInMap("IpCount")]
             [Validation(Required=false)]
@@ -49,27 +45,31 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public long? TotalCount { get; set; }
 
-            [NameInMap("HttpCount")]
-            [Validation(Required=false)]
-            public long? HttpCount { get; set; }
-
-            [NameInMap("DomainName")]
-            [Validation(Required=false)]
-            public string DomainName { get; set; }
-
-            [NameInMap("HttpsCount")]
-            [Validation(Required=false)]
-            public long? HttpsCount { get; set; }
-
             [NameInMap("V4HttpCount")]
             [Validation(Required=false)]
             public long? V4HttpCount { get; set; }
+
+            [NameInMap("V4HttpsCount")]
+            [Validation(Required=false)]
+            public long? V4HttpsCount { get; set; }
+
+            [NameInMap("V6HttpCount")]
+            [Validation(Required=false)]
+            public long? V6HttpCount { get; set; }
 
             [NameInMap("V6HttpsCount")]
             [Validation(Required=false)]
             public long? V6HttpsCount { get; set; }
 
         }
+
+        [NameInMap("TotalItems")]
+        [Validation(Required=false)]
+        public int? TotalItems { get; set; }
+
+        [NameInMap("TotalPages")]
+        [Validation(Required=false)]
+        public int? TotalPages { get; set; }
 
     }
 
