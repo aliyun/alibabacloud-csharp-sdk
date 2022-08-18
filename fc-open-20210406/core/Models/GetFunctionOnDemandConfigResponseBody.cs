@@ -13,9 +13,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public long? MaximumInstanceCount { get; set; }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("resource")]
         [Validation(Required=false)]
         public string Resource { get; set; }

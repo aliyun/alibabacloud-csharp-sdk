@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
-    public class EventSourceConfig : TeaModel {
-        [NameInMap("eventSourceParameters")]
+    public class RoutePolicy : TeaModel {
+        [NameInMap("condition")]
         [Validation(Required=false)]
-        public EventSourceParameters EventSourceParameters { get; set; }
+        public byte[] Condition { get; set; }
 
-        [NameInMap("eventSourceType")]
+        [NameInMap("policyItems")]
         [Validation(Required=false)]
-        public string EventSourceType { get; set; }
+        public PolicyItem PolicyItems { get; set; }
 
     }
 

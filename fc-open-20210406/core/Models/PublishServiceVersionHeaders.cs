@@ -13,9 +13,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public Dictionary<string, string> CommonHeaders { get; set; }
 
-        /// <summary>
-        /// 服务的ETag，可通过GetService接口获得。若发布版本时服务的ETag与传入的不一致，则发布版本会失败。
-        /// </summary>
         [NameInMap("If-Match")]
         [Validation(Required=false)]
         public string IfMatch { get; set; }
