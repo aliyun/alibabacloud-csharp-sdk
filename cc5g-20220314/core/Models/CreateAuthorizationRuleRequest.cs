@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public string Destination { get; set; }
 
+        [NameInMap("DestinationPort")]
+        [Validation(Required=false)]
+        public string DestinationPort { get; set; }
+
         [NameInMap("DestinationType")]
         [Validation(Required=false)]
         public string DestinationType { get; set; }
@@ -36,6 +40,10 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [NameInMap("Policy")]
         [Validation(Required=false)]
         public string Policy { get; set; }
+
+        [NameInMap("Protocol")]
+        [Validation(Required=false)]
+        public string Protocol { get; set; }
 
         [NameInMap("SourceCidr")]
         [Validation(Required=false)]
