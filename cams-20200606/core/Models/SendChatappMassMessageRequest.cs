@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
-    public class SendChatappMessageRequest : TeaModel {
+    public class SendChatappMassMessageRequest : TeaModel {
         [NameInMap("ChannelType")]
         [Validation(Required=false)]
         public string ChannelType { get; set; }
-
-        [NameInMap("Content")]
-        [Validation(Required=false)]
-        public string Content { get; set; }
 
         [NameInMap("CustWabaId")]
         [Validation(Required=false)]
@@ -37,29 +33,31 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string Language { get; set; }
 
-        [NameInMap("MessageType")]
+        [NameInMap("SenderList")]
         [Validation(Required=false)]
-        public string MessageType { get; set; }
+        public List<SendChatappMassMessageRequestSenderList> SenderList { get; set; }
+        public class SendChatappMassMessageRequestSenderList : TeaModel {
+            [NameInMap("Payload")]
+            [Validation(Required=false)]
+            public List<string> Payload { get; set; }
 
-        [NameInMap("Payload")]
+            [NameInMap("TemplateParams")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> TemplateParams { get; set; }
+
+            [NameInMap("To")]
+            [Validation(Required=false)]
+            public string To { get; set; }
+
+        }
+
+        [NameInMap("TaskId")]
         [Validation(Required=false)]
-        public List<string> Payload { get; set; }
+        public string TaskId { get; set; }
 
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]
         public string TemplateCode { get; set; }
-
-        [NameInMap("TemplateParams")]
-        [Validation(Required=false)]
-        public Dictionary<string, string> TemplateParams { get; set; }
-
-        [NameInMap("To")]
-        [Validation(Required=false)]
-        public string To { get; set; }
-
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
 
     }
 

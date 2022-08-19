@@ -9,30 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListChatappTemplateShrinkRequest : TeaModel {
-        /// <summary>
-        /// 审核状态
-        /// </summary>
         [NameInMap("AuditStatus")]
         [Validation(Required=false)]
         public string AuditStatus { get; set; }
 
-        /// <summary>
-        /// ISV客户WabaId
-        /// </summary>
         [NameInMap("CustWabaId")]
         [Validation(Required=false)]
         public string CustWabaId { get; set; }
 
-        /// <summary>
-        /// 语言
-        /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
         public string Language { get; set; }
 
-        /// <summary>
-        /// 模板名称
-        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

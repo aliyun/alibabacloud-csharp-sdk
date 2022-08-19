@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetChatappTemplateDetailResponseBody : TeaModel {
-        /// <summary>
-        /// 返回结果 OK 为正常
-        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// TemplateDetail
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetChatappTemplateDetailResponseBodyData Data { get; set; }
@@ -66,9 +60,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// 请求ID
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
