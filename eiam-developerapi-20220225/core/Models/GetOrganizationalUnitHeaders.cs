@@ -13,9 +13,6 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         [Validation(Required=false)]
         public Dictionary<string, string> CommonHeaders { get; set; }
 
-        /// <summary>
-        /// 认证信息，格式:Bearer access_token
-        /// </summary>
         [NameInMap("Authorization")]
         [Validation(Required=false)]
         public string Authorization { get; set; }

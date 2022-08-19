@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class CreateUserResponseBody : TeaModel {
-        /// <summary>
-        /// 账户ID
-        /// </summary>
         [NameInMap("userId")]
         [Validation(Required=false)]
         public string UserId { get; set; }

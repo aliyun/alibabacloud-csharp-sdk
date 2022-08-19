@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
-    public class GetApplicationProvisioningScopeResponseBody : TeaModel {
-        [NameInMap("organizationalUnitIds")]
+    public class GetUserIdByPhoneNumberRequest : TeaModel {
+        [NameInMap("phoneNumber")]
         [Validation(Required=false)]
-        public List<string> OrganizationalUnitIds { get; set; }
+        public string PhoneNumber { get; set; }
 
     }
 

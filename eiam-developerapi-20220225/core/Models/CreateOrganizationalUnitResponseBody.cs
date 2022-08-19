@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class CreateOrganizationalUnitResponseBody : TeaModel {
-        /// <summary>
-        /// 机构ID
-        /// </summary>
         [NameInMap("organizationalUnitId")]
         [Validation(Required=false)]
         public string OrganizationalUnitId { get; set; }

@@ -8,22 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
-    public class CreateOrganizationalUnitRequest : TeaModel {
-        [NameInMap("description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
+    public class GetOrganizationalUnitIdByExternalIdRequest : TeaModel {
         [NameInMap("organizationalUnitExternalId")]
         [Validation(Required=false)]
         public string OrganizationalUnitExternalId { get; set; }
 
-        [NameInMap("organizationalUnitName")]
+        [NameInMap("organizationalUnitSourceId")]
         [Validation(Required=false)]
-        public string OrganizationalUnitName { get; set; }
+        public string OrganizationalUnitSourceId { get; set; }
 
-        [NameInMap("parentId")]
+        [NameInMap("organizationalUnitSourceType")]
         [Validation(Required=false)]
-        public string ParentId { get; set; }
+        public string OrganizationalUnitSourceType { get; set; }
 
     }
 
