@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        [NameInMap("Ipv6LeaseTime")]
+        [Validation(Required=false)]
+        public string Ipv6LeaseTime { get; set; }
+
+        [NameInMap("LeaseTime")]
+        [Validation(Required=false)]
+        public string LeaseTime { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

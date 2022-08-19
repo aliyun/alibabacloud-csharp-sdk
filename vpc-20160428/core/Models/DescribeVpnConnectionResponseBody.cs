@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpnConnectionResponseBody : TeaModel {
+        [NameInMap("AttachInstanceId")]
+        [Validation(Required=false)]
+        public string AttachInstanceId { get; set; }
+
+        [NameInMap("AttachType")]
+        [Validation(Required=false)]
+        public string AttachType { get; set; }
+
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public long? CreateTime { get; set; }
+
+        [NameInMap("CrossAccountAuthorized")]
+        [Validation(Required=false)]
+        public bool? CrossAccountAuthorized { get; set; }
 
         [NameInMap("CustomerGatewayId")]
         [Validation(Required=false)]
@@ -62,6 +74,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string RemoteId { get; set; }
         };
 
+        [NameInMap("InternetIp")]
+        [Validation(Required=false)]
+        public string InternetIp { get; set; }
+
         [NameInMap("IpsecConfig")]
         [Validation(Required=false)]
         public DescribeVpnConnectionResponseBodyIpsecConfig IpsecConfig { get; set; }
@@ -88,6 +104,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("NetworkType")]
+        [Validation(Required=false)]
+        public string NetworkType { get; set; }
+
         [NameInMap("RemoteCaCertificate")]
         [Validation(Required=false)]
         public string RemoteCaCertificate { get; set; }
@@ -100,9 +120,25 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Spec")]
+        [Validation(Required=false)]
+        public string Spec { get; set; }
+
+        [NameInMap("State")]
+        [Validation(Required=false)]
+        public string State { get; set; }
+
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        [NameInMap("TransitRouterId")]
+        [Validation(Required=false)]
+        public string TransitRouterId { get; set; }
+
+        [NameInMap("TransitRouterName")]
+        [Validation(Required=false)]
+        public string TransitRouterName { get; set; }
 
         [NameInMap("VcoHealthCheck")]
         [Validation(Required=false)]
@@ -117,6 +153,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("Interval")]
             [Validation(Required=false)]
             public int? Interval { get; set; }
+            [NameInMap("Policy")]
+            [Validation(Required=false)]
+            public string Policy { get; set; }
             [NameInMap("Retry")]
             [Validation(Required=false)]
             public int? Retry { get; set; }
@@ -165,6 +204,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("VpnGatewayId")]
         [Validation(Required=false)]
         public string VpnGatewayId { get; set; }
+
+        [NameInMap("ZoneNo")]
+        [Validation(Required=false)]
+        public string ZoneNo { get; set; }
 
     }
 

@@ -36,6 +36,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("DomainNameServers")]
             [Validation(Required=false)]
             public string DomainNameServers { get; set; }
+            [NameInMap("Ipv6LeaseTime")]
+            [Validation(Required=false)]
+            public string Ipv6LeaseTime { get; set; }
+            [NameInMap("LeaseTime")]
+            [Validation(Required=false)]
+            public string LeaseTime { get; set; }
             [NameInMap("TFTPServerName")]
             [Validation(Required=false)]
             public string TFTPServerName { get; set; }

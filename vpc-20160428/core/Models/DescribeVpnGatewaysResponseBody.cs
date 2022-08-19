@@ -43,6 +43,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string InternetIp { get; set; }
                 public string IpsecVpn { get; set; }
                 public string Name { get; set; }
+                public string NetworkType { get; set; }
                 public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData ReservationData { get; set; }
                 public class DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData : TeaModel {
                     [NameInMap("ReservationEndTime")]

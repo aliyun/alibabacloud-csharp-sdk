@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string DhcpOptionsSetStatus { get; set; }
 
+        [NameInMap("Ipv4GatewayId")]
+        [Validation(Required=false)]
+        public string Ipv4GatewayId { get; set; }
+
         [NameInMap("Ipv6CidrBlock")]
         [Validation(Required=false)]
         public string Ipv6CidrBlock { get; set; }
@@ -109,6 +113,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        [NameInMap("SupportIpv4Gateway")]
+        [Validation(Required=false)]
+        public bool? SupportIpv4Gateway { get; set; }
 
         [NameInMap("UserCidrs")]
         [Validation(Required=false)]

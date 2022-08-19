@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeFlowLogsResponseBodyFlowLogsFlowLog> FlowLog { get; set; }
             public class DescribeFlowLogsResponseBodyFlowLogsFlowLog : TeaModel {
+                public int? AggregationInterval { get; set; }
+                public string BusinessStatus { get; set; }
                 public string CreationTime { get; set; }
                 public string Description { get; set; }
                 public string FlowLogId { get; set; }

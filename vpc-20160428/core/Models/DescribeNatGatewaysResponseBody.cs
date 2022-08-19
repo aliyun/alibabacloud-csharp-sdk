@@ -17,6 +17,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeNatGatewaysResponseBodyNatGatewaysNatGateway> NatGateway { get; set; }
             public class DescribeNatGatewaysResponseBodyNatGatewaysNatGateway : TeaModel {
+                public bool? AutoPay { get; set; }
                 public string BusinessStatus { get; set; }
                 public string CreationTime { get; set; }
                 public bool? DeletionProtection { get; set; }
@@ -46,6 +47,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     [Validation(Required=false)]
                     public List<DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpListsIpList> IpList { get; set; }
                     public class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpListsIpList : TeaModel {
+                        [NameInMap("AllocationId")]
+                        [Validation(Required=false)]
+                        public string AllocationId { get; set; }
+
                         [NameInMap("IpAddress")]
                         [Validation(Required=false)]
                         public string IpAddress { get; set; }
@@ -57,6 +62,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         [NameInMap("SnatEntryEnabled")]
                         [Validation(Required=false)]
                         public bool? SnatEntryEnabled { get; set; }
+
+                        [NameInMap("UsingStatus")]
+                        [Validation(Required=false)]
+                        public string UsingStatus { get; set; }
 
                     }
 
@@ -80,6 +89,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     [NameInMap("MaxBandwidth")]
                     [Validation(Required=false)]
                     public int? MaxBandwidth { get; set; }
+
+                    [NameInMap("MaxSessionEstablishRate")]
+                    [Validation(Required=false)]
+                    public int? MaxSessionEstablishRate { get; set; }
+
+                    [NameInMap("MaxSessionQuota")]
+                    [Validation(Required=false)]
+                    public int? MaxSessionQuota { get; set; }
 
                     [NameInMap("PrivateIpAddress")]
                     [Validation(Required=false)]

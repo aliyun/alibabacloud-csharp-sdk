@@ -29,10 +29,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? IsFakeAsn { get; set; }
 
-        [NameInMap("LocalAsn")]
-        [Validation(Required=false)]
-        public long? LocalAsn { get; set; }
-
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

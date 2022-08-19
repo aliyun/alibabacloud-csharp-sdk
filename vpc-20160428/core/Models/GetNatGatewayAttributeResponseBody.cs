@@ -135,16 +135,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string VswitchId { get; set; }
         };
 
-        /// <summary>
-        /// 默认不支持私网链接。设置为1则意味着支持私网链接
-        /// </summary>
         [NameInMap("PrivateLinkEnabled")]
         [Validation(Required=false)]
         public bool? PrivateLinkEnabled { get; set; }
 
-        /// <summary>
-        /// Fullnat：使用FullNat模式 Geneve：使用Geneve模式。 预估大部分场景都是非Geneve模式的。
-        /// </summary>
         [NameInMap("PrivateLinkMode")]
         [Validation(Required=false)]
         public string PrivateLinkMode { get; set; }

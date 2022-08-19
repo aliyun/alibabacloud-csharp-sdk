@@ -17,16 +17,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
-        /// <summary>
-        /// 要修改的DNAT条目的ID。
-        /// </summary>
         [NameInMap("FullNatEntryId")]
         [Validation(Required=false)]
         public string FullNatEntryId { get; set; }
 
-        /// <summary>
-        /// FullNAT条目所属的FullNAT列表的ID。
-        /// </summary>
         [NameInMap("FullNatTableId")]
         [Validation(Required=false)]
         public string FullNatTableId { get; set; }

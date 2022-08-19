@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("PublicIpAddressPoolId")]
+        [Validation(Required=false)]
+        public string PublicIpAddressPoolId { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -95,9 +99,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        /// <summary>
-        /// 是否开启安全防护
-        /// </summary>
         [NameInMap("SecurityProtectionEnabled")]
         [Validation(Required=false)]
         public bool? SecurityProtectionEnabled { get; set; }

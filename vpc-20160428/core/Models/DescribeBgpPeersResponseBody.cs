@@ -17,6 +17,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeBgpPeersResponseBodyBgpPeersBgpPeer> BgpPeer { get; set; }
             public class DescribeBgpPeersResponseBodyBgpPeersBgpPeer : TeaModel {
+                public int? AdvertisedRouteCount { get; set; }
                 public string AuthKey { get; set; }
                 public int? BfdMultiHop { get; set; }
                 public string BgpGroupId { get; set; }
@@ -24,14 +25,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string BgpStatus { get; set; }
                 public string Description { get; set; }
                 public bool? EnableBfd { get; set; }
+                public string GmtModified { get; set; }
                 public string Hold { get; set; }
                 public string IpVersion { get; set; }
-                public string IsFake { get; set; }
+                public bool? IsFake { get; set; }
                 public string Keepalive { get; set; }
                 public string LocalAsn { get; set; }
                 public string Name { get; set; }
                 public string PeerAsn { get; set; }
                 public string PeerIpAddress { get; set; }
+                public int? ReceivedRouteCount { get; set; }
                 public string RegionId { get; set; }
                 public string RouteLimit { get; set; }
                 public string RouterId { get; set; }

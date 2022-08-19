@@ -27,6 +27,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public class DescribeRouteEntryListResponseBodyRouteEntrysRouteEntry : TeaModel {
                 public string Description { get; set; }
                 public string DestinationCidrBlock { get; set; }
+                public string GmtModified { get; set; }
                 public string IpVersion { get; set; }
                 public DescribeRouteEntryListResponseBodyRouteEntrysRouteEntryNextHops NextHops { get; set; }
                 public class DescribeRouteEntryListResponseBodyRouteEntrysRouteEntryNextHops : TeaModel {

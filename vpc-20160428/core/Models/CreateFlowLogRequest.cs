@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateFlowLogRequest : TeaModel {
+        [NameInMap("AggregationInterval")]
+        [Validation(Required=false)]
+        public int? AggregationInterval { get; set; }
+
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }

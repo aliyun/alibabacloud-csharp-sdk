@@ -9,16 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UpdateVirtualPhysicalConnectionRequest : TeaModel {
-        /// <summary>
-        /// DryRun
-        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
-        /// <summary>
-        /// Vpconn的实例ID
-        /// </summary>
+        [NameInMap("ExpectSpec")]
+        [Validation(Required=false)]
+        public string ExpectSpec { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -27,16 +25,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        /// <summary>
-        /// 幂等Token
-        /// </summary>
         [NameInMap("Token")]
         [Validation(Required=false)]
         public string Token { get; set; }
 
-        /// <summary>
-        /// vpconn的VlanID
-        /// </summary>
         [NameInMap("VlanId")]
         [Validation(Required=false)]
         public long? VlanId { get; set; }

@@ -33,7 +33,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnection> VpnConnection { get; set; }
             public class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnection : TeaModel {
+                public string AttachInstanceId { get; set; }
+                public string AttachType { get; set; }
                 public long? CreateTime { get; set; }
+                public bool? CrossAccountAuthorized { get; set; }
                 public string CustomerGatewayId { get; set; }
                 public bool? EffectImmediately { get; set; }
                 public bool? EnableDpd { get; set; }
@@ -98,9 +101,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
                 public string LocalSubnet { get; set; }
                 public string Name { get; set; }
+                public string NetworkType { get; set; }
                 public string RemoteCaCertificate { get; set; }
                 public string RemoteSubnet { get; set; }
+                public string Spec { get; set; }
+                public string State { get; set; }
                 public string Status { get; set; }
+                public string TransitRouterId { get; set; }
+                public string TransitRouterName { get; set; }
                 public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionVcoHealthCheck VcoHealthCheck { get; set; }
                 public class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionVcoHealthCheck : TeaModel {
                     [NameInMap("Dip")]
@@ -114,6 +122,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     [NameInMap("Interval")]
                     [Validation(Required=false)]
                     public int? Interval { get; set; }
+
+                    [NameInMap("Policy")]
+                    [Validation(Required=false)]
+                    public string Policy { get; set; }
 
                     [NameInMap("Retry")]
                     [Validation(Required=false)]

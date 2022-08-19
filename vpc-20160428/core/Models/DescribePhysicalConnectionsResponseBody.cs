@@ -36,6 +36,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Description { get; set; }
                 public string EnabledTime { get; set; }
                 public string EndTime { get; set; }
+                public string ExpectSpec { get; set; }
                 public string HasReservationData { get; set; }
                 public string LineOperator { get; set; }
                 public string LoaStatus { get; set; }

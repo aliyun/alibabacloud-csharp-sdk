@@ -57,9 +57,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        /// <summary>
-        /// 是否开启安全防护
-        /// </summary>
         [NameInMap("SecurityProtectionEnabled")]
         [Validation(Required=false)]
         public bool? SecurityProtectionEnabled { get; set; }

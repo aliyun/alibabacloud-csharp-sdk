@@ -51,9 +51,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         }
 
-        /// <summary>
-        /// 本次请求最大数量
-        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public long? MaxResults { get; set; }
@@ -62,9 +59,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

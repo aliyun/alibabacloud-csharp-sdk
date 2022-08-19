@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string PricingCycle { get; set; }
 
+        [NameInMap("PublicIpAddressPoolId")]
+        [Validation(Required=false)]
+        public string PublicIpAddressPoolId { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListVirtualPhysicalConnectionsResponseBody : TeaModel {
-        /// <summary>
-        /// 本次查询数量
-        /// </summary>
         [NameInMap("Count")]
         [Validation(Required=false)]
         public int? Count { get; set; }
@@ -20,23 +17,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 总数
-        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
-        /// <summary>
-        /// Vpconn
-        /// </summary>
         [NameInMap("VirtualPhysicalConnections")]
         [Validation(Required=false)]
         public List<ListVirtualPhysicalConnectionsResponseBodyVirtualPhysicalConnections> VirtualPhysicalConnections { get; set; }
@@ -84,6 +72,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public string EndTime { get; set; }
+
+            [NameInMap("ExpectSpec")]
+            [Validation(Required=false)]
+            public string ExpectSpec { get; set; }
 
             [NameInMap("LineOperator")]
             [Validation(Required=false)]

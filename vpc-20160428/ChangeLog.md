@@ -1,3 +1,6 @@
+2022-08-19 Version: 2.0.2
+- Add DescribePublicIpAddress Interface.
+
 2021-12-05 Version: 2.0.1
 - Generated csharp 2016-04-28 for Vpc.
 

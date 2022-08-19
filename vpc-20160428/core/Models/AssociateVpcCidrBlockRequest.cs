@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AssociateVpcCidrBlockRequest : TeaModel {
+        [NameInMap("IPv6CidrBlock")]
+        [Validation(Required=false)]
+        public string IPv6CidrBlock { get; set; }
+
         [NameInMap("IpVersion")]
         [Validation(Required=false)]
         public string IpVersion { get; set; }

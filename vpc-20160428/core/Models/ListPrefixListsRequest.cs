@@ -25,16 +25,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        /// <summary>
-        /// 前缀列表的实例ID
-        /// </summary>
         [NameInMap("PrefixListIds")]
         [Validation(Required=false)]
         public List<string> PrefixListIds { get; set; }
 
-        /// <summary>
-        /// 地域
-        /// </summary>
+        [NameInMap("PrefixListName")]
+        [Validation(Required=false)]
+        public string PrefixListName { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

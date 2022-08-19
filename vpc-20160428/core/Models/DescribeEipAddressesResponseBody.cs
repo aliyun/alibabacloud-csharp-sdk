@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string BusinessStatus { get; set; }
                 public string ChargeType { get; set; }
                 public bool? DeletionProtection { get; set; }
-                public string Descritpion { get; set; }
+                public string Description { get; set; }
                 public string EipBandwidth { get; set; }
                 public string ExpiredTime { get; set; }
                 public string HDMonitorStatus { get; set; }
@@ -59,6 +59,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     }
 
                 }
+                public string PublicIpAddressPoolId { get; set; }
                 public string RegionId { get; set; }
                 public string ReservationActiveTime { get; set; }
                 public string ReservationBandwidth { get; set; }
@@ -76,6 +77,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string SegmentInstanceId { get; set; }
                 public int? ServiceManaged { get; set; }
                 public string Status { get; set; }
+                public DescribeEipAddressesResponseBodyEipAddressesEipAddressTags Tags { get; set; }
+                public class DescribeEipAddressesResponseBodyEipAddressesEipAddressTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<DescribeEipAddressesResponseBodyEipAddressesEipAddressTagsTag> Tag { get; set; }
+                    public class DescribeEipAddressesResponseBodyEipAddressesEipAddressTagsTag : TeaModel {
+                    }
+
+                }
             }
         };
 

@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
-        public string HttpStatusCode { get; set; }
+        public int? HttpStatusCode { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
