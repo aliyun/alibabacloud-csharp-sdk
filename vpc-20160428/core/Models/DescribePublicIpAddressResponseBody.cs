@@ -13,15 +13,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("IpRange")]
-        [Validation(Required=false)]
-        public DescribePublicIpAddressResponseBodyIpRange IpRange { get; set; }
-        public class DescribePublicIpAddressResponseBodyIpRange : TeaModel {
-            [NameInMap("IpRange")]
-            [Validation(Required=false)]
-            public List<string> IpRange { get; set; }
-        };
-
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -36,7 +27,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         [NameInMap("PublicIpAddress")]
         [Validation(Required=false)]
-        public string PublicIpAddress { get; set; }
+        public List<string> PublicIpAddress { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
