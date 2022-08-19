@@ -9,58 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class CreateRulesRequest : TeaModel {
-        /// <summary>
-        /// 幂等标识
-        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        /// <summary>
-        /// 是否只预检此次请求
-        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
-        /// <summary>
-        /// 监听标识
-        /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
         public string ListenerId { get; set; }
 
-        /// <summary>
-        /// 转发规则列表
-        /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public List<CreateRulesRequestRules> Rules { get; set; }
         public class CreateRulesRequestRules : TeaModel {
-            /// <summary>
-            /// 转发规则方向
-            /// </summary>
             [NameInMap("Direction")]
             [Validation(Required=false)]
             public string Direction { get; set; }
 
-            /// <summary>
-            /// 转发规则优先级
-            /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }
 
-            /// <summary>
-            /// 转发规则动作
-            /// </summary>
             [NameInMap("RuleActions")]
             [Validation(Required=false)]
             public List<CreateRulesRequestRulesRuleActions> RuleActions { get; set; }
             public class CreateRulesRequestRulesRuleActions : TeaModel {
-                /// <summary>
-                /// 返回固定内容动作配置
-                /// </summary>
                 [NameInMap("FixedResponseConfig")]
                 [Validation(Required=false)]
                 public CreateRulesRequestRulesRuleActionsFixedResponseConfig FixedResponseConfig { get; set; }
@@ -76,9 +52,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public string HttpCode { get; set; }
                 };
 
-                /// <summary>
-                /// 转发组动作配置
-                /// </summary>
                 [NameInMap("ForwardGroupConfig")]
                 [Validation(Required=false)]
                 public CreateRulesRequestRulesRuleActionsForwardGroupConfig ForwardGroupConfig { get; set; }
@@ -87,16 +60,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     [Validation(Required=false)]
                     public CreateRulesRequestRulesRuleActionsForwardGroupConfigServerGroupStickySession ServerGroupStickySession { get; set; }
                     public class CreateRulesRequestRulesRuleActionsForwardGroupConfigServerGroupStickySession : TeaModel {
-                        /// <summary>
-                        /// 是否开启会话保持
-                        /// </summary>
                         [NameInMap("Enabled")]
                         [Validation(Required=false)]
                         public bool? Enabled { get; set; }
 
-                        /// <summary>
-                        /// 超时时间
-                        /// </summary>
                         [NameInMap("Timeout")]
                         [Validation(Required=false)]
                         public int? Timeout { get; set; }
@@ -111,9 +78,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     }
                 };
 
-                /// <summary>
-                /// 插入头部动作配置
-                /// </summary>
                 [NameInMap("InsertHeaderConfig")]
                 [Validation(Required=false)]
                 public CreateRulesRequestRulesRuleActionsInsertHeaderConfig InsertHeaderConfig { get; set; }
@@ -129,16 +93,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public string ValueType { get; set; }
                 };
 
-                /// <summary>
-                /// 优先级
-                /// </summary>
                 [NameInMap("Order")]
                 [Validation(Required=false)]
                 public int? Order { get; set; }
 
-                /// <summary>
-                /// 重定向动作配置
-                /// </summary>
                 [NameInMap("RedirectConfig")]
                 [Validation(Required=false)]
                 public CreateRulesRequestRulesRuleActionsRedirectConfig RedirectConfig { get; set; }
@@ -163,9 +121,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public string Query { get; set; }
                 };
 
-                /// <summary>
-                /// 内部重定向动作配置
-                /// </summary>
                 [NameInMap("RewriteConfig")]
                 [Validation(Required=false)]
                 public CreateRulesRequestRulesRuleActionsRewriteConfig RewriteConfig { get; set; }
@@ -181,21 +136,18 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public string Query { get; set; }
                 };
 
-                /// <summary>
-                /// 流量限速
-                /// </summary>
                 [NameInMap("TrafficLimitConfig")]
                 [Validation(Required=false)]
                 public CreateRulesRequestRulesRuleActionsTrafficLimitConfig TrafficLimitConfig { get; set; }
                 public class CreateRulesRequestRulesRuleActionsTrafficLimitConfig : TeaModel {
+                    [NameInMap("PerIpQps")]
+                    [Validation(Required=false)]
+                    public int? PerIpQps { get; set; }
                     [NameInMap("QPS")]
                     [Validation(Required=false)]
                     public int? QPS { get; set; }
                 };
 
-                /// <summary>
-                /// 流量镜像
-                /// </summary>
                 [NameInMap("TrafficMirrorConfig")]
                 [Validation(Required=false)]
                 public CreateRulesRequestRulesRuleActionsTrafficMirrorConfig TrafficMirrorConfig { get; set; }
@@ -220,25 +172,16 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public string TargetType { get; set; }
                 };
 
-                /// <summary>
-                /// 转发规则动作类型
-                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
             }
 
-            /// <summary>
-            /// 转发规则条件
-            /// </summary>
             [NameInMap("RuleConditions")]
             [Validation(Required=false)]
             public List<CreateRulesRequestRulesRuleConditions> RuleConditions { get; set; }
             public class CreateRulesRequestRulesRuleConditions : TeaModel {
-                /// <summary>
-                /// Cookie条件配置
-                /// </summary>
                 [NameInMap("CookieConfig")]
                 [Validation(Required=false)]
                 public CreateRulesRequestRulesRuleConditionsCookieConfig CookieConfig { get; set; }
@@ -252,9 +195,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     }
                 };
 
-                /// <summary>
-                /// HTTP标头条件配置
-                /// </summary>
                 [NameInMap("HeaderConfig")]
                 [Validation(Required=false)]
                 public CreateRulesRequestRulesRuleConditionsHeaderConfig HeaderConfig { get; set; }
@@ -267,9 +207,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public List<string> Values { get; set; }
                 };
 
-                /// <summary>
-                /// 主机名条件配置
-                /// </summary>
                 [NameInMap("HostConfig")]
                 [Validation(Required=false)]
                 public CreateRulesRequestRulesRuleConditionsHostConfig HostConfig { get; set; }
@@ -279,9 +216,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public List<string> Values { get; set; }
                 };
 
-                /// <summary>
-                /// HTTP请求方法条件配置
-                /// </summary>
                 [NameInMap("MethodConfig")]
                 [Validation(Required=false)]
                 public CreateRulesRequestRulesRuleConditionsMethodConfig MethodConfig { get; set; }
@@ -291,9 +225,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public List<string> Values { get; set; }
                 };
 
-                /// <summary>
-                /// 路径条件配置
-                /// </summary>
                 [NameInMap("PathConfig")]
                 [Validation(Required=false)]
                 public CreateRulesRequestRulesRuleConditionsPathConfig PathConfig { get; set; }
@@ -303,9 +234,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public List<string> Values { get; set; }
                 };
 
-                /// <summary>
-                /// 查询字符串条件配置
-                /// </summary>
                 [NameInMap("QueryStringConfig")]
                 [Validation(Required=false)]
                 public CreateRulesRequestRulesRuleConditionsQueryStringConfig QueryStringConfig { get; set; }
@@ -319,9 +247,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     }
                 };
 
-                /// <summary>
-                /// 返回HTTP标头
-                /// </summary>
                 [NameInMap("ResponseHeaderConfig")]
                 [Validation(Required=false)]
                 public CreateRulesRequestRulesRuleConditionsResponseHeaderConfig ResponseHeaderConfig { get; set; }
@@ -334,9 +259,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public List<string> Values { get; set; }
                 };
 
-                /// <summary>
-                /// 基于源IP业务流量匹配
-                /// </summary>
                 [NameInMap("SourceIpConfig")]
                 [Validation(Required=false)]
                 public CreateRulesRequestRulesRuleConditionsSourceIpConfig SourceIpConfig { get; set; }
@@ -346,18 +268,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public List<string> Values { get; set; }
                 };
 
-                /// <summary>
-                /// 条件类型
-                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
             }
 
-            /// <summary>
-            /// 转发规则名称
-            /// </summary>
             [NameInMap("RuleName")]
             [Validation(Required=false)]
             public string RuleName { get; set; }

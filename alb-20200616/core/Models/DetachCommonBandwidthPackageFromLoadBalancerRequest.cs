@@ -9,37 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class DetachCommonBandwidthPackageFromLoadBalancerRequest : TeaModel {
-        /// <summary>
-        /// 带宽包ID
-        /// </summary>
         [NameInMap("BandwidthPackageId")]
         [Validation(Required=false)]
         public string BandwidthPackageId { get; set; }
 
-        /// <summary>
-        /// 幂等参数
-        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        /// <summary>
-        /// 预校验
-        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
-        /// <summary>
-        /// 实例ID
-        /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
         public string LoadBalancerId { get; set; }
 
-        /// <summary>
-        /// 地域ID
-        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

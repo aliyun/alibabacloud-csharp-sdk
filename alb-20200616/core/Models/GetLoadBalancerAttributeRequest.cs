@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class GetLoadBalancerAttributeRequest : TeaModel {
-        /// <summary>
-        /// 实例标识
-        /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
         public string LoadBalancerId { get; set; }

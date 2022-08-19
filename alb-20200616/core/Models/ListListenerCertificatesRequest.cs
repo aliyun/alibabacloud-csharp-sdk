@@ -9,30 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListListenerCertificatesRequest : TeaModel {
-        /// <summary>
-        /// 证书类型
-        /// </summary>
         [NameInMap("CertificateType")]
         [Validation(Required=false)]
         public string CertificateType { get; set; }
 
-        /// <summary>
-        /// 监听Id
-        /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
         public string ListenerId { get; set; }
 
-        /// <summary>
-        /// 查询数量
-        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
-        /// <summary>
-        /// 分页查询标识
-        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }

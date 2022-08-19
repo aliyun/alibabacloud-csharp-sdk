@@ -9,44 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListServerGroupsResponseBody : TeaModel {
-        /// <summary>
-        /// 本次查询返回记录数量
-        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
-        /// <summary>
-        /// 分页查询标识
-        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 服务器组
-        /// </summary>
         [NameInMap("ServerGroups")]
         [Validation(Required=false)]
         public List<ListServerGroupsResponseBodyServerGroups> ServerGroups { get; set; }
         public class ListServerGroupsResponseBodyServerGroups : TeaModel {
-            /// <summary>
-            /// 是否开启配置管理
-            /// </summary>
             [NameInMap("ConfigManagedEnabled")]
             [Validation(Required=false)]
             public bool? ConfigManagedEnabled { get; set; }
 
-            /// <summary>
-            /// 健康检查配置
-            /// </summary>
             [NameInMap("HealthCheckConfig")]
             [Validation(Required=false)]
             public ListServerGroupsResponseBodyServerGroupsHealthCheckConfig HealthCheckConfig { get; set; }
@@ -89,79 +71,46 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public int? UnhealthyThreshold { get; set; }
             };
 
-            /// <summary>
-            /// 是否支持Ipv6
-            /// </summary>
             [NameInMap("Ipv6Enabled")]
             [Validation(Required=false)]
             public bool? Ipv6Enabled { get; set; }
 
-            /// <summary>
-            /// 服务器组协议
-            /// </summary>
             [NameInMap("Protocol")]
             [Validation(Required=false)]
             public string Protocol { get; set; }
 
-            /// <summary>
-            /// 资源组id
-            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
-            /// <summary>
-            /// 调度策略
-            /// </summary>
             [NameInMap("Scheduler")]
             [Validation(Required=false)]
             public string Scheduler { get; set; }
 
-            /// <summary>
-            /// 服务器组内服务器数量
-            /// </summary>
             [NameInMap("ServerCount")]
             [Validation(Required=false)]
             public int? ServerCount { get; set; }
 
-            /// <summary>
-            /// 服务器组Id
-            /// </summary>
             [NameInMap("ServerGroupId")]
             [Validation(Required=false)]
             public string ServerGroupId { get; set; }
 
-            /// <summary>
-            /// 服务器组名称
-            /// </summary>
             [NameInMap("ServerGroupName")]
             [Validation(Required=false)]
             public string ServerGroupName { get; set; }
 
-            /// <summary>
-            /// 服务器组状态
-            /// </summary>
             [NameInMap("ServerGroupStatus")]
             [Validation(Required=false)]
             public string ServerGroupStatus { get; set; }
 
-            /// <summary>
-            /// 服务器组类型
-            /// </summary>
             [NameInMap("ServerGroupType")]
             [Validation(Required=false)]
             public string ServerGroupType { get; set; }
 
-            /// <summary>
-            /// 服务器名称
-            /// </summary>
             [NameInMap("ServiceName")]
             [Validation(Required=false)]
             public string ServiceName { get; set; }
 
-            /// <summary>
-            /// 会话保持配置
-            /// </summary>
             [NameInMap("StickySessionConfig")]
             [Validation(Required=false)]
             public ListServerGroupsResponseBodyServerGroupsStickySessionConfig StickySessionConfig { get; set; }
@@ -180,48 +129,30 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public string StickySessionType { get; set; }
             };
 
-            /// <summary>
-            /// 标签列表
-            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListServerGroupsResponseBodyServerGroupsTags> Tags { get; set; }
             public class ListServerGroupsResponseBodyServerGroupsTags : TeaModel {
-                /// <summary>
-                /// 标签键
-                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
-                /// <summary>
-                /// 标签值
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
 
             }
 
-            /// <summary>
-            /// 是否开启后端长链接
-            /// </summary>
             [NameInMap("UpstreamKeepaliveEnabled")]
             [Validation(Required=false)]
             public bool? UpstreamKeepaliveEnabled { get; set; }
 
-            /// <summary>
-            /// 服务器组所在VpcId
-            /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
 
         }
 
-        /// <summary>
-        /// 总记录数
-        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

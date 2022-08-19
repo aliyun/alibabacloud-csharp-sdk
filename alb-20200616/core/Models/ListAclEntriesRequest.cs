@@ -9,23 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListAclEntriesRequest : TeaModel {
-        /// <summary>
-        /// 访问控制策略Id
-        /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
         public string AclId { get; set; }
 
-        /// <summary>
-        /// 查询数量
-        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
-        /// <summary>
-        /// 分页查询标识
-        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }

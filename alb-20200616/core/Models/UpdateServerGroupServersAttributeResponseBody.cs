@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class UpdateServerGroupServersAttributeResponseBody : TeaModel {
-        /// <summary>
-        /// 异步任务Id
-        /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
