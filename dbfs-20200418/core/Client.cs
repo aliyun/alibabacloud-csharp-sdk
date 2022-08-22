@@ -1373,6 +1373,14 @@ namespace AlibabaCloud.SDK.DBFS20200418
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterKey))
+            {
+                query["FilterKey"] = request.FilterKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterValue))
+            {
+                query["FilterValue"] = request.FilterValue;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -1408,6 +1416,14 @@ namespace AlibabaCloud.SDK.DBFS20200418
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterKey))
+            {
+                query["FilterKey"] = request.FilterKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterValue))
+            {
+                query["FilterValue"] = request.FilterValue;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
