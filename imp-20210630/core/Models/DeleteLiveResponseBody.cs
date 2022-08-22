@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
     public class DeleteLiveResponseBody : TeaModel {
-        /// <summary>
-        /// 请求ID
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

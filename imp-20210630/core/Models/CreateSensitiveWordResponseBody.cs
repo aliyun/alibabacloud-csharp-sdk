@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
     public class CreateSensitiveWordResponseBody : TeaModel {
-        /// <summary>
-        /// 请求ID。
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 调用发送直播间弹幕的返回结果。
-        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public CreateSensitiveWordResponseBodyResult Result { get; set; }

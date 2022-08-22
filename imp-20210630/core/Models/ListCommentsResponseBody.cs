@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
     public class ListCommentsResponseBody : TeaModel {
-        /// <summary>
-        /// 请求ID。
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 调用查询弹幕消息列表的返回结果。
-        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public ListCommentsResponseBodyResult Result { get; set; }

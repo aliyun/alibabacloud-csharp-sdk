@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
     public class DeleteSensitiveWordShrinkRequest : TeaModel {
-        /// <summary>
-        /// 弹幕发送者的用户ID，最大长度不超过32个字节。
-        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }

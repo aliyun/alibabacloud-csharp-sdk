@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
     public class GetLiveResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -30,16 +27,10 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [Validation(Required=false)]
             public GetLiveResponseBodyResultArtcInfo ArtcInfo { get; set; }
             public class GetLiveResponseBodyResultArtcInfo : TeaModel {
-                /// <summary>
-                /// 原画转码地址
-                /// </summary>
                 [NameInMap("ArtcH5Url")]
                 [Validation(Required=false)]
                 public string ArtcH5Url { get; set; }
 
-                /// <summary>
-                /// 源码地址
-                /// </summary>
                 [NameInMap("ArtcUrl")]
                 [Validation(Required=false)]
                 public string ArtcUrl { get; set; }

@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
     public class CreateRoomResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// API请求的返回结果结构体。
-        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public CreateRoomResponseBodyResult Result { get; set; }

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
     public class GetLiveRequest : TeaModel {
-        /// <summary>
-        /// 直播资源的唯一标识ID
-        /// </summary>
         [NameInMap("LiveId")]
         [Validation(Required=false)]
         public string LiveId { get; set; }

@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
     public class ListClassesResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 创建课程返回的结果。
-        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public ListClassesResponseBodyResult Result { get; set; }

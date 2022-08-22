@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
     public class GetLiveRoomResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 创建场景化直播返回的结果。
-        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public GetLiveRoomResponseBodyResult Result { get; set; }
@@ -36,16 +30,10 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [Validation(Required=false)]
             public GetLiveRoomResponseBodyResultArtcInfo ArtcInfo { get; set; }
             public class GetLiveRoomResponseBodyResultArtcInfo : TeaModel {
-                /// <summary>
-                /// RTS转码流地址，推荐web端使用。
-                /// </summary>
                 [NameInMap("ArtcH5Url")]
                 [Validation(Required=false)]
                 public string ArtcH5Url { get; set; }
 
-                /// <summary>
-                /// RTS原码流地址，推荐移动端使用。
-                /// </summary>
                 [NameInMap("ArtcUrl")]
                 [Validation(Required=false)]
                 public string ArtcUrl { get; set; }

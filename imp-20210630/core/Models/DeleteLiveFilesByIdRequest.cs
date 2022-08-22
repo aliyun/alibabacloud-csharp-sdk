@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
-    public class BanCommentResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+    public class DeleteLiveFilesByIdRequest : TeaModel {
+        [NameInMap("AppId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string AppId { get; set; }
 
-        [NameInMap("Result")]
+        [NameInMap("LiveId")]
         [Validation(Required=false)]
-        public bool? Result { get; set; }
+        public string LiveId { get; set; }
 
     }
 
