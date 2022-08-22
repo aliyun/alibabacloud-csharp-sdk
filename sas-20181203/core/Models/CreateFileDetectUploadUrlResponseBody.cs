@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<CreateFileDetectUploadUrlResponseBodyUploadUrlList> UploadUrlList { get; set; }
         public class CreateFileDetectUploadUrlResponseBodyUploadUrlList : TeaModel {
+            [NameInMap("Code")]
+            [Validation(Required=false)]
+            public string Code { get; set; }
+
             [NameInMap("Context")]
             [Validation(Required=false)]
             public CreateFileDetectUploadUrlResponseBodyUploadUrlListContext Context { get; set; }
@@ -50,6 +54,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("InternalUrl")]
             [Validation(Required=false)]
             public string InternalUrl { get; set; }
+
+            [NameInMap("Message")]
+            [Validation(Required=false)]
+            public string Message { get; set; }
 
             [NameInMap("PublicUrl")]
             [Validation(Required=false)]

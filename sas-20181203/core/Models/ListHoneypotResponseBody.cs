@@ -69,9 +69,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
-            [NameInMap("LastRowKey")]
-            [Validation(Required=false)]
-            public string LastRowKey { get; set; }
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }

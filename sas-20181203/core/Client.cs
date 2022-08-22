@@ -735,6 +735,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HashKeyContextList))
+            {
+                query["HashKeyContextList"] = request.HashKeyContextList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HashKeyList))
             {
                 query["HashKeyList"] = request.HashKeyList;
@@ -766,6 +770,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HashKeyContextList))
+            {
+                query["HashKeyContextList"] = request.HashKeyContextList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HashKeyList))
             {
                 query["HashKeyList"] = request.HashKeyList;
