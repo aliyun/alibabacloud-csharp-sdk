@@ -1,0 +1,52 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
+{
+    public class ListHotelServiceCategoryResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public int? Code { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Result")]
+        [Validation(Required=false)]
+        public List<ListHotelServiceCategoryResponseBodyResult> Result { get; set; }
+        public class ListHotelServiceCategoryResponseBodyResult : TeaModel {
+            [NameInMap("Code")]
+            [Validation(Required=false)]
+            public string Code { get; set; }
+
+            [NameInMap("Desc")]
+            [Validation(Required=false)]
+            public string Desc { get; set; }
+
+            [NameInMap("Icon")]
+            [Validation(Required=false)]
+            public string Icon { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+        }
+
+    }
+
+}
