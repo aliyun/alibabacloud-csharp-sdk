@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.DBFS20200418.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
     }
 
 }
