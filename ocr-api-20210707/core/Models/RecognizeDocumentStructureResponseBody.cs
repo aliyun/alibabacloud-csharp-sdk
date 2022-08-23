@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ocr_api20210707.Models
 {
-    public class RecognizeBusShipTicketResponseBody : TeaModel {
+    public class RecognizeDocumentStructureResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
