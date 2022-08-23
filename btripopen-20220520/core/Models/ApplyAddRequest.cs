@@ -169,6 +169,64 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
+        [NameInMap("itinerary_rule")]
+        [Validation(Required=false)]
+        public int? ItineraryRule { get; set; }
+
+        [NameInMap("itinerary_set_list")]
+        [Validation(Required=false)]
+        public List<ApplyAddRequestItinerarySetList> ItinerarySetList { get; set; }
+        public class ApplyAddRequestItinerarySetList : TeaModel {
+            [NameInMap("arr_date")]
+            [Validation(Required=false)]
+            public string ArrDate { get; set; }
+
+            [NameInMap("city_code_set")]
+            [Validation(Required=false)]
+            public string CityCodeSet { get; set; }
+
+            [NameInMap("city_set")]
+            [Validation(Required=false)]
+            public string CitySet { get; set; }
+
+            [NameInMap("cost_center_id")]
+            [Validation(Required=false)]
+            public long? CostCenterId { get; set; }
+
+            [NameInMap("dep_date")]
+            [Validation(Required=false)]
+            public string DepDate { get; set; }
+
+            [NameInMap("invoice_id")]
+            [Validation(Required=false)]
+            public long? InvoiceId { get; set; }
+
+            [NameInMap("itinerary_id")]
+            [Validation(Required=false)]
+            public string ItineraryId { get; set; }
+
+            [NameInMap("project_code")]
+            [Validation(Required=false)]
+            public string ProjectCode { get; set; }
+
+            [NameInMap("project_title")]
+            [Validation(Required=false)]
+            public string ProjectTitle { get; set; }
+
+            [NameInMap("third_part_invoice_id")]
+            [Validation(Required=false)]
+            public string ThirdPartInvoiceId { get; set; }
+
+            [NameInMap("thirdpart_cost_center_id")]
+            [Validation(Required=false)]
+            public string ThirdpartCostCenterId { get; set; }
+
+            [NameInMap("traffic_type")]
+            [Validation(Required=false)]
+            public int? TrafficType { get; set; }
+
+        }
+
         [NameInMap("limit_traveler")]
         [Validation(Required=false)]
         public int? LimitTraveler { get; set; }

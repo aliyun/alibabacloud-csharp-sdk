@@ -253,6 +253,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 request.ItineraryListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ItineraryList, "itinerary_list", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ItinerarySetList))
+            {
+                request.ItinerarySetListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ItinerarySetList, "itinerary_set_list", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TravelerList))
             {
                 request.TravelerListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TravelerList, "traveler_list", "json");
@@ -310,6 +314,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItineraryListShrink))
             {
                 body["itinerary_list"] = request.ItineraryListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItineraryRule))
+            {
+                body["itinerary_rule"] = request.ItineraryRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItinerarySetListShrink))
+            {
+                body["itinerary_set_list"] = request.ItinerarySetListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LimitTraveler))
             {
@@ -417,6 +429,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 request.ItineraryListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ItineraryList, "itinerary_list", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ItinerarySetList))
+            {
+                request.ItinerarySetListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ItinerarySetList, "itinerary_set_list", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TravelerList))
             {
                 request.TravelerListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TravelerList, "traveler_list", "json");
@@ -474,6 +490,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItineraryListShrink))
             {
                 body["itinerary_list"] = request.ItineraryListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItineraryRule))
+            {
+                body["itinerary_rule"] = request.ItineraryRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItinerarySetListShrink))
+            {
+                body["itinerary_set_list"] = request.ItinerarySetListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LimitTraveler))
             {
@@ -745,6 +769,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 request.ItineraryListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ItineraryList, "itinerary_list", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ItinerarySetList))
+            {
+                request.ItinerarySetListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ItinerarySetList, "itinerary_set_list", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TravelerList))
             {
                 request.TravelerListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TravelerList, "traveler_list", "json");
@@ -797,6 +825,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItineraryListShrink))
             {
                 body["itinerary_list"] = request.ItineraryListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItineraryRule))
+            {
+                body["itinerary_rule"] = request.ItineraryRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItinerarySetListShrink))
+            {
+                body["itinerary_set_list"] = request.ItinerarySetListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LimitTraveler))
             {
@@ -899,6 +935,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 request.ItineraryListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ItineraryList, "itinerary_list", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ItinerarySetList))
+            {
+                request.ItinerarySetListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ItinerarySetList, "itinerary_set_list", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TravelerList))
             {
                 request.TravelerListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TravelerList, "traveler_list", "json");
@@ -951,6 +991,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItineraryListShrink))
             {
                 body["itinerary_list"] = request.ItineraryListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItineraryRule))
+            {
+                body["itinerary_rule"] = request.ItineraryRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItinerarySetListShrink))
+            {
+                body["itinerary_set_list"] = request.ItinerarySetListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LimitTraveler))
             {

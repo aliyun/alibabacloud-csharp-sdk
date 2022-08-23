@@ -151,6 +151,52 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public int? ItineraryRule { get; set; }
 
+            [NameInMap("itinerary_set_list")]
+            [Validation(Required=false)]
+            public List<ApplyListQueryResponseBodyModuleListItinerarySetList> ItinerarySetList { get; set; }
+            public class ApplyListQueryResponseBodyModuleListItinerarySetList : TeaModel {
+                [NameInMap("arr_date")]
+                [Validation(Required=false)]
+                public string ArrDate { get; set; }
+
+                [NameInMap("city_code_set")]
+                [Validation(Required=false)]
+                public string CityCodeSet { get; set; }
+
+                [NameInMap("city_set")]
+                [Validation(Required=false)]
+                public string CitySet { get; set; }
+
+                [NameInMap("cost_center_name")]
+                [Validation(Required=false)]
+                public string CostCenterName { get; set; }
+
+                [NameInMap("dep_date")]
+                [Validation(Required=false)]
+                public string DepDate { get; set; }
+
+                [NameInMap("invoice_name")]
+                [Validation(Required=false)]
+                public string InvoiceName { get; set; }
+
+                [NameInMap("itinerary_id")]
+                [Validation(Required=false)]
+                public string ItineraryId { get; set; }
+
+                [NameInMap("project_code")]
+                [Validation(Required=false)]
+                public string ProjectCode { get; set; }
+
+                [NameInMap("project_title")]
+                [Validation(Required=false)]
+                public string ProjectTitle { get; set; }
+
+                [NameInMap("traffic_type")]
+                [Validation(Required=false)]
+                public int? TrafficType { get; set; }
+
+            }
+
             [NameInMap("status")]
             [Validation(Required=false)]
             public int? Status { get; set; }

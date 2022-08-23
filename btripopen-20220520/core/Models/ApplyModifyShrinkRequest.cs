@@ -53,6 +53,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string ItineraryListShrink { get; set; }
 
+        [NameInMap("itinerary_rule")]
+        [Validation(Required=false)]
+        public int? ItineraryRule { get; set; }
+
+        [NameInMap("itinerary_set_list")]
+        [Validation(Required=false)]
+        public string ItinerarySetListShrink { get; set; }
+
         [NameInMap("limit_traveler")]
         [Validation(Required=false)]
         public int? LimitTraveler { get; set; }

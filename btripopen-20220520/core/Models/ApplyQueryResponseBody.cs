@@ -117,6 +117,21 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [NameInMap("itinerary_rule")]
             [Validation(Required=false)]
             public int? ItineraryRule { get; set; }
+            [NameInMap("itinerary_set_list")]
+            [Validation(Required=false)]
+            public List<ApplyQueryResponseBodyModuleItinerarySetList> ItinerarySetList { get; set; }
+            public class ApplyQueryResponseBodyModuleItinerarySetList : TeaModel {
+                public string ArrDate { get; set; }
+                public string CityCodeSet { get; set; }
+                public string CitySet { get; set; }
+                public string CostCenterName { get; set; }
+                public string DepDate { get; set; }
+                public string InvoiceName { get; set; }
+                public string ItineraryId { get; set; }
+                public string ProjectCode { get; set; }
+                public string ProjectTitle { get; set; }
+                public int? TrafficType { get; set; }
+            }
             [NameInMap("limit_traveler")]
             [Validation(Required=false)]
             public int? LimitTraveler { get; set; }
