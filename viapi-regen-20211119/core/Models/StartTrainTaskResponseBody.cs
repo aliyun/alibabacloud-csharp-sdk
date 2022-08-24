@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
         [Validation(Required=false)]
         public StartTrainTaskResponseBodyData Data { get; set; }
         public class StartTrainTaskResponseBodyData : TeaModel {
+            [NameInMap("CheckResult")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> CheckResult { get; set; }
             [NameInMap("DatasetId")]
             [Validation(Required=false)]
             public long? DatasetId { get; set; }

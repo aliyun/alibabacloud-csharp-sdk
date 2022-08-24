@@ -13,6 +13,12 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
         [Validation(Required=false)]
         public CreateServiceResponseBodyData Data { get; set; }
         public class CreateServiceResponseBodyData : TeaModel {
+            [NameInMap("AuthorizationType")]
+            [Validation(Required=false)]
+            public string AuthorizationType { get; set; }
+            [NameInMap("AuthorizedAccount")]
+            [Validation(Required=false)]
+            public string AuthorizedAccount { get; set; }
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public long? GmtCreate { get; set; }

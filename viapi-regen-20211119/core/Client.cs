@@ -18,7 +18,65 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"ap-northeast-1", "viapi-regen-daily.aliyuncs.com"},
+                {"ap-northeast-2-pop", "viapi-regen-daily.aliyuncs.com"},
+                {"ap-south-1", "viapi-regen-daily.aliyuncs.com"},
+                {"ap-southeast-1", "viapi-regen-daily.aliyuncs.com"},
+                {"ap-southeast-2", "viapi-regen-daily.aliyuncs.com"},
+                {"ap-southeast-3", "viapi-regen-daily.aliyuncs.com"},
+                {"ap-southeast-5", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-beijing", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-beijing-finance-1", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-beijing-finance-pop", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-beijing-gov-1", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-beijing-nu16-b01", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-chengdu", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-edge-1", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-fujian", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-haidian-cm12-c01", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-hangzhou-bj-b01", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-hangzhou-finance", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-hangzhou-internal-prod-1", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-hangzhou-internal-test-1", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-hangzhou-internal-test-2", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-hangzhou-internal-test-3", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-hangzhou-test-306", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-hongkong", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-hongkong-finance-pop", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-huhehaote", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-huhehaote-nebula-1", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-north-2-gov-1", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-qingdao", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-qingdao-nebula", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-shanghai-et15-b01", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-shanghai-et2-b01", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-shanghai-inner", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-shanghai-internal-test-1", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-shenzhen", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-shenzhen-inner", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-shenzhen-st4-d01", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-shenzhen-su18-b01", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-wuhan", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-wulanchabu", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-yushanfang", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-zhangbei", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-zhangbei-na61-b01", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-zhangjiakou", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-zhangjiakou-na62-a01", "viapi-regen-daily.aliyuncs.com"},
+                {"cn-zhengzhou-nebula-1", "viapi-regen-daily.aliyuncs.com"},
+                {"eu-central-1", "viapi-regen-daily.aliyuncs.com"},
+                {"eu-west-1", "viapi-regen-daily.aliyuncs.com"},
+                {"eu-west-1-oxs", "viapi-regen-daily.aliyuncs.com"},
+                {"me-east-1", "viapi-regen-daily.aliyuncs.com"},
+                {"rus-west-1-pop", "viapi-regen-daily.aliyuncs.com"},
+                {"us-east-1", "viapi-regen-daily.aliyuncs.com"},
+                {"us-west-1", "viapi-regen-daily.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("viapi-regen", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -253,6 +311,14 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationType))
+            {
+                body["AuthorizationType"] = request.AuthorizationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizedAccount))
+            {
+                body["AuthorizedAccount"] = request.AuthorizedAccount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
@@ -288,6 +354,14 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationType))
+            {
+                body["AuthorizationType"] = request.AuthorizationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizedAccount))
+            {
+                body["AuthorizedAccount"] = request.AuthorizedAccount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
@@ -401,6 +475,10 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdvancedParameters))
+            {
+                body["AdvancedParameters"] = request.AdvancedParameters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
             {
                 body["DatasetId"] = request.DatasetId;
@@ -448,6 +526,10 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdvancedParameters))
+            {
+                body["AdvancedParameters"] = request.AdvancedParameters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
             {
                 body["DatasetId"] = request.DatasetId;
@@ -1911,54 +1993,6 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119
             return await DownloadLabelFileWithOptionsAsync(request, runtime);
         }
 
-        public DownloadTemplateResponse DownloadTemplateWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DownloadTemplate",
-                Version = "2021-11-19",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DownloadTemplateResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<DownloadTemplateResponse> DownloadTemplateWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DownloadTemplate",
-                Version = "2021-11-19",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DownloadTemplateResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public DownloadTemplateResponse DownloadTemplate()
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DownloadTemplateWithOptions(runtime);
-        }
-
-        public async Task<DownloadTemplateResponse> DownloadTemplateAsync()
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DownloadTemplateWithOptionsAsync(runtime);
-        }
-
         public GetDatasetResponse GetDatasetWithOptions(GetDatasetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3401,6 +3435,10 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceStartFlag))
+            {
+                body["ForceStartFlag"] = request.ForceStartFlag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 body["Id"] = request.Id;
@@ -3428,6 +3466,10 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceStartFlag))
+            {
+                body["ForceStartFlag"] = request.ForceStartFlag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 body["Id"] = request.Id;
@@ -3779,6 +3821,14 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationType))
+            {
+                body["AuthorizationType"] = request.AuthorizationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizedAccount))
+            {
+                body["AuthorizedAccount"] = request.AuthorizedAccount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
@@ -3814,6 +3864,14 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationType))
+            {
+                body["AuthorizationType"] = request.AuthorizationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizedAccount))
+            {
+                body["AuthorizedAccount"] = request.AuthorizedAccount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
@@ -3861,6 +3919,10 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdvancedParameters))
+            {
+                body["AdvancedParameters"] = request.AdvancedParameters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
@@ -3896,6 +3958,10 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdvancedParameters))
+            {
+                body["AdvancedParameters"] = request.AdvancedParameters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;

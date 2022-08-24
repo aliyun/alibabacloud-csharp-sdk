@@ -13,9 +13,6 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
         [Validation(Required=false)]
         public GetServiceResponseBodyData Data { get; set; }
         public class GetServiceResponseBodyData : TeaModel {
-            [NameInMap("CurlExample")]
-            [Validation(Required=false)]
-            public string CurlExample { get; set; }
             [NameInMap("Errorcodes")]
             [Validation(Required=false)]
             public string Errorcodes { get; set; }
@@ -40,6 +37,9 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
             [NameInMap("ServiceDescription")]
             [Validation(Required=false)]
             public string ServiceDescription { get; set; }
+            [NameInMap("ServiceId")]
+            [Validation(Required=false)]
+            public string ServiceId { get; set; }
             [NameInMap("ServiceName")]
             [Validation(Required=false)]
             public string ServiceName { get; set; }

@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
         [Validation(Required=false)]
         public UpdateTrainTaskResponseBodyData Data { get; set; }
         public class UpdateTrainTaskResponseBodyData : TeaModel {
+            [NameInMap("AdvancedParameters")]
+            [Validation(Required=false)]
+            public string AdvancedParameters { get; set; }
             [NameInMap("DatasetId")]
             [Validation(Required=false)]
             public long? DatasetId { get; set; }

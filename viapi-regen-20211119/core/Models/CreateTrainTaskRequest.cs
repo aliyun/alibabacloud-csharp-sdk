@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
 {
     public class CreateTrainTaskRequest : TeaModel {
+        [NameInMap("AdvancedParameters")]
+        [Validation(Required=false)]
+        public string AdvancedParameters { get; set; }
+
         [NameInMap("DatasetId")]
         [Validation(Required=false)]
         public long? DatasetId { get; set; }

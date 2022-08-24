@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
 {
     public class StartTrainTaskRequest : TeaModel {
+        [NameInMap("ForceStartFlag")]
+        [Validation(Required=false)]
+        public bool? ForceStartFlag { get; set; }
+
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
