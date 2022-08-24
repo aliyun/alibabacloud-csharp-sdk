@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
-    public class DescribeDcdnBgpBpsDataRequest : TeaModel {
-        [NameInMap("DeviceName")]
+    public class DescribeDcdnWafUsageDataRequest : TeaModel {
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public string DeviceName { get; set; }
-
-        [NameInMap("DevicePort")]
-        [Validation(Required=false)]
-        public string DevicePort { get; set; }
+        public string DomainName { get; set; }
 
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -25,13 +21,13 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [Validation(Required=false)]
         public string Interval { get; set; }
 
-        [NameInMap("Isp")]
-        [Validation(Required=false)]
-        public string Isp { get; set; }
-
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("SplitBy")]
+        [Validation(Required=false)]
+        public string SplitBy { get; set; }
 
         [NameInMap("StartTime")]
         [Validation(Required=false)]

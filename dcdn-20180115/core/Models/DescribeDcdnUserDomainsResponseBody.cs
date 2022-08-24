@@ -19,6 +19,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public class DescribeDcdnUserDomainsResponseBodyDomainsPageData : TeaModel {
                 public string Cname { get; set; }
                 public string Description { get; set; }
+                public long? DomainId { get; set; }
                 public string DomainName { get; set; }
                 public string DomainStatus { get; set; }
                 public string GmtCreated { get; set; }

@@ -55,6 +55,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                     }
 
                 }
+                public string TenantID { get; set; }
             }
         };
 

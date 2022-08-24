@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [Validation(Required=false)]
         public string Edition { get; set; }
 
+        [NameInMap("Enabled")]
+        [Validation(Required=false)]
+        public string Enabled { get; set; }
+
         [NameInMap("OpeningTime")]
         [Validation(Required=false)]
         public string OpeningTime { get; set; }

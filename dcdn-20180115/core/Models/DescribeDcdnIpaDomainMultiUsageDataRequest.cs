@@ -8,22 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
-    public class BatchSetDcdnWafDomainConfigsRequest : TeaModel {
-        [NameInMap("ClientIpTag")]
+    public class DescribeDcdnIpaDomainMultiUsageDataRequest : TeaModel {
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public string ClientIpTag { get; set; }
+        public string DomainName { get; set; }
 
-        [NameInMap("DefenseStatus")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string DefenseStatus { get; set; }
-
-        [NameInMap("DomainNames")]
-        [Validation(Required=false)]
-        public string DomainNames { get; set; }
+        public string EndTime { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 

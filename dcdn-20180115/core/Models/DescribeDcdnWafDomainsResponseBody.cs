@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [Validation(Required=false)]
         public List<DescribeDcdnWafDomainsResponseBodyDomains> Domains { get; set; }
         public class DescribeDcdnWafDomainsResponseBodyDomains : TeaModel {
+            [NameInMap("ClientIpTag")]
+            [Validation(Required=false)]
+            public string ClientIpTag { get; set; }
+
             [NameInMap("DomainName")]
             [Validation(Required=false)]
             public string DomainName { get; set; }
