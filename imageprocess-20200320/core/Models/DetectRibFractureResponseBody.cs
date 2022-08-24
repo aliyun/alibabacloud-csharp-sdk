@@ -17,8 +17,8 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             [Validation(Required=false)]
             public List<DetectRibFractureResponseBodyDataDetections> Detections { get; set; }
             public class DetectRibFractureResponseBodyDataDetections : TeaModel {
-                public List<string> CoordinateImage { get; set; }
-                public List<string> Coordinates { get; set; }
+                public List<int?> CoordinateImage { get; set; }
+                public List<int?> Coordinates { get; set; }
                 public string FractureCategory { get; set; }
                 public float? FractureConfidence { get; set; }
                 public int? FractureId { get; set; }
@@ -27,13 +27,13 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             }
             [NameInMap("Origin")]
             [Validation(Required=false)]
-            public List<string> Origin { get; set; }
+            public List<float?> Origin { get; set; }
             [NameInMap("ResultURL")]
             [Validation(Required=false)]
             public string ResultURL { get; set; }
             [NameInMap("Spacing")]
             [Validation(Required=false)]
-            public List<string> Spacing { get; set; }
+            public List<float?> Spacing { get; set; }
         };
 
         [NameInMap("RequestId")]

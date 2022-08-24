@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             [Validation(Required=false)]
             public List<ClassifyFNFResponseBodyDataFractures> Fractures { get; set; }
             public class ClassifyFNFResponseBodyDataFractures : TeaModel {
-                public List<string> Boxes { get; set; }
+                public List<int?> Boxes { get; set; }
                 public ClassifyFNFResponseBodyDataFracturesTag Tag { get; set; }
                 public class ClassifyFNFResponseBodyDataFracturesTag : TeaModel {
                     [NameInMap("Label")]

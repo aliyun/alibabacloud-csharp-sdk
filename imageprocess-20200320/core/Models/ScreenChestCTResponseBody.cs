@@ -23,10 +23,10 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 public class ScreenChestCTResponseBodyDataAnalyzeChestVesselAortaInfo : TeaModel {
                     [NameInMap("Area")]
                     [Validation(Required=false)]
-                    public List<string> Area { get; set; }
+                    public List<float?> Area { get; set; }
                     [NameInMap("Coordinates")]
                     [Validation(Required=false)]
-                    public List<string> Coordinates { get; set; }
+                    public List<List<float?>> Coordinates { get; set; }
                     [NameInMap("LabelValue")]
                     [Validation(Required=false)]
                     public long? LabelValue { get; set; }
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 public class ScreenChestCTResponseBodyDataAnalyzeChestVesselPulmonaryInfo : TeaModel {
                     [NameInMap("Area")]
                     [Validation(Required=false)]
-                    public List<string> Area { get; set; }
+                    public List<float?> Area { get; set; }
                     [NameInMap("Coordinates")]
                     [Validation(Required=false)]
-                    public List<string> Coordinates { get; set; }
+                    public List<List<float?>> Coordinates { get; set; }
                     [NameInMap("LabelValue")]
                     [Validation(Required=false)]
                     public long? LabelValue { get; set; }

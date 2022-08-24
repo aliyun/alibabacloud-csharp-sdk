@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             [Validation(Required=false)]
             public List<DetectKneeXRayResponseBodyDataKLDetections> KLDetections { get; set; }
             public class DetectKneeXRayResponseBodyDataKLDetections : TeaModel {
-                public List<string> Detections { get; set; }
+                public List<float?> Detections { get; set; }
             }
         };
 

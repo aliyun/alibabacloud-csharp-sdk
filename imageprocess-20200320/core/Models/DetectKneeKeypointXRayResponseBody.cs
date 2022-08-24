@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             [Validation(Required=false)]
             public List<DetectKneeKeypointXRayResponseBodyDataKeyPoints> KeyPoints { get; set; }
             public class DetectKneeKeypointXRayResponseBodyDataKeyPoints : TeaModel {
-                public List<string> Coordinates { get; set; }
+                public List<int?> Coordinates { get; set; }
                 public DetectKneeKeypointXRayResponseBodyDataKeyPointsTag Tag { get; set; }
                 public class DetectKneeKeypointXRayResponseBodyDataKeyPointsTag : TeaModel {
                     [NameInMap("Direction")]

@@ -40,9 +40,6 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             }
         };
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

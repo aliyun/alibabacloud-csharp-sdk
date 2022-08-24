@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             public class DetectSpineMRIResponseBodyDataDiscs : TeaModel {
                 public string Disease { get; set; }
                 public string Identification { get; set; }
-                public List<string> Location { get; set; }
+                public List<float?> Location { get; set; }
             }
             [NameInMap("Vertebras")]
             [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             public class DetectSpineMRIResponseBodyDataVertebras : TeaModel {
                 public string Disease { get; set; }
                 public string Identification { get; set; }
-                public List<string> Location { get; set; }
+                public List<float?> Location { get; set; }
             }
         };
 

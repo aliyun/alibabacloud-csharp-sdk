@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                     public float? Y { get; set; }
                     public float? Z { get; set; }
                 }
-                public List<string> Origin { get; set; }
+                public List<float?> Origin { get; set; }
                 public string Report { get; set; }
                 public string SeriesInstanceUid { get; set; }
-                public List<string> Spacing { get; set; }
+                public List<float?> Spacing { get; set; }
             }
         };
 
