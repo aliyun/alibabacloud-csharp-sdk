@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string ServiceMeshId { get; set; }
 
+        [NameInMap("UpdatePermission")]
+        [Validation(Required=false)]
+        public bool? UpdatePermission { get; set; }
+
     }
 
 }

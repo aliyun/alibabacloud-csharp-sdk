@@ -208,6 +208,15 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             public int? SidecarLifecycle { get; set; }
                         };
 
+                        [NameInMap("AutoDiagnosis")]
+                        [Validation(Required=false)]
+                        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAutoDiagnosis AutoDiagnosis { get; set; }
+                        public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAutoDiagnosis : TeaModel {
+                            [NameInMap("AutoDiagnosisEnabled")]
+                            [Validation(Required=false)]
+                            public bool? AutoDiagnosisEnabled { get; set; }
+                        };
+
                         [NameInMap("CRAggregationConfiguration")]
                         [Validation(Required=false)]
                         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationCRAggregationConfiguration CRAggregationConfiguration { get; set; }

@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetail RouteDetail { get; set; }
         public class DescribeIstioGatewayRouteDetailResponseBodyRouteDetail : TeaModel {
+            [NameInMap("Domains")]
+            [Validation(Required=false)]
+            public List<string> Domains { get; set; }
             [NameInMap("HTTPAdvancedOptions")]
             [Validation(Required=false)]
             public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptions HTTPAdvancedOptions { get; set; }

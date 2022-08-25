@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public CreateIstioGatewayRoutesRequestGatewayRoute GatewayRoute { get; set; }
         public class CreateIstioGatewayRoutesRequestGatewayRoute : TeaModel {
+            [NameInMap("Domains")]
+            [Validation(Required=false)]
+            public List<string> Domains { get; set; }
             [NameInMap("HTTPAdvancedOptions")]
             [Validation(Required=false)]
             public CreateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptions HTTPAdvancedOptions { get; set; }
@@ -217,6 +220,15 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     [NameInMap("Host")]
                     [Validation(Required=false)]
                     public string Host { get; set; }
+
+                    [NameInMap("Port")]
+                    [Validation(Required=false)]
+                    public CreateIstioGatewayRoutesRequestGatewayRouteRouteDestinationsDestinationPort Port { get; set; }
+                    public class CreateIstioGatewayRoutesRequestGatewayRouteRouteDestinationsDestinationPort : TeaModel {
+                        [NameInMap("Number")]
+                        [Validation(Required=false)]
+                        public int? Number { get; set; }
+                    };
 
                     [NameInMap("Subset")]
                     [Validation(Required=false)]
