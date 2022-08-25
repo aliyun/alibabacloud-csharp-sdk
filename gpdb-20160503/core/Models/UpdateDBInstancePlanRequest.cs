@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
-    public class CreateDBInstancePlanRequest : TeaModel {
+    public class UpdateDBInstancePlanRequest : TeaModel {
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
@@ -29,21 +29,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string PlanEndDate { get; set; }
 
+        [NameInMap("PlanId")]
+        [Validation(Required=false)]
+        public string PlanId { get; set; }
+
         [NameInMap("PlanName")]
         [Validation(Required=false)]
         public string PlanName { get; set; }
 
-        [NameInMap("PlanScheduleType")]
-        [Validation(Required=false)]
-        public string PlanScheduleType { get; set; }
-
         [NameInMap("PlanStartDate")]
         [Validation(Required=false)]
         public string PlanStartDate { get; set; }
-
-        [NameInMap("PlanType")]
-        [Validation(Required=false)]
-        public string PlanType { get; set; }
 
     }
 
