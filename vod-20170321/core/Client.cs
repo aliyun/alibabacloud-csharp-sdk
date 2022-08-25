@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._signatureAlgorithm = "v2";
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -1776,6 +1777,104 @@ namespace AlibabaCloud.SDK.Vod20170321
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateUploadVideoWithOptionsAsync(request, runtime);
+        }
+
+        public DecryptKMSDataKeyResponse DecryptKMSDataKeyWithOptions(DecryptKMSDataKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CipherText))
+            {
+                query["CipherText"] = request.CipherText;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DecryptKMSDataKey",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DecryptKMSDataKeyResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DecryptKMSDataKeyResponse> DecryptKMSDataKeyWithOptionsAsync(DecryptKMSDataKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CipherText))
+            {
+                query["CipherText"] = request.CipherText;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DecryptKMSDataKey",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DecryptKMSDataKeyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DecryptKMSDataKeyResponse DecryptKMSDataKey(DecryptKMSDataKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DecryptKMSDataKeyWithOptions(request, runtime);
+        }
+
+        public async Task<DecryptKMSDataKeyResponse> DecryptKMSDataKeyAsync(DecryptKMSDataKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DecryptKMSDataKeyWithOptionsAsync(request, runtime);
         }
 
         public DeleteAIImageInfosResponse DeleteAIImageInfosWithOptions(DeleteAIImageInfosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5086,6 +5185,96 @@ namespace AlibabaCloud.SDK.Vod20170321
             return await DetachAppPolicyFromIdentityWithOptionsAsync(request, runtime);
         }
 
+        public GenerateKMSDataKeyResponse GenerateKMSDataKeyWithOptions(GenerateKMSDataKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateKMSDataKey",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateKMSDataKeyResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GenerateKMSDataKeyResponse> GenerateKMSDataKeyWithOptionsAsync(GenerateKMSDataKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateKMSDataKey",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateKMSDataKeyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GenerateKMSDataKeyResponse GenerateKMSDataKey(GenerateKMSDataKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GenerateKMSDataKeyWithOptions(request, runtime);
+        }
+
+        public async Task<GenerateKMSDataKeyResponse> GenerateKMSDataKeyAsync(GenerateKMSDataKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GenerateKMSDataKeyWithOptionsAsync(request, runtime);
+        }
+
         public GetAIImageJobsResponse GetAIImageJobsWithOptions(GetAIImageJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6108,6 +6297,88 @@ namespace AlibabaCloud.SDK.Vod20170321
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetImageInfoWithOptionsAsync(request, runtime);
+        }
+
+        public GetImageInfosResponse GetImageInfosWithOptions(GetImageInfosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthTimeout))
+            {
+                query["AuthTimeout"] = request.AuthTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageIds))
+            {
+                query["ImageIds"] = request.ImageIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputType))
+            {
+                query["OutputType"] = request.OutputType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetImageInfos",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetImageInfosResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetImageInfosResponse> GetImageInfosWithOptionsAsync(GetImageInfosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthTimeout))
+            {
+                query["AuthTimeout"] = request.AuthTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageIds))
+            {
+                query["ImageIds"] = request.ImageIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputType))
+            {
+                query["OutputType"] = request.OutputType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetImageInfos",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetImageInfosResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetImageInfosResponse GetImageInfos(GetImageInfosRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetImageInfosWithOptions(request, runtime);
+        }
+
+        public async Task<GetImageInfosResponse> GetImageInfosAsync(GetImageInfosRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetImageInfosWithOptionsAsync(request, runtime);
         }
 
         public GetMediaAuditAudioResultDetailResponse GetMediaAuditAudioResultDetailWithOptions(GetMediaAuditAudioResultDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
