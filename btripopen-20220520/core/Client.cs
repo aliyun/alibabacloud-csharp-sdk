@@ -119,18 +119,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public AddressGetResponse AddressGet(AddressGetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            AddressGetHeaders headers = new AddressGetHeaders();
             return AddressGetWithOptions(request, headers, runtime);
         }
 
         public async Task<AddressGetResponse> AddressGetAsync(AddressGetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            AddressGetHeaders headers = new AddressGetHeaders();
             return await AddressGetWithOptionsAsync(request, headers, runtime);
         }
 
-        public AddressGetResponse AddressGetWithOptions(AddressGetRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public AddressGetResponse AddressGetWithOptions(AddressGetRequest request, AddressGetHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -154,9 +154,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -174,7 +183,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<AddressGetResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<AddressGetResponse> AddressGetWithOptionsAsync(AddressGetRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<AddressGetResponse> AddressGetWithOptionsAsync(AddressGetRequest request, AddressGetHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -198,9 +207,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -218,21 +236,117 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<AddressGetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        public AirportSearchResponse AirportSearch(AirportSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            AirportSearchHeaders headers = new AirportSearchHeaders();
+            return AirportSearchWithOptions(request, headers, runtime);
+        }
+
+        public async Task<AirportSearchResponse> AirportSearchAsync(AirportSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            AirportSearchHeaders headers = new AirportSearchHeaders();
+            return await AirportSearchWithOptionsAsync(request, headers, runtime);
+        }
+
+        public AirportSearchResponse AirportSearchWithOptions(AirportSearchRequest request, AirportSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AirportSearch",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/city/v1/airport",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AirportSearchResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<AirportSearchResponse> AirportSearchWithOptionsAsync(AirportSearchRequest request, AirportSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AirportSearch",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/city/v1/airport",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AirportSearchResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public ApplyAddResponse ApplyAdd(ApplyAddRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            ApplyAddHeaders headers = new ApplyAddHeaders();
             return ApplyAddWithOptions(request, headers, runtime);
         }
 
         public async Task<ApplyAddResponse> ApplyAddAsync(ApplyAddRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            ApplyAddHeaders headers = new ApplyAddHeaders();
             return await ApplyAddWithOptionsAsync(request, headers, runtime);
         }
 
-        public ApplyAddResponse ApplyAddWithOptions(ApplyAddRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ApplyAddResponse ApplyAddWithOptions(ApplyAddRequest tmpReq, ApplyAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ApplyAddShrinkRequest request = new ApplyAddShrinkRequest();
@@ -387,9 +501,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["vehicle_budget"] = request.VehicleBudget;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
@@ -408,7 +531,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ApplyAddResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ApplyAddResponse> ApplyAddWithOptionsAsync(ApplyAddRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ApplyAddResponse> ApplyAddWithOptionsAsync(ApplyAddRequest tmpReq, ApplyAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ApplyAddShrinkRequest request = new ApplyAddShrinkRequest();
@@ -563,9 +686,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["vehicle_budget"] = request.VehicleBudget;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
@@ -584,21 +716,149 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ApplyAddResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        public ApplyApproveResponse ApplyApprove(ApplyApproveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ApplyApproveHeaders headers = new ApplyApproveHeaders();
+            return ApplyApproveWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ApplyApproveResponse> ApplyApproveAsync(ApplyApproveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ApplyApproveHeaders headers = new ApplyApproveHeaders();
+            return await ApplyApproveWithOptionsAsync(request, headers, runtime);
+        }
+
+        public ApplyApproveResponse ApplyApproveWithOptions(ApplyApproveRequest request, ApplyApproveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyId))
+            {
+                body["apply_id"] = request.ApplyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Note))
+            {
+                body["note"] = request.Note;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateTime))
+            {
+                body["operate_time"] = request.OperateTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["user_id"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["user_name"] = request.UserName;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ApplyApprove",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/apply/v1/biz-trip/action/approve",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ApplyApproveResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ApplyApproveResponse> ApplyApproveWithOptionsAsync(ApplyApproveRequest request, ApplyApproveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyId))
+            {
+                body["apply_id"] = request.ApplyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Note))
+            {
+                body["note"] = request.Note;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateTime))
+            {
+                body["operate_time"] = request.OperateTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["user_id"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["user_name"] = request.UserName;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ApplyApprove",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/apply/v1/biz-trip/action/approve",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ApplyApproveResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public ApplyListQueryResponse ApplyListQuery(ApplyListQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            ApplyListQueryHeaders headers = new ApplyListQueryHeaders();
             return ApplyListQueryWithOptions(request, headers, runtime);
         }
 
         public async Task<ApplyListQueryResponse> ApplyListQueryAsync(ApplyListQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            ApplyListQueryHeaders headers = new ApplyListQueryHeaders();
             return await ApplyListQueryWithOptionsAsync(request, headers, runtime);
         }
 
-        public ApplyListQueryResponse ApplyListQueryWithOptions(ApplyListQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ApplyListQueryResponse ApplyListQueryWithOptions(ApplyListQueryRequest request, ApplyListQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -646,9 +906,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -666,7 +935,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ApplyListQueryResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ApplyListQueryResponse> ApplyListQueryWithOptionsAsync(ApplyListQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ApplyListQueryResponse> ApplyListQueryWithOptionsAsync(ApplyListQueryRequest request, ApplyListQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -714,9 +983,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -737,18 +1015,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public ApplyModifyResponse ApplyModify(ApplyModifyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            ApplyModifyHeaders headers = new ApplyModifyHeaders();
             return ApplyModifyWithOptions(request, headers, runtime);
         }
 
         public async Task<ApplyModifyResponse> ApplyModifyAsync(ApplyModifyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            ApplyModifyHeaders headers = new ApplyModifyHeaders();
             return await ApplyModifyWithOptionsAsync(request, headers, runtime);
         }
 
-        public ApplyModifyResponse ApplyModifyWithOptions(ApplyModifyRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ApplyModifyResponse ApplyModifyWithOptions(ApplyModifyRequest tmpReq, ApplyModifyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ApplyModifyShrinkRequest request = new ApplyModifyShrinkRequest();
@@ -894,9 +1172,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["vehicle_budget"] = request.VehicleBudget;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -914,7 +1201,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ApplyModifyResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ApplyModifyResponse> ApplyModifyWithOptionsAsync(ApplyModifyRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ApplyModifyResponse> ApplyModifyWithOptionsAsync(ApplyModifyRequest tmpReq, ApplyModifyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ApplyModifyShrinkRequest request = new ApplyModifyShrinkRequest();
@@ -1060,9 +1347,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["vehicle_budget"] = request.VehicleBudget;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1083,18 +1379,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public ApplyQueryResponse ApplyQuery(ApplyQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            ApplyQueryHeaders headers = new ApplyQueryHeaders();
             return ApplyQueryWithOptions(request, headers, runtime);
         }
 
         public async Task<ApplyQueryResponse> ApplyQueryAsync(ApplyQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            ApplyQueryHeaders headers = new ApplyQueryHeaders();
             return await ApplyQueryWithOptionsAsync(request, headers, runtime);
         }
 
-        public ApplyQueryResponse ApplyQueryWithOptions(ApplyQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ApplyQueryResponse ApplyQueryWithOptions(ApplyQueryRequest request, ApplyQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -1114,9 +1410,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["type"] = request.Type;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1134,7 +1439,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ApplyQueryResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ApplyQueryResponse> ApplyQueryWithOptionsAsync(ApplyQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ApplyQueryResponse> ApplyQueryWithOptionsAsync(ApplyQueryRequest request, ApplyQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -1154,9 +1459,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["type"] = request.Type;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1177,18 +1491,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public CarApplyAddResponse CarApplyAdd(CarApplyAddRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            CarApplyAddHeaders headers = new CarApplyAddHeaders();
             return CarApplyAddWithOptions(request, headers, runtime);
         }
 
         public async Task<CarApplyAddResponse> CarApplyAddAsync(CarApplyAddRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            CarApplyAddHeaders headers = new CarApplyAddHeaders();
             return await CarApplyAddWithOptionsAsync(request, headers, runtime);
         }
 
-        public CarApplyAddResponse CarApplyAddWithOptions(CarApplyAddRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CarApplyAddResponse CarApplyAddWithOptions(CarApplyAddRequest request, CarApplyAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
@@ -1252,9 +1566,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1272,7 +1595,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CarApplyAddResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CarApplyAddResponse> CarApplyAddWithOptionsAsync(CarApplyAddRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CarApplyAddResponse> CarApplyAddWithOptionsAsync(CarApplyAddRequest request, CarApplyAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
@@ -1336,9 +1659,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1359,18 +1691,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public CarApplyModifyResponse CarApplyModify(CarApplyModifyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            CarApplyModifyHeaders headers = new CarApplyModifyHeaders();
             return CarApplyModifyWithOptions(request, headers, runtime);
         }
 
         public async Task<CarApplyModifyResponse> CarApplyModifyAsync(CarApplyModifyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            CarApplyModifyHeaders headers = new CarApplyModifyHeaders();
             return await CarApplyModifyWithOptionsAsync(request, headers, runtime);
         }
 
-        public CarApplyModifyResponse CarApplyModifyWithOptions(CarApplyModifyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CarApplyModifyResponse CarApplyModifyWithOptions(CarApplyModifyRequest request, CarApplyModifyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
@@ -1394,9 +1726,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1414,7 +1755,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CarApplyModifyResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CarApplyModifyResponse> CarApplyModifyWithOptionsAsync(CarApplyModifyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CarApplyModifyResponse> CarApplyModifyWithOptionsAsync(CarApplyModifyRequest request, CarApplyModifyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
@@ -1438,9 +1779,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1461,18 +1811,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public CarApplyQueryResponse CarApplyQuery(CarApplyQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            CarApplyQueryHeaders headers = new CarApplyQueryHeaders();
             return CarApplyQueryWithOptions(request, headers, runtime);
         }
 
         public async Task<CarApplyQueryResponse> CarApplyQueryAsync(CarApplyQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            CarApplyQueryHeaders headers = new CarApplyQueryHeaders();
             return await CarApplyQueryWithOptionsAsync(request, headers, runtime);
         }
 
-        public CarApplyQueryResponse CarApplyQueryWithOptions(CarApplyQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CarApplyQueryResponse CarApplyQueryWithOptions(CarApplyQueryRequest request, CarApplyQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -1500,9 +1850,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1520,7 +1879,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CarApplyQueryResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CarApplyQueryResponse> CarApplyQueryWithOptionsAsync(CarApplyQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CarApplyQueryResponse> CarApplyQueryWithOptionsAsync(CarApplyQueryRequest request, CarApplyQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -1548,9 +1907,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1571,18 +1939,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public CarBillSettlementQueryResponse CarBillSettlementQuery(CarBillSettlementQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            CarBillSettlementQueryHeaders headers = new CarBillSettlementQueryHeaders();
             return CarBillSettlementQueryWithOptions(request, headers, runtime);
         }
 
         public async Task<CarBillSettlementQueryResponse> CarBillSettlementQueryAsync(CarBillSettlementQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            CarBillSettlementQueryHeaders headers = new CarBillSettlementQueryHeaders();
             return await CarBillSettlementQueryWithOptionsAsync(request, headers, runtime);
         }
 
-        public CarBillSettlementQueryResponse CarBillSettlementQueryWithOptions(CarBillSettlementQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CarBillSettlementQueryResponse CarBillSettlementQueryWithOptions(CarBillSettlementQueryRequest request, CarBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -1602,9 +1970,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["period_start"] = request.PeriodStart;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1622,7 +1999,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CarBillSettlementQueryResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CarBillSettlementQueryResponse> CarBillSettlementQueryWithOptionsAsync(CarBillSettlementQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CarBillSettlementQueryResponse> CarBillSettlementQueryWithOptionsAsync(CarBillSettlementQueryRequest request, CarBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -1642,9 +2019,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["period_start"] = request.PeriodStart;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1665,18 +2051,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public CarOrderListQueryResponse CarOrderListQuery(CarOrderListQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            CarOrderListQueryHeaders headers = new CarOrderListQueryHeaders();
             return CarOrderListQueryWithOptions(request, headers, runtime);
         }
 
         public async Task<CarOrderListQueryResponse> CarOrderListQueryAsync(CarOrderListQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            CarOrderListQueryHeaders headers = new CarOrderListQueryHeaders();
             return await CarOrderListQueryWithOptionsAsync(request, headers, runtime);
         }
 
-        public CarOrderListQueryResponse CarOrderListQueryWithOptions(CarOrderListQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CarOrderListQueryResponse CarOrderListQueryWithOptions(CarOrderListQueryRequest request, CarOrderListQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -1724,9 +2110,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1744,7 +2139,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CarOrderListQueryResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CarOrderListQueryResponse> CarOrderListQueryWithOptionsAsync(CarOrderListQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CarOrderListQueryResponse> CarOrderListQueryWithOptionsAsync(CarOrderListQueryRequest request, CarOrderListQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -1792,9 +2187,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1812,21 +2216,109 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CarOrderListQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        public CitySearchResponse CitySearch(CitySearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CitySearchHeaders headers = new CitySearchHeaders();
+            return CitySearchWithOptions(request, headers, runtime);
+        }
+
+        public async Task<CitySearchResponse> CitySearchAsync(CitySearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CitySearchHeaders headers = new CitySearchHeaders();
+            return await CitySearchWithOptionsAsync(request, headers, runtime);
+        }
+
+        public CitySearchResponse CitySearchWithOptions(CitySearchRequest request, CitySearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["keyword"] = request.Keyword;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CitySearch",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/city/v1/city",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CitySearchResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CitySearchResponse> CitySearchWithOptionsAsync(CitySearchRequest request, CitySearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["keyword"] = request.Keyword;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CitySearch",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/city/v1/city",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CitySearchResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public CommonApplyQueryResponse CommonApplyQuery(CommonApplyQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            CommonApplyQueryHeaders headers = new CommonApplyQueryHeaders();
             return CommonApplyQueryWithOptions(request, headers, runtime);
         }
 
         public async Task<CommonApplyQueryResponse> CommonApplyQueryAsync(CommonApplyQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            CommonApplyQueryHeaders headers = new CommonApplyQueryHeaders();
             return await CommonApplyQueryWithOptionsAsync(request, headers, runtime);
         }
 
-        public CommonApplyQueryResponse CommonApplyQueryWithOptions(CommonApplyQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CommonApplyQueryResponse CommonApplyQueryWithOptions(CommonApplyQueryRequest request, CommonApplyQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -1842,9 +2334,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1862,7 +2363,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CommonApplyQueryResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CommonApplyQueryResponse> CommonApplyQueryWithOptionsAsync(CommonApplyQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CommonApplyQueryResponse> CommonApplyQueryWithOptionsAsync(CommonApplyQueryRequest request, CommonApplyQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -1878,9 +2379,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1901,18 +2411,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public CommonApplySyncResponse CommonApplySync(CommonApplySyncRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            CommonApplySyncHeaders headers = new CommonApplySyncHeaders();
             return CommonApplySyncWithOptions(request, headers, runtime);
         }
 
         public async Task<CommonApplySyncResponse> CommonApplySyncAsync(CommonApplySyncRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            CommonApplySyncHeaders headers = new CommonApplySyncHeaders();
             return await CommonApplySyncWithOptionsAsync(request, headers, runtime);
         }
 
-        public CommonApplySyncResponse CommonApplySyncWithOptions(CommonApplySyncRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CommonApplySyncResponse CommonApplySyncWithOptions(CommonApplySyncRequest request, CommonApplySyncHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -1940,9 +2450,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1960,7 +2479,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CommonApplySyncResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CommonApplySyncResponse> CommonApplySyncWithOptionsAsync(CommonApplySyncRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CommonApplySyncResponse> CommonApplySyncWithOptionsAsync(CommonApplySyncRequest request, CommonApplySyncHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -1988,9 +2507,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -2011,18 +2539,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public CorpTokenResponse CorpToken(CorpTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            CorpTokenHeaders headers = new CorpTokenHeaders();
             return CorpTokenWithOptions(request, headers, runtime);
         }
 
         public async Task<CorpTokenResponse> CorpTokenAsync(CorpTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            CorpTokenHeaders headers = new CorpTokenHeaders();
             return await CorpTokenWithOptionsAsync(request, headers, runtime);
         }
 
-        public CorpTokenResponse CorpTokenWithOptions(CorpTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CorpTokenResponse CorpTokenWithOptions(CorpTokenRequest request, CorpTokenHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -2034,9 +2562,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["type"] = request.Type;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripAccessToken))
+            {
+                realHeaders["x-acs-btrip-access-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripAccessToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -2054,7 +2591,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CorpTokenResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CorpTokenResponse> CorpTokenWithOptionsAsync(CorpTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CorpTokenResponse> CorpTokenWithOptionsAsync(CorpTokenRequest request, CorpTokenHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -2066,9 +2603,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["type"] = request.Type;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripAccessToken))
+            {
+                realHeaders["x-acs-btrip-access-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripAccessToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -2089,18 +2635,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public CostCenterDeleteResponse CostCenterDelete(CostCenterDeleteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            CostCenterDeleteHeaders headers = new CostCenterDeleteHeaders();
             return CostCenterDeleteWithOptions(request, headers, runtime);
         }
 
         public async Task<CostCenterDeleteResponse> CostCenterDeleteAsync(CostCenterDeleteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            CostCenterDeleteHeaders headers = new CostCenterDeleteHeaders();
             return await CostCenterDeleteWithOptionsAsync(request, headers, runtime);
         }
 
-        public CostCenterDeleteResponse CostCenterDeleteWithOptions(CostCenterDeleteRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CostCenterDeleteResponse CostCenterDeleteWithOptions(CostCenterDeleteRequest request, CostCenterDeleteHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -2108,9 +2654,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["thirdpart_id"] = request.ThirdpartId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -2128,7 +2683,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CostCenterDeleteResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CostCenterDeleteResponse> CostCenterDeleteWithOptionsAsync(CostCenterDeleteRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CostCenterDeleteResponse> CostCenterDeleteWithOptionsAsync(CostCenterDeleteRequest request, CostCenterDeleteHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -2136,9 +2691,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["thirdpart_id"] = request.ThirdpartId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -2159,18 +2723,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public CostCenterModifyResponse CostCenterModify(CostCenterModifyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            CostCenterModifyHeaders headers = new CostCenterModifyHeaders();
             return CostCenterModifyWithOptions(request, headers, runtime);
         }
 
         public async Task<CostCenterModifyResponse> CostCenterModifyAsync(CostCenterModifyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            CostCenterModifyHeaders headers = new CostCenterModifyHeaders();
             return await CostCenterModifyWithOptionsAsync(request, headers, runtime);
         }
 
-        public CostCenterModifyResponse CostCenterModifyWithOptions(CostCenterModifyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CostCenterModifyResponse CostCenterModifyWithOptions(CostCenterModifyRequest request, CostCenterModifyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
@@ -2194,9 +2758,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["title"] = request.Title;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -2214,7 +2787,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CostCenterModifyResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CostCenterModifyResponse> CostCenterModifyWithOptionsAsync(CostCenterModifyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CostCenterModifyResponse> CostCenterModifyWithOptionsAsync(CostCenterModifyRequest request, CostCenterModifyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
@@ -2238,9 +2811,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["title"] = request.Title;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -2373,18 +2955,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public CostCenterSaveResponse CostCenterSave(CostCenterSaveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            CostCenterSaveHeaders headers = new CostCenterSaveHeaders();
             return CostCenterSaveWithOptions(request, headers, runtime);
         }
 
         public async Task<CostCenterSaveResponse> CostCenterSaveAsync(CostCenterSaveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            CostCenterSaveHeaders headers = new CostCenterSaveHeaders();
             return await CostCenterSaveWithOptionsAsync(request, headers, runtime);
         }
 
-        public CostCenterSaveResponse CostCenterSaveWithOptions(CostCenterSaveRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CostCenterSaveResponse CostCenterSaveWithOptions(CostCenterSaveRequest request, CostCenterSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
@@ -2408,9 +2990,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["title"] = request.Title;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -2428,7 +3019,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CostCenterSaveResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CostCenterSaveResponse> CostCenterSaveWithOptionsAsync(CostCenterSaveRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CostCenterSaveResponse> CostCenterSaveWithOptionsAsync(CostCenterSaveRequest request, CostCenterSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
@@ -2452,9 +3043,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["title"] = request.Title;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -2475,18 +3075,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public DepartmentSaveResponse DepartmentSave(DepartmentSaveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            DepartmentSaveHeaders headers = new DepartmentSaveHeaders();
             return DepartmentSaveWithOptions(request, headers, runtime);
         }
 
         public async Task<DepartmentSaveResponse> DepartmentSaveAsync(DepartmentSaveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            DepartmentSaveHeaders headers = new DepartmentSaveHeaders();
             return await DepartmentSaveWithOptionsAsync(request, headers, runtime);
         }
 
-        public DepartmentSaveResponse DepartmentSaveWithOptions(DepartmentSaveRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DepartmentSaveResponse DepartmentSaveWithOptions(DepartmentSaveRequest tmpReq, DepartmentSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             DepartmentSaveShrinkRequest request = new DepartmentSaveShrinkRequest();
@@ -2500,9 +3100,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["depart_list"] = request.DepartListShrink;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -2520,7 +3129,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<DepartmentSaveResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DepartmentSaveResponse> DepartmentSaveWithOptionsAsync(DepartmentSaveRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DepartmentSaveResponse> DepartmentSaveWithOptionsAsync(DepartmentSaveRequest tmpReq, DepartmentSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             DepartmentSaveShrinkRequest request = new DepartmentSaveShrinkRequest();
@@ -2534,9 +3143,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["depart_list"] = request.DepartListShrink;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -2557,18 +3175,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public EntityAddResponse EntityAdd(EntityAddRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            EntityAddHeaders headers = new EntityAddHeaders();
             return EntityAddWithOptions(request, headers, runtime);
         }
 
         public async Task<EntityAddResponse> EntityAddAsync(EntityAddRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            EntityAddHeaders headers = new EntityAddHeaders();
             return await EntityAddWithOptionsAsync(request, headers, runtime);
         }
 
-        public EntityAddResponse EntityAddWithOptions(EntityAddRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public EntityAddResponse EntityAddWithOptions(EntityAddRequest tmpReq, EntityAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             EntityAddShrinkRequest request = new EntityAddShrinkRequest();
@@ -2586,9 +3204,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["thirdpart_id"] = request.ThirdpartId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -2606,7 +3233,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<EntityAddResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<EntityAddResponse> EntityAddWithOptionsAsync(EntityAddRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<EntityAddResponse> EntityAddWithOptionsAsync(EntityAddRequest tmpReq, EntityAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             EntityAddShrinkRequest request = new EntityAddShrinkRequest();
@@ -2624,9 +3251,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["thirdpart_id"] = request.ThirdpartId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -2647,18 +3283,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public EntityDeleteResponse EntityDelete(EntityDeleteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            EntityDeleteHeaders headers = new EntityDeleteHeaders();
             return EntityDeleteWithOptions(request, headers, runtime);
         }
 
         public async Task<EntityDeleteResponse> EntityDeleteAsync(EntityDeleteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            EntityDeleteHeaders headers = new EntityDeleteHeaders();
             return await EntityDeleteWithOptionsAsync(request, headers, runtime);
         }
 
-        public EntityDeleteResponse EntityDeleteWithOptions(EntityDeleteRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public EntityDeleteResponse EntityDeleteWithOptions(EntityDeleteRequest tmpReq, EntityDeleteHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             EntityDeleteShrinkRequest request = new EntityDeleteShrinkRequest();
@@ -2681,9 +3317,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["entity_d_o_list"] = request.EntityDOListShrink;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
@@ -2702,7 +3347,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<EntityDeleteResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<EntityDeleteResponse> EntityDeleteWithOptionsAsync(EntityDeleteRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<EntityDeleteResponse> EntityDeleteWithOptionsAsync(EntityDeleteRequest tmpReq, EntityDeleteHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             EntityDeleteShrinkRequest request = new EntityDeleteShrinkRequest();
@@ -2725,9 +3370,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["entity_d_o_list"] = request.EntityDOListShrink;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
@@ -2749,18 +3403,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public EntitySetResponse EntitySet(EntitySetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            EntitySetHeaders headers = new EntitySetHeaders();
             return EntitySetWithOptions(request, headers, runtime);
         }
 
         public async Task<EntitySetResponse> EntitySetAsync(EntitySetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            EntitySetHeaders headers = new EntitySetHeaders();
             return await EntitySetWithOptionsAsync(request, headers, runtime);
         }
 
-        public EntitySetResponse EntitySetWithOptions(EntitySetRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public EntitySetResponse EntitySetWithOptions(EntitySetRequest tmpReq, EntitySetHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             EntitySetShrinkRequest request = new EntitySetShrinkRequest();
@@ -2778,9 +3432,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["thirdpart_id"] = request.ThirdpartId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -2798,7 +3461,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<EntitySetResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<EntitySetResponse> EntitySetWithOptionsAsync(EntitySetRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<EntitySetResponse> EntitySetWithOptionsAsync(EntitySetRequest tmpReq, EntitySetHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             EntitySetShrinkRequest request = new EntitySetShrinkRequest();
@@ -2816,9 +3479,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["thirdpart_id"] = request.ThirdpartId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -2839,18 +3511,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public ExceedApplySyncResponse ExceedApplySync(ExceedApplySyncRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            ExceedApplySyncHeaders headers = new ExceedApplySyncHeaders();
             return ExceedApplySyncWithOptions(request, headers, runtime);
         }
 
         public async Task<ExceedApplySyncResponse> ExceedApplySyncAsync(ExceedApplySyncRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            ExceedApplySyncHeaders headers = new ExceedApplySyncHeaders();
             return await ExceedApplySyncWithOptionsAsync(request, headers, runtime);
         }
 
-        public ExceedApplySyncResponse ExceedApplySyncWithOptions(ExceedApplySyncRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ExceedApplySyncResponse ExceedApplySyncWithOptions(ExceedApplySyncRequest request, ExceedApplySyncHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -2878,9 +3550,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -2898,7 +3579,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ExceedApplySyncResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ExceedApplySyncResponse> ExceedApplySyncWithOptionsAsync(ExceedApplySyncRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ExceedApplySyncResponse> ExceedApplySyncWithOptionsAsync(ExceedApplySyncRequest request, ExceedApplySyncHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -2926,9 +3607,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -2949,18 +3639,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public FlightBillSettlementQueryResponse FlightBillSettlementQuery(FlightBillSettlementQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            FlightBillSettlementQueryHeaders headers = new FlightBillSettlementQueryHeaders();
             return FlightBillSettlementQueryWithOptions(request, headers, runtime);
         }
 
         public async Task<FlightBillSettlementQueryResponse> FlightBillSettlementQueryAsync(FlightBillSettlementQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            FlightBillSettlementQueryHeaders headers = new FlightBillSettlementQueryHeaders();
             return await FlightBillSettlementQueryWithOptionsAsync(request, headers, runtime);
         }
 
-        public FlightBillSettlementQueryResponse FlightBillSettlementQueryWithOptions(FlightBillSettlementQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public FlightBillSettlementQueryResponse FlightBillSettlementQueryWithOptions(FlightBillSettlementQueryRequest request, FlightBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -2980,9 +3670,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["period_start"] = request.PeriodStart;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3000,7 +3699,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightBillSettlementQueryResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<FlightBillSettlementQueryResponse> FlightBillSettlementQueryWithOptionsAsync(FlightBillSettlementQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<FlightBillSettlementQueryResponse> FlightBillSettlementQueryWithOptionsAsync(FlightBillSettlementQueryRequest request, FlightBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -3020,9 +3719,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["period_start"] = request.PeriodStart;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3043,18 +3751,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public FlightExceedApplyQueryResponse FlightExceedApplyQuery(FlightExceedApplyQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            FlightExceedApplyQueryHeaders headers = new FlightExceedApplyQueryHeaders();
             return FlightExceedApplyQueryWithOptions(request, headers, runtime);
         }
 
         public async Task<FlightExceedApplyQueryResponse> FlightExceedApplyQueryAsync(FlightExceedApplyQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            FlightExceedApplyQueryHeaders headers = new FlightExceedApplyQueryHeaders();
             return await FlightExceedApplyQueryWithOptionsAsync(request, headers, runtime);
         }
 
-        public FlightExceedApplyQueryResponse FlightExceedApplyQueryWithOptions(FlightExceedApplyQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public FlightExceedApplyQueryResponse FlightExceedApplyQueryWithOptions(FlightExceedApplyQueryRequest request, FlightExceedApplyQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -3062,9 +3770,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["apply_id"] = request.ApplyId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3082,7 +3799,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightExceedApplyQueryResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<FlightExceedApplyQueryResponse> FlightExceedApplyQueryWithOptionsAsync(FlightExceedApplyQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<FlightExceedApplyQueryResponse> FlightExceedApplyQueryWithOptionsAsync(FlightExceedApplyQueryRequest request, FlightExceedApplyQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -3090,9 +3807,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["apply_id"] = request.ApplyId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3113,18 +3839,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public FlightOrderListQueryResponse FlightOrderListQuery(FlightOrderListQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            FlightOrderListQueryHeaders headers = new FlightOrderListQueryHeaders();
             return FlightOrderListQueryWithOptions(request, headers, runtime);
         }
 
         public async Task<FlightOrderListQueryResponse> FlightOrderListQueryAsync(FlightOrderListQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            FlightOrderListQueryHeaders headers = new FlightOrderListQueryHeaders();
             return await FlightOrderListQueryWithOptionsAsync(request, headers, runtime);
         }
 
-        public FlightOrderListQueryResponse FlightOrderListQueryWithOptions(FlightOrderListQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public FlightOrderListQueryResponse FlightOrderListQueryWithOptions(FlightOrderListQueryRequest request, FlightOrderListQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -3172,9 +3898,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3192,7 +3927,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightOrderListQueryResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<FlightOrderListQueryResponse> FlightOrderListQueryWithOptionsAsync(FlightOrderListQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<FlightOrderListQueryResponse> FlightOrderListQueryWithOptionsAsync(FlightOrderListQueryRequest request, FlightOrderListQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -3240,9 +3975,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3263,18 +4007,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public FlightOrderQueryResponse FlightOrderQuery(FlightOrderQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            FlightOrderQueryHeaders headers = new FlightOrderQueryHeaders();
             return FlightOrderQueryWithOptions(request, headers, runtime);
         }
 
         public async Task<FlightOrderQueryResponse> FlightOrderQueryAsync(FlightOrderQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            FlightOrderQueryHeaders headers = new FlightOrderQueryHeaders();
             return await FlightOrderQueryWithOptionsAsync(request, headers, runtime);
         }
 
-        public FlightOrderQueryResponse FlightOrderQueryWithOptions(FlightOrderQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public FlightOrderQueryResponse FlightOrderQueryWithOptions(FlightOrderQueryRequest request, FlightOrderQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -3286,9 +4030,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3306,7 +4059,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightOrderQueryResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<FlightOrderQueryResponse> FlightOrderQueryWithOptionsAsync(FlightOrderQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<FlightOrderQueryResponse> FlightOrderQueryWithOptionsAsync(FlightOrderQueryRequest request, FlightOrderQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -3318,9 +4071,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3341,18 +4103,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public HotelBillSettlementQueryResponse HotelBillSettlementQuery(HotelBillSettlementQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            HotelBillSettlementQueryHeaders headers = new HotelBillSettlementQueryHeaders();
             return HotelBillSettlementQueryWithOptions(request, headers, runtime);
         }
 
         public async Task<HotelBillSettlementQueryResponse> HotelBillSettlementQueryAsync(HotelBillSettlementQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            HotelBillSettlementQueryHeaders headers = new HotelBillSettlementQueryHeaders();
             return await HotelBillSettlementQueryWithOptionsAsync(request, headers, runtime);
         }
 
-        public HotelBillSettlementQueryResponse HotelBillSettlementQueryWithOptions(HotelBillSettlementQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public HotelBillSettlementQueryResponse HotelBillSettlementQueryWithOptions(HotelBillSettlementQueryRequest request, HotelBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -3372,9 +4134,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["period_start"] = request.PeriodStart;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3392,7 +4163,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelBillSettlementQueryResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<HotelBillSettlementQueryResponse> HotelBillSettlementQueryWithOptionsAsync(HotelBillSettlementQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<HotelBillSettlementQueryResponse> HotelBillSettlementQueryWithOptionsAsync(HotelBillSettlementQueryRequest request, HotelBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -3412,9 +4183,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["period_start"] = request.PeriodStart;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3435,18 +4215,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public HotelExceedApplyQueryResponse HotelExceedApplyQuery(HotelExceedApplyQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            HotelExceedApplyQueryHeaders headers = new HotelExceedApplyQueryHeaders();
             return HotelExceedApplyQueryWithOptions(request, headers, runtime);
         }
 
         public async Task<HotelExceedApplyQueryResponse> HotelExceedApplyQueryAsync(HotelExceedApplyQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            HotelExceedApplyQueryHeaders headers = new HotelExceedApplyQueryHeaders();
             return await HotelExceedApplyQueryWithOptionsAsync(request, headers, runtime);
         }
 
-        public HotelExceedApplyQueryResponse HotelExceedApplyQueryWithOptions(HotelExceedApplyQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public HotelExceedApplyQueryResponse HotelExceedApplyQueryWithOptions(HotelExceedApplyQueryRequest request, HotelExceedApplyQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -3454,9 +4234,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["apply_id"] = request.ApplyId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3474,7 +4263,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelExceedApplyQueryResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<HotelExceedApplyQueryResponse> HotelExceedApplyQueryWithOptionsAsync(HotelExceedApplyQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<HotelExceedApplyQueryResponse> HotelExceedApplyQueryWithOptionsAsync(HotelExceedApplyQueryRequest request, HotelExceedApplyQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -3482,9 +4271,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["apply_id"] = request.ApplyId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3505,18 +4303,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public HotelOrderListQueryResponse HotelOrderListQuery(HotelOrderListQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            HotelOrderListQueryHeaders headers = new HotelOrderListQueryHeaders();
             return HotelOrderListQueryWithOptions(request, headers, runtime);
         }
 
         public async Task<HotelOrderListQueryResponse> HotelOrderListQueryAsync(HotelOrderListQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            HotelOrderListQueryHeaders headers = new HotelOrderListQueryHeaders();
             return await HotelOrderListQueryWithOptionsAsync(request, headers, runtime);
         }
 
-        public HotelOrderListQueryResponse HotelOrderListQueryWithOptions(HotelOrderListQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public HotelOrderListQueryResponse HotelOrderListQueryWithOptions(HotelOrderListQueryRequest request, HotelOrderListQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -3564,9 +4362,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3584,7 +4391,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelOrderListQueryResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<HotelOrderListQueryResponse> HotelOrderListQueryWithOptionsAsync(HotelOrderListQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<HotelOrderListQueryResponse> HotelOrderListQueryWithOptionsAsync(HotelOrderListQueryRequest request, HotelOrderListQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -3632,9 +4439,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3652,21 +4468,133 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelOrderListQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        public IeFlightBillSettlementQueryResponse IeFlightBillSettlementQuery(IeFlightBillSettlementQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            IeFlightBillSettlementQueryHeaders headers = new IeFlightBillSettlementQueryHeaders();
+            return IeFlightBillSettlementQueryWithOptions(request, headers, runtime);
+        }
+
+        public async Task<IeFlightBillSettlementQueryResponse> IeFlightBillSettlementQueryAsync(IeFlightBillSettlementQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            IeFlightBillSettlementQueryHeaders headers = new IeFlightBillSettlementQueryHeaders();
+            return await IeFlightBillSettlementQueryWithOptionsAsync(request, headers, runtime);
+        }
+
+        public IeFlightBillSettlementQueryResponse IeFlightBillSettlementQueryWithOptions(IeFlightBillSettlementQueryRequest request, IeFlightBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["page_no"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["page_size"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodEnd))
+            {
+                query["period_end"] = request.PeriodEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
+            {
+                query["period_start"] = request.PeriodStart;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IeFlightBillSettlementQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/ie-flight/v1/bill-settlement",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IeFlightBillSettlementQueryResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<IeFlightBillSettlementQueryResponse> IeFlightBillSettlementQueryWithOptionsAsync(IeFlightBillSettlementQueryRequest request, IeFlightBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["page_no"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["page_size"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodEnd))
+            {
+                query["period_end"] = request.PeriodEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
+            {
+                query["period_start"] = request.PeriodStart;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IeFlightBillSettlementQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/ie-flight/v1/bill-settlement",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IeFlightBillSettlementQueryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public InvoiceAddResponse InvoiceAdd(InvoiceAddRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            InvoiceAddHeaders headers = new InvoiceAddHeaders();
             return InvoiceAddWithOptions(request, headers, runtime);
         }
 
         public async Task<InvoiceAddResponse> InvoiceAddAsync(InvoiceAddRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            InvoiceAddHeaders headers = new InvoiceAddHeaders();
             return await InvoiceAddWithOptionsAsync(request, headers, runtime);
         }
 
-        public InvoiceAddResponse InvoiceAddWithOptions(InvoiceAddRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public InvoiceAddResponse InvoiceAddWithOptions(InvoiceAddRequest request, InvoiceAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
@@ -3702,9 +4630,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["type"] = request.Type;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3722,7 +4659,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InvoiceAddResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<InvoiceAddResponse> InvoiceAddWithOptionsAsync(InvoiceAddRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<InvoiceAddResponse> InvoiceAddWithOptionsAsync(InvoiceAddRequest request, InvoiceAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
@@ -3758,9 +4695,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["type"] = request.Type;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3781,18 +4727,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public InvoiceDeleteResponse InvoiceDelete(InvoiceDeleteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            InvoiceDeleteHeaders headers = new InvoiceDeleteHeaders();
             return InvoiceDeleteWithOptions(request, headers, runtime);
         }
 
         public async Task<InvoiceDeleteResponse> InvoiceDeleteAsync(InvoiceDeleteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            InvoiceDeleteHeaders headers = new InvoiceDeleteHeaders();
             return await InvoiceDeleteWithOptionsAsync(request, headers, runtime);
         }
 
-        public InvoiceDeleteResponse InvoiceDeleteWithOptions(InvoiceDeleteRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public InvoiceDeleteResponse InvoiceDeleteWithOptions(InvoiceDeleteRequest request, InvoiceDeleteHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -3800,9 +4746,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["third_part_id"] = request.ThirdPartId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3820,7 +4775,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InvoiceDeleteResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<InvoiceDeleteResponse> InvoiceDeleteWithOptionsAsync(InvoiceDeleteRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<InvoiceDeleteResponse> InvoiceDeleteWithOptionsAsync(InvoiceDeleteRequest request, InvoiceDeleteHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -3828,9 +4783,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["third_part_id"] = request.ThirdPartId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3851,18 +4815,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public InvoiceModifyResponse InvoiceModify(InvoiceModifyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            InvoiceModifyHeaders headers = new InvoiceModifyHeaders();
             return InvoiceModifyWithOptions(request, headers, runtime);
         }
 
         public async Task<InvoiceModifyResponse> InvoiceModifyAsync(InvoiceModifyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            InvoiceModifyHeaders headers = new InvoiceModifyHeaders();
             return await InvoiceModifyWithOptionsAsync(request, headers, runtime);
         }
 
-        public InvoiceModifyResponse InvoiceModifyWithOptions(InvoiceModifyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public InvoiceModifyResponse InvoiceModifyWithOptions(InvoiceModifyRequest request, InvoiceModifyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
@@ -3898,9 +4862,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["type"] = request.Type;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3918,7 +4891,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InvoiceModifyResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<InvoiceModifyResponse> InvoiceModifyWithOptionsAsync(InvoiceModifyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<InvoiceModifyResponse> InvoiceModifyWithOptionsAsync(InvoiceModifyRequest request, InvoiceModifyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
@@ -3954,9 +4927,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["type"] = request.Type;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3977,18 +4959,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public InvoiceRuleSaveResponse InvoiceRuleSave(InvoiceRuleSaveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            InvoiceRuleSaveHeaders headers = new InvoiceRuleSaveHeaders();
             return InvoiceRuleSaveWithOptions(request, headers, runtime);
         }
 
         public async Task<InvoiceRuleSaveResponse> InvoiceRuleSaveAsync(InvoiceRuleSaveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            InvoiceRuleSaveHeaders headers = new InvoiceRuleSaveHeaders();
             return await InvoiceRuleSaveWithOptionsAsync(request, headers, runtime);
         }
 
-        public InvoiceRuleSaveResponse InvoiceRuleSaveWithOptions(InvoiceRuleSaveRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public InvoiceRuleSaveResponse InvoiceRuleSaveWithOptions(InvoiceRuleSaveRequest tmpReq, InvoiceRuleSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             InvoiceRuleSaveShrinkRequest request = new InvoiceRuleSaveShrinkRequest();
@@ -4010,9 +4992,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["third_part_id"] = request.ThirdPartId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4030,7 +5021,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InvoiceRuleSaveResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<InvoiceRuleSaveResponse> InvoiceRuleSaveWithOptionsAsync(InvoiceRuleSaveRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<InvoiceRuleSaveResponse> InvoiceRuleSaveWithOptionsAsync(InvoiceRuleSaveRequest tmpReq, InvoiceRuleSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             InvoiceRuleSaveShrinkRequest request = new InvoiceRuleSaveShrinkRequest();
@@ -4052,9 +5043,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["third_part_id"] = request.ThirdPartId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4075,18 +5075,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public InvoiceSearchResponse InvoiceSearch(InvoiceSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            InvoiceSearchHeaders headers = new InvoiceSearchHeaders();
             return InvoiceSearchWithOptions(request, headers, runtime);
         }
 
         public async Task<InvoiceSearchResponse> InvoiceSearchAsync(InvoiceSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            InvoiceSearchHeaders headers = new InvoiceSearchHeaders();
             return await InvoiceSearchWithOptionsAsync(request, headers, runtime);
         }
 
-        public InvoiceSearchResponse InvoiceSearchWithOptions(InvoiceSearchRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public InvoiceSearchResponse InvoiceSearchWithOptions(InvoiceSearchRequest request, InvoiceSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -4098,9 +5098,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4118,7 +5127,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InvoiceSearchResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<InvoiceSearchResponse> InvoiceSearchWithOptionsAsync(InvoiceSearchRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<InvoiceSearchResponse> InvoiceSearchWithOptionsAsync(InvoiceSearchRequest request, InvoiceSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -4130,9 +5139,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4153,18 +5171,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public IsvUserSaveResponse IsvUserSave(IsvUserSaveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            IsvUserSaveHeaders headers = new IsvUserSaveHeaders();
             return IsvUserSaveWithOptions(request, headers, runtime);
         }
 
         public async Task<IsvUserSaveResponse> IsvUserSaveAsync(IsvUserSaveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            IsvUserSaveHeaders headers = new IsvUserSaveHeaders();
             return await IsvUserSaveWithOptionsAsync(request, headers, runtime);
         }
 
-        public IsvUserSaveResponse IsvUserSaveWithOptions(IsvUserSaveRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public IsvUserSaveResponse IsvUserSaveWithOptions(IsvUserSaveRequest tmpReq, IsvUserSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             IsvUserSaveShrinkRequest request = new IsvUserSaveShrinkRequest();
@@ -4178,9 +5196,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["user_list"] = request.UserListShrink;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4198,7 +5225,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IsvUserSaveResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<IsvUserSaveResponse> IsvUserSaveWithOptionsAsync(IsvUserSaveRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<IsvUserSaveResponse> IsvUserSaveWithOptionsAsync(IsvUserSaveRequest tmpReq, IsvUserSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             IsvUserSaveShrinkRequest request = new IsvUserSaveShrinkRequest();
@@ -4212,9 +5239,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["user_list"] = request.UserListShrink;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4235,18 +5271,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public MonthBillGetResponse MonthBillGet(MonthBillGetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            MonthBillGetHeaders headers = new MonthBillGetHeaders();
             return MonthBillGetWithOptions(request, headers, runtime);
         }
 
         public async Task<MonthBillGetResponse> MonthBillGetAsync(MonthBillGetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            MonthBillGetHeaders headers = new MonthBillGetHeaders();
             return await MonthBillGetWithOptionsAsync(request, headers, runtime);
         }
 
-        public MonthBillGetResponse MonthBillGetWithOptions(MonthBillGetRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public MonthBillGetResponse MonthBillGetWithOptions(MonthBillGetRequest request, MonthBillGetHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -4254,9 +5290,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["bill_month"] = request.BillMonth;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4274,7 +5319,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<MonthBillGetResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<MonthBillGetResponse> MonthBillGetWithOptionsAsync(MonthBillGetRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<MonthBillGetResponse> MonthBillGetWithOptionsAsync(MonthBillGetRequest request, MonthBillGetHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -4282,9 +5327,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["bill_month"] = request.BillMonth;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4305,18 +5359,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public ProjectAddResponse ProjectAdd(ProjectAddRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            ProjectAddHeaders headers = new ProjectAddHeaders();
             return ProjectAddWithOptions(request, headers, runtime);
         }
 
         public async Task<ProjectAddResponse> ProjectAddAsync(ProjectAddRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            ProjectAddHeaders headers = new ProjectAddHeaders();
             return await ProjectAddWithOptionsAsync(request, headers, runtime);
         }
 
-        public ProjectAddResponse ProjectAddWithOptions(ProjectAddRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ProjectAddResponse ProjectAddWithOptions(ProjectAddRequest request, ProjectAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
@@ -4340,9 +5394,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["third_part_invoice_id"] = request.ThirdPartInvoiceId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4360,7 +5423,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ProjectAddResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ProjectAddResponse> ProjectAddWithOptionsAsync(ProjectAddRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ProjectAddResponse> ProjectAddWithOptionsAsync(ProjectAddRequest request, ProjectAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
@@ -4384,9 +5447,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["third_part_invoice_id"] = request.ThirdPartInvoiceId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4407,18 +5479,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public ProjectDeleteResponse ProjectDelete(ProjectDeleteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            ProjectDeleteHeaders headers = new ProjectDeleteHeaders();
             return ProjectDeleteWithOptions(request, headers, runtime);
         }
 
         public async Task<ProjectDeleteResponse> ProjectDeleteAsync(ProjectDeleteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            ProjectDeleteHeaders headers = new ProjectDeleteHeaders();
             return await ProjectDeleteWithOptionsAsync(request, headers, runtime);
         }
 
-        public ProjectDeleteResponse ProjectDeleteWithOptions(ProjectDeleteRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ProjectDeleteResponse ProjectDeleteWithOptions(ProjectDeleteRequest request, ProjectDeleteHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -4426,9 +5498,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["third_part_id"] = request.ThirdPartId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4446,7 +5527,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ProjectDeleteResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ProjectDeleteResponse> ProjectDeleteWithOptionsAsync(ProjectDeleteRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ProjectDeleteResponse> ProjectDeleteWithOptionsAsync(ProjectDeleteRequest request, ProjectDeleteHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -4454,9 +5535,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["third_part_id"] = request.ThirdPartId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4477,18 +5567,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public ProjectModifyResponse ProjectModify(ProjectModifyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            ProjectModifyHeaders headers = new ProjectModifyHeaders();
             return ProjectModifyWithOptions(request, headers, runtime);
         }
 
         public async Task<ProjectModifyResponse> ProjectModifyAsync(ProjectModifyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            ProjectModifyHeaders headers = new ProjectModifyHeaders();
             return await ProjectModifyWithOptionsAsync(request, headers, runtime);
         }
 
-        public ProjectModifyResponse ProjectModifyWithOptions(ProjectModifyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ProjectModifyResponse ProjectModifyWithOptions(ProjectModifyRequest request, ProjectModifyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
@@ -4512,9 +5602,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["third_part_invoice_id"] = request.ThirdPartInvoiceId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4532,7 +5631,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ProjectModifyResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ProjectModifyResponse> ProjectModifyWithOptionsAsync(ProjectModifyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ProjectModifyResponse> ProjectModifyWithOptionsAsync(ProjectModifyRequest request, ProjectModifyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
@@ -4556,9 +5655,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["third_part_invoice_id"] = request.ThirdPartInvoiceId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4579,18 +5687,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public TrainBillSettlementQueryResponse TrainBillSettlementQuery(TrainBillSettlementQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            TrainBillSettlementQueryHeaders headers = new TrainBillSettlementQueryHeaders();
             return TrainBillSettlementQueryWithOptions(request, headers, runtime);
         }
 
         public async Task<TrainBillSettlementQueryResponse> TrainBillSettlementQueryAsync(TrainBillSettlementQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            TrainBillSettlementQueryHeaders headers = new TrainBillSettlementQueryHeaders();
             return await TrainBillSettlementQueryWithOptionsAsync(request, headers, runtime);
         }
 
-        public TrainBillSettlementQueryResponse TrainBillSettlementQueryWithOptions(TrainBillSettlementQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public TrainBillSettlementQueryResponse TrainBillSettlementQueryWithOptions(TrainBillSettlementQueryRequest request, TrainBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -4610,9 +5718,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["period_start"] = request.PeriodStart;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4630,7 +5747,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainBillSettlementQueryResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<TrainBillSettlementQueryResponse> TrainBillSettlementQueryWithOptionsAsync(TrainBillSettlementQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<TrainBillSettlementQueryResponse> TrainBillSettlementQueryWithOptionsAsync(TrainBillSettlementQueryRequest request, TrainBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -4650,9 +5767,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["period_start"] = request.PeriodStart;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4673,18 +5799,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public TrainExceedApplyQueryResponse TrainExceedApplyQuery(TrainExceedApplyQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            TrainExceedApplyQueryHeaders headers = new TrainExceedApplyQueryHeaders();
             return TrainExceedApplyQueryWithOptions(request, headers, runtime);
         }
 
         public async Task<TrainExceedApplyQueryResponse> TrainExceedApplyQueryAsync(TrainExceedApplyQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            TrainExceedApplyQueryHeaders headers = new TrainExceedApplyQueryHeaders();
             return await TrainExceedApplyQueryWithOptionsAsync(request, headers, runtime);
         }
 
-        public TrainExceedApplyQueryResponse TrainExceedApplyQueryWithOptions(TrainExceedApplyQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public TrainExceedApplyQueryResponse TrainExceedApplyQueryWithOptions(TrainExceedApplyQueryRequest request, TrainExceedApplyQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -4692,9 +5818,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["apply_id"] = request.ApplyId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4712,7 +5847,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainExceedApplyQueryResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<TrainExceedApplyQueryResponse> TrainExceedApplyQueryWithOptionsAsync(TrainExceedApplyQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<TrainExceedApplyQueryResponse> TrainExceedApplyQueryWithOptionsAsync(TrainExceedApplyQueryRequest request, TrainExceedApplyQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -4720,9 +5855,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["apply_id"] = request.ApplyId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4743,18 +5887,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public TrainOrderListQueryResponse TrainOrderListQuery(TrainOrderListQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            TrainOrderListQueryHeaders headers = new TrainOrderListQueryHeaders();
             return TrainOrderListQueryWithOptions(request, headers, runtime);
         }
 
         public async Task<TrainOrderListQueryResponse> TrainOrderListQueryAsync(TrainOrderListQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            TrainOrderListQueryHeaders headers = new TrainOrderListQueryHeaders();
             return await TrainOrderListQueryWithOptionsAsync(request, headers, runtime);
         }
 
-        public TrainOrderListQueryResponse TrainOrderListQueryWithOptions(TrainOrderListQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public TrainOrderListQueryResponse TrainOrderListQueryWithOptions(TrainOrderListQueryRequest request, TrainOrderListQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -4802,9 +5946,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4822,7 +5975,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainOrderListQueryResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<TrainOrderListQueryResponse> TrainOrderListQueryWithOptionsAsync(TrainOrderListQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<TrainOrderListQueryResponse> TrainOrderListQueryWithOptionsAsync(TrainOrderListQueryRequest request, TrainOrderListQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -4870,9 +6023,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4893,18 +6055,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         public TrainOrderQueryResponse TrainOrderQuery(TrainOrderQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            TrainOrderQueryHeaders headers = new TrainOrderQueryHeaders();
             return TrainOrderQueryWithOptions(request, headers, runtime);
         }
 
         public async Task<TrainOrderQueryResponse> TrainOrderQueryAsync(TrainOrderQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            TrainOrderQueryHeaders headers = new TrainOrderQueryHeaders();
             return await TrainOrderQueryWithOptionsAsync(request, headers, runtime);
         }
 
-        public TrainOrderQueryResponse TrainOrderQueryWithOptions(TrainOrderQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public TrainOrderQueryResponse TrainOrderQueryWithOptions(TrainOrderQueryRequest request, TrainOrderQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -4916,9 +6078,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4936,7 +6107,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainOrderQueryResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<TrainOrderQueryResponse> TrainOrderQueryWithOptionsAsync(TrainOrderQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<TrainOrderQueryResponse> TrainOrderQueryWithOptionsAsync(TrainOrderQueryRequest request, TrainOrderQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -4948,9 +6119,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["user_id"] = request.UserId;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4968,21 +6148,109 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainOrderQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        public TrainStationSearchResponse TrainStationSearch(TrainStationSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            TrainStationSearchHeaders headers = new TrainStationSearchHeaders();
+            return TrainStationSearchWithOptions(request, headers, runtime);
+        }
+
+        public async Task<TrainStationSearchResponse> TrainStationSearchAsync(TrainStationSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            TrainStationSearchHeaders headers = new TrainStationSearchHeaders();
+            return await TrainStationSearchWithOptionsAsync(request, headers, runtime);
+        }
+
+        public TrainStationSearchResponse TrainStationSearchWithOptions(TrainStationSearchRequest request, TrainStationSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["keyword"] = request.Keyword;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TrainStationSearch",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/city/v1/train",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TrainStationSearchResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<TrainStationSearchResponse> TrainStationSearchWithOptionsAsync(TrainStationSearchRequest request, TrainStationSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["keyword"] = request.Keyword;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TrainStationSearch",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/city/v1/train",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TrainStationSearchResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public UserQueryResponse UserQuery(UserQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            UserQueryHeaders headers = new UserQueryHeaders();
             return UserQueryWithOptions(request, headers, runtime);
         }
 
         public async Task<UserQueryResponse> UserQueryAsync(UserQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            UserQueryHeaders headers = new UserQueryHeaders();
             return await UserQueryWithOptionsAsync(request, headers, runtime);
         }
 
-        public UserQueryResponse UserQueryWithOptions(UserQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UserQueryResponse UserQueryWithOptions(UserQueryRequest request, UserQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -4990,13 +6258,30 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["modified_time_greater_or_equal_than"] = request.ModifiedTimeGreaterOrEqualThan;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["page_size"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageToken))
+            {
+                query["page_token"] = request.PageToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdPartJobNo))
             {
                 query["third_part_job_no"] = request.ThirdPartJobNo;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -5014,7 +6299,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<UserQueryResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<UserQueryResponse> UserQueryWithOptionsAsync(UserQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UserQueryResponse> UserQueryWithOptionsAsync(UserQueryRequest request, UserQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -5022,13 +6307,30 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["modified_time_greater_or_equal_than"] = request.ModifiedTimeGreaterOrEqualThan;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["page_size"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageToken))
+            {
+                query["page_token"] = request.PageToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdPartJobNo))
             {
                 query["third_part_job_no"] = request.ThirdPartJobNo;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params

@@ -8,22 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
-    public class UserQueryRequest : TeaModel {
-        [NameInMap("modified_time_greater_or_equal_than")]
+    public class IeFlightBillSettlementQueryRequest : TeaModel {
+        [NameInMap("page_no")]
         [Validation(Required=false)]
-        public string ModifiedTimeGreaterOrEqualThan { get; set; }
+        public int? PageNo { get; set; }
 
         [NameInMap("page_size")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("page_token")]
+        [NameInMap("period_end")]
         [Validation(Required=false)]
-        public string PageToken { get; set; }
+        public string PeriodEnd { get; set; }
 
-        [NameInMap("third_part_job_no")]
+        [NameInMap("period_start")]
         [Validation(Required=false)]
-        public string ThirdPartJobNo { get; set; }
+        public string PeriodStart { get; set; }
 
     }
 
