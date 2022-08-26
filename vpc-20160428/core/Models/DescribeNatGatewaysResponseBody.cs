@@ -123,6 +123,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
                 public string Spec { get; set; }
                 public string Status { get; set; }
+                public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTags Tags { get; set; }
+                public class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTagsTag> Tag { get; set; }
+                    public class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTagsTag : TeaModel {
+                        [NameInMap("TagKey")]
+                        [Validation(Required=false)]
+                        public string TagKey { get; set; }
+
+                        [NameInMap("TagValue")]
+                        [Validation(Required=false)]
+                        public string TagValue { get; set; }
+
+                    }
+
+                }
                 public string VpcId { get; set; }
             }
         };
