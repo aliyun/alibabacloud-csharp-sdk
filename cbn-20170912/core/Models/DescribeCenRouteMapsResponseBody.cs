@@ -66,6 +66,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
                 }
                 public string MapResult { get; set; }
+                public string MatchAddressType { get; set; }
                 public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchAsns MatchAsns { get; set; }
                 public class DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchAsns : TeaModel {
                     [NameInMap("MatchAsn")]

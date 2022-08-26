@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterAvailableResourceResponseBody : TeaModel {
+        [NameInMap("AvailableZones")]
+        [Validation(Required=false)]
+        public List<string> AvailableZones { get; set; }
+
         [NameInMap("MasterZones")]
         [Validation(Required=false)]
         public List<string> MasterZones { get; set; }

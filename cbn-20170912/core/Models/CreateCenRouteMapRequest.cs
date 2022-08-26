@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string MapResult { get; set; }
 
+        [NameInMap("MatchAddressType")]
+        [Validation(Required=false)]
+        public string MatchAddressType { get; set; }
+
         [NameInMap("MatchAsns")]
         [Validation(Required=false)]
         public List<long?> MatchAsns { get; set; }

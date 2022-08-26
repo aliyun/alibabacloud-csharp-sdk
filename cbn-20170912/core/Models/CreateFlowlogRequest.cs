@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string FlowLogName { get; set; }
 
+        [NameInMap("Interval")]
+        [Validation(Required=false)]
+        public long? Interval { get; set; }
+
         [NameInMap("LogStoreName")]
         [Validation(Required=false)]
         public string LogStoreName { get; set; }
@@ -52,6 +56,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("TransitRouterAttachmentId")]
+        [Validation(Required=false)]
+        public string TransitRouterAttachmentId { get; set; }
 
     }
 
