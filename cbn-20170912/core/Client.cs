@@ -5499,6 +5499,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["NextHop"] = request.NextHop;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextHopType))
+            {
+                query["NextHopType"] = request.NextHopType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -5565,6 +5569,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextHop))
             {
                 query["NextHop"] = request.NextHop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextHopType))
+            {
+                query["NextHopType"] = request.NextHopType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {

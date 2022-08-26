@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string NextHop { get; set; }
 
+        [NameInMap("NextHopType")]
+        [Validation(Required=false)]
+        public string NextHopType { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
