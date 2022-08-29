@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitMediaInfoJobRequest : TeaModel {
-        /// <summary>
-        /// 任务输入
-        /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]
         public SubmitMediaInfoJobRequestInput Input { get; set; }
@@ -24,16 +21,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Type { get; set; }
         };
 
-        /// <summary>
-        /// 任务名字
-        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        /// <summary>
-        /// 调度参数
-        /// </summary>
         [NameInMap("ScheduleConfig")]
         [Validation(Required=false)]
         public SubmitMediaInfoJobRequestScheduleConfig ScheduleConfig { get; set; }
@@ -46,9 +37,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? Priority { get; set; }
         };
 
-        /// <summary>
-        /// 用户数据
-        /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }

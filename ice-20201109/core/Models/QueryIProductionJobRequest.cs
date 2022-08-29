@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class QueryIProductionJobRequest : TeaModel {
-        /// <summary>
-        /// 幂等参数
-        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }

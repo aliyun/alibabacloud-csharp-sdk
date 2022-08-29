@@ -62,9 +62,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public long? Count { get; set; }
 
-                /// <summary>
-                /// 截图公共参数
-                /// </summary>
                 [NameInMap("FrameType")]
                 [Validation(Required=false)]
                 public string FrameType { get; set; }
@@ -77,9 +74,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public long? Interval { get; set; }
 
-                /// <summary>
-                /// Webvtt截图配置:是否拼合输出
-                /// </summary>
                 [NameInMap("IsSptFrag")]
                 [Validation(Required=false)]
                 public bool? IsSptFrag { get; set; }
@@ -88,9 +82,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public int? PixelBlackThreshold { get; set; }
 
-                /// <summary>
-                /// 雪碧图配置
-                /// </summary>
                 [NameInMap("SpriteSnapshotConfig")]
                 [Validation(Required=false)]
                 public SubmitSnapshotJobRequestTemplateConfigOverwriteParamsSpriteSnapshotConfig SpriteSnapshotConfig { get; set; }

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetLiveTranscodeJobRequest : TeaModel {
-        /// <summary>
-        /// 模板Id
-        /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }

@@ -15,20 +15,21 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public class DescribePlayMetricDataResponseBodyNodes : TeaModel {
             [NameInMap("X")]
             [Validation(Required=false)]
-            public long? X { get; set; }
+            public string X { get; set; }
 
             [NameInMap("Y")]
             [Validation(Required=false)]
-            public long? Y { get; set; }
+            public string Y { get; set; }
 
         }
 
-        /// <summary>
-        /// Id
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("SummaryData")]
+        [Validation(Required=false)]
+        public string SummaryData { get; set; }
 
     }
 

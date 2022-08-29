@@ -13,23 +13,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
-        /// <summary>
-        /// 符合要求的媒资集合
-        /// </summary>
         [NameInMap("MediaInfos")]
         [Validation(Required=false)]
         public List<ListPublicMediaBasicInfosResponseBodyMediaInfos> MediaInfos { get; set; }
         public class ListPublicMediaBasicInfosResponseBodyMediaInfos : TeaModel {
-            /// <summary>
-            /// FileInfos
-            /// </summary>
             [NameInMap("FileInfoList")]
             [Validation(Required=false)]
             public List<ListPublicMediaBasicInfosResponseBodyMediaInfosFileInfoList> FileInfoList { get; set; }
             public class ListPublicMediaBasicInfosResponseBodyMediaInfosFileInfoList : TeaModel {
-                /// <summary>
-                /// 文件基础信息，包含时长，大小等
-                /// </summary>
                 [NameInMap("FileBasicInfo")]
                 [Validation(Required=false)]
                 public ListPublicMediaBasicInfosResponseBodyMediaInfosFileInfoListFileBasicInfo FileBasicInfo { get; set; }
@@ -71,9 +62,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             }
 
-            /// <summary>
-            /// BasicInfo
-            /// </summary>
             [NameInMap("MediaBasicInfo")]
             [Validation(Required=false)]
             public ListPublicMediaBasicInfosResponseBodyMediaInfosMediaBasicInfo MediaBasicInfo { get; set; }
@@ -131,9 +119,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string UserData { get; set; }
             };
 
-            /// <summary>
-            /// 媒资ID
-            /// </summary>
             [NameInMap("MediaId")]
             [Validation(Required=false)]
             public string MediaId { get; set; }
@@ -144,16 +129,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 符合要求的媒资总数
-        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public long? TotalCount { get; set; }

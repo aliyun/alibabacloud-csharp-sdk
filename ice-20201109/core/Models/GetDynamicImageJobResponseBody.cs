@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetDynamicImageJobResponseBody : TeaModel {
-        /// <summary>
-        /// 截图任务信息
-        /// </summary>
         [NameInMap("DynamicImageJob")]
         [Validation(Required=false)]
         public GetDynamicImageJobResponseBodyDynamicImageJob DynamicImageJob { get; set; }
@@ -33,9 +30,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public string Media { get; set; }
 
-                /// <summary>
-                /// 输入类型为媒资ID时的OSS地址
-                /// </summary>
                 [NameInMap("OssFile")]
                 [Validation(Required=false)]
                 public GetDynamicImageJobResponseBodyDynamicImageJobInputOssFile OssFile { get; set; }
@@ -76,9 +70,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public string Media { get; set; }
 
-                /// <summary>
-                /// 输出类型为媒资ID时的OSS地址
-                /// </summary>
                 [NameInMap("OssFile")]
                 [Validation(Required=false)]
                 public GetDynamicImageJobResponseBodyDynamicImageJobOutputOssFile OssFile { get; set; }

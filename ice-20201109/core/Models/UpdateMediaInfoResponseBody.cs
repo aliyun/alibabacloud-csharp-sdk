@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class UpdateMediaInfoResponseBody : TeaModel {
-        /// <summary>
-        /// ICE媒资ID
-        /// </summary>
         [NameInMap("MediaId")]
         [Validation(Required=false)]
         public string MediaId { get; set; }
 
-        /// <summary>
-        /// 请求ID
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

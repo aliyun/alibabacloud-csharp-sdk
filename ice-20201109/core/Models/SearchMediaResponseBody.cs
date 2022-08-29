@@ -13,23 +13,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// 符合要求的媒资集合
-        /// </summary>
         [NameInMap("MediaInfoList")]
         [Validation(Required=false)]
         public List<SearchMediaResponseBodyMediaInfoList> MediaInfoList { get; set; }
         public class SearchMediaResponseBodyMediaInfoList : TeaModel {
-            /// <summary>
-            /// FileInfos
-            /// </summary>
             [NameInMap("FileInfoList")]
             [Validation(Required=false)]
             public List<SearchMediaResponseBodyMediaInfoListFileInfoList> FileInfoList { get; set; }
             public class SearchMediaResponseBodyMediaInfoListFileInfoList : TeaModel {
-                /// <summary>
-                /// 文件基础信息，包含时长，大小等
-                /// </summary>
                 [NameInMap("FileBasicInfo")]
                 [Validation(Required=false)]
                 public SearchMediaResponseBodyMediaInfoListFileInfoListFileBasicInfo FileBasicInfo { get; set; }
@@ -77,9 +68,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             }
 
-            /// <summary>
-            /// BasicInfo
-            /// </summary>
             [NameInMap("MediaBasicInfo")]
             [Validation(Required=false)]
             public SearchMediaResponseBodyMediaInfoListMediaBasicInfo MediaBasicInfo { get; set; }
@@ -152,9 +140,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string UserData { get; set; }
             };
 
-            /// <summary>
-            /// 媒资ID
-            /// </summary>
             [NameInMap("MediaId")]
             [Validation(Required=false)]
             public string MediaId { get; set; }

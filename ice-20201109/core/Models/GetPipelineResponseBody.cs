@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetPipelineResponseBody : TeaModel {
-        /// <summary>
-        /// 管道信息
-        /// </summary>
         [NameInMap("Pipeline")]
         [Validation(Required=false)]
         public GetPipelineResponseBodyPipeline Pipeline { get; set; }
@@ -39,9 +36,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Status { get; set; }
         };
 
-        /// <summary>
-        /// 请求ID
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

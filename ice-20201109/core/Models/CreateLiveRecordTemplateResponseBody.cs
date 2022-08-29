@@ -13,12 +13,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 资源一级ID
-        /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
-        public byte[] TemplateId { get; set; }
+        public string TemplateId { get; set; }
 
     }
 

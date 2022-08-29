@@ -9,9 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeletePlayInfoResponseBody : TeaModel {
-        /// <summary>
-        /// RequestId
-        /// </summary>
+        [NameInMap("ForbiddenList")]
+        [Validation(Required=false)]
+        public List<string> ForbiddenList { get; set; }
+
+        [NameInMap("IgnoredList")]
+        [Validation(Required=false)]
+        public List<string> IgnoredList { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

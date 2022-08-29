@@ -9,16 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteMediaInfosRequest : TeaModel {
-        /// <summary>
-        /// 待注册的媒资在相应系统中的地址
-        /// </summary>
+        [NameInMap("DeletePhysicalFiles")]
+        [Validation(Required=false)]
+        public bool? DeletePhysicalFiles { get; set; }
+
         [NameInMap("InputURLs")]
         [Validation(Required=false)]
         public string InputURLs { get; set; }
 
-        /// <summary>
-        /// ICE 媒资ID
-        /// </summary>
         [NameInMap("MediaIds")]
         [Validation(Required=false)]
         public string MediaIds { get; set; }

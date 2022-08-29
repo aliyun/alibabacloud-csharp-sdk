@@ -9,33 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListPublicMediaBasicInfosRequest : TeaModel {
-        /// <summary>
-        /// 返回值中是否包含文件基础信息
-        /// </summary>
         [NameInMap("IncludeFileBasicInfo")]
         [Validation(Required=false)]
         public bool? IncludeFileBasicInfo { get; set; }
 
-        /// <summary>
-        /// 分页大小
-        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
-        /// <summary>
-        /// 标签
-        /// </summary>
         [NameInMap("MediaTagId")]
         [Validation(Required=false)]
         public string MediaTagId { get; set; }
 
-        /// <summary>
-        /// 下一次读取的位置
-        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
+
+        [NameInMap("PageNo")]
+        [Validation(Required=false)]
+        public int? PageNo { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
     }
 

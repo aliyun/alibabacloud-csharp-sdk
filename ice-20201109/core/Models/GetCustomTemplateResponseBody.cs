@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetCustomTemplateResponseBody : TeaModel {
-        /// <summary>
-        /// 模板信息
-        /// </summary>
         [NameInMap("CustomTemplate")]
         [Validation(Required=false)]
         public GetCustomTemplateResponseBodyCustomTemplate CustomTemplate { get; set; }
@@ -51,9 +48,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string TypeName { get; set; }
         };
 
-        /// <summary>
-        /// 请求ID
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

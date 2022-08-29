@@ -13,23 +13,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 截图URL
-        /// </summary>
         [NameInMap("SnapshotUrls")]
         [Validation(Required=false)]
         public List<string> SnapshotUrls { get; set; }
 
-        /// <summary>
-        /// 截图总数量
-        /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]
         public int? Total { get; set; }
 
-        /// <summary>
-        /// WebVTT文件URL
-        /// </summary>
         [NameInMap("WebVTTUrl")]
         [Validation(Required=false)]
         public string WebVTTUrl { get; set; }

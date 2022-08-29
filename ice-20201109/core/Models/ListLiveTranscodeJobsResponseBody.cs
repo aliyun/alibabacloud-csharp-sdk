@@ -72,9 +72,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         }
 
-        /// <summary>
-        /// 请求ID
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

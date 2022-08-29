@@ -77,9 +77,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public string ScanMode { get; set; }
 
-                /// <summary>
-                /// 时间线参数
-                /// </summary>
                 [NameInMap("TimeSpan")]
                 [Validation(Required=false)]
                 public SubmitDynamicImageJobRequestTemplateConfigOverwriteParamsTimeSpan TimeSpan { get; set; }

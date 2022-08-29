@@ -25,11 +25,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string Type { get; set; }
 
+            [NameInMap("UuId")]
+            [Validation(Required=false)]
+            public string UuId { get; set; }
+
         }
 
-        /// <summary>
-        /// Id
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

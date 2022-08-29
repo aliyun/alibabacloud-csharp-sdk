@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetSnapshotJobResponseBody : TeaModel {
-        /// <summary>
-        /// 请求ID
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 截图任务信息
-        /// </summary>
         [NameInMap("SnapshotJob")]
         [Validation(Required=false)]
         public GetSnapshotJobResponseBodySnapshotJob SnapshotJob { get; set; }
@@ -46,9 +40,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public string Media { get; set; }
 
-                /// <summary>
-                /// 输入类型为媒资ID时的OSS地址
-                /// </summary>
                 [NameInMap("OssFile")]
                 [Validation(Required=false)]
                 public GetSnapshotJobResponseBodySnapshotJobInputOssFile OssFile { get; set; }
@@ -89,9 +80,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public string Media { get; set; }
 
-                /// <summary>
-                /// 输出类型为媒资ID时的OSS地址
-                /// </summary>
                 [NameInMap("OssFile")]
                 [Validation(Required=false)]
                 public GetSnapshotJobResponseBodySnapshotJobOutputOssFile OssFile { get; set; }

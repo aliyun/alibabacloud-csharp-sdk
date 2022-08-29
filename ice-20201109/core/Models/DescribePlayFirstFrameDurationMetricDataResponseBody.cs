@@ -13,19 +13,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public List<DescribePlayFirstFrameDurationMetricDataResponseBodyNodes> Nodes { get; set; }
         public class DescribePlayFirstFrameDurationMetricDataResponseBodyNodes : TeaModel {
-            [NameInMap("Duration")]
+            [NameInMap("X")]
             [Validation(Required=false)]
-            public long? Duration { get; set; }
+            public long? X { get; set; }
 
-            [NameInMap("Time")]
+            [NameInMap("Y")]
             [Validation(Required=false)]
-            public long? Time { get; set; }
+            public long? Y { get; set; }
 
         }
 
-        /// <summary>
-        /// Id
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetSystemTemplateResponseBody : TeaModel {
-        /// <summary>
-        /// 请求ID
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 模板信息
-        /// </summary>
         [NameInMap("SystemTemplate")]
         [Validation(Required=false)]
         public GetSystemTemplateResponseBodySystemTemplate SystemTemplate { get; set; }

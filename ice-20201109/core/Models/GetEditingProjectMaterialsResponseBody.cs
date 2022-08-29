@@ -31,23 +31,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         }
 
-        /// <summary>
-        /// 符合要求的媒资集合
-        /// </summary>
         [NameInMap("MediaInfos")]
         [Validation(Required=false)]
         public List<GetEditingProjectMaterialsResponseBodyMediaInfos> MediaInfos { get; set; }
         public class GetEditingProjectMaterialsResponseBodyMediaInfos : TeaModel {
-            /// <summary>
-            /// FileInfos
-            /// </summary>
             [NameInMap("FileInfoList")]
             [Validation(Required=false)]
             public List<GetEditingProjectMaterialsResponseBodyMediaInfosFileInfoList> FileInfoList { get; set; }
             public class GetEditingProjectMaterialsResponseBodyMediaInfosFileInfoList : TeaModel {
-                /// <summary>
-                /// 文件基础信息，包含时长，大小等
-                /// </summary>
                 [NameInMap("FileBasicInfo")]
                 [Validation(Required=false)]
                 public GetEditingProjectMaterialsResponseBodyMediaInfosFileInfoListFileBasicInfo FileBasicInfo { get; set; }
@@ -89,9 +80,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             }
 
-            /// <summary>
-            /// BasicInfo
-            /// </summary>
             [NameInMap("MediaBasicInfo")]
             [Validation(Required=false)]
             public GetEditingProjectMaterialsResponseBodyMediaInfosMediaBasicInfo MediaBasicInfo { get; set; }
@@ -152,9 +140,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string UserData { get; set; }
             };
 
-            /// <summary>
-            /// 媒资ID
-            /// </summary>
             [NameInMap("MediaId")]
             [Validation(Required=false)]
             public string MediaId { get; set; }
@@ -169,9 +154,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public List<string> ProjectMaterials { get; set; }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

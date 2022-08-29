@@ -29,13 +29,21 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string ItemConfigs { get; set; }
 
-        [NameInMap("MetricType")]
+        [NameInMap("MetricTypes")]
         [Validation(Required=false)]
-        public string MetricType { get; set; }
+        public List<string> MetricTypes { get; set; }
 
         [NameInMap("Network")]
         [Validation(Required=false)]
         public string Network { get; set; }
+
+        [NameInMap("OrderName")]
+        [Validation(Required=false)]
+        public string OrderName { get; set; }
+
+        [NameInMap("OrderType")]
+        [Validation(Required=false)]
+        public string OrderType { get; set; }
 
         [NameInMap("Os")]
         [Validation(Required=false)]

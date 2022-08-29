@@ -9,23 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class BatchGetMediaInfosResponseBody : TeaModel {
-        /// <summary>
-        /// 符合要求的媒资集合
-        /// </summary>
         [NameInMap("MediaInfos")]
         [Validation(Required=false)]
         public List<BatchGetMediaInfosResponseBodyMediaInfos> MediaInfos { get; set; }
         public class BatchGetMediaInfosResponseBodyMediaInfos : TeaModel {
-            /// <summary>
-            /// FileInfos
-            /// </summary>
             [NameInMap("FileInfoList")]
             [Validation(Required=false)]
             public List<BatchGetMediaInfosResponseBodyMediaInfosFileInfoList> FileInfoList { get; set; }
             public class BatchGetMediaInfosResponseBodyMediaInfosFileInfoList : TeaModel {
-                /// <summary>
-                /// 文件基础信息，包含时长，大小等
-                /// </summary>
                 [NameInMap("FileBasicInfo")]
                 [Validation(Required=false)]
                 public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListFileBasicInfo FileBasicInfo { get; set; }
@@ -67,9 +58,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             }
 
-            /// <summary>
-            /// BasicInfo
-            /// </summary>
             [NameInMap("MediaBasicInfo")]
             [Validation(Required=false)]
             public BatchGetMediaInfosResponseBodyMediaInfosMediaBasicInfo MediaBasicInfo { get; set; }
@@ -130,18 +118,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string UserData { get; set; }
             };
 
-            /// <summary>
-            /// 媒资ID
-            /// </summary>
             [NameInMap("MediaId")]
             [Validation(Required=false)]
             public string MediaId { get; set; }
 
         }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

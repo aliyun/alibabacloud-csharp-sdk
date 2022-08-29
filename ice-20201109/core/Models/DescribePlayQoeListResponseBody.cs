@@ -53,15 +53,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public float? QoeVVDuration { get; set; }
 
-            [NameInMap("Vpsid")]
+            [NameInMap("TraceId")]
             [Validation(Required=false)]
-            public string Vpsid { get; set; }
+            public string TraceId { get; set; }
 
         }
 
-        /// <summary>
-        /// Id
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

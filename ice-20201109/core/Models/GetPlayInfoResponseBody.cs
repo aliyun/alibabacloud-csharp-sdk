@@ -37,9 +37,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public List<GetPlayInfoResponseBodyPlayInfoList> PlayInfoList { get; set; }
         public class GetPlayInfoResponseBodyPlayInfoList : TeaModel {
-            /// <summary>
-            /// 颜色位深
-            /// </summary>
             [NameInMap("BitDepth")]
             [Validation(Required=false)]
             public int? BitDepth { get; set; }
@@ -80,9 +77,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string Fps { get; set; }
 
-            /// <summary>
-            /// 视频流HDR类型
-            /// </summary>
             [NameInMap("HDRType")]
             [Validation(Required=false)]
             public string HDRType { get; set; }
@@ -129,9 +123,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         }
 
-        /// <summary>
-        /// RequestId
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

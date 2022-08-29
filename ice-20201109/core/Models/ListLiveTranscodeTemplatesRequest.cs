@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string SortBy { get; set; }
 
-        /// <summary>
-        /// 模板Id
-        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }

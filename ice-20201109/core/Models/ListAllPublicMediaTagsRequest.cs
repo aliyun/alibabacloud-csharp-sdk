@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListAllPublicMediaTagsRequest : TeaModel {
-        /// <summary>
-        /// 媒资业务类型
-        /// </summary>
         [NameInMap("BusinessType")]
         [Validation(Required=false)]
         public string BusinessType { get; set; }

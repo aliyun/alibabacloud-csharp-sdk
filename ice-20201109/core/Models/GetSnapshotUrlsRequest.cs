@@ -13,9 +13,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string JobId { get; set; }
 
-        /// <summary>
-        /// 排列顺序。取值：Asc，Desc
-        /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }
@@ -28,9 +25,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// 鉴权超时时间
-        /// </summary>
         [NameInMap("Timeout")]
         [Validation(Required=false)]
         public long? Timeout { get; set; }

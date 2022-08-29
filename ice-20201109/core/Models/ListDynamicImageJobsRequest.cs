@@ -13,23 +13,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string EndOfCreateTime { get; set; }
 
-        /// <summary>
-        /// 任务ID
-        /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
-        /// <summary>
-        /// 连续分页查询时下一页的标记
-        /// </summary>
         [NameInMap("NextPageToken")]
         [Validation(Required=false)]
         public string NextPageToken { get; set; }
 
-        /// <summary>
-        /// 排序顺序：CreateTimeDesc 和 CreateTimeAsc
-        /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }
