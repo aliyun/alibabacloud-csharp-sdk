@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
-    public class DescribeUpdateBackendTaskRequest : TeaModel {
-        [NameInMap("OperationUid")]
+    public class ModifyApiGroupNetworkPolicyResponseBody : TeaModel {
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string OperationUid { get; set; }
+        public string RequestId { get; set; }
 
     }
 

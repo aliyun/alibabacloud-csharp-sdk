@@ -23,6 +23,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string AclType { get; set; }
                 public string ClassicEgressAddress { get; set; }
                 public string CreatedTime { get; set; }
+                public bool? EgressAddressChangeNotify { get; set; }
                 public bool? EgressIpv6Enable { get; set; }
                 public string ExpiredTime { get; set; }
                 public string HttpsPolicies { get; set; }

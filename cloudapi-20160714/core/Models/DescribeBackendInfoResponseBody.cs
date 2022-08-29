@@ -112,6 +112,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                         [NameInMap("VpcScheme")]
                         [Validation(Required=false)]
                         public string VpcScheme { get; set; }
+                        [NameInMap("VpcTargetHostName")]
+                        [Validation(Required=false)]
+                        public string VpcTargetHostName { get; set; }
                     };
 
                 }

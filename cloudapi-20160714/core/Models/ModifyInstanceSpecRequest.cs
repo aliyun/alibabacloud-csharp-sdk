@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string ModifyAction { get; set; }
 
+        [NameInMap("SkipWaitSwitch")]
+        [Validation(Required=false)]
+        public bool? SkipWaitSwitch { get; set; }
+
         [NameInMap("Token")]
         [Validation(Required=false)]
         public string Token { get; set; }

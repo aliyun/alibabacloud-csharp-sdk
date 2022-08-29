@@ -18,7 +18,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeApisResponseBodyApiSummarysApiSummary> ApiSummary { get; set; }
             public class DescribeApisResponseBodyApiSummarysApiSummary : TeaModel {
                 public string ApiId { get; set; }
+                public string ApiMethod { get; set; }
                 public string ApiName { get; set; }
+                public string ApiPath { get; set; }
                 public string CreatedTime { get; set; }
                 public string Description { get; set; }
                 public string GroupId { get; set; }

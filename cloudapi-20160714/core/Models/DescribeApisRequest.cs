@@ -13,9 +13,17 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string ApiId { get; set; }
 
+        [NameInMap("ApiMethod")]
+        [Validation(Required=false)]
+        public string ApiMethod { get; set; }
+
         [NameInMap("ApiName")]
         [Validation(Required=false)]
         public string ApiName { get; set; }
+
+        [NameInMap("ApiPath")]
+        [Validation(Required=false)]
+        public string ApiPath { get; set; }
 
         [NameInMap("CatalogId")]
         [Validation(Required=false)]
@@ -54,6 +62,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("UnDeployed")]
+        [Validation(Required=false)]
+        public bool? UnDeployed { get; set; }
 
         [NameInMap("Visibility")]
         [Validation(Required=false)]

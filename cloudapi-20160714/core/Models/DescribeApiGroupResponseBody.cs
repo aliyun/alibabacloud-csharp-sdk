@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string ClassicVpcSubDomain { get; set; }
 
+        [NameInMap("CloudMarketCommodity")]
+        [Validation(Required=false)]
+        public bool? CloudMarketCommodity { get; set; }
+
         [NameInMap("CmsMonitorGroup")]
         [Validation(Required=false)]
         public string CmsMonitorGroup { get; set; }
