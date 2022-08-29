@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class ListPoliciesRequest : TeaModel {
-        [NameInMap("PolicyType")]
-        [Validation(Required=false)]
-        public string PolicyType { get; set; }
-
         [NameInMap("Marker")]
         [Validation(Required=false)]
         public string Marker { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         [NameInMap("MaxItems")]
         [Validation(Required=false)]
         public int? MaxItems { get; set; }
+
+        [NameInMap("PolicyType")]
+        [Validation(Required=false)]
+        public string PolicyType { get; set; }
 
     }
 

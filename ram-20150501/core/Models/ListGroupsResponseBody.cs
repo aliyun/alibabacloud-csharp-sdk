@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class ListGroupsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Groups")]
         [Validation(Required=false)]
         public ListGroupsResponseBodyGroups Groups { get; set; }
@@ -21,11 +17,11 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             [Validation(Required=false)]
             public List<ListGroupsResponseBodyGroupsGroup> Group { get; set; }
             public class ListGroupsResponseBodyGroupsGroup : TeaModel {
-                public string GroupId { get; set; }
-                public string UpdateDate { get; set; }
-                public string GroupName { get; set; }
                 public string Comments { get; set; }
                 public string CreateDate { get; set; }
+                public string GroupId { get; set; }
+                public string GroupName { get; set; }
+                public string UpdateDate { get; set; }
             }
         };
 
@@ -36,6 +32,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         [NameInMap("Marker")]
         [Validation(Required=false)]
         public string Marker { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

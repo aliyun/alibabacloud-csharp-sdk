@@ -8,11 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
-    public class CreatePolicyResponseBody : TeaModel {
+    public class UpdatePolicyDescriptionResponseBody : TeaModel {
         [NameInMap("Policy")]
         [Validation(Required=false)]
-        public CreatePolicyResponseBodyPolicy Policy { get; set; }
-        public class CreatePolicyResponseBodyPolicy : TeaModel {
+        public UpdatePolicyDescriptionResponseBodyPolicy Policy { get; set; }
+        public class UpdatePolicyDescriptionResponseBodyPolicy : TeaModel {
             [NameInMap("CreateDate")]
             [Validation(Required=false)]
             public string CreateDate { get; set; }
@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             [NameInMap("PolicyType")]
             [Validation(Required=false)]
             public string PolicyType { get; set; }
+            [NameInMap("UpdateDate")]
+            [Validation(Required=false)]
+            public string UpdateDate { get; set; }
         };
 
         [NameInMap("RequestId")]

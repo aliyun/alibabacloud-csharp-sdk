@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class CreateRoleRequest : TeaModel {
-        [NameInMap("RoleName")]
+        [NameInMap("AssumeRolePolicyDocument")]
         [Validation(Required=false)]
-        public string RoleName { get; set; }
+        public string AssumeRolePolicyDocument { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("AssumeRolePolicyDocument")]
-        [Validation(Required=false)]
-        public string AssumeRolePolicyDocument { get; set; }
-
         [NameInMap("MaxSessionDuration")]
         [Validation(Required=false)]
         public long? MaxSessionDuration { get; set; }
+
+        [NameInMap("RoleName")]
+        [Validation(Required=false)]
+        public string RoleName { get; set; }
 
     }
 

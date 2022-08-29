@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class CreateUserRequest : TeaModel {
-        [NameInMap("UserName")]
+        [NameInMap("Comments")]
         [Validation(Required=false)]
-        public string UserName { get; set; }
+        public string Comments { get; set; }
 
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
-        [NameInMap("MobilePhone")]
-        [Validation(Required=false)]
-        public string MobilePhone { get; set; }
-
         [NameInMap("Email")]
         [Validation(Required=false)]
         public string Email { get; set; }
 
-        [NameInMap("Comments")]
+        [NameInMap("MobilePhone")]
         [Validation(Required=false)]
-        public string Comments { get; set; }
+        public string MobilePhone { get; set; }
+
+        [NameInMap("UserName")]
+        [Validation(Required=false)]
+        public string UserName { get; set; }
 
     }
 

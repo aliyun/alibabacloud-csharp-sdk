@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class AttachPolicyToGroupRequest : TeaModel {
-        [NameInMap("PolicyType")]
+        [NameInMap("GroupName")]
         [Validation(Required=false)]
-        public string PolicyType { get; set; }
+        public string GroupName { get; set; }
 
         [NameInMap("PolicyName")]
         [Validation(Required=false)]
         public string PolicyName { get; set; }
 
-        [NameInMap("GroupName")]
+        [NameInMap("PolicyType")]
         [Validation(Required=false)]
-        public string GroupName { get; set; }
+        public string PolicyType { get; set; }
 
     }
 

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
-    public class GetPolicyResponse : TeaModel {
+    public class UpdatePolicyDescriptionResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public GetPolicyResponseBody Body { get; set; }
+        public UpdatePolicyDescriptionResponseBody Body { get; set; }
 
     }
 

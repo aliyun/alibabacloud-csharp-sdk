@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class ListEntitiesForPolicyResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Groups")]
         [Validation(Required=false)]
         public ListEntitiesForPolicyResponseBodyGroups Groups { get; set; }
@@ -21,11 +17,15 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             [Validation(Required=false)]
             public List<ListEntitiesForPolicyResponseBodyGroupsGroup> Group { get; set; }
             public class ListEntitiesForPolicyResponseBodyGroupsGroup : TeaModel {
-                public string GroupName { get; set; }
-                public string Comments { get; set; }
                 public string AttachDate { get; set; }
+                public string Comments { get; set; }
+                public string GroupName { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Roles")]
         [Validation(Required=false)]
@@ -35,11 +35,11 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             [Validation(Required=false)]
             public List<ListEntitiesForPolicyResponseBodyRolesRole> Role { get; set; }
             public class ListEntitiesForPolicyResponseBodyRolesRole : TeaModel {
-                public string Description { get; set; }
-                public string RoleName { get; set; }
-                public string AttachDate { get; set; }
                 public string Arn { get; set; }
+                public string AttachDate { get; set; }
+                public string Description { get; set; }
                 public string RoleId { get; set; }
+                public string RoleName { get; set; }
             }
         };
 
@@ -51,10 +51,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             [Validation(Required=false)]
             public List<ListEntitiesForPolicyResponseBodyUsersUser> User { get; set; }
             public class ListEntitiesForPolicyResponseBodyUsersUser : TeaModel {
+                public string AttachDate { get; set; }
                 public string DisplayName { get; set; }
                 public string UserId { get; set; }
                 public string UserName { get; set; }
-                public string AttachDate { get; set; }
             }
         };
 

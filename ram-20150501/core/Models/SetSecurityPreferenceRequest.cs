@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class SetSecurityPreferenceRequest : TeaModel {
-        [NameInMap("EnableSaveMFATicket")]
-        [Validation(Required=false)]
-        public bool? EnableSaveMFATicket { get; set; }
-
         [NameInMap("AllowUserToChangePassword")]
         [Validation(Required=false)]
         public bool? AllowUserToChangePassword { get; set; }
@@ -21,21 +17,25 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         [Validation(Required=false)]
         public bool? AllowUserToManageAccessKeys { get; set; }
 
-        [NameInMap("AllowUserToManagePublicKeys")]
-        [Validation(Required=false)]
-        public bool? AllowUserToManagePublicKeys { get; set; }
-
         [NameInMap("AllowUserToManageMFADevices")]
         [Validation(Required=false)]
         public bool? AllowUserToManageMFADevices { get; set; }
 
-        [NameInMap("LoginSessionDuration")]
+        [NameInMap("AllowUserToManagePublicKeys")]
         [Validation(Required=false)]
-        public int? LoginSessionDuration { get; set; }
+        public bool? AllowUserToManagePublicKeys { get; set; }
+
+        [NameInMap("EnableSaveMFATicket")]
+        [Validation(Required=false)]
+        public bool? EnableSaveMFATicket { get; set; }
 
         [NameInMap("LoginNetworkMasks")]
         [Validation(Required=false)]
         public string LoginNetworkMasks { get; set; }
+
+        [NameInMap("LoginSessionDuration")]
+        [Validation(Required=false)]
+        public int? LoginSessionDuration { get; set; }
 
     }
 

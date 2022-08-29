@@ -12,13 +12,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class AddUserToGroupRequest : TeaModel {
-        [NameInMap("UserName")]
-        [Validation(Required=false)]
-        public string UserName { get; set; }
-
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
+
+        [NameInMap("UserName")]
+        [Validation(Required=false)]
+        public string UserName { get; set; }
 
     }
 

@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
-        [NameInMap("NewGroupName")]
-        [Validation(Required=false)]
-        public string NewGroupName { get; set; }
-
         [NameInMap("NewComments")]
         [Validation(Required=false)]
         public string NewComments { get; set; }
+
+        [NameInMap("NewGroupName")]
+        [Validation(Required=false)]
+        public string NewGroupName { get; set; }
 
     }
 

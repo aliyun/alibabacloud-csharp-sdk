@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         [Validation(Required=false)]
         public GetPolicyVersionResponseBodyPolicyVersion PolicyVersion { get; set; }
         public class GetPolicyVersionResponseBodyPolicyVersion : TeaModel {
+            [NameInMap("CreateDate")]
+            [Validation(Required=false)]
+            public string CreateDate { get; set; }
             [NameInMap("IsDefaultVersion")]
             [Validation(Required=false)]
             public bool? IsDefaultVersion { get; set; }
@@ -22,9 +25,6 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             [NameInMap("VersionId")]
             [Validation(Required=false)]
             public string VersionId { get; set; }
-            [NameInMap("CreateDate")]
-            [Validation(Required=false)]
-            public string CreateDate { get; set; }
         };
 
         [NameInMap("RequestId")]

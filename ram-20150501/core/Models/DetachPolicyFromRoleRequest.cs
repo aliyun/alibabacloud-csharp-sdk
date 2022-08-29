@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class DetachPolicyFromRoleRequest : TeaModel {
-        [NameInMap("PolicyType")]
-        [Validation(Required=false)]
-        public string PolicyType { get; set; }
-
         [NameInMap("PolicyName")]
         [Validation(Required=false)]
         public string PolicyName { get; set; }
+
+        [NameInMap("PolicyType")]
+        [Validation(Required=false)]
+        public string PolicyType { get; set; }
 
         [NameInMap("RoleName")]
         [Validation(Required=false)]

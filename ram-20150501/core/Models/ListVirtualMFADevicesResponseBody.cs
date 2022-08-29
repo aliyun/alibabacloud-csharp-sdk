@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class ListVirtualMFADevicesResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("VirtualMFADevices")]
         [Validation(Required=false)]
         public ListVirtualMFADevicesResponseBodyVirtualMFADevices VirtualMFADevices { get; set; }
@@ -17,6 +21,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             [Validation(Required=false)]
             public List<ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADevice> VirtualMFADevice { get; set; }
             public class ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADevice : TeaModel {
+                public string ActivateDate { get; set; }
                 public string SerialNumber { get; set; }
                 public ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADeviceUser User { get; set; }
                 public class ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADeviceUser : TeaModel {
@@ -33,13 +38,8 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
                     public string UserName { get; set; }
 
                 }
-                public string ActivateDate { get; set; }
             }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class GetAccountAliasResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("AccountAlias")]
         [Validation(Required=false)]
         public string AccountAlias { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

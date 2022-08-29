@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class DeleteAccessKeyRequest : TeaModel {
-        [NameInMap("UserName")]
-        [Validation(Required=false)]
-        public string UserName { get; set; }
-
         [NameInMap("UserAccessKeyId")]
         [Validation(Required=false)]
         public string UserAccessKeyId { get; set; }
+
+        [NameInMap("UserName")]
+        [Validation(Required=false)]
+        public string UserName { get; set; }
 
     }
 

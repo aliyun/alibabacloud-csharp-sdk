@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class UpdateAccessKeyRequest : TeaModel {
-        [NameInMap("UserName")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public string UserName { get; set; }
+        public string Status { get; set; }
 
         [NameInMap("UserAccessKeyId")]
         [Validation(Required=false)]
         public string UserAccessKeyId { get; set; }
 
-        [NameInMap("Status")]
+        [NameInMap("UserName")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string UserName { get; set; }
 
     }
 

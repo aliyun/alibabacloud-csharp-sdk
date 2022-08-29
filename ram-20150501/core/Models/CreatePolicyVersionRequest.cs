@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class CreatePolicyVersionRequest : TeaModel {
-        [NameInMap("PolicyName")]
-        [Validation(Required=false)]
-        public string PolicyName { get; set; }
-
         [NameInMap("PolicyDocument")]
         [Validation(Required=false)]
         public string PolicyDocument { get; set; }
 
-        [NameInMap("SetAsDefault")]
+        [NameInMap("PolicyName")]
         [Validation(Required=false)]
-        public bool? SetAsDefault { get; set; }
+        public string PolicyName { get; set; }
 
         [NameInMap("RotateStrategy")]
         [Validation(Required=false)]
         public string RotateStrategy { get; set; }
+
+        [NameInMap("SetAsDefault")]
+        [Validation(Required=false)]
+        public bool? SetAsDefault { get; set; }
 
     }
 

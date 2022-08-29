@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             [Validation(Required=false)]
             public List<ListAccessKeysResponseBodyAccessKeysAccessKey> AccessKey { get; set; }
             public class ListAccessKeysResponseBodyAccessKeysAccessKey : TeaModel {
-                public string Status { get; set; }
                 public string AccessKeyId { get; set; }
                 public string CreateDate { get; set; }
+                public string Status { get; set; }
             }
         };
 

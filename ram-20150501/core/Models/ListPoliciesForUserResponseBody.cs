@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             [Validation(Required=false)]
             public List<ListPoliciesForUserResponseBodyPoliciesPolicy> Policy { get; set; }
             public class ListPoliciesForUserResponseBodyPoliciesPolicy : TeaModel {
+                public string AttachDate { get; set; }
                 public string DefaultVersion { get; set; }
                 public string Description { get; set; }
                 public string PolicyName { get; set; }
-                public string AttachDate { get; set; }
                 public string PolicyType { get; set; }
             }
         };

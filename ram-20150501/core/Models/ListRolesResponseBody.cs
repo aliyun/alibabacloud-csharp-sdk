@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class ListRolesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("IsTruncated")]
         [Validation(Required=false)]
         public bool? IsTruncated { get; set; }
+
+        [NameInMap("Marker")]
+        [Validation(Required=false)]
+        public string Marker { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Roles")]
         [Validation(Required=false)]
@@ -25,19 +29,15 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             [Validation(Required=false)]
             public List<ListRolesResponseBodyRolesRole> Role { get; set; }
             public class ListRolesResponseBodyRolesRole : TeaModel {
-                public string Description { get; set; }
-                public string UpdateDate { get; set; }
-                public long? MaxSessionDuration { get; set; }
-                public string RoleName { get; set; }
-                public string CreateDate { get; set; }
-                public string RoleId { get; set; }
                 public string Arn { get; set; }
+                public string CreateDate { get; set; }
+                public string Description { get; set; }
+                public long? MaxSessionDuration { get; set; }
+                public string RoleId { get; set; }
+                public string RoleName { get; set; }
+                public string UpdateDate { get; set; }
             }
         };
-
-        [NameInMap("Marker")]
-        [Validation(Required=false)]
-        public string Marker { get; set; }
 
     }
 

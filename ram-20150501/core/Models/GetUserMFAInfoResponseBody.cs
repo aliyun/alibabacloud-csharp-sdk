@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             [NameInMap("SerialNumber")]
             [Validation(Required=false)]
             public string SerialNumber { get; set; }
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
         };
 
         [NameInMap("RequestId")]

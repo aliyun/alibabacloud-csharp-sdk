@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
-    public class RemoveUserFromGroupRequest : TeaModel {
-        [NameInMap("GroupName")]
+    public class UpdatePolicyDescriptionRequest : TeaModel {
+        [NameInMap("NewDescription")]
         [Validation(Required=false)]
-        public string GroupName { get; set; }
+        public string NewDescription { get; set; }
 
-        [NameInMap("UserName")]
+        [NameInMap("PolicyName")]
         [Validation(Required=false)]
-        public string UserName { get; set; }
+        public string PolicyName { get; set; }
 
     }
 

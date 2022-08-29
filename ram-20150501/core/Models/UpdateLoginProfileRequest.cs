@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class UpdateLoginProfileRequest : TeaModel {
-        [NameInMap("UserName")]
+        [NameInMap("MFABindRequired")]
         [Validation(Required=false)]
-        public string UserName { get; set; }
+        public bool? MFABindRequired { get; set; }
 
         [NameInMap("Password")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         [Validation(Required=false)]
         public bool? PasswordResetRequired { get; set; }
 
-        [NameInMap("MFABindRequired")]
+        [NameInMap("UserName")]
         [Validation(Required=false)]
-        public bool? MFABindRequired { get; set; }
+        public string UserName { get; set; }
 
     }
 
