@@ -17,9 +17,97 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string Created { get; set; }
 
+        [NameInMap("current_stage")]
+        [Validation(Required=false)]
+        public string CurrentStage { get; set; }
+
+        [NameInMap("error")]
+        [Validation(Required=false)]
+        public DescribeTaskInfoResponseBodyError Error { get; set; }
+        public class DescribeTaskInfoResponseBodyError : TeaModel {
+            [NameInMap("code")]
+            [Validation(Required=false)]
+            public string Code { get; set; }
+            [NameInMap("message")]
+            [Validation(Required=false)]
+            public string Message { get; set; }
+        };
+
+        [NameInMap("events")]
+        [Validation(Required=false)]
+        public List<DescribeTaskInfoResponseBodyEvents> Events { get; set; }
+        public class DescribeTaskInfoResponseBodyEvents : TeaModel {
+            [NameInMap("action")]
+            [Validation(Required=false)]
+            public string Action { get; set; }
+
+            [NameInMap("level")]
+            [Validation(Required=false)]
+            public string Level { get; set; }
+
+            [NameInMap("message")]
+            [Validation(Required=false)]
+            public string Message { get; set; }
+
+            [NameInMap("reason")]
+            [Validation(Required=false)]
+            public string Reason { get; set; }
+
+            [NameInMap("source")]
+            [Validation(Required=false)]
+            public string Source { get; set; }
+
+            [NameInMap("timestamp")]
+            [Validation(Required=false)]
+            public string Timestamp { get; set; }
+
+        }
+
+        [NameInMap("parameters")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Parameters { get; set; }
+
+        [NameInMap("stages")]
+        [Validation(Required=false)]
+        public List<DescribeTaskInfoResponseBodyStages> Stages { get; set; }
+        public class DescribeTaskInfoResponseBodyStages : TeaModel {
+            [NameInMap("end_time")]
+            [Validation(Required=false)]
+            public string EndTime { get; set; }
+
+            [NameInMap("message")]
+            [Validation(Required=false)]
+            public string Message { get; set; }
+
+            [NameInMap("outputs")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> Outputs { get; set; }
+
+            [NameInMap("start_time")]
+            [Validation(Required=false)]
+            public string StartTime { get; set; }
+
+            [NameInMap("state")]
+            [Validation(Required=false)]
+            public string State { get; set; }
+
+        }
+
         [NameInMap("state")]
         [Validation(Required=false)]
         public string State { get; set; }
+
+        [NameInMap("target")]
+        [Validation(Required=false)]
+        public DescribeTaskInfoResponseBodyTarget Target { get; set; }
+        public class DescribeTaskInfoResponseBodyTarget : TeaModel {
+            [NameInMap("id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+            [NameInMap("type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+        };
 
         [NameInMap("task_id")]
         [Validation(Required=false)]

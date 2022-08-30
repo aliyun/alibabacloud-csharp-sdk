@@ -6455,10 +6455,6 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["management"] = request.Management;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeConfig.ToMap()))
-            {
-                body["node_config"] = request.NodeConfig;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodepoolInfo.ToMap()))
             {
                 body["nodepool_info"] = request.NodepoolInfo;
@@ -6512,10 +6508,6 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Management.ToMap()))
             {
                 body["management"] = request.Management;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeConfig.ToMap()))
-            {
-                body["node_config"] = request.NodeConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodepoolInfo.ToMap()))
             {
@@ -6613,6 +6605,88 @@ namespace AlibabaCloud.SDK.CS20151215
                 BodyType = "none",
             };
             return TeaModel.ToObject<ModifyClusterTagsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyNodePoolNodeConfigResponse ModifyNodePoolNodeConfig(string ClusterId, string NodepoolId, ModifyNodePoolNodeConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ModifyNodePoolNodeConfigWithOptions(ClusterId, NodepoolId, request, headers, runtime);
+        }
+
+        public async Task<ModifyNodePoolNodeConfigResponse> ModifyNodePoolNodeConfigAsync(string ClusterId, string NodepoolId, ModifyNodePoolNodeConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ModifyNodePoolNodeConfigWithOptionsAsync(ClusterId, NodepoolId, request, headers, runtime);
+        }
+
+        public ModifyNodePoolNodeConfigResponse ModifyNodePoolNodeConfigWithOptions(string ClusterId, string NodepoolId, ModifyNodePoolNodeConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            NodepoolId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubeletConfig.ToMap()))
+            {
+                body["kubelet_config"] = request.KubeletConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RollingPolicy.ToMap()))
+            {
+                body["rolling_policy"] = request.RollingPolicy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyNodePoolNodeConfig",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + ClusterId + "/nodepools/" + NodepoolId + "/node_config",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyNodePoolNodeConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyNodePoolNodeConfigResponse> ModifyNodePoolNodeConfigWithOptionsAsync(string ClusterId, string NodepoolId, ModifyNodePoolNodeConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
+            NodepoolId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubeletConfig.ToMap()))
+            {
+                body["kubelet_config"] = request.KubeletConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RollingPolicy.ToMap()))
+            {
+                body["rolling_policy"] = request.RollingPolicy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyNodePoolNodeConfig",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + ClusterId + "/nodepools/" + NodepoolId + "/node_config",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyNodePoolNodeConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ModifyPolicyInstanceResponse ModifyPolicyInstance(string clusterId, string policyName, ModifyPolicyInstanceRequest request)
