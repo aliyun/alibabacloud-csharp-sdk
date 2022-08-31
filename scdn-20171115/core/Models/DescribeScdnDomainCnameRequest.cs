@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
     }
 
 }

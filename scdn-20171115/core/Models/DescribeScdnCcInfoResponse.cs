@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
         public DescribeScdnCcInfoResponseBody Body { get; set; }

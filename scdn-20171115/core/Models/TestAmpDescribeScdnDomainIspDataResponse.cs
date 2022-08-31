@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Scdn20171115.Models
 {
-    public class DescribeScdnDomainRealTimeHttpCodeDataResponse : TeaModel {
+    public class TestAmpDescribeScdnDomainIspDataResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeScdnDomainRealTimeHttpCodeDataResponseBody Body { get; set; }
+        public TestAmpDescribeScdnDomainIspDataResponseBody Body { get; set; }
 
     }
 

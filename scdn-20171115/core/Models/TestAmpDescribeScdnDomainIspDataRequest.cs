@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Scdn20171115.Models
 {
-    public class DescribeScdnDomainRealTimeTrafficDataRequest : TeaModel {
+    public class TestAmpDescribeScdnDomainIspDataRequest : TeaModel {
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }

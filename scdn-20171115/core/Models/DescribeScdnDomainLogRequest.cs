@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
