@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSlowLogRecordsResponseBody : TeaModel {
-        [NameInMap("CPUTime")]
-        [Validation(Required=false)]
-        public long? CPUTime { get; set; }
-
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
@@ -44,19 +40,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public long? QueryTimes { get; set; }
                 public long? ReturnRowCounts { get; set; }
                 public long? RowsAffectedCount { get; set; }
+                public string SQLHash { get; set; }
                 public string SQLText { get; set; }
                 public string UserName { get; set; }
                 public long? WriteIOCount { get; set; }
             }
         };
-
-        [NameInMap("LastRowsAffectedCount")]
-        [Validation(Required=false)]
-        public long? LastRowsAffectedCount { get; set; }
-
-        [NameInMap("LogicalIORead")]
-        [Validation(Required=false)]
-        public long? LogicalIORead { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -66,33 +55,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
-        [NameInMap("PhysicalIORead")]
-        [Validation(Required=false)]
-        public long? PhysicalIORead { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("RowsAffectedCount")]
-        [Validation(Required=false)]
-        public long? RowsAffectedCount { get; set; }
-
-        [NameInMap("SQLHash")]
-        [Validation(Required=false)]
-        public string SQLHash { get; set; }
-
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]
         public int? TotalRecordCount { get; set; }
-
-        [NameInMap("UserName")]
-        [Validation(Required=false)]
-        public string UserName { get; set; }
-
-        [NameInMap("WritesIOCount")]
-        [Validation(Required=false)]
-        public long? WritesIOCount { get; set; }
 
     }
 

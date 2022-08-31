@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribePGHbaConfigResponseBody : TeaModel {
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
         [NameInMap("DefaultHbaItems")]
         [Validation(Required=false)]
         public DescribePGHbaConfigResponseBodyDefaultHbaItems DefaultHbaItems { get; set; }

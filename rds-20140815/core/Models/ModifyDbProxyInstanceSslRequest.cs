@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDbProxyInstanceSslRequest : TeaModel {
+        [NameInMap("DBProxyEngineType")]
+        [Validation(Required=false)]
+        public string DBProxyEngineType { get; set; }
+
         [NameInMap("DbInstanceId")]
         [Validation(Required=false)]
         public string DbInstanceId { get; set; }

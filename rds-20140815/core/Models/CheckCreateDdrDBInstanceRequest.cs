@@ -13,18 +13,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string BackupSetId { get; set; }
 
-        [NameInMap("BinlogName")]
-        [Validation(Required=false)]
-        public string BinlogName { get; set; }
-
-        [NameInMap("BinlogPosition")]
-        [Validation(Required=false)]
-        public string BinlogPosition { get; set; }
-
-        [NameInMap("BinlogRole")]
-        [Validation(Required=false)]
-        public string BinlogRole { get; set; }
-
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
         public string DBInstanceClass { get; set; }

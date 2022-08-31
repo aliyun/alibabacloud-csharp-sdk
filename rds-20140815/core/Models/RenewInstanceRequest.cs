@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string AutoPay { get; set; }
 
+        [NameInMap("AutoRenew")]
+        [Validation(Required=false)]
+        public string AutoRenew { get; set; }
+
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }

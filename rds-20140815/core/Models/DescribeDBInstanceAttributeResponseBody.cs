@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string SecurityIPMode { get; set; }
                 public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeServerlessConfig ServerlessConfig { get; set; }
                 public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeServerlessConfig : TeaModel {
+                    [NameInMap("AutoPause")]
+                    [Validation(Required=false)]
+                    public bool? AutoPause { get; set; }
+
                     [NameInMap("ScaleMax")]
                     [Validation(Required=false)]
                     public double? ScaleMax { get; set; }
@@ -112,6 +116,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     [NameInMap("ScaleMin")]
                     [Validation(Required=false)]
                     public double? ScaleMin { get; set; }
+
+                    [NameInMap("SwitchForce")]
+                    [Validation(Required=false)]
+                    public bool? SwitchForce { get; set; }
 
                 }
                 public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeSlaveZones SlaveZones { get; set; }
@@ -136,6 +144,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string VpcCloudInstanceId { get; set; }
                 public string VpcId { get; set; }
                 public string ZoneId { get; set; }
+                public string KindCode { get; set; }
             }
         };
 

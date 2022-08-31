@@ -44,6 +44,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBName { get; set; }
                 public string DBStatus { get; set; }
                 public string Engine { get; set; }
+                public int? PageNumber { get; set; }
+                public int? PageSize { get; set; }
+                public string ResourceGroupId { get; set; }
+                public int? TotalCount { get; set; }
             }
         };
 

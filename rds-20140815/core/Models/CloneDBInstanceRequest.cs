@@ -81,6 +81,24 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string RestoreTime { get; set; }
 
+        [NameInMap("ServerlessConfig")]
+        [Validation(Required=false)]
+        public CloneDBInstanceRequestServerlessConfig ServerlessConfig { get; set; }
+        public class CloneDBInstanceRequestServerlessConfig : TeaModel {
+            [NameInMap("AutoPause")]
+            [Validation(Required=false)]
+            public bool? AutoPause { get; set; }
+            [NameInMap("MaxCapacity")]
+            [Validation(Required=false)]
+            public double? MaxCapacity { get; set; }
+            [NameInMap("MinCapacity")]
+            [Validation(Required=false)]
+            public double? MinCapacity { get; set; }
+            [NameInMap("SwitchForce")]
+            [Validation(Required=false)]
+            public bool? SwitchForce { get; set; }
+        };
+
         [NameInMap("TableMeta")]
         [Validation(Required=false)]
         public string TableMeta { get; set; }

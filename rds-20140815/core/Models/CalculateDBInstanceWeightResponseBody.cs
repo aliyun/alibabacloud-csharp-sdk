@@ -20,7 +20,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceId { get; set; }
                 public string DBInstanceType { get; set; }
                 public string ReadonlyInstanceSQLDelayedTime { get; set; }
-                public string Role { get; set; }
                 public string Weight { get; set; }
             }
         };

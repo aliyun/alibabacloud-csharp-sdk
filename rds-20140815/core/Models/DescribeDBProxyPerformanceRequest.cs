@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        [NameInMap("DBProxyEngineType")]
+        [Validation(Required=false)]
+        public string DBProxyEngineType { get; set; }
+
         [NameInMap("DBProxyInstanceType")]
         [Validation(Required=false)]
         public string DBProxyInstanceType { get; set; }

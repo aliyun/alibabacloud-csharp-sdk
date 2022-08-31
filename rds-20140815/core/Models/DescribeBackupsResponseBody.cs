@@ -57,6 +57,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string HostInstanceID { get; set; }
                 public int? IsAvail { get; set; }
                 public string MetaStatus { get; set; }
+                public string ResourceGroupId { get; set; }
                 public string StorageClass { get; set; }
                 public string StoreStatus { get; set; }
             }

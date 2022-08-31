@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public class DeleteBackupFileResponseBodyDeletedBaksetIds : TeaModel {
             [NameInMap("DeletedBaksetIds")]
             [Validation(Required=false)]
-            public List<string> DeletedBaksetIds { get; set; }
+            public List<int?> DeletedBaksetIds { get; set; }
         };
 
         [NameInMap("RequestId")]

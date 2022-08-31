@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeAvailableMetricsResponseBody : TeaModel {
+        [NameInMap("DBInstanceName")]
+        [Validation(Required=false)]
+        public string DBInstanceName { get; set; }
+
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeAvailableMetricsResponseBodyItems> Items { get; set; }

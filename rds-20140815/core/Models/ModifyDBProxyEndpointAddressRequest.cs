@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBProxyEndpointId { get; set; }
 
+        [NameInMap("DBProxyEngineType")]
+        [Validation(Required=false)]
+        public string DBProxyEngineType { get; set; }
+
         [NameInMap("DBProxyNewConnectString")]
         [Validation(Required=false)]
         public string DBProxyNewConnectString { get; set; }

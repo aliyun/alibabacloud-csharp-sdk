@@ -27,6 +27,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
         };
 
+        [NameInMap("DBProxyEngineType")]
+        [Validation(Required=false)]
+        public string DBProxyEngineType { get; set; }
+
         [NameInMap("DBProxyInstanceCurrentMinorVersion")]
         [Validation(Required=false)]
         public string DBProxyInstanceCurrentMinorVersion { get; set; }
@@ -77,6 +81,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
     }
 

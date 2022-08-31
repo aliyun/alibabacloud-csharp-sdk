@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDiagnosticReportListResponseBody : TeaModel {
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
         [NameInMap("ReportList")]
         [Validation(Required=false)]
         public List<DescribeDiagnosticReportListResponseBodyReportList> ReportList { get; set; }
