@@ -115,6 +115,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            [NameInMap("DisplaySandboxResult")]
+            [Validation(Required=false)]
+            public bool? DisplaySandboxResult { get; set; }
+
             [NameInMap("EventNotes")]
             [Validation(Required=false)]
             public List<DescribeSuspEventsResponseBodySuspEventsEventNotes> EventNotes { get; set; }
