@@ -11658,6 +11658,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["AlertUser"] = request.AlertUser;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaselineId))
+            {
+                body["BaselineId"] = request.BaselineId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
             {
                 body["BeginTime"] = request.BeginTime;
@@ -11712,6 +11716,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertUser))
             {
                 body["AlertUser"] = request.AlertUser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaselineId))
+            {
+                body["BaselineId"] = request.BaselineId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
             {
@@ -14524,6 +14532,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["ProjectId"] = request.ProjectId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -14598,6 +14610,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
                 body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

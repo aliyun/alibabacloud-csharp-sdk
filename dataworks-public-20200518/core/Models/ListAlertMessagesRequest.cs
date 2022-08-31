@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string AlertUser { get; set; }
 
+        [NameInMap("BaselineId")]
+        [Validation(Required=false)]
+        public long? BaselineId { get; set; }
+
         [NameInMap("BeginTime")]
         [Validation(Required=false)]
         public string BeginTime { get; set; }
