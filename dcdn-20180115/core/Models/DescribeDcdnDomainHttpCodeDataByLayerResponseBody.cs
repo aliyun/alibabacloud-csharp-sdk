@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public class DescribeDcdnDomainHttpCodeDataByLayerResponseBodyHttpCodeDataIntervalDataModule : TeaModel {
                 public string TimeStamp { get; set; }
                 public string TotalValue { get; set; }
-                public string Value { get; set; }
+                public Dictionary<string, string> Value { get; set; }
             }
         };
 
