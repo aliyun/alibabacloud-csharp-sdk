@@ -471,6 +471,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             {
                 query["IoMaxSpec"] = request.IoMaxSpec;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartitionNum))
+            {
+                query["PartitionNum"] = request.PartitionNum;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -533,6 +537,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoMaxSpec))
             {
                 query["IoMaxSpec"] = request.IoMaxSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartitionNum))
+            {
+                query["PartitionNum"] = request.PartitionNum;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -609,6 +617,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             {
                 query["IoMaxSpec"] = request.IoMaxSpec;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartitionNum))
+            {
+                query["PartitionNum"] = request.PartitionNum;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -671,6 +683,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoMaxSpec))
             {
                 query["IoMaxSpec"] = request.IoMaxSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartitionNum))
+            {
+                query["PartitionNum"] = request.PartitionNum;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -3391,6 +3407,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             {
                 query["IoMaxSpec"] = request.IoMaxSpec;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartitionNum))
+            {
+                query["PartitionNum"] = request.PartitionNum;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -3449,6 +3469,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoMaxSpec))
             {
                 query["IoMaxSpec"] = request.IoMaxSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartitionNum))
+            {
+                query["PartitionNum"] = request.PartitionNum;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -3521,6 +3545,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             {
                 query["IoMaxSpec"] = request.IoMaxSpec;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartitionNum))
+            {
+                query["PartitionNum"] = request.PartitionNum;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -3579,6 +3607,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoMaxSpec))
             {
                 query["IoMaxSpec"] = request.IoMaxSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartitionNum))
+            {
+                query["PartitionNum"] = request.PartitionNum;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {

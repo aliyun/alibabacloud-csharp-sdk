@@ -32,6 +32,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public long? ExpiredTime { get; set; }
                 public string InstanceId { get; set; }
                 public int? IoMax { get; set; }
+                public string KmsKeyId { get; set; }
                 public int? MsgRetain { get; set; }
                 public string Name { get; set; }
                 public int? PaidType { get; set; }

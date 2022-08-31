@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public string IoMaxSpec { get; set; }
 
+        [NameInMap("PartitionNum")]
+        [Validation(Required=false)]
+        public int? PartitionNum { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
