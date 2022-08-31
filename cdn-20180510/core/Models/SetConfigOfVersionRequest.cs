@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public long? FunctionId { get; set; }
 
-        [NameInMap("FunctionMatches")]
-        [Validation(Required=false)]
-        public string FunctionMatches { get; set; }
-
         [NameInMap("FunctionName")]
         [Validation(Required=false)]
         public string FunctionName { get; set; }

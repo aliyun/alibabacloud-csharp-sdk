@@ -8,26 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
-    public class DescribeDomainTopReferVisitRequest : TeaModel {
-        [NameInMap("DomainName")]
+    public class DeleteRealTimeLogLogstoreRequest : TeaModel {
+        [NameInMap("Logstore")]
         [Validation(Required=false)]
-        public string DomainName { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
+        public string Logstore { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("SortBy")]
+        [NameInMap("Project")]
         [Validation(Required=false)]
-        public string SortBy { get; set; }
+        public string Project { get; set; }
 
-        [NameInMap("StartTime")]
+        [NameInMap("Region")]
         [Validation(Required=false)]
-        public string StartTime { get; set; }
+        public string Region { get; set; }
 
     }
 

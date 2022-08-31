@@ -35,11 +35,19 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public string FunctionName { get; set; }
 
+            [NameInMap("ParentId")]
+            [Validation(Required=false)]
+            public string ParentId { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
         }
+
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

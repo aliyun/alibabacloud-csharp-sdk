@@ -21,6 +21,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                 public string Cname { get; set; }
                 public string Coverage { get; set; }
                 public string Description { get; set; }
+                public long? DomainId { get; set; }
                 public string DomainName { get; set; }
                 public string DomainStatus { get; set; }
                 public string GmtCreated { get; set; }
