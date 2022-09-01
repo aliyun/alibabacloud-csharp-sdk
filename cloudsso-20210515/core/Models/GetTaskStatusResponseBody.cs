@@ -20,22 +20,28 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public string EndTime { get; set; }
+
             [NameInMap("FailureReason")]
             [Validation(Required=false)]
             public string FailureReason { get; set; }
+
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public string TaskId { get; set; }
+
             [NameInMap("TaskType")]
             [Validation(Required=false)]
             public string TaskType { get; set; }
-        };
+
+        }
 
     }
 

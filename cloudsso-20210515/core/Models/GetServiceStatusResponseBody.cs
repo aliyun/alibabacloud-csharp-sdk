@@ -20,16 +20,20 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             [NameInMap("AccountId")]
             [Validation(Required=false)]
             public string AccountId { get; set; }
+
             [NameInMap("PrerequisiteCheckResult")]
             [Validation(Required=false)]
             public string PrerequisiteCheckResult { get; set; }
+
             [NameInMap("RegionsInUse")]
             [Validation(Required=false)]
             public List<string> RegionsInUse { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-        };
+
+        }
 
     }
 

@@ -20,16 +20,20 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             [NameInMap("AcsUrl")]
             [Validation(Required=false)]
             public string AcsUrl { get; set; }
+
             [NameInMap("DirectoryId")]
             [Validation(Required=false)]
             public string DirectoryId { get; set; }
+
             [NameInMap("EncodedMetadataDocument")]
             [Validation(Required=false)]
             public string EncodedMetadataDocument { get; set; }
+
             [NameInMap("EntityId")]
             [Validation(Required=false)]
             public string EntityId { get; set; }
-        };
+
+        }
 
     }
 

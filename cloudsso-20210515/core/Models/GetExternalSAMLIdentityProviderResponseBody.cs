@@ -20,31 +20,40 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             [NameInMap("CertificateIds")]
             [Validation(Required=false)]
             public List<string> CertificateIds { get; set; }
+
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
             [NameInMap("DirectoryId")]
             [Validation(Required=false)]
             public string DirectoryId { get; set; }
+
             [NameInMap("EncodedMetadataDocument")]
             [Validation(Required=false)]
             public string EncodedMetadataDocument { get; set; }
+
             [NameInMap("EntityId")]
             [Validation(Required=false)]
             public string EntityId { get; set; }
+
             [NameInMap("LoginUrl")]
             [Validation(Required=false)]
             public string LoginUrl { get; set; }
+
             [NameInMap("SSOStatus")]
             [Validation(Required=false)]
             public string SSOStatus { get; set; }
+
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
             public string UpdateTime { get; set; }
+
             [NameInMap("WantRequestSigned")]
             [Validation(Required=false)]
             public bool? WantRequestSigned { get; set; }
-        };
+
+        }
 
     }
 

@@ -20,25 +20,32 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
             [NameInMap("CredentialId")]
             [Validation(Required=false)]
             public string CredentialId { get; set; }
+
             [NameInMap("CredentialSecret")]
             [Validation(Required=false)]
             public string CredentialSecret { get; set; }
+
             [NameInMap("CredentialType")]
             [Validation(Required=false)]
             public string CredentialType { get; set; }
+
             [NameInMap("DirectoryId")]
             [Validation(Required=false)]
             public string DirectoryId { get; set; }
+
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
             public string ExpireTime { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-        };
+
+        }
 
     }
 
