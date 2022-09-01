@@ -1360,6 +1360,98 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
             return TeaModel.ToObject<GetUserIdByUserExternalIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        public GetUserIdByUsernameResponse GetUserIdByUsername(string instanceId, string applicationId, GetUserIdByUsernameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetUserIdByUsernameHeaders headers = new GetUserIdByUsernameHeaders();
+            return GetUserIdByUsernameWithOptions(instanceId, applicationId, request, headers, runtime);
+        }
+
+        public async Task<GetUserIdByUsernameResponse> GetUserIdByUsernameAsync(string instanceId, string applicationId, GetUserIdByUsernameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetUserIdByUsernameHeaders headers = new GetUserIdByUsernameHeaders();
+            return await GetUserIdByUsernameWithOptionsAsync(instanceId, applicationId, request, headers, runtime);
+        }
+
+        public GetUserIdByUsernameResponse GetUserIdByUsernameWithOptions(string instanceId, string applicationId, GetUserIdByUsernameRequest request, GetUserIdByUsernameHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
+            applicationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(applicationId);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
+            {
+                body["username"] = request.Username;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUserIdByUsername",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + instanceId + "/" + applicationId + "/users/_/actions/getUserIdByUsername",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserIdByUsernameResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetUserIdByUsernameResponse> GetUserIdByUsernameWithOptionsAsync(string instanceId, string applicationId, GetUserIdByUsernameRequest request, GetUserIdByUsernameHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
+            applicationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(applicationId);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
+            {
+                body["username"] = request.Username;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUserIdByUsername",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + instanceId + "/" + applicationId + "/users/_/actions/getUserIdByUsername",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserIdByUsernameResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public GetUserInfoResponse GetUserInfo(string instanceId, string applicationId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
