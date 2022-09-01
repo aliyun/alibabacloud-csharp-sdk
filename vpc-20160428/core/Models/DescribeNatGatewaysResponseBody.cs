@@ -23,6 +23,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public bool? DeletionProtection { get; set; }
                 public string Description { get; set; }
                 public bool? EcsMetricEnabled { get; set; }
+                public string EipBindMode { get; set; }
                 public string ExpiredTime { get; set; }
                 public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds ForwardTableIds { get; set; }
                 public class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds : TeaModel {
