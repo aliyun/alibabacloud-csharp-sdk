@@ -13,9 +13,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public EventSourceParameters EventSourceParameters { get; set; }
 
-        /// <summary>
-        /// eventSourceType
-        /// </summary>
         [NameInMap("eventSourceType")]
         [Validation(Required=false)]
         public string EventSourceType { get; set; }

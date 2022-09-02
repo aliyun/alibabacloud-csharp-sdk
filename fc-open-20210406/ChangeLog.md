@@ -1,3 +1,7 @@
+2022-09-02 Version: 1.1.9
+- Add ClaimGPUInstance for GPU render.
+- Add ReleaseGPUInstance for GPU render.
+
 2022-07-21 Version: 1.1.8
 - Add instanceSoftConcurrency field for function meta.
 

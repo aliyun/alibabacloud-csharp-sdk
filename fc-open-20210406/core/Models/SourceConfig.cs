@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class SourceConfig : TeaModel {
-        /// <summary>
-        /// logstore
-        /// </summary>
         [NameInMap("logstore")]
         [Validation(Required=false)]
         public string Logstore { get; set; }

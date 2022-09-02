@@ -9,44 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class ListServicesResponseBody : TeaModel {
-        /// <summary>
-        /// 下次查询token
-        /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        /// <summary>
-        /// 服务列表
-        /// </summary>
         [NameInMap("services")]
         [Validation(Required=false)]
         public List<ListServicesResponseBodyServices> Services { get; set; }
         public class ListServicesResponseBodyServices : TeaModel {
-            /// <summary>
-            /// 创建时间
-            /// </summary>
             [NameInMap("createdTime")]
             [Validation(Required=false)]
             public string CreatedTime { get; set; }
 
-            /// <summary>
-            /// 服务描述
-            /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
-            /// <summary>
-            /// 公网访问设置
-            /// </summary>
             [NameInMap("internetAccess")]
             [Validation(Required=false)]
             public bool? InternetAccess { get; set; }
 
-            /// <summary>
-            /// 上次更新时间
-            /// </summary>
             [NameInMap("lastModifiedTime")]
             [Validation(Required=false)]
             public string LastModifiedTime { get; set; }
@@ -59,23 +41,18 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
             [Validation(Required=false)]
             public NASConfig NasConfig { get; set; }
 
-            /// <summary>
-            /// 服务角色
-            /// </summary>
+            [NameInMap("ossMountConfig")]
+            [Validation(Required=false)]
+            public OSSMountConfig OssMountConfig { get; set; }
+
             [NameInMap("role")]
             [Validation(Required=false)]
             public string Role { get; set; }
 
-            /// <summary>
-            /// 服务ID
-            /// </summary>
             [NameInMap("serviceId")]
             [Validation(Required=false)]
             public string ServiceId { get; set; }
 
-            /// <summary>
-            /// 服务信息
-            /// </summary>
             [NameInMap("serviceName")]
             [Validation(Required=false)]
             public string ServiceName { get; set; }

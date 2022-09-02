@@ -21,16 +21,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public string XFcDate { get; set; }
 
-        /// <summary>
-        /// 调用方式:Sync或者Async，默认值：Sync
-        /// </summary>
         [NameInMap("X-Fc-Invocation-Type")]
         [Validation(Required=false)]
         public string XFcInvocationType { get; set; }
 
-        /// <summary>
-        /// 请求返回日志类型, Tail 为返回函数日志最后 4KB 数据，None 或空值则返回不带有日志，默认为 None
-        /// </summary>
         [NameInMap("X-Fc-Log-Type")]
         [Validation(Required=false)]
         public string XFcLogType { get; set; }

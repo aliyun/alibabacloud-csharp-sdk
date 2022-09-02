@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class AvailableAZ : TeaModel {
-        /// <summary>
-        /// az
-        /// </summary>
         [NameInMap("availableAZs")]
         [Validation(Required=false)]
         public string AvailableAZs { get; set; }
