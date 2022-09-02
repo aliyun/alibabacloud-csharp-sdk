@@ -138,13 +138,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("page_number")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
+
             [NameInMap("page_size")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("total_count")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-        };
+
+        }
 
     }
 

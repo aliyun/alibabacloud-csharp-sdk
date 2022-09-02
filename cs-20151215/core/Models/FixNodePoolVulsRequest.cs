@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("max_parallelism")]
             [Validation(Required=false)]
             public long? MaxParallelism { get; set; }
-        };
+
+        }
 
         [NameInMap("vul_list")]
         [Validation(Required=false)]

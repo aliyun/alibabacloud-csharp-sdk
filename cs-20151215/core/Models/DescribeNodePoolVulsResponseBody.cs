@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        [NameInMap("vuls_fix_service_purchased")]
+        [Validation(Required=false)]
+        public bool? VulsFixServicePurchased { get; set; }
+
     }
 
 }

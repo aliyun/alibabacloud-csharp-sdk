@@ -16,13 +16,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("page_number")]
             [Validation(Required=false)]
             public long? PageNumber { get; set; }
+
             [NameInMap("page_size")]
             [Validation(Required=false)]
             public long? PageSize { get; set; }
+
             [NameInMap("total_count")]
             [Validation(Required=false)]
             public long? TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("requestId")]
         [Validation(Required=false)]
@@ -43,10 +46,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [NameInMap("code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
+
                 [NameInMap("message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
-            };
+
+            }
 
             [NameInMap("state")]
             [Validation(Required=false)]

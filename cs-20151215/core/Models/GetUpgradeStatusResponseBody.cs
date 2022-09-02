@@ -32,10 +32,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("message")]
             [Validation(Required=false)]
             public string Message { get; set; }
+
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-        };
+
+        }
 
     }
 

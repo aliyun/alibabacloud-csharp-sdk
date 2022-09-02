@@ -16,6 +16,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("count")]
             [Validation(Required=false)]
             public long? Count { get; set; }
+
             [NameInMap("log")]
             [Validation(Required=false)]
             public DescribePolicyGovernanceInClusterResponseBodyAdmitLogLog Log { get; set; }
@@ -45,10 +46,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string ResourceNamespace { get; set; }
 
             }
+
             [NameInMap("progress")]
             [Validation(Required=false)]
             public string Progress { get; set; }
-        };
+
+        }
 
         [NameInMap("on_state")]
         [Validation(Required=false)]
@@ -85,6 +88,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public long? Violations { get; set; }
 
             }
+
             [NameInMap("warn")]
             [Validation(Required=false)]
             public DescribePolicyGovernanceInClusterResponseBodyTotalViolationsWarn Warn { get; set; }
@@ -98,7 +102,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public long? Violations { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("violations")]
         [Validation(Required=false)]
@@ -125,6 +130,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public long? Violations { get; set; }
 
             }
+
             [NameInMap("warn")]
             [Validation(Required=false)]
             public DescribePolicyGovernanceInClusterResponseBodyViolationsWarn Warn { get; set; }
@@ -146,7 +152,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public long? Violations { get; set; }
 
             }
-        };
+
+        }
 
     }
 

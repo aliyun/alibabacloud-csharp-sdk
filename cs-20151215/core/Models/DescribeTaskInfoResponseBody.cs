@@ -28,10 +28,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("code")]
             [Validation(Required=false)]
             public string Code { get; set; }
+
             [NameInMap("message")]
             [Validation(Required=false)]
             public string Message { get; set; }
-        };
+
+        }
 
         [NameInMap("events")]
         [Validation(Required=false)]
@@ -104,10 +106,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("id")]
             [Validation(Required=false)]
             public string Id { get; set; }
+
             [NameInMap("type")]
             [Validation(Required=false)]
             public string Type { get; set; }
-        };
+
+        }
 
         [NameInMap("task_id")]
         [Validation(Required=false)]
