@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeAccessControlListAttributeResponseBodyAclEntrysAclEntry> AclEntry { get; set; }
             public class DescribeAccessControlListAttributeResponseBodyAclEntrysAclEntry : TeaModel {
+                [NameInMap("AclEntryComment")]
+                [Validation(Required=false)]
                 public string AclEntryComment { get; set; }
+
+                [NameInMap("AclEntryIp")]
+                [Validation(Required=false)]
                 public string AclEntryIp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("AclId")]
         [Validation(Required=false)]

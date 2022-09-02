@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<RemoveVpcAccessResponseBodyApisApi> Api { get; set; }
             public class RemoveVpcAccessResponseBodyApisApi : TeaModel {
+                [NameInMap("ApiId")]
+                [Validation(Required=false)]
                 public string ApiId { get; set; }
+
+                [NameInMap("GroupId")]
+                [Validation(Required=false)]
                 public string GroupId { get; set; }
+
+                [NameInMap("StageId")]
+                [Validation(Required=false)]
                 public string StageId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

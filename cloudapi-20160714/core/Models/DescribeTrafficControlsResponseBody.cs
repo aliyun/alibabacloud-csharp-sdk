@@ -33,11 +33,28 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeTrafficControlsResponseBodyTrafficControlsTrafficControl> TrafficControl { get; set; }
             public class DescribeTrafficControlsResponseBodyTrafficControlsTrafficControl : TeaModel {
+                [NameInMap("ApiDefault")]
+                [Validation(Required=false)]
                 public int? ApiDefault { get; set; }
+
+                [NameInMap("AppDefault")]
+                [Validation(Required=false)]
                 public int? AppDefault { get; set; }
+
+                [NameInMap("CreatedTime")]
+                [Validation(Required=false)]
                 public string CreatedTime { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("ModifiedTime")]
+                [Validation(Required=false)]
                 public string ModifiedTime { get; set; }
+
+                [NameInMap("SpecialPolicies")]
+                [Validation(Required=false)]
                 public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControlSpecialPolicies SpecialPolicies { get; set; }
                 public class DescribeTrafficControlsResponseBodyTrafficControlsTrafficControlSpecialPolicies : TeaModel {
                     [NameInMap("SpecialPolicy")]
@@ -56,20 +73,41 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                             [Validation(Required=false)]
                             public List<DescribeTrafficControlsResponseBodyTrafficControlsTrafficControlSpecialPoliciesSpecialPolicySpecialsSpecial> Special { get; set; }
                             public class DescribeTrafficControlsResponseBodyTrafficControlsTrafficControlSpecialPoliciesSpecialPolicySpecialsSpecial : TeaModel {
+                                [NameInMap("SpecialKey")]
+                                [Validation(Required=false)]
                                 public string SpecialKey { get; set; }
+
+                                [NameInMap("TrafficValue")]
+                                [Validation(Required=false)]
                                 public int? TrafficValue { get; set; }
+
                             }
-                        };
+
+                        }
 
                     }
 
                 }
+
+                [NameInMap("TrafficControlId")]
+                [Validation(Required=false)]
                 public string TrafficControlId { get; set; }
+
+                [NameInMap("TrafficControlName")]
+                [Validation(Required=false)]
                 public string TrafficControlName { get; set; }
+
+                [NameInMap("TrafficControlUnit")]
+                [Validation(Required=false)]
                 public string TrafficControlUnit { get; set; }
+
+                [NameInMap("UserDefault")]
+                [Validation(Required=false)]
                 public int? UserDefault { get; set; }
+
             }
-        };
+
+        }
 
     }
 

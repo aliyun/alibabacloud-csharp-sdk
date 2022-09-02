@@ -21,9 +21,13 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribePurchasedApiGroupResponseBodyDomainsDomainItem> DomainItem { get; set; }
             public class DescribePurchasedApiGroupResponseBodyDomainsDomainItem : TeaModel {
+                [NameInMap("DomainName")]
+                [Validation(Required=false)]
                 public string DomainName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("GroupId")]
         [Validation(Required=false)]

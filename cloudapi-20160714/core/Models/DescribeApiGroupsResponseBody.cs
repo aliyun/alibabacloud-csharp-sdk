@@ -17,19 +17,60 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttribute> ApiGroupAttribute { get; set; }
             public class DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttribute : TeaModel {
+                [NameInMap("BasePath")]
+                [Validation(Required=false)]
                 public string BasePath { get; set; }
+
+                [NameInMap("BillingStatus")]
+                [Validation(Required=false)]
                 public string BillingStatus { get; set; }
+
+                [NameInMap("CreatedTime")]
+                [Validation(Required=false)]
                 public string CreatedTime { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("GroupId")]
+                [Validation(Required=false)]
                 public string GroupId { get; set; }
+
+                [NameInMap("GroupName")]
+                [Validation(Required=false)]
                 public string GroupName { get; set; }
+
+                [NameInMap("HttpsPolicy")]
+                [Validation(Required=false)]
                 public string HttpsPolicy { get; set; }
+
+                [NameInMap("IllegalStatus")]
+                [Validation(Required=false)]
                 public string IllegalStatus { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
                 public string InstanceType { get; set; }
+
+                [NameInMap("ModifiedTime")]
+                [Validation(Required=false)]
                 public string ModifiedTime { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("SubDomain")]
+                [Validation(Required=false)]
                 public string SubDomain { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
                 public DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttributeTags Tags { get; set; }
                 public class DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttributeTags : TeaModel {
                     [NameInMap("TagInfo")]
@@ -47,9 +88,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                     }
 
                 }
+
+                [NameInMap("TrafficLimit")]
+                [Validation(Required=false)]
                 public int? TrafficLimit { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

@@ -17,16 +17,41 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp> AuthorizedApp { get; set; }
             public class DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp : TeaModel {
+                [NameInMap("AppId")]
+                [Validation(Required=false)]
                 public long? AppId { get; set; }
+
+                [NameInMap("AppName")]
+                [Validation(Required=false)]
                 public string AppName { get; set; }
+
+                [NameInMap("AuthVaildTime")]
+                [Validation(Required=false)]
                 public string AuthVaildTime { get; set; }
+
+                [NameInMap("AuthorizationSource")]
+                [Validation(Required=false)]
                 public string AuthorizationSource { get; set; }
+
+                [NameInMap("AuthorizedTime")]
+                [Validation(Required=false)]
                 public string AuthorizedTime { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("Operator")]
+                [Validation(Required=false)]
                 public string Operator { get; set; }
+
+                [NameInMap("StageName")]
+                [Validation(Required=false)]
                 public string StageName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

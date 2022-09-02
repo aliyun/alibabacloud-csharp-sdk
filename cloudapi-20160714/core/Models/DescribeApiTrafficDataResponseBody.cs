@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiTrafficDataResponseBodyCallDownloadsMonitorItem> MonitorItem { get; set; }
             public class DescribeApiTrafficDataResponseBodyCallDownloadsMonitorItem : TeaModel {
+                [NameInMap("ItemTime")]
+                [Validation(Required=false)]
                 public string ItemTime { get; set; }
+
+                [NameInMap("ItemValue")]
+                [Validation(Required=false)]
                 public string ItemValue { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("CallUploads")]
         [Validation(Required=false)]
@@ -30,10 +37,17 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiTrafficDataResponseBodyCallUploadsMonitorItem> MonitorItem { get; set; }
             public class DescribeApiTrafficDataResponseBodyCallUploadsMonitorItem : TeaModel {
+                [NameInMap("ItemTime")]
+                [Validation(Required=false)]
                 public string ItemTime { get; set; }
+
+                [NameInMap("ItemValue")]
+                [Validation(Required=false)]
                 public string ItemValue { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

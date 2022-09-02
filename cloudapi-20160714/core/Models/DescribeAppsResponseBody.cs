@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeAppsResponseBodyAppsAppItem> AppItem { get; set; }
             public class DescribeAppsResponseBodyAppsAppItem : TeaModel {
+                [NameInMap("AppId")]
+                [Validation(Required=false)]
                 public long? AppId { get; set; }
+
+                [NameInMap("AppName")]
+                [Validation(Required=false)]
                 public string AppName { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

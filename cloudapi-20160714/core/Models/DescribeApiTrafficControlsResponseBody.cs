@@ -17,13 +17,29 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiTrafficControlsResponseBodyApiTrafficControlsApiTrafficControlItem> ApiTrafficControlItem { get; set; }
             public class DescribeApiTrafficControlsResponseBodyApiTrafficControlsApiTrafficControlItem : TeaModel {
+                [NameInMap("ApiId")]
+                [Validation(Required=false)]
                 public string ApiId { get; set; }
+
+                [NameInMap("ApiName")]
+                [Validation(Required=false)]
                 public string ApiName { get; set; }
+
+                [NameInMap("BoundTime")]
+                [Validation(Required=false)]
                 public string BoundTime { get; set; }
+
+                [NameInMap("TrafficControlId")]
+                [Validation(Required=false)]
                 public string TrafficControlId { get; set; }
+
+                [NameInMap("TrafficControlName")]
+                [Validation(Required=false)]
                 public string TrafficControlName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

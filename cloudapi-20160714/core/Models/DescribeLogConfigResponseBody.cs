@@ -17,12 +17,25 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeLogConfigResponseBodyLogInfosLogInfo> LogInfo { get; set; }
             public class DescribeLogConfigResponseBodyLogInfosLogInfo : TeaModel {
+                [NameInMap("LogType")]
+                [Validation(Required=false)]
                 public string LogType { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("SlsLogStore")]
+                [Validation(Required=false)]
                 public string SlsLogStore { get; set; }
+
+                [NameInMap("SlsProject")]
+                [Validation(Required=false)]
                 public string SlsProject { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

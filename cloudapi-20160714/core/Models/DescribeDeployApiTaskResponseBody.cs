@@ -17,13 +17,29 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeDeployApiTaskResponseBodyDeployedResultsDeployedResult> DeployedResult { get; set; }
             public class DescribeDeployApiTaskResponseBodyDeployedResultsDeployedResult : TeaModel {
+                [NameInMap("ApiUid")]
+                [Validation(Required=false)]
                 public string ApiUid { get; set; }
+
+                [NameInMap("DeployedStatus")]
+                [Validation(Required=false)]
                 public string DeployedStatus { get; set; }
+
+                [NameInMap("ErrorMsg")]
+                [Validation(Required=false)]
                 public string ErrorMsg { get; set; }
+
+                [NameInMap("GroupId")]
+                [Validation(Required=false)]
                 public string GroupId { get; set; }
+
+                [NameInMap("StageName")]
+                [Validation(Required=false)]
                 public string StageName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

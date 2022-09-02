@@ -41,11 +41,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiDocResponseBodyErrorCodeSamplesErrorCodeSample> ErrorCodeSample { get; set; }
             public class DescribeApiDocResponseBodyErrorCodeSamplesErrorCodeSample : TeaModel {
+                [NameInMap("Code")]
+                [Validation(Required=false)]
                 public string Code { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("Message")]
+                [Validation(Required=false)]
                 public string Message { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("FailResultSample")]
         [Validation(Required=false)]
@@ -74,22 +84,28 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [NameInMap("BodyFormat")]
             [Validation(Required=false)]
             public string BodyFormat { get; set; }
+
             [NameInMap("PostBodyDescription")]
             [Validation(Required=false)]
             public string PostBodyDescription { get; set; }
+
             [NameInMap("RequestHttpMethod")]
             [Validation(Required=false)]
             public string RequestHttpMethod { get; set; }
+
             [NameInMap("RequestMode")]
             [Validation(Required=false)]
             public string RequestMode { get; set; }
+
             [NameInMap("RequestPath")]
             [Validation(Required=false)]
             public string RequestPath { get; set; }
+
             [NameInMap("RequestProtocol")]
             [Validation(Required=false)]
             public string RequestProtocol { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -103,25 +119,77 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiDocResponseBodyRequestParametersRequestParameter> RequestParameter { get; set; }
             public class DescribeApiDocResponseBodyRequestParametersRequestParameter : TeaModel {
+                [NameInMap("ApiParameterName")]
+                [Validation(Required=false)]
                 public string ApiParameterName { get; set; }
+
+                [NameInMap("ArrayItemsType")]
+                [Validation(Required=false)]
                 public string ArrayItemsType { get; set; }
+
+                [NameInMap("DefaultValue")]
+                [Validation(Required=false)]
                 public string DefaultValue { get; set; }
+
+                [NameInMap("DemoValue")]
+                [Validation(Required=false)]
                 public string DemoValue { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("DocOrder")]
+                [Validation(Required=false)]
                 public int? DocOrder { get; set; }
+
+                [NameInMap("DocShow")]
+                [Validation(Required=false)]
                 public string DocShow { get; set; }
+
+                [NameInMap("EnumValue")]
+                [Validation(Required=false)]
                 public string EnumValue { get; set; }
+
+                [NameInMap("JsonScheme")]
+                [Validation(Required=false)]
                 public string JsonScheme { get; set; }
+
+                [NameInMap("Location")]
+                [Validation(Required=false)]
                 public string Location { get; set; }
+
+                [NameInMap("MaxLength")]
+                [Validation(Required=false)]
                 public long? MaxLength { get; set; }
+
+                [NameInMap("MaxValue")]
+                [Validation(Required=false)]
                 public long? MaxValue { get; set; }
+
+                [NameInMap("MinLength")]
+                [Validation(Required=false)]
                 public long? MinLength { get; set; }
+
+                [NameInMap("MinValue")]
+                [Validation(Required=false)]
                 public long? MinValue { get; set; }
+
+                [NameInMap("ParameterType")]
+                [Validation(Required=false)]
                 public string ParameterType { get; set; }
+
+                [NameInMap("RegularExpression")]
+                [Validation(Required=false)]
                 public string RegularExpression { get; set; }
+
+                [NameInMap("Required")]
+                [Validation(Required=false)]
                 public string Required { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ResultDescriptions")]
         [Validation(Required=false)]
@@ -131,16 +199,41 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiDocResponseBodyResultDescriptionsResultDescription> ResultDescription { get; set; }
             public class DescribeApiDocResponseBodyResultDescriptionsResultDescription : TeaModel {
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("HasChild")]
+                [Validation(Required=false)]
                 public bool? HasChild { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public string Id { get; set; }
+
+                [NameInMap("Key")]
+                [Validation(Required=false)]
                 public string Key { get; set; }
+
+                [NameInMap("Mandatory")]
+                [Validation(Required=false)]
                 public bool? Mandatory { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Pid")]
+                [Validation(Required=false)]
                 public string Pid { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ResultSample")]
         [Validation(Required=false)]

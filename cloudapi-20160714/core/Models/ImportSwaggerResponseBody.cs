@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<ImportSwaggerResponseBodyFailedApiImportSwaggerFailed> ApiImportSwaggerFailed { get; set; }
             public class ImportSwaggerResponseBodyFailedApiImportSwaggerFailed : TeaModel {
+                [NameInMap("ErrorMsg")]
+                [Validation(Required=false)]
                 public string ErrorMsg { get; set; }
+
+                [NameInMap("HttpMethod")]
+                [Validation(Required=false)]
                 public string HttpMethod { get; set; }
+
+                [NameInMap("Path")]
+                [Validation(Required=false)]
                 public string Path { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ModelFailed")]
         [Validation(Required=false)]
@@ -31,11 +41,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<ImportSwaggerResponseBodyModelFailedApiImportModelFailed> ApiImportModelFailed { get; set; }
             public class ImportSwaggerResponseBodyModelFailedApiImportModelFailed : TeaModel {
+                [NameInMap("ErrorMsg")]
+                [Validation(Required=false)]
                 public string ErrorMsg { get; set; }
+
+                [NameInMap("GroupId")]
+                [Validation(Required=false)]
                 public string GroupId { get; set; }
+
+                [NameInMap("ModelName")]
+                [Validation(Required=false)]
                 public string ModelName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ModelSuccess")]
         [Validation(Required=false)]
@@ -45,12 +65,25 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<ImportSwaggerResponseBodyModelSuccessApiImportModelSuccess> ApiImportModelSuccess { get; set; }
             public class ImportSwaggerResponseBodyModelSuccessApiImportModelSuccess : TeaModel {
+                [NameInMap("GroupId")]
+                [Validation(Required=false)]
                 public string GroupId { get; set; }
+
+                [NameInMap("ModelName")]
+                [Validation(Required=false)]
                 public string ModelName { get; set; }
+
+                [NameInMap("ModelOperation")]
+                [Validation(Required=false)]
                 public string ModelOperation { get; set; }
+
+                [NameInMap("ModelUid")]
+                [Validation(Required=false)]
                 public string ModelUid { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -64,12 +97,25 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess> ApiImportSwaggerSuccess { get; set; }
             public class ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess : TeaModel {
+                [NameInMap("ApiOperation")]
+                [Validation(Required=false)]
                 public string ApiOperation { get; set; }
+
+                [NameInMap("ApiUid")]
+                [Validation(Required=false)]
                 public string ApiUid { get; set; }
+
+                [NameInMap("HttpMethod")]
+                [Validation(Required=false)]
                 public string HttpMethod { get; set; }
+
+                [NameInMap("Path")]
+                [Validation(Required=false)]
                 public string Path { get; set; }
+
             }
-        };
+
+        }
 
     }
 

@@ -29,15 +29,37 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeSignaturesResponseBodySignatureInfosSignatureInfo> SignatureInfo { get; set; }
             public class DescribeSignaturesResponseBodySignatureInfosSignatureInfo : TeaModel {
+                [NameInMap("CreatedTime")]
+                [Validation(Required=false)]
                 public string CreatedTime { get; set; }
+
+                [NameInMap("ModifiedTime")]
+                [Validation(Required=false)]
                 public string ModifiedTime { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("SignatureId")]
+                [Validation(Required=false)]
                 public string SignatureId { get; set; }
+
+                [NameInMap("SignatureKey")]
+                [Validation(Required=false)]
                 public string SignatureKey { get; set; }
+
+                [NameInMap("SignatureName")]
+                [Validation(Required=false)]
                 public string SignatureName { get; set; }
+
+                [NameInMap("SignatureSecret")]
+                [Validation(Required=false)]
                 public string SignatureSecret { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

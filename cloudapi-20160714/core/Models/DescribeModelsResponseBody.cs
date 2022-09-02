@@ -17,16 +17,41 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeModelsResponseBodyModelDetailsModelDetail> ModelDetail { get; set; }
             public class DescribeModelsResponseBodyModelDetailsModelDetail : TeaModel {
+                [NameInMap("CreatedTime")]
+                [Validation(Required=false)]
                 public string CreatedTime { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("GroupId")]
+                [Validation(Required=false)]
                 public string GroupId { get; set; }
+
+                [NameInMap("ModelId")]
+                [Validation(Required=false)]
                 public string ModelId { get; set; }
+
+                [NameInMap("ModelName")]
+                [Validation(Required=false)]
                 public string ModelName { get; set; }
+
+                [NameInMap("ModelRef")]
+                [Validation(Required=false)]
                 public string ModelRef { get; set; }
+
+                [NameInMap("ModifiedTime")]
+                [Validation(Required=false)]
                 public string ModifiedTime { get; set; }
+
+                [NameInMap("Schema")]
+                [Validation(Required=false)]
                 public string Schema { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

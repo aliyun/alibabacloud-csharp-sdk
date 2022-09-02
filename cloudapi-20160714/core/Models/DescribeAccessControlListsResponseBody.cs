@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeAccessControlListsResponseBodyAclsAcl> Acl { get; set; }
             public class DescribeAccessControlListsResponseBodyAclsAcl : TeaModel {
+                [NameInMap("AclId")]
+                [Validation(Required=false)]
                 public string AclId { get; set; }
+
+                [NameInMap("AclName")]
+                [Validation(Required=false)]
                 public string AclName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

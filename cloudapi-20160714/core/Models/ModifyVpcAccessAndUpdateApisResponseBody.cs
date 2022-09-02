@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
-    public class DescribeUpdateVpcInfoTaskRequest : TeaModel {
-        [NameInMap("OperationUid")]
+    public class ModifyVpcAccessAndUpdateApisResponseBody : TeaModel {
+        [NameInMap("OperationId")]
         [Validation(Required=false)]
-        public string OperationUid { get; set; }
+        public string OperationId { get; set; }
 
-        [NameInMap("SecurityToken")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string RequestId { get; set; }
 
     }
 

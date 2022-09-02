@@ -17,13 +17,29 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeIpControlPolicyItemsResponseBodyIpControlPolicyItemsIpControlPolicyItem> IpControlPolicyItem { get; set; }
             public class DescribeIpControlPolicyItemsResponseBodyIpControlPolicyItemsIpControlPolicyItem : TeaModel {
+                [NameInMap("AppId")]
+                [Validation(Required=false)]
                 public string AppId { get; set; }
+
+                [NameInMap("CidrIp")]
+                [Validation(Required=false)]
                 public string CidrIp { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("ModifiedTime")]
+                [Validation(Required=false)]
                 public string ModifiedTime { get; set; }
+
+                [NameInMap("PolicyItemId")]
+                [Validation(Required=false)]
                 public string PolicyItemId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

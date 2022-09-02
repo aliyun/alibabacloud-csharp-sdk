@@ -45,20 +45,57 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiGroupResponseBodyCustomDomainsDomainItem> DomainItem { get; set; }
             public class DescribeApiGroupResponseBodyCustomDomainsDomainItem : TeaModel {
+                [NameInMap("BindStageName")]
+                [Validation(Required=false)]
                 public string BindStageName { get; set; }
+
+                [NameInMap("CertificateId")]
+                [Validation(Required=false)]
                 public string CertificateId { get; set; }
+
+                [NameInMap("CertificateName")]
+                [Validation(Required=false)]
                 public string CertificateName { get; set; }
+
+                [NameInMap("CustomDomainType")]
+                [Validation(Required=false)]
                 public string CustomDomainType { get; set; }
+
+                [NameInMap("DomainBindingStatus")]
+                [Validation(Required=false)]
                 public string DomainBindingStatus { get; set; }
+
+                [NameInMap("DomainCNAMEStatus")]
+                [Validation(Required=false)]
                 public string DomainCNAMEStatus { get; set; }
+
+                [NameInMap("DomainLegalStatus")]
+                [Validation(Required=false)]
                 public string DomainLegalStatus { get; set; }
+
+                [NameInMap("DomainName")]
+                [Validation(Required=false)]
                 public string DomainName { get; set; }
+
+                [NameInMap("DomainRemark")]
+                [Validation(Required=false)]
                 public string DomainRemark { get; set; }
+
+                [NameInMap("DomainWebSocketStatus")]
+                [Validation(Required=false)]
                 public string DomainWebSocketStatus { get; set; }
+
+                [NameInMap("IsHttpRedirectToHttps")]
+                [Validation(Required=false)]
                 public bool? IsHttpRedirectToHttps { get; set; }
+
+                [NameInMap("WildcardDomainPatterns")]
+                [Validation(Required=false)]
                 public string WildcardDomainPatterns { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("CustomTraceConfig")]
         [Validation(Required=false)]
@@ -136,11 +173,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiGroupResponseBodyStageItemsStageInfo> StageInfo { get; set; }
             public class DescribeApiGroupResponseBodyStageItemsStageInfo : TeaModel {
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("StageId")]
+                [Validation(Required=false)]
                 public string StageId { get; set; }
+
+                [NameInMap("StageName")]
+                [Validation(Required=false)]
                 public string StageName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Status")]
         [Validation(Required=false)]

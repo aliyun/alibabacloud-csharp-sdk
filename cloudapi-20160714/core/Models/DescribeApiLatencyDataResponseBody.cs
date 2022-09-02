@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiLatencyDataResponseBodyCallLatencysMonitorItem> MonitorItem { get; set; }
             public class DescribeApiLatencyDataResponseBodyCallLatencysMonitorItem : TeaModel {
+                [NameInMap("ItemTime")]
+                [Validation(Required=false)]
                 public string ItemTime { get; set; }
+
+                [NameInMap("ItemValue")]
+                [Validation(Required=false)]
                 public string ItemValue { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

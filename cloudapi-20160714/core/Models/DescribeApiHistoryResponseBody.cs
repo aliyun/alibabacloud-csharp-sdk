@@ -36,13 +36,16 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [NameInMap("BackendId")]
             [Validation(Required=false)]
             public string BackendId { get; set; }
+
             [NameInMap("BackendName")]
             [Validation(Required=false)]
             public string BackendName { get; set; }
+
             [NameInMap("BackendType")]
             [Validation(Required=false)]
             public string BackendType { get; set; }
-        };
+
+        }
 
         [NameInMap("BackendEnable")]
         [Validation(Required=false)]
@@ -56,12 +59,25 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiHistoryResponseBodyConstantParametersConstantParameter> ConstantParameter { get; set; }
             public class DescribeApiHistoryResponseBodyConstantParametersConstantParameter : TeaModel {
+                [NameInMap("ConstantValue")]
+                [Validation(Required=false)]
                 public string ConstantValue { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("Location")]
+                [Validation(Required=false)]
                 public string Location { get; set; }
+
+                [NameInMap("ServiceParameterName")]
+                [Validation(Required=false)]
                 public string ServiceParameterName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("CustomSystemParameters")]
         [Validation(Required=false)]
@@ -71,13 +87,29 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiHistoryResponseBodyCustomSystemParametersCustomSystemParameter> CustomSystemParameter { get; set; }
             public class DescribeApiHistoryResponseBodyCustomSystemParametersCustomSystemParameter : TeaModel {
+                [NameInMap("DemoValue")]
+                [Validation(Required=false)]
                 public string DemoValue { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("Location")]
+                [Validation(Required=false)]
                 public string Location { get; set; }
+
+                [NameInMap("ParameterName")]
+                [Validation(Required=false)]
                 public string ParameterName { get; set; }
+
+                [NameInMap("ServiceParameterName")]
+                [Validation(Required=false)]
                 public string ServiceParameterName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("DeployedTime")]
         [Validation(Required=false)]
@@ -99,11 +131,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiHistoryResponseBodyErrorCodeSamplesErrorCodeSample> ErrorCodeSample { get; set; }
             public class DescribeApiHistoryResponseBodyErrorCodeSamplesErrorCodeSample : TeaModel {
+                [NameInMap("Code")]
+                [Validation(Required=false)]
                 public string Code { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("Message")]
+                [Validation(Required=false)]
                 public string Message { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("FailResultSample")]
         [Validation(Required=false)]
@@ -132,16 +174,20 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [NameInMap("IdTokenParamName")]
             [Validation(Required=false)]
             public string IdTokenParamName { get; set; }
+
             [NameInMap("OpenIdApiType")]
             [Validation(Required=false)]
             public string OpenIdApiType { get; set; }
+
             [NameInMap("PublicKey")]
             [Validation(Required=false)]
             public string PublicKey { get; set; }
+
             [NameInMap("PublicKeyId")]
             [Validation(Required=false)]
             public string PublicKeyId { get; set; }
-        };
+
+        }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -154,25 +200,32 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [NameInMap("BodyFormat")]
             [Validation(Required=false)]
             public string BodyFormat { get; set; }
+
             [NameInMap("BodyModel")]
             [Validation(Required=false)]
             public string BodyModel { get; set; }
+
             [NameInMap("PostBodyDescription")]
             [Validation(Required=false)]
             public string PostBodyDescription { get; set; }
+
             [NameInMap("RequestHttpMethod")]
             [Validation(Required=false)]
             public string RequestHttpMethod { get; set; }
+
             [NameInMap("RequestMode")]
             [Validation(Required=false)]
             public string RequestMode { get; set; }
+
             [NameInMap("RequestPath")]
             [Validation(Required=false)]
             public string RequestPath { get; set; }
+
             [NameInMap("RequestProtocol")]
             [Validation(Required=false)]
             public string RequestProtocol { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -186,25 +239,77 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiHistoryResponseBodyRequestParametersRequestParameter> RequestParameter { get; set; }
             public class DescribeApiHistoryResponseBodyRequestParametersRequestParameter : TeaModel {
+                [NameInMap("ApiParameterName")]
+                [Validation(Required=false)]
                 public string ApiParameterName { get; set; }
+
+                [NameInMap("ArrayItemsType")]
+                [Validation(Required=false)]
                 public string ArrayItemsType { get; set; }
+
+                [NameInMap("DefaultValue")]
+                [Validation(Required=false)]
                 public string DefaultValue { get; set; }
+
+                [NameInMap("DemoValue")]
+                [Validation(Required=false)]
                 public string DemoValue { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("DocOrder")]
+                [Validation(Required=false)]
                 public int? DocOrder { get; set; }
+
+                [NameInMap("DocShow")]
+                [Validation(Required=false)]
                 public string DocShow { get; set; }
+
+                [NameInMap("EnumValue")]
+                [Validation(Required=false)]
                 public string EnumValue { get; set; }
+
+                [NameInMap("JsonScheme")]
+                [Validation(Required=false)]
                 public string JsonScheme { get; set; }
+
+                [NameInMap("Location")]
+                [Validation(Required=false)]
                 public string Location { get; set; }
+
+                [NameInMap("MaxLength")]
+                [Validation(Required=false)]
                 public long? MaxLength { get; set; }
+
+                [NameInMap("MaxValue")]
+                [Validation(Required=false)]
                 public long? MaxValue { get; set; }
+
+                [NameInMap("MinLength")]
+                [Validation(Required=false)]
                 public long? MinLength { get; set; }
+
+                [NameInMap("MinValue")]
+                [Validation(Required=false)]
                 public long? MinValue { get; set; }
+
+                [NameInMap("ParameterType")]
+                [Validation(Required=false)]
                 public string ParameterType { get; set; }
+
+                [NameInMap("RegularExpression")]
+                [Validation(Required=false)]
                 public string RegularExpression { get; set; }
+
+                [NameInMap("Required")]
+                [Validation(Required=false)]
                 public string Required { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ResultBodyModel")]
         [Validation(Required=false)]
@@ -218,16 +323,41 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiHistoryResponseBodyResultDescriptionsResultDescription> ResultDescription { get; set; }
             public class DescribeApiHistoryResponseBodyResultDescriptionsResultDescription : TeaModel {
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("HasChild")]
+                [Validation(Required=false)]
                 public bool? HasChild { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public string Id { get; set; }
+
+                [NameInMap("Key")]
+                [Validation(Required=false)]
                 public string Key { get; set; }
+
+                [NameInMap("Mandatory")]
+                [Validation(Required=false)]
                 public bool? Mandatory { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Pid")]
+                [Validation(Required=false)]
                 public string Pid { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ResultSample")]
         [Validation(Required=false)]
@@ -244,9 +374,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [NameInMap("ContentTypeCatagory")]
             [Validation(Required=false)]
             public string ContentTypeCatagory { get; set; }
+
             [NameInMap("ContentTypeValue")]
             [Validation(Required=false)]
             public string ContentTypeValue { get; set; }
+
             [NameInMap("EventBridgeConfig")]
             [Validation(Required=false)]
             public DescribeApiHistoryResponseBodyServiceConfigEventBridgeConfig EventBridgeConfig { get; set; }
@@ -268,6 +400,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string RoleArn { get; set; }
 
             }
+
             [NameInMap("FunctionComputeConfig")]
             [Validation(Required=false)]
             public DescribeApiHistoryResponseBodyServiceConfigFunctionComputeConfig FunctionComputeConfig { get; set; }
@@ -321,9 +454,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string ServiceName { get; set; }
 
             }
+
             [NameInMap("Mock")]
             [Validation(Required=false)]
             public string Mock { get; set; }
+
             [NameInMap("MockHeaders")]
             [Validation(Required=false)]
             public DescribeApiHistoryResponseBodyServiceConfigMockHeaders MockHeaders { get; set; }
@@ -343,12 +478,15 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 }
 
             }
+
             [NameInMap("MockResult")]
             [Validation(Required=false)]
             public string MockResult { get; set; }
+
             [NameInMap("MockStatusCode")]
             [Validation(Required=false)]
             public int? MockStatusCode { get; set; }
+
             [NameInMap("OssConfig")]
             [Validation(Required=false)]
             public DescribeApiHistoryResponseBodyServiceConfigOssConfig OssConfig { get; set; }
@@ -370,24 +508,31 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string OssRegionId { get; set; }
 
             }
+
             [NameInMap("ServiceAddress")]
             [Validation(Required=false)]
             public string ServiceAddress { get; set; }
+
             [NameInMap("ServiceHttpMethod")]
             [Validation(Required=false)]
             public string ServiceHttpMethod { get; set; }
+
             [NameInMap("ServicePath")]
             [Validation(Required=false)]
             public string ServicePath { get; set; }
+
             [NameInMap("ServiceProtocol")]
             [Validation(Required=false)]
             public string ServiceProtocol { get; set; }
+
             [NameInMap("ServiceTimeout")]
             [Validation(Required=false)]
             public int? ServiceTimeout { get; set; }
+
             [NameInMap("ServiceVpcEnable")]
             [Validation(Required=false)]
             public string ServiceVpcEnable { get; set; }
+
             [NameInMap("VpcConfig")]
             [Validation(Required=false)]
             public DescribeApiHistoryResponseBodyServiceConfigVpcConfig VpcConfig { get; set; }
@@ -413,10 +558,12 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string VpcScheme { get; set; }
 
             }
+
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
-        };
+
+        }
 
         [NameInMap("ServiceParameters")]
         [Validation(Required=false)]
@@ -426,11 +573,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiHistoryResponseBodyServiceParametersServiceParameter> ServiceParameter { get; set; }
             public class DescribeApiHistoryResponseBodyServiceParametersServiceParameter : TeaModel {
+                [NameInMap("Location")]
+                [Validation(Required=false)]
                 public string Location { get; set; }
+
+                [NameInMap("ParameterType")]
+                [Validation(Required=false)]
                 public string ParameterType { get; set; }
+
+                [NameInMap("ServiceParameterName")]
+                [Validation(Required=false)]
                 public string ServiceParameterName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ServiceParametersMap")]
         [Validation(Required=false)]
@@ -440,10 +597,17 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiHistoryResponseBodyServiceParametersMapServiceParameterMap> ServiceParameterMap { get; set; }
             public class DescribeApiHistoryResponseBodyServiceParametersMapServiceParameterMap : TeaModel {
+                [NameInMap("RequestParameterName")]
+                [Validation(Required=false)]
                 public string RequestParameterName { get; set; }
+
+                [NameInMap("ServiceParameterName")]
+                [Validation(Required=false)]
                 public string ServiceParameterName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("StageName")]
         [Validation(Required=false)]
@@ -461,13 +625,29 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiHistoryResponseBodySystemParametersSystemParameter> SystemParameter { get; set; }
             public class DescribeApiHistoryResponseBodySystemParametersSystemParameter : TeaModel {
+                [NameInMap("DemoValue")]
+                [Validation(Required=false)]
                 public string DemoValue { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("Location")]
+                [Validation(Required=false)]
                 public string Location { get; set; }
+
+                [NameInMap("ParameterName")]
+                [Validation(Required=false)]
                 public string ParameterName { get; set; }
+
+                [NameInMap("ServiceParameterName")]
+                [Validation(Required=false)]
                 public string ServiceParameterName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Visibility")]
         [Validation(Required=false)]
