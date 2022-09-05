@@ -42,10 +42,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [NameInMap("DataSources")]
             [Validation(Required=false)]
             public List<string> DataSources { get; set; }
+
             [NameInMap("Resources")]
             [Validation(Required=false)]
             public List<string> Resources { get; set; }
-        };
+
+        }
 
     }
 

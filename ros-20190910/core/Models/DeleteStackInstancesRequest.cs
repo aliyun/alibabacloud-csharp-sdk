@@ -24,7 +24,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [NameInMap("RdFolderIds")]
             [Validation(Required=false)]
             public List<string> RdFolderIds { get; set; }
-        };
+
+        }
 
         [NameInMap("OperationDescription")]
         [Validation(Required=false)]

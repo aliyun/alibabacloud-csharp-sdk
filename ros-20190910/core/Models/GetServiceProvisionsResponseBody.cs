@@ -36,15 +36,26 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 [NameInMap("AuthorizationURL")]
                 [Validation(Required=false)]
                 public string AuthorizationURL { get; set; }
+
                 [NameInMap("Roles")]
                 [Validation(Required=false)]
                 public List<GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRoles> Roles { get; set; }
                 public class GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRoles : TeaModel {
+                    [NameInMap("Created")]
+                    [Validation(Required=false)]
                     public bool? Created { get; set; }
+
+                    [NameInMap("Function")]
+                    [Validation(Required=false)]
                     public string Function { get; set; }
+
+                    [NameInMap("RoleName")]
+                    [Validation(Required=false)]
                     public string RoleName { get; set; }
+
                 }
-            };
+
+            }
 
             [NameInMap("ServiceName")]
             [Validation(Required=false)]

@@ -20,6 +20,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [NameInMap("AdministrationRoleName")]
             [Validation(Required=false)]
             public string AdministrationRoleName { get; set; }
+
             [NameInMap("AutoDeployment")]
             [Validation(Required=false)]
             public GetStackGroupResponseBodyStackGroupAutoDeployment AutoDeployment { get; set; }
@@ -33,28 +34,41 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public bool? RetainStacksOnAccountRemoval { get; set; }
 
             }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
             [NameInMap("ExecutionRoleName")]
             [Validation(Required=false)]
             public string ExecutionRoleName { get; set; }
+
             [NameInMap("Parameters")]
             [Validation(Required=false)]
             public List<GetStackGroupResponseBodyStackGroupParameters> Parameters { get; set; }
             public class GetStackGroupResponseBodyStackGroupParameters : TeaModel {
+                [NameInMap("ParameterKey")]
+                [Validation(Required=false)]
                 public string ParameterKey { get; set; }
+
+                [NameInMap("ParameterValue")]
+                [Validation(Required=false)]
                 public string ParameterValue { get; set; }
+
             }
+
             [NameInMap("PermissionModel")]
             [Validation(Required=false)]
             public string PermissionModel { get; set; }
+
             [NameInMap("RdFolderIds")]
             [Validation(Required=false)]
             public List<string> RdFolderIds { get; set; }
+
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
+
             [NameInMap("StackGroupDriftDetectionDetail")]
             [Validation(Required=false)]
             public GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail StackGroupDriftDetectionDetail { get; set; }
@@ -96,19 +110,24 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public int? TotalStackInstancesCount { get; set; }
 
             }
+
             [NameInMap("StackGroupId")]
             [Validation(Required=false)]
             public string StackGroupId { get; set; }
+
             [NameInMap("StackGroupName")]
             [Validation(Required=false)]
             public string StackGroupName { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("TemplateBody")]
             [Validation(Required=false)]
             public string TemplateBody { get; set; }
-        };
+
+        }
 
     }
 

@@ -24,10 +24,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [NameInMap("Enabled")]
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
+
             [NameInMap("RetainStacksOnAccountRemoval")]
             [Validation(Required=false)]
             public bool? RetainStacksOnAccountRemoval { get; set; }
-        };
+
+        }
 
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -40,10 +42,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [NameInMap("AccountIds")]
             [Validation(Required=false)]
             public List<string> AccountIds { get; set; }
+
             [NameInMap("RdFolderIds")]
             [Validation(Required=false)]
             public List<string> RdFolderIds { get; set; }
-        };
+
+        }
 
         [NameInMap("Description")]
         [Validation(Required=false)]

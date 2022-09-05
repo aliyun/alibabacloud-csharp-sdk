@@ -5949,9 +5949,15 @@ namespace AlibabaCloud.SDK.ROS20190910
             return await MoveResourceGroupWithOptionsAsync(request, runtime);
         }
 
-        public PreviewStackResponse PreviewStackWithOptions(PreviewStackRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public PreviewStackResponse PreviewStackWithOptions(PreviewStackRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            PreviewStackShrinkRequest request = new PreviewStackShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceConfigRules))
+            {
+                request.ResourceConfigRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceConfigRules, "ResourceConfigRules", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -5972,6 +5978,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceConfigRulesShrink))
+            {
+                query["ResourceConfigRules"] = request.ResourceConfigRulesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StackId))
             {
@@ -6036,9 +6046,15 @@ namespace AlibabaCloud.SDK.ROS20190910
             return TeaModel.ToObject<PreviewStackResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<PreviewStackResponse> PreviewStackWithOptionsAsync(PreviewStackRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<PreviewStackResponse> PreviewStackWithOptionsAsync(PreviewStackRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            PreviewStackShrinkRequest request = new PreviewStackShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceConfigRules))
+            {
+                request.ResourceConfigRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceConfigRules, "ResourceConfigRules", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -6059,6 +6075,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceConfigRulesShrink))
+            {
+                query["ResourceConfigRules"] = request.ResourceConfigRulesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StackId))
             {

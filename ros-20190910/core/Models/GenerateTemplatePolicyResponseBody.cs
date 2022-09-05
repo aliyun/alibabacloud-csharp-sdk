@@ -17,14 +17,25 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public List<GenerateTemplatePolicyResponseBodyPolicyStatement> Statement { get; set; }
             public class GenerateTemplatePolicyResponseBodyPolicyStatement : TeaModel {
+                [NameInMap("Action")]
+                [Validation(Required=false)]
                 public List<string> Action { get; set; }
+
+                [NameInMap("Effect")]
+                [Validation(Required=false)]
                 public string Effect { get; set; }
+
+                [NameInMap("Resource")]
+                [Validation(Required=false)]
                 public string Resource { get; set; }
+
             }
+
             [NameInMap("Version")]
             [Validation(Required=false)]
             public string Version { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

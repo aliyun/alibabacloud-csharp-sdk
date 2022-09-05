@@ -50,10 +50,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
+
             [NameInMap("ResourceTypeFilter")]
             [Validation(Required=false)]
             public List<string> ResourceTypeFilter { get; set; }
-        };
+
+        }
 
         [NameInMap("SourceResources")]
         [Validation(Required=false)]
@@ -75,11 +77,13 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public class CreateTemplateScratchRequestSourceTag : TeaModel {
             [NameInMap("ResourceTags")]
             [Validation(Required=false)]
-            public Dictionary<string, string> ResourceTags { get; set; }
+            public Dictionary<string, object> ResourceTags { get; set; }
+
             [NameInMap("ResourceTypeFilter")]
             [Validation(Required=false)]
             public List<string> ResourceTypeFilter { get; set; }
-        };
+
+        }
 
         [NameInMap("TemplateScratchType")]
         [Validation(Required=false)]

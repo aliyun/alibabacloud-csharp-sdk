@@ -49,11 +49,21 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public List<GetChangeSetResponseBodyLogTerraformLogs> TerraformLogs { get; set; }
             public class GetChangeSetResponseBodyLogTerraformLogs : TeaModel {
+                [NameInMap("Command")]
+                [Validation(Required=false)]
                 public string Command { get; set; }
+
+                [NameInMap("Content")]
+                [Validation(Required=false)]
                 public string Content { get; set; }
+
+                [NameInMap("Stream")]
+                [Validation(Required=false)]
                 public string Stream { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Parameters")]
         [Validation(Required=false)]

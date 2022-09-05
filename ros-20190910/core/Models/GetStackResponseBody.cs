@@ -41,22 +41,45 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public List<GetStackResponseBodyLogResourceLogs> ResourceLogs { get; set; }
             public class GetStackResponseBodyLogResourceLogs : TeaModel {
+                [NameInMap("Logs")]
+                [Validation(Required=false)]
                 public List<GetStackResponseBodyLogResourceLogsLogs> Logs { get; set; }
                 public class GetStackResponseBodyLogResourceLogsLogs : TeaModel {
+                    [NameInMap("Content")]
+                    [Validation(Required=false)]
                     public string Content { get; set; }
+
+                    [NameInMap("Keys")]
+                    [Validation(Required=false)]
                     public List<string> Keys { get; set; }
+
                 }
+
+                [NameInMap("ResourceName")]
+                [Validation(Required=false)]
                 public string ResourceName { get; set; }
+
             }
+
             [NameInMap("TerraformLogs")]
             [Validation(Required=false)]
             public List<GetStackResponseBodyLogTerraformLogs> TerraformLogs { get; set; }
             public class GetStackResponseBodyLogTerraformLogs : TeaModel {
+                [NameInMap("Command")]
+                [Validation(Required=false)]
                 public string Command { get; set; }
+
+                [NameInMap("Content")]
+                [Validation(Required=false)]
                 public string Content { get; set; }
+
+                [NameInMap("Stream")]
+                [Validation(Required=false)]
                 public string Stream { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("NotificationURLs")]
         [Validation(Required=false)]
@@ -107,28 +130,46 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [NameInMap("FailedResourceCount")]
             [Validation(Required=false)]
             public int? FailedResourceCount { get; set; }
+
             [NameInMap("InProgressResourceCount")]
             [Validation(Required=false)]
             public int? InProgressResourceCount { get; set; }
+
             [NameInMap("InProgressResourceDetails")]
             [Validation(Required=false)]
             public List<GetStackResponseBodyResourceProgressInProgressResourceDetails> InProgressResourceDetails { get; set; }
             public class GetStackResponseBodyResourceProgressInProgressResourceDetails : TeaModel {
+                [NameInMap("ProgressTargetValue")]
+                [Validation(Required=false)]
                 public float? ProgressTargetValue { get; set; }
+
+                [NameInMap("ProgressValue")]
+                [Validation(Required=false)]
                 public float? ProgressValue { get; set; }
+
+                [NameInMap("ResourceName")]
+                [Validation(Required=false)]
                 public string ResourceName { get; set; }
+
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
                 public string ResourceType { get; set; }
+
             }
+
             [NameInMap("PendingResourceCount")]
             [Validation(Required=false)]
             public int? PendingResourceCount { get; set; }
+
             [NameInMap("SuccessResourceCount")]
             [Validation(Required=false)]
             public int? SuccessResourceCount { get; set; }
+
             [NameInMap("TotalResourceCount")]
             [Validation(Required=false)]
             public int? TotalResourceCount { get; set; }
-        };
+
+        }
 
         [NameInMap("RootStackId")]
         [Validation(Required=false)]

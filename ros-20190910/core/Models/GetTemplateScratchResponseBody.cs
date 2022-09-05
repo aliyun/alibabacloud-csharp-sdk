@@ -20,22 +20,33 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
             [NameInMap("FailedCode")]
             [Validation(Required=false)]
             public string FailedCode { get; set; }
+
             [NameInMap("LogicalIdStrategy")]
             [Validation(Required=false)]
             public string LogicalIdStrategy { get; set; }
+
             [NameInMap("PreferenceParameters")]
             [Validation(Required=false)]
             public List<GetTemplateScratchResponseBodyTemplateScratchPreferenceParameters> PreferenceParameters { get; set; }
             public class GetTemplateScratchResponseBodyTemplateScratchPreferenceParameters : TeaModel {
+                [NameInMap("ParameterKey")]
+                [Validation(Required=false)]
                 public string ParameterKey { get; set; }
+
+                [NameInMap("ParameterValue")]
+                [Validation(Required=false)]
                 public string ParameterValue { get; set; }
+
             }
+
             [NameInMap("SourceResourceGroup")]
             [Validation(Required=false)]
             public GetTemplateScratchResponseBodyTemplateScratchSourceResourceGroup SourceResourceGroup { get; set; }
@@ -49,13 +60,21 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public List<string> ResourceTypeFilter { get; set; }
 
             }
+
             [NameInMap("SourceResources")]
             [Validation(Required=false)]
             public List<GetTemplateScratchResponseBodyTemplateScratchSourceResources> SourceResources { get; set; }
             public class GetTemplateScratchResponseBodyTemplateScratchSourceResources : TeaModel {
+                [NameInMap("ResourceId")]
+                [Validation(Required=false)]
                 public string ResourceId { get; set; }
+
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
                 public string ResourceType { get; set; }
+
             }
+
             [NameInMap("SourceTag")]
             [Validation(Required=false)]
             public GetTemplateScratchResponseBodyTemplateScratchSourceTag SourceTag { get; set; }
@@ -69,6 +88,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public List<string> ResourceTypeFilter { get; set; }
 
             }
+
             [NameInMap("StackProvision")]
             [Validation(Required=false)]
             public GetTemplateScratchResponseBodyTemplateScratchStackProvision StackProvision { get; set; }
@@ -82,33 +102,50 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public bool? Importable { get; set; }
 
             }
+
             [NameInMap("Stacks")]
             [Validation(Required=false)]
             public List<GetTemplateScratchResponseBodyTemplateScratchStacks> Stacks { get; set; }
             public class GetTemplateScratchResponseBodyTemplateScratchStacks : TeaModel {
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("StackId")]
+                [Validation(Required=false)]
                 public string StackId { get; set; }
+
+                [NameInMap("UsageType")]
+                [Validation(Required=false)]
                 public string UsageType { get; set; }
+
             }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("StatusReason")]
             [Validation(Required=false)]
             public string StatusReason { get; set; }
+
             [NameInMap("TemplateScratchData")]
             [Validation(Required=false)]
-            public Dictionary<string, string> TemplateScratchData { get; set; }
+            public Dictionary<string, object> TemplateScratchData { get; set; }
+
             [NameInMap("TemplateScratchId")]
             [Validation(Required=false)]
             public string TemplateScratchId { get; set; }
+
             [NameInMap("TemplateScratchType")]
             [Validation(Required=false)]
             public string TemplateScratchType { get; set; }
+
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
             public string UpdateTime { get; set; }
-        };
+
+        }
 
     }
 

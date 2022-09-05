@@ -8,41 +8,23 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
-    public class CreateStackGroupRequest : TeaModel {
-        [NameInMap("AdministrationRoleName")]
-        [Validation(Required=false)]
-        public string AdministrationRoleName { get; set; }
-
-        [NameInMap("AutoDeployment")]
-        [Validation(Required=false)]
-        public CreateStackGroupRequestAutoDeployment AutoDeployment { get; set; }
-        public class CreateStackGroupRequestAutoDeployment : TeaModel {
-            [NameInMap("Enabled")]
-            [Validation(Required=false)]
-            public bool? Enabled { get; set; }
-
-            [NameInMap("RetainStacksOnAccountRemoval")]
-            [Validation(Required=false)]
-            public bool? RetainStacksOnAccountRemoval { get; set; }
-
-        }
-
+    public class PreviewStackShrinkRequest : TeaModel {
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("DisableRollback")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public bool? DisableRollback { get; set; }
 
-        [NameInMap("ExecutionRoleName")]
+        [NameInMap("Parallelism")]
         [Validation(Required=false)]
-        public string ExecutionRoleName { get; set; }
+        public long? Parallelism { get; set; }
 
         [NameInMap("Parameters")]
         [Validation(Required=false)]
-        public List<CreateStackGroupRequestParameters> Parameters { get; set; }
-        public class CreateStackGroupRequestParameters : TeaModel {
+        public List<PreviewStackShrinkRequestParameters> Parameters { get; set; }
+        public class PreviewStackShrinkRequestParameters : TeaModel {
             [NameInMap("ParameterKey")]
             [Validation(Required=false)]
             public string ParameterKey { get; set; }
@@ -53,21 +35,29 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         }
 
-        [NameInMap("PermissionModel")]
-        [Validation(Required=false)]
-        public string PermissionModel { get; set; }
-
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("ResourceGroupId")]
+        [NameInMap("ResourceConfigRules")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public string ResourceConfigRulesShrink { get; set; }
 
-        [NameInMap("StackGroupName")]
+        [NameInMap("StackId")]
         [Validation(Required=false)]
-        public string StackGroupName { get; set; }
+        public string StackId { get; set; }
+
+        [NameInMap("StackName")]
+        [Validation(Required=false)]
+        public string StackName { get; set; }
+
+        [NameInMap("StackPolicyBody")]
+        [Validation(Required=false)]
+        public string StackPolicyBody { get; set; }
+
+        [NameInMap("StackPolicyURL")]
+        [Validation(Required=false)]
+        public string StackPolicyURL { get; set; }
 
         [NameInMap("TemplateBody")]
         [Validation(Required=false)]
@@ -77,6 +67,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
+        [NameInMap("TemplateScratchId")]
+        [Validation(Required=false)]
+        public string TemplateScratchId { get; set; }
+
+        [NameInMap("TemplateScratchRegionId")]
+        [Validation(Required=false)]
+        public string TemplateScratchRegionId { get; set; }
+
         [NameInMap("TemplateURL")]
         [Validation(Required=false)]
         public string TemplateURL { get; set; }
@@ -84,6 +82,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [NameInMap("TemplateVersion")]
         [Validation(Required=false)]
         public string TemplateVersion { get; set; }
+
+        [NameInMap("TimeoutInMinutes")]
+        [Validation(Required=false)]
+        public long? TimeoutInMinutes { get; set; }
 
     }
 

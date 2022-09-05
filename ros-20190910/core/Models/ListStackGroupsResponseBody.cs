@@ -32,10 +32,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 [NameInMap("Enabled")]
                 [Validation(Required=false)]
                 public bool? Enabled { get; set; }
+
                 [NameInMap("RetainStacksOnAccountRemoval")]
                 [Validation(Required=false)]
                 public bool? RetainStacksOnAccountRemoval { get; set; }
-            };
+
+            }
 
             [NameInMap("Description")]
             [Validation(Required=false)]

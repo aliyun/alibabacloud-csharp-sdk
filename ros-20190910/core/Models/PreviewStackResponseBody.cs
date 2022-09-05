@@ -20,9 +20,11 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
             [NameInMap("DisableRollback")]
             [Validation(Required=false)]
             public bool? DisableRollback { get; set; }
+
             [NameInMap("Log")]
             [Validation(Required=false)]
             public PreviewStackResponseBodyStackLog Log { get; set; }
@@ -46,42 +48,102 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 }
 
             }
+
             [NameInMap("Parameters")]
             [Validation(Required=false)]
             public List<PreviewStackResponseBodyStackParameters> Parameters { get; set; }
             public class PreviewStackResponseBodyStackParameters : TeaModel {
+                [NameInMap("ParameterKey")]
+                [Validation(Required=false)]
                 public string ParameterKey { get; set; }
+
+                [NameInMap("ParameterValue")]
+                [Validation(Required=false)]
                 public string ParameterValue { get; set; }
+
             }
+
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
             [NameInMap("Resources")]
             [Validation(Required=false)]
             public List<PreviewStackResponseBodyStackResources> Resources { get; set; }
             public class PreviewStackResponseBodyStackResources : TeaModel {
+                [NameInMap("Action")]
+                [Validation(Required=false)]
                 public string Action { get; set; }
+
+                [NameInMap("ConfigRuleEvaluations")]
+                [Validation(Required=false)]
+                public List<PreviewStackResponseBodyStackResourcesConfigRuleEvaluations> ConfigRuleEvaluations { get; set; }
+                public class PreviewStackResponseBodyStackResourcesConfigRuleEvaluations : TeaModel {
+                    [NameInMap("Annotation")]
+                    [Validation(Required=false)]
+                    public string Annotation { get; set; }
+
+                    [NameInMap("ComplianceType")]
+                    [Validation(Required=false)]
+                    public string ComplianceType { get; set; }
+
+                    [NameInMap("HelpUrl")]
+                    [Validation(Required=false)]
+                    public string HelpUrl { get; set; }
+
+                    [NameInMap("Identifier")]
+                    [Validation(Required=false)]
+                    public string Identifier { get; set; }
+
+                }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("LogicalResourceId")]
+                [Validation(Required=false)]
                 public string LogicalResourceId { get; set; }
-                public Dictionary<string, string> Properties { get; set; }
+
+                [NameInMap("Properties")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> Properties { get; set; }
+
+                [NameInMap("Replacement")]
+                [Validation(Required=false)]
                 public string Replacement { get; set; }
+
+                [NameInMap("RequiredBy")]
+                [Validation(Required=false)]
                 public List<string> RequiredBy { get; set; }
+
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
                 public string ResourceType { get; set; }
-                public Dictionary<string, string> Stack { get; set; }
+
+                [NameInMap("Stack")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> Stack { get; set; }
+
             }
+
             [NameInMap("StackName")]
             [Validation(Required=false)]
             public string StackName { get; set; }
+
             [NameInMap("StackPolicyBody")]
             [Validation(Required=false)]
-            public Dictionary<string, string> StackPolicyBody { get; set; }
+            public Dictionary<string, object> StackPolicyBody { get; set; }
+
             [NameInMap("TemplateDescription")]
             [Validation(Required=false)]
             public string TemplateDescription { get; set; }
+
             [NameInMap("TimeoutInMinutes")]
             [Validation(Required=false)]
             public int? TimeoutInMinutes { get; set; }
-        };
+
+        }
 
     }
 
