@@ -56,13 +56,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                         [NameInMap("MaxCount")]
                         [Validation(Required=false)]
                         public string MaxCount { get; set; }
+
                         [NameInMap("MinCount")]
                         [Validation(Required=false)]
                         public string MinCount { get; set; }
+
                         [NameInMap("Step")]
                         [Validation(Required=false)]
                         public string Step { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("StorageSize")]
                     [Validation(Required=false)]
@@ -71,13 +74,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                         [NameInMap("MaxCount")]
                         [Validation(Required=false)]
                         public string MaxCount { get; set; }
+
                         [NameInMap("MinCount")]
                         [Validation(Required=false)]
                         public string MinCount { get; set; }
+
                         [NameInMap("Step")]
                         [Validation(Required=false)]
                         public string Step { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("StorageType")]
                     [Validation(Required=false)]

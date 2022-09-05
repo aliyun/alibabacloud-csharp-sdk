@@ -34,6 +34,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public float? Value { get; set; }
 
             }
+
             [NameInMap("adbpg_connection_status")]
             [Validation(Required=false)]
             public DescribeHealthStatusResponseBodyStatusAdbpgConnectionStatus AdbpgConnectionStatus { get; set; }
@@ -47,6 +48,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public float? Value { get; set; }
 
             }
+
             [NameInMap("adbpg_disk_status")]
             [Validation(Required=false)]
             public DescribeHealthStatusResponseBodyStatusAdbpgDiskStatus AdbpgDiskStatus { get; set; }
@@ -60,6 +62,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public float? Value { get; set; }
 
             }
+
             [NameInMap("adbpg_disk_usage_percent")]
             [Validation(Required=false)]
             public DescribeHealthStatusResponseBodyStatusAdbpgDiskUsagePercent AdbpgDiskUsagePercent { get; set; }
@@ -73,6 +76,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public float? Value { get; set; }
 
             }
+
             [NameInMap("adbpg_master_disk_usage_percent_max")]
             [Validation(Required=false)]
             public DescribeHealthStatusResponseBodyStatusAdbpgMasterDiskUsagePercentMax AdbpgMasterDiskUsagePercentMax { get; set; }
@@ -86,6 +90,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public float? Value { get; set; }
 
             }
+
             [NameInMap("adbpg_master_status")]
             [Validation(Required=false)]
             public DescribeHealthStatusResponseBodyStatusAdbpgMasterStatus AdbpgMasterStatus { get; set; }
@@ -99,6 +104,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public float? Value { get; set; }
 
             }
+
             [NameInMap("adbpg_segment_status")]
             [Validation(Required=false)]
             public DescribeHealthStatusResponseBodyStatusAdbpgSegmentStatus AdbpgSegmentStatus { get; set; }
@@ -112,6 +118,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public float? Value { get; set; }
 
             }
+
             [NameInMap("adbpg_status")]
             [Validation(Required=false)]
             public DescribeHealthStatusResponseBodyStatusAdbpgStatus AdbpgStatus { get; set; }
@@ -125,6 +132,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public float? Value { get; set; }
 
             }
+
             [NameInMap("node_master_connection_status")]
             [Validation(Required=false)]
             public DescribeHealthStatusResponseBodyStatusNodeMasterConnectionStatus NodeMasterConnectionStatus { get; set; }
@@ -138,6 +146,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public float? Value { get; set; }
 
             }
+
             [NameInMap("node_master_status")]
             [Validation(Required=false)]
             public DescribeHealthStatusResponseBodyStatusNodeMasterStatus NodeMasterStatus { get; set; }
@@ -151,6 +160,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public float? Value { get; set; }
 
             }
+
             [NameInMap("node_segment_connection_status")]
             [Validation(Required=false)]
             public DescribeHealthStatusResponseBodyStatusNodeSegmentConnectionStatus NodeSegmentConnectionStatus { get; set; }
@@ -164,6 +174,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public float? Value { get; set; }
 
             }
+
             [NameInMap("node_segment_disk_status")]
             [Validation(Required=false)]
             public DescribeHealthStatusResponseBodyStatusNodeSegmentDiskStatus NodeSegmentDiskStatus { get; set; }
@@ -177,7 +188,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public float? Value { get; set; }
 
             }
-        };
+
+        }
 
     }
 

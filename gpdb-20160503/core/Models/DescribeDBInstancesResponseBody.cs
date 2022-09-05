@@ -17,28 +17,96 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public List<DescribeDBInstancesResponseBodyItemsDBInstance> DBInstance { get; set; }
             public class DescribeDBInstancesResponseBodyItemsDBInstance : TeaModel {
+                [NameInMap("ConnectionMode")]
+                [Validation(Required=false)]
                 public string ConnectionMode { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("DBInstanceCategory")]
+                [Validation(Required=false)]
                 public string DBInstanceCategory { get; set; }
+
+                [NameInMap("DBInstanceDescription")]
+                [Validation(Required=false)]
                 public string DBInstanceDescription { get; set; }
+
+                [NameInMap("DBInstanceId")]
+                [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
+
+                [NameInMap("DBInstanceMode")]
+                [Validation(Required=false)]
                 public string DBInstanceMode { get; set; }
+
+                [NameInMap("DBInstanceNetType")]
+                [Validation(Required=false)]
                 public string DBInstanceNetType { get; set; }
+
+                [NameInMap("DBInstanceStatus")]
+                [Validation(Required=false)]
                 public string DBInstanceStatus { get; set; }
+
+                [NameInMap("Engine")]
+                [Validation(Required=false)]
                 public string Engine { get; set; }
+
+                [NameInMap("EngineVersion")]
+                [Validation(Required=false)]
                 public string EngineVersion { get; set; }
+
+                [NameInMap("ExpireTime")]
+                [Validation(Required=false)]
                 public string ExpireTime { get; set; }
+
+                [NameInMap("InstanceDeployType")]
+                [Validation(Required=false)]
                 public string InstanceDeployType { get; set; }
+
+                [NameInMap("InstanceNetworkType")]
+                [Validation(Required=false)]
                 public string InstanceNetworkType { get; set; }
+
+                [NameInMap("LockMode")]
+                [Validation(Required=false)]
                 public string LockMode { get; set; }
+
+                [NameInMap("LockReason")]
+                [Validation(Required=false)]
                 public string LockReason { get; set; }
+
+                [NameInMap("MasterNodeNum")]
+                [Validation(Required=false)]
                 public int? MasterNodeNum { get; set; }
+
+                [NameInMap("PayType")]
+                [Validation(Required=false)]
                 public string PayType { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
+
+                [NameInMap("SegNodeNum")]
+                [Validation(Required=false)]
                 public string SegNodeNum { get; set; }
+
+                [NameInMap("StorageSize")]
+                [Validation(Required=false)]
                 public string StorageSize { get; set; }
+
+                [NameInMap("StorageType")]
+                [Validation(Required=false)]
                 public string StorageType { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
                 public DescribeDBInstancesResponseBodyItemsDBInstanceTags Tags { get; set; }
                 public class DescribeDBInstancesResponseBodyItemsDBInstanceTags : TeaModel {
                     [NameInMap("Tag")]
@@ -56,11 +124,22 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     }
 
                 }
+
+                [NameInMap("VSwitchId")]
+                [Validation(Required=false)]
                 public string VSwitchId { get; set; }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
                 public string VpcId { get; set; }
+
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
                 public string ZoneId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

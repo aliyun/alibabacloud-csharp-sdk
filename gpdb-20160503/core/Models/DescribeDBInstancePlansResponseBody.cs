@@ -17,21 +17,53 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public DescribeDBInstancePlansResponseBodyItems Items { get; set; }
         public class DescribeDBInstancePlansResponseBodyItems : TeaModel {
-            [NameInMap("Plan")]
+            [NameInMap("PlanList")]
             [Validation(Required=false)]
-            public List<DescribeDBInstancePlansResponseBodyItemsPlan> Plan { get; set; }
-            public class DescribeDBInstancePlansResponseBodyItemsPlan : TeaModel {
+            public List<DescribeDBInstancePlansResponseBodyItemsPlanList> PlanList { get; set; }
+            public class DescribeDBInstancePlansResponseBodyItemsPlanList : TeaModel {
+                [NameInMap("DBInstanceId")]
+                [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
+
+                [NameInMap("PlanConfig")]
+                [Validation(Required=false)]
                 public string PlanConfig { get; set; }
+
+                [NameInMap("PlanDesc")]
+                [Validation(Required=false)]
                 public string PlanDesc { get; set; }
-                public string PlanEndTime { get; set; }
+
+                [NameInMap("PlanEndDate")]
+                [Validation(Required=false)]
+                public string PlanEndDate { get; set; }
+
+                [NameInMap("PlanId")]
+                [Validation(Required=false)]
                 public string PlanId { get; set; }
+
+                [NameInMap("PlanName")]
+                [Validation(Required=false)]
                 public string PlanName { get; set; }
-                public string PlanStartTime { get; set; }
+
+                [NameInMap("PlanScheduleType")]
+                [Validation(Required=false)]
+                public string PlanScheduleType { get; set; }
+
+                [NameInMap("PlanStartDate")]
+                [Validation(Required=false)]
+                public string PlanStartDate { get; set; }
+
+                [NameInMap("PlanStatus")]
+                [Validation(Required=false)]
+                public string PlanStatus { get; set; }
+
+                [NameInMap("PlanType")]
+                [Validation(Required=false)]
                 public string PlanType { get; set; }
-                public string PlanscheduleType { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

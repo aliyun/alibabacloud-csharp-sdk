@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string PlanId { get; set; }
 
-        [NameInMap("PlanSchedulerType")]
+        [NameInMap("PlanScheduleType")]
         [Validation(Required=false)]
-        public string PlanSchedulerType { get; set; }
+        public string PlanScheduleType { get; set; }
 
         [NameInMap("PlanType")]
         [Validation(Required=false)]

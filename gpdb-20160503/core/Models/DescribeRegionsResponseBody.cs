@@ -17,7 +17,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public List<DescribeRegionsResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeRegionsResponseBodyRegionsRegion : TeaModel {
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("Zones")]
+                [Validation(Required=false)]
                 public DescribeRegionsResponseBodyRegionsRegionZones Zones { get; set; }
                 public class DescribeRegionsResponseBodyRegionsRegionZones : TeaModel {
                     [NameInMap("Zone")]
@@ -35,8 +40,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

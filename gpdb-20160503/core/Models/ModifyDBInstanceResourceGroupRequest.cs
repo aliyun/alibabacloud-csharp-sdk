@@ -8,38 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
-    public class DownloadDiagnosisRecordsRequest : TeaModel {
+    public class ModifyDBInstanceResourceGroupRequest : TeaModel {
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
-        [NameInMap("Database")]
+        [NameInMap("NewResourceGroupId")]
         [Validation(Required=false)]
-        public string Database { get; set; }
+        public string NewResourceGroupId { get; set; }
 
-        [NameInMap("EndTime")]
+        [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
-        public string EndTime { get; set; }
+        public string OwnerAccount { get; set; }
 
-        [NameInMap("Lang")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        [NameInMap("QueryCondition")]
-        [Validation(Required=false)]
-        public string QueryCondition { get; set; }
+        public long? OwnerId { get; set; }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
-        [NameInMap("StartTime")]
+        [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
-        public string StartTime { get; set; }
+        public string ResourceOwnerAccount { get; set; }
 
-        [NameInMap("User")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public string User { get; set; }
+        public long? ResourceOwnerId { get; set; }
 
     }
 

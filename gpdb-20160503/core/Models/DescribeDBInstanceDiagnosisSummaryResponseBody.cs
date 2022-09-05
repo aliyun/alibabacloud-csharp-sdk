@@ -66,22 +66,28 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [NameInMap("ExceptionNodeNum")]
             [Validation(Required=false)]
             public int? ExceptionNodeNum { get; set; }
+
             [NameInMap("NormalNodeNum")]
             [Validation(Required=false)]
             public int? NormalNodeNum { get; set; }
+
             [NameInMap("NotPreferredNodeNum")]
             [Validation(Required=false)]
             public int? NotPreferredNodeNum { get; set; }
+
             [NameInMap("NotSyncingNodeNum")]
             [Validation(Required=false)]
             public int? NotSyncingNodeNum { get; set; }
+
             [NameInMap("PreferredNodeNum")]
             [Validation(Required=false)]
             public int? PreferredNodeNum { get; set; }
+
             [NameInMap("SyncedNodeNum")]
             [Validation(Required=false)]
             public int? SyncedNodeNum { get; set; }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -98,22 +104,28 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [NameInMap("ExceptionNodeNum")]
             [Validation(Required=false)]
             public int? ExceptionNodeNum { get; set; }
+
             [NameInMap("NormalNodeNum")]
             [Validation(Required=false)]
             public int? NormalNodeNum { get; set; }
+
             [NameInMap("NotPreferredNodeNum")]
             [Validation(Required=false)]
             public int? NotPreferredNodeNum { get; set; }
+
             [NameInMap("NotSyncingNodeNum")]
             [Validation(Required=false)]
             public int? NotSyncingNodeNum { get; set; }
+
             [NameInMap("PreferredNodeNum")]
             [Validation(Required=false)]
             public int? PreferredNodeNum { get; set; }
+
             [NameInMap("SyncedNodeNum")]
             [Validation(Required=false)]
             public int? SyncedNodeNum { get; set; }
-        };
+
+        }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

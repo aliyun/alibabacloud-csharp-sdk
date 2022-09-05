@@ -8,15 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
-    public class DownloadDiagnosisRecordsResponseBody : TeaModel {
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
-        [NameInMap("DownloadId")]
-        [Validation(Required=false)]
-        public string DownloadId { get; set; }
-
+    public class ModifyDBInstanceResourceGroupResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

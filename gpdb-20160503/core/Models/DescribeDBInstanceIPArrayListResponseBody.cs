@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public List<DescribeDBInstanceIPArrayListResponseBodyItemsDBInstanceIPArray> DBInstanceIPArray { get; set; }
             public class DescribeDBInstanceIPArrayListResponseBodyItemsDBInstanceIPArray : TeaModel {
+                [NameInMap("DBInstanceIPArrayAttribute")]
+                [Validation(Required=false)]
                 public string DBInstanceIPArrayAttribute { get; set; }
+
+                [NameInMap("DBInstanceIPArrayName")]
+                [Validation(Required=false)]
                 public string DBInstanceIPArrayName { get; set; }
+
+                [NameInMap("SecurityIPList")]
+                [Validation(Required=false)]
                 public string SecurityIPList { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
