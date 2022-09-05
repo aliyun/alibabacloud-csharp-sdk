@@ -8,11 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListQuotaApplicationsRequest : TeaModel {
+    public class CreateTemplateQuotaItemRequest : TeaModel {
+        [NameInMap("DesireValue")]
+        [Validation(Required=false)]
+        public float? DesireValue { get; set; }
+
         [NameInMap("Dimensions")]
         [Validation(Required=false)]
-        public List<ListQuotaApplicationsRequestDimensions> Dimensions { get; set; }
-        public class ListQuotaApplicationsRequestDimensions : TeaModel {
+        public List<CreateTemplateQuotaItemRequestDimensions> Dimensions { get; set; }
+        public class CreateTemplateQuotaItemRequestDimensions : TeaModel {
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
@@ -23,17 +27,13 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 
         }
 
-        [NameInMap("KeyWord")]
+        [NameInMap("EnvLanguage")]
         [Validation(Required=false)]
-        public string KeyWord { get; set; }
+        public string EnvLanguage { get; set; }
 
-        [NameInMap("MaxResults")]
+        [NameInMap("NoticeType")]
         [Validation(Required=false)]
-        public int? MaxResults { get; set; }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
+        public long? NoticeType { get; set; }
 
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
@@ -42,14 +42,6 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         [NameInMap("QuotaActionCode")]
         [Validation(Required=false)]
         public string QuotaActionCode { get; set; }
-
-        [NameInMap("QuotaCategory")]
-        [Validation(Required=false)]
-        public string QuotaCategory { get; set; }
-
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
 
     }
 

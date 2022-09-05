@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListProductQuotaDimensionsRequest : TeaModel {
+    public class ListProductDimensionGroupsRequest : TeaModel {
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
@@ -20,10 +20,6 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
-
-        [NameInMap("QuotaCategory")]
-        [Validation(Required=false)]
-        public string QuotaCategory { get; set; }
 
     }
 

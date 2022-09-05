@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListProductsRequest : TeaModel {
-        [NameInMap("MaxResults")]
+    public class CreateTemplateQuotaItemResponseBody : TeaModel {
+        [NameInMap("Id")]
         [Validation(Required=false)]
-        public int? MaxResults { get; set; }
+        public string Id { get; set; }
 
-        [NameInMap("NextToken")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
+        public string RequestId { get; set; }
 
     }
 

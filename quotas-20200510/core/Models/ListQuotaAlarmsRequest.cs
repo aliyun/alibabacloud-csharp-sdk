@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class ListQuotaAlarmsRequest : TeaModel {
-        [NameInMap("NextToken")]
+        [NameInMap("AlarmName")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
+        public string AlarmName { get; set; }
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
-
-        [NameInMap("AlarmName")]
-        [Validation(Required=false)]
-        public string AlarmName { get; set; }
 
         [NameInMap("QuotaActionCode")]
         [Validation(Required=false)]

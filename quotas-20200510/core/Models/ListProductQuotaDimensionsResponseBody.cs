@@ -9,21 +9,39 @@ using Tea;
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class ListProductQuotaDimensionsResponseBody : TeaModel {
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         [NameInMap("QuotaDimensions")]
         [Validation(Required=false)]
         public List<ListProductQuotaDimensionsResponseBodyQuotaDimensions> QuotaDimensions { get; set; }
         public class ListProductQuotaDimensionsResponseBodyQuotaDimensions : TeaModel {
-            [NameInMap("Requisite")]
+            [NameInMap("DependentDimensions")]
             [Validation(Required=false)]
-            public bool? Requisite { get; set; }
+            public List<string> DependentDimensions { get; set; }
 
             [NameInMap("DimensionKey")]
             [Validation(Required=false)]
             public string DimensionKey { get; set; }
 
-            [NameInMap("DependentDimensions")]
+            [NameInMap("DimensionValueDetail")]
             [Validation(Required=false)]
-            public List<string> DependentDimensions { get; set; }
+            public List<ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail> DimensionValueDetail { get; set; }
+            public class ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail : TeaModel {
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
             [NameInMap("DimensionValues")]
             [Validation(Required=false)]
@@ -33,23 +51,19 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("Requisite")]
+            [Validation(Required=false)]
+            public bool? Requisite { get; set; }
+
         }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("MaxResults")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? MaxResults { get; set; }
+        public int? TotalCount { get; set; }
 
     }
 

@@ -9,29 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class ListDependentQuotasResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Quotas")]
         [Validation(Required=false)]
         public List<ListDependentQuotasResponseBodyQuotas> Quotas { get; set; }
         public class ListDependentQuotasResponseBodyQuotas : TeaModel {
-            [NameInMap("QuotaActionCode")]
-            [Validation(Required=false)]
-            public string QuotaActionCode { get; set; }
-
             [NameInMap("Dimensions")]
             [Validation(Required=false)]
             public List<ListDependentQuotasResponseBodyQuotasDimensions> Dimensions { get; set; }
             public class ListDependentQuotasResponseBodyQuotasDimensions : TeaModel {
-                [NameInMap("DimensionKey")]
-                [Validation(Required=false)]
-                public string DimensionKey { get; set; }
-
                 [NameInMap("DependentDimension")]
                 [Validation(Required=false)]
                 public List<string> DependentDimension { get; set; }
+
+                [NameInMap("DimensionKey")]
+                [Validation(Required=false)]
+                public string DimensionKey { get; set; }
 
                 [NameInMap("DimensionValues")]
                 [Validation(Required=false)]
@@ -43,11 +35,19 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [Validation(Required=false)]
             public string ProductCode { get; set; }
 
+            [NameInMap("QuotaActionCode")]
+            [Validation(Required=false)]
+            public string QuotaActionCode { get; set; }
+
             [NameInMap("Scale")]
             [Validation(Required=false)]
             public float? Scale { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

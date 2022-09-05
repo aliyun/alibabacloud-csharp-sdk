@@ -12,6 +12,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class CreateQuotaAlarmRequest : TeaModel {
+        [NameInMap("AlarmName")]
+        [Validation(Required=false)]
+        public string AlarmName { get; set; }
+
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
@@ -19,22 +23,6 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         [NameInMap("QuotaActionCode")]
         [Validation(Required=false)]
         public string QuotaActionCode { get; set; }
-
-        [NameInMap("AlarmName")]
-        [Validation(Required=false)]
-        public string AlarmName { get; set; }
-
-        [NameInMap("Threshold")]
-        [Validation(Required=false)]
-        public float? Threshold { get; set; }
-
-        [NameInMap("ThresholdPercent")]
-        [Validation(Required=false)]
-        public float? ThresholdPercent { get; set; }
-
-        [NameInMap("WebHook")]
-        [Validation(Required=false)]
-        public string WebHook { get; set; }
 
         [NameInMap("QuotaDimensions")]
         [Validation(Required=false)]
@@ -49,6 +37,22 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("Threshold")]
+        [Validation(Required=false)]
+        public float? Threshold { get; set; }
+
+        [NameInMap("ThresholdPercent")]
+        [Validation(Required=false)]
+        public float? ThresholdPercent { get; set; }
+
+        [NameInMap("ThresholdType")]
+        [Validation(Required=false)]
+        public string ThresholdType { get; set; }
+
+        [NameInMap("WebHook")]
+        [Validation(Required=false)]
+        public string WebHook { get; set; }
 
     }
 

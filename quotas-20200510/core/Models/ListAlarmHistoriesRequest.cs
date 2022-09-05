@@ -9,29 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class ListAlarmHistoriesRequest : TeaModel {
-        [NameInMap("NextToken")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
+        public long? EndTime { get; set; }
 
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
-        [NameInMap("StartTime")]
+        [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public long? StartTime { get; set; }
+        public int? MaxResults { get; set; }
 
-        [NameInMap("EndTime")]
+        [NameInMap("NextToken")]
         [Validation(Required=false)]
-        public long? EndTime { get; set; }
+        public string NextToken { get; set; }
 
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
 
     }
 

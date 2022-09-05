@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListProductsResponse : TeaModel {
+    public class CreateTemplateQuotaItemResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ListProductsResponseBody Body { get; set; }
+        public CreateTemplateQuotaItemResponseBody Body { get; set; }
 
     }
 

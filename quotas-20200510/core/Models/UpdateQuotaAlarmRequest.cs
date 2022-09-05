@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         [Validation(Required=false)]
         public float? ThresholdPercent { get; set; }
 
+        [NameInMap("ThresholdType")]
+        [Validation(Required=false)]
+        public string ThresholdType { get; set; }
+
         [NameInMap("WebHook")]
         [Validation(Required=false)]
         public string WebHook { get; set; }

@@ -8,11 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListQuotaApplicationsRequest : TeaModel {
+    public class ListQuotaApplicationTemplatesRequest : TeaModel {
         [NameInMap("Dimensions")]
         [Validation(Required=false)]
-        public List<ListQuotaApplicationsRequestDimensions> Dimensions { get; set; }
-        public class ListQuotaApplicationsRequestDimensions : TeaModel {
+        public List<ListQuotaApplicationTemplatesRequestDimensions> Dimensions { get; set; }
+        public class ListQuotaApplicationTemplatesRequestDimensions : TeaModel {
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
@@ -22,10 +22,6 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string Value { get; set; }
 
         }
-
-        [NameInMap("KeyWord")]
-        [Validation(Required=false)]
-        public string KeyWord { get; set; }
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -42,14 +38,6 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         [NameInMap("QuotaActionCode")]
         [Validation(Required=false)]
         public string QuotaActionCode { get; set; }
-
-        [NameInMap("QuotaCategory")]
-        [Validation(Required=false)]
-        public string QuotaCategory { get; set; }
-
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
 
     }
 

@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class GetProductQuotaRequest : TeaModel {
-        [NameInMap("ProductCode")]
-        [Validation(Required=false)]
-        public string ProductCode { get; set; }
-
-        [NameInMap("QuotaActionCode")]
-        [Validation(Required=false)]
-        public string QuotaActionCode { get; set; }
-
         [NameInMap("Dimensions")]
         [Validation(Required=false)]
         public List<GetProductQuotaRequestDimensions> Dimensions { get; set; }
@@ -30,6 +22,14 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("ProductCode")]
+        [Validation(Required=false)]
+        public string ProductCode { get; set; }
+
+        [NameInMap("QuotaActionCode")]
+        [Validation(Required=false)]
+        public string QuotaActionCode { get; set; }
 
     }
 
