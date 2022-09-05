@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyPolicyGroupRequest : TeaModel {
+        [NameInMap("AppContentProtection")]
+        [Validation(Required=false)]
+        public string AppContentProtection { get; set; }
+
         [NameInMap("AuthorizeAccessPolicyRule")]
         [Validation(Required=false)]
         public List<ModifyPolicyGroupRequestAuthorizeAccessPolicyRule> AuthorizeAccessPolicyRule { get; set; }
@@ -123,6 +127,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string PrinterRedirection { get; set; }
 
+        [NameInMap("RecordContent")]
+        [Validation(Required=false)]
+        public string RecordContent { get; set; }
+
+        [NameInMap("RecordContentExpires")]
+        [Validation(Required=false)]
+        public long? RecordContentExpires { get; set; }
+
         [NameInMap("Recording")]
         [Validation(Required=false)]
         public string Recording { get; set; }
@@ -130,6 +142,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("RecordingEndTime")]
         [Validation(Required=false)]
         public string RecordingEndTime { get; set; }
+
+        [NameInMap("RecordingExpires")]
+        [Validation(Required=false)]
+        public long? RecordingExpires { get; set; }
 
         [NameInMap("RecordingFps")]
         [Validation(Required=false)]

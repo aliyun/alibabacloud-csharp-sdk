@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string Comments { get; set; }
 
+            [NameInMap("ConnectDuration")]
+            [Validation(Required=false)]
+            public long? ConnectDuration { get; set; }
+
             [NameInMap("Cpu")]
             [Validation(Required=false)]
             public int? Cpu { get; set; }
@@ -64,6 +68,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("GpuSpec")]
             [Validation(Required=false)]
             public string GpuSpec { get; set; }
+
+            [NameInMap("IdleDisconnectDuration")]
+            [Validation(Required=false)]
+            public long? IdleDisconnectDuration { get; set; }
 
             [NameInMap("ImageId")]
             [Validation(Required=false)]
@@ -125,6 +133,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string PolicyGroupName { get; set; }
 
+            [NameInMap("RatioThreshold")]
+            [Validation(Required=false)]
+            public float? RatioThreshold { get; set; }
+
             [NameInMap("ResetType")]
             [Validation(Required=false)]
             public long? ResetType { get; set; }
@@ -133,6 +145,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public int? Status { get; set; }
 
+            [NameInMap("StopDuration")]
+            [Validation(Required=false)]
+            public long? StopDuration { get; set; }
+
             [NameInMap("SystemDiskCategory")]
             [Validation(Required=false)]
             public string SystemDiskCategory { get; set; }
@@ -140,6 +156,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("SystemDiskSize")]
             [Validation(Required=false)]
             public int? SystemDiskSize { get; set; }
+
+            [NameInMap("Version")]
+            [Validation(Required=false)]
+            public int? Version { get; set; }
 
             [NameInMap("VolumeEncryptionEnabled")]
             [Validation(Required=false)]

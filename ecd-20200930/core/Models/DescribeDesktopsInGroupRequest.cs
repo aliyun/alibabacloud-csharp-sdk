@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string DesktopGroupId { get; set; }
 
+        [NameInMap("IgnoreDeleted")]
+        [Validation(Required=false)]
+        public bool? IgnoreDeleted { get; set; }
+
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }

@@ -44,16 +44,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 [NameInMap("CpuCount")]
                 [Validation(Required=false)]
                 public int? CpuCount { get; set; }
+
                 [NameInMap("GpuCount")]
                 [Validation(Required=false)]
                 public float? GpuCount { get; set; }
+
                 [NameInMap("GpuSpec")]
                 [Validation(Required=false)]
                 public string GpuSpec { get; set; }
+
                 [NameInMap("MemorySize")]
                 [Validation(Required=false)]
                 public int? MemorySize { get; set; }
-            };
+
+            }
 
             [NameInMap("DesktopTypeFamily")]
             [Validation(Required=false)]

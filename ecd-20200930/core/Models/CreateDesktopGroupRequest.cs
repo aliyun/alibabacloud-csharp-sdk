@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string Comments { get; set; }
 
+        [NameInMap("ConnectDuration")]
+        [Validation(Required=false)]
+        public long? ConnectDuration { get; set; }
+
         [NameInMap("DefaultInitDesktopCount")]
         [Validation(Required=false)]
         public int? DefaultInitDesktopCount { get; set; }
@@ -64,6 +68,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("EndUserIds")]
         [Validation(Required=false)]
         public List<string> EndUserIds { get; set; }
+
+        [NameInMap("IdleDisconnectDuration")]
+        [Validation(Required=false)]
+        public long? IdleDisconnectDuration { get; set; }
 
         [NameInMap("KeepDuration")]
         [Validation(Required=false)]
@@ -101,6 +109,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string PolicyGroupId { get; set; }
 
+        [NameInMap("RatioThreshold")]
+        [Validation(Required=false)]
+        public float? RatioThreshold { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -112,6 +124,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("ScaleStrategyId")]
         [Validation(Required=false)]
         public string ScaleStrategyId { get; set; }
+
+        [NameInMap("StopDuration")]
+        [Validation(Required=false)]
+        public long? StopDuration { get; set; }
 
         [NameInMap("VolumeEncryptionEnabled")]
         [Validation(Required=false)]

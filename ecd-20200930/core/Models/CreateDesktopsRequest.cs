@@ -95,6 +95,24 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string UserAssignMode { get; set; }
 
+        [NameInMap("UserCommands")]
+        [Validation(Required=false)]
+        public List<CreateDesktopsRequestUserCommands> UserCommands { get; set; }
+        public class CreateDesktopsRequestUserCommands : TeaModel {
+            [NameInMap("Content")]
+            [Validation(Required=false)]
+            public string Content { get; set; }
+
+            [NameInMap("ContentEncoding")]
+            [Validation(Required=false)]
+            public string ContentEncoding { get; set; }
+
+            [NameInMap("ContentType")]
+            [Validation(Required=false)]
+            public string ContentType { get; set; }
+
+        }
+
         [NameInMap("UserName")]
         [Validation(Required=false)]
         public string UserName { get; set; }

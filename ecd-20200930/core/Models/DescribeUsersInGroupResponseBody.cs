@@ -52,10 +52,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 [NameInMap("ExternalName")]
                 [Validation(Required=false)]
                 public string ExternalName { get; set; }
+
                 [NameInMap("JobNumber")]
                 [Validation(Required=false)]
                 public string JobNumber { get; set; }
-            };
+
+            }
+
+            [NameInMap("UserDesktopId")]
+            [Validation(Required=false)]
+            public string UserDesktopId { get; set; }
 
             [NameInMap("UserSetPropertiesModels")]
             [Validation(Required=false)]

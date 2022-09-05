@@ -73,9 +73,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string ManagementFlag { get; set; }
 
+            [NameInMap("ManagementFlags")]
+            [Validation(Required=false)]
+            public List<string> ManagementFlags { get; set; }
+
+            [NameInMap("MemberEniIp")]
+            [Validation(Required=false)]
+            public string MemberEniIp { get; set; }
+
             [NameInMap("OsType")]
             [Validation(Required=false)]
             public string OsType { get; set; }
+
+            [NameInMap("PrimaryEniIp")]
+            [Validation(Required=false)]
+            public string PrimaryEniIp { get; set; }
 
             [NameInMap("ResetTime")]
             [Validation(Required=false)]
@@ -155,9 +167,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string ManagementFlag { get; set; }
 
+            [NameInMap("ManagementFlags")]
+            [Validation(Required=false)]
+            public List<string> ManagementFlags { get; set; }
+
+            [NameInMap("MemberEniIp")]
+            [Validation(Required=false)]
+            public string MemberEniIp { get; set; }
+
             [NameInMap("OsType")]
             [Validation(Required=false)]
             public string OsType { get; set; }
+
+            [NameInMap("PrimaryEniIp")]
+            [Validation(Required=false)]
+            public string PrimaryEniIp { get; set; }
 
             [NameInMap("ReleaseTime")]
             [Validation(Required=false)]

@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string Comments { get; set; }
 
+        [NameInMap("ConnectDuration")]
+        [Validation(Required=false)]
+        public long? ConnectDuration { get; set; }
+
         [NameInMap("DesktopGroupId")]
         [Validation(Required=false)]
         public string DesktopGroupId { get; set; }
@@ -36,6 +40,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("DesktopGroupName")]
         [Validation(Required=false)]
         public string DesktopGroupName { get; set; }
+
+        [NameInMap("DisableSessionConfig")]
+        [Validation(Required=false)]
+        public bool? DisableSessionConfig { get; set; }
+
+        [NameInMap("IdleDisconnectDuration")]
+        [Validation(Required=false)]
+        public long? IdleDisconnectDuration { get; set; }
 
         [NameInMap("ImageId")]
         [Validation(Required=false)]
@@ -65,6 +77,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string PolicyGroupId { get; set; }
 
+        [NameInMap("RatioThreshold")]
+        [Validation(Required=false)]
+        public float? RatioThreshold { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -76,6 +92,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("ScaleStrategyId")]
         [Validation(Required=false)]
         public string ScaleStrategyId { get; set; }
+
+        [NameInMap("StopDuration")]
+        [Validation(Required=false)]
+        public long? StopDuration { get; set; }
 
     }
 

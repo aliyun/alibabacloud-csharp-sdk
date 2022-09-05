@@ -118,16 +118,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 [NameInMap("CurrentAppVersion")]
                 [Validation(Required=false)]
                 public string CurrentAppVersion { get; set; }
+
                 [NameInMap("NewAppVersion")]
                 [Validation(Required=false)]
                 public string NewAppVersion { get; set; }
+
                 [NameInMap("ReleaseNote")]
                 [Validation(Required=false)]
                 public string ReleaseNote { get; set; }
+
                 [NameInMap("Size")]
                 [Validation(Required=false)]
                 public long? Size { get; set; }
-            };
+
+            }
 
             [NameInMap("GpuCategory")]
             [Validation(Required=false)]

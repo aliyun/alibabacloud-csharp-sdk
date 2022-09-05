@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string Progress { get; set; }
 
+            [NameInMap("ProtocolType")]
+            [Validation(Required=false)]
+            public string ProtocolType { get; set; }
+
             [NameInMap("RemainTime")]
             [Validation(Required=false)]
             public int? RemainTime { get; set; }

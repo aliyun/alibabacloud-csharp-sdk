@@ -8,10 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
-    public class DescribeRegionsRequest : TeaModel {
-        [NameInMap("AcceptLanguage")]
+    public class DeleteCloudDriveUsersRequest : TeaModel {
+        [NameInMap("CdsId")]
         [Validation(Required=false)]
-        public string AcceptLanguage { get; set; }
+        public string CdsId { get; set; }
+
+        [NameInMap("EndUserId")]
+        [Validation(Required=false)]
+        public List<string> EndUserId { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]

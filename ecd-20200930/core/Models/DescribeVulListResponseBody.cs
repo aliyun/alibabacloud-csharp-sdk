@@ -49,13 +49,29 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 [Validation(Required=false)]
                 public List<DescribeVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList> RpmEntityList { get; set; }
                 public class DescribeVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList : TeaModel {
+                    [NameInMap("FullVersion")]
+                    [Validation(Required=false)]
                     public string FullVersion { get; set; }
+
+                    [NameInMap("MatchDetail")]
+                    [Validation(Required=false)]
                     public string MatchDetail { get; set; }
+
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
                     public string Name { get; set; }
+
+                    [NameInMap("Path")]
+                    [Validation(Required=false)]
                     public string Path { get; set; }
+
+                    [NameInMap("UpdateCmd")]
+                    [Validation(Required=false)]
                     public string UpdateCmd { get; set; }
+
                 }
-            };
+
+            }
 
             [NameInMap("FirstTs")]
             [Validation(Required=false)]
