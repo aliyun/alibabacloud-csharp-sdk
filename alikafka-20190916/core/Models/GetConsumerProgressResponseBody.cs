@@ -20,6 +20,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [NameInMap("LastTimestamp")]
             [Validation(Required=false)]
             public long? LastTimestamp { get; set; }
+
             [NameInMap("TopicList")]
             [Validation(Required=false)]
             public GetConsumerProgressResponseBodyConsumerProgressTopicList TopicList { get; set; }
@@ -40,12 +41,25 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                         [Validation(Required=false)]
                         public List<GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList> OffsetList { get; set; }
                         public class GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList : TeaModel {
+                            [NameInMap("BrokerOffset")]
+                            [Validation(Required=false)]
                             public long? BrokerOffset { get; set; }
+
+                            [NameInMap("ConsumerOffset")]
+                            [Validation(Required=false)]
                             public long? ConsumerOffset { get; set; }
+
+                            [NameInMap("LastTimestamp")]
+                            [Validation(Required=false)]
                             public long? LastTimestamp { get; set; }
+
+                            [NameInMap("Partition")]
+                            [Validation(Required=false)]
                             public int? Partition { get; set; }
+
                         }
-                    };
+
+                    }
 
                     [NameInMap("Topic")]
                     [Validation(Required=false)]
@@ -58,10 +72,12 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 }
 
             }
+
             [NameInMap("TotalDiff")]
             [Validation(Required=false)]
             public long? TotalDiff { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

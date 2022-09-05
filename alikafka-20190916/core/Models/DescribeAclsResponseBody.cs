@@ -21,14 +21,33 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [Validation(Required=false)]
             public List<DescribeAclsResponseBodyKafkaAclListKafkaAclVO> KafkaAclVO { get; set; }
             public class DescribeAclsResponseBodyKafkaAclListKafkaAclVO : TeaModel {
+                [NameInMap("AclOperationType")]
+                [Validation(Required=false)]
                 public string AclOperationType { get; set; }
+
+                [NameInMap("AclResourceName")]
+                [Validation(Required=false)]
                 public string AclResourceName { get; set; }
+
+                [NameInMap("AclResourcePatternType")]
+                [Validation(Required=false)]
                 public string AclResourcePatternType { get; set; }
+
+                [NameInMap("AclResourceType")]
+                [Validation(Required=false)]
                 public string AclResourceType { get; set; }
+
+                [NameInMap("Host")]
+                [Validation(Required=false)]
                 public string Host { get; set; }
+
+                [NameInMap("Username")]
+                [Validation(Required=false)]
                 public string Username { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

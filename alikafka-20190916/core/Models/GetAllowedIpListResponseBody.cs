@@ -16,21 +16,36 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [NameInMap("DeployType")]
             [Validation(Required=false)]
             public int? DeployType { get; set; }
+
             [NameInMap("InternetList")]
             [Validation(Required=false)]
             public List<GetAllowedIpListResponseBodyAllowedListInternetList> InternetList { get; set; }
             public class GetAllowedIpListResponseBodyAllowedListInternetList : TeaModel {
+                [NameInMap("AllowedIpList")]
+                [Validation(Required=false)]
                 public List<string> AllowedIpList { get; set; }
+
+                [NameInMap("PortRange")]
+                [Validation(Required=false)]
                 public string PortRange { get; set; }
+
             }
+
             [NameInMap("VpcList")]
             [Validation(Required=false)]
             public List<GetAllowedIpListResponseBodyAllowedListVpcList> VpcList { get; set; }
             public class GetAllowedIpListResponseBodyAllowedListVpcList : TeaModel {
+                [NameInMap("AllowedIpList")]
+                [Validation(Required=false)]
                 public List<string> AllowedIpList { get; set; }
+
+                [NameInMap("PortRange")]
+                [Validation(Required=false)]
                 public string PortRange { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Code")]
         [Validation(Required=false)]

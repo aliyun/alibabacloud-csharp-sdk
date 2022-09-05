@@ -32,6 +32,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [NameInMap("LastTimeStamp")]
             [Validation(Required=false)]
             public long? LastTimeStamp { get; set; }
+
             [NameInMap("OffsetTable")]
             [Validation(Required=false)]
             public GetTopicStatusResponseBodyTopicStatusOffsetTable OffsetTable { get; set; }
@@ -63,10 +64,12 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 }
 
             }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public long? TotalCount { get; set; }
-        };
+
+        }
 
     }
 

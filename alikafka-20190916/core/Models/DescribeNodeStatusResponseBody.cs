@@ -28,7 +28,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public List<string> Status { get; set; }
-        };
+
+        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

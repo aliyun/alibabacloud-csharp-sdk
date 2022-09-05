@@ -29,11 +29,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [Validation(Required=false)]
             public List<DescribeSaslUsersResponseBodySaslUserListSaslUserVO> SaslUserVO { get; set; }
             public class DescribeSaslUsersResponseBodySaslUserListSaslUserVO : TeaModel {
+                [NameInMap("Password")]
+                [Validation(Required=false)]
                 public string Password { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
+                [NameInMap("Username")]
+                [Validation(Required=false)]
                 public string Username { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

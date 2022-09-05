@@ -41,15 +41,44 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [Validation(Required=false)]
             public List<GetTopicListResponseBodyTopicListTopicVO> TopicVO { get; set; }
             public class GetTopicListResponseBodyTopicListTopicVO : TeaModel {
+                [NameInMap("CompactTopic")]
+                [Validation(Required=false)]
                 public bool? CompactTopic { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public long? CreateTime { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("LocalTopic")]
+                [Validation(Required=false)]
                 public bool? LocalTopic { get; set; }
+
+                [NameInMap("PartitionNum")]
+                [Validation(Required=false)]
                 public int? PartitionNum { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("Remark")]
+                [Validation(Required=false)]
                 public string Remark { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public int? Status { get; set; }
+
+                [NameInMap("StatusName")]
+                [Validation(Required=false)]
                 public string StatusName { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
                 public GetTopicListResponseBodyTopicListTopicVOTags Tags { get; set; }
                 public class GetTopicListResponseBodyTopicListTopicVOTags : TeaModel {
                     [NameInMap("TagVO")]
@@ -67,9 +96,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                     }
 
                 }
+
+                [NameInMap("Topic")]
+                [Validation(Required=false)]
                 public string Topic { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Total")]
         [Validation(Required=false)]

@@ -21,10 +21,24 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [Validation(Required=false)]
             public List<GetConsumerListResponseBodyConsumerListConsumerVO> ConsumerVO { get; set; }
             public class GetConsumerListResponseBodyConsumerListConsumerVO : TeaModel {
+                [NameInMap("ConsumerId")]
+                [Validation(Required=false)]
                 public string ConsumerId { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("Remark")]
+                [Validation(Required=false)]
                 public string Remark { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
                 public GetConsumerListResponseBodyConsumerListConsumerVOTags Tags { get; set; }
                 public class GetConsumerListResponseBodyConsumerListConsumerVOTags : TeaModel {
                     [NameInMap("TagVO")]
@@ -42,8 +56,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
