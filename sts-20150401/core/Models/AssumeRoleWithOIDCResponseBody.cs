@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Sts20150401.Models
             [NameInMap("Arn")]
             [Validation(Required=false)]
             public string Arn { get; set; }
+
             [NameInMap("AssumedRoleId")]
             [Validation(Required=false)]
             public string AssumedRoleId { get; set; }
-        };
+
+        }
 
         [NameInMap("Credentials")]
         [Validation(Required=false)]
@@ -28,16 +30,20 @@ namespace AlibabaCloud.SDK.Sts20150401.Models
             [NameInMap("AccessKeyId")]
             [Validation(Required=false)]
             public string AccessKeyId { get; set; }
+
             [NameInMap("AccessKeySecret")]
             [Validation(Required=false)]
             public string AccessKeySecret { get; set; }
+
             [NameInMap("Expiration")]
             [Validation(Required=false)]
             public string Expiration { get; set; }
+
             [NameInMap("SecurityToken")]
             [Validation(Required=false)]
             public string SecurityToken { get; set; }
-        };
+
+        }
 
         [NameInMap("OIDCTokenInfo")]
         [Validation(Required=false)]
@@ -46,13 +52,16 @@ namespace AlibabaCloud.SDK.Sts20150401.Models
             [NameInMap("ClientIds")]
             [Validation(Required=false)]
             public string ClientIds { get; set; }
+
             [NameInMap("Issuer")]
             [Validation(Required=false)]
             public string Issuer { get; set; }
+
             [NameInMap("Subject")]
             [Validation(Required=false)]
             public string Subject { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
