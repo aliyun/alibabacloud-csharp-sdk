@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<ListRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos> RealtimeLogDeliveryInfos { get; set; }
             public class ListRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos : TeaModel {
+                [NameInMap("Logstore")]
+                [Validation(Required=false)]
                 public string Logstore { get; set; }
+
+                [NameInMap("Project")]
+                [Validation(Required=false)]
                 public string Project { get; set; }
+
+                [NameInMap("Region")]
+                [Validation(Required=false)]
                 public string Region { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

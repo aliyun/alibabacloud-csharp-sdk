@@ -17,12 +17,25 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel> BpsDataModel { get; set; }
             public class DescribeDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel : TeaModel {
+                [NameInMap("Bps")]
+                [Validation(Required=false)]
                 public long? Bps { get; set; }
+
+                [NameInMap("IspName")]
+                [Validation(Required=false)]
                 public string IspName { get; set; }
+
+                [NameInMap("LocationName")]
+                [Validation(Required=false)]
                 public string LocationName { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]

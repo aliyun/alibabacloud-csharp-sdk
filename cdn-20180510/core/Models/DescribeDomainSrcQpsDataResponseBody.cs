@@ -33,10 +33,17 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainSrcQpsDataResponseBodySrcQpsDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeDomainSrcQpsDataResponseBodySrcQpsDataPerIntervalDataModule : TeaModel {
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
                 public string Value { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("StartTime")]
         [Validation(Required=false)]

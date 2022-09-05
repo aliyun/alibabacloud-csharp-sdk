@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeCdnUserBillPredictionResponseBodyBillPredictionDataBillPredictionDataItem> BillPredictionDataItem { get; set; }
             public class DescribeCdnUserBillPredictionResponseBodyBillPredictionDataBillPredictionDataItem : TeaModel {
+                [NameInMap("Area")]
+                [Validation(Required=false)]
                 public string Area { get; set; }
+
+                [NameInMap("TimeStp")]
+                [Validation(Required=false)]
                 public string TimeStp { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
                 public float? Value { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("BillType")]
         [Validation(Required=false)]

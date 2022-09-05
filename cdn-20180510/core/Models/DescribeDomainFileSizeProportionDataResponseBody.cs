@@ -29,7 +29,12 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainFileSizeProportionDataResponseBodyFileSizeProportionDataIntervalUsageData> UsageData { get; set; }
             public class DescribeDomainFileSizeProportionDataResponseBodyFileSizeProportionDataIntervalUsageData : TeaModel {
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
                 public DescribeDomainFileSizeProportionDataResponseBodyFileSizeProportionDataIntervalUsageDataValue Value { get; set; }
                 public class DescribeDomainFileSizeProportionDataResponseBodyFileSizeProportionDataIntervalUsageDataValue : TeaModel {
                     [NameInMap("FileSizeProportionData")]
@@ -47,8 +52,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

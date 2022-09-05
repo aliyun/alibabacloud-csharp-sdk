@@ -44,10 +44,12 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                         [NameInMap("EndTime")]
                         [Validation(Required=false)]
                         public string EndTime { get; set; }
+
                         [NameInMap("StartTime")]
                         [Validation(Required=false)]
                         public string StartTime { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("TaskId")]
                     [Validation(Required=false)]
@@ -64,16 +66,20 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                 }
 
             }
+
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-        };
+
+        }
 
     }
 

@@ -24,7 +24,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [NameInMap("Vip")]
             [Validation(Required=false)]
             public List<string> Vip { get; set; }
-        };
+
+        }
 
     }
 

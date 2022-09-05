@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [NameInMap("IPV4")]
             [Validation(Required=false)]
             public List<string> IPV4 { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

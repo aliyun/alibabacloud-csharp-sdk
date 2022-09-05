@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeCdnDeletedDomainsResponseBodyDomainsPageData> PageData { get; set; }
             public class DescribeCdnDeletedDomainsResponseBodyDomainsPageData : TeaModel {
+                [NameInMap("DomainName")]
+                [Validation(Required=false)]
                 public string DomainName { get; set; }
+
+                [NameInMap("GmtModified")]
+                [Validation(Required=false)]
                 public string GmtModified { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

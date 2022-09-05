@@ -29,13 +29,29 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainTopReferVisitResponseBodyTopReferListReferList> ReferList { get; set; }
             public class DescribeDomainTopReferVisitResponseBodyTopReferListReferList : TeaModel {
+                [NameInMap("Flow")]
+                [Validation(Required=false)]
                 public string Flow { get; set; }
+
+                [NameInMap("FlowProportion")]
+                [Validation(Required=false)]
                 public float? FlowProportion { get; set; }
+
+                [NameInMap("ReferDetail")]
+                [Validation(Required=false)]
                 public string ReferDetail { get; set; }
+
+                [NameInMap("VisitData")]
+                [Validation(Required=false)]
                 public string VisitData { get; set; }
+
+                [NameInMap("VisitProportion")]
+                [Validation(Required=false)]
                 public float? VisitProportion { get; set; }
+
             }
-        };
+
+        }
 
     }
 

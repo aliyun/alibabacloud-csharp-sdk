@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainRealTimeReqHitRateDataResponseBodyDataReqHitRateDataModel> ReqHitRateDataModel { get; set; }
             public class DescribeDomainRealTimeReqHitRateDataResponseBodyDataReqHitRateDataModel : TeaModel {
+                [NameInMap("ReqHitRate")]
+                [Validation(Required=false)]
                 public float? ReqHitRate { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

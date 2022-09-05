@@ -17,17 +17,52 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeUserDomainsResponseBodyDomainsPageData> PageData { get; set; }
             public class DescribeUserDomainsResponseBodyDomainsPageData : TeaModel {
+                [NameInMap("CdnType")]
+                [Validation(Required=false)]
                 public string CdnType { get; set; }
+
+                [NameInMap("Cname")]
+                [Validation(Required=false)]
                 public string Cname { get; set; }
+
+                [NameInMap("Coverage")]
+                [Validation(Required=false)]
                 public string Coverage { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("DomainId")]
+                [Validation(Required=false)]
                 public long? DomainId { get; set; }
+
+                [NameInMap("DomainName")]
+                [Validation(Required=false)]
                 public string DomainName { get; set; }
+
+                [NameInMap("DomainStatus")]
+                [Validation(Required=false)]
                 public string DomainStatus { get; set; }
+
+                [NameInMap("GmtCreated")]
+                [Validation(Required=false)]
                 public string GmtCreated { get; set; }
+
+                [NameInMap("GmtModified")]
+                [Validation(Required=false)]
                 public string GmtModified { get; set; }
+
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
+
+                [NameInMap("Sandbox")]
+                [Validation(Required=false)]
                 public string Sandbox { get; set; }
+
+                [NameInMap("Sources")]
+                [Validation(Required=false)]
                 public DescribeUserDomainsResponseBodyDomainsPageDataSources Sources { get; set; }
                 public class DescribeUserDomainsResponseBodyDomainsPageDataSources : TeaModel {
                     [NameInMap("Source")]
@@ -57,9 +92,14 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                     }
 
                 }
+
+                [NameInMap("SslProtocol")]
+                [Validation(Required=false)]
                 public string SslProtocol { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

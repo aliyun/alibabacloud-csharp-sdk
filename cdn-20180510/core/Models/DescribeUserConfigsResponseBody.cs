@@ -30,6 +30,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                 public string Prefix { get; set; }
 
             }
+
             [NameInMap("WafConfig")]
             [Validation(Required=false)]
             public DescribeUserConfigsResponseBodyConfigsWafConfig WafConfig { get; set; }
@@ -39,7 +40,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                 public string Enable { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

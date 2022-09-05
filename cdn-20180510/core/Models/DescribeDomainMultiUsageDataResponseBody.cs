@@ -25,12 +25,25 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainMultiUsageDataResponseBodyRequestPerIntervalRequestDataModule> RequestDataModule { get; set; }
             public class DescribeDomainMultiUsageDataResponseBodyRequestPerIntervalRequestDataModule : TeaModel {
+                [NameInMap("Domain")]
+                [Validation(Required=false)]
                 public string Domain { get; set; }
+
+                [NameInMap("Request")]
+                [Validation(Required=false)]
                 public long? Request { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("StartTime")]
         [Validation(Required=false)]
@@ -44,13 +57,29 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainMultiUsageDataResponseBodyTrafficPerIntervalTrafficDataModule> TrafficDataModule { get; set; }
             public class DescribeDomainMultiUsageDataResponseBodyTrafficPerIntervalTrafficDataModule : TeaModel {
+                [NameInMap("Area")]
+                [Validation(Required=false)]
                 public string Area { get; set; }
+
+                [NameInMap("Bps")]
+                [Validation(Required=false)]
                 public float? Bps { get; set; }
+
+                [NameInMap("Domain")]
+                [Validation(Required=false)]
                 public string Domain { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
-        };
+
+        }
 
     }
 

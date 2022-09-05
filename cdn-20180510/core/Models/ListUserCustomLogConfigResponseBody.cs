@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [NameInMap("ConfigId")]
             [Validation(Required=false)]
             public List<string> ConfigId { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

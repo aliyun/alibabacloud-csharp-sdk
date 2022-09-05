@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeCdnRegionAndIspResponseBodyIspsIsp> Isp { get; set; }
             public class DescribeCdnRegionAndIspResponseBodyIspsIsp : TeaModel {
+                [NameInMap("NameEn")]
+                [Validation(Required=false)]
                 public string NameEn { get; set; }
+
+                [NameInMap("NameZh")]
+                [Validation(Required=false)]
                 public string NameZh { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -30,10 +37,17 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeCdnRegionAndIspResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeCdnRegionAndIspResponseBodyRegionsRegion : TeaModel {
+                [NameInMap("NameEn")]
+                [Validation(Required=false)]
                 public string NameEn { get; set; }
+
+                [NameInMap("NameZh")]
+                [Validation(Required=false)]
                 public string NameZh { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainRealTimeByteHitRateDataResponseBodyDataByteHitRateDataModel> ByteHitRateDataModel { get; set; }
             public class DescribeDomainRealTimeByteHitRateDataResponseBodyDataByteHitRateDataModel : TeaModel {
+                [NameInMap("ByteHitRate")]
+                [Validation(Required=false)]
                 public float? ByteHitRate { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

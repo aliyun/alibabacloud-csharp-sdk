@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainAverageResponseTimeResponseBodyAvgRTPerIntervalDataModule> DataModule { get; set; }
             public class DescribeDomainAverageResponseTimeResponseBodyAvgRTPerIntervalDataModule : TeaModel {
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
                 public string Value { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("DataInterval")]
         [Validation(Required=false)]

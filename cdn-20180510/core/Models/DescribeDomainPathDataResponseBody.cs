@@ -37,12 +37,25 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainPathDataResponseBodyPathDataPerIntervalUsageData> UsageData { get; set; }
             public class DescribeDomainPathDataResponseBodyPathDataPerIntervalUsageData : TeaModel {
+                [NameInMap("Acc")]
+                [Validation(Required=false)]
                 public int? Acc { get; set; }
+
+                [NameInMap("Path")]
+                [Validation(Required=false)]
                 public string Path { get; set; }
+
+                [NameInMap("Time")]
+                [Validation(Required=false)]
                 public string Time { get; set; }
+
+                [NameInMap("Traffic")]
+                [Validation(Required=false)]
                 public int? Traffic { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("StartTime")]
         [Validation(Required=false)]

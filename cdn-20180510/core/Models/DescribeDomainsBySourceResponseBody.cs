@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainsBySourceResponseBodyDomainsListDomainsData> DomainsData { get; set; }
             public class DescribeDomainsBySourceResponseBodyDomainsListDomainsData : TeaModel {
+                [NameInMap("DomainInfos")]
+                [Validation(Required=false)]
                 public DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomainInfos DomainInfos { get; set; }
                 public class DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomainInfos : TeaModel {
                     [NameInMap("domainInfo")]
@@ -50,6 +52,9 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                     }
 
                 }
+
+                [NameInMap("Domains")]
+                [Validation(Required=false)]
                 public DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomains Domains { get; set; }
                 public class DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomains : TeaModel {
                     [NameInMap("domainNames")]
@@ -57,9 +62,14 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                     public List<string> DomainNames { get; set; }
 
                 }
+
+                [NameInMap("Source")]
+                [Validation(Required=false)]
                 public string Source { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

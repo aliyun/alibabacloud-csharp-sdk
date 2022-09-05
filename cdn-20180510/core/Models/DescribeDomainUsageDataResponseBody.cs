@@ -45,12 +45,25 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainUsageDataResponseBodyUsageDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeDomainUsageDataResponseBodyUsageDataPerIntervalDataModule : TeaModel {
+                [NameInMap("PeakTime")]
+                [Validation(Required=false)]
                 public string PeakTime { get; set; }
+
+                [NameInMap("SpecialValue")]
+                [Validation(Required=false)]
                 public string SpecialValue { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
                 public string Value { get; set; }
+
             }
-        };
+
+        }
 
     }
 

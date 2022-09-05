@@ -33,11 +33,21 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainSrcBpsDataResponseBodySrcBpsDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeDomainSrcBpsDataResponseBodySrcBpsDataPerIntervalDataModule : TeaModel {
+                [NameInMap("HttpsValue")]
+                [Validation(Required=false)]
                 public string HttpsValue { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
                 public string Value { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("StartTime")]
         [Validation(Required=false)]

@@ -29,7 +29,12 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainHttpCodeDataResponseBodyHttpCodeDataUsageData> UsageData { get; set; }
             public class DescribeDomainHttpCodeDataResponseBodyHttpCodeDataUsageData : TeaModel {
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
                 public DescribeDomainHttpCodeDataResponseBodyHttpCodeDataUsageDataValue Value { get; set; }
                 public class DescribeDomainHttpCodeDataResponseBodyHttpCodeDataUsageDataValue : TeaModel {
                     [NameInMap("CodeProportionData")]
@@ -51,8 +56,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

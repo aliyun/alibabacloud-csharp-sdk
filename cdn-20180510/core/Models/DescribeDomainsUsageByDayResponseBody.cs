@@ -37,18 +37,49 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainsUsageByDayResponseBodyUsageByDaysUsageByDay> UsageByDay { get; set; }
             public class DescribeDomainsUsageByDayResponseBodyUsageByDaysUsageByDay : TeaModel {
+                [NameInMap("BytesHitRate")]
+                [Validation(Required=false)]
                 public string BytesHitRate { get; set; }
+
+                [NameInMap("MaxBps")]
+                [Validation(Required=false)]
                 public string MaxBps { get; set; }
+
+                [NameInMap("MaxBpsTime")]
+                [Validation(Required=false)]
                 public string MaxBpsTime { get; set; }
+
+                [NameInMap("MaxSrcBps")]
+                [Validation(Required=false)]
                 public string MaxSrcBps { get; set; }
+
+                [NameInMap("MaxSrcBpsTime")]
+                [Validation(Required=false)]
                 public string MaxSrcBpsTime { get; set; }
+
+                [NameInMap("Qps")]
+                [Validation(Required=false)]
                 public string Qps { get; set; }
+
+                [NameInMap("RequestHitRate")]
+                [Validation(Required=false)]
                 public string RequestHitRate { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
+                [NameInMap("TotalAccess")]
+                [Validation(Required=false)]
                 public string TotalAccess { get; set; }
+
+                [NameInMap("TotalTraffic")]
+                [Validation(Required=false)]
                 public string TotalTraffic { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("UsageTotal")]
         [Validation(Required=false)]
@@ -57,28 +88,36 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [NameInMap("BytesHitRate")]
             [Validation(Required=false)]
             public string BytesHitRate { get; set; }
+
             [NameInMap("MaxBps")]
             [Validation(Required=false)]
             public string MaxBps { get; set; }
+
             [NameInMap("MaxBpsTime")]
             [Validation(Required=false)]
             public string MaxBpsTime { get; set; }
+
             [NameInMap("MaxSrcBps")]
             [Validation(Required=false)]
             public string MaxSrcBps { get; set; }
+
             [NameInMap("MaxSrcBpsTime")]
             [Validation(Required=false)]
             public string MaxSrcBpsTime { get; set; }
+
             [NameInMap("RequestHitRate")]
             [Validation(Required=false)]
             public string RequestHitRate { get; set; }
+
             [NameInMap("TotalAccess")]
             [Validation(Required=false)]
             public string TotalAccess { get; set; }
+
             [NameInMap("TotalTraffic")]
             [Validation(Required=false)]
             public string TotalTraffic { get; set; }
-        };
+
+        }
 
     }
 

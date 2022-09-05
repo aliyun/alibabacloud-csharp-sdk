@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [NameInMap("Domain")]
             [Validation(Required=false)]
             public List<string> Domain { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
