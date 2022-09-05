@@ -8,49 +8,53 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imarketing20220704.Models
 {
-    public class GetBrandPageResponseBody : TeaModel {
+    public class GetLeadsListPageResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
-        public long? Code { get; set; }
+        public int? Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public GetBrandPageResponseBodyData Data { get; set; }
-        public class GetBrandPageResponseBodyData : TeaModel {
+        public GetLeadsListPageResponseBodyData Data { get; set; }
+        public class GetLeadsListPageResponseBodyData : TeaModel {
             [NameInMap("List")]
             [Validation(Required=false)]
-            public List<GetBrandPageResponseBodyDataList> List { get; set; }
-            public class GetBrandPageResponseBodyDataList : TeaModel {
-                [NameInMap("AccountNo")]
+            public List<GetLeadsListPageResponseBodyDataList> List { get; set; }
+            public class GetLeadsListPageResponseBodyDataList : TeaModel {
+                [NameInMap("ComponentId")]
                 [Validation(Required=false)]
-                public string AccountNo { get; set; }
+                public string ComponentId { get; set; }
 
-                [NameInMap("AccountType")]
+                [NameInMap("ContentId")]
                 [Validation(Required=false)]
-                public string AccountType { get; set; }
+                public long? ContentId { get; set; }
 
-                [NameInMap("Company")]
+                [NameInMap("CreativeId")]
                 [Validation(Required=false)]
-                public string Company { get; set; }
+                public int? CreativeId { get; set; }
 
-                [NameInMap("MainId")]
+                [NameInMap("CreativeName")]
                 [Validation(Required=false)]
-                public long? MainId { get; set; }
+                public string CreativeName { get; set; }
 
-                [NameInMap("MainName")]
+                [NameInMap("LeadsDetail")]
                 [Validation(Required=false)]
-                public string MainName { get; set; }
+                public string LeadsDetail { get; set; }
 
-                [NameInMap("ParentMainId")]
+                [NameInMap("SerialId")]
                 [Validation(Required=false)]
-                public long? ParentMainId { get; set; }
+                public long? SerialId { get; set; }
+
+                [NameInMap("TaskId")]
+                [Validation(Required=false)]
+                public long? TaskId { get; set; }
 
             }
 
             [NameInMap("PageInfo")]
             [Validation(Required=false)]
-            public GetBrandPageResponseBodyDataPageInfo PageInfo { get; set; }
-            public class GetBrandPageResponseBodyDataPageInfo : TeaModel {
+            public GetLeadsListPageResponseBodyDataPageInfo PageInfo { get; set; }
+            public class GetLeadsListPageResponseBodyDataPageInfo : TeaModel {
                 [NameInMap("Page")]
                 [Validation(Required=false)]
                 public int? Page { get; set; }
@@ -66,6 +70,10 @@ namespace AlibabaCloud.SDK.Imarketing20220704.Models
             }
 
         }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

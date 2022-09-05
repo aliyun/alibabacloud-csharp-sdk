@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imarketing20220704.Models
 {
-    public class SendSmsRequest : TeaModel {
-        [NameInMap("NowStamp")]
+    public class UpdateAdxCreativeContentResponseBody : TeaModel {
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public long? NowStamp { get; set; }
+        public string Message { get; set; }
 
-        [NameInMap("PhoneNumbers")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string PhoneNumbers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("SignKey")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public string SignKey { get; set; }
+        public int? Status { get; set; }
 
     }
 

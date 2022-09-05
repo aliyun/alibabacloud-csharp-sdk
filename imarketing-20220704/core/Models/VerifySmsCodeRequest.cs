@@ -8,7 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imarketing20220704.Models
 {
-    public class SendSmsRequest : TeaModel {
+    public class VerifySmsCodeRequest : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("NowStamp")]
         [Validation(Required=false)]
         public long? NowStamp { get; set; }

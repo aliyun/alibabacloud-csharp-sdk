@@ -8,22 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imarketing20220704.Models
 {
-    public class SendSmsResponseBody : TeaModel {
+    public class GetBusinessIdResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public int? Code { get; set; }
+
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public bool? Data { get; set; }
-
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public int? ErrorCode { get; set; }
+        public string Data { get; set; }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
-
-        [NameInMap("HttpCode")]
-        [Validation(Required=false)]
-        public int? HttpCode { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
