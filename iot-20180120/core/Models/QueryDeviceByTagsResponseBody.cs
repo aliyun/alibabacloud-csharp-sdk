@@ -21,12 +21,25 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<QueryDeviceByTagsResponseBodyDataSimpleDeviceInfo> SimpleDeviceInfo { get; set; }
             public class QueryDeviceByTagsResponseBodyDataSimpleDeviceInfo : TeaModel {
+                [NameInMap("DeviceName")]
+                [Validation(Required=false)]
                 public string DeviceName { get; set; }
+
+                [NameInMap("IotId")]
+                [Validation(Required=false)]
                 public string IotId { get; set; }
+
+                [NameInMap("ProductKey")]
+                [Validation(Required=false)]
                 public string ProductKey { get; set; }
+
+                [NameInMap("ProductName")]
+                [Validation(Required=false)]
                 public string ProductName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

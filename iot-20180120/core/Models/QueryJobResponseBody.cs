@@ -20,9 +20,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
             [NameInMap("JobDocument")]
             [Validation(Required=false)]
             public string JobDocument { get; set; }
+
             [NameInMap("JobFile")]
             [Validation(Required=false)]
             public QueryJobResponseBodyDataJobFile JobFile { get; set; }
@@ -40,12 +42,15 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 public string SignMethod { get; set; }
 
             }
+
             [NameInMap("JobId")]
             [Validation(Required=false)]
             public string JobId { get; set; }
+
             [NameInMap("JobName")]
             [Validation(Required=false)]
             public string JobName { get; set; }
+
             [NameInMap("RolloutConfig")]
             [Validation(Required=false)]
             public QueryJobResponseBodyDataRolloutConfig RolloutConfig { get; set; }
@@ -59,12 +64,15 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 public string MessageQoS { get; set; }
 
             }
+
             [NameInMap("ScheduledTime")]
             [Validation(Required=false)]
             public long? ScheduledTime { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("TargetConfig")]
             [Validation(Required=false)]
             public QueryJobResponseBodyDataTargetConfig TargetConfig { get; set; }
@@ -77,10 +85,17 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                     [Validation(Required=false)]
                     public List<QueryJobResponseBodyDataTargetConfigTargetDevicesTargetDevices> TargetDevices { get; set; }
                     public class QueryJobResponseBodyDataTargetConfigTargetDevicesTargetDevices : TeaModel {
+                        [NameInMap("DeviceName")]
+                        [Validation(Required=false)]
                         public string DeviceName { get; set; }
+
+                        [NameInMap("ProductKey")]
+                        [Validation(Required=false)]
                         public string ProductKey { get; set; }
+
                     }
-                };
+
+                }
 
                 [NameInMap("TargetGroup")]
                 [Validation(Required=false)]
@@ -95,6 +110,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 public string TargetType { get; set; }
 
             }
+
             [NameInMap("TimeoutConfig")]
             [Validation(Required=false)]
             public QueryJobResponseBodyDataTimeoutConfig TimeoutConfig { get; set; }
@@ -104,16 +120,20 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 public int? InProgressTimeoutInMinutes { get; set; }
 
             }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
+
             [NameInMap("UtcCreate")]
             [Validation(Required=false)]
             public string UtcCreate { get; set; }
+
             [NameInMap("UtcModified")]
             [Validation(Required=false)]
             public string UtcModified { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

@@ -21,14 +21,33 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<ListParserResponseBodyDataParserList> ParserList { get; set; }
             public class ListParserResponseBodyDataParserList : TeaModel {
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("ParserId")]
+                [Validation(Required=false)]
                 public long? ParserId { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("UtcCreated")]
+                [Validation(Required=false)]
                 public string UtcCreated { get; set; }
+
+                [NameInMap("UtcModified")]
+                [Validation(Required=false)]
                 public string UtcModified { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

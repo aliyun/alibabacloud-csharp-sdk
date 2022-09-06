@@ -56,16 +56,20 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 }
 
             }
+
             [NameInMap("PageId")]
             [Validation(Required=false)]
             public int? PageId { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public int? Total { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

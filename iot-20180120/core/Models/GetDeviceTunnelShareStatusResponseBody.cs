@@ -20,16 +20,20 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("GmtOpened")]
             [Validation(Required=false)]
             public long? GmtOpened { get; set; }
+
             [NameInMap("IsOpen")]
             [Validation(Required=false)]
             public bool? IsOpen { get; set; }
+
             [NameInMap("Password")]
             [Validation(Required=false)]
             public string Password { get; set; }
+
             [NameInMap("ShareId")]
             [Validation(Required=false)]
             public string ShareId { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

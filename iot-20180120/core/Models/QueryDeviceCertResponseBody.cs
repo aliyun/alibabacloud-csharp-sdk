@@ -20,16 +20,20 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("CertSN")]
             [Validation(Required=false)]
             public string CertSN { get; set; }
+
             [NameInMap("Certificate")]
             [Validation(Required=false)]
             public string Certificate { get; set; }
+
             [NameInMap("PrivateKey")]
             [Validation(Required=false)]
             public string PrivateKey { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("ApplyId")]
             [Validation(Required=false)]
             public long? ApplyId { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

@@ -20,28 +20,36 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("DeviceActive")]
             [Validation(Required=false)]
             public int? DeviceActive { get; set; }
+
             [NameInMap("DeviceCount")]
             [Validation(Required=false)]
             public int? DeviceCount { get; set; }
+
             [NameInMap("DeviceOnline")]
             [Validation(Required=false)]
             public int? DeviceOnline { get; set; }
+
             [NameInMap("DynamicGroupExpression")]
             [Validation(Required=false)]
             public string DynamicGroupExpression { get; set; }
+
             [NameInMap("GroupDesc")]
             [Validation(Required=false)]
             public string GroupDesc { get; set; }
+
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public string GroupId { get; set; }
+
             [NameInMap("GroupName")]
             [Validation(Required=false)]
             public string GroupName { get; set; }
+
             [NameInMap("UtcCreate")]
             [Validation(Required=false)]
             public string UtcCreate { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

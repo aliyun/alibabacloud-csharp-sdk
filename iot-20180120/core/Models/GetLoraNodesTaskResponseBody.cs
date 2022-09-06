@@ -36,7 +36,8 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("SuccessDevEui")]
             [Validation(Required=false)]
             public List<string> SuccessDevEui { get; set; }
-        };
+
+        }
 
         [NameInMap("TaskId")]
         [Validation(Required=false)]

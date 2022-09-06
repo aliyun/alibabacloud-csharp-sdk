@@ -72,10 +72,12 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 }
 
             }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public int? Total { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("ScriptType")]
             [Validation(Required=false)]
             public string ScriptType { get; set; }
+
             [NameInMap("ScriptUrl")]
             [Validation(Required=false)]
             public string ScriptUrl { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

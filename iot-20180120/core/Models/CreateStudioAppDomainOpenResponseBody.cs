@@ -20,25 +20,32 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("AppId")]
             [Validation(Required=false)]
             public string AppId { get; set; }
+
             [NameInMap("Host")]
             [Validation(Required=false)]
             public string Host { get; set; }
+
             [NameInMap("Id")]
             [Validation(Required=false)]
             public int? Id { get; set; }
+
             [NameInMap("IsBeian")]
             [Validation(Required=false)]
             public string IsBeian { get; set; }
+
             [NameInMap("ProjectId")]
             [Validation(Required=false)]
             public string ProjectId { get; set; }
+
             [NameInMap("Protocol")]
             [Validation(Required=false)]
             public string Protocol { get; set; }
+
             [NameInMap("TenantId")]
             [Validation(Required=false)]
             public string TenantId { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

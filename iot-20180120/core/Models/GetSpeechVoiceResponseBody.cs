@@ -21,8 +21,16 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<GetSpeechVoiceResponseBodyDataItems> Items { get; set; }
             public class GetSpeechVoiceResponseBodyDataItems : TeaModel {
+                [NameInMap("Label")]
+                [Validation(Required=false)]
                 public string Label { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
                 public string Value { get; set; }
+
+                [NameInMap("VoiceList")]
+                [Validation(Required=false)]
                 public GetSpeechVoiceResponseBodyDataItemsVoiceList VoiceList { get; set; }
                 public class GetSpeechVoiceResponseBodyDataItemsVoiceList : TeaModel {
                     [NameInMap("Items")]
@@ -40,8 +48,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

@@ -20,6 +20,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("ApiSrn")]
             [Validation(Required=false)]
             public string ApiSrn { get; set; }
+
             [NameInMap("FieldNameList")]
             [Validation(Required=false)]
             public InvokeDataAPIServiceResponseBodyDataFieldNameList FieldNameList { get; set; }
@@ -29,12 +30,15 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 public List<string> FieldNameList { get; set; }
 
             }
+
             [NameInMap("PageNo")]
             [Validation(Required=false)]
             public int? PageNo { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("ResultList")]
             [Validation(Required=false)]
             public InvokeDataAPIServiceResponseBodyDataResultList ResultList { get; set; }
@@ -44,10 +48,12 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 public List<Dictionary<string, object>> ResultList { get; set; }
 
             }
+
             [NameInMap("TotalSize")]
             [Validation(Required=false)]
             public int? TotalSize { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

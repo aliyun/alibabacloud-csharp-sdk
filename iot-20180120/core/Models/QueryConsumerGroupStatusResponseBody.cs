@@ -25,13 +25,29 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<QueryConsumerGroupStatusResponseBodyClientConnectionStatusListConsumerGroupClientConnectionInfo> ConsumerGroupClientConnectionInfo { get; set; }
             public class QueryConsumerGroupStatusResponseBodyClientConnectionStatusListConsumerGroupClientConnectionInfo : TeaModel {
+                [NameInMap("AccumulatedConsumeCountPerMinute")]
+                [Validation(Required=false)]
                 public int? AccumulatedConsumeCountPerMinute { get; set; }
+
+                [NameInMap("ClientId")]
+                [Validation(Required=false)]
                 public string ClientId { get; set; }
+
+                [NameInMap("ClientIpPort")]
+                [Validation(Required=false)]
                 public string ClientIpPort { get; set; }
+
+                [NameInMap("OnlineTime")]
+                [Validation(Required=false)]
                 public long? OnlineTime { get; set; }
+
+                [NameInMap("RealTimeConsumeCountPerMinute")]
+                [Validation(Required=false)]
                 public int? RealTimeConsumeCountPerMinute { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Code")]
         [Validation(Required=false)]

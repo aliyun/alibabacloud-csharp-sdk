@@ -20,16 +20,20 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("FailSum")]
             [Validation(Required=false)]
             public long? FailSum { get; set; }
+
             [NameInMap("Progress")]
             [Validation(Required=false)]
             public int? Progress { get; set; }
+
             [NameInMap("ResultCsvFile")]
             [Validation(Required=false)]
             public string ResultCsvFile { get; set; }
+
             [NameInMap("SuccessSum")]
             [Validation(Required=false)]
             public long? SuccessSum { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

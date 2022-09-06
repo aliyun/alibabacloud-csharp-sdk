@@ -21,13 +21,29 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<QueryProductTopicResponseBodyDataProductTopicInfo> ProductTopicInfo { get; set; }
             public class QueryProductTopicResponseBodyDataProductTopicInfo : TeaModel {
+                [NameInMap("Desc")]
+                [Validation(Required=false)]
                 public string Desc { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public string Id { get; set; }
+
+                [NameInMap("Operation")]
+                [Validation(Required=false)]
                 public string Operation { get; set; }
+
+                [NameInMap("ProductKey")]
+                [Validation(Required=false)]
                 public string ProductKey { get; set; }
+
+                [NameInMap("TopicShortName")]
+                [Validation(Required=false)]
                 public string TopicShortName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

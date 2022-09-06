@@ -25,12 +25,32 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfo> SimpleOTAJobInfo { get; set; }
             public class ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfo : TeaModel {
+                [NameInMap("FirmwareId")]
+                [Validation(Required=false)]
                 public string FirmwareId { get; set; }
+
+                [NameInMap("JobId")]
+                [Validation(Required=false)]
                 public string JobId { get; set; }
+
+                [NameInMap("JobStatus")]
+                [Validation(Required=false)]
                 public string JobStatus { get; set; }
+
+                [NameInMap("JobType")]
+                [Validation(Required=false)]
                 public string JobType { get; set; }
+
+                [NameInMap("ProductKey")]
+                [Validation(Required=false)]
                 public string ProductKey { get; set; }
+
+                [NameInMap("SelectionType")]
+                [Validation(Required=false)]
                 public string SelectionType { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
                 public ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfoTags Tags { get; set; }
                 public class ListOTAJobByFirmwareResponseBodyDataSimpleOTAJobInfoTags : TeaModel {
                     [NameInMap("OtaTagDTO")]
@@ -48,13 +68,30 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                     }
 
                 }
+
+                [NameInMap("TargetSelection")]
+                [Validation(Required=false)]
                 public string TargetSelection { get; set; }
+
+                [NameInMap("UtcCreate")]
+                [Validation(Required=false)]
                 public string UtcCreate { get; set; }
+
+                [NameInMap("UtcEndTime")]
+                [Validation(Required=false)]
                 public string UtcEndTime { get; set; }
+
+                [NameInMap("UtcModified")]
+                [Validation(Required=false)]
                 public string UtcModified { get; set; }
+
+                [NameInMap("UtcStartTime")]
+                [Validation(Required=false)]
                 public string UtcStartTime { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

@@ -20,6 +20,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("ApplyId")]
             [Validation(Required=false)]
             public long? ApplyId { get; set; }
+
             [NameInMap("InvalidDeviceNameList")]
             [Validation(Required=false)]
             public BatchImportDeviceResponseBodyDataInvalidDeviceNameList InvalidDeviceNameList { get; set; }
@@ -29,6 +30,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 public List<string> InvalidDeviceName { get; set; }
 
             }
+
             [NameInMap("InvalidDeviceSecretList")]
             [Validation(Required=false)]
             public BatchImportDeviceResponseBodyDataInvalidDeviceSecretList InvalidDeviceSecretList { get; set; }
@@ -38,6 +40,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 public List<string> InvalidDeviceSecret { get; set; }
 
             }
+
             [NameInMap("InvalidSnList")]
             [Validation(Required=false)]
             public BatchImportDeviceResponseBodyDataInvalidSnList InvalidSnList { get; set; }
@@ -47,6 +50,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 public List<string> InvalidSn { get; set; }
 
             }
+
             [NameInMap("RepeatedDeviceNameList")]
             [Validation(Required=false)]
             public BatchImportDeviceResponseBodyDataRepeatedDeviceNameList RepeatedDeviceNameList { get; set; }
@@ -56,7 +60,8 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 public List<string> RepeatedDeviceName { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

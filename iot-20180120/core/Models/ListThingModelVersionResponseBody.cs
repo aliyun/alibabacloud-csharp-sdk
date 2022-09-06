@@ -21,11 +21,21 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<ListThingModelVersionResponseBodyDataModelVersions> ModelVersions { get; set; }
             public class ListThingModelVersionResponseBodyDataModelVersions : TeaModel {
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("GmtCreate")]
+                [Validation(Required=false)]
                 public long? GmtCreate { get; set; }
+
+                [NameInMap("ModelVersion")]
+                [Validation(Required=false)]
                 public string ModelVersion { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

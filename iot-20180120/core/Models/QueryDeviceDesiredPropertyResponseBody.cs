@@ -56,7 +56,8 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 }
 
             }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

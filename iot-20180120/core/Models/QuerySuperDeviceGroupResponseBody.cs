@@ -21,11 +21,21 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<QuerySuperDeviceGroupResponseBodyDataGroupInfo> GroupInfo { get; set; }
             public class QuerySuperDeviceGroupResponseBodyDataGroupInfo : TeaModel {
+                [NameInMap("GroupDesc")]
+                [Validation(Required=false)]
                 public string GroupDesc { get; set; }
+
+                [NameInMap("GroupId")]
+                [Validation(Required=false)]
                 public string GroupId { get; set; }
+
+                [NameInMap("GroupName")]
+                [Validation(Required=false)]
                 public string GroupName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

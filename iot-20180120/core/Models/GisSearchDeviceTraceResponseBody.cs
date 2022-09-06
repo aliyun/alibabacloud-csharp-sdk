@@ -20,17 +20,26 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("DeviceName")]
             [Validation(Required=false)]
             public string DeviceName { get; set; }
+
             [NameInMap("Points")]
             [Validation(Required=false)]
             public List<GisSearchDeviceTraceResponseBodyDataPoints> Points { get; set; }
             public class GisSearchDeviceTraceResponseBodyDataPoints : TeaModel {
+                [NameInMap("LocateTime")]
+                [Validation(Required=false)]
                 public long? LocateTime { get; set; }
+
+                [NameInMap("Location")]
+                [Validation(Required=false)]
                 public string Location { get; set; }
+
             }
+
             [NameInMap("ProductKey")]
             [Validation(Required=false)]
             public string ProductKey { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

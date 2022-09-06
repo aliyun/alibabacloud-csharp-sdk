@@ -20,31 +20,40 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("Cancelled")]
             [Validation(Required=false)]
             public int? Cancelled { get; set; }
+
             [NameInMap("Failed")]
             [Validation(Required=false)]
             public int? Failed { get; set; }
+
             [NameInMap("InProgress")]
             [Validation(Required=false)]
             public int? InProgress { get; set; }
+
             [NameInMap("Queued")]
             [Validation(Required=false)]
             public int? Queued { get; set; }
+
             [NameInMap("Rejected")]
             [Validation(Required=false)]
             public int? Rejected { get; set; }
+
             [NameInMap("Sent")]
             [Validation(Required=false)]
             public int? Sent { get; set; }
+
             [NameInMap("Succeeded")]
             [Validation(Required=false)]
             public int? Succeeded { get; set; }
+
             [NameInMap("TimeOut")]
             [Validation(Required=false)]
             public int? TimeOut { get; set; }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public int? Total { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

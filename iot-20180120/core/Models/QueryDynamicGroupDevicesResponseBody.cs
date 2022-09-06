@@ -21,20 +21,57 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<QueryDynamicGroupDevicesResponseBodyDataSimpleDeviceInfo> SimpleDeviceInfo { get; set; }
             public class QueryDynamicGroupDevicesResponseBodyDataSimpleDeviceInfo : TeaModel {
+                [NameInMap("ActiveTime")]
+                [Validation(Required=false)]
                 public string ActiveTime { get; set; }
+
+                [NameInMap("CategoryKey")]
+                [Validation(Required=false)]
                 public string CategoryKey { get; set; }
+
+                [NameInMap("DeviceName")]
+                [Validation(Required=false)]
                 public string DeviceName { get; set; }
+
+                [NameInMap("IotId")]
+                [Validation(Required=false)]
                 public string IotId { get; set; }
+
+                [NameInMap("LastOnlineTime")]
+                [Validation(Required=false)]
                 public string LastOnlineTime { get; set; }
+
+                [NameInMap("Nickname")]
+                [Validation(Required=false)]
                 public string Nickname { get; set; }
+
+                [NameInMap("NodeType")]
+                [Validation(Required=false)]
                 public int? NodeType { get; set; }
+
+                [NameInMap("ProductKey")]
+                [Validation(Required=false)]
                 public string ProductKey { get; set; }
+
+                [NameInMap("ProductName")]
+                [Validation(Required=false)]
                 public string ProductName { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("UtcActiveTime")]
+                [Validation(Required=false)]
                 public string UtcActiveTime { get; set; }
+
+                [NameInMap("UtcLastOnlineTime")]
+                [Validation(Required=false)]
                 public string UtcLastOnlineTime { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

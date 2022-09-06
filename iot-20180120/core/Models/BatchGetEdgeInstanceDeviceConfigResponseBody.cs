@@ -24,10 +24,12 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 [NameInMap("Content")]
                 [Validation(Required=false)]
                 public string Content { get; set; }
+
                 [NameInMap("Format")]
                 [Validation(Required=false)]
                 public string Format { get; set; }
-            };
+
+            }
 
             [NameInMap("IotId")]
             [Validation(Required=false)]

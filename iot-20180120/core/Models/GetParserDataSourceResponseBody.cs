@@ -20,19 +20,24 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("CreateUserId")]
             [Validation(Required=false)]
             public long? CreateUserId { get; set; }
+
             [NameInMap("DataSourceId")]
             [Validation(Required=false)]
             public long? DataSourceId { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
             [NameInMap("UtcCreated")]
             [Validation(Required=false)]
             public string UtcCreated { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

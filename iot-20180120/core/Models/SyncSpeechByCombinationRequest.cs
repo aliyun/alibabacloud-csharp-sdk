@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string DeviceName { get; set; }
 
+        [NameInMap("EnforceFlag")]
+        [Validation(Required=false)]
+        public bool? EnforceFlag { get; set; }
+
         [NameInMap("IotId")]
         [Validation(Required=false)]
         public string IotId { get; set; }

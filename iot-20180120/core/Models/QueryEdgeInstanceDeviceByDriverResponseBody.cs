@@ -20,19 +20,26 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
+
             [NameInMap("DeviceList")]
             [Validation(Required=false)]
             public List<QueryEdgeInstanceDeviceByDriverResponseBodyDataDeviceList> DeviceList { get; set; }
             public class QueryEdgeInstanceDeviceByDriverResponseBodyDataDeviceList : TeaModel {
+                [NameInMap("IotId")]
+                [Validation(Required=false)]
                 public string IotId { get; set; }
+
             }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public int? Total { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

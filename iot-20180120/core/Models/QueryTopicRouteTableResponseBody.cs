@@ -19,8 +19,9 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public class QueryTopicRouteTableResponseBodyDstTopics : TeaModel {
             [NameInMap("Topic")]
             [Validation(Required=false)]
-            public List<string> Topic { get; set; }
-        };
+            public List<Dictionary<string, object>> Topic { get; set; }
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

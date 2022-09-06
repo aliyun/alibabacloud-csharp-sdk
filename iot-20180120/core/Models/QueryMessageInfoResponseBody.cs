@@ -24,23 +24,34 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("GenerateTime")]
             [Validation(Required=false)]
             public long? GenerateTime { get; set; }
+
             [NameInMap("MessageContent")]
             [Validation(Required=false)]
             public string MessageContent { get; set; }
+
             [NameInMap("TopicFullName")]
             [Validation(Required=false)]
             public string TopicFullName { get; set; }
+
             [NameInMap("UniMsgId")]
             [Validation(Required=false)]
             public string UniMsgId { get; set; }
+
             [NameInMap("UserProperties")]
             [Validation(Required=false)]
             public List<QueryMessageInfoResponseBodyMessageUserProperties> UserProperties { get; set; }
             public class QueryMessageInfoResponseBodyMessageUserProperties : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
                 public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
                 public string Value { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -21,16 +21,41 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<ListJobResponseBodyDataData> Data { get; set; }
             public class ListJobResponseBodyDataData : TeaModel {
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("JobId")]
+                [Validation(Required=false)]
                 public string JobId { get; set; }
+
+                [NameInMap("JobName")]
+                [Validation(Required=false)]
                 public string JobName { get; set; }
+
+                [NameInMap("ScheduledTime")]
+                [Validation(Required=false)]
                 public long? ScheduledTime { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
+                [NameInMap("UtcCreate")]
+                [Validation(Required=false)]
                 public string UtcCreate { get; set; }
+
+                [NameInMap("UtcModified")]
+                [Validation(Required=false)]
                 public string UtcModified { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

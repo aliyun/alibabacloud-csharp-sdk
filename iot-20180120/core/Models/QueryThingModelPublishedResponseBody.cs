@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("ThingModelJson")]
             [Validation(Required=false)]
             public string ThingModelJson { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

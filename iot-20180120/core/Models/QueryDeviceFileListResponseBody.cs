@@ -25,12 +25,25 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<QueryDeviceFileListResponseBodyDataFileSummary> FileSummary { get; set; }
             public class QueryDeviceFileListResponseBodyDataFileSummary : TeaModel {
+                [NameInMap("FileId")]
+                [Validation(Required=false)]
                 public string FileId { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Size")]
+                [Validation(Required=false)]
                 public string Size { get; set; }
+
+                [NameInMap("UtcCreatedOn")]
+                [Validation(Required=false)]
                 public string UtcCreatedOn { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

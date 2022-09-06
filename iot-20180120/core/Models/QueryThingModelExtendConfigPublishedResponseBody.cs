@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("Configuration")]
             [Validation(Required=false)]
             public string Configuration { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

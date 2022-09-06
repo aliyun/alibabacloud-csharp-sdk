@@ -21,13 +21,21 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<QueryClientIdsResponseBodyDataDynamicRegClientIds> DynamicRegClientIds { get; set; }
             public class QueryClientIdsResponseBodyDataDynamicRegClientIds : TeaModel {
+                [NameInMap("ClientId")]
+                [Validation(Required=false)]
                 public string ClientId { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public long? CreateTime { get; set; }
+
             }
+
             [NameInMap("IotId")]
             [Validation(Required=false)]
             public string IotId { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

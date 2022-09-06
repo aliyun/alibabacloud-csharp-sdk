@@ -21,13 +21,29 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<ListDataSourceItemResponseBodyDataSourceItemsDataSourceItem> DataSourceItem { get; set; }
             public class ListDataSourceItemResponseBodyDataSourceItemsDataSourceItem : TeaModel {
+                [NameInMap("DataSourceItemId")]
+                [Validation(Required=false)]
                 public long? DataSourceItemId { get; set; }
+
+                [NameInMap("DeviceName")]
+                [Validation(Required=false)]
                 public string DeviceName { get; set; }
+
+                [NameInMap("ProductKey")]
+                [Validation(Required=false)]
                 public string ProductKey { get; set; }
+
+                [NameInMap("ScopeType")]
+                [Validation(Required=false)]
                 public string ScopeType { get; set; }
+
+                [NameInMap("Topic")]
+                [Validation(Required=false)]
                 public string Topic { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

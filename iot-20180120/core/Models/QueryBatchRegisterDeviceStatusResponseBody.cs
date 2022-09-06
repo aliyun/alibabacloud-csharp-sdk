@@ -26,9 +26,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 public List<string> Name { get; set; }
 
             }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("ValidList")]
             [Validation(Required=false)]
             public QueryBatchRegisterDeviceStatusResponseBodyDataValidList ValidList { get; set; }
@@ -38,7 +40,8 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 public List<string> Name { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

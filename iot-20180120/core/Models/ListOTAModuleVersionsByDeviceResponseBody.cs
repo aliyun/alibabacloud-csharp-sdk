@@ -25,13 +25,29 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<ListOTAModuleVersionsByDeviceResponseBodyDataSimpleOTAModuleInfo> SimpleOTAModuleInfo { get; set; }
             public class ListOTAModuleVersionsByDeviceResponseBodyDataSimpleOTAModuleInfo : TeaModel {
+                [NameInMap("DeviceName")]
+                [Validation(Required=false)]
                 public string DeviceName { get; set; }
+
+                [NameInMap("IotId")]
+                [Validation(Required=false)]
                 public string IotId { get; set; }
+
+                [NameInMap("ModuleName")]
+                [Validation(Required=false)]
                 public string ModuleName { get; set; }
+
+                [NameInMap("ModuleVersion")]
+                [Validation(Required=false)]
                 public string ModuleVersion { get; set; }
+
+                [NameInMap("ProductKey")]
+                [Validation(Required=false)]
                 public string ProductKey { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

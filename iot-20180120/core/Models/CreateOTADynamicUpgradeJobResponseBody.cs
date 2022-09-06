@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("JobId")]
             [Validation(Required=false)]
             public string JobId { get; set; }
+
             [NameInMap("UtcCreate")]
             [Validation(Required=false)]
             public string UtcCreate { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("OssAddress")]
             [Validation(Required=false)]
             public string OssAddress { get; set; }
+
             [NameInMap("OssPreSignedAddress")]
             [Validation(Required=false)]
             public string OssPreSignedAddress { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

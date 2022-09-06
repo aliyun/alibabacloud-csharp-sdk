@@ -20,13 +20,16 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("ApiSrn")]
             [Validation(Required=false)]
             public string ApiSrn { get; set; }
+
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
+
             [NameInMap("LastUpdateTime")]
             [Validation(Required=false)]
             public long? LastUpdateTime { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

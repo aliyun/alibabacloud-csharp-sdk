@@ -20,23 +20,42 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("RuleList")]
             [Validation(Required=false)]
             public List<QueryEdgeInstanceSceneRuleResponseBodyDataRuleList> RuleList { get; set; }
             public class QueryEdgeInstanceSceneRuleResponseBodyDataRuleList : TeaModel {
+                [NameInMap("GmtCreate")]
+                [Validation(Required=false)]
                 public long? GmtCreate { get; set; }
+
+                [NameInMap("IsExisted")]
+                [Validation(Required=false)]
                 public int? IsExisted { get; set; }
+
+                [NameInMap("RuleId")]
+                [Validation(Required=false)]
                 public string RuleId { get; set; }
+
+                [NameInMap("RuleName")]
+                [Validation(Required=false)]
                 public string RuleName { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public int? Status { get; set; }
+
             }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public int? Total { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

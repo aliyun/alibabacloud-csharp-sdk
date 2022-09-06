@@ -21,8 +21,16 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<BatchGetEdgeInstanceChannelResponseBodyDataChannel> Channel { get; set; }
             public class BatchGetEdgeInstanceChannelResponseBodyDataChannel : TeaModel {
+                [NameInMap("ChannelId")]
+                [Validation(Required=false)]
                 public string ChannelId { get; set; }
+
+                [NameInMap("ChannelName")]
+                [Validation(Required=false)]
                 public string ChannelName { get; set; }
+
+                [NameInMap("ConfigList")]
+                [Validation(Required=false)]
                 public BatchGetEdgeInstanceChannelResponseBodyDataChannelConfigList ConfigList { get; set; }
                 public class BatchGetEdgeInstanceChannelResponseBodyDataChannelConfigList : TeaModel {
                     [NameInMap("Config")]
@@ -48,8 +56,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

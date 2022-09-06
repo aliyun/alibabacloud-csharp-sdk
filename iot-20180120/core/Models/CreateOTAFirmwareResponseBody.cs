@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("FirmwareId")]
             [Validation(Required=false)]
             public string FirmwareId { get; set; }
+
             [NameInMap("UtcCreate")]
             [Validation(Required=false)]
             public string UtcCreate { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

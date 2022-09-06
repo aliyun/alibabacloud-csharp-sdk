@@ -20,6 +20,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
+
             [NameInMap("List")]
             [Validation(Required=false)]
             public GetThingTopoResponseBodyDataList List { get; set; }
@@ -43,16 +44,20 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 }
 
             }
+
             [NameInMap("PageCount")]
             [Validation(Required=false)]
             public long? PageCount { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public long? Total { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

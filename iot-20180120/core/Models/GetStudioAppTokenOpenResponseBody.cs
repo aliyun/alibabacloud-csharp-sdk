@@ -20,19 +20,24 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("BizId")]
             [Validation(Required=false)]
             public string BizId { get; set; }
+
             [NameInMap("BizType")]
             [Validation(Required=false)]
             public string BizType { get; set; }
+
             [NameInMap("IsEnable")]
             [Validation(Required=false)]
             public string IsEnable { get; set; }
+
             [NameInMap("Token")]
             [Validation(Required=false)]
             public string Token { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

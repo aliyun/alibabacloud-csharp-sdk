@@ -48,13 +48,16 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 }
 
             }
+
             [NameInMap("NextTime")]
             [Validation(Required=false)]
             public long? NextTime { get; set; }
+
             [NameInMap("NextValid")]
             [Validation(Required=false)]
             public bool? NextValid { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

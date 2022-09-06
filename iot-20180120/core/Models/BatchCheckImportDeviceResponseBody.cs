@@ -20,16 +20,20 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("InvalidDeviceNameList")]
             [Validation(Required=false)]
             public List<string> InvalidDeviceNameList { get; set; }
+
             [NameInMap("InvalidDeviceSecretList")]
             [Validation(Required=false)]
             public List<string> InvalidDeviceSecretList { get; set; }
+
             [NameInMap("InvalidSnList")]
             [Validation(Required=false)]
             public List<string> InvalidSnList { get; set; }
+
             [NameInMap("RepeatedDeviceNameList")]
             [Validation(Required=false)]
             public List<string> RepeatedDeviceNameList { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

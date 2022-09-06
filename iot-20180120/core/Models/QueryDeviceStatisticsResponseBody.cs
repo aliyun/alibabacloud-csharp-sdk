@@ -20,13 +20,16 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("activeCount")]
             [Validation(Required=false)]
             public long? ActiveCount { get; set; }
+
             [NameInMap("deviceCount")]
             [Validation(Required=false)]
             public long? DeviceCount { get; set; }
+
             [NameInMap("onlineCount")]
             [Validation(Required=false)]
             public long? OnlineCount { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

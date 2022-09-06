@@ -25,14 +25,33 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<QueryLoRaJoinPermissionsResponseBodyJoinPermissionsJoinPermission> JoinPermission { get; set; }
             public class QueryLoRaJoinPermissionsResponseBodyJoinPermissionsJoinPermission : TeaModel {
+                [NameInMap("ClassMode")]
+                [Validation(Required=false)]
                 public string ClassMode { get; set; }
+
+                [NameInMap("Enabled")]
+                [Validation(Required=false)]
                 public bool? Enabled { get; set; }
+
+                [NameInMap("JoinPermissionId")]
+                [Validation(Required=false)]
                 public string JoinPermissionId { get; set; }
+
+                [NameInMap("JoinPermissionName")]
+                [Validation(Required=false)]
                 public string JoinPermissionName { get; set; }
+
+                [NameInMap("JoinPermissionType")]
+                [Validation(Required=false)]
                 public string JoinPermissionType { get; set; }
+
+                [NameInMap("OwnerAliyunPk")]
+                [Validation(Required=false)]
                 public string OwnerAliyunPk { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ProductKey")]
         [Validation(Required=false)]

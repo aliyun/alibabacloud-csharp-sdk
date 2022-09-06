@@ -21,14 +21,33 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<BatchGetDeviceStateResponseBodyDeviceStatusListDeviceStatus> DeviceStatus { get; set; }
             public class BatchGetDeviceStateResponseBodyDeviceStatusListDeviceStatus : TeaModel {
+                [NameInMap("AsAddress")]
+                [Validation(Required=false)]
                 public string AsAddress { get; set; }
+
+                [NameInMap("DeviceId")]
+                [Validation(Required=false)]
                 public string DeviceId { get; set; }
+
+                [NameInMap("DeviceName")]
+                [Validation(Required=false)]
                 public string DeviceName { get; set; }
+
+                [NameInMap("IotId")]
+                [Validation(Required=false)]
                 public string IotId { get; set; }
+
+                [NameInMap("LastOnlineTime")]
+                [Validation(Required=false)]
                 public string LastOnlineTime { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

@@ -28,19 +28,24 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("Configuration")]
             [Validation(Required=false)]
             public string Configuration { get; set; }
+
             [NameInMap("ErrorActionFlag")]
             [Validation(Required=false)]
             public bool? ErrorActionFlag { get; set; }
+
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
+
             [NameInMap("RuleId")]
             [Validation(Required=false)]
             public long? RuleId { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
-        };
+
+        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

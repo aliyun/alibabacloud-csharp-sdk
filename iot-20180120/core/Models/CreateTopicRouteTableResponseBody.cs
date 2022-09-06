@@ -23,8 +23,9 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public class CreateTopicRouteTableResponseBodyFailureTopics : TeaModel {
             [NameInMap("Topic")]
             [Validation(Required=false)]
-            public List<string> Topic { get; set; }
-        };
+            public List<Dictionary<string, object>> Topic { get; set; }
+
+        }
 
         [NameInMap("IsAllSucceed")]
         [Validation(Required=false)]

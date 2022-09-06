@@ -20,6 +20,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
+
             [NameInMap("MessageRouteList")]
             [Validation(Required=false)]
             public QueryEdgeInstanceMessageRoutingResponseBodyDataMessageRouteList MessageRouteList { get; set; }
@@ -55,25 +56,32 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                         [NameInMap("Qos")]
                         [Validation(Required=false)]
                         public string Qos { get; set; }
+
                         [NameInMap("SourceApplicationName")]
                         [Validation(Required=false)]
                         public string SourceApplicationName { get; set; }
+
                         [NameInMap("SourceFcFunctionName")]
                         [Validation(Required=false)]
                         public string SourceFcFunctionName { get; set; }
+
                         [NameInMap("SourceFcServiceName")]
                         [Validation(Required=false)]
                         public string SourceFcServiceName { get; set; }
+
                         [NameInMap("TargetApplicationName")]
                         [Validation(Required=false)]
                         public string TargetApplicationName { get; set; }
+
                         [NameInMap("TargetFcFunctionName")]
                         [Validation(Required=false)]
                         public string TargetFcFunctionName { get; set; }
+
                         [NameInMap("TargetFcServiceName")]
                         [Validation(Required=false)]
                         public string TargetFcServiceName { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("RouteId")]
                     [Validation(Required=false)]
@@ -102,13 +110,16 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 }
 
             }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public int? Total { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

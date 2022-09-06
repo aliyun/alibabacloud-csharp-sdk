@@ -20,19 +20,24 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("Count")]
             [Validation(Required=false)]
             public long? Count { get; set; }
+
             [NameInMap("HasNext")]
             [Validation(Required=false)]
             public bool? HasNext { get; set; }
+
             [NameInMap("PageNum")]
             [Validation(Required=false)]
             public int? PageNum { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("ResultJson")]
             [Validation(Required=false)]
             public string ResultJson { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

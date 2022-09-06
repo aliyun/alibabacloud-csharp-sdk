@@ -20,13 +20,16 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("SourceAccessToken")]
             [Validation(Required=false)]
             public string SourceAccessToken { get; set; }
+
             [NameInMap("SourceURI")]
             [Validation(Required=false)]
             public string SourceURI { get; set; }
+
             [NameInMap("TunnelId")]
             [Validation(Required=false)]
             public string TunnelId { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

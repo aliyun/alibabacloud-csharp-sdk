@@ -20,21 +20,34 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
+
             [NameInMap("LogList")]
             [Validation(Required=false)]
             public List<QueryDetailSceneRuleLogResponseBodyDataLogList> LogList { get; set; }
             public class QueryDetailSceneRuleLogResponseBodyDataLogList : TeaModel {
+                [NameInMap("Code")]
+                [Validation(Required=false)]
                 public string Code { get; set; }
+
+                [NameInMap("Message")]
+                [Validation(Required=false)]
                 public string Message { get; set; }
+
+                [NameInMap("PkDn")]
+                [Validation(Required=false)]
                 public string PkDn { get; set; }
+
             }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public int? Total { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

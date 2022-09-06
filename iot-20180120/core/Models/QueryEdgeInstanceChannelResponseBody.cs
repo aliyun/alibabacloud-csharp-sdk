@@ -41,12 +41,25 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                         [Validation(Required=false)]
                         public List<QueryEdgeInstanceChannelResponseBodyDataChannelListChannelConfigListConfig> Config { get; set; }
                         public class QueryEdgeInstanceChannelResponseBodyDataChannelListChannelConfigListConfig : TeaModel {
+                            [NameInMap("ConfigId")]
+                            [Validation(Required=false)]
                             public string ConfigId { get; set; }
+
+                            [NameInMap("Content")]
+                            [Validation(Required=false)]
                             public string Content { get; set; }
+
+                            [NameInMap("Format")]
+                            [Validation(Required=false)]
                             public string Format { get; set; }
+
+                            [NameInMap("Key")]
+                            [Validation(Required=false)]
                             public string Key { get; set; }
+
                         }
-                    };
+
+                    }
 
                     [NameInMap("GmtCreate")]
                     [Validation(Required=false)]
@@ -67,16 +80,20 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 }
 
             }
+
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public int? Total { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

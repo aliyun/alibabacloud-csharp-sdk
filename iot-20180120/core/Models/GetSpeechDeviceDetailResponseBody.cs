@@ -20,25 +20,32 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("AvailableSpace")]
             [Validation(Required=false)]
             public float? AvailableSpace { get; set; }
+
             [NameInMap("DeviceName")]
             [Validation(Required=false)]
             public string DeviceName { get; set; }
+
             [NameInMap("IotId")]
             [Validation(Required=false)]
             public string IotId { get; set; }
+
             [NameInMap("ProductKey")]
             [Validation(Required=false)]
             public string ProductKey { get; set; }
+
             [NameInMap("SpeechListUpdateTime")]
             [Validation(Required=false)]
             public long? SpeechListUpdateTime { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("TotalSpace")]
             [Validation(Required=false)]
             public float? TotalSpace { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

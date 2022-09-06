@@ -20,22 +20,28 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public long? GmtCreate { get; set; }
+
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public long? GmtModified { get; set; }
+
             [NameInMap("RuleContent")]
             [Validation(Required=false)]
             public string RuleContent { get; set; }
+
             [NameInMap("RuleDescription")]
             [Validation(Required=false)]
             public string RuleDescription { get; set; }
+
             [NameInMap("RuleName")]
             [Validation(Required=false)]
             public string RuleName { get; set; }
+
             [NameInMap("RuleStatus")]
             [Validation(Required=false)]
             public int? RuleStatus { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

@@ -21,15 +21,37 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<ListDestinationResponseBodyDestinationsDestinations> Destinations { get; set; }
             public class ListDestinationResponseBodyDestinationsDestinations : TeaModel {
+                [NameInMap("Configuration")]
+                [Validation(Required=false)]
                 public string Configuration { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("DestinationId")]
+                [Validation(Required=false)]
                 public long? DestinationId { get; set; }
+
+                [NameInMap("IsFailover")]
+                [Validation(Required=false)]
                 public bool? IsFailover { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
+                [NameInMap("UtcCreated")]
+                [Validation(Required=false)]
                 public string UtcCreated { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

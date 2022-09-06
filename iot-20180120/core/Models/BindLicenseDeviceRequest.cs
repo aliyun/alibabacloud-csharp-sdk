@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BindLicenseDeviceRequest : TeaModel {
+        [NameInMap("DeviceNameList")]
+        [Validation(Required=false)]
+        public List<string> DeviceNameList { get; set; }
+
         [NameInMap("IotIdList")]
         [Validation(Required=false)]
         public List<string> IotIdList { get; set; }

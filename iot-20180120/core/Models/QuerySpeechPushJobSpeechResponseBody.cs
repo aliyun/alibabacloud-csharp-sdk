@@ -37,11 +37,21 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                         [Validation(Required=false)]
                         public List<QuerySpeechPushJobSpeechResponseBodyDataListItemsSpeechListItems> Items { get; set; }
                         public class QuerySpeechPushJobSpeechResponseBodyDataListItemsSpeechListItems : TeaModel {
+                            [NameInMap("BizCode")]
+                            [Validation(Required=false)]
                             public string BizCode { get; set; }
+
+                            [NameInMap("Text")]
+                            [Validation(Required=false)]
                             public string Text { get; set; }
+
+                            [NameInMap("Voice")]
+                            [Validation(Required=false)]
                             public string Voice { get; set; }
+
                         }
-                    };
+
+                    }
 
                     [NameInMap("SpeechType")]
                     [Validation(Required=false)]
@@ -58,16 +68,20 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 }
 
             }
+
             [NameInMap("PageId")]
             [Validation(Required=false)]
             public int? PageId { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public int? Total { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

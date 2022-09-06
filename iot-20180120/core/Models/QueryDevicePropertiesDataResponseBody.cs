@@ -33,7 +33,12 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<QueryDevicePropertiesDataResponseBodyPropertyDataInfosPropertyDataInfo> PropertyDataInfo { get; set; }
             public class QueryDevicePropertiesDataResponseBodyPropertyDataInfosPropertyDataInfo : TeaModel {
+                [NameInMap("Identifier")]
+                [Validation(Required=false)]
                 public string Identifier { get; set; }
+
+                [NameInMap("List")]
+                [Validation(Required=false)]
                 public QueryDevicePropertiesDataResponseBodyPropertyDataInfosPropertyDataInfoList List { get; set; }
                 public class QueryDevicePropertiesDataResponseBodyPropertyDataInfosPropertyDataInfoList : TeaModel {
                     [NameInMap("PropertyInfo")]
@@ -51,8 +56,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

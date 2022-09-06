@@ -21,18 +21,49 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<QueryDeviceByStatusResponseBodyDataSimpleDeviceInfo> SimpleDeviceInfo { get; set; }
             public class QueryDeviceByStatusResponseBodyDataSimpleDeviceInfo : TeaModel {
+                [NameInMap("DeviceName")]
+                [Validation(Required=false)]
                 public string DeviceName { get; set; }
+
+                [NameInMap("DeviceSecret")]
+                [Validation(Required=false)]
                 public string DeviceSecret { get; set; }
+
+                [NameInMap("GmtCreate")]
+                [Validation(Required=false)]
                 public string GmtCreate { get; set; }
+
+                [NameInMap("GmtModified")]
+                [Validation(Required=false)]
                 public string GmtModified { get; set; }
+
+                [NameInMap("IotId")]
+                [Validation(Required=false)]
                 public string IotId { get; set; }
+
+                [NameInMap("Nickname")]
+                [Validation(Required=false)]
                 public string Nickname { get; set; }
+
+                [NameInMap("ProductKey")]
+                [Validation(Required=false)]
                 public string ProductKey { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("UtcCreate")]
+                [Validation(Required=false)]
                 public string UtcCreate { get; set; }
+
+                [NameInMap("UtcModified")]
+                [Validation(Required=false)]
                 public string UtcModified { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

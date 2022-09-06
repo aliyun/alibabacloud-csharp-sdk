@@ -25,13 +25,29 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<ListProductByTagsResponseBodyProductInfosProductInfo> ProductInfo { get; set; }
             public class ListProductByTagsResponseBodyProductInfosProductInfo : TeaModel {
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public long? CreateTime { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("NodeType")]
+                [Validation(Required=false)]
                 public int? NodeType { get; set; }
+
+                [NameInMap("ProductKey")]
+                [Validation(Required=false)]
                 public string ProductKey { get; set; }
+
+                [NameInMap("ProductName")]
+                [Validation(Required=false)]
                 public string ProductName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

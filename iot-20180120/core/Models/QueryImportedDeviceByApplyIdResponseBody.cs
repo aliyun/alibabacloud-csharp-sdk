@@ -21,12 +21,25 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<QueryImportedDeviceByApplyIdResponseBodyDeviceListDevice> Device { get; set; }
             public class QueryImportedDeviceByApplyIdResponseBodyDeviceListDevice : TeaModel {
+                [NameInMap("DeviceName")]
+                [Validation(Required=false)]
                 public string DeviceName { get; set; }
+
+                [NameInMap("DeviceSecret")]
+                [Validation(Required=false)]
                 public string DeviceSecret { get; set; }
+
+                [NameInMap("ProductKey")]
+                [Validation(Required=false)]
                 public string ProductKey { get; set; }
+
+                [NameInMap("Sn")]
+                [Validation(Required=false)]
                 public string Sn { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

@@ -21,11 +21,21 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<QuerySoundCodeLabelBatchFailedResultResponseBodyDataItems> Items { get; set; }
             public class QuerySoundCodeLabelBatchFailedResultResponseBodyDataItems : TeaModel {
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
                 public string ErrorMessage { get; set; }
+
+                [NameInMap("Label")]
+                [Validation(Required=false)]
                 public string Label { get; set; }
+
+                [NameInMap("ResultCode")]
+                [Validation(Required=false)]
                 public string ResultCode { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

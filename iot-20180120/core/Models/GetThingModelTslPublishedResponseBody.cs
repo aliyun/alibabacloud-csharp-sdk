@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("TslStr")]
             [Validation(Required=false)]
             public string TslStr { get; set; }
+
             [NameInMap("TslUri")]
             [Validation(Required=false)]
             public string TslUri { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

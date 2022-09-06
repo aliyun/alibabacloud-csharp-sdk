@@ -20,66 +20,87 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("DestVersion")]
             [Validation(Required=false)]
             public string DestVersion { get; set; }
+
             [NameInMap("DownloadProtocol")]
             [Validation(Required=false)]
             public string DownloadProtocol { get; set; }
+
             [NameInMap("DynamicMode")]
             [Validation(Required=false)]
             public int? DynamicMode { get; set; }
+
             [NameInMap("FirmwareId")]
             [Validation(Required=false)]
             public string FirmwareId { get; set; }
+
             [NameInMap("GrayPercent")]
             [Validation(Required=false)]
             public string GrayPercent { get; set; }
+
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public string GroupId { get; set; }
+
             [NameInMap("GroupName")]
             [Validation(Required=false)]
             public string GroupName { get; set; }
+
             [NameInMap("JobDesc")]
             [Validation(Required=false)]
             public string JobDesc { get; set; }
+
             [NameInMap("JobId")]
             [Validation(Required=false)]
             public string JobId { get; set; }
+
             [NameInMap("JobStatus")]
             [Validation(Required=false)]
             public string JobStatus { get; set; }
+
             [NameInMap("JobType")]
             [Validation(Required=false)]
             public string JobType { get; set; }
+
             [NameInMap("MaximumPerMinute")]
             [Validation(Required=false)]
             public int? MaximumPerMinute { get; set; }
+
             [NameInMap("MultiModuleMode")]
             [Validation(Required=false)]
             public bool? MultiModuleMode { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
             [NameInMap("NeedConfirm")]
             [Validation(Required=false)]
             public bool? NeedConfirm { get; set; }
+
             [NameInMap("NeedPush")]
             [Validation(Required=false)]
             public bool? NeedPush { get; set; }
+
             [NameInMap("OverwriteMode")]
             [Validation(Required=false)]
             public int? OverwriteMode { get; set; }
+
             [NameInMap("ProductKey")]
             [Validation(Required=false)]
             public string ProductKey { get; set; }
+
             [NameInMap("RetryCount")]
             [Validation(Required=false)]
             public int? RetryCount { get; set; }
+
             [NameInMap("RetryInterval")]
             [Validation(Required=false)]
             public int? RetryInterval { get; set; }
+
             [NameInMap("SelectionType")]
             [Validation(Required=false)]
             public string SelectionType { get; set; }
+
             [NameInMap("SrcVersions")]
             [Validation(Required=false)]
             public QueryOTAJobResponseBodyDataSrcVersions SrcVersions { get; set; }
@@ -89,6 +110,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 public List<string> SrcVersion { get; set; }
 
             }
+
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public QueryOTAJobResponseBodyDataTags Tags { get; set; }
@@ -108,31 +130,40 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 }
 
             }
+
             [NameInMap("TargetSelection")]
             [Validation(Required=false)]
             public string TargetSelection { get; set; }
+
             [NameInMap("TimeoutInMinutes")]
             [Validation(Required=false)]
             public int? TimeoutInMinutes { get; set; }
+
             [NameInMap("UtcCreate")]
             [Validation(Required=false)]
             public string UtcCreate { get; set; }
+
             [NameInMap("UtcEndTime")]
             [Validation(Required=false)]
             public string UtcEndTime { get; set; }
+
             [NameInMap("UtcModified")]
             [Validation(Required=false)]
             public string UtcModified { get; set; }
+
             [NameInMap("UtcScheduleFinishTime")]
             [Validation(Required=false)]
             public string UtcScheduleFinishTime { get; set; }
+
             [NameInMap("UtcScheduleTime")]
             [Validation(Required=false)]
             public string UtcScheduleTime { get; set; }
+
             [NameInMap("UtcStartTime")]
             [Validation(Required=false)]
             public string UtcStartTime { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

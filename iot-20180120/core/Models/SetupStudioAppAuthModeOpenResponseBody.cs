@@ -20,6 +20,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("AuthMode")]
             [Validation(Required=false)]
             public int? AuthMode { get; set; }
+
             [NameInMap("TokenInfo")]
             [Validation(Required=false)]
             public SetupStudioAppAuthModeOpenResponseBodyDataTokenInfo TokenInfo { get; set; }
@@ -45,7 +46,8 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 public string Type { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

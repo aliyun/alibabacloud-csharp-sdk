@@ -24,7 +24,8 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("IssueModel")]
             [Validation(Required=false)]
             public int? IssueModel { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

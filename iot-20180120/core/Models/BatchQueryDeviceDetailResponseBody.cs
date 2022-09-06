@@ -21,22 +21,65 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<BatchQueryDeviceDetailResponseBodyDataData> Data { get; set; }
             public class BatchQueryDeviceDetailResponseBodyDataData : TeaModel {
+                [NameInMap("DeviceName")]
+                [Validation(Required=false)]
                 public string DeviceName { get; set; }
+
+                [NameInMap("DeviceSecret")]
+                [Validation(Required=false)]
                 public string DeviceSecret { get; set; }
+
+                [NameInMap("FirmwareVersion")]
+                [Validation(Required=false)]
                 public string FirmwareVersion { get; set; }
+
+                [NameInMap("GmtActive")]
+                [Validation(Required=false)]
                 public string GmtActive { get; set; }
+
+                [NameInMap("GmtCreate")]
+                [Validation(Required=false)]
                 public string GmtCreate { get; set; }
+
+                [NameInMap("IotId")]
+                [Validation(Required=false)]
                 public string IotId { get; set; }
+
+                [NameInMap("Nickname")]
+                [Validation(Required=false)]
                 public string Nickname { get; set; }
+
+                [NameInMap("NodeType")]
+                [Validation(Required=false)]
                 public int? NodeType { get; set; }
+
+                [NameInMap("ProductKey")]
+                [Validation(Required=false)]
                 public string ProductKey { get; set; }
+
+                [NameInMap("ProductName")]
+                [Validation(Required=false)]
                 public string ProductName { get; set; }
+
+                [NameInMap("Region")]
+                [Validation(Required=false)]
                 public string Region { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("UtcActive")]
+                [Validation(Required=false)]
                 public string UtcActive { get; set; }
+
+                [NameInMap("UtcCreate")]
+                [Validation(Required=false)]
                 public string UtcCreate { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

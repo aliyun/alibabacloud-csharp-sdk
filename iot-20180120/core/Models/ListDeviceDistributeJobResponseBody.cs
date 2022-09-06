@@ -69,11 +69,21 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                         [Validation(Required=false)]
                         public List<ListDeviceDistributeJobResponseBodyDataJobInfoItemsTargetInstanceConfigsTargetInstanceConfigs> TargetInstanceConfigs { get; set; }
                         public class ListDeviceDistributeJobResponseBodyDataJobInfoItemsTargetInstanceConfigsTargetInstanceConfigs : TeaModel {
+                            [NameInMap("TargetInstanceId")]
+                            [Validation(Required=false)]
                             public string TargetInstanceId { get; set; }
+
+                            [NameInMap("TargetInstanceName")]
+                            [Validation(Required=false)]
                             public string TargetInstanceName { get; set; }
+
+                            [NameInMap("TargetRegion")]
+                            [Validation(Required=false)]
                             public string TargetRegion { get; set; }
+
                         }
-                    };
+
+                    }
 
                     [NameInMap("TargetUid")]
                     [Validation(Required=false)]
@@ -86,13 +96,16 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 }
 
             }
+
             [NameInMap("NextToken")]
             [Validation(Required=false)]
             public string NextToken { get; set; }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public int? Total { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

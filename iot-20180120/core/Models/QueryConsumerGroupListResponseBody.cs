@@ -25,11 +25,21 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<QueryConsumerGroupListResponseBodyDataConsumerGroupDTO> ConsumerGroupDTO { get; set; }
             public class QueryConsumerGroupListResponseBodyDataConsumerGroupDTO : TeaModel {
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("GroupId")]
+                [Validation(Required=false)]
                 public string GroupId { get; set; }
+
+                [NameInMap("GroupName")]
+                [Validation(Required=false)]
                 public string GroupName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

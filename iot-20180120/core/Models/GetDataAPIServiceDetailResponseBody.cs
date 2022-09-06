@@ -20,30 +20,39 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("ApiPath")]
             [Validation(Required=false)]
             public string ApiPath { get; set; }
+
             [NameInMap("ApiSrn")]
             [Validation(Required=false)]
             public string ApiSrn { get; set; }
+
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
+
             [NameInMap("DateFormat")]
             [Validation(Required=false)]
             public string DateFormat { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
+
             [NameInMap("LastUpdateTime")]
             [Validation(Required=false)]
             public long? LastUpdateTime { get; set; }
+
             [NameInMap("RequestMethod")]
             [Validation(Required=false)]
             public string RequestMethod { get; set; }
+
             [NameInMap("RequestProtocol")]
             [Validation(Required=false)]
             public string RequestProtocol { get; set; }
+
             [NameInMap("SqlTemplateDTO")]
             [Validation(Required=false)]
             public GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTO SqlTemplateDTO { get; set; }
@@ -60,13 +69,29 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                     [Validation(Required=false)]
                     public List<GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTORequestParamsRequestParams> RequestParams { get; set; }
                     public class GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTORequestParamsRequestParams : TeaModel {
+                        [NameInMap("Desc")]
+                        [Validation(Required=false)]
                         public string Desc { get; set; }
+
+                        [NameInMap("Example")]
+                        [Validation(Required=false)]
                         public string Example { get; set; }
+
+                        [NameInMap("Name")]
+                        [Validation(Required=false)]
                         public string Name { get; set; }
+
+                        [NameInMap("Required")]
+                        [Validation(Required=false)]
                         public bool? Required { get; set; }
+
+                        [NameInMap("Type")]
+                        [Validation(Required=false)]
                         public string Type { get; set; }
+
                     }
-                };
+
+                }
 
                 [NameInMap("ResponseParams")]
                 [Validation(Required=false)]
@@ -76,23 +101,41 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                     [Validation(Required=false)]
                     public List<GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTOResponseParamsResponseParams> ResponseParams { get; set; }
                     public class GetDataAPIServiceDetailResponseBodyDataSqlTemplateDTOResponseParamsResponseParams : TeaModel {
+                        [NameInMap("Desc")]
+                        [Validation(Required=false)]
                         public string Desc { get; set; }
+
+                        [NameInMap("Example")]
+                        [Validation(Required=false)]
                         public string Example { get; set; }
+
+                        [NameInMap("Name")]
+                        [Validation(Required=false)]
                         public string Name { get; set; }
+
+                        [NameInMap("Required")]
+                        [Validation(Required=false)]
                         public bool? Required { get; set; }
+
+                        [NameInMap("Type")]
+                        [Validation(Required=false)]
                         public string Type { get; set; }
+
                     }
-                };
+
+                }
 
                 [NameInMap("TemplateSql")]
                 [Validation(Required=false)]
                 public string TemplateSql { get; set; }
 
             }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
