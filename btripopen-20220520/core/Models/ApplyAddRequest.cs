@@ -46,30 +46,46 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [NameInMap("business_discount")]
             [Validation(Required=false)]
             public int? BusinessDiscount { get; set; }
+
             [NameInMap("economy_discount")]
             [Validation(Required=false)]
             public int? EconomyDiscount { get; set; }
+
             [NameInMap("first_discount")]
             [Validation(Required=false)]
             public int? FirstDiscount { get; set; }
+
             [NameInMap("flight_cabins")]
             [Validation(Required=false)]
             public string FlightCabins { get; set; }
+
             [NameInMap("hotel_citys")]
             [Validation(Required=false)]
             public List<ApplyAddRequestExternalTravelerStandardHotelCitys> HotelCitys { get; set; }
             public class ApplyAddRequestExternalTravelerStandardHotelCitys : TeaModel {
+                [NameInMap("city_code")]
+                [Validation(Required=false)]
                 public string CityCode { get; set; }
+
+                [NameInMap("city_name")]
+                [Validation(Required=false)]
                 public string CityName { get; set; }
+
+                [NameInMap("fee")]
+                [Validation(Required=false)]
                 public long? Fee { get; set; }
+
             }
+
             [NameInMap("reserve_type")]
             [Validation(Required=false)]
             public int? ReserveType { get; set; }
+
             [NameInMap("train_seats")]
             [Validation(Required=false)]
             public string TrainSeats { get; set; }
-        };
+
+        }
 
         [NameInMap("flight_budget")]
         [Validation(Required=false)]
@@ -86,10 +102,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [NameInMap("param")]
             [Validation(Required=false)]
             public string Param { get; set; }
+
             [NameInMap("type")]
             [Validation(Required=false)]
             public string Type { get; set; }
-        };
+
+        }
 
         [NameInMap("international_flight_cabins")]
         [Validation(Required=false)]

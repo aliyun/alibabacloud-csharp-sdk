@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [NameInMap("remove_num")]
             [Validation(Required=false)]
             public int? RemoveNum { get; set; }
+
             [NameInMap("selected_user_num")]
             [Validation(Required=false)]
             public int? SelectedUserNum { get; set; }
-        };
+
+        }
 
         [NameInMap("more_page")]
         [Validation(Required=false)]

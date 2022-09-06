@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [NameInMap("expire")]
             [Validation(Required=false)]
             public long? Expire { get; set; }
+
             [NameInMap("token")]
             [Validation(Required=false)]
             public string Token { get; set; }
-        };
+
+        }
 
         [NameInMap("message")]
         [Validation(Required=false)]

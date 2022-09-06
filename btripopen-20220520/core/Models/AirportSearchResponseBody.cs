@@ -17,15 +17,29 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<AirportSearchResponseBodyModuleCities> Cities { get; set; }
             public class AirportSearchResponseBodyModuleCities : TeaModel {
+                [NameInMap("code")]
+                [Validation(Required=false)]
                 public string Code { get; set; }
+
+                [NameInMap("distance")]
+                [Validation(Required=false)]
                 public int? Distance { get; set; }
+
+                [NameInMap("name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("travel_name")]
+                [Validation(Required=false)]
                 public string TravelName { get; set; }
+
             }
+
             [NameInMap("nearby")]
             [Validation(Required=false)]
             public bool? Nearby { get; set; }
-        };
+
+        }
 
         [NameInMap("requestId")]
         [Validation(Required=false)]

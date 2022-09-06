@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [NameInMap("id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
-        };
+
+        }
 
         [NameInMap("result_code")]
         [Validation(Required=false)]

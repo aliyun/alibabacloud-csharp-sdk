@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [NameInMap("url")]
             [Validation(Required=false)]
             public string Url { get; set; }
-        };
+
+        }
 
         [NameInMap("result_code")]
         [Validation(Required=false)]

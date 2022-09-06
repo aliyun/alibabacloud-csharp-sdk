@@ -56,16 +56,20 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("corp_id")]
                 [Validation(Required=false)]
                 public string CorpId { get; set; }
+
                 [NameInMap("id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
+
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
+
                 [NameInMap("number")]
                 [Validation(Required=false)]
                 public string Number { get; set; }
-            };
+
+            }
 
             [NameInMap("dep_city")]
             [Validation(Required=false)]
@@ -106,10 +110,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
+
                 [NameInMap("title")]
                 [Validation(Required=false)]
                 public string Title { get; set; }
-            };
+
+            }
 
             [NameInMap("price_info_list")]
             [Validation(Required=false)]
@@ -264,13 +270,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [NameInMap("page")]
             [Validation(Required=false)]
             public int? Page { get; set; }
+
             [NameInMap("page_size")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("total_number")]
             [Validation(Required=false)]
             public int? TotalNumber { get; set; }
-        };
+
+        }
 
         [NameInMap("result_code")]
         [Validation(Required=false)]

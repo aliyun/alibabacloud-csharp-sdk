@@ -274,13 +274,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [NameInMap("page")]
             [Validation(Required=false)]
             public int? Page { get; set; }
+
             [NameInMap("page_size")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("total_number")]
             [Validation(Required=false)]
             public int? TotalNumber { get; set; }
-        };
+
+        }
 
         [NameInMap("result_code")]
         [Validation(Required=false)]

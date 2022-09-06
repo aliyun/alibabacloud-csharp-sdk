@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<CitySearchResponseBodyModuleCities> Cities { get; set; }
             public class CitySearchResponseBodyModuleCities : TeaModel {
+                [NameInMap("code")]
+                [Validation(Required=false)]
                 public string Code { get; set; }
+
+                [NameInMap("name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("region")]
+                [Validation(Required=false)]
                 public int? Region { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("requestId")]
         [Validation(Required=false)]
