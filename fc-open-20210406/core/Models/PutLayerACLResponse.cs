@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=true)]
         public int? StatusCode { get; set; }
 
-        [NameInMap("body")]
-        [Validation(Required=true)]
-        public string Body { get; set; }
-
     }
 
 }

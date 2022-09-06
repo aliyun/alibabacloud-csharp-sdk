@@ -1,3 +1,6 @@
+2022-09-06 Version: 1.1.10
+- Update PutLayerACL output.
+
 2022-09-02 Version: 1.1.9
 - Add ClaimGPUInstance for GPU render.
 - Add ReleaseGPUInstance for GPU render.

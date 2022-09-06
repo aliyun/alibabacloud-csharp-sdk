@@ -6660,7 +6660,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "string",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutLayerACLResponse>(CallApi(params_, req, runtime));
         }
@@ -6706,7 +6706,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "string",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutLayerACLResponse>(await CallApiAsync(params_, req, runtime));
         }
