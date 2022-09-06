@@ -1,0 +1,42 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.OutboundBot20191226.Models
+{
+    public class ModifyTTSConfigRequest : TeaModel {
+        [NameInMap("AppKey")]
+        [Validation(Required=false)]
+        public string AppKey { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("NlsServiceType")]
+        [Validation(Required=false)]
+        public string NlsServiceType { get; set; }
+
+        [NameInMap("ScriptId")]
+        [Validation(Required=false)]
+        public string ScriptId { get; set; }
+
+        [NameInMap("SpeechRate")]
+        [Validation(Required=false)]
+        public string SpeechRate { get; set; }
+
+        [NameInMap("Voice")]
+        [Validation(Required=false)]
+        public string Voice { get; set; }
+
+        [NameInMap("Volume")]
+        [Validation(Required=false)]
+        public string Volume { get; set; }
+
+    }
+
+}
