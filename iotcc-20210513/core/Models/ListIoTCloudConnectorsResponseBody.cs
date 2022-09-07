@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.IoTCC20210513.Models
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
+            [NameInMap("GrantAliUid")]
+            [Validation(Required=false)]
+            public string GrantAliUid { get; set; }
+
             [NameInMap("ISP")]
             [Validation(Required=false)]
             public string ISP { get; set; }
@@ -64,6 +68,10 @@ namespace AlibabaCloud.SDK.IoTCC20210513.Models
             [NameInMap("RateLimit")]
             [Validation(Required=false)]
             public long? RateLimit { get; set; }
+
+            [NameInMap("ServiceType")]
+            [Validation(Required=false)]
+            public string ServiceType { get; set; }
 
             [NameInMap("Type")]
             [Validation(Required=false)]

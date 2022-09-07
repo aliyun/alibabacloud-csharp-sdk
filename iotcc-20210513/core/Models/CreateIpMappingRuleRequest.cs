@@ -8,38 +8,38 @@ using Tea;
 
 namespace AlibabaCloud.SDK.IoTCC20210513.Models
 {
-    public class UpdateIoTCloudConnectorAttributeRequest : TeaModel {
+    public class CreateIpMappingRuleRequest : TeaModel {
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("DestinationIp")]
+        [Validation(Required=false)]
+        public string DestinationIp { get; set; }
 
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
-        [NameInMap("IoTCloudConnectorDescription")]
-        [Validation(Required=false)]
-        public string IoTCloudConnectorDescription { get; set; }
-
         [NameInMap("IoTCloudConnectorId")]
         [Validation(Required=false)]
         public string IoTCloudConnectorId { get; set; }
 
-        [NameInMap("IoTCloudConnectorName")]
+        [NameInMap("IpMappingRuleDescription")]
         [Validation(Required=false)]
-        public string IoTCloudConnectorName { get; set; }
+        public string IpMappingRuleDescription { get; set; }
 
-        [NameInMap("Mode")]
+        [NameInMap("IpMappingRuleName")]
         [Validation(Required=false)]
-        public string Mode { get; set; }
+        public string IpMappingRuleName { get; set; }
+
+        [NameInMap("MappingIp")]
+        [Validation(Required=false)]
+        public string MappingIp { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        [NameInMap("WildcardDomainEnabled")]
-        [Validation(Required=false)]
-        public bool? WildcardDomainEnabled { get; set; }
 
     }
 

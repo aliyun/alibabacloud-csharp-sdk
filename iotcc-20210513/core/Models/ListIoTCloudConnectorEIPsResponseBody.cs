@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.IoTCC20210513.Models
 {
-    public class ListAPNsRequest : TeaModel {
-        [NameInMap("APN")]
+    public class ListIoTCloudConnectorEIPsResponseBody : TeaModel {
+        [NameInMap("EIPs")]
         [Validation(Required=false)]
-        public string APN { get; set; }
-
-        [NameInMap("ISP")]
-        [Validation(Required=false)]
-        public string ISP { get; set; }
+        public List<string> EIPs { get; set; }
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -25,13 +21,13 @@ namespace AlibabaCloud.SDK.IoTCC20210513.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("Type")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public int? TotalCount { get; set; }
 
     }
 

@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.IoTCC20210513.Models
         [Validation(Required=false)]
         public List<string> Destination { get; set; }
 
+        [NameInMap("DestinationPort")]
+        [Validation(Required=false)]
+        public List<string> DestinationPort { get; set; }
+
         [NameInMap("DestinationType")]
         [Validation(Required=false)]
         public List<string> DestinationType { get; set; }
@@ -48,6 +52,10 @@ namespace AlibabaCloud.SDK.IoTCC20210513.Models
         [NameInMap("Policy")]
         [Validation(Required=false)]
         public List<string> Policy { get; set; }
+
+        [NameInMap("Protocol")]
+        [Validation(Required=false)]
+        public List<string> Protocol { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]

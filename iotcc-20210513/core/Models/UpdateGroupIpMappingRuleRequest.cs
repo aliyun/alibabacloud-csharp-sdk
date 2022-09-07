@@ -1,0 +1,50 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.IoTCC20210513.Models
+{
+    public class UpdateGroupIpMappingRuleRequest : TeaModel {
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        [NameInMap("DestinationIp")]
+        [Validation(Required=false)]
+        public string DestinationIp { get; set; }
+
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        [NameInMap("GroupIpMappingRuleId")]
+        [Validation(Required=false)]
+        public string GroupIpMappingRuleId { get; set; }
+
+        [NameInMap("IoTCloudConnectorGroupId")]
+        [Validation(Required=false)]
+        public string IoTCloudConnectorGroupId { get; set; }
+
+        [NameInMap("IpMappingRuleDescription")]
+        [Validation(Required=false)]
+        public string IpMappingRuleDescription { get; set; }
+
+        [NameInMap("IpMappingRuleName")]
+        [Validation(Required=false)]
+        public string IpMappingRuleName { get; set; }
+
+        [NameInMap("MappingIp")]
+        [Validation(Required=false)]
+        public string MappingIp { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+    }
+
+}

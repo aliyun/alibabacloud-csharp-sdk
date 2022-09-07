@@ -61,11 +61,19 @@ namespace AlibabaCloud.SDK.IoTCC20210513.Models
                 [Validation(Required=false)]
                 public string IoTCloudConnectorStatus { get; set; }
 
+                [NameInMap("ServiceType")]
+                [Validation(Required=false)]
+                public string ServiceType { get; set; }
+
             }
 
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
+            [NameInMap("ServiceType")]
+            [Validation(Required=false)]
+            public string ServiceType { get; set; }
 
             [NameInMap("Type")]
             [Validation(Required=false)]

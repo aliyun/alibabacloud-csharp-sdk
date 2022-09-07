@@ -8,30 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.IoTCC20210513.Models
 {
-    public class ListAPNsRequest : TeaModel {
-        [NameInMap("APN")]
+    public class DeleteIpMappingRuleRequest : TeaModel {
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string APN { get; set; }
+        public string ClientToken { get; set; }
 
-        [NameInMap("ISP")]
+        [NameInMap("DryRun")]
         [Validation(Required=false)]
-        public string ISP { get; set; }
+        public bool? DryRun { get; set; }
 
-        [NameInMap("MaxResults")]
+        [NameInMap("IoTCloudConnectorId")]
         [Validation(Required=false)]
-        public int? MaxResults { get; set; }
+        public string IoTCloudConnectorId { get; set; }
 
-        [NameInMap("NextToken")]
+        [NameInMap("IpMappingRuleId")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
+        public string IpMappingRuleId { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
 
     }
 

@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.IoTCC20210513.Models
 {
-    public class GetConnectionPoolIpOperationResultResponseBody : TeaModel {
+    public class ConfirmIoTCloudConnectorResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("ResultFilePaths")]
+        [NameInMap("ResourceId")]
         [Validation(Required=false)]
-        public List<string> ResultFilePaths { get; set; }
+        public string ResourceId { get; set; }
 
     }
 

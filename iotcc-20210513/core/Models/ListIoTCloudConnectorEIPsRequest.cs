@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.IoTCC20210513.Models
 {
-    public class ListAPNsRequest : TeaModel {
-        [NameInMap("APN")]
+    public class ListIoTCloudConnectorEIPsRequest : TeaModel {
+        [NameInMap("IoTCloudConnectorId")]
         [Validation(Required=false)]
-        public string APN { get; set; }
-
-        [NameInMap("ISP")]
-        [Validation(Required=false)]
-        public string ISP { get; set; }
+        public string IoTCloudConnectorId { get; set; }
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -28,10 +24,6 @@ namespace AlibabaCloud.SDK.IoTCC20210513.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
 
     }
 
