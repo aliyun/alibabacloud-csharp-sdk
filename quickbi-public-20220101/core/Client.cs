@@ -881,6 +881,104 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return await AuthorizeMenuWithOptionsAsync(request, runtime);
         }
 
+        public BatchAddFeishuUsersResponse BatchAddFeishuUsersWithOptions(BatchAddFeishuUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeishuUsers))
+            {
+                query["FeishuUsers"] = request.FeishuUsers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAdmin))
+            {
+                query["IsAdmin"] = request.IsAdmin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAuthAdmin))
+            {
+                query["IsAuthAdmin"] = request.IsAuthAdmin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                query["UserGroupIds"] = request.UserGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserType))
+            {
+                query["UserType"] = request.UserType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchAddFeishuUsers",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchAddFeishuUsersResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<BatchAddFeishuUsersResponse> BatchAddFeishuUsersWithOptionsAsync(BatchAddFeishuUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeishuUsers))
+            {
+                query["FeishuUsers"] = request.FeishuUsers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAdmin))
+            {
+                query["IsAdmin"] = request.IsAdmin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAuthAdmin))
+            {
+                query["IsAuthAdmin"] = request.IsAuthAdmin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                query["UserGroupIds"] = request.UserGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserType))
+            {
+                query["UserType"] = request.UserType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchAddFeishuUsers",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchAddFeishuUsersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public BatchAddFeishuUsersResponse BatchAddFeishuUsers(BatchAddFeishuUsersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchAddFeishuUsersWithOptions(request, runtime);
+        }
+
+        public async Task<BatchAddFeishuUsersResponse> BatchAddFeishuUsersAsync(BatchAddFeishuUsersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchAddFeishuUsersWithOptionsAsync(request, runtime);
+        }
+
         public CancelAuthorizationMenuResponse CancelAuthorizationMenuWithOptions(CancelAuthorizationMenuRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
