@@ -37,6 +37,36 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public string DriftDetectionTime { get; set; }
 
+            [NameInMap("OperationInfo")]
+            [Validation(Required=false)]
+            public ListStacksResponseBodyStacksOperationInfo OperationInfo { get; set; }
+            public class ListStacksResponseBodyStacksOperationInfo : TeaModel {
+                [NameInMap("Action")]
+                [Validation(Required=false)]
+                public string Action { get; set; }
+
+                [NameInMap("Code")]
+                [Validation(Required=false)]
+                public string Code { get; set; }
+
+                [NameInMap("LogicalResourceId")]
+                [Validation(Required=false)]
+                public string LogicalResourceId { get; set; }
+
+                [NameInMap("Message")]
+                [Validation(Required=false)]
+                public string Message { get; set; }
+
+                [NameInMap("RequestId")]
+                [Validation(Required=false)]
+                public string RequestId { get; set; }
+
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
+                public string ResourceType { get; set; }
+
+            }
+
             [NameInMap("ParentStackId")]
             [Validation(Required=false)]
             public string ParentStackId { get; set; }
