@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string RouteMode { get; set; }
 
+        [NameInMap("TransitRouterType")]
+        [Validation(Required=false)]
+        public string TransitRouterType { get; set; }
+
         [NameInMap("VpcFirewallId")]
         [Validation(Required=false)]
         public string VpcFirewallId { get; set; }

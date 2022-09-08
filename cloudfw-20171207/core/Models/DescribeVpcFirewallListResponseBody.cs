@@ -40,13 +40,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 [NameInMap("BasicRules")]
                 [Validation(Required=false)]
                 public int? BasicRules { get; set; }
+
                 [NameInMap("EnableAllPatch")]
                 [Validation(Required=false)]
                 public int? EnableAllPatch { get; set; }
+
                 [NameInMap("RunMode")]
                 [Validation(Required=false)]
                 public int? RunMode { get; set; }
-            };
+
+            }
 
             [NameInMap("LocalVpc")]
             [Validation(Required=false)]
@@ -55,30 +58,48 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 [NameInMap("AuthorizationStatus")]
                 [Validation(Required=false)]
                 public string AuthorizationStatus { get; set; }
+
                 [NameInMap("OwnerId")]
                 [Validation(Required=false)]
                 public long? OwnerId { get; set; }
+
                 [NameInMap("RegionNo")]
                 [Validation(Required=false)]
                 public string RegionNo { get; set; }
+
                 [NameInMap("VpcCidrTableList")]
                 [Validation(Required=false)]
                 public List<DescribeVpcFirewallListResponseBodyVpcFirewallsLocalVpcVpcCidrTableList> VpcCidrTableList { get; set; }
                 public class DescribeVpcFirewallListResponseBodyVpcFirewallsLocalVpcVpcCidrTableList : TeaModel {
+                    [NameInMap("RouteEntryList")]
+                    [Validation(Required=false)]
                     public List<DescribeVpcFirewallListResponseBodyVpcFirewallsLocalVpcVpcCidrTableListRouteEntryList> RouteEntryList { get; set; }
                     public class DescribeVpcFirewallListResponseBodyVpcFirewallsLocalVpcVpcCidrTableListRouteEntryList : TeaModel {
+                        [NameInMap("DestinationCidr")]
+                        [Validation(Required=false)]
                         public string DestinationCidr { get; set; }
+
+                        [NameInMap("NextHopInstanceId")]
+                        [Validation(Required=false)]
                         public string NextHopInstanceId { get; set; }
+
                     }
+
+                    [NameInMap("RouteTableId")]
+                    [Validation(Required=false)]
                     public string RouteTableId { get; set; }
+
                 }
+
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
+
                 [NameInMap("VpcName")]
                 [Validation(Required=false)]
                 public string VpcName { get; set; }
-            };
+
+            }
 
             [NameInMap("MemberUid")]
             [Validation(Required=false)]
@@ -91,30 +112,48 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 [NameInMap("AuthorizationStatus")]
                 [Validation(Required=false)]
                 public string AuthorizationStatus { get; set; }
+
                 [NameInMap("OwnerId")]
                 [Validation(Required=false)]
                 public long? OwnerId { get; set; }
+
                 [NameInMap("RegionNo")]
                 [Validation(Required=false)]
                 public string RegionNo { get; set; }
+
                 [NameInMap("VpcCidrTableList")]
                 [Validation(Required=false)]
                 public List<DescribeVpcFirewallListResponseBodyVpcFirewallsPeerVpcVpcCidrTableList> VpcCidrTableList { get; set; }
                 public class DescribeVpcFirewallListResponseBodyVpcFirewallsPeerVpcVpcCidrTableList : TeaModel {
+                    [NameInMap("RouteEntryList")]
+                    [Validation(Required=false)]
                     public List<DescribeVpcFirewallListResponseBodyVpcFirewallsPeerVpcVpcCidrTableListRouteEntryList> RouteEntryList { get; set; }
                     public class DescribeVpcFirewallListResponseBodyVpcFirewallsPeerVpcVpcCidrTableListRouteEntryList : TeaModel {
+                        [NameInMap("DestinationCidr")]
+                        [Validation(Required=false)]
                         public string DestinationCidr { get; set; }
+
+                        [NameInMap("NextHopInstanceId")]
+                        [Validation(Required=false)]
                         public string NextHopInstanceId { get; set; }
+
                     }
+
+                    [NameInMap("RouteTableId")]
+                    [Validation(Required=false)]
                     public string RouteTableId { get; set; }
+
                 }
+
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
+
                 [NameInMap("VpcName")]
                 [Validation(Required=false)]
                 public string VpcName { get; set; }
-            };
+
+            }
 
             [NameInMap("RegionStatus")]
             [Validation(Required=false)]

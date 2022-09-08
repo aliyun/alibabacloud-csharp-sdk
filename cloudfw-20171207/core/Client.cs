@@ -3248,6 +3248,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["RouteMode"] = request.RouteMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterType))
+            {
+                query["TransitRouterType"] = request.TransitRouterType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcFirewallId))
             {
                 query["VpcFirewallId"] = request.VpcFirewallId;
@@ -3322,6 +3326,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteMode))
             {
                 query["RouteMode"] = request.RouteMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterType))
+            {
+                query["TransitRouterType"] = request.TransitRouterType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcFirewallId))
             {

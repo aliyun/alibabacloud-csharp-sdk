@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public List<string> ApplicationNameList { get; set; }
 
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public long? CreateTime { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
@@ -101,6 +105,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public int? IpVersion { get; set; }
 
+            [NameInMap("ModifyTime")]
+            [Validation(Required=false)]
+            public long? ModifyTime { get; set; }
+
             [NameInMap("Order")]
             [Validation(Required=false)]
             public int? Order { get; set; }
@@ -128,6 +136,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [NameInMap("SourceType")]
             [Validation(Required=false)]
             public string SourceType { get; set; }
+
+            [NameInMap("SpreadCnt")]
+            [Validation(Required=false)]
+            public int? SpreadCnt { get; set; }
 
         }
 

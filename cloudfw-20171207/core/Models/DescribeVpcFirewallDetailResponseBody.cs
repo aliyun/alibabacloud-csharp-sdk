@@ -28,33 +28,52 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [NameInMap("EniId")]
             [Validation(Required=false)]
             public string EniId { get; set; }
+
             [NameInMap("EniPrivateIpAddress")]
             [Validation(Required=false)]
             public string EniPrivateIpAddress { get; set; }
+
             [NameInMap("RegionNo")]
             [Validation(Required=false)]
             public string RegionNo { get; set; }
+
             [NameInMap("RouterInterfaceId")]
             [Validation(Required=false)]
             public string RouterInterfaceId { get; set; }
+
             [NameInMap("VpcCidrTableList")]
             [Validation(Required=false)]
             public List<DescribeVpcFirewallDetailResponseBodyLocalVpcVpcCidrTableList> VpcCidrTableList { get; set; }
             public class DescribeVpcFirewallDetailResponseBodyLocalVpcVpcCidrTableList : TeaModel {
+                [NameInMap("RouteEntryList")]
+                [Validation(Required=false)]
                 public List<DescribeVpcFirewallDetailResponseBodyLocalVpcVpcCidrTableListRouteEntryList> RouteEntryList { get; set; }
                 public class DescribeVpcFirewallDetailResponseBodyLocalVpcVpcCidrTableListRouteEntryList : TeaModel {
+                    [NameInMap("DestinationCidr")]
+                    [Validation(Required=false)]
                     public string DestinationCidr { get; set; }
+
+                    [NameInMap("NextHopInstanceId")]
+                    [Validation(Required=false)]
                     public string NextHopInstanceId { get; set; }
+
                 }
+
+                [NameInMap("RouteTableId")]
+                [Validation(Required=false)]
                 public string RouteTableId { get; set; }
+
             }
+
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
+
             [NameInMap("VpcName")]
             [Validation(Required=false)]
             public string VpcName { get; set; }
-        };
+
+        }
 
         [NameInMap("PeerVpc")]
         [Validation(Required=false)]
@@ -63,33 +82,52 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [NameInMap("EniId")]
             [Validation(Required=false)]
             public string EniId { get; set; }
+
             [NameInMap("EniPrivateIpAddress")]
             [Validation(Required=false)]
             public string EniPrivateIpAddress { get; set; }
+
             [NameInMap("RegionNo")]
             [Validation(Required=false)]
             public string RegionNo { get; set; }
+
             [NameInMap("RouterInterfaceId")]
             [Validation(Required=false)]
             public string RouterInterfaceId { get; set; }
+
             [NameInMap("VpcCidrTableList")]
             [Validation(Required=false)]
             public List<DescribeVpcFirewallDetailResponseBodyPeerVpcVpcCidrTableList> VpcCidrTableList { get; set; }
             public class DescribeVpcFirewallDetailResponseBodyPeerVpcVpcCidrTableList : TeaModel {
+                [NameInMap("RouteEntryList")]
+                [Validation(Required=false)]
                 public List<DescribeVpcFirewallDetailResponseBodyPeerVpcVpcCidrTableListRouteEntryList> RouteEntryList { get; set; }
                 public class DescribeVpcFirewallDetailResponseBodyPeerVpcVpcCidrTableListRouteEntryList : TeaModel {
+                    [NameInMap("DestinationCidr")]
+                    [Validation(Required=false)]
                     public string DestinationCidr { get; set; }
+
+                    [NameInMap("NextHopInstanceId")]
+                    [Validation(Required=false)]
                     public string NextHopInstanceId { get; set; }
+
                 }
+
+                [NameInMap("RouteTableId")]
+                [Validation(Required=false)]
                 public string RouteTableId { get; set; }
+
             }
+
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
+
             [NameInMap("VpcName")]
             [Validation(Required=false)]
             public string VpcName { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

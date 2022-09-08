@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [NameInMap("IpAddrs")]
             [Validation(Required=false)]
             public string IpAddrs { get; set; }
+
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
             public long? UpdateTime { get; set; }
-        };
+
+        }
 
     }
 

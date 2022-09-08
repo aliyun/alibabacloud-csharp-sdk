@@ -56,16 +56,20 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 [NameInMap("CityId")]
                 [Validation(Required=false)]
                 public string CityId { get; set; }
+
                 [NameInMap("CityName")]
                 [Validation(Required=false)]
                 public string CityName { get; set; }
+
                 [NameInMap("CountryId")]
                 [Validation(Required=false)]
                 public string CountryId { get; set; }
+
                 [NameInMap("CountryName")]
                 [Validation(Required=false)]
                 public string CountryName { get; set; }
-            };
+
+            }
 
             [NameInMap("LastEventTime")]
             [Validation(Required=false)]
@@ -128,19 +132,24 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 [NameInMap("EcsInstanceId")]
                 [Validation(Required=false)]
                 public string EcsInstanceId { get; set; }
+
                 [NameInMap("EcsInstanceName")]
                 [Validation(Required=false)]
                 public string EcsInstanceName { get; set; }
+
                 [NameInMap("NetworkInstanceId")]
                 [Validation(Required=false)]
                 public string NetworkInstanceId { get; set; }
+
                 [NameInMap("NetworkInstanceName")]
                 [Validation(Required=false)]
                 public string NetworkInstanceName { get; set; }
+
                 [NameInMap("RegionNo")]
                 [Validation(Required=false)]
                 public string RegionNo { get; set; }
-            };
+
+            }
 
             [NameInMap("VpcSrcInfo")]
             [Validation(Required=false)]
@@ -149,19 +158,24 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 [NameInMap("EcsInstanceId")]
                 [Validation(Required=false)]
                 public string EcsInstanceId { get; set; }
+
                 [NameInMap("EcsInstanceName")]
                 [Validation(Required=false)]
                 public string EcsInstanceName { get; set; }
+
                 [NameInMap("NetworkInstanceId")]
                 [Validation(Required=false)]
                 public string NetworkInstanceId { get; set; }
+
                 [NameInMap("NetworkInstanceName")]
                 [Validation(Required=false)]
                 public string NetworkInstanceName { get; set; }
+
                 [NameInMap("RegionNo")]
                 [Validation(Required=false)]
                 public string RegionNo { get; set; }
-            };
+
+            }
 
             [NameInMap("VulLevel")]
             [Validation(Required=false)]

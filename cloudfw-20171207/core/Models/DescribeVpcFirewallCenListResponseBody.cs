@@ -44,13 +44,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 [NameInMap("BasicRules")]
                 [Validation(Required=false)]
                 public int? BasicRules { get; set; }
+
                 [NameInMap("EnableAllPatch")]
                 [Validation(Required=false)]
                 public int? EnableAllPatch { get; set; }
+
                 [NameInMap("RunMode")]
                 [Validation(Required=false)]
                 public int? RunMode { get; set; }
-            };
+
+            }
 
             [NameInMap("LocalVpc")]
             [Validation(Required=false)]
@@ -59,54 +62,80 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 [NameInMap("AuthorizationStatus")]
                 [Validation(Required=false)]
                 public string AuthorizationStatus { get; set; }
+
                 [NameInMap("DefendCidrList")]
                 [Validation(Required=false)]
                 public List<string> DefendCidrList { get; set; }
+
                 [NameInMap("ManualVSwitchId")]
                 [Validation(Required=false)]
                 public string ManualVSwitchId { get; set; }
+
                 [NameInMap("NetworkInstanceId")]
                 [Validation(Required=false)]
                 public string NetworkInstanceId { get; set; }
+
                 [NameInMap("NetworkInstanceName")]
                 [Validation(Required=false)]
                 public string NetworkInstanceName { get; set; }
+
                 [NameInMap("NetworkInstanceType")]
                 [Validation(Required=false)]
                 public string NetworkInstanceType { get; set; }
+
                 [NameInMap("OwnerId")]
                 [Validation(Required=false)]
                 public long? OwnerId { get; set; }
+
                 [NameInMap("RegionNo")]
                 [Validation(Required=false)]
                 public string RegionNo { get; set; }
+
                 [NameInMap("RouteMode")]
                 [Validation(Required=false)]
                 public string RouteMode { get; set; }
+
                 [NameInMap("SupportManualMode")]
                 [Validation(Required=false)]
                 public string SupportManualMode { get; set; }
+
                 [NameInMap("TransitRouterType")]
                 [Validation(Required=false)]
                 public string TransitRouterType { get; set; }
+
                 [NameInMap("VpcCidrTableList")]
                 [Validation(Required=false)]
                 public List<DescribeVpcFirewallCenListResponseBodyVpcFirewallsLocalVpcVpcCidrTableList> VpcCidrTableList { get; set; }
                 public class DescribeVpcFirewallCenListResponseBodyVpcFirewallsLocalVpcVpcCidrTableList : TeaModel {
+                    [NameInMap("RouteEntryList")]
+                    [Validation(Required=false)]
                     public List<DescribeVpcFirewallCenListResponseBodyVpcFirewallsLocalVpcVpcCidrTableListRouteEntryList> RouteEntryList { get; set; }
                     public class DescribeVpcFirewallCenListResponseBodyVpcFirewallsLocalVpcVpcCidrTableListRouteEntryList : TeaModel {
+                        [NameInMap("DestinationCidr")]
+                        [Validation(Required=false)]
                         public string DestinationCidr { get; set; }
+
+                        [NameInMap("NextHopInstanceId")]
+                        [Validation(Required=false)]
                         public string NextHopInstanceId { get; set; }
+
                     }
+
+                    [NameInMap("RouteTableId")]
+                    [Validation(Required=false)]
                     public string RouteTableId { get; set; }
+
                 }
+
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
+
                 [NameInMap("VpcName")]
                 [Validation(Required=false)]
                 public string VpcName { get; set; }
-            };
+
+            }
 
             [NameInMap("MemberUid")]
             [Validation(Required=false)]
