@@ -20,9 +20,11 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [NameInMap("ClusterSpec")]
             [Validation(Required=false)]
             public string ClusterSpec { get; set; }
+
             [NameInMap("Clusters")]
             [Validation(Required=false)]
             public List<string> Clusters { get; set; }
+
             [NameInMap("Endpoints")]
             [Validation(Required=false)]
             public DescribeServiceMeshDetailResponseBodyServiceMeshEndpoints Endpoints { get; set; }
@@ -44,12 +46,15 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 public string PublicPilotEndpoint { get; set; }
 
             }
+
             [NameInMap("OwnerId")]
             [Validation(Required=false)]
             public string OwnerId { get; set; }
+
             [NameInMap("OwnerType")]
             [Validation(Required=false)]
             public string OwnerType { get; set; }
+
             [NameInMap("ServiceMeshInfo")]
             [Validation(Required=false)]
             public DescribeServiceMeshDetailResponseBodyServiceMeshServiceMeshInfo ServiceMeshInfo { get; set; }
@@ -91,6 +96,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 public string Version { get; set; }
 
             }
+
             [NameInMap("Spec")]
             [Validation(Required=false)]
             public DescribeServiceMeshDetailResponseBodyServiceMeshSpec Spec { get; set; }
@@ -102,16 +108,20 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     [NameInMap("ApiServerLoadbalancerId")]
                     [Validation(Required=false)]
                     public string ApiServerLoadbalancerId { get; set; }
+
                     [NameInMap("ApiServerPublicEip")]
                     [Validation(Required=false)]
                     public bool? ApiServerPublicEip { get; set; }
+
                     [NameInMap("PilotPublicEip")]
                     [Validation(Required=false)]
                     public bool? PilotPublicEip { get; set; }
+
                     [NameInMap("PilotPublicLoadbalancerId")]
                     [Validation(Required=false)]
                     public string PilotPublicLoadbalancerId { get; set; }
-                };
+
+                }
 
                 [NameInMap("MeshConfig")]
                 [Validation(Required=false)]
@@ -130,6 +140,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         public string Project { get; set; }
 
                     }
+
                     [NameInMap("Audit")]
                     [Validation(Required=false)]
                     public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigAudit Audit { get; set; }
@@ -147,6 +158,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         public string Project { get; set; }
 
                     }
+
                     [NameInMap("ControlPlaneLogInfo")]
                     [Validation(Required=false)]
                     public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigControlPlaneLogInfo ControlPlaneLogInfo { get; set; }
@@ -160,9 +172,11 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         public string Project { get; set; }
 
                     }
+
                     [NameInMap("CustomizedZipkin")]
                     [Validation(Required=false)]
                     public bool? CustomizedZipkin { get; set; }
+
                     [NameInMap("Edition")]
                     [Validation(Required=false)]
                     public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigEdition Edition { get; set; }
@@ -180,18 +194,23 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         public string ProxyImageTag { get; set; }
 
                     }
+
                     [NameInMap("EnableLocalityLB")]
                     [Validation(Required=false)]
                     public bool? EnableLocalityLB { get; set; }
+
                     [NameInMap("ExcludeIPRanges")]
                     [Validation(Required=false)]
                     public string ExcludeIPRanges { get; set; }
+
                     [NameInMap("ExcludeInboundPorts")]
                     [Validation(Required=false)]
                     public string ExcludeInboundPorts { get; set; }
+
                     [NameInMap("ExcludeOutboundPorts")]
                     [Validation(Required=false)]
                     public string ExcludeOutboundPorts { get; set; }
+
                     [NameInMap("ExtraConfiguration")]
                     [Validation(Required=false)]
                     public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration ExtraConfiguration { get; set; }
@@ -203,10 +222,12 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             [NameInMap("GatewayLifecycle")]
                             [Validation(Required=false)]
                             public int? GatewayLifecycle { get; set; }
+
                             [NameInMap("SidecarLifecycle")]
                             [Validation(Required=false)]
                             public int? SidecarLifecycle { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("AutoDiagnosis")]
                         [Validation(Required=false)]
@@ -215,7 +236,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             [NameInMap("AutoDiagnosisEnabled")]
                             [Validation(Required=false)]
                             public bool? AutoDiagnosisEnabled { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("CRAggregationConfiguration")]
                         [Validation(Required=false)]
@@ -224,7 +246,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             [NameInMap("Enabled")]
                             [Validation(Required=false)]
                             public bool? Enabled { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("CRAggregationEnabled")]
                         [Validation(Required=false)]
@@ -241,7 +264,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             [NameInMap("EnableHistory")]
                             [Validation(Required=false)]
                             public bool? EnableHistory { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("Lifecycle")]
                         [Validation(Required=false)]
@@ -258,7 +282,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                                     [NameInMap("command")]
                                     [Validation(Required=false)]
                                     public List<string> Command { get; set; }
-                                };
+
+                                }
 
                                 [NameInMap("httpGet")]
                                 [Validation(Required=false)]
@@ -267,20 +292,30 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                                     [NameInMap("host")]
                                     [Validation(Required=false)]
                                     public string Host { get; set; }
+
                                     [NameInMap("httpHeaders")]
                                     [Validation(Required=false)]
                                     public List<DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGetHttpHeaders> HttpHeaders { get; set; }
                                     public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGetHttpHeaders : TeaModel {
+                                        [NameInMap("name")]
+                                        [Validation(Required=false)]
                                         public string Name { get; set; }
+
+                                        [NameInMap("value")]
+                                        [Validation(Required=false)]
                                         public string Value { get; set; }
+
                                     }
+
                                     [NameInMap("port")]
                                     [Validation(Required=false)]
                                     public string Port { get; set; }
+
                                     [NameInMap("scheme")]
                                     [Validation(Required=false)]
                                     public string Scheme { get; set; }
-                                };
+
+                                }
 
                                 [NameInMap("tcpSocket")]
                                 [Validation(Required=false)]
@@ -289,12 +324,15 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                                     [NameInMap("host")]
                                     [Validation(Required=false)]
                                     public string Host { get; set; }
+
                                     [NameInMap("port")]
                                     [Validation(Required=false)]
                                     public string Port { get; set; }
-                                };
+
+                                }
 
                             }
+
                             [NameInMap("preStop")]
                             [Validation(Required=false)]
                             public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStop PreStop { get; set; }
@@ -306,7 +344,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                                     [NameInMap("command")]
                                     [Validation(Required=false)]
                                     public List<string> Command { get; set; }
-                                };
+
+                                }
 
                                 [NameInMap("httpGet")]
                                 [Validation(Required=false)]
@@ -315,20 +354,30 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                                     [NameInMap("host")]
                                     [Validation(Required=false)]
                                     public string Host { get; set; }
+
                                     [NameInMap("httpHeaders")]
                                     [Validation(Required=false)]
                                     public List<DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGetHttpHeaders> HttpHeaders { get; set; }
                                     public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGetHttpHeaders : TeaModel {
+                                        [NameInMap("name")]
+                                        [Validation(Required=false)]
                                         public string Name { get; set; }
+
+                                        [NameInMap("value")]
+                                        [Validation(Required=false)]
                                         public string Value { get; set; }
+
                                     }
+
                                     [NameInMap("port")]
                                     [Validation(Required=false)]
                                     public string Port { get; set; }
+
                                     [NameInMap("scheme")]
                                     [Validation(Required=false)]
                                     public string Scheme { get; set; }
-                                };
+
+                                }
 
                                 [NameInMap("tcpSocket")]
                                 [Validation(Required=false)]
@@ -337,13 +386,16 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                                     [NameInMap("host")]
                                     [Validation(Required=false)]
                                     public string Host { get; set; }
+
                                     [NameInMap("port")]
                                     [Validation(Required=false)]
                                     public string Port { get; set; }
-                                };
+
+                                }
 
                             }
-                        };
+
+                        }
 
                         [NameInMap("MultiBuffer")]
                         [Validation(Required=false)]
@@ -352,10 +404,12 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             [NameInMap("Enabled")]
                             [Validation(Required=false)]
                             public bool? Enabled { get; set; }
+
                             [NameInMap("PollDelay")]
                             [Validation(Required=false)]
                             public string PollDelay { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("NFDConfiguration")]
                         [Validation(Required=false)]
@@ -364,10 +418,12 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             [NameInMap("Enabled")]
                             [Validation(Required=false)]
                             public bool? Enabled { get; set; }
+
                             [NameInMap("NFDLabelPruned")]
                             [Validation(Required=false)]
                             public bool? NFDLabelPruned { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("OPAScopeInjection")]
                         [Validation(Required=false)]
@@ -376,7 +432,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             [NameInMap("OPAScopeInjected")]
                             [Validation(Required=false)]
                             public bool? OPAScopeInjected { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("RateLimit")]
                         [Validation(Required=false)]
@@ -385,7 +442,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             [NameInMap("EnableGlobalRateLimit")]
                             [Validation(Required=false)]
                             public bool? EnableGlobalRateLimit { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("SidecarProxyInitResourceLimit")]
                         [Validation(Required=false)]
@@ -394,10 +452,12 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             [NameInMap("ResourceCPULimit")]
                             [Validation(Required=false)]
                             public string ResourceCPULimit { get; set; }
+
                             [NameInMap("ResourceMemoryLimit")]
                             [Validation(Required=false)]
                             public string ResourceMemoryLimit { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("SidecarProxyInitResourceRequest")]
                         [Validation(Required=false)]
@@ -406,19 +466,23 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             [NameInMap("ResourceCPURequest")]
                             [Validation(Required=false)]
                             public string ResourceCPURequest { get; set; }
+
                             [NameInMap("ResourceMemoryRequest")]
                             [Validation(Required=false)]
                             public string ResourceMemoryRequest { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("TerminationDrainDuration")]
                         [Validation(Required=false)]
                         public string TerminationDrainDuration { get; set; }
 
                     }
+
                     [NameInMap("IncludeIPRanges")]
                     [Validation(Required=false)]
                     public string IncludeIPRanges { get; set; }
+
                     [NameInMap("K8sNewAPIsSupport")]
                     [Validation(Required=false)]
                     public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigK8sNewAPIsSupport K8sNewAPIsSupport { get; set; }
@@ -428,6 +492,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         public bool? GatewayAPIEnabled { get; set; }
 
                     }
+
                     [NameInMap("Kiali")]
                     [Validation(Required=false)]
                     public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigKiali Kiali { get; set; }
@@ -441,6 +506,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         public string Url { get; set; }
 
                     }
+
                     [NameInMap("LocalityLB")]
                     [Validation(Required=false)]
                     public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigLocalityLB LocalityLB { get; set; }
@@ -458,6 +524,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         public Dictionary<string, object> Failover { get; set; }
 
                     }
+
                     [NameInMap("MSE")]
                     [Validation(Required=false)]
                     public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigMSE MSE { get; set; }
@@ -467,6 +534,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         public bool? Enabled { get; set; }
 
                     }
+
                     [NameInMap("OPA")]
                     [Validation(Required=false)]
                     public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigOPA OPA { get; set; }
@@ -496,9 +564,11 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         public string RequestMemory { get; set; }
 
                     }
+
                     [NameInMap("OutboundTrafficPolicy")]
                     [Validation(Required=false)]
                     public string OutboundTrafficPolicy { get; set; }
+
                     [NameInMap("Pilot")]
                     [Validation(Required=false)]
                     public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilot Pilot { get; set; }
@@ -510,10 +580,12 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             [NameInMap("Enabled")]
                             [Validation(Required=false)]
                             public bool? Enabled { get; set; }
+
                             [NameInMap("NacosID")]
                             [Validation(Required=false)]
                             public string NacosID { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("Feature")]
                         [Validation(Required=false)]
@@ -522,10 +594,12 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             [NameInMap("EnableSDSServer")]
                             [Validation(Required=false)]
                             public bool? EnableSDSServer { get; set; }
+
                             [NameInMap("FilterGatewayClusterConfig")]
                             [Validation(Required=false)]
                             public bool? FilterGatewayClusterConfig { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("Http10Enabled")]
                         [Validation(Required=false)]
@@ -536,6 +610,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         public float? TraceSampling { get; set; }
 
                     }
+
                     [NameInMap("Prometheus")]
                     [Validation(Required=false)]
                     public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPrometheus Prometheus { get; set; }
@@ -549,6 +624,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         public bool? UseExternal { get; set; }
 
                     }
+
                     [NameInMap("ProtocolSupport")]
                     [Validation(Required=false)]
                     public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigProtocolSupport ProtocolSupport { get; set; }
@@ -570,6 +646,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         public bool? ThriftFilterEnabled { get; set; }
 
                     }
+
                     [NameInMap("Proxy")]
                     [Validation(Required=false)]
                     public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigProxy Proxy { get; set; }
@@ -619,6 +696,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         public string RequestMemory { get; set; }
 
                     }
+
                     [NameInMap("SidecarInjector")]
                     [Validation(Required=false)]
                     public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigSidecarInjector SidecarInjector { get; set; }
@@ -638,10 +716,12 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             [NameInMap("Enabled")]
                             [Validation(Required=false)]
                             public bool? Enabled { get; set; }
+
                             [NameInMap("ExcludeNamespaces")]
                             [Validation(Required=false)]
                             public string ExcludeNamespaces { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("LimitCPU")]
                         [Validation(Required=false)]
@@ -668,12 +748,15 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         public string SidecarInjectorWebhookAsYaml { get; set; }
 
                     }
+
                     [NameInMap("Telemetry")]
                     [Validation(Required=false)]
                     public bool? Telemetry { get; set; }
+
                     [NameInMap("Tracing")]
                     [Validation(Required=false)]
                     public bool? Tracing { get; set; }
+
                     [NameInMap("WebAssemblyFilterDeployment")]
                     [Validation(Required=false)]
                     public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigWebAssemblyFilterDeployment WebAssemblyFilterDeployment { get; set; }
@@ -683,7 +766,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         public bool? Enabled { get; set; }
 
                     }
-                };
+
+                }
 
                 [NameInMap("Network")]
                 [Validation(Required=false)]
@@ -692,16 +776,20 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     [NameInMap("SecurityGroupId")]
                     [Validation(Required=false)]
                     public string SecurityGroupId { get; set; }
+
                     [NameInMap("VSwitches")]
                     [Validation(Required=false)]
                     public List<string> VSwitches { get; set; }
+
                     [NameInMap("VpcId")]
                     [Validation(Required=false)]
                     public string VpcId { get; set; }
-                };
+
+                }
 
             }
-        };
+
+        }
 
     }
 

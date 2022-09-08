@@ -32,19 +32,24 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 [NameInMap("IntranetApiServerEndpoint")]
                 [Validation(Required=false)]
                 public string IntranetApiServerEndpoint { get; set; }
+
                 [NameInMap("IntranetPilotEndpoint")]
                 [Validation(Required=false)]
                 public string IntranetPilotEndpoint { get; set; }
+
                 [NameInMap("PublicApiServerEndpoint")]
                 [Validation(Required=false)]
                 public string PublicApiServerEndpoint { get; set; }
+
                 [NameInMap("PublicPilotEndpoint")]
                 [Validation(Required=false)]
                 public string PublicPilotEndpoint { get; set; }
+
                 [NameInMap("ReverseTunnelEndpoint")]
                 [Validation(Required=false)]
                 public string ReverseTunnelEndpoint { get; set; }
-            };
+
+            }
 
             [NameInMap("OwnerId")]
             [Validation(Required=false)]
@@ -61,31 +66,40 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
                 public string ErrorMessage { get; set; }
+
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
+
                 [NameInMap("Profile")]
                 [Validation(Required=false)]
                 public string Profile { get; set; }
+
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
+
                 [NameInMap("ServiceMeshId")]
                 [Validation(Required=false)]
                 public string ServiceMeshId { get; set; }
+
                 [NameInMap("State")]
                 [Validation(Required=false)]
                 public string State { get; set; }
+
                 [NameInMap("UpdateTime")]
                 [Validation(Required=false)]
                 public string UpdateTime { get; set; }
+
                 [NameInMap("Version")]
                 [Validation(Required=false)]
                 public string Version { get; set; }
-            };
+
+            }
 
             [NameInMap("Spec")]
             [Validation(Required=false)]
@@ -112,6 +126,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     public string PilotPublicLoadbalancerId { get; set; }
 
                 }
+
                 [NameInMap("MeshConfig")]
                 [Validation(Required=false)]
                 public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfig MeshConfig { get; set; }
@@ -131,10 +146,12 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         [NameInMap("Http10Enabled")]
                         [Validation(Required=false)]
                         public bool? Http10Enabled { get; set; }
+
                         [NameInMap("TraceSampling")]
                         [Validation(Required=false)]
                         public float? TraceSampling { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("SidecarInjector")]
                     [Validation(Required=false)]
@@ -143,9 +160,11 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         [NameInMap("AutoInjectionPolicyEnabled")]
                         [Validation(Required=false)]
                         public bool? AutoInjectionPolicyEnabled { get; set; }
+
                         [NameInMap("EnableNamespacesByDefault")]
                         [Validation(Required=false)]
                         public bool? EnableNamespacesByDefault { get; set; }
+
                         [NameInMap("InitCNIConfiguration")]
                         [Validation(Required=false)]
                         public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfigSidecarInjectorInitCNIConfiguration InitCNIConfiguration { get; set; }
@@ -159,7 +178,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             public string ExcludeNamespaces { get; set; }
 
                         }
-                    };
+
+                    }
 
                     [NameInMap("StrictMtls")]
                     [Validation(Required=false)]
@@ -174,6 +194,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     public bool? Tracing { get; set; }
 
                 }
+
                 [NameInMap("Network")]
                 [Validation(Required=false)]
                 public DescribeServiceMeshesResponseBodyServiceMeshesSpecNetwork Network { get; set; }
@@ -191,7 +212,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     public string VpcId { get; set; }
 
                 }
-            };
+
+            }
 
         }
 

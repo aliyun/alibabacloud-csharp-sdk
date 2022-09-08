@@ -16,36 +16,47 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [NameInMap("Concurrency")]
             [Validation(Required=false)]
             public int? Concurrency { get; set; }
+
             [NameInMap("ExcludeInboundPorts")]
             [Validation(Required=false)]
             public string ExcludeInboundPorts { get; set; }
+
             [NameInMap("ExcludeOutboundIPRanges")]
             [Validation(Required=false)]
             public string ExcludeOutboundIPRanges { get; set; }
+
             [NameInMap("ExcludeOutboundPorts")]
             [Validation(Required=false)]
             public string ExcludeOutboundPorts { get; set; }
+
             [NameInMap("HoldApplicationUntilProxyStarts")]
             [Validation(Required=false)]
             public bool? HoldApplicationUntilProxyStarts { get; set; }
+
             [NameInMap("IncludeInboundPorts")]
             [Validation(Required=false)]
             public string IncludeInboundPorts { get; set; }
+
             [NameInMap("IncludeOutboundIPRanges")]
             [Validation(Required=false)]
             public string IncludeOutboundIPRanges { get; set; }
+
             [NameInMap("IncludeOutboundPorts")]
             [Validation(Required=false)]
             public string IncludeOutboundPorts { get; set; }
+
             [NameInMap("IstioDNSProxyEnabled")]
             [Validation(Required=false)]
             public bool? IstioDNSProxyEnabled { get; set; }
+
             [NameInMap("LifecycleStr")]
             [Validation(Required=false)]
             public string LifecycleStr { get; set; }
+
             [NameInMap("LogLevel")]
             [Validation(Required=false)]
             public string LogLevel { get; set; }
+
             [NameInMap("ProxyStatsMatcher")]
             [Validation(Required=false)]
             public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesProxyStatsMatcher ProxyStatsMatcher { get; set; }
@@ -63,6 +74,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 public List<string> InclusionSuffixes { get; set; }
 
             }
+
             [NameInMap("SidecarProxyInitResourceLimit")]
             [Validation(Required=false)]
             public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyInitResourceLimit SidecarProxyInitResourceLimit { get; set; }
@@ -76,6 +88,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 public string ResourceMemoryLimit { get; set; }
 
             }
+
             [NameInMap("SidecarProxyInitResourceRequest")]
             [Validation(Required=false)]
             public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyInitResourceRequest SidecarProxyInitResourceRequest { get; set; }
@@ -89,6 +102,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 public string ResourceMemoryRequest { get; set; }
 
             }
+
             [NameInMap("SidecarProxyResourceLimit")]
             [Validation(Required=false)]
             public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyResourceLimit SidecarProxyResourceLimit { get; set; }
@@ -102,6 +116,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 public string ResourceMemoryLimit { get; set; }
 
             }
+
             [NameInMap("SidecarProxyResourceRequest")]
             [Validation(Required=false)]
             public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyResourceRequest SidecarProxyResourceRequest { get; set; }
@@ -115,10 +130,12 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                 public string ResourceMemoryRequest { get; set; }
 
             }
+
             [NameInMap("TerminationDrainDuration")]
             [Validation(Required=false)]
             public string TerminationDrainDuration { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -20,13 +20,16 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [NameInMap("EnvoyEnvContent")]
             [Validation(Required=false)]
             public string EnvoyEnvContent { get; set; }
+
             [NameInMap("HostsContent")]
             [Validation(Required=false)]
             public string HostsContent { get; set; }
+
             [NameInMap("TokenContent")]
             [Validation(Required=false)]
             public string TokenContent { get; set; }
-        };
+
+        }
 
     }
 

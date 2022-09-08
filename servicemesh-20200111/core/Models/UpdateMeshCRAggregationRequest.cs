@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string ServiceMeshId { get; set; }
 
+        [NameInMap("UsePublicApiServer")]
+        [Validation(Required=false)]
+        public bool? UsePublicApiServer { get; set; }
+
     }
 
 }

@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [Validation(Required=false)]
             public long? ForbiddenFlag { get; set; }
 
+            [NameInMap("ForbiddenInfo")]
+            [Validation(Required=false)]
+            public string ForbiddenInfo { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }

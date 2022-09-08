@@ -32,6 +32,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [NameInMap("Domains")]
             [Validation(Required=false)]
             public List<string> Domains { get; set; }
+
             [NameInMap("HTTPAdvancedOptions")]
             [Validation(Required=false)]
             public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptions HTTPAdvancedOptions { get; set; }
@@ -43,10 +44,12 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
+
                     [NameInMap("Namespace")]
                     [Validation(Required=false)]
                     public string Namespace { get; set; }
-                };
+
+                }
 
                 [NameInMap("Fault")]
                 [Validation(Required=false)]
@@ -67,9 +70,11 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             [NameInMap("Value")]
                             [Validation(Required=false)]
                             public float? Value { get; set; }
-                        };
+
+                        }
 
                     }
+
                     [NameInMap("Delay")]
                     [Validation(Required=false)]
                     public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsFaultDelay Delay { get; set; }
@@ -89,10 +94,12 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                             [NameInMap("Value")]
                             [Validation(Required=false)]
                             public float? Value { get; set; }
-                        };
+
+                        }
 
                     }
-                };
+
+                }
 
                 [NameInMap("HTTPRedirect")]
                 [Validation(Required=false)]
@@ -101,13 +108,16 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     [NameInMap("Authority")]
                     [Validation(Required=false)]
                     public string Authority { get; set; }
+
                     [NameInMap("RedirectCode")]
                     [Validation(Required=false)]
                     public int? RedirectCode { get; set; }
+
                     [NameInMap("Uri")]
                     [Validation(Required=false)]
                     public string Uri { get; set; }
-                };
+
+                }
 
                 [NameInMap("Mirror")]
                 [Validation(Required=false)]
@@ -116,10 +126,12 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     [NameInMap("Host")]
                     [Validation(Required=false)]
                     public string Host { get; set; }
+
                     [NameInMap("Subset")]
                     [Validation(Required=false)]
                     public string Subset { get; set; }
-                };
+
+                }
 
                 [NameInMap("MirrorPercentage")]
                 [Validation(Required=false)]
@@ -128,7 +140,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public float? Value { get; set; }
-                };
+
+                }
 
                 [NameInMap("Retries")]
                 [Validation(Required=false)]
@@ -137,12 +150,15 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     [NameInMap("Attempts")]
                     [Validation(Required=false)]
                     public int? Attempts { get; set; }
+
                     [NameInMap("PerTryTimeout")]
                     [Validation(Required=false)]
                     public string PerTryTimeout { get; set; }
+
                     [NameInMap("RetryOn")]
                     [Validation(Required=false)]
                     public string RetryOn { get; set; }
+
                     [NameInMap("RetryRemoteLocalities")]
                     [Validation(Required=false)]
                     public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsRetriesRetryRemoteLocalities RetryRemoteLocalities { get; set; }
@@ -152,7 +168,8 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         public bool? Value { get; set; }
 
                     }
-                };
+
+                }
 
                 [NameInMap("Rewrite")]
                 [Validation(Required=false)]
@@ -161,16 +178,19 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     [NameInMap("Authority")]
                     [Validation(Required=false)]
                     public string Authority { get; set; }
+
                     [NameInMap("Uri")]
                     [Validation(Required=false)]
                     public string Uri { get; set; }
-                };
+
+                }
 
                 [NameInMap("Timeout")]
                 [Validation(Required=false)]
                 public string Timeout { get; set; }
 
             }
+
             [NameInMap("MatchRequest")]
             [Validation(Required=false)]
             public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailMatchRequest MatchRequest { get; set; }
@@ -218,16 +238,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     [NameInMap("MatchingContent")]
                     [Validation(Required=false)]
                     public string MatchingContent { get; set; }
+
                     [NameInMap("MatchingMode")]
                     [Validation(Required=false)]
                     public string MatchingMode { get; set; }
-                };
+
+                }
 
             }
+
             [NameInMap("RouteDestinations")]
             [Validation(Required=false)]
             public List<DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinations> RouteDestinations { get; set; }
             public class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinations : TeaModel {
+                [NameInMap("Destination")]
+                [Validation(Required=false)]
                 public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinationsDestination Destination { get; set; }
                 public class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinationsDestination : TeaModel {
                     [NameInMap("Host")]
@@ -241,13 +266,17 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         [NameInMap("Number")]
                         [Validation(Required=false)]
                         public int? Number { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("Subset")]
                     [Validation(Required=false)]
                     public string Subset { get; set; }
 
                 }
+
+                [NameInMap("Headers")]
+                [Validation(Required=false)]
                 public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinationsHeaders Headers { get; set; }
                 public class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinationsHeaders : TeaModel {
                     [NameInMap("Request")]
@@ -256,14 +285,17 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     public class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinationsHeadersRequest : TeaModel {
                         [NameInMap("Add")]
                         [Validation(Required=false)]
-                        public Dictionary<string, string> Add { get; set; }
+                        public Dictionary<string, object> Add { get; set; }
+
                         [NameInMap("Remove")]
                         [Validation(Required=false)]
                         public List<string> Remove { get; set; }
+
                         [NameInMap("Set")]
                         [Validation(Required=false)]
                         public Dictionary<string, string> Set { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("Response")]
                     [Validation(Required=false)]
@@ -271,25 +303,35 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     public class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinationsHeadersResponse : TeaModel {
                         [NameInMap("Add")]
                         [Validation(Required=false)]
-                        public Dictionary<string, string> Add { get; set; }
+                        public Dictionary<string, object> Add { get; set; }
+
                         [NameInMap("Remove")]
                         [Validation(Required=false)]
                         public List<string> Remove { get; set; }
+
                         [NameInMap("Set")]
                         [Validation(Required=false)]
-                        public Dictionary<string, string> Set { get; set; }
-                    };
+                        public Dictionary<string, object> Set { get; set; }
+
+                    }
 
                 }
+
+                [NameInMap("Weight")]
+                [Validation(Required=false)]
                 public int? Weight { get; set; }
+
             }
+
             [NameInMap("RouteName")]
             [Validation(Required=false)]
             public string RouteName { get; set; }
+
             [NameInMap("RouteType")]
             [Validation(Required=false)]
             public string RouteType { get; set; }
-        };
+
+        }
 
         [NameInMap("Status")]
         [Validation(Required=false)]
