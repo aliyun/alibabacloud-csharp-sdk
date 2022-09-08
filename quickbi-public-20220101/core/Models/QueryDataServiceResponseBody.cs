@@ -21,20 +21,41 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             [Validation(Required=false)]
             public List<QueryDataServiceResponseBodyResultHeaders> Headers { get; set; }
             public class QueryDataServiceResponseBodyResultHeaders : TeaModel {
+                [NameInMap("Aggregator")]
+                [Validation(Required=false)]
                 public string Aggregator { get; set; }
+
+                [NameInMap("Column")]
+                [Validation(Required=false)]
                 public string Column { get; set; }
+
+                [NameInMap("DataType")]
+                [Validation(Required=false)]
                 public string DataType { get; set; }
+
+                [NameInMap("Granularity")]
+                [Validation(Required=false)]
                 public string Granularity { get; set; }
+
+                [NameInMap("Label")]
+                [Validation(Required=false)]
                 public string Label { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
+
             [NameInMap("Sql")]
             [Validation(Required=false)]
             public string Sql { get; set; }
+
             [NameInMap("Values")]
             [Validation(Required=false)]
-            public List<string> Values { get; set; }
-        };
+            public List<Dictionary<string, object>> Values { get; set; }
+
+        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

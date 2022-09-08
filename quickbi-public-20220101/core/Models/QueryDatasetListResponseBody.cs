@@ -21,7 +21,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             [Validation(Required=false)]
             public List<QueryDatasetListResponseBodyResultData> Data { get; set; }
             public class QueryDatasetListResponseBodyResultData : TeaModel {
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("DataSource")]
+                [Validation(Required=false)]
                 public QueryDatasetListResponseBodyResultDataDataSource DataSource { get; set; }
                 public class QueryDatasetListResponseBodyResultDataDataSource : TeaModel {
                     [NameInMap("DsId")]
@@ -37,9 +42,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public string DsType { get; set; }
 
                 }
+
+                [NameInMap("DatasetId")]
+                [Validation(Required=false)]
                 public string DatasetId { get; set; }
+
+                [NameInMap("DatasetName")]
+                [Validation(Required=false)]
                 public string DatasetName { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("Directory")]
+                [Validation(Required=false)]
                 public QueryDatasetListResponseBodyResultDataDirectory Directory { get; set; }
                 public class QueryDatasetListResponseBodyResultDataDirectory : TeaModel {
                     [NameInMap("Id")]
@@ -59,26 +76,50 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public string PathName { get; set; }
 
                 }
+
+                [NameInMap("ModifyTime")]
+                [Validation(Required=false)]
                 public string ModifyTime { get; set; }
+
+                [NameInMap("OwnerId")]
+                [Validation(Required=false)]
                 public string OwnerId { get; set; }
+
+                [NameInMap("OwnerName")]
+                [Validation(Required=false)]
                 public string OwnerName { get; set; }
+
+                [NameInMap("RowLevel")]
+                [Validation(Required=false)]
                 public bool? RowLevel { get; set; }
+
+                [NameInMap("WorkspaceId")]
+                [Validation(Required=false)]
                 public string WorkspaceId { get; set; }
+
+                [NameInMap("WorkspaceName")]
+                [Validation(Required=false)]
                 public string WorkspaceName { get; set; }
+
             }
+
             [NameInMap("PageNum")]
             [Validation(Required=false)]
             public int? PageNum { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("TotalNum")]
             [Validation(Required=false)]
             public int? TotalNum { get; set; }
+
             [NameInMap("TotalPages")]
             [Validation(Required=false)]
             public int? TotalPages { get; set; }
-        };
+
+        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

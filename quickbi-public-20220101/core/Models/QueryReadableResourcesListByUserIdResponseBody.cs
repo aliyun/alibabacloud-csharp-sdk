@@ -32,16 +32,20 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
+
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
+
                 [NameInMap("PathId")]
                 [Validation(Required=false)]
                 public string PathId { get; set; }
+
                 [NameInMap("PathName")]
                 [Validation(Required=false)]
                 public string PathName { get; set; }
-            };
+
+            }
 
             [NameInMap("ModifyName")]
             [Validation(Required=false)]

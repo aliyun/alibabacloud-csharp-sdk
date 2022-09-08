@@ -20,13 +20,16 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             [NameInMap("CubeId")]
             [Validation(Required=false)]
             public string CubeId { get; set; }
+
             [NameInMap("IsOpenColumnLevelPermission")]
             [Validation(Required=false)]
             public int? IsOpenColumnLevelPermission { get; set; }
+
             [NameInMap("IsOpenRowLevelPermission")]
             [Validation(Required=false)]
             public int? IsOpenRowLevelPermission { get; set; }
-        };
+
+        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

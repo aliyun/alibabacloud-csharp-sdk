@@ -20,16 +20,20 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             [NameInMap("Failure")]
             [Validation(Required=false)]
             public int? Failure { get; set; }
+
             [NameInMap("FailureDetail")]
             [Validation(Required=false)]
-            public Dictionary<string, string> FailureDetail { get; set; }
+            public Dictionary<string, object> FailureDetail { get; set; }
+
             [NameInMap("Success")]
             [Validation(Required=false)]
             public int? Success { get; set; }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public int? Total { get; set; }
-        };
+
+        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

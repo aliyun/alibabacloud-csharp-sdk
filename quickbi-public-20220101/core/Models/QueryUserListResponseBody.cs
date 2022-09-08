@@ -21,27 +21,53 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             [Validation(Required=false)]
             public List<QueryUserListResponseBodyResultData> Data { get; set; }
             public class QueryUserListResponseBodyResultData : TeaModel {
+                [NameInMap("AccountId")]
+                [Validation(Required=false)]
                 public string AccountId { get; set; }
+
+                [NameInMap("AccountName")]
+                [Validation(Required=false)]
                 public string AccountName { get; set; }
+
+                [NameInMap("AdminUser")]
+                [Validation(Required=false)]
                 public bool? AdminUser { get; set; }
+
+                [NameInMap("AuthAdminUser")]
+                [Validation(Required=false)]
                 public bool? AuthAdminUser { get; set; }
+
+                [NameInMap("NickName")]
+                [Validation(Required=false)]
                 public string NickName { get; set; }
+
+                [NameInMap("UserId")]
+                [Validation(Required=false)]
                 public string UserId { get; set; }
+
+                [NameInMap("UserType")]
+                [Validation(Required=false)]
                 public int? UserType { get; set; }
+
             }
+
             [NameInMap("PageNum")]
             [Validation(Required=false)]
             public int? PageNum { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("TotalNum")]
             [Validation(Required=false)]
             public int? TotalNum { get; set; }
+
             [NameInMap("TotalPages")]
             [Validation(Required=false)]
             public int? TotalPages { get; set; }
-        };
+
+        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

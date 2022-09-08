@@ -20,13 +20,16 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             [NameInMap("RoleCode")]
             [Validation(Required=false)]
             public string RoleCode { get; set; }
+
             [NameInMap("RoleId")]
             [Validation(Required=false)]
             public long? RoleId { get; set; }
+
             [NameInMap("RoleName")]
             [Validation(Required=false)]
             public string RoleName { get; set; }
-        };
+
+        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

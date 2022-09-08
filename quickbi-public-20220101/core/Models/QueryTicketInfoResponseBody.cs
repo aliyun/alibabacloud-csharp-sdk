@@ -20,37 +20,48 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             [NameInMap("AccessTicket")]
             [Validation(Required=false)]
             public string AccessTicket { get; set; }
+
             [NameInMap("CmptId")]
             [Validation(Required=false)]
             public string CmptId { get; set; }
+
             [NameInMap("GlobalParam")]
             [Validation(Required=false)]
             public string GlobalParam { get; set; }
+
             [NameInMap("InvalidTime")]
             [Validation(Required=false)]
             public string InvalidTime { get; set; }
+
             [NameInMap("MaxTicketNum")]
             [Validation(Required=false)]
             public int? MaxTicketNum { get; set; }
+
             [NameInMap("OrganizationId")]
             [Validation(Required=false)]
             public string OrganizationId { get; set; }
+
             [NameInMap("RegisterTime")]
             [Validation(Required=false)]
             public string RegisterTime { get; set; }
+
             [NameInMap("UsedTicketNum")]
             [Validation(Required=false)]
             public int? UsedTicketNum { get; set; }
+
             [NameInMap("UserId")]
             [Validation(Required=false)]
             public string UserId { get; set; }
+
             [NameInMap("WatermarkParam")]
             [Validation(Required=false)]
             public string WatermarkParam { get; set; }
+
             [NameInMap("WorksId")]
             [Validation(Required=false)]
             public string WorksId { get; set; }
-        };
+
+        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

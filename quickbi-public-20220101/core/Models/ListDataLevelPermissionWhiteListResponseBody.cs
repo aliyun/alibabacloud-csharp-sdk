@@ -20,9 +20,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             [NameInMap("CubeId")]
             [Validation(Required=false)]
             public string CubeId { get; set; }
+
             [NameInMap("RuleType")]
             [Validation(Required=false)]
             public string RuleType { get; set; }
+
             [NameInMap("UsersModel")]
             [Validation(Required=false)]
             public ListDataLevelPermissionWhiteListResponseBodyResultUsersModel UsersModel { get; set; }
@@ -36,7 +38,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public List<string> Users { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

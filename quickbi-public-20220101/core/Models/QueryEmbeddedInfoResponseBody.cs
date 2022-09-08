@@ -34,13 +34,16 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public int? Report { get; set; }
 
             }
+
             [NameInMap("EmbeddedCount")]
             [Validation(Required=false)]
             public int? EmbeddedCount { get; set; }
+
             [NameInMap("MaxCount")]
             [Validation(Required=false)]
             public int? MaxCount { get; set; }
-        };
+
+        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]
