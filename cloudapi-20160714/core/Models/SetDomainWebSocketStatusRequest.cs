@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        [NameInMap("WSSEnable")]
+        [Validation(Required=false)]
+        public string WSSEnable { get; set; }
+
     }
 
 }

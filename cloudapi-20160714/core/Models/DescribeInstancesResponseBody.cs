@@ -101,6 +101,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [Validation(Required=false)]
                 public string InternetEgressAddress { get; set; }
 
+                [NameInMap("IntranetSegments")]
+                [Validation(Required=false)]
+                public string IntranetSegments { get; set; }
+
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
