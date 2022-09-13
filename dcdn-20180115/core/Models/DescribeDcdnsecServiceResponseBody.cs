@@ -45,9 +45,13 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnsecServiceResponseBodyOperationLocksLockReason> LockReason { get; set; }
             public class DescribeDcdnsecServiceResponseBodyOperationLocksLockReason : TeaModel {
+                [NameInMap("LockReason")]
+                [Validation(Required=false)]
                 public string LockReason { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

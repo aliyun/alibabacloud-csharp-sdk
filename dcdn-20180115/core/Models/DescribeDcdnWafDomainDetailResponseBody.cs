@@ -17,13 +17,21 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnWafDomainDetailResponseBodyDomainDefenseScenes> DefenseScenes { get; set; }
             public class DescribeDcdnWafDomainDetailResponseBodyDomainDefenseScenes : TeaModel {
+                [NameInMap("DefenseScene")]
+                [Validation(Required=false)]
                 public string DefenseScene { get; set; }
+
+                [NameInMap("PolicyId")]
+                [Validation(Required=false)]
                 public long? PolicyId { get; set; }
+
             }
+
             [NameInMap("DomainName")]
             [Validation(Required=false)]
             public string DomainName { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

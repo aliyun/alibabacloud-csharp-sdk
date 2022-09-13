@@ -20,16 +20,20 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [NameInMap("EndPoint")]
             [Validation(Required=false)]
             public string EndPoint { get; set; }
+
             [NameInMap("LogStore")]
             [Validation(Required=false)]
             public string LogStore { get; set; }
+
             [NameInMap("Project")]
             [Validation(Required=false)]
             public string Project { get; set; }
+
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
-        };
+
+        }
 
     }
 

@@ -29,11 +29,21 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnDomainHitRateDataResponseBodyHitRatePerIntervalDataModule> DataModule { get; set; }
             public class DescribeDcdnDomainHitRateDataResponseBodyHitRatePerIntervalDataModule : TeaModel {
+                [NameInMap("ByteHitRate")]
+                [Validation(Required=false)]
                 public float? ByteHitRate { get; set; }
+
+                [NameInMap("ReqHitRate")]
+                [Validation(Required=false)]
                 public float? ReqHitRate { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -29,14 +29,33 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnWafUsageDataResponseBodyWafUsageDataWafUsageDataItem> WafUsageDataItem { get; set; }
             public class DescribeDcdnWafUsageDataResponseBodyWafUsageDataWafUsageDataItem : TeaModel {
+                [NameInMap("AccessCnt")]
+                [Validation(Required=false)]
                 public long? AccessCnt { get; set; }
+
+                [NameInMap("BlockCnt")]
+                [Validation(Required=false)]
                 public long? BlockCnt { get; set; }
+
+                [NameInMap("Domain")]
+                [Validation(Required=false)]
                 public string Domain { get; set; }
+
+                [NameInMap("ObserveCnt")]
+                [Validation(Required=false)]
                 public long? ObserveCnt { get; set; }
+
+                [NameInMap("SecCu")]
+                [Validation(Required=false)]
                 public long? SecCu { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
             }
-        };
+
+        }
 
     }
 

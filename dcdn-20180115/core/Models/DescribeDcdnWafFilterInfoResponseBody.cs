@@ -44,10 +44,12 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                         [NameInMap("ErrMsg")]
                         [Validation(Required=false)]
                         public string ErrMsg { get; set; }
+
                         [NameInMap("Pattern")]
                         [Validation(Required=false)]
                         public string Pattern { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("Symbol")]
                     [Validation(Required=false)]

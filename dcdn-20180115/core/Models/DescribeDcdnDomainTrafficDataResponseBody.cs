@@ -37,14 +37,33 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeDcdnDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule : TeaModel {
+                [NameInMap("DynamicHttpTraffic")]
+                [Validation(Required=false)]
                 public float? DynamicHttpTraffic { get; set; }
+
+                [NameInMap("DynamicHttpsTraffic")]
+                [Validation(Required=false)]
                 public float? DynamicHttpsTraffic { get; set; }
+
+                [NameInMap("StaticHttpTraffic")]
+                [Validation(Required=false)]
                 public float? StaticHttpTraffic { get; set; }
+
+                [NameInMap("StaticHttpsTraffic")]
+                [Validation(Required=false)]
                 public float? StaticHttpsTraffic { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
+                [NameInMap("Traffic")]
+                [Validation(Required=false)]
                 public float? Traffic { get; set; }
+
             }
-        };
+
+        }
 
     }
 

@@ -17,8 +17,16 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem> BillHistoryDataItem { get; set; }
             public class DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem : TeaModel {
+                [NameInMap("BillTime")]
+                [Validation(Required=false)]
                 public string BillTime { get; set; }
+
+                [NameInMap("BillType")]
+                [Validation(Required=false)]
                 public string BillType { get; set; }
+
+                [NameInMap("BillingData")]
+                [Validation(Required=false)]
                 public DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingData BillingData { get; set; }
                 public class DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingData : TeaModel {
                     [NameInMap("BillingDataItem")]
@@ -48,9 +56,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                     }
 
                 }
+
+                [NameInMap("Dimension")]
+                [Validation(Required=false)]
                 public string Dimension { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

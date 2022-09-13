@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnBlockedRegionsResponseBodyInfoListInfoItem> InfoItem { get; set; }
             public class DescribeDcdnBlockedRegionsResponseBodyInfoListInfoItem : TeaModel {
+                [NameInMap("Continent")]
+                [Validation(Required=false)]
                 public string Continent { get; set; }
+
+                [NameInMap("CountriesAndRegions")]
+                [Validation(Required=false)]
                 public string CountriesAndRegions { get; set; }
+
+                [NameInMap("CountriesAndRegionsName")]
+                [Validation(Required=false)]
                 public string CountriesAndRegionsName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

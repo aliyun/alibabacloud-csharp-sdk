@@ -16,28 +16,36 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [NameInMap("DefenseScene")]
             [Validation(Required=false)]
             public string DefenseScene { get; set; }
+
             [NameInMap("DomainCount")]
             [Validation(Required=false)]
             public int? DomainCount { get; set; }
+
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public string GmtModified { get; set; }
+
             [NameInMap("PolicyId")]
             [Validation(Required=false)]
             public long? PolicyId { get; set; }
+
             [NameInMap("PolicyName")]
             [Validation(Required=false)]
             public string PolicyName { get; set; }
+
             [NameInMap("PolicyStatus")]
             [Validation(Required=false)]
             public string PolicyStatus { get; set; }
+
             [NameInMap("PolicyType")]
             [Validation(Required=false)]
             public string PolicyType { get; set; }
+
             [NameInMap("RuleCount")]
             [Validation(Required=false)]
             public long? RuleCount { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

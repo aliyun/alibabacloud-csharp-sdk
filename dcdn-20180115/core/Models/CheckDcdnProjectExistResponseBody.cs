@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [NameInMap("Exist")]
             [Validation(Required=false)]
             public string Exist { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

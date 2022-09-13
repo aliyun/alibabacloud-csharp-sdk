@@ -29,19 +29,53 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnDomainQpsDataResponseBodyQpsDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeDcdnDomainQpsDataResponseBodyQpsDataPerIntervalDataModule : TeaModel {
+                [NameInMap("Acc")]
+                [Validation(Required=false)]
                 public float? Acc { get; set; }
+
+                [NameInMap("DynamicHttpAcc")]
+                [Validation(Required=false)]
                 public float? DynamicHttpAcc { get; set; }
+
+                [NameInMap("DynamicHttpQps")]
+                [Validation(Required=false)]
                 public float? DynamicHttpQps { get; set; }
+
+                [NameInMap("DynamicHttpsAcc")]
+                [Validation(Required=false)]
                 public float? DynamicHttpsAcc { get; set; }
+
+                [NameInMap("DynamicHttpsQps")]
+                [Validation(Required=false)]
                 public float? DynamicHttpsQps { get; set; }
+
+                [NameInMap("Qps")]
+                [Validation(Required=false)]
                 public float? Qps { get; set; }
+
+                [NameInMap("StaticHttpAcc")]
+                [Validation(Required=false)]
                 public float? StaticHttpAcc { get; set; }
+
+                [NameInMap("StaticHttpQps")]
+                [Validation(Required=false)]
                 public float? StaticHttpQps { get; set; }
+
+                [NameInMap("StaticHttpsAcc")]
+                [Validation(Required=false)]
                 public float? StaticHttpsAcc { get; set; }
+
+                [NameInMap("StaticHttpsQps")]
+                [Validation(Required=false)]
                 public float? StaticHttpsQps { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

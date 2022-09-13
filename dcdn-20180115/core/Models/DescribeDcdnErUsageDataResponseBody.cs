@@ -21,12 +21,25 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnErUsageDataResponseBodyErAccDataErAccItem> ErAccItem { get; set; }
             public class DescribeDcdnErUsageDataResponseBodyErAccDataErAccItem : TeaModel {
+                [NameInMap("ErAcc")]
+                [Validation(Required=false)]
                 public long? ErAcc { get; set; }
+
+                [NameInMap("Routine")]
+                [Validation(Required=false)]
                 public string Routine { get; set; }
+
+                [NameInMap("Spec")]
+                [Validation(Required=false)]
                 public string Spec { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

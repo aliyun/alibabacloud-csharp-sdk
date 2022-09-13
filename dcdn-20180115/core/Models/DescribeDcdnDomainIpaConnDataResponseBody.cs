@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnDomainIpaConnDataResponseBodyConnectionDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeDcdnDomainIpaConnDataResponseBodyConnectionDataPerIntervalDataModule : TeaModel {
+                [NameInMap("Connections")]
+                [Validation(Required=false)]
                 public long? Connections { get; set; }
+
+                [NameInMap("Domain")]
+                [Validation(Required=false)]
                 public string Domain { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("EndTime")]
         [Validation(Required=false)]

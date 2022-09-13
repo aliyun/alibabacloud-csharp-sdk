@@ -48,10 +48,12 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 }
 
             }
+
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

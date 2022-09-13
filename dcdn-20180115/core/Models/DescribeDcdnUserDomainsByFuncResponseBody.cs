@@ -17,14 +17,40 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnUserDomainsByFuncResponseBodyDomainsPageData> PageData { get; set; }
             public class DescribeDcdnUserDomainsByFuncResponseBodyDomainsPageData : TeaModel {
+                [NameInMap("Cname")]
+                [Validation(Required=false)]
                 public string Cname { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("DomainName")]
+                [Validation(Required=false)]
                 public string DomainName { get; set; }
+
+                [NameInMap("DomainStatus")]
+                [Validation(Required=false)]
                 public string DomainStatus { get; set; }
+
+                [NameInMap("GmtCreated")]
+                [Validation(Required=false)]
                 public string GmtCreated { get; set; }
+
+                [NameInMap("GmtModified")]
+                [Validation(Required=false)]
                 public string GmtModified { get; set; }
+
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
+
+                [NameInMap("Sandbox")]
+                [Validation(Required=false)]
                 public string Sandbox { get; set; }
+
+                [NameInMap("Sources")]
+                [Validation(Required=false)]
                 public DescribeDcdnUserDomainsByFuncResponseBodyDomainsPageDataSources Sources { get; set; }
                 public class DescribeDcdnUserDomainsByFuncResponseBodyDomainsPageDataSources : TeaModel {
                     [NameInMap("Source")]
@@ -54,9 +80,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                     }
 
                 }
+
+                [NameInMap("SslProtocol")]
+                [Validation(Required=false)]
                 public string SslProtocol { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

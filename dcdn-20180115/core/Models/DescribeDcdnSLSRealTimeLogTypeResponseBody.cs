@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnSLSRealTimeLogTypeResponseBodyContentBusiness> Business { get; set; }
             public class DescribeDcdnSLSRealTimeLogTypeResponseBodyContentBusiness : TeaModel {
+                [NameInMap("BusinessType")]
+                [Validation(Required=false)]
                 public string BusinessType { get; set; }
+
+                [NameInMap("Desc")]
+                [Validation(Required=false)]
                 public string Desc { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

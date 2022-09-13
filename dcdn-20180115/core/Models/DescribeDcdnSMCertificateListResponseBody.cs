@@ -17,15 +17,29 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnSMCertificateListResponseBodyCertificateListModelCertList> CertList { get; set; }
             public class DescribeDcdnSMCertificateListResponseBodyCertificateListModelCertList : TeaModel {
+                [NameInMap("CertIdentifier")]
+                [Validation(Required=false)]
                 public string CertIdentifier { get; set; }
+
+                [NameInMap("CertName")]
+                [Validation(Required=false)]
                 public string CertName { get; set; }
+
+                [NameInMap("Common")]
+                [Validation(Required=false)]
                 public string Common { get; set; }
+
+                [NameInMap("Issuer")]
+                [Validation(Required=false)]
                 public string Issuer { get; set; }
+
             }
+
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

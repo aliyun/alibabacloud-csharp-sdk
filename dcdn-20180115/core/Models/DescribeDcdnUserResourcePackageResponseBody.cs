@@ -21,17 +21,45 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo> ResourcePackageInfo { get; set; }
             public class DescribeDcdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo : TeaModel {
+                [NameInMap("CommodityCode")]
+                [Validation(Required=false)]
                 public string CommodityCode { get; set; }
+
+                [NameInMap("CurrCapacity")]
+                [Validation(Required=false)]
                 public string CurrCapacity { get; set; }
+
+                [NameInMap("DisplayName")]
+                [Validation(Required=false)]
                 public string DisplayName { get; set; }
+
+                [NameInMap("EndTime")]
+                [Validation(Required=false)]
                 public string EndTime { get; set; }
+
+                [NameInMap("InitCapacity")]
+                [Validation(Required=false)]
                 public string InitCapacity { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("StartTime")]
+                [Validation(Required=false)]
                 public string StartTime { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("TemplateName")]
+                [Validation(Required=false)]
                 public string TemplateName { get; set; }
+
             }
-        };
+
+        }
 
     }
 
