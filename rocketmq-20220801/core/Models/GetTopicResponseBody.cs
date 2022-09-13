@@ -20,31 +20,36 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
+
             [NameInMap("messageType")]
             [Validation(Required=false)]
             public string MessageType { get; set; }
+
             [NameInMap("regionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
             [NameInMap("remark")]
             [Validation(Required=false)]
             public string Remark { get; set; }
-            [NameInMap("resourceGroupId")]
-            [Validation(Required=false)]
-            public string ResourceGroupId { get; set; }
+
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("topicName")]
             [Validation(Required=false)]
             public string TopicName { get; set; }
+
             [NameInMap("updateTime")]
             [Validation(Required=false)]
             public string UpdateTime { get; set; }
-        };
+
+        }
 
         [NameInMap("dynamicCode")]
         [Validation(Required=false)]

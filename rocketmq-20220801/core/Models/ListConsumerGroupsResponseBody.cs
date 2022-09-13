@@ -21,25 +21,49 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [Validation(Required=false)]
             public List<ListConsumerGroupsResponseBodyDataList> List { get; set; }
             public class ListConsumerGroupsResponseBodyDataList : TeaModel {
+                [NameInMap("consumerGroupId")]
+                [Validation(Required=false)]
                 public string ConsumerGroupId { get; set; }
+
+                [NameInMap("createTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("instanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("regionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("remark")]
+                [Validation(Required=false)]
                 public string Remark { get; set; }
-                public string ResourceGroupId { get; set; }
+
+                [NameInMap("status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("updateTime")]
+                [Validation(Required=false)]
                 public string UpdateTime { get; set; }
+
             }
+
             [NameInMap("pageNumber")]
             [Validation(Required=false)]
             public long? PageNumber { get; set; }
+
             [NameInMap("pageSize")]
             [Validation(Required=false)]
             public long? PageSize { get; set; }
+
             [NameInMap("totalCount")]
             [Validation(Required=false)]
             public long? TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("dynamicCode")]
         [Validation(Required=false)]

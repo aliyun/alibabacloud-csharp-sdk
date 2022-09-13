@@ -30,34 +30,40 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string RetryPolicy { get; set; }
 
             }
+
             [NameInMap("consumerGroupId")]
             [Validation(Required=false)]
             public string ConsumerGroupId { get; set; }
+
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
             [NameInMap("deliveryOrderType")]
             [Validation(Required=false)]
             public string DeliveryOrderType { get; set; }
+
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
+
             [NameInMap("regionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
             [NameInMap("remark")]
             [Validation(Required=false)]
             public string Remark { get; set; }
-            [NameInMap("resourceGroupId")]
-            [Validation(Required=false)]
-            public string ResourceGroupId { get; set; }
+
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("updateTime")]
             [Validation(Required=false)]
             public string UpdateTime { get; set; }
-        };
+
+        }
 
         [NameInMap("dynamicCode")]
         [Validation(Required=false)]

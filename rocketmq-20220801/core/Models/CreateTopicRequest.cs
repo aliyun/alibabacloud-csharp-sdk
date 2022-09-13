@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [Validation(Required=false)]
         public string Remark { get; set; }
 
-        [NameInMap("resourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
-
     }
 
 }

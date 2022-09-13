@@ -21,27 +21,28 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [Validation(Required=false)]
             public GetInstanceResponseBodyDataAccountInfo AccountInfo { get; set; }
             public class GetInstanceResponseBodyDataAccountInfo : TeaModel {
-                [NameInMap("password")]
-                [Validation(Required=false)]
-                public string Password { get; set; }
-
                 [NameInMap("username")]
                 [Validation(Required=false)]
                 public string Username { get; set; }
 
             }
+
             [NameInMap("bid")]
             [Validation(Required=false)]
             public string Bid { get; set; }
+
             [NameInMap("commodityCode")]
             [Validation(Required=false)]
             public string CommodityCode { get; set; }
+
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
             [NameInMap("expireTime")]
             [Validation(Required=false)]
             public string ExpireTime { get; set; }
+
             [NameInMap("extConfig")]
             [Validation(Required=false)]
             public GetInstanceResponseBodyDataExtConfig ExtConfig { get; set; }
@@ -83,21 +84,41 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public bool? SupportAutoScaling { get; set; }
 
             }
+
+            [NameInMap("groupCount")]
+            [Validation(Required=false)]
+            public long? GroupCount { get; set; }
+
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
+
             [NameInMap("instanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
+
             [NameInMap("instanceQuotas")]
             [Validation(Required=false)]
             public List<GetInstanceResponseBodyDataInstanceQuotas> InstanceQuotas { get; set; }
             public class GetInstanceResponseBodyDataInstanceQuotas : TeaModel {
+                [NameInMap("freeCount")]
+                [Validation(Required=false)]
                 public double? FreeCount { get; set; }
+
+                [NameInMap("quotaName")]
+                [Validation(Required=false)]
                 public string QuotaName { get; set; }
+
+                [NameInMap("totalCount")]
+                [Validation(Required=false)]
                 public double? TotalCount { get; set; }
+
+                [NameInMap("usedCount")]
+                [Validation(Required=false)]
                 public double? UsedCount { get; set; }
+
             }
+
             [NameInMap("networkInfo")]
             [Validation(Required=false)]
             public GetInstanceResponseBodyDataNetworkInfo NetworkInfo { get; set; }
@@ -127,49 +148,64 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     [NameInMap("vSwitchId")]
                     [Validation(Required=false)]
                     public string VSwitchId { get; set; }
+
                     [NameInMap("vpcId")]
                     [Validation(Required=false)]
                     public string VpcId { get; set; }
-                };
+
+                }
 
             }
+
             [NameInMap("paymentType")]
             [Validation(Required=false)]
             public string PaymentType { get; set; }
+
             [NameInMap("regionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
             [NameInMap("releaseTime")]
             [Validation(Required=false)]
             public string ReleaseTime { get; set; }
+
             [NameInMap("remark")]
             [Validation(Required=false)]
             public string Remark { get; set; }
-            [NameInMap("resourceGroupId")]
-            [Validation(Required=false)]
-            public string ResourceGroupId { get; set; }
+
             [NameInMap("seriesCode")]
             [Validation(Required=false)]
             public string SeriesCode { get; set; }
+
             [NameInMap("serviceCode")]
             [Validation(Required=false)]
             public string ServiceCode { get; set; }
+
             [NameInMap("startTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
+
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("subSeriesCode")]
             [Validation(Required=false)]
             public string SubSeriesCode { get; set; }
+
+            [NameInMap("topicCount")]
+            [Validation(Required=false)]
+            public long? TopicCount { get; set; }
+
             [NameInMap("updateTime")]
             [Validation(Required=false)]
             public string UpdateTime { get; set; }
+
             [NameInMap("userId")]
             [Validation(Required=false)]
             public string UserId { get; set; }
-        };
+
+        }
 
         [NameInMap("dynamicCode")]
         [Validation(Required=false)]

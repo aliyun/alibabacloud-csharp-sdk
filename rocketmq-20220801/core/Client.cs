@@ -54,8 +54,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         public CreateConsumerGroupResponse CreateConsumerGroupWithOptions(string instanceId, string consumerGroupId, CreateConsumerGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
-            consumerGroupId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroupId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumeRetryPolicy.ToMap()))
             {
@@ -69,10 +67,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             {
                 body["remark"] = request.Remark;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
-            {
-                body["resourceGroupId"] = request.ResourceGroupId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -83,7 +77,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 Action = "CreateConsumerGroup",
                 Version = "2022-08-01",
                 Protocol = "HTTPS",
-                Pathname = "/instances/" + instanceId + "/consumerGroups/" + consumerGroupId,
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/consumerGroups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroupId),
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -96,8 +90,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         public async Task<CreateConsumerGroupResponse> CreateConsumerGroupWithOptionsAsync(string instanceId, string consumerGroupId, CreateConsumerGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
-            consumerGroupId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroupId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumeRetryPolicy.ToMap()))
             {
@@ -111,10 +103,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             {
                 body["remark"] = request.Remark;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
-            {
-                body["resourceGroupId"] = request.ResourceGroupId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -125,7 +113,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 Action = "CreateConsumerGroup",
                 Version = "2022-08-01",
                 Protocol = "HTTPS",
-                Pathname = "/instances/" + instanceId + "/consumerGroups/" + consumerGroupId,
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/consumerGroups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroupId),
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -152,8 +140,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         public CreateTopicResponse CreateTopicWithOptions(string instanceId, string topicName, CreateTopicRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
-            topicName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(topicName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageType))
             {
@@ -162,10 +148,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
                 body["remark"] = request.Remark;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
-            {
-                body["resourceGroupId"] = request.ResourceGroupId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -177,7 +159,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 Action = "CreateTopic",
                 Version = "2022-08-01",
                 Protocol = "HTTPS",
-                Pathname = "/instances/" + instanceId + "/topics/" + topicName,
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/topics/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(topicName),
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -190,8 +172,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         public async Task<CreateTopicResponse> CreateTopicWithOptionsAsync(string instanceId, string topicName, CreateTopicRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
-            topicName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(topicName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageType))
             {
@@ -200,10 +180,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
                 body["remark"] = request.Remark;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
-            {
-                body["resourceGroupId"] = request.ResourceGroupId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -215,7 +191,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 Action = "CreateTopic",
                 Version = "2022-08-01",
                 Protocol = "HTTPS",
-                Pathname = "/instances/" + instanceId + "/topics/" + topicName,
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/topics/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(topicName),
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -241,8 +217,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         public DeleteConsumerGroupResponse DeleteConsumerGroupWithOptions(string instanceId, string consumerGroupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
-            consumerGroupId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroupId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -252,7 +226,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 Action = "DeleteConsumerGroup",
                 Version = "2022-08-01",
                 Protocol = "HTTPS",
-                Pathname = "/instances/" + instanceId + "/consumerGroups/" + consumerGroupId,
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/consumerGroups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroupId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -264,8 +238,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         public async Task<DeleteConsumerGroupResponse> DeleteConsumerGroupWithOptionsAsync(string instanceId, string consumerGroupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
-            consumerGroupId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroupId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -275,7 +247,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 Action = "DeleteConsumerGroup",
                 Version = "2022-08-01",
                 Protocol = "HTTPS",
-                Pathname = "/instances/" + instanceId + "/consumerGroups/" + consumerGroupId,
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/consumerGroups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroupId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -301,7 +273,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         public DeleteInstanceResponse DeleteInstanceWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -311,7 +282,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 Action = "DeleteInstance",
                 Version = "2022-08-01",
                 Protocol = "HTTPS",
-                Pathname = "/instances/" + instanceId,
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -323,7 +294,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         public async Task<DeleteInstanceResponse> DeleteInstanceWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -333,7 +303,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 Action = "DeleteInstance",
                 Version = "2022-08-01",
                 Protocol = "HTTPS",
-                Pathname = "/instances/" + instanceId,
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -359,8 +329,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         public DeleteTopicResponse DeleteTopicWithOptions(string instanceId, string topicName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
-            topicName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(topicName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -370,7 +338,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 Action = "DeleteTopic",
                 Version = "2022-08-01",
                 Protocol = "HTTPS",
-                Pathname = "/instances/" + instanceId + "/topics/" + topicName,
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/topics/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(topicName),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -382,8 +350,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         public async Task<DeleteTopicResponse> DeleteTopicWithOptionsAsync(string instanceId, string topicName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
-            topicName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(topicName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -393,7 +359,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 Action = "DeleteTopic",
                 Version = "2022-08-01",
                 Protocol = "HTTPS",
-                Pathname = "/instances/" + instanceId + "/topics/" + topicName,
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/topics/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(topicName),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -419,8 +385,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         public GetConsumerGroupResponse GetConsumerGroupWithOptions(string instanceId, string consumerGroupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
-            consumerGroupId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroupId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -430,7 +394,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 Action = "GetConsumerGroup",
                 Version = "2022-08-01",
                 Protocol = "HTTPS",
-                Pathname = "/instances/" + instanceId + "/consumerGroups/" + consumerGroupId,
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/consumerGroups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroupId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -442,8 +406,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         public async Task<GetConsumerGroupResponse> GetConsumerGroupWithOptionsAsync(string instanceId, string consumerGroupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
-            consumerGroupId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroupId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -453,7 +415,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 Action = "GetConsumerGroup",
                 Version = "2022-08-01",
                 Protocol = "HTTPS",
-                Pathname = "/instances/" + instanceId + "/consumerGroups/" + consumerGroupId,
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/consumerGroups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroupId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -479,7 +441,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         public GetInstanceResponse GetInstanceWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -489,7 +450,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 Action = "GetInstance",
                 Version = "2022-08-01",
                 Protocol = "HTTPS",
-                Pathname = "/instances/" + instanceId,
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -501,7 +462,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         public async Task<GetInstanceResponse> GetInstanceWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -511,7 +471,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 Action = "GetInstance",
                 Version = "2022-08-01",
                 Protocol = "HTTPS",
-                Pathname = "/instances/" + instanceId,
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -537,8 +497,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         public GetTopicResponse GetTopicWithOptions(string instanceId, string topicName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
-            topicName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(topicName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -548,7 +506,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 Action = "GetTopic",
                 Version = "2022-08-01",
                 Protocol = "HTTPS",
-                Pathname = "/instances/" + instanceId + "/topics/" + topicName,
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/topics/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(topicName),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -560,8 +518,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         public async Task<GetTopicResponse> GetTopicWithOptionsAsync(string instanceId, string topicName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
-            topicName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(topicName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -571,7 +527,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 Action = "GetTopic",
                 Version = "2022-08-01",
                 Protocol = "HTTPS",
-                Pathname = "/instances/" + instanceId + "/topics/" + topicName,
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/topics/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(topicName),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -598,7 +554,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         public ListConsumerGroupsResponse ListConsumerGroupsWithOptions(string instanceId, ListConsumerGroupsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
             {
@@ -612,10 +567,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             {
                 query["pageSize"] = request.PageSize;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
-            {
-                query["resourceGroupId"] = request.ResourceGroupId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -626,7 +577,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 Action = "ListConsumerGroups",
                 Version = "2022-08-01",
                 Protocol = "HTTPS",
-                Pathname = "/instances/" + instanceId + "/consumerGroups",
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/consumerGroups",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -639,7 +590,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         public async Task<ListConsumerGroupsResponse> ListConsumerGroupsWithOptionsAsync(string instanceId, ListConsumerGroupsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
             {
@@ -653,10 +603,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             {
                 query["pageSize"] = request.PageSize;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
-            {
-                query["resourceGroupId"] = request.ResourceGroupId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -667,7 +613,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 Action = "ListConsumerGroups",
                 Version = "2022-08-01",
                 Protocol = "HTTPS",
-                Pathname = "/instances/" + instanceId + "/consumerGroups",
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/consumerGroups",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -707,10 +653,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             {
                 query["pageSize"] = request.PageSize;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
-            {
-                query["resourceGroupId"] = request.ResourceGroupId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -746,10 +688,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["pageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
-            {
-                query["resourceGroupId"] = request.ResourceGroupId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -788,7 +726,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         public ListTopicsResponse ListTopicsWithOptions(string instanceId, ListTopicsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
             {
@@ -802,10 +739,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             {
                 query["pageSize"] = request.PageSize;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
-            {
-                query["resourceGroupId"] = request.ResourceGroupId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -816,7 +749,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 Action = "ListTopics",
                 Version = "2022-08-01",
                 Protocol = "HTTPS",
-                Pathname = "/instances/" + instanceId + "/topics",
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/topics",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -829,7 +762,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         public async Task<ListTopicsResponse> ListTopicsWithOptionsAsync(string instanceId, ListTopicsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
             {
@@ -843,10 +775,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             {
                 query["pageSize"] = request.PageSize;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
-            {
-                query["resourceGroupId"] = request.ResourceGroupId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -857,7 +785,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 Action = "ListTopics",
                 Version = "2022-08-01",
                 Protocol = "HTTPS",
-                Pathname = "/instances/" + instanceId + "/topics",
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/topics",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -884,8 +812,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         public UpdateConsumerGroupResponse UpdateConsumerGroupWithOptions(string instanceId, string consumerGroupId, UpdateConsumerGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
-            consumerGroupId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroupId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumeRetryPolicy.ToMap()))
             {
@@ -899,10 +825,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             {
                 body["remark"] = request.Remark;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
-            {
-                body["resourceGroupId"] = request.ResourceGroupId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -913,7 +835,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 Action = "UpdateConsumerGroup",
                 Version = "2022-08-01",
                 Protocol = "HTTPS",
-                Pathname = "/instances/" + instanceId + "/consumerGroups/" + consumerGroupId,
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/consumerGroups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroupId),
                 Method = "PATCH",
                 AuthType = "AK",
                 Style = "ROA",
@@ -926,8 +848,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         public async Task<UpdateConsumerGroupResponse> UpdateConsumerGroupWithOptionsAsync(string instanceId, string consumerGroupId, UpdateConsumerGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
-            consumerGroupId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroupId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumeRetryPolicy.ToMap()))
             {
@@ -941,10 +861,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             {
                 body["remark"] = request.Remark;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
-            {
-                body["resourceGroupId"] = request.ResourceGroupId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -955,7 +871,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 Action = "UpdateConsumerGroup",
                 Version = "2022-08-01",
                 Protocol = "HTTPS",
-                Pathname = "/instances/" + instanceId + "/consumerGroups/" + consumerGroupId,
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/consumerGroups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroupId),
                 Method = "PATCH",
                 AuthType = "AK",
                 Style = "ROA",
@@ -982,7 +898,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         public UpdateInstanceResponse UpdateInstanceWithOptions(string instanceId, UpdateInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtConfig.ToMap()))
             {
@@ -1000,10 +915,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             {
                 body["remark"] = request.Remark;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
-            {
-                body["resourceGroupId"] = request.ResourceGroupId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1014,7 +925,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 Action = "UpdateInstance",
                 Version = "2022-08-01",
                 Protocol = "HTTPS",
-                Pathname = "/instances/" + instanceId,
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId),
                 Method = "PATCH",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1027,7 +938,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         public async Task<UpdateInstanceResponse> UpdateInstanceWithOptionsAsync(string instanceId, UpdateInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtConfig.ToMap()))
             {
@@ -1045,10 +955,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             {
                 body["remark"] = request.Remark;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
-            {
-                body["resourceGroupId"] = request.ResourceGroupId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1059,7 +965,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 Action = "UpdateInstance",
                 Version = "2022-08-01",
                 Protocol = "HTTPS",
-                Pathname = "/instances/" + instanceId,
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId),
                 Method = "PATCH",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1086,16 +992,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         public UpdateTopicResponse UpdateTopicWithOptions(string instanceId, string topicName, UpdateTopicRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
-            topicName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(topicName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
                 body["remark"] = request.Remark;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
-            {
-                body["resourceGroupId"] = request.ResourceGroupId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1107,7 +1007,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 Action = "UpdateTopic",
                 Version = "2022-08-01",
                 Protocol = "HTTPS",
-                Pathname = "/instances/" + instanceId + "/topics/" + topicName,
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/topics/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(topicName),
                 Method = "PATCH",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1120,16 +1020,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         public async Task<UpdateTopicResponse> UpdateTopicWithOptionsAsync(string instanceId, string topicName, UpdateTopicRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
-            topicName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(topicName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
                 body["remark"] = request.Remark;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
-            {
-                body["resourceGroupId"] = request.ResourceGroupId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1141,7 +1035,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 Action = "UpdateTopic",
                 Version = "2022-08-01",
                 Protocol = "HTTPS",
-                Pathname = "/instances/" + instanceId + "/topics/" + topicName,
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/topics/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(topicName),
                 Method = "PATCH",
                 AuthType = "AK",
                 Style = "ROA",

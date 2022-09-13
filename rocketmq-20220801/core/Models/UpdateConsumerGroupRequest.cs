@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [NameInMap("maxRetryTimes")]
             [Validation(Required=false)]
             public int? MaxRetryTimes { get; set; }
+
             [NameInMap("retryPolicy")]
             [Validation(Required=false)]
             public string RetryPolicy { get; set; }
-        };
+
+        }
 
         [NameInMap("deliveryOrderType")]
         [Validation(Required=false)]
@@ -28,10 +30,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [NameInMap("remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
-
-        [NameInMap("resourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
 
     }
 

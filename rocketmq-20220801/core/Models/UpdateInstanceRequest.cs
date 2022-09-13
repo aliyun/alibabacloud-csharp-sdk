@@ -16,13 +16,16 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [NameInMap("autoScaling")]
             [Validation(Required=false)]
             public bool? AutoScaling { get; set; }
+
             [NameInMap("messageRetentionTime")]
             [Validation(Required=false)]
             public int? MessageRetentionTime { get; set; }
+
             [NameInMap("sendReceiveRatio")]
             [Validation(Required=false)]
             public float? SendReceiveRatio { get; set; }
-        };
+
+        }
 
         [NameInMap("instanceName")]
         [Validation(Required=false)]
@@ -36,18 +39,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [Validation(Required=false)]
             public List<UpdateInstanceRequestNetworkInfoEndpoints> Endpoints { get; set; }
             public class UpdateInstanceRequestNetworkInfoEndpoints : TeaModel {
+                [NameInMap("endpointType")]
+                [Validation(Required=false)]
                 public string EndpointType { get; set; }
+
+                [NameInMap("ipWhitelist")]
+                [Validation(Required=false)]
                 public string IpWhitelist { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
-
-        [NameInMap("resourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
 
     }
 
