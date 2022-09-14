@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("CreateSampleData")]
+        [Validation(Required=false)]
+        public bool? CreateSampleData { get; set; }
+
         [NameInMap("DBInstanceCategory")]
         [Validation(Required=false)]
         public string DBInstanceCategory { get; set; }
