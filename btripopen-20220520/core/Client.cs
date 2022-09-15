@@ -18,7 +18,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._signatureAlgorithm = "v2";
             this._endpointRule = "";
             CheckConfig(config);
             this._endpoint = GetEndpoint("btripopen", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -76,7 +75,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
                 Protocol = "HTTPS",
                 Pathname = "/btrip-open-auth/v1/access-token/action/take",
                 Method = "GET",
-                AuthType = "Anonymous",
+                AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
@@ -108,7 +107,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
                 Protocol = "HTTPS",
                 Pathname = "/btrip-open-auth/v1/access-token/action/take",
                 Method = "GET",
-                AuthType = "Anonymous",
+                AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
