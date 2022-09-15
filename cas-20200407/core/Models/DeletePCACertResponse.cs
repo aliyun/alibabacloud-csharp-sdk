@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cas20200407.Models
 {
-    public class DescribePackageStateResponse : TeaModel {
+    public class DeletePCACertResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribePackageStateResponseBody Body { get; set; }
+        public DeletePCACertResponseBody Body { get; set; }
 
     }
 
