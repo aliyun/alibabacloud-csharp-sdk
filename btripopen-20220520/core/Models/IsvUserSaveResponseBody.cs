@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class IsvUserSaveResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("code")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? Code { get; set; }
+
+        [NameInMap("message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
 
         [NameInMap("module")]
         [Validation(Required=false)]
         public string Module { get; set; }
 
-        [NameInMap("result_code")]
+        [NameInMap("requestId")]
         [Validation(Required=false)]
-        public int? ResultCode { get; set; }
-
-        [NameInMap("result_msg")]
-        [Validation(Required=false)]
-        public string ResultMsg { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("success")]
         [Validation(Required=false)]
