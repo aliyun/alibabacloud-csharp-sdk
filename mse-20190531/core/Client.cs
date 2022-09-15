@@ -58,6 +58,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["GatewayUniqueId"] = request.GatewayUniqueId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchType))
+            {
+                query["MatchType"] = request.MatchType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MseSessionId))
             {
                 query["MseSessionId"] = request.MseSessionId;
@@ -104,6 +108,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayUniqueId))
             {
                 query["GatewayUniqueId"] = request.GatewayUniqueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchType))
+            {
+                query["MatchType"] = request.MatchType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MseSessionId))
             {
