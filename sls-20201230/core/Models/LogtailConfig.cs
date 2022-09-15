@@ -40,13 +40,16 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [NameInMap("endpoint")]
             [Validation(Required=false)]
             public string Endpoint { get; set; }
+
             [NameInMap("logstoreName")]
             [Validation(Required=false)]
             public string LogstoreName { get; set; }
+
             [NameInMap("region")]
             [Validation(Required=false)]
             public string Region { get; set; }
-        };
+
+        }
 
         [NameInMap("outputType")]
         [Validation(Required=false)]

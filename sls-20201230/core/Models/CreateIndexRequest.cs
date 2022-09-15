@@ -20,19 +20,24 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [NameInMap("caseSensitive")]
             [Validation(Required=false)]
             public bool? CaseSensitive { get; set; }
+
             [NameInMap("chn")]
             [Validation(Required=false)]
             public bool? Chn { get; set; }
+
             [NameInMap("exclude_keys")]
             [Validation(Required=false)]
             public List<string> ExcludeKeys { get; set; }
+
             [NameInMap("include_keys")]
             [Validation(Required=false)]
             public List<string> IncludeKeys { get; set; }
+
             [NameInMap("token")]
             [Validation(Required=false)]
             public List<string> Token { get; set; }
-        };
+
+        }
 
         [NameInMap("log_reduce")]
         [Validation(Required=false)]

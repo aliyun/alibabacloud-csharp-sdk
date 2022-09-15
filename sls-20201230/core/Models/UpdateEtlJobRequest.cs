@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class EtlJob : TeaModel {
+    public class UpdateEtlJobRequest : TeaModel {
         [NameInMap("enable")]
         [Validation(Required=false)]
         public bool? Enable { get; set; }
@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         [NameInMap("functionConfig")]
         [Validation(Required=false)]
-        public EtlJobFunctionConfig FunctionConfig { get; set; }
-        public class EtlJobFunctionConfig : TeaModel {
+        public UpdateEtlJobRequestFunctionConfig FunctionConfig { get; set; }
+        public class UpdateEtlJobRequestFunctionConfig : TeaModel {
             [NameInMap("accountId")]
             [Validation(Required=false)]
             public string AccountId { get; set; }
@@ -57,8 +57,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         [NameInMap("logConfig")]
         [Validation(Required=false)]
-        public EtlJobLogConfig LogConfig { get; set; }
-        public class EtlJobLogConfig : TeaModel {
+        public UpdateEtlJobRequestLogConfig LogConfig { get; set; }
+        public class UpdateEtlJobRequestLogConfig : TeaModel {
             [NameInMap("endpoint")]
             [Validation(Required=false)]
             public string Endpoint { get; set; }
@@ -75,8 +75,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         [NameInMap("sourceConfig")]
         [Validation(Required=false)]
-        public EtlJobSourceConfig SourceConfig { get; set; }
-        public class EtlJobSourceConfig : TeaModel {
+        public UpdateEtlJobRequestSourceConfig SourceConfig { get; set; }
+        public class UpdateEtlJobRequestSourceConfig : TeaModel {
             [NameInMap("logstoreName")]
             [Validation(Required=false)]
             public string LogstoreName { get; set; }
@@ -85,8 +85,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         [NameInMap("triggerConfig")]
         [Validation(Required=false)]
-        public EtlJobTriggerConfig TriggerConfig { get; set; }
-        public class EtlJobTriggerConfig : TeaModel {
+        public UpdateEtlJobRequestTriggerConfig TriggerConfig { get; set; }
+        public class UpdateEtlJobRequestTriggerConfig : TeaModel {
             [NameInMap("maxRetryTime")]
             [Validation(Required=false)]
             public int? MaxRetryTime { get; set; }

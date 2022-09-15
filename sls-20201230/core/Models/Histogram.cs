@@ -8,22 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class GetHistogramsRequest : TeaModel {
+    public class Histogram : TeaModel {
+        [NameInMap("count")]
+        [Validation(Required=false)]
+        public long? Count { get; set; }
+
         [NameInMap("from")]
         [Validation(Required=false)]
-        public long? From { get; set; }
+        public int? From { get; set; }
 
-        [NameInMap("query")]
+        [NameInMap("progress")]
         [Validation(Required=false)]
-        public string Query { get; set; }
+        public string Progress { get; set; }
 
         [NameInMap("to")]
         [Validation(Required=false)]
-        public long? To { get; set; }
-
-        [NameInMap("topic")]
-        [Validation(Required=false)]
-        public string Topic { get; set; }
+        public int? To { get; set; }
 
     }
 

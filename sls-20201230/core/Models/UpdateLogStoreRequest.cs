@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public int? MaxSplitShard { get; set; }
 
+        [NameInMap("mode")]
+        [Validation(Required=false)]
+        public string Mode { get; set; }
+
         [NameInMap("shardCount")]
         [Validation(Required=false)]
         public int? ShardCount { get; set; }

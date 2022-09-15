@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class GetEtlMetaRequest : TeaModel {
-        [NameInMap("etlMetaKey")]
+    public class ListEtlJobResponseBody : TeaModel {
+        [NameInMap("count")]
         [Validation(Required=false)]
-        public string EtlMetaKey { get; set; }
+        public int? Count { get; set; }
 
-        [NameInMap("etlMetaName")]
+        [NameInMap("etlJobNameList")]
         [Validation(Required=false)]
-        public string EtlMetaName { get; set; }
+        public List<string> EtlJobNameList { get; set; }
 
-        [NameInMap("etlMetaTag")]
+        [NameInMap("total")]
         [Validation(Required=false)]
-        public string EtlMetaTag { get; set; }
+        public int? Total { get; set; }
 
     }
 

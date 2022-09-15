@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class GetIndexResponseBody : TeaModel {
-        [NameInMap("index_mode")]
-        [Validation(Required=false)]
-        public string IndexMode { get; set; }
-
+    public class Index : TeaModel {
         [NameInMap("keys")]
         [Validation(Required=false)]
-        public Dictionary<string, KeysValue> Keys { get; set; }
+        public Dictionary<string, IndexKeysValue> Keys { get; set; }
 
         [NameInMap("lastModifyTime")]
         [Validation(Required=false)]
@@ -23,8 +19,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         [NameInMap("line")]
         [Validation(Required=false)]
-        public GetIndexResponseBodyLine Line { get; set; }
-        public class GetIndexResponseBodyLine : TeaModel {
+        public IndexLine Line { get; set; }
+        public class IndexLine : TeaModel {
             [NameInMap("caseSensitive")]
             [Validation(Required=false)]
             public bool? CaseSensitive { get; set; }
@@ -62,10 +58,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [NameInMap("max_text_len")]
         [Validation(Required=false)]
         public int? MaxTextLen { get; set; }
-
-        [NameInMap("storage")]
-        [Validation(Required=false)]
-        public string Storage { get; set; }
 
         [NameInMap("ttl")]
         [Validation(Required=false)]

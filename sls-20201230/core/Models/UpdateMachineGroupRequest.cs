@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [NameInMap("externalName")]
             [Validation(Required=false)]
             public string ExternalName { get; set; }
+
             [NameInMap("groupTopic")]
             [Validation(Required=false)]
             public string GroupTopic { get; set; }
-        };
+
+        }
 
         [NameInMap("groupName")]
         [Validation(Required=false)]

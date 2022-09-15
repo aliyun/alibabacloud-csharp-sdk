@@ -41,10 +41,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string Topic { get; set; }
 
-        [NameInMap("type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
     }
 
 }

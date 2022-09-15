@@ -20,26 +20,38 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [NameInMap("accessid")]
             [Validation(Required=false)]
             public string Accessid { get; set; }
+
             [NameInMap("accesskey")]
             [Validation(Required=false)]
             public string Accesskey { get; set; }
+
             [NameInMap("bucket")]
             [Validation(Required=false)]
             public string Bucket { get; set; }
+
             [NameInMap("columns")]
             [Validation(Required=false)]
             public List<UpdateOssExternalStoreRequestParameterColumns> Columns { get; set; }
             public class UpdateOssExternalStoreRequestParameterColumns : TeaModel {
+                [NameInMap("name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
+
             [NameInMap("endpoint")]
             [Validation(Required=false)]
             public string Endpoint { get; set; }
+
             [NameInMap("objects")]
             [Validation(Required=false)]
             public List<string> Objects { get; set; }
-        };
+
+        }
 
         [NameInMap("storeType")]
         [Validation(Required=false)]

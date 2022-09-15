@@ -20,27 +20,35 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [NameInMap("bufferInterval")]
             [Validation(Required=false)]
             public int? BufferInterval { get; set; }
+
             [NameInMap("bufferSize")]
             [Validation(Required=false)]
             public int? BufferSize { get; set; }
+
             [NameInMap("compressType")]
             [Validation(Required=false)]
             public string CompressType { get; set; }
+
             [NameInMap("enable")]
             [Validation(Required=false)]
             public bool? Enable { get; set; }
+
             [NameInMap("ossBucket")]
             [Validation(Required=false)]
             public string OssBucket { get; set; }
+
             [NameInMap("ossPrefix")]
             [Validation(Required=false)]
             public string OssPrefix { get; set; }
+
             [NameInMap("pathFormat")]
             [Validation(Required=false)]
             public string PathFormat { get; set; }
+
             [NameInMap("roleArn")]
             [Validation(Required=false)]
             public string RoleArn { get; set; }
+
             [NameInMap("storage")]
             [Validation(Required=false)]
             public CreateOssShipperRequestTargetConfigurationStorage Storage { get; set; }
@@ -54,10 +62,12 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public string Format { get; set; }
 
             }
+
             [NameInMap("timeZone")]
             [Validation(Required=false)]
             public string TimeZone { get; set; }
-        };
+
+        }
 
         [NameInMap("targetType")]
         [Validation(Required=false)]

@@ -43,8 +43,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            machineGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(machineGroup);
-            configName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(configName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -69,8 +67,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            machineGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(machineGroup);
-            configName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(configName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -374,7 +370,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerGroup))
             {
@@ -414,7 +409,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerGroup))
             {
@@ -523,6 +517,130 @@ namespace AlibabaCloud.SDK.Sls20201230
                 BodyType = "none",
             };
             return TeaModel.ToObject<CreateDomainResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public CreateEtlJobResponse CreateEtlJob(string project, CreateEtlJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateEtlJobWithOptions(project, request, headers, runtime);
+        }
+
+        public async Task<CreateEtlJobResponse> CreateEtlJobAsync(string project, CreateEtlJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateEtlJobWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        public CreateEtlJobResponse CreateEtlJobWithOptions(string project, CreateEtlJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                body["enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlJobName))
+            {
+                body["etlJobName"] = request.EtlJobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FunctionConfig.ToMap()))
+            {
+                body["functionConfig"] = request.FunctionConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FunctionParameter))
+            {
+                body["functionParameter"] = request.FunctionParameter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogConfig.ToMap()))
+            {
+                body["logConfig"] = request.LogConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceConfig.ToMap()))
+            {
+                body["sourceConfig"] = request.SourceConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerConfig.ToMap()))
+            {
+                body["triggerConfig"] = request.TriggerConfig;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateEtlJob",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etljobs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateEtlJobResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<CreateEtlJobResponse> CreateEtlJobWithOptionsAsync(string project, CreateEtlJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                body["enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlJobName))
+            {
+                body["etlJobName"] = request.EtlJobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FunctionConfig.ToMap()))
+            {
+                body["functionConfig"] = request.FunctionConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FunctionParameter))
+            {
+                body["functionParameter"] = request.FunctionParameter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogConfig.ToMap()))
+            {
+                body["logConfig"] = request.LogConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceConfig.ToMap()))
+            {
+                body["sourceConfig"] = request.SourceConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerConfig.ToMap()))
+            {
+                body["triggerConfig"] = request.TriggerConfig;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateEtlJob",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etljobs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateEtlJobResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         public CreateEtlMetaResponse CreateEtlMeta(string project, CreateEtlMetaRequest request)
@@ -652,7 +770,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keys))
             {
@@ -708,7 +825,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keys))
             {
@@ -807,6 +923,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             {
                 body["maxSplitShard"] = request.MaxSplitShard;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                body["mode"] = request.Mode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardCount))
             {
                 body["shardCount"] = request.ShardCount;
@@ -873,6 +993,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSplitShard))
             {
                 body["maxSplitShard"] = request.MaxSplitShard;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                body["mode"] = request.Mode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardCount))
             {
@@ -1118,7 +1242,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShipperName))
             {
@@ -1158,7 +1281,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShipperName))
             {
@@ -1304,7 +1426,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShipperName))
             {
@@ -1344,7 +1465,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShipperName))
             {
@@ -1675,8 +1795,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
-            consumerGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroup);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -1701,8 +1819,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
-            consumerGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroup);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -1741,7 +1857,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            domainName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(domainName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -1766,7 +1881,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            domainName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(domainName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -1785,6 +1899,68 @@ namespace AlibabaCloud.SDK.Sls20201230
                 BodyType = "none",
             };
             return TeaModel.ToObject<DeleteDomainResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public DeleteEtlJobResponse DeleteEtlJob(string project, string etlJobName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteEtlJobWithOptions(project, etlJobName, headers, runtime);
+        }
+
+        public async Task<DeleteEtlJobResponse> DeleteEtlJobAsync(string project, string etlJobName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteEtlJobWithOptionsAsync(project, etlJobName, headers, runtime);
+        }
+
+        public DeleteEtlJobResponse DeleteEtlJobWithOptions(string project, string etlJobName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEtlJob",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etljobs/" + etlJobName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteEtlJobResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<DeleteEtlJobResponse> DeleteEtlJobWithOptionsAsync(string project, string etlJobName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEtlJob",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etljobs/" + etlJobName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteEtlJobResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         public DeleteEtlMetaResponse DeleteEtlMeta(string project, DeleteEtlMetaRequest request)
@@ -1897,7 +2073,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            externalStoreName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(externalStoreName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -1922,7 +2097,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            externalStoreName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(externalStoreName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -1961,7 +2135,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -1986,7 +2159,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -2025,7 +2197,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -2050,7 +2221,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -2151,7 +2321,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            machineGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(machineGroup);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -2176,7 +2345,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            machineGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(machineGroup);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -2277,7 +2445,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            savedsearchName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(savedsearchName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -2302,7 +2469,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            savedsearchName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(savedsearchName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -2341,8 +2507,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
-            shipperName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shipperName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -2367,8 +2531,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
-            shipperName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shipperName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -2407,7 +2569,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            machineGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(machineGroup);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -2432,7 +2593,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            machineGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(machineGroup);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -2471,7 +2631,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            configName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(configName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -2496,7 +2655,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            configName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(configName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -2536,8 +2694,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
-            consumerGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroup);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Shard))
             {
@@ -2569,8 +2725,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
-            consumerGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroup);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Shard))
             {
@@ -2616,7 +2770,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackLines))
             {
@@ -2664,7 +2817,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackLines))
             {
@@ -2726,8 +2878,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
-            shardId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shardId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
@@ -2763,8 +2913,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
-            shardId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shardId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
@@ -2814,8 +2962,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
-            shardId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shardId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cursor))
             {
@@ -2851,8 +2997,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
-            shardId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shardId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cursor))
             {
@@ -2883,6 +3027,68 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetCursorTimeResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        public GetEtlJobResponse GetEtlJob(string project, string etlJobName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetEtlJobWithOptions(project, etlJobName, headers, runtime);
+        }
+
+        public async Task<GetEtlJobResponse> GetEtlJobAsync(string project, string etlJobName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetEtlJobWithOptionsAsync(project, etlJobName, headers, runtime);
+        }
+
+        public GetEtlJobResponse GetEtlJobWithOptions(string project, string etlJobName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEtlJob",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etljobs/" + etlJobName,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEtlJobResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<GetEtlJobResponse> GetEtlJobWithOptionsAsync(string project, string etlJobName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEtlJob",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etljobs/" + etlJobName,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEtlJobResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
         public GetEtlMetaResponse GetEtlMeta(string project, GetEtlMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2903,13 +3109,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ElMetaName))
-            {
-                query["elMetaName"] = request.ElMetaName;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaKey))
             {
                 query["etlMetaKey"] = request.EtlMetaKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaName))
+            {
+                query["etlMetaName"] = request.EtlMetaName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaTag))
             {
@@ -2942,13 +3148,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ElMetaName))
-            {
-                query["elMetaName"] = request.ElMetaName;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaKey))
             {
                 query["etlMetaKey"] = request.EtlMetaKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaName))
+            {
+                query["etlMetaName"] = request.EtlMetaName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlMetaTag))
             {
@@ -2993,7 +3199,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            externalStoreName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(externalStoreName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -3018,7 +3223,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            externalStoreName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(externalStoreName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -3058,7 +3262,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
@@ -3076,10 +3279,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             {
                 query["topic"] = request.Topic;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
-            {
-                query["type"] = request.Type;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -3091,7 +3290,7 @@ namespace AlibabaCloud.SDK.Sls20201230
                 Action = "GetHistograms",
                 Version = "2020-12-30",
                 Protocol = "HTTPS",
-                Pathname = "/logstores/" + logstore + "/index",
+                Pathname = "/logstores/" + logstore + "/index?type=histogram",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3106,7 +3305,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
@@ -3124,10 +3322,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             {
                 query["topic"] = request.Topic;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
-            {
-                query["type"] = request.Type;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -3139,7 +3333,7 @@ namespace AlibabaCloud.SDK.Sls20201230
                 Action = "GetHistograms",
                 Version = "2020-12-30",
                 Protocol = "HTTPS",
-                Pathname = "/logstores/" + logstore + "/index",
+                Pathname = "/logstores/" + logstore + "/index?type=histogram",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3167,7 +3361,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -3192,7 +3385,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -3231,7 +3423,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -3256,7 +3447,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -3358,7 +3548,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
@@ -3392,10 +3581,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             {
                 query["topic"] = request.Topic;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
-            {
-                query["type"] = request.Type;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -3407,7 +3592,7 @@ namespace AlibabaCloud.SDK.Sls20201230
                 Action = "GetLogs",
                 Version = "2020-12-30",
                 Protocol = "HTTPS",
-                Pathname = "/logstores/" + logstore + "/index",
+                Pathname = "/logstores/" + logstore + "?type=log",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3422,7 +3607,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
@@ -3456,10 +3640,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             {
                 query["topic"] = request.Topic;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
-            {
-                query["type"] = request.Type;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -3471,7 +3651,7 @@ namespace AlibabaCloud.SDK.Sls20201230
                 Action = "GetLogs",
                 Version = "2020-12-30",
                 Protocol = "HTTPS",
-                Pathname = "/logstores/" + logstore + "/index",
+                Pathname = "/logstores/" + logstore + "?type=log",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3499,7 +3679,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            machineGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(machineGroup);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -3524,7 +3703,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            machineGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(machineGroup);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -3709,7 +3887,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            savedsearchName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(savedsearchName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -3734,7 +3911,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            savedsearchName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(savedsearchName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -3773,8 +3949,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
-            shipperName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shipperName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -3799,8 +3973,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
-            shipperName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shipperName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -3840,8 +4012,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
-            shipperName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shipperName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
@@ -3889,8 +4059,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
-            shipperName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shipperName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
@@ -3951,7 +4119,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -3976,7 +4143,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -4087,6 +4253,90 @@ namespace AlibabaCloud.SDK.Sls20201230
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListDomainsResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public ListEtlJobResponse ListEtlJob(string project, ListEtlJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListEtlJobWithOptions(project, request, headers, runtime);
+        }
+
+        public async Task<ListEtlJobResponse> ListEtlJobAsync(string project, ListEtlJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListEtlJobWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        public ListEtlJobResponse ListEtlJobWithOptions(string project, ListEtlJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEtlJob",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etljobs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEtlJobResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<ListEtlJobResponse> ListEtlJobWithOptionsAsync(string project, ListEtlJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEtlJob",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etljobs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEtlJobResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         public ListEtlMetaResponse ListEtlMeta(string project, ListEtlMetaRequest request)
@@ -4397,6 +4647,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             {
                 query["logstoreName"] = request.LogstoreName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                query["mode"] = request.Mode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
             {
                 query["offset"] = request.Offset;
@@ -4439,6 +4693,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogstoreName))
             {
                 query["logstoreName"] = request.LogstoreName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                query["mode"] = request.Mode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
             {
@@ -4584,7 +4842,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            machineGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(machineGroup);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
             {
@@ -4620,7 +4877,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            machineGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(machineGroup);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
             {
@@ -4839,7 +5095,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -4864,7 +5119,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -4903,7 +5157,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -4928,7 +5181,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -5074,8 +5326,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
-            shardID = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shardID);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Action))
             {
@@ -5107,8 +5357,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
-            shardID = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shardID);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Action))
             {
@@ -5153,8 +5401,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            machineGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(machineGroup);
-            configName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(configName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -5179,8 +5425,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            machineGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(machineGroup);
-            configName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(configName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -5220,8 +5464,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
-            shardID = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shardID);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Action))
             {
@@ -5261,8 +5503,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
-            shardID = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shardID);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Action))
             {
@@ -5496,8 +5736,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
-            consumerGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroup);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Consumer))
             {
@@ -5547,8 +5785,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
-            consumerGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroup);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Consumer))
             {
@@ -5612,8 +5848,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
-            consumerGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroup);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
             {
@@ -5649,8 +5883,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
-            consumerGroup = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroup);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
             {
@@ -5679,6 +5911,130 @@ namespace AlibabaCloud.SDK.Sls20201230
                 BodyType = "none",
             };
             return TeaModel.ToObject<UpdateConsumerGroupResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public UpdateEtlJobResponse UpdateEtlJob(string project, string etlJobName, UpdateEtlJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateEtlJobWithOptions(project, etlJobName, request, headers, runtime);
+        }
+
+        public async Task<UpdateEtlJobResponse> UpdateEtlJobAsync(string project, string etlJobName, UpdateEtlJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateEtlJobWithOptionsAsync(project, etlJobName, request, headers, runtime);
+        }
+
+        public UpdateEtlJobResponse UpdateEtlJobWithOptions(string project, string etlJobName, UpdateEtlJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                body["enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlJobName))
+            {
+                body["etlJobName"] = request.EtlJobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FunctionConfig.ToMap()))
+            {
+                body["functionConfig"] = request.FunctionConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FunctionParameter))
+            {
+                body["functionParameter"] = request.FunctionParameter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogConfig.ToMap()))
+            {
+                body["logConfig"] = request.LogConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceConfig.ToMap()))
+            {
+                body["sourceConfig"] = request.SourceConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerConfig.ToMap()))
+            {
+                body["triggerConfig"] = request.TriggerConfig;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateEtlJob",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etljobs/" + etlJobName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateEtlJobResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<UpdateEtlJobResponse> UpdateEtlJobWithOptionsAsync(string project, string etlJobName, UpdateEtlJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                body["enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtlJobName))
+            {
+                body["etlJobName"] = request.EtlJobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FunctionConfig.ToMap()))
+            {
+                body["functionConfig"] = request.FunctionConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FunctionParameter))
+            {
+                body["functionParameter"] = request.FunctionParameter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogConfig.ToMap()))
+            {
+                body["logConfig"] = request.LogConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceConfig.ToMap()))
+            {
+                body["sourceConfig"] = request.SourceConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerConfig.ToMap()))
+            {
+                body["triggerConfig"] = request.TriggerConfig;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateEtlJob",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/etljobs/" + etlJobName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateEtlJobResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         public UpdateEtlMetaResponse UpdateEtlMeta(string project, UpdateEtlMetaRequest request)
@@ -5808,7 +6164,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keys))
             {
@@ -5864,7 +6219,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keys))
             {
@@ -5934,7 +6288,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppendMeta))
             {
@@ -5963,6 +6316,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSplitShard))
             {
                 body["maxSplitShard"] = request.MaxSplitShard;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                body["mode"] = request.Mode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardCount))
             {
@@ -6002,7 +6359,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppendMeta))
             {
@@ -6031,6 +6387,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSplitShard))
             {
                 body["maxSplitShard"] = request.MaxSplitShard;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                body["mode"] = request.Mode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardCount))
             {
@@ -6168,7 +6528,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            groupName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(groupName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupAttribute.ToMap()))
             {
@@ -6216,7 +6575,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            groupName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(groupName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupAttribute.ToMap()))
             {
@@ -6278,8 +6636,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
-            shipperName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shipperName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShipperName))
             {
@@ -6319,8 +6675,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
-            shipperName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shipperName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShipperName))
             {
@@ -6374,7 +6728,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            externalStoreName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(externalStoreName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalStoreName))
             {
@@ -6414,7 +6767,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            externalStoreName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(externalStoreName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalStoreName))
             {
@@ -6468,8 +6820,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
-            shipperName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shipperName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShipperName))
             {
@@ -6509,8 +6859,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            logstore = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(logstore);
-            shipperName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(shipperName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShipperName))
             {
@@ -6640,7 +6988,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            externalStoreName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(externalStoreName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalStoreName))
             {
@@ -6680,7 +7027,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            externalStoreName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(externalStoreName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalStoreName))
             {
@@ -6734,7 +7080,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            savedsearchName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(savedsearchName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
             {
@@ -6782,7 +7127,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            savedsearchName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(savedsearchName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
             {
