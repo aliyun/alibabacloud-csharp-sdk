@@ -16,16 +16,20 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("CurrentVersionFullShowName")]
             [Validation(Required=false)]
             public string CurrentVersionFullShowName { get; set; }
+
             [NameInMap("MaxVersionChangelogUrl")]
             [Validation(Required=false)]
             public string MaxVersionChangelogUrl { get; set; }
+
             [NameInMap("MaxVersionCode")]
             [Validation(Required=false)]
             public string MaxVersionCode { get; set; }
+
             [NameInMap("MaxVersionFullShowName")]
             [Validation(Required=false)]
             public string MaxVersionFullShowName { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -39,9 +43,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

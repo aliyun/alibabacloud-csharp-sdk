@@ -13,16 +13,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
-        /// <summary>
-        /// 目标集群的id
-        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        /// <summary>
-        /// 想修改的镜像版本code
-        /// </summary>
+        [NameInMap("MseSessionId")]
+        [Validation(Required=false)]
+        public string MseSessionId { get; set; }
+
         [NameInMap("VersionCode")]
         [Validation(Required=false)]
         public string VersionCode { get; set; }

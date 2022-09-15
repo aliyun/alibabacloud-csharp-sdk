@@ -17,20 +17,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
 
+        [NameInMap("MseSessionId")]
+        [Validation(Required=false)]
+        public string MseSessionId { get; set; }
+
         [NameInMap("ServiceList")]
         [Validation(Required=false)]
         public string ServiceListShrink { get; set; }
 
-        [NameInMap("SourceId")]
-        [Validation(Required=false)]
-        public string SourceId { get; set; }
-
-        /// <summary>
-        /// 服务来源
-        /// </summary>
         [NameInMap("SourceType")]
         [Validation(Required=false)]
         public string SourceType { get; set; }
+
+        [NameInMap("TlsSetting")]
+        [Validation(Required=false)]
+        public string TlsSetting { get; set; }
 
     }
 

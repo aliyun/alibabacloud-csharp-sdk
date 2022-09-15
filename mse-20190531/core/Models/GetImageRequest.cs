@@ -13,9 +13,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
-        /// <summary>
-        /// 集群版本
-        /// </summary>
+        [NameInMap("MseSessionId")]
+        [Validation(Required=false)]
+        public string MseSessionId { get; set; }
+
         [NameInMap("VersionCode")]
         [Validation(Required=false)]
         public string VersionCode { get; set; }

@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
             [NameInMap("EndDate")]
             [Validation(Required=false)]
-            public long? EndDate { get; set; }
+            public string EndDate { get; set; }
 
             [NameInMap("EnvironmentId")]
             [Validation(Required=false)]
@@ -159,9 +159,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

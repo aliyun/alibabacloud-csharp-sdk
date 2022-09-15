@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
 
+        [NameInMap("MseSessionId")]
+        [Validation(Required=false)]
+        public string MseSessionId { get; set; }
+
         [NameInMap("ServiceList")]
         [Validation(Required=false)]
         public List<ImportServicesRequestServiceList> ServiceList { get; set; }
@@ -37,32 +41,23 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Namespace { get; set; }
 
-            /// <summary>
-            /// 服务的端口
-            /// </summary>
             [NameInMap("ServicePort")]
             [Validation(Required=false)]
             public long? ServicePort { get; set; }
 
-            /// <summary>
-            /// 服务的协议版本
-            /// </summary>
             [NameInMap("ServiceProtocol")]
             [Validation(Required=false)]
             public string ServiceProtocol { get; set; }
 
         }
 
-        [NameInMap("SourceId")]
-        [Validation(Required=false)]
-        public string SourceId { get; set; }
-
-        /// <summary>
-        /// 服务来源
-        /// </summary>
         [NameInMap("SourceType")]
         [Validation(Required=false)]
         public string SourceType { get; set; }
+
+        [NameInMap("TlsSetting")]
+        [Validation(Required=false)]
+        public string TlsSetting { get; set; }
 
     }
 

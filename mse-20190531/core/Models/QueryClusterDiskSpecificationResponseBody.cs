@@ -20,13 +20,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("Max")]
             [Validation(Required=false)]
             public int? Max { get; set; }
+
             [NameInMap("Min")]
             [Validation(Required=false)]
             public int? Min { get; set; }
+
             [NameInMap("Step")]
             [Validation(Required=false)]
             public int? Step { get; set; }
-        };
+
+        }
 
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]

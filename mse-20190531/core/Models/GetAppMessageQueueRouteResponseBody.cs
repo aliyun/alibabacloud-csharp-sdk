@@ -20,16 +20,24 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("AppId")]
             [Validation(Required=false)]
             public string AppId { get; set; }
+
             [NameInMap("Enable")]
             [Validation(Required=false)]
             public bool? Enable { get; set; }
+
+            [NameInMap("FilterSide")]
+            [Validation(Required=false)]
+            public string FilterSide { get; set; }
+
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
+
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<string> Tags { get; set; }
-        };
+
+        }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]

@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("Url")]
             [Validation(Required=false)]
             public string Url { get; set; }
-        };
+
+        }
 
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]

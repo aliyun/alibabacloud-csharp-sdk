@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("MseSessionId")]
+        [Validation(Required=false)]
+        public string MseSessionId { get; set; }
+
         [NameInMap("RequestPars")]
         [Validation(Required=false)]
         public string RequestPars { get; set; }

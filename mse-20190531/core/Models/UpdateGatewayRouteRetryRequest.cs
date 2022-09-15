@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public long? Id { get; set; }
 
+        [NameInMap("MseSessionId")]
+        [Validation(Required=false)]
+        public string MseSessionId { get; set; }
+
         [NameInMap("RetryJSON")]
         [Validation(Required=false)]
         public UpdateGatewayRouteRetryRequestRetryJSON RetryJSON { get; set; }
@@ -32,16 +36,20 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("Attempts")]
             [Validation(Required=false)]
             public int? Attempts { get; set; }
+
             [NameInMap("HttpCodes")]
             [Validation(Required=false)]
             public List<string> HttpCodes { get; set; }
+
             [NameInMap("RetryOn")]
             [Validation(Required=false)]
             public List<string> RetryOn { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-        };
+
+        }
 
     }
 

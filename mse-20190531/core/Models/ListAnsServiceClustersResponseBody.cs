@@ -17,33 +17,61 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public List<ListAnsServiceClustersResponseBodyDataClusters> Clusters { get; set; }
             public class ListAnsServiceClustersResponseBodyDataClusters : TeaModel {
+                [NameInMap("DefaultCheckPort")]
+                [Validation(Required=false)]
                 public int? DefaultCheckPort { get; set; }
+
+                [NameInMap("DefaultPort")]
+                [Validation(Required=false)]
                 public int? DefaultPort { get; set; }
+
+                [NameInMap("HealthCheckerType")]
+                [Validation(Required=false)]
                 public string HealthCheckerType { get; set; }
-                public Dictionary<string, string> Metadata { get; set; }
+
+                [NameInMap("Metadata")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> Metadata { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("ServiceName")]
+                [Validation(Required=false)]
                 public string ServiceName { get; set; }
+
+                [NameInMap("UseIPPort4Check")]
+                [Validation(Required=false)]
                 public bool? UseIPPort4Check { get; set; }
+
             }
+
             [NameInMap("Ephemeral")]
             [Validation(Required=false)]
             public bool? Ephemeral { get; set; }
+
             [NameInMap("GroupName")]
             [Validation(Required=false)]
             public string GroupName { get; set; }
+
             [NameInMap("Metadata")]
             [Validation(Required=false)]
-            public Dictionary<string, string> Metadata { get; set; }
+            public Dictionary<string, object> Metadata { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
             [NameInMap("ProtectThreshold")]
             [Validation(Required=false)]
             public float? ProtectThreshold { get; set; }
+
             [NameInMap("SelectorType")]
             [Validation(Required=false)]
             public string SelectorType { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

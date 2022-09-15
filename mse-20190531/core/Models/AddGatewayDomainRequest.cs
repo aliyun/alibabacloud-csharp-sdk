@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
 
+        [NameInMap("Http2")]
+        [Validation(Required=false)]
+        public string Http2 { get; set; }
+
+        [NameInMap("MseSessionId")]
+        [Validation(Required=false)]
+        public string MseSessionId { get; set; }
+
         [NameInMap("MustHttps")]
         [Validation(Required=false)]
         public bool? MustHttps { get; set; }
@@ -32,6 +40,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("Protocol")]
         [Validation(Required=false)]
         public string Protocol { get; set; }
+
+        [NameInMap("TlsMax")]
+        [Validation(Required=false)]
+        public string TlsMax { get; set; }
+
+        [NameInMap("TlsMin")]
+        [Validation(Required=false)]
+        public string TlsMin { get; set; }
 
     }
 

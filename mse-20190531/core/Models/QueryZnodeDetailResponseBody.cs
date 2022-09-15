@@ -16,16 +16,20 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("Data")]
             [Validation(Required=false)]
             public string Data { get; set; }
+
             [NameInMap("Dir")]
             [Validation(Required=false)]
             public bool? Dir { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
             [NameInMap("Path")]
             [Validation(Required=false)]
             public string Path { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

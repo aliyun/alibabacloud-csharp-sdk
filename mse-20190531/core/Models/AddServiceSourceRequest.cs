@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
 
+        [NameInMap("GroupList")]
+        [Validation(Required=false)]
+        public List<string> GroupList { get; set; }
+
         [NameInMap("IngressOptionsRequest")]
         [Validation(Required=false)]
         public AddServiceSourceRequestIngressOptionsRequest IngressOptionsRequest { get; set; }
@@ -28,13 +32,20 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("EnableIngress")]
             [Validation(Required=false)]
             public bool? EnableIngress { get; set; }
+
             [NameInMap("IngressClass")]
             [Validation(Required=false)]
             public string IngressClass { get; set; }
+
             [NameInMap("WatchNamespace")]
             [Validation(Required=false)]
             public string WatchNamespace { get; set; }
-        };
+
+        }
+
+        [NameInMap("MseSessionId")]
+        [Validation(Required=false)]
+        public string MseSessionId { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]

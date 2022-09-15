@@ -32,7 +32,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
-            };
+
+            }
 
             [NameInMap("GatewayId")]
             [Validation(Required=false)]
@@ -45,6 +46,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public string GmtModified { get; set; }
+
+            [NameInMap("Http2")]
+            [Validation(Required=false)]
+            public string Http2 { get; set; }
 
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -66,6 +71,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public int? Status { get; set; }
 
+            [NameInMap("TlsMax")]
+            [Validation(Required=false)]
+            public string TlsMax { get; set; }
+
+            [NameInMap("TlsMin")]
+            [Validation(Required=false)]
+            public string TlsMin { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
@@ -80,9 +93,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

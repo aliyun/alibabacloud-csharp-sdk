@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class QueryGovernanceKubernetesClusterResponseBody : TeaModel {
-        /// <summary>
-        /// 后端状态码
-        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
@@ -23,24 +20,46 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<QueryGovernanceKubernetesClusterResponseBodyDataResult> Result { get; set; }
             public class QueryGovernanceKubernetesClusterResponseBodyDataResult : TeaModel {
+                [NameInMap("ClusterId")]
+                [Validation(Required=false)]
                 public string ClusterId { get; set; }
+
+                [NameInMap("ClusterName")]
+                [Validation(Required=false)]
                 public string ClusterName { get; set; }
+
+                [NameInMap("K8sVersion")]
+                [Validation(Required=false)]
                 public string K8sVersion { get; set; }
+
+                [NameInMap("NamespaceInfos")]
+                [Validation(Required=false)]
                 public string NamespaceInfos { get; set; }
+
+                [NameInMap("PilotStartTime")]
+                [Validation(Required=false)]
                 public string PilotStartTime { get; set; }
+
+                [NameInMap("Region")]
+                [Validation(Required=false)]
                 public string Region { get; set; }
+
             }
+
             [NameInMap("TotalSize")]
             [Validation(Required=false)]
             public int? TotalSize { get; set; }
-        };
+
+        }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
@@ -54,9 +73,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 是否成功
-        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

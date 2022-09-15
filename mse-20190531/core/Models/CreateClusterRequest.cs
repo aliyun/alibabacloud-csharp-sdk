@@ -37,9 +37,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public int? InstanceCount { get; set; }
 
-        /// <summary>
-        /// 用于区分基础/专业版本
-        /// </summary>
+        [NameInMap("InstanceName")]
+        [Validation(Required=false)]
+        public string InstanceName { get; set; }
+
+        [NameInMap("MseSessionId")]
+        [Validation(Required=false)]
+        public string MseSessionId { get; set; }
+
         [NameInMap("MseVersion")]
         [Validation(Required=false)]
         public string MseVersion { get; set; }
@@ -67,6 +72,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("RequestPars")]
         [Validation(Required=false)]
         public string RequestPars { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

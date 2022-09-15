@@ -48,13 +48,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [NameInMap("EnableIngress")]
                 [Validation(Required=false)]
                 public bool? EnableIngress { get; set; }
+
                 [NameInMap("IngressClass")]
                 [Validation(Required=false)]
                 public string IngressClass { get; set; }
+
                 [NameInMap("WatchNamespace")]
                 [Validation(Required=false)]
                 public string WatchNamespace { get; set; }
-            };
+
+            }
 
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -82,9 +85,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

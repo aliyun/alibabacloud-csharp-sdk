@@ -54,15 +54,19 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public long? UnitNum { get; set; }
 
             }
+
             [NameInMap("DefaultServiceId")]
             [Validation(Required=false)]
             public long? DefaultServiceId { get; set; }
+
             [NameInMap("DefaultServiceName")]
             [Validation(Required=false)]
             public string DefaultServiceName { get; set; }
+
             [NameInMap("DestinationType")]
             [Validation(Required=false)]
             public string DestinationType { get; set; }
+
             [NameInMap("DirectResponse")]
             [Validation(Required=false)]
             public UpdateGatewayRouteWafStatusResponseBodyDataDirectResponse DirectResponse { get; set; }
@@ -76,33 +80,43 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? Code { get; set; }
 
             }
+
             [NameInMap("DomainId")]
             [Validation(Required=false)]
             public long? DomainId { get; set; }
+
             [NameInMap("DomainIdList")]
             [Validation(Required=false)]
-            public List<string> DomainIdList { get; set; }
+            public List<long?> DomainIdList { get; set; }
+
             [NameInMap("DomainName")]
             [Validation(Required=false)]
             public string DomainName { get; set; }
+
             [NameInMap("DomainNameList")]
             [Validation(Required=false)]
             public List<string> DomainNameList { get; set; }
+
             [NameInMap("EnableWaf")]
             [Validation(Required=false)]
             public bool? EnableWaf { get; set; }
+
             [NameInMap("GatewayId")]
             [Validation(Required=false)]
             public long? GatewayId { get; set; }
+
             [NameInMap("GatewayUniqueId")]
             [Validation(Required=false)]
             public string GatewayUniqueId { get; set; }
+
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
+
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public string GmtModified { get; set; }
+
             [NameInMap("HTTPRewrite")]
             [Validation(Required=false)]
             public UpdateGatewayRouteWafStatusResponseBodyDataHTTPRewrite HTTPRewrite { get; set; }
@@ -132,6 +146,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Substitution { get; set; }
 
             }
+
             [NameInMap("HeaderOp")]
             [Validation(Required=false)]
             public UpdateGatewayRouteWafStatusResponseBodyDataHeaderOp HeaderOp { get; set; }
@@ -163,15 +178,19 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Status { get; set; }
 
             }
+
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
             [NameInMap("Predicates")]
             [Validation(Required=false)]
             public string Predicates { get; set; }
+
             [NameInMap("Redirect")]
             [Validation(Required=false)]
             public UpdateGatewayRouteWafStatusResponseBodyDataRedirect Redirect { get; set; }
@@ -189,6 +208,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Path { get; set; }
 
             }
+
             [NameInMap("Retry")]
             [Validation(Required=false)]
             public UpdateGatewayRouteWafStatusResponseBodyDataRetry Retry { get; set; }
@@ -210,9 +230,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Status { get; set; }
 
             }
+
             [NameInMap("RouteOrder")]
             [Validation(Required=false)]
             public int? RouteOrder { get; set; }
+
             [NameInMap("RoutePredicates")]
             [Validation(Required=false)]
             public UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicates RoutePredicates { get; set; }
@@ -246,13 +268,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     [NameInMap("IgnoreCase")]
                     [Validation(Required=false)]
                     public bool? IgnoreCase { get; set; }
+
                     [NameInMap("Path")]
                     [Validation(Required=false)]
                     public string Path { get; set; }
+
                     [NameInMap("Type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }
-                };
+
+                }
 
                 [NameInMap("QueryPredicates")]
                 [Validation(Required=false)]
@@ -273,25 +298,53 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 }
 
             }
+
             [NameInMap("RouteServices")]
             [Validation(Required=false)]
             public List<UpdateGatewayRouteWafStatusResponseBodyDataRouteServices> RouteServices { get; set; }
             public class UpdateGatewayRouteWafStatusResponseBodyDataRouteServices : TeaModel {
+                [NameInMap("GroupName")]
+                [Validation(Required=false)]
                 public string GroupName { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Namespace")]
+                [Validation(Required=false)]
                 public string Namespace { get; set; }
+
+                [NameInMap("Percent")]
+                [Validation(Required=false)]
                 public int? Percent { get; set; }
+
+                [NameInMap("ServiceId")]
+                [Validation(Required=false)]
                 public long? ServiceId { get; set; }
+
+                [NameInMap("ServiceName")]
+                [Validation(Required=false)]
                 public string ServiceName { get; set; }
+
+                [NameInMap("SourceType")]
+                [Validation(Required=false)]
                 public string SourceType { get; set; }
+
+                [NameInMap("Version")]
+                [Validation(Required=false)]
                 public string Version { get; set; }
+
             }
+
             [NameInMap("Services")]
             [Validation(Required=false)]
             public string Services { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
+
             [NameInMap("Timeout")]
             [Validation(Required=false)]
             public UpdateGatewayRouteWafStatusResponseBodyDataTimeout Timeout { get; set; }
@@ -309,7 +362,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? UnitNum { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
@@ -319,9 +373,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

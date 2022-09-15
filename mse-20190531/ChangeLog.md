@@ -1,3 +1,6 @@
+2022-09-15 Version: 3.0.24
+- Automatically generate sdk tasks.
+
 2022-06-21 Version: 3.0.23
 - Add Seata List Cluster open.
 - Add Seata List Group.

@@ -24,28 +24,40 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("DefaultServiceId")]
             [Validation(Required=false)]
             public long? DefaultServiceId { get; set; }
+
             [NameInMap("DomainId")]
             [Validation(Required=false)]
             public long? DomainId { get; set; }
+
             [NameInMap("DomainName")]
             [Validation(Required=false)]
             public string DomainName { get; set; }
+
             [NameInMap("GatewayId")]
             [Validation(Required=false)]
             public long? GatewayId { get; set; }
+
             [NameInMap("GatewayUniqueId")]
             [Validation(Required=false)]
             public string GatewayUniqueId { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
             [NameInMap("RouteOrder")]
             [Validation(Required=false)]
             public int? RouteOrder { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
-        };
+
+        }
+
+        [NameInMap("MseSessionId")]
+        [Validation(Required=false)]
+        public string MseSessionId { get; set; }
 
         [NameInMap("OrderItem")]
         [Validation(Required=false)]

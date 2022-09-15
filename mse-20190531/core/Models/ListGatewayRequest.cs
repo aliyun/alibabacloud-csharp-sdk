@@ -24,19 +24,28 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("GatewayType")]
             [Validation(Required=false)]
             public string GatewayType { get; set; }
+
             [NameInMap("GatewayUniqueId")]
             [Validation(Required=false)]
             public string GatewayUniqueId { get; set; }
+
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
             [NameInMap("Vpc")]
             [Validation(Required=false)]
             public string Vpc { get; set; }
-        };
+
+        }
+
+        [NameInMap("MseSessionId")]
+        [Validation(Required=false)]
+        public string MseSessionId { get; set; }
 
         [NameInMap("OrderItem")]
         [Validation(Required=false)]

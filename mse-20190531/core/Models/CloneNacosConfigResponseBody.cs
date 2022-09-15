@@ -21,23 +21,39 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public List<CloneNacosConfigResponseBodyDataFailData> FailData { get; set; }
             public class CloneNacosConfigResponseBodyDataFailData : TeaModel {
+                [NameInMap("DataId")]
+                [Validation(Required=false)]
                 public string DataId { get; set; }
+
+                [NameInMap("Group")]
+                [Validation(Required=false)]
                 public string Group { get; set; }
+
             }
+
             [NameInMap("SkipCount")]
             [Validation(Required=false)]
             public int? SkipCount { get; set; }
+
             [NameInMap("SkipData")]
             [Validation(Required=false)]
             public List<CloneNacosConfigResponseBodyDataSkipData> SkipData { get; set; }
             public class CloneNacosConfigResponseBodyDataSkipData : TeaModel {
+                [NameInMap("DataId")]
+                [Validation(Required=false)]
                 public string DataId { get; set; }
+
+                [NameInMap("Group")]
+                [Validation(Required=false)]
                 public string Group { get; set; }
+
             }
+
             [NameInMap("SuccCount")]
             [Validation(Required=false)]
             public int? SuccCount { get; set; }
-        };
+
+        }
 
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]

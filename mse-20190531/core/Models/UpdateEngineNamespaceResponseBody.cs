@@ -16,22 +16,28 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("ConfigCount")]
             [Validation(Required=false)]
             public int? ConfigCount { get; set; }
+
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
+
             [NameInMap("NamespaceDesc")]
             [Validation(Required=false)]
             public string NamespaceDesc { get; set; }
+
             [NameInMap("NamespaceShowName")]
             [Validation(Required=false)]
             public string NamespaceShowName { get; set; }
+
             [NameInMap("Quota")]
             [Validation(Required=false)]
             public int? Quota { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public int? Type { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

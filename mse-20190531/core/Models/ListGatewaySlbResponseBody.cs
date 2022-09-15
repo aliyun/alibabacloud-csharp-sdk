@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public List<ListGatewaySlbResponseBodyData> Data { get; set; }
         public class ListGatewaySlbResponseBodyData : TeaModel {
+            [NameInMap("EditEnable")]
+            [Validation(Required=false)]
+            public bool? EditEnable { get; set; }
+
             [NameInMap("GatewayId")]
             [Validation(Required=false)]
             public string GatewayId { get; set; }
@@ -33,9 +37,25 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
 
+            [NameInMap("HttpPort")]
+            [Validation(Required=false)]
+            public int? HttpPort { get; set; }
+
+            [NameInMap("HttpsPort")]
+            [Validation(Required=false)]
+            public int? HttpsPort { get; set; }
+
+            [NameInMap("HttpsVServerGroupId")]
+            [Validation(Required=false)]
+            public string HttpsVServerGroupId { get; set; }
+
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
+
+            [NameInMap("ServiceWeight")]
+            [Validation(Required=false)]
+            public int? ServiceWeight { get; set; }
 
             [NameInMap("SlbId")]
             [Validation(Required=false)]
@@ -57,6 +77,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Type { get; set; }
 
+            [NameInMap("VServerGroupId")]
+            [Validation(Required=false)]
+            public string VServerGroupId { get; set; }
+
         }
 
         [NameInMap("HttpStatusCode")]
@@ -67,9 +91,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

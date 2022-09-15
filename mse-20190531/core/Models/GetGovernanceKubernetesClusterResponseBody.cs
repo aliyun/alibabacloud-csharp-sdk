@@ -20,32 +20,46 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
+
             [NameInMap("ClusterName")]
             [Validation(Required=false)]
             public string ClusterName { get; set; }
+
             [NameInMap("K8sVersion")]
             [Validation(Required=false)]
             public string K8sVersion { get; set; }
+
             [NameInMap("NamespaceInfos")]
             [Validation(Required=false)]
             public string NamespaceInfos { get; set; }
+
             [NameInMap("Namespaces")]
             [Validation(Required=false)]
             public List<GetGovernanceKubernetesClusterResponseBodyDataNamespaces> Namespaces { get; set; }
             public class GetGovernanceKubernetesClusterResponseBodyDataNamespaces : TeaModel {
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
                 public string Tags { get; set; }
+
             }
+
             [NameInMap("PilotStartTime")]
             [Validation(Required=false)]
             public string PilotStartTime { get; set; }
+
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
+
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
             public string UpdateTime { get; set; }
-        };
+
+        }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]

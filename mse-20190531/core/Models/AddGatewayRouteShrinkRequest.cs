@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public bool? EnableWaf { get; set; }
 
+        [NameInMap("Fallback")]
+        [Validation(Required=false)]
+        public bool? Fallback { get; set; }
+
+        [NameInMap("FallbackServices")]
+        [Validation(Required=false)]
+        public string FallbackServicesShrink { get; set; }
+
         [NameInMap("GatewayId")]
         [Validation(Required=false)]
         public long? GatewayId { get; set; }
@@ -40,6 +48,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("GatewayUniqueId")]
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
+
+        [NameInMap("MseSessionId")]
+        [Validation(Required=false)]
+        public string MseSessionId { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]

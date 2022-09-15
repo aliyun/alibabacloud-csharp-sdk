@@ -57,19 +57,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string MaxClientCnxns { get; set; }
 
-        /// <summary>
-        /// 最大超时时间
-        /// </summary>
         [NameInMap("MaxSessionTimeout")]
         [Validation(Required=false)]
         public string MaxSessionTimeout { get; set; }
 
-        /// <summary>
-        /// 最小超时时间
-        /// </summary>
         [NameInMap("MinSessionTimeout")]
         [Validation(Required=false)]
         public string MinSessionTimeout { get; set; }
+
+        [NameInMap("MseSessionId")]
+        [Validation(Required=false)]
+        public string MseSessionId { get; set; }
+
+        [NameInMap("NamingAuthEnabled")]
+        [Validation(Required=false)]
+        public bool? NamingAuthEnabled { get; set; }
 
         [NameInMap("OpenSuperAcl")]
         [Validation(Required=false)]
@@ -82,6 +84,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("RequestPars")]
         [Validation(Required=false)]
         public string RequestPars { get; set; }
+
+        [NameInMap("SnapshotCount")]
+        [Validation(Required=false)]
+        public string SnapshotCount { get; set; }
 
         [NameInMap("SyncLimit")]
         [Validation(Required=false)]

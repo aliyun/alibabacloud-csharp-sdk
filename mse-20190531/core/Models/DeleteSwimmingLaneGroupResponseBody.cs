@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class DeleteSwimmingLaneGroupResponseBody : TeaModel {
-        /// <summary>
-        /// code仅仅用来和success同步
-        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
@@ -20,9 +17,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public object Data { get; set; }
 
-        /// <summary>
-        /// 动态错误信息中的占位符
-        /// </summary>
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
