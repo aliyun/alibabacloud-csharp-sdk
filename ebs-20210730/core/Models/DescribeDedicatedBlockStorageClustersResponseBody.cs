@@ -28,16 +28,20 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
                 [NameInMap("AvailableCapacity")]
                 [Validation(Required=false)]
                 public long? AvailableCapacity { get; set; }
+
                 [NameInMap("DeliveryCapacity")]
                 [Validation(Required=false)]
                 public long? DeliveryCapacity { get; set; }
+
                 [NameInMap("TotalCapacity")]
                 [Validation(Required=false)]
                 public long? TotalCapacity { get; set; }
+
                 [NameInMap("UsedCapacity")]
                 [Validation(Required=false)]
                 public long? UsedCapacity { get; set; }
-            };
+
+            }
 
             [NameInMap("DedicatedBlockStorageClusterId")]
             [Validation(Required=false)]

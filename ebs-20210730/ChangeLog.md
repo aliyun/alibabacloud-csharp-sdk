@@ -1,3 +1,7 @@
+2022-09-15 Version: 1.3.11
+- DescribeDiskReplicaPairProgress to public.
+- Add Tag API.
+
 2022-08-17 Version: 1.3.7
 - Add bandwidth for replica group.
 - Add dbsc pop.
