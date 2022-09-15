@@ -787,9 +787,15 @@ namespace AlibabaCloud.SDK.Oos20190601
             return await CreatePatchBaselineWithOptionsAsync(request, runtime);
         }
 
-        public CreateSecretParameterResponse CreateSecretParameterWithOptions(CreateSecretParameterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateSecretParameterResponse CreateSecretParameterWithOptions(CreateSecretParameterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateSecretParameterShrinkRequest request = new CreateSecretParameterShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -819,9 +825,9 @@ namespace AlibabaCloud.SDK.Oos20190601
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
             {
-                query["Tags"] = request.Tags;
+                query["Tags"] = request.TagsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
@@ -850,9 +856,15 @@ namespace AlibabaCloud.SDK.Oos20190601
             return TeaModel.ToObject<CreateSecretParameterResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CreateSecretParameterResponse> CreateSecretParameterWithOptionsAsync(CreateSecretParameterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateSecretParameterResponse> CreateSecretParameterWithOptionsAsync(CreateSecretParameterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateSecretParameterShrinkRequest request = new CreateSecretParameterShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -882,9 +894,9 @@ namespace AlibabaCloud.SDK.Oos20190601
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
             {
-                query["Tags"] = request.Tags;
+                query["Tags"] = request.TagsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
@@ -1213,6 +1225,10 @@ namespace AlibabaCloud.SDK.Oos20190601
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
@@ -1244,6 +1260,10 @@ namespace AlibabaCloud.SDK.Oos20190601
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
@@ -3353,9 +3373,21 @@ namespace AlibabaCloud.SDK.Oos20190601
             {
                 query["NextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Product))
+            {
+                query["Product"] = request.Product;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3396,9 +3428,21 @@ namespace AlibabaCloud.SDK.Oos20190601
             {
                 query["NextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Product))
+            {
+                query["Product"] = request.Product;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

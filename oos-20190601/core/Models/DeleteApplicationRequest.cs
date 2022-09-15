@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class DeleteApplicationRequest : TeaModel {
+        [NameInMap("Force")]
+        [Validation(Required=false)]
+        public bool? Force { get; set; }
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

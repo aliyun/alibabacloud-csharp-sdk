@@ -16,22 +16,28 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [NameInMap("CreatedDate")]
             [Validation(Required=false)]
             public string CreatedDate { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
+
             [NameInMap("Tags")]
             [Validation(Required=false)]
-            public Dictionary<string, string> Tags { get; set; }
+            public Dictionary<string, object> Tags { get; set; }
+
             [NameInMap("UpdatedDate")]
             [Validation(Required=false)]
             public string UpdatedDate { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

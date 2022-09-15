@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
-    public class CreateSecretParameterRequest : TeaModel {
+    public class CreateSecretParameterShrinkRequest : TeaModel {
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         [NameInMap("Tags")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Tags { get; set; }
+        public string TagsShrink { get; set; }
 
         [NameInMap("Type")]
         [Validation(Required=false)]
