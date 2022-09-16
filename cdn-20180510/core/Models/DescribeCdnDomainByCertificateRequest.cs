@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string SSLPub { get; set; }
 
+        [NameInMap("SSLStatus")]
+        [Validation(Required=false)]
+        public bool? SSLStatus { get; set; }
+
     }
 
 }

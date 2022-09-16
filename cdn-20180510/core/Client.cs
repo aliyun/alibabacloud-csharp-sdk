@@ -2963,6 +2963,10 @@ namespace AlibabaCloud.SDK.Cdn20180510
             {
                 query["SSLPub"] = request.SSLPub;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SSLStatus))
+            {
+                query["SSLStatus"] = request.SSLStatus;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2993,6 +2997,10 @@ namespace AlibabaCloud.SDK.Cdn20180510
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SSLPub))
             {
                 query["SSLPub"] = request.SSLPub;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SSLStatus))
+            {
+                query["SSLStatus"] = request.SSLStatus;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
