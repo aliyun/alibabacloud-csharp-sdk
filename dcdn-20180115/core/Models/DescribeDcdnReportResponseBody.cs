@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
     public class DescribeDcdnReportResponseBody : TeaModel {
         [NameInMap("Content")]
         [Validation(Required=false)]
-        public string Content { get; set; }
+        public Dictionary<string, object> Content { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
