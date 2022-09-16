@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string DesktopName { get; set; }
 
+            [NameInMap("DisplayName")]
+            [Validation(Required=false)]
+            public string DisplayName { get; set; }
+
             [NameInMap("EndUserEmail")]
             [Validation(Required=false)]
             public string EndUserEmail { get; set; }
@@ -40,6 +44,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("EndUserPhone")]
             [Validation(Required=false)]
             public string EndUserPhone { get; set; }
+
+            [NameInMap("EndUserRemark")]
+            [Validation(Required=false)]
+            public string EndUserRemark { get; set; }
 
             [NameInMap("EndUserType")]
             [Validation(Required=false)]

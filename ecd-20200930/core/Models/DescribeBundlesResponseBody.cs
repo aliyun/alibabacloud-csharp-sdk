@@ -97,6 +97,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string OsType { get; set; }
 
+            [NameInMap("Platform")]
+            [Validation(Required=false)]
+            public string Platform { get; set; }
+
             [NameInMap("ProtocolType")]
             [Validation(Required=false)]
             public string ProtocolType { get; set; }

@@ -105,6 +105,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public int? MinDesktopsCount { get; set; }
 
+            [NameInMap("NasFileSystemID")]
+            [Validation(Required=false)]
+            public string NasFileSystemID { get; set; }
+
+            [NameInMap("NasFileSystemName")]
+            [Validation(Required=false)]
+            public string NasFileSystemName { get; set; }
+
             [NameInMap("OfficeSiteId")]
             [Validation(Required=false)]
             public string OfficeSiteId { get; set; }
@@ -140,6 +148,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("PolicyGroupName")]
             [Validation(Required=false)]
             public string PolicyGroupName { get; set; }
+
+            [NameInMap("ProfileFollowSwitch")]
+            [Validation(Required=false)]
+            public bool? ProfileFollowSwitch { get; set; }
 
             [NameInMap("RatioThreshold")]
             [Validation(Required=false)]

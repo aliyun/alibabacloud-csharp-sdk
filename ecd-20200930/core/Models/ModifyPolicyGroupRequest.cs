@@ -159,6 +159,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("RemoteCoordinate")]
+        [Validation(Required=false)]
+        public string RemoteCoordinate { get; set; }
+
         [NameInMap("RevokeAccessPolicyRule")]
         [Validation(Required=false)]
         public List<ModifyPolicyGroupRequestRevokeAccessPolicyRule> RevokeAccessPolicyRule { get; set; }

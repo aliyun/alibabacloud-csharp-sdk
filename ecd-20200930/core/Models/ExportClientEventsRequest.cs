@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string EventType { get; set; }
 
+        [NameInMap("EventTypes")]
+        [Validation(Required=false)]
+        public List<string> EventTypes { get; set; }
+
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }

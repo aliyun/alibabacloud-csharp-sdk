@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public bool? DisableSessionConfig { get; set; }
 
+        [NameInMap("FileSystemId")]
+        [Validation(Required=false)]
+        public string FileSystemId { get; set; }
+
         [NameInMap("IdleDisconnectDuration")]
         [Validation(Required=false)]
         public long? IdleDisconnectDuration { get; set; }
@@ -76,6 +80,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("PolicyGroupId")]
         [Validation(Required=false)]
         public string PolicyGroupId { get; set; }
+
+        [NameInMap("ProfileFollowSwitch")]
+        [Validation(Required=false)]
+        public bool? ProfileFollowSwitch { get; set; }
 
         [NameInMap("RatioThreshold")]
         [Validation(Required=false)]

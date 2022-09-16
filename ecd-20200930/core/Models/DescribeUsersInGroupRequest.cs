@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        [NameInMap("OrgId")]
+        [Validation(Required=false)]
+        public string OrgId { get; set; }
+
         [NameInMap("QueryUserDetail")]
         [Validation(Required=false)]
         public bool? QueryUserDetail { get; set; }
