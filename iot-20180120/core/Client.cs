@@ -4723,6 +4723,92 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await CopyThingModelWithOptionsAsync(request, runtime);
         }
 
+        public CountSpeechBroadcastHourResponse CountSpeechBroadcastHourWithOptions(CountSpeechBroadcastHourRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryDateTimeHour))
+            {
+                query["QueryDateTimeHour"] = request.QueryDateTimeHour;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareTaskCode))
+            {
+                body["ShareTaskCode"] = request.ShareTaskCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CountSpeechBroadcastHour",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CountSpeechBroadcastHourResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CountSpeechBroadcastHourResponse> CountSpeechBroadcastHourWithOptionsAsync(CountSpeechBroadcastHourRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryDateTimeHour))
+            {
+                query["QueryDateTimeHour"] = request.QueryDateTimeHour;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareTaskCode))
+            {
+                body["ShareTaskCode"] = request.ShareTaskCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CountSpeechBroadcastHour",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CountSpeechBroadcastHourResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CountSpeechBroadcastHourResponse CountSpeechBroadcastHour(CountSpeechBroadcastHourRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CountSpeechBroadcastHourWithOptions(request, runtime);
+        }
+
+        public async Task<CountSpeechBroadcastHourResponse> CountSpeechBroadcastHourAsync(CountSpeechBroadcastHourRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CountSpeechBroadcastHourWithOptionsAsync(request, runtime);
+        }
+
         public CreateConsumerGroupResponse CreateConsumerGroupWithOptions(CreateConsumerGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19381,6 +19467,108 @@ namespace AlibabaCloud.SDK.Iot20180120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PageQuerySharedSpeechOpenWithOptionsAsync(request, runtime);
+        }
+
+        public PageQuerySpeechBroadcastHourResponse PageQuerySpeechBroadcastHourWithOptions(PageQuerySpeechBroadcastHourRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryDateTimeHour))
+            {
+                query["QueryDateTimeHour"] = request.QueryDateTimeHour;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageToken))
+            {
+                body["PageToken"] = request.PageToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareTaskCode))
+            {
+                body["ShareTaskCode"] = request.ShareTaskCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PageQuerySpeechBroadcastHour",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PageQuerySpeechBroadcastHourResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<PageQuerySpeechBroadcastHourResponse> PageQuerySpeechBroadcastHourWithOptionsAsync(PageQuerySpeechBroadcastHourRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryDateTimeHour))
+            {
+                query["QueryDateTimeHour"] = request.QueryDateTimeHour;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageToken))
+            {
+                body["PageToken"] = request.PageToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareTaskCode))
+            {
+                body["ShareTaskCode"] = request.ShareTaskCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PageQuerySpeechBroadcastHour",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PageQuerySpeechBroadcastHourResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public PageQuerySpeechBroadcastHourResponse PageQuerySpeechBroadcastHour(PageQuerySpeechBroadcastHourRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return PageQuerySpeechBroadcastHourWithOptions(request, runtime);
+        }
+
+        public async Task<PageQuerySpeechBroadcastHourResponse> PageQuerySpeechBroadcastHourAsync(PageQuerySpeechBroadcastHourRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await PageQuerySpeechBroadcastHourWithOptionsAsync(request, runtime);
         }
 
         public PrintByTemplateResponse PrintByTemplateWithOptions(PrintByTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

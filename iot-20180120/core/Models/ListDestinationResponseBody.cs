@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
