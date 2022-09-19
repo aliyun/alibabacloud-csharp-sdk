@@ -17,9 +17,13 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
             [Validation(Required=false)]
             public List<CreateDedicatedHostResponseBodyDedicateHostListDedicateHostList> DedicateHostList { get; set; }
             public class CreateDedicatedHostResponseBodyDedicateHostListDedicateHostList : TeaModel {
+                [NameInMap("DedicatedHostId")]
+                [Validation(Required=false)]
                 public string DedicatedHostId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("OrderId")]
         [Validation(Required=false)]

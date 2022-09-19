@@ -8,30 +8,38 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cddc20200320.Models
 {
-    public class DescribeHostEcsLevelInfoRequest : TeaModel {
-        [NameInMap("CommodityCode")]
+    public class UntagRequest : TeaModel {
+        [NameInMap("AliUid")]
         [Validation(Required=false)]
-        public string CommodityCode { get; set; }
+        public long? AliUid { get; set; }
 
-        [NameInMap("DbType")]
+        [NameInMap("All")]
         [Validation(Required=false)]
-        public string DbType { get; set; }
+        public bool? All { get; set; }
 
-        [NameInMap("ImageCategory")]
+        [NameInMap("Bid")]
         [Validation(Required=false)]
-        public string ImageCategory { get; set; }
+        public string Bid { get; set; }
+
+        [NameInMap("Keys")]
+        [Validation(Required=false)]
+        public List<string> Keys { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("PayType")]
-        [Validation(Required=false)]
-        public string PayType { get; set; }
-
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("Release")]
+        [Validation(Required=false)]
+        public bool? Release { get; set; }
+
+        [NameInMap("ResourceIds")]
+        [Validation(Required=false)]
+        public List<string> ResourceIds { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -41,13 +49,13 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("StorageType")]
+        [NameInMap("ResourceType")]
         [Validation(Required=false)]
-        public string StorageType { get; set; }
+        public string ResourceType { get; set; }
 
-        [NameInMap("ZoneId")]
+        [NameInMap("Values")]
         [Validation(Required=false)]
-        public string ZoneId { get; set; }
+        public List<string> Values { get; set; }
 
     }
 

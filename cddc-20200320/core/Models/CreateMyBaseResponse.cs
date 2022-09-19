@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cddc20200320.Models
 {
-    public class RestartDedicatedHostResponse : TeaModel {
+    public class CreateMyBaseResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public RestartDedicatedHostResponseBody Body { get; set; }
+        public CreateMyBaseResponseBody Body { get; set; }
 
     }
 

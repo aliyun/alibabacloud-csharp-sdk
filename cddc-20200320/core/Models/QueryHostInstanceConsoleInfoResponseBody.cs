@@ -68,16 +68,20 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
                 [NameInMap("CpuRatio")]
                 [Validation(Required=false)]
                 public float? CpuRatio { get; set; }
+
                 [NameInMap("DiskCurr")]
                 [Validation(Required=false)]
                 public float? DiskCurr { get; set; }
+
                 [NameInMap("MemRatio")]
                 [Validation(Required=false)]
                 public float? MemRatio { get; set; }
+
                 [NameInMap("PerfIdbPio")]
                 [Validation(Required=false)]
                 public float? PerfIdbPio { get; set; }
-            };
+
+            }
 
             [NameInMap("Port")]
             [Validation(Required=false)]

@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -11,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cddc20200320.Models
 {
-    public class CreateDedicatedHostRequest : TeaModel {
+    public class CreateMyBaseShrinkRequest : TeaModel {
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public string AutoRenew { get; set; }
@@ -20,25 +17,21 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("DedicatedHostGroupDescription")]
+        [Validation(Required=false)]
+        public string DedicatedHostGroupDescription { get; set; }
+
         [NameInMap("DedicatedHostGroupId")]
         [Validation(Required=false)]
         public string DedicatedHostGroupId { get; set; }
 
-        [NameInMap("HostClass")]
+        [NameInMap("ECSClassList")]
         [Validation(Required=false)]
-        public string HostClass { get; set; }
+        public string ECSClassListShrink { get; set; }
 
-        [NameInMap("HostStorage")]
+        [NameInMap("Engine")]
         [Validation(Required=false)]
-        public string HostStorage { get; set; }
-
-        [NameInMap("HostStorageType")]
-        [Validation(Required=false)]
-        public string HostStorageType { get; set; }
-
-        [NameInMap("ImageCategory")]
-        [Validation(Required=false)]
-        public string ImageCategory { get; set; }
+        public string Engine { get; set; }
 
         [NameInMap("OsPassword")]
         [Validation(Required=false)]
@@ -56,6 +49,10 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
         [Validation(Required=false)]
         public string Period { get; set; }
 
+        [NameInMap("PeriodType")]
+        [Validation(Required=false)]
+        public string PeriodType { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -68,13 +65,17 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("UsedTime")]
+        [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
-        public string UsedTime { get; set; }
+        public string SecurityGroupId { get; set; }
 
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
+
+        [NameInMap("VpcId")]
+        [Validation(Required=false)]
+        public string VpcId { get; set; }
 
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

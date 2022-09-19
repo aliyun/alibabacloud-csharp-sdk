@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
         [Validation(Required=false)]
         public string DiskAllocationRatio { get; set; }
 
+        [NameInMap("DistributionTag")]
+        [Validation(Required=false)]
+        public string DistributionTag { get; set; }
+
         [NameInMap("EcsClassCode")]
         [Validation(Required=false)]
         public string EcsClassCode { get; set; }
