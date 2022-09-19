@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public double? ChangeServiceFee { get; set; }
 
+                [NameInMap("change_train_no")]
+                [Validation(Required=false)]
+                public string ChangeTrainNo { get; set; }
+
                 [NameInMap("change_train_type_name")]
                 [Validation(Required=false)]
                 public string ChangeTrainTypeName { get; set; }
@@ -60,6 +64,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("end_time")]
                 [Validation(Required=false)]
                 public string EndTime { get; set; }
+
+                [NameInMap("from_station_name")]
+                [Validation(Required=false)]
+                public string FromStationName { get; set; }
 
                 [NameInMap("gmt_create")]
                 [Validation(Required=false)]
@@ -84,6 +92,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("ticket_no")]
                 [Validation(Required=false)]
                 public string TicketNo { get; set; }
+
+                [NameInMap("to_station_name")]
+                [Validation(Required=false)]
+                public string ToStationName { get; set; }
 
             }
 
