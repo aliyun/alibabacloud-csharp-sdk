@@ -20,13 +20,16 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [NameInMap("TracingEnabled")]
             [Validation(Required=false)]
             public bool? TracingEnabled { get; set; }
+
             [NameInMap("TracingSample")]
             [Validation(Required=false)]
             public int? TracingSample { get; set; }
+
             [NameInMap("TracingType")]
             [Validation(Required=false)]
             public string TracingType { get; set; }
-        };
+
+        }
 
         [NameInMap("ClientToken")]
         [Validation(Required=false)]

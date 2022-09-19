@@ -52,13 +52,16 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                         [NameInMap("ActualResponse")]
                         [Validation(Required=false)]
                         public string ActualResponse { get; set; }
+
                         [NameInMap("ExpectedResponse")]
                         [Validation(Required=false)]
                         public string ExpectedResponse { get; set; }
+
                         [NameInMap("ReasonCode")]
                         [Validation(Required=false)]
                         public string ReasonCode { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("ServerId")]
                     [Validation(Required=false)]
@@ -125,13 +128,16 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                         [NameInMap("ActualResponse")]
                         [Validation(Required=false)]
                         public string ActualResponse { get; set; }
+
                         [NameInMap("ExpectedResponse")]
                         [Validation(Required=false)]
                         public string ExpectedResponse { get; set; }
+
                         [NameInMap("ReasonCode")]
                         [Validation(Required=false)]
                         public string ReasonCode { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("ServerId")]
                     [Validation(Required=false)]

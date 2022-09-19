@@ -48,13 +48,16 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     [NameInMap("Content")]
                     [Validation(Required=false)]
                     public string Content { get; set; }
+
                     [NameInMap("ContentType")]
                     [Validation(Required=false)]
                     public string ContentType { get; set; }
+
                     [NameInMap("HttpCode")]
                     [Validation(Required=false)]
                     public string HttpCode { get; set; }
-                };
+
+                }
 
                 [NameInMap("ForwardGroupConfig")]
                 [Validation(Required=false)]
@@ -64,10 +67,17 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     [Validation(Required=false)]
                     public List<ListRulesResponseBodyRulesRuleActionsForwardGroupConfigServerGroupTuples> ServerGroupTuples { get; set; }
                     public class ListRulesResponseBodyRulesRuleActionsForwardGroupConfigServerGroupTuples : TeaModel {
+                        [NameInMap("ServerGroupId")]
+                        [Validation(Required=false)]
                         public string ServerGroupId { get; set; }
+
+                        [NameInMap("Weight")]
+                        [Validation(Required=false)]
                         public int? Weight { get; set; }
+
                     }
-                };
+
+                }
 
                 [NameInMap("InsertHeaderConfig")]
                 [Validation(Required=false)]
@@ -76,13 +86,16 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
+
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public string Value { get; set; }
+
                     [NameInMap("ValueType")]
                     [Validation(Required=false)]
                     public string ValueType { get; set; }
-                };
+
+                }
 
                 [NameInMap("Order")]
                 [Validation(Required=false)]
@@ -95,22 +108,28 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     [NameInMap("Host")]
                     [Validation(Required=false)]
                     public string Host { get; set; }
+
                     [NameInMap("HttpCode")]
                     [Validation(Required=false)]
                     public string HttpCode { get; set; }
+
                     [NameInMap("Path")]
                     [Validation(Required=false)]
                     public string Path { get; set; }
+
                     [NameInMap("Port")]
                     [Validation(Required=false)]
                     public string Port { get; set; }
+
                     [NameInMap("Protocol")]
                     [Validation(Required=false)]
                     public string Protocol { get; set; }
+
                     [NameInMap("Query")]
                     [Validation(Required=false)]
                     public string Query { get; set; }
-                };
+
+                }
 
                 [NameInMap("RewriteConfig")]
                 [Validation(Required=false)]
@@ -119,13 +138,16 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     [NameInMap("Host")]
                     [Validation(Required=false)]
                     public string Host { get; set; }
+
                     [NameInMap("Path")]
                     [Validation(Required=false)]
                     public string Path { get; set; }
+
                     [NameInMap("Query")]
                     [Validation(Required=false)]
                     public string Query { get; set; }
-                };
+
+                }
 
                 [NameInMap("TrafficLimitConfig")]
                 [Validation(Required=false)]
@@ -134,10 +156,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     [NameInMap("PerIpQps")]
                     [Validation(Required=false)]
                     public int? PerIpQps { get; set; }
+
                     [NameInMap("QPS")]
                     [Validation(Required=false)]
                     public int? QPS { get; set; }
-                };
+
+                }
 
                 [NameInMap("TrafficMirrorConfig")]
                 [Validation(Required=false)]
@@ -162,7 +186,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                         }
 
                     }
-                };
+
+                }
 
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -182,10 +207,17 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     [Validation(Required=false)]
                     public List<ListRulesResponseBodyRulesRuleConditionsCookieConfigValues> Values { get; set; }
                     public class ListRulesResponseBodyRulesRuleConditionsCookieConfigValues : TeaModel {
+                        [NameInMap("Key")]
+                        [Validation(Required=false)]
                         public string Key { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
                         public string Value { get; set; }
+
                     }
-                };
+
+                }
 
                 [NameInMap("HeaderConfig")]
                 [Validation(Required=false)]
@@ -194,10 +226,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
+
                     [NameInMap("Values")]
                     [Validation(Required=false)]
                     public List<string> Values { get; set; }
-                };
+
+                }
 
                 [NameInMap("HostConfig")]
                 [Validation(Required=false)]
@@ -206,7 +240,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     [NameInMap("Values")]
                     [Validation(Required=false)]
                     public List<string> Values { get; set; }
-                };
+
+                }
 
                 [NameInMap("MethodConfig")]
                 [Validation(Required=false)]
@@ -215,7 +250,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     [NameInMap("Values")]
                     [Validation(Required=false)]
                     public List<string> Values { get; set; }
-                };
+
+                }
 
                 [NameInMap("PathConfig")]
                 [Validation(Required=false)]
@@ -224,7 +260,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     [NameInMap("Values")]
                     [Validation(Required=false)]
                     public List<string> Values { get; set; }
-                };
+
+                }
 
                 [NameInMap("QueryStringConfig")]
                 [Validation(Required=false)]
@@ -234,10 +271,17 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     [Validation(Required=false)]
                     public List<ListRulesResponseBodyRulesRuleConditionsQueryStringConfigValues> Values { get; set; }
                     public class ListRulesResponseBodyRulesRuleConditionsQueryStringConfigValues : TeaModel {
+                        [NameInMap("Key")]
+                        [Validation(Required=false)]
                         public string Key { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
                         public string Value { get; set; }
+
                     }
-                };
+
+                }
 
                 [NameInMap("SourceIpConfig")]
                 [Validation(Required=false)]
@@ -246,7 +290,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     [NameInMap("Values")]
                     [Validation(Required=false)]
                     public List<string> Values { get; set; }
-                };
+
+                }
 
                 [NameInMap("Type")]
                 [Validation(Required=false)]

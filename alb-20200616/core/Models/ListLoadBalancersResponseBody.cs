@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 [NameInMap("LogProject")]
                 [Validation(Required=false)]
                 public string LogProject { get; set; }
+
                 [NameInMap("LogStore")]
                 [Validation(Required=false)]
                 public string LogStore { get; set; }
-            };
+
+            }
 
             [NameInMap("AddressAllocatedMode")]
             [Validation(Required=false)]
@@ -56,10 +58,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 [NameInMap("Enabled")]
                 [Validation(Required=false)]
                 public bool? Enabled { get; set; }
+
                 [NameInMap("EnabledTime")]
                 [Validation(Required=false)]
                 public string EnabledTime { get; set; }
-            };
+
+            }
 
             [NameInMap("Ipv6AddressType")]
             [Validation(Required=false)]
@@ -72,7 +76,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 [NameInMap("PayType")]
                 [Validation(Required=false)]
                 public string PayType { get; set; }
-            };
+
+            }
 
             [NameInMap("LoadBalancerBussinessStatus")]
             [Validation(Required=false)]
@@ -115,10 +120,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 [NameInMap("Reason")]
                 [Validation(Required=false)]
                 public string Reason { get; set; }
+
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
-            };
+
+            }
 
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]

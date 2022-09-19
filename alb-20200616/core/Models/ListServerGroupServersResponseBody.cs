@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [Validation(Required=false)]
             public int? Port { get; set; }
 
+            [NameInMap("RemoteIpEnabled")]
+            [Validation(Required=false)]
+            public bool? RemoteIpEnabled { get; set; }
+
             [NameInMap("ServerGroupId")]
             [Validation(Required=false)]
             public string ServerGroupId { get; set; }

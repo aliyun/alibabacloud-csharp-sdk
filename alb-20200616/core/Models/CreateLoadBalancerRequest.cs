@@ -40,10 +40,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [NameInMap("BandwidthPackageId")]
             [Validation(Required=false)]
             public string BandwidthPackageId { get; set; }
+
             [NameInMap("PayType")]
             [Validation(Required=false)]
             public string PayType { get; set; }
-        };
+
+        }
 
         [NameInMap("LoadBalancerEdition")]
         [Validation(Required=false)]
@@ -60,10 +62,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [NameInMap("Reason")]
             [Validation(Required=false)]
             public string Reason { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-        };
+
+        }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
