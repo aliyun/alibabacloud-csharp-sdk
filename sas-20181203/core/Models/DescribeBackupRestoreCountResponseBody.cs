@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Recovering")]
             [Validation(Required=false)]
             public int? Recovering { get; set; }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public int? Total { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

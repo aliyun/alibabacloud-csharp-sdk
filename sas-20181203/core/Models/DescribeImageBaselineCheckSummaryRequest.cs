@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RiskLevel { get; set; }
 
+        [NameInMap("ScanRange")]
+        [Validation(Required=false)]
+        public List<string> ScanRange { get; set; }
+
     }
 
 }

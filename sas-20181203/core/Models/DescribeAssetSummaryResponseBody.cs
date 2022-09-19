@@ -16,13 +16,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("TotalAssetAllRegion")]
             [Validation(Required=false)]
             public int? TotalAssetAllRegion { get; set; }
+
             [NameInMap("TotalCoreAllRegion")]
             [Validation(Required=false)]
             public int? TotalCoreAllRegion { get; set; }
+
             [NameInMap("TotalCoreNum")]
             [Validation(Required=false)]
             public int? TotalCoreNum { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

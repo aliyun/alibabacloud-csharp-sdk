@@ -28,16 +28,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [NameInMap("AccessId")]
                 [Validation(Required=false)]
                 public string AccessId { get; set; }
+
                 [NameInMap("OssKey")]
                 [Validation(Required=false)]
                 public string OssKey { get; set; }
+
                 [NameInMap("Policy")]
                 [Validation(Required=false)]
                 public string Policy { get; set; }
+
                 [NameInMap("Signature")]
                 [Validation(Required=false)]
                 public string Signature { get; set; }
-            };
+
+            }
 
             [NameInMap("Expire")]
             [Validation(Required=false)]

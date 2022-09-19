@@ -24,7 +24,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("StrategyId")]
             [Validation(Required=false)]
             public int? StrategyId { get; set; }
-        };
+
+        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

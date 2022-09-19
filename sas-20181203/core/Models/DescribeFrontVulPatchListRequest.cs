@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Info { get; set; }
 
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
         [NameInMap("OperateType")]
         [Validation(Required=false)]
         public string OperateType { get; set; }

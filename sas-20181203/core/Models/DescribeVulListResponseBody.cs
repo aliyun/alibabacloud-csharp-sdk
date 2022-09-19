@@ -48,18 +48,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [NameInMap("AbsolutePath")]
                 [Validation(Required=false)]
                 public string AbsolutePath { get; set; }
+
                 [NameInMap("AliasName")]
                 [Validation(Required=false)]
                 public string AliasName { get; set; }
+
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
+
                 [NameInMap("Ip")]
                 [Validation(Required=false)]
                 public string Ip { get; set; }
+
                 [NameInMap("LastTs")]
                 [Validation(Required=false)]
                 public long? LastTs { get; set; }
+
                 [NameInMap("Necessity")]
                 [Validation(Required=false)]
                 public DescribeVulListResponseBodyVulRecordsExtendContentJsonNecessity Necessity { get; set; }
@@ -93,40 +98,78 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string TotalScore { get; set; }
 
                 }
+
                 [NameInMap("Os")]
                 [Validation(Required=false)]
                 public string Os { get; set; }
+
                 [NameInMap("OsRelease")]
                 [Validation(Required=false)]
                 public string OsRelease { get; set; }
+
                 [NameInMap("PrimaryId")]
                 [Validation(Required=false)]
                 public long? PrimaryId { get; set; }
+
                 [NameInMap("RpmEntityList")]
                 [Validation(Required=false)]
                 public List<DescribeVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList> RpmEntityList { get; set; }
                 public class DescribeVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList : TeaModel {
+                    [NameInMap("ContainerName")]
+                    [Validation(Required=false)]
                     public string ContainerName { get; set; }
+
+                    [NameInMap("FullVersion")]
+                    [Validation(Required=false)]
                     public string FullVersion { get; set; }
+
+                    [NameInMap("ImageName")]
+                    [Validation(Required=false)]
                     public string ImageName { get; set; }
+
+                    [NameInMap("MatchDetail")]
+                    [Validation(Required=false)]
                     public string MatchDetail { get; set; }
+
+                    [NameInMap("MatchList")]
+                    [Validation(Required=false)]
                     public List<string> MatchList { get; set; }
+
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
                     public string Name { get; set; }
+
+                    [NameInMap("Path")]
+                    [Validation(Required=false)]
                     public string Path { get; set; }
+
+                    [NameInMap("Pid")]
+                    [Validation(Required=false)]
                     public string Pid { get; set; }
+
+                    [NameInMap("UpdateCmd")]
+                    [Validation(Required=false)]
                     public string UpdateCmd { get; set; }
+
+                    [NameInMap("Version")]
+                    [Validation(Required=false)]
                     public string Version { get; set; }
+
                 }
+
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
+
                 [NameInMap("Tag")]
                 [Validation(Required=false)]
                 public string Tag { get; set; }
+
                 [NameInMap("cveList")]
                 [Validation(Required=false)]
                 public List<string> CveList { get; set; }
-            };
+
+            }
 
             [NameInMap("FirstTs")]
             [Validation(Required=false)]

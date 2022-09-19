@@ -16,13 +16,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("CategoryCount")]
             [Validation(Required=false)]
             public string CategoryCount { get; set; }
+
             [NameInMap("InstanceCount")]
             [Validation(Required=false)]
             public int? InstanceCount { get; set; }
+
             [NameInMap("RiskInstanceCount")]
             [Validation(Required=false)]
             public int? RiskInstanceCount { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

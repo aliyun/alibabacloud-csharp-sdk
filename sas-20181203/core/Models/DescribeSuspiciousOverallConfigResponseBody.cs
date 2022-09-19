@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Config")]
             [Validation(Required=false)]
             public string Config { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -21,14 +21,25 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public List<DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponseSecurityEventOperationStatuses> SecurityEventOperationStatuses { get; set; }
             public class DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponseSecurityEventOperationStatuses : TeaModel {
+                [NameInMap("ErrorCode")]
+                [Validation(Required=false)]
                 public string ErrorCode { get; set; }
+
+                [NameInMap("SecurityEventId")]
+                [Validation(Required=false)]
                 public string SecurityEventId { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
             }
+
             [NameInMap("TaskStatus")]
             [Validation(Required=false)]
             public string TaskStatus { get; set; }
-        };
+
+        }
 
     }
 

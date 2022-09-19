@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string AssetType { get; set; }
 
+        [NameInMap("CloudAssetSubType")]
+        [Validation(Required=false)]
+        public int? CloudAssetSubType { get; set; }
+
+        [NameInMap("CloudAssetType")]
+        [Validation(Required=false)]
+        public int? CloudAssetType { get; set; }
+
     }
 
 }

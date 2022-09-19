@@ -16,13 +16,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Link")]
             [Validation(Required=false)]
             public string Link { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
+
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
-        };
+
+        }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -31,13 +34,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Link")]
             [Validation(Required=false)]
             public string Link { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
+
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -50,13 +56,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Link")]
             [Validation(Required=false)]
             public string Link { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
+
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
-        };
+
+        }
 
     }
 

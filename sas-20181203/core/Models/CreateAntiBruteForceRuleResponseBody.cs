@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("RuleId")]
             [Validation(Required=false)]
             public long? RuleId { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

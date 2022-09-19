@@ -85,6 +85,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RepoRegionId { get; set; }
 
+        [NameInMap("ScanRange")]
+        [Validation(Required=false)]
+        public List<string> ScanRange { get; set; }
+
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }

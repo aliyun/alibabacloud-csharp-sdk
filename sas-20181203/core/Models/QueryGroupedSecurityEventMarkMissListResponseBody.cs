@@ -74,16 +74,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
+
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

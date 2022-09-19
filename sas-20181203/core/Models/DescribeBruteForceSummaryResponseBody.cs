@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("AllStrategyCount")]
             [Validation(Required=false)]
             public int? AllStrategyCount { get; set; }
+
             [NameInMap("EffectiveCount")]
             [Validation(Required=false)]
             public int? EffectiveCount { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

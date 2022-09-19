@@ -41,6 +41,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public bool? CanUpdate { get; set; }
 
+            [NameInMap("ClusterId")]
+            [Validation(Required=false)]
+            public string ClusterId { get; set; }
+
+            [NameInMap("ClusterName")]
+            [Validation(Required=false)]
+            public string ClusterName { get; set; }
+
+            [NameInMap("ContainerId")]
+            [Validation(Required=false)]
+            public string ContainerId { get; set; }
+
             [NameInMap("ExtendContentJson")]
             [Validation(Required=false)]
             public DescribeImageVulListResponseBodyVulRecordsExtendContentJson ExtendContentJson { get; set; }
@@ -48,27 +60,58 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [NameInMap("Os")]
                 [Validation(Required=false)]
                 public string Os { get; set; }
+
                 [NameInMap("OsRelease")]
                 [Validation(Required=false)]
                 public string OsRelease { get; set; }
+
                 [NameInMap("RpmEntityList")]
                 [Validation(Required=false)]
                 public List<DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList> RpmEntityList { get; set; }
                 public class DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList : TeaModel {
+                    [NameInMap("FullVersion")]
+                    [Validation(Required=false)]
                     public string FullVersion { get; set; }
+
+                    [NameInMap("Layer")]
+                    [Validation(Required=false)]
                     public string Layer { get; set; }
+
+                    [NameInMap("MatchDetail")]
+                    [Validation(Required=false)]
                     public string MatchDetail { get; set; }
+
+                    [NameInMap("MatchList")]
+                    [Validation(Required=false)]
                     public List<string> MatchList { get; set; }
+
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
                     public string Name { get; set; }
+
+                    [NameInMap("Path")]
+                    [Validation(Required=false)]
                     public string Path { get; set; }
+
+                    [NameInMap("UpdateCmd")]
+                    [Validation(Required=false)]
                     public string UpdateCmd { get; set; }
+
+                    [NameInMap("Version")]
+                    [Validation(Required=false)]
                     public string Version { get; set; }
+
                 }
-            };
+
+            }
 
             [NameInMap("FirstTs")]
             [Validation(Required=false)]
             public long? FirstTs { get; set; }
+
+            [NameInMap("Image")]
+            [Validation(Required=false)]
+            public string Image { get; set; }
 
             [NameInMap("ImageDigest")]
             [Validation(Required=false)]
@@ -90,9 +133,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("Namespace")]
+            [Validation(Required=false)]
+            public string Namespace { get; set; }
+
             [NameInMap("Necessity")]
             [Validation(Required=false)]
             public string Necessity { get; set; }
+
+            [NameInMap("Pod")]
+            [Validation(Required=false)]
+            public string Pod { get; set; }
 
             [NameInMap("PrimaryId")]
             [Validation(Required=false)]

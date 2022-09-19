@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? Importance { get; set; }
 
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
         [NameInMap("LogicalExp")]
         [Validation(Required=false)]
         public string LogicalExp { get; set; }

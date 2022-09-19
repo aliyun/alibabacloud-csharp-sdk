@@ -8,46 +8,54 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class CreateHoneypotResponseBody : TeaModel {
+    public class ListAvailableHoneypotResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Count")]
+        [Validation(Required=false)]
+        public int? Count { get; set; }
+
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public CreateHoneypotResponseBodyData Data { get; set; }
-        public class CreateHoneypotResponseBodyData : TeaModel {
-            [NameInMap("ControlNodeName")]
-            [Validation(Required=false)]
-            public string ControlNodeName { get; set; }
-
-            [NameInMap("HoneypotId")]
-            [Validation(Required=false)]
-            public string HoneypotId { get; set; }
-
+        public List<ListAvailableHoneypotResponseBodyData> Data { get; set; }
+        public class ListAvailableHoneypotResponseBodyData : TeaModel {
             [NameInMap("HoneypotImageDisplayName")]
             [Validation(Required=false)]
             public string HoneypotImageDisplayName { get; set; }
+
+            [NameInMap("HoneypotImageId")]
+            [Validation(Required=false)]
+            public string HoneypotImageId { get; set; }
 
             [NameInMap("HoneypotImageName")]
             [Validation(Required=false)]
             public string HoneypotImageName { get; set; }
 
-            [NameInMap("HoneypotName")]
+            [NameInMap("HoneypotImageType")]
             [Validation(Required=false)]
-            public string HoneypotName { get; set; }
+            public string HoneypotImageType { get; set; }
 
-            [NameInMap("NodeId")]
+            [NameInMap("HoneypotImageVersion")]
             [Validation(Required=false)]
-            public string NodeId { get; set; }
+            public string HoneypotImageVersion { get; set; }
 
-            [NameInMap("PresetId")]
+            [NameInMap("Multiports")]
             [Validation(Required=false)]
-            public string PresetId { get; set; }
+            public string Multiports { get; set; }
 
-            [NameInMap("State")]
+            [NameInMap("Proto")]
             [Validation(Required=false)]
-            public List<string> State { get; set; }
+            public string Proto { get; set; }
+
+            [NameInMap("ServicePort")]
+            [Validation(Required=false)]
+            public string ServicePort { get; set; }
+
+            [NameInMap("Template")]
+            [Validation(Required=false)]
+            public string Template { get; set; }
 
         }
 

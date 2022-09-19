@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        [NameInMap("ClusterName")]
+        [Validation(Required=false)]
+        public string ClusterName { get; set; }
+
+        [NameInMap("ContainerId")]
+        [Validation(Required=false)]
+        public string ContainerId { get; set; }
+
         [NameInMap("Criteria")]
         [Validation(Required=false)]
         public string Criteria { get; set; }
@@ -29,6 +37,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        [NameInMap("Image")]
+        [Validation(Required=false)]
+        public string Image { get; set; }
+
         [NameInMap("ImageDigest")]
         [Validation(Required=false)]
         public string ImageDigest { get; set; }
@@ -37,9 +49,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("Namespace")]
+        [Validation(Required=false)]
+        public string Namespace { get; set; }
+
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("Pod")]
+        [Validation(Required=false)]
+        public string Pod { get; set; }
 
         [NameInMap("RepoInstanceId")]
         [Validation(Required=false)]
@@ -52,6 +72,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("RepoNamespace")]
         [Validation(Required=false)]
         public string RepoNamespace { get; set; }
+
+        [NameInMap("ScanRange")]
+        [Validation(Required=false)]
+        public List<string> ScanRange { get; set; }
 
     }
 

@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public long? TaskId { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

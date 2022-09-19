@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
-        };
+
+        }
 
     }
 

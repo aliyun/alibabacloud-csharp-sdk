@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("NeedAuthCount")]
             [Validation(Required=false)]
             public int? NeedAuthCount { get; set; }
+
             [NameInMap("ScanImageCount")]
             [Validation(Required=false)]
             public int? ScanImageCount { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeInstanceAntiBruteForceRulesRequest : TeaModel {
+        [NameInMap("CurrentPage")]
+        [Validation(Required=false)]
+        public int? CurrentPage { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }

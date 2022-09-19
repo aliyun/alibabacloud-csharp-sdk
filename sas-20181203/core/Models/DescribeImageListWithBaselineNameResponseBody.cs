@@ -13,6 +13,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<DescribeImageListWithBaselineNameResponseBodyImageInfos> ImageInfos { get; set; }
         public class DescribeImageListWithBaselineNameResponseBodyImageInfos : TeaModel {
+            [NameInMap("BaselineType")]
+            [Validation(Required=false)]
+            public string BaselineType { get; set; }
+
+            [NameInMap("ClusterId")]
+            [Validation(Required=false)]
+            public string ClusterId { get; set; }
+
+            [NameInMap("ClusterName")]
+            [Validation(Required=false)]
+            public string ClusterName { get; set; }
+
+            [NameInMap("ContainerId")]
+            [Validation(Required=false)]
+            public string ContainerId { get; set; }
+
             [NameInMap("Digest")]
             [Validation(Required=false)]
             public string Digest { get; set; }
@@ -20,6 +36,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("HighRiskImage")]
             [Validation(Required=false)]
             public int? HighRiskImage { get; set; }
+
+            [NameInMap("Image")]
+            [Validation(Required=false)]
+            public string Image { get; set; }
 
             [NameInMap("ImageCreate")]
             [Validation(Required=false)]
@@ -49,9 +69,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? MiddleRiskImage { get; set; }
 
+            [NameInMap("Namespace")]
+            [Validation(Required=false)]
+            public string Namespace { get; set; }
+
             [NameInMap("NoRiskImage")]
             [Validation(Required=false)]
             public int? NoRiskImage { get; set; }
+
+            [NameInMap("Pod")]
+            [Validation(Required=false)]
+            public string Pod { get; set; }
 
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -98,16 +126,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
+
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
