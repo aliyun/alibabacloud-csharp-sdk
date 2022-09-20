@@ -17,14 +17,33 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData> EipMonitorData { get; set; }
             public class DescribeEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData : TeaModel {
+                [NameInMap("EipBandwidth")]
+                [Validation(Required=false)]
                 public int? EipBandwidth { get; set; }
+
+                [NameInMap("EipFlow")]
+                [Validation(Required=false)]
                 public int? EipFlow { get; set; }
+
+                [NameInMap("EipPackets")]
+                [Validation(Required=false)]
                 public int? EipPackets { get; set; }
+
+                [NameInMap("EipRX")]
+                [Validation(Required=false)]
                 public long? EipRX { get; set; }
+
+                [NameInMap("EipTX")]
+                [Validation(Required=false)]
                 public long? EipTX { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

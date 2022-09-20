@@ -17,7 +17,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance> GlobalAccelerationInstance { get; set; }
             public class DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance : TeaModel {
+                [NameInMap("AccelerationLocation")]
+                [Validation(Required=false)]
                 public string AccelerationLocation { get; set; }
+
+                [NameInMap("BackendServers")]
+                [Validation(Required=false)]
                 public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstanceBackendServers BackendServers { get; set; }
                 public class DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstanceBackendServers : TeaModel {
                     [NameInMap("BackendServer")]
@@ -43,16 +48,49 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     }
 
                 }
+
+                [NameInMap("Bandwidth")]
+                [Validation(Required=false)]
                 public string Bandwidth { get; set; }
+
+                [NameInMap("BandwidthType")]
+                [Validation(Required=false)]
                 public string BandwidthType { get; set; }
+
+                [NameInMap("ChargeType")]
+                [Validation(Required=false)]
                 public string ChargeType { get; set; }
+
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("ExpiredTime")]
+                [Validation(Required=false)]
                 public string ExpiredTime { get; set; }
+
+                [NameInMap("GlobalAccelerationInstanceId")]
+                [Validation(Required=false)]
                 public string GlobalAccelerationInstanceId { get; set; }
+
+                [NameInMap("InternetChargeType")]
+                [Validation(Required=false)]
                 public string InternetChargeType { get; set; }
+
+                [NameInMap("IpAddress")]
+                [Validation(Required=false)]
                 public string IpAddress { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("PublicIpAddresses")]
+                [Validation(Required=false)]
                 public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddresses PublicIpAddresses { get; set; }
                 public class DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddresses : TeaModel {
                     [NameInMap("PublicIpAddress")]
@@ -70,11 +108,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     }
 
                 }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("ServiceLocation")]
+                [Validation(Required=false)]
                 public string ServiceLocation { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

@@ -16,27 +16,35 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("CompanyLocalizedName")]
             [Validation(Required=false)]
             public string CompanyLocalizedName { get; set; }
+
             [NameInMap("CompanyName")]
             [Validation(Required=false)]
             public string CompanyName { get; set; }
+
             [NameInMap("ConstructionTime")]
             [Validation(Required=false)]
             public string ConstructionTime { get; set; }
+
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
+
             [NameInMap("LineCode")]
             [Validation(Required=false)]
             public string LineCode { get; set; }
+
             [NameInMap("LineLabel")]
             [Validation(Required=false)]
             public string LineLabel { get; set; }
+
             [NameInMap("LineType")]
             [Validation(Required=false)]
             public string LineType { get; set; }
+
             [NameInMap("LoaUrl")]
             [Validation(Required=false)]
             public string LoaUrl { get; set; }
+
             [NameInMap("PMInfo")]
             [Validation(Required=false)]
             public DescribePhysicalConnectionLOAResponseBodyPhysicalConnectionLOATypePMInfo PMInfo { get; set; }
@@ -68,13 +76,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
             }
+
             [NameInMap("SI")]
             [Validation(Required=false)]
             public string SI { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

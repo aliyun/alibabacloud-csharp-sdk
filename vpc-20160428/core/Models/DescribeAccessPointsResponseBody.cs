@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeAccessPointsResponseBodyAccessPointSetAccessPointType> AccessPointType { get; set; }
             public class DescribeAccessPointsResponseBodyAccessPointSetAccessPointType : TeaModel {
+                [NameInMap("AccessPointFeatureModels")]
+                [Validation(Required=false)]
                 public DescribeAccessPointsResponseBodyAccessPointSetAccessPointTypeAccessPointFeatureModels AccessPointFeatureModels { get; set; }
                 public class DescribeAccessPointsResponseBodyAccessPointSetAccessPointTypeAccessPointFeatureModels : TeaModel {
                     [NameInMap("AccessPointFeatureModel")]
@@ -34,16 +36,42 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     }
 
                 }
+
+                [NameInMap("AccessPointId")]
+                [Validation(Required=false)]
                 public string AccessPointId { get; set; }
+
+                [NameInMap("AttachedRegionNo")]
+                [Validation(Required=false)]
                 public string AttachedRegionNo { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("HostOperator")]
+                [Validation(Required=false)]
                 public string HostOperator { get; set; }
+
+                [NameInMap("Location")]
+                [Validation(Required=false)]
                 public string Location { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

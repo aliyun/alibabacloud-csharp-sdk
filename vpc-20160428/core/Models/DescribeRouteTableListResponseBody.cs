@@ -29,9 +29,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeRouteTableListResponseBodyRouterTableListRouterTableListType> RouterTableListType { get; set; }
             public class DescribeRouteTableListResponseBodyRouterTableListRouterTableListType : TeaModel {
+                [NameInMap("AssociateType")]
+                [Validation(Required=false)]
                 public string AssociateType { get; set; }
+
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("GatewayIds")]
+                [Validation(Required=false)]
                 public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeGatewayIds GatewayIds { get; set; }
                 public class DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeGatewayIds : TeaModel {
                     [NameInMap("GatewayIds")]
@@ -39,14 +50,41 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<string> GatewayIds { get; set; }
 
                 }
+
+                [NameInMap("OwnerId")]
+                [Validation(Required=false)]
                 public long? OwnerId { get; set; }
+
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
+
+                [NameInMap("RouteTableId")]
+                [Validation(Required=false)]
                 public string RouteTableId { get; set; }
+
+                [NameInMap("RouteTableName")]
+                [Validation(Required=false)]
                 public string RouteTableName { get; set; }
+
+                [NameInMap("RouteTableType")]
+                [Validation(Required=false)]
                 public string RouteTableType { get; set; }
+
+                [NameInMap("RouterId")]
+                [Validation(Required=false)]
                 public string RouterId { get; set; }
+
+                [NameInMap("RouterType")]
+                [Validation(Required=false)]
                 public string RouterType { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
                 public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeTags Tags { get; set; }
                 public class DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeTags : TeaModel {
                     [NameInMap("Tag")]
@@ -64,6 +102,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     }
 
                 }
+
+                [NameInMap("VSwitchIds")]
+                [Validation(Required=false)]
                 public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeVSwitchIds VSwitchIds { get; set; }
                 public class DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeVSwitchIds : TeaModel {
                     [NameInMap("VSwitchId")]
@@ -71,9 +112,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<string> VSwitchId { get; set; }
 
                 }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
                 public string VpcId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

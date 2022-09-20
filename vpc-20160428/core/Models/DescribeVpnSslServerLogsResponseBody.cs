@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("Logs")]
             [Validation(Required=false)]
             public List<string> Logs { get; set; }
-        };
+
+        }
 
         [NameInMap("IsCompleted")]
         [Validation(Required=false)]

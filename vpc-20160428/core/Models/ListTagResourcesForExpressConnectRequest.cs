@@ -8,28 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
-    public class DescribePhysicalConnectionsRequest : TeaModel {
-        [NameInMap("ClientToken")]
+    public class ListTagResourcesForExpressConnectRequest : TeaModel {
+        [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public int? MaxResults { get; set; }
 
-        [NameInMap("Filter")]
+        [NameInMap("NextToken")]
         [Validation(Required=false)]
-        public List<DescribePhysicalConnectionsRequestFilter> Filter { get; set; }
-        public class DescribePhysicalConnectionsRequestFilter : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public List<string> Value { get; set; }
-
-        }
-
-        [NameInMap("IncludeReservationData")]
-        [Validation(Required=false)]
-        public bool? IncludeReservationData { get; set; }
+        public string NextToken { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -39,17 +25,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ResourceId")]
+        [Validation(Required=false)]
+        public List<string> ResourceId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -59,10 +41,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("Tags")]
+        [NameInMap("ResourceType")]
         [Validation(Required=false)]
-        public List<DescribePhysicalConnectionsRequestTags> Tags { get; set; }
-        public class DescribePhysicalConnectionsRequestTags : TeaModel {
+        public string ResourceType { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<ListTagResourcesForExpressConnectRequestTag> Tag { get; set; }
+        public class ListTagResourcesForExpressConnectRequestTag : TeaModel {
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }

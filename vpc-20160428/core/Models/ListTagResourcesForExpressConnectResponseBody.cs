@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
-    public class ListTagResourcesResponseBody : TeaModel {
+    public class ListTagResourcesForExpressConnectResponseBody : TeaModel {
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -19,12 +19,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         [NameInMap("TagResources")]
         [Validation(Required=false)]
-        public ListTagResourcesResponseBodyTagResources TagResources { get; set; }
-        public class ListTagResourcesResponseBodyTagResources : TeaModel {
+        public ListTagResourcesForExpressConnectResponseBodyTagResources TagResources { get; set; }
+        public class ListTagResourcesForExpressConnectResponseBodyTagResources : TeaModel {
             [NameInMap("TagResource")]
             [Validation(Required=false)]
-            public List<ListTagResourcesResponseBodyTagResourcesTagResource> TagResource { get; set; }
-            public class ListTagResourcesResponseBodyTagResourcesTagResource : TeaModel {
+            public List<ListTagResourcesForExpressConnectResponseBodyTagResourcesTagResource> TagResource { get; set; }
+            public class ListTagResourcesForExpressConnectResponseBodyTagResourcesTagResource : TeaModel {
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }

@@ -33,17 +33,52 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway> VpnGateway { get; set; }
             public class DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway : TeaModel {
+                [NameInMap("AutoPropagate")]
+                [Validation(Required=false)]
                 public bool? AutoPropagate { get; set; }
+
+                [NameInMap("BusinessStatus")]
+                [Validation(Required=false)]
                 public string BusinessStatus { get; set; }
+
+                [NameInMap("ChargeType")]
+                [Validation(Required=false)]
                 public string ChargeType { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public long? CreateTime { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("EnableBgp")]
+                [Validation(Required=false)]
                 public bool? EnableBgp { get; set; }
+
+                [NameInMap("EndTime")]
+                [Validation(Required=false)]
                 public long? EndTime { get; set; }
+
+                [NameInMap("InternetIp")]
+                [Validation(Required=false)]
                 public string InternetIp { get; set; }
+
+                [NameInMap("IpsecVpn")]
+                [Validation(Required=false)]
                 public string IpsecVpn { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("NetworkType")]
+                [Validation(Required=false)]
                 public string NetworkType { get; set; }
+
+                [NameInMap("ReservationData")]
+                [Validation(Required=false)]
                 public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData ReservationData { get; set; }
                 public class DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData : TeaModel {
                     [NameInMap("ReservationEndTime")]
@@ -75,11 +110,29 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public string Status { get; set; }
 
                 }
+
+                [NameInMap("Spec")]
+                [Validation(Required=false)]
                 public string Spec { get; set; }
+
+                [NameInMap("SslMaxConnections")]
+                [Validation(Required=false)]
                 public long? SslMaxConnections { get; set; }
+
+                [NameInMap("SslVpn")]
+                [Validation(Required=false)]
                 public string SslVpn { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("Tag")]
+                [Validation(Required=false)]
                 public string Tag { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
                 public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayTags Tags { get; set; }
                 public class DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayTags : TeaModel {
                     [NameInMap("Tag")]
@@ -97,12 +150,26 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     }
 
                 }
+
+                [NameInMap("VSwitchId")]
+                [Validation(Required=false)]
                 public string VSwitchId { get; set; }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
                 public string VpcId { get; set; }
+
+                [NameInMap("VpnGatewayId")]
+                [Validation(Required=false)]
                 public string VpnGatewayId { get; set; }
+
+                [NameInMap("VpnType")]
+                [Validation(Required=false)]
                 public string VpnType { get; set; }
+
             }
-        };
+
+        }
 
     }
 

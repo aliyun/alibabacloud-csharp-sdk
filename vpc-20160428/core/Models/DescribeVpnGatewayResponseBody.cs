@@ -60,25 +60,32 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("ReservationEndTime")]
             [Validation(Required=false)]
             public string ReservationEndTime { get; set; }
+
             [NameInMap("ReservationIpsec")]
             [Validation(Required=false)]
             public string ReservationIpsec { get; set; }
+
             [NameInMap("ReservationMaxConnections")]
             [Validation(Required=false)]
             public int? ReservationMaxConnections { get; set; }
+
             [NameInMap("ReservationOrderType")]
             [Validation(Required=false)]
             public string ReservationOrderType { get; set; }
+
             [NameInMap("ReservationSpec")]
             [Validation(Required=false)]
             public string ReservationSpec { get; set; }
+
             [NameInMap("ReservationSsl")]
             [Validation(Required=false)]
             public string ReservationSsl { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-        };
+
+        }
 
         [NameInMap("Spec")]
         [Validation(Required=false)]
@@ -108,10 +115,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeVpnGatewayResponseBodyTagsTag> Tag { get; set; }
             public class DescribeVpnGatewayResponseBodyTagsTag : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
                 public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
                 public string Value { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

@@ -36,28 +36,36 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [NameInMap("IkeAuthAlg")]
                 [Validation(Required=false)]
                 public string IkeAuthAlg { get; set; }
+
                 [NameInMap("IkeEncAlg")]
                 [Validation(Required=false)]
                 public string IkeEncAlg { get; set; }
+
                 [NameInMap("IkeLifetime")]
                 [Validation(Required=false)]
                 public long? IkeLifetime { get; set; }
+
                 [NameInMap("IkeMode")]
                 [Validation(Required=false)]
                 public string IkeMode { get; set; }
+
                 [NameInMap("IkePfs")]
                 [Validation(Required=false)]
                 public string IkePfs { get; set; }
+
                 [NameInMap("IkeVersion")]
                 [Validation(Required=false)]
                 public string IkeVersion { get; set; }
+
                 [NameInMap("LocalId")]
                 [Validation(Required=false)]
                 public string LocalId { get; set; }
+
                 [NameInMap("RemoteId")]
                 [Validation(Required=false)]
                 public string RemoteId { get; set; }
-            };
+
+            }
 
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
@@ -70,16 +78,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [NameInMap("IpsecAuthAlg")]
                 [Validation(Required=false)]
                 public string IpsecAuthAlg { get; set; }
+
                 [NameInMap("IpsecEncAlg")]
                 [Validation(Required=false)]
                 public string IpsecEncAlg { get; set; }
+
                 [NameInMap("IpsecLifetime")]
                 [Validation(Required=false)]
                 public long? IpsecLifetime { get; set; }
+
                 [NameInMap("IpsecPfs")]
                 [Validation(Required=false)]
                 public string IpsecPfs { get; set; }
-            };
+
+            }
 
             [NameInMap("IpsecServerId")]
             [Validation(Required=false)]

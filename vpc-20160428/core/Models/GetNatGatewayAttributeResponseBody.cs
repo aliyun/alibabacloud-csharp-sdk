@@ -16,16 +16,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("AutoPay")]
             [Validation(Required=false)]
             public string AutoPay { get; set; }
+
             [NameInMap("InstanceChargeType")]
             [Validation(Required=false)]
             public string InstanceChargeType { get; set; }
+
             [NameInMap("InternetChargeType")]
             [Validation(Required=false)]
             public string InternetChargeType { get; set; }
+
             [NameInMap("Spec")]
             [Validation(Required=false)]
             public string Spec { get; set; }
-        };
+
+        }
 
         [NameInMap("BusinessStatus")]
         [Validation(Required=false)]
@@ -42,7 +46,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("Enabled")]
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
-        };
+
+        }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -63,10 +68,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("ForwardEntryCount")]
             [Validation(Required=false)]
             public int? ForwardEntryCount { get; set; }
+
             [NameInMap("ForwardTableId")]
             [Validation(Required=false)]
             public string ForwardTableId { get; set; }
-        };
+
+        }
 
         [NameInMap("FullNatTable")]
         [Validation(Required=false)]
@@ -75,10 +82,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("FullNatEntryCount")]
             [Validation(Required=false)]
             public long? FullNatEntryCount { get; set; }
+
             [NameInMap("FullNatTableId")]
             [Validation(Required=false)]
             public string FullNatTableId { get; set; }
-        };
+
+        }
 
         [NameInMap("IpList")]
         [Validation(Required=false)]
@@ -121,19 +130,24 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("EniInstanceId")]
             [Validation(Required=false)]
             public string EniInstanceId { get; set; }
+
             [NameInMap("IzNo")]
             [Validation(Required=false)]
             public string IzNo { get; set; }
+
             [NameInMap("MaxBandwidth")]
             [Validation(Required=false)]
             public int? MaxBandwidth { get; set; }
+
             [NameInMap("PrivateIpAddress")]
             [Validation(Required=false)]
             public string PrivateIpAddress { get; set; }
+
             [NameInMap("VswitchId")]
             [Validation(Required=false)]
             public string VswitchId { get; set; }
-        };
+
+        }
 
         [NameInMap("PrivateLinkEnabled")]
         [Validation(Required=false)]
@@ -162,10 +176,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("SnatEntryCount")]
             [Validation(Required=false)]
             public int? SnatEntryCount { get; set; }
+
             [NameInMap("SnatTableId")]
             [Validation(Required=false)]
             public string SnatTableId { get; set; }
-        };
+
+        }
 
         [NameInMap("Status")]
         [Validation(Required=false)]

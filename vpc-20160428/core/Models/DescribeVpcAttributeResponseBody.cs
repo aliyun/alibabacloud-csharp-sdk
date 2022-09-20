@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeVpcAttributeResponseBodyAssociatedCensAssociatedCen> AssociatedCen { get; set; }
             public class DescribeVpcAttributeResponseBodyAssociatedCensAssociatedCen : TeaModel {
+                [NameInMap("CenId")]
+                [Validation(Required=false)]
                 public string CenId { get; set; }
+
+                [NameInMap("CenOwnerId")]
+                [Validation(Required=false)]
                 public long? CenOwnerId { get; set; }
+
+                [NameInMap("CenStatus")]
+                [Validation(Required=false)]
                 public string CenStatus { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("CidrBlock")]
         [Validation(Required=false)]
@@ -39,10 +49,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeVpcAttributeResponseBodyCloudResourcesCloudResourceSetType> CloudResourceSetType { get; set; }
             public class DescribeVpcAttributeResponseBodyCloudResourcesCloudResourceSetType : TeaModel {
+                [NameInMap("ResourceCount")]
+                [Validation(Required=false)]
                 public int? ResourceCount { get; set; }
+
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
                 public string ResourceType { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("CreationTime")]
         [Validation(Required=false)]
@@ -76,10 +93,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeVpcAttributeResponseBodyIpv6CidrBlocksIpv6CidrBlock> Ipv6CidrBlock { get; set; }
             public class DescribeVpcAttributeResponseBodyIpv6CidrBlocksIpv6CidrBlock : TeaModel {
+                [NameInMap("Ipv6CidrBlock")]
+                [Validation(Required=false)]
                 public string Ipv6CidrBlock { get; set; }
+
+                [NameInMap("Ipv6Isp")]
+                [Validation(Required=false)]
                 public string Ipv6Isp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("IsDefault")]
         [Validation(Required=false)]
@@ -108,7 +132,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("SecondaryCidrBlock")]
             [Validation(Required=false)]
             public List<string> SecondaryCidrBlock { get; set; }
-        };
+
+        }
 
         [NameInMap("Status")]
         [Validation(Required=false)]
@@ -125,7 +150,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("UserCidr")]
             [Validation(Required=false)]
             public List<string> UserCidr { get; set; }
-        };
+
+        }
 
         [NameInMap("VRouterId")]
         [Validation(Required=false)]
@@ -138,7 +164,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public List<string> VSwitchId { get; set; }
-        };
+
+        }
 
         [NameInMap("VpcId")]
         [Validation(Required=false)]

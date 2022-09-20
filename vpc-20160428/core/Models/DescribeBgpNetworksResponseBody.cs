@@ -17,12 +17,25 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeBgpNetworksResponseBodyBgpNetworksBgpNetwork> BgpNetwork { get; set; }
             public class DescribeBgpNetworksResponseBodyBgpNetworksBgpNetwork : TeaModel {
+                [NameInMap("DstCidrBlock")]
+                [Validation(Required=false)]
                 public string DstCidrBlock { get; set; }
+
+                [NameInMap("RouterId")]
+                [Validation(Required=false)]
                 public string RouterId { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
                 public string VpcId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

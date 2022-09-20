@@ -21,11 +21,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeEipGatewayInfoResponseBodyEipInfosEipInfo> EipInfo { get; set; }
             public class DescribeEipGatewayInfoResponseBodyEipInfosEipInfo : TeaModel {
+                [NameInMap("Ip")]
+                [Validation(Required=false)]
                 public string Ip { get; set; }
+
+                [NameInMap("IpGw")]
+                [Validation(Required=false)]
                 public string IpGw { get; set; }
+
+                [NameInMap("IpMask")]
+                [Validation(Required=false)]
                 public string IpMask { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

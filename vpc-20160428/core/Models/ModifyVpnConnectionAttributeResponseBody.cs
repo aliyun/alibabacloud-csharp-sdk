@@ -40,31 +40,40 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("IkeAuthAlg")]
             [Validation(Required=false)]
             public string IkeAuthAlg { get; set; }
+
             [NameInMap("IkeEncAlg")]
             [Validation(Required=false)]
             public string IkeEncAlg { get; set; }
+
             [NameInMap("IkeLifetime")]
             [Validation(Required=false)]
             public long? IkeLifetime { get; set; }
+
             [NameInMap("IkeMode")]
             [Validation(Required=false)]
             public string IkeMode { get; set; }
+
             [NameInMap("IkePfs")]
             [Validation(Required=false)]
             public string IkePfs { get; set; }
+
             [NameInMap("IkeVersion")]
             [Validation(Required=false)]
             public string IkeVersion { get; set; }
+
             [NameInMap("LocalId")]
             [Validation(Required=false)]
             public string LocalId { get; set; }
+
             [NameInMap("Psk")]
             [Validation(Required=false)]
             public string Psk { get; set; }
+
             [NameInMap("RemoteId")]
             [Validation(Required=false)]
             public string RemoteId { get; set; }
-        };
+
+        }
 
         [NameInMap("IpsecConfig")]
         [Validation(Required=false)]
@@ -73,16 +82,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("IpsecAuthAlg")]
             [Validation(Required=false)]
             public string IpsecAuthAlg { get; set; }
+
             [NameInMap("IpsecEncAlg")]
             [Validation(Required=false)]
             public string IpsecEncAlg { get; set; }
+
             [NameInMap("IpsecLifetime")]
             [Validation(Required=false)]
             public long? IpsecLifetime { get; set; }
+
             [NameInMap("IpsecPfs")]
             [Validation(Required=false)]
             public string IpsecPfs { get; set; }
-        };
+
+        }
 
         [NameInMap("LocalSubnet")]
         [Validation(Required=false)]
@@ -107,19 +120,24 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("Dip")]
             [Validation(Required=false)]
             public string Dip { get; set; }
+
             [NameInMap("Enable")]
             [Validation(Required=false)]
             public string Enable { get; set; }
+
             [NameInMap("Interval")]
             [Validation(Required=false)]
             public int? Interval { get; set; }
+
             [NameInMap("Retry")]
             [Validation(Required=false)]
             public int? Retry { get; set; }
+
             [NameInMap("Sip")]
             [Validation(Required=false)]
             public string Sip { get; set; }
-        };
+
+        }
 
         [NameInMap("VpnBgpConfig")]
         [Validation(Required=false)]
@@ -128,25 +146,32 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("EnableBgp")]
             [Validation(Required=false)]
             public string EnableBgp { get; set; }
+
             [NameInMap("LocalAsn")]
             [Validation(Required=false)]
             public int? LocalAsn { get; set; }
+
             [NameInMap("LocalBgpIp")]
             [Validation(Required=false)]
             public string LocalBgpIp { get; set; }
+
             [NameInMap("PeerAsn")]
             [Validation(Required=false)]
             public int? PeerAsn { get; set; }
+
             [NameInMap("PeerBgpIp")]
             [Validation(Required=false)]
             public string PeerBgpIp { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("TunnelCidr")]
             [Validation(Required=false)]
             public string TunnelCidr { get; set; }
-        };
+
+        }
 
         [NameInMap("VpnConnectionId")]
         [Validation(Required=false)]

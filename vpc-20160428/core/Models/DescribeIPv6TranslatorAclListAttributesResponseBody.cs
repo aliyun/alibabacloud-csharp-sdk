@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeIPv6TranslatorAclListAttributesResponseBodyAclEntriesAclEntry> AclEntry { get; set; }
             public class DescribeIPv6TranslatorAclListAttributesResponseBodyAclEntriesAclEntry : TeaModel {
+                [NameInMap("AclEntryComment")]
+                [Validation(Required=false)]
                 public string AclEntryComment { get; set; }
+
+                [NameInMap("AclEntryId")]
+                [Validation(Required=false)]
                 public string AclEntryId { get; set; }
+
+                [NameInMap("AclEntryIp")]
+                [Validation(Required=false)]
                 public string AclEntryIp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("AclId")]
         [Validation(Required=false)]

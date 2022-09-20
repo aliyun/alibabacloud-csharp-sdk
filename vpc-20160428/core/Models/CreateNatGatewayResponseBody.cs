@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("ForwardTableId")]
             [Validation(Required=false)]
             public List<string> ForwardTableId { get; set; }
-        };
+
+        }
 
         [NameInMap("FullNatTableIds")]
         [Validation(Required=false)]
@@ -25,7 +26,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("FullNatTableId")]
             [Validation(Required=false)]
             public List<string> FullNatTableId { get; set; }
-        };
+
+        }
 
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]
@@ -42,7 +44,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("SnatTableId")]
             [Validation(Required=false)]
             public List<string> SnatTableId { get; set; }
-        };
+
+        }
 
     }
 

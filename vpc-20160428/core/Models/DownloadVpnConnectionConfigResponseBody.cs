@@ -58,6 +58,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string RemoteId { get; set; }
 
             }
+
             [NameInMap("IpsecConfig")]
             [Validation(Required=false)]
             public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIpsecConfig IpsecConfig { get; set; }
@@ -79,19 +80,24 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IpsecPfs { get; set; }
 
             }
+
             [NameInMap("Local")]
             [Validation(Required=false)]
             public string Local { get; set; }
+
             [NameInMap("LocalSubnet")]
             [Validation(Required=false)]
             public string LocalSubnet { get; set; }
+
             [NameInMap("Remote")]
             [Validation(Required=false)]
             public string Remote { get; set; }
+
             [NameInMap("RemoteSubnet")]
             [Validation(Required=false)]
             public string RemoteSubnet { get; set; }
-        };
+
+        }
 
     }
 

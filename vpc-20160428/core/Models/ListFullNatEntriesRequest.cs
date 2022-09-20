@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? MaxResults { get; set; }
 
+        [NameInMap("NatGatewayId")]
+        [Validation(Required=false)]
+        public string NatGatewayId { get; set; }
+
         [NameInMap("NetworkInterfaceIds")]
         [Validation(Required=false)]
         public List<string> NetworkInterfaceIds { get; set; }

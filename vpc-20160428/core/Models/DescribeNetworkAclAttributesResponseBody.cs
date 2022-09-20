@@ -16,9 +16,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
             [NameInMap("EgressAclEntries")]
             [Validation(Required=false)]
             public DescribeNetworkAclAttributesResponseBodyNetworkAclAttributeEgressAclEntries EgressAclEntries { get; set; }
@@ -58,6 +60,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
             }
+
             [NameInMap("IngressAclEntries")]
             [Validation(Required=false)]
             public DescribeNetworkAclAttributesResponseBodyNetworkAclAttributeIngressAclEntries IngressAclEntries { get; set; }
@@ -97,18 +100,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
             }
+
             [NameInMap("NetworkAclId")]
             [Validation(Required=false)]
             public string NetworkAclId { get; set; }
+
             [NameInMap("NetworkAclName")]
             [Validation(Required=false)]
             public string NetworkAclName { get; set; }
+
             [NameInMap("OwnerId")]
             [Validation(Required=false)]
             public long? OwnerId { get; set; }
+
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
             [NameInMap("Resources")]
             [Validation(Required=false)]
             public DescribeNetworkAclAttributesResponseBodyNetworkAclAttributeResources Resources { get; set; }
@@ -132,13 +140,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
             }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

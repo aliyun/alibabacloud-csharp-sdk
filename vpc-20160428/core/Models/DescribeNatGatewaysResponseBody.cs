@@ -17,14 +17,40 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeNatGatewaysResponseBodyNatGatewaysNatGateway> NatGateway { get; set; }
             public class DescribeNatGatewaysResponseBodyNatGatewaysNatGateway : TeaModel {
+                [NameInMap("AutoPay")]
+                [Validation(Required=false)]
                 public bool? AutoPay { get; set; }
+
+                [NameInMap("BusinessStatus")]
+                [Validation(Required=false)]
                 public string BusinessStatus { get; set; }
+
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
+                [NameInMap("DeletionProtection")]
+                [Validation(Required=false)]
                 public bool? DeletionProtection { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("EcsMetricEnabled")]
+                [Validation(Required=false)]
                 public bool? EcsMetricEnabled { get; set; }
+
+                [NameInMap("EipBindMode")]
+                [Validation(Required=false)]
                 public string EipBindMode { get; set; }
+
+                [NameInMap("ExpiredTime")]
+                [Validation(Required=false)]
                 public string ExpiredTime { get; set; }
+
+                [NameInMap("ForwardTableIds")]
+                [Validation(Required=false)]
                 public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds ForwardTableIds { get; set; }
                 public class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds : TeaModel {
                     [NameInMap("ForwardTableId")]
@@ -32,6 +58,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<string> ForwardTableId { get; set; }
 
                 }
+
+                [NameInMap("FullNatTableIds")]
+                [Validation(Required=false)]
                 public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayFullNatTableIds FullNatTableIds { get; set; }
                 public class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayFullNatTableIds : TeaModel {
                     [NameInMap("FullNatTableId")]
@@ -39,9 +68,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<string> FullNatTableId { get; set; }
 
                 }
+
+                [NameInMap("IcmpReplyEnabled")]
+                [Validation(Required=false)]
                 public bool? IcmpReplyEnabled { get; set; }
+
+                [NameInMap("InstanceChargeType")]
+                [Validation(Required=false)]
                 public string InstanceChargeType { get; set; }
+
+                [NameInMap("InternetChargeType")]
+                [Validation(Required=false)]
                 public string InternetChargeType { get; set; }
+
+                [NameInMap("IpLists")]
+                [Validation(Required=false)]
                 public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpLists IpLists { get; set; }
                 public class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpLists : TeaModel {
                     [NameInMap("IpList")]
@@ -71,8 +112,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     }
 
                 }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("NatGatewayId")]
+                [Validation(Required=false)]
                 public string NatGatewayId { get; set; }
+
+                [NameInMap("NatGatewayPrivateInfo")]
+                [Validation(Required=false)]
                 public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo NatGatewayPrivateInfo { get; set; }
                 public class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo : TeaModel {
                     [NameInMap("EniInstanceId")]
@@ -108,13 +158,37 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public string VswitchId { get; set; }
 
                 }
+
+                [NameInMap("NatType")]
+                [Validation(Required=false)]
                 public string NatType { get; set; }
+
+                [NameInMap("NetworkType")]
+                [Validation(Required=false)]
                 public string NetworkType { get; set; }
+
+                [NameInMap("PrivateLinkEnabled")]
+                [Validation(Required=false)]
                 public bool? PrivateLinkEnabled { get; set; }
+
+                [NameInMap("PrivateLinkMode")]
+                [Validation(Required=false)]
                 public string PrivateLinkMode { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
+
+                [NameInMap("SecurityProtectionEnabled")]
+                [Validation(Required=false)]
                 public bool? SecurityProtectionEnabled { get; set; }
+
+                [NameInMap("SnatTableIds")]
+                [Validation(Required=false)]
                 public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewaySnatTableIds SnatTableIds { get; set; }
                 public class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewaySnatTableIds : TeaModel {
                     [NameInMap("SnatTableId")]
@@ -122,8 +196,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<string> SnatTableId { get; set; }
 
                 }
+
+                [NameInMap("Spec")]
+                [Validation(Required=false)]
                 public string Spec { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
                 public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTags Tags { get; set; }
                 public class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTags : TeaModel {
                     [NameInMap("Tag")]
@@ -141,9 +224,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     }
 
                 }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
                 public string VpcId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

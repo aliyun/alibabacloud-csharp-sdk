@@ -56,10 +56,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("RouteTableId")]
             [Validation(Required=false)]
             public string RouteTableId { get; set; }
+
             [NameInMap("RouteTableType")]
             [Validation(Required=false)]
             public string RouteTableType { get; set; }
-        };
+
+        }
 
         [NameInMap("Status")]
         [Validation(Required=false)]

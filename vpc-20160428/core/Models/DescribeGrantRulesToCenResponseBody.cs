@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeGrantRulesToCenResponseBodyCenGrantRulesCbnGrantRule> CbnGrantRule { get; set; }
             public class DescribeGrantRulesToCenResponseBodyCenGrantRulesCbnGrantRule : TeaModel {
+                [NameInMap("CenInstanceId")]
+                [Validation(Required=false)]
                 public string CenInstanceId { get; set; }
+
+                [NameInMap("CenOwnerId")]
+                [Validation(Required=false)]
                 public long? CenOwnerId { get; set; }
+
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
