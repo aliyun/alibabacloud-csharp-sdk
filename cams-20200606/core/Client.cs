@@ -37,108 +37,6 @@ namespace AlibabaCloud.SDK.Cams20200606
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        public CheckChatappContactsResponse CheckChatappContactsWithOptions(CheckChatappContactsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            CheckChatappContactsShrinkRequest request = new CheckChatappContactsShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Contacts))
-            {
-                request.ContactsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Contacts, "Contacts", "json");
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelType))
-            {
-                body["ChannelType"] = request.ChannelType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactsShrink))
-            {
-                body["Contacts"] = request.ContactsShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustWabaId))
-            {
-                body["CustWabaId"] = request.CustWabaId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
-            {
-                body["From"] = request.From;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CheckChatappContacts",
-                Version = "2020-06-06",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CheckChatappContactsResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<CheckChatappContactsResponse> CheckChatappContactsWithOptionsAsync(CheckChatappContactsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            CheckChatappContactsShrinkRequest request = new CheckChatappContactsShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Contacts))
-            {
-                request.ContactsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Contacts, "Contacts", "json");
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelType))
-            {
-                body["ChannelType"] = request.ChannelType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactsShrink))
-            {
-                body["Contacts"] = request.ContactsShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustWabaId))
-            {
-                body["CustWabaId"] = request.CustWabaId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
-            {
-                body["From"] = request.From;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CheckChatappContacts",
-                Version = "2020-06-06",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CheckChatappContactsResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public CheckChatappContactsResponse CheckChatappContacts(CheckChatappContactsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return CheckChatappContactsWithOptions(request, runtime);
-        }
-
-        public async Task<CheckChatappContactsResponse> CheckChatappContactsAsync(CheckChatappContactsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await CheckChatappContactsWithOptionsAsync(request, runtime);
-        }
-
         public CreateChatappTemplateResponse CreateChatappTemplateWithOptions(CreateChatappTemplateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -168,6 +66,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExampleShrink))
             {
                 body["Example"] = request.ExampleShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvCode))
+            {
+                body["IsvCode"] = request.IsvCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
@@ -230,6 +132,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 body["Example"] = request.ExampleShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvCode))
+            {
+                body["IsvCode"] = request.IsvCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
                 body["Language"] = request.Language;
@@ -281,6 +187,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 query["CustWabaId"] = request.CustWabaId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvCode))
+            {
+                query["IsvCode"] = request.IsvCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
             {
                 query["TemplateCode"] = request.TemplateCode;
@@ -311,6 +221,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustWabaId))
             {
                 query["CustWabaId"] = request.CustWabaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvCode))
+            {
+                query["IsvCode"] = request.IsvCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
             {
@@ -355,6 +269,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 query["CustWabaId"] = request.CustWabaId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvCode))
+            {
+                query["IsvCode"] = request.IsvCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
                 query["Language"] = request.Language;
@@ -389,6 +307,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustWabaId))
             {
                 query["CustWabaId"] = request.CustWabaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvCode))
+            {
+                query["IsvCode"] = request.IsvCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
@@ -447,6 +369,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 query["CustWabaId"] = request.CustWabaId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvCode))
+            {
+                query["IsvCode"] = request.IsvCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
                 query["Language"] = request.Language;
@@ -495,6 +421,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustWabaId))
             {
                 query["CustWabaId"] = request.CustWabaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvCode))
+            {
+                query["IsvCode"] = request.IsvCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
@@ -569,6 +499,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 body["From"] = request.From;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvCode))
+            {
+                body["IsvCode"] = request.IsvCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
                 body["Language"] = request.Language;
@@ -633,6 +567,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
                 body["From"] = request.From;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvCode))
+            {
+                body["IsvCode"] = request.IsvCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
@@ -724,6 +662,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 body["From"] = request.From;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvCode))
+            {
+                body["IsvCode"] = request.IsvCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
                 body["Language"] = request.Language;
@@ -810,6 +752,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
                 body["From"] = request.From;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvCode))
+            {
+                body["IsvCode"] = request.IsvCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {

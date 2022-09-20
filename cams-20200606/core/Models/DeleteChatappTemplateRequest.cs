@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string CustWabaId { get; set; }
 
+        [NameInMap("IsvCode")]
+        [Validation(Required=false)]
+        public string IsvCode { get; set; }
+
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]
         public string TemplateCode { get; set; }

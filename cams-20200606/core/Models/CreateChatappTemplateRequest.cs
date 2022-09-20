@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -76,6 +79,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [NameInMap("Example")]
         [Validation(Required=false)]
         public Dictionary<string, string> Example { get; set; }
+
+        [NameInMap("IsvCode")]
+        [Validation(Required=false)]
+        public string IsvCode { get; set; }
 
         [NameInMap("Language")]
         [Validation(Required=false)]

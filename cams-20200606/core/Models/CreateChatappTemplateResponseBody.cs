@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             [NameInMap("TemplateCode")]
             [Validation(Required=false)]
             public string TemplateCode { get; set; }
+
             [NameInMap("TemplateName")]
             [Validation(Required=false)]
             public string TemplateName { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
