@@ -88,7 +88,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public AttachInstancesResponse AttachInstancesWithOptions(string ClusterId, AttachInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpuPolicy))
             {
@@ -152,7 +151,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "AttachInstances",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/attach",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/attach",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -165,7 +164,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<AttachInstancesResponse> AttachInstancesWithOptionsAsync(string ClusterId, AttachInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpuPolicy))
             {
@@ -229,7 +227,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "AttachInstances",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/attach",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/attach",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -255,7 +253,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public CancelClusterUpgradeResponse CancelClusterUpgradeWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -265,7 +262,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "CancelClusterUpgrade",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/clusters/" + ClusterId + "/upgrade/cancel",
+                Pathname = "/api/v2/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/upgrade/cancel",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -277,7 +274,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<CancelClusterUpgradeResponse> CancelClusterUpgradeWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -287,7 +283,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "CancelClusterUpgrade",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/clusters/" + ClusterId + "/upgrade/cancel",
+                Pathname = "/api/v2/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/upgrade/cancel",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -313,8 +309,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public CancelComponentUpgradeResponse CancelComponentUpgradeWithOptions(string clusterId, string componentId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
-            componentId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(componentId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -324,7 +318,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "CancelComponentUpgrade",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/components/" + componentId + "/cancel",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/components/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(componentId) + "/cancel",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -336,8 +330,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<CancelComponentUpgradeResponse> CancelComponentUpgradeWithOptionsAsync(string clusterId, string componentId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
-            componentId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(componentId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -347,7 +339,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "CancelComponentUpgrade",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/components/" + componentId + "/cancel",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/components/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(componentId) + "/cancel",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -373,7 +365,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public CancelTaskResponse CancelTaskWithOptions(string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            taskId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -383,7 +374,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "CancelTask",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/tasks/" + taskId + "/cancel",
+                Pathname = "/tasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId) + "/cancel",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -395,7 +386,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<CancelTaskResponse> CancelTaskWithOptionsAsync(string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            taskId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -405,7 +395,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "CancelTask",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/tasks/" + taskId + "/cancel",
+                Pathname = "/tasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId) + "/cancel",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -432,7 +422,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public CancelWorkflowResponse CancelWorkflowWithOptions(string workflowName, CancelWorkflowRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            workflowName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workflowName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Action))
             {
@@ -448,7 +437,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "CancelWorkflow",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/gs/workflow/" + workflowName,
+                Pathname = "/gs/workflow/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workflowName),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -461,7 +450,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<CancelWorkflowResponse> CancelWorkflowWithOptionsAsync(string workflowName, CancelWorkflowRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            workflowName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workflowName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Action))
             {
@@ -477,7 +465,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "CancelWorkflow",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/gs/workflow/" + workflowName,
+                Pathname = "/gs/workflow/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workflowName),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -504,7 +492,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public CreateAutoscalingConfigResponse CreateAutoscalingConfigWithOptions(string ClusterId, CreateAutoscalingConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CoolDownDuration))
             {
@@ -544,7 +531,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "CreateAutoscalingConfig",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/cluster/" + ClusterId + "/autoscale/config/",
+                Pathname = "/cluster/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/autoscale/config/",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -557,7 +544,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<CreateAutoscalingConfigResponse> CreateAutoscalingConfigWithOptionsAsync(string ClusterId, CreateAutoscalingConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CoolDownDuration))
             {
@@ -597,7 +583,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "CreateAutoscalingConfig",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/cluster/" + ClusterId + "/autoscale/config/",
+                Pathname = "/cluster/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/autoscale/config/",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1382,7 +1368,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public CreateClusterNodePoolResponse CreateClusterNodePoolWithOptions(string ClusterId, CreateClusterNodePoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoScaling.ToMap()))
             {
@@ -1434,7 +1419,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "CreateClusterNodePool",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/nodepools",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/nodepools",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1447,7 +1432,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<CreateClusterNodePoolResponse> CreateClusterNodePoolWithOptionsAsync(string ClusterId, CreateClusterNodePoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoScaling.ToMap()))
             {
@@ -1499,7 +1483,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "CreateClusterNodePool",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/nodepools",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/nodepools",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1808,7 +1792,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public CreateTriggerResponse CreateTriggerWithOptions(string clusterId, CreateTriggerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Action))
             {
@@ -1836,7 +1819,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "CreateTrigger",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/triggers",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/triggers",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1849,7 +1832,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<CreateTriggerResponse> CreateTriggerWithOptionsAsync(string clusterId, CreateTriggerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Action))
             {
@@ -1877,7 +1859,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "CreateTrigger",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/triggers",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/triggers",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2016,7 +1998,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public DeleteClusterResponse DeleteClusterWithOptions(string ClusterId, DeleteClusterRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             DeleteClusterShrinkRequest request = new DeleteClusterShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RetainResources))
@@ -2046,7 +2027,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DeleteCluster",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId,
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2059,7 +2040,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<DeleteClusterResponse> DeleteClusterWithOptionsAsync(string ClusterId, DeleteClusterRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             DeleteClusterShrinkRequest request = new DeleteClusterShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RetainResources))
@@ -2089,7 +2069,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DeleteCluster",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId,
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2116,8 +2096,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public DeleteClusterNodepoolResponse DeleteClusterNodepoolWithOptions(string ClusterId, string NodepoolId, DeleteClusterNodepoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
-            NodepoolId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
             {
@@ -2133,7 +2111,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DeleteClusterNodepool",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/nodepools/" + NodepoolId,
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2146,8 +2124,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<DeleteClusterNodepoolResponse> DeleteClusterNodepoolWithOptionsAsync(string ClusterId, string NodepoolId, DeleteClusterNodepoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
-            NodepoolId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
             {
@@ -2163,7 +2139,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DeleteClusterNodepool",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/nodepools/" + NodepoolId,
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2190,7 +2166,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public DeleteClusterNodesResponse DeleteClusterNodesWithOptions(string ClusterId, DeleteClusterNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DrainNode))
             {
@@ -2214,7 +2189,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DeleteClusterNodes",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/nodes",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/nodes",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2227,7 +2202,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<DeleteClusterNodesResponse> DeleteClusterNodesWithOptionsAsync(string ClusterId, DeleteClusterNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DrainNode))
             {
@@ -2251,7 +2225,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DeleteClusterNodes",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/nodes",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/nodes",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2278,7 +2252,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public DeleteEdgeMachineResponse DeleteEdgeMachineWithOptions(string edgeMachineid, DeleteEdgeMachineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            edgeMachineid = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(edgeMachineid);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
             {
@@ -2294,7 +2267,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DeleteEdgeMachine",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/edge_machines/[edge_machineid]",
+                Pathname = "/edge_machines/%5Bedge_machineid%5D",
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2307,7 +2280,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<DeleteEdgeMachineResponse> DeleteEdgeMachineWithOptionsAsync(string edgeMachineid, DeleteEdgeMachineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            edgeMachineid = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(edgeMachineid);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
             {
@@ -2323,7 +2295,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DeleteEdgeMachine",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/edge_machines/[edge_machineid]",
+                Pathname = "/edge_machines/%5Bedge_machineid%5D",
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2349,7 +2321,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public DeleteKubernetesTriggerResponse DeleteKubernetesTriggerWithOptions(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2359,7 +2330,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DeleteKubernetesTrigger",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/triggers/revoke/" + Id,
+                Pathname = "/triggers/revoke/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2371,7 +2342,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<DeleteKubernetesTriggerResponse> DeleteKubernetesTriggerWithOptionsAsync(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2381,7 +2351,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DeleteKubernetesTrigger",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/triggers/revoke/" + Id,
+                Pathname = "/triggers/revoke/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2408,8 +2378,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public DeletePolicyInstanceResponse DeletePolicyInstanceWithOptions(string clusterId, string policyName, DeletePolicyInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
-            policyName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(policyName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
@@ -2425,7 +2393,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DeletePolicyInstance",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/policies/" + policyName,
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/policies/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(policyName),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2438,8 +2406,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<DeletePolicyInstanceResponse> DeletePolicyInstanceWithOptionsAsync(string clusterId, string policyName, DeletePolicyInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
-            policyName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(policyName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
@@ -2455,7 +2421,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DeletePolicyInstance",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/policies/" + policyName,
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/policies/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(policyName),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2481,7 +2447,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public DeleteTemplateResponse DeleteTemplateWithOptions(string TemplateId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            TemplateId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TemplateId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2491,7 +2456,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DeleteTemplate",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/templates/" + TemplateId,
+                Pathname = "/templates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TemplateId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2503,7 +2468,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<DeleteTemplateResponse> DeleteTemplateWithOptionsAsync(string TemplateId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            TemplateId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TemplateId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2513,7 +2477,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DeleteTemplate",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/templates/" + TemplateId,
+                Pathname = "/templates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TemplateId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2539,8 +2503,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public DeleteTriggerResponse DeleteTriggerWithOptions(string clusterId, string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2550,7 +2512,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DeleteTrigger",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/[cluster_id]/triggers/[Id]",
+                Pathname = "/clusters/%5Bcluster_id%5D/triggers/%5BId%5D",
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2562,8 +2524,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<DeleteTriggerResponse> DeleteTriggerWithOptionsAsync(string clusterId, string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2573,7 +2533,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DeleteTrigger",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/[cluster_id]/triggers/[Id]",
+                Pathname = "/clusters/%5Bcluster_id%5D/triggers/%5BId%5D",
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2600,8 +2560,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public DeployPolicyInstanceResponse DeployPolicyInstanceWithOptions(string clusterId, string policyName, DeployPolicyInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
-            policyName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(policyName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Action))
             {
@@ -2625,7 +2583,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DeployPolicyInstance",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/policies/" + policyName,
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/policies/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(policyName),
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2638,8 +2596,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<DeployPolicyInstanceResponse> DeployPolicyInstanceWithOptionsAsync(string clusterId, string policyName, DeployPolicyInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
-            policyName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(policyName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Action))
             {
@@ -2663,7 +2619,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DeployPolicyInstance",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/policies/" + policyName,
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/policies/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(policyName),
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2689,7 +2645,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public DescirbeWorkflowResponse DescirbeWorkflowWithOptions(string workflowName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            workflowName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workflowName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2699,7 +2654,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescirbeWorkflow",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/gs/workflow/" + workflowName,
+                Pathname = "/gs/workflow/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workflowName),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2711,7 +2666,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<DescirbeWorkflowResponse> DescirbeWorkflowWithOptionsAsync(string workflowName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            workflowName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workflowName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2721,7 +2675,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescirbeWorkflow",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/gs/workflow/" + workflowName,
+                Pathname = "/gs/workflow/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workflowName),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2825,9 +2779,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public DescribeClusterAddonMetadataResponse DescribeClusterAddonMetadataWithOptions(string clusterId, string componentId, string version, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
-            componentId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(componentId);
-            version = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(version);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2837,7 +2788,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterAddonMetadata",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/components/" + componentId + "/metadata",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/components/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(componentId) + "/metadata",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2849,9 +2800,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<DescribeClusterAddonMetadataResponse> DescribeClusterAddonMetadataWithOptionsAsync(string clusterId, string componentId, string version, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
-            componentId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(componentId);
-            version = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(version);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2861,7 +2809,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterAddonMetadata",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/components/" + componentId + "/metadata",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/components/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(componentId) + "/metadata",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2887,8 +2835,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public DescribeClusterAddonUpgradeStatusResponse DescribeClusterAddonUpgradeStatusWithOptions(string ClusterId, string ComponentId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
-            ComponentId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ComponentId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2898,7 +2844,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterAddonUpgradeStatus",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/components/" + ComponentId + "/upgradestatus",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/components/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ComponentId) + "/upgradestatus",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2910,8 +2856,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<DescribeClusterAddonUpgradeStatusResponse> DescribeClusterAddonUpgradeStatusWithOptionsAsync(string ClusterId, string ComponentId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
-            ComponentId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ComponentId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2921,7 +2865,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterAddonUpgradeStatus",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/components/" + ComponentId + "/upgradestatus",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/components/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ComponentId) + "/upgradestatus",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2948,7 +2892,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public DescribeClusterAddonsUpgradeStatusResponse DescribeClusterAddonsUpgradeStatusWithOptions(string ClusterId, DescribeClusterAddonsUpgradeStatusRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             DescribeClusterAddonsUpgradeStatusShrinkRequest request = new DescribeClusterAddonsUpgradeStatusShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ComponentIds))
@@ -2970,7 +2913,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterAddonsUpgradeStatus",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/components/upgradestatus",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/components/upgradestatus",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2983,7 +2926,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<DescribeClusterAddonsUpgradeStatusResponse> DescribeClusterAddonsUpgradeStatusWithOptionsAsync(string ClusterId, DescribeClusterAddonsUpgradeStatusRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             DescribeClusterAddonsUpgradeStatusShrinkRequest request = new DescribeClusterAddonsUpgradeStatusShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ComponentIds))
@@ -3005,7 +2947,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterAddonsUpgradeStatus",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/components/upgradestatus",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/components/upgradestatus",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3031,7 +2973,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public DescribeClusterAddonsVersionResponse DescribeClusterAddonsVersionWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3041,7 +2982,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterAddonsVersion",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/components/version",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/components/version",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3053,7 +2994,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<DescribeClusterAddonsVersionResponse> DescribeClusterAddonsVersionWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3063,7 +3003,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterAddonsVersion",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/components/version",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/components/version",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3090,7 +3030,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public DescribeClusterAttachScriptsResponse DescribeClusterAttachScriptsWithOptions(string ClusterId, DescribeClusterAttachScriptsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Arch))
             {
@@ -3126,7 +3065,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterAttachScripts",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/attachscript",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/attachscript",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3139,7 +3078,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<DescribeClusterAttachScriptsResponse> DescribeClusterAttachScriptsWithOptionsAsync(string ClusterId, DescribeClusterAttachScriptsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Arch))
             {
@@ -3175,7 +3113,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterAttachScripts",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/attachscript",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/attachscript",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3201,7 +3139,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public DescribeClusterDetailResponse DescribeClusterDetailWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3211,7 +3148,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterDetail",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId,
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3223,7 +3160,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<DescribeClusterDetailResponse> DescribeClusterDetailWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3233,7 +3169,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterDetail",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId,
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3260,7 +3196,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public DescribeClusterEventsResponse DescribeClusterEventsWithOptions(string ClusterId, DescribeClusterEventsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -3284,7 +3219,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterEvents",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/events",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/events",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3297,7 +3232,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<DescribeClusterEventsResponse> DescribeClusterEventsWithOptionsAsync(string ClusterId, DescribeClusterEventsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -3321,7 +3255,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterEvents",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/events",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/events",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3347,7 +3281,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public DescribeClusterLogsResponse DescribeClusterLogsWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3357,7 +3290,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterLogs",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/logs",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/logs",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3369,7 +3302,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<DescribeClusterLogsResponse> DescribeClusterLogsWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3379,7 +3311,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterLogs",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/logs",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/logs",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3405,8 +3337,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public DescribeClusterNodePoolDetailResponse DescribeClusterNodePoolDetailWithOptions(string ClusterId, string NodepoolId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
-            NodepoolId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3416,7 +3346,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterNodePoolDetail",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/nodepools/" + NodepoolId,
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3428,8 +3358,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<DescribeClusterNodePoolDetailResponse> DescribeClusterNodePoolDetailWithOptionsAsync(string ClusterId, string NodepoolId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
-            NodepoolId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3439,7 +3367,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterNodePoolDetail",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/nodepools/" + NodepoolId,
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3465,7 +3393,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public DescribeClusterNodePoolsResponse DescribeClusterNodePoolsWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3475,7 +3402,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterNodePools",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/nodepools",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/nodepools",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3487,7 +3414,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<DescribeClusterNodePoolsResponse> DescribeClusterNodePoolsWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3497,7 +3423,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterNodePools",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/nodepools",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/nodepools",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3524,7 +3450,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public DescribeClusterNodesResponse DescribeClusterNodesWithOptions(string ClusterId, DescribeClusterNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
             {
@@ -3556,7 +3481,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterNodes",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/nodes",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/nodes",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3569,7 +3494,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<DescribeClusterNodesResponse> DescribeClusterNodesWithOptionsAsync(string ClusterId, DescribeClusterNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
             {
@@ -3601,7 +3525,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterNodes",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/nodes",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/nodes",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3627,7 +3551,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public DescribeClusterResourcesResponse DescribeClusterResourcesWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3637,7 +3560,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterResources",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/resources",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/resources",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3649,7 +3572,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<DescribeClusterResourcesResponse> DescribeClusterResourcesWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3659,7 +3581,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterResources",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/resources",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/resources",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3685,7 +3607,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public DescribeClusterTasksResponse DescribeClusterTasksWithOptions(string clusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3695,7 +3616,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterTasks",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/tasks",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/tasks",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3707,7 +3628,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<DescribeClusterTasksResponse> DescribeClusterTasksWithOptionsAsync(string clusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3717,7 +3637,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterTasks",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/tasks",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/tasks",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3744,7 +3664,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public DescribeClusterUserKubeconfigResponse DescribeClusterUserKubeconfigWithOptions(string ClusterId, DescribeClusterUserKubeconfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateIpAddress))
             {
@@ -3764,7 +3683,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterUserKubeconfig",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/k8s/" + ClusterId + "/user_config",
+                Pathname = "/k8s/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/user_config",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3777,7 +3696,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<DescribeClusterUserKubeconfigResponse> DescribeClusterUserKubeconfigWithOptionsAsync(string ClusterId, DescribeClusterUserKubeconfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateIpAddress))
             {
@@ -3797,7 +3715,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterUserKubeconfig",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/k8s/" + ClusterId + "/user_config",
+                Pathname = "/k8s/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/user_config",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3824,7 +3742,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public DescribeClusterV2UserKubeconfigResponse DescribeClusterV2UserKubeconfigWithOptions(string ClusterId, DescribeClusterV2UserKubeconfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateIpAddress))
             {
@@ -3840,7 +3757,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterV2UserKubeconfig",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/k8s/" + ClusterId + "/user_config",
+                Pathname = "/api/v2/k8s/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/user_config",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3853,7 +3770,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<DescribeClusterV2UserKubeconfigResponse> DescribeClusterV2UserKubeconfigWithOptionsAsync(string ClusterId, DescribeClusterV2UserKubeconfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateIpAddress))
             {
@@ -3869,7 +3785,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeClusterV2UserKubeconfig",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/k8s/" + ClusterId + "/user_config",
+                Pathname = "/api/v2/k8s/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/user_config",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4091,7 +4007,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public DescribeEdgeMachineActiveProcessResponse DescribeEdgeMachineActiveProcessWithOptions(string edgeMachineid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            edgeMachineid = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(edgeMachineid);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4101,7 +4016,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeEdgeMachineActiveProcess",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/edge_machines/[edge_machineid]/activeprocess",
+                Pathname = "/edge_machines/%5Bedge_machineid%5D/activeprocess",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4113,7 +4028,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<DescribeEdgeMachineActiveProcessResponse> DescribeEdgeMachineActiveProcessWithOptionsAsync(string edgeMachineid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            edgeMachineid = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(edgeMachineid);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4123,7 +4037,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeEdgeMachineActiveProcess",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/edge_machines/[edge_machineid]/activeprocess",
+                Pathname = "/edge_machines/%5Bedge_machineid%5D/activeprocess",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4205,7 +4119,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public DescribeEdgeMachineTunnelConfigDetailResponse DescribeEdgeMachineTunnelConfigDetailWithOptions(string edgeMachineid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            edgeMachineid = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(edgeMachineid);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4215,7 +4128,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeEdgeMachineTunnelConfigDetail",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/edge_machines/[edge_machineid]/tunnelconfig",
+                Pathname = "/edge_machines/%5Bedge_machineid%5D/tunnelconfig",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4227,7 +4140,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<DescribeEdgeMachineTunnelConfigDetailResponse> DescribeEdgeMachineTunnelConfigDetailWithOptionsAsync(string edgeMachineid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            edgeMachineid = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(edgeMachineid);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4237,7 +4149,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeEdgeMachineTunnelConfigDetail",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/edge_machines/[edge_machineid]/tunnelconfig",
+                Pathname = "/edge_machines/%5Bedge_machineid%5D/tunnelconfig",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4468,7 +4380,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public DescribeExternalAgentResponse DescribeExternalAgentWithOptions(string ClusterId, DescribeExternalAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateIpAddress))
             {
@@ -4484,7 +4395,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeExternalAgent",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/k8s/" + ClusterId + "/external/agent/deployment",
+                Pathname = "/k8s/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/external/agent/deployment",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4497,7 +4408,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<DescribeExternalAgentResponse> DescribeExternalAgentWithOptionsAsync(string ClusterId, DescribeExternalAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateIpAddress))
             {
@@ -4513,7 +4423,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeExternalAgent",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/k8s/" + ClusterId + "/external/agent/deployment",
+                Pathname = "/k8s/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/external/agent/deployment",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4641,8 +4551,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public DescribeNodePoolVulsResponse DescribeNodePoolVulsWithOptions(string clusterId, string nodepoolId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
-            nodepoolId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(nodepoolId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4652,7 +4560,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeNodePoolVuls",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/nodepools/" + nodepoolId + "/vuls",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(nodepoolId) + "/vuls",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4664,8 +4572,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<DescribeNodePoolVulsResponse> DescribeNodePoolVulsWithOptionsAsync(string clusterId, string nodepoolId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
-            nodepoolId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(nodepoolId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4675,7 +4581,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeNodePoolVuls",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/nodepools/" + nodepoolId + "/vuls",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(nodepoolId) + "/vuls",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4757,7 +4663,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public DescribePolicyDetailsResponse DescribePolicyDetailsWithOptions(string policyName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            policyName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(policyName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4767,7 +4672,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribePolicyDetails",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/policies/" + policyName,
+                Pathname = "/policies/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(policyName),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4779,7 +4684,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<DescribePolicyDetailsResponse> DescribePolicyDetailsWithOptionsAsync(string policyName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            policyName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(policyName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4789,7 +4693,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribePolicyDetails",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/policies/" + policyName,
+                Pathname = "/policies/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(policyName),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4815,7 +4719,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public DescribePolicyGovernanceInClusterResponse DescribePolicyGovernanceInClusterWithOptions(string clusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4825,7 +4728,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribePolicyGovernanceInCluster",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/policygovernance",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/policygovernance",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4837,7 +4740,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<DescribePolicyGovernanceInClusterResponse> DescribePolicyGovernanceInClusterWithOptionsAsync(string clusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4847,7 +4749,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribePolicyGovernanceInCluster",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/policygovernance",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/policygovernance",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4874,7 +4776,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public DescribePolicyInstancesResponse DescribePolicyInstancesWithOptions(string clusterId, DescribePolicyInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
@@ -4894,7 +4795,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribePolicyInstances",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/policies",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/policies",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4907,7 +4808,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<DescribePolicyInstancesResponse> DescribePolicyInstancesWithOptionsAsync(string clusterId, DescribePolicyInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
@@ -4927,7 +4827,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribePolicyInstances",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/policies",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/policies",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4953,7 +4853,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public DescribePolicyInstancesStatusResponse DescribePolicyInstancesStatusWithOptions(string clusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4963,7 +4862,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribePolicyInstancesStatus",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/policies/status",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/policies/status",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4975,7 +4874,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<DescribePolicyInstancesStatusResponse> DescribePolicyInstancesStatusWithOptionsAsync(string clusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4985,7 +4883,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribePolicyInstancesStatus",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/policies/status",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/policies/status",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5011,7 +4909,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public DescribeTaskInfoResponse DescribeTaskInfoWithOptions(string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            taskId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5021,7 +4918,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeTaskInfo",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/tasks/" + taskId,
+                Pathname = "/tasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5033,7 +4930,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<DescribeTaskInfoResponse> DescribeTaskInfoWithOptionsAsync(string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            taskId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5043,7 +4939,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeTaskInfo",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/tasks/" + taskId,
+                Pathname = "/tasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5070,7 +4966,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public DescribeTemplateAttributeResponse DescribeTemplateAttributeWithOptions(string TemplateId, DescribeTemplateAttributeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            TemplateId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TemplateId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
             {
@@ -5086,7 +4981,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeTemplateAttribute",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/templates/" + TemplateId,
+                Pathname = "/templates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TemplateId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5099,7 +4994,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<DescribeTemplateAttributeResponse> DescribeTemplateAttributeWithOptionsAsync(string TemplateId, DescribeTemplateAttributeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            TemplateId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TemplateId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
             {
@@ -5115,7 +5009,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeTemplateAttribute",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/templates/" + TemplateId,
+                Pathname = "/templates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TemplateId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5228,7 +5122,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public DescribeTriggerResponse DescribeTriggerWithOptions(string clusterId, DescribeTriggerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -5256,7 +5149,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeTrigger",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/[cluster_id]/triggers",
+                Pathname = "/clusters/%5Bcluster_id%5D/triggers",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5269,7 +5162,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<DescribeTriggerResponse> DescribeTriggerWithOptionsAsync(string clusterId, DescribeTriggerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -5297,7 +5189,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeTrigger",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/[cluster_id]/triggers",
+                Pathname = "/clusters/%5Bcluster_id%5D/triggers",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5323,7 +5215,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public DescribeUserPermissionResponse DescribeUserPermissionWithOptions(string uid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            uid = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(uid);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5333,7 +5224,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeUserPermission",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/permissions/users/" + uid,
+                Pathname = "/permissions/users/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(uid),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5345,7 +5236,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<DescribeUserPermissionResponse> DescribeUserPermissionWithOptionsAsync(string uid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            uid = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(uid);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5355,7 +5245,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "DescribeUserPermission",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/permissions/users/" + uid,
+                Pathname = "/permissions/users/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(uid),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5494,8 +5384,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public EdgeClusterAddEdgeMachineResponse EdgeClusterAddEdgeMachineWithOptions(string clusterid, string edgeMachineid, EdgeClusterAddEdgeMachineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            clusterid = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterid);
-            edgeMachineid = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(edgeMachineid);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expired))
             {
@@ -5519,7 +5407,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "EdgeClusterAddEdgeMachine",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/[clusterid]/attachedgemachine/[edge_machineid]",
+                Pathname = "/clusters/%5Bclusterid%5D/attachedgemachine/%5Bedge_machineid%5D",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5532,8 +5420,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<EdgeClusterAddEdgeMachineResponse> EdgeClusterAddEdgeMachineWithOptionsAsync(string clusterid, string edgeMachineid, EdgeClusterAddEdgeMachineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            clusterid = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterid);
-            edgeMachineid = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(edgeMachineid);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expired))
             {
@@ -5557,7 +5443,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "EdgeClusterAddEdgeMachine",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/[clusterid]/attachedgemachine/[edge_machineid]",
+                Pathname = "/clusters/%5Bclusterid%5D/attachedgemachine/%5Bedge_machineid%5D",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5584,8 +5470,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public FixNodePoolVulsResponse FixNodePoolVulsWithOptions(string clusterId, string nodepoolId, FixNodePoolVulsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
-            nodepoolId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(nodepoolId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nodes))
             {
@@ -5609,7 +5493,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "FixNodePoolVuls",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/nodepools/" + nodepoolId + "/vuls/fix",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(nodepoolId) + "/vuls/fix",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5622,8 +5506,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<FixNodePoolVulsResponse> FixNodePoolVulsWithOptionsAsync(string clusterId, string nodepoolId, FixNodePoolVulsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
-            nodepoolId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(nodepoolId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nodes))
             {
@@ -5647,7 +5529,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "FixNodePoolVuls",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/nodepools/" + nodepoolId + "/vuls/fix",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(nodepoolId) + "/vuls/fix",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5674,7 +5556,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public GetKubernetesTriggerResponse GetKubernetesTriggerWithOptions(string ClusterId, GetKubernetesTriggerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -5702,7 +5583,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "GetKubernetesTrigger",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/triggers/" + ClusterId,
+                Pathname = "/triggers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5715,7 +5596,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<GetKubernetesTriggerResponse> GetKubernetesTriggerWithOptionsAsync(string ClusterId, GetKubernetesTriggerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -5743,7 +5623,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "GetKubernetesTrigger",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/triggers/" + ClusterId,
+                Pathname = "/triggers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5769,7 +5649,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public GetUpgradeStatusResponse GetUpgradeStatusWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5779,7 +5658,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "GetUpgradeStatus",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/clusters/" + ClusterId + "/upgrade/status",
+                Pathname = "/api/v2/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/upgrade/status",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5791,7 +5670,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<GetUpgradeStatusResponse> GetUpgradeStatusWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5801,7 +5679,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "GetUpgradeStatus",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/clusters/" + ClusterId + "/upgrade/status",
+                Pathname = "/api/v2/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/upgrade/status",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5828,7 +5706,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public GrantPermissionsResponse GrantPermissionsWithOptions(string uid, GrantPermissionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            uid = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(uid);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5839,7 +5716,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "GrantPermissions",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/permissions/users/" + uid,
+                Pathname = "/permissions/users/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(uid),
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5852,7 +5729,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<GrantPermissionsResponse> GrantPermissionsWithOptionsAsync(string uid, GrantPermissionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            uid = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(uid);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5863,7 +5739,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "GrantPermissions",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/permissions/users/" + uid,
+                Pathname = "/permissions/users/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(uid),
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5890,7 +5766,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public InstallClusterAddonsResponse InstallClusterAddonsWithOptions(string ClusterId, InstallClusterAddonsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5901,7 +5776,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "InstallClusterAddons",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/components/install",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/components/install",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5914,7 +5789,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<InstallClusterAddonsResponse> InstallClusterAddonsWithOptionsAsync(string ClusterId, InstallClusterAddonsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5925,7 +5799,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "InstallClusterAddons",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/components/install",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/components/install",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6074,7 +5948,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public MigrateClusterResponse MigrateClusterWithOptions(string clusterId, MigrateClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucketEndpoint))
             {
@@ -6094,7 +5967,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "MigrateCluster",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/migrate",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/migrate",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6107,7 +5980,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<MigrateClusterResponse> MigrateClusterWithOptionsAsync(string clusterId, MigrateClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucketEndpoint))
             {
@@ -6127,7 +5999,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "MigrateCluster",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/migrate",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/migrate",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6154,7 +6026,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public ModifyClusterResponse ModifyClusterWithOptions(string ClusterId, ModifyClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiServerEip))
             {
@@ -6202,7 +6073,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "ModifyCluster",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/clusters/" + ClusterId,
+                Pathname = "/api/v2/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6215,7 +6086,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<ModifyClusterResponse> ModifyClusterWithOptionsAsync(string ClusterId, ModifyClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiServerEip))
             {
@@ -6263,7 +6133,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "ModifyCluster",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/clusters/" + ClusterId,
+                Pathname = "/api/v2/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6290,8 +6160,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public ModifyClusterAddonResponse ModifyClusterAddonWithOptions(string clusterId, string componentId, ModifyClusterAddonRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
-            componentId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(componentId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
             {
@@ -6307,7 +6175,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "ModifyClusterAddon",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/components/" + componentId + "/config",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/components/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(componentId) + "/config",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6320,8 +6188,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<ModifyClusterAddonResponse> ModifyClusterAddonWithOptionsAsync(string clusterId, string componentId, ModifyClusterAddonRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
-            componentId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(componentId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
             {
@@ -6337,7 +6203,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "ModifyClusterAddon",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/components/" + componentId + "/config",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/components/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(componentId) + "/config",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6364,7 +6230,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public ModifyClusterConfigurationResponse ModifyClusterConfigurationWithOptions(string ClusterId, ModifyClusterConfigurationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomizeConfig))
             {
@@ -6380,7 +6245,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "ModifyClusterConfiguration",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/configuration",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/configuration",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6393,7 +6258,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<ModifyClusterConfigurationResponse> ModifyClusterConfigurationWithOptionsAsync(string ClusterId, ModifyClusterConfigurationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomizeConfig))
             {
@@ -6409,7 +6273,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "ModifyClusterConfiguration",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/configuration",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/configuration",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6436,8 +6300,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public ModifyClusterNodePoolResponse ModifyClusterNodePoolWithOptions(string ClusterId, string NodepoolId, ModifyClusterNodePoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
-            NodepoolId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoScaling.ToMap()))
             {
@@ -6477,7 +6339,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "ModifyClusterNodePool",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/nodepools/" + NodepoolId,
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6490,8 +6352,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<ModifyClusterNodePoolResponse> ModifyClusterNodePoolWithOptionsAsync(string ClusterId, string NodepoolId, ModifyClusterNodePoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
-            NodepoolId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoScaling.ToMap()))
             {
@@ -6531,7 +6391,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "ModifyClusterNodePool",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/nodepools/" + NodepoolId,
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6558,7 +6418,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public ModifyClusterTagsResponse ModifyClusterTagsWithOptions(string ClusterId, ModifyClusterTagsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6569,7 +6428,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "ModifyClusterTags",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/tags",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/tags",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6582,7 +6441,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<ModifyClusterTagsResponse> ModifyClusterTagsWithOptionsAsync(string ClusterId, ModifyClusterTagsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6593,7 +6451,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "ModifyClusterTags",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/tags",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/tags",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6620,8 +6478,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public ModifyNodePoolNodeConfigResponse ModifyNodePoolNodeConfigWithOptions(string ClusterId, string NodepoolId, ModifyNodePoolNodeConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
-            NodepoolId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubeletConfig.ToMap()))
             {
@@ -6641,7 +6497,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "ModifyNodePoolNodeConfig",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/nodepools/" + NodepoolId + "/node_config",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId) + "/node_config",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6654,8 +6510,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<ModifyNodePoolNodeConfigResponse> ModifyNodePoolNodeConfigWithOptionsAsync(string ClusterId, string NodepoolId, ModifyNodePoolNodeConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
-            NodepoolId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubeletConfig.ToMap()))
             {
@@ -6675,7 +6529,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "ModifyNodePoolNodeConfig",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/nodepools/" + NodepoolId + "/node_config",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId) + "/node_config",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6702,8 +6556,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public ModifyPolicyInstanceResponse ModifyPolicyInstanceWithOptions(string clusterId, string policyName, ModifyPolicyInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
-            policyName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(policyName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Action))
             {
@@ -6731,7 +6583,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "ModifyPolicyInstance",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/policies/" + policyName,
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/policies/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(policyName),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6744,8 +6596,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<ModifyPolicyInstanceResponse> ModifyPolicyInstanceWithOptionsAsync(string clusterId, string policyName, ModifyPolicyInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
-            policyName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(policyName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Action))
             {
@@ -6773,7 +6623,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "ModifyPolicyInstance",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/policies/" + policyName,
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/policies/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(policyName),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6869,7 +6719,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public PauseClusterUpgradeResponse PauseClusterUpgradeWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6879,7 +6728,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "PauseClusterUpgrade",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/clusters/" + ClusterId + "/upgrade/pause",
+                Pathname = "/api/v2/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/upgrade/pause",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6891,7 +6740,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<PauseClusterUpgradeResponse> PauseClusterUpgradeWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6901,7 +6749,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "PauseClusterUpgrade",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/clusters/" + ClusterId + "/upgrade/pause",
+                Pathname = "/api/v2/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/upgrade/pause",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6927,8 +6775,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public PauseComponentUpgradeResponse PauseComponentUpgradeWithOptions(string clusterid, string componentid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            clusterid = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterid);
-            componentid = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(componentid);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6938,7 +6784,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "PauseComponentUpgrade",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterid + "/components/" + componentid + "/pause",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterid) + "/components/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(componentid) + "/pause",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6950,8 +6796,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<PauseComponentUpgradeResponse> PauseComponentUpgradeWithOptionsAsync(string clusterid, string componentid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            clusterid = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterid);
-            componentid = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(componentid);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6961,7 +6805,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "PauseComponentUpgrade",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterid + "/components/" + componentid + "/pause",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterid) + "/components/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(componentid) + "/pause",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6987,7 +6831,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public PauseTaskResponse PauseTaskWithOptions(string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            taskId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6997,7 +6840,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "PauseTask",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/tasks/" + taskId + "/pause",
+                Pathname = "/tasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId) + "/pause",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7009,7 +6852,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<PauseTaskResponse> PauseTaskWithOptionsAsync(string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            taskId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -7019,7 +6861,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "PauseTask",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/tasks/" + taskId + "/pause",
+                Pathname = "/tasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId) + "/pause",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7046,7 +6888,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public RemoveClusterNodesResponse RemoveClusterNodesWithOptions(string ClusterId, RemoveClusterNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DrainNode))
             {
@@ -7070,7 +6911,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "RemoveClusterNodes",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/clusters/" + ClusterId + "/nodes/remove",
+                Pathname = "/api/v2/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/nodes/remove",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7083,7 +6924,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<RemoveClusterNodesResponse> RemoveClusterNodesWithOptionsAsync(string ClusterId, RemoveClusterNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DrainNode))
             {
@@ -7107,7 +6947,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "RemoveClusterNodes",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/clusters/" + ClusterId + "/nodes/remove",
+                Pathname = "/api/v2/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/nodes/remove",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7115,6 +6955,104 @@ namespace AlibabaCloud.SDK.CS20151215
                 BodyType = "none",
             };
             return TeaModel.ToObject<RemoveClusterNodesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public RemoveNodePoolNodesResponse RemoveNodePoolNodes(string ClusterId, string NodepoolId, RemoveNodePoolNodesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RemoveNodePoolNodesWithOptions(ClusterId, NodepoolId, request, headers, runtime);
+        }
+
+        public async Task<RemoveNodePoolNodesResponse> RemoveNodePoolNodesAsync(string ClusterId, string NodepoolId, RemoveNodePoolNodesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RemoveNodePoolNodesWithOptionsAsync(ClusterId, NodepoolId, request, headers, runtime);
+        }
+
+        public RemoveNodePoolNodesResponse RemoveNodePoolNodesWithOptions(string ClusterId, string NodepoolId, RemoveNodePoolNodesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RemoveNodePoolNodesShrinkRequest request = new RemoveNodePoolNodesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Nodes))
+            {
+                request.NodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Nodes, "nodes", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DrainNode))
+            {
+                query["drain_node"] = request.DrainNode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodesShrink))
+            {
+                query["nodes"] = request.NodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReleaseNode))
+            {
+                query["release_node"] = request.ReleaseNode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveNodePoolNodes",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId) + "/nodes",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveNodePoolNodesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<RemoveNodePoolNodesResponse> RemoveNodePoolNodesWithOptionsAsync(string ClusterId, string NodepoolId, RemoveNodePoolNodesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RemoveNodePoolNodesShrinkRequest request = new RemoveNodePoolNodesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Nodes))
+            {
+                request.NodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Nodes, "nodes", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DrainNode))
+            {
+                query["drain_node"] = request.DrainNode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodesShrink))
+            {
+                query["nodes"] = request.NodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReleaseNode))
+            {
+                query["release_node"] = request.ReleaseNode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveNodePoolNodes",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId) + "/nodes",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveNodePoolNodesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public RemoveWorkflowResponse RemoveWorkflow(string workflowName)
@@ -7133,7 +7071,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public RemoveWorkflowResponse RemoveWorkflowWithOptions(string workflowName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            workflowName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workflowName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -7143,7 +7080,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "RemoveWorkflow",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/gs/workflow/" + workflowName,
+                Pathname = "/gs/workflow/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workflowName),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7155,7 +7092,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<RemoveWorkflowResponse> RemoveWorkflowWithOptionsAsync(string workflowName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            workflowName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workflowName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -7165,7 +7101,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "RemoveWorkflow",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/gs/workflow/" + workflowName,
+                Pathname = "/gs/workflow/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workflowName),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7192,8 +7128,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public RepairClusterNodePoolResponse RepairClusterNodePoolWithOptions(string clusterId, string nodepoolId, RepairClusterNodePoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
-            nodepoolId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(nodepoolId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nodes))
             {
@@ -7209,7 +7143,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "RepairClusterNodePool",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/nodepools/" + nodepoolId + "/repair",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(nodepoolId) + "/repair",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7222,8 +7156,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<RepairClusterNodePoolResponse> RepairClusterNodePoolWithOptionsAsync(string clusterId, string nodepoolId, RepairClusterNodePoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            clusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId);
-            nodepoolId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(nodepoolId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nodes))
             {
@@ -7239,7 +7171,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "RepairClusterNodePool",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterId + "/nodepools/" + nodepoolId + "/repair",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(nodepoolId) + "/repair",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7265,8 +7197,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public ResumeComponentUpgradeResponse ResumeComponentUpgradeWithOptions(string clusterid, string componentid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            clusterid = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterid);
-            componentid = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(componentid);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -7276,7 +7206,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "ResumeComponentUpgrade",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterid + "/components/" + componentid + "/resume",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterid) + "/components/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(componentid) + "/resume",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7288,8 +7218,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<ResumeComponentUpgradeResponse> ResumeComponentUpgradeWithOptionsAsync(string clusterid, string componentid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            clusterid = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterid);
-            componentid = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(componentid);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -7299,7 +7227,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "ResumeComponentUpgrade",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + clusterid + "/components/" + componentid + "/resume",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterid) + "/components/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(componentid) + "/resume",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7325,7 +7253,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public ResumeTaskResponse ResumeTaskWithOptions(string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            taskId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -7335,7 +7262,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "ResumeTask",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/tasks/" + taskId + "/resume",
+                Pathname = "/tasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId) + "/resume",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7347,7 +7274,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<ResumeTaskResponse> ResumeTaskWithOptionsAsync(string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            taskId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -7357,7 +7283,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "ResumeTask",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/tasks/" + taskId + "/resume",
+                Pathname = "/tasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId) + "/resume",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7383,7 +7309,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public ResumeUpgradeClusterResponse ResumeUpgradeClusterWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -7393,7 +7318,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "ResumeUpgradeCluster",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/clusters/" + ClusterId + "/upgrade/resume",
+                Pathname = "/api/v2/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/upgrade/resume",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7405,7 +7330,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<ResumeUpgradeClusterResponse> ResumeUpgradeClusterWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -7415,7 +7339,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "ResumeUpgradeCluster",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/clusters/" + ClusterId + "/upgrade/resume",
+                Pathname = "/api/v2/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/upgrade/resume",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7442,7 +7366,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public ScaleClusterResponse ScaleClusterWithOptions(string ClusterId, ScaleClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudMonitorFlags))
             {
@@ -7530,7 +7453,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "ScaleCluster",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId,
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7543,7 +7466,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<ScaleClusterResponse> ScaleClusterWithOptionsAsync(string ClusterId, ScaleClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudMonitorFlags))
             {
@@ -7631,7 +7553,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "ScaleCluster",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId,
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7658,8 +7580,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public ScaleClusterNodePoolResponse ScaleClusterNodePoolWithOptions(string ClusterId, string NodepoolId, ScaleClusterNodePoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
-            NodepoolId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Count))
             {
@@ -7675,7 +7595,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "ScaleClusterNodePool",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/nodepools/" + NodepoolId,
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId),
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7688,8 +7608,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<ScaleClusterNodePoolResponse> ScaleClusterNodePoolWithOptionsAsync(string ClusterId, string NodepoolId, ScaleClusterNodePoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
-            NodepoolId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Count))
             {
@@ -7705,7 +7623,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "ScaleClusterNodePool",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/nodepools/" + NodepoolId,
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId),
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7732,7 +7650,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public ScaleOutClusterResponse ScaleOutClusterWithOptions(string ClusterId, ScaleOutClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudMonitorFlags))
             {
@@ -7828,7 +7745,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "ScaleOutCluster",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/clusters/" + ClusterId,
+                Pathname = "/api/v2/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId),
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7841,7 +7758,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<ScaleOutClusterResponse> ScaleOutClusterWithOptionsAsync(string ClusterId, ScaleOutClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudMonitorFlags))
             {
@@ -7937,7 +7853,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "ScaleOutCluster",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/clusters/" + ClusterId,
+                Pathname = "/api/v2/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId),
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8272,7 +8188,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public UnInstallClusterAddonsResponse UnInstallClusterAddonsWithOptions(string ClusterId, UnInstallClusterAddonsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -8283,7 +8198,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "UnInstallClusterAddons",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/components/uninstall",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/components/uninstall",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8296,7 +8211,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<UnInstallClusterAddonsResponse> UnInstallClusterAddonsWithOptionsAsync(string ClusterId, UnInstallClusterAddonsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -8307,7 +8221,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "UnInstallClusterAddons",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/components/uninstall",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/components/uninstall",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8435,7 +8349,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public UpdateContactGroupForAlertResponse UpdateContactGroupForAlertWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -8445,7 +8358,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "UpdateContactGroupForAlert",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/alert/" + ClusterId + "/alert_rule/contact_groups",
+                Pathname = "/alert/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/alert_rule/contact_groups",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8457,7 +8370,6 @@ namespace AlibabaCloud.SDK.CS20151215
 
         public async Task<UpdateContactGroupForAlertResponse> UpdateContactGroupForAlertWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -8467,7 +8379,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "UpdateContactGroupForAlert",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/alert/" + ClusterId + "/alert_rule/contact_groups",
+                Pathname = "/alert/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/alert_rule/contact_groups",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8494,7 +8406,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public UpdateK8sClusterUserConfigExpireResponse UpdateK8sClusterUserConfigExpireWithOptions(string ClusterId, UpdateK8sClusterUserConfigExpireRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireHour))
             {
@@ -8514,7 +8425,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "UpdateK8sClusterUserConfigExpire",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/k8s/" + ClusterId + "/user_config/expire",
+                Pathname = "/k8s/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/user_config/expire",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8527,7 +8438,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<UpdateK8sClusterUserConfigExpireResponse> UpdateK8sClusterUserConfigExpireWithOptionsAsync(string ClusterId, UpdateK8sClusterUserConfigExpireRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireHour))
             {
@@ -8547,7 +8457,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "UpdateK8sClusterUserConfigExpire",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/k8s/" + ClusterId + "/user_config/expire",
+                Pathname = "/k8s/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/user_config/expire",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8574,7 +8484,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public UpdateTemplateResponse UpdateTemplateWithOptions(string TemplateId, UpdateTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            TemplateId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TemplateId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -8606,7 +8515,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "UpdateTemplate",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/templates/" + TemplateId,
+                Pathname = "/templates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TemplateId),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8619,7 +8528,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<UpdateTemplateResponse> UpdateTemplateWithOptionsAsync(string TemplateId, UpdateTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            TemplateId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TemplateId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -8651,7 +8559,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "UpdateTemplate",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/templates/" + TemplateId,
+                Pathname = "/templates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TemplateId),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8678,7 +8586,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public UpgradeClusterResponse UpgradeClusterWithOptions(string ClusterId, UpgradeClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentName))
             {
@@ -8702,7 +8609,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "UpgradeCluster",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/clusters/" + ClusterId + "/upgrade",
+                Pathname = "/api/v2/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/upgrade",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8715,7 +8622,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<UpgradeClusterResponse> UpgradeClusterWithOptionsAsync(string ClusterId, UpgradeClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentName))
             {
@@ -8739,7 +8645,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "UpgradeCluster",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/clusters/" + ClusterId + "/upgrade",
+                Pathname = "/api/v2/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/upgrade",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8766,7 +8672,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public UpgradeClusterAddonsResponse UpgradeClusterAddonsWithOptions(string ClusterId, UpgradeClusterAddonsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -8777,7 +8682,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "UpgradeClusterAddons",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/components/upgrade",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/components/upgrade",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8790,7 +8695,6 @@ namespace AlibabaCloud.SDK.CS20151215
         public async Task<UpgradeClusterAddonsResponse> UpgradeClusterAddonsWithOptionsAsync(string ClusterId, UpgradeClusterAddonsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -8801,7 +8705,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Action = "UpgradeClusterAddons",
                 Version = "2015-12-15",
                 Protocol = "HTTPS",
-                Pathname = "/clusters/" + ClusterId + "/components/upgrade",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/components/upgrade",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
