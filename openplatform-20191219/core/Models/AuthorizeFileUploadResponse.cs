@@ -9,37 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenPlatform20191219.Models
 {
     public class AuthorizeFileUploadResponse : TeaModel {
-        [NameInMap("AccessKeyId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string AccessKeyId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Bucket")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string Bucket { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("EncodedPolicy")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string EncodedPolicy { get; set; }
-
-        [NameInMap("Endpoint")]
-        [Validation(Required=true)]
-        public string Endpoint { get; set; }
-
-        [NameInMap("ObjectKey")]
-        [Validation(Required=true)]
-        public string ObjectKey { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Signature")]
-        [Validation(Required=true)]
-        public string Signature { get; set; }
-
-        [NameInMap("UseAccelerate")]
-        [Validation(Required=true)]
-        public bool? UseAccelerate { get; set; }
+        public AuthorizeFileUploadResponseBody Body { get; set; }
 
     }
 

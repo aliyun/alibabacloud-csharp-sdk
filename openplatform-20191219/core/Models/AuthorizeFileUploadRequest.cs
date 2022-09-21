@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -10,7 +13,7 @@ namespace AlibabaCloud.SDK.OpenPlatform20191219.Models
 {
     public class AuthorizeFileUploadRequest : TeaModel {
         [NameInMap("Product")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Product { get; set; }
 
         [NameInMap("RegionId")]

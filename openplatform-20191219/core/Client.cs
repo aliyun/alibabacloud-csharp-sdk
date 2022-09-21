@@ -13,40 +13,16 @@ using AlibabaCloud.SDK.OpenPlatform20191219.Models;
 
 namespace AlibabaCloud.SDK.OpenPlatform20191219
 {
-    public class Client : AlibabaCloud.RPCClient.Client
+    public class Client : AlibabaCloud.OpenApiClient.Client
     {
 
-        public Client(AlibabaCloud.RPCClient.Models.Config config): base(config)
+        public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "";
             CheckConfig(config);
             this._endpoint = GetEndpoint("openplatform", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
 
-
-        public AuthorizeFileUploadResponse AuthorizeFileUploadWithOptions(AuthorizeFileUploadRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<AuthorizeFileUploadResponse>(DoRequest("AuthorizeFileUpload", "HTTPS", "GET", "2019-12-19", "AK", request.ToMap(), null, runtime));
-        }
-
-        public async Task<AuthorizeFileUploadResponse> AuthorizeFileUploadWithOptionsAsync(AuthorizeFileUploadRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<AuthorizeFileUploadResponse>(await DoRequestAsync("AuthorizeFileUpload", "HTTPS", "GET", "2019-12-19", "AK", request.ToMap(), null, runtime));
-        }
-
-        public AuthorizeFileUploadResponse AuthorizeFileUpload(AuthorizeFileUploadRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return AuthorizeFileUploadWithOptions(request, runtime);
-        }
-
-        public async Task<AuthorizeFileUploadResponse> AuthorizeFileUploadAsync(AuthorizeFileUploadRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await AuthorizeFileUploadWithOptionsAsync(request, runtime);
-        }
 
         public string GetEndpoint(string productId, string regionId, string endpointRule, string network, string suffix, Dictionary<string, string> endpointMap, string endpoint)
         {
@@ -59,6 +35,64 @@ namespace AlibabaCloud.SDK.OpenPlatform20191219
                 return endpointMap.Get(regionId);
             }
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
+        }
+
+        public AuthorizeFileUploadResponse AuthorizeFileUploadWithOptions(AuthorizeFileUploadRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AuthorizeFileUpload",
+                Version = "2019-12-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AuthorizeFileUploadResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<AuthorizeFileUploadResponse> AuthorizeFileUploadWithOptionsAsync(AuthorizeFileUploadRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AuthorizeFileUpload",
+                Version = "2019-12-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AuthorizeFileUploadResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public AuthorizeFileUploadResponse AuthorizeFileUpload(AuthorizeFileUploadRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AuthorizeFileUploadWithOptions(request, runtime);
+        }
+
+        public async Task<AuthorizeFileUploadResponse> AuthorizeFileUploadAsync(AuthorizeFileUploadRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AuthorizeFileUploadWithOptionsAsync(request, runtime);
         }
 
     }

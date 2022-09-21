@@ -7,8 +7,14 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.OpenPlatform20191219</AssemblyName>
-    <Version>1.1.2</Version>
+    <Version>2.0.0</Version>
     <LangVersion>5</LangVersion>
+    <Authors>Alibaba Cloud</Authors>
+    <Description>Alibaba Cloud OpenPlatform (20191219) SDK Library for .NET</Description>
+    <PackageTags>Alibaba Aliyun OpenPlatform SDK</PackageTags>
+    <Copyright>©2009-present Alibaba Cloud</Copyright>
+    <PackageProjectUrl>https://github.com/aliyun/alibabacloud-csharp-sdk</PackageProjectUrl>
+    <PackageIconUrl>https://www.alibabacloud.com/favicon.ico</PackageIconUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
     <DefineConstants>NETSTANDARD2_0</DefineConstants>
@@ -34,9 +40,10 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="AlibabaCloud.TeaUtil" Version="0.1.9"/>
-    <PackageReference Include="AlibabaCloud.RPCClient" Version="1.0.1"/>
+    <PackageReference Include="AlibabaCloud.TeaUtil" Version="0.1.14"/>
+    <PackageReference Include="AlibabaCloud.OpenApiClient" Version="0.1.4"/>
+    <PackageReference Include="AlibabaCloud.OpenApiUtil" Version="1.0.16"/>
     <PackageReference Include="AlibabaCloud.EndpointUtil" Version="0.1.1"/>
-    <PackageReference Include="Tea" Version="1.0.4"/>
+    <PackageReference Include="Tea" Version="1.0.11"/>
   </ItemGroup>
 </Project>
