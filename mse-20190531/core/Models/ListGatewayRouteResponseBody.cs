@@ -261,6 +261,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     [Validation(Required=false)]
                     public ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoder HttpDubboTranscoder { get; set; }
                     public class ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoder : TeaModel {
+                        [NameInMap("DubboServiceGroup")]
+                        [Validation(Required=false)]
+                        public string DubboServiceGroup { get; set; }
+
                         [NameInMap("DubboServiceName")]
                         [Validation(Required=false)]
                         public string DubboServiceName { get; set; }
