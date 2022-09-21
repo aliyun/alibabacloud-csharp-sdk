@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             [NameInMap("IsPrivacyNumber")]
             [Validation(Required=false)]
             public bool? IsPrivacyNumber { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

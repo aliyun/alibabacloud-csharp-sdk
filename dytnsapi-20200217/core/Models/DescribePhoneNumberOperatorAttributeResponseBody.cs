@@ -20,22 +20,28 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             [NameInMap("BasicCarrier")]
             [Validation(Required=false)]
             public string BasicCarrier { get; set; }
+
             [NameInMap("Carrier")]
             [Validation(Required=false)]
             public string Carrier { get; set; }
+
             [NameInMap("City")]
             [Validation(Required=false)]
             public string City { get; set; }
+
             [NameInMap("IsNumberPortability")]
             [Validation(Required=false)]
             public bool? IsNumberPortability { get; set; }
+
             [NameInMap("NumberSegment")]
             [Validation(Required=false)]
             public long? NumberSegment { get; set; }
+
             [NameInMap("Province")]
             [Validation(Required=false)]
             public string Province { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

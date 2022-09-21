@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             [NameInMap("VerifyResult")]
             [Validation(Required=false)]
             public string VerifyResult { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

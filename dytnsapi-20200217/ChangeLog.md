@@ -1,3 +1,6 @@
+2022-09-21 Version: 1.0.16
+- Automatically generate sdk tasks.
+
 2022-07-26 Version: 1.0.15
 - Support Service of number analysis.
 

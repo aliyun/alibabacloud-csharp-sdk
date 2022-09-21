@@ -24,13 +24,16 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             [NameInMap("Carrier")]
             [Validation(Required=false)]
             public string Carrier { get; set; }
+
             [NameInMap("SerialId")]
             [Validation(Required=false)]
             public string SerialId { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

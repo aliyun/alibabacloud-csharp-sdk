@@ -28,10 +28,12 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             [NameInMap("Carrier")]
             [Validation(Required=false)]
             public string Carrier { get; set; }
+
             [NameInMap("VerifyResult")]
             [Validation(Required=false)]
             public int? VerifyResult { get; set; }
-        };
+
+        }
 
     }
 
