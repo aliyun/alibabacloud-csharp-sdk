@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class QueryClusterSpecificationRequest : TeaModel {
+    public class ListInstanceCountRequest : TeaModel {
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
-        [NameInMap("ConnectType")]
+        [NameInMap("ClusterType")]
         [Validation(Required=false)]
-        public string ConnectType { get; set; }
+        public string ClusterType { get; set; }
 
         [NameInMap("MseSessionId")]
         [Validation(Required=false)]
@@ -24,6 +24,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("MseVersion")]
         [Validation(Required=false)]
         public string MseVersion { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("RequestPars")]
+        [Validation(Required=false)]
+        public string RequestPars { get; set; }
 
     }
 
