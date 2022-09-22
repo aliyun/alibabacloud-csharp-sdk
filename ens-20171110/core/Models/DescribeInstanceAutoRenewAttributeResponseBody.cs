@@ -21,11 +21,21 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute> InstanceRenewAttribute { get; set; }
             public class DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute : TeaModel {
+                [NameInMap("AutoRenewal")]
+                [Validation(Required=false)]
                 public bool? AutoRenewal { get; set; }
+
+                [NameInMap("Duration")]
+                [Validation(Required=false)]
                 public string Duration { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -17,18 +17,49 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer> LoadBalancer { get; set; }
             public class DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer : TeaModel {
+                [NameInMap("Address")]
+                [Validation(Required=false)]
                 public string Address { get; set; }
+
+                [NameInMap("AddressIPVersion")]
+                [Validation(Required=false)]
                 public string AddressIPVersion { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("EnsRegionId")]
+                [Validation(Required=false)]
                 public string EnsRegionId { get; set; }
+
+                [NameInMap("LoadBalancerId")]
+                [Validation(Required=false)]
                 public string LoadBalancerId { get; set; }
+
+                [NameInMap("LoadBalancerName")]
+                [Validation(Required=false)]
                 public string LoadBalancerName { get; set; }
+
+                [NameInMap("LoadBalancerStatus")]
+                [Validation(Required=false)]
                 public string LoadBalancerStatus { get; set; }
+
+                [NameInMap("NetworkId")]
+                [Validation(Required=false)]
                 public string NetworkId { get; set; }
+
+                [NameInMap("PayType")]
+                [Validation(Required=false)]
                 public string PayType { get; set; }
+
+                [NameInMap("VSwitchId")]
+                [Validation(Required=false)]
                 public string VSwitchId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

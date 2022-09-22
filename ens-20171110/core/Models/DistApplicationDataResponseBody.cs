@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [NameInMap("DistInstanceId")]
             [Validation(Required=false)]
             public List<string> DistInstanceId { get; set; }
-        };
+
+        }
 
         [NameInMap("DistInstanceTotalCount")]
         [Validation(Required=false)]
@@ -30,12 +31,25 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DistApplicationDataResponseBodyDistResultsDistResult> DistResult { get; set; }
             public class DistApplicationDataResponseBodyDistResultsDistResult : TeaModel {
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("ResultCode")]
+                [Validation(Required=false)]
                 public int? ResultCode { get; set; }
+
+                [NameInMap("ResultDescrip")]
+                [Validation(Required=false)]
                 public string ResultDescrip { get; set; }
+
+                [NameInMap("Version")]
+                [Validation(Required=false)]
                 public string Version { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

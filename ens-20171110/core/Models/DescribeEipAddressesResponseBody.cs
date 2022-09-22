@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeEipAddressesResponseBodyEipAddressesEipAddress> EipAddress { get; set; }
             public class DescribeEipAddressesResponseBodyEipAddressesEipAddress : TeaModel {
+                [NameInMap("Eip")]
+                [Validation(Required=false)]
                 public string Eip { get; set; }
+
+                [NameInMap("InstanceIdInternetIp")]
+                [Validation(Required=false)]
                 public string InstanceIdInternetIp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

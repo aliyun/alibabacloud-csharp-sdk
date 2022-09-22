@@ -21,9 +21,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeEnsNetLevelResponseBodyEnsNetLevelsEnsNetLevel> EnsNetLevel { get; set; }
             public class DescribeEnsNetLevelResponseBodyEnsNetLevelsEnsNetLevel : TeaModel {
+                [NameInMap("EnsNetLevelCode")]
+                [Validation(Required=false)]
                 public string EnsNetLevelCode { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

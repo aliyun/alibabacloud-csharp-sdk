@@ -40,13 +40,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     [NameInMap("IpAddress")]
                     [Validation(Required=false)]
                     public string IpAddress { get; set; }
+
                     [NameInMap("NetworkId")]
                     [Validation(Required=false)]
                     public string NetworkId { get; set; }
+
                     [NameInMap("VSwitchId")]
                     [Validation(Required=false)]
                     public string VSwitchId { get; set; }
-                };
+
+                }
 
                 [NameInMap("Resolution")]
                 [Validation(Required=false)]

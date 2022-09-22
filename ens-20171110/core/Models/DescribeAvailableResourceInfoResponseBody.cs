@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeAvailableResourceInfoResponseBodyImagesImage> Image { get; set; }
             public class DescribeAvailableResourceInfoResponseBodyImagesImage : TeaModel {
+                [NameInMap("ImageId")]
+                [Validation(Required=false)]
                 public string ImageId { get; set; }
+
+                [NameInMap("ImageName")]
+                [Validation(Required=false)]
                 public string ImageName { get; set; }
+
+                [NameInMap("ImageSize")]
+                [Validation(Required=false)]
                 public int? ImageSize { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -35,6 +45,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResource> SupportResource { get; set; }
             public class DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResource : TeaModel {
+                [NameInMap("BandwidthTypes")]
+                [Validation(Required=false)]
                 public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceBandwidthTypes BandwidthTypes { get; set; }
                 public class DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceBandwidthTypes : TeaModel {
                     [NameInMap("BandwidthType")]
@@ -42,8 +54,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     public List<string> BandwidthType { get; set; }
 
                 }
+
+                [NameInMap("DataDiskMaxSize")]
+                [Validation(Required=false)]
                 public int? DataDiskMaxSize { get; set; }
+
+                [NameInMap("DataDiskMinSize")]
+                [Validation(Required=false)]
                 public int? DataDiskMinSize { get; set; }
+
+                [NameInMap("EnsRegionIds")]
+                [Validation(Required=false)]
                 public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceEnsRegionIds EnsRegionIds { get; set; }
                 public class DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceEnsRegionIds : TeaModel {
                     [NameInMap("EnsRegionId")]
@@ -51,6 +72,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     public List<string> EnsRegionId { get; set; }
 
                 }
+
+                [NameInMap("EnsRegionIdsExtends")]
+                [Validation(Required=false)]
                 public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceEnsRegionIdsExtends EnsRegionIdsExtends { get; set; }
                 public class DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceEnsRegionIdsExtends : TeaModel {
                     [NameInMap("EnsRegionId")]
@@ -80,6 +104,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     }
 
                 }
+
+                [NameInMap("InstanceSpeces")]
+                [Validation(Required=false)]
                 public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceInstanceSpeces InstanceSpeces { get; set; }
                 public class DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceInstanceSpeces : TeaModel {
                     [NameInMap("InstanceSpec")]
@@ -87,10 +114,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     public List<string> InstanceSpec { get; set; }
 
                 }
+
+                [NameInMap("SystemDiskMaxSize")]
+                [Validation(Required=false)]
                 public int? SystemDiskMaxSize { get; set; }
+
+                [NameInMap("SystemDiskMinSize")]
+                [Validation(Required=false)]
                 public int? SystemDiskMinSize { get; set; }
+
             }
-        };
+
+        }
 
     }
 

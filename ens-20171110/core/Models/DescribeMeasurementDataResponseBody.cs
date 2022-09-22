@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeMeasurementDataResponseBodyMeasurementDatasMeasurementData> MeasurementData { get; set; }
             public class DescribeMeasurementDataResponseBodyMeasurementDatasMeasurementData : TeaModel {
+                [NameInMap("BandWidthFeeDatas")]
+                [Validation(Required=false)]
                 public DescribeMeasurementDataResponseBodyMeasurementDatasMeasurementDataBandWidthFeeDatas BandWidthFeeDatas { get; set; }
                 public class DescribeMeasurementDataResponseBodyMeasurementDatasMeasurementDataBandWidthFeeDatas : TeaModel {
                     [NameInMap("BandWidthFeeData")]
@@ -38,10 +40,25 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     }
 
                 }
+
+                [NameInMap("ChargeModel")]
+                [Validation(Required=false)]
                 public string ChargeModel { get; set; }
+
+                [NameInMap("CostCycle")]
+                [Validation(Required=false)]
                 public string CostCycle { get; set; }
+
+                [NameInMap("CostEndTime")]
+                [Validation(Required=false)]
                 public string CostEndTime { get; set; }
+
+                [NameInMap("CostStartTime")]
+                [Validation(Required=false)]
                 public string CostStartTime { get; set; }
+
+                [NameInMap("ResourceFeeData")]
+                [Validation(Required=false)]
                 public DescribeMeasurementDataResponseBodyMeasurementDatasMeasurementDataResourceFeeData ResourceFeeData { get; set; }
                 public class DescribeMeasurementDataResponseBodyMeasurementDatasMeasurementDataResourceFeeData : TeaModel {
                     [NameInMap("Memory")]
@@ -57,6 +74,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     public int? Vcpu { get; set; }
 
                 }
+
+                [NameInMap("ResourceFeeDataDetails")]
+                [Validation(Required=false)]
                 public DescribeMeasurementDataResponseBodyMeasurementDatasMeasurementDataResourceFeeDataDetails ResourceFeeDataDetails { get; set; }
                 public class DescribeMeasurementDataResponseBodyMeasurementDatasMeasurementDataResourceFeeDataDetails : TeaModel {
                     [NameInMap("ResourceFeeDataDetail")]
@@ -82,8 +102,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

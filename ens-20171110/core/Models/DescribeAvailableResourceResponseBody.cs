@@ -21,10 +21,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeAvailableResourceResponseBodyImagesImage> Image { get; set; }
             public class DescribeAvailableResourceResponseBodyImagesImage : TeaModel {
+                [NameInMap("ImageId")]
+                [Validation(Required=false)]
                 public string ImageId { get; set; }
+
+                [NameInMap("ImageName")]
+                [Validation(Required=false)]
                 public string ImageName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -38,13 +45,29 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeAvailableResourceResponseBodySupportResourcesSupportResource> SupportResource { get; set; }
             public class DescribeAvailableResourceResponseBodySupportResourcesSupportResource : TeaModel {
+                [NameInMap("DataDiskSize")]
+                [Validation(Required=false)]
                 public string DataDiskSize { get; set; }
+
+                [NameInMap("EnsRegionId")]
+                [Validation(Required=false)]
                 public string EnsRegionId { get; set; }
+
+                [NameInMap("InstanceSpec")]
+                [Validation(Required=false)]
                 public string InstanceSpec { get; set; }
+
+                [NameInMap("SupportResourcesCount")]
+                [Validation(Required=false)]
                 public string SupportResourcesCount { get; set; }
+
+                [NameInMap("SystemDiskSize")]
+                [Validation(Required=false)]
                 public string SystemDiskSize { get; set; }
+
             }
-        };
+
+        }
 
     }
 

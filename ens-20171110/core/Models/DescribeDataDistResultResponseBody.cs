@@ -17,7 +17,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeDataDistResultResponseBodyDistResultsDistResult> DistResult { get; set; }
             public class DescribeDataDistResultResponseBodyDistResultsDistResult : TeaModel {
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("StatusStats")]
+                [Validation(Required=false)]
                 public DescribeDataDistResultResponseBodyDistResultsDistResultStatusStats StatusStats { get; set; }
                 public class DescribeDataDistResultResponseBodyDistResultsDistResultStatusStats : TeaModel {
                     [NameInMap("StatusStat")]
@@ -36,12 +41,25 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                             [Validation(Required=false)]
                             public List<DescribeDataDistResultResponseBodyDistResultsDistResultStatusStatsStatusStatInstancesInstance> Instance { get; set; }
                             public class DescribeDataDistResultResponseBodyDistResultsDistResultStatusStatsStatusStatInstancesInstance : TeaModel {
+                                [NameInMap("InstanceId")]
+                                [Validation(Required=false)]
                                 public string InstanceId { get; set; }
+
+                                [NameInMap("StartTime")]
+                                [Validation(Required=false)]
                                 public string StartTime { get; set; }
+
+                                [NameInMap("StatusDescrip")]
+                                [Validation(Required=false)]
                                 public string StatusDescrip { get; set; }
+
+                                [NameInMap("UpdateTime")]
+                                [Validation(Required=false)]
                                 public string UpdateTime { get; set; }
+
                             }
-                        };
+
+                        }
 
                         [NameInMap("Status")]
                         [Validation(Required=false)]
@@ -50,9 +68,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     }
 
                 }
+
+                [NameInMap("Version")]
+                [Validation(Required=false)]
                 public string Version { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

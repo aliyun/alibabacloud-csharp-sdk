@@ -17,21 +17,61 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeEnsEipAddressesResponseBodyEipAddressesEipAddress> EipAddress { get; set; }
             public class DescribeEnsEipAddressesResponseBodyEipAddressesEipAddress : TeaModel {
+                [NameInMap("AllocationId")]
+                [Validation(Required=false)]
                 public string AllocationId { get; set; }
+
+                [NameInMap("AllocationTime")]
+                [Validation(Required=false)]
                 public string AllocationTime { get; set; }
+
+                [NameInMap("Bandwidth")]
+                [Validation(Required=false)]
                 public int? Bandwidth { get; set; }
+
+                [NameInMap("ChargeType")]
+                [Validation(Required=false)]
                 public string ChargeType { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("EnsRegionId")]
+                [Validation(Required=false)]
                 public string EnsRegionId { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
                 public string InstanceType { get; set; }
+
+                [NameInMap("InternetChargeType")]
+                [Validation(Required=false)]
                 public string InternetChargeType { get; set; }
+
+                [NameInMap("IpAddress")]
+                [Validation(Required=false)]
                 public string IpAddress { get; set; }
+
+                [NameInMap("Isp")]
+                [Validation(Required=false)]
                 public string Isp { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

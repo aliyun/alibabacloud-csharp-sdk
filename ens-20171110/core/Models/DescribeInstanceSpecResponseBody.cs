@@ -33,12 +33,25 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeInstanceSpecResponseBodyInstanceSpecsInstanceSpec> InstanceSpec { get; set; }
             public class DescribeInstanceSpecResponseBodyInstanceSpecsInstanceSpec : TeaModel {
+                [NameInMap("Core")]
+                [Validation(Required=false)]
                 public string Core { get; set; }
+
+                [NameInMap("DisplayName")]
+                [Validation(Required=false)]
                 public string DisplayName { get; set; }
+
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
                 public string InstanceType { get; set; }
+
+                [NameInMap("Memory")]
+                [Validation(Required=false)]
                 public string Memory { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

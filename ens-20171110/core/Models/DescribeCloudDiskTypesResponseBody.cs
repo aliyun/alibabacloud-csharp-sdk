@@ -21,10 +21,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeCloudDiskTypesResponseBodySupportResourcesSupportResource> SupportResource { get; set; }
             public class DescribeCloudDiskTypesResponseBodySupportResourcesSupportResource : TeaModel {
+                [NameInMap("Category")]
+                [Validation(Required=false)]
                 public string Category { get; set; }
+
+                [NameInMap("EnsRegionId")]
+                [Validation(Required=false)]
                 public string EnsRegionId { get; set; }
+
             }
-        };
+
+        }
 
     }
 

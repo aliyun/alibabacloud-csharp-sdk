@@ -17,19 +17,37 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeEpnBandWidthDataResponseBodyMonitorDataBandWidthMonitorData> BandWidthMonitorData { get; set; }
             public class DescribeEpnBandWidthDataResponseBodyMonitorDataBandWidthMonitorData : TeaModel {
+                [NameInMap("DownBandWidth")]
+                [Validation(Required=false)]
                 public long? DownBandWidth { get; set; }
+
+                [NameInMap("InternetRX")]
+                [Validation(Required=false)]
                 public long? InternetRX { get; set; }
+
+                [NameInMap("InternetTX")]
+                [Validation(Required=false)]
                 public long? InternetTX { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
+                [NameInMap("UpBandWidth")]
+                [Validation(Required=false)]
                 public long? UpBandWidth { get; set; }
+
             }
+
             [NameInMap("MaxDownBandWidth")]
             [Validation(Required=false)]
             public long? MaxDownBandWidth { get; set; }
+
             [NameInMap("MaxUpBandWidth")]
             [Validation(Required=false)]
             public long? MaxUpBandWidth { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

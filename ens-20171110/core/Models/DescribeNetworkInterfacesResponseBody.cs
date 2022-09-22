@@ -17,13 +17,36 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet> NetworkInterfaceSet { get; set; }
             public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet : TeaModel {
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
+                [NameInMap("EnsRegionId")]
+                [Validation(Required=false)]
                 public string EnsRegionId { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("MacAddress")]
+                [Validation(Required=false)]
                 public string MacAddress { get; set; }
+
+                [NameInMap("NetworkInterfaceId")]
+                [Validation(Required=false)]
                 public string NetworkInterfaceId { get; set; }
+
+                [NameInMap("PrimaryIp")]
+                [Validation(Required=false)]
                 public string PrimaryIp { get; set; }
+
+                [NameInMap("PrimaryIpType")]
+                [Validation(Required=false)]
                 public string PrimaryIpType { get; set; }
+
+                [NameInMap("PrivateIpSets")]
+                [Validation(Required=false)]
                 public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSets PrivateIpSets { get; set; }
                 public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSets : TeaModel {
                     [NameInMap("PrivateIpSet")]
@@ -41,10 +64,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     }
 
                 }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("VSwitchId")]
+                [Validation(Required=false)]
                 public string VSwitchId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

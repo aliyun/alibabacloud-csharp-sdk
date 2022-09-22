@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeEpnMeasurementDataResponseBodyMeasurementDatasMeasurementData> MeasurementData { get; set; }
             public class DescribeEpnMeasurementDataResponseBodyMeasurementDatasMeasurementData : TeaModel {
+                [NameInMap("BandWidthFeeDatas")]
+                [Validation(Required=false)]
                 public DescribeEpnMeasurementDataResponseBodyMeasurementDatasMeasurementDataBandWidthFeeDatas BandWidthFeeDatas { get; set; }
                 public class DescribeEpnMeasurementDataResponseBodyMeasurementDatasMeasurementDataBandWidthFeeDatas : TeaModel {
                     [NameInMap("BandWidthFeeData")]
@@ -46,12 +48,26 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     }
 
                 }
+
+                [NameInMap("ChargeModel")]
+                [Validation(Required=false)]
                 public string ChargeModel { get; set; }
+
+                [NameInMap("CostCycle")]
+                [Validation(Required=false)]
                 public string CostCycle { get; set; }
+
+                [NameInMap("CostEndTime")]
+                [Validation(Required=false)]
                 public string CostEndTime { get; set; }
+
+                [NameInMap("CostStartTime")]
+                [Validation(Required=false)]
                 public string CostStartTime { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -17,17 +17,45 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeEnsRegionIdResourceResponseBodyEnsRegionIdResourcesEnsRegionIdResource> EnsRegionIdResource { get; set; }
             public class DescribeEnsRegionIdResourceResponseBodyEnsRegionIdResourcesEnsRegionIdResource : TeaModel {
+                [NameInMap("Area")]
+                [Validation(Required=false)]
                 public string Area { get; set; }
+
+                [NameInMap("AreaCode")]
+                [Validation(Required=false)]
                 public string AreaCode { get; set; }
+
+                [NameInMap("BizDate")]
+                [Validation(Required=false)]
                 public string BizDate { get; set; }
+
+                [NameInMap("EnsRegionId")]
+                [Validation(Required=false)]
                 public string EnsRegionId { get; set; }
+
+                [NameInMap("EnsRegionIdName")]
+                [Validation(Required=false)]
                 public string EnsRegionIdName { get; set; }
+
+                [NameInMap("InstanceCount")]
+                [Validation(Required=false)]
                 public int? InstanceCount { get; set; }
+
+                [NameInMap("InternetBandwidth")]
+                [Validation(Required=false)]
                 public long? InternetBandwidth { get; set; }
+
+                [NameInMap("Isp")]
+                [Validation(Required=false)]
                 public string Isp { get; set; }
+
+                [NameInMap("VCpu")]
+                [Validation(Required=false)]
                 public int? VCpu { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

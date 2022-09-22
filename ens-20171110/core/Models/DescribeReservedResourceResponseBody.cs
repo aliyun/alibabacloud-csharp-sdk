@@ -21,10 +21,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeReservedResourceResponseBodyImagesImage> Image { get; set; }
             public class DescribeReservedResourceResponseBodyImagesImage : TeaModel {
+                [NameInMap("ImageId")]
+                [Validation(Required=false)]
                 public string ImageId { get; set; }
+
+                [NameInMap("ImageName")]
+                [Validation(Required=false)]
                 public string ImageName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -38,6 +45,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeReservedResourceResponseBodySupportResourcesSupportResource> SupportResource { get; set; }
             public class DescribeReservedResourceResponseBodySupportResourcesSupportResource : TeaModel {
+                [NameInMap("DataDiskSizes")]
+                [Validation(Required=false)]
                 public DescribeReservedResourceResponseBodySupportResourcesSupportResourceDataDiskSizes DataDiskSizes { get; set; }
                 public class DescribeReservedResourceResponseBodySupportResourcesSupportResourceDataDiskSizes : TeaModel {
                     [NameInMap("DataDiskSize")]
@@ -45,9 +54,21 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     public List<string> DataDiskSize { get; set; }
 
                 }
+
+                [NameInMap("EnsRegionId")]
+                [Validation(Required=false)]
                 public string EnsRegionId { get; set; }
+
+                [NameInMap("InstanceSpec")]
+                [Validation(Required=false)]
                 public string InstanceSpec { get; set; }
+
+                [NameInMap("SupportResourcesCount")]
+                [Validation(Required=false)]
                 public string SupportResourcesCount { get; set; }
+
+                [NameInMap("SystemDiskSizes")]
+                [Validation(Required=false)]
                 public DescribeReservedResourceResponseBodySupportResourcesSupportResourceSystemDiskSizes SystemDiskSizes { get; set; }
                 public class DescribeReservedResourceResponseBodySupportResourcesSupportResourceSystemDiskSizes : TeaModel {
                     [NameInMap("SystemDiskSize")]
@@ -55,8 +76,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     public List<string> SystemDiskSize { get; set; }
 
                 }
+
             }
-        };
+
+        }
 
     }
 

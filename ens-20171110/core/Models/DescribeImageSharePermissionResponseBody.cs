@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [NameInMap("Account")]
             [Validation(Required=false)]
             public List<string> Account { get; set; }
-        };
+
+        }
 
         [NameInMap("ImageId")]
         [Validation(Required=false)]

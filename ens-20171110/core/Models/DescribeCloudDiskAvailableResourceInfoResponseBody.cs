@@ -21,15 +21,37 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeCloudDiskAvailableResourceInfoResponseBodySupportResourcesSupportResource> SupportResource { get; set; }
             public class DescribeCloudDiskAvailableResourceInfoResponseBodySupportResourcesSupportResource : TeaModel {
+                [NameInMap("CanBuyCount")]
+                [Validation(Required=false)]
                 public long? CanBuyCount { get; set; }
+
+                [NameInMap("Category")]
+                [Validation(Required=false)]
                 public string Category { get; set; }
+
+                [NameInMap("DefaultDiskSize")]
+                [Validation(Required=false)]
                 public long? DefaultDiskSize { get; set; }
+
+                [NameInMap("DiskMaxSize")]
+                [Validation(Required=false)]
                 public long? DiskMaxSize { get; set; }
+
+                [NameInMap("DiskMinSize")]
+                [Validation(Required=false)]
                 public long? DiskMinSize { get; set; }
+
+                [NameInMap("EnsRegionId")]
+                [Validation(Required=false)]
                 public string EnsRegionId { get; set; }
+
+                [NameInMap("EnsRegionName")]
+                [Validation(Required=false)]
                 public string EnsRegionName { get; set; }
+
             }
-        };
+
+        }
 
     }
 

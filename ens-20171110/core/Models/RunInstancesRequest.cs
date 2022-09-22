@@ -122,7 +122,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [NameInMap("Size")]
             [Validation(Required=false)]
             public long? Size { get; set; }
-        };
+
+        }
 
         [NameInMap("UniqueSuffix")]
         [Validation(Required=false)]

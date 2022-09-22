@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeKeyPairsResponseBodyKeyPairsKeyPair> KeyPair { get; set; }
             public class DescribeKeyPairsResponseBodyKeyPairsKeyPair : TeaModel {
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
+                [NameInMap("KeyPairFingerPrint")]
+                [Validation(Required=false)]
                 public string KeyPairFingerPrint { get; set; }
+
+                [NameInMap("KeyPairName")]
+                [Validation(Required=false)]
                 public string KeyPairName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

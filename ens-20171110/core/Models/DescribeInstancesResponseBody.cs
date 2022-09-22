@@ -21,8 +21,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeInstancesResponseBodyInstancesInstance> Instance { get; set; }
             public class DescribeInstancesResponseBodyInstancesInstance : TeaModel {
+                [NameInMap("Cpu")]
+                [Validation(Required=false)]
                 public string Cpu { get; set; }
+
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
+                [NameInMap("DataDisk")]
+                [Validation(Required=false)]
                 public DescribeInstancesResponseBodyInstancesInstanceDataDisk DataDisk { get; set; }
                 public class DescribeInstancesResponseBodyInstancesInstanceDataDisk : TeaModel {
                     [NameInMap("DataDisk")]
@@ -68,11 +76,29 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     }
 
                 }
+
+                [NameInMap("Disk")]
+                [Validation(Required=false)]
                 public int? Disk { get; set; }
+
+                [NameInMap("EnsRegionId")]
+                [Validation(Required=false)]
                 public string EnsRegionId { get; set; }
+
+                [NameInMap("ExpiredTime")]
+                [Validation(Required=false)]
                 public string ExpiredTime { get; set; }
+
+                [NameInMap("HostName")]
+                [Validation(Required=false)]
                 public string HostName { get; set; }
+
+                [NameInMap("ImageId")]
+                [Validation(Required=false)]
                 public string ImageId { get; set; }
+
+                [NameInMap("InnerIpAddress")]
+                [Validation(Required=false)]
                 public DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress InnerIpAddress { get; set; }
                 public class DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress : TeaModel {
                     [NameInMap("IpAddress")]
@@ -80,12 +106,37 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     public List<string> IpAddress { get; set; }
 
                 }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("InstanceName")]
+                [Validation(Required=false)]
                 public string InstanceName { get; set; }
+
+                [NameInMap("InstanceResourceType")]
+                [Validation(Required=false)]
                 public string InstanceResourceType { get; set; }
+
+                [NameInMap("InstanceTypeFamily")]
+                [Validation(Required=false)]
+                public string InstanceTypeFamily { get; set; }
+
+                [NameInMap("InternetMaxBandwidthIn")]
+                [Validation(Required=false)]
                 public int? InternetMaxBandwidthIn { get; set; }
+
+                [NameInMap("InternetMaxBandwidthOut")]
+                [Validation(Required=false)]
                 public int? InternetMaxBandwidthOut { get; set; }
+
+                [NameInMap("Memory")]
+                [Validation(Required=false)]
                 public int? Memory { get; set; }
+
+                [NameInMap("NetworkAttributes")]
+                [Validation(Required=false)]
                 public DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes NetworkAttributes { get; set; }
                 public class DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes : TeaModel {
                     [NameInMap("NetworkId")]
@@ -99,14 +150,21 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                         [NameInMap("IpAddress")]
                         [Validation(Required=false)]
                         public List<string> IpAddress { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("VSwitchId")]
                     [Validation(Required=false)]
                     public string VSwitchId { get; set; }
 
                 }
+
+                [NameInMap("OSName")]
+                [Validation(Required=false)]
                 public string OSName { get; set; }
+
+                [NameInMap("PrivateIpAddresses")]
+                [Validation(Required=false)]
                 public DescribeInstancesResponseBodyInstancesInstancePrivateIpAddresses PrivateIpAddresses { get; set; }
                 public class DescribeInstancesResponseBodyInstancesInstancePrivateIpAddresses : TeaModel {
                     [NameInMap("PrivateIpAddress")]
@@ -128,6 +186,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     }
 
                 }
+
+                [NameInMap("PublicIpAddress")]
+                [Validation(Required=false)]
                 public DescribeInstancesResponseBodyInstancesInstancePublicIpAddress PublicIpAddress { get; set; }
                 public class DescribeInstancesResponseBodyInstancesInstancePublicIpAddress : TeaModel {
                     [NameInMap("IpAddress")]
@@ -135,6 +196,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     public List<string> IpAddress { get; set; }
 
                 }
+
+                [NameInMap("PublicIpAddresses")]
+                [Validation(Required=false)]
                 public DescribeInstancesResponseBodyInstancesInstancePublicIpAddresses PublicIpAddresses { get; set; }
                 public class DescribeInstancesResponseBodyInstancesInstancePublicIpAddresses : TeaModel {
                     [NameInMap("PublicIpAddress")]
@@ -156,6 +220,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     }
 
                 }
+
+                [NameInMap("SecurityGroupIds")]
+                [Validation(Required=false)]
                 public DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds SecurityGroupIds { get; set; }
                 public class DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds : TeaModel {
                     [NameInMap("SecurityGroupId")]
@@ -163,8 +230,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     public List<string> SecurityGroupId { get; set; }
 
                 }
+
+                [NameInMap("SpecName")]
+                [Validation(Required=false)]
                 public string SpecName { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("SystemDisk")]
+                [Validation(Required=false)]
                 public DescribeInstancesResponseBodyInstancesInstanceSystemDisk SystemDisk { get; set; }
                 public class DescribeInstancesResponseBodyInstancesInstanceSystemDisk : TeaModel {
                     [NameInMap("Category")]
@@ -204,8 +280,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     public string Uuid { get; set; }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

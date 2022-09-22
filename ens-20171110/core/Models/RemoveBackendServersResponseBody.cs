@@ -17,13 +17,29 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<RemoveBackendServersResponseBodyBackendServersBackendServer> BackendServer { get; set; }
             public class RemoveBackendServersResponseBodyBackendServersBackendServer : TeaModel {
+                [NameInMap("Ip")]
+                [Validation(Required=false)]
                 public string Ip { get; set; }
+
+                [NameInMap("Port")]
+                [Validation(Required=false)]
                 public int? Port { get; set; }
+
+                [NameInMap("ServerId")]
+                [Validation(Required=false)]
                 public string ServerId { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
+                [NameInMap("Weight")]
+                [Validation(Required=false)]
                 public int? Weight { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -21,14 +21,33 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeEnsNetDistrictResponseBodyEnsNetDistrictsEnsNetDistrict> EnsNetDistrict { get; set; }
             public class DescribeEnsNetDistrictResponseBodyEnsNetDistrictsEnsNetDistrict : TeaModel {
+                [NameInMap("EnsRegionIdCount")]
+                [Validation(Required=false)]
                 public string EnsRegionIdCount { get; set; }
+
+                [NameInMap("NetDistrictCode")]
+                [Validation(Required=false)]
                 public string NetDistrictCode { get; set; }
+
+                [NameInMap("NetDistrictEnName")]
+                [Validation(Required=false)]
                 public string NetDistrictEnName { get; set; }
+
+                [NameInMap("NetDistrictFatherCode")]
+                [Validation(Required=false)]
                 public string NetDistrictFatherCode { get; set; }
+
+                [NameInMap("NetDistrictLevel")]
+                [Validation(Required=false)]
                 public string NetDistrictLevel { get; set; }
+
+                [NameInMap("NetDistrictName")]
+                [Validation(Required=false)]
                 public string NetDistrictName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

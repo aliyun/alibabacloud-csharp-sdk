@@ -32,6 +32,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [NameInMap("ContainerService")]
             [Validation(Required=false)]
             public bool? ContainerService { get; set; }
+
             [NameInMap("ContainerStatuses")]
             [Validation(Required=false)]
             public DescribeServcieScheduleResponseBodyPodAbstractInfoContainerStatuses ContainerStatuses { get; set; }
@@ -51,19 +52,24 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 }
 
             }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public bool? Name { get; set; }
+
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public bool? Namespace { get; set; }
+
             [NameInMap("ResourceScope")]
             [Validation(Required=false)]
             public bool? ResourceScope { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public bool? Status { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -17,16 +17,41 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeExportImageInfoResponseBodyImagesImage> Image { get; set; }
             public class DescribeExportImageInfoResponseBodyImagesImage : TeaModel {
+                [NameInMap("Architecture")]
+                [Validation(Required=false)]
                 public string Architecture { get; set; }
+
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
+                [NameInMap("ExportedImageURL")]
+                [Validation(Required=false)]
                 public string ExportedImageURL { get; set; }
+
+                [NameInMap("ImageExportStatus")]
+                [Validation(Required=false)]
                 public string ImageExportStatus { get; set; }
+
+                [NameInMap("ImageId")]
+                [Validation(Required=false)]
                 public string ImageId { get; set; }
+
+                [NameInMap("ImageName")]
+                [Validation(Required=false)]
                 public string ImageName { get; set; }
+
+                [NameInMap("ImageOwnerAlias")]
+                [Validation(Required=false)]
                 public string ImageOwnerAlias { get; set; }
+
+                [NameInMap("Platform")]
+                [Validation(Required=false)]
                 public string Platform { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

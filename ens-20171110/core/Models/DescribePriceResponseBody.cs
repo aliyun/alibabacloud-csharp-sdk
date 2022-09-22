@@ -34,7 +34,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public float? TradePrice { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

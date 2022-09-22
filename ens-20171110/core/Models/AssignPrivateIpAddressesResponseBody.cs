@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [NameInMap("NetworkInterfaceId")]
             [Validation(Required=false)]
             public string NetworkInterfaceId { get; set; }
+
             [NameInMap("PrivateIpSet")]
             [Validation(Required=false)]
             public List<string> PrivateIpSet { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

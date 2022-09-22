@@ -21,10 +21,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeNetworkAttributeResponseBodyCloudResourcesCloudResourceSetType> CloudResourceSetType { get; set; }
             public class DescribeNetworkAttributeResponseBodyCloudResourcesCloudResourceSetType : TeaModel {
+                [NameInMap("ResourceCount")]
+                [Validation(Required=false)]
                 public int? ResourceCount { get; set; }
+
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
                 public string ResourceType { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("CreatedTime")]
         [Validation(Required=false)]
@@ -37,6 +44,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
+
+        [NameInMap("NetworkAclId")]
+        [Validation(Required=false)]
+        public string NetworkAclId { get; set; }
 
         [NameInMap("NetworkId")]
         [Validation(Required=false)]
@@ -65,7 +76,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public List<string> VSwitchId { get; set; }
-        };
+
+        }
 
     }
 

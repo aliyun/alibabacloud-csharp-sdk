@@ -29,13 +29,29 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup> SecurityGroup { get; set; }
             public class DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup : TeaModel {
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("InstanceCount")]
+                [Validation(Required=false)]
                 public int? InstanceCount { get; set; }
+
+                [NameInMap("SecurityGroupId")]
+                [Validation(Required=false)]
                 public string SecurityGroupId { get; set; }
+
+                [NameInMap("SecurityGroupName")]
+                [Validation(Required=false)]
                 public string SecurityGroupName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

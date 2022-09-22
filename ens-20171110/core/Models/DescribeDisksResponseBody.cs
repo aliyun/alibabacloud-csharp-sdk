@@ -21,20 +21,57 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeDisksResponseBodyDisksDisks> Disks { get; set; }
             public class DescribeDisksResponseBodyDisksDisks : TeaModel {
+                [NameInMap("Category")]
+                [Validation(Required=false)]
                 public string Category { get; set; }
+
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
+                [NameInMap("DiskChargeType")]
+                [Validation(Required=false)]
                 public string DiskChargeType { get; set; }
+
+                [NameInMap("DiskId")]
+                [Validation(Required=false)]
                 public string DiskId { get; set; }
+
+                [NameInMap("DiskName")]
+                [Validation(Required=false)]
                 public string DiskName { get; set; }
+
+                [NameInMap("EnsRegionId")]
+                [Validation(Required=false)]
                 public string EnsRegionId { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("InstanceName")]
+                [Validation(Required=false)]
                 public string InstanceName { get; set; }
+
+                [NameInMap("Portable")]
+                [Validation(Required=false)]
                 public bool? Portable { get; set; }
+
+                [NameInMap("Size")]
+                [Validation(Required=false)]
                 public int? Size { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

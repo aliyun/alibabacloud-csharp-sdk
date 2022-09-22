@@ -21,12 +21,25 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeInstanceTypesResponseBodyInstanceTypesInstanceType> InstanceType { get; set; }
             public class DescribeInstanceTypesResponseBodyInstanceTypesInstanceType : TeaModel {
+                [NameInMap("CpuCoreCount")]
+                [Validation(Required=false)]
                 public int? CpuCoreCount { get; set; }
+
+                [NameInMap("InstanceTypeId")]
+                [Validation(Required=false)]
                 public string InstanceTypeId { get; set; }
+
+                [NameInMap("InstanceTypeName")]
+                [Validation(Required=false)]
                 public string InstanceTypeName { get; set; }
+
+                [NameInMap("MemorySize")]
+                [Validation(Required=false)]
                 public int? MemorySize { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

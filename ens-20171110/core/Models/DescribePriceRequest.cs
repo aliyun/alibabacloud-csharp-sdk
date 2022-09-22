@@ -26,7 +26,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [NameInMap("Size")]
             [Validation(Required=false)]
             public int? Size { get; set; }
-        };
+
+        }
 
         [NameInMap("DataDisks")]
         [Validation(Required=false)]

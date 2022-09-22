@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<RunServiceScheduleResponseBodyCommandResultsCommandResult> CommandResult { get; set; }
             public class RunServiceScheduleResponseBodyCommandResultsCommandResult : TeaModel {
+                [NameInMap("Command")]
+                [Validation(Required=false)]
                 public string Command { get; set; }
+
+                [NameInMap("ContainerName")]
+                [Validation(Required=false)]
                 public string ContainerName { get; set; }
+
+                [NameInMap("ResultMsg")]
+                [Validation(Required=false)]
                 public string ResultMsg { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Index")]
         [Validation(Required=false)]

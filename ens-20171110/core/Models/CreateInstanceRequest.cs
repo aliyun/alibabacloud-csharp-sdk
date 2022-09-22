@@ -26,7 +26,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [NameInMap("Size")]
             [Validation(Required=false)]
             public string Size { get; set; }
-        };
+
+        }
 
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]

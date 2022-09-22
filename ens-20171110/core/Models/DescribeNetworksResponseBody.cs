@@ -17,14 +17,44 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeNetworksResponseBodyNetworksNetwork> Network { get; set; }
             public class DescribeNetworksResponseBodyNetworksNetwork : TeaModel {
+                [NameInMap("CidrBlock")]
+                [Validation(Required=false)]
                 public string CidrBlock { get; set; }
+
+                [NameInMap("CreatedTime")]
+                [Validation(Required=false)]
                 public string CreatedTime { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("EnsRegionId")]
+                [Validation(Required=false)]
                 public string EnsRegionId { get; set; }
+
+                [NameInMap("NetworkAclId")]
+                [Validation(Required=false)]
+                public string NetworkAclId { get; set; }
+
+                [NameInMap("NetworkId")]
+                [Validation(Required=false)]
                 public string NetworkId { get; set; }
+
+                [NameInMap("NetworkName")]
+                [Validation(Required=false)]
                 public string NetworkName { get; set; }
+
+                [NameInMap("RouterTableId")]
+                [Validation(Required=false)]
                 public string RouterTableId { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("VSwitchIds")]
+                [Validation(Required=false)]
                 public DescribeNetworksResponseBodyNetworksNetworkVSwitchIds VSwitchIds { get; set; }
                 public class DescribeNetworksResponseBodyNetworksNetworkVSwitchIds : TeaModel {
                     [NameInMap("VSwitchId")]
@@ -32,8 +62,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     public List<string> VSwitchId { get; set; }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

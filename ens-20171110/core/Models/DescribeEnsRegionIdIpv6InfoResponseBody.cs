@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [NameInMap("EnsRegionId")]
             [Validation(Required=false)]
             public string EnsRegionId { get; set; }
+
             [NameInMap("SupportIpv6")]
             [Validation(Required=false)]
             public bool? SupportIpv6 { get; set; }
-        };
+
+        }
 
     }
 

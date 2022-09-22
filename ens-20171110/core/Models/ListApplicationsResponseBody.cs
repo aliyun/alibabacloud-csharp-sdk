@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<ListApplicationsResponseBodyApplicationsApplication> Application { get; set; }
             public class ListApplicationsResponseBodyApplicationsApplication : TeaModel {
+                [NameInMap("AppList")]
+                [Validation(Required=false)]
                 public ListApplicationsResponseBodyApplicationsApplicationAppList AppList { get; set; }
                 public class ListApplicationsResponseBodyApplicationsApplicationAppList : TeaModel {
                     [NameInMap("App")]
@@ -34,9 +36,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     }
 
                 }
+
+                [NameInMap("ClusterName")]
+                [Validation(Required=false)]
                 public string ClusterName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
