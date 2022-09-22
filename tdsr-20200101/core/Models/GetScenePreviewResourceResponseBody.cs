@@ -20,6 +20,7 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
             [NameInMap("ResourceDirectory")]
             [Validation(Required=false)]
             public GetScenePreviewResourceResponseBodyDataResourceDirectory ResourceDirectory { get; set; }
@@ -41,10 +42,12 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
                 public string RootPath { get; set; }
 
             }
+
             [NameInMap("Version")]
             [Validation(Required=false)]
             public string Version { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

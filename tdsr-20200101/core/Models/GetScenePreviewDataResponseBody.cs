@@ -60,13 +60,16 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
                         [NameInMap("Rotation")]
                         [Validation(Required=false)]
                         public List<double?> Rotation { get; set; }
+
                         [NameInMap("Spot")]
                         [Validation(Required=false)]
                         public List<double?> Spot { get; set; }
+
                         [NameInMap("Viewpoint")]
                         [Validation(Required=false)]
                         public List<double?> Viewpoint { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("RawName")]
                     [Validation(Required=false)]
@@ -107,10 +110,13 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
                 public string TexturePanoPath { get; set; }
 
             }
+
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<GetScenePreviewDataResponseBodyDataTags> Tags { get; set; }
             public class GetScenePreviewDataResponseBodyDataTags : TeaModel {
+                [NameInMap("Config")]
+                [Validation(Required=false)]
                 public GetScenePreviewDataResponseBodyDataTagsConfig Config { get; set; }
                 public class GetScenePreviewDataResponseBodyDataTagsConfig : TeaModel {
                     [NameInMap("BackgroundColor")]
@@ -124,10 +130,12 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
                         [NameInMap("CustomText")]
                         [Validation(Required=false)]
                         public string CustomText { get; set; }
+
                         [NameInMap("Type")]
                         [Validation(Required=false)]
                         public string Type { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("Content")]
                     [Validation(Required=false)]
@@ -186,12 +194,26 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
                     public string Video { get; set; }
 
                 }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public string Id { get; set; }
+
+                [NameInMap("Position")]
+                [Validation(Required=false)]
                 public List<double?> Position { get; set; }
+
+                [NameInMap("PositionPanoCube")]
+                [Validation(Required=false)]
                 public List<double?> PositionPanoCube { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

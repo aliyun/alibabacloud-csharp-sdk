@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
             [NameInMap("Progress")]
             [Validation(Required=false)]
             public long? Progress { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

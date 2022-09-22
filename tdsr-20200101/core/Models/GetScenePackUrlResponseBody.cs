@@ -20,13 +20,16 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
             [NameInMap("Expire")]
             [Validation(Required=false)]
             public string Expire { get; set; }
+
             [NameInMap("Url")]
             [Validation(Required=false)]
             public string Url { get; set; }
+
             [NameInMap("Valid")]
             [Validation(Required=false)]
             public bool? Valid { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

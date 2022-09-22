@@ -20,16 +20,20 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
             [NameInMap("ModelToken")]
             [Validation(Required=false)]
             public string ModelToken { get; set; }
+
             [NameInMap("PreviewData")]
             [Validation(Required=false)]
             public string PreviewData { get; set; }
+
             [NameInMap("PreviewToken")]
             [Validation(Required=false)]
             public string PreviewToken { get; set; }
+
             [NameInMap("SceneType")]
             [Validation(Required=false)]
             public string SceneType { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

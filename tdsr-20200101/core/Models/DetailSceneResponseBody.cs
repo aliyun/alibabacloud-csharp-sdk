@@ -31,6 +31,28 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         [Validation(Required=false)]
         public string CoverUrl { get; set; }
 
+        [NameInMap("FloorPlans")]
+        [Validation(Required=false)]
+        public List<DetailSceneResponseBodyFloorPlans> FloorPlans { get; set; }
+        public class DetailSceneResponseBodyFloorPlans : TeaModel {
+            [NameInMap("ColorMapUrl")]
+            [Validation(Required=false)]
+            public string ColorMapUrl { get; set; }
+
+            [NameInMap("FloorLabel")]
+            [Validation(Required=false)]
+            public string FloorLabel { get; set; }
+
+            [NameInMap("FloorName")]
+            [Validation(Required=false)]
+            public string FloorName { get; set; }
+
+            [NameInMap("MiniMapUrl")]
+            [Validation(Required=false)]
+            public string MiniMapUrl { get; set; }
+
+        }
+
         [NameInMap("GmtCreate")]
         [Validation(Required=false)]
         public long? GmtCreate { get; set; }

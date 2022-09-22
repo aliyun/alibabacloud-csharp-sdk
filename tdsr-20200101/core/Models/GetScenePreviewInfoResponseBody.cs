@@ -20,16 +20,20 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
             [NameInMap("ModelPath")]
             [Validation(Required=false)]
             public string ModelPath { get; set; }
+
             [NameInMap("PanoList")]
             [Validation(Required=false)]
             public string PanoList { get; set; }
+
             [NameInMap("TextureModelPath")]
             [Validation(Required=false)]
             public string TextureModelPath { get; set; }
+
             [NameInMap("TexturePanoPath")]
             [Validation(Required=false)]
             public string TexturePanoPath { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
