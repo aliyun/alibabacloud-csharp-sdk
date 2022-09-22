@@ -1,0 +1,106 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Ecs20160314.Models
+{
+    public class DescribeResourceAggregationsRequest : TeaModel {
+        [NameInMap("Aggregators")]
+        [Validation(Required=false)]
+        public List<string> Aggregators { get; set; }
+
+        [NameInMap("Filter")]
+        [Validation(Required=false)]
+        public List<DescribeResourceAggregationsRequestFilter> Filter { get; set; }
+        public class DescribeResourceAggregationsRequestFilter : TeaModel {
+            [NameInMap("AttributeName")]
+            [Validation(Required=false)]
+            public string AttributeName { get; set; }
+
+            [NameInMap("AttributeValue")]
+            [Validation(Required=false)]
+            public string AttributeValue { get; set; }
+
+            [NameInMap("Operation")]
+            [Validation(Required=false)]
+            public string Operation { get; set; }
+
+        }
+
+        [NameInMap("Global")]
+        [Validation(Required=false)]
+        public string Global { get; set; }
+
+        [NameInMap("Keyword")]
+        [Validation(Required=false)]
+        public string Keyword { get; set; }
+
+        [NameInMap("Marker")]
+        [Validation(Required=false)]
+        public string Marker { get; set; }
+
+        [NameInMap("MaxItems")]
+        [Validation(Required=false)]
+        public int? MaxItems { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("Product")]
+        [Validation(Required=false)]
+        public string Product { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("RegionNo")]
+        [Validation(Required=false)]
+        public string RegionNo { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
+
+        [NameInMap("TagFilter")]
+        [Validation(Required=false)]
+        public List<DescribeResourceAggregationsRequestTagFilter> TagFilter { get; set; }
+        public class DescribeResourceAggregationsRequestTagFilter : TeaModel {
+            [NameInMap("Operation")]
+            [Validation(Required=false)]
+            public string Operation { get; set; }
+
+            [NameInMap("TagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+            [NameInMap("TagValues")]
+            [Validation(Required=false)]
+            public List<string> TagValues { get; set; }
+
+        }
+
+    }
+
+}
