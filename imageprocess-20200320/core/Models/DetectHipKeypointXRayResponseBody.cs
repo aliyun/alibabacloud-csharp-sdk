@@ -16,11 +16,17 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             [NameInMap("ImageUrl")]
             [Validation(Required=false)]
             public string ImageUrl { get; set; }
+
             [NameInMap("KeyPoints")]
             [Validation(Required=false)]
             public List<DetectHipKeypointXRayResponseBodyDataKeyPoints> KeyPoints { get; set; }
             public class DetectHipKeypointXRayResponseBodyDataKeyPoints : TeaModel {
+                [NameInMap("Coordinates")]
+                [Validation(Required=false)]
                 public List<int?> Coordinates { get; set; }
+
+                [NameInMap("Tag")]
+                [Validation(Required=false)]
                 public DetectHipKeypointXRayResponseBodyDataKeyPointsTag Tag { get; set; }
                 public class DetectHipKeypointXRayResponseBodyDataKeyPointsTag : TeaModel {
                     [NameInMap("Direction")]
@@ -32,15 +38,22 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                     public string Label { get; set; }
 
                 }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
                 public float? Value { get; set; }
+
             }
+
             [NameInMap("OrgId")]
             [Validation(Required=false)]
             public string OrgId { get; set; }
+
             [NameInMap("OrgName")]
             [Validation(Required=false)]
             public string OrgName { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

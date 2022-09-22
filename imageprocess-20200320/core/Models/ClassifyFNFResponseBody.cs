@@ -17,7 +17,12 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             [Validation(Required=false)]
             public List<ClassifyFNFResponseBodyDataFractures> Fractures { get; set; }
             public class ClassifyFNFResponseBodyDataFractures : TeaModel {
+                [NameInMap("Boxes")]
+                [Validation(Required=false)]
                 public List<int?> Boxes { get; set; }
+
+                [NameInMap("Tag")]
+                [Validation(Required=false)]
                 public ClassifyFNFResponseBodyDataFracturesTag Tag { get; set; }
                 public class ClassifyFNFResponseBodyDataFracturesTag : TeaModel {
                     [NameInMap("Label")]
@@ -25,18 +30,26 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                     public string Label { get; set; }
 
                 }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
                 public float? Value { get; set; }
+
             }
+
             [NameInMap("ImageUrl")]
             [Validation(Required=false)]
             public string ImageUrl { get; set; }
+
             [NameInMap("OrgId")]
             [Validation(Required=false)]
             public string OrgId { get; set; }
+
             [NameInMap("OrgName")]
             [Validation(Required=false)]
             public string OrgName { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

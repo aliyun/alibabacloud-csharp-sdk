@@ -8,30 +8,30 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 {
-    public class DetectPancResponseBody : TeaModel {
+    public class ScreenECResponseBody : TeaModel {
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public DetectPancResponseBodyData Data { get; set; }
-        public class DetectPancResponseBodyData : TeaModel {
+        public ScreenECResponseBodyData Data { get; set; }
+        public class ScreenECResponseBodyData : TeaModel {
             [NameInMap("Lesion")]
             [Validation(Required=false)]
-            public DetectPancResponseBodyDataLesion Lesion { get; set; }
-            public class DetectPancResponseBodyDataLesion : TeaModel {
+            public ScreenECResponseBodyDataLesion Lesion { get; set; }
+            public class ScreenECResponseBodyDataLesion : TeaModel {
+                [NameInMap("BenignVolume")]
+                [Validation(Required=false)]
+                public string BenignVolume { get; set; }
+
+                [NameInMap("EcVolume")]
+                [Validation(Required=false)]
+                public string EcVolume { get; set; }
+
+                [NameInMap("EsoVolume")]
+                [Validation(Required=false)]
+                public string EsoVolume { get; set; }
+
                 [NameInMap("Mask")]
                 [Validation(Required=false)]
                 public string Mask { get; set; }
-
-                [NameInMap("NonPdacVol")]
-                [Validation(Required=false)]
-                public string NonPdacVol { get; set; }
-
-                [NameInMap("PancVol")]
-                [Validation(Required=false)]
-                public string PancVol { get; set; }
-
-                [NameInMap("PdacVol")]
-                [Validation(Required=false)]
-                public string PdacVol { get; set; }
 
                 [NameInMap("Possibilities")]
                 [Validation(Required=false)]

@@ -24,22 +24,28 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                     [NameInMap("Area")]
                     [Validation(Required=false)]
                     public List<float?> Area { get; set; }
+
                     [NameInMap("Coordinates")]
                     [Validation(Required=false)]
                     public List<List<float?>> Coordinates { get; set; }
+
                     [NameInMap("LabelValue")]
                     [Validation(Required=false)]
                     public long? LabelValue { get; set; }
+
                     [NameInMap("MaxArea")]
                     [Validation(Required=false)]
                     public float? MaxArea { get; set; }
+
                     [NameInMap("MaxAreaIndex")]
                     [Validation(Required=false)]
                     public long? MaxAreaIndex { get; set; }
+
                     [NameInMap("MaxDiameter")]
                     [Validation(Required=false)]
                     public float? MaxDiameter { get; set; }
-                };
+
+                }
 
                 [NameInMap("PulmonaryInfo")]
                 [Validation(Required=false)]
@@ -48,31 +54,39 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                     [NameInMap("Area")]
                     [Validation(Required=false)]
                     public List<float?> Area { get; set; }
+
                     [NameInMap("Coordinates")]
                     [Validation(Required=false)]
                     public List<List<float?>> Coordinates { get; set; }
+
                     [NameInMap("LabelValue")]
                     [Validation(Required=false)]
                     public long? LabelValue { get; set; }
+
                     [NameInMap("MaxArea")]
                     [Validation(Required=false)]
                     public float? MaxArea { get; set; }
+
                     [NameInMap("MaxAreaIndex")]
                     [Validation(Required=false)]
                     public long? MaxAreaIndex { get; set; }
+
                     [NameInMap("MaxDiameter")]
                     [Validation(Required=false)]
                     public float? MaxDiameter { get; set; }
+
                     [NameInMap("NearestAortaArea")]
                     [Validation(Required=false)]
                     public float? NearestAortaArea { get; set; }
-                };
+
+                }
 
                 [NameInMap("ResultURL")]
                 [Validation(Required=false)]
                 public string ResultURL { get; set; }
 
             }
+
             [NameInMap("CACS")]
             [Validation(Required=false)]
             public ScreenChestCTResponseBodyDataCACS CACS { get; set; }
@@ -116,6 +130,7 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 public string VolumeScore { get; set; }
 
             }
+
             [NameInMap("Covid")]
             [Validation(Required=false)]
             public ScreenChestCTResponseBodyDataCovid Covid { get; set; }
@@ -145,6 +160,7 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 public string SeriesInstanceUID { get; set; }
 
             }
+
             [NameInMap("DetectLymph")]
             [Validation(Required=false)]
             public ScreenChestCTResponseBodyDataDetectLymph DetectLymph { get; set; }
@@ -180,6 +196,7 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 public string SeriesInstanceUID { get; set; }
 
             }
+
             [NameInMap("DetectPdac")]
             [Validation(Required=false)]
             public ScreenChestCTResponseBodyDataDetectPdac DetectPdac { get; set; }
@@ -191,25 +208,31 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                     [NameInMap("Mask")]
                     [Validation(Required=false)]
                     public string Mask { get; set; }
+
                     [NameInMap("NonPdacVol")]
                     [Validation(Required=false)]
                     public string NonPdacVol { get; set; }
+
                     [NameInMap("PancVol")]
                     [Validation(Required=false)]
                     public string PancVol { get; set; }
+
                     [NameInMap("PdacVol")]
                     [Validation(Required=false)]
                     public string PdacVol { get; set; }
+
                     [NameInMap("Possibilities")]
                     [Validation(Required=false)]
                     public List<string> Possibilities { get; set; }
-                };
+
+                }
 
                 [NameInMap("SeriesInstanceUID")]
                 [Validation(Required=false)]
                 public string SeriesInstanceUID { get; set; }
 
             }
+
             [NameInMap("DetectRibFracture")]
             [Validation(Required=false)]
             public ScreenChestCTResponseBodyDataDetectRibFracture DetectRibFracture { get; set; }
@@ -273,9 +296,11 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 public List<float?> Spacing { get; set; }
 
             }
+
             [NameInMap("ErrorMessage")]
             [Validation(Required=false)]
             public string ErrorMessage { get; set; }
+
             [NameInMap("LungNodule")]
             [Validation(Required=false)]
             public ScreenChestCTResponseBodyDataLungNodule LungNodule { get; set; }
@@ -365,13 +390,16 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 }
 
             }
+
             [NameInMap("NestedUrlList")]
             [Validation(Required=false)]
-            public Dictionary<string, string> NestedUrlList { get; set; }
+            public Dictionary<string, object> NestedUrlList { get; set; }
+
             [NameInMap("URLList")]
             [Validation(Required=false)]
-            public Dictionary<string, string> URLList { get; set; }
-        };
+            public Dictionary<string, object> URLList { get; set; }
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

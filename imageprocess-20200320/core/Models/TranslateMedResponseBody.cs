@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             [NameInMap("Text")]
             [Validation(Required=false)]
             public string Text { get; set; }
+
             [NameInMap("Words")]
             [Validation(Required=false)]
             public long? Words { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

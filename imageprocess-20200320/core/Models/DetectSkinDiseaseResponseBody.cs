@@ -15,8 +15,9 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
         public class DetectSkinDiseaseResponseBodyData : TeaModel {
             [NameInMap("Results")]
             [Validation(Required=false)]
-            public Dictionary<string, string> Results { get; set; }
-        };
+            public Dictionary<string, object> Results { get; set; }
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

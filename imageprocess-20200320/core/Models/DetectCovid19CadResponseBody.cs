@@ -16,19 +16,24 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             [NameInMap("LesionRatio")]
             [Validation(Required=false)]
             public string LesionRatio { get; set; }
+
             [NameInMap("Mask")]
             [Validation(Required=false)]
             public string Mask { get; set; }
+
             [NameInMap("NewProbability")]
             [Validation(Required=false)]
             public string NewProbability { get; set; }
+
             [NameInMap("NormalProbability")]
             [Validation(Required=false)]
             public string NormalProbability { get; set; }
+
             [NameInMap("OtherProbability")]
             [Validation(Required=false)]
             public string OtherProbability { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

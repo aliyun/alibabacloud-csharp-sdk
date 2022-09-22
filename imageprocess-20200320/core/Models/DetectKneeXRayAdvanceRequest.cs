@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 {
     public class DetectKneeXRayAdvanceRequest : TeaModel {
-        [NameInMap("UrlObject")]
-        [Validation(Required=true)]
-        public Stream UrlObject { get; set; }
-
         [NameInMap("DataFormat")]
         [Validation(Required=false)]
         public string DataFormat { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
         [NameInMap("OrgName")]
         [Validation(Required=false)]
         public string OrgName { get; set; }
+
+        [NameInMap("Url")]
+        [Validation(Required=false)]
+        public Stream UrlObject { get; set; }
 
     }
 

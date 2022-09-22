@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             [NameInMap("ResultURL")]
             [Validation(Required=false)]
             public string ResultURL { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

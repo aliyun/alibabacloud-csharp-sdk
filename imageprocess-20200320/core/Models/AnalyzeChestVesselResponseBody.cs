@@ -42,6 +42,7 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 public float? MaxDiameter { get; set; }
 
             }
+
             [NameInMap("PulmonaryInfo")]
             [Validation(Required=false)]
             public AnalyzeChestVesselResponseBodyDataPulmonaryInfo PulmonaryInfo { get; set; }
@@ -75,10 +76,12 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 public float? NearestAortaArea { get; set; }
 
             }
+
             [NameInMap("ResultURL")]
             [Validation(Required=false)]
             public string ResultURL { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

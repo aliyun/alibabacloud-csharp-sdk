@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             [NameInMap("DUrl")]
             [Validation(Required=false)]
             public string DUrl { get; set; }
+
             [NameInMap("NUrl")]
             [Validation(Required=false)]
             public string NUrl { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
