@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public string TimingTriggerConfig { get; set; }
 
+        [NameInMap("TimingTriggerUserPayload")]
+        [Validation(Required=false)]
+        public string TimingTriggerUserPayload { get; set; }
+
     }
 
 }

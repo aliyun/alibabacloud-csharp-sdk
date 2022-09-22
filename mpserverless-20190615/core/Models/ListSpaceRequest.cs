@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class ListSpaceRequest : TeaModel {
+        [NameInMap("EmasWorkspaceId")]
+        [Validation(Required=false)]
+        public string EmasWorkspaceId { get; set; }
+
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }

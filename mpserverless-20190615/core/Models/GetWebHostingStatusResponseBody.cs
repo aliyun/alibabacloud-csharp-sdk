@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
             [NameInMap("SpaceId")]
             [Validation(Required=false)]
             public string SpaceId { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

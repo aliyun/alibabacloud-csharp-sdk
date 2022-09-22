@@ -24,13 +24,16 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
                 [NameInMap("DataSize")]
                 [Validation(Required=false)]
                 public long? DataSize { get; set; }
+
                 [NameInMap("Read")]
                 [Validation(Required=false)]
                 public long? Read { get; set; }
+
                 [NameInMap("Write")]
                 [Validation(Required=false)]
                 public long? Write { get; set; }
-            };
+
+            }
 
             [NameInMap("CloudFunction")]
             [Validation(Required=false)]
@@ -39,13 +42,16 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
                 [NameInMap("Compute")]
                 [Validation(Required=false)]
                 public long? Compute { get; set; }
+
                 [NameInMap("Count")]
                 [Validation(Required=false)]
                 public long? Count { get; set; }
+
                 [NameInMap("Traffic")]
                 [Validation(Required=false)]
                 public long? Traffic { get; set; }
-            };
+
+            }
 
             [NameInMap("CloudStorage")]
             [Validation(Required=false)]
@@ -54,16 +60,20 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
                 [NameInMap("DataSize")]
                 [Validation(Required=false)]
                 public long? DataSize { get; set; }
+
                 [NameInMap("Download")]
                 [Validation(Required=false)]
                 public long? Download { get; set; }
+
                 [NameInMap("Traffic")]
                 [Validation(Required=false)]
                 public long? Traffic { get; set; }
+
                 [NameInMap("Upload")]
                 [Validation(Required=false)]
                 public long? Upload { get; set; }
-            };
+
+            }
 
             [NameInMap("EndTime")]
             [Validation(Required=false)]
@@ -80,10 +90,12 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
                 [NameInMap("DataSize")]
                 [Validation(Required=false)]
                 public long? DataSize { get; set; }
+
                 [NameInMap("Traffic")]
                 [Validation(Required=false)]
                 public long? Traffic { get; set; }
-            };
+
+            }
 
         }
 
@@ -102,16 +114,20 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
             [NameInMap("PageCount")]
             [Validation(Required=false)]
             public long? PageCount { get; set; }
+
             [NameInMap("PageNum")]
             [Validation(Required=false)]
             public long? PageNum { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public long? PageSize { get; set; }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public long? Total { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -16,19 +16,24 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
             [NameInMap("CreatedAt")]
             [Validation(Required=false)]
             public string CreatedAt { get; set; }
+
             [NameInMap("DeploymentId")]
             [Validation(Required=false)]
             public string DeploymentId { get; set; }
+
             [NameInMap("DownloadSignedUrl")]
             [Validation(Required=false)]
             public string DownloadSignedUrl { get; set; }
+
             [NameInMap("ModifiedAt")]
             [Validation(Required=false)]
             public string ModifiedAt { get; set; }
+
             [NameInMap("VersionNo")]
             [Validation(Required=false)]
             public string VersionNo { get; set; }
-        };
+
+        }
 
         [NameInMap("Function")]
         [Validation(Required=false)]
@@ -37,18 +42,23 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
             [NameInMap("CreatedAt")]
             [Validation(Required=false)]
             public string CreatedAt { get; set; }
+
             [NameInMap("Desc")]
             [Validation(Required=false)]
             public string Desc { get; set; }
+
             [NameInMap("HttpTriggerPath")]
             [Validation(Required=false)]
             public string HttpTriggerPath { get; set; }
+
             [NameInMap("ModifiedAt")]
             [Validation(Required=false)]
             public string ModifiedAt { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
             [NameInMap("Spec")]
             [Validation(Required=false)]
             public DescribeFunctionResponseBodyFunctionSpec Spec { get; set; }
@@ -70,10 +80,16 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
                 public string Timeout { get; set; }
 
             }
+
             [NameInMap("TimingTriggerConfig")]
             [Validation(Required=false)]
             public string TimingTriggerConfig { get; set; }
-        };
+
+            [NameInMap("TimingTriggerUserPayload")]
+            [Validation(Required=false)]
+            public string TimingTriggerUserPayload { get; set; }
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

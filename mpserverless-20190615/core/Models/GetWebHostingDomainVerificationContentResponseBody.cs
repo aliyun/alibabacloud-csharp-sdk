@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
+
             [NameInMap("Domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

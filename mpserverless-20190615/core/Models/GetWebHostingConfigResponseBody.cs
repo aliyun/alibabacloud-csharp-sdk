@@ -16,22 +16,28 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
             [NameInMap("AllowedIps")]
             [Validation(Required=false)]
             public string AllowedIps { get; set; }
+
             [NameInMap("DefaultDomain")]
             [Validation(Required=false)]
             public string DefaultDomain { get; set; }
+
             [NameInMap("ErrorPath")]
             [Validation(Required=false)]
             public string ErrorPath { get; set; }
+
             [NameInMap("HistoryModePath")]
             [Validation(Required=false)]
             public string HistoryModePath { get; set; }
+
             [NameInMap("IndexPath")]
             [Validation(Required=false)]
             public string IndexPath { get; set; }
+
             [NameInMap("SpaceId")]
             [Validation(Required=false)]
             public string SpaceId { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

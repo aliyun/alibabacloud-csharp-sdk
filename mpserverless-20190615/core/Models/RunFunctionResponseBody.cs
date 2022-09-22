@@ -24,16 +24,20 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
             [NameInMap("BillingDuration")]
             [Validation(Required=false)]
             public int? BillingDuration { get; set; }
+
             [NameInMap("InvocationDuration")]
             [Validation(Required=false)]
             public int? InvocationDuration { get; set; }
+
             [NameInMap("MaxMemoryUsage")]
             [Validation(Required=false)]
             public int? MaxMemoryUsage { get; set; }
+
             [NameInMap("RequestId")]
             [Validation(Required=false)]
             public string RequestId { get; set; }
-        };
+
+        }
 
     }
 

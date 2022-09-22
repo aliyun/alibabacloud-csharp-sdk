@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public string Desc { get; set; }
 
+        [NameInMap("Memory")]
+        [Validation(Required=false)]
+        public int? Memory { get; set; }
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -24,6 +28,10 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [NameInMap("SpaceId")]
         [Validation(Required=false)]
         public string SpaceId { get; set; }
+
+        [NameInMap("Timeout")]
+        [Validation(Required=false)]
+        public int? Timeout { get; set; }
 
     }
 

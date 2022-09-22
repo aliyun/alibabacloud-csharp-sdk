@@ -40,20 +40,28 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
             [NameInMap("InstanceConcurrency")]
             [Validation(Required=false)]
             public int? InstanceConcurrency { get; set; }
+
             [NameInMap("Memory")]
             [Validation(Required=false)]
             public string Memory { get; set; }
+
             [NameInMap("Runtime")]
             [Validation(Required=false)]
             public string Runtime { get; set; }
+
             [NameInMap("Timeout")]
             [Validation(Required=false)]
             public string Timeout { get; set; }
-        };
+
+        }
 
         [NameInMap("TimingTriggerConfig")]
         [Validation(Required=false)]
         public string TimingTriggerConfig { get; set; }
+
+        [NameInMap("TimingTriggerUserPayload")]
+        [Validation(Required=false)]
+        public string TimingTriggerUserPayload { get; set; }
 
     }
 

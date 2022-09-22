@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
-        [NameInMap("PageNum")]
+        [NameInMap("NextToken")]
         [Validation(Required=false)]
-        public int? PageNum { get; set; }
+        public string NextToken { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]

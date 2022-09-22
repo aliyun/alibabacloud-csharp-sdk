@@ -36,10 +36,12 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
                 [NameInMap("Label")]
                 [Validation(Required=false)]
                 public string Label { get; set; }
+
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
-            };
+
+            }
 
             [NameInMap("VersionNo")]
             [Validation(Required=false)]
@@ -54,16 +56,20 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
             [NameInMap("PageCount")]
             [Validation(Required=false)]
             public int? PageCount { get; set; }
+
             [NameInMap("PageNum")]
             [Validation(Required=false)]
             public int? PageNum { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public int? Total { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

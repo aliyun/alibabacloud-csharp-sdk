@@ -47,19 +47,15 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public ListFileResponseBodyPaginator Paginator { get; set; }
         public class ListFileResponseBodyPaginator : TeaModel {
-            [NameInMap("PageCount")]
+            [NameInMap("NextToken")]
             [Validation(Required=false)]
-            public int? PageCount { get; set; }
-            [NameInMap("PageNum")]
-            [Validation(Required=false)]
-            public int? PageNum { get; set; }
+            public string NextToken { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
-            [NameInMap("Total")]
-            [Validation(Required=false)]
-            public int? Total { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
