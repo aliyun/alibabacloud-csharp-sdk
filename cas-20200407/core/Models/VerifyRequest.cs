@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class VerifyRequest : TeaModel {
-        [NameInMap("Identifier")]
+        [NameInMap("CertIdentifier")]
         [Validation(Required=false)]
-        public string Identifier { get; set; }
+        public string CertIdentifier { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

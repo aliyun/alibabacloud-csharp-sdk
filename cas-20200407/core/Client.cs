@@ -1371,9 +1371,9 @@ namespace AlibabaCloud.SDK.Cas20200407
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Identifier))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertIdentifier))
             {
-                query["Identifier"] = request.Identifier;
+                query["CertIdentifier"] = request.CertIdentifier;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
             {
@@ -1414,9 +1414,9 @@ namespace AlibabaCloud.SDK.Cas20200407
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Identifier))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertIdentifier))
             {
-                query["Identifier"] = request.Identifier;
+                query["CertIdentifier"] = request.CertIdentifier;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
             {
