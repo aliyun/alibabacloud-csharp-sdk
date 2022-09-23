@@ -17,15 +17,37 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public List<DescribeCenAttachedChildInstancesResponseBodyChildInstancesChildInstance> ChildInstance { get; set; }
             public class DescribeCenAttachedChildInstancesResponseBodyChildInstancesChildInstance : TeaModel {
+                [NameInMap("CenId")]
+                [Validation(Required=false)]
                 public string CenId { get; set; }
+
+                [NameInMap("ChildInstanceAttachTime")]
+                [Validation(Required=false)]
                 public string ChildInstanceAttachTime { get; set; }
+
+                [NameInMap("ChildInstanceId")]
+                [Validation(Required=false)]
                 public string ChildInstanceId { get; set; }
+
+                [NameInMap("ChildInstanceOwnerId")]
+                [Validation(Required=false)]
                 public long? ChildInstanceOwnerId { get; set; }
+
+                [NameInMap("ChildInstanceRegionId")]
+                [Validation(Required=false)]
                 public string ChildInstanceRegionId { get; set; }
+
+                [NameInMap("ChildInstanceType")]
+                [Validation(Required=false)]
                 public string ChildInstanceType { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

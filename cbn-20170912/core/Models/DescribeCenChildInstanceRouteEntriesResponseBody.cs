@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public List<DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry> CenRouteEntry { get; set; }
             public class DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry : TeaModel {
+                [NameInMap("AsPaths")]
+                [Validation(Required=false)]
                 public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths AsPaths { get; set; }
                 public class DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths : TeaModel {
                     [NameInMap("AsPath")]
@@ -24,6 +26,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                     public List<string> AsPath { get; set; }
 
                 }
+
+                [NameInMap("CenRouteMapRecords")]
+                [Validation(Required=false)]
                 public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecords CenRouteMapRecords { get; set; }
                 public class DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecords : TeaModel {
                     [NameInMap("CenRouteMapRecord")]
@@ -41,6 +46,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                     }
 
                 }
+
+                [NameInMap("Communities")]
+                [Validation(Required=false)]
                 public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities Communities { get; set; }
                 public class DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities : TeaModel {
                     [NameInMap("Community")]
@@ -48,6 +56,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                     public List<string> Community { get; set; }
 
                 }
+
+                [NameInMap("Conflicts")]
+                [Validation(Required=false)]
                 public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryConflicts Conflicts { get; set; }
                 public class DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryConflicts : TeaModel {
                     [NameInMap("Conflict")]
@@ -77,17 +88,46 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                     }
 
                 }
+
+                [NameInMap("DestinationCidrBlock")]
+                [Validation(Required=false)]
                 public string DestinationCidrBlock { get; set; }
+
+                [NameInMap("NextHopInstanceId")]
+                [Validation(Required=false)]
                 public string NextHopInstanceId { get; set; }
+
+                [NameInMap("NextHopRegionId")]
+                [Validation(Required=false)]
                 public string NextHopRegionId { get; set; }
+
+                [NameInMap("NextHopType")]
+                [Validation(Required=false)]
                 public string NextHopType { get; set; }
+
+                [NameInMap("OperationalMode")]
+                [Validation(Required=false)]
                 public bool? OperationalMode { get; set; }
+
+                [NameInMap("PublishStatus")]
+                [Validation(Required=false)]
                 public string PublishStatus { get; set; }
+
+                [NameInMap("RouteTableId")]
+                [Validation(Required=false)]
                 public string RouteTableId { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

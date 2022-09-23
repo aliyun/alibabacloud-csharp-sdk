@@ -1727,6 +1727,152 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return await CreateCenInterRegionTrafficQosPolicyWithOptionsAsync(request, runtime);
         }
 
+        public CreateCenInterRegionTrafficQosQueueResponse CreateCenInterRegionTrafficQosQueueWithOptions(CreateCenInterRegionTrafficQosQueueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dscps))
+            {
+                query["Dscps"] = request.Dscps;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosQueueDescription))
+            {
+                query["QosQueueDescription"] = request.QosQueueDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosQueueName))
+            {
+                query["QosQueueName"] = request.QosQueueName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemainBandwidthPercent))
+            {
+                query["RemainBandwidthPercent"] = request.RemainBandwidthPercent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficQosPolicyId))
+            {
+                query["TrafficQosPolicyId"] = request.TrafficQosPolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCenInterRegionTrafficQosQueue",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCenInterRegionTrafficQosQueueResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateCenInterRegionTrafficQosQueueResponse> CreateCenInterRegionTrafficQosQueueWithOptionsAsync(CreateCenInterRegionTrafficQosQueueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dscps))
+            {
+                query["Dscps"] = request.Dscps;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosQueueDescription))
+            {
+                query["QosQueueDescription"] = request.QosQueueDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosQueueName))
+            {
+                query["QosQueueName"] = request.QosQueueName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemainBandwidthPercent))
+            {
+                query["RemainBandwidthPercent"] = request.RemainBandwidthPercent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficQosPolicyId))
+            {
+                query["TrafficQosPolicyId"] = request.TrafficQosPolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCenInterRegionTrafficQosQueue",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCenInterRegionTrafficQosQueueResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateCenInterRegionTrafficQosQueueResponse CreateCenInterRegionTrafficQosQueue(CreateCenInterRegionTrafficQosQueueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateCenInterRegionTrafficQosQueueWithOptions(request, runtime);
+        }
+
+        public async Task<CreateCenInterRegionTrafficQosQueueResponse> CreateCenInterRegionTrafficQosQueueAsync(CreateCenInterRegionTrafficQosQueueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateCenInterRegionTrafficQosQueueWithOptionsAsync(request, runtime);
+        }
+
         public CreateCenRouteMapResponse CreateCenRouteMapWithOptions(CreateCenRouteMapRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8547,6 +8693,14 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["CenId"] = request.CenId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -8597,6 +8751,14 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CenId))
             {
                 query["CenId"] = request.CenId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -8651,6 +8813,136 @@ namespace AlibabaCloud.SDK.Cbn20170912
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeGrantRulesToCenWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeGrantRulesToResourceResponse DescribeGrantRulesToResourceWithOptions(DescribeGrantRulesToResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeGrantRulesToResource",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeGrantRulesToResourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeGrantRulesToResourceResponse> DescribeGrantRulesToResourceWithOptionsAsync(DescribeGrantRulesToResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeGrantRulesToResource",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeGrantRulesToResourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeGrantRulesToResourceResponse DescribeGrantRulesToResource(DescribeGrantRulesToResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeGrantRulesToResourceWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeGrantRulesToResourceResponse> DescribeGrantRulesToResourceAsync(DescribeGrantRulesToResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeGrantRulesToResourceWithOptionsAsync(request, runtime);
         }
 
         public DescribePublishedRouteEntriesResponse DescribePublishedRouteEntriesWithOptions(DescribePublishedRouteEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -11155,10 +11447,6 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["ClientToken"] = request.ClientToken;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
-            {
-                query["DryRun"] = request.DryRun;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
@@ -11229,10 +11517,6 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
-            {
-                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -11451,10 +11735,6 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["ClientToken"] = request.ClientToken;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
-            {
-                query["DryRun"] = request.DryRun;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
@@ -11521,10 +11801,6 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
-            {
-                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -14683,6 +14959,128 @@ namespace AlibabaCloud.SDK.Cbn20170912
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RegisterTransitRouterMulticastGroupSourcesWithOptionsAsync(request, runtime);
+        }
+
+        public RemoveTrafficMatchRuleFromTrafficMarkingPolicyResponse RemoveTrafficMatchRuleFromTrafficMarkingPolicyWithOptions(RemoveTrafficMatchRuleFromTrafficMarkingPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficMarkRuleIds))
+            {
+                query["TrafficMarkRuleIds"] = request.TrafficMarkRuleIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficMarkingPolicyId))
+            {
+                query["TrafficMarkingPolicyId"] = request.TrafficMarkingPolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveTrafficMatchRuleFromTrafficMarkingPolicy",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveTrafficMatchRuleFromTrafficMarkingPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<RemoveTrafficMatchRuleFromTrafficMarkingPolicyResponse> RemoveTrafficMatchRuleFromTrafficMarkingPolicyWithOptionsAsync(RemoveTrafficMatchRuleFromTrafficMarkingPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficMarkRuleIds))
+            {
+                query["TrafficMarkRuleIds"] = request.TrafficMarkRuleIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficMarkingPolicyId))
+            {
+                query["TrafficMarkingPolicyId"] = request.TrafficMarkingPolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveTrafficMatchRuleFromTrafficMarkingPolicy",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveTrafficMatchRuleFromTrafficMarkingPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public RemoveTrafficMatchRuleFromTrafficMarkingPolicyResponse RemoveTrafficMatchRuleFromTrafficMarkingPolicy(RemoveTrafficMatchRuleFromTrafficMarkingPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RemoveTrafficMatchRuleFromTrafficMarkingPolicyWithOptions(request, runtime);
+        }
+
+        public async Task<RemoveTrafficMatchRuleFromTrafficMarkingPolicyResponse> RemoveTrafficMatchRuleFromTrafficMarkingPolicyAsync(RemoveTrafficMatchRuleFromTrafficMarkingPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RemoveTrafficMatchRuleFromTrafficMarkingPolicyWithOptionsAsync(request, runtime);
         }
 
         public RemoveTraficMatchRuleFromTrafficMarkingPolicyResponse RemoveTraficMatchRuleFromTrafficMarkingPolicyWithOptions(RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

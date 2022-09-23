@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public List<DescribeCensResponseBodyCensCen> Cen { get; set; }
             public class DescribeCensResponseBodyCensCen : TeaModel {
+                [NameInMap("CenBandwidthPackageIds")]
+                [Validation(Required=false)]
                 public DescribeCensResponseBodyCensCenCenBandwidthPackageIds CenBandwidthPackageIds { get; set; }
                 public class DescribeCensResponseBodyCensCenCenBandwidthPackageIds : TeaModel {
                     [NameInMap("CenBandwidthPackageId")]
@@ -24,14 +26,41 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                     public List<string> CenBandwidthPackageId { get; set; }
 
                 }
+
+                [NameInMap("CenId")]
+                [Validation(Required=false)]
                 public string CenId { get; set; }
+
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("Ipv6Level")]
+                [Validation(Required=false)]
                 public string Ipv6Level { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("ProtectionLevel")]
+                [Validation(Required=false)]
                 public string ProtectionLevel { get; set; }
+
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
                 public DescribeCensResponseBodyCensCenTags Tags { get; set; }
                 public class DescribeCensResponseBodyCensCenTags : TeaModel {
                     [NameInMap("Tag")]
@@ -49,8 +78,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

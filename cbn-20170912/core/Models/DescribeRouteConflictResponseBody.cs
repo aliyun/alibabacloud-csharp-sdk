@@ -29,13 +29,29 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public List<DescribeRouteConflictResponseBodyRouteConflictsRouteConflict> RouteConflict { get; set; }
             public class DescribeRouteConflictResponseBodyRouteConflictsRouteConflict : TeaModel {
+                [NameInMap("DestinationCidrBlock")]
+                [Validation(Required=false)]
                 public string DestinationCidrBlock { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
                 public string InstanceType { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public List<DescribeCenGeographicSpansResponseBodyGeographicSpanModelsGeographicSpanModel> GeographicSpanModel { get; set; }
             public class DescribeCenGeographicSpansResponseBodyGeographicSpanModelsGeographicSpanModel : TeaModel {
+                [NameInMap("GeographicSpanId")]
+                [Validation(Required=false)]
                 public string GeographicSpanId { get; set; }
+
+                [NameInMap("LocalGeoRegionId")]
+                [Validation(Required=false)]
                 public string LocalGeoRegionId { get; set; }
+
+                [NameInMap("OppositeGeoRegionId")]
+                [Validation(Required=false)]
                 public string OppositeGeoRegionId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

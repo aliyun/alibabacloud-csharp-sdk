@@ -17,15 +17,37 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public List<DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimitsCenInterRegionBandwidthLimit> CenInterRegionBandwidthLimit { get; set; }
             public class DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimitsCenInterRegionBandwidthLimit : TeaModel {
+                [NameInMap("BandwidthLimit")]
+                [Validation(Required=false)]
                 public long? BandwidthLimit { get; set; }
+
+                [NameInMap("BandwidthPackageId")]
+                [Validation(Required=false)]
                 public string BandwidthPackageId { get; set; }
+
+                [NameInMap("CenId")]
+                [Validation(Required=false)]
                 public string CenId { get; set; }
+
+                [NameInMap("GeographicSpanId")]
+                [Validation(Required=false)]
                 public string GeographicSpanId { get; set; }
+
+                [NameInMap("LocalRegionId")]
+                [Validation(Required=false)]
                 public string LocalRegionId { get; set; }
+
+                [NameInMap("OppositeRegionId")]
+                [Validation(Required=false)]
                 public string OppositeRegionId { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

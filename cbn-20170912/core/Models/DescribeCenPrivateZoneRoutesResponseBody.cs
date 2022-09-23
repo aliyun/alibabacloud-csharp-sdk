@@ -33,12 +33,25 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public List<DescribeCenPrivateZoneRoutesResponseBodyPrivateZoneInfosPrivateZoneInfo> PrivateZoneInfo { get; set; }
             public class DescribeCenPrivateZoneRoutesResponseBodyPrivateZoneInfosPrivateZoneInfo : TeaModel {
+                [NameInMap("AccessRegionId")]
+                [Validation(Required=false)]
                 public string AccessRegionId { get; set; }
+
+                [NameInMap("HostRegionId")]
+                [Validation(Required=false)]
                 public string HostRegionId { get; set; }
+
+                [NameInMap("HostVpcId")]
+                [Validation(Required=false)]
                 public string HostVpcId { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

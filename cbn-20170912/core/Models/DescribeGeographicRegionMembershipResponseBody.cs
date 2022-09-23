@@ -25,9 +25,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public List<DescribeGeographicRegionMembershipResponseBodyRegionIdsRegionId> RegionId { get; set; }
             public class DescribeGeographicRegionMembershipResponseBodyRegionIdsRegionId : TeaModel {
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

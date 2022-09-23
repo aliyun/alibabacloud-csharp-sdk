@@ -25,7 +25,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public List<DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntry> PublishedRouteEntry { get; set; }
             public class DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntry : TeaModel {
+                [NameInMap("ChildInstanceRouteTableId")]
+                [Validation(Required=false)]
                 public string ChildInstanceRouteTableId { get; set; }
+
+                [NameInMap("Conflicts")]
+                [Validation(Required=false)]
                 public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntryConflicts Conflicts { get; set; }
                 public class DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntryConflicts : TeaModel {
                     [NameInMap("Conflict")]
@@ -55,14 +60,34 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                     }
 
                 }
+
+                [NameInMap("DestinationCidrBlock")]
+                [Validation(Required=false)]
                 public string DestinationCidrBlock { get; set; }
+
+                [NameInMap("NextHopId")]
+                [Validation(Required=false)]
                 public string NextHopId { get; set; }
+
+                [NameInMap("NextHopType")]
+                [Validation(Required=false)]
                 public string NextHopType { get; set; }
+
+                [NameInMap("OperationalMode")]
+                [Validation(Required=false)]
                 public bool? OperationalMode { get; set; }
+
+                [NameInMap("PublishStatus")]
+                [Validation(Required=false)]
                 public string PublishStatus { get; set; }
+
+                [NameInMap("RouteType")]
+                [Validation(Required=false)]
                 public string RouteType { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
