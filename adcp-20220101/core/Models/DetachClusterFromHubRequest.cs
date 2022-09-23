@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         [Validation(Required=false)]
         public string ClusterIds { get; set; }
 
+        [NameInMap("DetachFromMesh")]
+        [Validation(Required=false)]
+        public bool? DetachFromMesh { get; set; }
+
     }
 
 }

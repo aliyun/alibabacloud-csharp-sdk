@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
             [Validation(Required=false)]
             public DescribeHubClusterDetailsResponseBodyClusterApiServer ApiServer { get; set; }
             public class DescribeHubClusterDetailsResponseBodyClusterApiServer : TeaModel {
+                [NameInMap("ApiServerEipId")]
+                [Validation(Required=false)]
+                public string ApiServerEipId { get; set; }
+
                 [NameInMap("EnabledPublic")]
                 [Validation(Required=false)]
                 public bool? EnabledPublic { get; set; }
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
                 public string LoadBalancerId { get; set; }
 
             }
+
             [NameInMap("ClusterInfo")]
             [Validation(Required=false)]
             public DescribeHubClusterDetailsResponseBodyClusterClusterInfo ClusterInfo { get; set; }
@@ -71,6 +76,29 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
                 public string Version { get; set; }
 
             }
+
+            [NameInMap("Conditions")]
+            [Validation(Required=false)]
+            public List<DescribeHubClusterDetailsResponseBodyClusterConditions> Conditions { get; set; }
+            public class DescribeHubClusterDetailsResponseBodyClusterConditions : TeaModel {
+                [NameInMap("Message")]
+                [Validation(Required=false)]
+                public string Message { get; set; }
+
+                [NameInMap("Reason")]
+                [Validation(Required=false)]
+                public string Reason { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
             [NameInMap("Endpoints")]
             [Validation(Required=false)]
             public DescribeHubClusterDetailsResponseBodyClusterEndpoints Endpoints { get; set; }
@@ -84,6 +112,39 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
                 public string PublicApiServerEndpoint { get; set; }
 
             }
+
+            [NameInMap("LogConfig")]
+            [Validation(Required=false)]
+            public DescribeHubClusterDetailsResponseBodyClusterLogConfig LogConfig { get; set; }
+            public class DescribeHubClusterDetailsResponseBodyClusterLogConfig : TeaModel {
+                [NameInMap("EnableLog")]
+                [Validation(Required=false)]
+                public bool? EnableLog { get; set; }
+
+                [NameInMap("LogProject")]
+                [Validation(Required=false)]
+                public string LogProject { get; set; }
+
+                [NameInMap("LogStoreTTL")]
+                [Validation(Required=false)]
+                public string LogStoreTTL { get; set; }
+
+            }
+
+            [NameInMap("MeshConfig")]
+            [Validation(Required=false)]
+            public DescribeHubClusterDetailsResponseBodyClusterMeshConfig MeshConfig { get; set; }
+            public class DescribeHubClusterDetailsResponseBodyClusterMeshConfig : TeaModel {
+                [NameInMap("EnableMesh")]
+                [Validation(Required=false)]
+                public bool? EnableMesh { get; set; }
+
+                [NameInMap("MeshId")]
+                [Validation(Required=false)]
+                public string MeshId { get; set; }
+
+            }
+
             [NameInMap("Network")]
             [Validation(Required=false)]
             public DescribeHubClusterDetailsResponseBodyClusterNetwork Network { get; set; }
@@ -109,7 +170,8 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
                 public string VpcId { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

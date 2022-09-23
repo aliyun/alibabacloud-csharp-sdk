@@ -12,6 +12,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
     public class AttachClusterToHubRequest : TeaModel {
+        [NameInMap("AttachToMesh")]
+        [Validation(Required=false)]
+        public bool? AttachToMesh { get; set; }
+
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }

@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
-    public class DescribeManagedClustersRequest : TeaModel {
-        [NameInMap("ClusterId")]
+    public class UpdateHubClusterFeatureResponseBody : TeaModel {
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string ClusterId { get; set; }
+        public string RequestId { get; set; }
 
     }
 

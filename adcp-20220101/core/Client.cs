@@ -18,7 +18,34 @@ namespace AlibabaCloud.SDK.Adcp20220101
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._signatureAlgorithm = "v2";
             this._endpointRule = "central";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-beijing", "adcp.cn-beijing.aliyuncs.com"},
+                {"cn-zhangjiakou", "adcp.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-hangzhou", "adcp.cn-hangzhou.aliyuncs.com"},
+                {"cn-shanghai", "adcp.cn-shanghai.aliyuncs.com"},
+                {"cn-shenzhen", "adcp.cn-shenzhen.aliyuncs.com"},
+                {"cn-heyuan", "adcp.cn-heyuan.aliyuncs.com"},
+                {"cn-hongkong", "adcp.cn-hongkong.aliyuncs.com"},
+                {"ap-northeast-1", "adcp.ap-northeast-1.aliyuncs.com"},
+                {"ap-southeast-1", "adcp.ap-southeast-1.aliyuncs.com"},
+                {"ap-southeast-5", "adcp.ap-southeast-5.aliyuncs.com"},
+                {"ap-south-1", "adcp.ap-south-1.aliyuncs.com"},
+                {"ap-southeast-2", "adcp.ap-southeast-2.aliyuncs.com"},
+                {"ap-southeast-3", "adcp.ap-southeast-3.aliyuncs.com"},
+                {"cn-chengdu", "adcp-vpc.cn-chengdu.aliyuncs.com"},
+                {"cn-huhehaote", "adcp.cn-huhehaote.aliyuncs.com"},
+                {"cn-qingdao", "adcp.cn-qingdao.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "adcp-vpc.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-wulanchabu", "adcp.cn-wulanchabu.aliyuncs.com"},
+                {"eu-central-1", "adcp.eu-central-1.aliyuncs.com"},
+                {"eu-west-1", "adcp-vpc.eu-west-1.aliyuncs.com"},
+                {"me-east-1", "adcp.me-east-1.aliyuncs.com"},
+                {"us-east-1", "adcp.us-east-1.aliyuncs.com"},
+                {"us-west-1", "adcp.us-west-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("adcp", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -41,6 +68,10 @@ namespace AlibabaCloud.SDK.Adcp20220101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachToMesh))
+            {
+                query["AttachToMesh"] = request.AttachToMesh;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["ClusterId"] = request.ClusterId;
@@ -74,6 +105,10 @@ namespace AlibabaCloud.SDK.Adcp20220101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachToMesh))
+            {
+                query["AttachToMesh"] = request.AttachToMesh;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["ClusterId"] = request.ClusterId;
@@ -127,26 +162,6 @@ namespace AlibabaCloud.SDK.Adcp20220101
             {
                 body["AuditLogEnabled"] = request.AuditLogEnabled;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditLogProject))
-            {
-                body["AuditLogProject"] = request.AuditLogProject;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditLogStoreTTL))
-            {
-                body["AuditLogStoreTTL"] = request.AuditLogStoreTTL;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ControlPlaneLogEnabled))
-            {
-                body["ControlPlaneLogEnabled"] = request.ControlPlaneLogEnabled;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ControlPlaneLogProject))
-            {
-                body["ControlPlaneLogProject"] = request.ControlPlaneLogProject;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ControlPlaneLogTTL))
-            {
-                body["ControlPlaneLogTTL"] = request.ControlPlaneLogTTL;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsEnterpriseSecurityGroup))
             {
                 body["IsEnterpriseSecurityGroup"] = request.IsEnterpriseSecurityGroup;
@@ -154,6 +169,10 @@ namespace AlibabaCloud.SDK.Adcp20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Profile))
+            {
+                body["Profile"] = request.Profile;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -198,26 +217,6 @@ namespace AlibabaCloud.SDK.Adcp20220101
             {
                 body["AuditLogEnabled"] = request.AuditLogEnabled;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditLogProject))
-            {
-                body["AuditLogProject"] = request.AuditLogProject;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditLogStoreTTL))
-            {
-                body["AuditLogStoreTTL"] = request.AuditLogStoreTTL;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ControlPlaneLogEnabled))
-            {
-                body["ControlPlaneLogEnabled"] = request.ControlPlaneLogEnabled;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ControlPlaneLogProject))
-            {
-                body["ControlPlaneLogProject"] = request.ControlPlaneLogProject;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ControlPlaneLogTTL))
-            {
-                body["ControlPlaneLogTTL"] = request.ControlPlaneLogTTL;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsEnterpriseSecurityGroup))
             {
                 body["IsEnterpriseSecurityGroup"] = request.IsEnterpriseSecurityGroup;
@@ -225,6 +224,10 @@ namespace AlibabaCloud.SDK.Adcp20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Profile))
+            {
+                body["Profile"] = request.Profile;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -549,9 +552,18 @@ namespace AlibabaCloud.SDK.Adcp20220101
             return await DescribeHubClusterLogsWithOptionsAsync(request, runtime);
         }
 
-        public DescribeHubClustersResponse DescribeHubClustersWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeHubClustersResponse DescribeHubClustersWithOptions(DescribeHubClustersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Profile))
+            {
+                query["Profile"] = request.Profile;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeHubClusters",
@@ -567,9 +579,18 @@ namespace AlibabaCloud.SDK.Adcp20220101
             return TeaModel.ToObject<DescribeHubClustersResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeHubClustersResponse> DescribeHubClustersWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeHubClustersResponse> DescribeHubClustersWithOptionsAsync(DescribeHubClustersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Profile))
+            {
+                query["Profile"] = request.Profile;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeHubClusters",
@@ -585,16 +606,16 @@ namespace AlibabaCloud.SDK.Adcp20220101
             return TeaModel.ToObject<DescribeHubClustersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeHubClustersResponse DescribeHubClusters()
+        public DescribeHubClustersResponse DescribeHubClusters(DescribeHubClustersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeHubClustersWithOptions(runtime);
+            return DescribeHubClustersWithOptions(request, runtime);
         }
 
-        public async Task<DescribeHubClustersResponse> DescribeHubClustersAsync()
+        public async Task<DescribeHubClustersResponse> DescribeHubClustersAsync(DescribeHubClustersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeHubClustersWithOptionsAsync(runtime);
+            return await DescribeHubClustersWithOptionsAsync(request, runtime);
         }
 
         public DescribeManagedClustersResponse DescribeManagedClustersWithOptions(DescribeManagedClustersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -663,9 +684,14 @@ namespace AlibabaCloud.SDK.Adcp20220101
             return await DescribeManagedClustersWithOptionsAsync(request, runtime);
         }
 
-        public DescribeRegionsResponse DescribeRegionsWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeRegions",
@@ -681,9 +707,14 @@ namespace AlibabaCloud.SDK.Adcp20220101
             return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeRegions",
@@ -699,16 +730,16 @@ namespace AlibabaCloud.SDK.Adcp20220101
             return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeRegionsResponse DescribeRegions()
+        public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeRegionsWithOptions(runtime);
+            return DescribeRegionsWithOptions(request, runtime);
         }
 
-        public async Task<DescribeRegionsResponse> DescribeRegionsAsync()
+        public async Task<DescribeRegionsResponse> DescribeRegionsAsync(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeRegionsWithOptionsAsync(runtime);
+            return await DescribeRegionsWithOptionsAsync(request, runtime);
         }
 
         public DetachClusterFromHubResponse DetachClusterFromHubWithOptions(DetachClusterFromHubRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -718,6 +749,10 @@ namespace AlibabaCloud.SDK.Adcp20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetachFromMesh))
+            {
+                query["DetachFromMesh"] = request.DetachFromMesh;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterIds))
@@ -751,6 +786,10 @@ namespace AlibabaCloud.SDK.Adcp20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetachFromMesh))
+            {
+                query["DetachFromMesh"] = request.DetachFromMesh;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterIds))
@@ -787,6 +826,128 @@ namespace AlibabaCloud.SDK.Adcp20220101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetachClusterFromHubWithOptionsAsync(request, runtime);
+        }
+
+        public UpdateHubClusterFeatureResponse UpdateHubClusterFeatureWithOptions(UpdateHubClusterFeatureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiServerEipId))
+            {
+                query["ApiServerEipId"] = request.ApiServerEipId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditLogEnabled))
+            {
+                query["AuditLogEnabled"] = request.AuditLogEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeletionProtection))
+            {
+                query["DeletionProtection"] = request.DeletionProtection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableArgoCD))
+            {
+                query["EnableArgoCD"] = request.EnableArgoCD;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableMesh))
+            {
+                query["EnableMesh"] = request.EnableMesh;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicApiServerEnabled))
+            {
+                query["PublicApiServerEnabled"] = request.PublicApiServerEnabled;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateHubClusterFeature",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateHubClusterFeatureResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateHubClusterFeatureResponse> UpdateHubClusterFeatureWithOptionsAsync(UpdateHubClusterFeatureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiServerEipId))
+            {
+                query["ApiServerEipId"] = request.ApiServerEipId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditLogEnabled))
+            {
+                query["AuditLogEnabled"] = request.AuditLogEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeletionProtection))
+            {
+                query["DeletionProtection"] = request.DeletionProtection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableArgoCD))
+            {
+                query["EnableArgoCD"] = request.EnableArgoCD;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableMesh))
+            {
+                query["EnableMesh"] = request.EnableMesh;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicApiServerEnabled))
+            {
+                query["PublicApiServerEnabled"] = request.PublicApiServerEnabled;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateHubClusterFeature",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateHubClusterFeatureResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateHubClusterFeatureResponse UpdateHubClusterFeature(UpdateHubClusterFeatureRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateHubClusterFeatureWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateHubClusterFeatureResponse> UpdateHubClusterFeatureAsync(UpdateHubClusterFeatureRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateHubClusterFeatureWithOptionsAsync(request, runtime);
         }
 
     }

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
-    public class DescribeHubClusterDetailsResponse : TeaModel {
+    public class UpdateHubClusterFeatureResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeHubClusterDetailsResponseBody Body { get; set; }
+        public UpdateHubClusterFeatureResponseBody Body { get; set; }
 
     }
 

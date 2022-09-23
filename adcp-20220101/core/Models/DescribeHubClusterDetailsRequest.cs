@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
     public class DescribeHubClusterDetailsRequest : TeaModel {
-        /// <summary>
-        /// 集群ID
-        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }

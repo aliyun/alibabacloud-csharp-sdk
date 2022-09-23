@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
-    public class DescribeManagedClustersRequest : TeaModel {
-        [NameInMap("ClusterId")]
+    public class DescribeRegionsRequest : TeaModel {
+        [NameInMap("Language")]
         [Validation(Required=false)]
-        public string ClusterId { get; set; }
+        public string Language { get; set; }
 
     }
 
