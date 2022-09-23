@@ -703,6 +703,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["instances"] = request.Instances;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpStack))
+            {
+                body["ip_stack"] = request.IpStack;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsEnterpriseSecurityGroup))
             {
                 body["is_enterprise_security_group"] = request.IsEnterpriseSecurityGroup;
@@ -1074,6 +1078,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instances))
             {
                 body["instances"] = request.Instances;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpStack))
+            {
+                body["ip_stack"] = request.IpStack;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsEnterpriseSecurityGroup))
             {

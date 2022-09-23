@@ -101,6 +101,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public List<string> Instances { get; set; }
 
+        [NameInMap("ip_stack")]
+        [Validation(Required=false)]
+        public string IpStack { get; set; }
+
         [NameInMap("is_enterprise_security_group")]
         [Validation(Required=false)]
         public bool? IsEnterpriseSecurityGroup { get; set; }
