@@ -1,3 +1,8 @@
+2022-09-26 Version: 1.0.18
+- Support Openapi Tag.
+- Support Tag Ram.
+
+
 2022-09-14 Version: 1.0.17
 - Support Openapi Tag.
 - Support Tag Ram.

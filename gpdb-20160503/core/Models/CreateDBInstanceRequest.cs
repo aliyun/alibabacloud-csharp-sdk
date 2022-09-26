@@ -101,6 +101,20 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string StorageType { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateDBInstanceRequestTag> Tag { get; set; }
+        public class CreateDBInstanceRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("UsedTime")]
         [Validation(Required=false)]
         public string UsedTime { get; set; }

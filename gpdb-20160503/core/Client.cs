@@ -525,6 +525,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["StorageType"] = request.StorageType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
             {
                 query["UsedTime"] = request.UsedTime;
@@ -655,6 +659,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
             {
                 query["StorageType"] = request.StorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
             {
@@ -3437,6 +3445,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchValue))
             {
                 query["SearchValue"] = request.SearchValue;
@@ -3479,6 +3491,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchValue))
             {
@@ -3531,6 +3547,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
@@ -3569,6 +3589,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
@@ -5589,6 +5613,200 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await DescribeSQLLogsOnSliceWithOptionsAsync(request, runtime);
         }
 
+        public DescribeSQLLogsV2Response DescribeSQLLogsV2WithOptions(DescribeSQLLogsV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Database))
+            {
+                query["Database"] = request.Database;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecuteCost))
+            {
+                query["ExecuteCost"] = request.ExecuteCost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecuteState))
+            {
+                query["ExecuteState"] = request.ExecuteState;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxExecuteCost))
+            {
+                query["MaxExecuteCost"] = request.MaxExecuteCost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinExecuteCost))
+            {
+                query["MinExecuteCost"] = request.MinExecuteCost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationClass))
+            {
+                query["OperationClass"] = request.OperationClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationType))
+            {
+                query["OperationType"] = request.OperationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryKeywords))
+            {
+                query["QueryKeywords"] = request.QueryKeywords;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIP))
+            {
+                query["SourceIP"] = request.SourceIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.User))
+            {
+                query["User"] = request.User;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSQLLogsV2",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSQLLogsV2Response>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeSQLLogsV2Response> DescribeSQLLogsV2WithOptionsAsync(DescribeSQLLogsV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Database))
+            {
+                query["Database"] = request.Database;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecuteCost))
+            {
+                query["ExecuteCost"] = request.ExecuteCost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecuteState))
+            {
+                query["ExecuteState"] = request.ExecuteState;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxExecuteCost))
+            {
+                query["MaxExecuteCost"] = request.MaxExecuteCost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinExecuteCost))
+            {
+                query["MinExecuteCost"] = request.MinExecuteCost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationClass))
+            {
+                query["OperationClass"] = request.OperationClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationType))
+            {
+                query["OperationType"] = request.OperationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryKeywords))
+            {
+                query["QueryKeywords"] = request.QueryKeywords;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIP))
+            {
+                query["SourceIP"] = request.SourceIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.User))
+            {
+                query["User"] = request.User;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSQLLogsV2",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSQLLogsV2Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeSQLLogsV2Response DescribeSQLLogsV2(DescribeSQLLogsV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSQLLogsV2WithOptions(request, runtime);
+        }
+
+        public async Task<DescribeSQLLogsV2Response> DescribeSQLLogsV2Async(DescribeSQLLogsV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSQLLogsV2WithOptionsAsync(request, runtime);
+        }
+
         public DescribeSampleDataResponse DescribeSampleDataWithOptions(DescribeSampleDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6061,6 +6279,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -6107,6 +6329,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
