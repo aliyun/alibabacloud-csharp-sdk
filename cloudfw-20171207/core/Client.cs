@@ -1480,10 +1480,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Query"] = request.Query;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
-            {
-                query["SourceIp"] = request.SourceIp;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1530,10 +1526,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
             {
                 query["Query"] = request.Query;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
-            {
-                query["SourceIp"] = request.SourceIp;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1606,10 +1598,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["SgStatus"] = request.SgStatus;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
-            {
-                query["SourceIp"] = request.SourceIp;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
@@ -1680,10 +1668,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SgStatus))
             {
                 query["SgStatus"] = request.SgStatus;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
-            {
-                query["SourceIp"] = request.SourceIp;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -1784,10 +1768,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Source"] = request.Source;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
-            {
-                query["SourceIp"] = request.SourceIp;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1862,10 +1842,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 query["Source"] = request.Source;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
-            {
-                query["SourceIp"] = request.SourceIp;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

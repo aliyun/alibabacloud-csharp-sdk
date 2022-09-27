@@ -45,10 +45,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string SgStatus { get; set; }
 
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
