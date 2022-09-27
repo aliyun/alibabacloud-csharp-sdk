@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20210728.Models
 {
     public class QueryTraceExtractRequest : TeaModel {
-        /// <summary>
-        /// 任务id
-        /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }

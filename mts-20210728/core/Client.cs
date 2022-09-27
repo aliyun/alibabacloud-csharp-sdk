@@ -806,6 +806,10 @@ namespace AlibabaCloud.SDK.Mts20210728
             {
                 body["Output"] = request.Output;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                body["Params"] = request.Params;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
             {
                 body["Url"] = request.Url;
@@ -849,6 +853,10 @@ namespace AlibabaCloud.SDK.Mts20210728
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Output))
             {
                 body["Output"] = request.Output;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                body["Params"] = request.Params;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
             {
