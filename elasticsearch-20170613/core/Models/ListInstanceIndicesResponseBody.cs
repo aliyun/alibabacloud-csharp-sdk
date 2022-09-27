@@ -16,16 +16,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("X-Managed-Count")]
             [Validation(Required=false)]
             public int? XManagedCount { get; set; }
+
             [NameInMap("X-Managed-StorageSize")]
             [Validation(Required=false)]
             public long? XManagedStorageSize { get; set; }
+
             [NameInMap("X-OSS-Count")]
             [Validation(Required=false)]
             public int? XOSSCount { get; set; }
+
             [NameInMap("X-OSS-StorageSize")]
             [Validation(Required=false)]
             public long? XOSSStorageSize { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("version")]
             [Validation(Required=false)]
             public string Version { get; set; }
-        };
+
+        }
 
     }
 

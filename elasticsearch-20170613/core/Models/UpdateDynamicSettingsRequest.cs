@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpdateDynamicSettingsRequest : TeaModel {
-        /// <summary>
-        /// 幂等参数
-        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }

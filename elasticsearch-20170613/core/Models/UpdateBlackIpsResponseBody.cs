@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("esIPBlacklist")]
             [Validation(Required=false)]
             public List<string> EsIPBlacklist { get; set; }
-        };
+
+        }
 
     }
 

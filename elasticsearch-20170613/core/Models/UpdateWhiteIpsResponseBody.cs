@@ -20,6 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("esIPWhitelist")]
             [Validation(Required=false)]
             public List<string> EsIPWhitelist { get; set; }
+
             [NameInMap("networkConfig")]
             [Validation(Required=false)]
             public UpdateWhiteIpsResponseBodyResultNetworkConfig NetworkConfig { get; set; }
@@ -43,7 +44,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 }
 
             }
-        };
+
+        }
 
     }
 

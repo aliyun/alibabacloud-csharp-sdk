@@ -20,40 +20,52 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("batchDelay")]
             [Validation(Required=false)]
             public int? BatchDelay { get; set; }
+
             [NameInMap("batchSize")]
             [Validation(Required=false)]
             public int? BatchSize { get; set; }
+
             [NameInMap("config")]
             [Validation(Required=false)]
             public string Config { get; set; }
+
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
             [NameInMap("gmtCreatedTime")]
             [Validation(Required=false)]
             public string GmtCreatedTime { get; set; }
+
             [NameInMap("gmtUpdateTime")]
             [Validation(Required=false)]
             public string GmtUpdateTime { get; set; }
+
             [NameInMap("pipelineId")]
             [Validation(Required=false)]
             public string PipelineId { get; set; }
+
             [NameInMap("pipelineStatus")]
             [Validation(Required=false)]
             public string PipelineStatus { get; set; }
+
             [NameInMap("queueCheckPointWrites")]
             [Validation(Required=false)]
             public int? QueueCheckPointWrites { get; set; }
+
             [NameInMap("queueMaxBytes")]
             [Validation(Required=false)]
             public int? QueueMaxBytes { get; set; }
+
             [NameInMap("queueType")]
             [Validation(Required=false)]
             public string QueueType { get; set; }
+
             [NameInMap("workers")]
             [Validation(Required=false)]
             public int? Workers { get; set; }
-        };
+
+        }
 
     }
 

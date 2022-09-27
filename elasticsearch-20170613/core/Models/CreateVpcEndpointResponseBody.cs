@@ -20,16 +20,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("endpointDomain")]
             [Validation(Required=false)]
             public string EndpointDomain { get; set; }
+
             [NameInMap("endpointId")]
             [Validation(Required=false)]
             public string EndpointId { get; set; }
+
             [NameInMap("endpointName")]
             [Validation(Required=false)]
             public string EndpointName { get; set; }
+
             [NameInMap("serviceId")]
             [Validation(Required=false)]
             public string ServiceId { get; set; }
-        };
+
+        }
 
     }
 

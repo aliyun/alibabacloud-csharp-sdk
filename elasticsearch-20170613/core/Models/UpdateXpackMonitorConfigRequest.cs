@@ -13,9 +13,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("enable")]
         [Validation(Required=false)]
-        public string Body { get; set; }
+        public bool? Enable { get; set; }
+
+        [NameInMap("endpoints")]
+        [Validation(Required=false)]
+        public List<string> Endpoints { get; set; }
+
+        [NameInMap("password")]
+        [Validation(Required=false)]
+        public string Password { get; set; }
+
+        [NameInMap("userName")]
+        [Validation(Required=false)]
+        public string UserName { get; set; }
 
     }
 

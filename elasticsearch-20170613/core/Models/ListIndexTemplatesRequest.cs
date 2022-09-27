@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListIndexTemplatesRequest : TeaModel {
-        [NameInMap("body")]
-        [Validation(Required=false)]
-        public string Body { get; set; }
-
         [NameInMap("indexTemplate")]
         [Validation(Required=false)]
         public string IndexTemplate { get; set; }

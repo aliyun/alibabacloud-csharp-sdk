@@ -55,7 +55,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ActivateZonesResponse ActivateZonesWithOptions(string InstanceId, ActivateZonesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -72,7 +71,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "ActivateZones",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/recover-zones",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/recover-zones",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -85,7 +84,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ActivateZonesResponse> ActivateZonesWithOptionsAsync(string InstanceId, ActivateZonesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -102,7 +100,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "ActivateZones",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/recover-zones",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/recover-zones",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -129,7 +127,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public AddConnectableClusterResponse AddConnectableClusterWithOptions(string InstanceId, AddConnectableClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -146,7 +143,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "AddConnectableCluster",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/connected-clusters",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/connected-clusters",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -159,7 +156,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<AddConnectableClusterResponse> AddConnectableClusterWithOptionsAsync(string InstanceId, AddConnectableClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -176,7 +172,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "AddConnectableCluster",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/connected-clusters",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/connected-clusters",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -203,7 +199,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public AddSnapshotRepoResponse AddSnapshotRepoWithOptions(string InstanceId, AddSnapshotRepoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -214,7 +209,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "AddSnapshotRepo",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/snapshot-repos",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/snapshot-repos",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -227,7 +222,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<AddSnapshotRepoResponse> AddSnapshotRepoWithOptionsAsync(string InstanceId, AddSnapshotRepoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -238,7 +232,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "AddSnapshotRepo",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/snapshot-repos",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/snapshot-repos",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -265,7 +259,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public CancelDeletionResponse CancelDeletionWithOptions(string InstanceId, CancelDeletionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -275,14 +268,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "CancelDeletion",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/cancel-deletion",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/cancel-deletion",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -295,7 +287,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<CancelDeletionResponse> CancelDeletionWithOptionsAsync(string InstanceId, CancelDeletionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -305,14 +296,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "CancelDeletion",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/cancel-deletion",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/cancel-deletion",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -339,7 +329,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public CancelLogstashDeletionResponse CancelLogstashDeletionWithOptions(string InstanceId, CancelLogstashDeletionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -349,14 +338,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "CancelLogstashDeletion",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/actions/cancel-deletion",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/cancel-deletion",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -369,7 +357,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<CancelLogstashDeletionResponse> CancelLogstashDeletionWithOptionsAsync(string InstanceId, CancelLogstashDeletionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -379,14 +366,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "CancelLogstashDeletion",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/actions/cancel-deletion",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/cancel-deletion",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -413,7 +399,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public CancelTaskResponse CancelTaskWithOptions(string InstanceId, CancelTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -427,14 +412,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "CancelTask",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/cancel-task",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/cancel-task",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -447,7 +431,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<CancelTaskResponse> CancelTaskWithOptionsAsync(string InstanceId, CancelTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -461,14 +444,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "CancelTask",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/cancel-task",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/cancel-task",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -589,7 +571,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public CloseDiagnosisResponse CloseDiagnosisWithOptions(string InstanceId, CloseDiagnosisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -603,14 +584,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "CloseDiagnosis",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/diagnosis/instances/" + InstanceId + "/actions/close-diagnosis",
+                Pathname = "/openapi/diagnosis/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/close-diagnosis",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -623,7 +603,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<CloseDiagnosisResponse> CloseDiagnosisWithOptionsAsync(string InstanceId, CloseDiagnosisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -637,14 +616,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "CloseDiagnosis",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/diagnosis/instances/" + InstanceId + "/actions/close-diagnosis",
+                Pathname = "/openapi/diagnosis/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/close-diagnosis",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -671,7 +649,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public CloseHttpsResponse CloseHttpsWithOptions(string InstanceId, CloseHttpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -681,14 +658,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "CloseHttps",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/close-https",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/close-https",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -701,7 +677,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<CloseHttpsResponse> CloseHttpsWithOptionsAsync(string InstanceId, CloseHttpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -711,14 +686,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "CloseHttps",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/close-https",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/close-https",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -745,8 +719,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public CloseManagedIndexResponse CloseManagedIndexWithOptions(string InstanceId, string Index, CloseManagedIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            Index = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Index);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -756,14 +728,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "CloseManagedIndex",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/indices/" + Index + "/close-managed",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/indices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Index) + "/close-managed",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -776,8 +747,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<CloseManagedIndexResponse> CloseManagedIndexWithOptionsAsync(string InstanceId, string Index, CloseManagedIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            Index = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Index);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -787,14 +756,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "CloseManagedIndex",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/indices/" + Index + "/close-managed",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/indices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Index) + "/close-managed",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -893,8 +861,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public CreateComponentIndexResponse CreateComponentIndexWithOptions(string InstanceId, string name, CreateComponentIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            name = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Meta))
             {
@@ -914,7 +880,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "CreateComponentIndex",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/component-index/" + name,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/component-index/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -927,8 +893,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<CreateComponentIndexResponse> CreateComponentIndexWithOptionsAsync(string InstanceId, string name, CreateComponentIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            name = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Meta))
             {
@@ -948,7 +912,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "CreateComponentIndex",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/component-index/" + name,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/component-index/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -975,7 +939,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public CreateDataStreamResponse CreateDataStreamWithOptions(string InstanceId, CreateDataStreamRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -992,7 +955,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "CreateDataStream",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/data-streams",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/data-streams",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1005,7 +968,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<CreateDataStreamResponse> CreateDataStreamWithOptionsAsync(string InstanceId, CreateDataStreamRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -1022,7 +984,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "CreateDataStream",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/data-streams",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/data-streams",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1049,7 +1011,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public CreateDataTasksResponse CreateDataTasksWithOptions(string InstanceId, CreateDataTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -1066,7 +1027,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "CreateDataTasks",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/data-task",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/data-task",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1079,7 +1040,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<CreateDataTasksResponse> CreateDataTasksWithOptionsAsync(string InstanceId, CreateDataTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -1096,7 +1056,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "CreateDataTasks",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/data-task",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/data-task",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1123,7 +1083,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public CreateILMPolicyResponse CreateILMPolicyWithOptions(string InstanceId, CreateILMPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -1140,7 +1099,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "CreateILMPolicy",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/ilm-policies",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/ilm-policies",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1153,7 +1112,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<CreateILMPolicyResponse> CreateILMPolicyWithOptionsAsync(string InstanceId, CreateILMPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -1170,7 +1128,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "CreateILMPolicy",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/ilm-policies",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/ilm-policies",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1197,7 +1155,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public CreateIndexTemplateResponse CreateIndexTemplateWithOptions(string InstanceId, CreateIndexTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -1214,7 +1171,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "CreateIndexTemplate",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/index-templates",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/index-templates",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1227,7 +1184,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<CreateIndexTemplateResponse> CreateIndexTemplateWithOptionsAsync(string InstanceId, CreateIndexTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -1244,7 +1200,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "CreateIndexTemplate",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/index-templates",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/index-templates",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1401,7 +1357,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public CreatePipelinesResponse CreatePipelinesWithOptions(string InstanceId, CreatePipelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -1422,7 +1377,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "CreatePipelines",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/pipelines",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/pipelines",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1435,7 +1390,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<CreatePipelinesResponse> CreatePipelinesWithOptionsAsync(string InstanceId, CreatePipelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -1456,7 +1410,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "CreatePipelines",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/pipelines",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/pipelines",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1483,7 +1437,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public CreateSnapshotResponse CreateSnapshotWithOptions(string InstanceId, CreateSnapshotRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -1500,7 +1453,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "CreateSnapshot",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/snapshots",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/snapshots",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1513,7 +1466,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<CreateSnapshotResponse> CreateSnapshotWithOptionsAsync(string InstanceId, CreateSnapshotRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -1530,7 +1482,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "CreateSnapshot",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/snapshots",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/snapshots",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1557,7 +1509,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public CreateVpcEndpointResponse CreateVpcEndpointWithOptions(string InstanceId, CreateVpcEndpointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -1587,7 +1538,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "CreateVpcEndpoint",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/vpc-endpoints",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/vpc-endpoints",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1600,7 +1551,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<CreateVpcEndpointResponse> CreateVpcEndpointWithOptionsAsync(string InstanceId, CreateVpcEndpointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -1630,7 +1580,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "CreateVpcEndpoint",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/vpc-endpoints",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/vpc-endpoints",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1657,7 +1607,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public DeactivateZonesResponse DeactivateZonesWithOptions(string InstanceId, DeactivateZonesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -1674,7 +1623,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "DeactivateZones",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/down-zones",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/down-zones",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1687,7 +1636,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<DeactivateZonesResponse> DeactivateZonesWithOptionsAsync(string InstanceId, DeactivateZonesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -1704,7 +1652,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "DeactivateZones",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/down-zones",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/down-zones",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1731,7 +1679,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public DeleteCollectorResponse DeleteCollectorWithOptions(string ResId, DeleteCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ResId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -1741,14 +1688,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteCollector",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/collectors/" + ResId,
+                Pathname = "/openapi/collectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1761,7 +1707,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<DeleteCollectorResponse> DeleteCollectorWithOptionsAsync(string ResId, DeleteCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ResId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -1771,14 +1716,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteCollector",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/collectors/" + ResId,
+                Pathname = "/openapi/collectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1788,36 +1732,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteCollectorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DeleteComponentIndexResponse DeleteComponentIndex(string InstanceId, string name, DeleteComponentIndexRequest request)
+        public DeleteComponentIndexResponse DeleteComponentIndex(string InstanceId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteComponentIndexWithOptions(InstanceId, name, request, headers, runtime);
+            return DeleteComponentIndexWithOptions(InstanceId, name, headers, runtime);
         }
 
-        public async Task<DeleteComponentIndexResponse> DeleteComponentIndexAsync(string InstanceId, string name, DeleteComponentIndexRequest request)
+        public async Task<DeleteComponentIndexResponse> DeleteComponentIndexAsync(string InstanceId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteComponentIndexWithOptionsAsync(InstanceId, name, request, headers, runtime);
+            return await DeleteComponentIndexWithOptionsAsync(InstanceId, name, headers, runtime);
         }
 
-        public DeleteComponentIndexResponse DeleteComponentIndexWithOptions(string InstanceId, string name, DeleteComponentIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteComponentIndexResponse DeleteComponentIndexWithOptions(string InstanceId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            name = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteComponentIndex",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/component-index/" + name,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/component-index/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1827,22 +1767,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteComponentIndexResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DeleteComponentIndexResponse> DeleteComponentIndexWithOptionsAsync(string InstanceId, string name, DeleteComponentIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteComponentIndexResponse> DeleteComponentIndexWithOptionsAsync(string InstanceId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            name = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteComponentIndex",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/component-index/" + name,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/component-index/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1869,7 +1805,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public DeleteConnectedClusterResponse DeleteConnectedClusterWithOptions(string InstanceId, DeleteConnectedClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -1883,14 +1818,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteConnectedCluster",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/connected-clusters",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/connected-clusters",
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1903,7 +1837,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<DeleteConnectedClusterResponse> DeleteConnectedClusterWithOptionsAsync(string InstanceId, DeleteConnectedClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -1917,14 +1850,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteConnectedCluster",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/connected-clusters",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/connected-clusters",
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1951,8 +1883,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public DeleteDataStreamResponse DeleteDataStreamWithOptions(string InstanceId, string DataStream, DeleteDataStreamRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            DataStream = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DataStream);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -1962,14 +1892,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteDataStream",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/data-streams/" + DataStream,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/data-streams/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DataStream),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1982,8 +1911,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<DeleteDataStreamResponse> DeleteDataStreamWithOptionsAsync(string InstanceId, string DataStream, DeleteDataStreamRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            DataStream = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DataStream);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -1993,14 +1920,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteDataStream",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/data-streams/" + DataStream,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/data-streams/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DataStream),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2027,7 +1953,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public DeleteDataTaskResponse DeleteDataTaskWithOptions(string InstanceId, DeleteDataTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -2041,14 +1966,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteDataTask",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/data-task",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/data-task",
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2061,7 +1985,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<DeleteDataTaskResponse> DeleteDataTaskWithOptionsAsync(string InstanceId, DeleteDataTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -2075,14 +1998,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteDataTask",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/data-task",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/data-task",
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2092,36 +2014,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteDataTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DeleteDeprecatedTemplateResponse DeleteDeprecatedTemplate(string InstanceId, string name, DeleteDeprecatedTemplateRequest request)
+        public DeleteDeprecatedTemplateResponse DeleteDeprecatedTemplate(string InstanceId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteDeprecatedTemplateWithOptions(InstanceId, name, request, headers, runtime);
+            return DeleteDeprecatedTemplateWithOptions(InstanceId, name, headers, runtime);
         }
 
-        public async Task<DeleteDeprecatedTemplateResponse> DeleteDeprecatedTemplateAsync(string InstanceId, string name, DeleteDeprecatedTemplateRequest request)
+        public async Task<DeleteDeprecatedTemplateResponse> DeleteDeprecatedTemplateAsync(string InstanceId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteDeprecatedTemplateWithOptionsAsync(InstanceId, name, request, headers, runtime);
+            return await DeleteDeprecatedTemplateWithOptionsAsync(InstanceId, name, headers, runtime);
         }
 
-        public DeleteDeprecatedTemplateResponse DeleteDeprecatedTemplateWithOptions(string InstanceId, string name, DeleteDeprecatedTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteDeprecatedTemplateResponse DeleteDeprecatedTemplateWithOptions(string InstanceId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            name = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteDeprecatedTemplate",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/deprecated-templates/" + name,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/deprecated-templates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2131,22 +2049,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteDeprecatedTemplateResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DeleteDeprecatedTemplateResponse> DeleteDeprecatedTemplateWithOptionsAsync(string InstanceId, string name, DeleteDeprecatedTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteDeprecatedTemplateResponse> DeleteDeprecatedTemplateWithOptionsAsync(string InstanceId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            name = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteDeprecatedTemplate",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/deprecated-templates/" + name,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/deprecated-templates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2156,36 +2070,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteDeprecatedTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DeleteILMPolicyResponse DeleteILMPolicy(string InstanceId, string PolicyName, DeleteILMPolicyRequest request)
+        public DeleteILMPolicyResponse DeleteILMPolicy(string InstanceId, string PolicyName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteILMPolicyWithOptions(InstanceId, PolicyName, request, headers, runtime);
+            return DeleteILMPolicyWithOptions(InstanceId, PolicyName, headers, runtime);
         }
 
-        public async Task<DeleteILMPolicyResponse> DeleteILMPolicyAsync(string InstanceId, string PolicyName, DeleteILMPolicyRequest request)
+        public async Task<DeleteILMPolicyResponse> DeleteILMPolicyAsync(string InstanceId, string PolicyName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteILMPolicyWithOptionsAsync(InstanceId, PolicyName, request, headers, runtime);
+            return await DeleteILMPolicyWithOptionsAsync(InstanceId, PolicyName, headers, runtime);
         }
 
-        public DeleteILMPolicyResponse DeleteILMPolicyWithOptions(string InstanceId, string PolicyName, DeleteILMPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteILMPolicyResponse DeleteILMPolicyWithOptions(string InstanceId, string PolicyName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            PolicyName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PolicyName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteILMPolicy",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/ilm-policies/" + PolicyName,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/ilm-policies/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PolicyName),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2195,22 +2105,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteILMPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DeleteILMPolicyResponse> DeleteILMPolicyWithOptionsAsync(string InstanceId, string PolicyName, DeleteILMPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteILMPolicyResponse> DeleteILMPolicyWithOptionsAsync(string InstanceId, string PolicyName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            PolicyName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PolicyName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteILMPolicy",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/ilm-policies/" + PolicyName,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/ilm-policies/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PolicyName),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2220,36 +2126,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteILMPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DeleteIndexTemplateResponse DeleteIndexTemplate(string InstanceId, string IndexTemplate, DeleteIndexTemplateRequest request)
+        public DeleteIndexTemplateResponse DeleteIndexTemplate(string InstanceId, string IndexTemplate)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteIndexTemplateWithOptions(InstanceId, IndexTemplate, request, headers, runtime);
+            return DeleteIndexTemplateWithOptions(InstanceId, IndexTemplate, headers, runtime);
         }
 
-        public async Task<DeleteIndexTemplateResponse> DeleteIndexTemplateAsync(string InstanceId, string IndexTemplate, DeleteIndexTemplateRequest request)
+        public async Task<DeleteIndexTemplateResponse> DeleteIndexTemplateAsync(string InstanceId, string IndexTemplate)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteIndexTemplateWithOptionsAsync(InstanceId, IndexTemplate, request, headers, runtime);
+            return await DeleteIndexTemplateWithOptionsAsync(InstanceId, IndexTemplate, headers, runtime);
         }
 
-        public DeleteIndexTemplateResponse DeleteIndexTemplateWithOptions(string InstanceId, string IndexTemplate, DeleteIndexTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteIndexTemplateResponse DeleteIndexTemplateWithOptions(string InstanceId, string IndexTemplate, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            IndexTemplate = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(IndexTemplate);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteIndexTemplate",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/index-templates/" + IndexTemplate,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/index-templates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(IndexTemplate),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2259,22 +2161,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteIndexTemplateResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DeleteIndexTemplateResponse> DeleteIndexTemplateWithOptionsAsync(string InstanceId, string IndexTemplate, DeleteIndexTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteIndexTemplateResponse> DeleteIndexTemplateWithOptionsAsync(string InstanceId, string IndexTemplate, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            IndexTemplate = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(IndexTemplate);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteIndexTemplate",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/index-templates/" + IndexTemplate,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/index-templates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(IndexTemplate),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2301,7 +2199,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public DeleteInstanceResponse DeleteInstanceWithOptions(string InstanceId, DeleteInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -2315,14 +2212,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteInstance",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2335,7 +2231,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<DeleteInstanceResponse> DeleteInstanceWithOptionsAsync(string InstanceId, DeleteInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -2349,14 +2244,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteInstance",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2383,7 +2277,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public DeleteLogstashResponse DeleteLogstashWithOptions(string InstanceId, DeleteLogstashRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -2397,14 +2290,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteLogstash",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId,
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2417,7 +2309,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<DeleteLogstashResponse> DeleteLogstashWithOptionsAsync(string InstanceId, DeleteLogstashRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -2431,14 +2322,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteLogstash",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId,
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2465,7 +2355,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public DeletePipelinesResponse DeletePipelinesWithOptions(string InstanceId, DeletePipelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -2479,14 +2368,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeletePipelines",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/pipelines",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/pipelines",
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2499,7 +2387,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<DeletePipelinesResponse> DeletePipelinesWithOptionsAsync(string InstanceId, DeletePipelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -2513,14 +2400,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeletePipelines",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/pipelines",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/pipelines",
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2547,7 +2433,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public DeleteSnapshotRepoResponse DeleteSnapshotRepoWithOptions(string InstanceId, DeleteSnapshotRepoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -2561,14 +2446,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteSnapshotRepo",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/snapshot-repos",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/snapshot-repos",
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2581,7 +2465,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<DeleteSnapshotRepoResponse> DeleteSnapshotRepoWithOptionsAsync(string InstanceId, DeleteSnapshotRepoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -2595,14 +2478,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteSnapshotRepo",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/snapshot-repos",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/snapshot-repos",
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2629,8 +2511,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public DeleteVpcEndpointResponse DeleteVpcEndpointWithOptions(string InstanceId, string EndpointId, DeleteVpcEndpointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            EndpointId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(EndpointId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -2640,14 +2520,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteVpcEndpoint",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/vpc-endpoints/" + EndpointId,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/vpc-endpoints/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(EndpointId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2660,8 +2539,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<DeleteVpcEndpointResponse> DeleteVpcEndpointWithOptionsAsync(string InstanceId, string EndpointId, DeleteVpcEndpointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            EndpointId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(EndpointId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -2671,14 +2548,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteVpcEndpoint",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/vpc-endpoints/" + EndpointId,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/vpc-endpoints/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(EndpointId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2688,35 +2564,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteVpcEndpointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeAckOperatorResponse DescribeAckOperator(string ClusterId, DescribeAckOperatorRequest request)
+        public DescribeAckOperatorResponse DescribeAckOperator(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeAckOperatorWithOptions(ClusterId, request, headers, runtime);
+            return DescribeAckOperatorWithOptions(ClusterId, headers, runtime);
         }
 
-        public async Task<DescribeAckOperatorResponse> DescribeAckOperatorAsync(string ClusterId, DescribeAckOperatorRequest request)
+        public async Task<DescribeAckOperatorResponse> DescribeAckOperatorAsync(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeAckOperatorWithOptionsAsync(ClusterId, request, headers, runtime);
+            return await DescribeAckOperatorWithOptionsAsync(ClusterId, headers, runtime);
         }
 
-        public DescribeAckOperatorResponse DescribeAckOperatorWithOptions(string ClusterId, DescribeAckOperatorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeAckOperatorResponse DescribeAckOperatorWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeAckOperator",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/ack-clusters/" + ClusterId + "/operator",
+                Pathname = "/openapi/ack-clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/operator",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2726,21 +2599,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeAckOperatorResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeAckOperatorResponse> DescribeAckOperatorWithOptionsAsync(string ClusterId, DescribeAckOperatorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeAckOperatorResponse> DescribeAckOperatorWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeAckOperator",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/ack-clusters/" + ClusterId + "/operator",
+                Pathname = "/openapi/ack-clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/operator",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2750,35 +2620,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeAckOperatorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeApmResponse DescribeApm(string instanceId, DescribeApmRequest request)
+        public DescribeApmResponse DescribeApm(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeApmWithOptions(instanceId, request, headers, runtime);
+            return DescribeApmWithOptions(instanceId, headers, runtime);
         }
 
-        public async Task<DescribeApmResponse> DescribeApmAsync(string instanceId, DescribeApmRequest request)
+        public async Task<DescribeApmResponse> DescribeApmAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeApmWithOptionsAsync(instanceId, request, headers, runtime);
+            return await DescribeApmWithOptionsAsync(instanceId, headers, runtime);
         }
 
-        public DescribeApmResponse DescribeApmWithOptions(string instanceId, DescribeApmRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeApmResponse DescribeApmWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeApm",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/apm/" + instanceId,
+                Pathname = "/openapi/apm/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2788,21 +2655,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeApmResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeApmResponse> DescribeApmWithOptionsAsync(string instanceId, DescribeApmRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeApmResponse> DescribeApmWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeApm",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/apm/" + instanceId,
+                Pathname = "/openapi/apm/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2812,35 +2676,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeApmResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeCollectorResponse DescribeCollector(string ResId, DescribeCollectorRequest request)
+        public DescribeCollectorResponse DescribeCollector(string ResId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeCollectorWithOptions(ResId, request, headers, runtime);
+            return DescribeCollectorWithOptions(ResId, headers, runtime);
         }
 
-        public async Task<DescribeCollectorResponse> DescribeCollectorAsync(string ResId, DescribeCollectorRequest request)
+        public async Task<DescribeCollectorResponse> DescribeCollectorAsync(string ResId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeCollectorWithOptionsAsync(ResId, request, headers, runtime);
+            return await DescribeCollectorWithOptionsAsync(ResId, headers, runtime);
         }
 
-        public DescribeCollectorResponse DescribeCollectorWithOptions(string ResId, DescribeCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeCollectorResponse DescribeCollectorWithOptions(string ResId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ResId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeCollector",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/collectors/" + ResId,
+                Pathname = "/openapi/collectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2850,21 +2711,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeCollectorResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeCollectorResponse> DescribeCollectorWithOptionsAsync(string ResId, DescribeCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeCollectorResponse> DescribeCollectorWithOptionsAsync(string ResId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ResId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeCollector",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/collectors/" + ResId,
+                Pathname = "/openapi/collectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2874,36 +2732,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeCollectorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeComponentIndexResponse DescribeComponentIndex(string InstanceId, string name, DescribeComponentIndexRequest request)
+        public DescribeComponentIndexResponse DescribeComponentIndex(string InstanceId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeComponentIndexWithOptions(InstanceId, name, request, headers, runtime);
+            return DescribeComponentIndexWithOptions(InstanceId, name, headers, runtime);
         }
 
-        public async Task<DescribeComponentIndexResponse> DescribeComponentIndexAsync(string InstanceId, string name, DescribeComponentIndexRequest request)
+        public async Task<DescribeComponentIndexResponse> DescribeComponentIndexAsync(string InstanceId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeComponentIndexWithOptionsAsync(InstanceId, name, request, headers, runtime);
+            return await DescribeComponentIndexWithOptionsAsync(InstanceId, name, headers, runtime);
         }
 
-        public DescribeComponentIndexResponse DescribeComponentIndexWithOptions(string InstanceId, string name, DescribeComponentIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeComponentIndexResponse DescribeComponentIndexWithOptions(string InstanceId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            name = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeComponentIndex",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/component-index/" + name,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/component-index/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2913,22 +2767,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeComponentIndexResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeComponentIndexResponse> DescribeComponentIndexWithOptionsAsync(string InstanceId, string name, DescribeComponentIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeComponentIndexResponse> DescribeComponentIndexWithOptionsAsync(string InstanceId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            name = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeComponentIndex",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/component-index/" + name,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/component-index/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2955,7 +2805,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public DescribeConnectableClustersResponse DescribeConnectableClustersWithOptions(string InstanceId, DescribeConnectableClustersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlreadySetItems))
             {
@@ -2965,14 +2814,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeConnectableClusters",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/connectable-clusters",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/connectable-clusters",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2985,7 +2833,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<DescribeConnectableClustersResponse> DescribeConnectableClustersWithOptionsAsync(string InstanceId, DescribeConnectableClustersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlreadySetItems))
             {
@@ -2995,14 +2842,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeConnectableClusters",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/connectable-clusters",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/connectable-clusters",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3012,36 +2858,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeConnectableClustersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeDeprecatedTemplateResponse DescribeDeprecatedTemplate(string InstanceId, string name, DescribeDeprecatedTemplateRequest request)
+        public DescribeDeprecatedTemplateResponse DescribeDeprecatedTemplate(string InstanceId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeDeprecatedTemplateWithOptions(InstanceId, name, request, headers, runtime);
+            return DescribeDeprecatedTemplateWithOptions(InstanceId, name, headers, runtime);
         }
 
-        public async Task<DescribeDeprecatedTemplateResponse> DescribeDeprecatedTemplateAsync(string InstanceId, string name, DescribeDeprecatedTemplateRequest request)
+        public async Task<DescribeDeprecatedTemplateResponse> DescribeDeprecatedTemplateAsync(string InstanceId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeDeprecatedTemplateWithOptionsAsync(InstanceId, name, request, headers, runtime);
+            return await DescribeDeprecatedTemplateWithOptionsAsync(InstanceId, name, headers, runtime);
         }
 
-        public DescribeDeprecatedTemplateResponse DescribeDeprecatedTemplateWithOptions(string InstanceId, string name, DescribeDeprecatedTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeDeprecatedTemplateResponse DescribeDeprecatedTemplateWithOptions(string InstanceId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            name = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeDeprecatedTemplate",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/deprecated-templates/" + name,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/deprecated-templates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3051,22 +2893,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeDeprecatedTemplateResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeDeprecatedTemplateResponse> DescribeDeprecatedTemplateWithOptionsAsync(string InstanceId, string name, DescribeDeprecatedTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeDeprecatedTemplateResponse> DescribeDeprecatedTemplateWithOptionsAsync(string InstanceId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            name = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeDeprecatedTemplate",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/deprecated-templates/" + name,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/deprecated-templates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3093,8 +2931,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public DescribeDiagnoseReportResponse DescribeDiagnoseReportWithOptions(string InstanceId, string ReportId, DescribeDiagnoseReportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            ReportId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ReportId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
@@ -3104,14 +2940,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeDiagnoseReport",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/diagnosis/instances/" + InstanceId + "/reports/" + ReportId,
+                Pathname = "/openapi/diagnosis/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/reports/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ReportId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3124,8 +2959,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<DescribeDiagnoseReportResponse> DescribeDiagnoseReportWithOptionsAsync(string InstanceId, string ReportId, DescribeDiagnoseReportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            ReportId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ReportId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
@@ -3135,14 +2968,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeDiagnoseReport",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/diagnosis/instances/" + InstanceId + "/reports/" + ReportId,
+                Pathname = "/openapi/diagnosis/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/reports/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ReportId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3169,7 +3001,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public DescribeDiagnosisSettingsResponse DescribeDiagnosisSettingsWithOptions(string InstanceId, DescribeDiagnosisSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
@@ -3179,14 +3010,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeDiagnosisSettings",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/diagnosis/instances/" + InstanceId + "/settings",
+                Pathname = "/openapi/diagnosis/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/settings",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3199,7 +3029,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<DescribeDiagnosisSettingsResponse> DescribeDiagnosisSettingsWithOptionsAsync(string InstanceId, DescribeDiagnosisSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
@@ -3209,14 +3038,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeDiagnosisSettings",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/diagnosis/instances/" + InstanceId + "/settings",
+                Pathname = "/openapi/diagnosis/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/settings",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3226,35 +3054,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeDiagnosisSettingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeDynamicSettingsResponse DescribeDynamicSettings(string InstanceId, DescribeDynamicSettingsRequest request)
+        public DescribeDynamicSettingsResponse DescribeDynamicSettings(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeDynamicSettingsWithOptions(InstanceId, request, headers, runtime);
+            return DescribeDynamicSettingsWithOptions(InstanceId, headers, runtime);
         }
 
-        public async Task<DescribeDynamicSettingsResponse> DescribeDynamicSettingsAsync(string InstanceId, DescribeDynamicSettingsRequest request)
+        public async Task<DescribeDynamicSettingsResponse> DescribeDynamicSettingsAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeDynamicSettingsWithOptionsAsync(InstanceId, request, headers, runtime);
+            return await DescribeDynamicSettingsWithOptionsAsync(InstanceId, headers, runtime);
         }
 
-        public DescribeDynamicSettingsResponse DescribeDynamicSettingsWithOptions(string InstanceId, DescribeDynamicSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeDynamicSettingsResponse DescribeDynamicSettingsWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeDynamicSettings",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/dynamic-settings",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/dynamic-settings",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3264,21 +3089,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeDynamicSettingsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeDynamicSettingsResponse> DescribeDynamicSettingsWithOptionsAsync(string InstanceId, DescribeDynamicSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeDynamicSettingsResponse> DescribeDynamicSettingsWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeDynamicSettings",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/dynamic-settings",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/dynamic-settings",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3288,35 +3110,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeDynamicSettingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeElasticsearchHealthResponse DescribeElasticsearchHealth(string InstanceId, DescribeElasticsearchHealthRequest request)
+        public DescribeElasticsearchHealthResponse DescribeElasticsearchHealth(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeElasticsearchHealthWithOptions(InstanceId, request, headers, runtime);
+            return DescribeElasticsearchHealthWithOptions(InstanceId, headers, runtime);
         }
 
-        public async Task<DescribeElasticsearchHealthResponse> DescribeElasticsearchHealthAsync(string InstanceId, DescribeElasticsearchHealthRequest request)
+        public async Task<DescribeElasticsearchHealthResponse> DescribeElasticsearchHealthAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeElasticsearchHealthWithOptionsAsync(InstanceId, request, headers, runtime);
+            return await DescribeElasticsearchHealthWithOptionsAsync(InstanceId, headers, runtime);
         }
 
-        public DescribeElasticsearchHealthResponse DescribeElasticsearchHealthWithOptions(string InstanceId, DescribeElasticsearchHealthRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeElasticsearchHealthResponse DescribeElasticsearchHealthWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeElasticsearchHealth",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/elasticsearch-health",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/elasticsearch-health",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3326,21 +3145,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeElasticsearchHealthResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeElasticsearchHealthResponse> DescribeElasticsearchHealthWithOptionsAsync(string InstanceId, DescribeElasticsearchHealthRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeElasticsearchHealthResponse> DescribeElasticsearchHealthWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeElasticsearchHealth",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/elasticsearch-health",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/elasticsearch-health",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3350,36 +3166,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeElasticsearchHealthResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeILMPolicyResponse DescribeILMPolicy(string InstanceId, string PolicyName, DescribeILMPolicyRequest request)
+        public DescribeILMPolicyResponse DescribeILMPolicy(string InstanceId, string PolicyName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeILMPolicyWithOptions(InstanceId, PolicyName, request, headers, runtime);
+            return DescribeILMPolicyWithOptions(InstanceId, PolicyName, headers, runtime);
         }
 
-        public async Task<DescribeILMPolicyResponse> DescribeILMPolicyAsync(string InstanceId, string PolicyName, DescribeILMPolicyRequest request)
+        public async Task<DescribeILMPolicyResponse> DescribeILMPolicyAsync(string InstanceId, string PolicyName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeILMPolicyWithOptionsAsync(InstanceId, PolicyName, request, headers, runtime);
+            return await DescribeILMPolicyWithOptionsAsync(InstanceId, PolicyName, headers, runtime);
         }
 
-        public DescribeILMPolicyResponse DescribeILMPolicyWithOptions(string InstanceId, string PolicyName, DescribeILMPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeILMPolicyResponse DescribeILMPolicyWithOptions(string InstanceId, string PolicyName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            PolicyName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PolicyName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeILMPolicy",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/ilm-policies/" + PolicyName,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/ilm-policies/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PolicyName),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3389,22 +3201,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeILMPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeILMPolicyResponse> DescribeILMPolicyWithOptionsAsync(string InstanceId, string PolicyName, DescribeILMPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeILMPolicyResponse> DescribeILMPolicyWithOptionsAsync(string InstanceId, string PolicyName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            PolicyName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PolicyName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeILMPolicy",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/ilm-policies/" + PolicyName,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/ilm-policies/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PolicyName),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3414,36 +3222,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeILMPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeIndexTemplateResponse DescribeIndexTemplate(string InstanceId, string IndexTemplate, DescribeIndexTemplateRequest request)
+        public DescribeIndexTemplateResponse DescribeIndexTemplate(string InstanceId, string IndexTemplate)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeIndexTemplateWithOptions(InstanceId, IndexTemplate, request, headers, runtime);
+            return DescribeIndexTemplateWithOptions(InstanceId, IndexTemplate, headers, runtime);
         }
 
-        public async Task<DescribeIndexTemplateResponse> DescribeIndexTemplateAsync(string InstanceId, string IndexTemplate, DescribeIndexTemplateRequest request)
+        public async Task<DescribeIndexTemplateResponse> DescribeIndexTemplateAsync(string InstanceId, string IndexTemplate)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeIndexTemplateWithOptionsAsync(InstanceId, IndexTemplate, request, headers, runtime);
+            return await DescribeIndexTemplateWithOptionsAsync(InstanceId, IndexTemplate, headers, runtime);
         }
 
-        public DescribeIndexTemplateResponse DescribeIndexTemplateWithOptions(string InstanceId, string IndexTemplate, DescribeIndexTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeIndexTemplateResponse DescribeIndexTemplateWithOptions(string InstanceId, string IndexTemplate, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            IndexTemplate = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(IndexTemplate);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeIndexTemplate",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/index-templates/" + IndexTemplate,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/index-templates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(IndexTemplate),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3453,22 +3257,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeIndexTemplateResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeIndexTemplateResponse> DescribeIndexTemplateWithOptionsAsync(string InstanceId, string IndexTemplate, DescribeIndexTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeIndexTemplateResponse> DescribeIndexTemplateWithOptionsAsync(string InstanceId, string IndexTemplate, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            IndexTemplate = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(IndexTemplate);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeIndexTemplate",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/index-templates/" + IndexTemplate,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/index-templates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(IndexTemplate),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3478,35 +3278,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeIndexTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeInstanceResponse DescribeInstance(string InstanceId, DescribeInstanceRequest request)
+        public DescribeInstanceResponse DescribeInstance(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeInstanceWithOptions(InstanceId, request, headers, runtime);
+            return DescribeInstanceWithOptions(InstanceId, headers, runtime);
         }
 
-        public async Task<DescribeInstanceResponse> DescribeInstanceAsync(string InstanceId, DescribeInstanceRequest request)
+        public async Task<DescribeInstanceResponse> DescribeInstanceAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeInstanceWithOptionsAsync(InstanceId, request, headers, runtime);
+            return await DescribeInstanceWithOptionsAsync(InstanceId, headers, runtime);
         }
 
-        public DescribeInstanceResponse DescribeInstanceWithOptions(string InstanceId, DescribeInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeInstanceResponse DescribeInstanceWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeInstance",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3516,21 +3313,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeInstanceResponse> DescribeInstanceWithOptionsAsync(string InstanceId, DescribeInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeInstanceResponse> DescribeInstanceWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeInstance",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3540,35 +3334,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeKibanaSettingsResponse DescribeKibanaSettings(string InstanceId, DescribeKibanaSettingsRequest request)
+        public DescribeKibanaSettingsResponse DescribeKibanaSettings(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeKibanaSettingsWithOptions(InstanceId, request, headers, runtime);
+            return DescribeKibanaSettingsWithOptions(InstanceId, headers, runtime);
         }
 
-        public async Task<DescribeKibanaSettingsResponse> DescribeKibanaSettingsAsync(string InstanceId, DescribeKibanaSettingsRequest request)
+        public async Task<DescribeKibanaSettingsResponse> DescribeKibanaSettingsAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeKibanaSettingsWithOptionsAsync(InstanceId, request, headers, runtime);
+            return await DescribeKibanaSettingsWithOptionsAsync(InstanceId, headers, runtime);
         }
 
-        public DescribeKibanaSettingsResponse DescribeKibanaSettingsWithOptions(string InstanceId, DescribeKibanaSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeKibanaSettingsResponse DescribeKibanaSettingsWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeKibanaSettings",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/kibana-settings",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/kibana-settings",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3578,21 +3369,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeKibanaSettingsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeKibanaSettingsResponse> DescribeKibanaSettingsWithOptionsAsync(string InstanceId, DescribeKibanaSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeKibanaSettingsResponse> DescribeKibanaSettingsWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeKibanaSettings",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/kibana-settings",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/kibana-settings",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3602,35 +3390,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeKibanaSettingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeLogstashResponse DescribeLogstash(string InstanceId, DescribeLogstashRequest request)
+        public DescribeLogstashResponse DescribeLogstash(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeLogstashWithOptions(InstanceId, request, headers, runtime);
+            return DescribeLogstashWithOptions(InstanceId, headers, runtime);
         }
 
-        public async Task<DescribeLogstashResponse> DescribeLogstashAsync(string InstanceId, DescribeLogstashRequest request)
+        public async Task<DescribeLogstashResponse> DescribeLogstashAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeLogstashWithOptionsAsync(InstanceId, request, headers, runtime);
+            return await DescribeLogstashWithOptionsAsync(InstanceId, headers, runtime);
         }
 
-        public DescribeLogstashResponse DescribeLogstashWithOptions(string InstanceId, DescribeLogstashRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeLogstashResponse DescribeLogstashWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeLogstash",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId,
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3640,21 +3425,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeLogstashResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeLogstashResponse> DescribeLogstashWithOptionsAsync(string InstanceId, DescribeLogstashRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeLogstashResponse> DescribeLogstashWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeLogstash",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId,
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3664,36 +3446,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeLogstashResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribePipelineResponse DescribePipeline(string InstanceId, string PipelineId, DescribePipelineRequest request)
+        public DescribePipelineResponse DescribePipeline(string InstanceId, string PipelineId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribePipelineWithOptions(InstanceId, PipelineId, request, headers, runtime);
+            return DescribePipelineWithOptions(InstanceId, PipelineId, headers, runtime);
         }
 
-        public async Task<DescribePipelineResponse> DescribePipelineAsync(string InstanceId, string PipelineId, DescribePipelineRequest request)
+        public async Task<DescribePipelineResponse> DescribePipelineAsync(string InstanceId, string PipelineId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribePipelineWithOptionsAsync(InstanceId, PipelineId, request, headers, runtime);
+            return await DescribePipelineWithOptionsAsync(InstanceId, PipelineId, headers, runtime);
         }
 
-        public DescribePipelineResponse DescribePipelineWithOptions(string InstanceId, string PipelineId, DescribePipelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribePipelineResponse DescribePipelineWithOptions(string InstanceId, string PipelineId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            PipelineId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PipelineId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribePipeline",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/pipelines/" + PipelineId,
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/pipelines/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PipelineId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3703,22 +3481,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribePipelineResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribePipelineResponse> DescribePipelineWithOptionsAsync(string InstanceId, string PipelineId, DescribePipelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribePipelineResponse> DescribePipelineWithOptionsAsync(string InstanceId, string PipelineId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            PipelineId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PipelineId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribePipeline",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/pipelines/" + PipelineId,
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/pipelines/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PipelineId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3745,7 +3519,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public DescribePipelineManagementConfigResponse DescribePipelineManagementConfigWithOptions(string InstanceId, DescribePipelineManagementConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -3755,14 +3528,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribePipelineManagementConfig",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/pipeline-management-config",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/pipeline-management-config",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3775,7 +3547,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<DescribePipelineManagementConfigResponse> DescribePipelineManagementConfigWithOptionsAsync(string InstanceId, DescribePipelineManagementConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -3785,14 +3556,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribePipelineManagementConfig",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/pipeline-management-config",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/pipeline-management-config",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3802,27 +3572,25 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribePipelineManagementConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest request)
+        public DescribeRegionsResponse DescribeRegions()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeRegionsWithOptions(request, headers, runtime);
+            return DescribeRegionsWithOptions(headers, runtime);
         }
 
-        public async Task<DescribeRegionsResponse> DescribeRegionsAsync(DescribeRegionsRequest request)
+        public async Task<DescribeRegionsResponse> DescribeRegionsAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeRegionsWithOptionsAsync(request, headers, runtime);
+            return await DescribeRegionsWithOptionsAsync(headers, runtime);
         }
 
-        public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeRegionsResponse DescribeRegionsWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3839,13 +3607,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(DescribeRegionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3862,35 +3628,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeSnapshotSettingResponse DescribeSnapshotSetting(string InstanceId, DescribeSnapshotSettingRequest request)
+        public DescribeSnapshotSettingResponse DescribeSnapshotSetting(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeSnapshotSettingWithOptions(InstanceId, request, headers, runtime);
+            return DescribeSnapshotSettingWithOptions(InstanceId, headers, runtime);
         }
 
-        public async Task<DescribeSnapshotSettingResponse> DescribeSnapshotSettingAsync(string InstanceId, DescribeSnapshotSettingRequest request)
+        public async Task<DescribeSnapshotSettingResponse> DescribeSnapshotSettingAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeSnapshotSettingWithOptionsAsync(InstanceId, request, headers, runtime);
+            return await DescribeSnapshotSettingWithOptionsAsync(InstanceId, headers, runtime);
         }
 
-        public DescribeSnapshotSettingResponse DescribeSnapshotSettingWithOptions(string InstanceId, DescribeSnapshotSettingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeSnapshotSettingResponse DescribeSnapshotSettingWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeSnapshotSetting",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/snapshot-setting",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/snapshot-setting",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3900,21 +3663,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeSnapshotSettingResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeSnapshotSettingResponse> DescribeSnapshotSettingWithOptionsAsync(string InstanceId, DescribeSnapshotSettingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeSnapshotSettingResponse> DescribeSnapshotSettingWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeSnapshotSetting",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/snapshot-setting",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/snapshot-setting",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3924,35 +3684,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeSnapshotSettingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeTemplatesResponse DescribeTemplates(string InstanceId, DescribeTemplatesRequest request)
+        public DescribeTemplatesResponse DescribeTemplates(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeTemplatesWithOptions(InstanceId, request, headers, runtime);
+            return DescribeTemplatesWithOptions(InstanceId, headers, runtime);
         }
 
-        public async Task<DescribeTemplatesResponse> DescribeTemplatesAsync(string InstanceId, DescribeTemplatesRequest request)
+        public async Task<DescribeTemplatesResponse> DescribeTemplatesAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeTemplatesWithOptionsAsync(InstanceId, request, headers, runtime);
+            return await DescribeTemplatesWithOptionsAsync(InstanceId, headers, runtime);
         }
 
-        public DescribeTemplatesResponse DescribeTemplatesWithOptions(string InstanceId, DescribeTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeTemplatesResponse DescribeTemplatesWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeTemplates",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/templates",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/templates",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3962,21 +3719,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeTemplatesResponse> DescribeTemplatesWithOptionsAsync(string InstanceId, DescribeTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeTemplatesResponse> DescribeTemplatesWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeTemplates",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/templates",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/templates",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3986,35 +3740,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeXpackMonitorConfigResponse DescribeXpackMonitorConfig(string InstanceId, DescribeXpackMonitorConfigRequest request)
+        public DescribeXpackMonitorConfigResponse DescribeXpackMonitorConfig(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeXpackMonitorConfigWithOptions(InstanceId, request, headers, runtime);
+            return DescribeXpackMonitorConfigWithOptions(InstanceId, headers, runtime);
         }
 
-        public async Task<DescribeXpackMonitorConfigResponse> DescribeXpackMonitorConfigAsync(string InstanceId, DescribeXpackMonitorConfigRequest request)
+        public async Task<DescribeXpackMonitorConfigResponse> DescribeXpackMonitorConfigAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeXpackMonitorConfigWithOptionsAsync(InstanceId, request, headers, runtime);
+            return await DescribeXpackMonitorConfigWithOptionsAsync(InstanceId, headers, runtime);
         }
 
-        public DescribeXpackMonitorConfigResponse DescribeXpackMonitorConfigWithOptions(string InstanceId, DescribeXpackMonitorConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeXpackMonitorConfigResponse DescribeXpackMonitorConfigWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeXpackMonitorConfig",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/xpack-monitor-config",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/xpack-monitor-config",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4024,21 +3775,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeXpackMonitorConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeXpackMonitorConfigResponse> DescribeXpackMonitorConfigWithOptionsAsync(string InstanceId, DescribeXpackMonitorConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeXpackMonitorConfigResponse> DescribeXpackMonitorConfigWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeXpackMonitorConfig",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/xpack-monitor-config",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/xpack-monitor-config",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4065,7 +3813,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public DiagnoseInstanceResponse DiagnoseInstanceWithOptions(string InstanceId, DiagnoseInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -4075,18 +3822,31 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["lang"] = request.Lang;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiagnoseItems))
+            {
+                body["diagnoseItems"] = request.DiagnoseItems;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Indices))
+            {
+                body["indices"] = request.Indices;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DiagnoseInstance",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/diagnosis/instances/" + InstanceId + "/actions/diagnose",
+                Pathname = "/openapi/diagnosis/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/diagnose",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4099,7 +3859,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<DiagnoseInstanceResponse> DiagnoseInstanceWithOptionsAsync(string InstanceId, DiagnoseInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -4109,18 +3868,31 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["lang"] = request.Lang;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiagnoseItems))
+            {
+                body["diagnoseItems"] = request.DiagnoseItems;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Indices))
+            {
+                body["indices"] = request.Indices;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DiagnoseInstance",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/diagnosis/instances/" + InstanceId + "/actions/diagnose",
+                Pathname = "/openapi/diagnosis/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/diagnose",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4147,7 +3919,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public EstimatedLogstashRestartTimeResponse EstimatedLogstashRestartTimeWithOptions(string InstanceId, EstimatedLogstashRestartTimeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
             {
@@ -4164,7 +3935,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "EstimatedLogstashRestartTime",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/estimated-time/restart-time",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/estimated-time/restart-time",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4177,7 +3948,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<EstimatedLogstashRestartTimeResponse> EstimatedLogstashRestartTimeWithOptionsAsync(string InstanceId, EstimatedLogstashRestartTimeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
             {
@@ -4194,7 +3964,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "EstimatedLogstashRestartTime",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/estimated-time/restart-time",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/estimated-time/restart-time",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4221,7 +3991,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public EstimatedRestartTimeResponse EstimatedRestartTimeWithOptions(string InstanceId, EstimatedRestartTimeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
             {
@@ -4238,7 +4007,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "EstimatedRestartTime",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/estimated-time/restart-time",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/estimated-time/restart-time",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4251,7 +4020,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<EstimatedRestartTimeResponse> EstimatedRestartTimeWithOptionsAsync(string InstanceId, EstimatedRestartTimeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
             {
@@ -4268,7 +4036,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "EstimatedRestartTime",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/estimated-time/restart-time",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/estimated-time/restart-time",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4338,35 +4106,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetClusterDataInformationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetElastictaskResponse GetElastictask(string InstanceId, GetElastictaskRequest request)
+        public GetElastictaskResponse GetElastictask(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetElastictaskWithOptions(InstanceId, request, headers, runtime);
+            return GetElastictaskWithOptions(InstanceId, headers, runtime);
         }
 
-        public async Task<GetElastictaskResponse> GetElastictaskAsync(string InstanceId, GetElastictaskRequest request)
+        public async Task<GetElastictaskResponse> GetElastictaskAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetElastictaskWithOptionsAsync(InstanceId, request, headers, runtime);
+            return await GetElastictaskWithOptionsAsync(InstanceId, headers, runtime);
         }
 
-        public GetElastictaskResponse GetElastictaskWithOptions(string InstanceId, GetElastictaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetElastictaskResponse GetElastictaskWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetElastictask",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/elastic-task",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/elastic-task",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4376,21 +4141,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetElastictaskResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<GetElastictaskResponse> GetElastictaskWithOptionsAsync(string InstanceId, GetElastictaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetElastictaskResponse> GetElastictaskWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetElastictask",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/elastic-task",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/elastic-task",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4417,7 +4179,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public GetEmonGrafanaAlertsResponse GetEmonGrafanaAlertsWithOptions(string ProjectId, GetEmonGrafanaAlertsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ProjectId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4428,7 +4189,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "GetEmonGrafanaAlerts",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/emon/projects/" + ProjectId + "/grafana/proxy/api/alerts",
+                Pathname = "/openapi/emon/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId) + "/grafana/proxy/api/alerts",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4441,7 +4202,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<GetEmonGrafanaAlertsResponse> GetEmonGrafanaAlertsWithOptionsAsync(string ProjectId, GetEmonGrafanaAlertsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ProjectId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4452,7 +4212,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "GetEmonGrafanaAlerts",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/emon/projects/" + ProjectId + "/grafana/proxy/api/alerts",
+                Pathname = "/openapi/emon/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId) + "/grafana/proxy/api/alerts",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4479,7 +4239,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public GetEmonGrafanaDashboardsResponse GetEmonGrafanaDashboardsWithOptions(string ProjectId, GetEmonGrafanaDashboardsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ProjectId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4490,7 +4249,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "GetEmonGrafanaDashboards",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/emon/projects/" + ProjectId + "/grafana/proxy/api/search",
+                Pathname = "/openapi/emon/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId) + "/grafana/proxy/api/search",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4503,7 +4262,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<GetEmonGrafanaDashboardsResponse> GetEmonGrafanaDashboardsWithOptionsAsync(string ProjectId, GetEmonGrafanaDashboardsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ProjectId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4514,7 +4272,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "GetEmonGrafanaDashboards",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/emon/projects/" + ProjectId + "/grafana/proxy/api/search",
+                Pathname = "/openapi/emon/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId) + "/grafana/proxy/api/search",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4541,7 +4299,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public GetEmonMonitorDataResponse GetEmonMonitorDataWithOptions(string ProjectId, GetEmonMonitorDataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ProjectId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4552,7 +4309,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "GetEmonMonitorData",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/emon/projects/" + ProjectId + "/metrics/query",
+                Pathname = "/openapi/emon/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId) + "/metrics/query",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4565,7 +4322,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<GetEmonMonitorDataResponse> GetEmonMonitorDataWithOptionsAsync(string ProjectId, GetEmonMonitorDataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ProjectId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4576,7 +4332,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "GetEmonMonitorData",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/emon/projects/" + ProjectId + "/metrics/query",
+                Pathname = "/openapi/emon/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId) + "/metrics/query",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4586,35 +4342,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetEmonMonitorDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetOpenStoreUsageResponse GetOpenStoreUsage(string InstanceId, GetOpenStoreUsageRequest request)
+        public GetOpenStoreUsageResponse GetOpenStoreUsage(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetOpenStoreUsageWithOptions(InstanceId, request, headers, runtime);
+            return GetOpenStoreUsageWithOptions(InstanceId, headers, runtime);
         }
 
-        public async Task<GetOpenStoreUsageResponse> GetOpenStoreUsageAsync(string InstanceId, GetOpenStoreUsageRequest request)
+        public async Task<GetOpenStoreUsageResponse> GetOpenStoreUsageAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetOpenStoreUsageWithOptionsAsync(InstanceId, request, headers, runtime);
+            return await GetOpenStoreUsageWithOptionsAsync(InstanceId, headers, runtime);
         }
 
-        public GetOpenStoreUsageResponse GetOpenStoreUsageWithOptions(string InstanceId, GetOpenStoreUsageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetOpenStoreUsageResponse GetOpenStoreUsageWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetOpenStoreUsage",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/openstore/usage",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/openstore/usage",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4624,21 +4377,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetOpenStoreUsageResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<GetOpenStoreUsageResponse> GetOpenStoreUsageWithOptionsAsync(string InstanceId, GetOpenStoreUsageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetOpenStoreUsageResponse> GetOpenStoreUsageWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetOpenStoreUsage",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/openstore/usage",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/openstore/usage",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4674,7 +4424,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4703,7 +4452,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4737,7 +4485,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public GetSuggestShrinkableNodesResponse GetSuggestShrinkableNodesWithOptions(string InstanceId, GetSuggestShrinkableNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Count))
             {
@@ -4755,14 +4502,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetSuggestShrinkableNodes",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/suggest-shrinkable-nodes",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/suggest-shrinkable-nodes",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4775,7 +4521,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<GetSuggestShrinkableNodesResponse> GetSuggestShrinkableNodesWithOptionsAsync(string InstanceId, GetSuggestShrinkableNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Count))
             {
@@ -4793,14 +4538,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetSuggestShrinkableNodes",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/suggest-shrinkable-nodes",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/suggest-shrinkable-nodes",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4827,7 +4571,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public GetTransferableNodesResponse GetTransferableNodesWithOptions(string InstanceId, GetTransferableNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Count))
             {
@@ -4841,14 +4584,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetTransferableNodes",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/transferable-nodes",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/transferable-nodes",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4861,7 +4603,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<GetTransferableNodesResponse> GetTransferableNodesWithOptionsAsync(string InstanceId, GetTransferableNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Count))
             {
@@ -4875,14 +4616,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetTransferableNodes",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/transferable-nodes",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/transferable-nodes",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4981,7 +4721,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public InstallAckOperatorResponse InstallAckOperatorWithOptions(string ClusterId, InstallAckOperatorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -4998,7 +4737,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "InstallAckOperator",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/ack-clusters/" + ClusterId + "/operator",
+                Pathname = "/openapi/ack-clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/operator",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5011,7 +4750,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<InstallAckOperatorResponse> InstallAckOperatorWithOptionsAsync(string ClusterId, InstallAckOperatorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -5028,7 +4766,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "InstallAckOperator",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/ack-clusters/" + ClusterId + "/operator",
+                Pathname = "/openapi/ack-clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/operator",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5055,7 +4793,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public InstallKibanaSystemPluginResponse InstallKibanaSystemPluginWithOptions(string InstanceId, InstallKibanaSystemPluginRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -5072,7 +4809,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "InstallKibanaSystemPlugin",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/kibana-plugins/system/actions/install",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/kibana-plugins/system/actions/install",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5085,7 +4822,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<InstallKibanaSystemPluginResponse> InstallKibanaSystemPluginWithOptionsAsync(string InstanceId, InstallKibanaSystemPluginRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -5102,7 +4838,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "InstallKibanaSystemPlugin",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/kibana-plugins/system/actions/install",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/kibana-plugins/system/actions/install",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5129,7 +4865,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public InstallLogstashSystemPluginResponse InstallLogstashSystemPluginWithOptions(string InstanceId, InstallLogstashSystemPluginRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -5146,7 +4881,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "InstallLogstashSystemPlugin",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/plugins/system/actions/install",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/plugins/system/actions/install",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5159,7 +4894,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<InstallLogstashSystemPluginResponse> InstallLogstashSystemPluginWithOptionsAsync(string InstanceId, InstallLogstashSystemPluginRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -5176,7 +4910,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "InstallLogstashSystemPlugin",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/plugins/system/actions/install",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/plugins/system/actions/install",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5203,7 +4937,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public InstallSystemPluginResponse InstallSystemPluginWithOptions(string InstanceId, InstallSystemPluginRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -5220,7 +4953,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "InstallSystemPlugin",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/plugins/system/actions/install",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/plugins/system/actions/install",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5233,7 +4966,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<InstallSystemPluginResponse> InstallSystemPluginWithOptionsAsync(string InstanceId, InstallSystemPluginRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -5250,7 +4982,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "InstallSystemPlugin",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/plugins/system/actions/install",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/plugins/system/actions/install",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5277,7 +5009,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public InstallUserPluginsResponse InstallUserPluginsWithOptions(string InstanceId, InstallUserPluginsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5288,7 +5019,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "InstallUserPlugins",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/plugins/user/actions/install",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/plugins/user/actions/install",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5301,7 +5032,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<InstallUserPluginsResponse> InstallUserPluginsWithOptionsAsync(string InstanceId, InstallUserPluginsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5312,7 +5042,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "InstallUserPlugins",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/plugins/user/actions/install",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/plugins/user/actions/install",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5339,7 +5069,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public InterruptElasticsearchTaskResponse InterruptElasticsearchTaskWithOptions(string InstanceId, InterruptElasticsearchTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -5349,14 +5078,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "InterruptElasticsearchTask",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/interrupt",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/interrupt",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5369,7 +5097,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<InterruptElasticsearchTaskResponse> InterruptElasticsearchTaskWithOptionsAsync(string InstanceId, InterruptElasticsearchTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -5379,14 +5106,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "InterruptElasticsearchTask",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/interrupt",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/interrupt",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5413,7 +5139,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public InterruptLogstashTaskResponse InterruptLogstashTaskWithOptions(string InstanceId, InterruptLogstashTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -5423,14 +5148,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "InterruptLogstashTask",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/actions/interrupt",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/interrupt",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5443,7 +5167,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<InterruptLogstashTaskResponse> InterruptLogstashTaskWithOptionsAsync(string InstanceId, InterruptLogstashTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -5453,14 +5176,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "InterruptLogstashTask",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/actions/interrupt",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/interrupt",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5504,7 +5226,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5541,7 +5262,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5575,7 +5295,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ListAckNamespacesResponse ListAckNamespacesWithOptions(string ClusterId, ListAckNamespacesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
@@ -5589,14 +5308,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListAckNamespaces",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/ack-clusters/" + ClusterId + "/namespaces",
+                Pathname = "/openapi/ack-clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/namespaces",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5609,7 +5327,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ListAckNamespacesResponse> ListAckNamespacesWithOptionsAsync(string ClusterId, ListAckNamespacesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ClusterId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
@@ -5623,14 +5340,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListAckNamespaces",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/ack-clusters/" + ClusterId + "/namespaces",
+                Pathname = "/openapi/ack-clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/namespaces",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5657,7 +5373,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ListActionRecordsResponse ListActionRecordsWithOptions(string InstanceId, ListActionRecordsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActionNames))
             {
@@ -5695,14 +5410,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListActionRecords",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/action-records",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/action-records",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5715,7 +5429,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ListActionRecordsResponse> ListActionRecordsWithOptionsAsync(string InstanceId, ListActionRecordsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActionNames))
             {
@@ -5753,14 +5466,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListActionRecords",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/action-records",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/action-records",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5787,7 +5499,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ListAllNodeResponse ListAllNodeWithOptions(string InstanceId, ListAllNodeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extended))
             {
@@ -5797,14 +5508,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListAllNode",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/nodes",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/nodes",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5817,7 +5527,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ListAllNodeResponse> ListAllNodeWithOptionsAsync(string InstanceId, ListAllNodeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extended))
             {
@@ -5827,14 +5536,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListAllNode",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/nodes",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/nodes",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5861,7 +5569,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ListAlternativeSnapshotReposResponse ListAlternativeSnapshotReposWithOptions(string InstanceId, ListAlternativeSnapshotReposRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlreadySetItems))
             {
@@ -5871,14 +5578,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListAlternativeSnapshotRepos",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/alternative-snapshot-repos",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/alternative-snapshot-repos",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5891,7 +5597,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ListAlternativeSnapshotReposResponse> ListAlternativeSnapshotReposWithOptionsAsync(string InstanceId, ListAlternativeSnapshotReposRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlreadySetItems))
             {
@@ -5901,14 +5606,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListAlternativeSnapshotRepos",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/alternative-snapshot-repos",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/alternative-snapshot-repos",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5960,7 +5664,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6005,7 +5708,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6022,35 +5724,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListApmResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListAvailableEsInstanceIdsResponse ListAvailableEsInstanceIds(string InstanceId, ListAvailableEsInstanceIdsRequest request)
+        public ListAvailableEsInstanceIdsResponse ListAvailableEsInstanceIds(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListAvailableEsInstanceIdsWithOptions(InstanceId, request, headers, runtime);
+            return ListAvailableEsInstanceIdsWithOptions(InstanceId, headers, runtime);
         }
 
-        public async Task<ListAvailableEsInstanceIdsResponse> ListAvailableEsInstanceIdsAsync(string InstanceId, ListAvailableEsInstanceIdsRequest request)
+        public async Task<ListAvailableEsInstanceIdsResponse> ListAvailableEsInstanceIdsAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListAvailableEsInstanceIdsWithOptionsAsync(InstanceId, request, headers, runtime);
+            return await ListAvailableEsInstanceIdsWithOptionsAsync(InstanceId, headers, runtime);
         }
 
-        public ListAvailableEsInstanceIdsResponse ListAvailableEsInstanceIdsWithOptions(string InstanceId, ListAvailableEsInstanceIdsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListAvailableEsInstanceIdsResponse ListAvailableEsInstanceIdsWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListAvailableEsInstanceIds",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/available-elasticsearch-for-centralized-management",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/available-elasticsearch-for-centralized-management",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6060,21 +5759,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListAvailableEsInstanceIdsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListAvailableEsInstanceIdsResponse> ListAvailableEsInstanceIdsWithOptionsAsync(string InstanceId, ListAvailableEsInstanceIdsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListAvailableEsInstanceIdsResponse> ListAvailableEsInstanceIdsWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListAvailableEsInstanceIds",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/available-elasticsearch-for-centralized-management",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/available-elasticsearch-for-centralized-management",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6130,7 +5826,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6179,7 +5874,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6213,7 +5907,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ListComponentIndicesResponse ListComponentIndicesWithOptions(string InstanceId, ListComponentIndicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -6231,14 +5924,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListComponentIndices",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/component-index",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/component-index",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6251,7 +5943,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ListComponentIndicesResponse> ListComponentIndicesWithOptionsAsync(string InstanceId, ListComponentIndicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -6269,14 +5960,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListComponentIndices",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/component-index",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/component-index",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6286,35 +5976,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListComponentIndicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListConnectedClustersResponse ListConnectedClusters(string InstanceId, ListConnectedClustersRequest request)
+        public ListConnectedClustersResponse ListConnectedClusters(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListConnectedClustersWithOptions(InstanceId, request, headers, runtime);
+            return ListConnectedClustersWithOptions(InstanceId, headers, runtime);
         }
 
-        public async Task<ListConnectedClustersResponse> ListConnectedClustersAsync(string InstanceId, ListConnectedClustersRequest request)
+        public async Task<ListConnectedClustersResponse> ListConnectedClustersAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListConnectedClustersWithOptionsAsync(InstanceId, request, headers, runtime);
+            return await ListConnectedClustersWithOptionsAsync(InstanceId, headers, runtime);
         }
 
-        public ListConnectedClustersResponse ListConnectedClustersWithOptions(string InstanceId, ListConnectedClustersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListConnectedClustersResponse ListConnectedClustersWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListConnectedClusters",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/connected-clusters",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/connected-clusters",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6324,21 +6011,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListConnectedClustersResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListConnectedClustersResponse> ListConnectedClustersWithOptionsAsync(string InstanceId, ListConnectedClustersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListConnectedClustersResponse> ListConnectedClustersWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListConnectedClusters",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/connected-clusters",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/connected-clusters",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6365,7 +6049,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ListDataStreamsResponse ListDataStreamsWithOptions(string InstanceId, ListDataStreamsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsManaged))
             {
@@ -6379,14 +6062,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListDataStreams",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/data-streams",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/data-streams",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6399,7 +6081,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ListDataStreamsResponse> ListDataStreamsWithOptionsAsync(string InstanceId, ListDataStreamsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsManaged))
             {
@@ -6413,14 +6094,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListDataStreams",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/data-streams",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/data-streams",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6430,35 +6110,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDataStreamsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListDataTasksResponse ListDataTasks(string InstanceId, ListDataTasksRequest request)
+        public ListDataTasksResponse ListDataTasks(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListDataTasksWithOptions(InstanceId, request, headers, runtime);
+            return ListDataTasksWithOptions(InstanceId, headers, runtime);
         }
 
-        public async Task<ListDataTasksResponse> ListDataTasksAsync(string InstanceId, ListDataTasksRequest request)
+        public async Task<ListDataTasksResponse> ListDataTasksAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListDataTasksWithOptionsAsync(InstanceId, request, headers, runtime);
+            return await ListDataTasksWithOptionsAsync(InstanceId, headers, runtime);
         }
 
-        public ListDataTasksResponse ListDataTasksWithOptions(string InstanceId, ListDataTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListDataTasksResponse ListDataTasksWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListDataTasks",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/data-task",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/data-task",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6468,21 +6145,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDataTasksResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListDataTasksResponse> ListDataTasksWithOptionsAsync(string InstanceId, ListDataTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListDataTasksResponse> ListDataTasksWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListDataTasks",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/data-task",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/data-task",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6526,7 +6200,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6563,7 +6236,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6597,7 +6269,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ListDeprecatedTemplatesResponse ListDeprecatedTemplatesWithOptions(string InstanceId, ListDeprecatedTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -6615,14 +6286,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListDeprecatedTemplates",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/deprecated-templates",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/deprecated-templates",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6635,7 +6305,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ListDeprecatedTemplatesResponse> ListDeprecatedTemplatesWithOptionsAsync(string InstanceId, ListDeprecatedTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -6653,14 +6322,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListDeprecatedTemplates",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/deprecated-templates",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/deprecated-templates",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6687,7 +6355,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ListDiagnoseIndicesResponse ListDiagnoseIndicesWithOptions(string InstanceId, ListDiagnoseIndicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
@@ -6697,14 +6364,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListDiagnoseIndices",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/diagnosis/instances/" + InstanceId + "/indices",
+                Pathname = "/openapi/diagnosis/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/indices",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6717,7 +6383,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ListDiagnoseIndicesResponse> ListDiagnoseIndicesWithOptionsAsync(string InstanceId, ListDiagnoseIndicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
@@ -6727,14 +6392,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListDiagnoseIndices",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/diagnosis/instances/" + InstanceId + "/indices",
+                Pathname = "/openapi/diagnosis/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/indices",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6761,7 +6425,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ListDiagnoseReportResponse ListDiagnoseReportWithOptions(string InstanceId, ListDiagnoseReportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Detail))
             {
@@ -6795,14 +6458,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListDiagnoseReport",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/diagnosis/instances/" + InstanceId + "/reports",
+                Pathname = "/openapi/diagnosis/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/reports",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6815,7 +6477,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ListDiagnoseReportResponse> ListDiagnoseReportWithOptionsAsync(string InstanceId, ListDiagnoseReportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Detail))
             {
@@ -6849,14 +6510,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListDiagnoseReport",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/diagnosis/instances/" + InstanceId + "/reports",
+                Pathname = "/openapi/diagnosis/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/reports",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6883,7 +6543,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ListDiagnoseReportIdsResponse ListDiagnoseReportIdsWithOptions(string InstanceId, ListDiagnoseReportIdsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -6913,14 +6572,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListDiagnoseReportIds",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/diagnosis/instances/" + InstanceId + "/report-ids",
+                Pathname = "/openapi/diagnosis/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/report-ids",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6933,7 +6591,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ListDiagnoseReportIdsResponse> ListDiagnoseReportIdsWithOptionsAsync(string InstanceId, ListDiagnoseReportIdsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -6963,14 +6620,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListDiagnoseReportIds",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/diagnosis/instances/" + InstanceId + "/report-ids",
+                Pathname = "/openapi/diagnosis/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/report-ids",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6997,7 +6653,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ListDictInformationResponse ListDictInformationWithOptions(string InstanceId, ListDictInformationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnalyzerType))
             {
@@ -7015,14 +6670,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListDictInformation",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/dict/_info",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/dict/_info",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7035,7 +6689,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ListDictInformationResponse> ListDictInformationWithOptionsAsync(string InstanceId, ListDictInformationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnalyzerType))
             {
@@ -7053,14 +6706,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListDictInformation",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/dict/_info",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/dict/_info",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7087,7 +6739,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ListDictsResponse ListDictsWithOptions(string InstanceId, ListDictsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnalyzerType))
             {
@@ -7101,14 +6752,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListDicts",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/dicts",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/dicts",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7121,7 +6771,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ListDictsResponse> ListDictsWithOptionsAsync(string InstanceId, ListDictsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnalyzerType))
             {
@@ -7135,14 +6784,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListDicts",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/dicts",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/dicts",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7198,7 +6846,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7247,7 +6894,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7264,35 +6910,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListEcsInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListExtendfilesResponse ListExtendfiles(string InstanceId, ListExtendfilesRequest request)
+        public ListExtendfilesResponse ListExtendfiles(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListExtendfilesWithOptions(InstanceId, request, headers, runtime);
+            return ListExtendfilesWithOptions(InstanceId, headers, runtime);
         }
 
-        public async Task<ListExtendfilesResponse> ListExtendfilesAsync(string InstanceId, ListExtendfilesRequest request)
+        public async Task<ListExtendfilesResponse> ListExtendfilesAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListExtendfilesWithOptionsAsync(InstanceId, request, headers, runtime);
+            return await ListExtendfilesWithOptionsAsync(InstanceId, headers, runtime);
         }
 
-        public ListExtendfilesResponse ListExtendfilesWithOptions(string InstanceId, ListExtendfilesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListExtendfilesResponse ListExtendfilesWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListExtendfiles",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/extendfiles",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/extendfiles",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7302,21 +6945,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListExtendfilesResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListExtendfilesResponse> ListExtendfilesWithOptionsAsync(string InstanceId, ListExtendfilesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListExtendfilesResponse> ListExtendfilesWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListExtendfiles",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/extendfiles",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/extendfiles",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7343,7 +6983,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ListILMPoliciesResponse ListILMPoliciesWithOptions(string InstanceId, ListILMPoliciesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyName))
             {
@@ -7353,14 +6992,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListILMPolicies",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/ilm-policies",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/ilm-policies",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7373,7 +7011,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ListILMPoliciesResponse> ListILMPoliciesWithOptionsAsync(string InstanceId, ListILMPoliciesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyName))
             {
@@ -7383,14 +7020,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListILMPolicies",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/ilm-policies",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/ilm-policies",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7417,7 +7053,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ListIndexTemplatesResponse ListIndexTemplatesWithOptions(string InstanceId, ListIndexTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexTemplate))
             {
@@ -7435,14 +7070,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListIndexTemplates",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/index-templates",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/index-templates",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7455,7 +7089,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ListIndexTemplatesResponse> ListIndexTemplatesWithOptionsAsync(string InstanceId, ListIndexTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexTemplate))
             {
@@ -7473,14 +7106,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListIndexTemplates",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/index-templates",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/index-templates",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7556,7 +7188,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7625,7 +7256,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7640,6 +7270,200 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListInstanceHistoryEventsResponse ListInstanceHistoryEvents(ListInstanceHistoryEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListInstanceHistoryEventsWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ListInstanceHistoryEventsResponse> ListInstanceHistoryEventsAsync(ListInstanceHistoryEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListInstanceHistoryEventsWithOptionsAsync(request, headers, runtime);
+        }
+
+        public ListInstanceHistoryEventsResponse ListInstanceHistoryEventsWithOptions(ListInstanceHistoryEventsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListInstanceHistoryEventsShrinkRequest request = new ListInstanceHistoryEventsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EventCycleStatus))
+            {
+                request.EventCycleStatusShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EventCycleStatus, "eventCycleStatus", "simple");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EventLevel))
+            {
+                request.EventLevelShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EventLevel, "eventLevel", "simple");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EventType))
+            {
+                request.EventTypeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EventType, "eventType", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventCreateEndTime))
+            {
+                query["eventCreateEndTime"] = request.EventCreateEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventCreateStartTime))
+            {
+                query["eventCreateStartTime"] = request.EventCreateStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventCycleStatusShrink))
+            {
+                query["eventCycleStatus"] = request.EventCycleStatusShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventExecuteEndTime))
+            {
+                query["eventExecuteEndTime"] = request.EventExecuteEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventExecuteStartTime))
+            {
+                query["eventExecuteStartTime"] = request.EventExecuteStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventFinashEndTime))
+            {
+                query["eventFinashEndTime"] = request.EventFinashEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventFinashStartTime))
+            {
+                query["eventFinashStartTime"] = request.EventFinashStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventLevelShrink))
+            {
+                query["eventLevel"] = request.EventLevelShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventTypeShrink))
+            {
+                query["eventType"] = request.EventTypeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["instanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeIP))
+            {
+                query["nodeIP"] = request.NodeIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstanceHistoryEvents",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/events",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstanceHistoryEventsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListInstanceHistoryEventsResponse> ListInstanceHistoryEventsWithOptionsAsync(ListInstanceHistoryEventsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListInstanceHistoryEventsShrinkRequest request = new ListInstanceHistoryEventsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EventCycleStatus))
+            {
+                request.EventCycleStatusShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EventCycleStatus, "eventCycleStatus", "simple");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EventLevel))
+            {
+                request.EventLevelShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EventLevel, "eventLevel", "simple");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EventType))
+            {
+                request.EventTypeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EventType, "eventType", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventCreateEndTime))
+            {
+                query["eventCreateEndTime"] = request.EventCreateEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventCreateStartTime))
+            {
+                query["eventCreateStartTime"] = request.EventCreateStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventCycleStatusShrink))
+            {
+                query["eventCycleStatus"] = request.EventCycleStatusShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventExecuteEndTime))
+            {
+                query["eventExecuteEndTime"] = request.EventExecuteEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventExecuteStartTime))
+            {
+                query["eventExecuteStartTime"] = request.EventExecuteStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventFinashEndTime))
+            {
+                query["eventFinashEndTime"] = request.EventFinashEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventFinashStartTime))
+            {
+                query["eventFinashStartTime"] = request.EventFinashStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventLevelShrink))
+            {
+                query["eventLevel"] = request.EventLevelShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventTypeShrink))
+            {
+                query["eventType"] = request.EventTypeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["instanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeIP))
+            {
+                query["nodeIP"] = request.NodeIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstanceHistoryEvents",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/events",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstanceHistoryEventsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListInstanceIndicesResponse ListInstanceIndices(string InstanceId, ListInstanceIndicesRequest request)
@@ -7659,7 +7483,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ListInstanceIndicesResponse ListInstanceIndicesWithOptions(string InstanceId, ListInstanceIndicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.All))
             {
@@ -7689,14 +7512,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListInstanceIndices",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/indices",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/indices",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7709,7 +7531,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ListInstanceIndicesResponse> ListInstanceIndicesWithOptionsAsync(string InstanceId, ListInstanceIndicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.All))
             {
@@ -7739,14 +7560,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListInstanceIndices",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/indices",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/indices",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7773,7 +7593,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ListKibanaPluginsResponse ListKibanaPluginsWithOptions(string InstanceId, ListKibanaPluginsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
@@ -7787,14 +7606,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListKibanaPlugins",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/kibana-plugins",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/kibana-plugins",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7807,7 +7625,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ListKibanaPluginsResponse> ListKibanaPluginsWithOptionsAsync(string InstanceId, ListKibanaPluginsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
@@ -7821,14 +7638,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListKibanaPlugins",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/kibana-plugins",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/kibana-plugins",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7880,6 +7696,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["size"] = request.Size;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["tags"] = request.Tags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
             {
                 query["version"] = request.Version;
@@ -7888,7 +7708,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7933,6 +7752,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["size"] = request.Size;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["tags"] = request.Tags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
             {
                 query["version"] = request.Version;
@@ -7941,7 +7764,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7975,7 +7797,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ListLogstashLogResponse ListLogstashLogWithOptions(string InstanceId, ListLogstashLogRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
             {
@@ -8005,14 +7826,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListLogstashLog",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/search-log",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/search-log",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8025,7 +7845,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ListLogstashLogResponse> ListLogstashLogWithOptionsAsync(string InstanceId, ListLogstashLogRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
             {
@@ -8055,14 +7874,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListLogstashLog",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/search-log",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/search-log",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8089,7 +7907,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ListLogstashPluginsResponse ListLogstashPluginsWithOptions(string InstanceId, ListLogstashPluginsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -8111,14 +7928,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListLogstashPlugins",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/plugins",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/plugins",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8131,7 +7947,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ListLogstashPluginsResponse> ListLogstashPluginsWithOptionsAsync(string InstanceId, ListLogstashPluginsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -8153,14 +7968,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListLogstashPlugins",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/plugins",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/plugins",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8187,7 +8001,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ListNodesResponse ListNodesWithOptions(string ResId, ListNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ResId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcsInstanceIds))
             {
@@ -8213,14 +8026,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListNodes",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/collectors/" + ResId + "/nodes",
+                Pathname = "/openapi/collectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId) + "/nodes",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8233,7 +8045,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ListNodesResponse> ListNodesWithOptionsAsync(string ResId, ListNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ResId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcsInstanceIds))
             {
@@ -8259,14 +8070,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListNodes",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/collectors/" + ResId + "/nodes",
+                Pathname = "/openapi/collectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId) + "/nodes",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8293,7 +8103,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ListPipelineResponse ListPipelineWithOptions(string InstanceId, ListPipelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
@@ -8311,14 +8120,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListPipeline",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/pipelines",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/pipelines",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8331,7 +8139,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ListPipelineResponse> ListPipelineWithOptionsAsync(string InstanceId, ListPipelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
@@ -8349,14 +8156,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListPipeline",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/pipelines",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/pipelines",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8383,7 +8189,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ListPipelineIdsResponse ListPipelineIdsWithOptions(string InstanceId, ListPipelineIdsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -8394,7 +8199,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "ListPipelineIds",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/pipeline-ids",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/pipeline-ids",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8407,7 +8212,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ListPipelineIdsResponse> ListPipelineIdsWithOptionsAsync(string InstanceId, ListPipelineIdsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -8418,7 +8222,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "ListPipelineIds",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/pipeline-ids",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/pipeline-ids",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8445,7 +8249,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ListPluginsResponse ListPluginsWithOptions(string InstanceId, ListPluginsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -8467,14 +8270,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListPlugins",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/plugins",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/plugins",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8487,7 +8289,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ListPluginsResponse> ListPluginsWithOptionsAsync(string InstanceId, ListPluginsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -8509,14 +8310,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListPlugins",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/plugins",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/plugins",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8543,7 +8343,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ListSearchLogResponse ListSearchLogWithOptions(string InstanceId, ListSearchLogRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
             {
@@ -8573,14 +8372,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListSearchLog",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/search-log",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/search-log",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8593,7 +8391,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ListSearchLogResponse> ListSearchLogWithOptionsAsync(string InstanceId, ListSearchLogRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
             {
@@ -8623,14 +8420,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListSearchLog",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/search-log",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/search-log",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8657,7 +8453,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ListShardRecoveriesResponse ListShardRecoveriesWithOptions(string InstanceId, ListShardRecoveriesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActiveOnly))
             {
@@ -8667,14 +8462,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListShardRecoveries",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/cat-recovery",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/cat-recovery",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8687,7 +8481,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ListShardRecoveriesResponse> ListShardRecoveriesWithOptionsAsync(string InstanceId, ListShardRecoveriesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActiveOnly))
             {
@@ -8697,14 +8490,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListShardRecoveries",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/cat-recovery",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/cat-recovery",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8714,35 +8506,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListShardRecoveriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListSnapshotReposByInstanceIdResponse ListSnapshotReposByInstanceId(string InstanceId, ListSnapshotReposByInstanceIdRequest request)
+        public ListSnapshotReposByInstanceIdResponse ListSnapshotReposByInstanceId(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListSnapshotReposByInstanceIdWithOptions(InstanceId, request, headers, runtime);
+            return ListSnapshotReposByInstanceIdWithOptions(InstanceId, headers, runtime);
         }
 
-        public async Task<ListSnapshotReposByInstanceIdResponse> ListSnapshotReposByInstanceIdAsync(string InstanceId, ListSnapshotReposByInstanceIdRequest request)
+        public async Task<ListSnapshotReposByInstanceIdResponse> ListSnapshotReposByInstanceIdAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListSnapshotReposByInstanceIdWithOptionsAsync(InstanceId, request, headers, runtime);
+            return await ListSnapshotReposByInstanceIdWithOptionsAsync(InstanceId, headers, runtime);
         }
 
-        public ListSnapshotReposByInstanceIdResponse ListSnapshotReposByInstanceIdWithOptions(string InstanceId, ListSnapshotReposByInstanceIdRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListSnapshotReposByInstanceIdResponse ListSnapshotReposByInstanceIdWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListSnapshotReposByInstanceId",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/snapshot-repos",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/snapshot-repos",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8752,21 +8541,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListSnapshotReposByInstanceIdResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListSnapshotReposByInstanceIdResponse> ListSnapshotReposByInstanceIdWithOptionsAsync(string InstanceId, ListSnapshotReposByInstanceIdRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListSnapshotReposByInstanceIdResponse> ListSnapshotReposByInstanceIdWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListSnapshotReposByInstanceId",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/snapshot-repos",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/snapshot-repos",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8822,7 +8608,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8871,7 +8656,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8918,7 +8702,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8951,7 +8734,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8985,7 +8767,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ListVpcEndpointsResponse ListVpcEndpointsWithOptions(string InstanceId, ListVpcEndpointsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
@@ -8999,14 +8780,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListVpcEndpoints",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/vpc-endpoints",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/vpc-endpoints",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -9019,7 +8799,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ListVpcEndpointsResponse> ListVpcEndpointsWithOptionsAsync(string InstanceId, ListVpcEndpointsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
@@ -9033,14 +8812,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListVpcEndpoints",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/vpc-endpoints",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/vpc-endpoints",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -9067,7 +8845,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public MigrateToOtherZoneResponse MigrateToOtherZoneWithOptions(string InstanceId, MigrateToOtherZoneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
@@ -9084,7 +8861,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "MigrateToOtherZone",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/migrate-zones",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/migrate-zones",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -9097,7 +8874,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<MigrateToOtherZoneResponse> MigrateToOtherZoneWithOptionsAsync(string InstanceId, MigrateToOtherZoneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
@@ -9114,7 +8890,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "MigrateToOtherZone",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/migrate-zones",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/migrate-zones",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -9141,7 +8917,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ModifyDeployMachineResponse ModifyDeployMachineWithOptions(string ResId, ModifyDeployMachineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ResId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -9158,7 +8933,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "ModifyDeployMachine",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/collectors/" + ResId + "/actions/modify-deploy-machines",
+                Pathname = "/openapi/collectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId) + "/actions/modify-deploy-machines",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -9171,7 +8946,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ModifyDeployMachineResponse> ModifyDeployMachineWithOptionsAsync(string ResId, ModifyDeployMachineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ResId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -9188,7 +8962,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "ModifyDeployMachine",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/collectors/" + ResId + "/actions/modify-deploy-machines",
+                Pathname = "/openapi/collectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId) + "/actions/modify-deploy-machines",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -9215,7 +8989,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ModifyElastictaskResponse ModifyElastictaskWithOptions(string InstanceId, ModifyElastictaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -9226,7 +8999,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "ModifyElastictask",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/elastic-task",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/elastic-task",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -9239,7 +9012,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ModifyElastictaskResponse> ModifyElastictaskWithOptionsAsync(string InstanceId, ModifyElastictaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -9250,7 +9022,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "ModifyElastictask",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/elastic-task",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/elastic-task",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -9277,7 +9049,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ModifyInstanceMaintainTimeResponse ModifyInstanceMaintainTimeWithOptions(string InstanceId, ModifyInstanceMaintainTimeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -9294,7 +9065,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "ModifyInstanceMaintainTime",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/modify-maintaintime",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/modify-maintaintime",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -9307,7 +9078,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ModifyInstanceMaintainTimeResponse> ModifyInstanceMaintainTimeWithOptionsAsync(string InstanceId, ModifyInstanceMaintainTimeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -9324,7 +9094,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "ModifyInstanceMaintainTime",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/modify-maintaintime",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/modify-maintaintime",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -9351,7 +9121,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ModifyWhiteIpsResponse ModifyWhiteIpsWithOptions(string InstanceId, ModifyWhiteIpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -9389,7 +9158,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "ModifyWhiteIps",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/modify-white-ips",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/modify-white-ips",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -9402,7 +9171,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ModifyWhiteIpsResponse> ModifyWhiteIpsWithOptionsAsync(string InstanceId, ModifyWhiteIpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -9440,7 +9208,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "ModifyWhiteIps",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/modify-white-ips",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/modify-white-ips",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -9467,7 +9235,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public MoveResourceGroupResponse MoveResourceGroupWithOptions(string InstanceId, MoveResourceGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -9484,7 +9251,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "MoveResourceGroup",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/resourcegroup",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/resourcegroup",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -9497,7 +9264,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<MoveResourceGroupResponse> MoveResourceGroupWithOptionsAsync(string InstanceId, MoveResourceGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -9514,7 +9280,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "MoveResourceGroup",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/resourcegroup",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/resourcegroup",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -9541,7 +9307,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public OpenDiagnosisResponse OpenDiagnosisWithOptions(string InstanceId, OpenDiagnosisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -9555,14 +9320,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "OpenDiagnosis",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/diagnosis/instances/" + InstanceId + "/actions/open-diagnosis",
+                Pathname = "/openapi/diagnosis/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/open-diagnosis",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -9575,7 +9339,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<OpenDiagnosisResponse> OpenDiagnosisWithOptionsAsync(string InstanceId, OpenDiagnosisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -9589,14 +9352,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "OpenDiagnosis",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/diagnosis/instances/" + InstanceId + "/actions/open-diagnosis",
+                Pathname = "/openapi/diagnosis/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/open-diagnosis",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -9623,7 +9385,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public OpenHttpsResponse OpenHttpsWithOptions(string InstanceId, OpenHttpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -9633,14 +9394,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "OpenHttps",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/open-https",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/open-https",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -9653,7 +9413,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<OpenHttpsResponse> OpenHttpsWithOptionsAsync(string InstanceId, OpenHttpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -9663,14 +9422,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "OpenHttps",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/open-https",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/open-https",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -9697,8 +9455,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public PostEmonTryAlarmRuleResponse PostEmonTryAlarmRuleWithOptions(string ProjectId, string AlarmGroupId, PostEmonTryAlarmRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ProjectId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId);
-            AlarmGroupId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(AlarmGroupId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -9709,7 +9465,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "PostEmonTryAlarmRule",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/emon/projects/" + ProjectId + "/alarm-groups/" + AlarmGroupId + "/alarm-rules/_test",
+                Pathname = "/openapi/emon/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId) + "/alarm-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(AlarmGroupId) + "/alarm-rules/_test",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -9722,8 +9478,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<PostEmonTryAlarmRuleResponse> PostEmonTryAlarmRuleWithOptionsAsync(string ProjectId, string AlarmGroupId, PostEmonTryAlarmRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ProjectId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId);
-            AlarmGroupId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(AlarmGroupId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -9734,7 +9488,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "PostEmonTryAlarmRule",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/emon/projects/" + ProjectId + "/alarm-groups/" + AlarmGroupId + "/alarm-rules/_test",
+                Pathname = "/openapi/emon/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId) + "/alarm-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(AlarmGroupId) + "/alarm-rules/_test",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -9761,7 +9515,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public RecommendTemplatesResponse RecommendTemplatesWithOptions(string InstanceId, RecommendTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsageScenario))
             {
@@ -9771,14 +9524,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "RecommendTemplates",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/recommended-templates",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/recommended-templates",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -9791,7 +9543,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<RecommendTemplatesResponse> RecommendTemplatesWithOptionsAsync(string InstanceId, RecommendTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsageScenario))
             {
@@ -9801,14 +9552,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "RecommendTemplates",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/recommended-templates",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/recommended-templates",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -9835,7 +9585,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ReinstallCollectorResponse ReinstallCollectorWithOptions(string ResId, ReinstallCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ResId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -9852,7 +9601,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "ReinstallCollector",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/collectors/" + ResId + "/actions/reinstall",
+                Pathname = "/openapi/collectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId) + "/actions/reinstall",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -9865,7 +9614,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ReinstallCollectorResponse> ReinstallCollectorWithOptionsAsync(string ResId, ReinstallCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ResId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -9882,7 +9630,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "ReinstallCollector",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/collectors/" + ResId + "/actions/reinstall",
+                Pathname = "/openapi/collectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId) + "/actions/reinstall",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -9892,35 +9640,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ReinstallCollectorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public RemoveApmResponse RemoveApm(string instanceId, RemoveApmRequest request)
+        public RemoveApmResponse RemoveApm(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return RemoveApmWithOptions(instanceId, request, headers, runtime);
+            return RemoveApmWithOptions(instanceId, headers, runtime);
         }
 
-        public async Task<RemoveApmResponse> RemoveApmAsync(string instanceId, RemoveApmRequest request)
+        public async Task<RemoveApmResponse> RemoveApmAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await RemoveApmWithOptionsAsync(instanceId, request, headers, runtime);
+            return await RemoveApmWithOptionsAsync(instanceId, headers, runtime);
         }
 
-        public RemoveApmResponse RemoveApmWithOptions(string instanceId, RemoveApmRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public RemoveApmResponse RemoveApmWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "RemoveApm",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/apm/" + instanceId,
+                Pathname = "/openapi/apm/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -9930,21 +9675,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<RemoveApmResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<RemoveApmResponse> RemoveApmWithOptionsAsync(string instanceId, RemoveApmRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<RemoveApmResponse> RemoveApmWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "RemoveApm",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/apm/" + instanceId,
+                Pathname = "/openapi/apm/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -9971,7 +9713,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public RenewInstanceResponse RenewInstanceWithOptions(string InstanceId, RenewInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -9988,7 +9729,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "RenewInstance",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/renew",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/renew",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10001,7 +9742,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<RenewInstanceResponse> RenewInstanceWithOptionsAsync(string InstanceId, RenewInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -10018,7 +9758,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "RenewInstance",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/renew",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/renew",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10045,7 +9785,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public RenewLogstashResponse RenewLogstashWithOptions(string InstanceId, RenewLogstashRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -10062,7 +9801,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "RenewLogstash",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/actions/renew",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/renew",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10075,7 +9814,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<RenewLogstashResponse> RenewLogstashWithOptionsAsync(string InstanceId, RenewLogstashRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -10092,7 +9830,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "RenewLogstash",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/actions/renew",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/renew",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10119,7 +9857,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public RestartCollectorResponse RestartCollectorWithOptions(string ResId, RestartCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ResId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -10129,14 +9866,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "RestartCollector",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/collectors/" + ResId + "/actions/restart",
+                Pathname = "/openapi/collectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId) + "/actions/restart",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10149,7 +9885,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<RestartCollectorResponse> RestartCollectorWithOptionsAsync(string ResId, RestartCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ResId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -10159,14 +9894,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "RestartCollector",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/collectors/" + ResId + "/actions/restart",
+                Pathname = "/openapi/collectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId) + "/actions/restart",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10193,7 +9927,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public RestartInstanceResponse RestartInstanceWithOptions(string InstanceId, RestartInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -10214,7 +9947,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "RestartInstance",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/restart",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/restart",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10227,7 +9960,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<RestartInstanceResponse> RestartInstanceWithOptionsAsync(string InstanceId, RestartInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -10248,7 +9980,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "RestartInstance",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/restart",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/restart",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10275,7 +10007,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public RestartLogstashResponse RestartLogstashWithOptions(string InstanceId, RestartLogstashRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -10285,18 +10016,39 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["force"] = request.Force;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchCount))
+            {
+                body["batchCount"] = request.BatchCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BlueGreenDep))
+            {
+                body["blueGreenDep"] = request.BlueGreenDep;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeTypes))
+            {
+                body["nodeTypes"] = request.NodeTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nodes))
+            {
+                body["nodes"] = request.Nodes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestartType))
+            {
+                body["restartType"] = request.RestartType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "RestartLogstash",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/actions/restart",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/restart",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10309,7 +10061,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<RestartLogstashResponse> RestartLogstashWithOptionsAsync(string InstanceId, RestartLogstashRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -10319,18 +10070,39 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["force"] = request.Force;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchCount))
+            {
+                body["batchCount"] = request.BatchCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BlueGreenDep))
+            {
+                body["blueGreenDep"] = request.BlueGreenDep;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeTypes))
+            {
+                body["nodeTypes"] = request.NodeTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nodes))
+            {
+                body["nodes"] = request.Nodes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestartType))
+            {
+                body["restartType"] = request.RestartType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "RestartLogstash",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/actions/restart",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/restart",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10357,7 +10129,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ResumeElasticsearchTaskResponse ResumeElasticsearchTaskWithOptions(string InstanceId, ResumeElasticsearchTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -10367,14 +10138,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ResumeElasticsearchTask",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/resume",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/resume",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10387,7 +10157,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ResumeElasticsearchTaskResponse> ResumeElasticsearchTaskWithOptionsAsync(string InstanceId, ResumeElasticsearchTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -10397,14 +10166,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ResumeElasticsearchTask",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/resume",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/resume",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10431,7 +10199,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ResumeLogstashTaskResponse ResumeLogstashTaskWithOptions(string InstanceId, ResumeLogstashTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -10441,14 +10208,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ResumeLogstashTask",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/actions/resume",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/resume",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10461,7 +10227,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ResumeLogstashTaskResponse> ResumeLogstashTaskWithOptionsAsync(string InstanceId, ResumeLogstashTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -10471,14 +10236,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ResumeLogstashTask",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/actions/resume",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/resume",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10505,8 +10269,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public RolloverDataStreamResponse RolloverDataStreamWithOptions(string InstanceId, string DataStream, RolloverDataStreamRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            DataStream = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DataStream);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -10516,14 +10278,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "RolloverDataStream",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/data-streams/" + DataStream + "/rollover",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/data-streams/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DataStream) + "/rollover",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10536,8 +10297,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<RolloverDataStreamResponse> RolloverDataStreamWithOptionsAsync(string InstanceId, string DataStream, RolloverDataStreamRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            DataStream = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DataStream);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -10547,14 +10306,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "RolloverDataStream",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/data-streams/" + DataStream + "/rollover",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/data-streams/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DataStream) + "/rollover",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10581,7 +10339,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public RunPipelinesResponse RunPipelinesWithOptions(string InstanceId, RunPipelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -10598,7 +10355,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "RunPipelines",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/pipelines/action/run",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/pipelines/action/run",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10611,7 +10368,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<RunPipelinesResponse> RunPipelinesWithOptionsAsync(string InstanceId, RunPipelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -10628,7 +10384,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "RunPipelines",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/pipelines/action/run",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/pipelines/action/run",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10655,11 +10411,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ShrinkNodeResponse ShrinkNodeWithOptions(string InstanceId, ShrinkNodeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Count))
+            {
+                query["count"] = request.Count;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreStatus))
             {
@@ -10680,7 +10439,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "ShrinkNode",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/shrink",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/shrink",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10693,11 +10452,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ShrinkNodeResponse> ShrinkNodeWithOptionsAsync(string InstanceId, ShrinkNodeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Count))
+            {
+                query["count"] = request.Count;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreStatus))
             {
@@ -10718,7 +10480,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "ShrinkNode",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/shrink",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/shrink",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10728,35 +10490,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ShrinkNodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public StartApmResponse StartApm(string instanceId, StartApmRequest request)
+        public StartApmResponse StartApm(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return StartApmWithOptions(instanceId, request, headers, runtime);
+            return StartApmWithOptions(instanceId, headers, runtime);
         }
 
-        public async Task<StartApmResponse> StartApmAsync(string instanceId, StartApmRequest request)
+        public async Task<StartApmResponse> StartApmAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await StartApmWithOptionsAsync(instanceId, request, headers, runtime);
+            return await StartApmWithOptionsAsync(instanceId, headers, runtime);
         }
 
-        public StartApmResponse StartApmWithOptions(string instanceId, StartApmRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public StartApmResponse StartApmWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "StartApm",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/apm/" + instanceId + "/actions/start",
+                Pathname = "/openapi/apm/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/actions/start",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10766,21 +10525,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<StartApmResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<StartApmResponse> StartApmWithOptionsAsync(string instanceId, StartApmRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<StartApmResponse> StartApmWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "StartApm",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/apm/" + instanceId + "/actions/start",
+                Pathname = "/openapi/apm/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/actions/start",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10807,7 +10563,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public StartCollectorResponse StartCollectorWithOptions(string ResId, StartCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ResId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -10817,14 +10572,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "StartCollector",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/collectors/" + ResId + "/actions/start",
+                Pathname = "/openapi/collectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId) + "/actions/start",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10837,7 +10591,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<StartCollectorResponse> StartCollectorWithOptionsAsync(string ResId, StartCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ResId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -10847,14 +10600,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "StartCollector",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/collectors/" + ResId + "/actions/start",
+                Pathname = "/openapi/collectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId) + "/actions/start",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10864,35 +10616,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<StartCollectorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public StopApmResponse StopApm(string instanceId, StopApmRequest request)
+        public StopApmResponse StopApm(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return StopApmWithOptions(instanceId, request, headers, runtime);
+            return StopApmWithOptions(instanceId, headers, runtime);
         }
 
-        public async Task<StopApmResponse> StopApmAsync(string instanceId, StopApmRequest request)
+        public async Task<StopApmResponse> StopApmAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await StopApmWithOptionsAsync(instanceId, request, headers, runtime);
+            return await StopApmWithOptionsAsync(instanceId, headers, runtime);
         }
 
-        public StopApmResponse StopApmWithOptions(string instanceId, StopApmRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public StopApmResponse StopApmWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "StopApm",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/apm/" + instanceId + "/actions/stop",
+                Pathname = "/openapi/apm/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/actions/stop",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10902,21 +10651,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<StopApmResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<StopApmResponse> StopApmWithOptionsAsync(string instanceId, StopApmRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<StopApmResponse> StopApmWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "StopApm",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/apm/" + instanceId + "/actions/stop",
+                Pathname = "/openapi/apm/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/actions/stop",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10943,7 +10689,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public StopCollectorResponse StopCollectorWithOptions(string ResId, StopCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ResId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -10953,14 +10698,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "StopCollector",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/collectors/" + ResId + "/actions/stop",
+                Pathname = "/openapi/collectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId) + "/actions/stop",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10973,7 +10717,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<StopCollectorResponse> StopCollectorWithOptionsAsync(string ResId, StopCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ResId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -10983,14 +10726,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "StopCollector",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/collectors/" + ResId + "/actions/stop",
+                Pathname = "/openapi/collectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId) + "/actions/stop",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -11017,7 +10759,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public StopPipelinesResponse StopPipelinesWithOptions(string InstanceId, StopPipelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -11034,7 +10775,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "StopPipelines",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/pipelines/action/stop",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/pipelines/action/stop",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -11047,7 +10788,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<StopPipelinesResponse> StopPipelinesWithOptionsAsync(string InstanceId, StopPipelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -11064,7 +10804,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "StopPipelines",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/pipelines/action/stop",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/pipelines/action/stop",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -11091,10 +10831,23 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIds))
+            {
+                body["ResourceIds"] = request.ResourceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                body["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                body["Tags"] = request.Tags;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -11114,10 +10867,23 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIds))
+            {
+                body["ResourceIds"] = request.ResourceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                body["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                body["Tags"] = request.Tags;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -11151,7 +10917,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public TransferNodeResponse TransferNodeWithOptions(string InstanceId, TransferNodeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -11172,7 +10937,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "TransferNode",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/transfer",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/transfer",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -11185,7 +10950,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<TransferNodeResponse> TransferNodeWithOptionsAsync(string InstanceId, TransferNodeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -11206,7 +10970,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "TransferNode",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/transfer",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/transfer",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -11233,7 +10997,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public TriggerNetworkResponse TriggerNetworkWithOptions(string InstanceId, TriggerNetworkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -11263,7 +11026,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "TriggerNetwork",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/network-trigger",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/network-trigger",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -11276,7 +11039,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<TriggerNetworkResponse> TriggerNetworkWithOptionsAsync(string InstanceId, TriggerNetworkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -11306,7 +11068,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "TriggerNetwork",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/network-trigger",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/network-trigger",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -11333,7 +11095,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UninstallKibanaPluginResponse UninstallKibanaPluginWithOptions(string InstanceId, UninstallKibanaPluginRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -11350,7 +11111,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UninstallKibanaPlugin",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/kibana-plugins/actions/uninstall",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/kibana-plugins/actions/uninstall",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -11363,7 +11124,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UninstallKibanaPluginResponse> UninstallKibanaPluginWithOptionsAsync(string InstanceId, UninstallKibanaPluginRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -11380,7 +11140,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UninstallKibanaPlugin",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/kibana-plugins/actions/uninstall",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/kibana-plugins/actions/uninstall",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -11407,7 +11167,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UninstallLogstashPluginResponse UninstallLogstashPluginWithOptions(string InstanceId, UninstallLogstashPluginRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -11424,7 +11183,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UninstallLogstashPlugin",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/plugins/actions/uninstall",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/plugins/actions/uninstall",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -11437,7 +11196,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UninstallLogstashPluginResponse> UninstallLogstashPluginWithOptionsAsync(string InstanceId, UninstallLogstashPluginRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -11454,7 +11212,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UninstallLogstashPlugin",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/plugins/actions/uninstall",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/plugins/actions/uninstall",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -11481,7 +11239,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UninstallPluginResponse UninstallPluginWithOptions(string InstanceId, UninstallPluginRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -11498,7 +11255,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UninstallPlugin",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/plugins/actions/uninstall",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/plugins/actions/uninstall",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -11511,7 +11268,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UninstallPluginResponse> UninstallPluginWithOptionsAsync(string InstanceId, UninstallPluginRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -11528,7 +11284,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UninstallPlugin",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/plugins/actions/uninstall",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/plugins/actions/uninstall",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -11651,7 +11407,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateAdminPasswordResponse UpdateAdminPasswordWithOptions(string InstanceId, UpdateAdminPasswordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -11668,7 +11423,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateAdminPassword",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/admin-pwd",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/admin-pwd",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -11681,7 +11436,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateAdminPasswordResponse> UpdateAdminPasswordWithOptionsAsync(string InstanceId, UpdateAdminPasswordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -11698,7 +11452,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateAdminPassword",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/admin-pwd",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/admin-pwd",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -11725,7 +11479,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateAdvancedSettingResponse UpdateAdvancedSettingWithOptions(string InstanceId, UpdateAdvancedSettingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -11742,7 +11495,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateAdvancedSetting",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/update-advanced-setting",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/update-advanced-setting",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -11755,7 +11508,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateAdvancedSettingResponse> UpdateAdvancedSettingWithOptionsAsync(string InstanceId, UpdateAdvancedSettingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -11772,7 +11524,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateAdvancedSetting",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/update-advanced-setting",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/update-advanced-setting",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -11799,7 +11551,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateAliwsDictResponse UpdateAliwsDictWithOptions(string InstanceId, UpdateAliwsDictRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -11816,7 +11567,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateAliwsDict",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/aliws-dict",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/aliws-dict",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -11829,7 +11580,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateAliwsDictResponse> UpdateAliwsDictWithOptionsAsync(string InstanceId, UpdateAliwsDictRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -11846,7 +11596,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateAliwsDict",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/aliws-dict",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/aliws-dict",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -11873,7 +11623,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateApmResponse UpdateApmWithOptions(string instanceId, UpdateApmRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -11905,7 +11654,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateApm",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/apm/" + instanceId,
+                Pathname = "/openapi/apm/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -11918,7 +11667,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateApmResponse> UpdateApmWithOptionsAsync(string instanceId, UpdateApmRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -11950,7 +11698,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateApm",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/apm/" + instanceId,
+                Pathname = "/openapi/apm/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -11977,33 +11725,26 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateBlackIpsResponse UpdateBlackIpsWithOptions(string InstanceId, UpdateBlackIpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["clientToken"] = request.ClientToken;
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EsIPBlacklist))
-            {
-                body["esIPBlacklist"] = request.EsIPBlacklist;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "UpdateBlackIps",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/black-ips",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/black-ips",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "formData",
+                ReqBodyType = "json",
                 BodyType = "json",
             };
             return TeaModel.ToObject<UpdateBlackIpsResponse>(CallApi(params_, req, runtime));
@@ -12012,33 +11753,26 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateBlackIpsResponse> UpdateBlackIpsWithOptionsAsync(string InstanceId, UpdateBlackIpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["clientToken"] = request.ClientToken;
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EsIPBlacklist))
-            {
-                body["esIPBlacklist"] = request.EsIPBlacklist;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "UpdateBlackIps",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/black-ips",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/black-ips",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "formData",
+                ReqBodyType = "json",
                 BodyType = "json",
             };
             return TeaModel.ToObject<UpdateBlackIpsResponse>(await CallApiAsync(params_, req, runtime));
@@ -12061,7 +11795,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateCollectorResponse UpdateCollectorWithOptions(string ResId, UpdateCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ResId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -12078,7 +11811,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateCollector",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/collectors/" + ResId,
+                Pathname = "/openapi/collectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -12091,7 +11824,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateCollectorResponse> UpdateCollectorWithOptionsAsync(string ResId, UpdateCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ResId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -12108,7 +11840,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateCollector",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/collectors/" + ResId,
+                Pathname = "/openapi/collectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -12135,7 +11867,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateCollectorNameResponse UpdateCollectorNameWithOptions(string ResId, UpdateCollectorNameRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ResId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -12152,7 +11883,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateCollectorName",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/collectors/" + ResId + "/actions/rename",
+                Pathname = "/openapi/collectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId) + "/actions/rename",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -12165,7 +11896,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateCollectorNameResponse> UpdateCollectorNameWithOptionsAsync(string ResId, UpdateCollectorNameRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            ResId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -12182,7 +11912,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateCollectorName",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/collectors/" + ResId + "/actions/rename",
+                Pathname = "/openapi/collectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResId) + "/actions/rename",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -12209,8 +11939,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateComponentIndexResponse UpdateComponentIndexWithOptions(string InstanceId, string name, UpdateComponentIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            name = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Meta))
             {
@@ -12230,7 +11958,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateComponentIndex",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/component-index/" + name,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/component-index/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -12243,8 +11971,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateComponentIndexResponse> UpdateComponentIndexWithOptionsAsync(string InstanceId, string name, UpdateComponentIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            name = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Meta))
             {
@@ -12264,7 +11990,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateComponentIndex",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/component-index/" + name,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/component-index/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -12291,7 +12017,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateDescriptionResponse UpdateDescriptionWithOptions(string InstanceId, UpdateDescriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -12313,7 +12038,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateDescription",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/description",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/description",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -12326,7 +12051,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateDescriptionResponse> UpdateDescriptionWithOptionsAsync(string InstanceId, UpdateDescriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -12348,7 +12072,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateDescription",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/description",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/description",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -12375,7 +12099,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateDiagnosisSettingsResponse UpdateDiagnosisSettingsWithOptions(string InstanceId, UpdateDiagnosisSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -12396,7 +12119,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateDiagnosisSettings",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/diagnosis/instances/" + InstanceId + "/settings",
+                Pathname = "/openapi/diagnosis/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/settings",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -12409,7 +12132,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateDiagnosisSettingsResponse> UpdateDiagnosisSettingsWithOptionsAsync(string InstanceId, UpdateDiagnosisSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -12430,7 +12152,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateDiagnosisSettings",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/diagnosis/instances/" + InstanceId + "/settings",
+                Pathname = "/openapi/diagnosis/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/settings",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -12457,7 +12179,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateDictResponse UpdateDictWithOptions(string InstanceId, UpdateDictRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -12474,7 +12195,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateDict",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/dict",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/dict",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -12487,7 +12208,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateDictResponse> UpdateDictWithOptionsAsync(string InstanceId, UpdateDictRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -12504,7 +12224,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateDict",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/dict",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/dict",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -12531,7 +12251,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateDynamicSettingsResponse UpdateDynamicSettingsWithOptions(string InstanceId, UpdateDynamicSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -12556,7 +12275,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateDynamicSettings",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/dynamic-settings",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/dynamic-settings",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -12569,7 +12288,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateDynamicSettingsResponse> UpdateDynamicSettingsWithOptionsAsync(string InstanceId, UpdateDynamicSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -12594,7 +12312,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateDynamicSettings",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/dynamic-settings",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/dynamic-settings",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -12621,7 +12339,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateExtendConfigResponse UpdateExtendConfigWithOptions(string InstanceId, UpdateExtendConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -12638,7 +12355,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateExtendConfig",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/extend-configs/actions/update",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/extend-configs/actions/update",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -12651,7 +12368,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateExtendConfigResponse> UpdateExtendConfigWithOptionsAsync(string InstanceId, UpdateExtendConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -12668,7 +12384,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateExtendConfig",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/extend-configs/actions/update",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/extend-configs/actions/update",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -12695,7 +12411,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateExtendfilesResponse UpdateExtendfilesWithOptions(string InstanceId, UpdateExtendfilesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -12712,7 +12427,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateExtendfiles",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/extendfiles",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/extendfiles",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -12725,7 +12440,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateExtendfilesResponse> UpdateExtendfilesWithOptionsAsync(string InstanceId, UpdateExtendfilesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -12742,7 +12456,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateExtendfiles",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/extendfiles",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/extendfiles",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -12769,7 +12483,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateHotIkDictsResponse UpdateHotIkDictsWithOptions(string InstanceId, UpdateHotIkDictsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -12786,7 +12499,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateHotIkDicts",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/ik-hot-dict",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/ik-hot-dict",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -12799,7 +12512,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateHotIkDictsResponse> UpdateHotIkDictsWithOptionsAsync(string InstanceId, UpdateHotIkDictsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -12816,7 +12528,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateHotIkDicts",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/ik-hot-dict",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/ik-hot-dict",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -12843,8 +12555,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateILMPolicyResponse UpdateILMPolicyWithOptions(string InstanceId, string PolicyName, UpdateILMPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            PolicyName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PolicyName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -12861,7 +12571,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateILMPolicy",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/ilm-policies/" + PolicyName,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/ilm-policies/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PolicyName),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -12874,8 +12584,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateILMPolicyResponse> UpdateILMPolicyWithOptionsAsync(string InstanceId, string PolicyName, UpdateILMPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            PolicyName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PolicyName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -12892,7 +12600,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateILMPolicy",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/ilm-policies/" + PolicyName,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/ilm-policies/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PolicyName),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -12919,8 +12627,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateIndexTemplateResponse UpdateIndexTemplateWithOptions(string InstanceId, string IndexTemplate, UpdateIndexTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            IndexTemplate = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(IndexTemplate);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -12937,7 +12643,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateIndexTemplate",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/index-templates/" + IndexTemplate,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/index-templates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(IndexTemplate),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -12950,8 +12656,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateIndexTemplateResponse> UpdateIndexTemplateWithOptionsAsync(string InstanceId, string IndexTemplate, UpdateIndexTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            IndexTemplate = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(IndexTemplate);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -12968,7 +12672,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateIndexTemplate",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/index-templates/" + IndexTemplate,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/index-templates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(IndexTemplate),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -12995,28 +12699,64 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateInstanceResponse UpdateInstanceWithOptions(string InstanceId, UpdateInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["clientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["force"] = request.Force;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderActionType))
             {
                 query["orderActionType"] = request.OrderActionType;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientNodeConfiguration.ToMap()))
+            {
+                body["clientNodeConfiguration"] = request.ClientNodeConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ElasticDataNodeConfiguration.ToMap()))
+            {
+                body["elasticDataNodeConfiguration"] = request.ElasticDataNodeConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceCategory))
+            {
+                body["instanceCategory"] = request.InstanceCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KibanaConfiguration.ToMap()))
+            {
+                body["kibanaConfiguration"] = request.KibanaConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterConfiguration.ToMap()))
+            {
+                body["masterConfiguration"] = request.MasterConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeAmount))
+            {
+                body["nodeAmount"] = request.NodeAmount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeSpec.ToMap()))
+            {
+                body["nodeSpec"] = request.NodeSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WarmNodeConfiguration.ToMap()))
+            {
+                body["warmNodeConfiguration"] = request.WarmNodeConfiguration;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "UpdateInstance",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -13029,28 +12769,64 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateInstanceResponse> UpdateInstanceWithOptionsAsync(string InstanceId, UpdateInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["clientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["force"] = request.Force;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderActionType))
             {
                 query["orderActionType"] = request.OrderActionType;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientNodeConfiguration.ToMap()))
+            {
+                body["clientNodeConfiguration"] = request.ClientNodeConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ElasticDataNodeConfiguration.ToMap()))
+            {
+                body["elasticDataNodeConfiguration"] = request.ElasticDataNodeConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceCategory))
+            {
+                body["instanceCategory"] = request.InstanceCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KibanaConfiguration.ToMap()))
+            {
+                body["kibanaConfiguration"] = request.KibanaConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterConfiguration.ToMap()))
+            {
+                body["masterConfiguration"] = request.MasterConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeAmount))
+            {
+                body["nodeAmount"] = request.NodeAmount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeSpec.ToMap()))
+            {
+                body["nodeSpec"] = request.NodeSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WarmNodeConfiguration.ToMap()))
+            {
+                body["warmNodeConfiguration"] = request.WarmNodeConfiguration;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "UpdateInstance",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -13077,7 +12853,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateInstanceChargeTypeResponse UpdateInstanceChargeTypeWithOptions(string InstanceId, UpdateInstanceChargeTypeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -13094,7 +12869,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateInstanceChargeType",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/convert-pay-type",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/convert-pay-type",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -13107,7 +12882,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateInstanceChargeTypeResponse> UpdateInstanceChargeTypeWithOptionsAsync(string InstanceId, UpdateInstanceChargeTypeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -13124,7 +12898,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateInstanceChargeType",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/convert-pay-type",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/convert-pay-type",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -13151,7 +12925,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateInstanceSettingsResponse UpdateInstanceSettingsWithOptions(string InstanceId, UpdateInstanceSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -13168,7 +12941,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateInstanceSettings",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/instance-settings",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/instance-settings",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -13181,7 +12954,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateInstanceSettingsResponse> UpdateInstanceSettingsWithOptionsAsync(string InstanceId, UpdateInstanceSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -13198,7 +12970,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateInstanceSettings",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/instance-settings",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/instance-settings",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -13225,7 +12997,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateKibanaSettingsResponse UpdateKibanaSettingsWithOptions(string InstanceId, UpdateKibanaSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -13242,7 +13013,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateKibanaSettings",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/update-kibana-settings",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/update-kibana-settings",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -13255,7 +13026,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateKibanaSettingsResponse> UpdateKibanaSettingsWithOptionsAsync(string InstanceId, UpdateKibanaSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -13272,7 +13042,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateKibanaSettings",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/update-kibana-settings",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/update-kibana-settings",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -13299,7 +13069,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateKibanaWhiteIpsResponse UpdateKibanaWhiteIpsWithOptions(string InstanceId, UpdateKibanaWhiteIpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -13309,18 +13078,27 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["modifyMode"] = request.ModifyMode;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KibanaIPWhitelist))
+            {
+                body["kibanaIPWhitelist"] = request.KibanaIPWhitelist;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteIpGroup.ToMap()))
+            {
+                body["whiteIpGroup"] = request.WhiteIpGroup;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "UpdateKibanaWhiteIps",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/kibana-white-ips",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/kibana-white-ips",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -13333,7 +13111,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateKibanaWhiteIpsResponse> UpdateKibanaWhiteIpsWithOptionsAsync(string InstanceId, UpdateKibanaWhiteIpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -13343,18 +13120,27 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["modifyMode"] = request.ModifyMode;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KibanaIPWhitelist))
+            {
+                body["kibanaIPWhitelist"] = request.KibanaIPWhitelist;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteIpGroup.ToMap()))
+            {
+                body["whiteIpGroup"] = request.WhiteIpGroup;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "UpdateKibanaWhiteIps",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/kibana-white-ips",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/kibana-white-ips",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -13381,24 +13167,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateLogstashResponse UpdateLogstashWithOptions(string InstanceId, UpdateLogstashRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["clientToken"] = request.ClientToken;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeAmount))
+            {
+                body["nodeAmount"] = request.NodeAmount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeSpec.ToMap()))
+            {
+                body["nodeSpec"] = request.NodeSpec;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "UpdateLogstash",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId,
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -13411,24 +13205,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateLogstashResponse> UpdateLogstashWithOptionsAsync(string InstanceId, UpdateLogstashRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["clientToken"] = request.ClientToken;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeAmount))
+            {
+                body["nodeAmount"] = request.NodeAmount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeSpec.ToMap()))
+            {
+                body["nodeSpec"] = request.NodeSpec;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "UpdateLogstash",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId,
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -13455,7 +13257,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateLogstashChargeTypeResponse UpdateLogstashChargeTypeWithOptions(string InstanceId, UpdateLogstashChargeTypeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -13472,7 +13273,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateLogstashChargeType",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/actions/convert-pay-type",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/convert-pay-type",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -13485,7 +13286,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateLogstashChargeTypeResponse> UpdateLogstashChargeTypeWithOptionsAsync(string InstanceId, UpdateLogstashChargeTypeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -13502,7 +13302,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateLogstashChargeType",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/actions/convert-pay-type",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/convert-pay-type",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -13529,7 +13329,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateLogstashDescriptionResponse UpdateLogstashDescriptionWithOptions(string InstanceId, UpdateLogstashDescriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -13546,7 +13345,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateLogstashDescription",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/description",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/description",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -13559,7 +13358,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateLogstashDescriptionResponse> UpdateLogstashDescriptionWithOptionsAsync(string InstanceId, UpdateLogstashDescriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -13576,7 +13374,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateLogstashDescription",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/description",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/description",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -13603,7 +13401,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateLogstashSettingsResponse UpdateLogstashSettingsWithOptions(string InstanceId, UpdateLogstashSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -13620,7 +13417,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateLogstashSettings",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/instance-settings",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/instance-settings",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -13633,7 +13430,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateLogstashSettingsResponse> UpdateLogstashSettingsWithOptionsAsync(string InstanceId, UpdateLogstashSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -13650,7 +13446,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateLogstashSettings",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/instance-settings",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/instance-settings",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -13677,24 +13473,44 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdatePipelineManagementConfigResponse UpdatePipelineManagementConfigWithOptions(string InstanceId, UpdatePipelineManagementConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["clientToken"] = request.ClientToken;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Endpoints))
+            {
+                body["endpoints"] = request.Endpoints;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                body["password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineIds))
+            {
+                body["pipelineIds"] = request.PipelineIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineManagementType))
+            {
+                body["pipelineManagementType"] = request.PipelineManagementType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["userName"] = request.UserName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "UpdatePipelineManagementConfig",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/pipeline-management-config",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/pipeline-management-config",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -13707,24 +13523,44 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdatePipelineManagementConfigResponse> UpdatePipelineManagementConfigWithOptionsAsync(string InstanceId, UpdatePipelineManagementConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["clientToken"] = request.ClientToken;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Endpoints))
+            {
+                body["endpoints"] = request.Endpoints;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                body["password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineIds))
+            {
+                body["pipelineIds"] = request.PipelineIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineManagementType))
+            {
+                body["pipelineManagementType"] = request.PipelineManagementType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["userName"] = request.UserName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "UpdatePipelineManagementConfig",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/pipeline-management-config",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/pipeline-management-config",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -13751,7 +13587,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdatePipelinesResponse UpdatePipelinesWithOptions(string InstanceId, UpdatePipelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -13772,7 +13607,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdatePipelines",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/pipelines",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/pipelines",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -13785,7 +13620,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdatePipelinesResponse> UpdatePipelinesWithOptionsAsync(string InstanceId, UpdatePipelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -13806,7 +13640,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdatePipelines",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/pipelines",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/pipelines",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -13833,7 +13667,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdatePrivateNetworkWhiteIpsResponse UpdatePrivateNetworkWhiteIpsWithOptions(string InstanceId, UpdatePrivateNetworkWhiteIpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -13854,7 +13687,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdatePrivateNetworkWhiteIps",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/private-network-white-ips",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/private-network-white-ips",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -13867,7 +13700,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdatePrivateNetworkWhiteIpsResponse> UpdatePrivateNetworkWhiteIpsWithOptionsAsync(string InstanceId, UpdatePrivateNetworkWhiteIpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -13888,7 +13720,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdatePrivateNetworkWhiteIps",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/private-network-white-ips",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/private-network-white-ips",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -13915,7 +13747,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdatePublicNetworkResponse UpdatePublicNetworkWithOptions(string InstanceId, UpdatePublicNetworkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -13932,7 +13763,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdatePublicNetwork",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/public-network",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/public-network",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -13945,7 +13776,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdatePublicNetworkResponse> UpdatePublicNetworkWithOptionsAsync(string InstanceId, UpdatePublicNetworkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -13962,7 +13792,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdatePublicNetwork",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/public-network",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/public-network",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -13989,7 +13819,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdatePublicWhiteIpsResponse UpdatePublicWhiteIpsWithOptions(string InstanceId, UpdatePublicWhiteIpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -14010,7 +13839,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdatePublicWhiteIps",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/public-white-ips",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/public-white-ips",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -14023,7 +13852,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdatePublicWhiteIpsResponse> UpdatePublicWhiteIpsWithOptionsAsync(string InstanceId, UpdatePublicWhiteIpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -14044,7 +13872,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdatePublicWhiteIps",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/public-white-ips",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/public-white-ips",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -14071,7 +13899,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateReadWritePolicyResponse UpdateReadWritePolicyWithOptions(string InstanceId, UpdateReadWritePolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -14088,7 +13915,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateReadWritePolicy",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/update-read-write-policy",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/update-read-write-policy",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -14101,7 +13928,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateReadWritePolicyResponse> UpdateReadWritePolicyWithOptionsAsync(string InstanceId, UpdateReadWritePolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -14118,7 +13944,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateReadWritePolicy",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/update-read-write-policy",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/update-read-write-policy",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -14145,7 +13971,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateSnapshotSettingResponse UpdateSnapshotSettingWithOptions(string InstanceId, UpdateSnapshotSettingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -14156,7 +13981,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateSnapshotSetting",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/snapshot-setting",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/snapshot-setting",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -14169,7 +13994,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateSnapshotSettingResponse> UpdateSnapshotSettingWithOptionsAsync(string InstanceId, UpdateSnapshotSettingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -14180,7 +14004,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateSnapshotSetting",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/snapshot-setting",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/snapshot-setting",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -14207,7 +14031,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateSynonymsDictsResponse UpdateSynonymsDictsWithOptions(string InstanceId, UpdateSynonymsDictsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -14224,7 +14047,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateSynonymsDicts",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/synonymsDict",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/synonymsDict",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -14237,7 +14060,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateSynonymsDictsResponse> UpdateSynonymsDictsWithOptionsAsync(string InstanceId, UpdateSynonymsDictsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -14254,7 +14076,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateSynonymsDicts",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/synonymsDict",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/synonymsDict",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -14281,8 +14103,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateTemplateResponse UpdateTemplateWithOptions(string InstanceId, string TemplateName, UpdateTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            TemplateName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TemplateName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -14299,7 +14119,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateTemplate",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/templates/" + TemplateName,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/templates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TemplateName),
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -14312,8 +14132,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateTemplateResponse> UpdateTemplateWithOptionsAsync(string InstanceId, string TemplateName, UpdateTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
-            TemplateName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TemplateName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -14330,7 +14148,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateTemplate",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/templates/" + TemplateName,
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/templates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TemplateName),
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -14357,7 +14175,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateWhiteIpsResponse UpdateWhiteIpsWithOptions(string InstanceId, UpdateWhiteIpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -14387,7 +14204,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateWhiteIps",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/white-ips",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/white-ips",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -14400,7 +14217,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateWhiteIpsResponse> UpdateWhiteIpsWithOptionsAsync(string InstanceId, UpdateWhiteIpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -14430,7 +14246,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpdateWhiteIps",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/white-ips",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/white-ips",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -14457,24 +14273,40 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpdateXpackMonitorConfigResponse UpdateXpackMonitorConfigWithOptions(string InstanceId, UpdateXpackMonitorConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                body["enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Endpoints))
+            {
+                body["endpoints"] = request.Endpoints;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                body["password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["userName"] = request.UserName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "UpdateXpackMonitorConfig",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/xpack-monitor-config",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/xpack-monitor-config",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -14487,24 +14319,40 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpdateXpackMonitorConfigResponse> UpdateXpackMonitorConfigWithOptionsAsync(string InstanceId, UpdateXpackMonitorConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                body["enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Endpoints))
+            {
+                body["endpoints"] = request.Endpoints;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                body["password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["userName"] = request.UserName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "UpdateXpackMonitorConfig",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/xpack-monitor-config",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/xpack-monitor-config",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -14531,7 +14379,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public UpgradeEngineVersionResponse UpgradeEngineVersionWithOptions(string InstanceId, UpgradeEngineVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -14561,11 +14408,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpgradeEngineVersion",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/upgrade-version",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/upgrade-version",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "formData",
+                ReqBodyType = "json",
                 BodyType = "json",
             };
             return TeaModel.ToObject<UpgradeEngineVersionResponse>(CallApi(params_, req, runtime));
@@ -14574,7 +14421,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<UpgradeEngineVersionResponse> UpgradeEngineVersionWithOptionsAsync(string InstanceId, UpgradeEngineVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -14604,11 +14450,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "UpgradeEngineVersion",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/actions/upgrade-version",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/upgrade-version",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "formData",
+                ReqBodyType = "json",
                 BodyType = "json",
             };
             return TeaModel.ToObject<UpgradeEngineVersionResponse>(await CallApiAsync(params_, req, runtime));
@@ -14631,7 +14477,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ValidateConnectionResponse ValidateConnectionWithOptions(string InstanceId, ValidateConnectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -14648,7 +14493,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "ValidateConnection",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/validate-connection",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/validate-connection",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -14661,7 +14506,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ValidateConnectionResponse> ValidateConnectionWithOptionsAsync(string InstanceId, ValidateConnectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -14678,7 +14522,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "ValidateConnection",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/logstashes/" + InstanceId + "/validate-connection",
+                Pathname = "/openapi/logstashes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/validate-connection",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -14705,8 +14549,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ValidateShrinkNodesResponse ValidateShrinkNodesWithOptions(string InstanceId, ValidateShrinkNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Count))
+            {
+                query["count"] = request.Count;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreStatus))
             {
                 query["ignoreStatus"] = request.IgnoreStatus;
@@ -14726,7 +14573,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "ValidateShrinkNodes",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/validate-shrink-nodes",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/validate-shrink-nodes",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -14739,8 +14586,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ValidateShrinkNodesResponse> ValidateShrinkNodesWithOptionsAsync(string InstanceId, ValidateShrinkNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Count))
+            {
+                query["count"] = request.Count;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreStatus))
             {
                 query["ignoreStatus"] = request.IgnoreStatus;
@@ -14760,7 +14610,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "ValidateShrinkNodes",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/validate-shrink-nodes",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/validate-shrink-nodes",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -14800,7 +14650,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -14833,7 +14682,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -14867,7 +14715,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public ValidateTransferableNodesResponse ValidateTransferableNodesWithOptions(string InstanceId, ValidateTransferableNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeType))
             {
@@ -14884,7 +14731,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "ValidateTransferableNodes",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/validate-transfer-nodes",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/validate-transfer-nodes",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -14897,7 +14744,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<ValidateTransferableNodesResponse> ValidateTransferableNodesWithOptionsAsync(string InstanceId, ValidateTransferableNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            InstanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeType))
             {
@@ -14914,7 +14760,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 Action = "ValidateTransferableNodes",
                 Version = "2017-06-13",
                 Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + InstanceId + "/validate-transfer-nodes",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/validate-transfer-nodes",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -14946,11 +14792,68 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["clientToken"] = request.ClientToken;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientNodeConfiguration.ToMap()))
+            {
+                body["clientNodeConfiguration"] = request.ClientNodeConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ElasticDataNodeConfiguration.ToMap()))
+            {
+                body["elasticDataNodeConfiguration"] = request.ElasticDataNodeConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EsAdminPassword))
+            {
+                body["esAdminPassword"] = request.EsAdminPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EsVersion))
+            {
+                body["esVersion"] = request.EsVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceCategory))
+            {
+                body["instanceCategory"] = request.InstanceCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KibanaConfiguration.ToMap()))
+            {
+                body["kibanaConfiguration"] = request.KibanaConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterConfiguration.ToMap()))
+            {
+                body["masterConfiguration"] = request.MasterConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkConfig.ToMap()))
+            {
+                body["networkConfig"] = request.NetworkConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeAmount))
+            {
+                body["nodeAmount"] = request.NodeAmount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeSpec.ToMap()))
+            {
+                body["nodeSpec"] = request.NodeSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentInfo.ToMap()))
+            {
+                body["paymentInfo"] = request.PaymentInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentType))
+            {
+                body["paymentType"] = request.PaymentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WarmNodeConfiguration.ToMap()))
+            {
+                body["warmNodeConfiguration"] = request.WarmNodeConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneCount))
+            {
+                body["zoneCount"] = request.ZoneCount;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -14975,11 +14878,68 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["clientToken"] = request.ClientToken;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientNodeConfiguration.ToMap()))
+            {
+                body["clientNodeConfiguration"] = request.ClientNodeConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ElasticDataNodeConfiguration.ToMap()))
+            {
+                body["elasticDataNodeConfiguration"] = request.ElasticDataNodeConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EsAdminPassword))
+            {
+                body["esAdminPassword"] = request.EsAdminPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EsVersion))
+            {
+                body["esVersion"] = request.EsVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceCategory))
+            {
+                body["instanceCategory"] = request.InstanceCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KibanaConfiguration.ToMap()))
+            {
+                body["kibanaConfiguration"] = request.KibanaConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterConfiguration.ToMap()))
+            {
+                body["masterConfiguration"] = request.MasterConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkConfig.ToMap()))
+            {
+                body["networkConfig"] = request.NetworkConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeAmount))
+            {
+                body["nodeAmount"] = request.NodeAmount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeSpec.ToMap()))
+            {
+                body["nodeSpec"] = request.NodeSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentInfo.ToMap()))
+            {
+                body["paymentInfo"] = request.PaymentInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentType))
+            {
+                body["paymentType"] = request.PaymentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WarmNodeConfiguration.ToMap()))
+            {
+                body["warmNodeConfiguration"] = request.WarmNodeConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneCount))
+            {
+                body["zoneCount"] = request.ZoneCount;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {

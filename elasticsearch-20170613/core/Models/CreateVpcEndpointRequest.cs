@@ -13,16 +13,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        /// <summary>
-        /// 终端节点服务ID
-        /// </summary>
         [NameInMap("serviceId")]
         [Validation(Required=false)]
         public string ServiceId { get; set; }
 
-        /// <summary>
-        /// 可用区ID
-        /// </summary>
         [NameInMap("zoneId")]
         [Validation(Required=false)]
         public string ZoneId { get; set; }

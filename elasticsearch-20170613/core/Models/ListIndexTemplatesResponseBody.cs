@@ -44,13 +44,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 [NameInMap("aliases")]
                 [Validation(Required=false)]
                 public string Aliases { get; set; }
+
                 [NameInMap("mappings")]
                 [Validation(Required=false)]
                 public string Mappings { get; set; }
+
                 [NameInMap("settings")]
                 [Validation(Required=false)]
                 public string Settings { get; set; }
-            };
+
+            }
 
         }
 

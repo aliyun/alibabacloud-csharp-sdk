@@ -20,15 +20,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("dataStream")]
             [Validation(Required=false)]
             public bool? DataStream { get; set; }
+
             [NameInMap("indexPatterns")]
             [Validation(Required=false)]
             public List<string> IndexPatterns { get; set; }
+
             [NameInMap("indexTemplate")]
             [Validation(Required=false)]
             public string IndexTemplate { get; set; }
+
             [NameInMap("order")]
             [Validation(Required=false)]
             public long? Order { get; set; }
+
             [NameInMap("template")]
             [Validation(Required=false)]
             public DescribeDeprecatedTemplateResponseBodyResultTemplate Template { get; set; }
@@ -46,10 +50,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Settings { get; set; }
 
             }
+
             [NameInMap("version")]
             [Validation(Required=false)]
             public string Version { get; set; }
-        };
+
+        }
 
     }
 

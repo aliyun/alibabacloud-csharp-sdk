@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpgradeEngineVersionRequest : TeaModel {
-        [NameInMap("clientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        [NameInMap("dryRun")]
-        [Validation(Required=false)]
-        public bool? DryRun { get; set; }
-
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [NameInMap("version")]
         [Validation(Required=false)]
         public string Version { get; set; }
+
+        [NameInMap("clientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        [NameInMap("dryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
 
     }
 

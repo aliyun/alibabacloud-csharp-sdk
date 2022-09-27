@@ -9,9 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class RestartLogstashRequest : TeaModel {
-        [NameInMap("body")]
+        [NameInMap("batchCount")]
         [Validation(Required=false)]
-        public string Body { get; set; }
+        public double? BatchCount { get; set; }
+
+        [NameInMap("blueGreenDep")]
+        [Validation(Required=false)]
+        public bool? BlueGreenDep { get; set; }
+
+        [NameInMap("nodeTypes")]
+        [Validation(Required=false)]
+        public List<string> NodeTypes { get; set; }
+
+        [NameInMap("nodes")]
+        [Validation(Required=false)]
+        public List<string> Nodes { get; set; }
+
+        [NameInMap("restartType")]
+        [Validation(Required=false)]
+        public string RestartType { get; set; }
 
         [NameInMap("clientToken")]
         [Validation(Required=false)]

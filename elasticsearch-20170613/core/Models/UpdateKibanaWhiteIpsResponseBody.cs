@@ -20,10 +20,52 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("kibanaIPWhitelist")]
             [Validation(Required=false)]
             public List<string> KibanaIPWhitelist { get; set; }
+
             [NameInMap("kibanaPrivateIPWhitelist")]
             [Validation(Required=false)]
             public List<string> KibanaPrivateIPWhitelist { get; set; }
-        };
+
+            [NameInMap("networkConfig")]
+            [Validation(Required=false)]
+            public UpdateKibanaWhiteIpsResponseBodyResultNetworkConfig NetworkConfig { get; set; }
+            public class UpdateKibanaWhiteIpsResponseBodyResultNetworkConfig : TeaModel {
+                [NameInMap("type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+                [NameInMap("vpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
+
+                [NameInMap("vsArea")]
+                [Validation(Required=false)]
+                public string VsArea { get; set; }
+
+                [NameInMap("vswitchId")]
+                [Validation(Required=false)]
+                public string VswitchId { get; set; }
+
+                [NameInMap("whiteIpGroupList")]
+                [Validation(Required=false)]
+                public List<UpdateKibanaWhiteIpsResponseBodyResultNetworkConfigWhiteIpGroupList> WhiteIpGroupList { get; set; }
+                public class UpdateKibanaWhiteIpsResponseBodyResultNetworkConfigWhiteIpGroupList : TeaModel {
+                    [NameInMap("groupName")]
+                    [Validation(Required=false)]
+                    public string GroupName { get; set; }
+
+                    [NameInMap("ips")]
+                    [Validation(Required=false)]
+                    public List<string> Ips { get; set; }
+
+                    [NameInMap("whiteIpType")]
+                    [Validation(Required=false)]
+                    public string WhiteIpType { get; set; }
+
+                }
+
+            }
+
+        }
 
     }
 

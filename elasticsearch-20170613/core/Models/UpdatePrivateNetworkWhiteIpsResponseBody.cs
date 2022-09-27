@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("privateNetworkIpWhiteList")]
             [Validation(Required=false)]
             public List<string> PrivateNetworkIpWhiteList { get; set; }
-        };
+
+        }
 
     }
 

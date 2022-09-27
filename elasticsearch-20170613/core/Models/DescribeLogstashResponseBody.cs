@@ -19,44 +19,74 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public class DescribeLogstashResponseBodyResult : TeaModel {
             [NameInMap("ExtendConfigs")]
             [Validation(Required=false)]
-            public List<string> ExtendConfigs { get; set; }
+            public List<Dictionary<string, object>> ExtendConfigs { get; set; }
+
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
+
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<DescribeLogstashResponseBodyResultTags> Tags { get; set; }
             public class DescribeLogstashResponseBodyResultTags : TeaModel {
+                [NameInMap("tagKey")]
+                [Validation(Required=false)]
                 public string TagKey { get; set; }
+
+                [NameInMap("tagValue")]
+                [Validation(Required=false)]
                 public string TagValue { get; set; }
+
             }
+
             [NameInMap("ZoneInfos")]
             [Validation(Required=false)]
             public List<DescribeLogstashResponseBodyResultZoneInfos> ZoneInfos { get; set; }
             public class DescribeLogstashResponseBodyResultZoneInfos : TeaModel {
+                [NameInMap("status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("zoneId")]
+                [Validation(Required=false)]
                 public string ZoneId { get; set; }
+
             }
+
             [NameInMap("config")]
             [Validation(Required=false)]
-            public Dictionary<string, string> Config { get; set; }
+            public Dictionary<string, object> Config { get; set; }
+
             [NameInMap("createdAt")]
             [Validation(Required=false)]
             public string CreatedAt { get; set; }
+
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
             [NameInMap("endpointList")]
             [Validation(Required=false)]
             public List<DescribeLogstashResponseBodyResultEndpointList> EndpointList { get; set; }
             public class DescribeLogstashResponseBodyResultEndpointList : TeaModel {
+                [NameInMap("host")]
+                [Validation(Required=false)]
                 public string Host { get; set; }
+
+                [NameInMap("port")]
+                [Validation(Required=false)]
                 public string Port { get; set; }
+
+                [NameInMap("zoneId")]
+                [Validation(Required=false)]
                 public string ZoneId { get; set; }
+
             }
+
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
+
             [NameInMap("networkConfig")]
             [Validation(Required=false)]
             public DescribeLogstashResponseBodyResultNetworkConfig NetworkConfig { get; set; }
@@ -78,9 +108,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string VswitchId { get; set; }
 
             }
+
             [NameInMap("nodeAmount")]
             [Validation(Required=false)]
             public int? NodeAmount { get; set; }
+
             [NameInMap("nodeSpec")]
             [Validation(Required=false)]
             public DescribeLogstashResponseBodyResultNodeSpec NodeSpec { get; set; }
@@ -102,22 +134,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Spec { get; set; }
 
             }
+
             [NameInMap("paymentType")]
             [Validation(Required=false)]
             public string PaymentType { get; set; }
+
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("updatedAt")]
             [Validation(Required=false)]
             public string UpdatedAt { get; set; }
+
             [NameInMap("version")]
             [Validation(Required=false)]
             public string Version { get; set; }
+
             [NameInMap("vpcInstanceId")]
             [Validation(Required=false)]
             public string VpcInstanceId { get; set; }
-        };
+
+        }
 
     }
 

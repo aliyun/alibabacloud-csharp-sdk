@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
             [NameInMap("phases")]
             [Validation(Required=false)]
-            public Dictionary<string, string> Phases { get; set; }
-        };
+            public Dictionary<string, object> Phases { get; set; }
+
+        }
 
     }
 

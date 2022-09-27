@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("resId")]
             [Validation(Required=false)]
             public string ResId { get; set; }
-        };
+
+        }
 
     }
 

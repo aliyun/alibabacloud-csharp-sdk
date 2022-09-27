@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("X-Total-Count")]
             [Validation(Required=false)]
             public int? XTotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -34,12 +35,25 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public List<ListTagResourcesResponseBodyTagResourcesTagResource> TagResource { get; set; }
             public class ListTagResourcesResponseBodyTagResourcesTagResource : TeaModel {
+                [NameInMap("ResourceId")]
+                [Validation(Required=false)]
                 public string ResourceId { get; set; }
+
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
                 public string ResourceType { get; set; }
+
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
                 public string TagKey { get; set; }
+
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
                 public string TagValue { get; set; }
+
             }
-        };
+
+        }
 
     }
 

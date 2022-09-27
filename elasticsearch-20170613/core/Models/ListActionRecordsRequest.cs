@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string ActionNames { get; set; }
 
-        [NameInMap("body")]
-        [Validation(Required=false)]
-        public string Body { get; set; }
-
         [NameInMap("endTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }

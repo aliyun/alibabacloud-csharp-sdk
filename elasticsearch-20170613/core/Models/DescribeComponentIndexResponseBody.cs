@@ -19,7 +19,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public class DescribeComponentIndexResponseBodyResult : TeaModel {
             [NameInMap("_meta")]
             [Validation(Required=false)]
-            public Dictionary<string, string> Meta { get; set; }
+            public Dictionary<string, object> Meta { get; set; }
+
             [NameInMap("template")]
             [Validation(Required=false)]
             public DescribeComponentIndexResponseBodyResultTemplate Template { get; set; }
@@ -37,7 +38,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public Dictionary<string, object> Settings { get; set; }
 
             }
-        };
+
+        }
 
     }
 

@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public bool? ActiveOnly { get; set; }
 
-        [NameInMap("body")]
-        [Validation(Required=false)]
-        public string Body { get; set; }
-
     }
 
 }

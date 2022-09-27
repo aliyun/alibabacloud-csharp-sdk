@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
     public class UninstallLogstashPluginRequest : TeaModel {
         [NameInMap("body")]
         [Validation(Required=false)]
-        public string Body { get; set; }
+        public List<string> Body { get; set; }
 
         [NameInMap("clientToken")]
         [Validation(Required=false)]

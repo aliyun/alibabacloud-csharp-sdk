@@ -13,9 +13,17 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("diagnoseItems")]
         [Validation(Required=false)]
-        public string Body { get; set; }
+        public List<string> DiagnoseItems { get; set; }
+
+        [NameInMap("indices")]
+        [Validation(Required=false)]
+        public List<string> Indices { get; set; }
+
+        [NameInMap("type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
         [NameInMap("lang")]
         [Validation(Required=false)]

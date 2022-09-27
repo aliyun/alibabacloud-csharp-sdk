@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListLogstashPluginsRequest : TeaModel {
-        [NameInMap("body")]
-        [Validation(Required=false)]
-        public string Body { get; set; }
-
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }

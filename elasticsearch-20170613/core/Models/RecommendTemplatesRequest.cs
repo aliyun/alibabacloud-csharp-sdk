@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class RecommendTemplatesRequest : TeaModel {
-        [NameInMap("body")]
-        [Validation(Required=false)]
-        public string Body { get; set; }
-
         [NameInMap("usageScenario")]
         [Validation(Required=false)]
         public string UsageScenario { get; set; }

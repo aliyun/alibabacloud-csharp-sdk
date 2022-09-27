@@ -20,13 +20,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("groupName")]
             [Validation(Required=false)]
             public string GroupName { get; set; }
+
             [NameInMap("ips")]
             [Validation(Required=false)]
             public List<string> Ips { get; set; }
+
             [NameInMap("whiteIpType")]
             [Validation(Required=false)]
             public string WhiteIpType { get; set; }
-        };
+
+        }
 
         [NameInMap("clientToken")]
         [Validation(Required=false)]

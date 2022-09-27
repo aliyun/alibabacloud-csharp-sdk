@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("unit")]
             [Validation(Required=false)]
             public string Unit { get; set; }
+
             [NameInMap("value")]
             [Validation(Required=false)]
             public long? Value { get; set; }
-        };
+
+        }
 
     }
 

@@ -20,6 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("fileSize")]
             [Validation(Required=false)]
             public long? FileSize { get; set; }
+
             [NameInMap("ossObject")]
             [Validation(Required=false)]
             public ListDictInformationResponseBodyResultOssObject OssObject { get; set; }
@@ -37,10 +38,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Key { get; set; }
 
             }
+
             [NameInMap("type")]
             [Validation(Required=false)]
             public string Type { get; set; }
-        };
+
+        }
 
     }
 

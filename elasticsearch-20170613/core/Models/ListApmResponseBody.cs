@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("X-Total-Count")]
             [Validation(Required=false)]
             public long? XTotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

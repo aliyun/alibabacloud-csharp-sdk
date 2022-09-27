@@ -19,14 +19,17 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public class CreateComponentIndexRequestTemplate : TeaModel {
             [NameInMap("aliases")]
             [Validation(Required=false)]
-            public Dictionary<string, string> Aliases { get; set; }
+            public Dictionary<string, object> Aliases { get; set; }
+
             [NameInMap("mappings")]
             [Validation(Required=false)]
-            public Dictionary<string, string> Mappings { get; set; }
+            public Dictionary<string, object> Mappings { get; set; }
+
             [NameInMap("settings")]
             [Validation(Required=false)]
-            public Dictionary<string, string> Settings { get; set; }
-        };
+            public Dictionary<string, object> Settings { get; set; }
+
+        }
 
     }
 

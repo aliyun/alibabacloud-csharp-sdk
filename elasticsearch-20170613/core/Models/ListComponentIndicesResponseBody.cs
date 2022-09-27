@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("X-Total-Count")]
             [Validation(Required=false)]
             public long? XTotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -36,7 +37,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public class ListComponentIndicesResponseBodyResultContent : TeaModel {
                 [NameInMap("_meta")]
                 [Validation(Required=false)]
-                public Dictionary<string, string> Meta { get; set; }
+                public Dictionary<string, object> Meta { get; set; }
+
                 [NameInMap("template")]
                 [Validation(Required=false)]
                 public ListComponentIndicesResponseBodyResultContentTemplate Template { get; set; }
@@ -60,16 +62,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                                 [NameInMap("name")]
                                 [Validation(Required=false)]
                                 public string Name { get; set; }
-                            };
+
+                            }
 
                         }
-                    };
+
+                    }
 
                 }
+
                 [NameInMap("version")]
                 [Validation(Required=false)]
                 public long? Version { get; set; }
-            };
+
+            }
 
             [NameInMap("name")]
             [Validation(Required=false)]

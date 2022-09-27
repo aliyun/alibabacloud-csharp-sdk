@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class GetTransferableNodesRequest : TeaModel {
-        [NameInMap("body")]
-        [Validation(Required=false)]
-        public string Body { get; set; }
-
         [NameInMap("count")]
         [Validation(Required=false)]
         public int? Count { get; set; }

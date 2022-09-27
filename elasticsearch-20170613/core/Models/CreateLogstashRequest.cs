@@ -20,16 +20,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("type")]
             [Validation(Required=false)]
             public string Type { get; set; }
+
             [NameInMap("vpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
+
             [NameInMap("vsArea")]
             [Validation(Required=false)]
             public string VsArea { get; set; }
+
             [NameInMap("vswitchId")]
             [Validation(Required=false)]
             public string VswitchId { get; set; }
-        };
+
+        }
 
         [NameInMap("nodeAmount")]
         [Validation(Required=false)]
@@ -42,13 +46,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("disk")]
             [Validation(Required=false)]
             public long? Disk { get; set; }
+
             [NameInMap("diskType")]
             [Validation(Required=false)]
             public string DiskType { get; set; }
+
             [NameInMap("spec")]
             [Validation(Required=false)]
             public string Spec { get; set; }
-        };
+
+        }
 
         [NameInMap("paymentInfo")]
         [Validation(Required=false)]
@@ -57,16 +64,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("autoRenewDuration")]
             [Validation(Required=false)]
             public long? AutoRenewDuration { get; set; }
+
             [NameInMap("duration")]
             [Validation(Required=false)]
             public long? Duration { get; set; }
+
             [NameInMap("isAutoRenew")]
             [Validation(Required=false)]
             public bool? IsAutoRenew { get; set; }
+
             [NameInMap("pricingCycle")]
             [Validation(Required=false)]
             public string PricingCycle { get; set; }
-        };
+
+        }
 
         [NameInMap("paymentType")]
         [Validation(Required=false)]

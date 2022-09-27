@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("Enable")]
             [Validation(Required=false)]
             public bool? Enable { get; set; }
+
             [NameInMap("QuartzRegex")]
             [Validation(Required=false)]
             public string QuartzRegex { get; set; }
-        };
+
+        }
 
     }
 

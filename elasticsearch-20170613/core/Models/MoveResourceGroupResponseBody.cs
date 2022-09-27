@@ -20,27 +20,45 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("createdAt")]
             [Validation(Required=false)]
             public string CreatedAt { get; set; }
+
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
             [NameInMap("dictList")]
             [Validation(Required=false)]
             public List<MoveResourceGroupResponseBodyResultDictList> DictList { get; set; }
             public class MoveResourceGroupResponseBodyResultDictList : TeaModel {
+                [NameInMap("fileSize")]
+                [Validation(Required=false)]
                 public long? FileSize { get; set; }
+
+                [NameInMap("name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("sourceType")]
+                [Validation(Required=false)]
                 public string SourceType { get; set; }
+
+                [NameInMap("type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
+
             [NameInMap("domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
+
             [NameInMap("esVersion")]
             [Validation(Required=false)]
             public string EsVersion { get; set; }
+
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
+
             [NameInMap("kibanaConfiguration")]
             [Validation(Required=false)]
             public MoveResourceGroupResponseBodyResultKibanaConfiguration KibanaConfiguration { get; set; }
@@ -62,12 +80,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Spec { get; set; }
 
             }
+
             [NameInMap("kibanaDomain")]
             [Validation(Required=false)]
             public string KibanaDomain { get; set; }
+
             [NameInMap("kibanaPort")]
             [Validation(Required=false)]
             public int? KibanaPort { get; set; }
+
             [NameInMap("masterConfiguration")]
             [Validation(Required=false)]
             public MoveResourceGroupResponseBodyResultMasterConfiguration MasterConfiguration { get; set; }
@@ -89,6 +110,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Spec { get; set; }
 
             }
+
             [NameInMap("networkConfig")]
             [Validation(Required=false)]
             public MoveResourceGroupResponseBodyResultNetworkConfig NetworkConfig { get; set; }
@@ -110,9 +132,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string VswitchId { get; set; }
 
             }
+
             [NameInMap("nodeAmount")]
             [Validation(Required=false)]
             public int? NodeAmount { get; set; }
+
             [NameInMap("nodeSpec")]
             [Validation(Required=false)]
             public MoveResourceGroupResponseBodyResultNodeSpec NodeSpec { get; set; }
@@ -130,31 +154,50 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Spec { get; set; }
 
             }
+
             [NameInMap("paymentType")]
             [Validation(Required=false)]
             public string PaymentType { get; set; }
+
             [NameInMap("publicDomain")]
             [Validation(Required=false)]
             public string PublicDomain { get; set; }
+
             [NameInMap("publicPort")]
             [Validation(Required=false)]
             public int? PublicPort { get; set; }
+
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("synonymsDicts")]
             [Validation(Required=false)]
             public List<MoveResourceGroupResponseBodyResultSynonymsDicts> SynonymsDicts { get; set; }
             public class MoveResourceGroupResponseBodyResultSynonymsDicts : TeaModel {
+                [NameInMap("fileSize")]
+                [Validation(Required=false)]
                 public long? FileSize { get; set; }
+
+                [NameInMap("name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("sourceType")]
+                [Validation(Required=false)]
                 public string SourceType { get; set; }
+
+                [NameInMap("type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
+
             [NameInMap("updatedAt")]
             [Validation(Required=false)]
             public string UpdatedAt { get; set; }
-        };
+
+        }
 
     }
 

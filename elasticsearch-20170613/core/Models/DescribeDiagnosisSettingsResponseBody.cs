@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("scene")]
             [Validation(Required=false)]
             public string Scene { get; set; }
+
             [NameInMap("updateTime")]
             [Validation(Required=false)]
             public long? UpdateTime { get; set; }
-        };
+
+        }
 
     }
 

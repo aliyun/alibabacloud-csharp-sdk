@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("X-Total-Count")]
             [Validation(Required=false)]
             public long? XTotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -49,13 +50,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 [NameInMap("aliases")]
                 [Validation(Required=false)]
                 public string Aliases { get; set; }
+
                 [NameInMap("mappings")]
                 [Validation(Required=false)]
                 public string Mappings { get; set; }
+
                 [NameInMap("settings")]
                 [Validation(Required=false)]
                 public string Settings { get; set; }
-            };
+
+            }
 
             [NameInMap("version")]
             [Validation(Required=false)]

@@ -20,10 +20,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
+
             [NameInMap("diagnoseItems")]
             [Validation(Required=false)]
             public List<DescribeDiagnoseReportResponseBodyResultDiagnoseItems> DiagnoseItems { get; set; }
             public class DescribeDiagnoseReportResponseBodyResultDiagnoseItems : TeaModel {
+                [NameInMap("detail")]
+                [Validation(Required=false)]
                 public DescribeDiagnoseReportResponseBodyResultDiagnoseItemsDetail Detail { get; set; }
                 public class DescribeDiagnoseReportResponseBodyResultDiagnoseItemsDetail : TeaModel {
                     [NameInMap("desc")]
@@ -47,25 +50,38 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     public string Type { get; set; }
 
                 }
+
+                [NameInMap("health")]
+                [Validation(Required=false)]
                 public string Health { get; set; }
+
+                [NameInMap("item")]
+                [Validation(Required=false)]
                 public string Item { get; set; }
+
             }
+
             [NameInMap("health")]
             [Validation(Required=false)]
             public string Health { get; set; }
+
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
+
             [NameInMap("reportId")]
             [Validation(Required=false)]
             public string ReportId { get; set; }
+
             [NameInMap("state")]
             [Validation(Required=false)]
             public string State { get; set; }
+
             [NameInMap("trigger")]
             [Validation(Required=false)]
             public string Trigger { get; set; }
-        };
+
+        }
 
     }
 

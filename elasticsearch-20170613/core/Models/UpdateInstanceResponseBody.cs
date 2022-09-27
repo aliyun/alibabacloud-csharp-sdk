@@ -20,18 +20,23 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("createdAt")]
             [Validation(Required=false)]
             public string CreatedAt { get; set; }
+
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
             [NameInMap("domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
+
             [NameInMap("esVersion")]
             [Validation(Required=false)]
             public string EsVersion { get; set; }
+
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
+
             [NameInMap("kibanaConfiguration")]
             [Validation(Required=false)]
             public UpdateInstanceResponseBodyResultKibanaConfiguration KibanaConfiguration { get; set; }
@@ -53,6 +58,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Spec { get; set; }
 
             }
+
             [NameInMap("masterConfiguration")]
             [Validation(Required=false)]
             public UpdateInstanceResponseBodyResultMasterConfiguration MasterConfiguration { get; set; }
@@ -74,9 +80,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Spec { get; set; }
 
             }
+
             [NameInMap("nodeAmount")]
             [Validation(Required=false)]
             public int? NodeAmount { get; set; }
+
             [NameInMap("nodeSpec")]
             [Validation(Required=false)]
             public UpdateInstanceResponseBodyResultNodeSpec NodeSpec { get; set; }
@@ -94,13 +102,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Spec { get; set; }
 
             }
+
             [NameInMap("paymentType")]
             [Validation(Required=false)]
             public string PaymentType { get; set; }
+
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-        };
+
+        }
 
     }
 

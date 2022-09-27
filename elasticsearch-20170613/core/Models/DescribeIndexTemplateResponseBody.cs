@@ -20,18 +20,23 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("dataStream")]
             [Validation(Required=false)]
             public bool? DataStream { get; set; }
+
             [NameInMap("ilmPolicy")]
             [Validation(Required=false)]
             public string IlmPolicy { get; set; }
+
             [NameInMap("indexPatterns")]
             [Validation(Required=false)]
             public List<string> IndexPatterns { get; set; }
+
             [NameInMap("indexTemplate")]
             [Validation(Required=false)]
             public string IndexTemplate { get; set; }
+
             [NameInMap("priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }
+
             [NameInMap("template")]
             [Validation(Required=false)]
             public DescribeIndexTemplateResponseBodyResultTemplate Template { get; set; }
@@ -49,7 +54,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Settings { get; set; }
 
             }
-        };
+
+        }
 
     }
 

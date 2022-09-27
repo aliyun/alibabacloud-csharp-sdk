@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Result")]
+        [Validation(Required=false)]
+        public bool? Result { get; set; }
+
     }
 
 }

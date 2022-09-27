@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public string Host { get; set; }
 
+            [NameInMap("hostName")]
+            [Validation(Required=false)]
+            public string HostName { get; set; }
+
+            [NameInMap("nodeType")]
+            [Validation(Required=false)]
+            public string NodeType { get; set; }
+
             [NameInMap("port")]
             [Validation(Required=false)]
             public int? Port { get; set; }
@@ -26,6 +34,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string ZoneId { get; set; }
 
         }
+
+        [NameInMap("count")]
+        [Validation(Required=false)]
+        public int? Count { get; set; }
 
         [NameInMap("ignoreStatus")]
         [Validation(Required=false)]

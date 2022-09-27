@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("enablePublic")]
             [Validation(Required=false)]
             public bool? EnablePublic { get; set; }
-        };
+
+        }
 
     }
 

@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("X-Total-Count")]
             [Validation(Required=false)]
             public int? XTotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -59,16 +60,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 [NameInMap("type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
+
                 [NameInMap("vpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
+
                 [NameInMap("vsArea")]
                 [Validation(Required=false)]
                 public string VsArea { get; set; }
+
                 [NameInMap("vswitchId")]
                 [Validation(Required=false)]
                 public string VswitchId { get; set; }
-            };
+
+            }
 
             [NameInMap("nodeAmount")]
             [Validation(Required=false)]
@@ -81,16 +86,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 [NameInMap("disk")]
                 [Validation(Required=false)]
                 public int? Disk { get; set; }
+
                 [NameInMap("diskEncryption")]
                 [Validation(Required=false)]
                 public bool? DiskEncryption { get; set; }
+
                 [NameInMap("diskType")]
                 [Validation(Required=false)]
                 public string DiskType { get; set; }
+
                 [NameInMap("spec")]
                 [Validation(Required=false)]
                 public string Spec { get; set; }
-            };
+
+            }
 
             [NameInMap("paymentType")]
             [Validation(Required=false)]

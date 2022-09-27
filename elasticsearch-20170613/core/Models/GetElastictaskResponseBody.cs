@@ -42,6 +42,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string TriggerType { get; set; }
 
             }
+
             [NameInMap("elasticShrinkTask")]
             [Validation(Required=false)]
             public GetElastictaskResponseBodyResultElasticShrinkTask ElasticShrinkTask { get; set; }
@@ -67,7 +68,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string TriggerType { get; set; }
 
             }
-        };
+
+        }
 
     }
 

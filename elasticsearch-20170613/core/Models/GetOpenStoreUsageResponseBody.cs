@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class GetOpenStoreUsageResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -23,10 +20,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("currentUsage")]
             [Validation(Required=false)]
             public long? CurrentUsage { get; set; }
+
             [NameInMap("lastDayUsage")]
             [Validation(Required=false)]
             public long? LastDayUsage { get; set; }
-        };
+
+        }
 
     }
 

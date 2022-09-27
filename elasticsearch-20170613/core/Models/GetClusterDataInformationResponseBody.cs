@@ -20,6 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("connectable")]
             [Validation(Required=false)]
             public bool? Connectable { get; set; }
+
             [NameInMap("metaInfo")]
             [Validation(Required=false)]
             public GetClusterDataInformationResponseBodyResultMetaInfo MetaInfo { get; set; }
@@ -45,7 +46,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public List<string> TypeName { get; set; }
 
             }
-        };
+
+        }
 
     }
 

@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
-        };
+
+        }
 
     }
 
