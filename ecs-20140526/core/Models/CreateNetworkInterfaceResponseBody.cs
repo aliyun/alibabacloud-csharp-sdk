@@ -21,9 +21,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<CreateNetworkInterfaceResponseBodyIpv6SetsIpv6Set> Ipv6Set { get; set; }
             public class CreateNetworkInterfaceResponseBodyIpv6SetsIpv6Set : TeaModel {
+                [NameInMap("Ipv6Address")]
+                [Validation(Required=false)]
                 public string Ipv6Address { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("MacAddress")]
         [Validation(Required=false)]
@@ -53,10 +57,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<CreateNetworkInterfaceResponseBodyPrivateIpSetsPrivateIpSet> PrivateIpSet { get; set; }
             public class CreateNetworkInterfaceResponseBodyPrivateIpSetsPrivateIpSet : TeaModel {
+                [NameInMap("Primary")]
+                [Validation(Required=false)]
                 public bool? Primary { get; set; }
+
+                [NameInMap("PrivateIpAddress")]
+                [Validation(Required=false)]
                 public string PrivateIpAddress { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -73,7 +84,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
             public List<string> SecurityGroupId { get; set; }
-        };
+
+        }
 
         [NameInMap("ServiceID")]
         [Validation(Required=false)]
@@ -95,10 +107,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<CreateNetworkInterfaceResponseBodyTagsTag> Tag { get; set; }
             public class CreateNetworkInterfaceResponseBodyTagsTag : TeaModel {
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
                 public string TagKey { get; set; }
+
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
                 public string TagValue { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Type")]
         [Validation(Required=false)]

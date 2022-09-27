@@ -17,9 +17,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeCapacityReservationInstancesResponseBodyCapacityReservationItemInstanceIdSet> InstanceIdSet { get; set; }
             public class DescribeCapacityReservationInstancesResponseBodyCapacityReservationItemInstanceIdSet : TeaModel {
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]

@@ -17,15 +17,44 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeImageComponentsResponseBodyImageComponentImageComponentSet> ImageComponentSet { get; set; }
             public class DescribeImageComponentsResponseBodyImageComponentImageComponentSet : TeaModel {
+                [NameInMap("ComponentType")]
+                [Validation(Required=false)]
                 public string ComponentType { get; set; }
+
+                [NameInMap("Content")]
+                [Validation(Required=false)]
                 public string Content { get; set; }
+
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("ImageComponentId")]
+                [Validation(Required=false)]
                 public string ImageComponentId { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Owner")]
+                [Validation(Required=false)]
                 public string Owner { get; set; }
+
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
+
+                [NameInMap("SystemType")]
+                [Validation(Required=false)]
                 public string SystemType { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
                 public DescribeImageComponentsResponseBodyImageComponentImageComponentSetTags Tags { get; set; }
                 public class DescribeImageComponentsResponseBodyImageComponentImageComponentSetTags : TeaModel {
                     [NameInMap("Tag")]
@@ -43,8 +72,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]

@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public string CommandId { get; set; }
 
+                    [NameInMap("ContainerId")]
+                    [Validation(Required=false)]
+                    public string ContainerId { get; set; }
+
+                    [NameInMap("ContainerName")]
+                    [Validation(Required=false)]
+                    public string ContainerName { get; set; }
+
                     [NameInMap("Dropped")]
                     [Validation(Required=false)]
                     public int? Dropped { get; set; }
@@ -77,6 +85,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public string StopTime { get; set; }
 
+                    [NameInMap("Tags")]
+                    [Validation(Required=false)]
+                    public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTags Tags { get; set; }
+                    public class DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTags : TeaModel {
+                        [NameInMap("Tag")]
+                        [Validation(Required=false)]
+                        public List<DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTagsTag> Tag { get; set; }
+                        public class DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTagsTag : TeaModel {
+                            [NameInMap("TagKey")]
+                            [Validation(Required=false)]
+                            public string TagKey { get; set; }
+
+                            [NameInMap("TagValue")]
+                            [Validation(Required=false)]
+                            public string TagValue { get; set; }
+
+                        }
+
+                    }
+
                     [NameInMap("Username")]
                     [Validation(Required=false)]
                     public string Username { get; set; }
@@ -84,16 +112,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
             }
+
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public long? PageNumber { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public long? PageSize { get; set; }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public long? TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

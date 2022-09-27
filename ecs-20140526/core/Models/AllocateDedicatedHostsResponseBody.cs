@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("DedicatedHostId")]
             [Validation(Required=false)]
             public List<string> DedicatedHostId { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

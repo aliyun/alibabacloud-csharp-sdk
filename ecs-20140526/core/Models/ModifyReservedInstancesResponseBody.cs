@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("ReservedInstanceId")]
             [Validation(Required=false)]
             public List<string> ReservedInstanceId { get; set; }
-        };
+
+        }
 
     }
 

@@ -29,12 +29,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage> SnapshotPackage { get; set; }
             public class DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage : TeaModel {
+                [NameInMap("DisplayName")]
+                [Validation(Required=false)]
                 public string DisplayName { get; set; }
+
+                [NameInMap("EndTime")]
+                [Validation(Required=false)]
                 public string EndTime { get; set; }
+
+                [NameInMap("InitCapacity")]
+                [Validation(Required=false)]
                 public long? InitCapacity { get; set; }
+
+                [NameInMap("StartTime")]
+                [Validation(Required=false)]
                 public string StartTime { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -21,10 +21,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribePrefixListAssociationsResponseBodyPrefixListAssociationsPrefixListAssociation> PrefixListAssociation { get; set; }
             public class DescribePrefixListAssociationsResponseBodyPrefixListAssociationsPrefixListAssociation : TeaModel {
+                [NameInMap("ResourceId")]
+                [Validation(Required=false)]
                 public string ResourceId { get; set; }
+
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
                 public string ResourceType { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

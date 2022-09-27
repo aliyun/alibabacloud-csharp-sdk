@@ -24,7 +24,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("NvmeSupport")]
             [Validation(Required=false)]
             public string NvmeSupport { get; set; }
-        };
+
+        }
 
         [NameInMap("ImageFamily")]
         [Validation(Required=false)]

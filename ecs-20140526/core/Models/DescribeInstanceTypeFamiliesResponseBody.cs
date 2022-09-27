@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily> InstanceTypeFamily { get; set; }
             public class DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily : TeaModel {
+                [NameInMap("Generation")]
+                [Validation(Required=false)]
                 public string Generation { get; set; }
+
+                [NameInMap("InstanceTypeFamilyId")]
+                [Validation(Required=false)]
                 public string InstanceTypeFamilyId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

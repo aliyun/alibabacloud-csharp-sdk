@@ -34,6 +34,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public float? TradePrice { get; set; }
 
             }
+
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public DescribeInstanceModificationPriceResponseBodyPriceInfoRules Rules { get; set; }
@@ -53,7 +54,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

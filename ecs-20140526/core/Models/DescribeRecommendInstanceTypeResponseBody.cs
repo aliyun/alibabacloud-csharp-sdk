@@ -17,8 +17,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceType> RecommendInstanceType { get; set; }
             public class DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceType : TeaModel {
+                [NameInMap("CommodityCode")]
+                [Validation(Required=false)]
                 public string CommodityCode { get; set; }
+
+                [NameInMap("InstanceChargeType")]
+                [Validation(Required=false)]
                 public string InstanceChargeType { get; set; }
+
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
                 public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeInstanceType InstanceType { get; set; }
                 public class DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeInstanceType : TeaModel {
                     [NameInMap("Cores")]
@@ -46,12 +54,33 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string SupportIoOptimized { get; set; }
 
                 }
+
+                [NameInMap("NetworkType")]
+                [Validation(Required=false)]
                 public string NetworkType { get; set; }
+
+                [NameInMap("Priority")]
+                [Validation(Required=false)]
                 public int? Priority { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("Scene")]
+                [Validation(Required=false)]
                 public string Scene { get; set; }
+
+                [NameInMap("SpotStrategy")]
+                [Validation(Required=false)]
                 public string SpotStrategy { get; set; }
+
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
                 public string ZoneId { get; set; }
+
+                [NameInMap("Zones")]
+                [Validation(Required=false)]
                 public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZones Zones { get; set; }
                 public class DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZones : TeaModel {
                     [NameInMap("zone")]
@@ -65,7 +94,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             [NameInMap("NetworkType")]
                             [Validation(Required=false)]
                             public List<string> NetworkType { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("ZoneNo")]
                         [Validation(Required=false)]
@@ -74,8 +104,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

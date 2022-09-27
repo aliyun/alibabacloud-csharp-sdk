@@ -29,15 +29,37 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType> SpotPriceType { get; set; }
             public class DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType : TeaModel {
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
                 public string InstanceType { get; set; }
+
+                [NameInMap("IoOptimized")]
+                [Validation(Required=false)]
                 public string IoOptimized { get; set; }
+
+                [NameInMap("NetworkType")]
+                [Validation(Required=false)]
                 public string NetworkType { get; set; }
+
+                [NameInMap("OriginPrice")]
+                [Validation(Required=false)]
                 public float? OriginPrice { get; set; }
+
+                [NameInMap("SpotPrice")]
+                [Validation(Required=false)]
                 public float? SpotPrice { get; set; }
+
+                [NameInMap("Timestamp")]
+                [Validation(Required=false)]
                 public string Timestamp { get; set; }
+
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
                 public string ZoneId { get; set; }
+
             }
-        };
+
+        }
 
     }
 

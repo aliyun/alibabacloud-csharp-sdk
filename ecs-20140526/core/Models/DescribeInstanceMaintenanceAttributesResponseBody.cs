@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute> MaintenanceAttribute { get; set; }
             public class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute : TeaModel {
+                [NameInMap("ActionOnMaintenance")]
+                [Validation(Required=false)]
                 public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance ActionOnMaintenance { get; set; }
                 public class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance : TeaModel {
                     [NameInMap("DefaultValue")]
@@ -30,14 +32,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [NameInMap("SupportedValue")]
                         [Validation(Required=false)]
                         public List<string> SupportedValue { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public string Value { get; set; }
 
                 }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("MaintenanceWindows")]
+                [Validation(Required=false)]
                 public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindows MaintenanceWindows { get; set; }
                 public class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindows : TeaModel {
                     [NameInMap("MaintenanceWindow")]
@@ -55,9 +64,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
+                [NameInMap("NotifyOnMaintenance")]
+                [Validation(Required=false)]
                 public bool? NotifyOnMaintenance { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

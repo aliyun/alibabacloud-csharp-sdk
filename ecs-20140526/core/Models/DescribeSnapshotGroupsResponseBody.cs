@@ -25,13 +25,36 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroup> SnapshotGroup { get; set; }
             public class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroup : TeaModel {
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("ProgressStatus")]
+                [Validation(Required=false)]
                 public string ProgressStatus { get; set; }
+
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
+
+                [NameInMap("SnapshotGroupId")]
+                [Validation(Required=false)]
                 public string SnapshotGroupId { get; set; }
+
+                [NameInMap("Snapshots")]
+                [Validation(Required=false)]
                 public DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshots Snapshots { get; set; }
                 public class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshots : TeaModel {
                     [NameInMap("Snapshot")]
@@ -70,15 +93,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             [Validation(Required=false)]
                             public List<DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshotTagsTag> Tag { get; set; }
                             public class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshotTagsTag : TeaModel {
+                                [NameInMap("Key")]
+                                [Validation(Required=false)]
                                 public string Key { get; set; }
+
+                                [NameInMap("Value")]
+                                [Validation(Required=false)]
                                 public string Value { get; set; }
+
                             }
-                        };
+
+                        }
 
                     }
 
                 }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
                 public DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupTags Tags { get; set; }
                 public class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupTags : TeaModel {
                     [NameInMap("Tag")]
@@ -96,8 +132,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
     }
 

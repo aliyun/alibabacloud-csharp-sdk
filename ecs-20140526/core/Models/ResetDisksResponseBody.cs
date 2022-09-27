@@ -17,9 +17,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<ResetDisksResponseBodyOperationProgressSetOperationProgress> OperationProgress { get; set; }
             public class ResetDisksResponseBodyOperationProgressSetOperationProgress : TeaModel {
+                [NameInMap("ErrorCode")]
+                [Validation(Required=false)]
                 public string ErrorCode { get; set; }
+
+                [NameInMap("ErrorMsg")]
+                [Validation(Required=false)]
                 public string ErrorMsg { get; set; }
+
+                [NameInMap("OperationStatus")]
+                [Validation(Required=false)]
                 public string OperationStatus { get; set; }
+
+                [NameInMap("RelatedItemSet")]
+                [Validation(Required=false)]
                 public ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSet RelatedItemSet { get; set; }
                 public class ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSet : TeaModel {
                     [NameInMap("RelatedItem")]
@@ -37,8 +48,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

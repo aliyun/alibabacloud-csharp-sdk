@@ -16,6 +16,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("NetworkInterfaceId")]
             [Validation(Required=false)]
             public string NetworkInterfaceId { get; set; }
+
             [NameInMap("PrivateIpSet")]
             [Validation(Required=false)]
             public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSetPrivateIpSet PrivateIpSet { get; set; }
@@ -25,7 +26,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public List<string> PrivateIpAddress { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

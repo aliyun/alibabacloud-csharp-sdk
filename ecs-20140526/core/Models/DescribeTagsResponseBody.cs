@@ -29,6 +29,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeTagsResponseBodyTagsTag> Tag { get; set; }
             public class DescribeTagsResponseBodyTagsTag : TeaModel {
+                [NameInMap("ResourceTypeCount")]
+                [Validation(Required=false)]
                 public DescribeTagsResponseBodyTagsTagResourceTypeCount ResourceTypeCount { get; set; }
                 public class DescribeTagsResponseBodyTagsTagResourceTypeCount : TeaModel {
                     [NameInMap("Ddh")]
@@ -80,10 +82,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public int? Volume { get; set; }
 
                 }
+
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
                 public string TagKey { get; set; }
+
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
                 public string TagValue { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet> NetworkInterfaceSet { get; set; }
             public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet : TeaModel {
+                [NameInMap("AssociatedPublicIp")]
+                [Validation(Required=false)]
                 public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAssociatedPublicIp AssociatedPublicIp { get; set; }
                 public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAssociatedPublicIp : TeaModel {
                     [NameInMap("AllocationId")]
@@ -28,6 +30,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string PublicIpAddress { get; set; }
 
                 }
+
+                [NameInMap("Attachment")]
+                [Validation(Required=false)]
                 public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAttachment Attachment { get; set; }
                 public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAttachment : TeaModel {
                     [NameInMap("DeviceIndex")]
@@ -43,9 +48,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string TrunkNetworkInterfaceId { get; set; }
 
                 }
+
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("Ipv6Sets")]
+                [Validation(Required=false)]
                 public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6Sets Ipv6Sets { get; set; }
                 public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6Sets : TeaModel {
                     [NameInMap("Ipv6Set")]
@@ -59,12 +76,33 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
+                [NameInMap("MacAddress")]
+                [Validation(Required=false)]
                 public string MacAddress { get; set; }
+
+                [NameInMap("NetworkInterfaceId")]
+                [Validation(Required=false)]
                 public string NetworkInterfaceId { get; set; }
+
+                [NameInMap("NetworkInterfaceName")]
+                [Validation(Required=false)]
                 public string NetworkInterfaceName { get; set; }
+
+                [NameInMap("NetworkInterfaceTrafficMode")]
+                [Validation(Required=false)]
                 public string NetworkInterfaceTrafficMode { get; set; }
+
+                [NameInMap("OwnerId")]
+                [Validation(Required=false)]
                 public string OwnerId { get; set; }
+
+                [NameInMap("PrivateIpAddress")]
+                [Validation(Required=false)]
                 public string PrivateIpAddress { get; set; }
+
+                [NameInMap("PrivateIpSets")]
+                [Validation(Required=false)]
                 public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSets PrivateIpSets { get; set; }
                 public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSets : TeaModel {
                     [NameInMap("PrivateIpSet")]
@@ -78,10 +116,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             [NameInMap("AllocationId")]
                             [Validation(Required=false)]
                             public string AllocationId { get; set; }
+
                             [NameInMap("PublicIpAddress")]
                             [Validation(Required=false)]
                             public string PublicIpAddress { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("Primary")]
                         [Validation(Required=false)]
@@ -94,9 +134,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
+                [NameInMap("QueueNumber")]
+                [Validation(Required=false)]
                 public int? QueueNumber { get; set; }
+
+                [NameInMap("QueuePairNumber")]
+                [Validation(Required=false)]
                 public int? QueuePairNumber { get; set; }
+
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
+
+                [NameInMap("SecurityGroupIds")]
+                [Validation(Required=false)]
                 public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetSecurityGroupIds SecurityGroupIds { get; set; }
                 public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetSecurityGroupIds : TeaModel {
                     [NameInMap("SecurityGroupId")]
@@ -104,9 +156,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<string> SecurityGroupId { get; set; }
 
                 }
+
+                [NameInMap("ServiceID")]
+                [Validation(Required=false)]
                 public long? ServiceID { get; set; }
+
+                [NameInMap("ServiceManaged")]
+                [Validation(Required=false)]
                 public bool? ServiceManaged { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
                 public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetTags Tags { get; set; }
                 public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetTags : TeaModel {
                     [NameInMap("Tag")]
@@ -124,12 +188,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
+                [NameInMap("VSwitchId")]
+                [Validation(Required=false)]
                 public string VSwitchId { get; set; }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
                 public string VpcId { get; set; }
+
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
                 public string ZoneId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("NextToken")]
         [Validation(Required=false)]

@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("Size")]
             [Validation(Required=false)]
             public int? Size { get; set; }
-        };
+
+        }
 
         [NameInMap("Architecture")]
         [Validation(Required=false)]

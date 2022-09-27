@@ -60,10 +60,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("Password")]
             [Validation(Required=false)]
             public string Password { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
-        };
+
+        }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

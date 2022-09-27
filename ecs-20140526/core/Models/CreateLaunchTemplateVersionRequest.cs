@@ -16,34 +16,44 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("AutoSnapshotPolicyId")]
             [Validation(Required=false)]
             public string AutoSnapshotPolicyId { get; set; }
+
             [NameInMap("BurstingEnabled")]
             [Validation(Required=false)]
             public bool? BurstingEnabled { get; set; }
+
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
+
             [NameInMap("DeleteWithInstance")]
             [Validation(Required=false)]
             public bool? DeleteWithInstance { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
             [NameInMap("DiskName")]
             [Validation(Required=false)]
             public string DiskName { get; set; }
+
             [NameInMap("Iops")]
             [Validation(Required=false)]
             public int? Iops { get; set; }
+
             [NameInMap("PerformanceLevel")]
             [Validation(Required=false)]
             public string PerformanceLevel { get; set; }
+
             [NameInMap("ProvisionedIops")]
             [Validation(Required=false)]
             public long? ProvisionedIops { get; set; }
+
             [NameInMap("Size")]
             [Validation(Required=false)]
             public int? Size { get; set; }
-        };
+
+        }
 
         [NameInMap("AutoReleaseTime")]
         [Validation(Required=false)]

@@ -17,15 +17,44 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeSendFileResultsResponseBodyInvocationsInvocation> Invocation { get; set; }
             public class DescribeSendFileResultsResponseBodyInvocationsInvocation : TeaModel {
+                [NameInMap("Content")]
+                [Validation(Required=false)]
                 public string Content { get; set; }
+
+                [NameInMap("ContentType")]
+                [Validation(Required=false)]
                 public string ContentType { get; set; }
+
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("FileGroup")]
+                [Validation(Required=false)]
                 public string FileGroup { get; set; }
+
+                [NameInMap("FileMode")]
+                [Validation(Required=false)]
                 public string FileMode { get; set; }
+
+                [NameInMap("FileOwner")]
+                [Validation(Required=false)]
                 public string FileOwner { get; set; }
+
+                [NameInMap("InvocationStatus")]
+                [Validation(Required=false)]
                 public string InvocationStatus { get; set; }
+
+                [NameInMap("InvokeId")]
+                [Validation(Required=false)]
                 public string InvokeId { get; set; }
+
+                [NameInMap("InvokeInstances")]
+                [Validation(Required=false)]
                 public DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstances InvokeInstances { get; set; }
                 public class DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstances : TeaModel {
                     [NameInMap("InvokeInstance")]
@@ -67,12 +96,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Overwrite")]
+                [Validation(Required=false)]
                 public string Overwrite { get; set; }
+
+                [NameInMap("TargetDir")]
+                [Validation(Required=false)]
                 public string TargetDir { get; set; }
+
+                [NameInMap("VmCount")]
+                [Validation(Required=false)]
                 public int? VmCount { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost> DedicatedHost { get; set; }
             public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost : TeaModel {
+                [NameInMap("SchedulerOptions")]
+                [Validation(Required=true)]
                 public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSchedulerOptions SchedulerOptions { get; set; }
                 public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSchedulerOptions : TeaModel {
                     [NameInMap("ManagedPrivateSpaceId")]
@@ -24,9 +26,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string ManagedPrivateSpaceId { get; set; }
 
                 }
+
+                [NameInMap("ActionOnMaintenance")]
+                [Validation(Required=false)]
                 public string ActionOnMaintenance { get; set; }
+
+                [NameInMap("AutoPlacement")]
+                [Validation(Required=false)]
                 public string AutoPlacement { get; set; }
+
+                [NameInMap("AutoReleaseTime")]
+                [Validation(Required=false)]
                 public string AutoReleaseTime { get; set; }
+
+                [NameInMap("Capacity")]
+                [Validation(Required=false)]
                 public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity Capacity { get; set; }
                 public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity : TeaModel {
                     [NameInMap("AvailableLocalStorage")]
@@ -66,17 +80,53 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public int? TotalVgpus { get; set; }
 
                 }
+
+                [NameInMap("ChargeType")]
+                [Validation(Required=false)]
                 public string ChargeType { get; set; }
+
+                [NameInMap("Cores")]
+                [Validation(Required=false)]
                 public int? Cores { get; set; }
+
+                [NameInMap("CpuOverCommitRatio")]
+                [Validation(Required=false)]
                 public float? CpuOverCommitRatio { get; set; }
+
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
+                [NameInMap("DedicatedHostClusterId")]
+                [Validation(Required=false)]
                 public string DedicatedHostClusterId { get; set; }
+
+                [NameInMap("DedicatedHostId")]
+                [Validation(Required=false)]
                 public string DedicatedHostId { get; set; }
+
+                [NameInMap("DedicatedHostName")]
+                [Validation(Required=false)]
                 public string DedicatedHostName { get; set; }
+
+                [NameInMap("DedicatedHostType")]
+                [Validation(Required=false)]
                 public string DedicatedHostType { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("ExpiredTime")]
+                [Validation(Required=false)]
                 public string ExpiredTime { get; set; }
+
+                [NameInMap("GPUSpec")]
+                [Validation(Required=false)]
                 public string GPUSpec { get; set; }
+
+                [NameInMap("HostDetailInfo")]
+                [Validation(Required=false)]
                 public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostHostDetailInfo HostDetailInfo { get; set; }
                 public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostHostDetailInfo : TeaModel {
                     [NameInMap("SerialNumber")]
@@ -84,6 +134,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string SerialNumber { get; set; }
 
                 }
+
+                [NameInMap("Instances")]
+                [Validation(Required=false)]
                 public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstances Instances { get; set; }
                 public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstances : TeaModel {
                     [NameInMap("Instance")]
@@ -101,7 +154,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
+                [NameInMap("MachineId")]
+                [Validation(Required=false)]
                 public string MachineId { get; set; }
+
+                [NameInMap("NetworkAttributes")]
+                [Validation(Required=false)]
                 public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostNetworkAttributes NetworkAttributes { get; set; }
                 public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostNetworkAttributes : TeaModel {
                     [NameInMap("SlbUdpTimeout")]
@@ -113,6 +172,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public int? UdpTimeout { get; set; }
 
                 }
+
+                [NameInMap("OperationLocks")]
+                [Validation(Required=false)]
                 public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocks OperationLocks { get; set; }
                 public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocks : TeaModel {
                     [NameInMap("OperationLock")]
@@ -126,12 +188,33 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
+                [NameInMap("PhysicalGpus")]
+                [Validation(Required=false)]
                 public int? PhysicalGpus { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
+
+                [NameInMap("SaleCycle")]
+                [Validation(Required=false)]
                 public string SaleCycle { get; set; }
+
+                [NameInMap("Sockets")]
+                [Validation(Required=false)]
                 public int? Sockets { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("SupportedCustomInstanceTypeFamilies")]
+                [Validation(Required=false)]
                 public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedCustomInstanceTypeFamilies SupportedCustomInstanceTypeFamilies { get; set; }
                 public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedCustomInstanceTypeFamilies : TeaModel {
                     [NameInMap("SupportedCustomInstanceTypeFamily")]
@@ -139,6 +222,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<string> SupportedCustomInstanceTypeFamily { get; set; }
 
                 }
+
+                [NameInMap("SupportedInstanceTypeFamilies")]
+                [Validation(Required=false)]
                 public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedInstanceTypeFamilies SupportedInstanceTypeFamilies { get; set; }
                 public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedInstanceTypeFamilies : TeaModel {
                     [NameInMap("SupportedInstanceTypeFamily")]
@@ -146,6 +232,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<string> SupportedInstanceTypeFamily { get; set; }
 
                 }
+
+                [NameInMap("SupportedInstanceTypesList")]
+                [Validation(Required=false)]
                 public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedInstanceTypesList SupportedInstanceTypesList { get; set; }
                 public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedInstanceTypesList : TeaModel {
                     [NameInMap("SupportedInstanceTypesList")]
@@ -153,6 +242,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<string> SupportedInstanceTypesList { get; set; }
 
                 }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
                 public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostTags Tags { get; set; }
                 public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostTags : TeaModel {
                     [NameInMap("Tag")]
@@ -170,9 +262,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
                 public string ZoneId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

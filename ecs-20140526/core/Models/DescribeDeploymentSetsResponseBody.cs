@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet> DeploymentSet { get; set; }
             public class DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet : TeaModel {
+                [NameInMap("Capacities")]
+                [Validation(Required=false)]
                 public DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetCapacities Capacities { get; set; }
                 public class DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetCapacities : TeaModel {
                     [NameInMap("Capacity")]
@@ -38,15 +40,45 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
+                [NameInMap("DeploymentSetDescription")]
+                [Validation(Required=false)]
                 public string DeploymentSetDescription { get; set; }
+
+                [NameInMap("DeploymentSetId")]
+                [Validation(Required=false)]
                 public string DeploymentSetId { get; set; }
+
+                [NameInMap("DeploymentSetName")]
+                [Validation(Required=false)]
                 public string DeploymentSetName { get; set; }
+
+                [NameInMap("DeploymentStrategy")]
+                [Validation(Required=false)]
                 public string DeploymentStrategy { get; set; }
+
+                [NameInMap("Domain")]
+                [Validation(Required=false)]
                 public string Domain { get; set; }
+
+                [NameInMap("Granularity")]
+                [Validation(Required=false)]
                 public string Granularity { get; set; }
+
+                [NameInMap("GroupCount")]
+                [Validation(Required=false)]
                 public int? GroupCount { get; set; }
+
+                [NameInMap("InstanceAmount")]
+                [Validation(Required=false)]
                 public int? InstanceAmount { get; set; }
+
+                [NameInMap("InstanceIds")]
+                [Validation(Required=false)]
                 public DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetInstanceIds InstanceIds { get; set; }
                 public class DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetInstanceIds : TeaModel {
                     [NameInMap("InstanceId")]
@@ -54,9 +86,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<string> InstanceId { get; set; }
 
                 }
+
+                [NameInMap("Strategy")]
+                [Validation(Required=false)]
                 public string Strategy { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

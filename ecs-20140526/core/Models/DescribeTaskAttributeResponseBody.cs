@@ -29,9 +29,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgress> OperationProgress { get; set; }
             public class DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgress : TeaModel {
+                [NameInMap("ErrorCode")]
+                [Validation(Required=false)]
                 public string ErrorCode { get; set; }
+
+                [NameInMap("ErrorMsg")]
+                [Validation(Required=false)]
                 public string ErrorMsg { get; set; }
+
+                [NameInMap("OperationStatus")]
+                [Validation(Required=false)]
                 public string OperationStatus { get; set; }
+
+                [NameInMap("RelatedItemSet")]
+                [Validation(Required=false)]
                 public DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSet RelatedItemSet { get; set; }
                 public class DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSet : TeaModel {
                     [NameInMap("RelatedItem")]
@@ -49,8 +60,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -17,82 +17,142 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<CreateAutoProvisioningGroupRequestLaunchConfigurationArn> Arn { get; set; }
             public class CreateAutoProvisioningGroupRequestLaunchConfigurationArn : TeaModel {
+                [NameInMap("AssumeRoleFor")]
+                [Validation(Required=false)]
                 public long? AssumeRoleFor { get; set; }
+
+                [NameInMap("RoleType")]
+                [Validation(Required=false)]
                 public string RoleType { get; set; }
+
+                [NameInMap("Rolearn")]
+                [Validation(Required=false)]
                 public string Rolearn { get; set; }
+
             }
+
             [NameInMap("CreditSpecification")]
             [Validation(Required=false)]
             public string CreditSpecification { get; set; }
+
             [NameInMap("DataDisk")]
             [Validation(Required=false)]
             public List<CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk> DataDisk { get; set; }
             public class CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk : TeaModel {
+                [NameInMap("Category")]
+                [Validation(Required=false)]
                 public string Category { get; set; }
+
+                [NameInMap("DeleteWithInstance")]
+                [Validation(Required=false)]
                 public bool? DeleteWithInstance { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("Device")]
+                [Validation(Required=false)]
                 public string Device { get; set; }
+
+                [NameInMap("DiskName")]
+                [Validation(Required=false)]
                 public string DiskName { get; set; }
+
+                [NameInMap("Encrypted")]
+                [Validation(Required=false)]
                 public bool? Encrypted { get; set; }
+
+                [NameInMap("KmsKeyId")]
+                [Validation(Required=false)]
                 public string KmsKeyId { get; set; }
+
+                [NameInMap("PerformanceLevel")]
+                [Validation(Required=false)]
                 public string PerformanceLevel { get; set; }
+
+                [NameInMap("Size")]
+                [Validation(Required=false)]
                 public int? Size { get; set; }
+
+                [NameInMap("SnapshotId")]
+                [Validation(Required=false)]
                 public string SnapshotId { get; set; }
+
             }
+
             [NameInMap("DeploymentSetId")]
             [Validation(Required=false)]
             public string DeploymentSetId { get; set; }
+
             [NameInMap("HostName")]
             [Validation(Required=false)]
             public string HostName { get; set; }
+
             [NameInMap("HostNames")]
             [Validation(Required=false)]
             public List<string> HostNames { get; set; }
+
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
+
             [NameInMap("InstanceDescription")]
             [Validation(Required=false)]
             public string InstanceDescription { get; set; }
+
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
+
             [NameInMap("InternetChargeType")]
             [Validation(Required=false)]
             public string InternetChargeType { get; set; }
+
             [NameInMap("InternetMaxBandwidthIn")]
             [Validation(Required=false)]
             public int? InternetMaxBandwidthIn { get; set; }
+
             [NameInMap("InternetMaxBandwidthOut")]
             [Validation(Required=false)]
             public int? InternetMaxBandwidthOut { get; set; }
+
             [NameInMap("IoOptimized")]
             [Validation(Required=false)]
             public string IoOptimized { get; set; }
+
             [NameInMap("KeyPairName")]
             [Validation(Required=false)]
             public string KeyPairName { get; set; }
+
             [NameInMap("Password")]
             [Validation(Required=false)]
             public string Password { get; set; }
+
             [NameInMap("PasswordInherit")]
             [Validation(Required=false)]
             public bool? PasswordInherit { get; set; }
+
             [NameInMap("RamRoleName")]
             [Validation(Required=false)]
             public string RamRoleName { get; set; }
+
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
+
             [NameInMap("SecurityEnhancementStrategy")]
             [Validation(Required=false)]
             public string SecurityEnhancementStrategy { get; set; }
+
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
             public string SecurityGroupId { get; set; }
+
             [NameInMap("SecurityGroupIds")]
             [Validation(Required=false)]
             public List<string> SecurityGroupIds { get; set; }
+
             [NameInMap("SystemDisk")]
             [Validation(Required=false)]
             public CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk SystemDisk { get; set; }
@@ -110,32 +170,46 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string KMSKeyId { get; set; }
 
             }
+
             [NameInMap("SystemDiskCategory")]
             [Validation(Required=false)]
             public string SystemDiskCategory { get; set; }
+
             [NameInMap("SystemDiskDescription")]
             [Validation(Required=false)]
             public string SystemDiskDescription { get; set; }
+
             [NameInMap("SystemDiskName")]
             [Validation(Required=false)]
             public string SystemDiskName { get; set; }
+
             [NameInMap("SystemDiskPerformanceLevel")]
             [Validation(Required=false)]
             public string SystemDiskPerformanceLevel { get; set; }
+
             [NameInMap("SystemDiskSize")]
             [Validation(Required=false)]
             public int? SystemDiskSize { get; set; }
+
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public List<CreateAutoProvisioningGroupRequestLaunchConfigurationTag> Tag { get; set; }
             public class CreateAutoProvisioningGroupRequestLaunchConfigurationTag : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
                 public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
                 public string Value { get; set; }
+
             }
+
             [NameInMap("UserData")]
             [Validation(Required=false)]
             public string UserData { get; set; }
-        };
+
+        }
 
         [NameInMap("AutoProvisioningGroupName")]
         [Validation(Required=false)]
@@ -170,6 +244,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("ExcessCapacityTerminationPolicy")]
         [Validation(Required=false)]
         public string ExcessCapacityTerminationPolicy { get; set; }
+
+        [NameInMap("HibernationOptionsConfigured")]
+        [Validation(Required=false)]
+        public bool? HibernationOptionsConfigured { get; set; }
 
         [NameInMap("LaunchTemplateConfig")]
         [Validation(Required=false)]

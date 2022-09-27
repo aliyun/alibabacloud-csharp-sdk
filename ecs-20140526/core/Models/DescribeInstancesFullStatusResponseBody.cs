@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusType> InstanceFullStatusType { get; set; }
             public class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusType : TeaModel {
+                [NameInMap("HealthStatus")]
+                [Validation(Required=false)]
                 public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeHealthStatus HealthStatus { get; set; }
                 public class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeHealthStatus : TeaModel {
                     [NameInMap("Code")]
@@ -28,7 +30,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string Name { get; set; }
 
                 }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("ScheduledSystemEventSet")]
+                [Validation(Required=false)]
                 public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSet ScheduledSystemEventSet { get; set; }
                 public class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSet : TeaModel {
                     [NameInMap("ScheduledSystemEventType")]
@@ -42,10 +50,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             [NameInMap("Code")]
                             [Validation(Required=false)]
                             public int? Code { get; set; }
+
                             [NameInMap("Name")]
                             [Validation(Required=false)]
                             public string Name { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("EventId")]
                         [Validation(Required=false)]
@@ -62,10 +72,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             [NameInMap("Code")]
                             [Validation(Required=false)]
                             public int? Code { get; set; }
+
                             [NameInMap("Name")]
                             [Validation(Required=false)]
                             public string Name { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("ExtendedAttribute")]
                         [Validation(Required=false)]
@@ -74,9 +86,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             [NameInMap("Device")]
                             [Validation(Required=false)]
                             public string Device { get; set; }
+
                             [NameInMap("DiskId")]
                             [Validation(Required=false)]
                             public string DiskId { get; set; }
+
                             [NameInMap("InactiveDisks")]
                             [Validation(Required=false)]
                             public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisks InactiveDisks { get; set; }
@@ -108,7 +122,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                                 }
 
                             }
-                        };
+
+                        }
 
                         [NameInMap("ImpactLevel")]
                         [Validation(Required=false)]
@@ -125,6 +140,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeStatus Status { get; set; }
                 public class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeStatus : TeaModel {
                     [NameInMap("Code")]
@@ -136,8 +154,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string Name { get; set; }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

@@ -17,9 +17,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSet> LaunchTemplateVersionSet { get; set; }
             public class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSet : TeaModel {
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("CreatedBy")]
+                [Validation(Required=false)]
                 public string CreatedBy { get; set; }
+
+                [NameInMap("DefaultVersion")]
+                [Validation(Required=false)]
                 public bool? DefaultVersion { get; set; }
+
+                [NameInMap("LaunchTemplateData")]
+                [Validation(Required=false)]
                 public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData LaunchTemplateData { get; set; }
                 public class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData : TeaModel {
                     [NameInMap("SystemDisk")]
@@ -29,34 +40,44 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [NameInMap("AutoSnapshotPolicyId")]
                         [Validation(Required=false)]
                         public string AutoSnapshotPolicyId { get; set; }
+
                         [NameInMap("BurstingEnabled")]
                         [Validation(Required=false)]
                         public bool? BurstingEnabled { get; set; }
+
                         [NameInMap("Category")]
                         [Validation(Required=false)]
                         public string Category { get; set; }
+
                         [NameInMap("DeleteWithInstance")]
                         [Validation(Required=false)]
                         public bool? DeleteWithInstance { get; set; }
+
                         [NameInMap("Description")]
                         [Validation(Required=false)]
                         public string Description { get; set; }
+
                         [NameInMap("DiskName")]
                         [Validation(Required=false)]
                         public string DiskName { get; set; }
+
                         [NameInMap("Iops")]
                         [Validation(Required=false)]
                         public int? Iops { get; set; }
+
                         [NameInMap("PerformanceLevel")]
                         [Validation(Required=false)]
                         public string PerformanceLevel { get; set; }
+
                         [NameInMap("ProvisionedIops")]
                         [Validation(Required=false)]
                         public long? ProvisionedIops { get; set; }
+
                         [NameInMap("Size")]
                         [Validation(Required=false)]
                         public int? Size { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("AutoReleaseTime")]
                     [Validation(Required=false)]
@@ -70,20 +91,57 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [Validation(Required=false)]
                         public List<DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk> DataDisk { get; set; }
                         public class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk : TeaModel {
+                            [NameInMap("AutoSnapshotPolicyId")]
+                            [Validation(Required=false)]
                             public string AutoSnapshotPolicyId { get; set; }
+
+                            [NameInMap("BurstingEnabled")]
+                            [Validation(Required=false)]
                             public bool? BurstingEnabled { get; set; }
+
+                            [NameInMap("Category")]
+                            [Validation(Required=false)]
                             public string Category { get; set; }
+
+                            [NameInMap("DeleteWithInstance")]
+                            [Validation(Required=false)]
                             public bool? DeleteWithInstance { get; set; }
+
+                            [NameInMap("Description")]
+                            [Validation(Required=false)]
                             public string Description { get; set; }
+
+                            [NameInMap("Device")]
+                            [Validation(Required=false)]
                             public string Device { get; set; }
+
+                            [NameInMap("DiskName")]
+                            [Validation(Required=false)]
                             public string DiskName { get; set; }
+
+                            [NameInMap("Encrypted")]
+                            [Validation(Required=false)]
                             public string Encrypted { get; set; }
+
+                            [NameInMap("PerformanceLevel")]
+                            [Validation(Required=false)]
                             public string PerformanceLevel { get; set; }
+
+                            [NameInMap("ProvisionedIops")]
+                            [Validation(Required=false)]
                             public long? ProvisionedIops { get; set; }
+
+                            [NameInMap("Size")]
+                            [Validation(Required=false)]
                             public int? Size { get; set; }
+
+                            [NameInMap("SnapshotId")]
+                            [Validation(Required=false)]
                             public string SnapshotId { get; set; }
+
                         }
-                    };
+
+                    }
 
                     [NameInMap("DeploymentSetId")]
                     [Validation(Required=false)]
@@ -153,12 +211,32 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [Validation(Required=false)]
                         public List<DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterface> NetworkInterface { get; set; }
                         public class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterface : TeaModel {
+                            [NameInMap("Description")]
+                            [Validation(Required=false)]
                             public string Description { get; set; }
+
+                            [NameInMap("InstanceType")]
+                            [Validation(Required=false)]
                             public string InstanceType { get; set; }
+
+                            [NameInMap("NetworkInterfaceName")]
+                            [Validation(Required=false)]
                             public string NetworkInterfaceName { get; set; }
+
+                            [NameInMap("NetworkInterfaceTrafficMode")]
+                            [Validation(Required=false)]
                             public string NetworkInterfaceTrafficMode { get; set; }
+
+                            [NameInMap("PrimaryIpAddress")]
+                            [Validation(Required=false)]
                             public string PrimaryIpAddress { get; set; }
+
+                            [NameInMap("SecurityGroupId")]
+                            [Validation(Required=false)]
                             public string SecurityGroupId { get; set; }
+
+                            [NameInMap("SecurityGroupIds")]
+                            [Validation(Required=false)]
                             public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterfaceSecurityGroupIds SecurityGroupIds { get; set; }
                             public class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterfaceSecurityGroupIds : TeaModel {
                                 [NameInMap("SecurityGroupId")]
@@ -166,9 +244,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                                 public List<string> SecurityGroupId { get; set; }
 
                             }
+
+                            [NameInMap("VSwitchId")]
+                            [Validation(Required=false)]
                             public string VSwitchId { get; set; }
+
                         }
-                    };
+
+                    }
 
                     [NameInMap("NetworkType")]
                     [Validation(Required=false)]
@@ -209,7 +292,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [NameInMap("SecurityGroupId")]
                         [Validation(Required=false)]
                         public List<string> SecurityGroupId { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("SpotDuration")]
                     [Validation(Required=false)]
@@ -231,10 +315,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [Validation(Required=false)]
                         public List<DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataTagsInstanceTag> InstanceTag { get; set; }
                         public class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataTagsInstanceTag : TeaModel {
+                            [NameInMap("Key")]
+                            [Validation(Required=false)]
                             public string Key { get; set; }
+
+                            [NameInMap("Value")]
+                            [Validation(Required=false)]
                             public string Value { get; set; }
+
                         }
-                    };
+
+                    }
 
                     [NameInMap("UserData")]
                     [Validation(Required=false)]
@@ -253,13 +344,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string ZoneId { get; set; }
 
                 }
+
+                [NameInMap("LaunchTemplateId")]
+                [Validation(Required=false)]
                 public string LaunchTemplateId { get; set; }
+
+                [NameInMap("LaunchTemplateName")]
+                [Validation(Required=false)]
                 public string LaunchTemplateName { get; set; }
+
+                [NameInMap("ModifiedTime")]
+                [Validation(Required=false)]
                 public string ModifiedTime { get; set; }
+
+                [NameInMap("VersionDescription")]
+                [Validation(Required=false)]
                 public string VersionDescription { get; set; }
+
+                [NameInMap("VersionNumber")]
+                [Validation(Required=false)]
                 public long? VersionNumber { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

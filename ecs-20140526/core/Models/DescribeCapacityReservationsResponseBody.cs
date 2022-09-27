@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem> CapacityReservationItem { get; set; }
             public class DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem : TeaModel {
+                [NameInMap("AllocatedResources")]
+                [Validation(Required=false)]
                 public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResources AllocatedResources { get; set; }
                 public class DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResources : TeaModel {
                     [NameInMap("AllocatedResource")]
@@ -42,19 +44,69 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("EndTime")]
+                [Validation(Required=false)]
                 public string EndTime { get; set; }
+
+                [NameInMap("EndTimeType")]
+                [Validation(Required=false)]
                 public string EndTimeType { get; set; }
+
+                [NameInMap("InstanceChargeType")]
+                [Validation(Required=false)]
                 public string InstanceChargeType { get; set; }
+
+                [NameInMap("Platform")]
+                [Validation(Required=false)]
                 public string Platform { get; set; }
+
+                [NameInMap("PrivatePoolOptionsId")]
+                [Validation(Required=false)]
                 public string PrivatePoolOptionsId { get; set; }
+
+                [NameInMap("PrivatePoolOptionsMatchCriteria")]
+                [Validation(Required=false)]
                 public string PrivatePoolOptionsMatchCriteria { get; set; }
+
+                [NameInMap("PrivatePoolOptionsName")]
+                [Validation(Required=false)]
                 public string PrivatePoolOptionsName { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("ReservedInstanceId")]
+                [Validation(Required=false)]
+                public string ReservedInstanceId { get; set; }
+
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
+
+                [NameInMap("SavingPlanId")]
+                [Validation(Required=false)]
+                public string SavingPlanId { get; set; }
+
+                [NameInMap("StartTime")]
+                [Validation(Required=false)]
                 public string StartTime { get; set; }
+
+                [NameInMap("StartTimeType")]
+                [Validation(Required=false)]
                 public string StartTimeType { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
                 public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemTags Tags { get; set; }
                 public class DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemTags : TeaModel {
                     [NameInMap("Tag")]
@@ -72,9 +124,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
+                [NameInMap("TimeSlot")]
+                [Validation(Required=false)]
                 public string TimeSlot { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]

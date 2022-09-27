@@ -29,13 +29,36 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance> ReservedInstance { get; set; }
             public class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance : TeaModel {
+                [NameInMap("AllocationStatus")]
+                [Validation(Required=false)]
                 public string AllocationStatus { get; set; }
+
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("ExpiredTime")]
+                [Validation(Required=false)]
                 public string ExpiredTime { get; set; }
+
+                [NameInMap("InstanceAmount")]
+                [Validation(Required=false)]
                 public int? InstanceAmount { get; set; }
+
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
                 public string InstanceType { get; set; }
+
+                [NameInMap("OfferingType")]
+                [Validation(Required=false)]
                 public string OfferingType { get; set; }
+
+                [NameInMap("OperationLocks")]
+                [Validation(Required=false)]
                 public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocks OperationLocks { get; set; }
                 public class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocks : TeaModel {
                     [NameInMap("OperationLock")]
@@ -49,14 +72,41 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
+                [NameInMap("Platform")]
+                [Validation(Required=false)]
                 public string Platform { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("ReservedInstanceId")]
+                [Validation(Required=false)]
                 public string ReservedInstanceId { get; set; }
+
+                [NameInMap("ReservedInstanceName")]
+                [Validation(Required=false)]
                 public string ReservedInstanceName { get; set; }
+
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
+
+                [NameInMap("Scope")]
+                [Validation(Required=false)]
                 public string Scope { get; set; }
+
+                [NameInMap("StartTime")]
+                [Validation(Required=false)]
                 public string StartTime { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
                 public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTags Tags { get; set; }
                 public class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTags : TeaModel {
                     [NameInMap("Tag")]
@@ -74,9 +124,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
                 public string ZoneId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

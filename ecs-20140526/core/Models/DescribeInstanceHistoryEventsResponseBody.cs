@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventType> InstanceSystemEventType { get; set; }
             public class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventType : TeaModel {
+                [NameInMap("EventCycleStatus")]
+                [Validation(Required=false)]
                 public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventCycleStatus EventCycleStatus { get; set; }
                 public class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventCycleStatus : TeaModel {
                     [NameInMap("Code")]
@@ -28,9 +30,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string Name { get; set; }
 
                 }
+
+                [NameInMap("EventFinishTime")]
+                [Validation(Required=false)]
                 public string EventFinishTime { get; set; }
+
+                [NameInMap("EventId")]
+                [Validation(Required=false)]
                 public string EventId { get; set; }
+
+                [NameInMap("EventPublishTime")]
+                [Validation(Required=false)]
                 public string EventPublishTime { get; set; }
+
+                [NameInMap("EventType")]
+                [Validation(Required=false)]
                 public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventType EventType { get; set; }
                 public class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventType : TeaModel {
                     [NameInMap("Code")]
@@ -42,6 +56,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string Name { get; set; }
 
                 }
+
+                [NameInMap("ExtendedAttribute")]
+                [Validation(Required=false)]
                 public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute ExtendedAttribute { get; set; }
                 public class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute : TeaModel {
                     [NameInMap("Device")]
@@ -68,13 +85,29 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [Validation(Required=false)]
                         public List<DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk> InactiveDisk { get; set; }
                         public class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk : TeaModel {
+                            [NameInMap("CreationTime")]
+                            [Validation(Required=false)]
                             public string CreationTime { get; set; }
+
+                            [NameInMap("DeviceCategory")]
+                            [Validation(Required=false)]
                             public string DeviceCategory { get; set; }
+
+                            [NameInMap("DeviceSize")]
+                            [Validation(Required=false)]
                             public string DeviceSize { get; set; }
+
+                            [NameInMap("DeviceType")]
+                            [Validation(Required=false)]
                             public string DeviceType { get; set; }
+
+                            [NameInMap("ReleaseTime")]
+                            [Validation(Required=false)]
                             public string ReleaseTime { get; set; }
+
                         }
-                    };
+
+                    }
 
                     [NameInMap("MigrationOptions")]
                     [Validation(Required=false)]
@@ -83,7 +116,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [NameInMap("MigrationOption")]
                         [Validation(Required=false)]
                         public List<string> MigrationOption { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("OnlineRepairPolicy")]
                     [Validation(Required=false)]
@@ -94,13 +128,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string Rack { get; set; }
 
                 }
+
+                [NameInMap("ImpactLevel")]
+                [Validation(Required=false)]
                 public string ImpactLevel { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("NotBefore")]
+                [Validation(Required=false)]
                 public string NotBefore { get; set; }
+
+                [NameInMap("Reason")]
+                [Validation(Required=false)]
                 public string Reason { get; set; }
+
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
                 public string ResourceType { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

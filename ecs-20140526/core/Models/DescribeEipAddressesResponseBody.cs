@@ -17,16 +17,48 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeEipAddressesResponseBodyEipAddressesEipAddress> EipAddress { get; set; }
             public class DescribeEipAddressesResponseBodyEipAddressesEipAddress : TeaModel {
+                [NameInMap("AllocationId")]
+                [Validation(Required=false)]
                 public string AllocationId { get; set; }
+
+                [NameInMap("AllocationTime")]
+                [Validation(Required=false)]
                 public string AllocationTime { get; set; }
+
+                [NameInMap("Bandwidth")]
+                [Validation(Required=false)]
                 public string Bandwidth { get; set; }
+
+                [NameInMap("ChargeType")]
+                [Validation(Required=false)]
                 public string ChargeType { get; set; }
+
+                [NameInMap("EipBandwidth")]
+                [Validation(Required=false)]
                 public string EipBandwidth { get; set; }
+
+                [NameInMap("ExpiredTime")]
+                [Validation(Required=false)]
                 public string ExpiredTime { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
                 public string InstanceType { get; set; }
+
+                [NameInMap("InternetChargeType")]
+                [Validation(Required=false)]
                 public string InternetChargeType { get; set; }
+
+                [NameInMap("IpAddress")]
+                [Validation(Required=false)]
                 public string IpAddress { get; set; }
+
+                [NameInMap("OperationLocks")]
+                [Validation(Required=false)]
                 public DescribeEipAddressesResponseBodyEipAddressesEipAddressOperationLocks OperationLocks { get; set; }
                 public class DescribeEipAddressesResponseBodyEipAddressesEipAddressOperationLocks : TeaModel {
                     [NameInMap("LockReason")]
@@ -40,10 +72,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

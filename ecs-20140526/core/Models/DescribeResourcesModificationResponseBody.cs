@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeResourcesModificationResponseBodyAvailableZonesAvailableZone> AvailableZone { get; set; }
             public class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZone : TeaModel {
+                [NameInMap("AvailableResources")]
+                [Validation(Required=false)]
                 public DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResources AvailableResources { get; set; }
                 public class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResources : TeaModel {
                     [NameInMap("AvailableResource")]
@@ -31,14 +33,33 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             [Validation(Required=false)]
                             public List<DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource> SupportedResource { get; set; }
                             public class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource : TeaModel {
+                                [NameInMap("Max")]
+                                [Validation(Required=false)]
                                 public int? Max { get; set; }
+
+                                [NameInMap("Min")]
+                                [Validation(Required=false)]
                                 public int? Min { get; set; }
+
+                                [NameInMap("Status")]
+                                [Validation(Required=false)]
                                 public string Status { get; set; }
+
+                                [NameInMap("StatusCategory")]
+                                [Validation(Required=false)]
                                 public string StatusCategory { get; set; }
+
+                                [NameInMap("Unit")]
+                                [Validation(Required=false)]
                                 public string Unit { get; set; }
+
+                                [NameInMap("Value")]
+                                [Validation(Required=false)]
                                 public string Value { get; set; }
+
                             }
-                        };
+
+                        }
 
                         [NameInMap("Type")]
                         [Validation(Required=false)]
@@ -47,12 +68,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("StatusCategory")]
+                [Validation(Required=false)]
                 public string StatusCategory { get; set; }
+
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
                 public string ZoneId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

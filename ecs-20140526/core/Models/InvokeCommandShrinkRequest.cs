@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string CommandId { get; set; }
 
+        [NameInMap("ContainerId")]
+        [Validation(Required=false)]
+        public string ContainerId { get; set; }
+
+        [NameInMap("ContainerName")]
+        [Validation(Required=false)]
+        public string ContainerName { get; set; }
+
         [NameInMap("Frequency")]
         [Validation(Required=false)]
         public string Frequency { get; set; }

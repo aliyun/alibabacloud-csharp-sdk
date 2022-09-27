@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReference> SecurityGroupReference { get; set; }
             public class DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReference : TeaModel {
+                [NameInMap("ReferencingSecurityGroups")]
+                [Validation(Required=false)]
                 public DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroups ReferencingSecurityGroups { get; set; }
                 public class DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroups : TeaModel {
                     [NameInMap("ReferencingSecurityGroup")]
@@ -38,9 +40,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
+                [NameInMap("SecurityGroupId")]
+                [Validation(Required=false)]
                 public string SecurityGroupId { get; set; }
+
             }
-        };
+
+        }
 
     }
 

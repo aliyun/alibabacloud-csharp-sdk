@@ -29,16 +29,48 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit> StorageCapacityUnit { get; set; }
             public class DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit : TeaModel {
+                [NameInMap("AllocationStatus")]
+                [Validation(Required=false)]
                 public string AllocationStatus { get; set; }
+
+                [NameInMap("Capacity")]
+                [Validation(Required=false)]
                 public int? Capacity { get; set; }
+
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("ExpiredTime")]
+                [Validation(Required=false)]
                 public string ExpiredTime { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("StartTime")]
+                [Validation(Required=false)]
                 public string StartTime { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("StorageCapacityUnitId")]
+                [Validation(Required=false)]
                 public string StorageCapacityUnitId { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
                 public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTags Tags { get; set; }
                 public class DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTags : TeaModel {
                     [NameInMap("Tag")]
@@ -56,8 +88,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

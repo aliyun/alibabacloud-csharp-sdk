@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("Configured")]
             [Validation(Required=false)]
             public bool? Configured { get; set; }
-        };
+
+        }
 
         [NameInMap("PrivatePoolOptions")]
         [Validation(Required=false)]
@@ -25,10 +26,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
+
             [NameInMap("MatchCriteria")]
             [Validation(Required=false)]
             public string MatchCriteria { get; set; }
-        };
+
+        }
 
         [NameInMap("SystemDisk")]
         [Validation(Required=false)]
@@ -37,22 +40,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
             [NameInMap("DiskName")]
             [Validation(Required=false)]
             public string DiskName { get; set; }
+
             [NameInMap("PerformanceLevel")]
             [Validation(Required=false)]
             public string PerformanceLevel { get; set; }
+
             [NameInMap("Size")]
             [Validation(Required=false)]
             public int? Size { get; set; }
+
             [NameInMap("StorageClusterId")]
             [Validation(Required=false)]
             public string StorageClusterId { get; set; }
-        };
+
+        }
 
         [NameInMap("Affinity")]
         [Validation(Required=false)]

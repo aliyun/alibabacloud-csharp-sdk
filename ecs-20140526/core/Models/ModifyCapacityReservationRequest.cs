@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
-        };
+
+        }
 
         [NameInMap("Description")]
         [Validation(Required=false)]

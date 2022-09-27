@@ -17,9 +17,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeImagesResponseBodyImagesImage> Image { get; set; }
             public class DescribeImagesResponseBodyImagesImage : TeaModel {
+                [NameInMap("Architecture")]
+                [Validation(Required=false)]
                 public string Architecture { get; set; }
+
+                [NameInMap("BootMode")]
+                [Validation(Required=false)]
+                public string BootMode { get; set; }
+
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("DetectionOptions")]
+                [Validation(Required=false)]
                 public DescribeImagesResponseBodyImagesImageDetectionOptions DetectionOptions { get; set; }
                 public class DescribeImagesResponseBodyImagesImageDetectionOptions : TeaModel {
                     [NameInMap("Items")]
@@ -30,18 +45,34 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [Validation(Required=false)]
                         public List<DescribeImagesResponseBodyImagesImageDetectionOptionsItemsItem> Item { get; set; }
                         public class DescribeImagesResponseBodyImagesImageDetectionOptionsItemsItem : TeaModel {
+                            [NameInMap("Name")]
+                            [Validation(Required=false)]
                             public string Name { get; set; }
+
+                            [NameInMap("RiskCode")]
+                            [Validation(Required=false)]
                             public string RiskCode { get; set; }
+
+                            [NameInMap("RiskLevel")]
+                            [Validation(Required=false)]
                             public string RiskLevel { get; set; }
+
+                            [NameInMap("Value")]
+                            [Validation(Required=false)]
                             public string Value { get; set; }
+
                         }
-                    };
+
+                    }
 
                     [NameInMap("Status")]
                     [Validation(Required=false)]
                     public string Status { get; set; }
 
                 }
+
+                [NameInMap("DiskDeviceMappings")]
+                [Validation(Required=false)]
                 public DescribeImagesResponseBodyImagesImageDiskDeviceMappings DiskDeviceMappings { get; set; }
                 public class DescribeImagesResponseBodyImagesImageDiskDeviceMappings : TeaModel {
                     [NameInMap("DiskDeviceMapping")]
@@ -87,6 +118,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
+                [NameInMap("Features")]
+                [Validation(Required=false)]
                 public DescribeImagesResponseBodyImagesImageFeatures Features { get; set; }
                 public class DescribeImagesResponseBodyImagesImageFeatures : TeaModel {
                     [NameInMap("NvmeSupport")]
@@ -94,29 +128,101 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string NvmeSupport { get; set; }
 
                 }
+
+                [NameInMap("ImageFamily")]
+                [Validation(Required=false)]
                 public string ImageFamily { get; set; }
+
+                [NameInMap("ImageId")]
+                [Validation(Required=false)]
                 public string ImageId { get; set; }
+
+                [NameInMap("ImageName")]
+                [Validation(Required=false)]
                 public string ImageName { get; set; }
+
+                [NameInMap("ImageOwnerAlias")]
+                [Validation(Required=false)]
                 public string ImageOwnerAlias { get; set; }
+
+                [NameInMap("ImageOwnerId")]
+                [Validation(Required=false)]
                 public long? ImageOwnerId { get; set; }
+
+                [NameInMap("ImageVersion")]
+                [Validation(Required=false)]
                 public string ImageVersion { get; set; }
+
+                [NameInMap("IsCopied")]
+                [Validation(Required=false)]
                 public bool? IsCopied { get; set; }
+
+                [NameInMap("IsPublic")]
+                [Validation(Required=false)]
                 public bool? IsPublic { get; set; }
+
+                [NameInMap("IsSelfShared")]
+                [Validation(Required=false)]
                 public string IsSelfShared { get; set; }
+
+                [NameInMap("IsSubscribed")]
+                [Validation(Required=false)]
                 public bool? IsSubscribed { get; set; }
+
+                [NameInMap("IsSupportCloudinit")]
+                [Validation(Required=false)]
                 public bool? IsSupportCloudinit { get; set; }
+
+                [NameInMap("IsSupportIoOptimized")]
+                [Validation(Required=false)]
                 public bool? IsSupportIoOptimized { get; set; }
+
+                [NameInMap("LoginAsNonRootSupported")]
+                [Validation(Required=false)]
                 public bool? LoginAsNonRootSupported { get; set; }
+
+                [NameInMap("OSName")]
+                [Validation(Required=false)]
                 public string OSName { get; set; }
+
+                [NameInMap("OSNameEn")]
+                [Validation(Required=false)]
                 public string OSNameEn { get; set; }
+
+                [NameInMap("OSType")]
+                [Validation(Required=false)]
                 public string OSType { get; set; }
+
+                [NameInMap("Platform")]
+                [Validation(Required=false)]
                 public string Platform { get; set; }
+
+                [NameInMap("ProductCode")]
+                [Validation(Required=false)]
                 public string ProductCode { get; set; }
+
+                [NameInMap("Progress")]
+                [Validation(Required=false)]
                 public string Progress { get; set; }
+
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
+
+                [NameInMap("Size")]
+                [Validation(Required=false)]
                 public int? Size { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("SupplierName")]
+                [Validation(Required=false)]
                 public string SupplierName { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
                 public DescribeImagesResponseBodyImagesImageTags Tags { get; set; }
                 public class DescribeImagesResponseBodyImagesImageTags : TeaModel {
                     [NameInMap("Tag")]
@@ -134,9 +240,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
+                [NameInMap("Usage")]
+                [Validation(Required=false)]
                 public string Usage { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

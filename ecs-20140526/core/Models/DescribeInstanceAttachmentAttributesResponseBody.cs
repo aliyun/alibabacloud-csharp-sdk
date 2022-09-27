@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeInstanceAttachmentAttributesResponseBodyInstancesInstance> Instance { get; set; }
             public class DescribeInstanceAttachmentAttributesResponseBodyInstancesInstance : TeaModel {
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("PrivatePoolOptionsId")]
+                [Validation(Required=false)]
                 public string PrivatePoolOptionsId { get; set; }
+
+                [NameInMap("PrivatePoolOptionsMatchCriteria")]
+                [Validation(Required=false)]
                 public string PrivatePoolOptionsMatchCriteria { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

@@ -32,10 +32,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("DedicatedHostId")]
             [Validation(Required=false)]
             public string DedicatedHostId { get; set; }
+
             [NameInMap("DedicatedHostName")]
             [Validation(Required=false)]
             public string DedicatedHostName { get; set; }
-        };
+
+        }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -48,16 +50,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("AllocationId")]
             [Validation(Required=false)]
             public string AllocationId { get; set; }
+
             [NameInMap("Bandwidth")]
             [Validation(Required=false)]
             public int? Bandwidth { get; set; }
+
             [NameInMap("InternetChargeType")]
             [Validation(Required=false)]
             public string InternetChargeType { get; set; }
+
             [NameInMap("IpAddress")]
             [Validation(Required=false)]
             public string IpAddress { get; set; }
-        };
+
+        }
 
         [NameInMap("ExpiredTime")]
         [Validation(Required=false)]
@@ -78,7 +84,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("IpAddress")]
             [Validation(Required=false)]
             public List<string> IpAddress { get; set; }
-        };
+
+        }
 
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
@@ -128,9 +135,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeInstanceAttributeResponseBodyOperationLocksLockReason> LockReason { get; set; }
             public class DescribeInstanceAttributeResponseBodyOperationLocksLockReason : TeaModel {
+                [NameInMap("LockReason")]
+                [Validation(Required=false)]
                 public string LockReason { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PublicIpAddress")]
         [Validation(Required=false)]
@@ -139,7 +150,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("IpAddress")]
             [Validation(Required=false)]
             public List<string> IpAddress { get; set; }
-        };
+
+        }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -156,7 +168,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
             public List<string> SecurityGroupId { get; set; }
-        };
+
+        }
 
         [NameInMap("SerialNumber")]
         [Validation(Required=false)]
@@ -181,6 +194,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("NatIpAddress")]
             [Validation(Required=false)]
             public string NatIpAddress { get; set; }
+
             [NameInMap("PrivateIpAddress")]
             [Validation(Required=false)]
             public DescribeInstanceAttributeResponseBodyVpcAttributesPrivateIpAddress PrivateIpAddress { get; set; }
@@ -190,13 +204,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public List<string> IpAddress { get; set; }
 
             }
+
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
+
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
-        };
+
+        }
 
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

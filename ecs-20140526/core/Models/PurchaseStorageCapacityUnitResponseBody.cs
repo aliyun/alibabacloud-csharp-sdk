@@ -24,7 +24,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("StorageCapacityUnitId")]
             [Validation(Required=false)]
             public List<string> StorageCapacityUnitId { get; set; }
-        };
+
+        }
 
     }
 

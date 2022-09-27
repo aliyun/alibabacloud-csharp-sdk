@@ -17,10 +17,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeKeyPairsResponseBodyKeyPairsKeyPair> KeyPair { get; set; }
             public class DescribeKeyPairsResponseBodyKeyPairsKeyPair : TeaModel {
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
+                [NameInMap("KeyPairFingerPrint")]
+                [Validation(Required=false)]
                 public string KeyPairFingerPrint { get; set; }
+
+                [NameInMap("KeyPairName")]
+                [Validation(Required=false)]
                 public string KeyPairName { get; set; }
+
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
                 public DescribeKeyPairsResponseBodyKeyPairsKeyPairTags Tags { get; set; }
                 public class DescribeKeyPairsResponseBodyKeyPairsKeyPairTags : TeaModel {
                     [NameInMap("Tag")]
@@ -38,8 +52,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

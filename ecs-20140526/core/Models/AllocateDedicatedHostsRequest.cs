@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("SlbUdpTimeout")]
             [Validation(Required=false)]
             public int? SlbUdpTimeout { get; set; }
+
             [NameInMap("UdpTimeout")]
             [Validation(Required=false)]
             public int? UdpTimeout { get; set; }
-        };
+
+        }
 
         [NameInMap("ActionOnMaintenance")]
         [Validation(Required=false)]

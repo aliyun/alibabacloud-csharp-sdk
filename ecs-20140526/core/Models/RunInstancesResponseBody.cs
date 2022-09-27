@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("InstanceIdSet")]
             [Validation(Required=false)]
             public List<string> InstanceIdSet { get; set; }
-        };
+
+        }
 
         [NameInMap("OrderId")]
         [Validation(Required=false)]

@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("AllocationId")]
             [Validation(Required=false)]
             public string AllocationId { get; set; }
+
             [NameInMap("PublicIpAddress")]
             [Validation(Required=false)]
             public string PublicIpAddress { get; set; }
-        };
+
+        }
 
         [NameInMap("Attachment")]
         [Validation(Required=false)]
@@ -28,9 +30,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("DeviceIndex")]
             [Validation(Required=false)]
             public int? DeviceIndex { get; set; }
+
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
+
             [NameInMap("MemberNetworkInterfaceIds")]
             [Validation(Required=false)]
             public DescribeNetworkInterfaceAttributeResponseBodyAttachmentMemberNetworkInterfaceIds MemberNetworkInterfaceIds { get; set; }
@@ -40,10 +44,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public List<string> MemberNetworkInterfaceId { get; set; }
 
             }
+
             [NameInMap("TrunkNetworkInterfaceId")]
             [Validation(Required=false)]
             public string TrunkNetworkInterfaceId { get; set; }
-        };
+
+        }
 
         [NameInMap("BondInterfaceSpecification")]
         [Validation(Required=false)]
@@ -52,6 +58,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("BondMode")]
             [Validation(Required=false)]
             public string BondMode { get; set; }
+
             [NameInMap("SlaveInterfaceSpecification")]
             [Validation(Required=false)]
             public DescribeNetworkInterfaceAttributeResponseBodyBondInterfaceSpecificationSlaveInterfaceSpecification SlaveInterfaceSpecification { get; set; }
@@ -75,7 +82,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
             }
-        };
+
+        }
 
         [NameInMap("CreationTime")]
         [Validation(Required=false)]
@@ -97,9 +105,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeNetworkInterfaceAttributeResponseBodyIpv6SetsIpv6Set> Ipv6Set { get; set; }
             public class DescribeNetworkInterfaceAttributeResponseBodyIpv6SetsIpv6Set : TeaModel {
+                [NameInMap("Ipv6Address")]
+                [Validation(Required=false)]
                 public string Ipv6Address { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("MacAddress")]
         [Validation(Required=false)]
@@ -133,6 +145,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet> PrivateIpSet { get; set; }
             public class DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet : TeaModel {
+                [NameInMap("AssociatedPublicIp")]
+                [Validation(Required=false)]
                 public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp AssociatedPublicIp { get; set; }
                 public class DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp : TeaModel {
                     [NameInMap("AllocationId")]
@@ -144,10 +158,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string PublicIpAddress { get; set; }
 
                 }
+
+                [NameInMap("Primary")]
+                [Validation(Required=false)]
                 public bool? Primary { get; set; }
+
+                [NameInMap("PrivateIpAddress")]
+                [Validation(Required=false)]
                 public string PrivateIpAddress { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("QueueNumber")]
         [Validation(Required=false)]
@@ -172,7 +194,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
             public List<string> SecurityGroupId { get; set; }
-        };
+
+        }
 
         [NameInMap("ServiceID")]
         [Validation(Required=false)]
@@ -189,13 +212,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("BondNetworkInterfaceId")]
             [Validation(Required=false)]
             public string BondNetworkInterfaceId { get; set; }
+
             [NameInMap("SlaveNetworkInterfaceId")]
             [Validation(Required=false)]
             public string SlaveNetworkInterfaceId { get; set; }
+
             [NameInMap("WorkState")]
             [Validation(Required=false)]
             public string WorkState { get; set; }
-        };
+
+        }
 
         [NameInMap("Status")]
         [Validation(Required=false)]
@@ -209,10 +235,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeNetworkInterfaceAttributeResponseBodyTagsTag> Tag { get; set; }
             public class DescribeNetworkInterfaceAttributeResponseBodyTagsTag : TeaModel {
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
                 public string TagKey { get; set; }
+
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
                 public string TagValue { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Type")]
         [Validation(Required=false)]

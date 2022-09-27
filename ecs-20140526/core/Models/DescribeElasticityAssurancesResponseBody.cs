@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem> ElasticityAssuranceItem { get; set; }
             public class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem : TeaModel {
+                [NameInMap("AllocatedResources")]
+                [Validation(Required=false)]
                 public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResources AllocatedResources { get; set; }
                 public class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResources : TeaModel {
                     [NameInMap("AllocatedResource")]
@@ -42,18 +44,57 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("EndTime")]
+                [Validation(Required=false)]
                 public string EndTime { get; set; }
+
+                [NameInMap("InstanceChargeType")]
+                [Validation(Required=false)]
                 public string InstanceChargeType { get; set; }
+
+                [NameInMap("LatestStartTime")]
+                [Validation(Required=false)]
                 public string LatestStartTime { get; set; }
+
+                [NameInMap("PrivatePoolOptionsId")]
+                [Validation(Required=false)]
                 public string PrivatePoolOptionsId { get; set; }
+
+                [NameInMap("PrivatePoolOptionsMatchCriteria")]
+                [Validation(Required=false)]
                 public string PrivatePoolOptionsMatchCriteria { get; set; }
+
+                [NameInMap("PrivatePoolOptionsName")]
+                [Validation(Required=false)]
                 public string PrivatePoolOptionsName { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
+
+                [NameInMap("StartTime")]
+                [Validation(Required=false)]
                 public string StartTime { get; set; }
+
+                [NameInMap("StartTimeType")]
+                [Validation(Required=false)]
                 public string StartTimeType { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
                 public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemTags Tags { get; set; }
                 public class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemTags : TeaModel {
                     [NameInMap("Tag")]
@@ -71,10 +112,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
+                [NameInMap("TotalAssuranceTimes")]
+                [Validation(Required=false)]
                 public string TotalAssuranceTimes { get; set; }
+
+                [NameInMap("UsedAssuranceTimes")]
+                [Validation(Required=false)]
                 public int? UsedAssuranceTimes { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]

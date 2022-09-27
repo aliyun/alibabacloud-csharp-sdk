@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("Ids")]
             [Validation(Required=false)]
             public string Ids { get; set; }
-        };
+
+        }
 
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]

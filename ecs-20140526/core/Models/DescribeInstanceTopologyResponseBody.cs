@@ -21,10 +21,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeInstanceTopologyResponseBodyTopologysTopology> Topology { get; set; }
             public class DescribeInstanceTopologyResponseBodyTopologysTopology : TeaModel {
+                [NameInMap("HostId")]
+                [Validation(Required=false)]
                 public string HostId { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
             }
-        };
+
+        }
 
     }
 

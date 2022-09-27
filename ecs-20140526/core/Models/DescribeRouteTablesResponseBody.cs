@@ -29,8 +29,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeRouteTablesResponseBodyRouteTablesRouteTable> RouteTable { get; set; }
             public class DescribeRouteTablesResponseBodyRouteTablesRouteTable : TeaModel {
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
+
+                [NameInMap("RouteEntrys")]
+                [Validation(Required=false)]
                 public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrys RouteEntrys { get; set; }
                 public class DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrys : TeaModel {
                     [NameInMap("RouteEntry")]
@@ -57,12 +65,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             [Validation(Required=false)]
                             public List<DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHopsNextHop> NextHop { get; set; }
                             public class DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHopsNextHop : TeaModel {
+                                [NameInMap("Enabled")]
+                                [Validation(Required=false)]
                                 public int? Enabled { get; set; }
+
+                                [NameInMap("NextHopId")]
+                                [Validation(Required=false)]
                                 public string NextHopId { get; set; }
+
+                                [NameInMap("NextHopType")]
+                                [Validation(Required=false)]
                                 public string NextHopType { get; set; }
+
+                                [NameInMap("Weight")]
+                                [Validation(Required=false)]
                                 public int? Weight { get; set; }
+
                             }
-                        };
+
+                        }
 
                         [NameInMap("RouteTableId")]
                         [Validation(Required=false)]
@@ -79,11 +100,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
+                [NameInMap("RouteTableId")]
+                [Validation(Required=false)]
                 public string RouteTableId { get; set; }
+
+                [NameInMap("RouteTableType")]
+                [Validation(Required=false)]
                 public string RouteTableType { get; set; }
+
+                [NameInMap("VRouterId")]
+                [Validation(Required=false)]
                 public string VRouterId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

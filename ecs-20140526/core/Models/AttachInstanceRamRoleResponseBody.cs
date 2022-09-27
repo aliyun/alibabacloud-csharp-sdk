@@ -17,12 +17,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<AttachInstanceRamRoleResponseBodyAttachInstanceRamRoleResultsAttachInstanceRamRoleResult> AttachInstanceRamRoleResult { get; set; }
             public class AttachInstanceRamRoleResponseBodyAttachInstanceRamRoleResultsAttachInstanceRamRoleResult : TeaModel {
+                [NameInMap("Code")]
+                [Validation(Required=false)]
                 public string Code { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("Message")]
+                [Validation(Required=false)]
                 public string Message { get; set; }
+
+                [NameInMap("Success")]
+                [Validation(Required=false)]
                 public bool? Success { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("FailCount")]
         [Validation(Required=false)]

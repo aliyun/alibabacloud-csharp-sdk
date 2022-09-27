@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public string ZoneId { get; set; }
+
     }
 
 }

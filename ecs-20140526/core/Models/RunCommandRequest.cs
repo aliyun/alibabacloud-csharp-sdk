@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string CommandContent { get; set; }
 
+        [NameInMap("ContainerId")]
+        [Validation(Required=false)]
+        public string ContainerId { get; set; }
+
+        [NameInMap("ContainerName")]
+        [Validation(Required=false)]
+        public string ContainerName { get; set; }
+
         [NameInMap("ContentEncoding")]
         [Validation(Required=false)]
         public string ContentEncoding { get; set; }
@@ -68,6 +76,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<RunCommandRequestTag> Tag { get; set; }
+        public class RunCommandRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
         [NameInMap("Timed")]
         [Validation(Required=false)]

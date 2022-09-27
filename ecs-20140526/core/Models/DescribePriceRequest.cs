@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             [NameInMap("Size")]
             [Validation(Required=false)]
-            public int? Size { get; set; }
+            public long? Size { get; set; }
 
         }
 
@@ -34,13 +34,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
+
             [NameInMap("PerformanceLevel")]
             [Validation(Required=false)]
             public string PerformanceLevel { get; set; }
+
             [NameInMap("Size")]
             [Validation(Required=false)]
             public int? Size { get; set; }
-        };
+
+        }
 
         [NameInMap("Amount")]
         [Validation(Required=false)]

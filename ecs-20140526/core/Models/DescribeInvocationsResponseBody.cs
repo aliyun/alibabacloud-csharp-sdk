@@ -17,15 +17,52 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeInvocationsResponseBodyInvocationsInvocation> Invocation { get; set; }
             public class DescribeInvocationsResponseBodyInvocationsInvocation : TeaModel {
+                [NameInMap("CommandContent")]
+                [Validation(Required=false)]
                 public string CommandContent { get; set; }
+
+                [NameInMap("CommandDescription")]
+                [Validation(Required=false)]
                 public string CommandDescription { get; set; }
+
+                [NameInMap("CommandId")]
+                [Validation(Required=false)]
                 public string CommandId { get; set; }
+
+                [NameInMap("CommandName")]
+                [Validation(Required=false)]
                 public string CommandName { get; set; }
+
+                [NameInMap("CommandType")]
+                [Validation(Required=false)]
                 public string CommandType { get; set; }
+
+                [NameInMap("ContainerId")]
+                [Validation(Required=false)]
+                public string ContainerId { get; set; }
+
+                [NameInMap("ContainerName")]
+                [Validation(Required=false)]
+                public string ContainerName { get; set; }
+
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
+                [NameInMap("Frequency")]
+                [Validation(Required=false)]
                 public string Frequency { get; set; }
+
+                [NameInMap("InvocationStatus")]
+                [Validation(Required=false)]
                 public string InvocationStatus { get; set; }
+
+                [NameInMap("InvokeId")]
+                [Validation(Required=false)]
                 public string InvokeId { get; set; }
+
+                [NameInMap("InvokeInstances")]
+                [Validation(Required=false)]
                 public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstances InvokeInstances { get; set; }
                 public class DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstances : TeaModel {
                     [NameInMap("InvokeInstance")]
@@ -95,15 +132,58 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
+                [NameInMap("InvokeStatus")]
+                [Validation(Required=false)]
                 public string InvokeStatus { get; set; }
+
+                [NameInMap("Parameters")]
+                [Validation(Required=false)]
                 public string Parameters { get; set; }
+
+                [NameInMap("RepeatMode")]
+                [Validation(Required=false)]
                 public string RepeatMode { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public DescribeInvocationsResponseBodyInvocationsInvocationTags Tags { get; set; }
+                public class DescribeInvocationsResponseBodyInvocationsInvocationTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<DescribeInvocationsResponseBodyInvocationsInvocationTagsTag> Tag { get; set; }
+                    public class DescribeInvocationsResponseBodyInvocationsInvocationTagsTag : TeaModel {
+                        [NameInMap("TagKey")]
+                        [Validation(Required=false)]
+                        public string TagKey { get; set; }
+
+                        [NameInMap("TagValue")]
+                        [Validation(Required=false)]
+                        public string TagValue { get; set; }
+
+                    }
+
+                }
+
+                [NameInMap("Timed")]
+                [Validation(Required=false)]
                 public bool? Timed { get; set; }
+
+                [NameInMap("Timeout")]
+                [Validation(Required=false)]
                 public long? Timeout { get; set; }
+
+                [NameInMap("Username")]
+                [Validation(Required=false)]
                 public string Username { get; set; }
+
+                [NameInMap("WorkingDir")]
+                [Validation(Required=false)]
                 public string WorkingDir { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

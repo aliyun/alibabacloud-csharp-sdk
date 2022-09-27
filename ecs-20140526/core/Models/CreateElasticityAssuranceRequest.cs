@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("MatchCriteria")]
             [Validation(Required=false)]
             public string MatchCriteria { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
-        };
+
+        }
 
         [NameInMap("AssuranceTimes")]
         [Validation(Required=false)]

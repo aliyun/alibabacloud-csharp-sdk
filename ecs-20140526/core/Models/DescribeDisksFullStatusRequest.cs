@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("End")]
             [Validation(Required=false)]
             public string End { get; set; }
+
             [NameInMap("Start")]
             [Validation(Required=false)]
             public string Start { get; set; }
-        };
+
+        }
 
         [NameInMap("DiskId")]
         [Validation(Required=false)]

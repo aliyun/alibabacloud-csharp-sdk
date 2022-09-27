@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
-        };
+
+        }
 
         [NameInMap("AutoPay")]
         [Validation(Required=false)]

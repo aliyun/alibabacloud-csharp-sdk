@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("BandwidthPackageId")]
             [Validation(Required=false)]
             public List<string> BandwidthPackageId { get; set; }
-        };
+
+        }
 
         [NameInMap("ForwardTableIds")]
         [Validation(Required=false)]
@@ -25,7 +26,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("ForwardTableId")]
             [Validation(Required=false)]
             public List<string> ForwardTableId { get; set; }
-        };
+
+        }
 
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]

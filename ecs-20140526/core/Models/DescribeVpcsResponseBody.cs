@@ -33,12 +33,32 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeVpcsResponseBodyVpcsVpc> Vpc { get; set; }
             public class DescribeVpcsResponseBodyVpcsVpc : TeaModel {
+                [NameInMap("CidrBlock")]
+                [Validation(Required=false)]
                 public string CidrBlock { get; set; }
+
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("IsDefault")]
+                [Validation(Required=false)]
                 public bool? IsDefault { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("UserCidrs")]
+                [Validation(Required=false)]
                 public DescribeVpcsResponseBodyVpcsVpcUserCidrs UserCidrs { get; set; }
                 public class DescribeVpcsResponseBodyVpcsVpcUserCidrs : TeaModel {
                     [NameInMap("UserCidr")]
@@ -46,7 +66,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<string> UserCidr { get; set; }
 
                 }
+
+                [NameInMap("VRouterId")]
+                [Validation(Required=false)]
                 public string VRouterId { get; set; }
+
+                [NameInMap("VSwitchIds")]
+                [Validation(Required=false)]
                 public DescribeVpcsResponseBodyVpcsVpcVSwitchIds VSwitchIds { get; set; }
                 public class DescribeVpcsResponseBodyVpcsVpcVSwitchIds : TeaModel {
                     [NameInMap("VSwitchId")]
@@ -54,10 +80,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<string> VSwitchId { get; set; }
 
                 }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
                 public string VpcId { get; set; }
+
+                [NameInMap("VpcName")]
+                [Validation(Required=false)]
                 public string VpcName { get; set; }
+
             }
-        };
+
+        }
 
     }
 

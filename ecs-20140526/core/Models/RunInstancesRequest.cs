@@ -16,13 +16,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("Core")]
             [Validation(Required=false)]
             public int? Core { get; set; }
+
             [NameInMap("Numa")]
             [Validation(Required=false)]
             public string Numa { get; set; }
+
             [NameInMap("ThreadsPerCore")]
             [Validation(Required=false)]
             public int? ThreadsPerCore { get; set; }
-        };
+
+        }
 
         [NameInMap("HibernationOptions")]
         [Validation(Required=false)]
@@ -31,7 +34,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("Configured")]
             [Validation(Required=false)]
             public bool? Configured { get; set; }
-        };
+
+        }
 
         [NameInMap("PrivatePoolOptions")]
         [Validation(Required=false)]
@@ -40,10 +44,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
+
             [NameInMap("MatchCriteria")]
             [Validation(Required=false)]
             public string MatchCriteria { get; set; }
-        };
+
+        }
 
         [NameInMap("SchedulerOptions")]
         [Validation(Required=false)]
@@ -52,7 +58,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("DedicatedHostClusterId")]
             [Validation(Required=false)]
             public string DedicatedHostClusterId { get; set; }
-        };
+
+        }
 
         [NameInMap("SecurityOptions")]
         [Validation(Required=false)]
@@ -61,10 +68,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("ConfidentialComputingMode")]
             [Validation(Required=false)]
             public string ConfidentialComputingMode { get; set; }
+
             [NameInMap("TrustedSystemMode")]
             [Validation(Required=false)]
             public string TrustedSystemMode { get; set; }
-        };
+
+        }
 
         [NameInMap("SystemDisk")]
         [Validation(Required=false)]
@@ -73,40 +82,52 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("AutoSnapshotPolicyId")]
             [Validation(Required=false)]
             public string AutoSnapshotPolicyId { get; set; }
+
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
             [NameInMap("DiskName")]
             [Validation(Required=false)]
             public string DiskName { get; set; }
+
             [NameInMap("PerformanceLevel")]
             [Validation(Required=false)]
             public string PerformanceLevel { get; set; }
+
             [NameInMap("Size")]
             [Validation(Required=false)]
             public string Size { get; set; }
+
             [NameInMap("BurstingEnabled")]
             [Validation(Required=false)]
             public bool? BurstingEnabled { get; set; }
+
             [NameInMap("EncryptAlgorithm")]
             [Validation(Required=false)]
             public string EncryptAlgorithm { get; set; }
+
             [NameInMap("Encrypted")]
             [Validation(Required=false)]
             public string Encrypted { get; set; }
+
             [NameInMap("KMSKeyId")]
             [Validation(Required=false)]
             public string KMSKeyId { get; set; }
+
             [NameInMap("ProvisionedIops")]
             [Validation(Required=false)]
             public long? ProvisionedIops { get; set; }
+
             [NameInMap("StorageClusterId")]
             [Validation(Required=false)]
             public string StorageClusterId { get; set; }
-        };
+
+        }
 
         [NameInMap("Affinity")]
         [Validation(Required=false)]

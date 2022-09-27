@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("End")]
             [Validation(Required=false)]
             public string End { get; set; }
+
             [NameInMap("Start")]
             [Validation(Required=false)]
             public string Start { get; set; }
-        };
+
+        }
 
         [NameInMap("NotBefore")]
         [Validation(Required=false)]
@@ -28,10 +30,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("End")]
             [Validation(Required=false)]
             public string End { get; set; }
+
             [NameInMap("Start")]
             [Validation(Required=false)]
             public string Start { get; set; }
-        };
+
+        }
 
         [NameInMap("EventId")]
         [Validation(Required=false)]

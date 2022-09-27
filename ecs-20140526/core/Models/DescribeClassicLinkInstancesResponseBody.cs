@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeClassicLinkInstancesResponseBodyLinksLink> Link { get; set; }
             public class DescribeClassicLinkInstancesResponseBodyLinksLink : TeaModel {
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
                 public string VpcId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

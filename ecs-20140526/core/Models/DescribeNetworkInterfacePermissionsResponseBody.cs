@@ -17,14 +17,33 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissionsNetworkInterfacePermission> NetworkInterfacePermission { get; set; }
             public class DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissionsNetworkInterfacePermission : TeaModel {
+                [NameInMap("AccountId")]
+                [Validation(Required=false)]
                 public long? AccountId { get; set; }
+
+                [NameInMap("NetworkInterfaceId")]
+                [Validation(Required=false)]
                 public string NetworkInterfaceId { get; set; }
+
+                [NameInMap("NetworkInterfacePermissionId")]
+                [Validation(Required=false)]
                 public string NetworkInterfacePermissionId { get; set; }
+
+                [NameInMap("Permission")]
+                [Validation(Required=false)]
                 public string Permission { get; set; }
+
+                [NameInMap("PermissionState")]
+                [Validation(Required=false)]
                 public string PermissionState { get; set; }
+
+                [NameInMap("ServiceName")]
+                [Validation(Required=false)]
                 public string ServiceName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

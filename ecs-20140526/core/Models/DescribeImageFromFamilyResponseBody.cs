@@ -16,12 +16,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("Architecture")]
             [Validation(Required=false)]
             public string Architecture { get; set; }
+
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
             [NameInMap("DiskDeviceMappings")]
             [Validation(Required=false)]
             public DescribeImageFromFamilyResponseBodyImageDiskDeviceMappings DiskDeviceMappings { get; set; }
@@ -61,57 +64,75 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
             }
+
             [NameInMap("ImageFamily")]
             [Validation(Required=false)]
             public string ImageFamily { get; set; }
+
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
+
             [NameInMap("ImageName")]
             [Validation(Required=false)]
             public string ImageName { get; set; }
+
             [NameInMap("ImageOwnerAlias")]
             [Validation(Required=false)]
             public string ImageOwnerAlias { get; set; }
+
             [NameInMap("ImageVersion")]
             [Validation(Required=false)]
             public string ImageVersion { get; set; }
+
             [NameInMap("IsCopied")]
             [Validation(Required=false)]
             public bool? IsCopied { get; set; }
+
             [NameInMap("IsSelfShared")]
             [Validation(Required=false)]
             public string IsSelfShared { get; set; }
+
             [NameInMap("IsSubscribed")]
             [Validation(Required=false)]
             public bool? IsSubscribed { get; set; }
+
             [NameInMap("IsSupportCloudinit")]
             [Validation(Required=false)]
             public bool? IsSupportCloudinit { get; set; }
+
             [NameInMap("IsSupportIoOptimized")]
             [Validation(Required=false)]
             public bool? IsSupportIoOptimized { get; set; }
+
             [NameInMap("OSName")]
             [Validation(Required=false)]
             public string OSName { get; set; }
+
             [NameInMap("OSType")]
             [Validation(Required=false)]
             public string OSType { get; set; }
+
             [NameInMap("Platform")]
             [Validation(Required=false)]
             public string Platform { get; set; }
+
             [NameInMap("ProductCode")]
             [Validation(Required=false)]
             public string ProductCode { get; set; }
+
             [NameInMap("Progress")]
             [Validation(Required=false)]
             public string Progress { get; set; }
+
             [NameInMap("Size")]
             [Validation(Required=false)]
             public int? Size { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public DescribeImageFromFamilyResponseBodyImageTags Tags { get; set; }
@@ -131,10 +152,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
             }
+
             [NameInMap("Usage")]
             [Validation(Required=false)]
             public string Usage { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

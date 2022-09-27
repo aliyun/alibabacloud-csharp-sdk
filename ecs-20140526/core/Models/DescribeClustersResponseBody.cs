@@ -17,9 +17,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeClustersResponseBodyClustersCluster> Cluster { get; set; }
             public class DescribeClustersResponseBodyClustersCluster : TeaModel {
+                [NameInMap("ClusterId")]
+                [Validation(Required=false)]
                 public string ClusterId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

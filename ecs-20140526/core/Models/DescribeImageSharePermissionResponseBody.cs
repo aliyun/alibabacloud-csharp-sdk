@@ -17,9 +17,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeImageSharePermissionResponseBodyAccountsAccount> Account { get; set; }
             public class DescribeImageSharePermissionResponseBodyAccountsAccount : TeaModel {
+                [NameInMap("AliyunId")]
+                [Validation(Required=false)]
                 public string AliyunId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ImageId")]
         [Validation(Required=false)]
@@ -49,9 +53,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeImageSharePermissionResponseBodyShareGroupsShareGroup> ShareGroup { get; set; }
             public class DescribeImageSharePermissionResponseBodyShareGroupsShareGroup : TeaModel {
+                [NameInMap("Group")]
+                [Validation(Required=false)]
                 public string Group { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -33,14 +33,33 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeTasksResponseBodyTaskSetTask> Task { get; set; }
             public class DescribeTasksResponseBodyTaskSetTask : TeaModel {
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
+                [NameInMap("FinishedTime")]
+                [Validation(Required=false)]
                 public string FinishedTime { get; set; }
+
+                [NameInMap("SupportCancel")]
+                [Validation(Required=false)]
                 public string SupportCancel { get; set; }
+
+                [NameInMap("TaskAction")]
+                [Validation(Required=false)]
                 public string TaskAction { get; set; }
+
+                [NameInMap("TaskId")]
+                [Validation(Required=false)]
                 public string TaskId { get; set; }
+
+                [NameInMap("TaskStatus")]
+                [Validation(Required=false)]
                 public string TaskStatus { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

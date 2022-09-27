@@ -17,17 +17,45 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus> InstanceCloudAssistantStatus { get; set; }
             public class DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus : TeaModel {
+                [NameInMap("ActiveTaskCount")]
+                [Validation(Required=false)]
                 public long? ActiveTaskCount { get; set; }
+
+                [NameInMap("CloudAssistantStatus")]
+                [Validation(Required=false)]
                 public string CloudAssistantStatus { get; set; }
+
+                [NameInMap("CloudAssistantVersion")]
+                [Validation(Required=false)]
                 public string CloudAssistantVersion { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("InvocationCount")]
+                [Validation(Required=false)]
                 public long? InvocationCount { get; set; }
+
+                [NameInMap("LastHeartbeatTime")]
+                [Validation(Required=false)]
                 public string LastHeartbeatTime { get; set; }
+
+                [NameInMap("LastInvokedTime")]
+                [Validation(Required=false)]
                 public string LastInvokedTime { get; set; }
+
+                [NameInMap("OSType")]
+                [Validation(Required=false)]
                 public string OSType { get; set; }
+
+                [NameInMap("SupportSessionManager")]
+                [Validation(Required=false)]
                 public bool? SupportSessionManager { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

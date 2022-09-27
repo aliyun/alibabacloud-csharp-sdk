@@ -17,9 +17,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
-        /// <summary>
-        /// 发布为社区镜像
-        /// </summary>
         [NameInMap("IsPublic")]
         [Validation(Required=false)]
         public bool? IsPublic { get; set; }

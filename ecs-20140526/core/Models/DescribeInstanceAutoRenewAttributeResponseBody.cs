@@ -17,13 +17,29 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute> InstanceRenewAttribute { get; set; }
             public class DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute : TeaModel {
+                [NameInMap("AutoRenewEnabled")]
+                [Validation(Required=false)]
                 public bool? AutoRenewEnabled { get; set; }
+
+                [NameInMap("Duration")]
+                [Validation(Required=false)]
                 public int? Duration { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("PeriodUnit")]
+                [Validation(Required=false)]
                 public string PeriodUnit { get; set; }
+
+                [NameInMap("RenewalStatus")]
+                [Validation(Required=false)]
                 public string RenewalStatus { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

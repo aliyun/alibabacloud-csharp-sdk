@@ -17,12 +17,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth> Bandwidth { get; set; }
             public class DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth : TeaModel {
+                [NameInMap("InternetChargeType")]
+                [Validation(Required=false)]
                 public string InternetChargeType { get; set; }
+
+                [NameInMap("Max")]
+                [Validation(Required=false)]
                 public int? Max { get; set; }
+
+                [NameInMap("Min")]
+                [Validation(Required=false)]
                 public int? Min { get; set; }
+
+                [NameInMap("Unit")]
+                [Validation(Required=false)]
                 public string Unit { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

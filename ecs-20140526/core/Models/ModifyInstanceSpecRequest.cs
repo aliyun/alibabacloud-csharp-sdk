@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
-        };
+
+        }
 
         [NameInMap("Temporary")]
         [Validation(Required=false)]
@@ -25,13 +26,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public string EndTime { get; set; }
+
             [NameInMap("InternetMaxBandwidthOut")]
             [Validation(Required=false)]
             public int? InternetMaxBandwidthOut { get; set; }
+
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
-        };
+
+        }
 
         [NameInMap("AllowMigrateAcrossZone")]
         [Validation(Required=false)]

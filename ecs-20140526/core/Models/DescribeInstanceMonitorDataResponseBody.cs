@@ -17,25 +17,77 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData> InstanceMonitorData { get; set; }
             public class DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData : TeaModel {
+                [NameInMap("BPSRead")]
+                [Validation(Required=false)]
                 public int? BPSRead { get; set; }
+
+                [NameInMap("BPSWrite")]
+                [Validation(Required=false)]
                 public int? BPSWrite { get; set; }
+
+                [NameInMap("CPU")]
+                [Validation(Required=false)]
                 public int? CPU { get; set; }
+
+                [NameInMap("CPUAdvanceCreditBalance")]
+                [Validation(Required=false)]
                 public float? CPUAdvanceCreditBalance { get; set; }
+
+                [NameInMap("CPUCreditBalance")]
+                [Validation(Required=false)]
                 public float? CPUCreditBalance { get; set; }
+
+                [NameInMap("CPUCreditUsage")]
+                [Validation(Required=false)]
                 public float? CPUCreditUsage { get; set; }
+
+                [NameInMap("CPUNotpaidSurplusCreditUsage")]
+                [Validation(Required=false)]
                 public float? CPUNotpaidSurplusCreditUsage { get; set; }
+
+                [NameInMap("IOPSRead")]
+                [Validation(Required=false)]
                 public int? IOPSRead { get; set; }
+
+                [NameInMap("IOPSWrite")]
+                [Validation(Required=false)]
                 public int? IOPSWrite { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("InternetBandwidth")]
+                [Validation(Required=false)]
                 public int? InternetBandwidth { get; set; }
+
+                [NameInMap("InternetRX")]
+                [Validation(Required=false)]
                 public int? InternetRX { get; set; }
+
+                [NameInMap("InternetTX")]
+                [Validation(Required=false)]
                 public int? InternetTX { get; set; }
+
+                [NameInMap("IntranetBandwidth")]
+                [Validation(Required=false)]
                 public int? IntranetBandwidth { get; set; }
+
+                [NameInMap("IntranetRX")]
+                [Validation(Required=false)]
                 public int? IntranetRX { get; set; }
+
+                [NameInMap("IntranetTX")]
+                [Validation(Required=false)]
                 public int? IntranetTX { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -33,20 +33,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("TemplateTag")]
-        [Validation(Required=false)]
-        public List<DeleteImageComponentRequestTemplateTag> TemplateTag { get; set; }
-        public class DeleteImageComponentRequestTemplateTag : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
-
     }
 
 }

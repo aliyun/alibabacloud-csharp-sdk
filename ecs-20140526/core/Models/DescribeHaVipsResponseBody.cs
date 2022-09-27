@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeHaVipsResponseBodyHaVipsHaVip> HaVip { get; set; }
             public class DescribeHaVipsResponseBodyHaVipsHaVip : TeaModel {
+                [NameInMap("AssociatedEipAddresses")]
+                [Validation(Required=false)]
                 public DescribeHaVipsResponseBodyHaVipsHaVipAssociatedEipAddresses AssociatedEipAddresses { get; set; }
                 public class DescribeHaVipsResponseBodyHaVipsHaVipAssociatedEipAddresses : TeaModel {
                     [NameInMap("associatedEipAddresse")]
@@ -24,6 +26,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<string> AssociatedEipAddresse { get; set; }
 
                 }
+
+                [NameInMap("AssociatedInstances")]
+                [Validation(Required=false)]
                 public DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances AssociatedInstances { get; set; }
                 public class DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances : TeaModel {
                     [NameInMap("associatedInstance")]
@@ -31,17 +36,46 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<string> AssociatedInstance { get; set; }
 
                 }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("HaVipId")]
+                [Validation(Required=false)]
                 public string HaVipId { get; set; }
+
+                [NameInMap("IpAddress")]
+                [Validation(Required=false)]
                 public string IpAddress { get; set; }
+
+                [NameInMap("MasterInstanceId")]
+                [Validation(Required=false)]
                 public string MasterInstanceId { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("VSwitchId")]
+                [Validation(Required=false)]
                 public string VSwitchId { get; set; }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
                 public string VpcId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

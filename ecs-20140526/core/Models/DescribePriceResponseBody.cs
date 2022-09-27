@@ -29,9 +29,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribePriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel> ResourcePriceModel { get; set; }
                     public class DescribePriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel : TeaModel {
+                        [NameInMap("DiscountPrice")]
+                        [Validation(Required=false)]
                         public float? DiscountPrice { get; set; }
+
+                        [NameInMap("OriginalPrice")]
+                        [Validation(Required=false)]
                         public float? OriginalPrice { get; set; }
+
+                        [NameInMap("Resource")]
+                        [Validation(Required=false)]
                         public string Resource { get; set; }
+
+                        [NameInMap("SubRules")]
+                        [Validation(Required=false)]
                         public DescribePriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRules SubRules { get; set; }
                         public class DescribePriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRules : TeaModel {
                             [NameInMap("Rule")]
@@ -49,9 +60,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             }
 
                         }
+
+                        [NameInMap("TradePrice")]
+                        [Validation(Required=false)]
                         public float? TradePrice { get; set; }
+
                     }
-                };
+
+                }
 
                 [NameInMap("DiscountPrice")]
                 [Validation(Required=false)]
@@ -70,6 +86,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public float? TradePrice { get; set; }
 
             }
+
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public DescribePriceResponseBodyPriceInfoRules Rules { get; set; }
@@ -89,7 +106,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

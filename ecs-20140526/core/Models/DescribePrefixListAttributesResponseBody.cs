@@ -29,10 +29,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribePrefixListAttributesResponseBodyEntriesEntry> Entry { get; set; }
             public class DescribePrefixListAttributesResponseBodyEntriesEntry : TeaModel {
+                [NameInMap("Cidr")]
+                [Validation(Required=false)]
                 public string Cidr { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("MaxEntries")]
         [Validation(Required=false)]

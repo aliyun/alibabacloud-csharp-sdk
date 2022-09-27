@@ -33,16 +33,41 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeVirtualBorderRoutersForPhysicalConnectionResponseBodyVirtualBorderRouterForPhysicalConnectionSetVirtualBorderRouterForPhysicalConnectionType> VirtualBorderRouterForPhysicalConnectionType { get; set; }
             public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBodyVirtualBorderRouterForPhysicalConnectionSetVirtualBorderRouterForPhysicalConnectionType : TeaModel {
+                [NameInMap("ActivationTime")]
+                [Validation(Required=false)]
                 public string ActivationTime { get; set; }
+
+                [NameInMap("CircuitCode")]
+                [Validation(Required=false)]
                 public string CircuitCode { get; set; }
+
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
+                [NameInMap("RecoveryTime")]
+                [Validation(Required=false)]
                 public string RecoveryTime { get; set; }
+
+                [NameInMap("TerminationTime")]
+                [Validation(Required=false)]
                 public string TerminationTime { get; set; }
+
+                [NameInMap("VbrId")]
+                [Validation(Required=false)]
                 public string VbrId { get; set; }
+
+                [NameInMap("VbrOwnerUid")]
+                [Validation(Required=false)]
                 public long? VbrOwnerUid { get; set; }
+
+                [NameInMap("VlanId")]
+                [Validation(Required=false)]
                 public int? VlanId { get; set; }
+
             }
-        };
+
+        }
 
     }
 

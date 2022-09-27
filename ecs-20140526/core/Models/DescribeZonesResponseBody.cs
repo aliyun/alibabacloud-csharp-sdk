@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeZonesResponseBodyZonesZone> Zone { get; set; }
             public class DescribeZonesResponseBodyZonesZone : TeaModel {
+                [NameInMap("AvailableDedicatedHostTypes")]
+                [Validation(Required=false)]
                 public DescribeZonesResponseBodyZonesZoneAvailableDedicatedHostTypes AvailableDedicatedHostTypes { get; set; }
                 public class DescribeZonesResponseBodyZonesZoneAvailableDedicatedHostTypes : TeaModel {
                     [NameInMap("DedicatedHostType")]
@@ -28,6 +30,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<string> DedicatedHostType { get; set; }
 
                 }
+
+                [NameInMap("AvailableDiskCategories")]
+                [Validation(Required=false)]
                 public DescribeZonesResponseBodyZonesZoneAvailableDiskCategories AvailableDiskCategories { get; set; }
                 public class DescribeZonesResponseBodyZonesZoneAvailableDiskCategories : TeaModel {
                     [NameInMap("DiskCategories")]
@@ -35,6 +40,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<string> DiskCategories { get; set; }
 
                 }
+
+                [NameInMap("AvailableInstanceTypes")]
+                [Validation(Required=false)]
                 public DescribeZonesResponseBodyZonesZoneAvailableInstanceTypes AvailableInstanceTypes { get; set; }
                 public class DescribeZonesResponseBodyZonesZoneAvailableInstanceTypes : TeaModel {
                     [NameInMap("InstanceTypes")]
@@ -42,6 +50,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<string> InstanceTypes { get; set; }
 
                 }
+
+                [NameInMap("AvailableResourceCreation")]
+                [Validation(Required=false)]
                 public DescribeZonesResponseBodyZonesZoneAvailableResourceCreation AvailableResourceCreation { get; set; }
                 public class DescribeZonesResponseBodyZonesZoneAvailableResourceCreation : TeaModel {
                     [NameInMap("ResourceTypes")]
@@ -49,6 +60,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<string> ResourceTypes { get; set; }
 
                 }
+
+                [NameInMap("AvailableResources")]
+                [Validation(Required=false)]
                 public DescribeZonesResponseBodyZonesZoneAvailableResources AvailableResources { get; set; }
                 public class DescribeZonesResponseBodyZonesZoneAvailableResources : TeaModel {
                     [NameInMap("ResourcesInfo")]
@@ -62,7 +76,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             [NameInMap("supportedDataDiskCategory")]
                             [Validation(Required=false)]
                             public List<string> SupportedDataDiskCategory { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("InstanceGenerations")]
                         [Validation(Required=false)]
@@ -71,7 +86,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             [NameInMap("supportedInstanceGeneration")]
                             [Validation(Required=false)]
                             public List<string> SupportedInstanceGeneration { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("InstanceTypeFamilies")]
                         [Validation(Required=false)]
@@ -80,7 +96,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             [NameInMap("supportedInstanceTypeFamily")]
                             [Validation(Required=false)]
                             public List<string> SupportedInstanceTypeFamily { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("InstanceTypes")]
                         [Validation(Required=false)]
@@ -89,7 +106,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             [NameInMap("supportedInstanceType")]
                             [Validation(Required=false)]
                             public List<string> SupportedInstanceType { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("IoOptimized")]
                         [Validation(Required=false)]
@@ -102,7 +120,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             [NameInMap("supportedNetworkCategory")]
                             [Validation(Required=false)]
                             public List<string> SupportedNetworkCategory { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("SystemDiskCategories")]
                         [Validation(Required=false)]
@@ -111,11 +130,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             [NameInMap("supportedSystemDiskCategory")]
                             [Validation(Required=false)]
                             public List<string> SupportedSystemDiskCategory { get; set; }
-                        };
+
+                        }
 
                     }
 
                 }
+
+                [NameInMap("AvailableVolumeCategories")]
+                [Validation(Required=false)]
                 public DescribeZonesResponseBodyZonesZoneAvailableVolumeCategories AvailableVolumeCategories { get; set; }
                 public class DescribeZonesResponseBodyZonesZoneAvailableVolumeCategories : TeaModel {
                     [NameInMap("VolumeCategories")]
@@ -123,6 +146,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<string> VolumeCategories { get; set; }
 
                 }
+
+                [NameInMap("DedicatedHostGenerations")]
+                [Validation(Required=false)]
                 public DescribeZonesResponseBodyZonesZoneDedicatedHostGenerations DedicatedHostGenerations { get; set; }
                 public class DescribeZonesResponseBodyZonesZoneDedicatedHostGenerations : TeaModel {
                     [NameInMap("DedicatedHostGeneration")]
@@ -130,11 +156,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<string> DedicatedHostGeneration { get; set; }
 
                 }
+
+                [NameInMap("LocalName")]
+                [Validation(Required=false)]
                 public string LocalName { get; set; }
+
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
                 public string ZoneId { get; set; }
+
+                [NameInMap("ZoneType")]
+                [Validation(Required=false)]
                 public string ZoneType { get; set; }
+
             }
-        };
+
+        }
 
     }
 
