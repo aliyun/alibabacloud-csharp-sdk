@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public string HttpStatusCode { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
