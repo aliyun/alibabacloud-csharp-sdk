@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string AddressGroupUUID { get; set; }
 
+            [NameInMap("Business")]
+            [Validation(Required=false)]
+            public string Business { get; set; }
+
+            [NameInMap("CategoryClassId")]
+            [Validation(Required=false)]
+            public string CategoryClassId { get; set; }
+
             [NameInMap("CategoryId")]
             [Validation(Required=false)]
             public string CategoryId { get; set; }
@@ -49,6 +57,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string GroupName { get; set; }
 
+            [NameInMap("HasAcl")]
+            [Validation(Required=false)]
+            public string HasAcl { get; set; }
+
             [NameInMap("HasAclRecommend")]
             [Validation(Required=false)]
             public bool? HasAclRecommend { get; set; }
@@ -60,6 +72,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [NameInMap("IsMarkNormal")]
             [Validation(Required=false)]
             public bool? IsMarkNormal { get; set; }
+
+            [NameInMap("Organization")]
+            [Validation(Required=false)]
+            public string Organization { get; set; }
 
             [NameInMap("OutBytes")]
             [Validation(Required=false)]
@@ -73,6 +89,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string RuleName { get; set; }
 
+            [NameInMap("SecurityReason")]
+            [Validation(Required=false)]
+            public string SecurityReason { get; set; }
+
             [NameInMap("SecuritySuggest")]
             [Validation(Required=false)]
             public string SecuritySuggest { get; set; }
@@ -85,6 +105,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public List<DescribeOutgoingDomainResponseBodyDomainListTagList> TagList { get; set; }
             public class DescribeOutgoingDomainResponseBodyDomainListTagList : TeaModel {
+                [NameInMap("ClassId")]
+                [Validation(Required=false)]
+                public string ClassId { get; set; }
+
                 [NameInMap("RiskLevel")]
                 [Validation(Required=false)]
                 public int? RiskLevel { get; set; }
@@ -102,6 +126,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string TagName { get; set; }
 
             }
+
+            [NameInMap("TotalBytes")]
+            [Validation(Required=false)]
+            public string TotalBytes { get; set; }
 
         }
 

@@ -25,13 +25,19 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string AclStatus { get; set; }
 
-            [NameInMap("AddressGroupName")]
+            [NameInMap("AddressGroupList")]
             [Validation(Required=false)]
-            public string AddressGroupName { get; set; }
+            public List<DescribeOutgoingDestinationIPResponseBodyDstIPListAddressGroupList> AddressGroupList { get; set; }
+            public class DescribeOutgoingDestinationIPResponseBodyDstIPListAddressGroupList : TeaModel {
+                [NameInMap("AddressGroupName")]
+                [Validation(Required=false)]
+                public string AddressGroupName { get; set; }
 
-            [NameInMap("AddressGroupUUID")]
-            [Validation(Required=false)]
-            public string AddressGroupUUID { get; set; }
+                [NameInMap("AddressGroupUUID")]
+                [Validation(Required=false)]
+                public string AddressGroupUUID { get; set; }
+
+            }
 
             [NameInMap("ApplicationPortList")]
             [Validation(Required=false)]
@@ -46,6 +52,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public int? Port { get; set; }
 
             }
+
+            [NameInMap("CategoryClassId")]
+            [Validation(Required=false)]
+            public string CategoryClassId { get; set; }
 
             [NameInMap("CategoryId")]
             [Validation(Required=false)]
@@ -62,6 +72,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [NameInMap("GroupName")]
             [Validation(Required=false)]
             public string GroupName { get; set; }
+
+            [NameInMap("HasAcl")]
+            [Validation(Required=false)]
+            public string HasAcl { get; set; }
 
             [NameInMap("HasAclRecommend")]
             [Validation(Required=false)]
@@ -87,6 +101,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string RuleName { get; set; }
 
+            [NameInMap("SecurityReason")]
+            [Validation(Required=false)]
+            public string SecurityReason { get; set; }
+
             [NameInMap("SecuritySuggest")]
             [Validation(Required=false)]
             public string SecuritySuggest { get; set; }
@@ -99,6 +117,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public List<DescribeOutgoingDestinationIPResponseBodyDstIPListTagList> TagList { get; set; }
             public class DescribeOutgoingDestinationIPResponseBodyDstIPListTagList : TeaModel {
+                [NameInMap("ClassId")]
+                [Validation(Required=false)]
+                public string ClassId { get; set; }
+
                 [NameInMap("RiskLevel")]
                 [Validation(Required=false)]
                 public int? RiskLevel { get; set; }
@@ -116,6 +138,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string TagName { get; set; }
 
             }
+
+            [NameInMap("TotalBytes")]
+            [Validation(Required=false)]
+            public string TotalBytes { get; set; }
 
         }
 

@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string NoLocation { get; set; }
 
+        [NameInMap("Order")]
+        [Validation(Required=false)]
+        public string Order { get; set; }
+
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
@@ -68,6 +72,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [NameInMap("RuleSource")]
         [Validation(Required=false)]
         public string RuleSource { get; set; }
+
+        [NameInMap("Sort")]
+        [Validation(Required=false)]
+        public string Sort { get; set; }
 
         [NameInMap("SrcIP")]
         [Validation(Required=false)]

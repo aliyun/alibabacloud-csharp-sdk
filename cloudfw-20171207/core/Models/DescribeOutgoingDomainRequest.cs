@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeOutgoingDomainRequest : TeaModel {
-        [NameInMap("CategoryId")]
-        [Validation(Required=false)]
-        public string CategoryId { get; set; }
-
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public string CurrentPage { get; set; }
