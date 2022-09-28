@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeOutgoingDestinationIPRequest : TeaModel {
+        [NameInMap("ApplicationName")]
+        [Validation(Required=false)]
+        public string ApplicationName { get; set; }
+
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public string CurrentPage { get; set; }
