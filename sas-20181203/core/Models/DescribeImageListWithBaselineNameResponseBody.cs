@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<DescribeImageListWithBaselineNameResponseBodyImageInfos> ImageInfos { get; set; }
         public class DescribeImageListWithBaselineNameResponseBodyImageInfos : TeaModel {
-            [NameInMap("BaselineType")]
-            [Validation(Required=false)]
-            public string BaselineType { get; set; }
-
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }

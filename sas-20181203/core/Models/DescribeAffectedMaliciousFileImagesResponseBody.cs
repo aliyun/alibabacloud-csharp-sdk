@@ -73,10 +73,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string MaliciousMd5 { get; set; }
 
-            [NameInMap("MaliciousSource")]
-            [Validation(Required=false)]
-            public string MaliciousSource { get; set; }
-
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
