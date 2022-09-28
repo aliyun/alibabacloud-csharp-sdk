@@ -13,6 +13,16 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("RuleIds")]
+        [Validation(Required=false)]
+        public BatchCreateDcdnWafRulesResponseBodyRuleIds RuleIds { get; set; }
+        public class BatchCreateDcdnWafRulesResponseBodyRuleIds : TeaModel {
+            [NameInMap("RuleId")]
+            [Validation(Required=false)]
+            public List<string> RuleId { get; set; }
+
+        }
+
     }
 
 }

@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public string PolicyType { get; set; }
 
+            [NameInMap("RuleConfigs")]
+            [Validation(Required=false)]
+            public string RuleConfigs { get; set; }
+
             [NameInMap("RuleCount")]
             [Validation(Required=false)]
             public long? RuleCount { get; set; }

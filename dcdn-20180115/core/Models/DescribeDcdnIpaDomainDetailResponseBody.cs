@@ -93,10 +93,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
             }
 
-            [NameInMap("TenantID")]
-            [Validation(Required=false)]
-            public string TenantID { get; set; }
-
         }
 
         [NameInMap("RequestId")]

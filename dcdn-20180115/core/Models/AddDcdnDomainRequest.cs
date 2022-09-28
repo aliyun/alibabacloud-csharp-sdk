@@ -44,6 +44,20 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [Validation(Required=false)]
         public string Sources { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<AddDcdnDomainRequestTag> Tag { get; set; }
+        public class AddDcdnDomainRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("TopLevelDomain")]
         [Validation(Required=false)]
         public string TopLevelDomain { get; set; }
