@@ -15,7 +15,23 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<Dictionary<string, object>> Data { get; set; }
+        public CheckMobilesCardSupportResponseBodyData Data { get; set; }
+        public class CheckMobilesCardSupportResponseBodyData : TeaModel {
+            [NameInMap("queryResult")]
+            [Validation(Required=false)]
+            public List<CheckMobilesCardSupportResponseBodyDataQueryResult> QueryResult { get; set; }
+            public class CheckMobilesCardSupportResponseBodyDataQueryResult : TeaModel {
+                [NameInMap("mobile")]
+                [Validation(Required=false)]
+                public string Mobile { get; set; }
+
+                [NameInMap("support")]
+                [Validation(Required=false)]
+                public bool? Support { get; set; }
+
+            }
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

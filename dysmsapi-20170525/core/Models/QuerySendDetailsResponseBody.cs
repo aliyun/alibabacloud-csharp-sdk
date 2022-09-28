@@ -29,16 +29,41 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             [Validation(Required=false)]
             public List<QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO> SmsSendDetailDTO { get; set; }
             public class QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO : TeaModel {
+                [NameInMap("Content")]
+                [Validation(Required=false)]
                 public string Content { get; set; }
+
+                [NameInMap("ErrCode")]
+                [Validation(Required=false)]
                 public string ErrCode { get; set; }
+
+                [NameInMap("OutId")]
+                [Validation(Required=false)]
                 public string OutId { get; set; }
+
+                [NameInMap("PhoneNum")]
+                [Validation(Required=false)]
                 public string PhoneNum { get; set; }
+
+                [NameInMap("ReceiveDate")]
+                [Validation(Required=false)]
                 public string ReceiveDate { get; set; }
+
+                [NameInMap("SendDate")]
+                [Validation(Required=false)]
                 public string SendDate { get; set; }
+
+                [NameInMap("SendStatus")]
+                [Validation(Required=false)]
                 public long? SendStatus { get; set; }
+
+                [NameInMap("TemplateCode")]
+                [Validation(Required=false)]
                 public string TemplateCode { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             [NameInMap("Templates")]
             [Validation(Required=false)]
             public List<Dictionary<string, object>> Templates { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

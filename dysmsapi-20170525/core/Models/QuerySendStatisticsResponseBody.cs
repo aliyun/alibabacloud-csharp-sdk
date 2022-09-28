@@ -21,16 +21,33 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             [Validation(Required=false)]
             public List<QuerySendStatisticsResponseBodyDataTargetList> TargetList { get; set; }
             public class QuerySendStatisticsResponseBodyDataTargetList : TeaModel {
+                [NameInMap("NoRespondedCount")]
+                [Validation(Required=false)]
                 public long? NoRespondedCount { get; set; }
+
+                [NameInMap("RespondedFailCount")]
+                [Validation(Required=false)]
                 public long? RespondedFailCount { get; set; }
+
+                [NameInMap("RespondedSuccessCount")]
+                [Validation(Required=false)]
                 public long? RespondedSuccessCount { get; set; }
+
+                [NameInMap("SendDate")]
+                [Validation(Required=false)]
                 public string SendDate { get; set; }
+
+                [NameInMap("TotalCount")]
+                [Validation(Required=false)]
                 public long? TotalCount { get; set; }
+
             }
+
             [NameInMap("TotalSize")]
             [Validation(Required=false)]
             public long? TotalSize { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

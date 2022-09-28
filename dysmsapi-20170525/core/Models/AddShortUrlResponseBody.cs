@@ -20,13 +20,16 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             [NameInMap("ExpireDate")]
             [Validation(Required=false)]
             public string ExpireDate { get; set; }
+
             [NameInMap("ShortUrl")]
             [Validation(Required=false)]
             public string ShortUrl { get; set; }
+
             [NameInMap("SourceUrl")]
             [Validation(Required=false)]
             public string SourceUrl { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

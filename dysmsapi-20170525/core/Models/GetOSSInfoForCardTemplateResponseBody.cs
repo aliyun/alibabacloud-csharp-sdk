@@ -20,28 +20,36 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             [NameInMap("AccessKeyId")]
             [Validation(Required=false)]
             public string AccessKeyId { get; set; }
+
             [NameInMap("AliUid")]
             [Validation(Required=false)]
             public string AliUid { get; set; }
+
             [NameInMap("Bucket")]
             [Validation(Required=false)]
             public string Bucket { get; set; }
+
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
             public string ExpireTime { get; set; }
+
             [NameInMap("Host")]
             [Validation(Required=false)]
             public string Host { get; set; }
+
             [NameInMap("Policy")]
             [Validation(Required=false)]
             public string Policy { get; set; }
+
             [NameInMap("Signature")]
             [Validation(Required=false)]
             public string Signature { get; set; }
+
             [NameInMap("StartPath")]
             [Validation(Required=false)]
             public string StartPath { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

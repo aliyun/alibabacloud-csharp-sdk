@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             [NameInMap("ResUrlDownload")]
             [Validation(Required=false)]
             public string ResUrlDownload { get; set; }
+
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
             public long? ResourceId { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

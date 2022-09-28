@@ -56,13 +56,16 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
                 [NameInMap("RejectDate")]
                 [Validation(Required=false)]
                 public string RejectDate { get; set; }
+
                 [NameInMap("RejectInfo")]
                 [Validation(Required=false)]
                 public string RejectInfo { get; set; }
+
                 [NameInMap("RejectSubInfo")]
                 [Validation(Required=false)]
                 public string RejectSubInfo { get; set; }
-            };
+
+            }
 
             [NameInMap("TemplateCode")]
             [Validation(Required=false)]

@@ -20,22 +20,28 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             [NameInMap("BizCardId")]
             [Validation(Required=false)]
             public string BizCardId { get; set; }
+
             [NameInMap("BizDigitalId")]
             [Validation(Required=false)]
             public string BizDigitalId { get; set; }
+
             [NameInMap("BizSmsId")]
             [Validation(Required=false)]
             public string BizSmsId { get; set; }
+
             [NameInMap("CardTmpState")]
             [Validation(Required=false)]
             public int? CardTmpState { get; set; }
+
             [NameInMap("MediaMobiles")]
             [Validation(Required=false)]
             public string MediaMobiles { get; set; }
+
             [NameInMap("NotMediaMobiles")]
             [Validation(Required=false)]
             public string NotMediaMobiles { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

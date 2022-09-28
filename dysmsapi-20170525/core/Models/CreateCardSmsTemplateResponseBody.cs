@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             [NameInMap("TemplateCode")]
             [Validation(Required=false)]
             public string TemplateCode { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
