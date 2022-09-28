@@ -57,6 +57,20 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Spec { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<AddGatewayRequestTag> Tag { get; set; }
+        public class AddGatewayRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }

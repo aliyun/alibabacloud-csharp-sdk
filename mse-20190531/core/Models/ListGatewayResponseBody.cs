@@ -141,6 +141,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string LatestVersion { get; set; }
 
+                [NameInMap("MseTag")]
+                [Validation(Required=false)]
+                public string MseTag { get; set; }
+
                 [NameInMap("MustUpgrade")]
                 [Validation(Required=false)]
                 public bool? MustUpgrade { get; set; }

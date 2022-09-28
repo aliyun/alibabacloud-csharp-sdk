@@ -63,6 +63,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
             }
 
+            [NameInMap("MseTag")]
+            [Validation(Required=false)]
+            public string MseTag { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }

@@ -209,6 +209,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string Namespace { get; set; }
 
+                [NameInMap("Ports")]
+                [Validation(Required=false)]
+                public List<int?> Ports { get; set; }
+
                 [NameInMap("ServiceNameInRegistry")]
                 [Validation(Required=false)]
                 public string ServiceNameInRegistry { get; set; }

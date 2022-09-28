@@ -83,6 +83,44 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Namespace { get; set; }
 
+            [NameInMap("PortTrafficPolicyList")]
+            [Validation(Required=false)]
+            public List<GetGatewayServiceDetailResponseBodyDataPortTrafficPolicyList> PortTrafficPolicyList { get; set; }
+            public class GetGatewayServiceDetailResponseBodyDataPortTrafficPolicyList : TeaModel {
+                [NameInMap("GatewayUniqueId")]
+                [Validation(Required=false)]
+                public string GatewayUniqueId { get; set; }
+
+                [NameInMap("GmtCreate")]
+                [Validation(Required=false)]
+                public string GmtCreate { get; set; }
+
+                [NameInMap("GmtModified")]
+                [Validation(Required=false)]
+                public string GmtModified { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public long? Id { get; set; }
+
+                [NameInMap("ServiceId")]
+                [Validation(Required=false)]
+                public long? ServiceId { get; set; }
+
+                [NameInMap("ServicePort")]
+                [Validation(Required=false)]
+                public int? ServicePort { get; set; }
+
+                [NameInMap("TrafficPolicy")]
+                [Validation(Required=false)]
+                public TrafficPolicy TrafficPolicy { get; set; }
+
+            }
+
+            [NameInMap("Ports")]
+            [Validation(Required=false)]
+            public List<int?> Ports { get; set; }
+
             [NameInMap("ServiceNameInRegistry")]
             [Validation(Required=false)]
             public string ServiceNameInRegistry { get; set; }

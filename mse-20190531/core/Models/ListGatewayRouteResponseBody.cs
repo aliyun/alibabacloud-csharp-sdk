@@ -121,6 +121,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     [Validation(Required=false)]
                     public string ServiceName { get; set; }
 
+                    [NameInMap("ServicePort")]
+                    [Validation(Required=false)]
+                    public int? ServicePort { get; set; }
+
                     [NameInMap("SourceType")]
                     [Validation(Required=false)]
                     public string SourceType { get; set; }
@@ -338,6 +342,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     [NameInMap("ServiceName")]
                     [Validation(Required=false)]
                     public string ServiceName { get; set; }
+
+                    [NameInMap("ServicePort")]
+                    [Validation(Required=false)]
+                    public int? ServicePort { get; set; }
 
                     [NameInMap("SourceType")]
                     [Validation(Required=false)]

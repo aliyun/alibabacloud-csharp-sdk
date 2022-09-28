@@ -33,6 +33,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string MseSessionId { get; set; }
 
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("Note")]
+        [Validation(Required=false)]
+        public string Note { get; set; }
+
+        [NameInMap("ResourceIdJsonList")]
+        [Validation(Required=false)]
+        public string ResourceIdJsonList { get; set; }
+
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
