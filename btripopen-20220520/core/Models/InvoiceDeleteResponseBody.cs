@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("result_code")]
+        [NameInMap("code")]
         [Validation(Required=false)]
-        public int? ResultCode { get; set; }
+        public int? Code { get; set; }
 
-        [NameInMap("result_msg")]
+        [NameInMap("message")]
         [Validation(Required=false)]
-        public string ResultMsg { get; set; }
+        public string Message { get; set; }
 
         [NameInMap("success")]
         [Validation(Required=false)]

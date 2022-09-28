@@ -159,13 +159,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
-        [NameInMap("err_code")]
+        [NameInMap("code")]
         [Validation(Required=false)]
-        public int? ErrCode { get; set; }
+        public int? Code { get; set; }
 
-        [NameInMap("err_msg")]
+        [NameInMap("message")]
         [Validation(Required=false)]
-        public string ErrMsg { get; set; }
+        public string Message { get; set; }
 
         [NameInMap("success")]
         [Validation(Required=false)]
