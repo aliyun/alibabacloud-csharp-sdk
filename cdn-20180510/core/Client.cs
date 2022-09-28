@@ -91,6 +91,10 @@ namespace AlibabaCloud.SDK.Cdn20180510
             {
                 query["Sources"] = request.Sources;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopLevelDomain))
             {
                 query["TopLevelDomain"] = request.TopLevelDomain;
@@ -153,6 +157,10 @@ namespace AlibabaCloud.SDK.Cdn20180510
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sources))
             {
                 query["Sources"] = request.Sources;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopLevelDomain))
             {
