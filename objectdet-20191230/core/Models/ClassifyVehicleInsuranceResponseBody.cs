@@ -17,13 +17,21 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
             [Validation(Required=false)]
             public List<ClassifyVehicleInsuranceResponseBodyDataLabels> Labels { get; set; }
             public class ClassifyVehicleInsuranceResponseBodyDataLabels : TeaModel {
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Score")]
+                [Validation(Required=false)]
                 public float? Score { get; set; }
+
             }
+
             [NameInMap("Threshold")]
             [Validation(Required=false)]
             public float? Threshold { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

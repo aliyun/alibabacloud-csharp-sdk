@@ -8,15 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Objectdet20191230.Models
 {
-    public class DetectVehicleICongestionRequest : TeaModel {
+    public class DetectVehicleICongestionAdvanceRequest : TeaModel {
         [NameInMap("ImageURL")]
         [Validation(Required=false)]
-        public string ImageURL { get; set; }
+        public Stream ImageURLObject { get; set; }
 
         [NameInMap("PreRegionIntersectFeatures")]
         [Validation(Required=false)]
-        public List<DetectVehicleICongestionRequestPreRegionIntersectFeatures> PreRegionIntersectFeatures { get; set; }
-        public class DetectVehicleICongestionRequestPreRegionIntersectFeatures : TeaModel {
+        public List<DetectVehicleICongestionAdvanceRequestPreRegionIntersectFeatures> PreRegionIntersectFeatures { get; set; }
+        public class DetectVehicleICongestionAdvanceRequestPreRegionIntersectFeatures : TeaModel {
             [NameInMap("Features")]
             [Validation(Required=false)]
             public List<string> Features { get; set; }
@@ -25,16 +25,16 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
 
         [NameInMap("RoadRegions")]
         [Validation(Required=false)]
-        public List<DetectVehicleICongestionRequestRoadRegions> RoadRegions { get; set; }
-        public class DetectVehicleICongestionRequestRoadRegions : TeaModel {
+        public List<DetectVehicleICongestionAdvanceRequestRoadRegions> RoadRegions { get; set; }
+        public class DetectVehicleICongestionAdvanceRequestRoadRegions : TeaModel {
             [NameInMap("RoadRegion")]
             [Validation(Required=false)]
-            public List<DetectVehicleICongestionRequestRoadRegionsRoadRegion> RoadRegion { get; set; }
-            public class DetectVehicleICongestionRequestRoadRegionsRoadRegion : TeaModel {
+            public List<DetectVehicleICongestionAdvanceRequestRoadRegionsRoadRegion> RoadRegion { get; set; }
+            public class DetectVehicleICongestionAdvanceRequestRoadRegionsRoadRegion : TeaModel {
                 [NameInMap("Point")]
                 [Validation(Required=false)]
-                public DetectVehicleICongestionRequestRoadRegionsRoadRegionPoint Point { get; set; }
-                public class DetectVehicleICongestionRequestRoadRegionsRoadRegionPoint : TeaModel {
+                public DetectVehicleICongestionAdvanceRequestRoadRegionsRoadRegionPoint Point { get; set; }
+                public class DetectVehicleICongestionAdvanceRequestRoadRegionsRoadRegionPoint : TeaModel {
                     [NameInMap("X")]
                     [Validation(Required=false)]
                     public long? X { get; set; }

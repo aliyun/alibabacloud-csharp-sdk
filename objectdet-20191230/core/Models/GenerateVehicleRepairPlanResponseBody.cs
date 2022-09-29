@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public string TaskId { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

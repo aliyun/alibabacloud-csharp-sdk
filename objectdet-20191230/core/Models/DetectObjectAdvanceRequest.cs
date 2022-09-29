@@ -9,8 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.Objectdet20191230.Models
 {
     public class DetectObjectAdvanceRequest : TeaModel {
-        [NameInMap("ImageURLObject")]
-        [Validation(Required=true)]
+        [NameInMap("ImageURL")]
+        [Validation(Required=false)]
         public Stream ImageURLObject { get; set; }
 
     }

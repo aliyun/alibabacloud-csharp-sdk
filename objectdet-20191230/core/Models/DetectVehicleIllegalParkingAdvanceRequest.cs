@@ -8,23 +8,23 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Objectdet20191230.Models
 {
-    public class DetectVehicleIllegalParkingRequest : TeaModel {
+    public class DetectVehicleIllegalParkingAdvanceRequest : TeaModel {
         [NameInMap("ImageURL")]
         [Validation(Required=false)]
-        public string ImageURL { get; set; }
+        public Stream ImageURLObject { get; set; }
 
         [NameInMap("RoadRegions")]
         [Validation(Required=false)]
-        public List<DetectVehicleIllegalParkingRequestRoadRegions> RoadRegions { get; set; }
-        public class DetectVehicleIllegalParkingRequestRoadRegions : TeaModel {
+        public List<DetectVehicleIllegalParkingAdvanceRequestRoadRegions> RoadRegions { get; set; }
+        public class DetectVehicleIllegalParkingAdvanceRequestRoadRegions : TeaModel {
             [NameInMap("RoadRegion")]
             [Validation(Required=false)]
-            public List<DetectVehicleIllegalParkingRequestRoadRegionsRoadRegion> RoadRegion { get; set; }
-            public class DetectVehicleIllegalParkingRequestRoadRegionsRoadRegion : TeaModel {
+            public List<DetectVehicleIllegalParkingAdvanceRequestRoadRegionsRoadRegion> RoadRegion { get; set; }
+            public class DetectVehicleIllegalParkingAdvanceRequestRoadRegionsRoadRegion : TeaModel {
                 [NameInMap("Point")]
                 [Validation(Required=false)]
-                public DetectVehicleIllegalParkingRequestRoadRegionsRoadRegionPoint Point { get; set; }
-                public class DetectVehicleIllegalParkingRequestRoadRegionsRoadRegionPoint : TeaModel {
+                public DetectVehicleIllegalParkingAdvanceRequestRoadRegionsRoadRegionPoint Point { get; set; }
+                public class DetectVehicleIllegalParkingAdvanceRequestRoadRegionsRoadRegionPoint : TeaModel {
                     [NameInMap("X")]
                     [Validation(Required=false)]
                     public long? X { get; set; }

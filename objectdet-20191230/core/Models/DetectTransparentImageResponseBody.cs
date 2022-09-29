@@ -17,9 +17,13 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
             [Validation(Required=false)]
             public List<DetectTransparentImageResponseBodyDataElements> Elements { get; set; }
             public class DetectTransparentImageResponseBodyDataElements : TeaModel {
+                [NameInMap("TransparentImage")]
+                [Validation(Required=false)]
                 public int? TransparentImage { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

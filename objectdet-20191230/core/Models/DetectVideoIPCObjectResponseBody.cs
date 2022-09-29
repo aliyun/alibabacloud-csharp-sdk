@@ -17,31 +17,56 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
             [Validation(Required=false)]
             public List<DetectVideoIPCObjectResponseBodyDataFrames> Frames { get; set; }
             public class DetectVideoIPCObjectResponseBodyDataFrames : TeaModel {
+                [NameInMap("Elements")]
+                [Validation(Required=false)]
                 public List<DetectVideoIPCObjectResponseBodyDataFramesElements> Elements { get; set; }
                 public class DetectVideoIPCObjectResponseBodyDataFramesElements : TeaModel {
+                    [NameInMap("Height")]
+                    [Validation(Required=false)]
                     public long? Height { get; set; }
+
+                    [NameInMap("Score")]
+                    [Validation(Required=false)]
                     public float? Score { get; set; }
+
+                    [NameInMap("Type")]
+                    [Validation(Required=false)]
                     public string Type { get; set; }
+
+                    [NameInMap("Width")]
+                    [Validation(Required=false)]
                     public long? Width { get; set; }
+
+                    [NameInMap("X")]
+                    [Validation(Required=false)]
                     public long? X { get; set; }
+
+                    [NameInMap("Y")]
+                    [Validation(Required=false)]
                     public long? Y { get; set; }
+
                 }
+
+                [NameInMap("Time")]
+                [Validation(Required=false)]
                 public long? Time { get; set; }
+
             }
+
             [NameInMap("Height")]
             [Validation(Required=false)]
             public long? Height { get; set; }
+
             [NameInMap("InputFile")]
             [Validation(Required=false)]
             public string InputFile { get; set; }
+
             [NameInMap("Width")]
             [Validation(Required=false)]
             public long? Width { get; set; }
-        };
 
-        /// <summary>
-        /// JobId
-        /// </summary>
+        }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -17,17 +17,29 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
             [Validation(Required=false)]
             public List<DetectObjectResponseBodyDataElements> Elements { get; set; }
             public class DetectObjectResponseBodyDataElements : TeaModel {
-                public List<string> Boxes { get; set; }
+                [NameInMap("Boxes")]
+                [Validation(Required=false)]
+                public List<int?> Boxes { get; set; }
+
+                [NameInMap("Score")]
+                [Validation(Required=false)]
                 public float? Score { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
+
             [NameInMap("Height")]
             [Validation(Required=false)]
             public int? Height { get; set; }
+
             [NameInMap("Width")]
             [Validation(Required=false)]
             public int? Width { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

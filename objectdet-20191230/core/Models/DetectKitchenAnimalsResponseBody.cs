@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
             [Validation(Required=false)]
             public List<DetectKitchenAnimalsResponseBodyDataElements> Elements { get; set; }
             public class DetectKitchenAnimalsResponseBodyDataElements : TeaModel {
+                [NameInMap("Rectangles")]
+                [Validation(Required=false)]
                 public DetectKitchenAnimalsResponseBodyDataElementsRectangles Rectangles { get; set; }
                 public class DetectKitchenAnimalsResponseBodyDataElementsRectangles : TeaModel {
                     [NameInMap("Height")]
@@ -36,14 +38,19 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
                     public long? Width { get; set; }
 
                 }
-                public float? Score { get; set; }
-                public string Type { get; set; }
-            }
-        };
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
+                [NameInMap("Score")]
+                [Validation(Required=false)]
+                public float? Score { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
+        }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

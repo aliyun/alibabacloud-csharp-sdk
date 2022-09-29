@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Objectdet20191230.Models
 {
     public class DetectKitchenAnimalsAdvanceRequest : TeaModel {
-        [NameInMap("ImageURLAObject")]
-        [Validation(Required=true)]
+        [NameInMap("ImageURLA")]
+        [Validation(Required=false)]
         public Stream ImageURLAObject { get; set; }
 
         [NameInMap("ImageURLB")]
         [Validation(Required=false)]
-        public string ImageURLB { get; set; }
+        public Stream ImageURLBObject { get; set; }
 
     }
 

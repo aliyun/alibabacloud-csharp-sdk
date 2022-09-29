@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
             [NameInMap("MaxNum")]
             [Validation(Required=false)]
             public long? MaxNum { get; set; }
+
             [NameInMap("Threshold")]
             [Validation(Required=false)]
             public double? Threshold { get; set; }
-        };
+
+        }
 
         [NameInMap("ImageUrl")]
         [Validation(Required=false)]

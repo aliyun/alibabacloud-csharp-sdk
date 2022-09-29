@@ -17,9 +17,16 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
             [Validation(Required=false)]
             public List<DetectWorkwearResponseBodyDataElements> Elements { get; set; }
             public class DetectWorkwearResponseBodyDataElements : TeaModel {
+                [NameInMap("Property")]
+                [Validation(Required=false)]
                 public List<DetectWorkwearResponseBodyDataElementsProperty> Property { get; set; }
                 public class DetectWorkwearResponseBodyDataElementsProperty : TeaModel {
+                    [NameInMap("Label")]
+                    [Validation(Required=false)]
                     public string Label { get; set; }
+
+                    [NameInMap("Probability")]
+                    [Validation(Required=false)]
                     public DetectWorkwearResponseBodyDataElementsPropertyProbability Probability { get; set; }
                     public class DetectWorkwearResponseBodyDataElementsPropertyProbability : TeaModel {
                         [NameInMap("No")]
@@ -39,7 +46,11 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
                         public double? Yes { get; set; }
 
                     }
+
                 }
+
+                [NameInMap("Rectangles")]
+                [Validation(Required=false)]
                 public DetectWorkwearResponseBodyDataElementsRectangles Rectangles { get; set; }
                 public class DetectWorkwearResponseBodyDataElementsRectangles : TeaModel {
                     [NameInMap("Height")]
@@ -59,14 +70,19 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
                     public long? Width { get; set; }
 
                 }
-                public double? Score { get; set; }
-                public string Type { get; set; }
-            }
-        };
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
+                [NameInMap("Score")]
+                [Validation(Required=false)]
+                public double? Score { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
+        }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

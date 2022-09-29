@@ -16,11 +16,9 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
             [NameInMap("RequestId")]
             [Validation(Required=false)]
             public string RequestId { get; set; }
-        };
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
+        }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

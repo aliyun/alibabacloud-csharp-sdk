@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Objectdet20191230.Models
 {
     public class DetectVehicleIllegalParkingShrinkRequest : TeaModel {
-        /// <summary>
-        /// A short description of struct
-        /// </summary>
         [NameInMap("ImageURL")]
         [Validation(Required=false)]
         public string ImageURL { get; set; }

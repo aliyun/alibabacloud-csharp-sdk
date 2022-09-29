@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Objectdet20191230.Models
 {
     public class DetectWorkwearAdvanceRequest : TeaModel {
-        [NameInMap("ImageUrlObject")]
-        [Validation(Required=true)]
-        public Stream ImageUrlObject { get; set; }
-
         [NameInMap("Clothes")]
         [Validation(Required=false)]
         public DetectWorkwearAdvanceRequestClothes Clothes { get; set; }
@@ -20,10 +16,16 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
             [NameInMap("MaxNum")]
             [Validation(Required=false)]
             public long? MaxNum { get; set; }
+
             [NameInMap("Threshold")]
             [Validation(Required=false)]
             public double? Threshold { get; set; }
-        };
+
+        }
+
+        [NameInMap("ImageUrl")]
+        [Validation(Required=false)]
+        public Stream ImageUrlObject { get; set; }
 
         [NameInMap("Labels")]
         [Validation(Required=false)]

@@ -17,9 +17,13 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
             [Validation(Required=false)]
             public List<DetectWhiteBaseImageResponseBodyDataElements> Elements { get; set; }
             public class DetectWhiteBaseImageResponseBodyDataElements : TeaModel {
+                [NameInMap("WhiteBase")]
+                [Validation(Required=false)]
                 public int? WhiteBase { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
