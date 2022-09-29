@@ -29,11 +29,21 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             [Validation(Required=false)]
             public List<QueryInvalidAddressResponseBodyDataMailDetail> MailDetail { get; set; }
             public class QueryInvalidAddressResponseBodyDataMailDetail : TeaModel {
+                [NameInMap("LastUpdateTime")]
+                [Validation(Required=false)]
                 public string LastUpdateTime { get; set; }
+
+                [NameInMap("ToAddress")]
+                [Validation(Required=false)]
                 public string ToAddress { get; set; }
+
+                [NameInMap("UtcLastUpdateTime")]
+                [Validation(Required=false)]
                 public long? UtcLastUpdateTime { get; set; }
+
             }
-        };
+
+        }
 
     }
 

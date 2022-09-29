@@ -33,19 +33,53 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             [Validation(Required=false)]
             public List<QueryDomainByParamResponseBodyDataDomain> Domain { get; set; }
             public class QueryDomainByParamResponseBodyDataDomain : TeaModel {
+                [NameInMap("CnameAuthStatus")]
+                [Validation(Required=false)]
                 public string CnameAuthStatus { get; set; }
+
+                [NameInMap("ConfirmStatus")]
+                [Validation(Required=false)]
                 public string ConfirmStatus { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("DomainId")]
+                [Validation(Required=false)]
                 public string DomainId { get; set; }
+
+                [NameInMap("DomainName")]
+                [Validation(Required=false)]
                 public string DomainName { get; set; }
+
+                [NameInMap("DomainRecord")]
+                [Validation(Required=false)]
                 public string DomainRecord { get; set; }
+
+                [NameInMap("DomainStatus")]
+                [Validation(Required=false)]
                 public string DomainStatus { get; set; }
+
+                [NameInMap("IcpStatus")]
+                [Validation(Required=false)]
                 public string IcpStatus { get; set; }
+
+                [NameInMap("MxAuthStatus")]
+                [Validation(Required=false)]
                 public string MxAuthStatus { get; set; }
+
+                [NameInMap("SpfAuthStatus")]
+                [Validation(Required=false)]
                 public string SpfAuthStatus { get; set; }
+
+                [NameInMap("UtcCreateTime")]
+                [Validation(Required=false)]
                 public long? UtcCreateTime { get; set; }
+
             }
-        };
+
+        }
 
     }
 

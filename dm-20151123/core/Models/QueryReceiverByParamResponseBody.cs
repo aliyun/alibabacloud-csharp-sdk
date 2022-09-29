@@ -33,16 +33,41 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             [Validation(Required=false)]
             public List<QueryReceiverByParamResponseBodyDataReceiver> Receiver { get; set; }
             public class QueryReceiverByParamResponseBodyDataReceiver : TeaModel {
+                [NameInMap("Count")]
+                [Validation(Required=false)]
                 public string Count { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("Desc")]
+                [Validation(Required=false)]
                 public string Desc { get; set; }
+
+                [NameInMap("ReceiverId")]
+                [Validation(Required=false)]
                 public string ReceiverId { get; set; }
+
+                [NameInMap("ReceiversAlias")]
+                [Validation(Required=false)]
                 public string ReceiversAlias { get; set; }
+
+                [NameInMap("ReceiversName")]
+                [Validation(Required=false)]
                 public string ReceiversName { get; set; }
+
+                [NameInMap("ReceiversStatus")]
+                [Validation(Required=false)]
                 public string ReceiversStatus { get; set; }
+
+                [NameInMap("UtcCreateTime")]
+                [Validation(Required=false)]
                 public long? UtcCreateTime { get; set; }
+
             }
-        };
+
+        }
 
     }
 

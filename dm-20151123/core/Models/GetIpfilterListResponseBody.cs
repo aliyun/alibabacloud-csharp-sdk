@@ -33,11 +33,21 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             [Validation(Required=false)]
             public List<GetIpfilterListResponseBodyDataIpfilters> Ipfilters { get; set; }
             public class GetIpfilterListResponseBodyDataIpfilters : TeaModel {
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public string Id { get; set; }
+
+                [NameInMap("IpAddress")]
+                [Validation(Required=false)]
                 public string IpAddress { get; set; }
+
             }
-        };
+
+        }
 
     }
 

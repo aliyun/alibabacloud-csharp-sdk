@@ -33,17 +33,45 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             [Validation(Required=false)]
             public List<QueryTaskByParamResponseBodyDataTask> Task { get; set; }
             public class QueryTaskByParamResponseBodyDataTask : TeaModel {
+                [NameInMap("AddressType")]
+                [Validation(Required=false)]
                 public string AddressType { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("ReceiversName")]
+                [Validation(Required=false)]
                 public string ReceiversName { get; set; }
+
+                [NameInMap("RequestCount")]
+                [Validation(Required=false)]
                 public string RequestCount { get; set; }
+
+                [NameInMap("TagName")]
+                [Validation(Required=false)]
                 public string TagName { get; set; }
+
+                [NameInMap("TaskId")]
+                [Validation(Required=false)]
                 public string TaskId { get; set; }
+
+                [NameInMap("TaskStatus")]
+                [Validation(Required=false)]
                 public string TaskStatus { get; set; }
+
+                [NameInMap("TemplateName")]
+                [Validation(Required=false)]
                 public string TemplateName { get; set; }
+
+                [NameInMap("UtcCreateTime")]
+                [Validation(Required=false)]
                 public long? UtcCreateTime { get; set; }
+
             }
-        };
+
+        }
 
     }
 

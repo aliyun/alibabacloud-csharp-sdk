@@ -33,10 +33,17 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             [Validation(Required=false)]
             public List<QueryTagByParamResponseBodyDataTag> Tag { get; set; }
             public class QueryTagByParamResponseBodyDataTag : TeaModel {
+                [NameInMap("TagId")]
+                [Validation(Required=false)]
                 public string TagId { get; set; }
+
+                [NameInMap("TagName")]
+                [Validation(Required=false)]
                 public string TagName { get; set; }
+
             }
-        };
+
+        }
 
     }
 

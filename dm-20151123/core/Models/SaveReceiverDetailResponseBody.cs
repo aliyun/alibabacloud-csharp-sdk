@@ -17,9 +17,13 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             [Validation(Required=false)]
             public List<SaveReceiverDetailResponseBodyDataDetail> Detail { get; set; }
             public class SaveReceiverDetailResponseBodyDataDetail : TeaModel {
+                [NameInMap("Email")]
+                [Validation(Required=false)]
                 public string Email { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ErrorCount")]
         [Validation(Required=false)]

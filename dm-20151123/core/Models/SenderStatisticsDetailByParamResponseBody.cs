@@ -25,14 +25,33 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             [Validation(Required=false)]
             public List<SenderStatisticsDetailByParamResponseBodyDataMailDetail> MailDetail { get; set; }
             public class SenderStatisticsDetailByParamResponseBodyDataMailDetail : TeaModel {
+                [NameInMap("AccountName")]
+                [Validation(Required=false)]
                 public string AccountName { get; set; }
+
+                [NameInMap("LastUpdateTime")]
+                [Validation(Required=false)]
                 public string LastUpdateTime { get; set; }
+
+                [NameInMap("Message")]
+                [Validation(Required=false)]
                 public string Message { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public int? Status { get; set; }
+
+                [NameInMap("ToAddress")]
+                [Validation(Required=false)]
                 public string ToAddress { get; set; }
+
+                [NameInMap("UtcLastUpdateTime")]
+                [Validation(Required=false)]
                 public string UtcLastUpdateTime { get; set; }
+
             }
-        };
+
+        }
 
     }
 

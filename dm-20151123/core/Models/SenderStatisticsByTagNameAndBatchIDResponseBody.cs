@@ -25,15 +25,37 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             [Validation(Required=false)]
             public List<SenderStatisticsByTagNameAndBatchIDResponseBodyDataStat> Stat { get; set; }
             public class SenderStatisticsByTagNameAndBatchIDResponseBodyDataStat : TeaModel {
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("faildCount")]
+                [Validation(Required=false)]
                 public string FaildCount { get; set; }
+
+                [NameInMap("requestCount")]
+                [Validation(Required=false)]
                 public string RequestCount { get; set; }
+
+                [NameInMap("succeededPercent")]
+                [Validation(Required=false)]
                 public string SucceededPercent { get; set; }
+
+                [NameInMap("successCount")]
+                [Validation(Required=false)]
                 public string SuccessCount { get; set; }
+
+                [NameInMap("unavailableCount")]
+                [Validation(Required=false)]
                 public string UnavailableCount { get; set; }
+
+                [NameInMap("unavailablePercent")]
+                [Validation(Required=false)]
                 public string UnavailablePercent { get; set; }
+
             }
-        };
+
+        }
 
     }
 

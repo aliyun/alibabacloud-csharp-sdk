@@ -33,20 +33,57 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             [Validation(Required=false)]
             public List<QueryMailAddressByParamResponseBodyDataMailAddress> MailAddress { get; set; }
             public class QueryMailAddressByParamResponseBodyDataMailAddress : TeaModel {
+                [NameInMap("AccountName")]
+                [Validation(Required=false)]
                 public string AccountName { get; set; }
+
+                [NameInMap("AccountStatus")]
+                [Validation(Required=false)]
                 public string AccountStatus { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("DailyCount")]
+                [Validation(Required=false)]
                 public string DailyCount { get; set; }
+
+                [NameInMap("DailyReqCount")]
+                [Validation(Required=false)]
                 public string DailyReqCount { get; set; }
+
+                [NameInMap("DomainStatus")]
+                [Validation(Required=false)]
                 public string DomainStatus { get; set; }
+
+                [NameInMap("MailAddressId")]
+                [Validation(Required=false)]
                 public string MailAddressId { get; set; }
+
+                [NameInMap("MonthCount")]
+                [Validation(Required=false)]
                 public string MonthCount { get; set; }
+
+                [NameInMap("MonthReqCount")]
+                [Validation(Required=false)]
                 public string MonthReqCount { get; set; }
+
+                [NameInMap("ReplyAddress")]
+                [Validation(Required=false)]
                 public string ReplyAddress { get; set; }
+
+                [NameInMap("ReplyStatus")]
+                [Validation(Required=false)]
                 public string ReplyStatus { get; set; }
+
+                [NameInMap("Sendtype")]
+                [Validation(Required=false)]
                 public string Sendtype { get; set; }
+
             }
-        };
+
+        }
 
     }
 
