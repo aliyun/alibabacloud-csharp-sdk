@@ -15,52 +15,68 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         public class RecognizeFaceResponseBodyData : TeaModel {
             [NameInMap("AgeList")]
             [Validation(Required=false)]
-            public List<string> AgeList { get; set; }
+            public List<int?> AgeList { get; set; }
+
             [NameInMap("BeautyList")]
             [Validation(Required=false)]
-            public List<string> BeautyList { get; set; }
+            public List<float?> BeautyList { get; set; }
+
             [NameInMap("DenseFeatureLength")]
             [Validation(Required=false)]
             public int? DenseFeatureLength { get; set; }
+
             [NameInMap("DenseFeatures")]
             [Validation(Required=false)]
             public List<string> DenseFeatures { get; set; }
+
             [NameInMap("Expressions")]
             [Validation(Required=false)]
-            public List<string> Expressions { get; set; }
+            public List<int?> Expressions { get; set; }
+
             [NameInMap("FaceCount")]
             [Validation(Required=false)]
             public int? FaceCount { get; set; }
+
             [NameInMap("FaceProbabilityList")]
             [Validation(Required=false)]
-            public List<string> FaceProbabilityList { get; set; }
+            public List<float?> FaceProbabilityList { get; set; }
+
             [NameInMap("FaceRectangles")]
             [Validation(Required=false)]
-            public List<string> FaceRectangles { get; set; }
+            public List<int?> FaceRectangles { get; set; }
+
             [NameInMap("GenderList")]
             [Validation(Required=false)]
-            public List<string> GenderList { get; set; }
+            public List<int?> GenderList { get; set; }
+
             [NameInMap("Glasses")]
             [Validation(Required=false)]
-            public List<string> Glasses { get; set; }
+            public List<int?> Glasses { get; set; }
+
             [NameInMap("HatList")]
             [Validation(Required=false)]
-            public List<string> HatList { get; set; }
+            public List<int?> HatList { get; set; }
+
             [NameInMap("LandmarkCount")]
             [Validation(Required=false)]
             public int? LandmarkCount { get; set; }
+
             [NameInMap("Landmarks")]
             [Validation(Required=false)]
-            public List<string> Landmarks { get; set; }
+            public List<float?> Landmarks { get; set; }
+
             [NameInMap("Masks")]
             [Validation(Required=false)]
-            public List<string> Masks { get; set; }
+            public List<long?> Masks { get; set; }
+
             [NameInMap("PoseList")]
             [Validation(Required=false)]
-            public List<string> PoseList { get; set; }
+            public List<float?> PoseList { get; set; }
+
             [NameInMap("Pupils")]
             [Validation(Required=false)]
-            public List<string> Pupils { get; set; }
+            public List<float?> Pupils { get; set; }
+
             [NameInMap("Qualities")]
             [Validation(Required=false)]
             public RecognizeFaceResponseBodyDataQualities Qualities { get; set; }
@@ -98,7 +114,8 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
                 public List<float?> ScoreList { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

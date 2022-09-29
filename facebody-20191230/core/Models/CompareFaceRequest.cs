@@ -25,9 +25,6 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [Validation(Required=false)]
         public string ImageURLB { get; set; }
 
-        /// <summary>
-        /// 质量分阈值，取值范围 [0.0, 100.0],   0.0或空  表示不做质量分判断逻辑。
-        /// </summary>
         [NameInMap("QualityScoreThreshold")]
         [Validation(Required=false)]
         public float? QualityScoreThreshold { get; set; }

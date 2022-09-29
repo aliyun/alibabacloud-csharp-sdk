@@ -26,13 +26,21 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
                 public int? Width { get; set; }
 
             }
+
             [NameInMap("Outputs")]
             [Validation(Required=false)]
             public List<HandPostureResponseBodyDataOutputs> Outputs { get; set; }
             public class HandPostureResponseBodyDataOutputs : TeaModel {
+                [NameInMap("HandCount")]
+                [Validation(Required=false)]
                 public int? HandCount { get; set; }
+
+                [NameInMap("Results")]
+                [Validation(Required=false)]
                 public List<HandPostureResponseBodyDataOutputsResults> Results { get; set; }
                 public class HandPostureResponseBodyDataOutputsResults : TeaModel {
+                    [NameInMap("Box")]
+                    [Validation(Required=false)]
                     public HandPostureResponseBodyDataOutputsResultsBox Box { get; set; }
                     public class HandPostureResponseBodyDataOutputsResultsBox : TeaModel {
                         [NameInMap("Confident")]
@@ -50,6 +58,9 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
                         }
 
                     }
+
+                    [NameInMap("Hands")]
+                    [Validation(Required=false)]
                     public HandPostureResponseBodyDataOutputsResultsHands Hands { get; set; }
                     public class HandPostureResponseBodyDataOutputsResultsHands : TeaModel {
                         [NameInMap("Confident")]
@@ -77,9 +88,12 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
                         }
 
                     }
+
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

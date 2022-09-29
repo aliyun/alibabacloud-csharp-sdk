@@ -8,18 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
-    public class ExtractPedestrianFeatureAttrAdvanceRequest : TeaModel {
+    public class VerifyFaceMaskAdvanceRequest : TeaModel {
+        [NameInMap("ImageData")]
+        [Validation(Required=false)]
+        public byte[] ImageData { get; set; }
+
         [NameInMap("ImageURL")]
         [Validation(Required=false)]
         public Stream ImageURLObject { get; set; }
 
-        [NameInMap("Mode")]
+        [NameInMap("RefData")]
         [Validation(Required=false)]
-        public string Mode { get; set; }
+        public byte[] RefData { get; set; }
 
-        [NameInMap("ServiceVersion")]
+        [NameInMap("RefUrl")]
         [Validation(Required=false)]
-        public string ServiceVersion { get; set; }
+        public Stream RefUrlObject { get; set; }
 
     }
 

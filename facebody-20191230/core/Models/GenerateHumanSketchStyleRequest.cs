@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class GenerateHumanSketchStyleRequest : TeaModel {
-        /// <summary>
-        /// A short description of struct
-        /// </summary>
         [NameInMap("ImageURL")]
         [Validation(Required=false)]
         public string ImageURL { get; set; }

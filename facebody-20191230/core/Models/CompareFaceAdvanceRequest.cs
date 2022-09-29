@@ -8,26 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
-    public class SearchFaceAdvanceRequest : TeaModel {
-        [NameInMap("DbName")]
+    public class CompareFaceAdvanceRequest : TeaModel {
+        [NameInMap("ImageDataA")]
         [Validation(Required=false)]
-        public string DbName { get; set; }
+        public byte[] ImageDataA { get; set; }
 
-        [NameInMap("DbNames")]
+        [NameInMap("ImageDataB")]
         [Validation(Required=false)]
-        public string DbNames { get; set; }
+        public byte[] ImageDataB { get; set; }
 
-        [NameInMap("ImageUrl")]
+        [NameInMap("ImageURLA")]
         [Validation(Required=false)]
-        public Stream ImageUrlObject { get; set; }
+        public Stream ImageURLAObject { get; set; }
 
-        [NameInMap("Limit")]
+        [NameInMap("ImageURLB")]
         [Validation(Required=false)]
-        public int? Limit { get; set; }
-
-        [NameInMap("MaxFaceNum")]
-        [Validation(Required=false)]
-        public long? MaxFaceNum { get; set; }
+        public Stream ImageURLBObject { get; set; }
 
         [NameInMap("QualityScoreThreshold")]
         [Validation(Required=false)]

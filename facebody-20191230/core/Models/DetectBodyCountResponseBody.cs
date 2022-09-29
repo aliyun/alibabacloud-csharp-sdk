@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [NameInMap("PersonNumber")]
             [Validation(Required=false)]
             public int? PersonNumber { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

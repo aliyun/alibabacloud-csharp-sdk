@@ -17,17 +17,30 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public List<SearchBodyTraceResponseBodyDataMatchList> MatchList { get; set; }
             public class SearchBodyTraceResponseBodyDataMatchList : TeaModel {
+                [NameInMap("DbId")]
+                [Validation(Required=false)]
                 public long? DbId { get; set; }
-                public string ExtraData { get; set; }
-                public long? PersonId { get; set; }
-                public float? Score { get; set; }
-                public long? TraceId { get; set; }
-            }
-        };
 
-        /// <summary>
-        /// RequestId
-        /// </summary>
+                [NameInMap("ExtraData")]
+                [Validation(Required=false)]
+                public string ExtraData { get; set; }
+
+                [NameInMap("PersonId")]
+                [Validation(Required=false)]
+                public long? PersonId { get; set; }
+
+                [NameInMap("Score")]
+                [Validation(Required=false)]
+                public float? Score { get; set; }
+
+                [NameInMap("TraceId")]
+                [Validation(Required=false)]
+                public long? TraceId { get; set; }
+
+            }
+
+        }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

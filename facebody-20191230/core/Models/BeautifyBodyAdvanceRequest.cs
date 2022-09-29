@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class BeautifyBodyAdvanceRequest : TeaModel {
-        [NameInMap("ImageURLObject")]
-        [Validation(Required=true)]
-        public Stream ImageURLObject { get; set; }
-
         [NameInMap("AgeRange")]
         [Validation(Required=false)]
         public BeautifyBodyAdvanceRequestAgeRange AgeRange { get; set; }
@@ -20,10 +16,12 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [NameInMap("AgeMax")]
             [Validation(Required=false)]
             public long? AgeMax { get; set; }
+
             [NameInMap("AgeMinimum")]
             [Validation(Required=false)]
             public long? AgeMinimum { get; set; }
-        };
+
+        }
 
         [NameInMap("BodyBoxes")]
         [Validation(Required=false)]
@@ -66,16 +64,20 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
                 [NameInMap("Height")]
                 [Validation(Required=false)]
                 public float? Height { get; set; }
+
                 [NameInMap("Width")]
                 [Validation(Required=false)]
                 public float? Width { get; set; }
+
                 [NameInMap("X")]
                 [Validation(Required=false)]
                 public float? X { get; set; }
+
                 [NameInMap("Y")]
                 [Validation(Required=false)]
                 public float? Y { get; set; }
-            };
+
+            }
 
             [NameInMap("Gender")]
             [Validation(Required=false)]
@@ -86,6 +88,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [NameInMap("FemaleLiquifyDegree")]
         [Validation(Required=false)]
         public float? FemaleLiquifyDegree { get; set; }
+
+        [NameInMap("ImageURL")]
+        [Validation(Required=false)]
+        public Stream ImageURLObject { get; set; }
 
         [NameInMap("IsPregnant")]
         [Validation(Required=false)]

@@ -16,11 +16,9 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
             public string TemplateId { get; set; }
-        };
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
+        }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -9,13 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class RecognizeHandGestureAdvanceRequest : TeaModel {
-        [NameInMap("ImageURLObject")]
-        [Validation(Required=true)]
-        public Stream ImageURLObject { get; set; }
-
-        /// <summary>
-        /// A short description of struct
-        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
@@ -23,6 +16,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [NameInMap("GestureType")]
         [Validation(Required=false)]
         public string GestureType { get; set; }
+
+        [NameInMap("ImageURL")]
+        [Validation(Required=false)]
+        public Stream ImageURLObject { get; set; }
 
     }
 

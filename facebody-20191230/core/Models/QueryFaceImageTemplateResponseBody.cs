@@ -17,17 +17,30 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public List<QueryFaceImageTemplateResponseBodyDataElements> Elements { get; set; }
             public class QueryFaceImageTemplateResponseBodyDataElements : TeaModel {
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
-                public string TemplateId { get; set; }
-                public string TemplateURL { get; set; }
-                public string UpdateTime { get; set; }
-                public string UserId { get; set; }
-            }
-        };
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
+                [NameInMap("TemplateId")]
+                [Validation(Required=false)]
+                public string TemplateId { get; set; }
+
+                [NameInMap("TemplateURL")]
+                [Validation(Required=false)]
+                public string TemplateURL { get; set; }
+
+                [NameInMap("UpdateTime")]
+                [Validation(Required=false)]
+                public string UpdateTime { get; set; }
+
+                [NameInMap("UserId")]
+                [Validation(Required=false)]
+                public string UserId { get; set; }
+
+            }
+
+        }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

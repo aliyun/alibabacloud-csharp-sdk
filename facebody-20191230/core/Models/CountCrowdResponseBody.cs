@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [NameInMap("HotMap")]
             [Validation(Required=false)]
             public string HotMap { get; set; }
+
             [NameInMap("PeopleNumber")]
             [Validation(Required=false)]
             public int? PeopleNumber { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

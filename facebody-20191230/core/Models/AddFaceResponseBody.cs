@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [NameInMap("FaceId")]
             [Validation(Required=false)]
             public string FaceId { get; set; }
+
             [NameInMap("QualitieScore")]
             [Validation(Required=false)]
             public float? QualitieScore { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

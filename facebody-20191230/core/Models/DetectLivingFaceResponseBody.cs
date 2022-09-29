@@ -17,21 +17,49 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public List<DetectLivingFaceResponseBodyDataElements> Elements { get; set; }
             public class DetectLivingFaceResponseBodyDataElements : TeaModel {
+                [NameInMap("ImageURL")]
+                [Validation(Required=false)]
                 public string ImageURL { get; set; }
+
+                [NameInMap("Results")]
+                [Validation(Required=false)]
                 public List<DetectLivingFaceResponseBodyDataElementsResults> Results { get; set; }
                 public class DetectLivingFaceResponseBodyDataElementsResults : TeaModel {
+                    [NameInMap("Frames")]
+                    [Validation(Required=false)]
                     public List<DetectLivingFaceResponseBodyDataElementsResultsFrames> Frames { get; set; }
                     public class DetectLivingFaceResponseBodyDataElementsResultsFrames : TeaModel {
+                        [NameInMap("Rate")]
+                        [Validation(Required=false)]
                         public float? Rate { get; set; }
+
+                        [NameInMap("Url")]
+                        [Validation(Required=false)]
                         public string Url { get; set; }
+
                     }
+
+                    [NameInMap("Label")]
+                    [Validation(Required=false)]
                     public string Label { get; set; }
+
+                    [NameInMap("Rate")]
+                    [Validation(Required=false)]
                     public float? Rate { get; set; }
+
+                    [NameInMap("Suggestion")]
+                    [Validation(Required=false)]
                     public string Suggestion { get; set; }
+
                 }
+
+                [NameInMap("TaskId")]
+                [Validation(Required=false)]
                 public string TaskId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

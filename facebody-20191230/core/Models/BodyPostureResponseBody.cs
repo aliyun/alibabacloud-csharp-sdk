@@ -26,25 +26,48 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
                 public int? Width { get; set; }
 
             }
+
             [NameInMap("Outputs")]
             [Validation(Required=false)]
             public List<BodyPostureResponseBodyDataOutputs> Outputs { get; set; }
             public class BodyPostureResponseBodyDataOutputs : TeaModel {
+                [NameInMap("HumanCount")]
+                [Validation(Required=false)]
                 public int? HumanCount { get; set; }
+
+                [NameInMap("Results")]
+                [Validation(Required=false)]
                 public List<BodyPostureResponseBodyDataOutputsResults> Results { get; set; }
                 public class BodyPostureResponseBodyDataOutputsResults : TeaModel {
+                    [NameInMap("Bodies")]
+                    [Validation(Required=false)]
                     public List<BodyPostureResponseBodyDataOutputsResultsBodies> Bodies { get; set; }
                     public class BodyPostureResponseBodyDataOutputsResultsBodies : TeaModel {
+                        [NameInMap("Confident")]
+                        [Validation(Required=false)]
                         public float? Confident { get; set; }
+
+                        [NameInMap("Label")]
+                        [Validation(Required=false)]
                         public string Label { get; set; }
+
+                        [NameInMap("Positions")]
+                        [Validation(Required=false)]
                         public List<BodyPostureResponseBodyDataOutputsResultsBodiesPositions> Positions { get; set; }
                         public class BodyPostureResponseBodyDataOutputsResultsBodiesPositions : TeaModel {
-                            public List<string> Points { get; set; }
+                            [NameInMap("Points")]
+                            [Validation(Required=false)]
+                            public List<float?> Points { get; set; }
+
                         }
+
                     }
+
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -16,22 +16,28 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [NameInMap("Confidence")]
             [Validation(Required=false)]
             public float? Confidence { get; set; }
+
             [NameInMap("Mask")]
             [Validation(Required=false)]
             public int? Mask { get; set; }
+
             [NameInMap("MaskRef")]
             [Validation(Required=false)]
             public int? MaskRef { get; set; }
+
             [NameInMap("Rectangle")]
             [Validation(Required=false)]
-            public List<string> Rectangle { get; set; }
+            public List<int?> Rectangle { get; set; }
+
             [NameInMap("RectangleRef")]
             [Validation(Required=false)]
-            public List<string> RectangleRef { get; set; }
+            public List<int?> RectangleRef { get; set; }
+
             [NameInMap("Thresholds")]
             [Validation(Required=false)]
-            public List<string> Thresholds { get; set; }
-        };
+            public List<float?> Thresholds { get; set; }
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

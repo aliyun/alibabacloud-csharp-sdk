@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [NameInMap("VerificationToken")]
             [Validation(Required=false)]
             public string VerificationToken { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

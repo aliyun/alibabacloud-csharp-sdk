@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public List<DetectVideoLivingFaceResponseBodyDataElements> Elements { get; set; }
             public class DetectVideoLivingFaceResponseBodyDataElements : TeaModel {
+                [NameInMap("FaceConfidence")]
+                [Validation(Required=false)]
                 public float? FaceConfidence { get; set; }
+
+                [NameInMap("LiveConfidence")]
+                [Validation(Required=false)]
                 public float? LiveConfidence { get; set; }
-                public List<string> Rect { get; set; }
+
+                [NameInMap("Rect")]
+                [Validation(Required=false)]
+                public List<int?> Rect { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

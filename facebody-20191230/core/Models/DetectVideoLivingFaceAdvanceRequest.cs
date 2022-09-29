@@ -9,8 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class DetectVideoLivingFaceAdvanceRequest : TeaModel {
-        [NameInMap("VideoUrlObject")]
-        [Validation(Required=true)]
+        [NameInMap("VideoUrl")]
+        [Validation(Required=false)]
         public Stream VideoUrlObject { get; set; }
 
     }

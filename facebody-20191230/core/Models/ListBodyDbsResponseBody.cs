@@ -17,17 +17,22 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public List<ListBodyDbsResponseBodyDataDbList> DbList { get; set; }
             public class ListBodyDbsResponseBodyDataDbList : TeaModel {
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public long? Id { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
             }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public long? Total { get; set; }
-        };
 
-        /// <summary>
-        /// RequestId
-        /// </summary>
+        }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

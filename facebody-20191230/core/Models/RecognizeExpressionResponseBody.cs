@@ -17,8 +17,16 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public List<RecognizeExpressionResponseBodyDataElements> Elements { get; set; }
             public class RecognizeExpressionResponseBodyDataElements : TeaModel {
+                [NameInMap("Expression")]
+                [Validation(Required=false)]
                 public string Expression { get; set; }
+
+                [NameInMap("FaceProbability")]
+                [Validation(Required=false)]
                 public float? FaceProbability { get; set; }
+
+                [NameInMap("FaceRectangle")]
+                [Validation(Required=false)]
                 public RecognizeExpressionResponseBodyDataElementsFaceRectangle FaceRectangle { get; set; }
                 public class RecognizeExpressionResponseBodyDataElementsFaceRectangle : TeaModel {
                     [NameInMap("Height")]
@@ -38,8 +46,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
                     public int? Width { get; set; }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

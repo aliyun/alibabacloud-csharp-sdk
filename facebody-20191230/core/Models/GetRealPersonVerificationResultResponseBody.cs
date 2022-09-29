@@ -16,13 +16,16 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [NameInMap("IdentityInfo")]
             [Validation(Required=false)]
             public string IdentityInfo { get; set; }
+
             [NameInMap("MaterialMatch")]
             [Validation(Required=false)]
             public string MaterialMatch { get; set; }
+
             [NameInMap("Passed")]
             [Validation(Required=false)]
             public bool? Passed { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

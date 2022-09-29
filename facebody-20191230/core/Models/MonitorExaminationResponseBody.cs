@@ -16,6 +16,7 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [NameInMap("ChatScore")]
             [Validation(Required=false)]
             public float? ChatScore { get; set; }
+
             [NameInMap("FaceInfo")]
             [Validation(Required=false)]
             public MonitorExaminationResponseBodyDataFaceInfo FaceInfo { get; set; }
@@ -35,15 +36,19 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
                     [NameInMap("Pitch")]
                     [Validation(Required=false)]
                     public float? Pitch { get; set; }
+
                     [NameInMap("Roll")]
                     [Validation(Required=false)]
                     public float? Roll { get; set; }
+
                     [NameInMap("Yaw")]
                     [Validation(Required=false)]
                     public float? Yaw { get; set; }
-                };
+
+                }
 
             }
+
             [NameInMap("PersonInfo")]
             [Validation(Required=false)]
             public MonitorExaminationResponseBodyDataPersonInfo PersonInfo { get; set; }
@@ -55,10 +60,12 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
                     [NameInMap("Score")]
                     [Validation(Required=false)]
                     public float? Score { get; set; }
+
                     [NameInMap("Threshold")]
                     [Validation(Required=false)]
                     public float? Threshold { get; set; }
-                };
+
+                }
 
                 [NameInMap("EarPhone")]
                 [Validation(Required=false)]
@@ -67,24 +74,25 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
                     [NameInMap("Score")]
                     [Validation(Required=false)]
                     public float? Score { get; set; }
+
                     [NameInMap("Threshold")]
                     [Validation(Required=false)]
                     public float? Threshold { get; set; }
-                };
+
+                }
 
                 [NameInMap("PersonNumber")]
                 [Validation(Required=false)]
                 public long? PersonNumber { get; set; }
 
             }
+
             [NameInMap("Threshold")]
             [Validation(Required=false)]
             public float? Threshold { get; set; }
-        };
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
+        }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

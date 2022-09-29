@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class AddFaceAdvanceRequest : TeaModel {
-        [NameInMap("ImageUrlObject")]
-        [Validation(Required=true)]
-        public Stream ImageUrlObject { get; set; }
-
         [NameInMap("DbName")]
         [Validation(Required=false)]
         public string DbName { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [NameInMap("ExtraData")]
         [Validation(Required=false)]
         public string ExtraData { get; set; }
+
+        [NameInMap("ImageUrl")]
+        [Validation(Required=false)]
+        public Stream ImageUrlObject { get; set; }
 
         [NameInMap("QualityScoreThreshold")]
         [Validation(Required=false)]

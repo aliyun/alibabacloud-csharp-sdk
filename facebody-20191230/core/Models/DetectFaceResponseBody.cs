@@ -16,24 +16,31 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [NameInMap("FaceCount")]
             [Validation(Required=false)]
             public int? FaceCount { get; set; }
+
             [NameInMap("FaceProbabilityList")]
             [Validation(Required=false)]
-            public List<string> FaceProbabilityList { get; set; }
+            public List<float?> FaceProbabilityList { get; set; }
+
             [NameInMap("FaceRectangles")]
             [Validation(Required=false)]
-            public List<string> FaceRectangles { get; set; }
+            public List<int?> FaceRectangles { get; set; }
+
             [NameInMap("LandmarkCount")]
             [Validation(Required=false)]
             public int? LandmarkCount { get; set; }
+
             [NameInMap("Landmarks")]
             [Validation(Required=false)]
-            public List<string> Landmarks { get; set; }
+            public List<float?> Landmarks { get; set; }
+
             [NameInMap("PoseList")]
             [Validation(Required=false)]
-            public List<string> PoseList { get; set; }
+            public List<float?> PoseList { get; set; }
+
             [NameInMap("Pupils")]
             [Validation(Required=false)]
-            public List<string> Pupils { get; set; }
+            public List<float?> Pupils { get; set; }
+
             [NameInMap("Qualities")]
             [Validation(Required=false)]
             public DetectFaceResponseBodyDataQualities Qualities { get; set; }
@@ -71,7 +78,8 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
                 public List<float?> ScoreList { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

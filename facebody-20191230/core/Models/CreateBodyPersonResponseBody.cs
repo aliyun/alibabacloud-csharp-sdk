@@ -16,11 +16,9 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
-        };
 
-        /// <summary>
-        /// RequestId
-        /// </summary>
+        }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

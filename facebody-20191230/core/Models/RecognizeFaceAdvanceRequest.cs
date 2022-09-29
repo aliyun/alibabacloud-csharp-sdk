@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class RecognizeFaceAdvanceRequest : TeaModel {
-        [NameInMap("ImageURLObject")]
-        [Validation(Required=true)]
-        public Stream ImageURLObject { get; set; }
-
         [NameInMap("Age")]
         [Validation(Required=false)]
         public bool? Age { get; set; }
@@ -36,6 +32,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [NameInMap("Hat")]
         [Validation(Required=false)]
         public bool? Hat { get; set; }
+
+        [NameInMap("ImageURL")]
+        [Validation(Required=false)]
+        public Stream ImageURLObject { get; set; }
 
         [NameInMap("Mask")]
         [Validation(Required=false)]

@@ -17,13 +17,23 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public List<DetectIPCPedestrianResponseBodyDataImageInfoList> ImageInfoList { get; set; }
             public class DetectIPCPedestrianResponseBodyDataImageInfoList : TeaModel {
+                [NameInMap("Elements")]
+                [Validation(Required=false)]
                 public List<DetectIPCPedestrianResponseBodyDataImageInfoListElements> Elements { get; set; }
                 public class DetectIPCPedestrianResponseBodyDataImageInfoListElements : TeaModel {
-                    public List<string> Boxes { get; set; }
+                    [NameInMap("Boxes")]
+                    [Validation(Required=false)]
+                    public List<int?> Boxes { get; set; }
+
+                    [NameInMap("Score")]
+                    [Validation(Required=false)]
                     public float? Score { get; set; }
+
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

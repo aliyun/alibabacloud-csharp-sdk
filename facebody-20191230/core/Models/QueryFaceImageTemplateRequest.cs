@@ -13,9 +13,6 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
-        /// <summary>
-        /// A short description of struct
-        /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }

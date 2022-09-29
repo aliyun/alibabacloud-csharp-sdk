@@ -17,15 +17,31 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public List<RecognizeActionResponseBodyDataElements> Elements { get; set; }
             public class RecognizeActionResponseBodyDataElements : TeaModel {
+                [NameInMap("Boxes")]
+                [Validation(Required=false)]
                 public List<RecognizeActionResponseBodyDataElementsBoxes> Boxes { get; set; }
                 public class RecognizeActionResponseBodyDataElementsBoxes : TeaModel {
-                    public List<string> Box { get; set; }
+                    [NameInMap("Box")]
+                    [Validation(Required=false)]
+                    public List<int?> Box { get; set; }
+
                 }
+
+                [NameInMap("Labels")]
+                [Validation(Required=false)]
                 public List<string> Labels { get; set; }
-                public List<string> Scores { get; set; }
+
+                [NameInMap("Scores")]
+                [Validation(Required=false)]
+                public List<float?> Scores { get; set; }
+
+                [NameInMap("Timestamp")]
+                [Validation(Required=false)]
                 public int? Timestamp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

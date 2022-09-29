@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public List<DetectPedestrianIntrusionResponseBodyDataElements> Elements { get; set; }
             public class DetectPedestrianIntrusionResponseBodyDataElements : TeaModel {
+                [NameInMap("Box")]
+                [Validation(Required=false)]
                 public DetectPedestrianIntrusionResponseBodyDataElementsBox Box { get; set; }
                 public class DetectPedestrianIntrusionResponseBodyDataElementsBox : TeaModel {
                     [NameInMap("Bottom")]
@@ -36,18 +38,34 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
                     public long? Top { get; set; }
 
                 }
+
+                [NameInMap("BoxId")]
+                [Validation(Required=false)]
                 public long? BoxId { get; set; }
+
+                [NameInMap("IsIntrude")]
+                [Validation(Required=false)]
                 public bool? IsIntrude { get; set; }
+
+                [NameInMap("Score")]
+                [Validation(Required=false)]
                 public long? Score { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
+
             [NameInMap("ImageHeight")]
             [Validation(Required=false)]
             public long? ImageHeight { get; set; }
+
             [NameInMap("ImageWidth")]
             [Validation(Required=false)]
             public long? ImageWidth { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
