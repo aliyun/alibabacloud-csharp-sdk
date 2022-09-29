@@ -20,9 +20,11 @@ namespace AlibabaCloud.SDK.Linkcard20210520.Models
             [NameInMap("DirectionalGroupId")]
             [Validation(Required=false)]
             public long? DirectionalGroupId { get; set; }
+
             [NameInMap("DirectionalName")]
             [Validation(Required=false)]
             public string DirectionalName { get; set; }
+
             [NameInMap("PaginationResult")]
             [Validation(Required=false)]
             public ListDirectionalDetailResponseBodyDataPaginationResult PaginationResult { get; set; }
@@ -70,7 +72,8 @@ namespace AlibabaCloud.SDK.Linkcard20210520.Models
                 public int? Total { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

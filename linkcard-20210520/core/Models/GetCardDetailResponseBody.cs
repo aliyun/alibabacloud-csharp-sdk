@@ -21,20 +21,60 @@ namespace AlibabaCloud.SDK.Linkcard20210520.Models
             [Validation(Required=false)]
             public List<GetCardDetailResponseBodyDataListPsimCards> ListPsimCards { get; set; }
             public class GetCardDetailResponseBodyDataListPsimCards : TeaModel {
+                [NameInMap("ApnName")]
+                [Validation(Required=false)]
                 public string ApnName { get; set; }
+
+                [NameInMap("CertifyStatus")]
+                [Validation(Required=false)]
                 public string CertifyStatus { get; set; }
+
+                [NameInMap("Iccid")]
+                [Validation(Required=false)]
                 public string Iccid { get; set; }
+
+                [NameInMap("Imsi")]
+                [Validation(Required=false)]
                 public List<string> Imsi { get; set; }
+
+                [NameInMap("Ip")]
+                [Validation(Required=false)]
                 public List<string> Ip { get; set; }
+
+                [NameInMap("Msisdn")]
+                [Validation(Required=false)]
                 public List<string> Msisdn { get; set; }
+
+                [NameInMap("OpenSms")]
+                [Validation(Required=false)]
                 public bool? OpenSms { get; set; }
+
+                [NameInMap("OsStatus")]
+                [Validation(Required=false)]
                 public string OsStatus { get; set; }
+
+                [NameInMap("PeriodAddFlow")]
+                [Validation(Required=false)]
                 public string PeriodAddFlow { get; set; }
+
+                [NameInMap("PeriodSmsUse")]
+                [Validation(Required=false)]
                 public string PeriodSmsUse { get; set; }
+
+                [NameInMap("PrivateNetworkSegment")]
+                [Validation(Required=false)]
                 public string PrivateNetworkSegment { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("Vendor")]
+                [Validation(Required=false)]
                 public string Vendor { get; set; }
+
             }
+
             [NameInMap("VsimCardInfo")]
             [Validation(Required=false)]
             public GetCardDetailResponseBodyDataVsimCardInfo VsimCardInfo { get; set; }
@@ -218,7 +258,8 @@ namespace AlibabaCloud.SDK.Linkcard20210520.Models
                 public int? VsimInstanceId { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

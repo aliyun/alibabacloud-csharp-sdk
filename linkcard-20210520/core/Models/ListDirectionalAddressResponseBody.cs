@@ -21,25 +21,45 @@ namespace AlibabaCloud.SDK.Linkcard20210520.Models
             [Validation(Required=false)]
             public List<ListDirectionalAddressResponseBodyDataList> List { get; set; }
             public class ListDirectionalAddressResponseBodyDataList : TeaModel {
+                [NameInMap("Address")]
+                [Validation(Required=false)]
                 public string Address { get; set; }
+
+                [NameInMap("AddressType")]
+                [Validation(Required=false)]
                 public string AddressType { get; set; }
+
+                [NameInMap("GroupId")]
+                [Validation(Required=false)]
                 public string GroupId { get; set; }
+
+                [NameInMap("Source")]
+                [Validation(Required=false)]
                 public string Source { get; set; }
+
+                [NameInMap("State")]
+                [Validation(Required=false)]
                 public int? State { get; set; }
+
             }
+
             [NameInMap("PageCount")]
             [Validation(Required=false)]
             public int? PageCount { get; set; }
+
             [NameInMap("PageNo")]
             [Validation(Required=false)]
             public int? PageNo { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public int? Total { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

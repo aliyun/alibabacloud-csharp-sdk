@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Linkcard20210520.Models
             [NameInMap("OrderNo")]
             [Validation(Required=false)]
             public string OrderNo { get; set; }
+
             [NameInMap("SerialNo")]
             [Validation(Required=false)]
             public string SerialNo { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

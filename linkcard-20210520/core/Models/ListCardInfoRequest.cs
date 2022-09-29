@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.Linkcard20210520.Models
         [Validation(Required=false)]
         public string MaxFlow { get; set; }
 
+        [NameInMap("MaxRestFlowPercentage")]
+        [Validation(Required=false)]
+        public double? MaxRestFlowPercentage { get; set; }
+
         [NameInMap("MinFlow")]
         [Validation(Required=false)]
         public string MinFlow { get; set; }

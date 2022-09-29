@@ -328,54 +328,6 @@ namespace AlibabaCloud.SDK.Linkcard20210520
             return await BatchAddDirectionalAddressWithOptionsAsync(request, runtime);
         }
 
-        public CardStatisticsResponse CardStatisticsWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CardStatistics",
-                Version = "2021-05-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CardStatisticsResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<CardStatisticsResponse> CardStatisticsWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CardStatistics",
-                Version = "2021-05-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CardStatisticsResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public CardStatisticsResponse CardStatistics()
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return CardStatisticsWithOptions(runtime);
-        }
-
-        public async Task<CardStatisticsResponse> CardStatisticsAsync()
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await CardStatisticsWithOptionsAsync(runtime);
-        }
-
         public ForceActivationResponse ForceActivationWithOptions(ForceActivationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -756,6 +708,10 @@ namespace AlibabaCloud.SDK.Linkcard20210520
             {
                 query["MaxFlow"] = request.MaxFlow;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxRestFlowPercentage))
+            {
+                query["MaxRestFlowPercentage"] = request.MaxRestFlowPercentage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinFlow))
             {
                 query["MinFlow"] = request.MinFlow;
@@ -890,6 +846,10 @@ namespace AlibabaCloud.SDK.Linkcard20210520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxFlow))
             {
                 query["MaxFlow"] = request.MaxFlow;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxRestFlowPercentage))
+            {
+                query["MaxRestFlowPercentage"] = request.MaxRestFlowPercentage;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinFlow))
             {
