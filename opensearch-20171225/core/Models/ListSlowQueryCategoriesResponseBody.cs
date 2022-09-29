@@ -20,13 +20,16 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [NameInMap("analyzeStatus")]
             [Validation(Required=false)]
             public string AnalyzeStatus { get; set; }
+
             [NameInMap("end")]
             [Validation(Required=false)]
             public int? End { get; set; }
+
             [NameInMap("start")]
             [Validation(Required=false)]
             public int? Start { get; set; }
-        };
+
+        }
 
     }
 

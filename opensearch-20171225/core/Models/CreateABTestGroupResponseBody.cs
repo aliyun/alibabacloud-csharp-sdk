@@ -20,19 +20,24 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [NameInMap("created")]
             [Validation(Required=false)]
             public int? Created { get; set; }
+
             [NameInMap("id")]
             [Validation(Required=false)]
             public string Id { get; set; }
+
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
             [NameInMap("status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
+
             [NameInMap("updated")]
             [Validation(Required=false)]
             public int? Updated { get; set; }
-        };
+
+        }
 
     }
 

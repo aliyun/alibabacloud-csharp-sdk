@@ -40,13 +40,16 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
+
                 [NameInMap("Domain")]
                 [Validation(Required=false)]
                 public string Domain { get; set; }
+
                 [NameInMap("Language")]
                 [Validation(Required=false)]
                 public string Language { get; set; }
-            };
+
+            }
 
             [NameInMap("CreateParameters")]
             [Validation(Required=false)]

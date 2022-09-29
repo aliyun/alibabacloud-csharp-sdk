@@ -20,19 +20,24 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
             [NameInMap("modifyTime")]
             [Validation(Required=false)]
             public string ModifyTime { get; set; }
+
             [NameInMap("scope")]
             [Validation(Required=false)]
             public string Scope { get; set; }
+
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("type")]
             [Validation(Required=false)]
             public string Type { get; set; }
-        };
+
+        }
 
     }
 

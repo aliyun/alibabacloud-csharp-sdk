@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [NameInMap("progress")]
             [Validation(Required=false)]
             public int? Progress { get; set; }
+
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-        };
+
+        }
 
     }
 

@@ -19,11 +19,13 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         public class DescribeRegionResponseBodyResult : TeaModel {
             [NameInMap("config")]
             [Validation(Required=false)]
-            public Dictionary<string, string> Config { get; set; }
+            public Dictionary<string, object> Config { get; set; }
+
             [NameInMap("regionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
-        };
+
+        }
 
     }
 

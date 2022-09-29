@@ -1,3 +1,6 @@
+2022-09-29 Version: 1.1.1
+- Add Tag API.
+
 2022-03-30 Version: 1.0.5
 - Update algorithm service interface.
 

@@ -20,13 +20,16 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [NameInMap("appGroupId")]
             [Validation(Required=false)]
             public string AppGroupId { get; set; }
+
             [NameInMap("region")]
             [Validation(Required=false)]
             public string Region { get; set; }
+
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-        };
+
+        }
 
     }
 

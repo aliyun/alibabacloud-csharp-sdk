@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class UpdateFunctionInstanceResponseBody : TeaModel {
-        /// <summary>
-        /// 错误码
-        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -20,16 +17,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         [Validation(Required=false)]
         public long? HttpCode { get; set; }
 
-        /// <summary>
-        /// 耗时
-        /// </summary>
         [NameInMap("Latency")]
         [Validation(Required=false)]
         public long? Latency { get; set; }
 
-        /// <summary>
-        /// 错误信息
-        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }

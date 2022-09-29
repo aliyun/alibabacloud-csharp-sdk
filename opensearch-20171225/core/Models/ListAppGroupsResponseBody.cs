@@ -100,17 +100,16 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
                 [NameInMap("computeResource")]
                 [Validation(Required=false)]
                 public int? ComputeResource { get; set; }
+
                 [NameInMap("docSize")]
                 [Validation(Required=false)]
                 public int? DocSize { get; set; }
+
                 [NameInMap("spec")]
                 [Validation(Required=false)]
                 public string Spec { get; set; }
-            };
 
-            [NameInMap("resourceGroupId")]
-            [Validation(Required=false)]
-            public string ResourceGroupId { get; set; }
+            }
 
             [NameInMap("secondRankAlgoDeploymentId")]
             [Validation(Required=false)]
@@ -123,6 +122,20 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [NameInMap("switchedTime")]
             [Validation(Required=false)]
             public int? SwitchedTime { get; set; }
+
+            [NameInMap("tags")]
+            [Validation(Required=false)]
+            public List<ListAppGroupsResponseBodyResultTags> Tags { get; set; }
+            public class ListAppGroupsResponseBodyResultTags : TeaModel {
+                [NameInMap("tagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                [NameInMap("tagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
+            }
 
             [NameInMap("type")]
             [Validation(Required=false)]

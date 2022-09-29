@@ -19,14 +19,17 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         public class GenerateMergedTableResponseBodyResult : TeaModel {
             [NameInMap("fromTable")]
             [Validation(Required=false)]
-            public Dictionary<string, string> FromTable { get; set; }
+            public Dictionary<string, object> FromTable { get; set; }
+
             [NameInMap("mergeTable")]
             [Validation(Required=false)]
-            public Dictionary<string, string> MergeTable { get; set; }
+            public Dictionary<string, object> MergeTable { get; set; }
+
             [NameInMap("primaryKey")]
             [Validation(Required=false)]
             public string PrimaryKey { get; set; }
-        };
+
+        }
 
     }
 

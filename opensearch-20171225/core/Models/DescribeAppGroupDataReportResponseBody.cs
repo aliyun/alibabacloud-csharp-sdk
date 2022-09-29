@@ -20,10 +20,13 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [NameInMap("receivedCount")]
             [Validation(Required=false)]
             public int? ReceivedCount { get; set; }
+
             [NameInMap("receivedSample")]
             [Validation(Required=false)]
             public List<DescribeAppGroupDataReportResponseBodyResultReceivedSample> ReceivedSample { get; set; }
             public class DescribeAppGroupDataReportResponseBodyResultReceivedSample : TeaModel {
+                [NameInMap("message")]
+                [Validation(Required=false)]
                 public DescribeAppGroupDataReportResponseBodyResultReceivedSampleMessage Message { get; set; }
                 public class DescribeAppGroupDataReportResponseBodyResultReceivedSampleMessage : TeaModel {
                     [NameInMap("arg1")]
@@ -67,9 +70,14 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
                     public string UserId { get; set; }
 
                 }
+
+                [NameInMap("receivedTimeMs")]
+                [Validation(Required=false)]
                 public long? ReceivedTimeMs { get; set; }
+
             }
-        };
+
+        }
 
     }
 

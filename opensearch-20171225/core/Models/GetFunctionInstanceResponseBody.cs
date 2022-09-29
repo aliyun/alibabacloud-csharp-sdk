@@ -50,43 +50,61 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
                 public string Language { get; set; }
 
             }
+
             [NameInMap("CreateParameters")]
             [Validation(Required=false)]
             public List<GetFunctionInstanceResponseBodyResultCreateParameters> CreateParameters { get; set; }
             public class GetFunctionInstanceResponseBodyResultCreateParameters : TeaModel {
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
                 public string Value { get; set; }
+
             }
+
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
+
             [NameInMap("Cron")]
             [Validation(Required=false)]
             public string Cron { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
             [NameInMap("ExtendInfo")]
             [Validation(Required=false)]
             public string ExtendInfo { get; set; }
+
             [NameInMap("FunctionName")]
             [Validation(Required=false)]
             public string FunctionName { get; set; }
+
             [NameInMap("FunctionType")]
             [Validation(Required=false)]
             public string FunctionType { get; set; }
+
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
+
             [NameInMap("ModelType")]
             [Validation(Required=false)]
             public string ModelType { get; set; }
+
             [NameInMap("Source")]
             [Validation(Required=false)]
             public string Source { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("Task")]
             [Validation(Required=false)]
             public GetFunctionInstanceResponseBodyResultTask Task { get; set; }
@@ -100,17 +118,26 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
                 public long? LastRunTime { get; set; }
 
             }
+
             [NameInMap("UsageParameters")]
             [Validation(Required=false)]
             public List<GetFunctionInstanceResponseBodyResultUsageParameters> UsageParameters { get; set; }
             public class GetFunctionInstanceResponseBodyResultUsageParameters : TeaModel {
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
                 public string Value { get; set; }
+
             }
+
             [NameInMap("VersionId")]
             [Validation(Required=false)]
             public long? VersionId { get; set; }
-        };
+
+        }
 
         [NameInMap("Status")]
         [Validation(Required=false)]

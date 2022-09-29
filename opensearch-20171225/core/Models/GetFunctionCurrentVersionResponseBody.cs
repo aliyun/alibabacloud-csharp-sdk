@@ -36,12 +36,15 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [NameInMap("FunctionName")]
             [Validation(Required=false)]
             public string FunctionName { get; set; }
+
             [NameInMap("FunctionType")]
             [Validation(Required=false)]
             public string FunctionType { get; set; }
+
             [NameInMap("ModelType")]
             [Validation(Required=false)]
             public string ModelType { get; set; }
+
             [NameInMap("VersionConfig")]
             [Validation(Required=false)]
             public GetFunctionCurrentVersionResponseBodyResultVersionConfig VersionConfig { get; set; }
@@ -93,13 +96,16 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
                 }
 
             }
+
             [NameInMap("VersionId")]
             [Validation(Required=false)]
             public long? VersionId { get; set; }
+
             [NameInMap("VersionName")]
             [Validation(Required=false)]
             public string VersionName { get; set; }
-        };
+
+        }
 
         [NameInMap("Status")]
         [Validation(Required=false)]

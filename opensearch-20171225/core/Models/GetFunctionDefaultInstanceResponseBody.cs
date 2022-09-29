@@ -13,9 +13,6 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// 功能名称
-        /// </summary>
         [NameInMap("FunctionName")]
         [Validation(Required=false)]
         public string FunctionName { get; set; }
@@ -24,9 +21,6 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         [Validation(Required=false)]
         public long? HttpCode { get; set; }
 
-        /// <summary>
-        /// 实例名称
-        /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
@@ -50,7 +44,8 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
-        };
+
+        }
 
         [NameInMap("Status")]
         [Validation(Required=false)]
