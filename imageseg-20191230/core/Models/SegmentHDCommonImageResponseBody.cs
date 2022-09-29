@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageseg20191230.Models
 {
     public class SegmentHDCommonImageResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SegmentHDCommonImageResponseBodyData Data { get; set; }
@@ -20,7 +16,12 @@ namespace AlibabaCloud.SDK.Imageseg20191230.Models
             [NameInMap("ImageUrl")]
             [Validation(Required=false)]
             public string ImageUrl { get; set; }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

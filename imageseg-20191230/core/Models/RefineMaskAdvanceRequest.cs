@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageseg20191230.Models
 {
     public class RefineMaskAdvanceRequest : TeaModel {
-        [NameInMap("ImageURLObject")]
-        [Validation(Required=true)]
+        [NameInMap("ImageURL")]
+        [Validation(Required=false)]
         public Stream ImageURLObject { get; set; }
 
         [NameInMap("MaskImageURL")]
         [Validation(Required=false)]
-        public string MaskImageURL { get; set; }
+        public Stream MaskImageURLObject { get; set; }
 
     }
 

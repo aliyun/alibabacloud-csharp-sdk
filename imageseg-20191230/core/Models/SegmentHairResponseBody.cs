@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageseg20191230.Models
 {
     public class SegmentHairResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SegmentHairResponseBodyData Data { get; set; }
@@ -21,13 +17,33 @@ namespace AlibabaCloud.SDK.Imageseg20191230.Models
             [Validation(Required=false)]
             public List<SegmentHairResponseBodyDataElements> Elements { get; set; }
             public class SegmentHairResponseBodyDataElements : TeaModel {
-                public string ImageURL { get; set; }
-                public int? Width { get; set; }
+                [NameInMap("Height")]
+                [Validation(Required=false)]
                 public int? Height { get; set; }
-                public int? Y { get; set; }
+
+                [NameInMap("ImageURL")]
+                [Validation(Required=false)]
+                public string ImageURL { get; set; }
+
+                [NameInMap("Width")]
+                [Validation(Required=false)]
+                public int? Width { get; set; }
+
+                [NameInMap("X")]
+                [Validation(Required=false)]
                 public int? X { get; set; }
+
+                [NameInMap("Y")]
+                [Validation(Required=false)]
+                public int? Y { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

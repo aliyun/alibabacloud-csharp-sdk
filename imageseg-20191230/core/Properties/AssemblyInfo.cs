@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("alibabacloud-imageseg")]
 [assembly: AssemblyDescription("Alibaba Cloud imageseg (20191230) SDK Library for .NET")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Alibaba Cloud, Inc")]
+[assembly: AssemblyCompany("Alibaba Cloud")]
 [assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("c49f7580-7520-11eb-b568-1547be837847")]
+[assembly: Guid("9f4f7b00-3fda-11ed-8065-7b6091351ce8")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -29,5 +29,5 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("0.0.18.0")]
-[assembly: AssemblyFileVersion("0.0.18.0")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]

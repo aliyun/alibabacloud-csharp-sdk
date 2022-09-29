@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageseg20191230.Models
 {
     public class SegmentHDCommonImageAdvanceRequest : TeaModel {
-        [NameInMap("ImageUrlObject")]
-        [Validation(Required=true)]
-        public Stream ImageUrlObject { get; set; }
-
-        [NameInMap("Async")]
+        [NameInMap("ImageUrl")]
         [Validation(Required=false)]
-        public bool? Async { get; set; }
+        public Stream ImageUrlObject { get; set; }
 
     }
 

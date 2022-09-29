@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageseg20191230.Models
 {
     public class SegmentFurnitureResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SegmentFurnitureResponseBodyData Data { get; set; }
@@ -21,9 +17,17 @@ namespace AlibabaCloud.SDK.Imageseg20191230.Models
             [Validation(Required=false)]
             public List<SegmentFurnitureResponseBodyDataElements> Elements { get; set; }
             public class SegmentFurnitureResponseBodyDataElements : TeaModel {
+                [NameInMap("ImageURL")]
+                [Validation(Required=false)]
                 public string ImageURL { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

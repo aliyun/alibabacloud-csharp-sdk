@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageseg20191230.Models
 {
     public class ParseFaceResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ParseFaceResponseBodyData Data { get; set; }
@@ -21,13 +17,25 @@ namespace AlibabaCloud.SDK.Imageseg20191230.Models
             [Validation(Required=false)]
             public List<ParseFaceResponseBodyDataElements> Elements { get; set; }
             public class ParseFaceResponseBodyDataElements : TeaModel {
+                [NameInMap("ImageURL")]
+                [Validation(Required=false)]
                 public string ImageURL { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
             }
+
             [NameInMap("OriginImageURL")]
             [Validation(Required=false)]
             public string OriginImageURL { get; set; }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

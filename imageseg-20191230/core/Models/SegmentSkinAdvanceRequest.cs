@@ -9,8 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageseg20191230.Models
 {
     public class SegmentSkinAdvanceRequest : TeaModel {
-        [NameInMap("URLObject")]
-        [Validation(Required=true)]
+        [NameInMap("URL")]
+        [Validation(Required=false)]
         public Stream URLObject { get; set; }
 
     }
