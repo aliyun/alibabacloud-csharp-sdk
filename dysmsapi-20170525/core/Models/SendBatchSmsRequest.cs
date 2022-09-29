@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class SendBatchSmsRequest : TeaModel {
+        [NameInMap("OutId")]
+        [Validation(Required=false)]
+        public string OutId { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
