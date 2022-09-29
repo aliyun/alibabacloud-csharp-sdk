@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public string BehaviorReason { get; set; }
 
+            [NameInMap("IllegalValueByParameterConstraints")]
+            [Validation(Required=false)]
+            public List<object> IllegalValueByParameterConstraints { get; set; }
+
+            [NameInMap("IllegalValueByRules")]
+            [Validation(Required=false)]
+            public List<object> IllegalValueByRules { get; set; }
+
             [NameInMap("ParameterKey")]
             [Validation(Required=false)]
             public string ParameterKey { get; set; }

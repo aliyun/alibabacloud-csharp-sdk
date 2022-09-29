@@ -49,6 +49,24 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         }
 
+        [NameInMap("Resources")]
+        [Validation(Required=false)]
+        public List<ValidateTemplateResponseBodyResources> Resources { get; set; }
+        public class ValidateTemplateResponseBodyResources : TeaModel {
+            [NameInMap("LogicalResourceIdPattern")]
+            [Validation(Required=false)]
+            public string LogicalResourceIdPattern { get; set; }
+
+            [NameInMap("ResourcePath")]
+            [Validation(Required=false)]
+            public string ResourcePath { get; set; }
+
+            [NameInMap("ResourceType")]
+            [Validation(Required=false)]
+            public string ResourceType { get; set; }
+
+        }
+
     }
 
 }
