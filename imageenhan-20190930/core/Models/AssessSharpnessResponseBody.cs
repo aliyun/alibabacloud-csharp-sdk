@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
             [NameInMap("Sharpness")]
             [Validation(Required=false)]
             public float? Sharpness { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

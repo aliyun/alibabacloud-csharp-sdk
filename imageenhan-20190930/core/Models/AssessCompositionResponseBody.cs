@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
             [NameInMap("Score")]
             [Validation(Required=false)]
             public float? Score { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

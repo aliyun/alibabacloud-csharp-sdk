@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imageenhan20190930.Models
 {
-    public class IntelligentCompositionAdvanceRequest : TeaModel {
-        [NameInMap("ImageURL")]
+    public class ExtendImageStyleAdvanceRequest : TeaModel {
+        [NameInMap("MajorUrl")]
         [Validation(Required=false)]
-        public Stream ImageURLObject { get; set; }
+        public Stream MajorUrlObject { get; set; }
 
-        [NameInMap("NumBoxes")]
+        [NameInMap("StyleUrl")]
         [Validation(Required=false)]
-        public int? NumBoxes { get; set; }
+        public Stream StyleUrlObject { get; set; }
 
     }
 

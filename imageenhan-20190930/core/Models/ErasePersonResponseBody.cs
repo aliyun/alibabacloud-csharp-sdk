@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
             [NameInMap("ImageUrl")]
             [Validation(Required=false)]
             public string ImageUrl { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

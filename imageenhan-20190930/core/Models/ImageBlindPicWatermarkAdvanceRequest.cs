@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageenhan20190930.Models
 {
     public class ImageBlindPicWatermarkAdvanceRequest : TeaModel {
-        [NameInMap("OriginImageURLObject")]
-        [Validation(Required=true)]
-        public Stream OriginImageURLObject { get; set; }
-
         [NameInMap("FunctionType")]
         [Validation(Required=false)]
         public string FunctionType { get; set; }
 
         [NameInMap("LogoURL")]
         [Validation(Required=false)]
-        public string LogoURL { get; set; }
+        public Stream LogoURLObject { get; set; }
+
+        [NameInMap("OriginImageURL")]
+        [Validation(Required=false)]
+        public Stream OriginImageURLObject { get; set; }
 
         [NameInMap("OutputFileType")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
 
         [NameInMap("WatermarkImageURL")]
         [Validation(Required=false)]
-        public string WatermarkImageURL { get; set; }
+        public Stream WatermarkImageURLObject { get; set; }
 
     }
 

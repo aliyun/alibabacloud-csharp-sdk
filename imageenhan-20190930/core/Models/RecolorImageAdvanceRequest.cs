@@ -8,24 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imageenhan20190930.Models
 {
-    public class RecolorHDImageAdvanceRequest : TeaModel {
+    public class RecolorImageAdvanceRequest : TeaModel {
         [NameInMap("ColorCount")]
         [Validation(Required=false)]
         public int? ColorCount { get; set; }
 
         [NameInMap("ColorTemplate")]
         [Validation(Required=false)]
-        public List<RecolorHDImageAdvanceRequestColorTemplate> ColorTemplate { get; set; }
-        public class RecolorHDImageAdvanceRequestColorTemplate : TeaModel {
+        public List<RecolorImageAdvanceRequestColorTemplate> ColorTemplate { get; set; }
+        public class RecolorImageAdvanceRequestColorTemplate : TeaModel {
             [NameInMap("Color")]
             [Validation(Required=false)]
             public string Color { get; set; }
 
         }
-
-        [NameInMap("Degree")]
-        [Validation(Required=false)]
-        public string Degree { get; set; }
 
         [NameInMap("Mode")]
         [Validation(Required=false)]

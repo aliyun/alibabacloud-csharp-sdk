@@ -9,8 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageenhan20190930.Models
 {
     public class ImitatePhotoStyleAdvanceRequest : TeaModel {
-        [NameInMap("ImageURLObject")]
-        [Validation(Required=true)]
+        [NameInMap("ImageURL")]
+        [Validation(Required=false)]
         public Stream ImageURLObject { get; set; }
 
         [NameInMap("StyleUrl")]

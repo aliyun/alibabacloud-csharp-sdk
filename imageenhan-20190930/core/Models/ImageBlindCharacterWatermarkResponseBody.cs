@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
             [NameInMap("TextImageURL")]
             [Validation(Required=false)]
             public string TextImageURL { get; set; }
+
             [NameInMap("WatermarkImageURL")]
             [Validation(Required=false)]
             public string WatermarkImageURL { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageenhan20190930.Models
 {
     public class MakeSuperResolutionImageAdvanceRequest : TeaModel {
-        [NameInMap("UrlObject")]
-        [Validation(Required=true)]
-        public Stream UrlObject { get; set; }
-
         [NameInMap("Mode")]
         [Validation(Required=false)]
         public string Mode { get; set; }
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
         [NameInMap("UpscaleFactor")]
         [Validation(Required=false)]
         public long? UpscaleFactor { get; set; }
+
+        [NameInMap("Url")]
+        [Validation(Required=false)]
+        public Stream UrlObject { get; set; }
 
     }
 
