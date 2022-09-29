@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
 {
     public class SendMessageResponseBody : TeaModel {
-        /// <summary>
-        /// 返回数据。
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SendMessageResponseBodyData Data { get; set; }
@@ -20,31 +17,30 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
             [Validation(Required=false)]
             public List<SendMessageResponseBodyDataMessages> Messages { get; set; }
             public class SendMessageResponseBodyDataMessages : TeaModel {
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public string Id { get; set; }
+
+                [NameInMap("PhoneNumber")]
+                [Validation(Required=false)]
                 public string PhoneNumber { get; set; }
+
             }
+
             [NameInMap("RequestId")]
             [Validation(Required=false)]
             public string RequestId { get; set; }
-        };
 
-        /// <summary>
-        /// 错误码。
-        /// </summary>
+        }
+
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public int? ErrorCode { get; set; }
 
-        /// <summary>
-        /// 错误信息。
-        /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
-        /// <summary>
-        /// 请求ID。
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

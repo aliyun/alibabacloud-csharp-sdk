@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
 {
     public class ListSignaturesResponseBody : TeaModel {
-        /// <summary>
-        /// 返回数据。
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListSignaturesResponseBodyData Data { get; set; }
@@ -19,41 +16,51 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("Signatures")]
             [Validation(Required=false)]
             public List<ListSignaturesResponseBodyDataSignatures> Signatures { get; set; }
             public class ListSignaturesResponseBodyDataSignatures : TeaModel {
+                [NameInMap("CreatedTime")]
+                [Validation(Required=false)]
                 public string CreatedTime { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public string Id { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public int? Status { get; set; }
+
+                [NameInMap("UpdatedTime")]
+                [Validation(Required=false)]
                 public string UpdatedTime { get; set; }
+
             }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-        };
 
-        /// <summary>
-        /// 错误码。
-        /// </summary>
+        }
+
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public int? ErrorCode { get; set; }
 
-        /// <summary>
-        /// 错误信息。
-        /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
-        /// <summary>
-        /// 请求ID。
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

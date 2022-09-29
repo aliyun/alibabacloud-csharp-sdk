@@ -919,7 +919,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public DeleteCampaignResponse DeleteCampaignWithOptions(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -929,7 +928,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "DeleteCampaign",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/campaigns/" + Id,
+                Pathname = "/api/v2/campaigns/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -941,7 +940,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public async Task<DeleteCampaignResponse> DeleteCampaignWithOptionsAsync(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -951,7 +949,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "DeleteCampaign",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/campaigns/" + Id,
+                Pathname = "/api/v2/campaigns/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -985,7 +983,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public DeleteGroupResponse DeleteGroupWithOptions(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -995,7 +992,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "DeleteGroup",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/groups/" + Id,
+                Pathname = "/api/v2/groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1007,7 +1004,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public async Task<DeleteGroupResponse> DeleteGroupWithOptionsAsync(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1017,7 +1013,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "DeleteGroup",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/groups/" + Id,
+                Pathname = "/api/v2/groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1049,7 +1045,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public DeleteInferenceJobResponse DeleteInferenceJobWithOptions(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1059,7 +1054,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "DeleteInferenceJob",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/inference/jobs/" + Id,
+                Pathname = "/api/v2/inference/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1071,7 +1066,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public async Task<DeleteInferenceJobResponse> DeleteInferenceJobWithOptionsAsync(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1081,7 +1075,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "DeleteInferenceJob",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/inference/jobs/" + Id,
+                Pathname = "/api/v2/inference/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1115,7 +1109,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public DeleteScheduleResponse DeleteScheduleWithOptions(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1125,7 +1118,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "DeleteSchedule",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/schedules/" + Id,
+                Pathname = "/api/v2/schedules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1137,7 +1130,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public async Task<DeleteScheduleResponse> DeleteScheduleWithOptionsAsync(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1147,7 +1139,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "DeleteSchedule",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/schedules/" + Id,
+                Pathname = "/api/v2/schedules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1181,7 +1173,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public DeleteSignatureResponse DeleteSignatureWithOptions(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1191,7 +1182,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "DeleteSignature",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/signatures/" + Id,
+                Pathname = "/api/v2/signatures/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1203,7 +1194,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public async Task<DeleteSignatureResponse> DeleteSignatureWithOptionsAsync(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1213,7 +1203,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "DeleteSignature",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/signatures/" + Id,
+                Pathname = "/api/v2/signatures/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1247,7 +1237,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public DeleteTemplateResponse DeleteTemplateWithOptions(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1257,7 +1246,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "DeleteTemplate",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/templates/" + Id,
+                Pathname = "/api/v2/templates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1269,7 +1258,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public async Task<DeleteTemplateResponse> DeleteTemplateWithOptionsAsync(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1279,7 +1267,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "DeleteTemplate",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/templates/" + Id,
+                Pathname = "/api/v2/templates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1311,7 +1299,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public DeleteTrainingJobResponse DeleteTrainingJobWithOptions(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1321,7 +1308,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "DeleteTrainingJob",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/training/jobs/" + Id,
+                Pathname = "/api/v2/training/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1333,7 +1320,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public async Task<DeleteTrainingJobResponse> DeleteTrainingJobWithOptionsAsync(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1343,7 +1329,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "DeleteTrainingJob",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/training/jobs/" + Id,
+                Pathname = "/api/v2/training/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1375,7 +1361,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public GetAlgorithmResponse GetAlgorithmWithOptions(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1385,7 +1370,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "GetAlgorithm",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/algorithms/" + Id,
+                Pathname = "/api/v2/algorithms/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1397,7 +1382,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public async Task<GetAlgorithmResponse> GetAlgorithmWithOptionsAsync(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1407,7 +1391,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "GetAlgorithm",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/algorithms/" + Id,
+                Pathname = "/api/v2/algorithms/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1439,7 +1423,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public GetCampaignResponse GetCampaignWithOptions(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1449,7 +1432,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "GetCampaign",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/campaigns/" + Id,
+                Pathname = "/api/v2/campaigns/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1461,7 +1444,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public async Task<GetCampaignResponse> GetCampaignWithOptionsAsync(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1471,7 +1453,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "GetCampaign",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/campaigns/" + Id,
+                Pathname = "/api/v2/campaigns/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1503,7 +1485,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public GetGroupResponse GetGroupWithOptions(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1513,7 +1494,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "GetGroup",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/groups/" + Id,
+                Pathname = "/api/v2/groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1525,7 +1506,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public async Task<GetGroupResponse> GetGroupWithOptionsAsync(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1535,7 +1515,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "GetGroup",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/groups/" + Id,
+                Pathname = "/api/v2/groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1567,7 +1547,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public GetInferenceJobResponse GetInferenceJobWithOptions(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1577,7 +1556,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "GetInferenceJob",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/inference/jobs/" + Id,
+                Pathname = "/api/v2/inference/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1589,7 +1568,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public async Task<GetInferenceJobResponse> GetInferenceJobWithOptionsAsync(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1599,7 +1577,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "GetInferenceJob",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/inference/jobs/" + Id,
+                Pathname = "/api/v2/inference/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1693,7 +1671,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public GetScheduleResponse GetScheduleWithOptions(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1703,7 +1680,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "GetSchedule",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/schedules/" + Id,
+                Pathname = "/api/v2/schedules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1715,7 +1692,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public async Task<GetScheduleResponse> GetScheduleWithOptionsAsync(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1725,7 +1701,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "GetSchedule",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/schedules/" + Id,
+                Pathname = "/api/v2/schedules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1757,7 +1733,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public GetSignatureResponse GetSignatureWithOptions(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1767,7 +1742,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "GetSignature",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/signatures/" + Id,
+                Pathname = "/api/v2/signatures/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1779,7 +1754,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public async Task<GetSignatureResponse> GetSignatureWithOptionsAsync(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1789,7 +1763,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "GetSignature",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/signatures/" + Id,
+                Pathname = "/api/v2/signatures/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1821,7 +1795,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public GetTemplateResponse GetTemplateWithOptions(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1831,7 +1804,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "GetTemplate",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/templates/" + Id,
+                Pathname = "/api/v2/templates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1843,7 +1816,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public async Task<GetTemplateResponse> GetTemplateWithOptionsAsync(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1853,7 +1825,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "GetTemplate",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/templates/" + Id,
+                Pathname = "/api/v2/templates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1885,7 +1857,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public GetTrainingJobResponse GetTrainingJobWithOptions(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1895,7 +1866,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "GetTrainingJob",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/training/jobs/" + Id,
+                Pathname = "/api/v2/training/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1907,7 +1878,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
 
         public async Task<GetTrainingJobResponse> GetTrainingJobWithOptionsAsync(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1917,7 +1887,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "GetTrainingJob",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/training/jobs/" + Id,
+                Pathname = "/api/v2/training/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2313,9 +2283,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<ListGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * 获取预测任务列表。
-         */
         public ListInferenceJobsResponse ListInferenceJobs(ListInferenceJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2323,9 +2290,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return ListInferenceJobsWithOptions(request, headers, runtime);
         }
 
-        /**
-         * 获取预测任务列表。
-         */
         public async Task<ListInferenceJobsResponse> ListInferenceJobsAsync(ListInferenceJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2340,6 +2304,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CampaignId))
             {
                 query["CampaignId"] = request.CampaignId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CampaignName))
+            {
+                query["CampaignName"] = request.CampaignName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -2360,6 +2328,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrainingJobName))
+            {
+                query["TrainingJobName"] = request.TrainingJobName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2389,6 +2361,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             {
                 query["CampaignId"] = request.CampaignId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CampaignName))
+            {
+                query["CampaignName"] = request.CampaignName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
@@ -2408,6 +2384,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrainingJobName))
+            {
+                query["TrainingJobName"] = request.TrainingJobName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3093,9 +3073,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<ListTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * 获取训练任务列表。
-         */
         public ListTrainingJobsResponse ListTrainingJobs(ListTrainingJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3103,9 +3080,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return ListTrainingJobsWithOptions(request, headers, runtime);
         }
 
-        /**
-         * 获取训练任务列表。
-         */
         public async Task<ListTrainingJobsResponse> ListTrainingJobsAsync(ListTrainingJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3120,6 +3094,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CampaignId))
             {
                 query["CampaignId"] = request.CampaignId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CampaignName))
+            {
+                query["CampaignName"] = request.CampaignName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -3140,6 +3118,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrainingScheduleId))
+            {
+                query["TrainingScheduleId"] = request.TrainingScheduleId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3169,6 +3151,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             {
                 query["CampaignId"] = request.CampaignId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CampaignName))
+            {
+                query["CampaignName"] = request.CampaignName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
@@ -3188,6 +3174,10 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrainingScheduleId))
+            {
+                query["TrainingScheduleId"] = request.TrainingScheduleId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3209,9 +3199,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return TeaModel.ToObject<ListTrainingJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * 发送短信。
-         */
         public SendMessageResponse SendMessage(SendMessageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3219,9 +3206,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
             return SendMessageWithOptions(request, headers, runtime);
         }
 
-        /**
-         * 发送短信。
-         */
         public async Task<SendMessageResponse> SendMessageAsync(SendMessageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3512,7 +3496,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         public UpdateCampaignResponse UpdateCampaignWithOptions(string Id, UpdateCampaignRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -3532,7 +3515,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "UpdateCampaign",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/campaigns/" + Id,
+                Pathname = "/api/v2/campaigns/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3545,7 +3528,6 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
         public async Task<UpdateCampaignResponse> UpdateCampaignWithOptionsAsync(string Id, UpdateCampaignRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -3565,7 +3547,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20220112
                 Action = "UpdateCampaign",
                 Version = "2022-01-12",
                 Protocol = "HTTPS",
-                Pathname = "/api/v2/campaigns/" + Id,
+                Pathname = "/api/v2/campaigns/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Id),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
