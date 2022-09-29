@@ -9,8 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.Videorecog20200320.Models
 {
     public class UnderstandVideoContentAdvanceRequest : TeaModel {
-        [NameInMap("VideoURLObject")]
-        [Validation(Required=true)]
+        [NameInMap("VideoURL")]
+        [Validation(Required=false)]
         public Stream VideoURLObject { get; set; }
 
     }

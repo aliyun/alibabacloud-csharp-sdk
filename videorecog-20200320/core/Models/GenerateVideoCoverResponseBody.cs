@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.Videorecog20200320.Models
             [Validation(Required=false)]
             public List<GenerateVideoCoverResponseBodyDataOutputs> Outputs { get; set; }
             public class GenerateVideoCoverResponseBodyDataOutputs : TeaModel {
+                [NameInMap("Confidence")]
+                [Validation(Required=false)]
                 public float? Confidence { get; set; }
+
+                [NameInMap("ImageURL")]
+                [Validation(Required=false)]
                 public string ImageURL { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

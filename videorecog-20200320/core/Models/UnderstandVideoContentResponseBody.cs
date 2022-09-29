@@ -15,7 +15,8 @@ namespace AlibabaCloud.SDK.Videorecog20200320.Models
         public class UnderstandVideoContentResponseBodyData : TeaModel {
             [NameInMap("TagInfo")]
             [Validation(Required=false)]
-            public Dictionary<string, string> TagInfo { get; set; }
+            public Dictionary<string, object> TagInfo { get; set; }
+
             [NameInMap("VideoInfo")]
             [Validation(Required=false)]
             public UnderstandVideoContentResponseBodyDataVideoInfo VideoInfo { get; set; }
@@ -37,11 +38,9 @@ namespace AlibabaCloud.SDK.Videorecog20200320.Models
                 public long? Width { get; set; }
 
             }
-        };
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
+        }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

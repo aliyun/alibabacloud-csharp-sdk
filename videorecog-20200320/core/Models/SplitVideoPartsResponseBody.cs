@@ -17,15 +17,22 @@ namespace AlibabaCloud.SDK.Videorecog20200320.Models
             [Validation(Required=false)]
             public List<SplitVideoPartsResponseBodyDataElements> Elements { get; set; }
             public class SplitVideoPartsResponseBodyDataElements : TeaModel {
+                [NameInMap("BeginTime")]
+                [Validation(Required=false)]
                 public float? BeginTime { get; set; }
-                public float? EndTime { get; set; }
-                public long? Index { get; set; }
-            }
-        };
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
+                [NameInMap("EndTime")]
+                [Validation(Required=false)]
+                public float? EndTime { get; set; }
+
+                [NameInMap("Index")]
+                [Validation(Required=false)]
+                public long? Index { get; set; }
+
+            }
+
+        }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

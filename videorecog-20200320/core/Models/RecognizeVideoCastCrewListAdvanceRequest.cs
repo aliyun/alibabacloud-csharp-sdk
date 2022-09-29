@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Videorecog20200320.Models
 {
     public class RecognizeVideoCastCrewListAdvanceRequest : TeaModel {
-        [NameInMap("VideoUrlObject")]
-        [Validation(Required=true)]
-        public Stream VideoUrlObject { get; set; }
-
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<RecognizeVideoCastCrewListAdvanceRequestParams> Params { get; set; }
@@ -25,7 +21,11 @@ namespace AlibabaCloud.SDK.Videorecog20200320.Models
 
         [NameInMap("RegisterUrl")]
         [Validation(Required=false)]
-        public string RegisterUrl { get; set; }
+        public Stream RegisterUrlObject { get; set; }
+
+        [NameInMap("VideoUrl")]
+        [Validation(Required=false)]
+        public Stream VideoUrlObject { get; set; }
 
     }
 
