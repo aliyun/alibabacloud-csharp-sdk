@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class SuperResolveVideoRequest : TeaModel {
-        [NameInMap("VideoUrl")]
-        [Validation(Required=false)]
-        public string VideoUrl { get; set; }
-
         [NameInMap("BitRate")]
         [Validation(Required=false)]
         public int? BitRate { get; set; }
+
+        [NameInMap("VideoUrl")]
+        [Validation(Required=false)]
+        public string VideoUrl { get; set; }
 
     }
 

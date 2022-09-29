@@ -9,13 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class QueryFaceVideoTemplateResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryFaceVideoTemplateResponseBodyData Data { get; set; }
@@ -24,13 +17,33 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
             [Validation(Required=false)]
             public List<QueryFaceVideoTemplateResponseBodyDataElements> Elements { get; set; }
             public class QueryFaceVideoTemplateResponseBodyDataElements : TeaModel {
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
-                public string UpdateTime { get; set; }
-                public string UserId { get; set; }
+
+                [NameInMap("TemplateId")]
+                [Validation(Required=false)]
                 public string TemplateId { get; set; }
+
+                [NameInMap("TemplateURL")]
+                [Validation(Required=false)]
                 public string TemplateURL { get; set; }
+
+                [NameInMap("UpdateTime")]
+                [Validation(Required=false)]
+                public string UpdateTime { get; set; }
+
+                [NameInMap("UserId")]
+                [Validation(Required=false)]
+                public string UserId { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

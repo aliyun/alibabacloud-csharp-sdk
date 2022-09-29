@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class ToneSdrVideoAdvanceRequest : TeaModel {
-        [NameInMap("VideoURLObject")]
-        [Validation(Required=true)]
-        public Stream VideoURLObject { get; set; }
-
         [NameInMap("Bitrate")]
         [Validation(Required=false)]
         public int? Bitrate { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
         [NameInMap("RecolorModel")]
         [Validation(Required=false)]
         public string RecolorModel { get; set; }
+
+        [NameInMap("VideoURL")]
+        [Validation(Required=false)]
+        public Stream VideoURLObject { get; set; }
 
     }
 

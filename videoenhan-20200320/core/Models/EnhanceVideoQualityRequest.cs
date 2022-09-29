@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class EnhanceVideoQualityRequest : TeaModel {
-        [NameInMap("VideoURL")]
+        [NameInMap("Bitrate")]
         [Validation(Required=false)]
-        public string VideoURL { get; set; }
-
-        [NameInMap("OutPutWidth")]
-        [Validation(Required=false)]
-        public int? OutPutWidth { get; set; }
-
-        [NameInMap("OutPutHeight")]
-        [Validation(Required=false)]
-        public int? OutPutHeight { get; set; }
+        public int? Bitrate { get; set; }
 
         [NameInMap("FrameRate")]
         [Validation(Required=false)]
@@ -33,9 +25,17 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
         [Validation(Required=false)]
         public int? MaxIlluminance { get; set; }
 
-        [NameInMap("Bitrate")]
+        [NameInMap("OutPutHeight")]
         [Validation(Required=false)]
-        public int? Bitrate { get; set; }
+        public int? OutPutHeight { get; set; }
+
+        [NameInMap("OutPutWidth")]
+        [Validation(Required=false)]
+        public int? OutPutWidth { get; set; }
+
+        [NameInMap("VideoURL")]
+        [Validation(Required=false)]
+        public string VideoURL { get; set; }
 
     }
 

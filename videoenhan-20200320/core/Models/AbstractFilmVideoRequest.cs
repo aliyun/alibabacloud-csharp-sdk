@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class AbstractFilmVideoRequest : TeaModel {
-        [NameInMap("VideoUrl")]
-        [Validation(Required=false)]
-        public string VideoUrl { get; set; }
-
         [NameInMap("Length")]
         [Validation(Required=false)]
         public int? Length { get; set; }
+
+        [NameInMap("VideoUrl")]
+        [Validation(Required=false)]
+        public string VideoUrl { get; set; }
 
     }
 

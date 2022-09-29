@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class InterpolateVideoFrameRequest : TeaModel {
-        [NameInMap("VideoURL")]
+        [NameInMap("Bitrate")]
         [Validation(Required=false)]
-        public string VideoURL { get; set; }
+        public int? Bitrate { get; set; }
 
         [NameInMap("FrameRate")]
         [Validation(Required=false)]
         public int? FrameRate { get; set; }
 
-        [NameInMap("Bitrate")]
+        [NameInMap("VideoURL")]
         [Validation(Required=false)]
-        public int? Bitrate { get; set; }
+        public string VideoURL { get; set; }
 
     }
 

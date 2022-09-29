@@ -9,31 +9,31 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class EraseVideoLogoRequest : TeaModel {
-        [NameInMap("VideoUrl")]
-        [Validation(Required=false)]
-        public string VideoUrl { get; set; }
-
         [NameInMap("Boxes")]
         [Validation(Required=false)]
         public List<EraseVideoLogoRequestBoxes> Boxes { get; set; }
         public class EraseVideoLogoRequestBoxes : TeaModel {
-            [NameInMap("W")]
-            [Validation(Required=false)]
-            public float? W { get; set; }
-
             [NameInMap("H")]
             [Validation(Required=false)]
             public float? H { get; set; }
 
-            [NameInMap("Y")]
+            [NameInMap("W")]
             [Validation(Required=false)]
-            public float? Y { get; set; }
+            public float? W { get; set; }
 
             [NameInMap("X")]
             [Validation(Required=false)]
             public float? X { get; set; }
 
+            [NameInMap("Y")]
+            [Validation(Required=false)]
+            public float? Y { get; set; }
+
         }
+
+        [NameInMap("VideoUrl")]
+        [Validation(Required=false)]
+        public string VideoUrl { get; set; }
 
     }
 

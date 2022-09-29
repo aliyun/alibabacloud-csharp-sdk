@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class EraseVideoSubtitlesAdvanceRequest : TeaModel {
-        [NameInMap("VideoUrlObject")]
-        [Validation(Required=true)]
-        public Stream VideoUrlObject { get; set; }
+        [NameInMap("BH")]
+        [Validation(Required=false)]
+        public float? BH { get; set; }
+
+        [NameInMap("BW")]
+        [Validation(Required=false)]
+        public float? BW { get; set; }
 
         [NameInMap("BX")]
         [Validation(Required=false)]
@@ -21,13 +25,9 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
         [Validation(Required=false)]
         public float? BY { get; set; }
 
-        [NameInMap("BW")]
+        [NameInMap("VideoUrl")]
         [Validation(Required=false)]
-        public float? BW { get; set; }
-
-        [NameInMap("BH")]
-        [Validation(Required=false)]
-        public float? BH { get; set; }
+        public Stream VideoUrlObject { get; set; }
 
     }
 

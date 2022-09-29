@@ -9,20 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class MergeVideoModelFaceRequest : TeaModel {
-        /// <summary>
-        /// A short description of struct
-        /// </summary>
-        [NameInMap("UserId")]
+        [NameInMap("FaceImageURL")]
         [Validation(Required=false)]
-        public string UserId { get; set; }
+        public string FaceImageURL { get; set; }
 
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
-        [NameInMap("FaceImageURL")]
+        [NameInMap("UserId")]
         [Validation(Required=false)]
-        public string FaceImageURL { get; set; }
+        public string UserId { get; set; }
 
     }
 

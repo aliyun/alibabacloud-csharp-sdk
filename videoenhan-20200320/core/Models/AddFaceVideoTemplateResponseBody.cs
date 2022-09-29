@@ -9,13 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class AddFaceVideoTemplateResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Date")]
         [Validation(Required=false)]
         public AddFaceVideoTemplateResponseBodyDate Date { get; set; }
@@ -23,7 +16,12 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
             public string TemplateId { get; set; }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

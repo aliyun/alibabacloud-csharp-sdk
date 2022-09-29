@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class AdjustVideoColorAdvanceRequest : TeaModel {
-        [NameInMap("VideoUrlObject")]
-        [Validation(Required=true)]
-        public Stream VideoUrlObject { get; set; }
+        [NameInMap("Mode")]
+        [Validation(Required=false)]
+        public string Mode { get; set; }
 
         [NameInMap("VideoBitrate")]
         [Validation(Required=false)]
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
         [Validation(Required=false)]
         public string VideoFormat { get; set; }
 
-        [NameInMap("Mode")]
+        [NameInMap("VideoUrl")]
         [Validation(Required=false)]
-        public string Mode { get; set; }
+        public Stream VideoUrlObject { get; set; }
 
     }
 

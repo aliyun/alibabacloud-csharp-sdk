@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class ConvertHdrVideoRequest : TeaModel {
-        [NameInMap("VideoURL")]
+        [NameInMap("Bitrate")]
         [Validation(Required=false)]
-        public string VideoURL { get; set; }
+        public int? Bitrate { get; set; }
 
         [NameInMap("HDRFormat")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
         [Validation(Required=false)]
         public int? MaxIlluminance { get; set; }
 
-        [NameInMap("Bitrate")]
+        [NameInMap("VideoURL")]
         [Validation(Required=false)]
-        public int? Bitrate { get; set; }
+        public string VideoURL { get; set; }
 
     }
 

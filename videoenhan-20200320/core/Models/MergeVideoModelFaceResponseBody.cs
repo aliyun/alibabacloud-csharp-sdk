@@ -9,13 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class MergeVideoModelFaceResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public MergeVideoModelFaceResponseBodyData Data { get; set; }
@@ -23,7 +16,12 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
             [NameInMap("VideoURL")]
             [Validation(Required=false)]
             public string VideoURL { get; set; }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

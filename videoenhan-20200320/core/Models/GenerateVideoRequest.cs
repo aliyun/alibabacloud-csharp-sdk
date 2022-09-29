@@ -9,22 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class GenerateVideoRequest : TeaModel {
-        [NameInMap("Scene")]
-        [Validation(Required=false)]
-        public string Scene { get; set; }
-
-        [NameInMap("Width")]
-        [Validation(Required=false)]
-        public int? Width { get; set; }
-
-        [NameInMap("Height")]
-        [Validation(Required=false)]
-        public int? Height { get; set; }
-
-        [NameInMap("Style")]
-        [Validation(Required=false)]
-        public string Style { get; set; }
-
         [NameInMap("Duration")]
         [Validation(Required=false)]
         public float? Duration { get; set; }
@@ -33,39 +17,55 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
         [Validation(Required=false)]
         public bool? DurationAdaption { get; set; }
 
-        [NameInMap("TransitionStyle")]
-        [Validation(Required=false)]
-        public string TransitionStyle { get; set; }
-
-        [NameInMap("SmartEffect")]
-        [Validation(Required=false)]
-        public bool? SmartEffect { get; set; }
-
-        [NameInMap("PuzzleEffect")]
-        [Validation(Required=false)]
-        public bool? PuzzleEffect { get; set; }
-
-        [NameInMap("Mute")]
-        [Validation(Required=false)]
-        public bool? Mute { get; set; }
-
         [NameInMap("FileList")]
         [Validation(Required=false)]
         public List<GenerateVideoRequestFileList> FileList { get; set; }
         public class GenerateVideoRequestFileList : TeaModel {
-            [NameInMap("Type")]
+            [NameInMap("FileName")]
             [Validation(Required=false)]
-            public string Type { get; set; }
+            public string FileName { get; set; }
 
             [NameInMap("FileUrl")]
             [Validation(Required=false)]
             public string FileUrl { get; set; }
 
-            [NameInMap("FileName")]
+            [NameInMap("Type")]
             [Validation(Required=false)]
-            public string FileName { get; set; }
+            public string Type { get; set; }
 
         }
+
+        [NameInMap("Height")]
+        [Validation(Required=false)]
+        public int? Height { get; set; }
+
+        [NameInMap("Mute")]
+        [Validation(Required=false)]
+        public bool? Mute { get; set; }
+
+        [NameInMap("PuzzleEffect")]
+        [Validation(Required=false)]
+        public bool? PuzzleEffect { get; set; }
+
+        [NameInMap("Scene")]
+        [Validation(Required=false)]
+        public string Scene { get; set; }
+
+        [NameInMap("SmartEffect")]
+        [Validation(Required=false)]
+        public bool? SmartEffect { get; set; }
+
+        [NameInMap("Style")]
+        [Validation(Required=false)]
+        public string Style { get; set; }
+
+        [NameInMap("TransitionStyle")]
+        [Validation(Required=false)]
+        public string TransitionStyle { get; set; }
+
+        [NameInMap("Width")]
+        [Validation(Required=false)]
+        public int? Width { get; set; }
 
     }
 

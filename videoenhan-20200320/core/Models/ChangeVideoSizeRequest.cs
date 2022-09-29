@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class ChangeVideoSizeRequest : TeaModel {
-        [NameInMap("VideoUrl")]
+        [NameInMap("B")]
         [Validation(Required=false)]
-        public string VideoUrl { get; set; }
-
-        [NameInMap("Width")]
-        [Validation(Required=false)]
-        public int? Width { get; set; }
-
-        [NameInMap("Height")]
-        [Validation(Required=false)]
-        public int? Height { get; set; }
+        public int? B { get; set; }
 
         [NameInMap("CropType")]
         [Validation(Required=false)]
@@ -29,21 +21,29 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
         [Validation(Required=false)]
         public string FillType { get; set; }
 
-        [NameInMap("Tightness")]
+        [NameInMap("G")]
         [Validation(Required=false)]
-        public float? Tightness { get; set; }
+        public int? G { get; set; }
+
+        [NameInMap("Height")]
+        [Validation(Required=false)]
+        public int? Height { get; set; }
 
         [NameInMap("R")]
         [Validation(Required=false)]
         public int? R { get; set; }
 
-        [NameInMap("G")]
+        [NameInMap("Tightness")]
         [Validation(Required=false)]
-        public int? G { get; set; }
+        public float? Tightness { get; set; }
 
-        [NameInMap("B")]
+        [NameInMap("VideoUrl")]
         [Validation(Required=false)]
-        public int? B { get; set; }
+        public string VideoUrl { get; set; }
+
+        [NameInMap("Width")]
+        [Validation(Required=false)]
+        public int? Width { get; set; }
 
     }
 

@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class AbstractEcommerceVideoAdvanceRequest : TeaModel {
-        [NameInMap("VideoUrlObject")]
-        [Validation(Required=true)]
-        public Stream VideoUrlObject { get; set; }
-
         [NameInMap("Duration")]
         [Validation(Required=false)]
         public float? Duration { get; set; }
 
-        [NameInMap("Width")]
-        [Validation(Required=false)]
-        public int? Width { get; set; }
-
         [NameInMap("Height")]
         [Validation(Required=false)]
         public int? Height { get; set; }
+
+        [NameInMap("VideoUrl")]
+        [Validation(Required=false)]
+        public Stream VideoUrlObject { get; set; }
+
+        [NameInMap("Width")]
+        [Validation(Required=false)]
+        public int? Width { get; set; }
 
     }
 

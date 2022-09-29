@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class EraseVideoSubtitlesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public EraseVideoSubtitlesResponseBodyData Data { get; set; }
@@ -20,7 +16,12 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
             [NameInMap("VideoUrl")]
             [Validation(Required=false)]
             public string VideoUrl { get; set; }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 
