@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class HotelBillSettlementQueryResponseBody : TeaModel {
+        [NameInMap("code")]
+        [Validation(Required=false)]
+        public int? Code { get; set; }
+
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -260,10 +264,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("result_code")]
-        [Validation(Required=false)]
-        public int? ResultCode { get; set; }
 
         [NameInMap("success")]
         [Validation(Required=false)]
