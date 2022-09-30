@@ -63,6 +63,14 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public string SmsUpExtendCode { get; set; }
 
+        [NameInMap("TemplateCode")]
+        [Validation(Required=false)]
+        public string TemplateCode { get; set; }
+
+        [NameInMap("TemplateParam")]
+        [Validation(Required=false)]
+        public string TemplateParam { get; set; }
+
     }
 
 }

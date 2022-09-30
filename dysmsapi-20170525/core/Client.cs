@@ -2432,6 +2432,14 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
             {
                 query["SmsUpExtendCodeJson"] = request.SmsUpExtendCodeJson;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
+            {
+                query["TemplateCode"] = request.TemplateCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateParamJson))
+            {
+                query["TemplateParamJson"] = request.TemplateParamJson;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2498,6 +2506,14 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SmsUpExtendCodeJson))
             {
                 query["SmsUpExtendCodeJson"] = request.SmsUpExtendCodeJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
+            {
+                query["TemplateCode"] = request.TemplateCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateParamJson))
+            {
+                query["TemplateParamJson"] = request.TemplateParamJson;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2708,6 +2724,14 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
             {
                 query["SmsUpExtendCode"] = request.SmsUpExtendCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
+            {
+                query["TemplateCode"] = request.TemplateCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateParam))
+            {
+                query["TemplateParam"] = request.TemplateParam;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2770,6 +2794,14 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SmsUpExtendCode))
             {
                 query["SmsUpExtendCode"] = request.SmsUpExtendCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
+            {
+                query["TemplateCode"] = request.TemplateCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateParam))
+            {
+                query["TemplateParam"] = request.TemplateParam;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
