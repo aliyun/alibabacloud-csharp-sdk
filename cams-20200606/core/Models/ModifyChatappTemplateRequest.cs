@@ -8,19 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
-    public class CreateChatappTemplateRequest : TeaModel {
-        [NameInMap("Category")]
-        [Validation(Required=false)]
-        public string Category { get; set; }
-
+    public class ModifyChatappTemplateRequest : TeaModel {
         [NameInMap("Components")]
         [Validation(Required=false)]
-        public List<CreateChatappTemplateRequestComponents> Components { get; set; }
-        public class CreateChatappTemplateRequestComponents : TeaModel {
+        public List<ModifyChatappTemplateRequestComponents> Components { get; set; }
+        public class ModifyChatappTemplateRequestComponents : TeaModel {
             [NameInMap("Buttons")]
             [Validation(Required=false)]
-            public List<CreateChatappTemplateRequestComponentsButtons> Buttons { get; set; }
-            public class CreateChatappTemplateRequestComponentsButtons : TeaModel {
+            public List<ModifyChatappTemplateRequestComponentsButtons> Buttons { get; set; }
+            public class ModifyChatappTemplateRequestComponentsButtons : TeaModel {
                 [NameInMap("PhoneNumber")]
                 [Validation(Required=false)]
                 public string PhoneNumber { get; set; }
@@ -85,13 +81,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string Language { get; set; }
 
-        [NameInMap("Name")]
+        [NameInMap("TemplateCode")]
         [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("TemplateType")]
-        [Validation(Required=false)]
-        public string TemplateType { get; set; }
+        public string TemplateCode { get; set; }
 
     }
 
