@@ -31,6 +31,14 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
 
         }
 
+        [NameInMap("CycleEndTime")]
+        [Validation(Required=false)]
+        public long? CycleEndTime { get; set; }
+
+        [NameInMap("CycleStartTime")]
+        [Validation(Required=false)]
+        public long? CycleStartTime { get; set; }
+
         [NameInMap("DbUsage")]
         [Validation(Required=false)]
         public QuerySpaceConsumptionResponseBodyDbUsage DbUsage { get; set; }
