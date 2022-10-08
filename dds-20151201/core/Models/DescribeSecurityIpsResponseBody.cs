@@ -21,11 +21,21 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeSecurityIpsResponseBodySecurityIpGroupsSecurityIpGroup> SecurityIpGroup { get; set; }
             public class DescribeSecurityIpsResponseBodySecurityIpGroupsSecurityIpGroup : TeaModel {
+                [NameInMap("SecurityIpGroupAttribute")]
+                [Validation(Required=false)]
                 public string SecurityIpGroupAttribute { get; set; }
+
+                [NameInMap("SecurityIpGroupName")]
+                [Validation(Required=false)]
                 public string SecurityIpGroupName { get; set; }
+
+                [NameInMap("SecurityIpList")]
+                [Validation(Required=false)]
                 public string SecurityIpList { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("SecurityIps")]
         [Validation(Required=false)]

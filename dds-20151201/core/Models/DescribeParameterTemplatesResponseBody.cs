@@ -29,14 +29,33 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeParameterTemplatesResponseBodyParametersTemplateRecord> TemplateRecord { get; set; }
             public class DescribeParameterTemplatesResponseBodyParametersTemplateRecord : TeaModel {
+                [NameInMap("CheckingCode")]
+                [Validation(Required=false)]
                 public string CheckingCode { get; set; }
+
+                [NameInMap("ForceModify")]
+                [Validation(Required=false)]
                 public bool? ForceModify { get; set; }
+
+                [NameInMap("ForceRestart")]
+                [Validation(Required=false)]
                 public bool? ForceRestart { get; set; }
+
+                [NameInMap("ParameterDescription")]
+                [Validation(Required=false)]
                 public string ParameterDescription { get; set; }
+
+                [NameInMap("ParameterName")]
+                [Validation(Required=false)]
                 public string ParameterName { get; set; }
+
+                [NameInMap("ParameterValue")]
+                [Validation(Required=false)]
                 public string ParameterValue { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

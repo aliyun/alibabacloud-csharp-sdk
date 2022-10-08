@@ -21,13 +21,29 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeRoleZoneInfoResponseBodyZoneInfosZoneInfo> ZoneInfo { get; set; }
             public class DescribeRoleZoneInfoResponseBodyZoneInfosZoneInfo : TeaModel {
+                [NameInMap("InsName")]
+                [Validation(Required=false)]
                 public string InsName { get; set; }
+
+                [NameInMap("NodeType")]
+                [Validation(Required=false)]
                 public string NodeType { get; set; }
+
+                [NameInMap("RoleId")]
+                [Validation(Required=false)]
                 public string RoleId { get; set; }
+
+                [NameInMap("RoleType")]
+                [Validation(Required=false)]
                 public string RoleType { get; set; }
+
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
                 public string ZoneId { get; set; }
+
             }
-        };
+
+        }
 
     }
 

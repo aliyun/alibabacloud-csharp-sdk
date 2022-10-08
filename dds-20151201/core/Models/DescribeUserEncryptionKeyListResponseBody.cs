@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [NameInMap("KeyId")]
             [Validation(Required=false)]
             public List<string> KeyId { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -17,9 +17,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeBackupDBsResponseBodyDatabasesDatabase> Database { get; set; }
             public class DescribeBackupDBsResponseBodyDatabasesDatabase : TeaModel {
+                [NameInMap("DBName")]
+                [Validation(Required=false)]
                 public string DBName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

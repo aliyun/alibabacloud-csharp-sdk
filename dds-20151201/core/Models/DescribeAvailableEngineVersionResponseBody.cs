@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [NameInMap("EngineVersion")]
             [Validation(Required=false)]
             public List<string> EngineVersion { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

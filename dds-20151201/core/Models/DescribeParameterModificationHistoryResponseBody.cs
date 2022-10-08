@@ -17,12 +17,25 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeParameterModificationHistoryResponseBodyHistoricalParametersHistoricalParameter> HistoricalParameter { get; set; }
             public class DescribeParameterModificationHistoryResponseBodyHistoricalParametersHistoricalParameter : TeaModel {
+                [NameInMap("ModifyTime")]
+                [Validation(Required=false)]
                 public string ModifyTime { get; set; }
+
+                [NameInMap("NewParameterValue")]
+                [Validation(Required=false)]
                 public string NewParameterValue { get; set; }
+
+                [NameInMap("OldParameterValue")]
+                [Validation(Required=false)]
                 public string OldParameterValue { get; set; }
+
+                [NameInMap("ParameterName")]
+                [Validation(Required=false)]
                 public string ParameterName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

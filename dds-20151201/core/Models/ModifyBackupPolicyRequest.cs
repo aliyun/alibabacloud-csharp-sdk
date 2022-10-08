@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyBackupPolicyRequest : TeaModel {
+        [NameInMap("BackupInterval")]
+        [Validation(Required=false)]
+        public string BackupInterval { get; set; }
+
         [NameInMap("BackupRetentionPeriod")]
         [Validation(Required=false)]
         public long? BackupRetentionPeriod { get; set; }
@@ -52,6 +56,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
+
+        [NameInMap("SnapshotBackupType")]
+        [Validation(Required=false)]
+        public string SnapshotBackupType { get; set; }
 
     }
 

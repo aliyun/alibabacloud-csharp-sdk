@@ -17,14 +17,33 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeParametersResponseBodyConfigParametersParameter> Parameter { get; set; }
             public class DescribeParametersResponseBodyConfigParametersParameter : TeaModel {
+                [NameInMap("CheckingCode")]
+                [Validation(Required=false)]
                 public string CheckingCode { get; set; }
+
+                [NameInMap("ForceRestart")]
+                [Validation(Required=false)]
                 public bool? ForceRestart { get; set; }
+
+                [NameInMap("ModifiableStatus")]
+                [Validation(Required=false)]
                 public bool? ModifiableStatus { get; set; }
+
+                [NameInMap("ParameterDescription")]
+                [Validation(Required=false)]
                 public string ParameterDescription { get; set; }
+
+                [NameInMap("ParameterName")]
+                [Validation(Required=false)]
                 public string ParameterName { get; set; }
+
+                [NameInMap("ParameterValue")]
+                [Validation(Required=false)]
                 public string ParameterValue { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Engine")]
         [Validation(Required=false)]
@@ -46,14 +65,33 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeParametersResponseBodyRunningParametersParameter> Parameter { get; set; }
             public class DescribeParametersResponseBodyRunningParametersParameter : TeaModel {
+                [NameInMap("CheckingCode")]
+                [Validation(Required=false)]
                 public string CheckingCode { get; set; }
+
+                [NameInMap("ForceRestart")]
+                [Validation(Required=false)]
                 public string ForceRestart { get; set; }
+
+                [NameInMap("ModifiableStatus")]
+                [Validation(Required=false)]
                 public string ModifiableStatus { get; set; }
+
+                [NameInMap("ParameterDescription")]
+                [Validation(Required=false)]
                 public string ParameterDescription { get; set; }
+
+                [NameInMap("ParameterName")]
+                [Validation(Required=false)]
                 public string ParameterName { get; set; }
+
+                [NameInMap("ParameterValue")]
+                [Validation(Required=false)]
                 public string ParameterValue { get; set; }
+
             }
-        };
+
+        }
 
     }
 

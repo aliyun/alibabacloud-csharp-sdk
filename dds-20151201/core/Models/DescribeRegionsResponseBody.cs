@@ -17,8 +17,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeRegionsResponseBodyRegionsDdsRegion> DdsRegion { get; set; }
             public class DescribeRegionsResponseBodyRegionsDdsRegion : TeaModel {
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("RegionName")]
+                [Validation(Required=false)]
                 public string RegionName { get; set; }
+
+                [NameInMap("Zones")]
+                [Validation(Required=false)]
                 public DescribeRegionsResponseBodyRegionsDdsRegionZones Zones { get; set; }
                 public class DescribeRegionsResponseBodyRegionsDdsRegionZones : TeaModel {
                     [NameInMap("Zone")]
@@ -40,8 +48,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

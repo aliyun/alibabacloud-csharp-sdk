@@ -21,7 +21,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey> PerformanceKey { get; set; }
             public class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
                 public string Key { get; set; }
+
+                [NameInMap("PerformanceValues")]
+                [Validation(Required=false)]
                 public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyPerformanceValues PerformanceValues { get; set; }
                 public class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyPerformanceValues : TeaModel {
                     [NameInMap("PerformanceValue")]
@@ -39,10 +44,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     }
 
                 }
+
+                [NameInMap("Unit")]
+                [Validation(Required=false)]
                 public string Unit { get; set; }
+
+                [NameInMap("ValueFormat")]
+                [Validation(Required=false)]
                 public string ValueFormat { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

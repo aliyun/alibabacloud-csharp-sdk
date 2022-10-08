@@ -40,15 +40,19 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 }
 
             }
+
             [NameInMap("Currency")]
             [Validation(Required=false)]
             public string Currency { get; set; }
+
             [NameInMap("DiscountAmount")]
             [Validation(Required=false)]
             public float? DiscountAmount { get; set; }
+
             [NameInMap("OriginalAmount")]
             [Validation(Required=false)]
             public float? OriginalAmount { get; set; }
+
             [NameInMap("RuleIds")]
             [Validation(Required=false)]
             public DescribeRenewalPriceResponseBodyOrderRuleIds RuleIds { get; set; }
@@ -58,10 +62,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public List<string> RuleId { get; set; }
 
             }
+
             [NameInMap("TradeAmount")]
             [Validation(Required=false)]
             public float? TradeAmount { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -75,11 +81,21 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeRenewalPriceResponseBodyRulesRule> Rule { get; set; }
             public class DescribeRenewalPriceResponseBodyRulesRule : TeaModel {
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("RuleDescId")]
+                [Validation(Required=false)]
                 public long? RuleDescId { get; set; }
+
+                [NameInMap("Title")]
+                [Validation(Required=false)]
                 public string Title { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("SubOrders")]
         [Validation(Required=false)]
@@ -89,9 +105,20 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeRenewalPriceResponseBodySubOrdersSubOrder> SubOrder { get; set; }
             public class DescribeRenewalPriceResponseBodySubOrdersSubOrder : TeaModel {
+                [NameInMap("DiscountAmount")]
+                [Validation(Required=false)]
                 public float? DiscountAmount { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("OriginalAmount")]
+                [Validation(Required=false)]
                 public float? OriginalAmount { get; set; }
+
+                [NameInMap("RuleIds")]
+                [Validation(Required=false)]
                 public DescribeRenewalPriceResponseBodySubOrdersSubOrderRuleIds RuleIds { get; set; }
                 public class DescribeRenewalPriceResponseBodySubOrdersSubOrderRuleIds : TeaModel {
                     [NameInMap("RuleId")]
@@ -99,9 +126,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     public List<string> RuleId { get; set; }
 
                 }
+
+                [NameInMap("TradeAmount")]
+                [Validation(Required=false)]
                 public float? TradeAmount { get; set; }
+
             }
-        };
+
+        }
 
     }
 

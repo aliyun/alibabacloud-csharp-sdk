@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBType> SupportedDBType { get; set; }
             public class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBType : TeaModel {
+                [NameInMap("AvailableZones")]
+                [Validation(Required=false)]
                 public DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZones AvailableZones { get; set; }
                 public class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZones : TeaModel {
                     [NameInMap("AvailableZone")]
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                             [Validation(Required=false)]
                             public List<DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersion> SupportedEngineVersion { get; set; }
                             public class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersion : TeaModel {
+                                [NameInMap("SupportedEngines")]
+                                [Validation(Required=false)]
                                 public DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEngines SupportedEngines { get; set; }
                                 public class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEngines : TeaModel {
                                     [NameInMap("SupportedEngine")]
@@ -57,6 +61,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                                             [Validation(Required=false)]
                                             public List<DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEnginesSupportedEngineSupportedNodeTypesSupportedNodeType> SupportedNodeType { get; set; }
                                             public class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEnginesSupportedEngineSupportedNodeTypesSupportedNodeType : TeaModel {
+                                                [NameInMap("AvailableResources")]
+                                                [Validation(Required=false)]
                                                 public DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEnginesSupportedEngineSupportedNodeTypesSupportedNodeTypeAvailableResources AvailableResources { get; set; }
                                                 public class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEnginesSupportedEngineSupportedNodeTypesSupportedNodeTypeAvailableResources : TeaModel {
                                                     [NameInMap("AvailableResource")]
@@ -70,13 +76,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                                                             [NameInMap("Max")]
                                                             [Validation(Required=false)]
                                                             public int? Max { get; set; }
+
                                                             [NameInMap("Min")]
                                                             [Validation(Required=false)]
                                                             public int? Min { get; set; }
+
                                                             [NameInMap("Step")]
                                                             [Validation(Required=false)]
                                                             public int? Step { get; set; }
-                                                        };
+
+                                                        }
 
                                                         [NameInMap("InstanceClass")]
                                                         [Validation(Required=false)]
@@ -89,17 +98,30 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                                                     }
 
                                                 }
+
+                                                [NameInMap("NetworkTypes")]
+                                                [Validation(Required=false)]
                                                 public string NetworkTypes { get; set; }
+
+                                                [NameInMap("NodeType")]
+                                                [Validation(Required=false)]
                                                 public string NodeType { get; set; }
+
                                             }
-                                        };
+
+                                        }
 
                                     }
 
                                 }
+
+                                [NameInMap("Version")]
+                                [Validation(Required=false)]
                                 public string Version { get; set; }
+
                             }
-                        };
+
+                        }
 
                         [NameInMap("ZoneId")]
                         [Validation(Required=false)]
@@ -108,9 +130,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     }
 
                 }
+
+                [NameInMap("DbType")]
+                [Validation(Required=false)]
                 public string DbType { get; set; }
+
             }
-        };
+
+        }
 
     }
 

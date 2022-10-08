@@ -17,8 +17,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance> DBInstance { get; set; }
             public class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance : TeaModel {
+                [NameInMap("CapacityUnit")]
+                [Validation(Required=false)]
                 public string CapacityUnit { get; set; }
+
+                [NameInMap("ChargeType")]
+                [Validation(Required=false)]
                 public string ChargeType { get; set; }
+
+                [NameInMap("ConfigserverList")]
+                [Validation(Required=false)]
                 public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceConfigserverList ConfigserverList { get; set; }
                 public class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceConfigserverList : TeaModel {
                     [NameInMap("ConfigserverAttribute")]
@@ -64,26 +72,89 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     }
 
                 }
+
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
+                [NameInMap("CurrentKernelVersion")]
+                [Validation(Required=false)]
                 public string CurrentKernelVersion { get; set; }
+
+                [NameInMap("DBInstanceClass")]
+                [Validation(Required=false)]
                 public string DBInstanceClass { get; set; }
+
+                [NameInMap("DBInstanceDescription")]
+                [Validation(Required=false)]
                 public string DBInstanceDescription { get; set; }
+
+                [NameInMap("DBInstanceId")]
+                [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
+
+                [NameInMap("DBInstanceReleaseProtection")]
+                [Validation(Required=false)]
                 public bool? DBInstanceReleaseProtection { get; set; }
+
+                [NameInMap("DBInstanceStatus")]
+                [Validation(Required=false)]
                 public string DBInstanceStatus { get; set; }
+
+                [NameInMap("DBInstanceStorage")]
+                [Validation(Required=false)]
                 public int? DBInstanceStorage { get; set; }
+
+                [NameInMap("DBInstanceType")]
+                [Validation(Required=false)]
                 public string DBInstanceType { get; set; }
+
+                [NameInMap("Engine")]
+                [Validation(Required=false)]
                 public string Engine { get; set; }
+
+                [NameInMap("EngineVersion")]
+                [Validation(Required=false)]
                 public string EngineVersion { get; set; }
+
+                [NameInMap("ExpireTime")]
+                [Validation(Required=false)]
                 public string ExpireTime { get; set; }
+
+                [NameInMap("HiddenZoneId")]
+                [Validation(Required=false)]
                 public string HiddenZoneId { get; set; }
+
+                [NameInMap("KindCode")]
+                [Validation(Required=false)]
                 public string KindCode { get; set; }
+
+                [NameInMap("LastDowngradeTime")]
+                [Validation(Required=false)]
                 public string LastDowngradeTime { get; set; }
+
+                [NameInMap("LockMode")]
+                [Validation(Required=false)]
                 public string LockMode { get; set; }
+
+                [NameInMap("MaintainEndTime")]
+                [Validation(Required=false)]
                 public string MaintainEndTime { get; set; }
+
+                [NameInMap("MaintainStartTime")]
+                [Validation(Required=false)]
                 public string MaintainStartTime { get; set; }
+
+                [NameInMap("MaxConnections")]
+                [Validation(Required=false)]
                 public int? MaxConnections { get; set; }
+
+                [NameInMap("MaxIOPS")]
+                [Validation(Required=false)]
                 public int? MaxIOPS { get; set; }
+
+                [NameInMap("MongosList")]
+                [Validation(Required=false)]
                 public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceMongosList MongosList { get; set; }
                 public class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceMongosList : TeaModel {
                     [NameInMap("MongosAttribute")]
@@ -137,12 +208,33 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     }
 
                 }
+
+                [NameInMap("NetworkType")]
+                [Validation(Required=false)]
                 public string NetworkType { get; set; }
+
+                [NameInMap("ProtocolType")]
+                [Validation(Required=false)]
                 public string ProtocolType { get; set; }
+
+                [NameInMap("ReadonlyReplicas")]
+                [Validation(Required=false)]
                 public string ReadonlyReplicas { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("ReplacateId")]
+                [Validation(Required=false)]
                 public string ReplacateId { get; set; }
+
+                [NameInMap("ReplicaSetName")]
+                [Validation(Required=false)]
                 public string ReplicaSetName { get; set; }
+
+                [NameInMap("ReplicaSets")]
+                [Validation(Required=false)]
                 public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceReplicaSets ReplicaSets { get; set; }
                 public class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceReplicaSets : TeaModel {
                     [NameInMap("ReplicaSet")]
@@ -180,9 +272,21 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     }
 
                 }
+
+                [NameInMap("ReplicationFactor")]
+                [Validation(Required=false)]
                 public string ReplicationFactor { get; set; }
+
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
+
+                [NameInMap("SecondaryZoneId")]
+                [Validation(Required=false)]
                 public string SecondaryZoneId { get; set; }
+
+                [NameInMap("ShardList")]
+                [Validation(Required=false)]
                 public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardList ShardList { get; set; }
                 public class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardList : TeaModel {
                     [NameInMap("ShardAttribute")]
@@ -232,7 +336,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     }
 
                 }
+
+                [NameInMap("StorageEngine")]
+                [Validation(Required=false)]
                 public string StorageEngine { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
                 public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceTags Tags { get; set; }
                 public class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceTags : TeaModel {
                     [NameInMap("Tag")]
@@ -250,13 +360,30 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     }
 
                 }
+
+                [NameInMap("VPCCloudInstanceIds")]
+                [Validation(Required=false)]
                 public string VPCCloudInstanceIds { get; set; }
+
+                [NameInMap("VPCId")]
+                [Validation(Required=false)]
                 public string VPCId { get; set; }
+
+                [NameInMap("VSwitchId")]
+                [Validation(Required=false)]
                 public string VSwitchId { get; set; }
+
+                [NameInMap("VpcAuthMode")]
+                [Validation(Required=false)]
                 public string VpcAuthMode { get; set; }
+
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
                 public string ZoneId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

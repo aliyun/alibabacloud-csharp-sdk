@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeKernelReleaseNotesResponseBodyReleaseNotesReleaseNote> ReleaseNote { get; set; }
             public class DescribeKernelReleaseNotesResponseBodyReleaseNotesReleaseNote : TeaModel {
+                [NameInMap("KernelVersion")]
+                [Validation(Required=false)]
                 public string KernelVersion { get; set; }
+
+                [NameInMap("ReleaseNote")]
+                [Validation(Required=false)]
                 public string ReleaseNote { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

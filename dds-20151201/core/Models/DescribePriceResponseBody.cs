@@ -40,15 +40,19 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 }
 
             }
+
             [NameInMap("Currency")]
             [Validation(Required=false)]
             public string Currency { get; set; }
+
             [NameInMap("DiscountAmount")]
             [Validation(Required=false)]
             public string DiscountAmount { get; set; }
+
             [NameInMap("OriginalAmount")]
             [Validation(Required=false)]
             public string OriginalAmount { get; set; }
+
             [NameInMap("RuleIds")]
             [Validation(Required=false)]
             public DescribePriceResponseBodyOrderRuleIds RuleIds { get; set; }
@@ -58,10 +62,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public List<string> RuleId { get; set; }
 
             }
+
             [NameInMap("TradeAmount")]
             [Validation(Required=false)]
             public string TradeAmount { get; set; }
-        };
+
+        }
 
         [NameInMap("OrderParams")]
         [Validation(Required=false)]
@@ -79,11 +85,21 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribePriceResponseBodyRulesRule> Rule { get; set; }
             public class DescribePriceResponseBodyRulesRule : TeaModel {
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("RuleDescId")]
+                [Validation(Required=false)]
                 public long? RuleDescId { get; set; }
+
+                [NameInMap("Title")]
+                [Validation(Required=false)]
                 public string Title { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("SubOrders")]
         [Validation(Required=false)]
@@ -93,9 +109,20 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribePriceResponseBodySubOrdersSubOrder> SubOrder { get; set; }
             public class DescribePriceResponseBodySubOrdersSubOrder : TeaModel {
+                [NameInMap("DiscountAmount")]
+                [Validation(Required=false)]
                 public string DiscountAmount { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("OriginalAmount")]
+                [Validation(Required=false)]
                 public string OriginalAmount { get; set; }
+
+                [NameInMap("RuleIds")]
+                [Validation(Required=false)]
                 public DescribePriceResponseBodySubOrdersSubOrderRuleIds RuleIds { get; set; }
                 public class DescribePriceResponseBodySubOrdersSubOrderRuleIds : TeaModel {
                     [NameInMap("RuleId")]
@@ -103,9 +130,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     public List<string> RuleId { get; set; }
 
                 }
+
+                [NameInMap("TradeAmount")]
+                [Validation(Required=false)]
                 public string TradeAmount { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TraceId")]
         [Validation(Required=false)]
