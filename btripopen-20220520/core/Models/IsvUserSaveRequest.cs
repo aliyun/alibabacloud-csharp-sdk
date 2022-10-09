@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public int? LeaveStatus { get; set; }
 
+            [NameInMap("manager_user_id")]
+            [Validation(Required=false)]
+            public string ManagerUserId { get; set; }
+
             [NameInMap("phone")]
             [Validation(Required=false)]
             public string Phone { get; set; }
