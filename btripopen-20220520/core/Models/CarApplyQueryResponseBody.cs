@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class CarApplyQueryResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("apply_list")]
         [Validation(Required=false)]
         public List<CarApplyQueryResponseBodyApplyList> ApplyList { get; set; }
@@ -166,6 +162,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
+
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("success")]
         [Validation(Required=false)]
