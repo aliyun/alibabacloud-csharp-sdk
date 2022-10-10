@@ -17,14 +17,33 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public List<DescribeBackupTasksResponseBodyItemsBackupJob> BackupJob { get; set; }
             public class DescribeBackupTasksResponseBodyItemsBackupJob : TeaModel {
+                [NameInMap("BackupJobId")]
+                [Validation(Required=false)]
                 public string BackupJobId { get; set; }
+
+                [NameInMap("BackupProgressStatus")]
+                [Validation(Required=false)]
                 public string BackupProgressStatus { get; set; }
+
+                [NameInMap("JobMode")]
+                [Validation(Required=false)]
                 public string JobMode { get; set; }
+
+                [NameInMap("Process")]
+                [Validation(Required=false)]
                 public string Process { get; set; }
+
+                [NameInMap("StartTime")]
+                [Validation(Required=false)]
                 public string StartTime { get; set; }
+
+                [NameInMap("TaskAction")]
+                [Validation(Required=false)]
                 public string TaskAction { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

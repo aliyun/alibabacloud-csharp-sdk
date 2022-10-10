@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string AutoAddNewNodes { get; set; }
 
+            [NameInMap("DBClusterId")]
+            [Validation(Required=false)]
+            public string DBClusterId { get; set; }
+
             [NameInMap("DBEndpointDescription")]
             [Validation(Required=false)]
             public string DBEndpointDescription { get; set; }

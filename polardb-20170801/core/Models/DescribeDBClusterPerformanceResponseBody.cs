@@ -33,9 +33,20 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public List<DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItem> PerformanceItem { get; set; }
             public class DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItem : TeaModel {
+                [NameInMap("DBNodeId")]
+                [Validation(Required=false)]
                 public string DBNodeId { get; set; }
+
+                [NameInMap("Measurement")]
+                [Validation(Required=false)]
                 public string Measurement { get; set; }
+
+                [NameInMap("MetricName")]
+                [Validation(Required=false)]
                 public string MetricName { get; set; }
+
+                [NameInMap("Points")]
+                [Validation(Required=false)]
                 public DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItemPoints Points { get; set; }
                 public class DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItemPoints : TeaModel {
                     [NameInMap("PerformanceItemValue")]
@@ -53,8 +64,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

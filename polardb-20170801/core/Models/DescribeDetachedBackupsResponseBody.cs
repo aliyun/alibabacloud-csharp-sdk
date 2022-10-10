@@ -17,21 +17,61 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public List<DescribeDetachedBackupsResponseBodyItemsBackup> Backup { get; set; }
             public class DescribeDetachedBackupsResponseBodyItemsBackup : TeaModel {
+                [NameInMap("BackupEndTime")]
+                [Validation(Required=false)]
                 public string BackupEndTime { get; set; }
+
+                [NameInMap("BackupId")]
+                [Validation(Required=false)]
                 public string BackupId { get; set; }
+
+                [NameInMap("BackupMethod")]
+                [Validation(Required=false)]
                 public string BackupMethod { get; set; }
+
+                [NameInMap("BackupMode")]
+                [Validation(Required=false)]
                 public string BackupMode { get; set; }
+
+                [NameInMap("BackupSetSize")]
+                [Validation(Required=false)]
                 public string BackupSetSize { get; set; }
+
+                [NameInMap("BackupStartTime")]
+                [Validation(Required=false)]
                 public string BackupStartTime { get; set; }
+
+                [NameInMap("BackupStatus")]
+                [Validation(Required=false)]
                 public string BackupStatus { get; set; }
+
+                [NameInMap("BackupType")]
+                [Validation(Required=false)]
                 public string BackupType { get; set; }
+
+                [NameInMap("BackupsLevel")]
+                [Validation(Required=false)]
                 public string BackupsLevel { get; set; }
+
+                [NameInMap("ConsistentTime")]
+                [Validation(Required=false)]
                 public string ConsistentTime { get; set; }
+
+                [NameInMap("DBClusterId")]
+                [Validation(Required=false)]
                 public string DBClusterId { get; set; }
+
+                [NameInMap("IsAvail")]
+                [Validation(Required=false)]
                 public string IsAvail { get; set; }
+
+                [NameInMap("StoreStatus")]
+                [Validation(Required=false)]
                 public string StoreStatus { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

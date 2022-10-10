@@ -17,14 +17,33 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public List<DescribeAutoRenewAttributeResponseBodyItemsAutoRenewAttribute> AutoRenewAttribute { get; set; }
             public class DescribeAutoRenewAttributeResponseBodyItemsAutoRenewAttribute : TeaModel {
+                [NameInMap("AutoRenewEnabled")]
+                [Validation(Required=false)]
                 public bool? AutoRenewEnabled { get; set; }
+
+                [NameInMap("DBClusterId")]
+                [Validation(Required=false)]
                 public string DBClusterId { get; set; }
+
+                [NameInMap("Duration")]
+                [Validation(Required=false)]
                 public int? Duration { get; set; }
+
+                [NameInMap("PeriodUnit")]
+                [Validation(Required=false)]
                 public string PeriodUnit { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("RenewalStatus")]
+                [Validation(Required=false)]
                 public string RenewalStatus { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

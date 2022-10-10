@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("TDERegion")]
+        [Validation(Required=false)]
+        public string TDERegion { get; set; }
+
         [NameInMap("TDEStatus")]
         [Validation(Required=false)]
         public string TDEStatus { get; set; }

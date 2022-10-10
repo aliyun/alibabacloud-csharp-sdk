@@ -8,10 +8,30 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
-    public class OpenAITaskRequest : TeaModel {
-        [NameInMap("DBClusterId")]
+    public class EvaluateRegionResourceRequest : TeaModel {
+        [NameInMap("DBInstanceConnType")]
         [Validation(Required=false)]
-        public string DBClusterId { get; set; }
+        public string DBInstanceConnType { get; set; }
+
+        [NameInMap("DBNodeClass")]
+        [Validation(Required=false)]
+        public string DBNodeClass { get; set; }
+
+        [NameInMap("DBType")]
+        [Validation(Required=false)]
+        public string DBType { get; set; }
+
+        [NameInMap("DBVersion")]
+        [Validation(Required=false)]
+        public string DBVersion { get; set; }
+
+        [NameInMap("DispenseMode")]
+        [Validation(Required=false)]
+        public string DispenseMode { get; set; }
+
+        [NameInMap("NeedMaxScaleLink")]
+        [Validation(Required=false)]
+        public string NeedMaxScaleLink { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -20,10 +40,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
-
-        [NameInMap("Password")]
-        [Validation(Required=false)]
-        public string Password { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -41,9 +57,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("Username")]
+        [NameInMap("SubDomain")]
         [Validation(Required=false)]
-        public string Username { get; set; }
+        public string SubDomain { get; set; }
+
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public string ZoneId { get; set; }
 
     }
 

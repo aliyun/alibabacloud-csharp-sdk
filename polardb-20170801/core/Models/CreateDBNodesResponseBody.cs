@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [NameInMap("DBNodeId")]
             [Validation(Required=false)]
             public List<string> DBNodeId { get; set; }
-        };
+
+        }
 
         [NameInMap("OrderId")]
         [Validation(Required=false)]

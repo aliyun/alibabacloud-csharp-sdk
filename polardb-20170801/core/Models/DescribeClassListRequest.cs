@@ -8,10 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
-    public class OpenAITaskRequest : TeaModel {
-        [NameInMap("DBClusterId")]
+    public class DescribeClassListRequest : TeaModel {
+        [NameInMap("CommodityCode")]
         [Validation(Required=false)]
-        public string DBClusterId { get; set; }
+        public string CommodityCode { get; set; }
+
+        [NameInMap("OrderType")]
+        [Validation(Required=false)]
+        public string OrderType { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
-
-        [NameInMap("Password")]
-        [Validation(Required=false)]
-        public string Password { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -40,10 +40,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("Username")]
-        [Validation(Required=false)]
-        public string Username { get; set; }
 
     }
 

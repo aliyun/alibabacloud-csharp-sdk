@@ -93,6 +93,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public int? MaxIOPS { get; set; }
 
+            [NameInMap("SccMode")]
+            [Validation(Required=false)]
+            public string SccMode { get; set; }
+
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
             public string ZoneId { get; set; }
@@ -190,6 +194,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("SQLSize")]
         [Validation(Required=false)]
         public long? SQLSize { get; set; }
+
+        [NameInMap("ServerlessType")]
+        [Validation(Required=false)]
+        public string ServerlessType { get; set; }
 
         [NameInMap("StorageMax")]
         [Validation(Required=false)]

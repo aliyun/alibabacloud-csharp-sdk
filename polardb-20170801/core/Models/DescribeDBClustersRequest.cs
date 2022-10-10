@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBType { get; set; }
 
+        [NameInMap("Expired")]
+        [Validation(Required=false)]
+        public bool? Expired { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -48,6 +52,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("PayType")]
         [Validation(Required=false)]
         public string PayType { get; set; }
+
+        [NameInMap("RecentCreationInterval")]
+        [Validation(Required=false)]
+        public int? RecentCreationInterval { get; set; }
+
+        [NameInMap("RecentExpirationInterval")]
+        [Validation(Required=false)]
+        public int? RecentExpirationInterval { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]

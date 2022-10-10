@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public List<DescribeDatabasesResponseBodyDatabasesDatabase> Database { get; set; }
             public class DescribeDatabasesResponseBodyDatabasesDatabase : TeaModel {
+                [NameInMap("Accounts")]
+                [Validation(Required=false)]
                 public DescribeDatabasesResponseBodyDatabasesDatabaseAccounts Accounts { get; set; }
                 public class DescribeDatabasesResponseBodyDatabasesDatabaseAccounts : TeaModel {
                     [NameInMap("Account")]
@@ -42,13 +44,30 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                     }
 
                 }
+
+                [NameInMap("CharacterSetName")]
+                [Validation(Required=false)]
                 public string CharacterSetName { get; set; }
+
+                [NameInMap("DBDescription")]
+                [Validation(Required=false)]
                 public string DBDescription { get; set; }
+
+                [NameInMap("DBName")]
+                [Validation(Required=false)]
                 public string DBName { get; set; }
+
+                [NameInMap("DBStatus")]
+                [Validation(Required=false)]
                 public string DBStatus { get; set; }
+
+                [NameInMap("Engine")]
+                [Validation(Required=false)]
                 public string Engine { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

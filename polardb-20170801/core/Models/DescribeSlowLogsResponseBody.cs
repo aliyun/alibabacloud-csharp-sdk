@@ -29,22 +29,65 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public List<DescribeSlowLogsResponseBodyItemsSQLSlowLog> SQLSlowLog { get; set; }
             public class DescribeSlowLogsResponseBodyItemsSQLSlowLog : TeaModel {
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("DBName")]
+                [Validation(Required=false)]
                 public string DBName { get; set; }
+
+                [NameInMap("DBNodeId")]
+                [Validation(Required=false)]
                 public string DBNodeId { get; set; }
+
+                [NameInMap("MaxExecutionTime")]
+                [Validation(Required=false)]
                 public long? MaxExecutionTime { get; set; }
+
+                [NameInMap("MaxLockTime")]
+                [Validation(Required=false)]
                 public long? MaxLockTime { get; set; }
+
+                [NameInMap("ParseMaxRowCount")]
+                [Validation(Required=false)]
                 public long? ParseMaxRowCount { get; set; }
+
+                [NameInMap("ParseTotalRowCounts")]
+                [Validation(Required=false)]
                 public long? ParseTotalRowCounts { get; set; }
+
+                [NameInMap("ReturnMaxRowCount")]
+                [Validation(Required=false)]
                 public long? ReturnMaxRowCount { get; set; }
+
+                [NameInMap("ReturnTotalRowCounts")]
+                [Validation(Required=false)]
                 public long? ReturnTotalRowCounts { get; set; }
+
+                [NameInMap("SQLHASH")]
+                [Validation(Required=false)]
                 public string SQLHASH { get; set; }
+
+                [NameInMap("SQLText")]
+                [Validation(Required=false)]
                 public string SQLText { get; set; }
+
+                [NameInMap("TotalExecutionCounts")]
+                [Validation(Required=false)]
                 public long? TotalExecutionCounts { get; set; }
+
+                [NameInMap("TotalExecutionTimes")]
+                [Validation(Required=false)]
                 public long? TotalExecutionTimes { get; set; }
+
+                [NameInMap("TotalLockTimes")]
+                [Validation(Required=false)]
                 public long? TotalLockTimes { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

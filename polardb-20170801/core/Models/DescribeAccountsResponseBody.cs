@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string AccountName { get; set; }
 
+            [NameInMap("AccountPassword")]
+            [Validation(Required=false)]
+            public string AccountPassword { get; set; }
+
             [NameInMap("AccountPasswordValidTime")]
             [Validation(Required=false)]
             public string AccountPasswordValidTime { get; set; }

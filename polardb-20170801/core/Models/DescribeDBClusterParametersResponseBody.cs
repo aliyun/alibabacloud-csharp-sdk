@@ -33,20 +33,57 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public List<DescribeDBClusterParametersResponseBodyRunningParametersParameter> Parameter { get; set; }
             public class DescribeDBClusterParametersResponseBodyRunningParametersParameter : TeaModel {
+                [NameInMap("CheckingCode")]
+                [Validation(Required=false)]
                 public string CheckingCode { get; set; }
+
+                [NameInMap("DataType")]
+                [Validation(Required=false)]
                 public string DataType { get; set; }
+
+                [NameInMap("DefaultParameterValue")]
+                [Validation(Required=false)]
                 public string DefaultParameterValue { get; set; }
+
+                [NameInMap("Factor")]
+                [Validation(Required=false)]
                 public string Factor { get; set; }
+
+                [NameInMap("ForceRestart")]
+                [Validation(Required=false)]
                 public bool? ForceRestart { get; set; }
+
+                [NameInMap("IsModifiable")]
+                [Validation(Required=false)]
                 public bool? IsModifiable { get; set; }
+
+                [NameInMap("IsNodeAvailable")]
+                [Validation(Required=false)]
                 public string IsNodeAvailable { get; set; }
+
+                [NameInMap("ParamRelyRule")]
+                [Validation(Required=false)]
                 public string ParamRelyRule { get; set; }
+
+                [NameInMap("ParameterDescription")]
+                [Validation(Required=false)]
                 public string ParameterDescription { get; set; }
+
+                [NameInMap("ParameterName")]
+                [Validation(Required=false)]
                 public string ParameterName { get; set; }
+
+                [NameInMap("ParameterStatus")]
+                [Validation(Required=false)]
                 public string ParameterStatus { get; set; }
+
+                [NameInMap("ParameterValue")]
+                [Validation(Required=false)]
                 public string ParameterValue { get; set; }
+
             }
-        };
+
+        }
 
     }
 

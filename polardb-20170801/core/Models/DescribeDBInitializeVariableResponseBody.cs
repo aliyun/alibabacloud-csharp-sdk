@@ -29,11 +29,21 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public List<DescribeDBInitializeVariableResponseBodyVariablesVariable> Variable { get; set; }
             public class DescribeDBInitializeVariableResponseBodyVariablesVariable : TeaModel {
+                [NameInMap("Charset")]
+                [Validation(Required=false)]
                 public string Charset { get; set; }
+
+                [NameInMap("Collate")]
+                [Validation(Required=false)]
                 public string Collate { get; set; }
+
+                [NameInMap("Ctype")]
+                [Validation(Required=false)]
                 public string Ctype { get; set; }
+
             }
-        };
+
+        }
 
     }
 

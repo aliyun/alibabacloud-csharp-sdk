@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [NameInMap("RuleList")]
             [Validation(Required=false)]
             public List<string> RuleList { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

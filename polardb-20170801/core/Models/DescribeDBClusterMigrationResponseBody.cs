@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public string Port { get; set; }
 
+                [NameInMap("SSLEnabled")]
+                [Validation(Required=false)]
+                public string SSLEnabled { get; set; }
+
                 [NameInMap("VPCId")]
                 [Validation(Required=false)]
                 public string VPCId { get; set; }
@@ -104,6 +108,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public string Port { get; set; }
+
+                [NameInMap("SSLEnabled")]
+                [Validation(Required=false)]
+                public string SSLEnabled { get; set; }
 
                 [NameInMap("VPCId")]
                 [Validation(Required=false)]
