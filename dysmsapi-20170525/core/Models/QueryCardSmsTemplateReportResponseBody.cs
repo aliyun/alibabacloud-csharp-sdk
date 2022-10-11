@@ -15,7 +15,13 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<Dictionary<string, object>> Data { get; set; }
+        public QueryCardSmsTemplateReportResponseBodyData Data { get; set; }
+        public class QueryCardSmsTemplateReportResponseBodyData : TeaModel {
+            [NameInMap("model")]
+            [Validation(Required=false)]
+            public List<Dictionary<string, object>> Model { get; set; }
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
