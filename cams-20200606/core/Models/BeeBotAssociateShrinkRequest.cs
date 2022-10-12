@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class BeeBotAssociateShrinkRequest : TeaModel {
-        [NameInMap("ChatBotInstnaceId")]
+        [NameInMap("ChatBotInstanceId")]
         [Validation(Required=false)]
-        public string ChatBotInstnaceId { get; set; }
+        public string ChatBotInstanceId { get; set; }
 
         [NameInMap("IsvCode")]
         [Validation(Required=false)]

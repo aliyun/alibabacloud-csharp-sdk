@@ -47,9 +47,9 @@ namespace AlibabaCloud.SDK.Cams20200606
                 request.PerspectiveShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Perspective, "Perspective", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatBotInstnaceId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatBotInstanceId))
             {
-                body["ChatBotInstnaceId"] = request.ChatBotInstnaceId;
+                body["ChatBotInstanceId"] = request.ChatBotInstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvCode))
             {
@@ -100,9 +100,9 @@ namespace AlibabaCloud.SDK.Cams20200606
                 request.PerspectiveShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Perspective, "Perspective", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatBotInstnaceId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatBotInstanceId))
             {
-                body["ChatBotInstnaceId"] = request.ChatBotInstnaceId;
+                body["ChatBotInstanceId"] = request.ChatBotInstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvCode))
             {
@@ -169,9 +169,9 @@ namespace AlibabaCloud.SDK.Cams20200606
                 request.VendorParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VendorParam, "VendorParam", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatBotInstnaceId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatBotInstanceId))
             {
-                body["ChatBotInstnaceId"] = request.ChatBotInstnaceId;
+                body["ChatBotInstanceId"] = request.ChatBotInstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntentName))
             {
@@ -242,9 +242,9 @@ namespace AlibabaCloud.SDK.Cams20200606
                 request.VendorParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VendorParam, "VendorParam", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatBotInstnaceId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatBotInstanceId))
             {
-                body["ChatBotInstnaceId"] = request.ChatBotInstnaceId;
+                body["ChatBotInstanceId"] = request.ChatBotInstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntentName))
             {
