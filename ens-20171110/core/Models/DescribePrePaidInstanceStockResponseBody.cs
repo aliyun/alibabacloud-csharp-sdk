@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("ResourceGap")]
+        [Validation(Required=false)]
+        public string ResourceGap { get; set; }
+
         [NameInMap("SystemDiskSize")]
         [Validation(Required=false)]
         public int? SystemDiskSize { get; set; }

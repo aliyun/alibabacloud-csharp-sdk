@@ -25,10 +25,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public int? SystemDiskSize { get; set; }
 
-        [NameInMap("Version")]
-        [Validation(Required=false)]
-        public string Version { get; set; }
-
     }
 
 }

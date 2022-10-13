@@ -23,15 +23,15 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public class DescribeUserBandWidthDataResponseBodyMonitorDataBandWidthMonitorData : TeaModel {
                 [NameInMap("DownBandWidth")]
                 [Validation(Required=false)]
-                public int? DownBandWidth { get; set; }
+                public long? DownBandWidth { get; set; }
 
                 [NameInMap("InternetRX")]
                 [Validation(Required=false)]
-                public int? InternetRX { get; set; }
+                public long? InternetRX { get; set; }
 
                 [NameInMap("InternetTX")]
                 [Validation(Required=false)]
-                public int? InternetTX { get; set; }
+                public long? InternetTX { get; set; }
 
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
                 [NameInMap("UpBandWidth")]
                 [Validation(Required=false)]
-                public int? UpBandWidth { get; set; }
+                public long? UpBandWidth { get; set; }
 
             }
 

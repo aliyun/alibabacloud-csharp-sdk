@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string InstanceResourceType { get; set; }
 
+        [NameInMap("IntranetIp")]
+        [Validation(Required=false)]
+        public string IntranetIp { get; set; }
+
         [NameInMap("NetworkId")]
         [Validation(Required=false)]
         public string NetworkId { get; set; }
