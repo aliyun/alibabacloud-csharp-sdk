@@ -29,18 +29,49 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public List<QueryPushRecordsResponseBodyPushInfosPushInfo> PushInfo { get; set; }
             public class QueryPushRecordsResponseBodyPushInfosPushInfo : TeaModel {
+                [NameInMap("AppKey")]
+                [Validation(Required=false)]
                 public long? AppKey { get; set; }
+
+                [NameInMap("Body")]
+                [Validation(Required=false)]
                 public string Body { get; set; }
+
+                [NameInMap("DeviceType")]
+                [Validation(Required=false)]
                 public string DeviceType { get; set; }
+
+                [NameInMap("MessageId")]
+                [Validation(Required=false)]
                 public string MessageId { get; set; }
+
+                [NameInMap("PushTime")]
+                [Validation(Required=false)]
                 public string PushTime { get; set; }
+
+                [NameInMap("PushType")]
+                [Validation(Required=false)]
                 public string PushType { get; set; }
+
+                [NameInMap("Source")]
+                [Validation(Required=false)]
                 public string Source { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("Target")]
+                [Validation(Required=false)]
                 public string Target { get; set; }
+
+                [NameInMap("Title")]
+                [Validation(Required=false)]
                 public string Title { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

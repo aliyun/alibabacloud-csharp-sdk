@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public List<CheckDevicesResponseBodyDeviceCheckInfosDeviceCheckInfo> DeviceCheckInfo { get; set; }
             public class CheckDevicesResponseBodyDeviceCheckInfosDeviceCheckInfo : TeaModel {
+                [NameInMap("Available")]
+                [Validation(Required=false)]
                 public bool? Available { get; set; }
+
+                [NameInMap("DeviceId")]
+                [Validation(Required=false)]
                 public string DeviceId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

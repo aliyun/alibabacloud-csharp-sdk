@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [NameInMap("ExipreTime")]
             [Validation(Required=false)]
             public long? ExipreTime { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-        };
+
+        }
 
         [NameInMap("IOS")]
         [Validation(Required=false)]
@@ -36,10 +38,12 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [NameInMap("ExipreTime")]
             [Validation(Required=false)]
             public long? ExipreTime { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [NameInMap("MessageId")]
             [Validation(Required=false)]
             public List<string> MessageId { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

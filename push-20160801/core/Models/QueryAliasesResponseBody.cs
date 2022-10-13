@@ -17,9 +17,13 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public List<QueryAliasesResponseBodyAliasInfosAliasInfo> AliasInfo { get; set; }
             public class QueryAliasesResponseBodyAliasInfosAliasInfo : TeaModel {
+                [NameInMap("AliasName")]
+                [Validation(Required=false)]
                 public string AliasName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

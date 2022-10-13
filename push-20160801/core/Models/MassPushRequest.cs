@@ -69,6 +69,14 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public string AndroidNotificationChannel { get; set; }
 
+            [NameInMap("AndroidNotificationGroup")]
+            [Validation(Required=false)]
+            public string AndroidNotificationGroup { get; set; }
+
+            [NameInMap("AndroidNotificationHonorChannel")]
+            [Validation(Required=false)]
+            public string AndroidNotificationHonorChannel { get; set; }
+
             [NameInMap("AndroidNotificationHuaweiChannel")]
             [Validation(Required=false)]
             public string AndroidNotificationHuaweiChannel { get; set; }

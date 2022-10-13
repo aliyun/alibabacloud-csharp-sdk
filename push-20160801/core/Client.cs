@@ -1048,6 +1048,14 @@ namespace AlibabaCloud.SDK.Push20160801
             {
                 query["AndroidNotificationChannel"] = request.AndroidNotificationChannel;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidNotificationGroup))
+            {
+                query["AndroidNotificationGroup"] = request.AndroidNotificationGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidNotificationHonorChannel))
+            {
+                query["AndroidNotificationHonorChannel"] = request.AndroidNotificationHonorChannel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidNotificationHuaweiChannel))
             {
                 query["AndroidNotificationHuaweiChannel"] = request.AndroidNotificationHuaweiChannel;
@@ -1330,6 +1338,14 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidNotificationChannel))
             {
                 query["AndroidNotificationChannel"] = request.AndroidNotificationChannel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidNotificationGroup))
+            {
+                query["AndroidNotificationGroup"] = request.AndroidNotificationGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidNotificationHonorChannel))
+            {
+                query["AndroidNotificationHonorChannel"] = request.AndroidNotificationHonorChannel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidNotificationHuaweiChannel))
             {
@@ -2090,88 +2106,6 @@ namespace AlibabaCloud.SDK.Push20160801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryAliasesWithOptionsAsync(request, runtime);
-        }
-
-        public QueryDeviceCountResponse QueryDeviceCountWithOptions(QueryDeviceCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppKey))
-            {
-                query["AppKey"] = request.AppKey;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Target))
-            {
-                query["Target"] = request.Target;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetValue))
-            {
-                query["TargetValue"] = request.TargetValue;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "QueryDeviceCount",
-                Version = "2016-08-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<QueryDeviceCountResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<QueryDeviceCountResponse> QueryDeviceCountWithOptionsAsync(QueryDeviceCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppKey))
-            {
-                query["AppKey"] = request.AppKey;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Target))
-            {
-                query["Target"] = request.Target;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetValue))
-            {
-                query["TargetValue"] = request.TargetValue;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "QueryDeviceCount",
-                Version = "2016-08-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<QueryDeviceCountResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public QueryDeviceCountResponse QueryDeviceCount(QueryDeviceCountRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return QueryDeviceCountWithOptions(request, runtime);
-        }
-
-        public async Task<QueryDeviceCountResponse> QueryDeviceCountAsync(QueryDeviceCountRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await QueryDeviceCountWithOptionsAsync(request, runtime);
         }
 
         public QueryDeviceInfoResponse QueryDeviceInfoWithOptions(QueryDeviceInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

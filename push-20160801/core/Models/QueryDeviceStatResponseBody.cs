@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public List<QueryDeviceStatResponseBodyAppDeviceStatsAppDeviceStat> AppDeviceStat { get; set; }
             public class QueryDeviceStatResponseBodyAppDeviceStatsAppDeviceStat : TeaModel {
+                [NameInMap("Count")]
+                [Validation(Required=false)]
                 public long? Count { get; set; }
+
+                [NameInMap("DeviceType")]
+                [Validation(Required=false)]
                 public string DeviceType { get; set; }
+
+                [NameInMap("Time")]
+                [Validation(Required=false)]
                 public string Time { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

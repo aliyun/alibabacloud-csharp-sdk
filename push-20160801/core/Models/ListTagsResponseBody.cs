@@ -21,9 +21,13 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public List<ListTagsResponseBodyTagInfosTagInfo> TagInfo { get; set; }
             public class ListTagsResponseBodyTagInfosTagInfo : TeaModel {
+                [NameInMap("TagName")]
+                [Validation(Required=false)]
                 public string TagName { get; set; }
+
             }
-        };
+
+        }
 
     }
 
