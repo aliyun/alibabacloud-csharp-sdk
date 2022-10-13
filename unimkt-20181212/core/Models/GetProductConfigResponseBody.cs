@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.UniMkt20181212.Models
 {
-    public class GetBizTypeConfigResponseBody : TeaModel {
+    public class GetProductConfigResponseBody : TeaModel {
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
@@ -17,14 +17,10 @@ namespace AlibabaCloud.SDK.UniMkt20181212.Models
         [Validation(Required=false)]
         public string ErrorMsg { get; set; }
 
-        [NameInMap("Ext")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> Ext { get; set; }
-
         [NameInMap("Header")]
         [Validation(Required=false)]
-        public GetBizTypeConfigResponseBodyHeader Header { get; set; }
-        public class GetBizTypeConfigResponseBodyHeader : TeaModel {
+        public GetProductConfigResponseBodyHeader Header { get; set; }
+        public class GetProductConfigResponseBodyHeader : TeaModel {
             [NameInMap("CostTime")]
             [Validation(Required=false)]
             public long? CostTime { get; set; }
@@ -49,31 +45,29 @@ namespace AlibabaCloud.SDK.UniMkt20181212.Models
 
         [NameInMap("Result")]
         [Validation(Required=false)]
-        public GetBizTypeConfigResponseBodyResult Result { get; set; }
-        public class GetBizTypeConfigResponseBodyResult : TeaModel {
-            [NameInMap("AccountType")]
+        public List<GetProductConfigResponseBodyResult> Result { get; set; }
+        public class GetProductConfigResponseBodyResult : TeaModel {
+            [NameInMap("BusinessList")]
             [Validation(Required=false)]
-            public string AccountType { get; set; }
+            public List<GetProductConfigResponseBodyResultBusinessList> BusinessList { get; set; }
+            public class GetProductConfigResponseBodyResultBusinessList : TeaModel {
+                [NameInMap("BusinessCode")]
+                [Validation(Required=false)]
+                public string BusinessCode { get; set; }
 
-            [NameInMap("ChargeType")]
-            [Validation(Required=false)]
-            public string ChargeType { get; set; }
+                [NameInMap("BusinessCodeName")]
+                [Validation(Required=false)]
+                public string BusinessCodeName { get; set; }
 
-            [NameInMap("Code")]
-            [Validation(Required=false)]
-            public string Code { get; set; }
+            }
 
-            [NameInMap("Desc")]
+            [NameInMap("ProductCode")]
             [Validation(Required=false)]
-            public string Desc { get; set; }
+            public string ProductCode { get; set; }
 
-            [NameInMap("Name")]
+            [NameInMap("ProductName")]
             [Validation(Required=false)]
-            public string Name { get; set; }
-
-            [NameInMap("TransactionMode")]
-            [Validation(Required=false)]
-            public string TransactionMode { get; set; }
+            public string ProductName { get; set; }
 
         }
 

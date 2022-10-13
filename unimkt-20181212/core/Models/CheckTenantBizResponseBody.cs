@@ -24,10 +24,12 @@ namespace AlibabaCloud.SDK.UniMkt20181212.Models
             [NameInMap("CanAccessAdSlot")]
             [Validation(Required=false)]
             public bool? CanAccessAdSlot { get; set; }
+
             [NameInMap("CanAccessMedia")]
             [Validation(Required=false)]
             public bool? CanAccessMedia { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

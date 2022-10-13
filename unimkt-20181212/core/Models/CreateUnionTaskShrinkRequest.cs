@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.UniMkt20181212.Models
 {
     public class CreateUnionTaskShrinkRequest : TeaModel {
+        [NameInMap("AnchorId")]
+        [Validation(Required=false)]
+        public string AnchorId { get; set; }
+
         [NameInMap("BrandUserId")]
         [Validation(Required=false)]
         public long? BrandUserId { get; set; }

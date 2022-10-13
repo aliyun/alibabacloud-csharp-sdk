@@ -28,16 +28,20 @@ namespace AlibabaCloud.SDK.UniMkt20181212.Models
             [NameInMap("CostTime")]
             [Validation(Required=false)]
             public long? CostTime { get; set; }
+
             [NameInMap("RpcId")]
             [Validation(Required=false)]
             public string RpcId { get; set; }
+
             [NameInMap("TraceId")]
             [Validation(Required=false)]
             public string TraceId { get; set; }
+
             [NameInMap("Version")]
             [Validation(Required=false)]
             public string Version { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.UniMkt20181212.Models
 {
-    public class GetDeliveryTypeConfigListRequest : TeaModel {
+    public class GetProductConfigRequest : TeaModel {
         [NameInMap("AccountType")]
         [Validation(Required=false)]
         public string AccountType { get; set; }

@@ -20,28 +20,36 @@ namespace AlibabaCloud.SDK.UniMkt20181212.Models
             [NameInMap("BrandUserId")]
             [Validation(Required=false)]
             public long? BrandUserId { get; set; }
+
             [NameInMap("ChainValue")]
             [Validation(Required=false)]
             public string ChainValue { get; set; }
+
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
             [NameInMap("OpenScene")]
             [Validation(Required=false)]
             public int? OpenScene { get; set; }
+
             [NameInMap("ProxyUserId")]
             [Validation(Required=false)]
             public long? ProxyUserId { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
+
             [NameInMap("TemplateType")]
             [Validation(Required=false)]
             public string TemplateType { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

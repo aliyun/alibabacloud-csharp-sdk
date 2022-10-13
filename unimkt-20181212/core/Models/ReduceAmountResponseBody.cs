@@ -16,13 +16,16 @@ namespace AlibabaCloud.SDK.UniMkt20181212.Models
             [NameInMap("ChargeDetail")]
             [Validation(Required=false)]
             public string ChargeDetail { get; set; }
+
             [NameInMap("Price")]
             [Validation(Required=false)]
             public long? Price { get; set; }
+
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public long? TaskId { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

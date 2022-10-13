@@ -25,12 +25,25 @@ namespace AlibabaCloud.SDK.UniMkt20181212.Models
             [Validation(Required=false)]
             public List<CheckDeviceResponseBodyPlansPlanDto> PlanDto { get; set; }
             public class CheckDeviceResponseBodyPlansPlanDto : TeaModel {
+                [NameInMap("EndTime")]
+                [Validation(Required=false)]
                 public string EndTime { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public long? Id { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("StartTime")]
+                [Validation(Required=false)]
                 public string StartTime { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

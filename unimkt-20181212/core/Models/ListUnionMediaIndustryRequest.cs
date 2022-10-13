@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.UniMkt20181212.Models
 {
     public class ListUnionMediaIndustryRequest : TeaModel {
-        /// <summary>
-        /// channelId
-        /// </summary>
         [NameInMap("ChannelId")]
         [Validation(Required=false)]
         public string ChannelId { get; set; }
 
-        /// <summary>
-        /// proxyUserId
-        /// </summary>
         [NameInMap("ProxyUserId")]
         [Validation(Required=false)]
         public long? ProxyUserId { get; set; }

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.UniMkt20181212.Models
 {
     public class GetDeliveryTypeConfigRequest : TeaModel {
-        /// <summary>
-        /// A short description of struct
-        /// </summary>
         [NameInMap("DeliveryType")]
         [Validation(Required=false)]
         public string DeliveryType { get; set; }

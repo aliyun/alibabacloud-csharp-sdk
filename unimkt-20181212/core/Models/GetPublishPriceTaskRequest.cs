@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.UniMkt20181212.Models
 {
     public class GetPublishPriceTaskRequest : TeaModel {
-        /// <summary>
-        /// A short description of struct
-        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }

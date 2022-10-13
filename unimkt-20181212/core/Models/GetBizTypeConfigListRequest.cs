@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.UniMkt20181212.Models
 {
     public class GetBizTypeConfigListRequest : TeaModel {
-        /// <summary>
-        /// A short description of struct
-        /// </summary>
         [NameInMap("AccountType")]
         [Validation(Required=false)]
         public string AccountType { get; set; }

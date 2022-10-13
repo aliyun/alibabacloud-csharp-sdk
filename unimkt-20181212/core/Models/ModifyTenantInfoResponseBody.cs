@@ -24,37 +24,48 @@ namespace AlibabaCloud.SDK.UniMkt20181212.Models
             [NameInMap("Business")]
             [Validation(Required=false)]
             public string Business { get; set; }
+
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
+
             [NameInMap("ExtInfo")]
             [Validation(Required=false)]
             public string ExtInfo { get; set; }
+
             [NameInMap("ModifyTime")]
             [Validation(Required=false)]
             public long? ModifyTime { get; set; }
+
             [NameInMap("SettleInfo")]
             [Validation(Required=false)]
             public string SettleInfo { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("TenantDescription")]
             [Validation(Required=false)]
             public string TenantDescription { get; set; }
+
             [NameInMap("TenantId")]
             [Validation(Required=false)]
             public string TenantId { get; set; }
+
             [NameInMap("TenantName")]
             [Validation(Required=false)]
             public string TenantName { get; set; }
+
             [NameInMap("UserName")]
             [Validation(Required=false)]
             public string UserName { get; set; }
+
             [NameInMap("Version")]
             [Validation(Required=false)]
             public long? Version { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
