@@ -81,6 +81,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string ThirdpartBusinessId { get; set; }
 
+        [NameInMap("thirdpart_depart_id")]
+        [Validation(Required=false)]
+        public string ThirdpartDepartId { get; set; }
+
         [NameInMap("together_book_rule")]
         [Validation(Required=false)]
         public int? TogetherBookRule { get; set; }

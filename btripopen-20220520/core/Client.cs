@@ -452,6 +452,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["thirdpart_business_id"] = request.ThirdpartBusinessId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdpartDepartId))
+            {
+                body["thirdpart_depart_id"] = request.ThirdpartDepartId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TogetherBookRule))
             {
                 body["together_book_rule"] = request.TogetherBookRule;
@@ -636,6 +640,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdpartBusinessId))
             {
                 body["thirdpart_business_id"] = request.ThirdpartBusinessId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdpartDepartId))
+            {
+                body["thirdpart_depart_id"] = request.ThirdpartDepartId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TogetherBookRule))
             {
@@ -1127,6 +1135,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["thirdpart_business_id"] = request.ThirdpartBusinessId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdpartDepartId))
+            {
+                body["thirdpart_depart_id"] = request.ThirdpartDepartId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TogetherBookRule))
             {
                 body["together_book_rule"] = request.TogetherBookRule;
@@ -1301,6 +1313,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdpartBusinessId))
             {
                 body["thirdpart_business_id"] = request.ThirdpartBusinessId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdpartDepartId))
+            {
+                body["thirdpart_depart_id"] = request.ThirdpartDepartId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TogetherBookRule))
             {
