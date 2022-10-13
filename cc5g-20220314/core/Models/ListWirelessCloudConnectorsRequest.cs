@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public string BusinessType { get; set; }
 
+        [NameInMap("IsInGroup")]
+        [Validation(Required=false)]
+        public string IsInGroup { get; set; }
+
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public long? MaxResults { get; set; }
@@ -32,6 +36,10 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [NameInMap("Statuses")]
         [Validation(Required=false)]
         public List<string> Statuses { get; set; }
+
+        [NameInMap("WirelessCloudConnectorGroupId")]
+        [Validation(Required=false)]
+        public string WirelessCloudConnectorGroupId { get; set; }
 
         [NameInMap("WirelessCloudConnectorIds")]
         [Validation(Required=false)]

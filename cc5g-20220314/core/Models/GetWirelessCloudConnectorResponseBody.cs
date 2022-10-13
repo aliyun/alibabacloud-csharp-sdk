@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("GrantAliUid")]
+            [Validation(Required=false)]
+            public string GrantAliUid { get; set; }
+
             [NameInMap("ISP")]
             [Validation(Required=false)]
             public string ISP { get; set; }
@@ -94,6 +98,10 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("ServiceType")]
+        [Validation(Required=false)]
+        public string ServiceType { get; set; }
 
         [NameInMap("Status")]
         [Validation(Required=false)]

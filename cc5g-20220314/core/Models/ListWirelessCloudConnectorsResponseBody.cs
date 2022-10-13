@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            [NameInMap("ServiceType")]
+            [Validation(Required=false)]
+            public string ServiceType { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
@@ -68,6 +72,10 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
             [NameInMap("UseCase")]
             [Validation(Required=false)]
             public string UseCase { get; set; }
+
+            [NameInMap("WirelessCloudConnectorGroupId")]
+            [Validation(Required=false)]
+            public string WirelessCloudConnectorGroupId { get; set; }
 
             [NameInMap("WirelessCloudConnectorId")]
             [Validation(Required=false)]

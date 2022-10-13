@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public long? MaxResults { get; set; }
 
+        [NameInMap("Msisdn")]
+        [Validation(Required=false)]
+        public string Msisdn { get; set; }
+
         [NameInMap("NetLinkId")]
         [Validation(Required=false)]
         public string NetLinkId { get; set; }
