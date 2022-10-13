@@ -85,6 +85,34 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
                     }
 
+                    [NameInMap("MockConfig")]
+                    [Validation(Required=false)]
+                    public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfig MockConfig { get; set; }
+                    public class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfig : TeaModel {
+                        [NameInMap("MockHeaders")]
+                        [Validation(Required=false)]
+                        public List<DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfigMockHeaders> MockHeaders { get; set; }
+                        public class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfigMockHeaders : TeaModel {
+                            [NameInMap("HeaderName")]
+                            [Validation(Required=false)]
+                            public string HeaderName { get; set; }
+
+                            [NameInMap("HeaderValue")]
+                            [Validation(Required=false)]
+                            public string HeaderValue { get; set; }
+
+                        }
+
+                        [NameInMap("MockResult")]
+                        [Validation(Required=false)]
+                        public string MockResult { get; set; }
+
+                        [NameInMap("MockStatusCode")]
+                        [Validation(Required=false)]
+                        public string MockStatusCode { get; set; }
+
+                    }
+
                     [NameInMap("OssConfig")]
                     [Validation(Required=false)]
                     public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigOssConfig OssConfig { get; set; }

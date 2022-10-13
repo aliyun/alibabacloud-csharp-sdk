@@ -93,6 +93,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [Validation(Required=false)]
                 public string WildcardDomainPatterns { get; set; }
 
+                [NameInMap("WssEnable")]
+                [Validation(Required=false)]
+                public string WssEnable { get; set; }
+
             }
 
         }
