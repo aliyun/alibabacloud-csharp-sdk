@@ -9,33 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class DescribeInstanceResponseBody : TeaModel {
-        [NameInMap("Status")]
+        [NameInMap("ApplicableOperations")]
         [Validation(Required=false)]
-        public string Status { get; set; }
-
-        [NameInMap("ModifyTime")]
-        [Validation(Required=false)]
-        public long? ModifyTime { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public List<string> ApplicableOperations { get; set; }
 
         [NameInMap("Concurrency")]
         [Validation(Required=false)]
         public long? Concurrency { get; set; }
 
-        [NameInMap("ApplicableOperations")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public List<string> ApplicableOperations { get; set; }
+        public string Description { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("ModifyTime")]
+        [Validation(Required=false)]
+        public long? ModifyTime { get; set; }
 
         [NameInMap("ModifyUserName")]
         [Validation(Required=false)]
@@ -44,6 +36,14 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

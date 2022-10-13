@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class AuditTTSVoiceResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("AuditionUrl")]
         [Validation(Required=false)]
         public string AuditionUrl { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

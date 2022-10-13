@@ -9,17 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class DescribeConversationResponseBody : TeaModel {
-        [NameInMap("EffectiveAnswerCount")]
+        [NameInMap("BeginTime")]
         [Validation(Required=false)]
-        public int? EffectiveAnswerCount { get; set; }
+        public long? BeginTime { get; set; }
+
+        [NameInMap("CallingNumber")]
+        [Validation(Required=false)]
+        public string CallingNumber { get; set; }
 
         [NameInMap("ConversationId")]
         [Validation(Required=false)]
         public string ConversationId { get; set; }
 
-        [NameInMap("TransferredToAgent")]
+        [NameInMap("EffectiveAnswerCount")]
         [Validation(Required=false)]
-        public bool? TransferredToAgent { get; set; }
+        public int? EffectiveAnswerCount { get; set; }
 
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -29,17 +33,13 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("BeginTime")]
-        [Validation(Required=false)]
-        public long? BeginTime { get; set; }
-
         [NameInMap("SkillGroupId")]
         [Validation(Required=false)]
         public string SkillGroupId { get; set; }
 
-        [NameInMap("CallingNumber")]
+        [NameInMap("TransferredToAgent")]
         [Validation(Required=false)]
-        public string CallingNumber { get; set; }
+        public bool? TransferredToAgent { get; set; }
 
         [NameInMap("UserUtteranceCount")]
         [Validation(Required=false)]

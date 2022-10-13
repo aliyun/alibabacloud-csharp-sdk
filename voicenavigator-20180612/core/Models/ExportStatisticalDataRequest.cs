@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ExportStatisticalDataRequest : TeaModel {
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("TimeUnit")]
-        [Validation(Required=false)]
-        public string TimeUnit { get; set; }
-
-        [NameInMap("ExportType")]
-        [Validation(Required=false)]
-        public string ExportType { get; set; }
-
         [NameInMap("BeginTimeLeftRange")]
         [Validation(Required=false)]
         public long? BeginTimeLeftRange { get; set; }
@@ -28,6 +16,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [NameInMap("BeginTimeRightRange")]
         [Validation(Required=false)]
         public long? BeginTimeRightRange { get; set; }
+
+        [NameInMap("ExportType")]
+        [Validation(Required=false)]
+        public string ExportType { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("TimeUnit")]
+        [Validation(Required=false)]
+        public string TimeUnit { get; set; }
 
     }
 

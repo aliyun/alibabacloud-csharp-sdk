@@ -9,37 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ListChatbotInstancesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public long? PageSize { get; set; }
-
         [NameInMap("Bots")]
         [Validation(Required=false)]
         public List<ListChatbotInstancesResponseBodyBots> Bots { get; set; }
         public class ListChatbotInstancesResponseBodyBots : TeaModel {
+            [NameInMap("Avatar")]
+            [Validation(Required=false)]
+            public string Avatar { get; set; }
+
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
-            [NameInMap("TimeZone")]
+            [NameInMap("Introduction")]
             [Validation(Required=false)]
-            public string TimeZone { get; set; }
-
-            [NameInMap("Avatar")]
-            [Validation(Required=false)]
-            public string Avatar { get; set; }
+            public string Introduction { get; set; }
 
             [NameInMap("LanguageCode")]
             [Validation(Required=false)]
@@ -49,15 +37,27 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
-            [NameInMap("Introduction")]
+            [NameInMap("TimeZone")]
             [Validation(Required=false)]
-            public string Introduction { get; set; }
-
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
+            public string TimeZone { get; set; }
 
         }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

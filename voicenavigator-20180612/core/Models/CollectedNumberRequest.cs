@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class CollectedNumberRequest : TeaModel {
+        [NameInMap("ConversationId")]
+        [Validation(Required=false)]
+        public string ConversationId { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("ConversationId")]
+        [NameInMap("InstanceOwnerId")]
         [Validation(Required=false)]
-        public string ConversationId { get; set; }
+        public long? InstanceOwnerId { get; set; }
 
         [NameInMap("Number")]
         [Validation(Required=false)]

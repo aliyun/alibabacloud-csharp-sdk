@@ -9,17 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ModifyTTSConfigRequest : TeaModel {
+        [NameInMap("AppKey")]
+        [Validation(Required=false)]
+        public string AppKey { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("Voice")]
+        [NameInMap("NlsServiceType")]
         [Validation(Required=false)]
-        public string Voice { get; set; }
+        public string NlsServiceType { get; set; }
 
         [NameInMap("SpeechRate")]
         [Validation(Required=false)]
         public string SpeechRate { get; set; }
+
+        [NameInMap("Voice")]
+        [Validation(Required=false)]
+        public string Voice { get; set; }
 
         [NameInMap("Volume")]
         [Validation(Required=false)]

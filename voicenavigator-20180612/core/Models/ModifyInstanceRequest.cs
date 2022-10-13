@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ModifyInstanceRequest : TeaModel {
-        [NameInMap("InstanceId")]
+        [NameInMap("Concurrency")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public long? Concurrency { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("Concurrency")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public long? Concurrency { get; set; }
+        public string InstanceId { get; set; }
 
-        [NameInMap("ChatbotInstanceId")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public string ChatbotInstanceId { get; set; }
+        public string Name { get; set; }
 
     }
 

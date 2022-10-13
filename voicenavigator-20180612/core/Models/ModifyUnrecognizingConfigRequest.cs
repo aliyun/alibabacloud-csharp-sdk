@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ModifyUnrecognizingConfigRequest : TeaModel {
+        [NameInMap("FinalAction")]
+        [Validation(Required=false)]
+        public string FinalAction { get; set; }
+
+        [NameInMap("FinalActionParams")]
+        [Validation(Required=false)]
+        public string FinalActionParams { get; set; }
+
+        [NameInMap("FinalPrompt")]
+        [Validation(Required=false)]
+        public string FinalPrompt { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -20,18 +32,6 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [NameInMap("Threshold")]
         [Validation(Required=false)]
         public int? Threshold { get; set; }
-
-        [NameInMap("FinalPrompt")]
-        [Validation(Required=false)]
-        public string FinalPrompt { get; set; }
-
-        [NameInMap("FinalAction")]
-        [Validation(Required=false)]
-        public string FinalAction { get; set; }
-
-        [NameInMap("FinalActionParams")]
-        [Validation(Required=false)]
-        public string FinalActionParams { get; set; }
 
     }
 

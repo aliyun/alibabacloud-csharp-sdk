@@ -13,17 +13,17 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("Voice")]
+        [NameInMap("SpeechRate")]
         [Validation(Required=false)]
-        public string Voice { get; set; }
+        public string SpeechRate { get; set; }
 
         [NameInMap("Text")]
         [Validation(Required=false)]
         public string Text { get; set; }
 
-        [NameInMap("SpeechRate")]
+        [NameInMap("Voice")]
         [Validation(Required=false)]
-        public string SpeechRate { get; set; }
+        public string Voice { get; set; }
 
         [NameInMap("Volume")]
         [Validation(Required=false)]

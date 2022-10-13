@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class SaveRecordingRequest : TeaModel {
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
         [NameInMap("ConversationId")]
         [Validation(Required=false)]
         public string ConversationId { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public long? StartTime { get; set; }
 
         [NameInMap("Duration")]
         [Validation(Required=false)]
@@ -33,9 +25,25 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string FilePath { get; set; }
 
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("InstanceOwnerId")]
+        [Validation(Required=false)]
+        public long? InstanceOwnerId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
+
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
+
+        [NameInMap("VoiceSliceRecordingList")]
+        [Validation(Required=false)]
+        public string VoiceSliceRecordingList { get; set; }
 
     }
 

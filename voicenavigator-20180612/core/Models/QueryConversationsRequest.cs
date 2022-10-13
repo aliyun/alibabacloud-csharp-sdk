@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class QueryConversationsRequest : TeaModel {
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("CallingNumber")]
-        [Validation(Required=false)]
-        public string CallingNumber { get; set; }
-
         [NameInMap("BeginTimeLeftRange")]
         [Validation(Required=false)]
         public long? BeginTimeLeftRange { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [NameInMap("BeginTimeRightRange")]
         [Validation(Required=false)]
         public long? BeginTimeRightRange { get; set; }
+
+        [NameInMap("CallingNumber")]
+        [Validation(Required=false)]
+        public string CallingNumber { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

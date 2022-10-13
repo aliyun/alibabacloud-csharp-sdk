@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string Action { get; set; }
 
+        [NameInMap("ActionParams")]
+        [Validation(Required=false)]
+        public string ActionParams { get; set; }
+
         [NameInMap("Interruptible")]
         [Validation(Required=false)]
         public bool? Interruptible { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("ActionParams")]
-        [Validation(Required=false)]
-        public string ActionParams { get; set; }
 
         [NameInMap("TextResponse")]
         [Validation(Required=false)]

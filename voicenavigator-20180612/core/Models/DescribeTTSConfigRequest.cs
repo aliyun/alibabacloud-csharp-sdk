@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("InstanceOwnerId")]
+        [Validation(Required=false)]
+        public long? InstanceOwnerId { get; set; }
+
     }
 
 }

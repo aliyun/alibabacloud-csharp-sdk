@@ -9,9 +9,47 @@ using Tea;
 namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class QueryConversationsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("Conversations")]
         [Validation(Required=false)]
-        public long? TotalCount { get; set; }
+        public List<QueryConversationsResponseBodyConversations> Conversations { get; set; }
+        public class QueryConversationsResponseBodyConversations : TeaModel {
+            [NameInMap("BeginTime")]
+            [Validation(Required=false)]
+            public long? BeginTime { get; set; }
+
+            [NameInMap("CallingNumber")]
+            [Validation(Required=false)]
+            public string CallingNumber { get; set; }
+
+            [NameInMap("ConversationId")]
+            [Validation(Required=false)]
+            public string ConversationId { get; set; }
+
+            [NameInMap("EffectiveAnswerCount")]
+            [Validation(Required=false)]
+            public int? EffectiveAnswerCount { get; set; }
+
+            [NameInMap("EndTime")]
+            [Validation(Required=false)]
+            public long? EndTime { get; set; }
+
+            [NameInMap("SkillGroupId")]
+            [Validation(Required=false)]
+            public string SkillGroupId { get; set; }
+
+            [NameInMap("TransferredToAgent")]
+            [Validation(Required=false)]
+            public bool? TransferredToAgent { get; set; }
+
+            [NameInMap("UserUtteranceCount")]
+            [Validation(Required=false)]
+            public int? UserUtteranceCount { get; set; }
+
+        }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -21,47 +59,9 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("Conversations")]
-        [Validation(Required=false)]
-        public List<QueryConversationsResponseBodyConversations> Conversations { get; set; }
-        public class QueryConversationsResponseBodyConversations : TeaModel {
-            [NameInMap("EndTime")]
-            [Validation(Required=false)]
-            public long? EndTime { get; set; }
-
-            [NameInMap("EffectiveAnswerCount")]
-            [Validation(Required=false)]
-            public int? EffectiveAnswerCount { get; set; }
-
-            [NameInMap("TransferredToAgent")]
-            [Validation(Required=false)]
-            public bool? TransferredToAgent { get; set; }
-
-            [NameInMap("BeginTime")]
-            [Validation(Required=false)]
-            public long? BeginTime { get; set; }
-
-            [NameInMap("SkillGroupId")]
-            [Validation(Required=false)]
-            public string SkillGroupId { get; set; }
-
-            [NameInMap("ConversationId")]
-            [Validation(Required=false)]
-            public string ConversationId { get; set; }
-
-            [NameInMap("CallingNumber")]
-            [Validation(Required=false)]
-            public string CallingNumber { get; set; }
-
-            [NameInMap("UserUtteranceCount")]
-            [Validation(Required=false)]
-            public int? UserUtteranceCount { get; set; }
-
-        }
+        public long? TotalCount { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class DescribeRecordingResponseBody : TeaModel {
+        [NameInMap("FileName")]
+        [Validation(Required=false)]
+        public string FileName { get; set; }
+
         [NameInMap("FilePath")]
         [Validation(Required=false)]
         public string FilePath { get; set; }
@@ -17,9 +21,9 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("FileName")]
+        [NameInMap("VoiceSliceRecordingListJson")]
         [Validation(Required=false)]
-        public string FileName { get; set; }
+        public string VoiceSliceRecordingListJson { get; set; }
 
     }
 

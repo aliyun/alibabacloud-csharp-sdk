@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class SilenceTimeoutRequest : TeaModel {
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
         [NameInMap("ConversationId")]
         [Validation(Required=false)]
         public string ConversationId { get; set; }
@@ -20,6 +16,14 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [NameInMap("InitialContext")]
         [Validation(Required=false)]
         public string InitialContext { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("InstanceOwnerId")]
+        [Validation(Required=false)]
+        public long? InstanceOwnerId { get; set; }
 
     }
 
