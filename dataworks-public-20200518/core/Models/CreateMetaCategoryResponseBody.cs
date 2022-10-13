@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("CategoryId")]
             [Validation(Required=false)]
             public long? CategoryId { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

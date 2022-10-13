@@ -16,39 +16,51 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("ApiId")]
             [Validation(Required=false)]
             public long? ApiId { get; set; }
+
             [NameInMap("ApiMode")]
             [Validation(Required=false)]
             public int? ApiMode { get; set; }
+
             [NameInMap("ApiName")]
             [Validation(Required=false)]
             public string ApiName { get; set; }
+
             [NameInMap("ApiPath")]
             [Validation(Required=false)]
             public string ApiPath { get; set; }
+
             [NameInMap("CreatedTime")]
             [Validation(Required=false)]
             public string CreatedTime { get; set; }
+
             [NameInMap("CreatorId")]
             [Validation(Required=false)]
             public string CreatorId { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public string GroupId { get; set; }
+
             [NameInMap("ModifiedTime")]
             [Validation(Required=false)]
             public string ModifiedTime { get; set; }
+
             [NameInMap("OperatorId")]
             [Validation(Required=false)]
             public string OperatorId { get; set; }
+
             [NameInMap("ProjectId")]
             [Validation(Required=false)]
             public long? ProjectId { get; set; }
+
             [NameInMap("Protocols")]
             [Validation(Required=false)]
             public List<int?> Protocols { get; set; }
+
             [NameInMap("RegistrationDetails")]
             [Validation(Required=false)]
             public GetDataServicePublishedApiResponseBodyDataRegistrationDetails RegistrationDetails { get; set; }
@@ -134,12 +146,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string SuccessfulResultSample { get; set; }
 
             }
+
             [NameInMap("RequestMethod")]
             [Validation(Required=false)]
             public int? RequestMethod { get; set; }
+
             [NameInMap("ResponseContentType")]
             [Validation(Required=false)]
             public int? ResponseContentType { get; set; }
+
             [NameInMap("ScriptDetails")]
             [Validation(Required=false)]
             public GetDataServicePublishedApiResponseBodyDataScriptDetails ScriptDetails { get; set; }
@@ -163,10 +178,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     [NameInMap("ConnectionId")]
                     [Validation(Required=false)]
                     public long? ConnectionId { get; set; }
+
                     [NameInMap("TableName")]
                     [Validation(Required=false)]
                     public string TableName { get; set; }
-                };
+
+                }
 
                 [NameInMap("ScriptErrorCodes")]
                 [Validation(Required=false)]
@@ -251,18 +268,23 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string SuccessfulResultSample { get; set; }
 
             }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
+
             [NameInMap("TenantId")]
             [Validation(Required=false)]
             public long? TenantId { get; set; }
+
             [NameInMap("Timeout")]
             [Validation(Required=false)]
             public int? Timeout { get; set; }
+
             [NameInMap("VisibleRange")]
             [Validation(Required=false)]
             public int? VisibleRange { get; set; }
+
             [NameInMap("WizardDetails")]
             [Validation(Required=false)]
             public GetDataServicePublishedApiResponseBodyDataWizardDetails WizardDetails { get; set; }
@@ -286,10 +308,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     [NameInMap("ConnectionId")]
                     [Validation(Required=false)]
                     public long? ConnectionId { get; set; }
+
                     [NameInMap("TableName")]
                     [Validation(Required=false)]
                     public string TableName { get; set; }
-                };
+
+                }
 
                 [NameInMap("WizardErrorCodes")]
                 [Validation(Required=false)]
@@ -370,7 +394,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 }
 
             }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

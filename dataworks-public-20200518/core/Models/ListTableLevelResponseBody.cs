@@ -37,16 +37,33 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public List<ListTableLevelResponseBodyTableLevelInfoLevelList> LevelList { get; set; }
             public class ListTableLevelResponseBodyTableLevelInfoLevelList : TeaModel {
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("LevelId")]
+                [Validation(Required=false)]
                 public long? LevelId { get; set; }
+
+                [NameInMap("LevelType")]
+                [Validation(Required=false)]
                 public int? LevelType { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("ProjectId")]
+                [Validation(Required=false)]
                 public long? ProjectId { get; set; }
+
             }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public long? TotalCount { get; set; }
-        };
+
+        }
 
     }
 

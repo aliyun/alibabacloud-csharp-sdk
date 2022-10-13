@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("RecodeTime")]
             [Validation(Required=false)]
             public long? RecodeTime { get; set; }
+
             [NameInMap("Usage")]
             [Validation(Required=false)]
             public float? Usage { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

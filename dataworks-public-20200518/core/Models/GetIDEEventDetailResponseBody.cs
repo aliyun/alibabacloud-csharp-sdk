@@ -48,22 +48,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     [NameInMap("BusinessId")]
                     [Validation(Required=false)]
                     public long? BusinessId { get; set; }
+
                     [NameInMap("CurrentVersion")]
                     [Validation(Required=false)]
                     public long? CurrentVersion { get; set; }
+
                     [NameInMap("DataSourceName")]
                     [Validation(Required=false)]
                     public string DataSourceName { get; set; }
+
                     [NameInMap("FolderId")]
                     [Validation(Required=false)]
                     public string FolderId { get; set; }
+
                     [NameInMap("Owner")]
                     [Validation(Required=false)]
                     public string Owner { get; set; }
+
                     [NameInMap("ParentFileId")]
                     [Validation(Required=false)]
                     public long? ParentFileId { get; set; }
-                };
+
+                }
 
                 [NameInMap("FileType")]
                 [Validation(Required=false)]
@@ -76,48 +82,72 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     [NameInMap("AutoRerunIntervalMillis")]
                     [Validation(Required=false)]
                     public long? AutoRerunIntervalMillis { get; set; }
+
                     [NameInMap("AutoRerunTimes")]
                     [Validation(Required=false)]
                     public long? AutoRerunTimes { get; set; }
+
                     [NameInMap("CronExpress")]
                     [Validation(Required=false)]
                     public string CronExpress { get; set; }
+
                     [NameInMap("CycleType")]
                     [Validation(Required=false)]
                     public string CycleType { get; set; }
+
                     [NameInMap("DependentNodeIdList")]
                     [Validation(Required=false)]
                     public string DependentNodeIdList { get; set; }
+
                     [NameInMap("DependentType")]
                     [Validation(Required=false)]
                     public string DependentType { get; set; }
+
                     [NameInMap("InputList")]
                     [Validation(Required=false)]
                     public List<GetIDEEventDetailResponseBodyEventDetailCommittedFileNodeConfigurationInputList> InputList { get; set; }
                     public class GetIDEEventDetailResponseBodyEventDetailCommittedFileNodeConfigurationInputList : TeaModel {
+                        [NameInMap("Input")]
+                        [Validation(Required=false)]
                         public string Input { get; set; }
+
+                        [NameInMap("ParseType")]
+                        [Validation(Required=false)]
                         public string ParseType { get; set; }
+
                     }
+
                     [NameInMap("OutputList")]
                     [Validation(Required=false)]
                     public List<GetIDEEventDetailResponseBodyEventDetailCommittedFileNodeConfigurationOutputList> OutputList { get; set; }
                     public class GetIDEEventDetailResponseBodyEventDetailCommittedFileNodeConfigurationOutputList : TeaModel {
+                        [NameInMap("Output")]
+                        [Validation(Required=false)]
                         public string Output { get; set; }
+
+                        [NameInMap("RefTableName")]
+                        [Validation(Required=false)]
                         public string RefTableName { get; set; }
+
                     }
+
                     [NameInMap("ParaValue")]
                     [Validation(Required=false)]
                     public string ParaValue { get; set; }
+
                     [NameInMap("RerunMode")]
                     [Validation(Required=false)]
                     public string RerunMode { get; set; }
+
                     [NameInMap("ResourceGroupId")]
                     [Validation(Required=false)]
                     public long? ResourceGroupId { get; set; }
+
                     [NameInMap("SchedulerType")]
                     [Validation(Required=false)]
                     public string SchedulerType { get; set; }
-                };
+
+                }
 
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
@@ -128,6 +158,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string UseType { get; set; }
 
             }
+
             [NameInMap("DeletedFile")]
             [Validation(Required=false)]
             public GetIDEEventDetailResponseBodyEventDetailDeletedFile DeletedFile { get; set; }
@@ -181,6 +212,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string UseType { get; set; }
 
             }
+
             [NameInMap("FileExecutionCommand")]
             [Validation(Required=false)]
             public GetIDEEventDetailResponseBodyEventDetailFileExecutionCommand FileExecutionCommand { get; set; }
@@ -202,6 +234,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? FileType { get; set; }
 
             }
+
             [NameInMap("TableModel")]
             [Validation(Required=false)]
             public GetIDEEventDetailResponseBodyEventDetailTableModel TableModel { get; set; }
@@ -253,7 +286,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string TableName { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -16,30 +16,70 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("Topics")]
             [Validation(Required=false)]
             public List<ListTopicsResponseBodyDataTopics> Topics { get; set; }
             public class ListTopicsResponseBodyDataTopics : TeaModel {
+                [NameInMap("AddTime")]
+                [Validation(Required=false)]
                 public long? AddTime { get; set; }
+
+                [NameInMap("FixTime")]
+                [Validation(Required=false)]
                 public long? FixTime { get; set; }
+
+                [NameInMap("HappenTime")]
+                [Validation(Required=false)]
                 public long? HappenTime { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public long? InstanceId { get; set; }
+
+                [NameInMap("NodeId")]
+                [Validation(Required=false)]
                 public long? NodeId { get; set; }
+
+                [NameInMap("NodeName")]
+                [Validation(Required=false)]
                 public string NodeName { get; set; }
+
+                [NameInMap("NodeOwner")]
+                [Validation(Required=false)]
                 public string NodeOwner { get; set; }
+
+                [NameInMap("ProjectId")]
+                [Validation(Required=false)]
                 public long? ProjectId { get; set; }
+
+                [NameInMap("TopicId")]
+                [Validation(Required=false)]
                 public long? TopicId { get; set; }
+
+                [NameInMap("TopicName")]
+                [Validation(Required=false)]
                 public string TopicName { get; set; }
+
+                [NameInMap("TopicStatus")]
+                [Validation(Required=false)]
                 public string TopicStatus { get; set; }
+
+                [NameInMap("TopicType")]
+                [Validation(Required=false)]
                 public string TopicType { get; set; }
+
             }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

@@ -13,6 +13,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public GetDeploymentResponseBodyData Data { get; set; }
         public class GetDeploymentResponseBodyData : TeaModel {
+            [NameInMap("DeployedItems")]
+            [Validation(Required=false)]
+            public List<GetDeploymentResponseBodyDataDeployedItems> DeployedItems { get; set; }
+            public class GetDeploymentResponseBodyDataDeployedItems : TeaModel {
+                [NameInMap("FileId")]
+                [Validation(Required=false)]
+                public long? FileId { get; set; }
+
+                [NameInMap("FileVersion")]
+                [Validation(Required=false)]
+                public long? FileVersion { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public int? Status { get; set; }
+
+            }
+
             [NameInMap("Deployment")]
             [Validation(Required=false)]
             public GetDeploymentResponseBodyDataDeployment Deployment { get; set; }
@@ -58,7 +76,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? ToEnvironment { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

@@ -16,13 +16,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("TaskContent")]
             [Validation(Required=false)]
             public string TaskContent { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

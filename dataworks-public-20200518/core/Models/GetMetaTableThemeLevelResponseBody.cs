@@ -17,21 +17,47 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public List<GetMetaTableThemeLevelResponseBodyEntityLevel> Level { get; set; }
             public class GetMetaTableThemeLevelResponseBodyEntityLevel : TeaModel {
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("LevelId")]
+                [Validation(Required=false)]
                 public long? LevelId { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public int? Type { get; set; }
+
             }
+
             [NameInMap("Theme")]
             [Validation(Required=false)]
             public List<GetMetaTableThemeLevelResponseBodyEntityTheme> Theme { get; set; }
             public class GetMetaTableThemeLevelResponseBodyEntityTheme : TeaModel {
+                [NameInMap("Level")]
+                [Validation(Required=false)]
                 public int? Level { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("ParentId")]
+                [Validation(Required=false)]
                 public long? ParentId { get; set; }
+
+                [NameInMap("ThemeId")]
+                [Validation(Required=false)]
                 public long? ThemeId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

@@ -16,9 +16,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
             [NameInMap("SolutionInfo")]
             [Validation(Required=false)]
             public GetDISyncInstanceInfoResponseBodyDataSolutionInfo SolutionInfo { get; set; }
@@ -39,6 +41,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [Validation(Required=false)]
                 public List<GetDISyncInstanceInfoResponseBodyDataSolutionInfoStepDetail> StepDetail { get; set; }
                 public class GetDISyncInstanceInfoResponseBodyDataSolutionInfoStepDetail : TeaModel {
+                    [NameInMap("Info")]
+                    [Validation(Required=false)]
+                    public string Info { get; set; }
+
                     [NameInMap("Status")]
                     [Validation(Required=false)]
                     public string Status { get; set; }
@@ -54,10 +60,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 }
 
             }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -16,81 +16,130 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
+
             [NameInMap("ColumnList")]
             [Validation(Required=false)]
             public List<GetMetaTableFullInfoResponseBodyDataColumnList> ColumnList { get; set; }
             public class GetMetaTableFullInfoResponseBodyDataColumnList : TeaModel {
+                [NameInMap("Caption")]
+                [Validation(Required=false)]
                 public string Caption { get; set; }
+
+                [NameInMap("ColumnGuid")]
+                [Validation(Required=false)]
                 public string ColumnGuid { get; set; }
+
+                [NameInMap("ColumnName")]
+                [Validation(Required=false)]
                 public string ColumnName { get; set; }
+
+                [NameInMap("ColumnType")]
+                [Validation(Required=false)]
                 public string ColumnType { get; set; }
+
+                [NameInMap("Comment")]
+                [Validation(Required=false)]
                 public string Comment { get; set; }
+
+                [NameInMap("IsForeignKey")]
+                [Validation(Required=false)]
                 public bool? IsForeignKey { get; set; }
+
+                [NameInMap("IsPartitionColumn")]
+                [Validation(Required=false)]
                 public bool? IsPartitionColumn { get; set; }
+
+                [NameInMap("IsPrimaryKey")]
+                [Validation(Required=false)]
                 public bool? IsPrimaryKey { get; set; }
+
+                [NameInMap("Position")]
+                [Validation(Required=false)]
                 public int? Position { get; set; }
+
             }
+
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
+
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
+
             [NameInMap("DataSize")]
             [Validation(Required=false)]
             public long? DataSize { get; set; }
+
             [NameInMap("DatabaseName")]
             [Validation(Required=false)]
             public string DatabaseName { get; set; }
+
             [NameInMap("EnvType")]
             [Validation(Required=false)]
             public int? EnvType { get; set; }
+
             [NameInMap("IsVisible")]
             [Validation(Required=false)]
             public int? IsVisible { get; set; }
+
             [NameInMap("LastAccessTime")]
             [Validation(Required=false)]
             public long? LastAccessTime { get; set; }
+
             [NameInMap("LastDdlTime")]
             [Validation(Required=false)]
             public long? LastDdlTime { get; set; }
+
             [NameInMap("LastModifyTime")]
             [Validation(Required=false)]
             public long? LastModifyTime { get; set; }
+
             [NameInMap("LifeCycle")]
             [Validation(Required=false)]
             public int? LifeCycle { get; set; }
+
             [NameInMap("Location")]
             [Validation(Required=false)]
             public string Location { get; set; }
+
             [NameInMap("OwnerId")]
             [Validation(Required=false)]
             public string OwnerId { get; set; }
+
             [NameInMap("PartitionKeys")]
             [Validation(Required=false)]
             public string PartitionKeys { get; set; }
+
             [NameInMap("ProjectId")]
             [Validation(Required=false)]
             public long? ProjectId { get; set; }
+
             [NameInMap("ProjectName")]
             [Validation(Required=false)]
             public string ProjectName { get; set; }
+
             [NameInMap("Schema")]
             [Validation(Required=false)]
             public string Schema { get; set; }
+
             [NameInMap("TableGuid")]
             [Validation(Required=false)]
             public string TableGuid { get; set; }
+
             [NameInMap("TableName")]
             [Validation(Required=false)]
             public string TableName { get; set; }
+
             [NameInMap("TenantId")]
             [Validation(Required=false)]
             public long? TenantId { get; set; }
+
             [NameInMap("TotalColumnCount")]
             [Validation(Required=false)]
             public long? TotalColumnCount { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

@@ -17,18 +17,41 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public List<ListMetaDBResponseBodyDatabaseInfoDbList> DbList { get; set; }
             public class ListMetaDBResponseBodyDatabaseInfoDbList : TeaModel {
+                [NameInMap("CreateTimeStamp")]
+                [Validation(Required=false)]
                 public long? CreateTimeStamp { get; set; }
+
+                [NameInMap("Location")]
+                [Validation(Required=false)]
                 public string Location { get; set; }
+
+                [NameInMap("ModifiedTimeStamp")]
+                [Validation(Required=false)]
                 public long? ModifiedTimeStamp { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("OwnerId")]
+                [Validation(Required=false)]
                 public string OwnerId { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
+                [NameInMap("UUID")]
+                [Validation(Required=false)]
                 public string UUID { get; set; }
+
             }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public long? TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -16,73 +16,96 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("AddTime")]
             [Validation(Required=false)]
             public long? AddTime { get; set; }
+
             [NameInMap("AlertTime")]
             [Validation(Required=false)]
             public long? AlertTime { get; set; }
+
             [NameInMap("Assigner")]
             [Validation(Required=false)]
             public string Assigner { get; set; }
+
             [NameInMap("BaselineBuffer")]
             [Validation(Required=false)]
             public long? BaselineBuffer { get; set; }
+
             [NameInMap("BaselineId")]
             [Validation(Required=false)]
             public long? BaselineId { get; set; }
+
             [NameInMap("BaselineInGroupId")]
             [Validation(Required=false)]
             public int? BaselineInGroupId { get; set; }
+
             [NameInMap("BaselineName")]
             [Validation(Required=false)]
             public string BaselineName { get; set; }
+
             [NameInMap("BaselineStatus")]
             [Validation(Required=false)]
             public string BaselineStatus { get; set; }
+
             [NameInMap("Buffer")]
             [Validation(Required=false)]
             public long? Buffer { get; set; }
+
             [NameInMap("DealTime")]
             [Validation(Required=false)]
             public long? DealTime { get; set; }
+
             [NameInMap("DealUser")]
             [Validation(Required=false)]
             public string DealUser { get; set; }
+
             [NameInMap("FixTime")]
             [Validation(Required=false)]
             public long? FixTime { get; set; }
+
             [NameInMap("HappenTime")]
             [Validation(Required=false)]
             public long? HappenTime { get; set; }
+
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public long? InstanceId { get; set; }
+
             [NameInMap("NextAlertTime")]
             [Validation(Required=false)]
             public long? NextAlertTime { get; set; }
+
             [NameInMap("NodeId")]
             [Validation(Required=false)]
             public long? NodeId { get; set; }
+
             [NameInMap("NodeName")]
             [Validation(Required=false)]
             public string NodeName { get; set; }
+
             [NameInMap("Owner")]
             [Validation(Required=false)]
             public string Owner { get; set; }
+
             [NameInMap("ProjectId")]
             [Validation(Required=false)]
             public long? ProjectId { get; set; }
+
             [NameInMap("TopicId")]
             [Validation(Required=false)]
             public long? TopicId { get; set; }
+
             [NameInMap("TopicName")]
             [Validation(Required=false)]
             public string TopicName { get; set; }
+
             [NameInMap("TopicStatus")]
             [Validation(Required=false)]
             public string TopicStatus { get; set; }
+
             [NameInMap("TopicType")]
             [Validation(Required=false)]
             public string TopicType { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

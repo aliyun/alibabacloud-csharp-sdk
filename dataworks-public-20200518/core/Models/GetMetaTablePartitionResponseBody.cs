@@ -17,28 +17,65 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public List<GetMetaTablePartitionResponseBodyDataDataEntityList> DataEntityList { get; set; }
             public class GetMetaTablePartitionResponseBodyDataDataEntityList : TeaModel {
+                [NameInMap("Comment")]
+                [Validation(Required=false)]
                 public string Comment { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public long? CreateTime { get; set; }
+
+                [NameInMap("DataSize")]
+                [Validation(Required=false)]
                 public long? DataSize { get; set; }
+
+                [NameInMap("ModifiedTime")]
+                [Validation(Required=false)]
                 public long? ModifiedTime { get; set; }
+
+                [NameInMap("PartitionGuid")]
+                [Validation(Required=false)]
                 public string PartitionGuid { get; set; }
+
+                [NameInMap("PartitionLocation")]
+                [Validation(Required=false)]
                 public string PartitionLocation { get; set; }
+
+                [NameInMap("PartitionName")]
+                [Validation(Required=false)]
                 public string PartitionName { get; set; }
+
+                [NameInMap("PartitionPath")]
+                [Validation(Required=false)]
                 public string PartitionPath { get; set; }
+
+                [NameInMap("PartitionType")]
+                [Validation(Required=false)]
                 public string PartitionType { get; set; }
+
+                [NameInMap("RecordCount")]
+                [Validation(Required=false)]
                 public long? RecordCount { get; set; }
+
+                [NameInMap("TableGuid")]
+                [Validation(Required=false)]
                 public string TableGuid { get; set; }
+
             }
+
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public long? TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

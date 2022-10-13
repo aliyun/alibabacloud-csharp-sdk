@@ -17,24 +17,45 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public List<GetSuccessInstanceTrendResponseBodyInstanceStatusTrendAvgTrend> AvgTrend { get; set; }
             public class GetSuccessInstanceTrendResponseBodyInstanceStatusTrendAvgTrend : TeaModel {
+                [NameInMap("Count")]
+                [Validation(Required=false)]
                 public int? Count { get; set; }
+
+                [NameInMap("TimePoint")]
+                [Validation(Required=false)]
                 public string TimePoint { get; set; }
+
             }
+
             [NameInMap("TodayTrend")]
             [Validation(Required=false)]
             public List<GetSuccessInstanceTrendResponseBodyInstanceStatusTrendTodayTrend> TodayTrend { get; set; }
             public class GetSuccessInstanceTrendResponseBodyInstanceStatusTrendTodayTrend : TeaModel {
+                [NameInMap("Count")]
+                [Validation(Required=false)]
                 public int? Count { get; set; }
+
+                [NameInMap("TimePoint")]
+                [Validation(Required=false)]
                 public string TimePoint { get; set; }
+
             }
+
             [NameInMap("YesterdayTrend")]
             [Validation(Required=false)]
             public List<GetSuccessInstanceTrendResponseBodyInstanceStatusTrendYesterdayTrend> YesterdayTrend { get; set; }
             public class GetSuccessInstanceTrendResponseBodyInstanceStatusTrendYesterdayTrend : TeaModel {
+                [NameInMap("Count")]
+                [Validation(Required=false)]
                 public int? Count { get; set; }
+
+                [NameInMap("TimePoint")]
+                [Validation(Required=false)]
                 public string TimePoint { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

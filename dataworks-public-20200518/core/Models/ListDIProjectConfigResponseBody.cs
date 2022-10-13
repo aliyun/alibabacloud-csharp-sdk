@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("Config")]
             [Validation(Required=false)]
             public string Config { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

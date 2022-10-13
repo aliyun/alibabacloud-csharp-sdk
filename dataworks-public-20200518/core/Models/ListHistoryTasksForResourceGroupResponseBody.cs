@@ -16,24 +16,46 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("PageNum")]
             [Validation(Required=false)]
             public int? PageNum { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("Tasks")]
             [Validation(Required=false)]
             public List<ListHistoryTasksForResourceGroupResponseBodyDataTasks> Tasks { get; set; }
             public class ListHistoryTasksForResourceGroupResponseBodyDataTasks : TeaModel {
+                [NameInMap("Concurrency")]
+                [Validation(Required=false)]
                 public int? Concurrency { get; set; }
+
+                [NameInMap("ProjectName")]
+                [Validation(Required=false)]
                 public string ProjectName { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public int? Status { get; set; }
+
+                [NameInMap("TaskId")]
+                [Validation(Required=false)]
                 public string TaskId { get; set; }
+
+                [NameInMap("TaskName")]
+                [Validation(Required=false)]
                 public string TaskName { get; set; }
+
+                [NameInMap("TaskType")]
+                [Validation(Required=false)]
                 public int? TaskType { get; set; }
+
             }
+
             [NameInMap("TotalNum")]
             [Validation(Required=false)]
             public int? TotalNum { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

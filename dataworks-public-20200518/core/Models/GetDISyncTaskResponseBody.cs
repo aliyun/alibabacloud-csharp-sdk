@@ -16,9 +16,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("Code")]
             [Validation(Required=false)]
             public string Code { get; set; }
+
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
+
             [NameInMap("SolutionDetail")]
             [Validation(Required=false)]
             public GetDISyncTaskResponseBodyDataSolutionDetail SolutionDetail { get; set; }
@@ -68,10 +70,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Type { get; set; }
 
             }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

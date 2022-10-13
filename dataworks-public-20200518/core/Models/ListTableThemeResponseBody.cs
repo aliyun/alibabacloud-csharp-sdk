@@ -17,18 +17,41 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public List<ListTableThemeResponseBodyDataThemeList> ThemeList { get; set; }
             public class ListTableThemeResponseBodyDataThemeList : TeaModel {
+                [NameInMap("CreateTimeStamp")]
+                [Validation(Required=false)]
                 public long? CreateTimeStamp { get; set; }
+
+                [NameInMap("Creator")]
+                [Validation(Required=false)]
                 public string Creator { get; set; }
+
+                [NameInMap("Level")]
+                [Validation(Required=false)]
                 public int? Level { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("ParentId")]
+                [Validation(Required=false)]
                 public long? ParentId { get; set; }
+
+                [NameInMap("ProjectId")]
+                [Validation(Required=false)]
                 public long? ProjectId { get; set; }
+
+                [NameInMap("ThemeId")]
+                [Validation(Required=false)]
                 public long? ThemeId { get; set; }
+
             }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public long? TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

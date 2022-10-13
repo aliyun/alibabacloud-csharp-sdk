@@ -17,19 +17,29 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public List<ListFileTypeResponseBodyNodeTypeInfoListNodeTypeInfo> NodeTypeInfo { get; set; }
             public class ListFileTypeResponseBodyNodeTypeInfoListNodeTypeInfo : TeaModel {
+                [NameInMap("NodeType")]
+                [Validation(Required=false)]
                 public int? NodeType { get; set; }
+
+                [NameInMap("NodeTypeName")]
+                [Validation(Required=false)]
                 public string NodeTypeName { get; set; }
+
             }
+
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

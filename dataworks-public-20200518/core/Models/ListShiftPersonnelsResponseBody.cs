@@ -16,22 +16,38 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("ShiftPersons")]
             [Validation(Required=false)]
             public List<ListShiftPersonnelsResponseBodyPagingShiftPersons> ShiftPersons { get; set; }
             public class ListShiftPersonnelsResponseBodyPagingShiftPersons : TeaModel {
+                [NameInMap("BeginTime")]
+                [Validation(Required=false)]
                 public long? BeginTime { get; set; }
+
+                [NameInMap("EndTime")]
+                [Validation(Required=false)]
                 public long? EndTime { get; set; }
+
+                [NameInMap("ShiftPersonName")]
+                [Validation(Required=false)]
                 public string ShiftPersonName { get; set; }
+
+                [NameInMap("ShiftPersonUID")]
+                [Validation(Required=false)]
                 public string ShiftPersonUID { get; set; }
+
             }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

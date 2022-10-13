@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("FolderId")]
             [Validation(Required=false)]
             public string FolderId { get; set; }
+
             [NameInMap("FolderPath")]
             [Validation(Required=false)]
             public string FolderPath { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

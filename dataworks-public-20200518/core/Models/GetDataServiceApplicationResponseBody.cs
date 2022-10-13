@@ -16,22 +16,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("ApplicationCode")]
             [Validation(Required=false)]
             public string ApplicationCode { get; set; }
+
             [NameInMap("ApplicationId")]
             [Validation(Required=false)]
             public long? ApplicationId { get; set; }
+
             [NameInMap("ApplicationKey")]
             [Validation(Required=false)]
             public string ApplicationKey { get; set; }
+
             [NameInMap("ApplicationName")]
             [Validation(Required=false)]
             public string ApplicationName { get; set; }
+
             [NameInMap("ApplicationSecret")]
             [Validation(Required=false)]
             public string ApplicationSecret { get; set; }
+
             [NameInMap("ProjectId")]
             [Validation(Required=false)]
             public long? ProjectId { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

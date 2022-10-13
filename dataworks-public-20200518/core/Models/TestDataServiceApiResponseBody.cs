@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("TestId")]
             [Validation(Required=false)]
             public string TestId { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

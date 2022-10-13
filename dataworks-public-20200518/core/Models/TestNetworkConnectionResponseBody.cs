@@ -24,10 +24,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("ConnectMessage")]
             [Validation(Required=false)]
             public string ConnectMessage { get; set; }
+
             [NameInMap("ConnectStatus")]
             [Validation(Required=false)]
             public bool? ConnectStatus { get; set; }
-        };
+
+        }
 
     }
 

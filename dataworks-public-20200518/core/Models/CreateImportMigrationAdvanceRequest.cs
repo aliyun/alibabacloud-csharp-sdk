@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateImportMigrationAdvanceRequest : TeaModel {
-        [NameInMap("PackageFileObject")]
-        [Validation(Required=true)]
-        public Stream PackageFileObject { get; set; }
-
         [NameInMap("CalculateEngineMap")]
         [Validation(Required=false)]
         public string CalculateEngineMap { get; set; }
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("PackageFile")]
+        [Validation(Required=false)]
+        public Stream PackageFileObject { get; set; }
 
         [NameInMap("PackageType")]
         [Validation(Required=false)]

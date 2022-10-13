@@ -17,29 +17,88 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public List<ListAlertMessagesResponseBodyDataAlertMessages> AlertMessages { get; set; }
             public class ListAlertMessagesResponseBodyDataAlertMessages : TeaModel {
+                [NameInMap("AlertId")]
+                [Validation(Required=false)]
                 public long? AlertId { get; set; }
+
+                [NameInMap("AlertMessageStatus")]
+                [Validation(Required=false)]
                 public string AlertMessageStatus { get; set; }
+
+                [NameInMap("AlertMethod")]
+                [Validation(Required=false)]
                 public string AlertMethod { get; set; }
+
+                [NameInMap("AlertTime")]
+                [Validation(Required=false)]
                 public long? AlertTime { get; set; }
+
+                [NameInMap("AlertUser")]
+                [Validation(Required=false)]
                 public string AlertUser { get; set; }
+
+                [NameInMap("Content")]
+                [Validation(Required=false)]
                 public string Content { get; set; }
+
+                [NameInMap("Instances")]
+                [Validation(Required=false)]
                 public List<ListAlertMessagesResponseBodyDataAlertMessagesInstances> Instances { get; set; }
                 public class ListAlertMessagesResponseBodyDataAlertMessagesInstances : TeaModel {
+                    [NameInMap("InstanceId")]
+                    [Validation(Required=false)]
                     public long? InstanceId { get; set; }
+
+                    [NameInMap("NodeId")]
+                    [Validation(Required=false)]
                     public long? NodeId { get; set; }
+
+                    [NameInMap("NodeName")]
+                    [Validation(Required=false)]
                     public string NodeName { get; set; }
+
+                    [NameInMap("ProjectId")]
+                    [Validation(Required=false)]
                     public long? ProjectId { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
                     public string Status { get; set; }
+
                 }
+
+                [NameInMap("Nodes")]
+                [Validation(Required=false)]
                 public List<ListAlertMessagesResponseBodyDataAlertMessagesNodes> Nodes { get; set; }
                 public class ListAlertMessagesResponseBodyDataAlertMessagesNodes : TeaModel {
+                    [NameInMap("NodeId")]
+                    [Validation(Required=false)]
                     public long? NodeId { get; set; }
+
+                    [NameInMap("NodeName")]
+                    [Validation(Required=false)]
                     public string NodeName { get; set; }
+
+                    [NameInMap("Owner")]
+                    [Validation(Required=false)]
                     public string Owner { get; set; }
+
+                    [NameInMap("ProjectId")]
+                    [Validation(Required=false)]
                     public long? ProjectId { get; set; }
+
                 }
+
+                [NameInMap("RemindId")]
+                [Validation(Required=false)]
                 public long? RemindId { get; set; }
+
+                [NameInMap("RemindName")]
+                [Validation(Required=false)]
                 public string RemindName { get; set; }
+
+                [NameInMap("SlaAlert")]
+                [Validation(Required=false)]
                 public ListAlertMessagesResponseBodyDataAlertMessagesSlaAlert SlaAlert { get; set; }
                 public class ListAlertMessagesResponseBodyDataAlertMessagesSlaAlert : TeaModel {
                     [NameInMap("BaselineId")]
@@ -71,27 +130,56 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string Status { get; set; }
 
                 }
+
+                [NameInMap("Source")]
+                [Validation(Required=false)]
                 public string Source { get; set; }
+
+                [NameInMap("Topics")]
+                [Validation(Required=false)]
                 public List<ListAlertMessagesResponseBodyDataAlertMessagesTopics> Topics { get; set; }
                 public class ListAlertMessagesResponseBodyDataAlertMessagesTopics : TeaModel {
+                    [NameInMap("InstanceId")]
+                    [Validation(Required=false)]
                     public long? InstanceId { get; set; }
+
+                    [NameInMap("NodeId")]
+                    [Validation(Required=false)]
                     public long? NodeId { get; set; }
+
+                    [NameInMap("TopicId")]
+                    [Validation(Required=false)]
                     public long? TopicId { get; set; }
+
+                    [NameInMap("TopicName")]
+                    [Validation(Required=false)]
                     public string TopicName { get; set; }
+
+                    [NameInMap("TopicOwner")]
+                    [Validation(Required=false)]
                     public string TopicOwner { get; set; }
+
+                    [NameInMap("TopicStatus")]
+                    [Validation(Required=false)]
                     public string TopicStatus { get; set; }
+
                 }
+
             }
+
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public string PageNumber { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public string PageSize { get; set; }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public string TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

@@ -17,17 +17,29 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public List<GetMetaTableLineageResponseBodyDataDataEntityList> DataEntityList { get; set; }
             public class GetMetaTableLineageResponseBodyDataDataEntityList : TeaModel {
+                [NameInMap("CreateTimestamp")]
+                [Validation(Required=false)]
                 public long? CreateTimestamp { get; set; }
+
+                [NameInMap("TableGuid")]
+                [Validation(Required=false)]
                 public string TableGuid { get; set; }
+
+                [NameInMap("TableName")]
+                [Validation(Required=false)]
                 public string TableName { get; set; }
+
             }
+
             [NameInMap("HasNext")]
             [Validation(Required=false)]
             public bool? HasNext { get; set; }
+
             [NameInMap("NextPrimaryKey")]
             [Validation(Required=false)]
             public string NextPrimaryKey { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

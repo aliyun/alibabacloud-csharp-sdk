@@ -36,10 +36,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("Order")]
             [Validation(Required=false)]
             public string Order { get; set; }
+
             [NameInMap("SortField")]
             [Validation(Required=false)]
             public string SortField { get; set; }
-        };
+
+        }
 
         [NameInMap("TableGuid")]
         [Validation(Required=false)]

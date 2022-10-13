@@ -106,6 +106,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string UseType { get; set; }
 
             }
+
             [NameInMap("NodeConfiguration")]
             [Validation(Required=false)]
             public GetFileResponseBodyDataNodeConfiguration NodeConfiguration { get; set; }
@@ -231,7 +232,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public bool? Stop { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

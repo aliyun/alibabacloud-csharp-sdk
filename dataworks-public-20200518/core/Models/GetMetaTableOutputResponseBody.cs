@@ -17,24 +17,49 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public List<GetMetaTableOutputResponseBodyDataDataEntityList> DataEntityList { get; set; }
             public class GetMetaTableOutputResponseBodyDataDataEntityList : TeaModel {
+                [NameInMap("EndTime")]
+                [Validation(Required=false)]
                 public string EndTime { get; set; }
+
+                [NameInMap("ProjectId")]
+                [Validation(Required=false)]
                 public long? ProjectId { get; set; }
+
+                [NameInMap("StartTime")]
+                [Validation(Required=false)]
                 public string StartTime { get; set; }
+
+                [NameInMap("TableGuid")]
+                [Validation(Required=false)]
                 public string TableGuid { get; set; }
+
+                [NameInMap("TaskId")]
+                [Validation(Required=false)]
                 public string TaskId { get; set; }
+
+                [NameInMap("TaskInstanceId")]
+                [Validation(Required=false)]
                 public long? TaskInstanceId { get; set; }
+
+                [NameInMap("WaitTime")]
+                [Validation(Required=false)]
                 public string WaitTime { get; set; }
+
             }
+
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public long? TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

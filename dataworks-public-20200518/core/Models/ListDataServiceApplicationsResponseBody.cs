@@ -17,20 +17,33 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public List<ListDataServiceApplicationsResponseBodyDataApplications> Applications { get; set; }
             public class ListDataServiceApplicationsResponseBodyDataApplications : TeaModel {
+                [NameInMap("ApplicationId")]
+                [Validation(Required=false)]
                 public long? ApplicationId { get; set; }
+
+                [NameInMap("ApplicationName")]
+                [Validation(Required=false)]
                 public string ApplicationName { get; set; }
+
+                [NameInMap("ProjectId")]
+                [Validation(Required=false)]
                 public long? ProjectId { get; set; }
+
             }
+
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
