@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class UpdateSwimLaneRequest : TeaModel {
-        [NameInMap("AddedServicesList")]
+        [NameInMap("GroupName")]
         [Validation(Required=false)]
-        public string AddedServicesList { get; set; }
-
-        [NameInMap("DeletedServicesList")]
-        [Validation(Required=false)]
-        public string DeletedServicesList { get; set; }
+        public string GroupName { get; set; }
 
         [NameInMap("LabelSelectorKey")]
         [Validation(Required=false)]
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]
         public string ServiceMeshId { get; set; }
+
+        [NameInMap("ServicesList")]
+        [Validation(Required=false)]
+        public string ServicesList { get; set; }
 
         [NameInMap("SwimLaneName")]
         [Validation(Required=false)]

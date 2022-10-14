@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
-    public class DeleteSwimLaneRequest : TeaModel {
+    public class UpdateSwimLaneGroupRequest : TeaModel {
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string ServiceMeshId { get; set; }
 
-        [NameInMap("SwimLaneName")]
+        [NameInMap("ServicesList")]
         [Validation(Required=false)]
-        public string SwimLaneName { get; set; }
+        public string ServicesList { get; set; }
 
     }
 

@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string ServiceMeshId { get; set; }
 
+        [NameInMap("ShowNsLabels")]
+        [Validation(Required=false)]
+        public bool? ShowNsLabels { get; set; }
+
     }
 
 }

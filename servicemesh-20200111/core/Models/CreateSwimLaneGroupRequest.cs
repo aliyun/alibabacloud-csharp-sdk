@@ -8,18 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
-    public class DeleteSwimLaneRequest : TeaModel {
+    public class CreateSwimLaneGroupRequest : TeaModel {
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
+
+        [NameInMap("IngressGatewayName")]
+        [Validation(Required=false)]
+        public string IngressGatewayName { get; set; }
+
+        [NameInMap("IngressType")]
+        [Validation(Required=false)]
+        public string IngressType { get; set; }
 
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]
         public string ServiceMeshId { get; set; }
 
-        [NameInMap("SwimLaneName")]
+        [NameInMap("ServicesList")]
         [Validation(Required=false)]
-        public string SwimLaneName { get; set; }
+        public string ServicesList { get; set; }
 
     }
 
