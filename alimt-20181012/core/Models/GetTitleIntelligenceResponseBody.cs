@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
             [NameInMap("Titles")]
             [Validation(Required=false)]
             public string Titles { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

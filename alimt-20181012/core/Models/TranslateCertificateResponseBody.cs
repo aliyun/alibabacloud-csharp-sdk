@@ -17,12 +17,25 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
             [Validation(Required=false)]
             public List<TranslateCertificateResponseBodyDataTranslatedValues> TranslatedValues { get; set; }
             public class TranslateCertificateResponseBodyDataTranslatedValues : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
                 public string Key { get; set; }
+
+                [NameInMap("KeyTranslation")]
+                [Validation(Required=false)]
                 public string KeyTranslation { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
                 public string Value { get; set; }
+
+                [NameInMap("ValueTranslation")]
+                [Validation(Required=false)]
                 public string ValueTranslation { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

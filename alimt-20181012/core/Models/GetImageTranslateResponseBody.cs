@@ -20,13 +20,16 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
             [NameInMap("Orc")]
             [Validation(Required=false)]
             public string Orc { get; set; }
+
             [NameInMap("PictureEditor")]
             [Validation(Required=false)]
             public string PictureEditor { get; set; }
+
             [NameInMap("Url")]
             [Validation(Required=false)]
             public string Url { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

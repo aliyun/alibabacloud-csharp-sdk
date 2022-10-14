@@ -20,13 +20,16 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
             [NameInMap("FinalImageUrl")]
             [Validation(Required=false)]
             public string FinalImageUrl { get; set; }
+
             [NameInMap("InPaintingUrl")]
             [Validation(Required=false)]
             public string InPaintingUrl { get; set; }
+
             [NameInMap("TemplateJson")]
             [Validation(Required=false)]
             public string TemplateJson { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

@@ -1,3 +1,6 @@
+2022-10-14 Version: 2.0.5
+- Generated csharp 2018-10-12 for alimt.
+
 2021-11-15 Version: 2.0.4
 - Add Ext parameter to image translation API.
 

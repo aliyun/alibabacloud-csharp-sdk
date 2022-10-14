@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
             [NameInMap("ImageData")]
             [Validation(Required=false)]
             public string ImageData { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

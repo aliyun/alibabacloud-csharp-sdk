@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
             [NameInMap("Language")]
             [Validation(Required=false)]
             public string Language { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

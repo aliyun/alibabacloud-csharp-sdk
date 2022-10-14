@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public string TaskId { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

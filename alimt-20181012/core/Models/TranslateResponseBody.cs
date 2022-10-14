@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
             [NameInMap("Translated")]
             [Validation(Required=false)]
             public string Translated { get; set; }
+
             [NameInMap("WordCount")]
             [Validation(Required=false)]
             public string WordCount { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

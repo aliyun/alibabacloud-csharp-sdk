@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
     public class TranslateGeneralRequest : TeaModel {
+        [NameInMap("Context")]
+        [Validation(Required=false)]
+        public string Context { get; set; }
+
         [NameInMap("FormatType")]
         [Validation(Required=false)]
         public string FormatType { get; set; }
