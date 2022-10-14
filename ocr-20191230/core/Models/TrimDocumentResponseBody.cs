@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

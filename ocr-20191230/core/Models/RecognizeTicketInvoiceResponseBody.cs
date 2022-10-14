@@ -16,19 +16,25 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [NameInMap("Count")]
             [Validation(Required=false)]
             public long? Count { get; set; }
+
             [NameInMap("Height")]
             [Validation(Required=false)]
             public long? Height { get; set; }
+
             [NameInMap("OrgHeight")]
             [Validation(Required=false)]
             public long? OrgHeight { get; set; }
+
             [NameInMap("OrgWidth")]
             [Validation(Required=false)]
             public long? OrgWidth { get; set; }
+
             [NameInMap("Results")]
             [Validation(Required=false)]
             public List<RecognizeTicketInvoiceResponseBodyDataResults> Results { get; set; }
             public class RecognizeTicketInvoiceResponseBodyDataResults : TeaModel {
+                [NameInMap("Content")]
+                [Validation(Required=false)]
                 public RecognizeTicketInvoiceResponseBodyDataResultsContent Content { get; set; }
                 public class RecognizeTicketInvoiceResponseBodyDataResultsContent : TeaModel {
                     [NameInMap("AntiFakeCode")]
@@ -68,33 +74,69 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                     public string SumAmount { get; set; }
 
                 }
+
+                [NameInMap("Index")]
+                [Validation(Required=false)]
                 public long? Index { get; set; }
+
+                [NameInMap("KeyValueInfos")]
+                [Validation(Required=false)]
                 public List<RecognizeTicketInvoiceResponseBodyDataResultsKeyValueInfos> KeyValueInfos { get; set; }
                 public class RecognizeTicketInvoiceResponseBodyDataResultsKeyValueInfos : TeaModel {
+                    [NameInMap("Key")]
+                    [Validation(Required=false)]
                     public string Key { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
                     public string Value { get; set; }
+
+                    [NameInMap("ValuePositions")]
+                    [Validation(Required=false)]
                     public List<RecognizeTicketInvoiceResponseBodyDataResultsKeyValueInfosValuePositions> ValuePositions { get; set; }
                     public class RecognizeTicketInvoiceResponseBodyDataResultsKeyValueInfosValuePositions : TeaModel {
+                        [NameInMap("X")]
+                        [Validation(Required=false)]
                         public long? X { get; set; }
+
+                        [NameInMap("Y")]
+                        [Validation(Required=false)]
                         public long? Y { get; set; }
+
                     }
+
+                    [NameInMap("ValueScore")]
+                    [Validation(Required=false)]
                     public float? ValueScore { get; set; }
+
                 }
+
+                [NameInMap("SliceRectangle")]
+                [Validation(Required=false)]
                 public List<RecognizeTicketInvoiceResponseBodyDataResultsSliceRectangle> SliceRectangle { get; set; }
                 public class RecognizeTicketInvoiceResponseBodyDataResultsSliceRectangle : TeaModel {
+                    [NameInMap("X")]
+                    [Validation(Required=false)]
                     public long? X { get; set; }
+
+                    [NameInMap("Y")]
+                    [Validation(Required=false)]
                     public long? Y { get; set; }
+
                 }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
+
             [NameInMap("Width")]
             [Validation(Required=false)]
             public long? Width { get; set; }
-        };
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
+        }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

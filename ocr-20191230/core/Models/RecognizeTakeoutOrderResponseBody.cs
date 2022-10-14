@@ -17,12 +17,25 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [Validation(Required=false)]
             public List<RecognizeTakeoutOrderResponseBodyDataElements> Elements { get; set; }
             public class RecognizeTakeoutOrderResponseBodyDataElements : TeaModel {
-                public List<string> Boxes { get; set; }
+                [NameInMap("Boxes")]
+                [Validation(Required=false)]
+                public List<int?> Boxes { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Score")]
+                [Validation(Required=false)]
                 public float? Score { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
                 public string Value { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

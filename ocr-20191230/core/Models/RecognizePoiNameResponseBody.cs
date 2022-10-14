@@ -17,15 +17,34 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [Validation(Required=false)]
             public List<RecognizePoiNameResponseBodyDataSignboards> Signboards { get; set; }
             public class RecognizePoiNameResponseBodyDataSignboards : TeaModel {
+                [NameInMap("Texts")]
+                [Validation(Required=false)]
                 public List<RecognizePoiNameResponseBodyDataSignboardsTexts> Texts { get; set; }
                 public class RecognizePoiNameResponseBodyDataSignboardsTexts : TeaModel {
+                    [NameInMap("Label")]
+                    [Validation(Required=false)]
                     public string Label { get; set; }
-                    public List<string> Points { get; set; }
+
+                    [NameInMap("Points")]
+                    [Validation(Required=false)]
+                    public List<int?> Points { get; set; }
+
+                    [NameInMap("Score")]
+                    [Validation(Required=false)]
                     public float? Score { get; set; }
+
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
                     public string Tag { get; set; }
+
+                    [NameInMap("Type")]
+                    [Validation(Required=false)]
                     public string Type { get; set; }
+
                 }
+
             }
+
             [NameInMap("Summary")]
             [Validation(Required=false)]
             public RecognizePoiNameResponseBodyDataSummary Summary { get; set; }
@@ -39,7 +58,8 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public float? Score { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

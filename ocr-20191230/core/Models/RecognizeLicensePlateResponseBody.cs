@@ -17,15 +17,38 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [Validation(Required=false)]
             public List<RecognizeLicensePlateResponseBodyDataPlates> Plates { get; set; }
             public class RecognizeLicensePlateResponseBodyDataPlates : TeaModel {
+                [NameInMap("Confidence")]
+                [Validation(Required=false)]
                 public float? Confidence { get; set; }
+
+                [NameInMap("PlateNumber")]
+                [Validation(Required=false)]
                 public string PlateNumber { get; set; }
+
+                [NameInMap("PlateType")]
+                [Validation(Required=false)]
                 public string PlateType { get; set; }
+
+                [NameInMap("PlateTypeConfidence")]
+                [Validation(Required=false)]
                 public float? PlateTypeConfidence { get; set; }
+
+                [NameInMap("Positions")]
+                [Validation(Required=false)]
                 public List<RecognizeLicensePlateResponseBodyDataPlatesPositions> Positions { get; set; }
                 public class RecognizeLicensePlateResponseBodyDataPlatesPositions : TeaModel {
+                    [NameInMap("X")]
+                    [Validation(Required=false)]
                     public long? X { get; set; }
+
+                    [NameInMap("Y")]
+                    [Validation(Required=false)]
                     public long? Y { get; set; }
+
                 }
+
+                [NameInMap("Roi")]
+                [Validation(Required=false)]
                 public RecognizeLicensePlateResponseBodyDataPlatesRoi Roi { get; set; }
                 public class RecognizeLicensePlateResponseBodyDataPlatesRoi : TeaModel {
                     [NameInMap("H")]
@@ -45,8 +68,10 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                     public int? Y { get; set; }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -17,8 +17,16 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [Validation(Required=false)]
             public List<RecognizeCharacterResponseBodyDataResults> Results { get; set; }
             public class RecognizeCharacterResponseBodyDataResults : TeaModel {
+                [NameInMap("Probability")]
+                [Validation(Required=false)]
                 public float? Probability { get; set; }
+
+                [NameInMap("Text")]
+                [Validation(Required=false)]
                 public string Text { get; set; }
+
+                [NameInMap("TextRectangles")]
+                [Validation(Required=false)]
                 public RecognizeCharacterResponseBodyDataResultsTextRectangles TextRectangles { get; set; }
                 public class RecognizeCharacterResponseBodyDataResultsTextRectangles : TeaModel {
                     [NameInMap("Angle")]
@@ -42,8 +50,10 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                     public int? Width { get; set; }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

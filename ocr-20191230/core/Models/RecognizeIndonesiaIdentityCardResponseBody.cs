@@ -40,6 +40,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("AddressFirstLine")]
             [Validation(Required=false)]
             public RecognizeIndonesiaIdentityCardResponseBodyDataAddressFirstLine AddressFirstLine { get; set; }
@@ -67,6 +68,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("AddressFourthLine")]
             [Validation(Required=false)]
             public RecognizeIndonesiaIdentityCardResponseBodyDataAddressFourthLine AddressFourthLine { get; set; }
@@ -94,6 +96,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("AddressSecondLine")]
             [Validation(Required=false)]
             public RecognizeIndonesiaIdentityCardResponseBodyDataAddressSecondLine AddressSecondLine { get; set; }
@@ -121,6 +124,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("AddressThirdLine")]
             [Validation(Required=false)]
             public RecognizeIndonesiaIdentityCardResponseBodyDataAddressThirdLine AddressThirdLine { get; set; }
@@ -148,6 +152,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("BirthDate")]
             [Validation(Required=false)]
             public RecognizeIndonesiaIdentityCardResponseBodyDataBirthDate BirthDate { get; set; }
@@ -175,6 +180,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("BirthPlace")]
             [Validation(Required=false)]
             public RecognizeIndonesiaIdentityCardResponseBodyDataBirthPlace BirthPlace { get; set; }
@@ -202,6 +208,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("CardBox")]
             [Validation(Required=false)]
             public RecognizeIndonesiaIdentityCardResponseBodyDataCardBox CardBox { get; set; }
@@ -229,6 +236,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("ExpiryDate")]
             [Validation(Required=false)]
             public RecognizeIndonesiaIdentityCardResponseBodyDataExpiryDate ExpiryDate { get; set; }
@@ -256,6 +264,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Gender")]
             [Validation(Required=false)]
             public RecognizeIndonesiaIdentityCardResponseBodyDataGender Gender { get; set; }
@@ -283,6 +292,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Height")]
             [Validation(Required=false)]
             public RecognizeIndonesiaIdentityCardResponseBodyDataHeight Height { get; set; }
@@ -310,6 +320,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("IdNumber")]
             [Validation(Required=false)]
             public RecognizeIndonesiaIdentityCardResponseBodyDataIdNumber IdNumber { get; set; }
@@ -337,6 +348,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("LicenseNumber")]
             [Validation(Required=false)]
             public RecognizeIndonesiaIdentityCardResponseBodyDataLicenseNumber LicenseNumber { get; set; }
@@ -364,6 +376,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("MaritalStatus")]
             [Validation(Required=false)]
             public RecognizeIndonesiaIdentityCardResponseBodyDataMaritalStatus MaritalStatus { get; set; }
@@ -391,6 +404,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("NameFirstLine")]
             [Validation(Required=false)]
             public RecognizeIndonesiaIdentityCardResponseBodyDataNameFirstLine NameFirstLine { get; set; }
@@ -418,6 +432,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("NameSecondLine")]
             [Validation(Required=false)]
             public RecognizeIndonesiaIdentityCardResponseBodyDataNameSecondLine NameSecondLine { get; set; }
@@ -445,6 +460,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Nationality")]
             [Validation(Required=false)]
             public RecognizeIndonesiaIdentityCardResponseBodyDataNationality Nationality { get; set; }
@@ -472,6 +488,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Occupation")]
             [Validation(Required=false)]
             public RecognizeIndonesiaIdentityCardResponseBodyDataOccupation Occupation { get; set; }
@@ -499,6 +516,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("PortraitBox")]
             [Validation(Required=false)]
             public RecognizeIndonesiaIdentityCardResponseBodyDataPortraitBox PortraitBox { get; set; }
@@ -526,6 +544,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Province")]
             [Validation(Required=false)]
             public RecognizeIndonesiaIdentityCardResponseBodyDataProvince Province { get; set; }
@@ -553,6 +572,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Religion")]
             [Validation(Required=false)]
             public RecognizeIndonesiaIdentityCardResponseBodyDataReligion Religion { get; set; }
@@ -580,6 +600,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Sex")]
             [Validation(Required=false)]
             public RecognizeIndonesiaIdentityCardResponseBodyDataSex Sex { get; set; }
@@ -607,11 +628,9 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
-        };
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
+        }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -16,15 +16,19 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [NameInMap("Address")]
             [Validation(Required=false)]
             public string Address { get; set; }
+
             [NameInMap("Angle")]
             [Validation(Required=false)]
             public float? Angle { get; set; }
+
             [NameInMap("Business")]
             [Validation(Required=false)]
             public string Business { get; set; }
+
             [NameInMap("Capital")]
             [Validation(Required=false)]
             public string Capital { get; set; }
+
             [NameInMap("Emblem")]
             [Validation(Required=false)]
             public RecognizeBusinessLicenseResponseBodyDataEmblem Emblem { get; set; }
@@ -46,15 +50,19 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public int? Width { get; set; }
 
             }
+
             [NameInMap("EstablishDate")]
             [Validation(Required=false)]
             public string EstablishDate { get; set; }
+
             [NameInMap("LegalPerson")]
             [Validation(Required=false)]
             public string LegalPerson { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
             [NameInMap("QRCode")]
             [Validation(Required=false)]
             public RecognizeBusinessLicenseResponseBodyDataQRCode QRCode { get; set; }
@@ -76,9 +84,11 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public int? Width { get; set; }
 
             }
+
             [NameInMap("RegisterNumber")]
             [Validation(Required=false)]
             public string RegisterNumber { get; set; }
+
             [NameInMap("Stamp")]
             [Validation(Required=false)]
             public RecognizeBusinessLicenseResponseBodyDataStamp Stamp { get; set; }
@@ -100,6 +110,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public int? Width { get; set; }
 
             }
+
             [NameInMap("Title")]
             [Validation(Required=false)]
             public RecognizeBusinessLicenseResponseBodyDataTitle Title { get; set; }
@@ -121,13 +132,16 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public int? Width { get; set; }
 
             }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
+
             [NameInMap("ValidPeriod")]
             [Validation(Required=false)]
             public string ValidPeriod { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

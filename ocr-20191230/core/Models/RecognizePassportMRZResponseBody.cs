@@ -17,13 +17,29 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [Validation(Required=false)]
             public List<RecognizePassportMRZResponseBodyDataRegions> Regions { get; set; }
             public class RecognizePassportMRZResponseBodyDataRegions : TeaModel {
-                public List<string> BandBoxes { get; set; }
+                [NameInMap("BandBoxes")]
+                [Validation(Required=false)]
+                public List<float?> BandBoxes { get; set; }
+
+                [NameInMap("Content")]
+                [Validation(Required=false)]
                 public string Content { get; set; }
+
+                [NameInMap("DetectionScore")]
+                [Validation(Required=false)]
                 public float? DetectionScore { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("RecognitionScore")]
+                [Validation(Required=false)]
                 public float? RecognitionScore { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

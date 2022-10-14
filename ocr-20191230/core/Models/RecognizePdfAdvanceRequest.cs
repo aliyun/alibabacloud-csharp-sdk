@@ -9,8 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
     public class RecognizePdfAdvanceRequest : TeaModel {
-        [NameInMap("FileURLObject")]
-        [Validation(Required=true)]
+        [NameInMap("FileURL")]
+        [Validation(Required=false)]
         public Stream FileURLObject { get; set; }
 
     }

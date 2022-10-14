@@ -9,8 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
     public class RecognizeVietnamIdentityCardAdvanceRequest : TeaModel {
-        [NameInMap("ImageUrlObject")]
-        [Validation(Required=true)]
+        [NameInMap("ImageUrl")]
+        [Validation(Required=false)]
         public Stream ImageUrlObject { get; set; }
 
     }

@@ -16,9 +16,11 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [NameInMap("IsBlur")]
             [Validation(Required=false)]
             public bool? IsBlur { get; set; }
+
             [NameInMap("IsCard")]
             [Validation(Required=false)]
             public bool? IsCard { get; set; }
+
             [NameInMap("SpoofResult")]
             [Validation(Required=false)]
             public DetectCardScreenshotResponseBodyDataSpoofResult SpoofResult { get; set; }
@@ -34,13 +36,16 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                     [NameInMap("ScreenScore")]
                     [Validation(Required=false)]
                     public float? ScreenScore { get; set; }
+
                     [NameInMap("ScreenThreshold")]
                     [Validation(Required=false)]
                     public float? ScreenThreshold { get; set; }
-                };
+
+                }
 
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

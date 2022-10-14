@@ -40,6 +40,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("AddressSecondLine")]
             [Validation(Required=false)]
             public RecognizeVietnamIdentityCardResponseBodyDataAddressSecondLine AddressSecondLine { get; set; }
@@ -67,6 +68,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("BirthDate")]
             [Validation(Required=false)]
             public RecognizeVietnamIdentityCardResponseBodyDataBirthDate BirthDate { get; set; }
@@ -94,6 +96,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("CardBox")]
             [Validation(Required=false)]
             public RecognizeVietnamIdentityCardResponseBodyDataCardBox CardBox { get; set; }
@@ -121,6 +124,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("DriveClass")]
             [Validation(Required=false)]
             public RecognizeVietnamIdentityCardResponseBodyDataDriveClass DriveClass { get; set; }
@@ -148,6 +152,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("ExpiryDate")]
             [Validation(Required=false)]
             public RecognizeVietnamIdentityCardResponseBodyDataExpiryDate ExpiryDate { get; set; }
@@ -175,6 +180,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("FullName")]
             [Validation(Required=false)]
             public RecognizeVietnamIdentityCardResponseBodyDataFullName FullName { get; set; }
@@ -202,6 +208,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("IdNumber")]
             [Validation(Required=false)]
             public RecognizeVietnamIdentityCardResponseBodyDataIdNumber IdNumber { get; set; }
@@ -229,6 +236,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Nationality")]
             [Validation(Required=false)]
             public RecognizeVietnamIdentityCardResponseBodyDataNationality Nationality { get; set; }
@@ -256,6 +264,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("OriginPlaceFirstLine")]
             [Validation(Required=false)]
             public RecognizeVietnamIdentityCardResponseBodyDataOriginPlaceFirstLine OriginPlaceFirstLine { get; set; }
@@ -283,6 +292,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("OriginPlaceSecondLine")]
             [Validation(Required=false)]
             public RecognizeVietnamIdentityCardResponseBodyDataOriginPlaceSecondLine OriginPlaceSecondLine { get; set; }
@@ -310,6 +320,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("PortraitBox")]
             [Validation(Required=false)]
             public RecognizeVietnamIdentityCardResponseBodyDataPortraitBox PortraitBox { get; set; }
@@ -337,6 +348,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("ResidencePlaceFirstLine")]
             [Validation(Required=false)]
             public RecognizeVietnamIdentityCardResponseBodyDataResidencePlaceFirstLine ResidencePlaceFirstLine { get; set; }
@@ -364,6 +376,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("ResidencePlaceSecondLine")]
             [Validation(Required=false)]
             public RecognizeVietnamIdentityCardResponseBodyDataResidencePlaceSecondLine ResidencePlaceSecondLine { get; set; }
@@ -391,6 +404,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Sex")]
             [Validation(Required=false)]
             public RecognizeVietnamIdentityCardResponseBodyDataSex Sex { get; set; }
@@ -418,11 +432,9 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
-        };
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
+        }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

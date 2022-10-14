@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [Validation(Required=false)]
             public List<RecognizeTaxiInvoiceResponseBodyDataInvoices> Invoices { get; set; }
             public class RecognizeTaxiInvoiceResponseBodyDataInvoices : TeaModel {
+                [NameInMap("InvoiceRoi")]
+                [Validation(Required=false)]
                 public RecognizeTaxiInvoiceResponseBodyDataInvoicesInvoiceRoi InvoiceRoi { get; set; }
                 public class RecognizeTaxiInvoiceResponseBodyDataInvoicesInvoiceRoi : TeaModel {
                     [NameInMap("H")]
@@ -36,8 +38,13 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                     public float? Y { get; set; }
 
                 }
+
+                [NameInMap("Items")]
+                [Validation(Required=false)]
                 public List<RecognizeTaxiInvoiceResponseBodyDataInvoicesItems> Items { get; set; }
                 public class RecognizeTaxiInvoiceResponseBodyDataInvoicesItems : TeaModel {
+                    [NameInMap("ItemRoi")]
+                    [Validation(Required=false)]
                     public RecognizeTaxiInvoiceResponseBodyDataInvoicesItemsItemRoi ItemRoi { get; set; }
                     public class RecognizeTaxiInvoiceResponseBodyDataInvoicesItemsItemRoi : TeaModel {
                         [NameInMap("Angle")]
@@ -51,10 +58,12 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                             [NameInMap("X")]
                             [Validation(Required=false)]
                             public float? X { get; set; }
+
                             [NameInMap("Y")]
                             [Validation(Required=false)]
                             public float? Y { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("Size")]
                         [Validation(Required=false)]
@@ -63,17 +72,28 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                             [NameInMap("H")]
                             [Validation(Required=false)]
                             public float? H { get; set; }
+
                             [NameInMap("W")]
                             [Validation(Required=false)]
                             public float? W { get; set; }
-                        };
+
+                        }
 
                     }
+
+                    [NameInMap("Text")]
+                    [Validation(Required=false)]
                     public string Text { get; set; }
+
                 }
+
+                [NameInMap("RotateType")]
+                [Validation(Required=false)]
                 public int? RotateType { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

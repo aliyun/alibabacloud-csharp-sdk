@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [NameInMap("VinCode")]
             [Validation(Required=false)]
             public string VinCode { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

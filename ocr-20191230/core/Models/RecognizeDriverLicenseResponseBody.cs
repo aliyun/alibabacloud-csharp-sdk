@@ -34,6 +34,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Record { get; set; }
 
             }
+
             [NameInMap("FaceResult")]
             [Validation(Required=false)]
             public RecognizeDriverLicenseResponseBodyDataFaceResult FaceResult { get; set; }
@@ -75,7 +76,8 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string VehicleType { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

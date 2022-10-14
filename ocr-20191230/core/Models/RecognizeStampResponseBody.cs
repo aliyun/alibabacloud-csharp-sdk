@@ -17,11 +17,22 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [Validation(Required=false)]
             public List<RecognizeStampResponseBodyDataResults> Results { get; set; }
             public class RecognizeStampResponseBodyDataResults : TeaModel {
+                [NameInMap("GeneralText")]
+                [Validation(Required=false)]
                 public List<RecognizeStampResponseBodyDataResultsGeneralText> GeneralText { get; set; }
                 public class RecognizeStampResponseBodyDataResultsGeneralText : TeaModel {
+                    [NameInMap("Confidence")]
+                    [Validation(Required=false)]
                     public float? Confidence { get; set; }
+
+                    [NameInMap("Content")]
+                    [Validation(Required=false)]
                     public string Content { get; set; }
+
                 }
+
+                [NameInMap("Roi")]
+                [Validation(Required=false)]
                 public RecognizeStampResponseBodyDataResultsRoi Roi { get; set; }
                 public class RecognizeStampResponseBodyDataResultsRoi : TeaModel {
                     [NameInMap("Height")]
@@ -41,6 +52,9 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                     public int? Width { get; set; }
 
                 }
+
+                [NameInMap("Text")]
+                [Validation(Required=false)]
                 public RecognizeStampResponseBodyDataResultsText Text { get; set; }
                 public class RecognizeStampResponseBodyDataResultsText : TeaModel {
                     [NameInMap("Confidence")]
@@ -52,8 +66,10 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                     public string Content { get; set; }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

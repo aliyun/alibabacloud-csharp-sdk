@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 [Validation(Required=false)]
                 public List<float?> InvoiceNoes { get; set; }
 
+                [NameInMap("ItemNames")]
+                [Validation(Required=false)]
+                public List<int?> ItemNames { get; set; }
+
                 [NameInMap("PayeeAddresses")]
                 [Validation(Required=false)]
                 public List<float?> PayeeAddresses { get; set; }
@@ -94,6 +98,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public List<float?> WithoutTaxAmounts { get; set; }
 
             }
+
             [NameInMap("Content")]
             [Validation(Required=false)]
             public RecognizeVATInvoiceResponseBodyDataContent Content { get; set; }
@@ -125,6 +130,10 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 [NameInMap("InvoiceNo")]
                 [Validation(Required=false)]
                 public string InvoiceNo { get; set; }
+
+                [NameInMap("ItemName")]
+                [Validation(Required=false)]
+                public List<string> ItemName { get; set; }
 
                 [NameInMap("Payee")]
                 [Validation(Required=false)]
@@ -175,7 +184,8 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string WithoutTaxAmount { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

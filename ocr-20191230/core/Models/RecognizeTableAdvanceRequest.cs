@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
     public class RecognizeTableAdvanceRequest : TeaModel {
-        [NameInMap("ImageURLObject")]
-        [Validation(Required=true)]
-        public Stream ImageURLObject { get; set; }
-
         [NameInMap("AssureDirection")]
         [Validation(Required=false)]
         public bool? AssureDirection { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
         [NameInMap("HasLine")]
         [Validation(Required=false)]
         public bool? HasLine { get; set; }
+
+        [NameInMap("ImageURL")]
+        [Validation(Required=false)]
+        public Stream ImageURLObject { get; set; }
 
         [NameInMap("OutputFormat")]
         [Validation(Required=false)]

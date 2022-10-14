@@ -58,6 +58,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string UnladenMass { get; set; }
 
             }
+
             [NameInMap("FaceResult")]
             [Validation(Required=false)]
             public RecognizeDrivingLicenseResponseBodyDataFaceResult FaceResult { get; set; }
@@ -103,7 +104,8 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Vin { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -40,6 +40,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("BirthDate")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataBirthDate BirthDate { get; set; }
@@ -67,6 +68,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("BirthPlace")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataBirthPlace BirthPlace { get; set; }
@@ -94,6 +96,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("BloodType")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataBloodType BloodType { get; set; }
@@ -121,6 +124,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("CardBox")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataCardBox CardBox { get; set; }
@@ -148,6 +152,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Cilt")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataCilt Cilt { get; set; }
@@ -175,6 +180,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("DocumentNumber")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataDocumentNumber DocumentNumber { get; set; }
@@ -202,6 +208,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("DriveClass")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataDriveClass DriveClass { get; set; }
@@ -229,6 +236,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("DueDate")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataDueDate DueDate { get; set; }
@@ -256,6 +264,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Duzenleyen")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataDuzenleyen Duzenleyen { get; set; }
@@ -283,6 +292,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("EntryNumber")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataEntryNumber EntryNumber { get; set; }
@@ -310,6 +320,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("ExpiryDate")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataExpiryDate ExpiryDate { get; set; }
@@ -337,6 +348,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("FatherName")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataFatherName FatherName { get; set; }
@@ -364,6 +376,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("ForeignersId")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataForeignersId ForeignersId { get; set; }
@@ -391,6 +404,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Gender")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataGender Gender { get; set; }
@@ -418,6 +432,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("GivenName")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataGivenName GivenName { get; set; }
@@ -445,6 +460,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("IdNumber")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataIdNumber IdNumber { get; set; }
@@ -472,6 +488,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("IssueBy")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataIssueBy IssueBy { get; set; }
@@ -499,6 +516,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("IssueCounty")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataIssueCounty IssueCounty { get; set; }
@@ -526,6 +544,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("IssueDate")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataIssueDate IssueDate { get; set; }
@@ -553,6 +572,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("IssuePlace")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataIssuePlace IssuePlace { get; set; }
@@ -580,6 +600,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Kutuk")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataKutuk Kutuk { get; set; }
@@ -607,6 +628,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("LicenseNumber")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataLicenseNumber LicenseNumber { get; set; }
@@ -634,6 +656,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("MaritalStatus")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataMaritalStatus MaritalStatus { get; set; }
@@ -661,6 +684,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("MotherName")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataMotherName MotherName { get; set; }
@@ -688,6 +712,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataName Name { get; set; }
@@ -715,6 +740,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Nationality")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataNationality Nationality { get; set; }
@@ -742,6 +768,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("NeighborhoodVillage")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataNeighborhoodVillage NeighborhoodVillage { get; set; }
@@ -769,6 +796,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataPageNumber PageNumber { get; set; }
@@ -796,6 +824,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("PassportNumber")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataPassportNumber PassportNumber { get; set; }
@@ -823,6 +852,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("PortraitBox")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataPortraitBox PortraitBox { get; set; }
@@ -850,6 +880,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Province")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataProvince Province { get; set; }
@@ -877,6 +908,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("ProvinceOfResidence")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataProvinceOfResidence ProvinceOfResidence { get; set; }
@@ -904,6 +936,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("ReasonOfIssue")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataReasonOfIssue ReasonOfIssue { get; set; }
@@ -931,6 +964,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("RegisterNumber")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataRegisterNumber RegisterNumber { get; set; }
@@ -958,6 +992,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Religion")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataReligion Religion { get; set; }
@@ -985,6 +1020,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Sayfa")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataSayfa Sayfa { get; set; }
@@ -1012,6 +1048,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Seri")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataSeri Seri { get; set; }
@@ -1039,6 +1076,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Sex")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataSex Sex { get; set; }
@@ -1066,6 +1104,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Surname")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataSurname Surname { get; set; }
@@ -1093,6 +1132,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("TypeOfResidencePermit")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataTypeOfResidencePermit TypeOfResidencePermit { get; set; }
@@ -1120,6 +1160,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("ValidUntil")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataValidUntil ValidUntil { get; set; }
@@ -1147,6 +1188,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Village")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataVillage Village { get; set; }
@@ -1174,6 +1216,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("VolumeNumber")]
             [Validation(Required=false)]
             public RecognizeTurkeyIdentityCardResponseBodyDataVolumeNumber VolumeNumber { get; set; }
@@ -1201,11 +1244,9 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
-        };
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
+        }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

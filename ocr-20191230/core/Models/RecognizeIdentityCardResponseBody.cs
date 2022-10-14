@@ -30,6 +30,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string StartDate { get; set; }
 
             }
+
             [NameInMap("FrontResult")]
             [Validation(Required=false)]
             public RecognizeIdentityCardResponseBodyDataFrontResult FrontResult { get; set; }
@@ -77,6 +78,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                     [NameInMap("Angle")]
                     [Validation(Required=false)]
                     public float? Angle { get; set; }
+
                     [NameInMap("Center")]
                     [Validation(Required=false)]
                     public RecognizeIdentityCardResponseBodyDataFrontResultFaceRectangleCenter Center { get; set; }
@@ -90,6 +92,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                         public float? Y { get; set; }
 
                     }
+
                     [NameInMap("Size")]
                     [Validation(Required=false)]
                     public RecognizeIdentityCardResponseBodyDataFrontResultFaceRectangleSize Size { get; set; }
@@ -103,7 +106,8 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                         public float? Width { get; set; }
 
                     }
-                };
+
+                }
 
                 [NameInMap("Gender")]
                 [Validation(Required=false)]
@@ -122,7 +126,8 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Nationality { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

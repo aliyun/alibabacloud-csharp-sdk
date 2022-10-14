@@ -40,6 +40,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("AddressFirstLine")]
             [Validation(Required=false)]
             public RecognizeMalaysiaIdentityCardResponseBodyDataAddressFirstLine AddressFirstLine { get; set; }
@@ -67,6 +68,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("AddressFourthLine")]
             [Validation(Required=false)]
             public RecognizeMalaysiaIdentityCardResponseBodyDataAddressFourthLine AddressFourthLine { get; set; }
@@ -94,6 +96,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("AddressSecondLine")]
             [Validation(Required=false)]
             public RecognizeMalaysiaIdentityCardResponseBodyDataAddressSecondLine AddressSecondLine { get; set; }
@@ -121,6 +124,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("AddressThirdLine")]
             [Validation(Required=false)]
             public RecognizeMalaysiaIdentityCardResponseBodyDataAddressThirdLine AddressThirdLine { get; set; }
@@ -148,6 +152,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("CardBox")]
             [Validation(Required=false)]
             public RecognizeMalaysiaIdentityCardResponseBodyDataCardBox CardBox { get; set; }
@@ -175,6 +180,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("DriveClass")]
             [Validation(Required=false)]
             public RecognizeMalaysiaIdentityCardResponseBodyDataDriveClass DriveClass { get; set; }
@@ -202,6 +208,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("ExpiryDate")]
             [Validation(Required=false)]
             public RecognizeMalaysiaIdentityCardResponseBodyDataExpiryDate ExpiryDate { get; set; }
@@ -229,6 +236,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("IdNumber")]
             [Validation(Required=false)]
             public RecognizeMalaysiaIdentityCardResponseBodyDataIdNumber IdNumber { get; set; }
@@ -256,6 +264,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("IssueDate")]
             [Validation(Required=false)]
             public RecognizeMalaysiaIdentityCardResponseBodyDataIssueDate IssueDate { get; set; }
@@ -283,6 +292,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("NameFirstLine")]
             [Validation(Required=false)]
             public RecognizeMalaysiaIdentityCardResponseBodyDataNameFirstLine NameFirstLine { get; set; }
@@ -310,6 +320,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("NameSecondLine")]
             [Validation(Required=false)]
             public RecognizeMalaysiaIdentityCardResponseBodyDataNameSecondLine NameSecondLine { get; set; }
@@ -337,6 +348,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Nationality")]
             [Validation(Required=false)]
             public RecognizeMalaysiaIdentityCardResponseBodyDataNationality Nationality { get; set; }
@@ -364,6 +376,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("PortraitBox")]
             [Validation(Required=false)]
             public RecognizeMalaysiaIdentityCardResponseBodyDataPortraitBox PortraitBox { get; set; }
@@ -391,6 +404,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Sex")]
             [Validation(Required=false)]
             public RecognizeMalaysiaIdentityCardResponseBodyDataSex Sex { get; set; }
@@ -418,11 +432,9 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
-        };
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
+        }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

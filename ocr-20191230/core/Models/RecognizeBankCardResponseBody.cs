@@ -16,13 +16,16 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [NameInMap("BankName")]
             [Validation(Required=false)]
             public string BankName { get; set; }
+
             [NameInMap("CardNumber")]
             [Validation(Required=false)]
             public string CardNumber { get; set; }
+
             [NameInMap("ValidDate")]
             [Validation(Required=false)]
             public string ValidDate { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

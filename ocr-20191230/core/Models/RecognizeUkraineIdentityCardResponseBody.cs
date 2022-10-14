@@ -40,6 +40,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("CardBox")]
             [Validation(Required=false)]
             public RecognizeUkraineIdentityCardResponseBodyDataCardBox CardBox { get; set; }
@@ -67,6 +68,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("DocumentNumber")]
             [Validation(Required=false)]
             public RecognizeUkraineIdentityCardResponseBodyDataDocumentNumber DocumentNumber { get; set; }
@@ -94,6 +96,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("ExpiryDate")]
             [Validation(Required=false)]
             public RecognizeUkraineIdentityCardResponseBodyDataExpiryDate ExpiryDate { get; set; }
@@ -121,6 +124,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("NameEnglish")]
             [Validation(Required=false)]
             public RecognizeUkraineIdentityCardResponseBodyDataNameEnglish NameEnglish { get; set; }
@@ -148,6 +152,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("NameUkraine")]
             [Validation(Required=false)]
             public RecognizeUkraineIdentityCardResponseBodyDataNameUkraine NameUkraine { get; set; }
@@ -175,6 +180,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Nationality")]
             [Validation(Required=false)]
             public RecognizeUkraineIdentityCardResponseBodyDataNationality Nationality { get; set; }
@@ -202,6 +208,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Patronymic")]
             [Validation(Required=false)]
             public RecognizeUkraineIdentityCardResponseBodyDataPatronymic Patronymic { get; set; }
@@ -229,6 +236,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("PortraitBox")]
             [Validation(Required=false)]
             public RecognizeUkraineIdentityCardResponseBodyDataPortraitBox PortraitBox { get; set; }
@@ -256,6 +264,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("RecordNumber")]
             [Validation(Required=false)]
             public RecognizeUkraineIdentityCardResponseBodyDataRecordNumber RecordNumber { get; set; }
@@ -283,6 +292,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Sex")]
             [Validation(Required=false)]
             public RecognizeUkraineIdentityCardResponseBodyDataSex Sex { get; set; }
@@ -310,6 +320,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("SurnameEnglish")]
             [Validation(Required=false)]
             public RecognizeUkraineIdentityCardResponseBodyDataSurnameEnglish SurnameEnglish { get; set; }
@@ -337,6 +348,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("SurnameUkraine")]
             [Validation(Required=false)]
             public RecognizeUkraineIdentityCardResponseBodyDataSurnameUkraine SurnameUkraine { get; set; }
@@ -364,11 +376,9 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
-        };
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
+        }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

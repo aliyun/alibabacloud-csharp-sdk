@@ -40,6 +40,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("BirthPlaceFirstLine")]
             [Validation(Required=false)]
             public RecognizeRussiaIdentityCardResponseBodyDataBirthPlaceFirstLine BirthPlaceFirstLine { get; set; }
@@ -67,6 +68,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("BirthPlaceSecondLine")]
             [Validation(Required=false)]
             public RecognizeRussiaIdentityCardResponseBodyDataBirthPlaceSecondLine BirthPlaceSecondLine { get; set; }
@@ -94,6 +96,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("BirthPlaceThirdLine")]
             [Validation(Required=false)]
             public RecognizeRussiaIdentityCardResponseBodyDataBirthPlaceThirdLine BirthPlaceThirdLine { get; set; }
@@ -121,6 +124,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("CardBox")]
             [Validation(Required=false)]
             public RecognizeRussiaIdentityCardResponseBodyDataCardBox CardBox { get; set; }
@@ -148,6 +152,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("GivenName")]
             [Validation(Required=false)]
             public RecognizeRussiaIdentityCardResponseBodyDataGivenName GivenName { get; set; }
@@ -175,6 +180,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("IdNumber")]
             [Validation(Required=false)]
             public RecognizeRussiaIdentityCardResponseBodyDataIdNumber IdNumber { get; set; }
@@ -202,6 +208,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("PaternalName")]
             [Validation(Required=false)]
             public RecognizeRussiaIdentityCardResponseBodyDataPaternalName PaternalName { get; set; }
@@ -229,6 +236,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("PortraitBox")]
             [Validation(Required=false)]
             public RecognizeRussiaIdentityCardResponseBodyDataPortraitBox PortraitBox { get; set; }
@@ -256,6 +264,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("Sex")]
             [Validation(Required=false)]
             public RecognizeRussiaIdentityCardResponseBodyDataSex Sex { get; set; }
@@ -283,6 +292,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("SurnameFirstLine")]
             [Validation(Required=false)]
             public RecognizeRussiaIdentityCardResponseBodyDataSurnameFirstLine SurnameFirstLine { get; set; }
@@ -310,6 +320,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
+
             [NameInMap("SurnameSecondLine")]
             [Validation(Required=false)]
             public RecognizeRussiaIdentityCardResponseBodyDataSurnameSecondLine SurnameSecondLine { get; set; }
@@ -337,11 +348,9 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 public string Text { get; set; }
 
             }
-        };
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
+        }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
