@@ -3202,6 +3202,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["AppIds"] = request.AppIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbGrayEnable))
+            {
+                query["DbGrayEnable"] = request.DbGrayEnable;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
             {
                 query["Enable"] = request.Enable;
@@ -3288,6 +3292,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIds))
             {
                 query["AppIds"] = request.AppIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbGrayEnable))
+            {
+                query["DbGrayEnable"] = request.DbGrayEnable;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
             {

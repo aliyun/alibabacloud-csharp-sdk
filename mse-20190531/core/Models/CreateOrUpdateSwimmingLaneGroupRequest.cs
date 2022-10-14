@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string AppIds { get; set; }
 
+        [NameInMap("DbGrayEnable")]
+        [Validation(Required=false)]
+        public bool? DbGrayEnable { get; set; }
+
         [NameInMap("Enable")]
         [Validation(Required=false)]
         public bool? Enable { get; set; }
