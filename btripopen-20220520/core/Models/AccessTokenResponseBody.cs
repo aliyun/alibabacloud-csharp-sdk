@@ -31,6 +31,24 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        [NameInMap("module")]
+        [Validation(Required=false)]
+        public AccessTokenResponseBodyModule Module { get; set; }
+        public class AccessTokenResponseBodyModule : TeaModel {
+            [NameInMap("expire")]
+            [Validation(Required=false)]
+            public long? Expire { get; set; }
+
+            [NameInMap("start")]
+            [Validation(Required=false)]
+            public long? Start { get; set; }
+
+            [NameInMap("token")]
+            [Validation(Required=false)]
+            public string Token { get; set; }
+
+        }
+
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
