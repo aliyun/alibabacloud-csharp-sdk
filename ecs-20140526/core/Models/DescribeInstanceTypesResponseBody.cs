@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public int? GPUAmount { get; set; }
 
+                [NameInMap("GPUMemorySize")]
+                [Validation(Required=false)]
+                public float? GPUMemorySize { get; set; }
+
                 [NameInMap("GPUSpec")]
                 [Validation(Required=false)]
                 public string GPUSpec { get; set; }
