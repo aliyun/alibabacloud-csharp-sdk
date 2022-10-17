@@ -97,6 +97,14 @@ namespace AlibabaCloud.SDK.Videorecog20200320.Models
 
             }
 
+            [NameInMap("OcrResultsUrl")]
+            [Validation(Required=false)]
+            public string OcrResultsUrl { get; set; }
+
+            [NameInMap("OcrVideoResultsUrl")]
+            [Validation(Required=false)]
+            public string OcrVideoResultsUrl { get; set; }
+
             [NameInMap("SubtitlesResults")]
             [Validation(Required=false)]
             public List<RecognizeVideoCastCrewListResponseBodyDataSubtitlesResults> SubtitlesResults { get; set; }
@@ -178,6 +186,10 @@ namespace AlibabaCloud.SDK.Videorecog20200320.Models
             }
 
         }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
