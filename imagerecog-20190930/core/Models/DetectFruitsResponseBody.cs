@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imagerecog20190930.Models
 {
     public class DetectFruitsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DetectFruitsResponseBodyData Data { get; set; }
@@ -21,11 +17,25 @@ namespace AlibabaCloud.SDK.Imagerecog20190930.Models
             [Validation(Required=false)]
             public List<DetectFruitsResponseBodyDataElements> Elements { get; set; }
             public class DetectFruitsResponseBodyDataElements : TeaModel {
-                public float? Score { get; set; }
-                public List<string> Box { get; set; }
+                [NameInMap("Box")]
+                [Validation(Required=false)]
+                public List<float?> Box { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Score")]
+                [Validation(Required=false)]
+                public float? Score { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

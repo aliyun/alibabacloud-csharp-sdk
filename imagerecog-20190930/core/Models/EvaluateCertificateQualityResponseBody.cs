@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imagerecog20190930.Models
 {
     public class EvaluateCertificateQualityResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public EvaluateCertificateQualityResponseBodyData Data { get; set; }
@@ -21,11 +17,25 @@ namespace AlibabaCloud.SDK.Imagerecog20190930.Models
             [Validation(Required=false)]
             public List<EvaluateCertificateQualityResponseBodyDataElements> Elements { get; set; }
             public class EvaluateCertificateQualityResponseBodyDataElements : TeaModel {
-                public string Value { get; set; }
+                [NameInMap("Pass")]
+                [Validation(Required=false)]
                 public string Pass { get; set; }
+
+                [NameInMap("Score")]
+                [Validation(Required=false)]
                 public string Score { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 
