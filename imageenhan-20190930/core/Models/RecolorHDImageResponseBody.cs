@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
 
         }
 
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
