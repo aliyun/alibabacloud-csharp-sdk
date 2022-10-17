@@ -1,3 +1,6 @@
+2022-10-17 Version: 2.0.2
+- Update videoseg.
+
 2021-03-08 Version: 2.0.1
 - Generated csharp 2020-03-20 for videoseg.
 

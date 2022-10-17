@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoseg20200320.Models
 {
     public class SegmentGreenScreenVideoAdvanceRequest : TeaModel {
-        [NameInMap("VideoURLObject")]
-        [Validation(Required=true)]
-        public Stream VideoURLObject { get; set; }
-
-        [NameInMap("Async")]
+        [NameInMap("VideoURL")]
         [Validation(Required=false)]
-        public bool? Async { get; set; }
+        public Stream VideoURLObject { get; set; }
 
     }
 

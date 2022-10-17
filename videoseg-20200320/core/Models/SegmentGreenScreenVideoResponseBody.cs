@@ -9,13 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoseg20200320.Models
 {
     public class SegmentGreenScreenVideoResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SegmentGreenScreenVideoResponseBodyData Data { get; set; }
@@ -23,7 +16,16 @@ namespace AlibabaCloud.SDK.Videoseg20200320.Models
             [NameInMap("VideoURL")]
             [Validation(Required=false)]
             public string VideoURL { get; set; }
-        };
+
+        }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

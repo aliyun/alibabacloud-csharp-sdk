@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Videoseg20200320.Models
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
         public GetAsyncJobResultResponseBody Body { get; set; }
