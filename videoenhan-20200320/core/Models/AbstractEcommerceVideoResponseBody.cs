@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 
         }
 
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
