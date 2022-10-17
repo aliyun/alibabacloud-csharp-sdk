@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Threedvision20210131.Models
 {
     public class EstimateMonocularVideoDepthAdvanceRequest : TeaModel {
-        [NameInMap("VideoURLObject")]
-        [Validation(Required=true)]
-        public Stream VideoURLObject { get; set; }
-
         [NameInMap("SampleRate")]
         [Validation(Required=false)]
         public string SampleRate { get; set; }
+
+        [NameInMap("VideoURL")]
+        [Validation(Required=false)]
+        public Stream VideoURLObject { get; set; }
 
     }
 

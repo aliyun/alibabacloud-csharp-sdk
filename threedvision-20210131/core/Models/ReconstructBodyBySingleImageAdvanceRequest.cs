@@ -9,8 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.Threedvision20210131.Models
 {
     public class ReconstructBodyBySingleImageAdvanceRequest : TeaModel {
-        [NameInMap("ImageURLObject")]
-        [Validation(Required=true)]
+        [NameInMap("ImageURL")]
+        [Validation(Required=false)]
         public Stream ImageURLObject { get; set; }
 
     }

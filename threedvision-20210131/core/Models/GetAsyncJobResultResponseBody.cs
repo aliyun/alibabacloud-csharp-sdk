@@ -9,30 +9,35 @@ using Tea;
 namespace AlibabaCloud.SDK.Threedvision20210131.Models
 {
     public class GetAsyncJobResultResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetAsyncJobResultResponseBodyData Data { get; set; }
         public class GetAsyncJobResultResponseBodyData : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-            [NameInMap("ErrorMessage")]
-            [Validation(Required=false)]
-            public string ErrorMessage { get; set; }
-            [NameInMap("Result")]
-            [Validation(Required=false)]
-            public string Result { get; set; }
             [NameInMap("ErrorCode")]
             [Validation(Required=false)]
             public string ErrorCode { get; set; }
+
+            [NameInMap("ErrorMessage")]
+            [Validation(Required=false)]
+            public string ErrorMessage { get; set; }
+
             [NameInMap("JobId")]
             [Validation(Required=false)]
             public string JobId { get; set; }
-        };
+
+            [NameInMap("Result")]
+            [Validation(Required=false)]
+            public string Result { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

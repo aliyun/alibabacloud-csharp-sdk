@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Threedvision20210131.Models
 {
     public class EstimateStereoImageDepthRequest : TeaModel {
-        /// <summary>
-        /// A short description of struct
-        /// </summary>
         [NameInMap("LeftImageURL")]
         [Validation(Required=false)]
         public string LeftImageURL { get; set; }
