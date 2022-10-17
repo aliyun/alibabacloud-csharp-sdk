@@ -21,13 +21,29 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             [Validation(Required=false)]
             public List<DescribeDeviceInfoResponseBodyDeviceInfoListDeviceInfo> DeviceInfo { get; set; }
             public class DescribeDeviceInfoResponseBodyDeviceInfoListDeviceInfo : TeaModel {
+                [NameInMap("BeginDay")]
+                [Validation(Required=false)]
                 public string BeginDay { get; set; }
+
+                [NameInMap("BizType")]
+                [Validation(Required=false)]
                 public string BizType { get; set; }
+
+                [NameInMap("DeviceId")]
+                [Validation(Required=false)]
                 public string DeviceId { get; set; }
+
+                [NameInMap("ExpiredDay")]
+                [Validation(Required=false)]
                 public string ExpiredDay { get; set; }
+
+                [NameInMap("UserDeviceId")]
+                [Validation(Required=false)]
                 public string UserDeviceId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]

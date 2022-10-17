@@ -28,15 +28,19 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             [NameInMap("FaceGlobalUrl")]
             [Validation(Required=false)]
             public string FaceGlobalUrl { get; set; }
+
             [NameInMap("FaceImageUrl")]
             [Validation(Required=false)]
             public string FaceImageUrl { get; set; }
+
             [NameInMap("FaceMask")]
             [Validation(Required=false)]
             public bool? FaceMask { get; set; }
+
             [NameInMap("FaceQuality")]
             [Validation(Required=false)]
             public string FaceQuality { get; set; }
+
             [NameInMap("IdCardInfo")]
             [Validation(Required=false)]
             public DescribeVerifyResultResponseBodyMaterialIdCardInfo IdCardInfo { get; set; }
@@ -82,16 +86,20 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string StartDate { get; set; }
 
             }
+
             [NameInMap("IdCardName")]
             [Validation(Required=false)]
             public string IdCardName { get; set; }
+
             [NameInMap("IdCardNumber")]
             [Validation(Required=false)]
             public string IdCardNumber { get; set; }
+
             [NameInMap("VideoUrls")]
             [Validation(Required=false)]
             public List<string> VideoUrls { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

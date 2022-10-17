@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class ContrastFaceVerifyAdvanceRequest : TeaModel {
-        [NameInMap("FaceContrastFileObject")]
-        [Validation(Required=true)]
-        public Stream FaceContrastFileObject { get; set; }
-
         [NameInMap("CertName")]
         [Validation(Required=false)]
         public string CertName { get; set; }
@@ -40,6 +36,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [NameInMap("EncryptType")]
         [Validation(Required=false)]
         public string EncryptType { get; set; }
+
+        [NameInMap("FaceContrastFile")]
+        [Validation(Required=false)]
+        public Stream FaceContrastFileObject { get; set; }
 
         [NameInMap("FaceContrastPicture")]
         [Validation(Required=false)]

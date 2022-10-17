@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             [NameInMap("ConfidenceThresholds")]
             [Validation(Required=false)]
             public string ConfidenceThresholds { get; set; }
+
             [NameInMap("SimilarityScore")]
             [Validation(Required=false)]
             public float? SimilarityScore { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

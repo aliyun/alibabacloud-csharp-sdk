@@ -28,19 +28,24 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             [NameInMap("DeviceToken")]
             [Validation(Required=false)]
             public string DeviceToken { get; set; }
+
             [NameInMap("IdentityInfo")]
             [Validation(Required=false)]
             public string IdentityInfo { get; set; }
+
             [NameInMap("MaterialInfo")]
             [Validation(Required=false)]
             public string MaterialInfo { get; set; }
+
             [NameInMap("Passed")]
             [Validation(Required=false)]
             public string Passed { get; set; }
+
             [NameInMap("SubCode")]
             [Validation(Required=false)]
             public string SubCode { get; set; }
-        };
+
+        }
 
     }
 

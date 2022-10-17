@@ -32,15 +32,19 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                         [NameInMap("Blur")]
                         [Validation(Required=false)]
                         public float? Blur { get; set; }
+
                         [NameInMap("Facequal")]
                         [Validation(Required=false)]
                         public float? Facequal { get; set; }
+
                         [NameInMap("Facetype")]
                         [Validation(Required=false)]
                         public string Facetype { get; set; }
+
                         [NameInMap("Glasses")]
                         [Validation(Required=false)]
                         public string Glasses { get; set; }
+
                         [NameInMap("Headpose")]
                         [Validation(Required=false)]
                         public DetectFaceAttributesResponseBodyDataFaceInfosFaceAttributesDetectInfoFaceAttributesHeadpose Headpose { get; set; }
@@ -58,12 +62,15 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                             public float? YawAngle { get; set; }
 
                         }
+
                         [NameInMap("Integrity")]
                         [Validation(Required=false)]
                         public int? Integrity { get; set; }
+
                         [NameInMap("Respirator")]
                         [Validation(Required=false)]
                         public string Respirator { get; set; }
+
                         [NameInMap("Smiling")]
                         [Validation(Required=false)]
                         public DetectFaceAttributesResponseBodyDataFaceInfosFaceAttributesDetectInfoFaceAttributesSmiling Smiling { get; set; }
@@ -77,7 +84,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                             public float? Value { get; set; }
 
                         }
-                    };
+
+                    }
 
                     [NameInMap("FaceRect")]
                     [Validation(Required=false)]
@@ -86,27 +94,34 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                         [NameInMap("Height")]
                         [Validation(Required=false)]
                         public int? Height { get; set; }
+
                         [NameInMap("Left")]
                         [Validation(Required=false)]
                         public int? Left { get; set; }
+
                         [NameInMap("Top")]
                         [Validation(Required=false)]
                         public int? Top { get; set; }
+
                         [NameInMap("Width")]
                         [Validation(Required=false)]
                         public int? Width { get; set; }
-                    };
+
+                    }
 
                 }
 
             }
+
             [NameInMap("ImgHeight")]
             [Validation(Required=false)]
             public int? ImgHeight { get; set; }
+
             [NameInMap("ImgWidth")]
             [Validation(Required=false)]
             public int? ImgWidth { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

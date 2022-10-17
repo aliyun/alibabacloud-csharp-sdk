@@ -28,16 +28,20 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             [NameInMap("CertifyId")]
             [Validation(Required=false)]
             public string CertifyId { get; set; }
+
             [NameInMap("MaterialInfo")]
             [Validation(Required=false)]
             public string MaterialInfo { get; set; }
+
             [NameInMap("Passed")]
             [Validation(Required=false)]
             public string Passed { get; set; }
+
             [NameInMap("SubCode")]
             [Validation(Required=false)]
             public string SubCode { get; set; }
-        };
+
+        }
 
     }
 
