@@ -1,0 +1,44 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Workorder20210610.Models
+{
+    public class ListCategoriesResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public int? Code { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public List<ListCategoriesResponseBodyData> Data { get; set; }
+        public class ListCategoriesResponseBodyData : TeaModel {
+            [NameInMap("CategoryId")]
+            [Validation(Required=false)]
+            public long? CategoryId { get; set; }
+
+            [NameInMap("CategoryName")]
+            [Validation(Required=false)]
+            public string CategoryName { get; set; }
+
+        }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+    }
+
+}
