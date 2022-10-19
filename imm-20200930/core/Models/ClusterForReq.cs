@@ -17,9 +17,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             [Validation(Required=false)]
             public List<ClusterForReqCoverFigures> Figures { get; set; }
             public class ClusterForReqCoverFigures : TeaModel {
+                [NameInMap("FigureId")]
+                [Validation(Required=false)]
                 public string FigureId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("CustomId")]
         [Validation(Required=false)]

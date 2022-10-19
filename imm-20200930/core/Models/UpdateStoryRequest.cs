@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             [NameInMap("URI")]
             [Validation(Required=false)]
             public string URI { get; set; }
-        };
+
+        }
 
         [NameInMap("CustomId")]
         [Validation(Required=false)]

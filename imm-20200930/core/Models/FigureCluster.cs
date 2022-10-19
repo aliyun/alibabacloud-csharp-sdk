@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public float? MaxAge { get; set; }
 
+        [NameInMap("MetaLockVersion")]
+        [Validation(Required=false)]
+        public long? MetaLockVersion { get; set; }
+
         [NameInMap("MinAge")]
         [Validation(Required=false)]
         public float? MinAge { get; set; }

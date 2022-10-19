@@ -72,6 +72,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
                 [NameInMap("DisableAudio")]
                 [Validation(Required=false)]
                 public bool? DisableAudio { get; set; }
+
                 [NameInMap("FilterAudio")]
                 [Validation(Required=false)]
                 public CreateMediaConvertTaskRequestTargetsAudioFilterAudio FilterAudio { get; set; }
@@ -81,6 +82,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
                     public bool? Mixing { get; set; }
 
                 }
+
                 [NameInMap("TranscodeAudio")]
                 [Validation(Required=false)]
                 public CreateMediaConvertTaskRequestTargetsAudioTranscodeAudio TranscodeAudio { get; set; }
@@ -114,7 +116,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
                     public string SampleRateOption { get; set; }
 
                 }
-            };
+
+            }
 
             [NameInMap("Container")]
             [Validation(Required=false)]
@@ -128,33 +131,95 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
                 [Validation(Required=false)]
                 public List<CreateMediaConvertTaskRequestTargetsImageSnapshots> Snapshots { get; set; }
                 public class CreateMediaConvertTaskRequestTargetsImageSnapshots : TeaModel {
+                    [NameInMap("Format")]
+                    [Validation(Required=false)]
                     public string Format { get; set; }
+
+                    [NameInMap("Height")]
+                    [Validation(Required=false)]
                     public int? Height { get; set; }
+
+                    [NameInMap("Interval")]
+                    [Validation(Required=false)]
                     public double? Interval { get; set; }
+
+                    [NameInMap("Number")]
+                    [Validation(Required=false)]
                     public int? Number { get; set; }
+
+                    [NameInMap("ScaleType")]
+                    [Validation(Required=false)]
                     public string ScaleType { get; set; }
+
+                    [NameInMap("StartTime")]
+                    [Validation(Required=false)]
                     public double? StartTime { get; set; }
+
+                    [NameInMap("URI")]
+                    [Validation(Required=false)]
                     public string URI { get; set; }
+
+                    [NameInMap("Width")]
+                    [Validation(Required=false)]
                     public int? Width { get; set; }
+
                 }
+
                 [NameInMap("Sprites")]
                 [Validation(Required=false)]
                 public List<CreateMediaConvertTaskRequestTargetsImageSprites> Sprites { get; set; }
                 public class CreateMediaConvertTaskRequestTargetsImageSprites : TeaModel {
+                    [NameInMap("Format")]
+                    [Validation(Required=false)]
                     public string Format { get; set; }
+
+                    [NameInMap("Interval")]
+                    [Validation(Required=false)]
                     public double? Interval { get; set; }
+
+                    [NameInMap("Margin")]
+                    [Validation(Required=false)]
                     public int? Margin { get; set; }
+
+                    [NameInMap("Number")]
+                    [Validation(Required=false)]
                     public int? Number { get; set; }
+
+                    [NameInMap("Pad")]
+                    [Validation(Required=false)]
                     public int? Pad { get; set; }
+
+                    [NameInMap("ScaleHeight")]
+                    [Validation(Required=false)]
                     public float? ScaleHeight { get; set; }
+
+                    [NameInMap("ScaleType")]
+                    [Validation(Required=false)]
                     public string ScaleType { get; set; }
+
+                    [NameInMap("ScaleWidth")]
+                    [Validation(Required=false)]
                     public float? ScaleWidth { get; set; }
+
+                    [NameInMap("StartTime")]
+                    [Validation(Required=false)]
                     public double? StartTime { get; set; }
+
+                    [NameInMap("TileHeight")]
+                    [Validation(Required=false)]
                     public int? TileHeight { get; set; }
+
+                    [NameInMap("TileWidth")]
+                    [Validation(Required=false)]
                     public int? TileWidth { get; set; }
+
+                    [NameInMap("URI")]
+                    [Validation(Required=false)]
                     public string URI { get; set; }
+
                 }
-            };
+
+            }
 
             [NameInMap("Preset")]
             [Validation(Required=false)]
@@ -167,13 +232,16 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
                 [NameInMap("Duration")]
                 [Validation(Required=false)]
                 public double? Duration { get; set; }
+
                 [NameInMap("Format")]
                 [Validation(Required=false)]
                 public string Format { get; set; }
+
                 [NameInMap("StartNumber")]
                 [Validation(Required=false)]
                 public int? StartNumber { get; set; }
-            };
+
+            }
 
             [NameInMap("Speed")]
             [Validation(Required=false)]
@@ -186,6 +254,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
                 [NameInMap("DisableSubtitle")]
                 [Validation(Required=false)]
                 public bool? DisableSubtitle { get; set; }
+
                 [NameInMap("ExtractSubtitle")]
                 [Validation(Required=false)]
                 public CreateMediaConvertTaskRequestTargetsSubtitleExtractSubtitle ExtractSubtitle { get; set; }
@@ -199,7 +268,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
                     public string URI { get; set; }
 
                 }
-            };
+
+            }
 
             [NameInMap("URI")]
             [Validation(Required=false)]
@@ -212,6 +282,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
                 [NameInMap("DisableVideo")]
                 [Validation(Required=false)]
                 public bool? DisableVideo { get; set; }
+
                 [NameInMap("FilterVideo")]
                 [Validation(Required=false)]
                 public CreateMediaConvertTaskRequestTargetsVideoFilterVideo FilterVideo { get; set; }
@@ -321,6 +392,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
                     }
 
                 }
+
                 [NameInMap("TranscodeVideo")]
                 [Validation(Required=false)]
                 public CreateMediaConvertTaskRequestTargetsVideoTranscodeVideo TranscodeVideo { get; set; }
@@ -394,7 +466,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
                     public string ScaleType { get; set; }
 
                 }
-            };
+
+            }
 
         }
 

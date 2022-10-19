@@ -17,9 +17,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             [Validation(Required=false)]
             public List<FigureClusterForReqCoverFigures> Figures { get; set; }
             public class FigureClusterForReqCoverFigures : TeaModel {
+                [NameInMap("FigureId")]
+                [Validation(Required=false)]
                 public string FigureId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("CustomId")]
         [Validation(Required=false)]
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("CustomLabels")]
         [Validation(Required=false)]
         public Dictionary<string, object> CustomLabels { get; set; }
+
+        [NameInMap("MetaLockVersion")]
+        [Validation(Required=false)]
+        public long? MetaLockVersion { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]

@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             [NameInMap("OverallQualityScore")]
             [Validation(Required=false)]
             public float? OverallQualityScore { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
