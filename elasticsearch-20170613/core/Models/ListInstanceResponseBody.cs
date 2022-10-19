@@ -193,6 +193,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 [Validation(Required=false)]
                 public string DiskType { get; set; }
 
+                [NameInMap("performanceLevel")]
+                [Validation(Required=false)]
+                public string PerformanceLevel { get; set; }
+
                 [NameInMap("spec")]
                 [Validation(Required=false)]
                 public string Spec { get; set; }
@@ -236,6 +240,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("updatedAt")]
             [Validation(Required=false)]
             public string UpdatedAt { get; set; }
+
+            [NameInMap("vpcInstanceId")]
+            [Validation(Required=false)]
+            public string VpcInstanceId { get; set; }
 
         }
 

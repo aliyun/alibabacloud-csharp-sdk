@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpdateAdminPasswordRequest : TeaModel {
-        [NameInMap("body")]
+        [NameInMap("esAdminPassword")]
         [Validation(Required=false)]
-        public string Body { get; set; }
+        public string EsAdminPassword { get; set; }
 
         [NameInMap("clientToken")]
         [Validation(Required=false)]

@@ -179,6 +179,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public bool? HaveKibana { get; set; }
 
+            [NameInMap("ikHotDicts")]
+            [Validation(Required=false)]
+            public List<DescribeInstanceResponseBodyResultIkHotDicts> IkHotDicts { get; set; }
+            public class DescribeInstanceResponseBodyResultIkHotDicts : TeaModel {
+                [NameInMap("fileSize")]
+                [Validation(Required=false)]
+                public int? FileSize { get; set; }
+
+                [NameInMap("name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("sourceType")]
+                [Validation(Required=false)]
+                public string SourceType { get; set; }
+
+                [NameInMap("type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
@@ -194,6 +216,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 [NameInMap("amount")]
                 [Validation(Required=false)]
                 public int? Amount { get; set; }
+
+                [NameInMap("disk")]
+                [Validation(Required=false)]
+                public int? Disk { get; set; }
 
                 [NameInMap("spec")]
                 [Validation(Required=false)]
@@ -298,6 +324,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 [NameInMap("diskType")]
                 [Validation(Required=false)]
                 public string DiskType { get; set; }
+
+                [NameInMap("performanceLevel")]
+                [Validation(Required=false)]
+                public string PerformanceLevel { get; set; }
 
                 [NameInMap("spec")]
                 [Validation(Required=false)]
