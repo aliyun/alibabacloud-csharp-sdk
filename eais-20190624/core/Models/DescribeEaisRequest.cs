@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Eais20190624.Models
 {
     public class DescribeEaisRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("ElasticAcceleratedInstanceIds")]
         [Validation(Required=false)]
         public string ElasticAcceleratedInstanceIds { get; set; }
@@ -21,13 +17,25 @@ namespace AlibabaCloud.SDK.Eais20190624.Models
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
-
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

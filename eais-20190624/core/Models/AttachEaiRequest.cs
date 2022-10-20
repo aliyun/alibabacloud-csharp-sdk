@@ -12,17 +12,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Eais20190624.Models
 {
     public class AttachEaiRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("ClientInstanceId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string ClientInstanceId { get; set; }
 
         [NameInMap("ElasticAcceleratedInstanceId")]
         [Validation(Required=false)]
         public string ElasticAcceleratedInstanceId { get; set; }
 
-        [NameInMap("ClientInstanceId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string ClientInstanceId { get; set; }
+        public string RegionId { get; set; }
 
     }
 

@@ -9,22 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Eais20190624.Models
 {
     public class DescribeEaisResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public DescribeEaisResponseBodyInstances Instances { get; set; }
@@ -33,17 +17,60 @@ namespace AlibabaCloud.SDK.Eais20190624.Models
             [Validation(Required=false)]
             public List<DescribeEaisResponseBodyInstancesInstance> Instance { get; set; }
             public class DescribeEaisResponseBodyInstancesInstance : TeaModel {
-                public string Status { get; set; }
-                public string CreationTime { get; set; }
-                public string ClientInstanceName { get; set; }
-                public string Description { get; set; }
-                public string ElasticAcceleratedInstanceId { get; set; }
-                public string InstanceName { get; set; }
-                public string ClientInstanceType { get; set; }
+                [NameInMap("Category")]
+                [Validation(Required=false)]
+                public string Category { get; set; }
+
+                [NameInMap("ClientInstanceId")]
+                [Validation(Required=false)]
                 public string ClientInstanceId { get; set; }
-                public string ZoneId { get; set; }
+
+                [NameInMap("ClientInstanceName")]
+                [Validation(Required=false)]
+                public string ClientInstanceName { get; set; }
+
+                [NameInMap("ClientInstanceType")]
+                [Validation(Required=false)]
+                public string ClientInstanceType { get; set; }
+
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
+                public string CreationTime { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                [NameInMap("ElasticAcceleratedInstanceId")]
+                [Validation(Required=false)]
+                public string ElasticAcceleratedInstanceId { get; set; }
+
+                [NameInMap("InstanceName")]
+                [Validation(Required=false)]
+                public string InstanceName { get; set; }
+
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
                 public string InstanceType { get; set; }
+
+                [NameInMap("JupyterUrl")]
+                [Validation(Required=false)]
+                public string JupyterUrl { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("SecurityGroupId")]
+                [Validation(Required=false)]
+                public string SecurityGroupId { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
                 public DescribeEaisResponseBodyInstancesInstanceTags Tags { get; set; }
                 public class DescribeEaisResponseBodyInstancesInstanceTags : TeaModel {
                     [NameInMap("Tag")]
@@ -61,8 +88,34 @@ namespace AlibabaCloud.SDK.Eais20190624.Models
                     }
 
                 }
+
+                [NameInMap("VSwitchId")]
+                [Validation(Required=false)]
+                public string VSwitchId { get; set; }
+
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
+                public string ZoneId { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

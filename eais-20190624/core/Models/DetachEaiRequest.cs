@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Eais20190624.Models
 {
     public class DetachEaiRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("ElasticAcceleratedInstanceId")]
         [Validation(Required=false)]
         public string ElasticAcceleratedInstanceId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

@@ -8,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eais20190624.Models
 {
-    public class AttachEaiResponseBody : TeaModel {
-        [NameInMap("ClientInstanceId")]
-        [Validation(Required=false)]
-        public string ClientInstanceId { get; set; }
-
+    public class CreateEaiJupyterResponseBody : TeaModel {
         [NameInMap("ElasticAcceleratedInstanceId")]
         [Validation(Required=false)]
         public string ElasticAcceleratedInstanceId { get; set; }

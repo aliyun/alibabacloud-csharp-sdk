@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eais20190624.Models
 {
-    public class DetachEaiResponse : TeaModel {
+    public class CreateEaiJupyterResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Eais20190624.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DetachEaiResponseBody Body { get; set; }
+        public CreateEaiJupyterResponseBody Body { get; set; }
 
     }
 

@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Eais20190624.Models
 {
     public class CreateEaiAllResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("ClientInstanceId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string ClientInstanceId { get; set; }
 
         [NameInMap("ElasticAcceleratedInstanceId")]
         [Validation(Required=false)]
         public string ElasticAcceleratedInstanceId { get; set; }
 
-        [NameInMap("ClientInstanceId")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string ClientInstanceId { get; set; }
+        public string RequestId { get; set; }
 
     }
 
