@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
     public class HotelExceedApplyQueryResponseBody : TeaModel {
         [NameInMap("code")]
         [Validation(Required=false)]
-        public int? Code { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("message")]
         [Validation(Required=false)]
