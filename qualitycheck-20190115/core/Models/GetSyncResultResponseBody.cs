@@ -28,13 +28,16 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
+
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
+
                 [NameInMap("SkillGroup")]
                 [Validation(Required=false)]
                 public string SkillGroup { get; set; }
-            };
+
+            }
 
             [NameInMap("AsrResult")]
             [Validation(Required=false)]
@@ -123,25 +126,32 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         [NameInMap("Begin")]
                         [Validation(Required=false)]
                         public long? Begin { get; set; }
+
                         [NameInMap("EmotionValue")]
                         [Validation(Required=false)]
                         public int? EmotionValue { get; set; }
+
                         [NameInMap("End")]
                         [Validation(Required=false)]
                         public int? End { get; set; }
+
                         [NameInMap("Role")]
                         [Validation(Required=false)]
                         public string Role { get; set; }
+
                         [NameInMap("SilenceDuration")]
                         [Validation(Required=false)]
                         public int? SilenceDuration { get; set; }
+
                         [NameInMap("SpeechRate")]
                         [Validation(Required=false)]
                         public int? SpeechRate { get; set; }
+
                         [NameInMap("Words")]
                         [Validation(Required=false)]
                         public string Words { get; set; }
-                    };
+
+                    }
 
                 }
 
@@ -170,52 +180,68 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 [NameInMap("Business")]
                 [Validation(Required=false)]
                 public string Business { get; set; }
+
                 [NameInMap("CallId")]
                 [Validation(Required=false)]
                 public string CallId { get; set; }
+
                 [NameInMap("CallTime")]
                 [Validation(Required=false)]
                 public string CallTime { get; set; }
+
                 [NameInMap("CallType")]
                 [Validation(Required=false)]
                 public int? CallType { get; set; }
+
                 [NameInMap("Callee")]
                 [Validation(Required=false)]
                 public string Callee { get; set; }
+
                 [NameInMap("Caller")]
                 [Validation(Required=false)]
                 public string Caller { get; set; }
+
                 [NameInMap("DataSetName")]
                 [Validation(Required=false)]
                 public string DataSetName { get; set; }
+
                 [NameInMap("Duration")]
                 [Validation(Required=false)]
                 public long? Duration { get; set; }
+
                 [NameInMap("DurationAudio")]
                 [Validation(Required=false)]
                 public long? DurationAudio { get; set; }
+
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
+
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
+
                 [NameInMap("PrimaryId")]
                 [Validation(Required=false)]
                 public string PrimaryId { get; set; }
+
                 [NameInMap("Remark1")]
                 [Validation(Required=false)]
                 public string Remark1 { get; set; }
+
                 [NameInMap("Remark2")]
                 [Validation(Required=false)]
                 public string Remark2 { get; set; }
+
                 [NameInMap("Remark3")]
                 [Validation(Required=false)]
                 public string Remark3 { get; set; }
+
                 [NameInMap("Url")]
                 [Validation(Required=false)]
                 public string Url { get; set; }
-            };
+
+            }
 
             [NameInMap("Resolver")]
             [Validation(Required=false)]

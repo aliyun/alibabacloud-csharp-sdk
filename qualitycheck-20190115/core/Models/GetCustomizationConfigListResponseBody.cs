@@ -21,14 +21,33 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo> ModelCustomizationDataSetPo { get; set; }
             public class GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo : TeaModel {
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("ModeCustomizationId")]
+                [Validation(Required=false)]
                 public string ModeCustomizationId { get; set; }
+
+                [NameInMap("ModelId")]
+                [Validation(Required=false)]
                 public long? ModelId { get; set; }
+
+                [NameInMap("ModelName")]
+                [Validation(Required=false)]
                 public string ModelName { get; set; }
+
+                [NameInMap("ModelStatus")]
+                [Validation(Required=false)]
                 public int? ModelStatus { get; set; }
+
+                [NameInMap("TaskType")]
+                [Validation(Required=false)]
                 public int? TaskType { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

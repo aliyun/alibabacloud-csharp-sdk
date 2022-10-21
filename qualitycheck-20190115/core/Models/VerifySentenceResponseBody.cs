@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<VerifySentenceResponseBodyDataDelta> Delta { get; set; }
             public class VerifySentenceResponseBodyDataDelta : TeaModel {
+                [NameInMap("Source")]
+                [Validation(Required=false)]
                 public VerifySentenceResponseBodyDataDeltaSource Source { get; set; }
                 public class VerifySentenceResponseBodyDataDeltaSource : TeaModel {
                     [NameInMap("Line")]
@@ -30,13 +32,17 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         [NameInMap("Line")]
                         [Validation(Required=false)]
                         public List<string> Line { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("Position")]
                     [Validation(Required=false)]
                     public int? Position { get; set; }
 
                 }
+
+                [NameInMap("Target")]
+                [Validation(Required=false)]
                 public VerifySentenceResponseBodyDataDeltaTarget Target { get; set; }
                 public class VerifySentenceResponseBodyDataDeltaTarget : TeaModel {
                     [NameInMap("Line")]
@@ -46,16 +52,22 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         [NameInMap("Line")]
                         [Validation(Required=false)]
                         public List<string> Line { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("Position")]
                     [Validation(Required=false)]
                     public int? Position { get; set; }
 
                 }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("IncorrectWords")]
         [Validation(Required=false)]

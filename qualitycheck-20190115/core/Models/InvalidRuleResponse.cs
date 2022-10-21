@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
         public InvalidRuleResponseBody Body { get; set; }

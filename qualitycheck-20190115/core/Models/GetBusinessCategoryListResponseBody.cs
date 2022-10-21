@@ -21,11 +21,21 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<GetBusinessCategoryListResponseBodyDataBusinessCategoryBasicInfo> BusinessCategoryBasicInfo { get; set; }
             public class GetBusinessCategoryListResponseBodyDataBusinessCategoryBasicInfo : TeaModel {
+                [NameInMap("Bid")]
+                [Validation(Required=false)]
                 public int? Bid { get; set; }
+
+                [NameInMap("BusinessName")]
+                [Validation(Required=false)]
                 public string BusinessName { get; set; }
+
+                [NameInMap("ServiceType")]
+                [Validation(Required=false)]
                 public int? ServiceType { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

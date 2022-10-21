@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<ListWarningConfigResponseBodyDataWarningConfigInfo> WarningConfigInfo { get; set; }
             public class ListWarningConfigResponseBodyDataWarningConfigInfo : TeaModel {
+                [NameInMap("Channels")]
+                [Validation(Required=false)]
                 public ListWarningConfigResponseBodyDataWarningConfigInfoChannels Channels { get; set; }
                 public class ListWarningConfigResponseBodyDataWarningConfigInfoChannels : TeaModel {
                     [NameInMap("Channel")]
@@ -38,9 +40,21 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     }
 
                 }
+
+                [NameInMap("ConfigId")]
+                [Validation(Required=false)]
                 public long? ConfigId { get; set; }
+
+                [NameInMap("ConfigName")]
+                [Validation(Required=false)]
                 public string ConfigName { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("RidList")]
+                [Validation(Required=false)]
                 public ListWarningConfigResponseBodyDataWarningConfigInfoRidList RidList { get; set; }
                 public class ListWarningConfigResponseBodyDataWarningConfigInfoRidList : TeaModel {
                     [NameInMap("RidList")]
@@ -48,6 +62,9 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     public List<string> RidList { get; set; }
 
                 }
+
+                [NameInMap("RuleList")]
+                [Validation(Required=false)]
                 public ListWarningConfigResponseBodyDataWarningConfigInfoRuleList RuleList { get; set; }
                 public class ListWarningConfigResponseBodyDataWarningConfigInfoRuleList : TeaModel {
                     [NameInMap("WarningRule")]
@@ -65,10 +82,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     }
 
                 }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public int? Status { get; set; }
+
+                [NameInMap("UpdateTime")]
+                [Validation(Required=false)]
                 public string UpdateTime { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

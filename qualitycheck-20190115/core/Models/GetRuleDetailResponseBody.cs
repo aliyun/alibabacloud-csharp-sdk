@@ -32,6 +32,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         [NameInMap("Absolute")]
                         [Validation(Required=false)]
                         public bool? Absolute { get; set; }
+
                         [NameInMap("Anchor")]
                         [Validation(Required=false)]
                         public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeAnchor Anchor { get; set; }
@@ -49,6 +50,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                             public string Location { get; set; }
 
                         }
+
                         [NameInMap("Range")]
                         [Validation(Required=false)]
                         public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeRange Range { get; set; }
@@ -62,10 +64,12 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                             public int? To { get; set; }
 
                         }
+
                         [NameInMap("Role")]
                         [Validation(Required=false)]
                         public string Role { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("ConditionInfoCid")]
                     [Validation(Required=false)]
@@ -83,8 +87,16 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         [Validation(Required=false)]
                         public List<GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfo> OperatorBasicInfo { get; set; }
                         public class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfo : TeaModel {
+                            [NameInMap("Oid")]
+                            [Validation(Required=false)]
                             public string Oid { get; set; }
+
+                            [NameInMap("OperName")]
+                            [Validation(Required=false)]
                             public string OperName { get; set; }
+
+                            [NameInMap("Param")]
+                            [Validation(Required=false)]
                             public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam Param { get; set; }
                             public class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam : TeaModel {
                                 [NameInMap("AntModelInfo")]
@@ -94,7 +106,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                     [NameInMap("AntModelInfo")]
                                     [Validation(Required=false)]
                                     public List<string> AntModelInfo { get; set; }
-                                };
+
+                                }
 
                                 [NameInMap("Average")]
                                 [Validation(Required=false)]
@@ -131,7 +144,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                     [NameInMap("Excludes")]
                                     [Validation(Required=false)]
                                     public List<string> Excludes { get; set; }
-                                };
+
+                                }
 
                                 [NameInMap("From")]
                                 [Validation(Required=false)]
@@ -180,7 +194,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                     [NameInMap("OperKeyWord")]
                                     [Validation(Required=false)]
                                     public List<string> OperKeyWord { get; set; }
-                                };
+
+                                }
 
                                 [NameInMap("Phrase")]
                                 [Validation(Required=false)]
@@ -193,7 +208,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                     [NameInMap("Pvalues")]
                                     [Validation(Required=false)]
                                     public List<string> Pvalues { get; set; }
-                                };
+
+                                }
 
                                 [NameInMap("References")]
                                 [Validation(Required=false)]
@@ -202,7 +218,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                     [NameInMap("Reference")]
                                     [Validation(Required=false)]
                                     public List<string> Reference { get; set; }
-                                };
+
+                                }
 
                                 [NameInMap("Regex")]
                                 [Validation(Required=false)]
@@ -223,7 +240,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                     [NameInMap("SimilarlySentence")]
                                     [Validation(Required=false)]
                                     public List<string> SimilarlySentence { get; set; }
-                                };
+
+                                }
 
                                 [NameInMap("Target")]
                                 [Validation(Required=false)]
@@ -242,22 +260,31 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                 public int? VelocityInMint { get; set; }
 
                             }
+
+                            [NameInMap("Type")]
+                            [Validation(Required=false)]
                             public string Type { get; set; }
+
                         }
-                    };
+
+                    }
 
                 }
 
             }
+
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
+
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public GetRuleDetailResponseBodyDataRules Rules { get; set; }
@@ -274,11 +301,21 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         [Validation(Required=false)]
                         public List<GetRuleDetailResponseBodyDataRulesRuleBasicInfoBusinessCategoriesBusinessCategoryBasicInfo> BusinessCategoryBasicInfo { get; set; }
                         public class GetRuleDetailResponseBodyDataRulesRuleBasicInfoBusinessCategoriesBusinessCategoryBasicInfo : TeaModel {
+                            [NameInMap("Bid")]
+                            [Validation(Required=false)]
                             public int? Bid { get; set; }
+
+                            [NameInMap("BusinessName")]
+                            [Validation(Required=false)]
                             public string BusinessName { get; set; }
+
+                            [NameInMap("ServiceType")]
+                            [Validation(Required=false)]
                             public int? ServiceType { get; set; }
+
                         }
-                    };
+
+                    }
 
                     [NameInMap("Rid")]
                     [Validation(Required=false)]
@@ -295,12 +332,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         [NameInMap("Trigger")]
                         [Validation(Required=false)]
                         public List<string> Trigger { get; set; }
-                    };
+
+                    }
 
                 }
 
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

@@ -21,8 +21,16 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<GetThesaurusBySynonymForApiResponseBodyDataThesaurusPo> ThesaurusPo { get; set; }
             public class GetThesaurusBySynonymForApiResponseBodyDataThesaurusPo : TeaModel {
+                [NameInMap("Business")]
+                [Validation(Required=false)]
                 public string Business { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public long? Id { get; set; }
+
+                [NameInMap("SynonymList")]
+                [Validation(Required=false)]
                 public GetThesaurusBySynonymForApiResponseBodyDataThesaurusPoSynonymList SynonymList { get; set; }
                 public class GetThesaurusBySynonymForApiResponseBodyDataThesaurusPoSynonymList : TeaModel {
                     [NameInMap("SynonymList")]
@@ -30,8 +38,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     public List<string> SynonymList { get; set; }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<UploadDataSyncResponseBodyDataResultInfo> ResultInfo { get; set; }
             public class UploadDataSyncResponseBodyDataResultInfo : TeaModel {
+                [NameInMap("HandScoreIdList")]
+                [Validation(Required=false)]
                 public UploadDataSyncResponseBodyDataResultInfoHandScoreIdList HandScoreIdList { get; set; }
                 public class UploadDataSyncResponseBodyDataResultInfoHandScoreIdList : TeaModel {
                     [NameInMap("HandScoreIdList")]
@@ -28,6 +30,9 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     public List<string> HandScoreIdList { get; set; }
 
                 }
+
+                [NameInMap("Rules")]
+                [Validation(Required=false)]
                 public UploadDataSyncResponseBodyDataResultInfoRules Rules { get; set; }
                 public class UploadDataSyncResponseBodyDataResultInfoRules : TeaModel {
                     [NameInMap("RuleHitInfo")]
@@ -42,9 +47,13 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                             [Validation(Required=false)]
                             public List<UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoConditionInfoConditionBasicInfo> ConditionBasicInfo { get; set; }
                             public class UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoConditionInfoConditionBasicInfo : TeaModel {
+                                [NameInMap("ConditionInfoCid")]
+                                [Validation(Required=false)]
                                 public string ConditionInfoCid { get; set; }
+
                             }
-                        };
+
+                        }
 
                         [NameInMap("Hit")]
                         [Validation(Required=false)]
@@ -54,6 +63,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                             [Validation(Required=false)]
                             public List<UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfo> ConditionHitInfo { get; set; }
                             public class UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfo : TeaModel {
+                                [NameInMap("HitCids")]
+                                [Validation(Required=false)]
                                 public UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfoHitCids HitCids { get; set; }
                                 public class UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfoHitCids : TeaModel {
                                     [NameInMap("CidItem")]
@@ -61,6 +72,9 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                     public List<string> CidItem { get; set; }
 
                                 }
+
+                                [NameInMap("HitKeyWords")]
+                                [Validation(Required=false)]
                                 public UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfoHitKeyWords HitKeyWords { get; set; }
                                 public class UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfoHitKeyWords : TeaModel {
                                     [NameInMap("HitKeyWord")]
@@ -90,6 +104,9 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                     }
 
                                 }
+
+                                [NameInMap("Phrase")]
+                                [Validation(Required=false)]
                                 public UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfoPhrase Phrase { get; set; }
                                 public class UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfoPhrase : TeaModel {
                                     [NameInMap("Begin")]
@@ -117,8 +134,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                     public string Words { get; set; }
 
                                 }
+
                             }
-                        };
+
+                        }
 
                         [NameInMap("Rid")]
                         [Validation(Required=false)]
@@ -131,9 +150,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     }
 
                 }
+
+                [NameInMap("Score")]
+                [Validation(Required=false)]
                 public int? Score { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

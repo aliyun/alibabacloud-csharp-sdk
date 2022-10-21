@@ -20,12 +20,15 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [NameInMap("AudioScheme")]
             [Validation(Required=false)]
             public string AudioScheme { get; set; }
+
             [NameInMap("AudioURL")]
             [Validation(Required=false)]
             public string AudioURL { get; set; }
+
             [NameInMap("Comments")]
             [Validation(Required=false)]
             public string Comments { get; set; }
+
             [NameInMap("Dialogues")]
             [Validation(Required=false)]
             public GetResultToReviewResponseBodyDataDialogues Dialogues { get; set; }
@@ -77,12 +80,15 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 }
 
             }
+
             [NameInMap("FileId")]
             [Validation(Required=false)]
             public string FileId { get; set; }
+
             [NameInMap("FileMergeName")]
             [Validation(Required=false)]
             public string FileMergeName { get; set; }
+
             [NameInMap("HitRuleReviewInfoList")]
             [Validation(Required=false)]
             public GetResultToReviewResponseBodyDataHitRuleReviewInfoList HitRuleReviewInfoList { get; set; }
@@ -103,13 +109,29 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         [Validation(Required=false)]
                         public List<GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoComplainHistoriesComplainHistories> ComplainHistories { get; set; }
                         public class GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoComplainHistoriesComplainHistories : TeaModel {
+                            [NameInMap("Comments")]
+                            [Validation(Required=false)]
                             public string Comments { get; set; }
+
+                            [NameInMap("OperationTime")]
+                            [Validation(Required=false)]
                             public string OperationTime { get; set; }
+
+                            [NameInMap("OperationType")]
+                            [Validation(Required=false)]
                             public int? OperationType { get; set; }
+
+                            [NameInMap("Operator")]
+                            [Validation(Required=false)]
                             public long? Operator { get; set; }
+
+                            [NameInMap("OperatorName")]
+                            [Validation(Required=false)]
                             public string OperatorName { get; set; }
+
                         }
-                    };
+
+                    }
 
                     [NameInMap("Complainable")]
                     [Validation(Required=false)]
@@ -123,6 +145,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         [Validation(Required=false)]
                         public List<GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfo> ConditionHitInfo { get; set; }
                         public class GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfo : TeaModel {
+                            [NameInMap("Cid")]
+                            [Validation(Required=false)]
                             public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoCid Cid { get; set; }
                             public class GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoCid : TeaModel {
                                 [NameInMap("Cid")]
@@ -130,6 +154,9 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                 public List<string> Cid { get; set; }
 
                             }
+
+                            [NameInMap("KeyWords")]
+                            [Validation(Required=false)]
                             public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoKeyWords KeyWords { get; set; }
                             public class GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoKeyWords : TeaModel {
                                 [NameInMap("KeyWord")]
@@ -139,6 +166,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                     [NameInMap("Cid")]
                                     [Validation(Required=false)]
                                     public string Cid { get; set; }
+
+                                    [NameInMap("CustomizeCode")]
+                                    [Validation(Required=false)]
+                                    public string CustomizeCode { get; set; }
 
                                     [NameInMap("From")]
                                     [Validation(Required=false)]
@@ -163,6 +194,9 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                 }
 
                             }
+
+                            [NameInMap("Phrase")]
+                            [Validation(Required=false)]
                             public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase Phrase { get; set; }
                             public class GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase : TeaModel {
                                 [NameInMap("Begin")]
@@ -194,8 +228,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                 public string Words { get; set; }
 
                             }
+
                         }
-                    };
+
+                    }
 
                     [NameInMap("ReviewInfo")]
                     [Validation(Required=false)]
@@ -204,19 +240,24 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         [NameInMap("HitId")]
                         [Validation(Required=false)]
                         public string HitId { get; set; }
+
                         [NameInMap("ReviewResult")]
                         [Validation(Required=false)]
                         public int? ReviewResult { get; set; }
+
                         [NameInMap("ReviewTime")]
                         [Validation(Required=false)]
                         public string ReviewTime { get; set; }
+
                         [NameInMap("Reviewer")]
                         [Validation(Required=false)]
                         public string Reviewer { get; set; }
+
                         [NameInMap("Rid")]
                         [Validation(Required=false)]
                         public long? Rid { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("Rid")]
                     [Validation(Required=false)]
@@ -245,6 +286,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 }
 
             }
+
             [NameInMap("ManualScoreInfoList")]
             [Validation(Required=false)]
             public GetResultToReviewResponseBodyDataManualScoreInfoList ManualScoreInfoList { get; set; }
@@ -261,13 +303,29 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         [Validation(Required=false)]
                         public List<GetResultToReviewResponseBodyDataManualScoreInfoListManualScoreInfoComplainHistoriesComplainHistories> ComplainHistories { get; set; }
                         public class GetResultToReviewResponseBodyDataManualScoreInfoListManualScoreInfoComplainHistoriesComplainHistories : TeaModel {
+                            [NameInMap("Comments")]
+                            [Validation(Required=false)]
                             public string Comments { get; set; }
+
+                            [NameInMap("OperationTime")]
+                            [Validation(Required=false)]
                             public string OperationTime { get; set; }
+
+                            [NameInMap("OperationType")]
+                            [Validation(Required=false)]
                             public int? OperationType { get; set; }
+
+                            [NameInMap("Operator")]
+                            [Validation(Required=false)]
                             public long? Operator { get; set; }
+
+                            [NameInMap("OperatorName")]
+                            [Validation(Required=false)]
                             public string OperatorName { get; set; }
+
                         }
-                    };
+
+                    }
 
                     [NameInMap("Complainable")]
                     [Validation(Required=false)]
@@ -292,6 +350,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 }
 
             }
+
             [NameInMap("ReviewHistoryList")]
             [Validation(Required=false)]
             public GetResultToReviewResponseBodyDataReviewHistoryList ReviewHistoryList { get; set; }
@@ -331,16 +390,20 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 }
 
             }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
+
             [NameInMap("TotalScore")]
             [Validation(Required=false)]
             public int? TotalScore { get; set; }
+
             [NameInMap("Vid")]
             [Validation(Required=false)]
             public string Vid { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

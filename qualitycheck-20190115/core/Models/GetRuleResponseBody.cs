@@ -36,7 +36,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         [NameInMap("BusinessCategoryNameList")]
                         [Validation(Required=false)]
                         public List<string> BusinessCategoryNameList { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("Comments")]
                     [Validation(Required=false)]
@@ -121,7 +122,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 }
 
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

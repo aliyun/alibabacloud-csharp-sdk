@@ -21,8 +21,16 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<ListSkillGroupConfigResponseBodyDataSkillGroupConfig> SkillGroupConfig { get; set; }
             public class ListSkillGroupConfigResponseBodyDataSkillGroupConfig : TeaModel {
+                [NameInMap("AllContentQualityCheck")]
+                [Validation(Required=false)]
                 public int? AllContentQualityCheck { get; set; }
+
+                [NameInMap("AllRids")]
+                [Validation(Required=false)]
                 public string AllRids { get; set; }
+
+                [NameInMap("AllRuleList")]
+                [Validation(Required=false)]
                 public ListSkillGroupConfigResponseBodyDataSkillGroupConfigAllRuleList AllRuleList { get; set; }
                 public class ListSkillGroupConfigResponseBodyDataSkillGroupConfigAllRuleList : TeaModel {
                     [NameInMap("RuleNameInfo")]
@@ -40,14 +48,41 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     }
 
                 }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public long? Id { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("ModelId")]
+                [Validation(Required=false)]
                 public long? ModelId { get; set; }
+
+                [NameInMap("ModelName")]
+                [Validation(Required=false)]
                 public string ModelName { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("QualityCheckType")]
+                [Validation(Required=false)]
                 public int? QualityCheckType { get; set; }
+
+                [NameInMap("Rid")]
+                [Validation(Required=false)]
                 public string Rid { get; set; }
+
+                [NameInMap("RuleList")]
+                [Validation(Required=false)]
                 public ListSkillGroupConfigResponseBodyDataSkillGroupConfigRuleList RuleList { get; set; }
                 public class ListSkillGroupConfigResponseBodyDataSkillGroupConfigRuleList : TeaModel {
                     [NameInMap("RuleNameInfo")]
@@ -65,10 +100,25 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     }
 
                 }
+
+                [NameInMap("ScreenSwitch")]
+                [Validation(Required=false)]
                 public bool? ScreenSwitch { get; set; }
+
+                [NameInMap("SkillGroupFrom")]
+                [Validation(Required=false)]
                 public int? SkillGroupFrom { get; set; }
+
+                [NameInMap("SkillGroupId")]
+                [Validation(Required=false)]
                 public string SkillGroupId { get; set; }
+
+                [NameInMap("SkillGroupName")]
+                [Validation(Required=false)]
                 public string SkillGroupName { get; set; }
+
+                [NameInMap("SkillGroupScreens")]
+                [Validation(Required=false)]
                 public ListSkillGroupConfigResponseBodyDataSkillGroupConfigSkillGroupScreens SkillGroupScreens { get; set; }
                 public class ListSkillGroupConfigResponseBodyDataSkillGroupConfigSkillGroupScreens : TeaModel {
                     [NameInMap("SkillGroupScreen")]
@@ -94,13 +144,30 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     }
 
                 }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public int? Status { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public int? Type { get; set; }
+
+                [NameInMap("UpdateTime")]
+                [Validation(Required=false)]
                 public string UpdateTime { get; set; }
+
+                [NameInMap("VocabId")]
+                [Validation(Required=false)]
                 public long? VocabId { get; set; }
+
+                [NameInMap("VocabName")]
+                [Validation(Required=false)]
                 public string VocabName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

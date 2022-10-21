@@ -20,20 +20,43 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [NameInMap("BeginTime")]
             [Validation(Required=false)]
             public long? BeginTime { get; set; }
+
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public List<SyncQualityCheckResponseBodyDataRules> Rules { get; set; }
             public class SyncQualityCheckResponseBodyDataRules : TeaModel {
+                [NameInMap("Hit")]
+                [Validation(Required=false)]
                 public List<SyncQualityCheckResponseBodyDataRulesHit> Hit { get; set; }
                 public class SyncQualityCheckResponseBodyDataRulesHit : TeaModel {
+                    [NameInMap("HitKeyWords")]
+                    [Validation(Required=false)]
                     public List<SyncQualityCheckResponseBodyDataRulesHitHitKeyWords> HitKeyWords { get; set; }
                     public class SyncQualityCheckResponseBodyDataRulesHitHitKeyWords : TeaModel {
+                        [NameInMap("Cid")]
+                        [Validation(Required=false)]
                         public int? Cid { get; set; }
+
+                        [NameInMap("From")]
+                        [Validation(Required=false)]
                         public int? From { get; set; }
+
+                        [NameInMap("Pid")]
+                        [Validation(Required=false)]
                         public int? Pid { get; set; }
+
+                        [NameInMap("To")]
+                        [Validation(Required=false)]
                         public int? To { get; set; }
+
+                        [NameInMap("Val")]
+                        [Validation(Required=false)]
                         public string Val { get; set; }
+
                     }
+
+                    [NameInMap("Phrase")]
+                    [Validation(Required=false)]
                     public SyncQualityCheckResponseBodyDataRulesHitPhrase Phrase { get; set; }
                     public class SyncQualityCheckResponseBodyDataRulesHitPhrase : TeaModel {
                         [NameInMap("Begin")]
@@ -69,20 +92,32 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         public string Words { get; set; }
 
                     }
+
                 }
+
+                [NameInMap("Rid")]
+                [Validation(Required=false)]
                 public string Rid { get; set; }
+
+                [NameInMap("RuleName")]
+                [Validation(Required=false)]
                 public string RuleName { get; set; }
+
             }
+
             [NameInMap("Score")]
             [Validation(Required=false)]
             public int? Score { get; set; }
+
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public string TaskId { get; set; }
+
             [NameInMap("Tid")]
             [Validation(Required=false)]
             public string Tid { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

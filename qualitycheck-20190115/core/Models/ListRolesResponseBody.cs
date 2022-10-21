@@ -21,14 +21,33 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<ListRolesResponseBodyDataRole> Role { get; set; }
             public class ListRolesResponseBodyDataRole : TeaModel {
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("DisplayName")]
+                [Validation(Required=false)]
                 public string DisplayName { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public long? Id { get; set; }
+
+                [NameInMap("Level")]
+                [Validation(Required=false)]
                 public int? Level { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("UpdateTime")]
+                [Validation(Required=false)]
                 public string UpdateTime { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

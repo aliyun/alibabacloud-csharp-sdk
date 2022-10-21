@@ -21,7 +21,12 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<GetScoreInfoResponseBodyDataScorePo> ScorePo { get; set; }
             public class GetScoreInfoResponseBodyDataScorePo : TeaModel {
+                [NameInMap("ScoreId")]
+                [Validation(Required=false)]
                 public int? ScoreId { get; set; }
+
+                [NameInMap("ScoreInfos")]
+                [Validation(Required=false)]
                 public GetScoreInfoResponseBodyDataScorePoScoreInfos ScoreInfos { get; set; }
                 public class GetScoreInfoResponseBodyDataScorePoScoreInfos : TeaModel {
                     [NameInMap("ScoreParam")]
@@ -47,9 +52,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     }
 
                 }
+
+                [NameInMap("ScoreName")]
+                [Validation(Required=false)]
                 public string ScoreName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

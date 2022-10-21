@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [NameInMap("ScoreSubId")]
             [Validation(Required=false)]
             public long? ScoreSubId { get; set; }
+
             [NameInMap("ScoreSubName")]
             [Validation(Required=false)]
             public string ScoreSubName { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

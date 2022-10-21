@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo> TaskAssignRuleInfo { get; set; }
             public class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo : TeaModel {
+                [NameInMap("Agents")]
+                [Validation(Required=false)]
                 public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgents Agents { get; set; }
                 public class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgents : TeaModel {
                     [NameInMap("Agent")]
@@ -42,16 +44,49 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     }
 
                 }
+
+                [NameInMap("AgentsStr")]
+                [Validation(Required=false)]
                 public string AgentsStr { get; set; }
+
+                [NameInMap("AssignmentType")]
+                [Validation(Required=false)]
                 public int? AssignmentType { get; set; }
+
+                [NameInMap("CallTimeEnd")]
+                [Validation(Required=false)]
                 public long? CallTimeEnd { get; set; }
+
+                [NameInMap("CallTimeStart")]
+                [Validation(Required=false)]
                 public long? CallTimeStart { get; set; }
+
+                [NameInMap("CallType")]
+                [Validation(Required=false)]
                 public int? CallType { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("DurationMax")]
+                [Validation(Required=false)]
                 public int? DurationMax { get; set; }
+
+                [NameInMap("DurationMin")]
+                [Validation(Required=false)]
                 public int? DurationMin { get; set; }
+
+                [NameInMap("Enabled")]
+                [Validation(Required=false)]
                 public int? Enabled { get; set; }
+
+                [NameInMap("Priority")]
+                [Validation(Required=false)]
                 public int? Priority { get; set; }
+
+                [NameInMap("Reviewers")]
+                [Validation(Required=false)]
                 public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewers Reviewers { get; set; }
                 public class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewers : TeaModel {
                     [NameInMap("Reviewer")]
@@ -69,8 +104,17 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     }
 
                 }
+
+                [NameInMap("RuleId")]
+                [Validation(Required=false)]
                 public long? RuleId { get; set; }
+
+                [NameInMap("RuleName")]
+                [Validation(Required=false)]
                 public string RuleName { get; set; }
+
+                [NameInMap("Rules")]
+                [Validation(Required=false)]
                 public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoRules Rules { get; set; }
                 public class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoRules : TeaModel {
                     [NameInMap("RuleBasicInfo")]
@@ -88,6 +132,9 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     }
 
                 }
+
+                [NameInMap("SamplingMode")]
+                [Validation(Required=false)]
                 public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingMode SamplingMode { get; set; }
                 public class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingMode : TeaModel {
                     [NameInMap("AnyNumberOfDraws")]
@@ -126,12 +173,22 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         [Validation(Required=false)]
                         public List<ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingModeSamplingModeAgentsSamplingModeAgent> SamplingModeAgent { get; set; }
                         public class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingModeSamplingModeAgentsSamplingModeAgent : TeaModel {
+                            [NameInMap("AgentId")]
+                            [Validation(Required=false)]
                             public string AgentId { get; set; }
+
+                            [NameInMap("AgentName")]
+                            [Validation(Required=false)]
                             public string AgentName { get; set; }
+
                         }
-                    };
+
+                    }
 
                 }
+
+                [NameInMap("SkillGroups")]
+                [Validation(Required=false)]
                 public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSkillGroups SkillGroups { get; set; }
                 public class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSkillGroups : TeaModel {
                     [NameInMap("SkillGroup")]
@@ -149,10 +206,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     }
 
                 }
+
+                [NameInMap("SkillGroupsStr")]
+                [Validation(Required=false)]
                 public string SkillGroupsStr { get; set; }
+
+                [NameInMap("UpdateTime")]
+                [Validation(Required=false)]
                 public string UpdateTime { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

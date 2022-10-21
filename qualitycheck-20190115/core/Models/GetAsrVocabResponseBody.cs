@@ -20,6 +20,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
             [NameInMap("Words")]
             [Validation(Required=false)]
             public GetAsrVocabResponseBodyDataWords Words { get; set; }
@@ -39,7 +40,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 }
 
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

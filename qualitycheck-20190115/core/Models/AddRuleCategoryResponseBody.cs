@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [NameInMap("Select")]
             [Validation(Required=false)]
             public bool? Select { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

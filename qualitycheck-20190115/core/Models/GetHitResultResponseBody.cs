@@ -25,10 +25,17 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<GetHitResultResponseBodyDataResultInfo> ResultInfo { get; set; }
             public class GetHitResultResponseBodyDataResultInfo : TeaModel {
+                [NameInMap("Rid")]
+                [Validation(Required=false)]
                 public long? Rid { get; set; }
+
+                [NameInMap("RuleName")]
+                [Validation(Required=false)]
                 public string RuleName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

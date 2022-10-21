@@ -25,12 +25,32 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<ListPrecisionTaskResponseBodyDataPrecisionTask> PrecisionTask { get; set; }
             public class ListPrecisionTaskResponseBodyDataPrecisionTask : TeaModel {
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("DataSetId")]
+                [Validation(Required=false)]
                 public long? DataSetId { get; set; }
+
+                [NameInMap("DataSetName")]
+                [Validation(Required=false)]
                 public string DataSetName { get; set; }
+
+                [NameInMap("Duration")]
+                [Validation(Required=false)]
                 public int? Duration { get; set; }
+
+                [NameInMap("IncorrectWords")]
+                [Validation(Required=false)]
                 public int? IncorrectWords { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Precisions")]
+                [Validation(Required=false)]
                 public ListPrecisionTaskResponseBodyDataPrecisionTaskPrecisions Precisions { get; set; }
                 public class ListPrecisionTaskResponseBodyDataPrecisionTaskPrecisions : TeaModel {
                     [NameInMap("Precision")]
@@ -64,14 +84,34 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     }
 
                 }
+
+                [NameInMap("Source")]
+                [Validation(Required=false)]
                 public int? Source { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public int? Status { get; set; }
+
+                [NameInMap("TaskId")]
+                [Validation(Required=false)]
                 public string TaskId { get; set; }
+
+                [NameInMap("TotalCount")]
+                [Validation(Required=false)]
                 public int? TotalCount { get; set; }
+
+                [NameInMap("UpdateTime")]
+                [Validation(Required=false)]
                 public string UpdateTime { get; set; }
+
+                [NameInMap("VerifiedCount")]
+                [Validation(Required=false)]
                 public int? VerifiedCount { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

@@ -25,17 +25,45 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<ListUsersResponseBodyDataUser> User { get; set; }
             public class ListUsersResponseBodyDataUser : TeaModel {
+                [NameInMap("AliUid")]
+                [Validation(Required=false)]
                 public string AliUid { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("DisplayName")]
+                [Validation(Required=false)]
                 public string DisplayName { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public long? Id { get; set; }
+
+                [NameInMap("LoginUserType")]
+                [Validation(Required=false)]
                 public int? LoginUserType { get; set; }
+
+                [NameInMap("RoleName")]
+                [Validation(Required=false)]
                 public string RoleName { get; set; }
+
+                [NameInMap("UpdateTime")]
+                [Validation(Required=false)]
                 public string UpdateTime { get; set; }
+
+                [NameInMap("UserName")]
+                [Validation(Required=false)]
                 public string UserName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

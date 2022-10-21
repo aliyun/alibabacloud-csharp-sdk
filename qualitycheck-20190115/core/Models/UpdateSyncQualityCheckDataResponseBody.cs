@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public string TaskId { get; set; }
+
             [NameInMap("Tid")]
             [Validation(Required=false)]
             public string Tid { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

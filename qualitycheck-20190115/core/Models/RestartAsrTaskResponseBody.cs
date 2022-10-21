@@ -21,11 +21,21 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<RestartAsrTaskResponseBodyDataRestartResult> RestartResult { get; set; }
             public class RestartAsrTaskResponseBodyDataRestartResult : TeaModel {
+                [NameInMap("Data")]
+                [Validation(Required=false)]
                 public string Data { get; set; }
+
+                [NameInMap("Message")]
+                [Validation(Required=false)]
                 public string Message { get; set; }
+
+                [NameInMap("Success")]
+                [Validation(Required=false)]
                 public bool? Success { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

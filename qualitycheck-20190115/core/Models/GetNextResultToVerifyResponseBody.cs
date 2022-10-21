@@ -20,9 +20,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [NameInMap("AudioScheme")]
             [Validation(Required=false)]
             public string AudioScheme { get; set; }
+
             [NameInMap("AudioURL")]
             [Validation(Required=false)]
             public string AudioURL { get; set; }
+
             [NameInMap("Dialogues")]
             [Validation(Required=false)]
             public GetNextResultToVerifyResponseBodyDataDialogues Dialogues { get; set; }
@@ -47,6 +49,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         [Validation(Required=false)]
                         public List<GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDelta> Delta { get; set; }
                         public class GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDelta : TeaModel {
+                            [NameInMap("Source")]
+                            [Validation(Required=false)]
                             public GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDeltaSource Source { get; set; }
                             public class GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDeltaSource : TeaModel {
                                 [NameInMap("Line")]
@@ -56,13 +60,17 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                     [NameInMap("Line")]
                                     [Validation(Required=false)]
                                     public List<string> Line { get; set; }
-                                };
+
+                                }
 
                                 [NameInMap("Position")]
                                 [Validation(Required=false)]
                                 public int? Position { get; set; }
 
                             }
+
+                            [NameInMap("Target")]
+                            [Validation(Required=false)]
                             public GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDeltaTarget Target { get; set; }
                             public class GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDeltaTarget : TeaModel {
                                 [NameInMap("Line")]
@@ -72,16 +80,22 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                     [NameInMap("Line")]
                                     [Validation(Required=false)]
                                     public List<string> Line { get; set; }
-                                };
+
+                                }
 
                                 [NameInMap("Position")]
                                 [Validation(Required=false)]
                                 public int? Position { get; set; }
 
                             }
+
+                            [NameInMap("Type")]
+                            [Validation(Required=false)]
                             public string Type { get; set; }
+
                         }
-                    };
+
+                    }
 
                     [NameInMap("EmotionValue")]
                     [Validation(Required=false)]
@@ -130,40 +144,52 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 }
 
             }
+
             [NameInMap("Duration")]
             [Validation(Required=false)]
             public int? Duration { get; set; }
+
             [NameInMap("FileId")]
             [Validation(Required=false)]
             public string FileId { get; set; }
+
             [NameInMap("FileName")]
             [Validation(Required=false)]
             public string FileName { get; set; }
+
             [NameInMap("IncorrectWords")]
             [Validation(Required=false)]
             public int? IncorrectWords { get; set; }
+
             [NameInMap("Index")]
             [Validation(Required=false)]
             public int? Index { get; set; }
+
             [NameInMap("Precision")]
             [Validation(Required=false)]
             public float? Precision { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
+
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
             public string UpdateTime { get; set; }
+
             [NameInMap("Verified")]
             [Validation(Required=false)]
             public bool? Verified { get; set; }
+
             [NameInMap("VerifiedCount")]
             [Validation(Required=false)]
             public int? VerifiedCount { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

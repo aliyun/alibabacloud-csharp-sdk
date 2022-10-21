@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [NameInMap("RidInfo")]
             [Validation(Required=false)]
             public List<string> RidInfo { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

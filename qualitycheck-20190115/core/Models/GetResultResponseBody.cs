@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<GetResultResponseBodyDataResultInfo> ResultInfo { get; set; }
             public class GetResultResponseBodyDataResultInfo : TeaModel {
+                [NameInMap("Agent")]
+                [Validation(Required=false)]
                 public GetResultResponseBodyDataResultInfoAgent Agent { get; set; }
                 public class GetResultResponseBodyDataResultInfoAgent : TeaModel {
                     [NameInMap("Id")]
@@ -40,6 +42,9 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     public string SkillGroup { get; set; }
 
                 }
+
+                [NameInMap("AsrResult")]
+                [Validation(Required=false)]
                 public GetResultResponseBodyDataResultInfoAsrResult AsrResult { get; set; }
                 public class GetResultResponseBodyDataResultInfoAsrResult : TeaModel {
                     [NameInMap("AsrResult")]
@@ -73,11 +78,29 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     }
 
                 }
+
+                [NameInMap("AssignmentTime")]
+                [Validation(Required=false)]
                 public string AssignmentTime { get; set; }
+
+                [NameInMap("Comments")]
+                [Validation(Required=false)]
                 public string Comments { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("CreateTimeLong")]
+                [Validation(Required=false)]
                 public string CreateTimeLong { get; set; }
+
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
                 public string ErrorMessage { get; set; }
+
+                [NameInMap("HitResult")]
+                [Validation(Required=false)]
                 public GetResultResponseBodyDataResultInfoHitResult HitResult { get; set; }
                 public class GetResultResponseBodyDataResultInfoHitResult : TeaModel {
                     [NameInMap("HitResult")]
@@ -92,6 +115,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                             [Validation(Required=false)]
                             public List<GetResultResponseBodyDataResultInfoHitResultHitResultHitsHit> Hit { get; set; }
                             public class GetResultResponseBodyDataResultInfoHitResultHitResultHitsHit : TeaModel {
+                                [NameInMap("Cid")]
+                                [Validation(Required=false)]
                                 public GetResultResponseBodyDataResultInfoHitResultHitResultHitsHitCid Cid { get; set; }
                                 public class GetResultResponseBodyDataResultInfoHitResultHitResultHitsHitCid : TeaModel {
                                     [NameInMap("Cid")]
@@ -99,6 +124,9 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                     public List<string> Cid { get; set; }
 
                                 }
+
+                                [NameInMap("KeyWords")]
+                                [Validation(Required=false)]
                                 public GetResultResponseBodyDataResultInfoHitResultHitResultHitsHitKeyWords KeyWords { get; set; }
                                 public class GetResultResponseBodyDataResultInfoHitResultHitResultHitsHitKeyWords : TeaModel {
                                     [NameInMap("KeyWord")]
@@ -124,6 +152,9 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                     }
 
                                 }
+
+                                [NameInMap("Phrase")]
+                                [Validation(Required=false)]
                                 public GetResultResponseBodyDataResultInfoHitResultHitResultHitsHitPhrase Phrase { get; set; }
                                 public class GetResultResponseBodyDataResultInfoHitResultHitResultHitsHitPhrase : TeaModel {
                                     [NameInMap("Begin")]
@@ -147,8 +178,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                     public string Words { get; set; }
 
                                 }
+
                             }
-                        };
+
+                        }
 
                         [NameInMap("Name")]
                         [Validation(Required=false)]
@@ -162,6 +195,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         [Validation(Required=false)]
                         public string Rid { get; set; }
 
+                        [NameInMap("SchemeId")]
+                        [Validation(Required=false)]
+                        public long? SchemeId { get; set; }
+
+                        [NameInMap("SchemeVersion")]
+                        [Validation(Required=false)]
+                        public long? SchemeVersion { get; set; }
+
                         [NameInMap("Type")]
                         [Validation(Required=false)]
                         public string Type { get; set; }
@@ -169,6 +210,9 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     }
 
                 }
+
+                [NameInMap("HitScore")]
+                [Validation(Required=false)]
                 public GetResultResponseBodyDataResultInfoHitScore HitScore { get; set; }
                 public class GetResultResponseBodyDataResultInfoHitScore : TeaModel {
                     [NameInMap("HitScore")]
@@ -194,7 +238,13 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     }
 
                 }
+
+                [NameInMap("LastDataId")]
+                [Validation(Required=false)]
                 public string LastDataId { get; set; }
+
+                [NameInMap("Recording")]
+                [Validation(Required=false)]
                 public GetResultResponseBodyDataResultInfoRecording Recording { get; set; }
                 public class GetResultResponseBodyDataResultInfoRecording : TeaModel {
                     [NameInMap("Business")]
@@ -302,19 +352,74 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     public string Url { get; set; }
 
                 }
+
+                [NameInMap("Resolver")]
+                [Validation(Required=false)]
                 public string Resolver { get; set; }
+
+                [NameInMap("ReviewResult")]
+                [Validation(Required=false)]
                 public int? ReviewResult { get; set; }
+
+                [NameInMap("ReviewStatus")]
+                [Validation(Required=false)]
                 public int? ReviewStatus { get; set; }
+
+                [NameInMap("ReviewTime")]
+                [Validation(Required=false)]
                 public string ReviewTime { get; set; }
+
+                [NameInMap("ReviewTimeLong")]
+                [Validation(Required=false)]
                 public string ReviewTimeLong { get; set; }
+
+                [NameInMap("ReviewType")]
+                [Validation(Required=false)]
                 public int? ReviewType { get; set; }
+
+                [NameInMap("Reviewer")]
+                [Validation(Required=false)]
                 public string Reviewer { get; set; }
+
+                [NameInMap("SchemeIdList")]
+                [Validation(Required=false)]
+                public GetResultResponseBodyDataResultInfoSchemeIdList SchemeIdList { get; set; }
+                public class GetResultResponseBodyDataResultInfoSchemeIdList : TeaModel {
+                    [NameInMap("SchemeIdList")]
+                    [Validation(Required=false)]
+                    public List<long?> SchemeIdList { get; set; }
+
+                }
+
+                [NameInMap("SchemeNameList")]
+                [Validation(Required=false)]
+                public GetResultResponseBodyDataResultInfoSchemeNameList SchemeNameList { get; set; }
+                public class GetResultResponseBodyDataResultInfoSchemeNameList : TeaModel {
+                    [NameInMap("SchemeNameList")]
+                    [Validation(Required=false)]
+                    public List<string> SchemeNameList { get; set; }
+
+                }
+
+                [NameInMap("Score")]
+                [Validation(Required=false)]
                 public int? Score { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public int? Status { get; set; }
+
+                [NameInMap("TaskId")]
+                [Validation(Required=false)]
                 public string TaskId { get; set; }
+
+                [NameInMap("TaskName")]
+                [Validation(Required=false)]
                 public string TaskName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

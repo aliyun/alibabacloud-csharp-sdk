@@ -21,13 +21,29 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<ListAsrVocabResponseBodyDataAsrVocab> AsrVocab { get; set; }
             public class ListAsrVocabResponseBodyDataAsrVocab : TeaModel {
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public string Id { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("UpdateTime")]
+                [Validation(Required=false)]
                 public string UpdateTime { get; set; }
+
+                [NameInMap("VocabularyId")]
+                [Validation(Required=false)]
                 public string VocabularyId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

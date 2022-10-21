@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<ListHotWordsTasksResponseBodyDataHotWordsTaskPo> HotWordsTaskPo { get; set; }
             public class ListHotWordsTasksResponseBodyDataHotWordsTaskPo : TeaModel {
+                [NameInMap("DialogueParam")]
+                [Validation(Required=false)]
                 public ListHotWordsTasksResponseBodyDataHotWordsTaskPoDialogueParam DialogueParam { get; set; }
                 public class ListHotWordsTasksResponseBodyDataHotWordsTaskPoDialogueParam : TeaModel {
                     [NameInMap("DataSetIds")]
@@ -60,17 +62,53 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     public string StartTime { get; set; }
 
                 }
+
+                [NameInMap("EndTime")]
+                [Validation(Required=false)]
                 public string EndTime { get; set; }
+
+                [NameInMap("InstanceStatus")]
+                [Validation(Required=false)]
                 public int? InstanceStatus { get; set; }
+
+                [NameInMap("LastExecutionTime")]
+                [Validation(Required=false)]
                 public string LastExecutionTime { get; set; }
+
+                [NameInMap("Message")]
+                [Validation(Required=false)]
                 public string Message { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("StartTime")]
+                [Validation(Required=false)]
                 public string StartTime { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public int? Status { get; set; }
+
+                [NameInMap("TaskConfigId")]
+                [Validation(Required=false)]
                 public long? TaskConfigId { get; set; }
+
+                [NameInMap("TimeInterval")]
+                [Validation(Required=false)]
                 public int? TimeInterval { get; set; }
+
+                [NameInMap("TimeUnit")]
+                [Validation(Required=false)]
                 public int? TimeUnit { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public int? Type { get; set; }
+
+                [NameInMap("WordsParam")]
+                [Validation(Required=false)]
                 public ListHotWordsTasksResponseBodyDataHotWordsTaskPoWordsParam WordsParam { get; set; }
                 public class ListHotWordsTasksResponseBodyDataHotWordsTaskPoWordsParam : TeaModel {
                     [NameInMap("Excludes")]
@@ -86,8 +124,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     public string Includes { get; set; }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
