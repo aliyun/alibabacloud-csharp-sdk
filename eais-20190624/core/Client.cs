@@ -457,9 +457,15 @@ namespace AlibabaCloud.SDK.Eais20190624
             return await CreateEaiAllWithOptionsAsync(request, runtime);
         }
 
-        public CreateEaiJupyterResponse CreateEaiJupyterWithOptions(CreateEaiJupyterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateEaiJupyterResponse CreateEaiJupyterWithOptions(CreateEaiJupyterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateEaiJupyterShrinkRequest request = new CreateEaiJupyterShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EnvironmentVar))
+            {
+                request.EnvironmentVarShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EnvironmentVar, "EnvironmentVar", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -468,6 +474,10 @@ namespace AlibabaCloud.SDK.Eais20190624
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EaisType))
             {
                 query["EaisType"] = request.EaisType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentVarShrink))
+            {
+                query["EnvironmentVar"] = request.EnvironmentVarShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -500,9 +510,15 @@ namespace AlibabaCloud.SDK.Eais20190624
             return TeaModel.ToObject<CreateEaiJupyterResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CreateEaiJupyterResponse> CreateEaiJupyterWithOptionsAsync(CreateEaiJupyterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateEaiJupyterResponse> CreateEaiJupyterWithOptionsAsync(CreateEaiJupyterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateEaiJupyterShrinkRequest request = new CreateEaiJupyterShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EnvironmentVar))
+            {
+                request.EnvironmentVarShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EnvironmentVar, "EnvironmentVar", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -511,6 +527,10 @@ namespace AlibabaCloud.SDK.Eais20190624
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EaisType))
             {
                 query["EaisType"] = request.EaisType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentVarShrink))
+            {
+                query["EnvironmentVar"] = request.EnvironmentVarShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
