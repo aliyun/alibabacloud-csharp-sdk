@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
-        [NameInMap("MseSessionId")]
-        [Validation(Required=false)]
-        public string MseSessionId { get; set; }
-
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }

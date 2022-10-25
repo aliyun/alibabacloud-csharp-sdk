@@ -33,13 +33,13 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string IngressOptionsRequestShrink { get; set; }
 
-        [NameInMap("MseSessionId")]
-        [Validation(Required=false)]
-        public string MseSessionId { get; set; }
-
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("PathList")]
+        [Validation(Required=false)]
+        public string PathListShrink { get; set; }
 
         [NameInMap("Source")]
         [Validation(Required=false)]

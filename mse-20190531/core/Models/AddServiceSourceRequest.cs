@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public bool? EnableIngress { get; set; }
 
+            [NameInMap("EnableStatus")]
+            [Validation(Required=false)]
+            public bool? EnableStatus { get; set; }
+
             [NameInMap("IngressClass")]
             [Validation(Required=false)]
             public string IngressClass { get; set; }
@@ -43,13 +47,13 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         }
 
-        [NameInMap("MseSessionId")]
-        [Validation(Required=false)]
-        public string MseSessionId { get; set; }
-
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("PathList")]
+        [Validation(Required=false)]
+        public List<string> PathList { get; set; }
 
         [NameInMap("Source")]
         [Validation(Required=false)]

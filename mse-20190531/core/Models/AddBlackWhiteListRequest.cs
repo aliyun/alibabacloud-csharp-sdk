@@ -25,10 +25,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public bool? IsWhite { get; set; }
 
-        [NameInMap("MseSessionId")]
-        [Validation(Required=false)]
-        public string MseSessionId { get; set; }
-
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

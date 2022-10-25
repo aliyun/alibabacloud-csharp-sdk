@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public long? GatewayId { get; set; }
 
+            [NameInMap("GatewayUniqueId")]
+            [Validation(Required=false)]
+            public string GatewayUniqueId { get; set; }
+
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
@@ -36,6 +40,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public string GmtModified { get; set; }
+
+            [NameInMap("GroupList")]
+            [Validation(Required=false)]
+            public List<string> GroupList { get; set; }
 
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -48,6 +56,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [NameInMap("EnableIngress")]
                 [Validation(Required=false)]
                 public bool? EnableIngress { get; set; }
+
+                [NameInMap("EnableStatus")]
+                [Validation(Required=false)]
+                public bool? EnableStatus { get; set; }
 
                 [NameInMap("IngressClass")]
                 [Validation(Required=false)]
@@ -62,6 +74,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
+            [NameInMap("PathList")]
+            [Validation(Required=false)]
+            public List<string> PathList { get; set; }
 
             [NameInMap("Source")]
             [Validation(Required=false)]

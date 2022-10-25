@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public long? LaneId { get; set; }
 
-        [NameInMap("MseSessionId")]
-        [Validation(Required=false)]
-        public string MseSessionId { get; set; }
-
     }
 
 }

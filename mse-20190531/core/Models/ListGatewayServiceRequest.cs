@@ -47,10 +47,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         }
 
-        [NameInMap("MseSessionId")]
-        [Validation(Required=false)]
-        public string MseSessionId { get; set; }
-
         [NameInMap("OrderItem")]
         [Validation(Required=false)]
         public string OrderItem { get; set; }

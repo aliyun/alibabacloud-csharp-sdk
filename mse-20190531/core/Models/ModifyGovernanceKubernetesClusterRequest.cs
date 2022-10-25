@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("MseSessionId")]
-        [Validation(Required=false)]
-        public string MseSessionId { get; set; }
-
         [NameInMap("NamespaceInfos")]
         [Validation(Required=false)]
         public string NamespaceInfos { get; set; }

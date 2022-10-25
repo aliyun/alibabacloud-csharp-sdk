@@ -29,10 +29,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string HttpsVServerGroupId { get; set; }
 
-        [NameInMap("MseSessionId")]
-        [Validation(Required=false)]
-        public string MseSessionId { get; set; }
-
         [NameInMap("ServiceWeight")]
         [Validation(Required=false)]
         public int? ServiceWeight { get; set; }

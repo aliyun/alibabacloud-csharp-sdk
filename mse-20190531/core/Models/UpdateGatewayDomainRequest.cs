@@ -29,10 +29,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public long? Id { get; set; }
 
-        [NameInMap("MseSessionId")]
-        [Validation(Required=false)]
-        public string MseSessionId { get; set; }
-
         [NameInMap("MustHttps")]
         [Validation(Required=false)]
         public bool? MustHttps { get; set; }
