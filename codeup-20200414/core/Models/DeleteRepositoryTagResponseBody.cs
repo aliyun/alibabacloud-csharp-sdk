@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Codeup20200414.Models
 {
     public class DeleteRepositoryTagResponseBody : TeaModel {
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
@@ -17,14 +21,6 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
         [NameInMap("Result")]
         [Validation(Required=false)]
         public DeleteRepositoryTagResponseBodyResult Result { get; set; }
@@ -32,7 +28,12 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
             [NameInMap("TagName")]
             [Validation(Required=false)]
             public string TagName { get; set; }
-        };
+
+        }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

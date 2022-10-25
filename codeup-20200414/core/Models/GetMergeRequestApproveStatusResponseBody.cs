@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Codeup20200414.Models
 {
     public class GetMergeRequestApproveStatusResponseBody : TeaModel {
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
@@ -17,25 +21,23 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
         [NameInMap("Result")]
         [Validation(Required=false)]
         public GetMergeRequestApproveStatusResponseBodyResult Result { get; set; }
         public class GetMergeRequestApproveStatusResponseBodyResult : TeaModel {
-            [NameInMap("Message")]
-            [Validation(Required=false)]
-            public string Message { get; set; }
             [NameInMap("ApproveStatus")]
             [Validation(Required=false)]
             public string ApproveStatus { get; set; }
-        };
+
+            [NameInMap("Message")]
+            [Validation(Required=false)]
+            public string Message { get; set; }
+
+        }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

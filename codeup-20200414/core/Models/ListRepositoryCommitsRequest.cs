@@ -25,10 +25,6 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
-        [NameInMap("Search")]
-        [Validation(Required=false)]
-        public string Search { get; set; }
-
         [NameInMap("Path")]
         [Validation(Required=false)]
         public string Path { get; set; }
@@ -36,6 +32,10 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [NameInMap("RefName")]
         [Validation(Required=false)]
         public string RefName { get; set; }
+
+        [NameInMap("Search")]
+        [Validation(Required=false)]
+        public string Search { get; set; }
 
         [NameInMap("ShowSignature")]
         [Validation(Required=false)]

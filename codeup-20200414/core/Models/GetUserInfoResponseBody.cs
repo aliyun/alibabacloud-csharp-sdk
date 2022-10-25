@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Codeup20200414.Models
 {
     public class GetUserInfoResponseBody : TeaModel {
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
@@ -17,37 +21,39 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
         [NameInMap("Result")]
         [Validation(Required=false)]
         public GetUserInfoResponseBodyResult Result { get; set; }
         public class GetUserInfoResponseBodyResult : TeaModel {
-            [NameInMap("Email")]
-            [Validation(Required=false)]
-            public string Email { get; set; }
             [NameInMap("AvatarUrl")]
             [Validation(Required=false)]
             public string AvatarUrl { get; set; }
+
+            [NameInMap("Email")]
+            [Validation(Required=false)]
+            public string Email { get; set; }
+
             [NameInMap("ExternalUserId")]
             [Validation(Required=false)]
             public string ExternalUserId { get; set; }
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
+
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
             [NameInMap("Username")]
             [Validation(Required=false)]
             public string Username { get; set; }
-        };
+
+        }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

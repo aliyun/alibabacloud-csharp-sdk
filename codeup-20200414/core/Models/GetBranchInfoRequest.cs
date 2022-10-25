@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [Validation(Required=false)]
         public string AccessToken { get; set; }
 
+        [NameInMap("BranchName")]
+        [Validation(Required=false)]
+        public string BranchName { get; set; }
+
         [NameInMap("OrganizationId")]
         [Validation(Required=false)]
         public string OrganizationId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [NameInMap("SubUserId")]
         [Validation(Required=false)]
         public string SubUserId { get; set; }
-
-        [NameInMap("BranchName")]
-        [Validation(Required=false)]
-        public string BranchName { get; set; }
 
     }
 

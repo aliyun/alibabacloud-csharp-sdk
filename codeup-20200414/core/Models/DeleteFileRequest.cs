@@ -13,21 +13,21 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [Validation(Required=false)]
         public string AccessToken { get; set; }
 
-        [NameInMap("OrganizationId")]
-        [Validation(Required=false)]
-        public string OrganizationId { get; set; }
-
         [NameInMap("BranchName")]
         [Validation(Required=false)]
         public string BranchName { get; set; }
+
+        [NameInMap("CommitMessage")]
+        [Validation(Required=false)]
+        public string CommitMessage { get; set; }
 
         [NameInMap("FilePath")]
         [Validation(Required=false)]
         public string FilePath { get; set; }
 
-        [NameInMap("CommitMessage")]
+        [NameInMap("OrganizationId")]
         [Validation(Required=false)]
-        public string CommitMessage { get; set; }
+        public string OrganizationId { get; set; }
 
         [NameInMap("SubUserId")]
         [Validation(Required=false)]

@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [Validation(Required=false)]
         public string AccessToken { get; set; }
 
+        [NameInMap("Archive")]
+        [Validation(Required=false)]
+        public bool? Archive { get; set; }
+
+        [NameInMap("Order")]
+        [Validation(Required=false)]
+        public string Order { get; set; }
+
         [NameInMap("OrganizationId")]
         [Validation(Required=false)]
         public string OrganizationId { get; set; }
@@ -25,21 +33,13 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
-        [NameInMap("Order")]
-        [Validation(Required=false)]
-        public string Order { get; set; }
-
-        [NameInMap("Sort")]
-        [Validation(Required=false)]
-        public string Sort { get; set; }
-
         [NameInMap("Search")]
         [Validation(Required=false)]
         public string Search { get; set; }
 
-        [NameInMap("Archive")]
+        [NameInMap("Sort")]
         [Validation(Required=false)]
-        public bool? Archive { get; set; }
+        public string Sort { get; set; }
 
     }
 

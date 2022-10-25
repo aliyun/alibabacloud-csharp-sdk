@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [Validation(Required=false)]
         public string AccessToken { get; set; }
 
-        [NameInMap("OrganizationId")]
-        [Validation(Required=false)]
-        public string OrganizationId { get; set; }
-
         [NameInMap("FromCommit")]
         [Validation(Required=false)]
         public string FromCommit { get; set; }
+
+        [NameInMap("OrganizationId")]
+        [Validation(Required=false)]
+        public string OrganizationId { get; set; }
 
         [NameInMap("ToCommit")]
         [Validation(Required=false)]

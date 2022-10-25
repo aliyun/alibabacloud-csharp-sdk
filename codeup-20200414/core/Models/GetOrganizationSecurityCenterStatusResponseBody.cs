@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Codeup20200414.Models
 {
     public class GetOrganizationSecurityCenterStatusResponseBody : TeaModel {
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
@@ -17,14 +21,6 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
         [NameInMap("Result")]
         [Validation(Required=false)]
         public GetOrganizationSecurityCenterStatusResponseBodyResult Result { get; set; }
@@ -32,7 +28,12 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
             [NameInMap("Enable")]
             [Validation(Required=false)]
             public bool? Enable { get; set; }
-        };
+
+        }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

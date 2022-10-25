@@ -13,29 +13,29 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [Validation(Required=false)]
         public string AccessToken { get; set; }
 
-        [NameInMap("OrganizationId")]
-        [Validation(Required=false)]
-        public string OrganizationId { get; set; }
-
         [NameInMap("FilePath")]
         [Validation(Required=false)]
         public string FilePath { get; set; }
-
-        [NameInMap("Ref")]
-        [Validation(Required=false)]
-        public string Ref { get; set; }
 
         [NameInMap("From")]
         [Validation(Required=false)]
         public long? From { get; set; }
 
-        [NameInMap("To")]
+        [NameInMap("OrganizationId")]
         [Validation(Required=false)]
-        public long? To { get; set; }
+        public string OrganizationId { get; set; }
+
+        [NameInMap("Ref")]
+        [Validation(Required=false)]
+        public string Ref { get; set; }
 
         [NameInMap("SubUserId")]
         [Validation(Required=false)]
         public string SubUserId { get; set; }
+
+        [NameInMap("To")]
+        [Validation(Required=false)]
+        public long? To { get; set; }
 
     }
 

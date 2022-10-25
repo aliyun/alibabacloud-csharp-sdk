@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Codeup20200414.Models
 {
     public class GetRepositoryTagResponseBody : TeaModel {
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
@@ -17,106 +21,109 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
         [NameInMap("Result")]
         [Validation(Required=false)]
         public GetRepositoryTagResponseBodyResult Result { get; set; }
         public class GetRepositoryTagResponseBodyResult : TeaModel {
-            [NameInMap("Message")]
-            [Validation(Required=false)]
-            public string Message { get; set; }
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public string Id { get; set; }
             [NameInMap("Commit")]
             [Validation(Required=false)]
             public GetRepositoryTagResponseBodyResultCommit Commit { get; set; }
             public class GetRepositoryTagResponseBodyResultCommit : TeaModel {
-                [NameInMap("ShortId")]
+                [NameInMap("AuthorEmail")]
                 [Validation(Required=false)]
-                public string ShortId { get; set; }
+                public string AuthorEmail { get; set; }
 
                 [NameInMap("AuthorName")]
                 [Validation(Required=false)]
                 public string AuthorName { get; set; }
 
-                [NameInMap("CreatedAt")]
-                [Validation(Required=false)]
-                public string CreatedAt { get; set; }
-
-                [NameInMap("Message")]
-                [Validation(Required=false)]
-                public string Message { get; set; }
-
                 [NameInMap("AuthoredDate")]
                 [Validation(Required=false)]
                 public string AuthoredDate { get; set; }
-
-                [NameInMap("CommitterName")]
-                [Validation(Required=false)]
-                public string CommitterName { get; set; }
-
-                [NameInMap("Title")]
-                [Validation(Required=false)]
-                public string Title { get; set; }
-
-                [NameInMap("AuthorEmail")]
-                [Validation(Required=false)]
-                public string AuthorEmail { get; set; }
-
-                [NameInMap("CommitterEmail")]
-                [Validation(Required=false)]
-                public string CommitterEmail { get; set; }
-
-                [NameInMap("Id")]
-                [Validation(Required=false)]
-                public string Id { get; set; }
 
                 [NameInMap("CommittedDate")]
                 [Validation(Required=false)]
                 public string CommittedDate { get; set; }
 
+                [NameInMap("CommitterEmail")]
+                [Validation(Required=false)]
+                public string CommitterEmail { get; set; }
+
+                [NameInMap("CommitterName")]
+                [Validation(Required=false)]
+                public string CommitterName { get; set; }
+
+                [NameInMap("CreatedAt")]
+                [Validation(Required=false)]
+                public string CreatedAt { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public string Id { get; set; }
+
+                [NameInMap("Message")]
+                [Validation(Required=false)]
+                public string Message { get; set; }
+
                 [NameInMap("ParentIds")]
                 [Validation(Required=false)]
                 public List<string> ParentIds { get; set; }
+
+                [NameInMap("ShortId")]
+                [Validation(Required=false)]
+                public string ShortId { get; set; }
 
                 [NameInMap("Signature")]
                 [Validation(Required=false)]
                 public GetRepositoryTagResponseBodyResultCommitSignature Signature { get; set; }
                 public class GetRepositoryTagResponseBodyResultCommitSignature : TeaModel {
-                    [NameInMap("VerificationStatus")]
-                    [Validation(Required=false)]
-                    public string VerificationStatus { get; set; }
                     [NameInMap("GpgKeyId")]
                     [Validation(Required=false)]
                     public string GpgKeyId { get; set; }
-                };
+
+                    [NameInMap("VerificationStatus")]
+                    [Validation(Required=false)]
+                    public string VerificationStatus { get; set; }
+
+                }
+
+                [NameInMap("Title")]
+                [Validation(Required=false)]
+                public string Title { get; set; }
 
             }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+
+            [NameInMap("Message")]
+            [Validation(Required=false)]
+            public string Message { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
             [NameInMap("Signature")]
             [Validation(Required=false)]
             public GetRepositoryTagResponseBodyResultSignature Signature { get; set; }
             public class GetRepositoryTagResponseBodyResultSignature : TeaModel {
-                [NameInMap("VerificationStatus")]
-                [Validation(Required=false)]
-                public string VerificationStatus { get; set; }
-
                 [NameInMap("GpgKeyId")]
                 [Validation(Required=false)]
                 public string GpgKeyId { get; set; }
 
+                [NameInMap("VerificationStatus")]
+                [Validation(Required=false)]
+                public string VerificationStatus { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

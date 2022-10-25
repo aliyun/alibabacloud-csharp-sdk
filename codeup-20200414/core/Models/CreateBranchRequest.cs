@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [Validation(Required=false)]
         public string SubUserId { get; set; }
 
+        [NameInMap("branchName")]
+        [Validation(Required=false)]
+        public string BranchName { get; set; }
+
+        [NameInMap("ref")]
+        [Validation(Required=false)]
+        public string Ref { get; set; }
+
     }
 
 }

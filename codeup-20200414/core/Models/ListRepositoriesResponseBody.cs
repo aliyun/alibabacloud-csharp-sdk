@@ -9,107 +9,107 @@ using Tea;
 namespace AlibabaCloud.SDK.Codeup20200414.Models
 {
     public class ListRepositoriesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("ErrorCode")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? ErrorCode { get; set; }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
-        [NameInMap("Total")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public long? Total { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public int? ErrorCode { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListRepositoriesResponseBodyResult> Result { get; set; }
         public class ListRepositoriesResponseBodyResult : TeaModel {
-            [NameInMap("LastActivityAt")]
+            [NameInMap("AccessLevel")]
             [Validation(Required=false)]
-            public string LastActivityAt { get; set; }
-
-            [NameInMap("NamespaceId")]
-            [Validation(Required=false)]
-            public long? NamespaceId { get; set; }
-
-            [NameInMap("AvatarUrl")]
-            [Validation(Required=false)]
-            public string AvatarUrl { get; set; }
-
-            [NameInMap("StarCount")]
-            [Validation(Required=false)]
-            public long? StarCount { get; set; }
+            public int? AccessLevel { get; set; }
 
             [NameInMap("Archive")]
             [Validation(Required=false)]
             public bool? Archive { get; set; }
 
+            [NameInMap("AvatarUrl")]
+            [Validation(Required=false)]
+            public string AvatarUrl { get; set; }
+
             [NameInMap("CreatedAt")]
             [Validation(Required=false)]
             public string CreatedAt { get; set; }
-
-            [NameInMap("Star")]
-            [Validation(Required=false)]
-            public bool? Star { get; set; }
 
             [NameInMap("DemoProjectStatus")]
             [Validation(Required=false)]
             public bool? DemoProjectStatus { get; set; }
 
-            [NameInMap("ImportStatus")]
-            [Validation(Required=false)]
-            public string ImportStatus { get; set; }
-
-            [NameInMap("WebUrl")]
-            [Validation(Required=false)]
-            public string WebUrl { get; set; }
-
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
-
-            [NameInMap("NameWithNamespace")]
-            [Validation(Required=false)]
-            public string NameWithNamespace { get; set; }
-
-            [NameInMap("PathWithNamespace")]
-            [Validation(Required=false)]
-            public string PathWithNamespace { get; set; }
-
-            [NameInMap("Path")]
-            [Validation(Required=false)]
-            public string Path { get; set; }
-
-            [NameInMap("VisibilityLevel")]
-            [Validation(Required=false)]
-            public string VisibilityLevel { get; set; }
-
-            [NameInMap("AccessLevel")]
-            [Validation(Required=false)]
-            public int? AccessLevel { get; set; }
-
-            [NameInMap("UpdatedAt")]
-            [Validation(Required=false)]
-            public string UpdatedAt { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
 
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
+            [NameInMap("ImportStatus")]
+            [Validation(Required=false)]
+            public string ImportStatus { get; set; }
+
+            [NameInMap("LastActivityAt")]
+            [Validation(Required=false)]
+            public string LastActivityAt { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("NameWithNamespace")]
+            [Validation(Required=false)]
+            public string NameWithNamespace { get; set; }
+
+            [NameInMap("NamespaceId")]
+            [Validation(Required=false)]
+            public long? NamespaceId { get; set; }
+
+            [NameInMap("Path")]
+            [Validation(Required=false)]
+            public string Path { get; set; }
+
+            [NameInMap("PathWithNamespace")]
+            [Validation(Required=false)]
+            public string PathWithNamespace { get; set; }
+
+            [NameInMap("Star")]
+            [Validation(Required=false)]
+            public bool? Star { get; set; }
+
+            [NameInMap("StarCount")]
+            [Validation(Required=false)]
+            public long? StarCount { get; set; }
+
+            [NameInMap("UpdatedAt")]
+            [Validation(Required=false)]
+            public string UpdatedAt { get; set; }
+
+            [NameInMap("VisibilityLevel")]
+            [Validation(Required=false)]
+            public string VisibilityLevel { get; set; }
+
+            [NameInMap("WebUrl")]
+            [Validation(Required=false)]
+            public string WebUrl { get; set; }
+
         }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Total")]
+        [Validation(Required=false)]
+        public long? Total { get; set; }
 
     }
 

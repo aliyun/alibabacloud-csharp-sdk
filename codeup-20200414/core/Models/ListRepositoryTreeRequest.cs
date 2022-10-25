@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [Validation(Required=false)]
         public string Path { get; set; }
 
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
         [NameInMap("RefName")]
         [Validation(Required=false)]
         public string RefName { get; set; }
@@ -32,6 +28,10 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [NameInMap("SubUserId")]
         [Validation(Required=false)]
         public string SubUserId { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

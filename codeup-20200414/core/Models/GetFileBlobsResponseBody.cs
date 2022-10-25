@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Codeup20200414.Models
 {
     public class GetFileBlobsResponseBody : TeaModel {
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
@@ -17,25 +21,23 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
         [NameInMap("Result")]
         [Validation(Required=false)]
         public GetFileBlobsResponseBodyResult Result { get; set; }
         public class GetFileBlobsResponseBodyResult : TeaModel {
-            [NameInMap("TotalLines")]
-            [Validation(Required=false)]
-            public int? TotalLines { get; set; }
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
-        };
+
+            [NameInMap("TotalLines")]
+            [Validation(Required=false)]
+            public int? TotalLines { get; set; }
+
+        }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

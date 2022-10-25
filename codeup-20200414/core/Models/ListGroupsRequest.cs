@@ -13,9 +13,9 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [Validation(Required=false)]
         public string AccessToken { get; set; }
 
-        [NameInMap("Search")]
+        [NameInMap("IncludePersonal")]
         [Validation(Required=false)]
-        public string Search { get; set; }
+        public bool? IncludePersonal { get; set; }
 
         [NameInMap("OrganizationId")]
         [Validation(Required=false)]
@@ -29,13 +29,13 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        [NameInMap("Search")]
+        [Validation(Required=false)]
+        public string Search { get; set; }
+
         [NameInMap("SubUserId")]
         [Validation(Required=false)]
         public string SubUserId { get; set; }
-
-        [NameInMap("IncludePersonal")]
-        [Validation(Required=false)]
-        public bool? IncludePersonal { get; set; }
 
     }
 

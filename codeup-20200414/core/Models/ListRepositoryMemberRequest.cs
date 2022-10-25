@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [Validation(Required=false)]
         public string OrganizationId { get; set; }
 
-        [NameInMap("Query")]
-        [Validation(Required=false)]
-        public string Query { get; set; }
-
         [NameInMap("Page")]
         [Validation(Required=false)]
         public long? Page { get; set; }
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
+
+        [NameInMap("Query")]
+        [Validation(Required=false)]
+        public string Query { get; set; }
 
         [NameInMap("SubUserId")]
         [Validation(Required=false)]
