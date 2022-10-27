@@ -21,13 +21,29 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public List<DescribeGWSClustersResponseBodyClustersClusterInfo> ClusterInfo { get; set; }
             public class DescribeGWSClustersResponseBodyClustersClusterInfo : TeaModel {
+                [NameInMap("ClusterId")]
+                [Validation(Required=false)]
                 public string ClusterId { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("InstanceCount")]
+                [Validation(Required=false)]
                 public int? InstanceCount { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
                 public string VpcId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

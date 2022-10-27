@@ -21,10 +21,17 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public List<ListInvocationStatusResponseBodyInvokeInstancesInvokeInstance> InvokeInstance { get; set; }
             public class ListInvocationStatusResponseBodyInvokeInstancesInvokeInstance : TeaModel {
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("InstanceInvokeStatus")]
+                [Validation(Required=false)]
                 public string InstanceInvokeStatus { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("InvokeStatus")]
         [Validation(Required=false)]

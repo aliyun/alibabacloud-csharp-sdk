@@ -17,12 +17,25 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public List<ListCommandsResponseBodyCommandsCommand> Command { get; set; }
             public class ListCommandsResponseBodyCommandsCommand : TeaModel {
+                [NameInMap("CommandContent")]
+                [Validation(Required=false)]
                 public string CommandContent { get; set; }
+
+                [NameInMap("CommandId")]
+                [Validation(Required=false)]
                 public string CommandId { get; set; }
+
+                [NameInMap("Timeout")]
+                [Validation(Required=false)]
                 public string Timeout { get; set; }
+
+                [NameInMap("WorkingDir")]
+                [Validation(Required=false)]
                 public string WorkingDir { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

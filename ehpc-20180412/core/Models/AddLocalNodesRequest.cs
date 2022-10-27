@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string Nodes { get; set; }
 
+        [NameInMap("Queue")]
+        [Validation(Required=false)]
+        public string Queue { get; set; }
+
     }
 
 }

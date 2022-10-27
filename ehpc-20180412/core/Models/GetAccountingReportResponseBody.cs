@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<string> Data { get; set; }
-        };
+
+        }
 
         [NameInMap("Metrics")]
         [Validation(Required=false)]

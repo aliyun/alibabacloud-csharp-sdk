@@ -45,12 +45,25 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public List<QueryServicePackAndPriceResponseBodyServicePackServicePackInfo> ServicePackInfo { get; set; }
             public class QueryServicePackAndPriceResponseBodyServicePackServicePackInfo : TeaModel {
+                [NameInMap("Capacity")]
+                [Validation(Required=false)]
                 public int? Capacity { get; set; }
+
+                [NameInMap("EndTime")]
+                [Validation(Required=false)]
                 public int? EndTime { get; set; }
+
+                [NameInMap("InstanceName")]
+                [Validation(Required=false)]
                 public string InstanceName { get; set; }
+
+                [NameInMap("StartTime")]
+                [Validation(Required=false)]
                 public int? StartTime { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TradePrice")]
         [Validation(Required=false)]

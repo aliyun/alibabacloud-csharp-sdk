@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public List<ListRegionsResponseBodyRegionsRegionInfo> RegionInfo { get; set; }
             public class ListRegionsResponseBodyRegionsRegionInfo : TeaModel {
+                [NameInMap("LocalName")]
+                [Validation(Required=false)]
                 public string LocalName { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

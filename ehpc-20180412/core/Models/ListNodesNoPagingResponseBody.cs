@@ -17,13 +17,29 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public List<ListNodesNoPagingResponseBodyNodesNodeInfo> NodeInfo { get; set; }
             public class ListNodesNoPagingResponseBodyNodesNodeInfo : TeaModel {
+                [NameInMap("HostName")]
+                [Validation(Required=false)]
                 public string HostName { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public string Id { get; set; }
+
+                [NameInMap("ImageId")]
+                [Validation(Required=false)]
                 public string ImageId { get; set; }
+
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
                 public string InstanceType { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -21,12 +21,25 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public List<GetCloudMetricProfilingResponseBodySvgUrlsSvgInfo> SvgInfo { get; set; }
             public class GetCloudMetricProfilingResponseBodySvgUrlsSvgInfo : TeaModel {
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Size")]
+                [Validation(Required=false)]
                 public int? Size { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
+                [NameInMap("Url")]
+                [Validation(Required=false)]
                 public string Url { get; set; }
+
             }
-        };
+
+        }
 
     }
 

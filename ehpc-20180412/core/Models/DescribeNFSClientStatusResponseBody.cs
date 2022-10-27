@@ -20,13 +20,16 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [NameInMap("ExitCode")]
             [Validation(Required=false)]
             public int? ExitCode { get; set; }
+
             [NameInMap("InvokeRecordStatus")]
             [Validation(Required=false)]
             public string InvokeRecordStatus { get; set; }
+
             [NameInMap("Output")]
             [Validation(Required=false)]
             public string Output { get; set; }
-        };
+
+        }
 
         [NameInMap("Status")]
         [Validation(Required=false)]

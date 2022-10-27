@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [NameInMap("SecurityGroup")]
             [Validation(Required=false)]
             public List<string> SecurityGroup { get; set; }
-        };
+
+        }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

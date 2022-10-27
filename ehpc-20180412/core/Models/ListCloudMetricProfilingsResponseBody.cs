@@ -25,15 +25,37 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public List<ListCloudMetricProfilingsResponseBodyProfilingsProfilingInfo> ProfilingInfo { get; set; }
             public class ListCloudMetricProfilingsResponseBodyProfilingsProfilingInfo : TeaModel {
+                [NameInMap("Duration")]
+                [Validation(Required=false)]
                 public int? Duration { get; set; }
+
+                [NameInMap("Freq")]
+                [Validation(Required=false)]
                 public int? Freq { get; set; }
+
+                [NameInMap("HostName")]
+                [Validation(Required=false)]
                 public string HostName { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("Pid")]
+                [Validation(Required=false)]
                 public int? Pid { get; set; }
+
+                [NameInMap("ProfilingId")]
+                [Validation(Required=false)]
                 public string ProfilingId { get; set; }
+
+                [NameInMap("TriggerTime")]
+                [Validation(Required=false)]
                 public string TriggerTime { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

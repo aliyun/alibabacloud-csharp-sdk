@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public List<DescribeGWSInstancesResponseBodyInstancesInstanceInfo> InstanceInfo { get; set; }
             public class DescribeGWSInstancesResponseBodyInstancesInstanceInfo : TeaModel {
+                [NameInMap("AppList")]
+                [Validation(Required=false)]
                 public DescribeGWSInstancesResponseBodyInstancesInstanceInfoAppList AppList { get; set; }
                 public class DescribeGWSInstancesResponseBodyInstancesInstanceInfoAppList : TeaModel {
                     [NameInMap("AppInfo")]
@@ -38,17 +40,46 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     }
 
                 }
+
+                [NameInMap("ClusterId")]
+                [Validation(Required=false)]
                 public string ClusterId { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("ExpireTime")]
+                [Validation(Required=false)]
                 public string ExpireTime { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
                 public string InstanceType { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("UserName")]
+                [Validation(Required=false)]
                 public string UserName { get; set; }
+
+                [NameInMap("WorkMode")]
+                [Validation(Required=false)]
                 public string WorkMode { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

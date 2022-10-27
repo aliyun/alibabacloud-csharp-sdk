@@ -26,6 +26,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string InstanceType { get; set; }
 
             }
+
             [NameInMap("Login")]
             [Validation(Required=true)]
             public CreateClusterRequestEcsOrderLogin Login { get; set; }
@@ -39,6 +40,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string InstanceType { get; set; }
 
             }
+
             [NameInMap("Manager")]
             [Validation(Required=true)]
             public CreateClusterRequestEcsOrderManager Manager { get; set; }
@@ -52,7 +54,8 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string InstanceType { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("AccountType")]
         [Validation(Required=false)]
@@ -285,6 +288,20 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [NameInMap("SystemDiskType")]
         [Validation(Required=false)]
         public string SystemDiskType { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateClusterRequestTag> Tag { get; set; }
+        public class CreateClusterRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

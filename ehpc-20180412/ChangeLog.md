@@ -1,3 +1,6 @@
+2022-10-27 Version: 1.14.15
+- ListNodesByQueue and ListJobsWithFilters add Async.
+
 2022-04-02 Version: 1.14.14
 - Support Domain for CreateCluster.
 

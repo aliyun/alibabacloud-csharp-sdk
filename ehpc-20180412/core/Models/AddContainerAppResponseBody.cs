@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [NameInMap("ContainerId")]
             [Validation(Required=false)]
             public List<string> ContainerId { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

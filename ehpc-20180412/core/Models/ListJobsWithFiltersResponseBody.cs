@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListJobsWithFiltersResponseBody : TeaModel {
-        /// <summary>
-        /// Jobs
-        /// </summary>
         [NameInMap("Jobs")]
         [Validation(Required=false)]
         public List<ListJobsWithFiltersResponseBodyJobs> Jobs { get; set; }
@@ -52,6 +49,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public string Queue { get; set; }
 
+            [NameInMap("Rerunable")]
+            [Validation(Required=false)]
+            public bool? Rerunable { get; set; }
+
             [NameInMap("Resources")]
             [Validation(Required=false)]
             public ListJobsWithFiltersResponseBodyJobsResources Resources { get; set; }
@@ -59,10 +60,12 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 [NameInMap("Cores")]
                 [Validation(Required=false)]
                 public long? Cores { get; set; }
+
                 [NameInMap("Nodes")]
                 [Validation(Required=false)]
                 public long? Nodes { get; set; }
-            };
+
+            }
 
             [NameInMap("ShellPath")]
             [Validation(Required=false)]
@@ -88,39 +91,28 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public string SubmitTime { get; set; }
 
+            [NameInMap("VariableList")]
+            [Validation(Required=false)]
+            public string VariableList { get; set; }
+
         }
 
-        /// <summary>
-        /// PageNumber
-        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
-        /// <summary>
-        /// PageSize
-        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// Success
-        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
-        /// <summary>
-        /// TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
-        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

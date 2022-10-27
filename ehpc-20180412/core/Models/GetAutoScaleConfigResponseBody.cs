@@ -61,6 +61,8 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public List<GetAutoScaleConfigResponseBodyQueuesQueueInfo> QueueInfo { get; set; }
             public class GetAutoScaleConfigResponseBodyQueuesQueueInfo : TeaModel {
+                [NameInMap("DataDisks")]
+                [Validation(Required=false)]
                 public GetAutoScaleConfigResponseBodyQueuesQueueInfoDataDisks DataDisks { get; set; }
                 public class GetAutoScaleConfigResponseBodyQueuesQueueInfoDataDisks : TeaModel {
                     [NameInMap("DataDisksInfo")]
@@ -94,11 +96,29 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     }
 
                 }
+
+                [NameInMap("EnableAutoGrow")]
+                [Validation(Required=false)]
                 public bool? EnableAutoGrow { get; set; }
+
+                [NameInMap("EnableAutoShrink")]
+                [Validation(Required=false)]
                 public bool? EnableAutoShrink { get; set; }
+
+                [NameInMap("HostNamePrefix")]
+                [Validation(Required=false)]
                 public string HostNamePrefix { get; set; }
+
+                [NameInMap("HostNameSuffix")]
+                [Validation(Required=false)]
                 public string HostNameSuffix { get; set; }
+
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
                 public string InstanceType { get; set; }
+
+                [NameInMap("InstanceTypes")]
+                [Validation(Required=false)]
                 public GetAutoScaleConfigResponseBodyQueuesQueueInfoInstanceTypes InstanceTypes { get; set; }
                 public class GetAutoScaleConfigResponseBodyQueuesQueueInfoInstanceTypes : TeaModel {
                     [NameInMap("InstanceTypeInfo")]
@@ -132,20 +152,58 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     }
 
                 }
+
+                [NameInMap("MaxNodesInQueue")]
+                [Validation(Required=false)]
                 public int? MaxNodesInQueue { get; set; }
+
+                [NameInMap("MaxNodesPerCycle")]
+                [Validation(Required=false)]
                 public long? MaxNodesPerCycle { get; set; }
+
+                [NameInMap("MinNodesInQueue")]
+                [Validation(Required=false)]
                 public int? MinNodesInQueue { get; set; }
+
+                [NameInMap("MinNodesPerCycle")]
+                [Validation(Required=false)]
                 public long? MinNodesPerCycle { get; set; }
+
+                [NameInMap("QueueImageId")]
+                [Validation(Required=false)]
                 public string QueueImageId { get; set; }
+
+                [NameInMap("QueueName")]
+                [Validation(Required=false)]
                 public string QueueName { get; set; }
+
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
+
+                [NameInMap("SpotPriceLimit")]
+                [Validation(Required=false)]
                 public float? SpotPriceLimit { get; set; }
+
+                [NameInMap("SpotStrategy")]
+                [Validation(Required=false)]
                 public string SpotStrategy { get; set; }
+
+                [NameInMap("SystemDiskCategory")]
+                [Validation(Required=false)]
                 public string SystemDiskCategory { get; set; }
+
+                [NameInMap("SystemDiskLevel")]
+                [Validation(Required=false)]
                 public string SystemDiskLevel { get; set; }
+
+                [NameInMap("SystemDiskSize")]
+                [Validation(Required=false)]
                 public int? SystemDiskSize { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -21,8 +21,16 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public List<ListSoftwaresResponseBodySoftwaresSoftwareInfo> SoftwareInfo { get; set; }
             public class ListSoftwaresResponseBodySoftwaresSoftwareInfo : TeaModel {
+                [NameInMap("AccountType")]
+                [Validation(Required=false)]
                 public string AccountType { get; set; }
+
+                [NameInMap("AccountVersion")]
+                [Validation(Required=false)]
                 public string AccountVersion { get; set; }
+
+                [NameInMap("Applications")]
+                [Validation(Required=false)]
                 public ListSoftwaresResponseBodySoftwaresSoftwareInfoApplications Applications { get; set; }
                 public class ListSoftwaresResponseBodySoftwaresSoftwareInfoApplications : TeaModel {
                     [NameInMap("ApplicationInfo")]
@@ -48,12 +56,26 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     }
 
                 }
+
+                [NameInMap("EhpcVersion")]
+                [Validation(Required=false)]
                 public string EhpcVersion { get; set; }
+
+                [NameInMap("OsTag")]
+                [Validation(Required=false)]
                 public string OsTag { get; set; }
+
+                [NameInMap("SchedulerType")]
+                [Validation(Required=false)]
                 public string SchedulerType { get; set; }
+
+                [NameInMap("SchedulerVersion")]
+                [Validation(Required=false)]
                 public string SchedulerVersion { get; set; }
+
             }
-        };
+
+        }
 
     }
 

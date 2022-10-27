@@ -17,14 +17,40 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public List<ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems> FileSystems { get; set; }
             public class ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems : TeaModel {
+                [NameInMap("BandWidth")]
+                [Validation(Required=false)]
                 public int? BandWidth { get; set; }
+
+                [NameInMap("Capacity")]
+                [Validation(Required=false)]
                 public int? Capacity { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("Destription")]
+                [Validation(Required=false)]
                 public string Destription { get; set; }
+
+                [NameInMap("EncryptType")]
+                [Validation(Required=false)]
                 public int? EncryptType { get; set; }
+
+                [NameInMap("FileSystemId")]
+                [Validation(Required=false)]
                 public string FileSystemId { get; set; }
+
+                [NameInMap("FileSystemType")]
+                [Validation(Required=false)]
                 public string FileSystemType { get; set; }
+
+                [NameInMap("MeteredSize")]
+                [Validation(Required=false)]
                 public int? MeteredSize { get; set; }
+
+                [NameInMap("MountTargetList")]
+                [Validation(Required=false)]
                 public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetList MountTargetList { get; set; }
                 public class ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetList : TeaModel {
                     [NameInMap("MountTargets")]
@@ -58,6 +84,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     }
 
                 }
+
+                [NameInMap("PackageList")]
+                [Validation(Required=false)]
                 public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsPackageList PackageList { get; set; }
                 public class ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsPackageList : TeaModel {
                     [NameInMap("Packages")]
@@ -71,12 +100,30 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     }
 
                 }
+
+                [NameInMap("ProtocolType")]
+                [Validation(Required=false)]
                 public string ProtocolType { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("StorageType")]
+                [Validation(Required=false)]
                 public string StorageType { get; set; }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

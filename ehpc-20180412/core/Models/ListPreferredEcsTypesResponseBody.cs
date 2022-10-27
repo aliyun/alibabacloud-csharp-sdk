@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public List<ListPreferredEcsTypesResponseBodySeriesSeriesInfo> SeriesInfo { get; set; }
             public class ListPreferredEcsTypesResponseBodySeriesSeriesInfo : TeaModel {
+                [NameInMap("Roles")]
+                [Validation(Required=false)]
                 public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles Roles { get; set; }
                 public class ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles : TeaModel {
                     [NameInMap("Compute")]
@@ -30,7 +32,8 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                         [NameInMap("InstanceTypeId")]
                         [Validation(Required=false)]
                         public List<string> InstanceTypeId { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("Login")]
                     [Validation(Required=false)]
@@ -39,7 +42,8 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                         [NameInMap("InstanceTypeId")]
                         [Validation(Required=false)]
                         public List<string> InstanceTypeId { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("Manager")]
                     [Validation(Required=false)]
@@ -48,13 +52,22 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                         [NameInMap("InstanceTypeId")]
                         [Validation(Required=false)]
                         public List<string> InstanceTypeId { get; set; }
-                    };
+
+                    }
 
                 }
+
+                [NameInMap("SeriesId")]
+                [Validation(Required=false)]
                 public string SeriesId { get; set; }
+
+                [NameInMap("SeriesName")]
+                [Validation(Required=false)]
                 public string SeriesName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("SupportSpotInstance")]
         [Validation(Required=false)]

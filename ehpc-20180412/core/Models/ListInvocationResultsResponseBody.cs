@@ -17,15 +17,37 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public List<ListInvocationResultsResponseBodyInvocationResultsInvocationResult> InvocationResult { get; set; }
             public class ListInvocationResultsResponseBodyInvocationResultsInvocationResult : TeaModel {
+                [NameInMap("CommandId")]
+                [Validation(Required=false)]
                 public string CommandId { get; set; }
+
+                [NameInMap("ExitCode")]
+                [Validation(Required=false)]
                 public int? ExitCode { get; set; }
+
+                [NameInMap("FinishedTime")]
+                [Validation(Required=false)]
                 public string FinishedTime { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("InvokeRecordStatus")]
+                [Validation(Required=false)]
                 public string InvokeRecordStatus { get; set; }
+
+                [NameInMap("Message")]
+                [Validation(Required=false)]
                 public string Message { get; set; }
+
+                [NameInMap("Success")]
+                [Validation(Required=false)]
                 public bool? Success { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

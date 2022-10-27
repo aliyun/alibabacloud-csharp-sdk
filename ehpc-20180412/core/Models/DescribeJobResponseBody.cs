@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [NameInMap("JobInfo")]
             [Validation(Required=false)]
             public string JobInfo { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

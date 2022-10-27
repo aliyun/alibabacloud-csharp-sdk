@@ -16,25 +16,32 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
+
             [NameInMap("ImageTag")]
             [Validation(Required=false)]
             public string ImageTag { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
             [NameInMap("Repository")]
             [Validation(Required=false)]
             public string Repository { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

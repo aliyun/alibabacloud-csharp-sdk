@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 [Validation(Required=false)]
                 public int? Cpus { get; set; }
 
+                [NameInMap("MaxJobs")]
+                [Validation(Required=false)]
+                public int? MaxJobs { get; set; }
+
                 [NameInMap("Mem")]
                 [Validation(Required=false)]
                 public string Mem { get; set; }
@@ -64,6 +68,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [NameInMap("SchedInterval")]
             [Validation(Required=false)]
             public int? SchedInterval { get; set; }
+
+            [NameInMap("SchedMaxJobs")]
+            [Validation(Required=false)]
+            public int? SchedMaxJobs { get; set; }
+
+            [NameInMap("SchedMaxQueuedJobs")]
+            [Validation(Required=false)]
+            public int? SchedMaxQueuedJobs { get; set; }
 
         }
 

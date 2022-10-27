@@ -17,8 +17,16 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public List<ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfo> InstanceTypeFamilyInfo { get; set; }
             public class ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfo : TeaModel {
+                [NameInMap("Generation")]
+                [Validation(Required=false)]
                 public string Generation { get; set; }
+
+                [NameInMap("InstanceTypeFamilyId")]
+                [Validation(Required=false)]
                 public string InstanceTypeFamilyId { get; set; }
+
+                [NameInMap("Types")]
+                [Validation(Required=false)]
                 public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypes Types { get; set; }
                 public class ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypes : TeaModel {
                     [NameInMap("TypesInfo")]
@@ -76,13 +84,16 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                             [NameInMap("ZoneId")]
                             [Validation(Required=false)]
                             public List<string> ZoneId { get; set; }
-                        };
+
+                        }
 
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

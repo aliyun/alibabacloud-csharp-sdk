@@ -17,12 +17,25 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public List<DescribePriceResponseBodyPricesPriceInfo> PriceInfo { get; set; }
             public class DescribePriceResponseBodyPricesPriceInfo : TeaModel {
+                [NameInMap("Currency")]
+                [Validation(Required=false)]
                 public string Currency { get; set; }
+
+                [NameInMap("NodeType")]
+                [Validation(Required=false)]
                 public string NodeType { get; set; }
+
+                [NameInMap("OriginalPrice")]
+                [Validation(Required=false)]
                 public float? OriginalPrice { get; set; }
+
+                [NameInMap("TradePrice")]
+                [Validation(Required=false)]
                 public float? TradePrice { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

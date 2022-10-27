@@ -16,9 +16,11 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [NameInMap("DefaultImageLocation")]
             [Validation(Required=false)]
             public string DefaultImageLocation { get; set; }
+
             [NameInMap("ImageExpirationTimeout")]
             [Validation(Required=false)]
             public string ImageExpirationTimeout { get; set; }
+
             [NameInMap("Locations")]
             [Validation(Required=false)]
             public DescribeImageGatewayConfigResponseBodyImagegwLocations Locations { get; set; }
@@ -46,16 +48,20 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 }
 
             }
+
             [NameInMap("MongoDBURI")]
             [Validation(Required=false)]
             public string MongoDBURI { get; set; }
+
             [NameInMap("PullUpdateTimeout")]
             [Validation(Required=false)]
             public long? PullUpdateTimeout { get; set; }
+
             [NameInMap("UpdateDateTime")]
             [Validation(Required=false)]
             public string UpdateDateTime { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -17,22 +17,72 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public List<ListNodesResponseBodyNodesNodeInfo> NodeInfo { get; set; }
             public class ListNodesResponseBodyNodesNodeInfo : TeaModel {
+                [NameInMap("AddTime")]
+                [Validation(Required=false)]
                 public string AddTime { get; set; }
+
+                [NameInMap("CreateMode")]
+                [Validation(Required=false)]
                 public string CreateMode { get; set; }
+
+                [NameInMap("CreatedByEhpc")]
+                [Validation(Required=false)]
                 public bool? CreatedByEhpc { get; set; }
+
+                [NameInMap("Expired")]
+                [Validation(Required=false)]
                 public bool? Expired { get; set; }
+
+                [NameInMap("ExpiredTime")]
+                [Validation(Required=false)]
                 public string ExpiredTime { get; set; }
+
+                [NameInMap("HostName")]
+                [Validation(Required=false)]
                 public string HostName { get; set; }
+
+                [NameInMap("HtEnabled")]
+                [Validation(Required=false)]
                 public bool? HtEnabled { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public string Id { get; set; }
+
+                [NameInMap("ImageId")]
+                [Validation(Required=false)]
                 public string ImageId { get; set; }
+
+                [NameInMap("ImageOwnerAlias")]
+                [Validation(Required=false)]
                 public string ImageOwnerAlias { get; set; }
+
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
                 public string InstanceType { get; set; }
+
+                [NameInMap("IpAddress")]
+                [Validation(Required=false)]
                 public string IpAddress { get; set; }
+
+                [NameInMap("Location")]
+                [Validation(Required=false)]
                 public string Location { get; set; }
+
+                [NameInMap("LockReason")]
+                [Validation(Required=false)]
                 public string LockReason { get; set; }
+
+                [NameInMap("PublicIpAddress")]
+                [Validation(Required=false)]
                 public string PublicIpAddress { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("Roles")]
+                [Validation(Required=false)]
                 public ListNodesResponseBodyNodesNodeInfoRoles Roles { get; set; }
                 public class ListNodesResponseBodyNodesNodeInfoRoles : TeaModel {
                     [NameInMap("Role")]
@@ -40,9 +90,21 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     public List<string> Role { get; set; }
 
                 }
+
+                [NameInMap("SpotStrategy")]
+                [Validation(Required=false)]
                 public string SpotStrategy { get; set; }
+
+                [NameInMap("StateInSched")]
+                [Validation(Required=false)]
                 public string StateInSched { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("TotalResources")]
+                [Validation(Required=false)]
                 public ListNodesResponseBodyNodesNodeInfoTotalResources TotalResources { get; set; }
                 public class ListNodesResponseBodyNodesNodeInfoTotalResources : TeaModel {
                     [NameInMap("Cpu")]
@@ -58,6 +120,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     public int? Memory { get; set; }
 
                 }
+
+                [NameInMap("UsedResources")]
+                [Validation(Required=false)]
                 public ListNodesResponseBodyNodesNodeInfoUsedResources UsedResources { get; set; }
                 public class ListNodesResponseBodyNodesNodeInfoUsedResources : TeaModel {
                     [NameInMap("Cpu")]
@@ -73,12 +138,26 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     public int? Memory { get; set; }
 
                 }
+
+                [NameInMap("VSwitchId")]
+                [Validation(Required=false)]
                 public string VSwitchId { get; set; }
+
+                [NameInMap("Version")]
+                [Validation(Required=false)]
                 public string Version { get; set; }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
                 public string VpcId { get; set; }
+
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
                 public string ZoneId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

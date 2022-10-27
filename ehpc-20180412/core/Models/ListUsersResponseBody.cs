@@ -33,11 +33,21 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public List<ListUsersResponseBodyUsersUserInfo> UserInfo { get; set; }
             public class ListUsersResponseBodyUsersUserInfo : TeaModel {
+                [NameInMap("AddTime")]
+                [Validation(Required=false)]
                 public string AddTime { get; set; }
+
+                [NameInMap("Group")]
+                [Validation(Required=false)]
                 public string Group { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
             }
-        };
+
+        }
 
     }
 
