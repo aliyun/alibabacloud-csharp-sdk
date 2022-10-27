@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.UniMkt20181212.Models
         [Validation(Required=false)]
         public string ChannelId { get; set; }
 
+        [NameInMap("ChargePloy")]
+        [Validation(Required=false)]
+        public long? ChargePloy { get; set; }
+
+        [NameInMap("ChargeType")]
+        [Validation(Required=false)]
+        public long? ChargeType { get; set; }
+
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -68,6 +76,10 @@ namespace AlibabaCloud.SDK.UniMkt20181212.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("OptimizationSwitch")]
+        [Validation(Required=false)]
+        public long? OptimizationSwitch { get; set; }
 
         [NameInMap("ProxyUserId")]
         [Validation(Required=false)]
