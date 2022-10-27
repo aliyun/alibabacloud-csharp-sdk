@@ -16,12 +16,15 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [NameInMap("Code")]
             [Validation(Required=false)]
             public string Code { get; set; }
+
             [NameInMap("CompleteTime")]
             [Validation(Required=false)]
             public string CompleteTime { get; set; }
+
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
+
             [NameInMap("Data")]
             [Validation(Required=false)]
             public GetAIMediaAuditJobResponseBodyMediaAuditJobData Data { get; set; }
@@ -195,9 +198,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         }
 
                     }
+
                     [NameInMap("Label")]
                     [Validation(Required=false)]
                     public string Label { get; set; }
+
                     [NameInMap("LiveResult")]
                     [Validation(Required=false)]
                     public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult LiveResult { get; set; }
@@ -255,6 +260,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         }
 
                     }
+
                     [NameInMap("LogoResult")]
                     [Validation(Required=false)]
                     public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult LogoResult { get; set; }
@@ -312,6 +318,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         }
 
                     }
+
                     [NameInMap("PornResult")]
                     [Validation(Required=false)]
                     public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult PornResult { get; set; }
@@ -369,9 +376,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         }
 
                     }
+
                     [NameInMap("Suggestion")]
                     [Validation(Required=false)]
                     public string Suggestion { get; set; }
+
                     [NameInMap("TerrorismResult")]
                     [Validation(Required=false)]
                     public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult TerrorismResult { get; set; }
@@ -429,25 +438,32 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         }
 
                     }
-                };
+
+                }
 
             }
+
             [NameInMap("JobId")]
             [Validation(Required=false)]
             public string JobId { get; set; }
+
             [NameInMap("MediaId")]
             [Validation(Required=false)]
             public string MediaId { get; set; }
+
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

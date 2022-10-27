@@ -1519,6 +1519,10 @@ namespace AlibabaCloud.SDK.Vod20170321
             {
                 query["ImageType"] = request.ImageType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalFileName))
+            {
+                query["OriginalFileName"] = request.OriginalFileName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageLocation))
             {
                 query["StorageLocation"] = request.StorageLocation;
@@ -1577,6 +1581,10 @@ namespace AlibabaCloud.SDK.Vod20170321
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageType))
             {
                 query["ImageType"] = request.ImageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalFileName))
+            {
+                query["OriginalFileName"] = request.OriginalFileName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageLocation))
             {

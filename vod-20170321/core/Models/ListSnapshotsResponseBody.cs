@@ -16,12 +16,15 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
+
             [NameInMap("JobId")]
             [Validation(Required=false)]
             public string JobId { get; set; }
+
             [NameInMap("Regular")]
             [Validation(Required=false)]
             public string Regular { get; set; }
+
             [NameInMap("Snapshots")]
             [Validation(Required=false)]
             public ListSnapshotsResponseBodyMediaSnapshotSnapshots Snapshots { get; set; }
@@ -41,10 +44,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 }
 
             }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public long? Total { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

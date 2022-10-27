@@ -17,18 +17,33 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetailList> List { get; set; }
             public class GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetailList : TeaModel {
+                [NameInMap("EndTime")]
+                [Validation(Required=false)]
                 public long? EndTime { get; set; }
+
+                [NameInMap("Label")]
+                [Validation(Required=false)]
                 public string Label { get; set; }
+
+                [NameInMap("StartTime")]
+                [Validation(Required=false)]
                 public long? StartTime { get; set; }
+
+                [NameInMap("Text")]
+                [Validation(Required=false)]
                 public string Text { get; set; }
+
             }
+
             [NameInMap("PageTotal")]
             [Validation(Required=false)]
             public int? PageTotal { get; set; }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public int? Total { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

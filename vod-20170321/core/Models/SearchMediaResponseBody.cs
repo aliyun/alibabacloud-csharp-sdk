@@ -20,46 +20,70 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public string AppId { get; set; }
+
                 [NameInMap("BusinessType")]
                 [Validation(Required=false)]
                 public string BusinessType { get; set; }
+
                 [NameInMap("Categories")]
                 [Validation(Required=false)]
                 public List<SearchMediaResponseBodyMediaListAttachedMediaCategories> Categories { get; set; }
                 public class SearchMediaResponseBodyMediaListAttachedMediaCategories : TeaModel {
+                    [NameInMap("CateId")]
+                    [Validation(Required=false)]
                     public long? CateId { get; set; }
+
+                    [NameInMap("CateName")]
+                    [Validation(Required=false)]
                     public string CateName { get; set; }
+
+                    [NameInMap("Level")]
+                    [Validation(Required=false)]
                     public long? Level { get; set; }
+
+                    [NameInMap("ParentId")]
+                    [Validation(Required=false)]
                     public long? ParentId { get; set; }
+
                 }
+
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
+
                 [NameInMap("MediaId")]
                 [Validation(Required=false)]
                 public string MediaId { get; set; }
+
                 [NameInMap("ModificationTime")]
                 [Validation(Required=false)]
                 public string ModificationTime { get; set; }
+
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
+
                 [NameInMap("StorageLocation")]
                 [Validation(Required=false)]
                 public string StorageLocation { get; set; }
+
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public string Tags { get; set; }
+
                 [NameInMap("Title")]
                 [Validation(Required=false)]
                 public string Title { get; set; }
+
                 [NameInMap("URL")]
                 [Validation(Required=false)]
                 public string URL { get; set; }
-            };
+
+            }
 
             [NameInMap("Audio")]
             [Validation(Required=false)]
@@ -68,64 +92,84 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public string AppId { get; set; }
+
                 [NameInMap("AudioId")]
                 [Validation(Required=false)]
                 public string AudioId { get; set; }
+
                 [NameInMap("CateId")]
                 [Validation(Required=false)]
                 public long? CateId { get; set; }
+
                 [NameInMap("CateName")]
                 [Validation(Required=false)]
                 public string CateName { get; set; }
+
                 [NameInMap("CoverURL")]
                 [Validation(Required=false)]
                 public string CoverURL { get; set; }
+
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
+
                 [NameInMap("DownloadSwitch")]
                 [Validation(Required=false)]
                 public string DownloadSwitch { get; set; }
+
                 [NameInMap("Duration")]
                 [Validation(Required=false)]
                 public float? Duration { get; set; }
+
                 [NameInMap("MediaSource")]
                 [Validation(Required=false)]
                 public string MediaSource { get; set; }
+
                 [NameInMap("ModificationTime")]
                 [Validation(Required=false)]
                 public string ModificationTime { get; set; }
+
                 [NameInMap("PreprocessStatus")]
                 [Validation(Required=false)]
                 public string PreprocessStatus { get; set; }
+
                 [NameInMap("Size")]
                 [Validation(Required=false)]
                 public long? Size { get; set; }
+
                 [NameInMap("Snapshots")]
                 [Validation(Required=false)]
                 public List<string> Snapshots { get; set; }
+
                 [NameInMap("SpriteSnapshots")]
                 [Validation(Required=false)]
                 public List<string> SpriteSnapshots { get; set; }
+
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
+
                 [NameInMap("StorageLocation")]
                 [Validation(Required=false)]
                 public string StorageLocation { get; set; }
+
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public string Tags { get; set; }
+
                 [NameInMap("Title")]
                 [Validation(Required=false)]
                 public string Title { get; set; }
+
                 [NameInMap("TranscodeMode")]
                 [Validation(Required=false)]
                 public string TranscodeMode { get; set; }
-            };
+
+            }
 
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
@@ -138,40 +182,52 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public string AppId { get; set; }
+
                 [NameInMap("CateId")]
                 [Validation(Required=false)]
                 public long? CateId { get; set; }
+
                 [NameInMap("CateName")]
                 [Validation(Required=false)]
                 public string CateName { get; set; }
+
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
+
                 [NameInMap("ImageId")]
                 [Validation(Required=false)]
                 public string ImageId { get; set; }
+
                 [NameInMap("ModificationTime")]
                 [Validation(Required=false)]
                 public string ModificationTime { get; set; }
+
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
+
                 [NameInMap("StorageLocation")]
                 [Validation(Required=false)]
                 public string StorageLocation { get; set; }
+
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public string Tags { get; set; }
+
                 [NameInMap("Title")]
                 [Validation(Required=false)]
                 public string Title { get; set; }
+
                 [NameInMap("URL")]
                 [Validation(Required=false)]
                 public string URL { get; set; }
-            };
+
+            }
 
             [NameInMap("MediaId")]
             [Validation(Required=false)]
@@ -188,64 +244,84 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public string AppId { get; set; }
+
                 [NameInMap("CateId")]
                 [Validation(Required=false)]
                 public long? CateId { get; set; }
+
                 [NameInMap("CateName")]
                 [Validation(Required=false)]
                 public string CateName { get; set; }
+
                 [NameInMap("CoverURL")]
                 [Validation(Required=false)]
                 public string CoverURL { get; set; }
+
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
+
                 [NameInMap("DownloadSwitch")]
                 [Validation(Required=false)]
                 public string DownloadSwitch { get; set; }
+
                 [NameInMap("Duration")]
                 [Validation(Required=false)]
                 public float? Duration { get; set; }
+
                 [NameInMap("MediaSource")]
                 [Validation(Required=false)]
                 public string MediaSource { get; set; }
+
                 [NameInMap("ModificationTime")]
                 [Validation(Required=false)]
                 public string ModificationTime { get; set; }
+
                 [NameInMap("PreprocessStatus")]
                 [Validation(Required=false)]
                 public string PreprocessStatus { get; set; }
+
                 [NameInMap("Size")]
                 [Validation(Required=false)]
                 public long? Size { get; set; }
+
                 [NameInMap("Snapshots")]
                 [Validation(Required=false)]
                 public List<string> Snapshots { get; set; }
+
                 [NameInMap("SpriteSnapshots")]
                 [Validation(Required=false)]
                 public List<string> SpriteSnapshots { get; set; }
+
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
+
                 [NameInMap("StorageLocation")]
                 [Validation(Required=false)]
                 public string StorageLocation { get; set; }
+
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public string Tags { get; set; }
+
                 [NameInMap("Title")]
                 [Validation(Required=false)]
                 public string Title { get; set; }
+
                 [NameInMap("TranscodeMode")]
                 [Validation(Required=false)]
                 public string TranscodeMode { get; set; }
+
                 [NameInMap("VideoId")]
                 [Validation(Required=false)]
                 public string VideoId { get; set; }
-            };
+
+            }
 
         }
 

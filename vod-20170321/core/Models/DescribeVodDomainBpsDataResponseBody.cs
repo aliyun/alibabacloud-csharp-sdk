@@ -17,15 +17,37 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<DescribeVodDomainBpsDataResponseBodyBpsDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeVodDomainBpsDataResponseBodyBpsDataPerIntervalDataModule : TeaModel {
+                [NameInMap("DomesticValue")]
+                [Validation(Required=false)]
                 public string DomesticValue { get; set; }
+
+                [NameInMap("HttpsDomesticValue")]
+                [Validation(Required=false)]
                 public string HttpsDomesticValue { get; set; }
+
+                [NameInMap("HttpsOverseasValue")]
+                [Validation(Required=false)]
                 public string HttpsOverseasValue { get; set; }
+
+                [NameInMap("HttpsValue")]
+                [Validation(Required=false)]
                 public string HttpsValue { get; set; }
+
+                [NameInMap("OverseasValue")]
+                [Validation(Required=false)]
                 public string OverseasValue { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
                 public string Value { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("DataInterval")]
         [Validation(Required=false)]

@@ -25,11 +25,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<DescribeVodStorageDataResponseBodyStorageDataStorageDataItem> StorageDataItem { get; set; }
             public class DescribeVodStorageDataResponseBodyStorageDataStorageDataItem : TeaModel {
+                [NameInMap("NetworkOut")]
+                [Validation(Required=false)]
                 public string NetworkOut { get; set; }
+
+                [NameInMap("StorageUtilization")]
+                [Validation(Required=false)]
                 public string StorageUtilization { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
             }
-        };
+
+        }
 
     }
 

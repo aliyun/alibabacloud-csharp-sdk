@@ -17,8 +17,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<GetMediaDNAResultResponseBodyDNAResultVideoDNA> VideoDNA { get; set; }
             public class GetMediaDNAResultResponseBodyDNAResultVideoDNA : TeaModel {
+                [NameInMap("Detail")]
+                [Validation(Required=false)]
                 public List<GetMediaDNAResultResponseBodyDNAResultVideoDNADetail> Detail { get; set; }
                 public class GetMediaDNAResultResponseBodyDNAResultVideoDNADetail : TeaModel {
+                    [NameInMap("Duplication")]
+                    [Validation(Required=false)]
                     public GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication Duplication { get; set; }
                     public class GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication : TeaModel {
                         [NameInMap("Duration")]
@@ -30,6 +34,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         public string Start { get; set; }
 
                     }
+
+                    [NameInMap("Input")]
+                    [Validation(Required=false)]
                     public GetMediaDNAResultResponseBodyDNAResultVideoDNADetailInput Input { get; set; }
                     public class GetMediaDNAResultResponseBodyDNAResultVideoDNADetailInput : TeaModel {
                         [NameInMap("Duration")]
@@ -41,11 +48,20 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         public string Start { get; set; }
 
                     }
+
                 }
+
+                [NameInMap("PrimaryKey")]
+                [Validation(Required=false)]
                 public string PrimaryKey { get; set; }
+
+                [NameInMap("Similarity")]
+                [Validation(Required=false)]
                 public string Similarity { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

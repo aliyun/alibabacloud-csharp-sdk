@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string ImageType { get; set; }
 
+        [NameInMap("OriginalFileName")]
+        [Validation(Required=false)]
+        public string OriginalFileName { get; set; }
+
         [NameInMap("StorageLocation")]
         [Validation(Required=false)]
         public string StorageLocation { get; set; }

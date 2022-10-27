@@ -21,11 +21,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<DescribePlayUserAvgResponseBodyUserPlayStatisAvgsUserPlayStatisAvg> UserPlayStatisAvg { get; set; }
             public class DescribePlayUserAvgResponseBodyUserPlayStatisAvgsUserPlayStatisAvg : TeaModel {
+                [NameInMap("AvgPlayCount")]
+                [Validation(Required=false)]
                 public string AvgPlayCount { get; set; }
+
+                [NameInMap("AvgPlayDuration")]
+                [Validation(Required=false)]
                 public string AvgPlayDuration { get; set; }
+
+                [NameInMap("Date")]
+                [Validation(Required=false)]
                 public string Date { get; set; }
+
             }
-        };
+
+        }
 
     }
 

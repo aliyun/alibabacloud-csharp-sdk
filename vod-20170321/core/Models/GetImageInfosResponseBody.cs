@@ -48,19 +48,24 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 [NameInMap("FileSize")]
                 [Validation(Required=false)]
                 public string FileSize { get; set; }
+
                 [NameInMap("FileURL")]
                 [Validation(Required=false)]
                 public string FileURL { get; set; }
+
                 [NameInMap("Height")]
                 [Validation(Required=false)]
                 public int? Height { get; set; }
+
                 [NameInMap("OriginalFileName")]
                 [Validation(Required=false)]
                 public string OriginalFileName { get; set; }
+
                 [NameInMap("Width")]
                 [Validation(Required=false)]
                 public int? Width { get; set; }
-            };
+
+            }
 
             [NameInMap("Status")]
             [Validation(Required=false)]

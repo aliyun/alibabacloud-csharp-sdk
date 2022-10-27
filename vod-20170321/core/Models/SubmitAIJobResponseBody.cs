@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<SubmitAIJobResponseBodyAIJobListAIJob> AIJob { get; set; }
             public class SubmitAIJobResponseBodyAIJobListAIJob : TeaModel {
+                [NameInMap("JobId")]
+                [Validation(Required=false)]
                 public string JobId { get; set; }
+
+                [NameInMap("MediaId")]
+                [Validation(Required=false)]
                 public string MediaId { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

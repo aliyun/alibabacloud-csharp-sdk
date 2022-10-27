@@ -24,19 +24,24 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [NameInMap("CoverURL")]
             [Validation(Required=false)]
             public string CoverURL { get; set; }
+
             [NameInMap("Duration")]
             [Validation(Required=false)]
             public float? Duration { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
+
             [NameInMap("VideoId")]
             [Validation(Required=false)]
             public string VideoId { get; set; }
-        };
+
+        }
 
     }
 

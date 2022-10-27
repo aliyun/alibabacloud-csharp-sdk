@@ -29,13 +29,29 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<DescribePlayTopVideosResponseBodyTopPlayVideosTopPlayVideoStatis> TopPlayVideoStatis { get; set; }
             public class DescribePlayTopVideosResponseBodyTopPlayVideosTopPlayVideoStatis : TeaModel {
+                [NameInMap("PlayDuration")]
+                [Validation(Required=false)]
                 public string PlayDuration { get; set; }
+
+                [NameInMap("Title")]
+                [Validation(Required=false)]
                 public string Title { get; set; }
+
+                [NameInMap("UV")]
+                [Validation(Required=false)]
                 public string UV { get; set; }
+
+                [NameInMap("VV")]
+                [Validation(Required=false)]
                 public string VV { get; set; }
+
+                [NameInMap("VideoId")]
+                [Validation(Required=false)]
                 public string VideoId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TotalNum")]
         [Validation(Required=false)]

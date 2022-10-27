@@ -17,12 +17,32 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideo> LiveRecordVideo { get; set; }
             public class ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideo : TeaModel {
+                [NameInMap("AppName")]
+                [Validation(Required=false)]
                 public string AppName { get; set; }
+
+                [NameInMap("DomainName")]
+                [Validation(Required=false)]
                 public string DomainName { get; set; }
+
+                [NameInMap("PlaylistId")]
+                [Validation(Required=false)]
                 public string PlaylistId { get; set; }
+
+                [NameInMap("RecordEndTime")]
+                [Validation(Required=false)]
                 public string RecordEndTime { get; set; }
+
+                [NameInMap("RecordStartTime")]
+                [Validation(Required=false)]
                 public string RecordStartTime { get; set; }
+
+                [NameInMap("StreamName")]
+                [Validation(Required=false)]
                 public string StreamName { get; set; }
+
+                [NameInMap("Video")]
+                [Validation(Required=false)]
                 public ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideo Video { get; set; }
                 public class ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideo : TeaModel {
                     [NameInMap("CateId")]
@@ -64,7 +84,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         [NameInMap("Snapshot")]
                         [Validation(Required=false)]
                         public List<string> Snapshot { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("Status")]
                     [Validation(Required=false)]
@@ -87,8 +108,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public string VideoId { get; set; }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

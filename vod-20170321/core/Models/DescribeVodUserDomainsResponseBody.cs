@@ -17,13 +17,36 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<DescribeVodUserDomainsResponseBodyDomainsPageData> PageData { get; set; }
             public class DescribeVodUserDomainsResponseBodyDomainsPageData : TeaModel {
+                [NameInMap("Cname")]
+                [Validation(Required=false)]
                 public string Cname { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("DomainName")]
+                [Validation(Required=false)]
                 public string DomainName { get; set; }
+
+                [NameInMap("DomainStatus")]
+                [Validation(Required=false)]
                 public string DomainStatus { get; set; }
+
+                [NameInMap("GmtCreated")]
+                [Validation(Required=false)]
                 public string GmtCreated { get; set; }
+
+                [NameInMap("GmtModified")]
+                [Validation(Required=false)]
                 public string GmtModified { get; set; }
+
+                [NameInMap("Sandbox")]
+                [Validation(Required=false)]
                 public string Sandbox { get; set; }
+
+                [NameInMap("Sources")]
+                [Validation(Required=false)]
                 public DescribeVodUserDomainsResponseBodyDomainsPageDataSources Sources { get; set; }
                 public class DescribeVodUserDomainsResponseBodyDomainsPageDataSources : TeaModel {
                     [NameInMap("Source")]
@@ -49,9 +72,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     }
 
                 }
+
+                [NameInMap("SslProtocol")]
+                [Validation(Required=false)]
                 public string SslProtocol { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

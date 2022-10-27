@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<DescribeVodAIDataResponseBodyAIDataAIDataItem> AIDataItem { get; set; }
             public class DescribeVodAIDataResponseBodyAIDataAIDataItem : TeaModel {
+                [NameInMap("Data")]
+                [Validation(Required=false)]
                 public DescribeVodAIDataResponseBodyAIDataAIDataItemData Data { get; set; }
                 public class DescribeVodAIDataResponseBodyAIDataAIDataItemData : TeaModel {
                     [NameInMap("DataItem")]
@@ -34,9 +36,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     }
 
                 }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("DataInterval")]
         [Validation(Required=false)]

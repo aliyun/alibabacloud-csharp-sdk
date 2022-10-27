@@ -21,9 +21,20 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotal> UserPlayStatisTotal { get; set; }
             public class DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotal : TeaModel {
+                [NameInMap("Date")]
+                [Validation(Required=false)]
                 public string Date { get; set; }
+
+                [NameInMap("PlayDuration")]
+                [Validation(Required=false)]
                 public string PlayDuration { get; set; }
+
+                [NameInMap("PlayRange")]
+                [Validation(Required=false)]
                 public string PlayRange { get; set; }
+
+                [NameInMap("UV")]
+                [Validation(Required=false)]
                 public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalUV UV { get; set; }
                 public class DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalUV : TeaModel {
                     [NameInMap("Android")]
@@ -43,6 +54,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public string IOS { get; set; }
 
                 }
+
+                [NameInMap("VV")]
+                [Validation(Required=false)]
                 public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalVV VV { get; set; }
                 public class DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalVV : TeaModel {
                     [NameInMap("Android")]
@@ -62,8 +76,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public string IOS { get; set; }
 
                 }
+
             }
-        };
+
+        }
 
     }
 

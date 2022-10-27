@@ -17,8 +17,16 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetail> DomainLogDetail { get; set; }
             public class DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetail : TeaModel {
+                [NameInMap("DomainName")]
+                [Validation(Required=false)]
                 public string DomainName { get; set; }
+
+                [NameInMap("LogCount")]
+                [Validation(Required=false)]
                 public long? LogCount { get; set; }
+
+                [NameInMap("LogInfos")]
+                [Validation(Required=false)]
                 public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfos LogInfos { get; set; }
                 public class DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfos : TeaModel {
                     [NameInMap("LogInfoDetail")]
@@ -48,6 +56,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     }
 
                 }
+
+                [NameInMap("PageInfos")]
+                [Validation(Required=false)]
                 public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos PageInfos { get; set; }
                 public class DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos : TeaModel {
                     [NameInMap("PageNumber")]
@@ -63,8 +74,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public long? Total { get; set; }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

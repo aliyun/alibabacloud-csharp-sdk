@@ -21,9 +21,13 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<SubmitTranscodeJobsResponseBodyTranscodeJobsTranscodeJob> TranscodeJob { get; set; }
             public class SubmitTranscodeJobsResponseBodyTranscodeJobsTranscodeJob : TeaModel {
+                [NameInMap("JobId")]
+                [Validation(Required=false)]
                 public string JobId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TranscodeTaskId")]
         [Validation(Required=false)]

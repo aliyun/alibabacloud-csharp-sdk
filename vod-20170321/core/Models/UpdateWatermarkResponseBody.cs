@@ -20,25 +20,32 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
+
             [NameInMap("FileUrl")]
             [Validation(Required=false)]
             public string FileUrl { get; set; }
+
             [NameInMap("IsDefault")]
             [Validation(Required=false)]
             public string IsDefault { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
+
             [NameInMap("WatermarkConfig")]
             [Validation(Required=false)]
             public string WatermarkConfig { get; set; }
+
             [NameInMap("WatermarkId")]
             [Validation(Required=false)]
             public string WatermarkId { get; set; }
-        };
+
+        }
 
     }
 

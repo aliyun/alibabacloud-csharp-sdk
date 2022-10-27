@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public List<string> ImageId { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

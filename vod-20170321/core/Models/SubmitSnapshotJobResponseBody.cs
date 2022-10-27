@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [NameInMap("JobId")]
             [Validation(Required=false)]
             public string JobId { get; set; }
-        };
+
+        }
 
     }
 

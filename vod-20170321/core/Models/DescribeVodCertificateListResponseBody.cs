@@ -48,10 +48,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 }
 
             }
+
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

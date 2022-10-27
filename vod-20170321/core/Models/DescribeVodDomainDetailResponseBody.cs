@@ -16,33 +16,43 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [NameInMap("CertName")]
             [Validation(Required=false)]
             public string CertName { get; set; }
+
             [NameInMap("Cname")]
             [Validation(Required=false)]
             public string Cname { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
             [NameInMap("DomainName")]
             [Validation(Required=false)]
             public string DomainName { get; set; }
+
             [NameInMap("DomainStatus")]
             [Validation(Required=false)]
             public string DomainStatus { get; set; }
+
             [NameInMap("GmtCreated")]
             [Validation(Required=false)]
             public string GmtCreated { get; set; }
+
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public string GmtModified { get; set; }
+
             [NameInMap("SSLProtocol")]
             [Validation(Required=false)]
             public string SSLProtocol { get; set; }
+
             [NameInMap("SSLPub")]
             [Validation(Required=false)]
             public string SSLPub { get; set; }
+
             [NameInMap("Scope")]
             [Validation(Required=false)]
             public string Scope { get; set; }
+
             [NameInMap("Sources")]
             [Validation(Required=false)]
             public DescribeVodDomainDetailResponseBodyDomainDetailSources Sources { get; set; }
@@ -74,10 +84,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 }
 
             }
+
             [NameInMap("Weight")]
             [Validation(Required=false)]
             public string Weight { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

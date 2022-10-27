@@ -20,25 +20,32 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
+
             [NameInMap("IsDefault")]
             [Validation(Required=false)]
             public string IsDefault { get; set; }
+
             [NameInMap("ModifyTime")]
             [Validation(Required=false)]
             public string ModifyTime { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
             [NameInMap("TemplateConfig")]
             [Validation(Required=false)]
             public string TemplateConfig { get; set; }
+
             [NameInMap("TemplateType")]
             [Validation(Required=false)]
             public string TemplateType { get; set; }
+
             [NameInMap("VodTemplateId")]
             [Validation(Required=false)]
             public string VodTemplateId { get; set; }
-        };
+
+        }
 
     }
 

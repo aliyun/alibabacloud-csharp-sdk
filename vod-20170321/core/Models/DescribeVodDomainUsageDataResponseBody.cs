@@ -45,10 +45,17 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<DescribeVodDomainUsageDataResponseBodyUsageDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeVodDomainUsageDataResponseBodyUsageDataPerIntervalDataModule : TeaModel {
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
                 public string Value { get; set; }
+
             }
-        };
+
+        }
 
     }
 

@@ -17,9 +17,13 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<SubmitPreprocessJobsResponseBodyPreprocessJobsPreprocessJob> PreprocessJob { get; set; }
             public class SubmitPreprocessJobsResponseBodyPreprocessJobsPreprocessJob : TeaModel {
+                [NameInMap("JobId")]
+                [Validation(Required=false)]
                 public string JobId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

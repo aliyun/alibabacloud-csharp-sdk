@@ -20,39 +20,51 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [NameInMap("AppId")]
             [Validation(Required=false)]
             public string AppId { get; set; }
+
             [NameInMap("AuditStatus")]
             [Validation(Required=false)]
             public string AuditStatus { get; set; }
+
             [NameInMap("CateId")]
             [Validation(Required=false)]
             public long? CateId { get; set; }
+
             [NameInMap("CateName")]
             [Validation(Required=false)]
             public string CateName { get; set; }
+
             [NameInMap("CoverURL")]
             [Validation(Required=false)]
             public string CoverURL { get; set; }
+
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
+
             [NameInMap("CustomMediaInfo")]
             [Validation(Required=false)]
             public string CustomMediaInfo { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
             [NameInMap("Duration")]
             [Validation(Required=false)]
             public float? Duration { get; set; }
+
             [NameInMap("ModificationTime")]
             [Validation(Required=false)]
             public string ModificationTime { get; set; }
+
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
             [NameInMap("Size")]
             [Validation(Required=false)]
             public long? Size { get; set; }
+
             [NameInMap("Snapshots")]
             [Validation(Required=false)]
             public GetVideoInfoResponseBodyVideoSnapshots Snapshots { get; set; }
@@ -62,25 +74,32 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public List<string> Snapshot { get; set; }
 
             }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("StorageLocation")]
             [Validation(Required=false)]
             public string StorageLocation { get; set; }
+
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public string Tags { get; set; }
+
             [NameInMap("TemplateGroupId")]
             [Validation(Required=false)]
             public string TemplateGroupId { get; set; }
+
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
+
             [NameInMap("VideoId")]
             [Validation(Required=false)]
             public string VideoId { get; set; }
-        };
+
+        }
 
     }
 
