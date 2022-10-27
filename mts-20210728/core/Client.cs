@@ -664,6 +664,10 @@ namespace AlibabaCloud.SDK.Mts20210728
             {
                 body["Output"] = request.Output;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                body["Params"] = request.Params;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 body["StartTime"] = request.StartTime;
@@ -732,6 +736,10 @@ namespace AlibabaCloud.SDK.Mts20210728
             {
                 body["Output"] = request.Output;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                body["Params"] = request.Params;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 body["StartTime"] = request.StartTime;
@@ -790,10 +798,6 @@ namespace AlibabaCloud.SDK.Mts20210728
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
-            {
-                body["Input"] = request.Input;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
             {
                 body["Level"] = request.Level;
@@ -809,10 +813,6 @@ namespace AlibabaCloud.SDK.Mts20210728
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
             {
                 body["Params"] = request.Params;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
-            {
-                body["Url"] = request.Url;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -838,10 +838,6 @@ namespace AlibabaCloud.SDK.Mts20210728
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
-            {
-                body["Input"] = request.Input;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
             {
                 body["Level"] = request.Level;
@@ -857,10 +853,6 @@ namespace AlibabaCloud.SDK.Mts20210728
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
             {
                 body["Params"] = request.Params;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
-            {
-                body["Url"] = request.Url;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

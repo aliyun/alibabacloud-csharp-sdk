@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Mts20210728.Models
         [Validation(Required=false)]
         public string Output { get; set; }
 
+        [NameInMap("Params")]
+        [Validation(Required=false)]
+        public string Params { get; set; }
+
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
