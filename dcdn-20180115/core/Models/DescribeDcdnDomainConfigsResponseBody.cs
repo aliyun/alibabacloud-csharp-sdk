@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 [Validation(Required=false)]
                 public string FunctionName { get; set; }
 
+                [NameInMap("ParentId")]
+                [Validation(Required=false)]
+                public string ParentId { get; set; }
+
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
