@@ -41,6 +41,28 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 [Validation(Required=false)]
                 public List<GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRoles> Roles { get; set; }
                 public class GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRoles : TeaModel {
+                    [NameInMap("ApiForCreation")]
+                    [Validation(Required=false)]
+                    public GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRolesApiForCreation ApiForCreation { get; set; }
+                    public class GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRolesApiForCreation : TeaModel {
+                        [NameInMap("ApiName")]
+                        [Validation(Required=false)]
+                        public string ApiName { get; set; }
+
+                        [NameInMap("ApiProductId")]
+                        [Validation(Required=false)]
+                        public string ApiProductId { get; set; }
+
+                        [NameInMap("ApiType")]
+                        [Validation(Required=false)]
+                        public string ApiType { get; set; }
+
+                        [NameInMap("Parameters")]
+                        [Validation(Required=false)]
+                        public Dictionary<string, object> Parameters { get; set; }
+
+                    }
+
                     [NameInMap("Created")]
                     [Validation(Required=false)]
                     public bool? Created { get; set; }

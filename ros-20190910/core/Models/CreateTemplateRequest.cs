@@ -17,6 +17,20 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<CreateTemplateRequestTags> Tags { get; set; }
+        public class CreateTemplateRequestTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("TemplateBody")]
         [Validation(Required=false)]
         public string TemplateBody { get; set; }

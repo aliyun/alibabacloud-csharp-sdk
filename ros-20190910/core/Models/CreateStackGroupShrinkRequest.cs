@@ -59,6 +59,20 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string StackGroupName { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<CreateStackGroupShrinkRequestTags> Tags { get; set; }
+        public class CreateStackGroupShrinkRequestTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("TemplateBody")]
         [Validation(Required=false)]
         public string TemplateBody { get; set; }

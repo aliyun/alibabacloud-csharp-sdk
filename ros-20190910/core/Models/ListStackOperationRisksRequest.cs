@@ -37,6 +37,22 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string StackId { get; set; }
 
+        [NameInMap("TemplateBody")]
+        [Validation(Required=false)]
+        public string TemplateBody { get; set; }
+
+        [NameInMap("TemplateId")]
+        [Validation(Required=false)]
+        public string TemplateId { get; set; }
+
+        [NameInMap("TemplateURL")]
+        [Validation(Required=false)]
+        public string TemplateURL { get; set; }
+
+        [NameInMap("TemplateVersion")]
+        [Validation(Required=false)]
+        public string TemplateVersion { get; set; }
+
     }
 
 }

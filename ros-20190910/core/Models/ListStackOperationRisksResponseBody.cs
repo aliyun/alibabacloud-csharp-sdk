@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListStackOperationRisksResponseBody : TeaModel {
+        [NameInMap("MissingPolicyActions")]
+        [Validation(Required=false)]
+        public List<string> MissingPolicyActions { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
