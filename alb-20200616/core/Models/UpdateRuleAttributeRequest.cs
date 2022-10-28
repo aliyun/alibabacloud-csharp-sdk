@@ -25,6 +25,36 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public List<UpdateRuleAttributeRequestRuleActions> RuleActions { get; set; }
         public class UpdateRuleAttributeRequestRuleActions : TeaModel {
+            [NameInMap("CorsConfig")]
+            [Validation(Required=false)]
+            public UpdateRuleAttributeRequestRuleActionsCorsConfig CorsConfig { get; set; }
+            public class UpdateRuleAttributeRequestRuleActionsCorsConfig : TeaModel {
+                [NameInMap("AllowCredentials")]
+                [Validation(Required=false)]
+                public string AllowCredentials { get; set; }
+
+                [NameInMap("AllowHeaders")]
+                [Validation(Required=false)]
+                public List<string> AllowHeaders { get; set; }
+
+                [NameInMap("AllowMethods")]
+                [Validation(Required=false)]
+                public List<string> AllowMethods { get; set; }
+
+                [NameInMap("AllowOrigin")]
+                [Validation(Required=false)]
+                public List<string> AllowOrigin { get; set; }
+
+                [NameInMap("ExposeHeaders")]
+                [Validation(Required=false)]
+                public List<string> ExposeHeaders { get; set; }
+
+                [NameInMap("MaxAge")]
+                [Validation(Required=false)]
+                public long? MaxAge { get; set; }
+
+            }
+
             [NameInMap("FixedResponseConfig")]
             [Validation(Required=false)]
             public UpdateRuleAttributeRequestRuleActionsFixedResponseConfig FixedResponseConfig { get; set; }
