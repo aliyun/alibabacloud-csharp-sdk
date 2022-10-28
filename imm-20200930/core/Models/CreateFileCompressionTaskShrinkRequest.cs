@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string CredentialConfigShrink { get; set; }
 
-        [NameInMap("ManifestURI")]
-        [Validation(Required=false)]
-        public string ManifestURI { get; set; }
-
         [NameInMap("NotifyTopicName")]
         [Validation(Required=false)]
         public string NotifyTopicName { get; set; }
@@ -32,6 +28,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
+
+        [NameInMap("SourceManifestURI")]
+        [Validation(Required=false)]
+        public string SourceManifestURI { get; set; }
 
         [NameInMap("Sources")]
         [Validation(Required=false)]

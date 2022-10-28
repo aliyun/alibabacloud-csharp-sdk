@@ -1679,10 +1679,6 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 query["CredentialConfig"] = request.CredentialConfigShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManifestURI))
-            {
-                query["ManifestURI"] = request.ManifestURI;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
                 query["NotifyTopicName"] = request.NotifyTopicName;
@@ -1694,6 +1690,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
                 query["ProjectName"] = request.ProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceManifestURI))
+            {
+                query["SourceManifestURI"] = request.SourceManifestURI;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcesShrink))
             {
@@ -1748,10 +1748,6 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 query["CredentialConfig"] = request.CredentialConfigShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManifestURI))
-            {
-                query["ManifestURI"] = request.ManifestURI;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
                 query["NotifyTopicName"] = request.NotifyTopicName;
@@ -1763,6 +1759,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
                 query["ProjectName"] = request.ProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceManifestURI))
+            {
+                query["SourceManifestURI"] = request.SourceManifestURI;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcesShrink))
             {
