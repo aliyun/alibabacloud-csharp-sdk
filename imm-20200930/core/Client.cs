@@ -6555,10 +6555,24 @@ namespace AlibabaCloud.SDK.Imm20200930
             return await MergeFigureClustersWithOptionsAsync(request, runtime);
         }
 
-        public QueryFigureClustersResponse QueryFigureClustersWithOptions(QueryFigureClustersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public QueryFigureClustersResponse QueryFigureClustersWithOptions(QueryFigureClustersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryFigureClustersShrinkRequest request = new QueryFigureClustersShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateTimeRange.ToMap()))
+            {
+                request.CreateTimeRangeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateTimeRange.ToMap(), "CreateTimeRange", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateTimeRange.ToMap()))
+            {
+                request.UpdateTimeRangeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateTimeRange.ToMap(), "UpdateTimeRange", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeRangeShrink))
+            {
+                query["CreateTimeRange"] = request.CreateTimeRangeShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomLabels))
             {
                 query["CustomLabels"] = request.CustomLabels;
@@ -6586,6 +6600,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sort))
             {
                 query["Sort"] = request.Sort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateTimeRangeShrink))
+            {
+                query["UpdateTimeRange"] = request.UpdateTimeRangeShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6606,10 +6624,24 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<QueryFigureClustersResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<QueryFigureClustersResponse> QueryFigureClustersWithOptionsAsync(QueryFigureClustersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<QueryFigureClustersResponse> QueryFigureClustersWithOptionsAsync(QueryFigureClustersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryFigureClustersShrinkRequest request = new QueryFigureClustersShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateTimeRange.ToMap()))
+            {
+                request.CreateTimeRangeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateTimeRange.ToMap(), "CreateTimeRange", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateTimeRange.ToMap()))
+            {
+                request.UpdateTimeRangeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateTimeRange.ToMap(), "UpdateTimeRange", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeRangeShrink))
+            {
+                query["CreateTimeRange"] = request.CreateTimeRangeShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomLabels))
             {
                 query["CustomLabels"] = request.CustomLabels;
@@ -6637,6 +6669,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sort))
             {
                 query["Sort"] = request.Sort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateTimeRangeShrink))
+            {
+                query["UpdateTimeRange"] = request.UpdateTimeRangeShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

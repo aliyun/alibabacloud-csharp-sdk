@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class QueryFigureClustersRequest : TeaModel {
+    public class QueryFigureClustersShrinkRequest : TeaModel {
         [NameInMap("CreateTimeRange")]
         [Validation(Required=false)]
-        public TimeRange CreateTimeRange { get; set; }
+        public string CreateTimeRangeShrink { get; set; }
 
         [NameInMap("CustomLabels")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         [NameInMap("UpdateTimeRange")]
         [Validation(Required=false)]
-        public TimeRange UpdateTimeRange { get; set; }
+        public string UpdateTimeRangeShrink { get; set; }
 
     }
 
