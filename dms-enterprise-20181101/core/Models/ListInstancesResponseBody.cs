@@ -25,21 +25,68 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListInstancesResponseBodyInstanceListInstance> Instance { get; set; }
             public class ListInstancesResponseBodyInstanceListInstance : TeaModel {
+                [NameInMap("DataLinkName")]
+                [Validation(Required=false)]
                 public string DataLinkName { get; set; }
+
+                [NameInMap("DatabasePassword")]
+                [Validation(Required=false)]
                 public string DatabasePassword { get; set; }
+
+                [NameInMap("DatabaseUser")]
+                [Validation(Required=false)]
                 public string DatabaseUser { get; set; }
+
+                [NameInMap("DbaId")]
+                [Validation(Required=false)]
                 public string DbaId { get; set; }
+
+                [NameInMap("DbaNickName")]
+                [Validation(Required=false)]
                 public string DbaNickName { get; set; }
+
+                [NameInMap("DdlOnline")]
+                [Validation(Required=false)]
                 public int? DdlOnline { get; set; }
+
+                [NameInMap("EcsInstanceId")]
+                [Validation(Required=false)]
                 public string EcsInstanceId { get; set; }
+
+                [NameInMap("EcsRegion")]
+                [Validation(Required=false)]
                 public string EcsRegion { get; set; }
+
+                [NameInMap("EnvType")]
+                [Validation(Required=false)]
                 public string EnvType { get; set; }
+
+                [NameInMap("ExportTimeout")]
+                [Validation(Required=false)]
                 public int? ExportTimeout { get; set; }
+
+                [NameInMap("Host")]
+                [Validation(Required=false)]
                 public string Host { get; set; }
+
+                [NameInMap("InstanceAlias")]
+                [Validation(Required=false)]
                 public string InstanceAlias { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("InstanceSource")]
+                [Validation(Required=false)]
                 public string InstanceSource { get; set; }
+
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
                 public string InstanceType { get; set; }
+
+                [NameInMap("OwnerIdList")]
+                [Validation(Required=false)]
                 public ListInstancesResponseBodyInstanceListInstanceOwnerIdList OwnerIdList { get; set; }
                 public class ListInstancesResponseBodyInstanceListInstanceOwnerIdList : TeaModel {
                     [NameInMap("OwnerIds")]
@@ -47,6 +94,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public List<string> OwnerIds { get; set; }
 
                 }
+
+                [NameInMap("OwnerNameList")]
+                [Validation(Required=false)]
                 public ListInstancesResponseBodyInstanceListInstanceOwnerNameList OwnerNameList { get; set; }
                 public class ListInstancesResponseBodyInstanceListInstanceOwnerNameList : TeaModel {
                     [NameInMap("OwnerNames")]
@@ -54,10 +104,29 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public List<string> OwnerNames { get; set; }
 
                 }
+
+                [NameInMap("Port")]
+                [Validation(Required=false)]
                 public int? Port { get; set; }
+
+                [NameInMap("QueryTimeout")]
+                [Validation(Required=false)]
                 public int? QueryTimeout { get; set; }
+
+                [NameInMap("SafeRuleId")]
+                [Validation(Required=false)]
                 public string SafeRuleId { get; set; }
+
+                [NameInMap("SellSitd")]
+                [Validation(Required=false)]
+                public bool? SellSitd { get; set; }
+
+                [NameInMap("Sid")]
+                [Validation(Required=false)]
                 public string Sid { get; set; }
+
+                [NameInMap("StandardGroup")]
+                [Validation(Required=false)]
                 public ListInstancesResponseBodyInstanceListInstanceStandardGroup StandardGroup { get; set; }
                 public class ListInstancesResponseBodyInstanceListInstanceStandardGroup : TeaModel {
                     [NameInMap("GroupMode")]
@@ -69,11 +138,22 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public string GroupName { get; set; }
 
                 }
+
+                [NameInMap("State")]
+                [Validation(Required=false)]
                 public string State { get; set; }
+
+                [NameInMap("UseDsql")]
+                [Validation(Required=false)]
                 public int? UseDsql { get; set; }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
                 public string VpcId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

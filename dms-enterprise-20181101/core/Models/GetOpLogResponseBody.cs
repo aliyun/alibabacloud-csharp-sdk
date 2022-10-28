@@ -25,16 +25,41 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<GetOpLogResponseBodyOpLogDetailsOpLogDetail> OpLogDetail { get; set; }
             public class GetOpLogResponseBodyOpLogDetailsOpLogDetail : TeaModel {
+                [NameInMap("Database")]
+                [Validation(Required=false)]
                 public string Database { get; set; }
+
+                [NameInMap("Module")]
+                [Validation(Required=false)]
                 public string Module { get; set; }
+
+                [NameInMap("OpContent")]
+                [Validation(Required=false)]
                 public string OpContent { get; set; }
+
+                [NameInMap("OpTime")]
+                [Validation(Required=false)]
                 public string OpTime { get; set; }
+
+                [NameInMap("OpUserId")]
+                [Validation(Required=false)]
                 public long? OpUserId { get; set; }
+
+                [NameInMap("OrderId")]
+                [Validation(Required=false)]
                 public long? OrderId { get; set; }
+
+                [NameInMap("UserId")]
+                [Validation(Required=false)]
                 public string UserId { get; set; }
+
+                [NameInMap("UserNick")]
+                [Validation(Required=false)]
                 public string UserNick { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

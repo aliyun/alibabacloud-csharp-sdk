@@ -28,19 +28,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [NameInMap("DbType")]
             [Validation(Required=false)]
             public string DbType { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
             [NameInMap("GroupMode")]
             [Validation(Required=false)]
             public string GroupMode { get; set; }
+
             [NameInMap("GroupName")]
             [Validation(Required=false)]
             public string GroupName { get; set; }
+
             [NameInMap("LastMenderId")]
             [Validation(Required=false)]
             public long? LastMenderId { get; set; }
-        };
+
+        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

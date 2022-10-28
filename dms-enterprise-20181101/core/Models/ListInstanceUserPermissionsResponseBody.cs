@@ -37,7 +37,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermission> UserPermission { get; set; }
             public class ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermission : TeaModel {
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("PermDetails")]
+                [Validation(Required=false)]
                 public ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetails PermDetails { get; set; }
                 public class ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetails : TeaModel {
                     [NameInMap("PermDetail")]
@@ -71,10 +76,18 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     }
 
                 }
+
+                [NameInMap("UserId")]
+                [Validation(Required=false)]
                 public string UserId { get; set; }
+
+                [NameInMap("UserNickName")]
+                [Validation(Required=false)]
                 public string UserNickName { get; set; }
+
             }
-        };
+
+        }
 
     }
 

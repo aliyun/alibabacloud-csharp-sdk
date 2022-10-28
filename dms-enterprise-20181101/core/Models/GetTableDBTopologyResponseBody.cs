@@ -17,31 +17,73 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<GetTableDBTopologyResponseBodyDBTopologyDataSourceList> DataSourceList { get; set; }
             public class GetTableDBTopologyResponseBodyDBTopologyDataSourceList : TeaModel {
+                [NameInMap("DatabaseList")]
+                [Validation(Required=false)]
                 public List<GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseList> DatabaseList { get; set; }
                 public class GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseList : TeaModel {
+                    [NameInMap("DbId")]
+                    [Validation(Required=false)]
                     public string DbId { get; set; }
+
+                    [NameInMap("DbName")]
+                    [Validation(Required=false)]
                     public string DbName { get; set; }
+
+                    [NameInMap("DbType")]
+                    [Validation(Required=false)]
                     public string DbType { get; set; }
+
+                    [NameInMap("EnvType")]
+                    [Validation(Required=false)]
                     public string EnvType { get; set; }
+
+                    [NameInMap("TableList")]
+                    [Validation(Required=false)]
                     public List<GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseListTableList> TableList { get; set; }
                     public class GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseListTableList : TeaModel {
+                        [NameInMap("TableId")]
+                        [Validation(Required=false)]
                         public string TableId { get; set; }
+
+                        [NameInMap("TableName")]
+                        [Validation(Required=false)]
                         public string TableName { get; set; }
+
+                        [NameInMap("TableType")]
+                        [Validation(Required=false)]
                         public string TableType { get; set; }
+
                     }
+
                 }
+
+                [NameInMap("DbType")]
+                [Validation(Required=false)]
                 public string DbType { get; set; }
+
+                [NameInMap("Host")]
+                [Validation(Required=false)]
                 public string Host { get; set; }
+
+                [NameInMap("Port")]
+                [Validation(Required=false)]
                 public int? Port { get; set; }
+
+                [NameInMap("Sid")]
+                [Validation(Required=false)]
                 public string Sid { get; set; }
+
             }
+
             [NameInMap("TableGuid")]
             [Validation(Required=false)]
             public string TableGuid { get; set; }
+
             [NameInMap("TableName")]
             [Validation(Required=false)]
             public string TableName { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

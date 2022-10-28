@@ -25,20 +25,57 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListProxySQLExecAuditLogResponseBodyProxySQLExecAuditLogListProxySQLExecAuditLog> ProxySQLExecAuditLog { get; set; }
             public class ListProxySQLExecAuditLogResponseBodyProxySQLExecAuditLogListProxySQLExecAuditLog : TeaModel {
+                [NameInMap("AffectRows")]
+                [Validation(Required=false)]
                 public long? AffectRows { get; set; }
+
+                [NameInMap("ElapsedTime")]
+                [Validation(Required=false)]
                 public long? ElapsedTime { get; set; }
+
+                [NameInMap("ExecState")]
+                [Validation(Required=false)]
                 public string ExecState { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public long? InstanceId { get; set; }
+
+                [NameInMap("InstanceName")]
+                [Validation(Required=false)]
                 public string InstanceName { get; set; }
+
+                [NameInMap("OpTime")]
+                [Validation(Required=false)]
                 public string OpTime { get; set; }
+
+                [NameInMap("Remark")]
+                [Validation(Required=false)]
                 public string Remark { get; set; }
+
+                [NameInMap("SQL")]
+                [Validation(Required=false)]
                 public string SQL { get; set; }
+
+                [NameInMap("SQLType")]
+                [Validation(Required=false)]
                 public string SQLType { get; set; }
+
+                [NameInMap("SchemaName")]
+                [Validation(Required=false)]
                 public string SchemaName { get; set; }
+
+                [NameInMap("UserId")]
+                [Validation(Required=false)]
                 public long? UserId { get; set; }
+
+                [NameInMap("UserName")]
+                [Validation(Required=false)]
                 public string UserName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

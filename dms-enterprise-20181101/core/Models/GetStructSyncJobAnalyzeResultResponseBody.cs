@@ -29,18 +29,35 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<GetStructSyncJobAnalyzeResultResponseBodyStructSyncJobAnalyzeResultResultList> ResultList { get; set; }
             public class GetStructSyncJobAnalyzeResultResponseBodyStructSyncJobAnalyzeResultResultList : TeaModel {
+                [NameInMap("Script")]
+                [Validation(Required=false)]
                 public string Script { get; set; }
+
+                [NameInMap("SourceTableName")]
+                [Validation(Required=false)]
                 public string SourceTableName { get; set; }
+
+                [NameInMap("TargetTableName")]
+                [Validation(Required=false)]
                 public string TargetTableName { get; set; }
+
             }
+
             [NameInMap("SummaryList")]
             [Validation(Required=false)]
             public List<GetStructSyncJobAnalyzeResultResponseBodyStructSyncJobAnalyzeResultSummaryList> SummaryList { get; set; }
             public class GetStructSyncJobAnalyzeResultResponseBodyStructSyncJobAnalyzeResultSummaryList : TeaModel {
+                [NameInMap("CompareType")]
+                [Validation(Required=false)]
                 public string CompareType { get; set; }
+
+                [NameInMap("Count")]
+                [Validation(Required=false)]
                 public long? Count { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

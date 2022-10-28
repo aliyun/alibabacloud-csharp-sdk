@@ -25,11 +25,21 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListLogicTableRouteConfigResponseBodyLogicTableRouteConfigListLogicTableRouteConfig> LogicTableRouteConfig { get; set; }
             public class ListLogicTableRouteConfigResponseBodyLogicTableRouteConfigListLogicTableRouteConfig : TeaModel {
+                [NameInMap("RouteExpr")]
+                [Validation(Required=false)]
                 public string RouteExpr { get; set; }
+
+                [NameInMap("RouteKey")]
+                [Validation(Required=false)]
                 public string RouteKey { get; set; }
+
+                [NameInMap("TableId")]
+                [Validation(Required=false)]
                 public long? TableId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

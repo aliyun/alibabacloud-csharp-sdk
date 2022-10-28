@@ -37,15 +37,44 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListUserPermissionsResponseBodyUserPermissionsUserPermission> UserPermission { get; set; }
             public class ListUserPermissionsResponseBodyUserPermissionsUserPermission : TeaModel {
+                [NameInMap("Alias")]
+                [Validation(Required=false)]
                 public string Alias { get; set; }
+
+                [NameInMap("ColumnName")]
+                [Validation(Required=false)]
                 public string ColumnName { get; set; }
+
+                [NameInMap("DbId")]
+                [Validation(Required=false)]
                 public string DbId { get; set; }
+
+                [NameInMap("DbType")]
+                [Validation(Required=false)]
                 public string DbType { get; set; }
+
+                [NameInMap("DsType")]
+                [Validation(Required=false)]
                 public string DsType { get; set; }
+
+                [NameInMap("EnvType")]
+                [Validation(Required=false)]
                 public string EnvType { get; set; }
+
+                [NameInMap("Host")]
+                [Validation(Required=false)]
                 public string Host { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("Logic")]
+                [Validation(Required=false)]
                 public bool? Logic { get; set; }
+
+                [NameInMap("PermDetails")]
+                [Validation(Required=false)]
                 public ListUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetails PermDetails { get; set; }
                 public class ListUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetails : TeaModel {
                     [NameInMap("PermDetail")]
@@ -79,15 +108,38 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     }
 
                 }
+
+                [NameInMap("Port")]
+                [Validation(Required=false)]
                 public long? Port { get; set; }
+
+                [NameInMap("SchemaName")]
+                [Validation(Required=false)]
                 public string SchemaName { get; set; }
+
+                [NameInMap("SearchName")]
+                [Validation(Required=false)]
                 public string SearchName { get; set; }
+
+                [NameInMap("TableId")]
+                [Validation(Required=false)]
                 public string TableId { get; set; }
+
+                [NameInMap("TableName")]
+                [Validation(Required=false)]
                 public string TableName { get; set; }
+
+                [NameInMap("UserId")]
+                [Validation(Required=false)]
                 public string UserId { get; set; }
+
+                [NameInMap("UserNickName")]
+                [Validation(Required=false)]
                 public string UserNickName { get; set; }
+
             }
-        };
+
+        }
 
     }
 

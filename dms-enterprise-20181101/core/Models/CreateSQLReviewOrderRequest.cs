@@ -20,13 +20,16 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [NameInMap("AttachmentKeyList")]
             [Validation(Required=false)]
             public List<string> AttachmentKeyList { get; set; }
+
             [NameInMap("DbId")]
             [Validation(Required=false)]
             public long? DbId { get; set; }
+
             [NameInMap("ProjectName")]
             [Validation(Required=false)]
             public string ProjectName { get; set; }
-        };
+
+        }
 
         [NameInMap("RelatedUserList")]
         [Validation(Required=false)]

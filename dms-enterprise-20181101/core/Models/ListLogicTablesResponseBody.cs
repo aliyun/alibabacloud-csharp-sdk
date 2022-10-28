@@ -25,8 +25,16 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListLogicTablesResponseBodyLogicTableListLogicTable> LogicTable { get; set; }
             public class ListLogicTablesResponseBodyLogicTableListLogicTable : TeaModel {
+                [NameInMap("DatabaseId")]
+                [Validation(Required=false)]
                 public string DatabaseId { get; set; }
+
+                [NameInMap("Logic")]
+                [Validation(Required=false)]
                 public bool? Logic { get; set; }
+
+                [NameInMap("OwnerIdList")]
+                [Validation(Required=false)]
                 public ListLogicTablesResponseBodyLogicTableListLogicTableOwnerIdList OwnerIdList { get; set; }
                 public class ListLogicTablesResponseBodyLogicTableListLogicTableOwnerIdList : TeaModel {
                     [NameInMap("OwnerIds")]
@@ -34,6 +42,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public List<string> OwnerIds { get; set; }
 
                 }
+
+                [NameInMap("OwnerNameList")]
+                [Validation(Required=false)]
                 public ListLogicTablesResponseBodyLogicTableListLogicTableOwnerNameList OwnerNameList { get; set; }
                 public class ListLogicTablesResponseBodyLogicTableListLogicTableOwnerNameList : TeaModel {
                     [NameInMap("OwnerNames")]
@@ -41,14 +52,34 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public List<string> OwnerNames { get; set; }
 
                 }
+
+                [NameInMap("SchemaName")]
+                [Validation(Required=false)]
                 public string SchemaName { get; set; }
+
+                [NameInMap("TableCount")]
+                [Validation(Required=false)]
                 public string TableCount { get; set; }
+
+                [NameInMap("TableExpr")]
+                [Validation(Required=false)]
                 public string TableExpr { get; set; }
+
+                [NameInMap("TableGuid")]
+                [Validation(Required=false)]
                 public string TableGuid { get; set; }
+
+                [NameInMap("TableId")]
+                [Validation(Required=false)]
                 public string TableId { get; set; }
+
+                [NameInMap("TableName")]
+                [Validation(Required=false)]
                 public string TableName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

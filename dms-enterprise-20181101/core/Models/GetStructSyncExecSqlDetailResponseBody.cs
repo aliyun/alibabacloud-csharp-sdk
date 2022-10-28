@@ -28,10 +28,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [NameInMap("ExecSql")]
             [Validation(Required=false)]
             public string ExecSql { get; set; }
+
             [NameInMap("TotalSqlCount")]
             [Validation(Required=false)]
             public long? TotalSqlCount { get; set; }
-        };
+
+        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

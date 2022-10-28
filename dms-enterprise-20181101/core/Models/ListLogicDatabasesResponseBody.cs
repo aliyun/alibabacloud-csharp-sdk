@@ -25,11 +25,28 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase> LogicDatabase { get; set; }
             public class ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase : TeaModel {
+                [NameInMap("Alias")]
+                [Validation(Required=false)]
                 public string Alias { get; set; }
+
+                [NameInMap("DatabaseId")]
+                [Validation(Required=false)]
                 public string DatabaseId { get; set; }
+
+                [NameInMap("DbType")]
+                [Validation(Required=false)]
                 public string DbType { get; set; }
+
+                [NameInMap("EnvType")]
+                [Validation(Required=false)]
                 public string EnvType { get; set; }
+
+                [NameInMap("Logic")]
+                [Validation(Required=false)]
                 public bool? Logic { get; set; }
+
+                [NameInMap("OwnerIdList")]
+                [Validation(Required=false)]
                 public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerIdList OwnerIdList { get; set; }
                 public class ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerIdList : TeaModel {
                     [NameInMap("OwnerIds")]
@@ -37,6 +54,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public List<string> OwnerIds { get; set; }
 
                 }
+
+                [NameInMap("OwnerNameList")]
+                [Validation(Required=false)]
                 public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerNameList OwnerNameList { get; set; }
                 public class ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerNameList : TeaModel {
                     [NameInMap("OwnerNames")]
@@ -44,10 +64,18 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public List<string> OwnerNames { get; set; }
 
                 }
+
+                [NameInMap("SchemaName")]
+                [Validation(Required=false)]
                 public string SchemaName { get; set; }
+
+                [NameInMap("SearchName")]
+                [Validation(Required=false)]
                 public string SearchName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

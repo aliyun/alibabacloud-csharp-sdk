@@ -24,11 +24,17 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [NameInMap("ApplyType")]
             [Validation(Required=false)]
             public string ApplyType { get; set; }
+
             [NameInMap("Resources")]
             [Validation(Required=false)]
             public List<GetOwnerApplyOrderDetailResponseBodyOwnerApplyOrderDetailResources> Resources { get; set; }
             public class GetOwnerApplyOrderDetailResponseBodyOwnerApplyOrderDetailResources : TeaModel {
+                [NameInMap("Logic")]
+                [Validation(Required=false)]
                 public bool? Logic { get; set; }
+
+                [NameInMap("ResourceDetail")]
+                [Validation(Required=false)]
                 public GetOwnerApplyOrderDetailResponseBodyOwnerApplyOrderDetailResourcesResourceDetail ResourceDetail { get; set; }
                 public class GetOwnerApplyOrderDetailResponseBodyOwnerApplyOrderDetailResourcesResourceDetail : TeaModel {
                     [NameInMap("DbType")]
@@ -56,9 +62,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public string TableName { get; set; }
 
                 }
+
+                [NameInMap("TargetId")]
+                [Validation(Required=false)]
                 public string TargetId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

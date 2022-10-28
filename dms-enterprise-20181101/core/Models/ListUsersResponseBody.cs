@@ -37,17 +37,52 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListUsersResponseBodyUserListUser> User { get; set; }
             public class ListUsersResponseBodyUserListUser : TeaModel {
+                [NameInMap("CurExecuteCount")]
+                [Validation(Required=false)]
                 public long? CurExecuteCount { get; set; }
+
+                [NameInMap("CurResultCount")]
+                [Validation(Required=false)]
                 public long? CurResultCount { get; set; }
+
+                [NameInMap("DingRobot")]
+                [Validation(Required=false)]
                 public string DingRobot { get; set; }
+
+                [NameInMap("Email")]
+                [Validation(Required=false)]
                 public string Email { get; set; }
+
+                [NameInMap("LastLoginTime")]
+                [Validation(Required=false)]
                 public string LastLoginTime { get; set; }
+
+                [NameInMap("MaxExecuteCount")]
+                [Validation(Required=false)]
                 public long? MaxExecuteCount { get; set; }
+
+                [NameInMap("MaxResultCount")]
+                [Validation(Required=false)]
                 public long? MaxResultCount { get; set; }
+
+                [NameInMap("Mobile")]
+                [Validation(Required=false)]
                 public string Mobile { get; set; }
+
+                [NameInMap("NickName")]
+                [Validation(Required=false)]
                 public string NickName { get; set; }
+
+                [NameInMap("NotificationMode")]
+                [Validation(Required=false)]
                 public string NotificationMode { get; set; }
+
+                [NameInMap("ParentUid")]
+                [Validation(Required=false)]
                 public string ParentUid { get; set; }
+
+                [NameInMap("RoleIdList")]
+                [Validation(Required=false)]
                 public ListUsersResponseBodyUserListUserRoleIdList RoleIdList { get; set; }
                 public class ListUsersResponseBodyUserListUserRoleIdList : TeaModel {
                     [NameInMap("RoleIds")]
@@ -55,6 +90,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public List<int?> RoleIds { get; set; }
 
                 }
+
+                [NameInMap("RoleNameList")]
+                [Validation(Required=false)]
                 public ListUsersResponseBodyUserListUserRoleNameList RoleNameList { get; set; }
                 public class ListUsersResponseBodyUserListUserRoleNameList : TeaModel {
                     [NameInMap("RoleNames")]
@@ -62,13 +100,30 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public List<string> RoleNames { get; set; }
 
                 }
+
+                [NameInMap("SignatureMethod")]
+                [Validation(Required=false)]
                 public string SignatureMethod { get; set; }
+
+                [NameInMap("State")]
+                [Validation(Required=false)]
                 public string State { get; set; }
+
+                [NameInMap("Uid")]
+                [Validation(Required=false)]
                 public string Uid { get; set; }
+
+                [NameInMap("UserId")]
+                [Validation(Required=false)]
                 public string UserId { get; set; }
+
+                [NameInMap("Webhook")]
+                [Validation(Required=false)]
                 public string Webhook { get; set; }
+
             }
-        };
+
+        }
 
     }
 

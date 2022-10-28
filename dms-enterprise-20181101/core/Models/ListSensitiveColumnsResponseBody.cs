@@ -29,14 +29,33 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListSensitiveColumnsResponseBodySensitiveColumnListSensitiveColumn> SensitiveColumn { get; set; }
             public class ListSensitiveColumnsResponseBodySensitiveColumnListSensitiveColumn : TeaModel {
+                [NameInMap("ColumnCount")]
+                [Validation(Required=false)]
                 public long? ColumnCount { get; set; }
+
+                [NameInMap("ColumnName")]
+                [Validation(Required=false)]
                 public string ColumnName { get; set; }
+
+                [NameInMap("FunctionType")]
+                [Validation(Required=false)]
                 public string FunctionType { get; set; }
+
+                [NameInMap("SchemaName")]
+                [Validation(Required=false)]
                 public string SchemaName { get; set; }
+
+                [NameInMap("SecurityLevel")]
+                [Validation(Required=false)]
                 public string SecurityLevel { get; set; }
+
+                [NameInMap("TableName")]
+                [Validation(Required=false)]
                 public string TableName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

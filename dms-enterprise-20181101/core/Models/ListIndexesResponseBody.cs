@@ -25,13 +25,29 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListIndexesResponseBodyIndexListIndex> Index { get; set; }
             public class ListIndexesResponseBodyIndexListIndex : TeaModel {
+                [NameInMap("IndexComment")]
+                [Validation(Required=false)]
                 public string IndexComment { get; set; }
+
+                [NameInMap("IndexId")]
+                [Validation(Required=false)]
                 public string IndexId { get; set; }
+
+                [NameInMap("IndexName")]
+                [Validation(Required=false)]
                 public string IndexName { get; set; }
+
+                [NameInMap("IndexType")]
+                [Validation(Required=false)]
                 public string IndexType { get; set; }
+
+                [NameInMap("TableId")]
+                [Validation(Required=false)]
                 public string TableId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

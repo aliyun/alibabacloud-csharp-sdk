@@ -24,24 +24,31 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
+
             [NameInMap("Committer")]
             [Validation(Required=false)]
             public string Committer { get; set; }
+
             [NameInMap("CommitterId")]
             [Validation(Required=false)]
             public long? CommitterId { get; set; }
+
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
             [NameInMap("LastModifyTime")]
             [Validation(Required=false)]
             public string LastModifyTime { get; set; }
+
             [NameInMap("OrderId")]
             [Validation(Required=false)]
             public long? OrderId { get; set; }
+
             [NameInMap("PluginType")]
             [Validation(Required=false)]
             public string PluginType { get; set; }
+
             [NameInMap("RelatedUserList")]
             [Validation(Required=false)]
             public GetOrderBaseInfoResponseBodyOrderBaseInfoRelatedUserList RelatedUserList { get; set; }
@@ -51,6 +58,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public List<string> UserIds { get; set; }
 
             }
+
             [NameInMap("RelatedUserNickList")]
             [Validation(Required=false)]
             public GetOrderBaseInfoResponseBodyOrderBaseInfoRelatedUserNickList RelatedUserNickList { get; set; }
@@ -60,19 +68,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public List<string> UserNicks { get; set; }
 
             }
+
             [NameInMap("StatusCode")]
             [Validation(Required=false)]
             public string StatusCode { get; set; }
+
             [NameInMap("StatusDesc")]
             [Validation(Required=false)]
             public string StatusDesc { get; set; }
+
             [NameInMap("WorkflowInstanceId")]
             [Validation(Required=false)]
             public long? WorkflowInstanceId { get; set; }
+
             [NameInMap("WorkflowStatusDesc")]
             [Validation(Required=false)]
             public string WorkflowStatusDesc { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

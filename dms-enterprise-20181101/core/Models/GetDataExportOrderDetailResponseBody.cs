@@ -26,6 +26,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public long? PreCheckId { get; set; }
 
             }
+
             [NameInMap("OrderDetail")]
             [Validation(Required=false)]
             public GetDataExportOrderDetailResponseBodyDataExportOrderDetailOrderDetail OrderDetail { get; set; }
@@ -67,7 +68,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public bool? Logic { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

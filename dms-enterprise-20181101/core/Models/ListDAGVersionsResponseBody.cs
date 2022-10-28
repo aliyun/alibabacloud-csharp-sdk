@@ -17,14 +17,33 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListDAGVersionsResponseBodyDagVersionListDagVersion> DagVersion { get; set; }
             public class ListDAGVersionsResponseBodyDagVersionListDagVersion : TeaModel {
+                [NameInMap("DagName")]
+                [Validation(Required=false)]
                 public string DagName { get; set; }
+
+                [NameInMap("DagOwnerId")]
+                [Validation(Required=false)]
                 public string DagOwnerId { get; set; }
+
+                [NameInMap("DagOwnerNickName")]
+                [Validation(Required=false)]
                 public string DagOwnerNickName { get; set; }
+
+                [NameInMap("LastVersionId")]
+                [Validation(Required=false)]
                 public long? LastVersionId { get; set; }
+
+                [NameInMap("VersionComments")]
+                [Validation(Required=false)]
                 public string VersionComments { get; set; }
+
+                [NameInMap("VersionId")]
+                [Validation(Required=false)]
                 public long? VersionId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

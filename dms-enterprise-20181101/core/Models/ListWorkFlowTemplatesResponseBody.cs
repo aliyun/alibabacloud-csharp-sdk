@@ -33,12 +33,32 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplate> WorkFlowTemplate { get; set; }
             public class ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplate : TeaModel {
+                [NameInMap("Comment")]
+                [Validation(Required=false)]
                 public string Comment { get; set; }
+
+                [NameInMap("CreateUserId")]
+                [Validation(Required=false)]
                 public long? CreateUserId { get; set; }
+
+                [NameInMap("Enabled")]
+                [Validation(Required=false)]
                 public string Enabled { get; set; }
+
+                [NameInMap("IsSystem")]
+                [Validation(Required=false)]
                 public int? IsSystem { get; set; }
+
+                [NameInMap("TemplateId")]
+                [Validation(Required=false)]
                 public long? TemplateId { get; set; }
+
+                [NameInMap("TemplateName")]
+                [Validation(Required=false)]
                 public string TemplateName { get; set; }
+
+                [NameInMap("WorkflowNodes")]
+                [Validation(Required=false)]
                 public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplateWorkflowNodes WorkflowNodes { get; set; }
                 public class ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplateWorkflowNodes : TeaModel {
                     [NameInMap("WorkflowNode")]
@@ -76,8 +96,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
     }
 

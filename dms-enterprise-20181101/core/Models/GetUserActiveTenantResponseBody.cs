@@ -32,13 +32,16 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("TenantName")]
             [Validation(Required=false)]
             public string TenantName { get; set; }
+
             [NameInMap("Tid")]
             [Validation(Required=false)]
             public long? Tid { get; set; }
-        };
+
+        }
 
     }
 

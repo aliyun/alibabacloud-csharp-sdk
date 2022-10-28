@@ -33,11 +33,28 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListTablesResponseBodyTableListTable> Table { get; set; }
             public class ListTablesResponseBodyTableListTable : TeaModel {
+                [NameInMap("DatabaseId")]
+                [Validation(Required=false)]
                 public string DatabaseId { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("Encoding")]
+                [Validation(Required=false)]
                 public string Encoding { get; set; }
+
+                [NameInMap("Engine")]
+                [Validation(Required=false)]
                 public string Engine { get; set; }
+
+                [NameInMap("NumRows")]
+                [Validation(Required=false)]
                 public long? NumRows { get; set; }
+
+                [NameInMap("OwnerIdList")]
+                [Validation(Required=false)]
                 public ListTablesResponseBodyTableListTableOwnerIdList OwnerIdList { get; set; }
                 public class ListTablesResponseBodyTableListTableOwnerIdList : TeaModel {
                     [NameInMap("OwnerIds")]
@@ -45,6 +62,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public List<string> OwnerIds { get; set; }
 
                 }
+
+                [NameInMap("OwnerNameList")]
+                [Validation(Required=false)]
                 public ListTablesResponseBodyTableListTableOwnerNameList OwnerNameList { get; set; }
                 public class ListTablesResponseBodyTableListTableOwnerNameList : TeaModel {
                     [NameInMap("OwnerNames")]
@@ -52,14 +72,34 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public List<string> OwnerNames { get; set; }
 
                 }
+
+                [NameInMap("StoreCapacity")]
+                [Validation(Required=false)]
                 public long? StoreCapacity { get; set; }
+
+                [NameInMap("TableGuid")]
+                [Validation(Required=false)]
                 public string TableGuid { get; set; }
+
+                [NameInMap("TableId")]
+                [Validation(Required=false)]
                 public string TableId { get; set; }
+
+                [NameInMap("TableName")]
+                [Validation(Required=false)]
                 public string TableName { get; set; }
+
+                [NameInMap("TableSchemaName")]
+                [Validation(Required=false)]
                 public string TableSchemaName { get; set; }
+
+                [NameInMap("TableType")]
+                [Validation(Required=false)]
                 public string TableType { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

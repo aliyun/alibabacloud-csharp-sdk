@@ -24,13 +24,17 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [NameInMap("ApplyType")]
             [Validation(Required=false)]
             public string ApplyType { get; set; }
+
             [NameInMap("PermType")]
             [Validation(Required=false)]
             public long? PermType { get; set; }
+
             [NameInMap("Resources")]
             [Validation(Required=false)]
             public List<GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResources> Resources { get; set; }
             public class GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResources : TeaModel {
+                [NameInMap("ColumnInfo")]
+                [Validation(Required=false)]
                 public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesColumnInfo ColumnInfo { get; set; }
                 public class GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesColumnInfo : TeaModel {
                     [NameInMap("ColumnName")]
@@ -42,6 +46,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public string TableName { get; set; }
 
                 }
+
+                [NameInMap("DatabaseInfo")]
+                [Validation(Required=false)]
                 public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesDatabaseInfo DatabaseInfo { get; set; }
                 public class GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesDatabaseInfo : TeaModel {
                     [NameInMap("DbId")]
@@ -73,6 +80,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public string SearchName { get; set; }
 
                 }
+
+                [NameInMap("InstanceInfo")]
+                [Validation(Required=false)]
                 public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesInstanceInfo InstanceInfo { get; set; }
                 public class GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesInstanceInfo : TeaModel {
                     [NameInMap("DbType")]
@@ -116,6 +126,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public string SearchName { get; set; }
 
                 }
+
+                [NameInMap("TableInfo")]
+                [Validation(Required=false)]
                 public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesTableInfo TableInfo { get; set; }
                 public class GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesTableInfo : TeaModel {
                     [NameInMap("TableName")]
@@ -123,11 +136,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public string TableName { get; set; }
 
                 }
+
             }
+
             [NameInMap("Seconds")]
             [Validation(Required=false)]
             public long? Seconds { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -16,9 +16,11 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [NameInMap("AuditId")]
             [Validation(Required=false)]
             public long? AuditId { get; set; }
+
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
             [NameInMap("CurrentHandlers")]
             [Validation(Required=false)]
             public GetApprovalDetailResponseBodyApprovalDetailCurrentHandlers CurrentHandlers { get; set; }
@@ -38,15 +40,19 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 }
 
             }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
             [NameInMap("OrderId")]
             [Validation(Required=false)]
             public long? OrderId { get; set; }
+
             [NameInMap("OrderType")]
             [Validation(Required=false)]
             public string OrderType { get; set; }
+
             [NameInMap("ReasonList")]
             [Validation(Required=false)]
             public GetApprovalDetailResponseBodyApprovalDetailReasonList ReasonList { get; set; }
@@ -56,12 +62,19 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public List<string> Reasons { get; set; }
 
             }
+
+            [NameInMap("TemplateId")]
+            [Validation(Required=false)]
+            public long? TemplateId { get; set; }
+
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
+
             [NameInMap("WorkflowInsCode")]
             [Validation(Required=false)]
             public string WorkflowInsCode { get; set; }
+
             [NameInMap("WorkflowNodes")]
             [Validation(Required=false)]
             public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodes WorkflowNodes { get; set; }
@@ -77,7 +90,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                         [NameInMap("AuditUserIds")]
                         [Validation(Required=false)]
                         public List<string> AuditUserIds { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("NodeName")]
                     [Validation(Required=false)]
@@ -102,7 +116,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 }
 
             }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

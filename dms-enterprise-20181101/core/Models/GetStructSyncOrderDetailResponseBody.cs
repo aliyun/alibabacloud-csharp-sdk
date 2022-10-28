@@ -28,6 +28,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [NameInMap("IgnoreError")]
             [Validation(Required=false)]
             public bool? IgnoreError { get; set; }
+
             [NameInMap("SourceDatabaseInfo")]
             [Validation(Required=false)]
             public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailSourceDatabaseInfo SourceDatabaseInfo { get; set; }
@@ -53,9 +54,11 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string SearchName { get; set; }
 
             }
+
             [NameInMap("SourceType")]
             [Validation(Required=false)]
             public string SourceType { get; set; }
+
             [NameInMap("SourceVersionInfo")]
             [Validation(Required=false)]
             public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailSourceVersionInfo SourceVersionInfo { get; set; }
@@ -65,13 +68,21 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string VersionId { get; set; }
 
             }
+
             [NameInMap("TableInfoList")]
             [Validation(Required=false)]
             public List<GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTableInfoList> TableInfoList { get; set; }
             public class GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTableInfoList : TeaModel {
+                [NameInMap("SourceTableName")]
+                [Validation(Required=false)]
                 public string SourceTableName { get; set; }
+
+                [NameInMap("TargetTableName")]
+                [Validation(Required=false)]
                 public string TargetTableName { get; set; }
+
             }
+
             [NameInMap("TargetDatabaseInfo")]
             [Validation(Required=false)]
             public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo TargetDatabaseInfo { get; set; }
@@ -97,9 +108,11 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string SearchName { get; set; }
 
             }
+
             [NameInMap("TargetType")]
             [Validation(Required=false)]
             public string TargetType { get; set; }
+
             [NameInMap("TargetVersionInfo")]
             [Validation(Required=false)]
             public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetVersionInfo TargetVersionInfo { get; set; }
@@ -109,7 +122,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string VersionId { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -42,9 +42,11 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public long? Unknown { get; set; }
 
             }
+
             [NameInMap("CheckedCount")]
             [Validation(Required=false)]
             public long? CheckedCount { get; set; }
+
             [NameInMap("SQLReviewResult")]
             [Validation(Required=false)]
             public GetSQLReviewCheckResultStatusResponseBodyCheckResultStatusSQLReviewResult SQLReviewResult { get; set; }
@@ -74,10 +76,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public long? UseDmsToolkit { get; set; }
 
             }
+
             [NameInMap("TotalSQLCount")]
             [Validation(Required=false)]
             public long? TotalSQLCount { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

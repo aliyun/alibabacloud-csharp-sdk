@@ -17,15 +17,44 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListDatabasesResponseBodyDatabaseListDatabase> Database { get; set; }
             public class ListDatabasesResponseBodyDatabaseListDatabase : TeaModel {
+                [NameInMap("CatalogName")]
+                [Validation(Required=false)]
                 public string CatalogName { get; set; }
+
+                [NameInMap("DatabaseId")]
+                [Validation(Required=false)]
                 public string DatabaseId { get; set; }
+
+                [NameInMap("DbType")]
+                [Validation(Required=false)]
                 public string DbType { get; set; }
+
+                [NameInMap("DbaId")]
+                [Validation(Required=false)]
                 public string DbaId { get; set; }
+
+                [NameInMap("DbaName")]
+                [Validation(Required=false)]
                 public string DbaName { get; set; }
+
+                [NameInMap("Encoding")]
+                [Validation(Required=false)]
                 public string Encoding { get; set; }
+
+                [NameInMap("EnvType")]
+                [Validation(Required=false)]
                 public string EnvType { get; set; }
+
+                [NameInMap("Host")]
+                [Validation(Required=false)]
                 public string Host { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("OwnerIdList")]
+                [Validation(Required=false)]
                 public ListDatabasesResponseBodyDatabaseListDatabaseOwnerIdList OwnerIdList { get; set; }
                 public class ListDatabasesResponseBodyDatabaseListDatabaseOwnerIdList : TeaModel {
                     [NameInMap("OwnerIds")]
@@ -33,6 +62,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public List<string> OwnerIds { get; set; }
 
                 }
+
+                [NameInMap("OwnerNameList")]
+                [Validation(Required=false)]
                 public ListDatabasesResponseBodyDatabaseListDatabaseOwnerNameList OwnerNameList { get; set; }
                 public class ListDatabasesResponseBodyDatabaseListDatabaseOwnerNameList : TeaModel {
                     [NameInMap("OwnerNames")]
@@ -40,13 +72,30 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public List<string> OwnerNames { get; set; }
 
                 }
+
+                [NameInMap("Port")]
+                [Validation(Required=false)]
                 public int? Port { get; set; }
+
+                [NameInMap("SchemaName")]
+                [Validation(Required=false)]
                 public string SchemaName { get; set; }
+
+                [NameInMap("SearchName")]
+                [Validation(Required=false)]
                 public string SearchName { get; set; }
+
+                [NameInMap("Sid")]
+                [Validation(Required=false)]
                 public string Sid { get; set; }
+
+                [NameInMap("State")]
+                [Validation(Required=false)]
                 public string State { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

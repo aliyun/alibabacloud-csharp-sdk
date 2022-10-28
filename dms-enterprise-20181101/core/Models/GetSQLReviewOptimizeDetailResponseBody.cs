@@ -24,9 +24,11 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [NameInMap("DbId")]
             [Validation(Required=false)]
             public int? DbId { get; set; }
+
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public int? InstanceId { get; set; }
+
             [NameInMap("QualityResult")]
             [Validation(Required=false)]
             public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResult QualityResult { get; set; }
@@ -84,13 +86,16 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 }
 
             }
+
             [NameInMap("QueryKey")]
             [Validation(Required=false)]
             public string QueryKey { get; set; }
+
             [NameInMap("SqlType")]
             [Validation(Required=false)]
             public string SqlType { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

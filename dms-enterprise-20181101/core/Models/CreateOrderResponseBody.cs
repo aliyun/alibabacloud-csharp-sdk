@@ -15,8 +15,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public class CreateOrderResponseBodyCreateOrderResult : TeaModel {
             [NameInMap("OrderIds")]
             [Validation(Required=false)]
-            public List<string> OrderIds { get; set; }
-        };
+            public List<long?> OrderIds { get; set; }
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

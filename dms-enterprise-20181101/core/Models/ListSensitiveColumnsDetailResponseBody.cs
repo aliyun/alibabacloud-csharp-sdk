@@ -29,18 +29,49 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail> SensitiveColumnsDetail { get; set; }
             public class ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail : TeaModel {
+                [NameInMap("ColumnDescription")]
+                [Validation(Required=false)]
                 public string ColumnDescription { get; set; }
+
+                [NameInMap("ColumnName")]
+                [Validation(Required=false)]
                 public string ColumnName { get; set; }
+
+                [NameInMap("ColumnType")]
+                [Validation(Required=false)]
                 public string ColumnType { get; set; }
+
+                [NameInMap("DbId")]
+                [Validation(Required=false)]
                 public long? DbId { get; set; }
+
+                [NameInMap("DbType")]
+                [Validation(Required=false)]
                 public string DbType { get; set; }
+
+                [NameInMap("EnvType")]
+                [Validation(Required=false)]
                 public string EnvType { get; set; }
+
+                [NameInMap("Logic")]
+                [Validation(Required=false)]
                 public bool? Logic { get; set; }
+
+                [NameInMap("SchemaName")]
+                [Validation(Required=false)]
                 public string SchemaName { get; set; }
+
+                [NameInMap("SearchName")]
+                [Validation(Required=false)]
                 public string SearchName { get; set; }
+
+                [NameInMap("TableName")]
+                [Validation(Required=false)]
                 public string TableName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

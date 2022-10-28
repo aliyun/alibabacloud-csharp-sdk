@@ -16,16 +16,20 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [NameInMap("ActualAffectRows")]
             [Validation(Required=false)]
             public long? ActualAffectRows { get; set; }
+
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
             [NameInMap("DBTaskGroupId")]
             [Validation(Required=false)]
             public long? DBTaskGroupId { get; set; }
+
             [NameInMap("jobStatus")]
             [Validation(Required=false)]
             public string JobStatus { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

@@ -28,28 +28,36 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [NameInMap("DBTaskGroupId")]
             [Validation(Required=false)]
             public long? DBTaskGroupId { get; set; }
+
             [NameInMap("ExecuteCount")]
             [Validation(Required=false)]
             public long? ExecuteCount { get; set; }
+
             [NameInMap("JobStatus")]
             [Validation(Required=false)]
             public string JobStatus { get; set; }
+
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
+
             [NameInMap("SecurityRule")]
             [Validation(Required=false)]
             public string SecurityRule { get; set; }
+
             [NameInMap("SqlCount")]
             [Validation(Required=false)]
             public long? SqlCount { get; set; }
+
             [NameInMap("TableAnalyzed")]
             [Validation(Required=false)]
             public long? TableAnalyzed { get; set; }
+
             [NameInMap("TableCount")]
             [Validation(Required=false)]
             public long? TableCount { get; set; }
-        };
+
+        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

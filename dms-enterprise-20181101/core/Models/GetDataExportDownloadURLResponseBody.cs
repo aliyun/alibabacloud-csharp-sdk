@@ -16,13 +16,16 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [NameInMap("HasResult")]
             [Validation(Required=false)]
             public bool? HasResult { get; set; }
+
             [NameInMap("TipMessage")]
             [Validation(Required=false)]
             public string TipMessage { get; set; }
+
             [NameInMap("URL")]
             [Validation(Required=false)]
             public string URL { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

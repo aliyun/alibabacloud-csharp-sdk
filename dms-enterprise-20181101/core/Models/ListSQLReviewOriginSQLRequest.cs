@@ -16,9 +16,11 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [NameInMap("CheckStatusResult")]
             [Validation(Required=false)]
             public string CheckStatusResult { get; set; }
+
             [NameInMap("FileId")]
             [Validation(Required=false)]
             public long? FileId { get; set; }
+
             [NameInMap("Page")]
             [Validation(Required=false)]
             public ListSQLReviewOriginSQLRequestOrderActionDetailPage Page { get; set; }
@@ -32,10 +34,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public int? PageSize { get; set; }
 
             }
+
             [NameInMap("SQLReviewResult")]
             [Validation(Required=false)]
             public string SQLReviewResult { get; set; }
-        };
+
+        }
 
         [NameInMap("OrderId")]
         [Validation(Required=false)]

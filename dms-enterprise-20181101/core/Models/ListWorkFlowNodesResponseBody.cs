@@ -33,6 +33,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNode> WorkflowNode { get; set; }
             public class ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNode : TeaModel {
+                [NameInMap("AuditUsers")]
+                [Validation(Required=false)]
                 public ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNodeAuditUsers AuditUsers { get; set; }
                 public class ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNodeAuditUsers : TeaModel {
                     [NameInMap("AuditUser")]
@@ -54,14 +56,34 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     }
 
                 }
+
+                [NameInMap("Comment")]
+                [Validation(Required=false)]
                 public string Comment { get; set; }
+
+                [NameInMap("CreateUserId")]
+                [Validation(Required=false)]
                 public long? CreateUserId { get; set; }
+
+                [NameInMap("CreateUserNickName")]
+                [Validation(Required=false)]
                 public string CreateUserNickName { get; set; }
+
+                [NameInMap("NodeId")]
+                [Validation(Required=false)]
                 public long? NodeId { get; set; }
+
+                [NameInMap("NodeName")]
+                [Validation(Required=false)]
                 public string NodeName { get; set; }
+
+                [NameInMap("NodeType")]
+                [Validation(Required=false)]
                 public string NodeType { get; set; }
+
             }
-        };
+
+        }
 
     }
 

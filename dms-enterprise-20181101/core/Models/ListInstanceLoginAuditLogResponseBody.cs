@@ -25,15 +25,37 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListInstanceLoginAuditLogResponseBodyInstanceLoginAuditLogListInstanceLoginAuditLog> InstanceLoginAuditLog { get; set; }
             public class ListInstanceLoginAuditLogResponseBodyInstanceLoginAuditLogListInstanceLoginAuditLog : TeaModel {
+                [NameInMap("DbUser")]
+                [Validation(Required=false)]
                 public string DbUser { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public long? InstanceId { get; set; }
+
+                [NameInMap("InstanceName")]
+                [Validation(Required=false)]
                 public string InstanceName { get; set; }
+
+                [NameInMap("OpTime")]
+                [Validation(Required=false)]
                 public string OpTime { get; set; }
+
+                [NameInMap("RequestIp")]
+                [Validation(Required=false)]
                 public string RequestIp { get; set; }
+
+                [NameInMap("UserId")]
+                [Validation(Required=false)]
                 public long? UserId { get; set; }
+
+                [NameInMap("UserName")]
+                [Validation(Required=false)]
                 public string UserName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [NameInMap("FileUrl")]
             [Validation(Required=false)]
             public List<string> FileUrl { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

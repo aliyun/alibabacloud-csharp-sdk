@@ -28,13 +28,16 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [NameInMap("BucketName")]
             [Validation(Required=false)]
             public string BucketName { get; set; }
+
             [NameInMap("Endpoint")]
             [Validation(Required=false)]
             public string Endpoint { get; set; }
+
             [NameInMap("ObjectName")]
             [Validation(Required=false)]
             public string ObjectName { get; set; }
-        };
+
+        }
 
     }
 

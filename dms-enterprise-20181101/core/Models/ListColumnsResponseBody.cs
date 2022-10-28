@@ -17,21 +17,61 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListColumnsResponseBodyColumnListColumn> Column { get; set; }
             public class ListColumnsResponseBodyColumnListColumn : TeaModel {
+                [NameInMap("AutoIncrement")]
+                [Validation(Required=false)]
                 public bool? AutoIncrement { get; set; }
+
+                [NameInMap("ColumnId")]
+                [Validation(Required=false)]
                 public string ColumnId { get; set; }
+
+                [NameInMap("ColumnName")]
+                [Validation(Required=false)]
                 public string ColumnName { get; set; }
+
+                [NameInMap("ColumnType")]
+                [Validation(Required=false)]
                 public string ColumnType { get; set; }
+
+                [NameInMap("DataLength")]
+                [Validation(Required=false)]
                 public long? DataLength { get; set; }
+
+                [NameInMap("DataPrecision")]
+                [Validation(Required=false)]
                 public int? DataPrecision { get; set; }
+
+                [NameInMap("DataScale")]
+                [Validation(Required=false)]
                 public int? DataScale { get; set; }
+
+                [NameInMap("DefaultValue")]
+                [Validation(Required=false)]
                 public string DefaultValue { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("FunctionType")]
+                [Validation(Required=false)]
                 public string FunctionType { get; set; }
+
+                [NameInMap("Nullable")]
+                [Validation(Required=false)]
                 public bool? Nullable { get; set; }
+
+                [NameInMap("SecurityLevel")]
+                [Validation(Required=false)]
                 public string SecurityLevel { get; set; }
+
+                [NameInMap("Sensitive")]
+                [Validation(Required=false)]
                 public bool? Sensitive { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

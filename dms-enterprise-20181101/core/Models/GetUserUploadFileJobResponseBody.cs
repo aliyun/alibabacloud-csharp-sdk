@@ -32,24 +32,31 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [NameInMap("AttachmentKey")]
             [Validation(Required=false)]
             public string AttachmentKey { get; set; }
+
             [NameInMap("FileName")]
             [Validation(Required=false)]
             public string FileName { get; set; }
+
             [NameInMap("FileSize")]
             [Validation(Required=false)]
             public long? FileSize { get; set; }
+
             [NameInMap("FileSource")]
             [Validation(Required=false)]
             public string FileSource { get; set; }
+
             [NameInMap("JobKey")]
             [Validation(Required=false)]
             public string JobKey { get; set; }
+
             [NameInMap("JobStatus")]
             [Validation(Required=false)]
             public string JobStatus { get; set; }
+
             [NameInMap("JobStatusDesc")]
             [Validation(Required=false)]
             public string JobStatusDesc { get; set; }
+
             [NameInMap("UploadOSSParam")]
             [Validation(Required=false)]
             public GetUserUploadFileJobResponseBodyUploadFileJobDetailUploadOSSParam UploadOSSParam { get; set; }
@@ -67,16 +74,20 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string ObjectName { get; set; }
 
             }
+
             [NameInMap("UploadType")]
             [Validation(Required=false)]
             public string UploadType { get; set; }
+
             [NameInMap("UploadURL")]
             [Validation(Required=false)]
             public string UploadURL { get; set; }
+
             [NameInMap("UploadedSize")]
             [Validation(Required=false)]
             public long? UploadedSize { get; set; }
-        };
+
+        }
 
     }
 

@@ -44,9 +44,11 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 }
 
             }
+
             [NameInMap("ExecMode")]
             [Validation(Required=false)]
             public string ExecMode { get; set; }
+
             [NameInMap("OrderDetail")]
             [Validation(Required=false)]
             public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailOrderDetail OrderDetail { get; set; }
@@ -96,6 +98,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string SqlType { get; set; }
 
             }
+
             [NameInMap("PreCheckDetail")]
             [Validation(Required=false)]
             public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailPreCheckDetail PreCheckDetail { get; set; }
@@ -119,10 +122,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 }
 
             }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

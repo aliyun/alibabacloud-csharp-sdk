@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string EcsRegion { get; set; }
 
+        [NameInMap("EnableSellSitd")]
+        [Validation(Required=false)]
+        public string EnableSellSitd { get; set; }
+
         [NameInMap("EnvType")]
         [Validation(Required=false)]
         public string EnvType { get; set; }
@@ -84,6 +88,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [NameInMap("SkipTest")]
         [Validation(Required=false)]
         public bool? SkipTest { get; set; }
+
+        [NameInMap("TemplateId")]
+        [Validation(Required=false)]
+        public long? TemplateId { get; set; }
+
+        [NameInMap("TemplateType")]
+        [Validation(Required=false)]
+        public string TemplateType { get; set; }
 
         [NameInMap("Tid")]
         [Validation(Required=false)]

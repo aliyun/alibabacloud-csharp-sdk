@@ -24,6 +24,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [NameInMap("IgnoreError")]
             [Validation(Required=false)]
             public bool? IgnoreError { get; set; }
+
             [NameInMap("Source")]
             [Validation(Required=false)]
             public CreateStructSyncOrderRequestParamSource Source { get; set; }
@@ -45,13 +46,21 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string VersionId { get; set; }
 
             }
+
             [NameInMap("TableInfoList")]
             [Validation(Required=false)]
             public List<CreateStructSyncOrderRequestParamTableInfoList> TableInfoList { get; set; }
             public class CreateStructSyncOrderRequestParamTableInfoList : TeaModel {
+                [NameInMap("SourceTableName")]
+                [Validation(Required=false)]
                 public string SourceTableName { get; set; }
+
+                [NameInMap("TargetTableName")]
+                [Validation(Required=false)]
                 public string TargetTableName { get; set; }
+
             }
+
             [NameInMap("Target")]
             [Validation(Required=false)]
             public CreateStructSyncOrderRequestParamTarget Target { get; set; }
@@ -73,7 +82,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string VersionId { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("RelatedUserList")]
         [Validation(Required=false)]
