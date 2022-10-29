@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string AutoUseCoupon { get; set; }
 
+        [NameInMap("BandwidthBillingType")]
+        [Validation(Required=false)]
+        public string BandwidthBillingType { get; set; }
+
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -40,7 +44,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [NameInMap("AccessMode")]
             [Validation(Required=false)]
             public string AccessMode { get; set; }
-        };
+
+        }
 
         [NameInMap("Name")]
         [Validation(Required=false)]

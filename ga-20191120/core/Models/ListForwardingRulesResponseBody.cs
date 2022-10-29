@@ -49,9 +49,13 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                     [Validation(Required=false)]
                     public List<ListForwardingRulesResponseBodyForwardingRulesRuleActionsForwardGroupConfigServerGroupTuples> ServerGroupTuples { get; set; }
                     public class ListForwardingRulesResponseBodyForwardingRulesRuleActionsForwardGroupConfigServerGroupTuples : TeaModel {
+                        [NameInMap("EndpointGroupId")]
+                        [Validation(Required=false)]
                         public string EndpointGroupId { get; set; }
+
                     }
-                };
+
+                }
 
                 [NameInMap("Order")]
                 [Validation(Required=false)]
@@ -78,7 +82,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                     [NameInMap("Values")]
                     [Validation(Required=false)]
                     public List<string> Values { get; set; }
-                };
+
+                }
 
                 [NameInMap("PathConfig")]
                 [Validation(Required=false)]
@@ -87,7 +92,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                     [NameInMap("Values")]
                     [Validation(Required=false)]
                     public List<string> Values { get; set; }
-                };
+
+                }
 
                 [NameInMap("RuleConditionType")]
                 [Validation(Required=false)]

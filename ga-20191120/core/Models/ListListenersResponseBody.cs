@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string State { get; set; }
 
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
             [NameInMap("XForwardedForConfig")]
             [Validation(Required=false)]
             public ListListenersResponseBodyListenersXForwardedForConfig XForwardedForConfig { get; set; }
@@ -102,19 +106,24 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 [NameInMap("XForwardedForGaApEnabled")]
                 [Validation(Required=false)]
                 public bool? XForwardedForGaApEnabled { get; set; }
+
                 [NameInMap("XForwardedForGaIdEnabled")]
                 [Validation(Required=false)]
                 public bool? XForwardedForGaIdEnabled { get; set; }
+
                 [NameInMap("XForwardedForPortEnabled")]
                 [Validation(Required=false)]
                 public bool? XForwardedForPortEnabled { get; set; }
+
                 [NameInMap("XForwardedForProtoEnabled")]
                 [Validation(Required=false)]
                 public bool? XForwardedForProtoEnabled { get; set; }
+
                 [NameInMap("XRealIpEnabled")]
                 [Validation(Required=false)]
                 public bool? XRealIpEnabled { get; set; }
-            };
+
+            }
 
         }
 

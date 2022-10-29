@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string AcceleratorId { get; set; }
 
+        [NameInMap("BandwidthBillingType")]
+        [Validation(Required=false)]
+        public string BandwidthBillingType { get; set; }
+
         [NameInMap("BasicBandwidthPackage")]
         [Validation(Required=false)]
         public DescribeAcceleratorResponseBodyBasicBandwidthPackage BasicBandwidthPackage { get; set; }
@@ -20,13 +24,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [NameInMap("Bandwidth")]
             [Validation(Required=false)]
             public int? Bandwidth { get; set; }
+
             [NameInMap("BandwidthType")]
             [Validation(Required=false)]
             public string BandwidthType { get; set; }
+
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
-        };
+
+        }
 
         [NameInMap("CenId")]
         [Validation(Required=false)]
@@ -43,10 +50,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [NameInMap("Bandwidth")]
             [Validation(Required=false)]
             public int? Bandwidth { get; set; }
+
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
-        };
+
+        }
+
+        [NameInMap("CrossPrivateState")]
+        [Validation(Required=false)]
+        public string CrossPrivateState { get; set; }
 
         [NameInMap("DdosId")]
         [Validation(Required=false)]
@@ -75,7 +88,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [NameInMap("AccessMode")]
             [Validation(Required=false)]
             public string AccessMode { get; set; }
-        };
+
+        }
 
         [NameInMap("Name")]
         [Validation(Required=false)]

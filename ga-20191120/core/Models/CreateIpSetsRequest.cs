@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string IpVersion { get; set; }
 
+            [NameInMap("IspType")]
+            [Validation(Required=false)]
+            public string IspType { get; set; }
+
         }
 
         [NameInMap("AcceleratorId")]
