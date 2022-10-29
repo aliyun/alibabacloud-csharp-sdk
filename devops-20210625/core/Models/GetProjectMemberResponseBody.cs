@@ -28,19 +28,24 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [NameInMap("accessLevel")]
             [Validation(Required=false)]
             public int? AccessLevel { get; set; }
+
             [NameInMap("avatarUrl")]
             [Validation(Required=false)]
             public string AvatarUrl { get; set; }
+
             [NameInMap("externUserId")]
             [Validation(Required=false)]
             public string ExternUserId { get; set; }
+
             [NameInMap("id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
+
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
-        };
+
+        }
 
         [NameInMap("success")]
         [Validation(Required=false)]

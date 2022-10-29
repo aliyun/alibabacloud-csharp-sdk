@@ -28,25 +28,32 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [NameInMap("CreatedAt")]
             [Validation(Required=false)]
             public string CreatedAt { get; set; }
+
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
+
             [NameInMap("NamespaceId")]
             [Validation(Required=false)]
             public long? NamespaceId { get; set; }
+
             [NameInMap("OrganizationId")]
             [Validation(Required=false)]
             public string OrganizationId { get; set; }
+
             [NameInMap("Path")]
             [Validation(Required=false)]
             public string Path { get; set; }
+
             [NameInMap("UpdatedAt")]
             [Validation(Required=false)]
             public string UpdatedAt { get; set; }
+
             [NameInMap("UserRole")]
             [Validation(Required=false)]
             public string UserRole { get; set; }
-        };
+
+        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

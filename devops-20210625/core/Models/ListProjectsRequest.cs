@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class ListProjectsRequest : TeaModel {
-        /// <summary>
-        /// 项目类型
-        /// </summary>
         [NameInMap("category")]
         [Validation(Required=false)]
         public string Category { get; set; }
@@ -24,23 +21,14 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string ExtraConditions { get; set; }
 
-        /// <summary>
-        /// 每页最大返回数量，0-200，默认值20
-        /// </summary>
         [NameInMap("maxResults")]
         [Validation(Required=false)]
         public long? MaxResults { get; set; }
 
-        /// <summary>
-        /// 分页中的起始序列
-        /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        /// <summary>
-        /// 公开类型
-        /// </summary>
         [NameInMap("scope")]
         [Validation(Required=false)]
         public string Scope { get; set; }

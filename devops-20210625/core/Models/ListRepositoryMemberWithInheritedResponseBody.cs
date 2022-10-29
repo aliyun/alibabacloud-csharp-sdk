@@ -52,25 +52,32 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
                 [NameInMap("id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
+
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
+
                 [NameInMap("nameWithNamespace")]
                 [Validation(Required=false)]
                 public string NameWithNamespace { get; set; }
+
                 [NameInMap("path")]
                 [Validation(Required=false)]
                 public string Path { get; set; }
+
                 [NameInMap("pathWithNamespace")]
                 [Validation(Required=false)]
                 public string PathWithNamespace { get; set; }
+
                 [NameInMap("type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
+
                 [NameInMap("visibilityLevel")]
                 [Validation(Required=false)]
                 public string VisibilityLevel { get; set; }
-            };
+
+            }
 
             [NameInMap("name")]
             [Validation(Required=false)]

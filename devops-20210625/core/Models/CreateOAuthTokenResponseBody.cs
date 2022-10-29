@@ -13,9 +13,6 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("errorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
@@ -31,16 +28,20 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [NameInMap("accessToken")]
             [Validation(Required=false)]
             public string AccessToken { get; set; }
+
             [NameInMap("id")]
             [Validation(Required=false)]
             public string Id { get; set; }
+
             [NameInMap("scope")]
             [Validation(Required=false)]
             public string Scope { get; set; }
+
             [NameInMap("tokenType")]
             [Validation(Required=false)]
             public string TokenType { get; set; }
-        };
+
+        }
 
         [NameInMap("success")]
         [Validation(Required=false)]
