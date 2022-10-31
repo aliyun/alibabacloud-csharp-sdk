@@ -111,6 +111,10 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public string UseCase { get; set; }
 
+        [NameInMap("WirelessCloudConnectorGroupId")]
+        [Validation(Required=false)]
+        public string WirelessCloudConnectorGroupId { get; set; }
+
         [NameInMap("WirelessCloudConnectorId")]
         [Validation(Required=false)]
         public string WirelessCloudConnectorId { get; set; }

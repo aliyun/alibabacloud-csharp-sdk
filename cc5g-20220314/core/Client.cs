@@ -151,6 +151,218 @@ namespace AlibabaCloud.SDK.CC5G20220314
             return await AddDNSAuthorizationRuleWithOptionsAsync(request, runtime);
         }
 
+        public AddGroupDnsAuthorizationRuleResponse AddGroupDnsAuthorizationRuleWithOptions(AddGroupDnsAuthorizationRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationIp))
+            {
+                query["DestinationIp"] = request.DestinationIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDNSIp))
+            {
+                query["SourceDNSIp"] = request.SourceDNSIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WirelessCloudConnectorGroupId))
+            {
+                query["WirelessCloudConnectorGroupId"] = request.WirelessCloudConnectorGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddGroupDnsAuthorizationRule",
+                Version = "2022-03-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddGroupDnsAuthorizationRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<AddGroupDnsAuthorizationRuleResponse> AddGroupDnsAuthorizationRuleWithOptionsAsync(AddGroupDnsAuthorizationRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationIp))
+            {
+                query["DestinationIp"] = request.DestinationIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDNSIp))
+            {
+                query["SourceDNSIp"] = request.SourceDNSIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WirelessCloudConnectorGroupId))
+            {
+                query["WirelessCloudConnectorGroupId"] = request.WirelessCloudConnectorGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddGroupDnsAuthorizationRule",
+                Version = "2022-03-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddGroupDnsAuthorizationRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public AddGroupDnsAuthorizationRuleResponse AddGroupDnsAuthorizationRule(AddGroupDnsAuthorizationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddGroupDnsAuthorizationRuleWithOptions(request, runtime);
+        }
+
+        public async Task<AddGroupDnsAuthorizationRuleResponse> AddGroupDnsAuthorizationRuleAsync(AddGroupDnsAuthorizationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddGroupDnsAuthorizationRuleWithOptionsAsync(request, runtime);
+        }
+
+        public AddWirelessCloudConnectorToGroupResponse AddWirelessCloudConnectorToGroupWithOptions(AddWirelessCloudConnectorToGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WirelessCloudConnectorGroupId))
+            {
+                query["WirelessCloudConnectorGroupId"] = request.WirelessCloudConnectorGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WirelessCloudConnectorIds))
+            {
+                query["WirelessCloudConnectorIds"] = request.WirelessCloudConnectorIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddWirelessCloudConnectorToGroup",
+                Version = "2022-03-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddWirelessCloudConnectorToGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<AddWirelessCloudConnectorToGroupResponse> AddWirelessCloudConnectorToGroupWithOptionsAsync(AddWirelessCloudConnectorToGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WirelessCloudConnectorGroupId))
+            {
+                query["WirelessCloudConnectorGroupId"] = request.WirelessCloudConnectorGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WirelessCloudConnectorIds))
+            {
+                query["WirelessCloudConnectorIds"] = request.WirelessCloudConnectorIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddWirelessCloudConnectorToGroup",
+                Version = "2022-03-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddWirelessCloudConnectorToGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public AddWirelessCloudConnectorToGroupResponse AddWirelessCloudConnectorToGroup(AddWirelessCloudConnectorToGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddWirelessCloudConnectorToGroupWithOptions(request, runtime);
+        }
+
+        public async Task<AddWirelessCloudConnectorToGroupResponse> AddWirelessCloudConnectorToGroupAsync(AddWirelessCloudConnectorToGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddWirelessCloudConnectorToGroupWithOptionsAsync(request, runtime);
+        }
+
         public AttachVpcToNetLinkResponse AttachVpcToNetLinkWithOptions(AttachVpcToNetLinkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -557,6 +769,152 @@ namespace AlibabaCloud.SDK.CC5G20220314
             return await CreateBatchOperateCardsTaskWithOptionsAsync(request, runtime);
         }
 
+        public CreateGroupAuthorizationRuleResponse CreateGroupAuthorizationRuleWithOptions(CreateGroupAuthorizationRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Destination))
+            {
+                query["Destination"] = request.Destination;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationPort))
+            {
+                query["DestinationPort"] = request.DestinationPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationType))
+            {
+                query["DestinationType"] = request.DestinationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Policy))
+            {
+                query["Policy"] = request.Policy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
+            {
+                query["Protocol"] = request.Protocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCidr))
+            {
+                query["SourceCidr"] = request.SourceCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WirelessCloudConnectorGroupId))
+            {
+                query["WirelessCloudConnectorGroupId"] = request.WirelessCloudConnectorGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGroupAuthorizationRule",
+                Version = "2022-03-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGroupAuthorizationRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateGroupAuthorizationRuleResponse> CreateGroupAuthorizationRuleWithOptionsAsync(CreateGroupAuthorizationRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Destination))
+            {
+                query["Destination"] = request.Destination;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationPort))
+            {
+                query["DestinationPort"] = request.DestinationPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationType))
+            {
+                query["DestinationType"] = request.DestinationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Policy))
+            {
+                query["Policy"] = request.Policy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
+            {
+                query["Protocol"] = request.Protocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCidr))
+            {
+                query["SourceCidr"] = request.SourceCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WirelessCloudConnectorGroupId))
+            {
+                query["WirelessCloudConnectorGroupId"] = request.WirelessCloudConnectorGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGroupAuthorizationRule",
+                Version = "2022-03-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGroupAuthorizationRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateGroupAuthorizationRuleResponse CreateGroupAuthorizationRule(CreateGroupAuthorizationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateGroupAuthorizationRuleWithOptions(request, runtime);
+        }
+
+        public async Task<CreateGroupAuthorizationRuleResponse> CreateGroupAuthorizationRuleAsync(CreateGroupAuthorizationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateGroupAuthorizationRuleWithOptionsAsync(request, runtime);
+        }
+
         public CreateIoTCloudConnectorBackhaulRouteResponse CreateIoTCloudConnectorBackhaulRouteWithOptions(CreateIoTCloudConnectorBackhaulRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -777,6 +1135,104 @@ namespace AlibabaCloud.SDK.CC5G20220314
             return await CreateWirelessCloudConnectorWithOptionsAsync(request, runtime);
         }
 
+        public CreateWirelessCloudConnectorGroupResponse CreateWirelessCloudConnectorGroupWithOptions(CreateWirelessCloudConnectorGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWirelessCloudConnectorGroup",
+                Version = "2022-03-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWirelessCloudConnectorGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateWirelessCloudConnectorGroupResponse> CreateWirelessCloudConnectorGroupWithOptionsAsync(CreateWirelessCloudConnectorGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWirelessCloudConnectorGroup",
+                Version = "2022-03-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWirelessCloudConnectorGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateWirelessCloudConnectorGroupResponse CreateWirelessCloudConnectorGroup(CreateWirelessCloudConnectorGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateWirelessCloudConnectorGroupWithOptions(request, runtime);
+        }
+
+        public async Task<CreateWirelessCloudConnectorGroupResponse> CreateWirelessCloudConnectorGroupAsync(CreateWirelessCloudConnectorGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateWirelessCloudConnectorGroupWithOptionsAsync(request, runtime);
+        }
+
         public DeleteAuthorizationRuleResponse DeleteAuthorizationRuleWithOptions(DeleteAuthorizationRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -957,6 +1413,96 @@ namespace AlibabaCloud.SDK.CC5G20220314
             return await DeleteBatchOperateCardsTaskWithOptionsAsync(request, runtime);
         }
 
+        public DeleteGroupAuthorizationRuleResponse DeleteGroupAuthorizationRuleWithOptions(DeleteGroupAuthorizationRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleId))
+            {
+                query["AuthorizationRuleId"] = request.AuthorizationRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WirelessCloudConnectorGroupId))
+            {
+                query["WirelessCloudConnectorGroupId"] = request.WirelessCloudConnectorGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteGroupAuthorizationRule",
+                Version = "2022-03-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteGroupAuthorizationRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteGroupAuthorizationRuleResponse> DeleteGroupAuthorizationRuleWithOptionsAsync(DeleteGroupAuthorizationRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleId))
+            {
+                query["AuthorizationRuleId"] = request.AuthorizationRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WirelessCloudConnectorGroupId))
+            {
+                query["WirelessCloudConnectorGroupId"] = request.WirelessCloudConnectorGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteGroupAuthorizationRule",
+                Version = "2022-03-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteGroupAuthorizationRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteGroupAuthorizationRuleResponse DeleteGroupAuthorizationRule(DeleteGroupAuthorizationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteGroupAuthorizationRuleWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteGroupAuthorizationRuleResponse> DeleteGroupAuthorizationRuleAsync(DeleteGroupAuthorizationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteGroupAuthorizationRuleWithOptionsAsync(request, runtime);
+        }
+
         public DeleteIoTCloudConnectorBackhaulRouteResponse DeleteIoTCloudConnectorBackhaulRouteWithOptions(DeleteIoTCloudConnectorBackhaulRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1127,6 +1673,88 @@ namespace AlibabaCloud.SDK.CC5G20220314
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteWirelessCloudConnectorWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteWirelessCloudConnectorGroupResponse DeleteWirelessCloudConnectorGroupWithOptions(DeleteWirelessCloudConnectorGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WirelessCloudConnectorGroupId))
+            {
+                query["WirelessCloudConnectorGroupId"] = request.WirelessCloudConnectorGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWirelessCloudConnectorGroup",
+                Version = "2022-03-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteWirelessCloudConnectorGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteWirelessCloudConnectorGroupResponse> DeleteWirelessCloudConnectorGroupWithOptionsAsync(DeleteWirelessCloudConnectorGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WirelessCloudConnectorGroupId))
+            {
+                query["WirelessCloudConnectorGroupId"] = request.WirelessCloudConnectorGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWirelessCloudConnectorGroup",
+                Version = "2022-03-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteWirelessCloudConnectorGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteWirelessCloudConnectorGroupResponse DeleteWirelessCloudConnectorGroup(DeleteWirelessCloudConnectorGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteWirelessCloudConnectorGroupWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteWirelessCloudConnectorGroupResponse> DeleteWirelessCloudConnectorGroupAsync(DeleteWirelessCloudConnectorGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteWirelessCloudConnectorGroupWithOptionsAsync(request, runtime);
         }
 
         public DetachVpcFromNetLinkResponse DetachVpcFromNetLinkWithOptions(DetachVpcFromNetLinkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2117,6 +2745,64 @@ namespace AlibabaCloud.SDK.CC5G20220314
             return await ListDiagnoseInfoForSingleCardWithOptionsAsync(request, runtime);
         }
 
+        public ListGroupAuthorizationRulesResponse ListGroupAuthorizationRulesWithOptions(ListGroupAuthorizationRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGroupAuthorizationRules",
+                Version = "2022-03-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGroupAuthorizationRulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListGroupAuthorizationRulesResponse> ListGroupAuthorizationRulesWithOptionsAsync(ListGroupAuthorizationRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGroupAuthorizationRules",
+                Version = "2022-03-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGroupAuthorizationRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListGroupAuthorizationRulesResponse ListGroupAuthorizationRules(ListGroupAuthorizationRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListGroupAuthorizationRulesWithOptions(request, runtime);
+        }
+
+        public async Task<ListGroupAuthorizationRulesResponse> ListGroupAuthorizationRulesAsync(ListGroupAuthorizationRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListGroupAuthorizationRulesWithOptionsAsync(request, runtime);
+        }
+
         public ListIoTCloudConnectorBackhaulRouteResponse ListIoTCloudConnectorBackhaulRouteWithOptions(ListIoTCloudConnectorBackhaulRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2289,6 +2975,64 @@ namespace AlibabaCloud.SDK.CC5G20220314
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListRegionsWithOptionsAsync(request, runtime);
+        }
+
+        public ListWirelessCloudConnectorGroupsResponse ListWirelessCloudConnectorGroupsWithOptions(ListWirelessCloudConnectorGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWirelessCloudConnectorGroups",
+                Version = "2022-03-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWirelessCloudConnectorGroupsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListWirelessCloudConnectorGroupsResponse> ListWirelessCloudConnectorGroupsWithOptionsAsync(ListWirelessCloudConnectorGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWirelessCloudConnectorGroups",
+                Version = "2022-03-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWirelessCloudConnectorGroupsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListWirelessCloudConnectorGroupsResponse ListWirelessCloudConnectorGroups(ListWirelessCloudConnectorGroupsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListWirelessCloudConnectorGroupsWithOptions(request, runtime);
+        }
+
+        public async Task<ListWirelessCloudConnectorGroupsResponse> ListWirelessCloudConnectorGroupsAsync(ListWirelessCloudConnectorGroupsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListWirelessCloudConnectorGroupsWithOptionsAsync(request, runtime);
         }
 
         public ListWirelessCloudConnectorsResponse ListWirelessCloudConnectorsWithOptions(ListWirelessCloudConnectorsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2659,6 +3403,104 @@ namespace AlibabaCloud.SDK.CC5G20220314
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await OpenCc5gServiceWithOptionsAsync(request, runtime);
+        }
+
+        public RemoveWirelessCloudConnectorFromGroupResponse RemoveWirelessCloudConnectorFromGroupWithOptions(RemoveWirelessCloudConnectorFromGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WirelessCloudConnectorGroupId))
+            {
+                query["WirelessCloudConnectorGroupId"] = request.WirelessCloudConnectorGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WirelessCloudConnectorIds))
+            {
+                query["WirelessCloudConnectorIds"] = request.WirelessCloudConnectorIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveWirelessCloudConnectorFromGroup",
+                Version = "2022-03-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveWirelessCloudConnectorFromGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<RemoveWirelessCloudConnectorFromGroupResponse> RemoveWirelessCloudConnectorFromGroupWithOptionsAsync(RemoveWirelessCloudConnectorFromGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WirelessCloudConnectorGroupId))
+            {
+                query["WirelessCloudConnectorGroupId"] = request.WirelessCloudConnectorGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WirelessCloudConnectorIds))
+            {
+                query["WirelessCloudConnectorIds"] = request.WirelessCloudConnectorIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveWirelessCloudConnectorFromGroup",
+                Version = "2022-03-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveWirelessCloudConnectorFromGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public RemoveWirelessCloudConnectorFromGroupResponse RemoveWirelessCloudConnectorFromGroup(RemoveWirelessCloudConnectorFromGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RemoveWirelessCloudConnectorFromGroupWithOptions(request, runtime);
+        }
+
+        public async Task<RemoveWirelessCloudConnectorFromGroupResponse> RemoveWirelessCloudConnectorFromGroupAsync(RemoveWirelessCloudConnectorFromGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RemoveWirelessCloudConnectorFromGroupWithOptionsAsync(request, runtime);
         }
 
         public ResumeCardsResponse ResumeCardsWithOptions(ResumeCardsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3745,6 +4587,274 @@ namespace AlibabaCloud.SDK.CC5G20220314
             return await UpdateDNSAuthorizationRuleWithOptionsAsync(request, runtime);
         }
 
+        public UpdateGroupAuthorizationRuleResponse UpdateGroupAuthorizationRuleWithOptions(UpdateGroupAuthorizationRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleId))
+            {
+                query["AuthorizationRuleId"] = request.AuthorizationRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Destination))
+            {
+                query["Destination"] = request.Destination;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationPort))
+            {
+                query["DestinationPort"] = request.DestinationPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Policy))
+            {
+                query["Policy"] = request.Policy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
+            {
+                query["Protocol"] = request.Protocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCidr))
+            {
+                query["SourceCidr"] = request.SourceCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WirelessCloudConnectorGroupId))
+            {
+                query["WirelessCloudConnectorGroupId"] = request.WirelessCloudConnectorGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGroupAuthorizationRule",
+                Version = "2022-03-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGroupAuthorizationRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateGroupAuthorizationRuleResponse> UpdateGroupAuthorizationRuleWithOptionsAsync(UpdateGroupAuthorizationRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleId))
+            {
+                query["AuthorizationRuleId"] = request.AuthorizationRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Destination))
+            {
+                query["Destination"] = request.Destination;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationPort))
+            {
+                query["DestinationPort"] = request.DestinationPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Policy))
+            {
+                query["Policy"] = request.Policy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
+            {
+                query["Protocol"] = request.Protocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCidr))
+            {
+                query["SourceCidr"] = request.SourceCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WirelessCloudConnectorGroupId))
+            {
+                query["WirelessCloudConnectorGroupId"] = request.WirelessCloudConnectorGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGroupAuthorizationRule",
+                Version = "2022-03-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGroupAuthorizationRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateGroupAuthorizationRuleResponse UpdateGroupAuthorizationRule(UpdateGroupAuthorizationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateGroupAuthorizationRuleWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateGroupAuthorizationRuleResponse> UpdateGroupAuthorizationRuleAsync(UpdateGroupAuthorizationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateGroupAuthorizationRuleWithOptionsAsync(request, runtime);
+        }
+
+        public UpdateGroupDnsAuthorizationRuleResponse UpdateGroupDnsAuthorizationRuleWithOptions(UpdateGroupDnsAuthorizationRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleId))
+            {
+                query["AuthorizationRuleId"] = request.AuthorizationRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationIp))
+            {
+                query["DestinationIp"] = request.DestinationIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDNSIp))
+            {
+                query["SourceDNSIp"] = request.SourceDNSIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WirelessCloudConnectorGroupId))
+            {
+                query["WirelessCloudConnectorGroupId"] = request.WirelessCloudConnectorGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGroupDnsAuthorizationRule",
+                Version = "2022-03-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGroupDnsAuthorizationRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateGroupDnsAuthorizationRuleResponse> UpdateGroupDnsAuthorizationRuleWithOptionsAsync(UpdateGroupDnsAuthorizationRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleId))
+            {
+                query["AuthorizationRuleId"] = request.AuthorizationRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationIp))
+            {
+                query["DestinationIp"] = request.DestinationIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDNSIp))
+            {
+                query["SourceDNSIp"] = request.SourceDNSIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WirelessCloudConnectorGroupId))
+            {
+                query["WirelessCloudConnectorGroupId"] = request.WirelessCloudConnectorGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGroupDnsAuthorizationRule",
+                Version = "2022-03-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGroupDnsAuthorizationRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateGroupDnsAuthorizationRuleResponse UpdateGroupDnsAuthorizationRule(UpdateGroupDnsAuthorizationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateGroupDnsAuthorizationRuleWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateGroupDnsAuthorizationRuleResponse> UpdateGroupDnsAuthorizationRuleAsync(UpdateGroupDnsAuthorizationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateGroupDnsAuthorizationRuleWithOptionsAsync(request, runtime);
+        }
+
         public UpdateWirelessCloudConnectorResponse UpdateWirelessCloudConnectorWithOptions(UpdateWirelessCloudConnectorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3841,6 +4951,104 @@ namespace AlibabaCloud.SDK.CC5G20220314
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateWirelessCloudConnectorWithOptionsAsync(request, runtime);
+        }
+
+        public UpdateWirelessCloudConnectorGroupResponse UpdateWirelessCloudConnectorGroupWithOptions(UpdateWirelessCloudConnectorGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WirelessCloudConnectorGroupId))
+            {
+                query["WirelessCloudConnectorGroupId"] = request.WirelessCloudConnectorGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWirelessCloudConnectorGroup",
+                Version = "2022-03-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWirelessCloudConnectorGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateWirelessCloudConnectorGroupResponse> UpdateWirelessCloudConnectorGroupWithOptionsAsync(UpdateWirelessCloudConnectorGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WirelessCloudConnectorGroupId))
+            {
+                query["WirelessCloudConnectorGroupId"] = request.WirelessCloudConnectorGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWirelessCloudConnectorGroup",
+                Version = "2022-03-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWirelessCloudConnectorGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateWirelessCloudConnectorGroupResponse UpdateWirelessCloudConnectorGroup(UpdateWirelessCloudConnectorGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateWirelessCloudConnectorGroupWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateWirelessCloudConnectorGroupResponse> UpdateWirelessCloudConnectorGroupAsync(UpdateWirelessCloudConnectorGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateWirelessCloudConnectorGroupWithOptionsAsync(request, runtime);
         }
 
     }
