@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DeleteCasterLayoutResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("CasterId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string CasterId { get; set; }
 
         [NameInMap("LayoutId")]
         [Validation(Required=false)]
         public string LayoutId { get; set; }
 
-        [NameInMap("CasterId")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string CasterId { get; set; }
+        public string RequestId { get; set; }
 
     }
 

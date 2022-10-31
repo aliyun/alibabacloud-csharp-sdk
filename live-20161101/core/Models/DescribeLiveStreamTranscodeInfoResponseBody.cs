@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamTranscodeInfoResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DomainTranscodeList")]
         [Validation(Required=false)]
         public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeList DomainTranscodeList { get; set; }
@@ -21,15 +17,41 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfo> DomainTranscodeInfo { get; set; }
             public class DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfo : TeaModel {
+                [NameInMap("CustomTranscodeParameters")]
+                [Validation(Required=false)]
                 public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters CustomTranscodeParameters { get; set; }
                 public class DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters : TeaModel {
-                    [NameInMap("VideoProfile")]
-                    [Validation(Required=false)]
-                    public string VideoProfile { get; set; }
-
                     [NameInMap("AudioBitrate")]
                     [Validation(Required=false)]
                     public int? AudioBitrate { get; set; }
+
+                    [NameInMap("AudioChannelNum")]
+                    [Validation(Required=false)]
+                    public int? AudioChannelNum { get; set; }
+
+                    [NameInMap("AudioCodec")]
+                    [Validation(Required=false)]
+                    public string AudioCodec { get; set; }
+
+                    [NameInMap("AudioProfile")]
+                    [Validation(Required=false)]
+                    public string AudioProfile { get; set; }
+
+                    [NameInMap("AudioRate")]
+                    [Validation(Required=false)]
+                    public int? AudioRate { get; set; }
+
+                    [NameInMap("Bframes")]
+                    [Validation(Required=false)]
+                    public string Bframes { get; set; }
+
+                    [NameInMap("FPS")]
+                    [Validation(Required=false)]
+                    public int? FPS { get; set; }
+
+                    [NameInMap("Gop")]
+                    [Validation(Required=false)]
+                    public string Gop { get; set; }
 
                     [NameInMap("Height")]
                     [Validation(Required=false)]
@@ -43,63 +65,61 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                     [Validation(Required=false)]
                     public string TemplateType { get; set; }
 
-                    [NameInMap("Bframes")]
+                    [NameInMap("VideoBitrate")]
                     [Validation(Required=false)]
-                    public string Bframes { get; set; }
+                    public int? VideoBitrate { get; set; }
 
-                    [NameInMap("AudioRate")]
+                    [NameInMap("VideoProfile")]
                     [Validation(Required=false)]
-                    public int? AudioRate { get; set; }
-
-                    [NameInMap("AudioCodec")]
-                    [Validation(Required=false)]
-                    public string AudioCodec { get; set; }
-
-                    [NameInMap("FPS")]
-                    [Validation(Required=false)]
-                    public int? FPS { get; set; }
-
-                    [NameInMap("Gop")]
-                    [Validation(Required=false)]
-                    public string Gop { get; set; }
+                    public string VideoProfile { get; set; }
 
                     [NameInMap("Width")]
                     [Validation(Required=false)]
                     public int? Width { get; set; }
 
-                    [NameInMap("VideoBitrate")]
-                    [Validation(Required=false)]
-                    public int? VideoBitrate { get; set; }
-
-                    [NameInMap("AudioChannelNum")]
-                    [Validation(Required=false)]
-                    public int? AudioChannelNum { get; set; }
-
-                    [NameInMap("AudioProfile")]
-                    [Validation(Required=false)]
-                    public string AudioProfile { get; set; }
-
                 }
-                public string TranscodeApp { get; set; }
-                public string TranscodeTemplate { get; set; }
+
+                [NameInMap("EncryptParameters")]
+                [Validation(Required=false)]
                 public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoEncryptParameters EncryptParameters { get; set; }
                 public class DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoEncryptParameters : TeaModel {
                     [NameInMap("EncryptType")]
                     [Validation(Required=false)]
                     public string EncryptType { get; set; }
 
-                    [NameInMap("KmsKeyID")]
-                    [Validation(Required=false)]
-                    public string KmsKeyID { get; set; }
-
                     [NameInMap("KmsKeyExpireInterval")]
                     [Validation(Required=false)]
                     public string KmsKeyExpireInterval { get; set; }
 
+                    [NameInMap("KmsKeyID")]
+                    [Validation(Required=false)]
+                    public string KmsKeyID { get; set; }
+
                 }
+
+                [NameInMap("IsLazy")]
+                [Validation(Required=false)]
+                public bool? IsLazy { get; set; }
+
+                [NameInMap("TranscodeApp")]
+                [Validation(Required=false)]
+                public string TranscodeApp { get; set; }
+
+                [NameInMap("TranscodeName")]
+                [Validation(Required=false)]
                 public string TranscodeName { get; set; }
+
+                [NameInMap("TranscodeTemplate")]
+                [Validation(Required=false)]
+                public string TranscodeTemplate { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

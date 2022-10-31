@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddMultiRateConfigRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
-
         [NameInMap("App")]
         [Validation(Required=false)]
         public string App { get; set; }
@@ -24,6 +16,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("AvFormat")]
         [Validation(Required=false)]
         public string AvFormat { get; set; }
+
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
 
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -36,6 +32,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("IsTimeAlign")]
         [Validation(Required=false)]
         public string IsTimeAlign { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
         [NameInMap("Templates")]
         [Validation(Required=false)]

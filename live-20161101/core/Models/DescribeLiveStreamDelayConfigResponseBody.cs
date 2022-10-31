@@ -16,26 +16,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [NameInMap("Delay")]
             [Validation(Required=false)]
             public int? Delay { get; set; }
+
             [NameInMap("Level")]
             [Validation(Required=false)]
             public string Level { get; set; }
-        };
 
-        [NameInMap("LiveStreamRtmpDelayConfig")]
-        [Validation(Required=false)]
-        public DescribeLiveStreamDelayConfigResponseBodyLiveStreamRtmpDelayConfig LiveStreamRtmpDelayConfig { get; set; }
-        public class DescribeLiveStreamDelayConfigResponseBodyLiveStreamRtmpDelayConfig : TeaModel {
-            [NameInMap("Delay")]
-            [Validation(Required=false)]
-            public int? Delay { get; set; }
-            [NameInMap("Level")]
-            [Validation(Required=false)]
-            public string Level { get; set; }
-        };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        }
 
         [NameInMap("LiveStreamHlsDelayConfig")]
         [Validation(Required=false)]
@@ -44,10 +30,30 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [NameInMap("Delay")]
             [Validation(Required=false)]
             public int? Delay { get; set; }
+
             [NameInMap("Level")]
             [Validation(Required=false)]
             public string Level { get; set; }
-        };
+
+        }
+
+        [NameInMap("LiveStreamRtmpDelayConfig")]
+        [Validation(Required=false)]
+        public DescribeLiveStreamDelayConfigResponseBodyLiveStreamRtmpDelayConfig LiveStreamRtmpDelayConfig { get; set; }
+        public class DescribeLiveStreamDelayConfigResponseBodyLiveStreamRtmpDelayConfig : TeaModel {
+            [NameInMap("Delay")]
+            [Validation(Required=false)]
+            public int? Delay { get; set; }
+
+            [NameInMap("Level")]
+            [Validation(Required=false)]
+            public string Level { get; set; }
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

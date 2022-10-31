@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveRecordVodConfigsRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("AppName")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string AppName { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("AppName")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string AppName { get; set; }
-
-        [NameInMap("StreamName")]
-        [Validation(Required=false)]
-        public string StreamName { get; set; }
+        public long? OwnerId { get; set; }
 
         [NameInMap("PageNum")]
         [Validation(Required=false)]
@@ -32,6 +28,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
+
+        [NameInMap("StreamName")]
+        [Validation(Required=false)]
+        public string StreamName { get; set; }
 
     }
 

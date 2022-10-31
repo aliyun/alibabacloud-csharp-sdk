@@ -12,21 +12,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddCasterComponentRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("CaptionLayerContent")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string CaptionLayerContent { get; set; }
 
         [NameInMap("CasterId")]
         [Validation(Required=false)]
         public string CasterId { get; set; }
 
+        [NameInMap("ComponentLayer")]
+        [Validation(Required=false)]
+        public string ComponentLayer { get; set; }
+
         [NameInMap("ComponentName")]
         [Validation(Required=false)]
         public string ComponentName { get; set; }
-
-        [NameInMap("LocationId")]
-        [Validation(Required=false)]
-        public string LocationId { get; set; }
 
         [NameInMap("ComponentType")]
         [Validation(Required=false)]
@@ -36,29 +36,29 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string Effect { get; set; }
 
-        [NameInMap("ComponentLayer")]
+        [NameInMap("HtmlLayerContent")]
         [Validation(Required=false)]
-        public string ComponentLayer { get; set; }
-
-        [NameInMap("LayerOrder")]
-        [Validation(Required=false)]
-        public string LayerOrder { get; set; }
-
-        [NameInMap("TextLayerContent")]
-        [Validation(Required=false)]
-        public string TextLayerContent { get; set; }
+        public string HtmlLayerContent { get; set; }
 
         [NameInMap("ImageLayerContent")]
         [Validation(Required=false)]
         public string ImageLayerContent { get; set; }
 
-        [NameInMap("CaptionLayerContent")]
+        [NameInMap("LayerOrder")]
         [Validation(Required=false)]
-        public string CaptionLayerContent { get; set; }
+        public string LayerOrder { get; set; }
 
-        [NameInMap("HtmlLayerContent")]
+        [NameInMap("LocationId")]
         [Validation(Required=false)]
-        public string HtmlLayerContent { get; set; }
+        public string LocationId { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("TextLayerContent")]
+        [Validation(Required=false)]
+        public string TextLayerContent { get; set; }
 
     }
 

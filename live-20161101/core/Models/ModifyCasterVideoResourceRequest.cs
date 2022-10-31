@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ModifyCasterVideoResourceRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("BeginOffset")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public int? BeginOffset { get; set; }
 
         [NameInMap("CasterId")]
         [Validation(Required=false)]
         public string CasterId { get; set; }
 
-        [NameInMap("ResourceId")]
+        [NameInMap("EndOffset")]
         [Validation(Required=false)]
-        public string ResourceId { get; set; }
-
-        [NameInMap("ResourceName")]
-        [Validation(Required=false)]
-        public string ResourceName { get; set; }
+        public int? EndOffset { get; set; }
 
         [NameInMap("LiveStreamUrl")]
         [Validation(Required=false)]
@@ -33,25 +29,29 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string MaterialId { get; set; }
 
-        [NameInMap("VodUrl")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string VodUrl { get; set; }
+        public long? OwnerId { get; set; }
 
-        [NameInMap("BeginOffset")]
+        [NameInMap("PtsCallbackInterval")]
         [Validation(Required=false)]
-        public int? BeginOffset { get; set; }
-
-        [NameInMap("EndOffset")]
-        [Validation(Required=false)]
-        public int? EndOffset { get; set; }
+        public int? PtsCallbackInterval { get; set; }
 
         [NameInMap("RepeatNum")]
         [Validation(Required=false)]
         public int? RepeatNum { get; set; }
 
-        [NameInMap("PtsCallbackInterval")]
+        [NameInMap("ResourceId")]
         [Validation(Required=false)]
-        public int? PtsCallbackInterval { get; set; }
+        public string ResourceId { get; set; }
+
+        [NameInMap("ResourceName")]
+        [Validation(Required=false)]
+        public string ResourceName { get; set; }
+
+        [NameInMap("VodUrl")]
+        [Validation(Required=false)]
+        public string VodUrl { get; set; }
 
     }
 

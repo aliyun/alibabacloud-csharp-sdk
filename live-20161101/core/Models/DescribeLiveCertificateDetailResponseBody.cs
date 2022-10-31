@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveCertificateDetailResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("Cert")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Cert { get; set; }
 
         [NameInMap("CertId")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string CertName { get; set; }
 
-        [NameInMap("Cert")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Cert { get; set; }
+        public string RequestId { get; set; }
 
     }
 

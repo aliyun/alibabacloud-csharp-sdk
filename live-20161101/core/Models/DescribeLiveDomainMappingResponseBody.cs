@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDomainMappingResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("LiveDomainModels")]
         [Validation(Required=false)]
         public DescribeLiveDomainMappingResponseBodyLiveDomainModels LiveDomainModels { get; set; }
@@ -21,10 +17,21 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveDomainMappingResponseBodyLiveDomainModelsLiveDomainModel> LiveDomainModel { get; set; }
             public class DescribeLiveDomainMappingResponseBodyLiveDomainModelsLiveDomainModel : TeaModel {
-                public string Type { get; set; }
+                [NameInMap("DomainName")]
+                [Validation(Required=false)]
                 public string DomainName { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

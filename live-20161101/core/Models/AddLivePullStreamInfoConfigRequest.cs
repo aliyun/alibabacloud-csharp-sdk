@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddLivePullStreamInfoConfigRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("AppName")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string AppName { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("AppName")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string AppName { get; set; }
+        public string EndTime { get; set; }
 
-        [NameInMap("StreamName")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string StreamName { get; set; }
+        public long? OwnerId { get; set; }
 
         [NameInMap("SourceUrl")]
         [Validation(Required=false)]
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
-        [NameInMap("EndTime")]
+        [NameInMap("StreamName")]
         [Validation(Required=false)]
-        public string EndTime { get; set; }
+        public string StreamName { get; set; }
 
     }
 

@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveRealtimeDeliveryAccResponseBodyRealTimeDeliveryAccDataAccData> AccData { get; set; }
             public class DescribeLiveRealtimeDeliveryAccResponseBodyRealTimeDeliveryAccDataAccData : TeaModel {
+                [NameInMap("FailedNum")]
+                [Validation(Required=false)]
                 public int? FailedNum { get; set; }
-                public string TimeStamp { get; set; }
+
+                [NameInMap("SuccessNum")]
+                [Validation(Required=false)]
                 public int? SuccessNum { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
+                public string TimeStamp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

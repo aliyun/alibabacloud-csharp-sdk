@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddLiveAudioAuditConfigRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
-
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
-        [NameInMap("StreamName")]
+        [NameInMap("BizType")]
         [Validation(Required=false)]
-        public string StreamName { get; set; }
+        public string BizType { get; set; }
+
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
 
         [NameInMap("OssBucket")]
         [Validation(Required=false)]
@@ -37,9 +33,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string OssObject { get; set; }
 
-        [NameInMap("BizType")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string BizType { get; set; }
+        public long? OwnerId { get; set; }
+
+        [NameInMap("StreamName")]
+        [Validation(Required=false)]
+        public string StreamName { get; set; }
 
     }
 

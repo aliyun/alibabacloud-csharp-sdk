@@ -21,15 +21,37 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveDomainStreamTranscodeDataResponseBodyTranscodeDataListTranscodeData> TranscodeData { get; set; }
             public class DescribeLiveDomainStreamTranscodeDataResponseBodyTranscodeDataListTranscodeData : TeaModel {
-                public string TanscodeType { get; set; }
+                [NameInMap("Domain")]
+                [Validation(Required=false)]
                 public string Domain { get; set; }
-                public string Region { get; set; }
+
+                [NameInMap("Duration")]
+                [Validation(Required=false)]
                 public int? Duration { get; set; }
-                public string TimeStamp { get; set; }
+
+                [NameInMap("Fps")]
+                [Validation(Required=false)]
                 public string Fps { get; set; }
+
+                [NameInMap("Region")]
+                [Validation(Required=false)]
+                public string Region { get; set; }
+
+                [NameInMap("Resolution")]
+                [Validation(Required=false)]
                 public string Resolution { get; set; }
+
+                [NameInMap("TanscodeType")]
+                [Validation(Required=false)]
+                public string TanscodeType { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
+                public string TimeStamp { get; set; }
+
             }
-        };
+
+        }
 
     }
 

@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class UpdateMixStreamRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
-
-        [NameInMap("MixStreamId")]
-        [Validation(Required=false)]
-        public string MixStreamId { get; set; }
 
         [NameInMap("InputStreamList")]
         [Validation(Required=false)]
@@ -28,6 +20,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("LayoutId")]
         [Validation(Required=false)]
         public string LayoutId { get; set; }
+
+        [NameInMap("MixStreamId")]
+        [Validation(Required=false)]
+        public string MixStreamId { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
     }
 

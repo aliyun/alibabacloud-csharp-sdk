@@ -17,20 +17,33 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel> BpsDataModel { get; set; }
             public class DescribeLiveDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel : TeaModel {
-                public string LocationName { get; set; }
-                public string TimeStamp { get; set; }
-                public string IspName { get; set; }
+                [NameInMap("Bps")]
+                [Validation(Required=false)]
                 public long? Bps { get; set; }
-            }
-        };
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+                [NameInMap("IspName")]
+                [Validation(Required=false)]
+                public string IspName { get; set; }
+
+                [NameInMap("LocationName")]
+                [Validation(Required=false)]
+                public string LocationName { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
+                public string TimeStamp { get; set; }
+
+            }
+
+        }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("TimeStamp")]
         [Validation(Required=false)]

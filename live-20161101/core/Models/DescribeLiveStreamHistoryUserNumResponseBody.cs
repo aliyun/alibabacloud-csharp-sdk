@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveStreamHistoryUserNumResponseBodyLiveStreamUserNumInfosLiveStreamUserNumInfo> LiveStreamUserNumInfo { get; set; }
             public class DescribeLiveStreamHistoryUserNumResponseBodyLiveStreamUserNumInfosLiveStreamUserNumInfo : TeaModel {
-                public string UserNum { get; set; }
+                [NameInMap("StreamTime")]
+                [Validation(Required=false)]
                 public string StreamTime { get; set; }
+
+                [NameInMap("UserNum")]
+                [Validation(Required=false)]
+                public string UserNum { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

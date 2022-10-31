@@ -9,37 +9,41 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamsOnlineListRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("AppName")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string AppName { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("AppName")]
+        [NameInMap("OnlyStream")]
         [Validation(Required=false)]
-        public string AppName { get; set; }
+        public string OnlyStream { get; set; }
 
-        [NameInMap("StreamName")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string StreamName { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public long? OwnerId { get; set; }
 
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }
 
-        [NameInMap("StreamType")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string StreamType { get; set; }
+        public int? PageSize { get; set; }
 
         [NameInMap("QueryType")]
         [Validation(Required=false)]
         public string QueryType { get; set; }
+
+        [NameInMap("StreamName")]
+        [Validation(Required=false)]
+        public string StreamName { get; set; }
+
+        [NameInMap("StreamType")]
+        [Validation(Required=false)]
+        public string StreamType { get; set; }
 
     }
 

@@ -17,9 +17,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<AddCasterProgramResponseBodyEpisodeIdsEpisodeId> EpisodeId { get; set; }
             public class AddCasterProgramResponseBodyEpisodeIdsEpisodeId : TeaModel {
+                [NameInMap("EpisodeId")]
+                [Validation(Required=false)]
                 public string EpisodeId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

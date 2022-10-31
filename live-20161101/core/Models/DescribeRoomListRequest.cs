@@ -9,29 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeRoomListRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("AppId")]
-        [Validation(Required=false)]
-        public string AppId { get; set; }
-
-        [NameInMap("RoomId")]
-        [Validation(Required=false)]
-        public string RoomId { get; set; }
-
         [NameInMap("AnchorId")]
         [Validation(Required=false)]
         public string AnchorId { get; set; }
 
-        [NameInMap("RoomStatus")]
+        [NameInMap("AppId")]
         [Validation(Required=false)]
-        public int? RoomStatus { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
+        public string AppId { get; set; }
 
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -41,6 +25,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string Order { get; set; }
 
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }
@@ -48,6 +36,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("RoomId")]
+        [Validation(Required=false)]
+        public string RoomId { get; set; }
+
+        [NameInMap("RoomStatus")]
+        [Validation(Required=false)]
+        public int? RoomStatus { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 

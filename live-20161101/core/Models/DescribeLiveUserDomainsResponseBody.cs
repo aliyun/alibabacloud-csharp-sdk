@@ -17,32 +17,57 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveUserDomainsResponseBodyDomainsPageData> PageData { get; set; }
             public class DescribeLiveUserDomainsResponseBodyDomainsPageData : TeaModel {
-                public string GmtCreated { get; set; }
-                public string LiveDomainType { get; set; }
-                public string LiveDomainStatus { get; set; }
-                public string RegionName { get; set; }
-                public string Description { get; set; }
+                [NameInMap("Cname")]
+                [Validation(Required=false)]
                 public string Cname { get; set; }
-                public string GmtModified { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                [NameInMap("DomainName")]
+                [Validation(Required=false)]
                 public string DomainName { get; set; }
+
+                [NameInMap("GmtCreated")]
+                [Validation(Required=false)]
+                public string GmtCreated { get; set; }
+
+                [NameInMap("GmtModified")]
+                [Validation(Required=false)]
+                public string GmtModified { get; set; }
+
+                [NameInMap("LiveDomainStatus")]
+                [Validation(Required=false)]
+                public string LiveDomainStatus { get; set; }
+
+                [NameInMap("LiveDomainType")]
+                [Validation(Required=false)]
+                public string LiveDomainType { get; set; }
+
+                [NameInMap("RegionName")]
+                [Validation(Required=false)]
+                public string RegionName { get; set; }
+
             }
-        };
 
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
+        }
 
-        [NameInMap("RequestId")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public long? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public long? PageNumber { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

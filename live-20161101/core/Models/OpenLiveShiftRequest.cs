@@ -9,25 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class OpenLiveShiftRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("AppName")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string AppName { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("AppName")]
+        [NameInMap("Duration")]
         [Validation(Required=false)]
-        public string AppName { get; set; }
+        public int? Duration { get; set; }
+
+        [NameInMap("IgnoreTranscode")]
+        [Validation(Required=false)]
+        public bool? IgnoreTranscode { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
         [NameInMap("StreamName")]
         [Validation(Required=false)]
         public string StreamName { get; set; }
-
-        [NameInMap("Duration")]
-        [Validation(Required=false)]
-        public int? Duration { get; set; }
 
         [NameInMap("Vision")]
         [Validation(Required=false)]

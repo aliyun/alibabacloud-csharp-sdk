@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveAudioAuditNotifyConfigResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("LiveAudioAuditNotifyConfigList")]
         [Validation(Required=false)]
         public DescribeLiveAudioAuditNotifyConfigResponseBodyLiveAudioAuditNotifyConfigList LiveAudioAuditNotifyConfigList { get; set; }
@@ -21,11 +17,25 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveAudioAuditNotifyConfigResponseBodyLiveAudioAuditNotifyConfigListLiveAudioAuditNotifyConfig> LiveAudioAuditNotifyConfig { get; set; }
             public class DescribeLiveAudioAuditNotifyConfigResponseBodyLiveAudioAuditNotifyConfigListLiveAudioAuditNotifyConfig : TeaModel {
-                public string CallbackTemplate { get; set; }
-                public string DomainName { get; set; }
+                [NameInMap("Callback")]
+                [Validation(Required=false)]
                 public string Callback { get; set; }
+
+                [NameInMap("CallbackTemplate")]
+                [Validation(Required=false)]
+                public string CallbackTemplate { get; set; }
+
+                [NameInMap("DomainName")]
+                [Validation(Required=false)]
+                public string DomainName { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

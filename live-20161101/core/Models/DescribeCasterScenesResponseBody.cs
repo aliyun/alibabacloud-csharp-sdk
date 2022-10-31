@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Total")]
-        [Validation(Required=false)]
-        public int? Total { get; set; }
-
         [NameInMap("SceneList")]
         [Validation(Required=false)]
         public DescribeCasterScenesResponseBodySceneList SceneList { get; set; }
@@ -25,19 +21,44 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeCasterScenesResponseBodySceneListScene> Scene { get; set; }
             public class DescribeCasterScenesResponseBodySceneListScene : TeaModel {
-                public int? Status { get; set; }
+                [NameInMap("ComponentIds")]
+                [Validation(Required=false)]
+                public DescribeCasterScenesResponseBodySceneListSceneComponentIds ComponentIds { get; set; }
+                public class DescribeCasterScenesResponseBodySceneListSceneComponentIds : TeaModel {
+                    [NameInMap("componentId")]
+                    [Validation(Required=false)]
+                    public List<string> ComponentId { get; set; }
+
+                }
+
+                [NameInMap("LayoutId")]
+                [Validation(Required=false)]
                 public string LayoutId { get; set; }
+
+                [NameInMap("OutputType")]
+                [Validation(Required=false)]
                 public string OutputType { get; set; }
+
+                [NameInMap("SceneId")]
+                [Validation(Required=false)]
+                public string SceneId { get; set; }
+
+                [NameInMap("SceneName")]
+                [Validation(Required=false)]
+                public string SceneName { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public int? Status { get; set; }
+
+                [NameInMap("StreamInfos")]
+                [Validation(Required=false)]
                 public DescribeCasterScenesResponseBodySceneListSceneStreamInfos StreamInfos { get; set; }
                 public class DescribeCasterScenesResponseBodySceneListSceneStreamInfos : TeaModel {
                     [NameInMap("StreamInfo")]
                     [Validation(Required=false)]
                     public List<DescribeCasterScenesResponseBodySceneListSceneStreamInfosStreamInfo> StreamInfo { get; set; }
                     public class DescribeCasterScenesResponseBodySceneListSceneStreamInfosStreamInfo : TeaModel {
-                        [NameInMap("VideoFormat")]
-                        [Validation(Required=false)]
-                        public string VideoFormat { get; set; }
-
                         [NameInMap("OutputStreamUrl")]
                         [Validation(Required=false)]
                         public string OutputStreamUrl { get; set; }
@@ -46,21 +67,25 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                         [Validation(Required=false)]
                         public string TranscodeConfig { get; set; }
 
+                        [NameInMap("VideoFormat")]
+                        [Validation(Required=false)]
+                        public string VideoFormat { get; set; }
+
                     }
 
                 }
-                public string SceneId { get; set; }
-                public string SceneName { get; set; }
-                public DescribeCasterScenesResponseBodySceneListSceneComponentIds ComponentIds { get; set; }
-                public class DescribeCasterScenesResponseBodySceneListSceneComponentIds : TeaModel {
-                    [NameInMap("componentId")]
-                    [Validation(Required=false)]
-                    public List<string> ComponentId { get; set; }
 
-                }
+                [NameInMap("StreamUrl")]
+                [Validation(Required=false)]
                 public string StreamUrl { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("Total")]
+        [Validation(Required=false)]
+        public int? Total { get; set; }
 
     }
 

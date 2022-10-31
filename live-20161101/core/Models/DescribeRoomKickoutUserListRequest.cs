@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeRoomKickoutUserListRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
-        [NameInMap("RoomId")]
-        [Validation(Required=false)]
-        public string RoomId { get; set; }
-
         [NameInMap("Order")]
         [Validation(Required=false)]
         public string Order { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
         [NameInMap("PageNum")]
         [Validation(Required=false)]
@@ -32,6 +28,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("RoomId")]
+        [Validation(Required=false)]
+        public string RoomId { get; set; }
 
     }
 

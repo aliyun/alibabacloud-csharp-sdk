@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeRoomKickoutUserListResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("TotalNum")]
         [Validation(Required=false)]
         public int? TotalNum { get; set; }
@@ -17,21 +21,17 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public int? TotalPage { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("UserList")]
         [Validation(Required=false)]
         public List<DescribeRoomKickoutUserListResponseBodyUserList> UserList { get; set; }
         public class DescribeRoomKickoutUserListResponseBodyUserList : TeaModel {
-            [NameInMap("OpEndTime")]
-            [Validation(Required=false)]
-            public string OpEndTime { get; set; }
-
             [NameInMap("AppUid")]
             [Validation(Required=false)]
             public string AppUid { get; set; }
+
+            [NameInMap("OpEndTime")]
+            [Validation(Required=false)]
+            public string OpEndTime { get; set; }
 
             [NameInMap("OpStartTime")]
             [Validation(Required=false)]

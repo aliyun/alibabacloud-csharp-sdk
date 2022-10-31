@@ -9,45 +9,45 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class UpdateLiveAppSnapshotConfigRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("AppName")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string AppName { get; set; }
 
-        [NameInMap("OwnerId")]
+        [NameInMap("Callback")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string Callback { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("AppName")]
+        [NameInMap("OssBucket")]
         [Validation(Required=false)]
-        public string AppName { get; set; }
-
-        [NameInMap("TimeInterval")]
-        [Validation(Required=false)]
-        public int? TimeInterval { get; set; }
+        public string OssBucket { get; set; }
 
         [NameInMap("OssEndpoint")]
         [Validation(Required=false)]
         public string OssEndpoint { get; set; }
 
-        [NameInMap("OssBucket")]
-        [Validation(Required=false)]
-        public string OssBucket { get; set; }
-
         [NameInMap("OverwriteOssObject")]
         [Validation(Required=false)]
         public string OverwriteOssObject { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
         [NameInMap("SequenceOssObject")]
         [Validation(Required=false)]
         public string SequenceOssObject { get; set; }
 
-        [NameInMap("Callback")]
+        [NameInMap("TimeInterval")]
         [Validation(Required=false)]
-        public string Callback { get; set; }
+        public int? TimeInterval { get; set; }
 
     }
 

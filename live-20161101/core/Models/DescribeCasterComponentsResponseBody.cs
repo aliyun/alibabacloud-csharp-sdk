@@ -17,12 +17,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeCasterComponentsResponseBodyComponentsComponent> Component { get; set; }
             public class DescribeCasterComponentsResponseBodyComponentsComponent : TeaModel {
-                public DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent TextLayerContent { get; set; }
-                public class DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent : TeaModel {
-                    [NameInMap("Color")]
-                    [Validation(Required=false)]
-                    public string Color { get; set; }
-
+                [NameInMap("CaptionLayerContent")]
+                [Validation(Required=false)]
+                public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent CaptionLayerContent { get; set; }
+                public class DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent : TeaModel {
                     [NameInMap("BorderColor")]
                     [Validation(Required=false)]
                     public string BorderColor { get; set; }
@@ -31,26 +29,67 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                     [Validation(Required=false)]
                     public float? BorderWidthNormalized { get; set; }
 
-                    [NameInMap("Text")]
+                    [NameInMap("Color")]
                     [Validation(Required=false)]
-                    public string Text { get; set; }
-
-                    [NameInMap("SizeNormalized")]
-                    [Validation(Required=false)]
-                    public float? SizeNormalized { get; set; }
+                    public string Color { get; set; }
 
                     [NameInMap("FontName")]
                     [Validation(Required=false)]
                     public string FontName { get; set; }
 
+                    [NameInMap("LineSpaceNormalized")]
+                    [Validation(Required=false)]
+                    public float? LineSpaceNormalized { get; set; }
+
+                    [NameInMap("LocationId")]
+                    [Validation(Required=false)]
+                    public string LocationId { get; set; }
+
+                    [NameInMap("PtsOffset")]
+                    [Validation(Required=false)]
+                    public int? PtsOffset { get; set; }
+
+                    [NameInMap("ShowSourceLan")]
+                    [Validation(Required=false)]
+                    public bool? ShowSourceLan { get; set; }
+
+                    [NameInMap("SizeNormalized")]
+                    [Validation(Required=false)]
+                    public float? SizeNormalized { get; set; }
+
+                    [NameInMap("SourceLan")]
+                    [Validation(Required=false)]
+                    public string SourceLan { get; set; }
+
+                    [NameInMap("TargetLan")]
+                    [Validation(Required=false)]
+                    public string TargetLan { get; set; }
+
+                    [NameInMap("WordCountPerLine")]
+                    [Validation(Required=false)]
+                    public int? WordCountPerLine { get; set; }
+
+                    [NameInMap("WordSpaceNormalized")]
+                    [Validation(Required=false)]
+                    public float? WordSpaceNormalized { get; set; }
+
+                    [NameInMap("WordsCount")]
+                    [Validation(Required=false)]
+                    public int? WordsCount { get; set; }
+
                 }
-                public string Effect { get; set; }
-                public string ComponentName { get; set; }
+
+                [NameInMap("ComponentId")]
+                [Validation(Required=false)]
+                public string ComponentId { get; set; }
+
+                [NameInMap("ComponentLayer")]
+                [Validation(Required=false)]
                 public DescribeCasterComponentsResponseBodyComponentsComponentComponentLayer ComponentLayer { get; set; }
                 public class DescribeCasterComponentsResponseBodyComponentsComponentComponentLayer : TeaModel {
-                    [NameInMap("Transparency")]
+                    [NameInMap("HeightNormalized")]
                     [Validation(Required=false)]
-                    public int? Transparency { get; set; }
+                    public float? HeightNormalized { get; set; }
 
                     [NameInMap("PositionNormalizeds")]
                     [Validation(Required=false)]
@@ -58,22 +97,38 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                     public class DescribeCasterComponentsResponseBodyComponentsComponentComponentLayerPositionNormalizeds : TeaModel {
                         [NameInMap("Position")]
                         [Validation(Required=false)]
-                        public List<string> Position { get; set; }
-                    };
+                        public List<float?> Position { get; set; }
 
-                    [NameInMap("HeightNormalized")]
-                    [Validation(Required=false)]
-                    public float? HeightNormalized { get; set; }
+                    }
 
                     [NameInMap("PositionRefer")]
                     [Validation(Required=false)]
                     public string PositionRefer { get; set; }
+
+                    [NameInMap("Transparency")]
+                    [Validation(Required=false)]
+                    public int? Transparency { get; set; }
 
                     [NameInMap("WidthNormalized")]
                     [Validation(Required=false)]
                     public float? WidthNormalized { get; set; }
 
                 }
+
+                [NameInMap("ComponentName")]
+                [Validation(Required=false)]
+                public string ComponentName { get; set; }
+
+                [NameInMap("ComponentType")]
+                [Validation(Required=false)]
+                public string ComponentType { get; set; }
+
+                [NameInMap("Effect")]
+                [Validation(Required=false)]
+                public string Effect { get; set; }
+
+                [NameInMap("ImageLayerContent")]
+                [Validation(Required=false)]
                 public DescribeCasterComponentsResponseBodyComponentsComponentImageLayerContent ImageLayerContent { get; set; }
                 public class DescribeCasterComponentsResponseBodyComponentsComponentImageLayerContent : TeaModel {
                     [NameInMap("MaterialId")]
@@ -81,70 +136,44 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                     public string MaterialId { get; set; }
 
                 }
-                public string ComponentType { get; set; }
-                public string LocationId { get; set; }
-                public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent CaptionLayerContent { get; set; }
-                public class DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent : TeaModel {
-                    [NameInMap("Color")]
-                    [Validation(Required=false)]
-                    public string Color { get; set; }
 
-                    [NameInMap("WordSpaceNormalized")]
+                [NameInMap("LocationId")]
+                [Validation(Required=false)]
+                public string LocationId { get; set; }
+
+                [NameInMap("TextLayerContent")]
+                [Validation(Required=false)]
+                public DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent TextLayerContent { get; set; }
+                public class DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent : TeaModel {
+                    [NameInMap("BorderColor")]
                     [Validation(Required=false)]
-                    public float? WordSpaceNormalized { get; set; }
+                    public string BorderColor { get; set; }
 
                     [NameInMap("BorderWidthNormalized")]
                     [Validation(Required=false)]
                     public float? BorderWidthNormalized { get; set; }
 
-                    [NameInMap("SourceLan")]
+                    [NameInMap("Color")]
                     [Validation(Required=false)]
-                    public string SourceLan { get; set; }
-
-                    [NameInMap("WordCountPerLine")]
-                    [Validation(Required=false)]
-                    public int? WordCountPerLine { get; set; }
-
-                    [NameInMap("TargetLan")]
-                    [Validation(Required=false)]
-                    public string TargetLan { get; set; }
-
-                    [NameInMap("BorderColor")]
-                    [Validation(Required=false)]
-                    public string BorderColor { get; set; }
-
-                    [NameInMap("LocationId")]
-                    [Validation(Required=false)]
-                    public string LocationId { get; set; }
-
-                    [NameInMap("LineSpaceNormalized")]
-                    [Validation(Required=false)]
-                    public float? LineSpaceNormalized { get; set; }
-
-                    [NameInMap("SizeNormalized")]
-                    [Validation(Required=false)]
-                    public float? SizeNormalized { get; set; }
-
-                    [NameInMap("ShowSourceLan")]
-                    [Validation(Required=false)]
-                    public bool? ShowSourceLan { get; set; }
-
-                    [NameInMap("WordsCount")]
-                    [Validation(Required=false)]
-                    public int? WordsCount { get; set; }
+                    public string Color { get; set; }
 
                     [NameInMap("FontName")]
                     [Validation(Required=false)]
                     public string FontName { get; set; }
 
-                    [NameInMap("PtsOffset")]
+                    [NameInMap("SizeNormalized")]
                     [Validation(Required=false)]
-                    public int? PtsOffset { get; set; }
+                    public float? SizeNormalized { get; set; }
+
+                    [NameInMap("Text")]
+                    [Validation(Required=false)]
+                    public string Text { get; set; }
 
                 }
-                public string ComponentId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

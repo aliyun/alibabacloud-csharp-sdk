@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ModifyCasterComponentRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("CaptionLayerContent")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string CaptionLayerContent { get; set; }
 
         [NameInMap("CasterId")]
         [Validation(Required=false)]
@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("ComponentId")]
         [Validation(Required=false)]
         public string ComponentId { get; set; }
+
+        [NameInMap("ComponentLayer")]
+        [Validation(Required=false)]
+        public string ComponentLayer { get; set; }
 
         [NameInMap("ComponentName")]
         [Validation(Required=false)]
@@ -33,21 +37,17 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string Effect { get; set; }
 
-        [NameInMap("ComponentLayer")]
-        [Validation(Required=false)]
-        public string ComponentLayer { get; set; }
-
-        [NameInMap("TextLayerContent")]
-        [Validation(Required=false)]
-        public string TextLayerContent { get; set; }
-
         [NameInMap("ImageLayerContent")]
         [Validation(Required=false)]
         public string ImageLayerContent { get; set; }
 
-        [NameInMap("CaptionLayerContent")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string CaptionLayerContent { get; set; }
+        public long? OwnerId { get; set; }
+
+        [NameInMap("TextLayerContent")]
+        [Validation(Required=false)]
+        public string TextLayerContent { get; set; }
 
     }
 

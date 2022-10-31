@@ -9,45 +9,45 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class CreateLiveStreamRecordIndexFilesRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("AppName")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string AppName { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("AppName")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string AppName { get; set; }
-
-        [NameInMap("StreamName")]
-        [Validation(Required=false)]
-        public string StreamName { get; set; }
-
-        [NameInMap("OssEndpoint")]
-        [Validation(Required=false)]
-        public string OssEndpoint { get; set; }
+        public string EndTime { get; set; }
 
         [NameInMap("OssBucket")]
         [Validation(Required=false)]
         public string OssBucket { get; set; }
 
+        [NameInMap("OssEndpoint")]
+        [Validation(Required=false)]
+        public string OssEndpoint { get; set; }
+
         [NameInMap("OssObject")]
         [Validation(Required=false)]
         public string OssObject { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
-        [NameInMap("EndTime")]
+        [NameInMap("StreamName")]
         [Validation(Required=false)]
-        public string EndTime { get; set; }
+        public string StreamName { get; set; }
 
     }
 

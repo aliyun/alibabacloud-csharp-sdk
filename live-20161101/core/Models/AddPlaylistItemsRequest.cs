@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddPlaylistItemsRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("CasterId")]
         [Validation(Required=false)]
         public string CasterId { get; set; }
 
-        [NameInMap("ProgramItems")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string ProgramItems { get; set; }
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ProgramConfig")]
+        [Validation(Required=false)]
+        public string ProgramConfig { get; set; }
 
         [NameInMap("ProgramId")]
         [Validation(Required=false)]
         public string ProgramId { get; set; }
 
-        [NameInMap("ProgramConfig")]
+        [NameInMap("ProgramItems")]
         [Validation(Required=false)]
-        public string ProgramConfig { get; set; }
+        public string ProgramItems { get; set; }
 
     }
 

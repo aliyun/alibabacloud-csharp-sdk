@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveAudioAuditConfigResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("LiveAudioAuditConfigList")]
         [Validation(Required=false)]
         public DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigList LiveAudioAuditConfigList { get; set; }
@@ -21,8 +17,20 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigListLiveAudioAuditConfig> LiveAudioAuditConfig { get; set; }
             public class DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigListLiveAudioAuditConfig : TeaModel {
+                [NameInMap("AppName")]
+                [Validation(Required=false)]
                 public string AppName { get; set; }
-                public string StreamName { get; set; }
+
+                [NameInMap("BizType")]
+                [Validation(Required=false)]
+                public string BizType { get; set; }
+
+                [NameInMap("DomainName")]
+                [Validation(Required=false)]
+                public string DomainName { get; set; }
+
+                [NameInMap("Scenes")]
+                [Validation(Required=false)]
                 public DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigListLiveAudioAuditConfigScenes Scenes { get; set; }
                 public class DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigListLiveAudioAuditConfigScenes : TeaModel {
                     [NameInMap("scene")]
@@ -30,10 +38,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                     public List<string> Scene { get; set; }
 
                 }
-                public string DomainName { get; set; }
-                public string BizType { get; set; }
+
+                [NameInMap("StreamName")]
+                [Validation(Required=false)]
+                public string StreamName { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

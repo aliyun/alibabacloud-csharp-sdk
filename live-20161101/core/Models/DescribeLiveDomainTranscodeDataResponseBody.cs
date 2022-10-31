@@ -21,11 +21,21 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveDomainTranscodeDataResponseBodyTranscodeDataInfosTranscodeDataInfo> TranscodeDataInfo { get; set; }
             public class DescribeLiveDomainTranscodeDataResponseBodyTranscodeDataInfosTranscodeDataInfo : TeaModel {
+                [NameInMap("Date")]
+                [Validation(Required=false)]
                 public string Date { get; set; }
-                public int? Total { get; set; }
+
+                [NameInMap("Detail")]
+                [Validation(Required=false)]
                 public string Detail { get; set; }
+
+                [NameInMap("Total")]
+                [Validation(Required=false)]
+                public int? Total { get; set; }
+
             }
-        };
+
+        }
 
     }
 

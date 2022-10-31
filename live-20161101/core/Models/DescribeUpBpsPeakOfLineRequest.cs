@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeUpBpsPeakOfLineRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string DomainName { get; set; }
 
-        [NameInMap("StartTime")]
+        [NameInMap("DomainSwitch")]
         [Validation(Required=false)]
-        public string StartTime { get; set; }
+        public string DomainSwitch { get; set; }
 
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -25,13 +25,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string Line { get; set; }
 
-        [NameInMap("DomainSwitch")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string DomainSwitch { get; set; }
+        public long? OwnerId { get; set; }
 
-        [NameInMap("DomainName")]
+        [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public string DomainName { get; set; }
+        public string StartTime { get; set; }
 
     }
 

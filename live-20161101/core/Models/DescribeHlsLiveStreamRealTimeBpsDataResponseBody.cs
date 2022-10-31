@@ -13,18 +13,22 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Time")]
+        [Validation(Required=false)]
+        public string Time { get; set; }
+
         [NameInMap("UsageData")]
         [Validation(Required=false)]
         public List<DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageData> UsageData { get; set; }
         public class DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageData : TeaModel {
+            [NameInMap("DomainName")]
+            [Validation(Required=false)]
+            public string DomainName { get; set; }
+
             [NameInMap("StreamInfos")]
             [Validation(Required=false)]
             public List<DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageDataStreamInfos> StreamInfos { get; set; }
             public class DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageDataStreamInfos : TeaModel {
-                [NameInMap("StreamName")]
-                [Validation(Required=false)]
-                public string StreamName { get; set; }
-
                 [NameInMap("Infos")]
                 [Validation(Required=false)]
                 public List<DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageDataStreamInfosInfos> Infos { get; set; }
@@ -43,17 +47,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 
                 }
 
+                [NameInMap("StreamName")]
+                [Validation(Required=false)]
+                public string StreamName { get; set; }
+
             }
 
-            [NameInMap("DomainName")]
-            [Validation(Required=false)]
-            public string DomainName { get; set; }
-
         }
-
-        [NameInMap("Time")]
-        [Validation(Required=false)]
-        public string Time { get; set; }
 
     }
 

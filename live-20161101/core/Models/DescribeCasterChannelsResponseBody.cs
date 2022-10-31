@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeCasterChannelsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Total")]
-        [Validation(Required=false)]
-        public int? Total { get; set; }
-
         [NameInMap("Channels")]
         [Validation(Required=false)]
         public DescribeCasterChannelsResponseBodyChannels Channels { get; set; }
@@ -25,12 +17,37 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeCasterChannelsResponseBodyChannelsChannel> Channel { get; set; }
             public class DescribeCasterChannelsResponseBodyChannelsChannel : TeaModel {
-                public string RtmpUrl { get; set; }
+                [NameInMap("ChannelId")]
+                [Validation(Required=false)]
                 public string ChannelId { get; set; }
+
+                [NameInMap("FaceBeauty")]
+                [Validation(Required=false)]
+                public string FaceBeauty { get; set; }
+
+                [NameInMap("ResourceId")]
+                [Validation(Required=false)]
                 public string ResourceId { get; set; }
+
+                [NameInMap("RtmpUrl")]
+                [Validation(Required=false)]
+                public string RtmpUrl { get; set; }
+
+                [NameInMap("StreamUrl")]
+                [Validation(Required=false)]
                 public string StreamUrl { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Total")]
+        [Validation(Required=false)]
+        public int? Total { get; set; }
 
     }
 

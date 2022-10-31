@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeCasterLayoutsRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("CasterId")]
         [Validation(Required=false)]
         public string CasterId { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("LayoutId")]
         [Validation(Required=false)]
         public string LayoutId { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
     }
 

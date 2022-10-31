@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDetectPornDataResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DetectPornData")]
         [Validation(Required=false)]
         public DescribeLiveDetectPornDataResponseBodyDetectPornData DetectPornData { get; set; }
@@ -21,16 +17,45 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveDetectPornDataResponseBodyDetectPornDataDataModule> DataModule { get; set; }
             public class DescribeLiveDetectPornDataResponseBodyDetectPornDataDataModule : TeaModel {
-                public string Domain { get; set; }
-                public string Region { get; set; }
+                [NameInMap("App")]
+                [Validation(Required=false)]
                 public string App { get; set; }
-                public string Stream { get; set; }
-                public string TimeStamp { get; set; }
+
+                [NameInMap("Count")]
+                [Validation(Required=false)]
                 public long? Count { get; set; }
-                public string Scene { get; set; }
+
+                [NameInMap("Domain")]
+                [Validation(Required=false)]
+                public string Domain { get; set; }
+
+                [NameInMap("Fee")]
+                [Validation(Required=false)]
                 public string Fee { get; set; }
+
+                [NameInMap("Region")]
+                [Validation(Required=false)]
+                public string Region { get; set; }
+
+                [NameInMap("Scene")]
+                [Validation(Required=false)]
+                public string Scene { get; set; }
+
+                [NameInMap("Stream")]
+                [Validation(Required=false)]
+                public string Stream { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
+                public string TimeStamp { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

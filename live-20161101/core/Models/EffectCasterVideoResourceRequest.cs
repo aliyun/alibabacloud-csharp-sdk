@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class EffectCasterVideoResourceRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("CasterId")]
         [Validation(Required=false)]
         public string CasterId { get; set; }
 
-        [NameInMap("SceneId")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string SceneId { get; set; }
+        public long? OwnerId { get; set; }
 
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
+
+        [NameInMap("SceneId")]
+        [Validation(Required=false)]
+        public string SceneId { get; set; }
 
     }
 

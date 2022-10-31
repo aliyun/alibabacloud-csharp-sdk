@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeCasterStreamUrlResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("CasterId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Total")]
-        [Validation(Required=false)]
-        public int? Total { get; set; }
+        public string CasterId { get; set; }
 
         [NameInMap("CasterStreams")]
         [Validation(Required=false)]
@@ -25,18 +21,26 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStream> CasterStream { get; set; }
             public class DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStream : TeaModel {
-                public string RtmpUrl { get; set; }
+                [NameInMap("OutputType")]
+                [Validation(Required=false)]
                 public int? OutputType { get; set; }
+
+                [NameInMap("RtmpUrl")]
+                [Validation(Required=false)]
+                public string RtmpUrl { get; set; }
+
+                [NameInMap("SceneId")]
+                [Validation(Required=false)]
+                public string SceneId { get; set; }
+
+                [NameInMap("StreamInfos")]
+                [Validation(Required=false)]
                 public DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStreamStreamInfos StreamInfos { get; set; }
                 public class DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStreamStreamInfos : TeaModel {
                     [NameInMap("StreamInfo")]
                     [Validation(Required=false)]
                     public List<DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStreamStreamInfosStreamInfo> StreamInfo { get; set; }
                     public class DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStreamStreamInfosStreamInfo : TeaModel {
-                        [NameInMap("VideoFormat")]
-                        [Validation(Required=false)]
-                        public string VideoFormat { get; set; }
-
                         [NameInMap("OutputStreamUrl")]
                         [Validation(Required=false)]
                         public string OutputStreamUrl { get; set; }
@@ -45,17 +49,29 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                         [Validation(Required=false)]
                         public string TranscodeConfig { get; set; }
 
+                        [NameInMap("VideoFormat")]
+                        [Validation(Required=false)]
+                        public string VideoFormat { get; set; }
+
                     }
 
                 }
-                public string SceneId { get; set; }
-                public string StreamUrl { get; set; }
-            }
-        };
 
-        [NameInMap("CasterId")]
+                [NameInMap("StreamUrl")]
+                [Validation(Required=false)]
+                public string StreamUrl { get; set; }
+
+            }
+
+        }
+
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string CasterId { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("Total")]
+        [Validation(Required=false)]
+        public int? Total { get; set; }
 
     }
 

@@ -1,0 +1,54 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Live20161101.Models
+{
+    public class DescribeLiveProducerUsageDataRequest : TeaModel {
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
+        [NameInMap("Instance")]
+        [Validation(Required=false)]
+        public string Instance { get; set; }
+
+        [NameInMap("Interval")]
+        [Validation(Required=false)]
+        public string Interval { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("Region")]
+        [Validation(Required=false)]
+        public string Region { get; set; }
+
+        [NameInMap("SplitBy")]
+        [Validation(Required=false)]
+        public string SplitBy { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
+
+        [NameInMap("app")]
+        [Validation(Required=false)]
+        public string App { get; set; }
+
+    }
+
+}

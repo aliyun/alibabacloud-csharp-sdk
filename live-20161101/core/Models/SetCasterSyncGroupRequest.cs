@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class SetCasterSyncGroupRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("CasterId")]
         [Validation(Required=false)]
         public string CasterId { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
         [NameInMap("SyncGroup")]
         [Validation(Required=false)]
@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public string HostResourceId { get; set; }
 
+            [NameInMap("Mode")]
+            [Validation(Required=false)]
+            public int? Mode { get; set; }
+
             [NameInMap("ResourceIds")]
             [Validation(Required=false)]
             public List<string> ResourceIds { get; set; }
@@ -33,9 +37,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public long? SyncDelayThreshold { get; set; }
 
-            [NameInMap("Mode")]
+            [NameInMap("SyncOffsets")]
             [Validation(Required=false)]
-            public int? Mode { get; set; }
+            public List<int?> SyncOffsets { get; set; }
 
         }
 

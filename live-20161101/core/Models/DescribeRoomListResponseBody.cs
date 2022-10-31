@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeRoomListResponseBody : TeaModel {
-        [NameInMap("TotalNum")]
-        [Validation(Required=false)]
-        public int? TotalNum { get; set; }
-
-        [NameInMap("TotalPage")]
-        [Validation(Required=false)]
-        public int? TotalPage { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -46,6 +38,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public int? RoomStatus { get; set; }
 
         }
+
+        [NameInMap("TotalNum")]
+        [Validation(Required=false)]
+        public int? TotalNum { get; set; }
+
+        [NameInMap("TotalPage")]
+        [Validation(Required=false)]
+        public int? TotalPage { get; set; }
 
     }
 

@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddLiveAudioAuditNotifyConfigRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
-
         [NameInMap("Callback")]
         [Validation(Required=false)]
         public string Callback { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("CallbackTemplate")]
         [Validation(Required=false)]
         public string CallbackTemplate { get; set; }
+
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
     }
 

@@ -9,53 +9,57 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddCasterVideoResourceRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("BeginOffset")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public int? BeginOffset { get; set; }
 
         [NameInMap("CasterId")]
         [Validation(Required=false)]
         public string CasterId { get; set; }
 
-        [NameInMap("ResourceName")]
+        [NameInMap("EndOffset")]
         [Validation(Required=false)]
-        public string ResourceName { get; set; }
+        public int? EndOffset { get; set; }
 
-        [NameInMap("LocationId")]
+        [NameInMap("FixedDelayDuration")]
         [Validation(Required=false)]
-        public string LocationId { get; set; }
+        public int? FixedDelayDuration { get; set; }
 
         [NameInMap("LiveStreamUrl")]
         [Validation(Required=false)]
         public string LiveStreamUrl { get; set; }
 
-        [NameInMap("StreamId")]
+        [NameInMap("LocationId")]
         [Validation(Required=false)]
-        public string StreamId { get; set; }
+        public string LocationId { get; set; }
 
         [NameInMap("MaterialId")]
         [Validation(Required=false)]
         public string MaterialId { get; set; }
 
-        [NameInMap("VodUrl")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string VodUrl { get; set; }
+        public long? OwnerId { get; set; }
 
-        [NameInMap("BeginOffset")]
+        [NameInMap("PtsCallbackInterval")]
         [Validation(Required=false)]
-        public int? BeginOffset { get; set; }
-
-        [NameInMap("EndOffset")]
-        [Validation(Required=false)]
-        public int? EndOffset { get; set; }
+        public int? PtsCallbackInterval { get; set; }
 
         [NameInMap("RepeatNum")]
         [Validation(Required=false)]
         public int? RepeatNum { get; set; }
 
-        [NameInMap("PtsCallbackInterval")]
+        [NameInMap("ResourceName")]
         [Validation(Required=false)]
-        public int? PtsCallbackInterval { get; set; }
+        public string ResourceName { get; set; }
+
+        [NameInMap("StreamId")]
+        [Validation(Required=false)]
+        public string StreamId { get; set; }
+
+        [NameInMap("VodUrl")]
+        [Validation(Required=false)]
+        public string VodUrl { get; set; }
 
     }
 

@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DeleteLiveAppRecordConfigRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("AppName")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string AppName { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("AppName")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string AppName { get; set; }
+        public long? OwnerId { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
         [NameInMap("StreamName")]
         [Validation(Required=false)]

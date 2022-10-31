@@ -17,12 +17,25 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeUpBpsPeakOfLineResponseBodyDescribeUpBpsPeakOfLinesDescribeUpBpsPeakOfLine> DescribeUpBpsPeakOfLine { get; set; }
             public class DescribeUpBpsPeakOfLineResponseBodyDescribeUpBpsPeakOfLinesDescribeUpBpsPeakOfLine : TeaModel {
-                public string QueryTime { get; set; }
-                public string StatName { get; set; }
-                public string PeakTime { get; set; }
+                [NameInMap("BandWidth")]
+                [Validation(Required=false)]
                 public float? BandWidth { get; set; }
+
+                [NameInMap("PeakTime")]
+                [Validation(Required=false)]
+                public string PeakTime { get; set; }
+
+                [NameInMap("QueryTime")]
+                [Validation(Required=false)]
+                public string QueryTime { get; set; }
+
+                [NameInMap("StatName")]
+                [Validation(Required=false)]
+                public string StatName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

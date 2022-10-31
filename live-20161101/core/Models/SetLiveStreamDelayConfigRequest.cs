@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class SetLiveStreamDelayConfigRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
+
+        [NameInMap("FlvDelay")]
+        [Validation(Required=false)]
+        public int? FlvDelay { get; set; }
+
+        [NameInMap("FlvLevel")]
+        [Validation(Required=false)]
+        public string FlvLevel { get; set; }
 
         [NameInMap("HlsDelay")]
         [Validation(Required=false)]
@@ -25,13 +29,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string HlsLevel { get; set; }
 
-        [NameInMap("FlvDelay")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public int? FlvDelay { get; set; }
-
-        [NameInMap("FlvLevel")]
-        [Validation(Required=false)]
-        public string FlvLevel { get; set; }
+        public long? OwnerId { get; set; }
 
         [NameInMap("RtmpDelay")]
         [Validation(Required=false)]

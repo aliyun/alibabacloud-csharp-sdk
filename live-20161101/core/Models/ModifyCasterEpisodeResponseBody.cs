@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ModifyCasterEpisodeResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("CasterId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string CasterId { get; set; }
 
         [NameInMap("EpisodeId")]
         [Validation(Required=false)]
         public string EpisodeId { get; set; }
 
-        [NameInMap("CasterId")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string CasterId { get; set; }
+        public string RequestId { get; set; }
 
     }
 

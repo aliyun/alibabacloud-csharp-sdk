@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("ProgramId")]
-        [Validation(Required=false)]
-        public string ProgramId { get; set; }
-
         [NameInMap("Page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("ProgramId")]
+        [Validation(Required=false)]
+        public string ProgramId { get; set; }
 
     }
 

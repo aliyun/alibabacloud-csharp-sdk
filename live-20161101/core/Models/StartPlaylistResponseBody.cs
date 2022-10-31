@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class StartPlaylistResponseBody : TeaModel {
+        [NameInMap("ProgramId")]
+        [Validation(Required=false)]
+        public string ProgramId { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -20,9 +24,15 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [NameInMap("AppName")]
             [Validation(Required=false)]
             public string AppName { get; set; }
+
+            [NameInMap("DomainName")]
+            [Validation(Required=false)]
+            public string DomainName { get; set; }
+
             [NameInMap("StreamName")]
             [Validation(Required=false)]
             public string StreamName { get; set; }
+
             [NameInMap("Streams")]
             [Validation(Required=false)]
             public StartPlaylistResponseBodyStreamInfoStreams Streams { get; set; }
@@ -31,10 +41,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 [Validation(Required=false)]
                 public List<StartPlaylistResponseBodyStreamInfoStreamsStream> Stream { get; set; }
                 public class StartPlaylistResponseBodyStreamInfoStreamsStream : TeaModel {
-                    [NameInMap("Quality")]
-                    [Validation(Required=false)]
-                    public string Quality { get; set; }
-
                     [NameInMap("PullFlvUrl")]
                     [Validation(Required=false)]
                     public string PullFlvUrl { get; set; }
@@ -47,17 +53,15 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                     [Validation(Required=false)]
                     public string PullRtmpUrl { get; set; }
 
+                    [NameInMap("Quality")]
+                    [Validation(Required=false)]
+                    public string Quality { get; set; }
+
                 }
 
             }
-            [NameInMap("DomainName")]
-            [Validation(Required=false)]
-            public string DomainName { get; set; }
-        };
 
-        [NameInMap("ProgramId")]
-        [Validation(Required=false)]
-        public string ProgramId { get; set; }
+        }
 
     }
 

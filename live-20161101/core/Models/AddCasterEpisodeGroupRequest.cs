@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddCasterEpisodeGroupRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("CallbackUrl")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string CallbackUrl { get; set; }
 
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -20,22 +20,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        [NameInMap("RepeatNum")]
-        [Validation(Required=false)]
-        public int? RepeatNum { get; set; }
-
-        [NameInMap("SideOutputUrl")]
-        [Validation(Required=false)]
-        public string SideOutputUrl { get; set; }
-
-        [NameInMap("CallbackUrl")]
-        [Validation(Required=false)]
-        public string CallbackUrl { get; set; }
 
         [NameInMap("Item")]
         [Validation(Required=false)]
@@ -50,6 +34,22 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string VodUrl { get; set; }
 
         }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("RepeatNum")]
+        [Validation(Required=false)]
+        public int? RepeatNum { get; set; }
+
+        [NameInMap("SideOutputUrl")]
+        [Validation(Required=false)]
+        public string SideOutputUrl { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeUpBpsPeakDataResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DescribeUpPeakTraffics")]
         [Validation(Required=false)]
         public DescribeUpBpsPeakDataResponseBodyDescribeUpPeakTraffics DescribeUpPeakTraffics { get; set; }
@@ -21,12 +17,29 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeUpBpsPeakDataResponseBodyDescribeUpPeakTrafficsDescribeUpPeakTraffic> DescribeUpPeakTraffic { get; set; }
             public class DescribeUpBpsPeakDataResponseBodyDescribeUpPeakTrafficsDescribeUpPeakTraffic : TeaModel {
-                public string QueryTime { get; set; }
-                public string StatName { get; set; }
-                public string PeakTime { get; set; }
+                [NameInMap("BandWidth")]
+                [Validation(Required=false)]
                 public string BandWidth { get; set; }
+
+                [NameInMap("PeakTime")]
+                [Validation(Required=false)]
+                public string PeakTime { get; set; }
+
+                [NameInMap("QueryTime")]
+                [Validation(Required=false)]
+                public string QueryTime { get; set; }
+
+                [NameInMap("StatName")]
+                [Validation(Required=false)]
+                public string StatName { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

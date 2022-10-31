@@ -21,32 +21,45 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfo> StreamCountInfo { get; set; }
             public class DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfo : TeaModel {
-                public string Type { get; set; }
+                [NameInMap("Count")]
+                [Validation(Required=false)]
+                public long? Count { get; set; }
+
+                [NameInMap("Limit")]
+                [Validation(Required=false)]
+                public long? Limit { get; set; }
+
+                [NameInMap("StreamCountDetails")]
+                [Validation(Required=false)]
                 public DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfoStreamCountDetails StreamCountDetails { get; set; }
                 public class DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfoStreamCountDetails : TeaModel {
                     [NameInMap("StreamCountDetail")]
                     [Validation(Required=false)]
                     public List<DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfoStreamCountDetailsStreamCountDetail> StreamCountDetail { get; set; }
                     public class DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfoStreamCountDetailsStreamCountDetail : TeaModel {
-                        [NameInMap("VideoDataRate")]
+                        [NameInMap("Count")]
                         [Validation(Required=false)]
-                        public long? VideoDataRate { get; set; }
+                        public long? Count { get; set; }
 
                         [NameInMap("Format")]
                         [Validation(Required=false)]
                         public string Format { get; set; }
 
-                        [NameInMap("Count")]
+                        [NameInMap("VideoDataRate")]
                         [Validation(Required=false)]
-                        public long? Count { get; set; }
+                        public long? VideoDataRate { get; set; }
 
                     }
 
                 }
-                public long? Limit { get; set; }
-                public long? Count { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
             }
-        };
+
+        }
 
     }
 

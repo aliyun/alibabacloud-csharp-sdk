@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ListLiveRealtimeLogDeliveryResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Content")]
         [Validation(Required=false)]
         public ListLiveRealtimeLogDeliveryResponseBodyContent Content { get; set; }
@@ -21,14 +17,37 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo> RealtimeLogDeliveryInfo { get; set; }
             public class ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo : TeaModel {
-                public string Status { get; set; }
+                [NameInMap("DmId")]
+                [Validation(Required=false)]
                 public int? DmId { get; set; }
-                public string Region { get; set; }
-                public string Logstore { get; set; }
-                public string Project { get; set; }
+
+                [NameInMap("DomainName")]
+                [Validation(Required=false)]
                 public string DomainName { get; set; }
+
+                [NameInMap("Logstore")]
+                [Validation(Required=false)]
+                public string Logstore { get; set; }
+
+                [NameInMap("Project")]
+                [Validation(Required=false)]
+                public string Project { get; set; }
+
+                [NameInMap("Region")]
+                [Validation(Required=false)]
+                public string Region { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -9,29 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class CreateMixStreamRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("CallbackConfig")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string CallbackConfig { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("LayoutId")]
-        [Validation(Required=false)]
-        public string LayoutId { get; set; }
-
         [NameInMap("InputStreamList")]
         [Validation(Required=false)]
         public string InputStreamList { get; set; }
+
+        [NameInMap("LayoutId")]
+        [Validation(Required=false)]
+        public string LayoutId { get; set; }
 
         [NameInMap("OutputConfig")]
         [Validation(Required=false)]
         public string OutputConfig { get; set; }
 
-        [NameInMap("CallbackConfig")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string CallbackConfig { get; set; }
+        public long? OwnerId { get; set; }
 
     }
 

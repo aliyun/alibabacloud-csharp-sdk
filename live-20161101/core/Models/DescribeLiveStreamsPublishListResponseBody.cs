@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamsPublishListResponseBody : TeaModel {
-        [NameInMap("TotalNum")]
-        [Validation(Required=false)]
-        public int? TotalNum { get; set; }
-
-        [NameInMap("TotalPage")]
-        [Validation(Required=false)]
-        public int? TotalPage { get; set; }
-
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }
@@ -24,10 +16,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
         [NameInMap("PublishInfo")]
         [Validation(Required=false)]
@@ -37,21 +25,73 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo> LiveStreamPublishInfo { get; set; }
             public class DescribeLiveStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo : TeaModel {
-                public string EdgeNodeAddr { get; set; }
-                public string PublishUrl { get; set; }
-                public string StreamName { get; set; }
-                public string StopTime { get; set; }
-                public string DomainName { get; set; }
-                public string TranscodeId { get; set; }
-                public string PublishDomain { get; set; }
-                public string PublishTime { get; set; }
+                [NameInMap("AppName")]
+                [Validation(Required=false)]
                 public string AppName { get; set; }
-                public string PublishType { get; set; }
-                public string Transcoded { get; set; }
+
+                [NameInMap("ClientAddr")]
+                [Validation(Required=false)]
                 public string ClientAddr { get; set; }
+
+                [NameInMap("DomainName")]
+                [Validation(Required=false)]
+                public string DomainName { get; set; }
+
+                [NameInMap("EdgeNodeAddr")]
+                [Validation(Required=false)]
+                public string EdgeNodeAddr { get; set; }
+
+                [NameInMap("PublishDomain")]
+                [Validation(Required=false)]
+                public string PublishDomain { get; set; }
+
+                [NameInMap("PublishTime")]
+                [Validation(Required=false)]
+                public string PublishTime { get; set; }
+
+                [NameInMap("PublishType")]
+                [Validation(Required=false)]
+                public string PublishType { get; set; }
+
+                [NameInMap("PublishUrl")]
+                [Validation(Required=false)]
+                public string PublishUrl { get; set; }
+
+                [NameInMap("StopTime")]
+                [Validation(Required=false)]
+                public string StopTime { get; set; }
+
+                [NameInMap("StreamName")]
+                [Validation(Required=false)]
+                public string StreamName { get; set; }
+
+                [NameInMap("StreamUrl")]
+                [Validation(Required=false)]
                 public string StreamUrl { get; set; }
+
+                [NameInMap("TranscodeId")]
+                [Validation(Required=false)]
+                public string TranscodeId { get; set; }
+
+                [NameInMap("Transcoded")]
+                [Validation(Required=false)]
+                public string Transcoded { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalNum")]
+        [Validation(Required=false)]
+        public int? TotalNum { get; set; }
+
+        [NameInMap("TotalPage")]
+        [Validation(Required=false)]
+        public int? TotalPage { get; set; }
 
     }
 

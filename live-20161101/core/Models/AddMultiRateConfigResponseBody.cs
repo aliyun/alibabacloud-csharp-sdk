@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddMultiRateConfigResponseBody : TeaModel {
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public int? Code { get; set; }
-
         [NameInMap("Body")]
         [Validation(Required=false)]
         public AddMultiRateConfigResponseBodyBody Body { get; set; }
@@ -29,22 +17,77 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<AddMultiRateConfigResponseBodyBodyFailedTemplates> FailedTemplates { get; set; }
             public class AddMultiRateConfigResponseBodyBodyFailedTemplates : TeaModel {
+                [NameInMap("AudioBitrate")]
+                [Validation(Required=false)]
                 public int? AudioBitrate { get; set; }
-                public int? Height { get; set; }
-                public string Template { get; set; }
-                public string TemplateType { get; set; }
-                public int? BandWidth { get; set; }
-                public int? Profile { get; set; }
-                public int? AudioRate { get; set; }
-                public string AudioCodec { get; set; }
-                public string Gop { get; set; }
-                public int? VideoBitrate { get; set; }
-                public int? Width { get; set; }
+
+                [NameInMap("AudioChannelNum")]
+                [Validation(Required=false)]
                 public int? AudioChannelNum { get; set; }
-                public int? Fps { get; set; }
+
+                [NameInMap("AudioCodec")]
+                [Validation(Required=false)]
+                public string AudioCodec { get; set; }
+
+                [NameInMap("AudioProfile")]
+                [Validation(Required=false)]
                 public string AudioProfile { get; set; }
+
+                [NameInMap("AudioRate")]
+                [Validation(Required=false)]
+                public int? AudioRate { get; set; }
+
+                [NameInMap("BandWidth")]
+                [Validation(Required=false)]
+                public int? BandWidth { get; set; }
+
+                [NameInMap("Fps")]
+                [Validation(Required=false)]
+                public int? Fps { get; set; }
+
+                [NameInMap("Gop")]
+                [Validation(Required=false)]
+                public string Gop { get; set; }
+
+                [NameInMap("Height")]
+                [Validation(Required=false)]
+                public int? Height { get; set; }
+
+                [NameInMap("Profile")]
+                [Validation(Required=false)]
+                public int? Profile { get; set; }
+
+                [NameInMap("Template")]
+                [Validation(Required=false)]
+                public string Template { get; set; }
+
+                [NameInMap("TemplateType")]
+                [Validation(Required=false)]
+                public string TemplateType { get; set; }
+
+                [NameInMap("VideoBitrate")]
+                [Validation(Required=false)]
+                public int? VideoBitrate { get; set; }
+
+                [NameInMap("Width")]
+                [Validation(Required=false)]
+                public int? Width { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public int? Code { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

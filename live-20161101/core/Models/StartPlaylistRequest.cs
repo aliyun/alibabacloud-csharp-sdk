@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class StartPlaylistRequest : TeaModel {
+        [NameInMap("Offset")]
+        [Validation(Required=false)]
+        public int? Offset { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("StartItemId")]
         [Validation(Required=false)]
         public string StartItemId { get; set; }
-
-        [NameInMap("Offset")]
-        [Validation(Required=false)]
-        public int? Offset { get; set; }
 
     }
 

@@ -9,33 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveUserDomainsRequest : TeaModel {
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("LiveDomainType")]
-        [Validation(Required=false)]
-        public string LiveDomainType { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
-
-        [NameInMap("RegionName")]
-        [Validation(Required=false)]
-        public string RegionName { get; set; }
 
         [NameInMap("DomainSearchType")]
         [Validation(Required=false)]
@@ -44,6 +20,30 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("DomainStatus")]
         [Validation(Required=false)]
         public string DomainStatus { get; set; }
+
+        [NameInMap("LiveDomainType")]
+        [Validation(Required=false)]
+        public string LiveDomainType { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RegionName")]
+        [Validation(Required=false)]
+        public string RegionName { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]

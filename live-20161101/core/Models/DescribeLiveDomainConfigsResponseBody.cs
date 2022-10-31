@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDomainConfigsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DomainConfigs")]
         [Validation(Required=false)]
         public DescribeLiveDomainConfigsResponseBodyDomainConfigs DomainConfigs { get; set; }
@@ -21,9 +17,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveDomainConfigsResponseBodyDomainConfigsDomainConfig> DomainConfig { get; set; }
             public class DescribeLiveDomainConfigsResponseBodyDomainConfigsDomainConfig : TeaModel {
-                public string Status { get; set; }
+                [NameInMap("ConfigId")]
+                [Validation(Required=false)]
                 public string ConfigId { get; set; }
-                public string FunctionName { get; set; }
+
+                [NameInMap("FunctionArgs")]
+                [Validation(Required=false)]
                 public DescribeLiveDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgs FunctionArgs { get; set; }
                 public class DescribeLiveDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgs : TeaModel {
                     [NameInMap("FunctionArg")]
@@ -41,8 +40,22 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                     }
 
                 }
+
+                [NameInMap("FunctionName")]
+                [Validation(Required=false)]
+                public string FunctionName { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

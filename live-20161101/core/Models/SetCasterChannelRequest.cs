@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class SetCasterChannelRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("CasterId")]
         [Validation(Required=false)]
         public string CasterId { get; set; }
@@ -21,6 +17,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string ChannelId { get; set; }
 
+        [NameInMap("FaceBeauty")]
+        [Validation(Required=false)]
+        public string FaceBeauty { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("PlayStatus")]
+        [Validation(Required=false)]
+        public int? PlayStatus { get; set; }
+
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
@@ -28,10 +36,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("SeekOffset")]
         [Validation(Required=false)]
         public int? SeekOffset { get; set; }
-
-        [NameInMap("PlayStatus")]
-        [Validation(Required=false)]
-        public int? PlayStatus { get; set; }
 
     }
 

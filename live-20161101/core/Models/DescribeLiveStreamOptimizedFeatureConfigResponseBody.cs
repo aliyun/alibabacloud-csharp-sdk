@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamOptimizedFeatureConfigResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("LiveStreamOptimizedFeatureConfigList")]
         [Validation(Required=false)]
         public DescribeLiveStreamOptimizedFeatureConfigResponseBodyLiveStreamOptimizedFeatureConfigList LiveStreamOptimizedFeatureConfigList { get; set; }
@@ -21,12 +17,29 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveStreamOptimizedFeatureConfigResponseBodyLiveStreamOptimizedFeatureConfigListLiveStreamOptimizedFeatureConfig> LiveStreamOptimizedFeatureConfig { get; set; }
             public class DescribeLiveStreamOptimizedFeatureConfigResponseBodyLiveStreamOptimizedFeatureConfigListLiveStreamOptimizedFeatureConfig : TeaModel {
+                [NameInMap("ConfigName")]
+                [Validation(Required=false)]
                 public string ConfigName { get; set; }
-                public string ConfigValue { get; set; }
+
+                [NameInMap("ConfigStatus")]
+                [Validation(Required=false)]
                 public string ConfigStatus { get; set; }
+
+                [NameInMap("ConfigValue")]
+                [Validation(Required=false)]
+                public string ConfigValue { get; set; }
+
+                [NameInMap("DomainName")]
+                [Validation(Required=false)]
                 public string DomainName { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

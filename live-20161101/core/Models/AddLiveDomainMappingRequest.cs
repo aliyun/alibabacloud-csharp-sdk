@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddLiveDomainMappingRequest : TeaModel {
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PullDomain")]
+        [Validation(Required=false)]
+        public string PullDomain { get; set; }
 
         [NameInMap("PushDomain")]
         [Validation(Required=false)]
         public string PushDomain { get; set; }
 
-        [NameInMap("PullDomain")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string PullDomain { get; set; }
+        public string SecurityToken { get; set; }
 
     }
 

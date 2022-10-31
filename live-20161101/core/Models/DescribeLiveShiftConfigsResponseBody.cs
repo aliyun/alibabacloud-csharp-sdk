@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveShiftConfigsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Content")]
         [Validation(Required=false)]
         public DescribeLiveShiftConfigsResponseBodyContent Content { get; set; }
@@ -21,12 +17,33 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveShiftConfigsResponseBodyContentConfig> Config { get; set; }
             public class DescribeLiveShiftConfigsResponseBodyContentConfig : TeaModel {
+                [NameInMap("AppName")]
+                [Validation(Required=false)]
                 public string AppName { get; set; }
-                public int? Vision { get; set; }
-                public string StreamName { get; set; }
+
+                [NameInMap("DomainName")]
+                [Validation(Required=false)]
                 public string DomainName { get; set; }
+
+                [NameInMap("IgnoreTranscode")]
+                [Validation(Required=false)]
+                public bool? IgnoreTranscode { get; set; }
+
+                [NameInMap("StreamName")]
+                [Validation(Required=false)]
+                public string StreamName { get; set; }
+
+                [NameInMap("Vision")]
+                [Validation(Required=false)]
+                public int? Vision { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -13,22 +13,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public List<ListPlaylistResponseBodyProgramList> ProgramList { get; set; }
         public class ListPlaylistResponseBodyProgramList : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public int? Status { get; set; }
-
-            [NameInMap("RepeatNumber")]
-            [Validation(Required=false)]
-            public int? RepeatNumber { get; set; }
-
-            [NameInMap("ProgramName")]
-            [Validation(Required=false)]
-            public string ProgramName { get; set; }
-
-            [NameInMap("ProgramId")]
-            [Validation(Required=false)]
-            public string ProgramId { get; set; }
-
             [NameInMap("CasterId")]
             [Validation(Required=false)]
             public string CasterId { get; set; }
@@ -36,6 +20,22 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [NameInMap("DomainName")]
             [Validation(Required=false)]
             public string DomainName { get; set; }
+
+            [NameInMap("ProgramId")]
+            [Validation(Required=false)]
+            public string ProgramId { get; set; }
+
+            [NameInMap("ProgramName")]
+            [Validation(Required=false)]
+            public string ProgramName { get; set; }
+
+            [NameInMap("RepeatNumber")]
+            [Validation(Required=false)]
+            public int? RepeatNumber { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public int? Status { get; set; }
 
         }
 

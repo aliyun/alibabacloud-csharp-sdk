@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamOptimizedFeatureConfigRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("ConfigName")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string ConfigName { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("ConfigName")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string ConfigName { get; set; }
+        public long? OwnerId { get; set; }
 
     }
 

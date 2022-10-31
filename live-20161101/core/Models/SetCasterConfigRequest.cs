@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class SetCasterConfigRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("CallbackUrl")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string CallbackUrl { get; set; }
 
         [NameInMap("CasterId")]
         [Validation(Required=false)]
@@ -21,33 +21,21 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string CasterName { get; set; }
 
-        [NameInMap("DomainName")]
+        [NameInMap("ChannelEnable")]
         [Validation(Required=false)]
-        public string DomainName { get; set; }
-
-        [NameInMap("TranscodeConfig")]
-        [Validation(Required=false)]
-        public string TranscodeConfig { get; set; }
-
-        [NameInMap("RecordConfig")]
-        [Validation(Required=false)]
-        public string RecordConfig { get; set; }
+        public int? ChannelEnable { get; set; }
 
         [NameInMap("Delay")]
         [Validation(Required=false)]
         public float? Delay { get; set; }
 
-        [NameInMap("UrgentMaterialId")]
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public string UrgentMaterialId { get; set; }
+        public string DomainName { get; set; }
 
-        [NameInMap("SideOutputUrl")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string SideOutputUrl { get; set; }
-
-        [NameInMap("CallbackUrl")]
-        [Validation(Required=false)]
-        public string CallbackUrl { get; set; }
+        public long? OwnerId { get; set; }
 
         [NameInMap("ProgramEffect")]
         [Validation(Required=false)]
@@ -57,9 +45,33 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string ProgramName { get; set; }
 
-        [NameInMap("ChannelEnable")]
+        [NameInMap("RecordConfig")]
         [Validation(Required=false)]
-        public int? ChannelEnable { get; set; }
+        public string RecordConfig { get; set; }
+
+        [NameInMap("SideOutputUrl")]
+        [Validation(Required=false)]
+        public string SideOutputUrl { get; set; }
+
+        [NameInMap("SideOutputUrlList")]
+        [Validation(Required=false)]
+        public string SideOutputUrlList { get; set; }
+
+        [NameInMap("SyncGroupsConfig")]
+        [Validation(Required=false)]
+        public string SyncGroupsConfig { get; set; }
+
+        [NameInMap("TranscodeConfig")]
+        [Validation(Required=false)]
+        public string TranscodeConfig { get; set; }
+
+        [NameInMap("UrgentLiveStreamUrl")]
+        [Validation(Required=false)]
+        public string UrgentLiveStreamUrl { get; set; }
+
+        [NameInMap("UrgentMaterialId")]
+        [Validation(Required=false)]
+        public string UrgentMaterialId { get; set; }
 
     }
 

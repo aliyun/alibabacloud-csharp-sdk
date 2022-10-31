@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamBitRateDataResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("FrameRateAndBitRateInfos")]
         [Validation(Required=false)]
         public DescribeLiveStreamBitRateDataResponseBodyFrameRateAndBitRateInfos FrameRateAndBitRateInfos { get; set; }
@@ -21,13 +17,33 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveStreamBitRateDataResponseBodyFrameRateAndBitRateInfosFrameRateAndBitRateInfo> FrameRateAndBitRateInfo { get; set; }
             public class DescribeLiveStreamBitRateDataResponseBodyFrameRateAndBitRateInfosFrameRateAndBitRateInfo : TeaModel {
-                public string Time { get; set; }
+                [NameInMap("AudioFrameRate")]
+                [Validation(Required=false)]
                 public float? AudioFrameRate { get; set; }
-                public float? VideoFrameRate { get; set; }
-                public string StreamUrl { get; set; }
+
+                [NameInMap("BitRate")]
+                [Validation(Required=false)]
                 public float? BitRate { get; set; }
+
+                [NameInMap("StreamUrl")]
+                [Validation(Required=false)]
+                public string StreamUrl { get; set; }
+
+                [NameInMap("Time")]
+                [Validation(Required=false)]
+                public string Time { get; set; }
+
+                [NameInMap("VideoFrameRate")]
+                [Validation(Required=false)]
+                public float? VideoFrameRate { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

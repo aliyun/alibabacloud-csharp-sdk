@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class RealTimeSnapshotCommandRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("AppName")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string AppName { get; set; }
 
         [NameInMap("Command")]
         [Validation(Required=false)]
@@ -21,21 +21,25 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("AppName")]
+        [NameInMap("Interval")]
         [Validation(Required=false)]
-        public string AppName { get; set; }
-
-        [NameInMap("StreamName")]
-        [Validation(Required=false)]
-        public string StreamName { get; set; }
+        public int? Interval { get; set; }
 
         [NameInMap("Mode")]
         [Validation(Required=false)]
         public int? Mode { get; set; }
 
-        [NameInMap("Interval")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public int? Interval { get; set; }
+        public long? OwnerId { get; set; }
+
+        [NameInMap("Source")]
+        [Validation(Required=false)]
+        public int? Source { get; set; }
+
+        [NameInMap("StreamName")]
+        [Validation(Required=false)]
+        public string StreamName { get; set; }
 
     }
 

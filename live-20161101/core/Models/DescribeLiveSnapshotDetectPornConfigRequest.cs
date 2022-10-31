@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveSnapshotDetectPornConfigRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("AppName")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string AppName { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("AppName")]
+        [NameInMap("Order")]
         [Validation(Required=false)]
-        public string AppName { get; set; }
+        public string Order { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
         [NameInMap("PageNum")]
         [Validation(Required=false)]
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("Order")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string Order { get; set; }
+        public string SecurityToken { get; set; }
 
     }
 

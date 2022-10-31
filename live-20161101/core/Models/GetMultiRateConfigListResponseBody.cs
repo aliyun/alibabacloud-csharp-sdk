@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class GetMultiRateConfigListResponseBody : TeaModel {
-        [NameInMap("Message")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? Code { get; set; }
 
         [NameInMap("GroupInfo")]
         [Validation(Required=false)]
@@ -25,16 +21,33 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<GetMultiRateConfigListResponseBodyGroupInfoInfo> Info { get; set; }
             public class GetMultiRateConfigListResponseBodyGroupInfoInfo : TeaModel {
-                public string GroupId { get; set; }
+                [NameInMap("App")]
+                [Validation(Required=false)]
                 public string App { get; set; }
-                public string AvFormat { get; set; }
-                public int? Count { get; set; }
-            }
-        };
 
-        [NameInMap("Code")]
+                [NameInMap("AvFormat")]
+                [Validation(Required=false)]
+                public string AvFormat { get; set; }
+
+                [NameInMap("Count")]
+                [Validation(Required=false)]
+                public int? Count { get; set; }
+
+                [NameInMap("GroupId")]
+                [Validation(Required=false)]
+                public string GroupId { get; set; }
+
+            }
+
+        }
+
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public int? Code { get; set; }
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -9,33 +9,47 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddPlaylistItemsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Items")]
         [Validation(Required=false)]
         public AddPlaylistItemsResponseBodyItems Items { get; set; }
         public class AddPlaylistItemsResponseBodyItems : TeaModel {
-            [NameInMap("SuccessItems")]
-            [Validation(Required=false)]
-            public List<AddPlaylistItemsResponseBodyItemsSuccessItems> SuccessItems { get; set; }
-            public class AddPlaylistItemsResponseBodyItemsSuccessItems : TeaModel {
-                public string ItemName { get; set; }
-                public string ItemId { get; set; }
-            }
             [NameInMap("FailedItems")]
             [Validation(Required=false)]
             public List<AddPlaylistItemsResponseBodyItemsFailedItems> FailedItems { get; set; }
             public class AddPlaylistItemsResponseBodyItemsFailedItems : TeaModel {
-                public string ItemName { get; set; }
+                [NameInMap("ItemId")]
+                [Validation(Required=false)]
                 public string ItemId { get; set; }
+
+                [NameInMap("ItemName")]
+                [Validation(Required=false)]
+                public string ItemName { get; set; }
+
             }
-        };
+
+            [NameInMap("SuccessItems")]
+            [Validation(Required=false)]
+            public List<AddPlaylistItemsResponseBodyItemsSuccessItems> SuccessItems { get; set; }
+            public class AddPlaylistItemsResponseBodyItemsSuccessItems : TeaModel {
+                [NameInMap("ItemId")]
+                [Validation(Required=false)]
+                public string ItemId { get; set; }
+
+                [NameInMap("ItemName")]
+                [Validation(Required=false)]
+                public string ItemName { get; set; }
+
+            }
+
+        }
 
         [NameInMap("ProgramId")]
         [Validation(Required=false)]
         public string ProgramId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

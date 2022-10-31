@@ -9,29 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamsBlockListResponseBody : TeaModel {
-        [NameInMap("TotalNum")]
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public int? TotalNum { get; set; }
+        public string DomainName { get; set; }
 
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("TotalPage")]
-        [Validation(Required=false)]
-        public int? TotalPage { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("DomainName")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string DomainName { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("StreamUrls")]
         [Validation(Required=false)]
@@ -40,7 +32,16 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [NameInMap("StreamUrl")]
             [Validation(Required=false)]
             public List<string> StreamUrl { get; set; }
-        };
+
+        }
+
+        [NameInMap("TotalNum")]
+        [Validation(Required=false)]
+        public int? TotalNum { get; set; }
+
+        [NameInMap("TotalPage")]
+        [Validation(Required=false)]
+        public int? TotalPage { get; set; }
 
     }
 

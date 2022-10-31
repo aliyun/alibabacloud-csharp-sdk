@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class UpdateLiveRecordNotifyConfigRequest : TeaModel {
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
+
+        [NameInMap("NeedStatusNotify")]
+        [Validation(Required=false)]
+        public bool? NeedStatusNotify { get; set; }
 
         [NameInMap("NotifyUrl")]
         [Validation(Required=false)]
@@ -29,9 +25,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string OnDemandUrl { get; set; }
 
-        [NameInMap("NeedStatusNotify")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public bool? NeedStatusNotify { get; set; }
+        public long? OwnerId { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
     }
 

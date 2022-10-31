@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class UpdateCasterSceneConfigRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("CasterId")]
         [Validation(Required=false)]
         public string CasterId { get; set; }
 
-        [NameInMap("SceneId")]
+        [NameInMap("ComponentId")]
         [Validation(Required=false)]
-        public string SceneId { get; set; }
+        public List<string> ComponentId { get; set; }
 
         [NameInMap("LayoutId")]
         [Validation(Required=false)]
         public string LayoutId { get; set; }
 
-        [NameInMap("ComponentId")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public List<string> ComponentId { get; set; }
+        public long? OwnerId { get; set; }
+
+        [NameInMap("SceneId")]
+        [Validation(Required=false)]
+        public string SceneId { get; set; }
 
     }
 

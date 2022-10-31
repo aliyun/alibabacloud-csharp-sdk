@@ -9,17 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class SetLiveStreamsNotifyUrlConfigRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        [NameInMap("NotifyAuthKey")]
+        [Validation(Required=false)]
+        public string NotifyAuthKey { get; set; }
+
+        [NameInMap("NotifyReqAuth")]
+        [Validation(Required=false)]
+        public string NotifyReqAuth { get; set; }
+
         [NameInMap("NotifyUrl")]
         [Validation(Required=false)]
         public string NotifyUrl { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
     }
 

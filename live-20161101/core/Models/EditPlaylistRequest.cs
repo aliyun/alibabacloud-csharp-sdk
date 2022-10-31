@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("ProgramConfig")]
+        [Validation(Required=false)]
+        public string ProgramConfig { get; set; }
+
         [NameInMap("ProgramId")]
         [Validation(Required=false)]
         public string ProgramId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("ProgramItems")]
         [Validation(Required=false)]
         public string ProgramItems { get; set; }
-
-        [NameInMap("ProgramConfig")]
-        [Validation(Required=false)]
-        public string ProgramConfig { get; set; }
 
     }
 
