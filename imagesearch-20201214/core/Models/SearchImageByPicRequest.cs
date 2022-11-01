@@ -37,10 +37,6 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("Start")]
         [Validation(Required=false)]
         public int? Start { get; set; }

@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             [NameInMap("PicNames")]
             [Validation(Required=false)]
             public List<string> PicNames { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

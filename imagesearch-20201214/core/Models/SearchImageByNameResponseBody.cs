@@ -58,13 +58,16 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             [NameInMap("DocsFound")]
             [Validation(Required=false)]
             public int? DocsFound { get; set; }
+
             [NameInMap("DocsReturn")]
             [Validation(Required=false)]
             public int? DocsReturn { get; set; }
+
             [NameInMap("SearchTime")]
             [Validation(Required=false)]
             public int? SearchTime { get; set; }
-        };
+
+        }
 
         [NameInMap("Msg")]
         [Validation(Required=false)]
@@ -78,22 +81,35 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             [Validation(Required=false)]
             public List<SearchImageByNameResponseBodyPicInfoAllCategories> AllCategories { get; set; }
             public class SearchImageByNameResponseBodyPicInfoAllCategories : TeaModel {
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public int? Id { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
             }
+
             [NameInMap("CategoryId")]
             [Validation(Required=false)]
             public int? CategoryId { get; set; }
+
             [NameInMap("MultiRegion")]
             [Validation(Required=false)]
             public List<SearchImageByNameResponseBodyPicInfoMultiRegion> MultiRegion { get; set; }
             public class SearchImageByNameResponseBodyPicInfoMultiRegion : TeaModel {
+                [NameInMap("Region")]
+                [Validation(Required=false)]
                 public string Region { get; set; }
+
             }
+
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

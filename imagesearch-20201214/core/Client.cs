@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
             {
                 credentialType = "access_key";
             }
-            AlibabaCloud.RPCClient.Models.Config authConfig = new AlibabaCloud.RPCClient.Models.Config
+            AlibabaCloud.OpenApiClient.Models.Config authConfig = new AlibabaCloud.OpenApiClient.Models.Config
             {
                 AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
@@ -226,31 +226,31 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PicContentObject))
             {
                 authResponse = authClient.AuthorizeFileUploadWithOptions(authRequest, runtime);
-                ossConfig.AccessKeyId = authResponse.AccessKeyId;
-                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Endpoint, authResponse.UseAccelerate, _endpointType);
+                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
+                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
                 ossClient = new AlibabaCloud.OSS.Client(ossConfig);
                 fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
                 {
-                    Filename = authResponse.ObjectKey,
+                    Filename = authResponse.Body.ObjectKey,
                     Content = request.PicContentObject,
                     ContentType = "",
                 };
                 ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
                 {
-                    AccessKeyId = authResponse.AccessKeyId,
-                    Policy = authResponse.EncodedPolicy,
-                    Signature = authResponse.Signature,
-                    Key = authResponse.ObjectKey,
+                    AccessKeyId = authResponse.Body.AccessKeyId,
+                    Policy = authResponse.Body.EncodedPolicy,
+                    Signature = authResponse.Body.Signature,
+                    Key = authResponse.Body.ObjectKey,
                     File = fileObj,
                     SuccessActionStatus = "201",
                 };
                 uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
                 {
-                    BucketName = authResponse.Bucket,
+                    BucketName = authResponse.Body.Bucket,
                     Header = ossHeader,
                 };
                 ossClient.PostObject(uploadRequest, ossRuntime);
-                addImageReq.PicContent = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
+                addImageReq.PicContent = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
             }
             AddImageResponse addImageResp = AddImageWithOptions(addImageReq, runtime);
             return addImageResp;
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
             {
                 credentialType = "access_key";
             }
-            AlibabaCloud.RPCClient.Models.Config authConfig = new AlibabaCloud.RPCClient.Models.Config
+            AlibabaCloud.OpenApiClient.Models.Config authConfig = new AlibabaCloud.OpenApiClient.Models.Config
             {
                 AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
@@ -307,31 +307,31 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PicContentObject))
             {
                 authResponse = await authClient.AuthorizeFileUploadWithOptionsAsync(authRequest, runtime);
-                ossConfig.AccessKeyId = authResponse.AccessKeyId;
-                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Endpoint, authResponse.UseAccelerate, _endpointType);
+                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
+                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
                 ossClient = new AlibabaCloud.OSS.Client(ossConfig);
                 fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
                 {
-                    Filename = authResponse.ObjectKey,
+                    Filename = authResponse.Body.ObjectKey,
                     Content = request.PicContentObject,
                     ContentType = "",
                 };
                 ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
                 {
-                    AccessKeyId = authResponse.AccessKeyId,
-                    Policy = authResponse.EncodedPolicy,
-                    Signature = authResponse.Signature,
-                    Key = authResponse.ObjectKey,
+                    AccessKeyId = authResponse.Body.AccessKeyId,
+                    Policy = authResponse.Body.EncodedPolicy,
+                    Signature = authResponse.Body.Signature,
+                    Key = authResponse.Body.ObjectKey,
                     File = fileObj,
                     SuccessActionStatus = "201",
                 };
                 uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
                 {
-                    BucketName = authResponse.Bucket,
+                    BucketName = authResponse.Body.Bucket,
                     Header = ossHeader,
                 };
                 await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
-                addImageReq.PicContent = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
+                addImageReq.PicContent = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
             }
             AddImageResponse addImageResp = await AddImageWithOptionsAsync(addImageReq, runtime);
             return addImageResp;
@@ -423,7 +423,10 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["InstanceName"] = request.InstanceName;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -447,7 +450,10 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["InstanceName"] = request.InstanceName;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -483,7 +489,10 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["InstanceName"] = request.InstanceName;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -507,7 +516,10 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["InstanceName"] = request.InstanceName;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -543,10 +555,22 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["Id"] = request.Id;
-            query["InstanceName"] = request.InstanceName;
-            query["PageNumber"] = request.PageNumber;
-            query["PageSize"] = request.PageSize;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -570,10 +594,22 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["Id"] = request.Id;
-            query["InstanceName"] = request.InstanceName;
-            query["PageNumber"] = request.PageNumber;
-            query["PageSize"] = request.PageSize;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -609,10 +645,22 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["BucketName"] = request.BucketName;
-            query["CallbackAddress"] = request.CallbackAddress;
-            query["InstanceName"] = request.InstanceName;
-            query["Path"] = request.Path;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketName))
+            {
+                query["BucketName"] = request.BucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackAddress))
+            {
+                query["CallbackAddress"] = request.CallbackAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -636,10 +684,22 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["BucketName"] = request.BucketName;
-            query["CallbackAddress"] = request.CallbackAddress;
-            query["InstanceName"] = request.InstanceName;
-            query["Path"] = request.Path;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketName))
+            {
+                query["BucketName"] = request.BucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackAddress))
+            {
+                query["CallbackAddress"] = request.CallbackAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -675,12 +735,30 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["BucketName"] = request.BucketName;
-            query["Id"] = request.Id;
-            query["InstanceName"] = request.InstanceName;
-            query["PageNumber"] = request.PageNumber;
-            query["PageSize"] = request.PageSize;
-            query["Path"] = request.Path;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketName))
+            {
+                query["BucketName"] = request.BucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -704,12 +782,30 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["BucketName"] = request.BucketName;
-            query["Id"] = request.Id;
-            query["InstanceName"] = request.InstanceName;
-            query["PageNumber"] = request.PageNumber;
-            query["PageSize"] = request.PageSize;
-            query["Path"] = request.Path;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketName))
+            {
+                query["BucketName"] = request.BucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -993,7 +1089,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
             {
                 credentialType = "access_key";
             }
-            AlibabaCloud.RPCClient.Models.Config authConfig = new AlibabaCloud.RPCClient.Models.Config
+            AlibabaCloud.OpenApiClient.Models.Config authConfig = new AlibabaCloud.OpenApiClient.Models.Config
             {
                 AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
@@ -1028,31 +1124,31 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PicContentObject))
             {
                 authResponse = authClient.AuthorizeFileUploadWithOptions(authRequest, runtime);
-                ossConfig.AccessKeyId = authResponse.AccessKeyId;
-                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Endpoint, authResponse.UseAccelerate, _endpointType);
+                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
+                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
                 ossClient = new AlibabaCloud.OSS.Client(ossConfig);
                 fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
                 {
-                    Filename = authResponse.ObjectKey,
+                    Filename = authResponse.Body.ObjectKey,
                     Content = request.PicContentObject,
                     ContentType = "",
                 };
                 ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
                 {
-                    AccessKeyId = authResponse.AccessKeyId,
-                    Policy = authResponse.EncodedPolicy,
-                    Signature = authResponse.Signature,
-                    Key = authResponse.ObjectKey,
+                    AccessKeyId = authResponse.Body.AccessKeyId,
+                    Policy = authResponse.Body.EncodedPolicy,
+                    Signature = authResponse.Body.Signature,
+                    Key = authResponse.Body.ObjectKey,
                     File = fileObj,
                     SuccessActionStatus = "201",
                 };
                 uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
                 {
-                    BucketName = authResponse.Bucket,
+                    BucketName = authResponse.Body.Bucket,
                     Header = ossHeader,
                 };
                 ossClient.PostObject(uploadRequest, ossRuntime);
-                searchImageByPicReq.PicContent = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
+                searchImageByPicReq.PicContent = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
             }
             SearchImageByPicResponse searchImageByPicResp = SearchImageByPicWithOptions(searchImageByPicReq, runtime);
             return searchImageByPicResp;
@@ -1074,7 +1170,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
             {
                 credentialType = "access_key";
             }
-            AlibabaCloud.RPCClient.Models.Config authConfig = new AlibabaCloud.RPCClient.Models.Config
+            AlibabaCloud.OpenApiClient.Models.Config authConfig = new AlibabaCloud.OpenApiClient.Models.Config
             {
                 AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
@@ -1109,31 +1205,31 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PicContentObject))
             {
                 authResponse = await authClient.AuthorizeFileUploadWithOptionsAsync(authRequest, runtime);
-                ossConfig.AccessKeyId = authResponse.AccessKeyId;
-                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Endpoint, authResponse.UseAccelerate, _endpointType);
+                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
+                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
                 ossClient = new AlibabaCloud.OSS.Client(ossConfig);
                 fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
                 {
-                    Filename = authResponse.ObjectKey,
+                    Filename = authResponse.Body.ObjectKey,
                     Content = request.PicContentObject,
                     ContentType = "",
                 };
                 ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
                 {
-                    AccessKeyId = authResponse.AccessKeyId,
-                    Policy = authResponse.EncodedPolicy,
-                    Signature = authResponse.Signature,
-                    Key = authResponse.ObjectKey,
+                    AccessKeyId = authResponse.Body.AccessKeyId,
+                    Policy = authResponse.Body.EncodedPolicy,
+                    Signature = authResponse.Body.Signature,
+                    Key = authResponse.Body.ObjectKey,
                     File = fileObj,
                     SuccessActionStatus = "201",
                 };
                 uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
                 {
-                    BucketName = authResponse.Bucket,
+                    BucketName = authResponse.Body.Bucket,
                     Header = ossHeader,
                 };
                 await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
-                searchImageByPicReq.PicContent = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
+                searchImageByPicReq.PicContent = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
             }
             SearchImageByPicResponse searchImageByPicResp = await SearchImageByPicWithOptionsAsync(searchImageByPicReq, runtime);
             return searchImageByPicResp;

@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             [NameInMap("DumpMetaStatus")]
             [Validation(Required=false)]
             public string DumpMetaStatus { get; set; }
+
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

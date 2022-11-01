@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
+
             [NameInMap("IncrementStatus")]
             [Validation(Required=false)]
             public string IncrementStatus { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
