@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public long? CodeSize { get; set; }
 
+        [NameInMap("cpu")]
+        [Validation(Required=false)]
+        public float? Cpu { get; set; }
+
         [NameInMap("createdTime")]
         [Validation(Required=false)]
         public string CreatedTime { get; set; }
@@ -44,6 +48,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        [NameInMap("diskSize")]
+        [Validation(Required=false)]
+        public int? DiskSize { get; set; }
 
         [NameInMap("environmentVariables")]
         [Validation(Required=false)]
@@ -92,6 +100,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [NameInMap("layers")]
         [Validation(Required=false)]
         public List<string> Layers { get; set; }
+
+        [NameInMap("layersArnV2")]
+        [Validation(Required=false)]
+        public List<string> LayersArnV2 { get; set; }
 
         [NameInMap("memorySize")]
         [Validation(Required=false)]

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public string AuthType { get; set; }
 
+        [NameInMap("disableURLInternet")]
+        [Validation(Required=false)]
+        public bool? DisableURLInternet { get; set; }
+
         [NameInMap("methods")]
         [Validation(Required=false)]
         public List<string> Methods { get; set; }

@@ -246,7 +246,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public CreateAliasResponse CreateAliasWithOptions(string serviceName, CreateAliasRequest request, CreateAliasHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdditionalVersionWeight))
             {
@@ -299,7 +298,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "CreateAlias",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/aliases",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/aliases",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -312,7 +311,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<CreateAliasResponse> CreateAliasWithOptionsAsync(string serviceName, CreateAliasRequest request, CreateAliasHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdditionalVersionWeight))
             {
@@ -365,7 +363,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "CreateAlias",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/aliases",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/aliases",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -528,7 +526,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public CreateFunctionResponse CreateFunctionWithOptions(string serviceName, CreateFunctionRequest request, CreateFunctionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CaPort))
             {
@@ -537,6 +534,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code.ToMap()))
             {
                 body["code"] = request.Code;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
+            {
+                body["cpu"] = request.Cpu;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomContainerConfig.ToMap()))
             {
@@ -557,6 +558,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskSize))
+            {
+                body["diskSize"] = request.DiskSize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentVariables))
             {
@@ -641,7 +646,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "CreateFunction",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -654,7 +659,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<CreateFunctionResponse> CreateFunctionWithOptionsAsync(string serviceName, CreateFunctionRequest request, CreateFunctionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CaPort))
             {
@@ -663,6 +667,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code.ToMap()))
             {
                 body["code"] = request.Code;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
+            {
+                body["cpu"] = request.Cpu;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomContainerConfig.ToMap()))
             {
@@ -683,6 +691,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskSize))
+            {
+                body["diskSize"] = request.DiskSize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentVariables))
             {
@@ -767,7 +779,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "CreateFunction",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -794,7 +806,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public CreateLayerVersionResponse CreateLayerVersionWithOptions(string layerName, CreateLayerVersionRequest request, CreateLayerVersionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            layerName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(layerName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code.ToMap()))
             {
@@ -835,7 +846,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "CreateLayerVersion",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/layers/" + layerName + "/versions",
+                Pathname = "/2021-04-06/layers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(layerName) + "/versions",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -848,7 +859,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<CreateLayerVersionResponse> CreateLayerVersionWithOptionsAsync(string layerName, CreateLayerVersionRequest request, CreateLayerVersionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            layerName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(layerName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code.ToMap()))
             {
@@ -889,7 +899,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "CreateLayerVersion",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/layers/" + layerName + "/versions",
+                Pathname = "/2021-04-06/layers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(layerName) + "/versions",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1084,8 +1094,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public CreateTriggerResponse CreateTriggerWithOptions(string serviceName, string functionName, CreateTriggerRequest request, CreateTriggerHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -1142,7 +1150,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "CreateTrigger",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/triggers",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1155,8 +1163,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<CreateTriggerResponse> CreateTriggerWithOptionsAsync(string serviceName, string functionName, CreateTriggerRequest request, CreateTriggerHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -1213,7 +1219,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "CreateTrigger",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/triggers",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1240,7 +1246,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public CreateVpcBindingResponse CreateVpcBindingWithOptions(string serviceName, CreateVpcBindingRequest request, CreateVpcBindingHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
             {
@@ -1273,7 +1278,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "CreateVpcBinding",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/bindings",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/bindings",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1286,7 +1291,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<CreateVpcBindingResponse> CreateVpcBindingWithOptionsAsync(string serviceName, CreateVpcBindingRequest request, CreateVpcBindingHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
             {
@@ -1319,7 +1323,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "CreateVpcBinding",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/bindings",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/bindings",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1345,8 +1349,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public DeleteAliasResponse DeleteAliasWithOptions(string serviceName, string aliasName, DeleteAliasHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            aliasName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(aliasName);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -1377,7 +1379,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "DeleteAlias",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/aliases/" + aliasName,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/aliases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(aliasName),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1389,8 +1391,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public async Task<DeleteAliasResponse> DeleteAliasWithOptionsAsync(string serviceName, string aliasName, DeleteAliasHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            aliasName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(aliasName);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -1421,7 +1421,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "DeleteAlias",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/aliases/" + aliasName,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/aliases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(aliasName),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1447,7 +1447,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public DeleteCustomDomainResponse DeleteCustomDomainWithOptions(string domainName, DeleteCustomDomainHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            domainName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(domainName);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -1474,7 +1473,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "DeleteCustomDomain",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/custom-domains/" + domainName,
+                Pathname = "/2021-04-06/custom-domains/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(domainName),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1486,7 +1485,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public async Task<DeleteCustomDomainResponse> DeleteCustomDomainWithOptionsAsync(string domainName, DeleteCustomDomainHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            domainName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(domainName);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -1513,7 +1511,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "DeleteCustomDomain",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/custom-domains/" + domainName,
+                Pathname = "/2021-04-06/custom-domains/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(domainName),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1539,8 +1537,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public DeleteFunctionResponse DeleteFunctionWithOptions(string serviceName, string functionName, DeleteFunctionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -1571,7 +1567,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "DeleteFunction",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1583,8 +1579,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public async Task<DeleteFunctionResponse> DeleteFunctionWithOptionsAsync(string serviceName, string functionName, DeleteFunctionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -1615,7 +1609,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "DeleteFunction",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1642,8 +1636,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public DeleteFunctionAsyncInvokeConfigResponse DeleteFunctionAsyncInvokeConfigWithOptions(string serviceName, string functionName, DeleteFunctionAsyncInvokeConfigRequest request, DeleteFunctionAsyncInvokeConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -1676,7 +1668,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "DeleteFunctionAsyncInvokeConfig",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-config",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/async-invoke-config",
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1689,8 +1681,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<DeleteFunctionAsyncInvokeConfigResponse> DeleteFunctionAsyncInvokeConfigWithOptionsAsync(string serviceName, string functionName, DeleteFunctionAsyncInvokeConfigRequest request, DeleteFunctionAsyncInvokeConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -1723,7 +1713,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "DeleteFunctionAsyncInvokeConfig",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-config",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/async-invoke-config",
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1750,8 +1740,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public DeleteFunctionOnDemandConfigResponse DeleteFunctionOnDemandConfigWithOptions(string serviceName, string functionName, DeleteFunctionOnDemandConfigRequest request, DeleteFunctionOnDemandConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -1788,7 +1776,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "DeleteFunctionOnDemandConfig",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/on-demand-config",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/on-demand-config",
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1801,8 +1789,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<DeleteFunctionOnDemandConfigResponse> DeleteFunctionOnDemandConfigWithOptionsAsync(string serviceName, string functionName, DeleteFunctionOnDemandConfigRequest request, DeleteFunctionOnDemandConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -1839,7 +1825,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "DeleteFunctionOnDemandConfig",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/on-demand-config",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/on-demand-config",
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1865,8 +1851,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public DeleteLayerVersionResponse DeleteLayerVersionWithOptions(string layerName, string version, DeleteLayerVersionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            layerName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(layerName);
-            version = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(version);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -1893,7 +1877,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "DeleteLayerVersion",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/layers/" + layerName + "/versions/" + version,
+                Pathname = "/2021-04-06/layers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(layerName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(version),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1905,8 +1889,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public async Task<DeleteLayerVersionResponse> DeleteLayerVersionWithOptionsAsync(string layerName, string version, DeleteLayerVersionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            layerName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(layerName);
-            version = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(version);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -1933,7 +1915,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "DeleteLayerVersion",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/layers/" + layerName + "/versions/" + version,
+                Pathname = "/2021-04-06/layers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(layerName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(version),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1959,7 +1941,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public DeleteServiceResponse DeleteServiceWithOptions(string serviceName, DeleteServiceHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -1990,7 +1971,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "DeleteService",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2002,7 +1983,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public async Task<DeleteServiceResponse> DeleteServiceWithOptionsAsync(string serviceName, DeleteServiceHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -2033,7 +2013,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "DeleteService",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2059,8 +2039,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public DeleteServiceVersionResponse DeleteServiceVersionWithOptions(string serviceName, string versionId, DeleteServiceVersionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            versionId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(versionId);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -2087,7 +2065,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "DeleteServiceVersion",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/versions/" + versionId,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(versionId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2099,8 +2077,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public async Task<DeleteServiceVersionResponse> DeleteServiceVersionWithOptionsAsync(string serviceName, string versionId, DeleteServiceVersionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            versionId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(versionId);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -2127,7 +2103,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "DeleteServiceVersion",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/versions/" + versionId,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(versionId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2153,9 +2129,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public DeleteTriggerResponse DeleteTriggerWithOptions(string serviceName, string functionName, string triggerName, DeleteTriggerHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
-            triggerName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(triggerName);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -2186,7 +2159,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "DeleteTrigger",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers/" + triggerName,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/triggers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(triggerName),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2198,9 +2171,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public async Task<DeleteTriggerResponse> DeleteTriggerWithOptionsAsync(string serviceName, string functionName, string triggerName, DeleteTriggerHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
-            triggerName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(triggerName);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -2231,7 +2201,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "DeleteTrigger",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers/" + triggerName,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/triggers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(triggerName),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2257,8 +2227,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public DeleteVpcBindingResponse DeleteVpcBindingWithOptions(string serviceName, string vpcId, DeleteVpcBindingHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            vpcId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(vpcId);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -2285,7 +2253,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "DeleteVpcBinding",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/bindings/" + vpcId,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/bindings/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(vpcId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2297,8 +2265,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public async Task<DeleteVpcBindingResponse> DeleteVpcBindingWithOptionsAsync(string serviceName, string vpcId, DeleteVpcBindingHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            vpcId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(vpcId);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -2325,7 +2291,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "DeleteVpcBinding",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/bindings/" + vpcId,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/bindings/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(vpcId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2352,9 +2318,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public DeregisterEventSourceResponse DeregisterEventSourceWithOptions(string serviceName, string functionName, string sourceArn, DeregisterEventSourceRequest request, DeregisterEventSourceHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
-            sourceArn = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sourceArn);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -2387,7 +2350,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "DeregisterEventSource",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/event-sources/" + sourceArn,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/event-sources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sourceArn),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2400,9 +2363,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<DeregisterEventSourceResponse> DeregisterEventSourceWithOptionsAsync(string serviceName, string functionName, string sourceArn, DeregisterEventSourceRequest request, DeregisterEventSourceHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
-            sourceArn = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sourceArn);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -2435,7 +2395,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "DeregisterEventSource",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/event-sources/" + sourceArn,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/event-sources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sourceArn),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2551,8 +2511,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public GetAliasResponse GetAliasWithOptions(string serviceName, string aliasName, GetAliasHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            aliasName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(aliasName);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -2579,7 +2537,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "GetAlias",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/aliases/" + aliasName,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/aliases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(aliasName),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2591,8 +2549,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public async Task<GetAliasResponse> GetAliasWithOptionsAsync(string serviceName, string aliasName, GetAliasHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            aliasName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(aliasName);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -2619,7 +2575,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "GetAlias",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/aliases/" + aliasName,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/aliases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(aliasName),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2645,7 +2601,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public GetCustomDomainResponse GetCustomDomainWithOptions(string domainName, GetCustomDomainHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            domainName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(domainName);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -2672,7 +2627,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "GetCustomDomain",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/custom-domains/" + domainName,
+                Pathname = "/2021-04-06/custom-domains/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(domainName),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2684,7 +2639,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public async Task<GetCustomDomainResponse> GetCustomDomainWithOptionsAsync(string domainName, GetCustomDomainHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            domainName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(domainName);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -2711,7 +2665,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "GetCustomDomain",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/custom-domains/" + domainName,
+                Pathname = "/2021-04-06/custom-domains/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(domainName),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2738,8 +2692,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public GetFunctionResponse GetFunctionWithOptions(string serviceName, string functionName, GetFunctionRequest request, GetFunctionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -2772,7 +2724,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "GetFunction",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2785,8 +2737,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<GetFunctionResponse> GetFunctionWithOptionsAsync(string serviceName, string functionName, GetFunctionRequest request, GetFunctionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -2819,7 +2769,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "GetFunction",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2846,8 +2796,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public GetFunctionAsyncInvokeConfigResponse GetFunctionAsyncInvokeConfigWithOptions(string serviceName, string functionName, GetFunctionAsyncInvokeConfigRequest request, GetFunctionAsyncInvokeConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -2880,7 +2828,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "GetFunctionAsyncInvokeConfig",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-config",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/async-invoke-config",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2893,8 +2841,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<GetFunctionAsyncInvokeConfigResponse> GetFunctionAsyncInvokeConfigWithOptionsAsync(string serviceName, string functionName, GetFunctionAsyncInvokeConfigRequest request, GetFunctionAsyncInvokeConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -2927,7 +2873,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "GetFunctionAsyncInvokeConfig",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-config",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/async-invoke-config",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2954,8 +2900,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public GetFunctionCodeResponse GetFunctionCodeWithOptions(string serviceName, string functionName, GetFunctionCodeRequest request, GetFunctionCodeHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -2988,7 +2932,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "GetFunctionCode",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/code",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/code",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3001,8 +2945,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<GetFunctionCodeResponse> GetFunctionCodeWithOptionsAsync(string serviceName, string functionName, GetFunctionCodeRequest request, GetFunctionCodeHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -3035,7 +2977,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "GetFunctionCode",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/code",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/code",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3062,8 +3004,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public GetFunctionOnDemandConfigResponse GetFunctionOnDemandConfigWithOptions(string serviceName, string functionName, GetFunctionOnDemandConfigRequest request, GetFunctionOnDemandConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -3096,7 +3036,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "GetFunctionOnDemandConfig",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/on-demand-config",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/on-demand-config",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3109,8 +3049,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<GetFunctionOnDemandConfigResponse> GetFunctionOnDemandConfigWithOptionsAsync(string serviceName, string functionName, GetFunctionOnDemandConfigRequest request, GetFunctionOnDemandConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -3143,7 +3081,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "GetFunctionOnDemandConfig",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/on-demand-config",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/on-demand-config",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3169,8 +3107,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public GetLayerVersionResponse GetLayerVersionWithOptions(string layerName, string version, GetLayerVersionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            layerName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(layerName);
-            version = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(version);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -3197,7 +3133,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "GetLayerVersion",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/layers/" + layerName + "/versions/" + version,
+                Pathname = "/2021-04-06/layers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(layerName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(version),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3209,8 +3145,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public async Task<GetLayerVersionResponse> GetLayerVersionWithOptionsAsync(string layerName, string version, GetLayerVersionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            layerName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(layerName);
-            version = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(version);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -3237,7 +3171,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "GetLayerVersion",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/layers/" + layerName + "/versions/" + version,
+                Pathname = "/2021-04-06/layers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(layerName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(version),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3264,8 +3198,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public GetProvisionConfigResponse GetProvisionConfigWithOptions(string serviceName, string functionName, GetProvisionConfigRequest request, GetProvisionConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -3298,7 +3230,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "GetProvisionConfig",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/provision-config",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/provision-config",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3311,8 +3243,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<GetProvisionConfigResponse> GetProvisionConfigWithOptionsAsync(string serviceName, string functionName, GetProvisionConfigRequest request, GetProvisionConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -3345,7 +3275,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "GetProvisionConfig",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/provision-config",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/provision-config",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3476,7 +3406,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public GetServiceResponse GetServiceWithOptions(string serviceName, GetServiceRequest request, GetServiceHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -3509,7 +3438,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "GetService",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3522,7 +3451,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<GetServiceResponse> GetServiceWithOptionsAsync(string serviceName, GetServiceRequest request, GetServiceHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -3555,7 +3483,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "GetService",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3582,9 +3510,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public GetStatefulAsyncInvocationResponse GetStatefulAsyncInvocationWithOptions(string serviceName, string functionName, string invocationId, GetStatefulAsyncInvocationRequest request, GetStatefulAsyncInvocationHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
-            invocationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(invocationId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -3629,7 +3554,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "GetStatefulAsyncInvocation",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/stateful-async-invocations/" + invocationId,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/stateful-async-invocations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(invocationId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3642,9 +3567,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<GetStatefulAsyncInvocationResponse> GetStatefulAsyncInvocationWithOptionsAsync(string serviceName, string functionName, string invocationId, GetStatefulAsyncInvocationRequest request, GetStatefulAsyncInvocationHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
-            invocationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(invocationId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -3689,7 +3611,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "GetStatefulAsyncInvocation",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/stateful-async-invocations/" + invocationId,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/stateful-async-invocations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(invocationId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3715,9 +3637,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public GetTriggerResponse GetTriggerWithOptions(string serviceName, string functionName, string triggerName, GetTriggerHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
-            triggerName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(triggerName);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -3744,7 +3663,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "GetTrigger",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers/" + triggerName,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/triggers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(triggerName),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3756,9 +3675,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public async Task<GetTriggerResponse> GetTriggerWithOptionsAsync(string serviceName, string functionName, string triggerName, GetTriggerHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
-            triggerName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(triggerName);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -3785,7 +3701,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "GetTrigger",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers/" + triggerName,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/triggers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(triggerName),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3812,8 +3728,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public InvokeFunctionResponse InvokeFunctionWithOptions(string serviceName, string functionName, InvokeFunctionRequest request, InvokeFunctionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -3864,7 +3778,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "InvokeFunction",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/invocations",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/invocations",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3877,8 +3791,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<InvokeFunctionResponse> InvokeFunctionWithOptionsAsync(string serviceName, string functionName, InvokeFunctionRequest request, InvokeFunctionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -3929,7 +3841,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "InvokeFunction",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/invocations",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/invocations",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3956,7 +3868,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public ListAliasesResponse ListAliasesWithOptions(string serviceName, ListAliasesRequest request, ListAliasesHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
@@ -4001,7 +3912,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "ListAliases",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/aliases",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/aliases",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4014,7 +3925,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<ListAliasesResponse> ListAliasesWithOptionsAsync(string serviceName, ListAliasesRequest request, ListAliasesHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
@@ -4059,7 +3969,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "ListAliases",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/aliases",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/aliases",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4214,8 +4124,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public ListEventSourcesResponse ListEventSourcesWithOptions(string serviceName, string functionName, ListEventSourcesRequest request, ListEventSourcesHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -4248,7 +4156,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "ListEventSources",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/event-sources",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/event-sources",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4261,8 +4169,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<ListEventSourcesResponse> ListEventSourcesWithOptionsAsync(string serviceName, string functionName, ListEventSourcesRequest request, ListEventSourcesHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -4295,7 +4201,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "ListEventSources",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/event-sources",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/event-sources",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4322,8 +4228,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public ListFunctionAsyncInvokeConfigsResponse ListFunctionAsyncInvokeConfigsWithOptions(string serviceName, string functionName, ListFunctionAsyncInvokeConfigsRequest request, ListFunctionAsyncInvokeConfigsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
@@ -4372,7 +4276,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "ListFunctionAsyncInvokeConfigs",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-configs",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/async-invoke-configs",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4385,8 +4289,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<ListFunctionAsyncInvokeConfigsResponse> ListFunctionAsyncInvokeConfigsWithOptionsAsync(string serviceName, string functionName, ListFunctionAsyncInvokeConfigsRequest request, ListFunctionAsyncInvokeConfigsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
@@ -4435,7 +4337,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "ListFunctionAsyncInvokeConfigs",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-configs",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/async-invoke-configs",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4462,7 +4364,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public ListFunctionsResponse ListFunctionsWithOptions(string serviceName, ListFunctionsRequest request, ListFunctionsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
@@ -4511,7 +4412,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "ListFunctions",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4524,7 +4425,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<ListFunctionsResponse> ListFunctionsWithOptionsAsync(string serviceName, ListFunctionsRequest request, ListFunctionsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
@@ -4573,7 +4473,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "ListFunctions",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4600,8 +4500,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public ListInstancesResponse ListInstancesWithOptions(string serviceName, string functionName, ListInstancesRequest request, ListInstancesHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
             {
@@ -4634,7 +4532,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "ListInstances",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/instances",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/instances",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4647,8 +4545,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<ListInstancesResponse> ListInstancesWithOptionsAsync(string serviceName, string functionName, ListInstancesRequest request, ListInstancesHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
             {
@@ -4681,7 +4577,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "ListInstances",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/instances",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/instances",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4708,7 +4604,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public ListLayerVersionsResponse ListLayerVersionsWithOptions(string layerName, ListLayerVersionsRequest request, ListLayerVersionsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            layerName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(layerName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
@@ -4745,7 +4640,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "ListLayerVersions",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/layers/" + layerName + "/versions",
+                Pathname = "/2021-04-06/layers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(layerName) + "/versions",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4758,7 +4653,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<ListLayerVersionsResponse> ListLayerVersionsWithOptionsAsync(string layerName, ListLayerVersionsRequest request, ListLayerVersionsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            layerName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(layerName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
@@ -4795,7 +4689,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "ListLayerVersions",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/layers/" + layerName + "/versions",
+                Pathname = "/2021-04-06/layers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(layerName) + "/versions",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5334,7 +5228,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public ListServiceVersionsResponse ListServiceVersionsWithOptions(string serviceName, ListServiceVersionsRequest request, ListServiceVersionsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
             {
@@ -5379,7 +5272,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "ListServiceVersions",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/versions",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/versions",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5392,7 +5285,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<ListServiceVersionsResponse> ListServiceVersionsWithOptionsAsync(string serviceName, ListServiceVersionsRequest request, ListServiceVersionsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
             {
@@ -5437,7 +5329,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "ListServiceVersions",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/versions",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/versions",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5704,8 +5596,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public ListStatefulAsyncInvocationsResponse ListStatefulAsyncInvocationsWithOptions(string serviceName, string functionName, ListStatefulAsyncInvocationsRequest request, ListStatefulAsyncInvocationsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludePayload))
             {
@@ -5782,7 +5672,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "ListStatefulAsyncInvocations",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/stateful-async-invocations",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/stateful-async-invocations",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5795,8 +5685,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<ListStatefulAsyncInvocationsResponse> ListStatefulAsyncInvocationsWithOptionsAsync(string serviceName, string functionName, ListStatefulAsyncInvocationsRequest request, ListStatefulAsyncInvocationsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludePayload))
             {
@@ -5873,7 +5761,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "ListStatefulAsyncInvocations",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/stateful-async-invocations",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/stateful-async-invocations",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6012,8 +5900,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public ListTriggersResponse ListTriggersWithOptions(string serviceName, string functionName, ListTriggersRequest request, ListTriggersHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
@@ -6058,7 +5944,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "ListTriggers",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/triggers",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6071,8 +5957,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<ListTriggersResponse> ListTriggersWithOptionsAsync(string serviceName, string functionName, ListTriggersRequest request, ListTriggersHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
@@ -6117,7 +6001,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "ListTriggers",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/triggers",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6143,7 +6027,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public ListVpcBindingsResponse ListVpcBindingsWithOptions(string serviceName, ListVpcBindingsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -6170,7 +6053,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "ListVpcBindings",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/bindings",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/bindings",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6182,7 +6065,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public async Task<ListVpcBindingsResponse> ListVpcBindingsWithOptionsAsync(string serviceName, ListVpcBindingsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -6209,7 +6091,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "ListVpcBindings",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/bindings",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/bindings",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6236,7 +6118,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public PublishServiceVersionResponse PublishServiceVersionWithOptions(string serviceName, PublishServiceVersionRequest request, PublishServiceVersionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -6273,7 +6154,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "PublishServiceVersion",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/versions",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/versions",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6286,7 +6167,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<PublishServiceVersionResponse> PublishServiceVersionWithOptionsAsync(string serviceName, PublishServiceVersionRequest request, PublishServiceVersionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -6323,7 +6203,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "PublishServiceVersion",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/versions",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/versions",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6350,8 +6230,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public PutFunctionAsyncInvokeConfigResponse PutFunctionAsyncInvokeConfigWithOptions(string serviceName, string functionName, PutFunctionAsyncInvokeConfigRequest request, PutFunctionAsyncInvokeConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -6402,7 +6280,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "PutFunctionAsyncInvokeConfig",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-config",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/async-invoke-config",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6415,8 +6293,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<PutFunctionAsyncInvokeConfigResponse> PutFunctionAsyncInvokeConfigWithOptionsAsync(string serviceName, string functionName, PutFunctionAsyncInvokeConfigRequest request, PutFunctionAsyncInvokeConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -6467,7 +6343,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "PutFunctionAsyncInvokeConfig",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-config",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/async-invoke-config",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6494,8 +6370,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public PutFunctionOnDemandConfigResponse PutFunctionOnDemandConfigWithOptions(string serviceName, string functionName, PutFunctionOnDemandConfigRequest request, PutFunctionOnDemandConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -6538,7 +6412,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "PutFunctionOnDemandConfig",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/on-demand-config",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/on-demand-config",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6551,8 +6425,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<PutFunctionOnDemandConfigResponse> PutFunctionOnDemandConfigWithOptionsAsync(string serviceName, string functionName, PutFunctionOnDemandConfigRequest request, PutFunctionOnDemandConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -6595,7 +6467,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "PutFunctionOnDemandConfig",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/on-demand-config",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/on-demand-config",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6622,7 +6494,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public PutLayerACLResponse PutLayerACLWithOptions(string layerName, PutLayerACLRequest request, PutLayerACLHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            layerName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(layerName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Public))
             {
@@ -6655,7 +6526,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "PutLayerACL",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/layers/" + layerName + "/acl",
+                Pathname = "/2021-04-06/layers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(layerName) + "/acl",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6668,7 +6539,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<PutLayerACLResponse> PutLayerACLWithOptionsAsync(string layerName, PutLayerACLRequest request, PutLayerACLHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            layerName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(layerName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Public))
             {
@@ -6701,7 +6571,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "PutLayerACL",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/layers/" + layerName + "/acl",
+                Pathname = "/2021-04-06/layers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(layerName) + "/acl",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6728,8 +6598,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public PutProvisionConfigResponse PutProvisionConfigWithOptions(string serviceName, string functionName, PutProvisionConfigRequest request, PutProvisionConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -6780,7 +6648,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "PutProvisionConfig",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/provision-config",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/provision-config",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6793,8 +6661,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<PutProvisionConfigResponse> PutProvisionConfigWithOptionsAsync(string serviceName, string functionName, PutProvisionConfigRequest request, PutProvisionConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -6845,7 +6711,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "PutProvisionConfig",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/provision-config",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/provision-config",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6872,8 +6738,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public RegisterEventSourceResponse RegisterEventSourceWithOptions(string serviceName, string functionName, RegisterEventSourceRequest request, RegisterEventSourceHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -6912,7 +6776,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "RegisterEventSource",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/event-sources",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/event-sources",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6925,8 +6789,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<RegisterEventSourceResponse> RegisterEventSourceWithOptionsAsync(string serviceName, string functionName, RegisterEventSourceRequest request, RegisterEventSourceHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -6965,7 +6827,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "RegisterEventSource",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/event-sources",
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/event-sources",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -6991,7 +6853,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public ReleaseGPUInstanceResponse ReleaseGPUInstanceWithOptions(string instanceId, ReleaseGPUInstanceHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -7018,7 +6879,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "ReleaseGPUInstance",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/gpuInstances/" + instanceId,
+                Pathname = "/2021-04-06/gpuInstances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7030,7 +6891,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
 
         public async Task<ReleaseGPUInstanceResponse> ReleaseGPUInstanceWithOptionsAsync(string instanceId, ReleaseGPUInstanceHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -7057,7 +6917,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "ReleaseGPUInstance",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/gpuInstances/" + instanceId,
+                Pathname = "/2021-04-06/gpuInstances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7084,9 +6944,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public StopStatefulAsyncInvocationResponse StopStatefulAsyncInvocationWithOptions(string serviceName, string functionName, string invocationId, StopStatefulAsyncInvocationRequest request, StopStatefulAsyncInvocationHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
-            invocationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(invocationId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -7119,7 +6976,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "StopStatefulAsyncInvocation",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/stateful-async-invocations/" + invocationId,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/stateful-async-invocations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(invocationId),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7132,9 +6989,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<StopStatefulAsyncInvocationResponse> StopStatefulAsyncInvocationWithOptionsAsync(string serviceName, string functionName, string invocationId, StopStatefulAsyncInvocationRequest request, StopStatefulAsyncInvocationHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
-            invocationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(invocationId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
@@ -7167,7 +7021,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "StopStatefulAsyncInvocation",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/stateful-async-invocations/" + invocationId,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/stateful-async-invocations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(invocationId),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7426,8 +7280,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public UpdateAliasResponse UpdateAliasWithOptions(string serviceName, string aliasName, UpdateAliasRequest request, UpdateAliasHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            aliasName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(aliasName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdditionalVersionWeight))
             {
@@ -7480,7 +7332,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "UpdateAlias",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/aliases/" + aliasName,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/aliases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(aliasName),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7493,8 +7345,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<UpdateAliasResponse> UpdateAliasWithOptionsAsync(string serviceName, string aliasName, UpdateAliasRequest request, UpdateAliasHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            aliasName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(aliasName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdditionalVersionWeight))
             {
@@ -7547,7 +7397,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "UpdateAlias",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/aliases/" + aliasName,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/aliases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(aliasName),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7574,7 +7424,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public UpdateCustomDomainResponse UpdateCustomDomainWithOptions(string domainName, UpdateCustomDomainRequest request, UpdateCustomDomainHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            domainName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(domainName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertConfig.ToMap()))
             {
@@ -7619,7 +7468,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "UpdateCustomDomain",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/custom-domains/" + domainName,
+                Pathname = "/2021-04-06/custom-domains/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(domainName),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7632,7 +7481,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<UpdateCustomDomainResponse> UpdateCustomDomainWithOptionsAsync(string domainName, UpdateCustomDomainRequest request, UpdateCustomDomainHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            domainName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(domainName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertConfig.ToMap()))
             {
@@ -7677,7 +7525,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "UpdateCustomDomain",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/custom-domains/" + domainName,
+                Pathname = "/2021-04-06/custom-domains/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(domainName),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7704,8 +7552,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public UpdateFunctionResponse UpdateFunctionWithOptions(string serviceName, string functionName, UpdateFunctionRequest request, UpdateFunctionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceConcurrency))
             {
@@ -7718,6 +7564,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code.ToMap()))
             {
                 body["code"] = request.Code;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
+            {
+                body["cpu"] = request.Cpu;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomContainerConfig.ToMap()))
             {
@@ -7738,6 +7588,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskSize))
+            {
+                body["diskSize"] = request.DiskSize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentVariables))
             {
@@ -7818,7 +7672,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "UpdateFunction",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7831,8 +7685,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<UpdateFunctionResponse> UpdateFunctionWithOptionsAsync(string serviceName, string functionName, UpdateFunctionRequest request, UpdateFunctionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceConcurrency))
             {
@@ -7845,6 +7697,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code.ToMap()))
             {
                 body["code"] = request.Code;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
+            {
+                body["cpu"] = request.Cpu;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomContainerConfig.ToMap()))
             {
@@ -7865,6 +7721,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskSize))
+            {
+                body["diskSize"] = request.DiskSize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentVariables))
             {
@@ -7945,7 +7805,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "UpdateFunction",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7972,7 +7832,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public UpdateServiceResponse UpdateServiceWithOptions(string serviceName, UpdateServiceRequest request, UpdateServiceHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -8037,7 +7896,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "UpdateService",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8050,7 +7909,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<UpdateServiceResponse> UpdateServiceWithOptionsAsync(string serviceName, UpdateServiceRequest request, UpdateServiceHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -8115,7 +7973,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "UpdateService",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8142,9 +8000,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public UpdateTriggerResponse UpdateTriggerWithOptions(string serviceName, string functionName, string triggerName, UpdateTriggerRequest request, UpdateTriggerHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
-            triggerName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(triggerName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -8193,7 +8048,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "UpdateTrigger",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers/" + triggerName,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/triggers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(triggerName),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8206,9 +8061,6 @@ namespace AlibabaCloud.SDK.FC_Open20210406
         public async Task<UpdateTriggerResponse> UpdateTriggerWithOptionsAsync(string serviceName, string functionName, string triggerName, UpdateTriggerRequest request, UpdateTriggerHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            serviceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName);
-            functionName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName);
-            triggerName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(triggerName);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -8257,7 +8109,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406
                 Action = "UpdateTrigger",
                 Version = "2021-04-06",
                 Protocol = "HTTPS",
-                Pathname = "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers/" + triggerName,
+                Pathname = "/2021-04-06/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceName) + "/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/triggers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(triggerName),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
