@@ -1,3 +1,7 @@
+2022-11-02 Version: 1.0.19
+- Support serverless v2
+
+
 2022-09-26 Version: 1.0.18
 - Support Openapi Tag.
 - Support Tag Ram.

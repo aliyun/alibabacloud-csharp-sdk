@@ -121,6 +121,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [Validation(Required=false)]
                 public string HostType { get; set; }
 
+                [NameInMap("IdleTime")]
+                [Validation(Required=false)]
+                public int? IdleTime { get; set; }
+
                 [NameInMap("InstanceNetworkType")]
                 [Validation(Required=false)]
                 public string InstanceNetworkType { get; set; }
@@ -200,6 +204,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [NameInMap("SegmentCounts")]
                 [Validation(Required=false)]
                 public int? SegmentCounts { get; set; }
+
+                [NameInMap("ServerlessMode")]
+                [Validation(Required=false)]
+                public string ServerlessMode { get; set; }
+
+                [NameInMap("ServerlessResource")]
+                [Validation(Required=false)]
+                public int? ServerlessResource { get; set; }
 
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]

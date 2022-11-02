@@ -97,6 +97,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [Validation(Required=false)]
                 public string SegNodeNum { get; set; }
 
+                [NameInMap("ServerlessMode")]
+                [Validation(Required=false)]
+                public string ServerlessMode { get; set; }
+
                 [NameInMap("StorageSize")]
                 [Validation(Required=false)]
                 public string StorageSize { get; set; }
