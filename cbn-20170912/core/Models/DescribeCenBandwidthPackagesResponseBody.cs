@@ -123,6 +123,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 [Validation(Required=false)]
                 public string ReservationOrderType { get; set; }
 
+                [NameInMap("ServiceType")]
+                [Validation(Required=false)]
+                public string ServiceType { get; set; }
+
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }

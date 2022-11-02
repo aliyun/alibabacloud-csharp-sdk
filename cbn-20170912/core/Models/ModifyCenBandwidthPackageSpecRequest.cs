@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("ServiceType")]
+        [Validation(Required=false)]
+        public string ServiceType { get; set; }
+
     }
 
 }

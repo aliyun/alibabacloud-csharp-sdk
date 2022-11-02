@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            [NameInMap("OperationalMode")]
+            [Validation(Required=false)]
+            public bool? OperationalMode { get; set; }
+
+            [NameInMap("Tag")]
+            [Validation(Required=false)]
+            public string Tag { get; set; }
+
             [NameInMap("TransitRouterRouteEntryDescription")]
             [Validation(Required=false)]
             public string TransitRouterRouteEntryDescription { get; set; }

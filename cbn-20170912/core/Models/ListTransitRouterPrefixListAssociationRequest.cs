@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterPrefixListAssociationRequest : TeaModel {
+        [NameInMap("NextHop")]
+        [Validation(Required=false)]
+        public string NextHop { get; set; }
+
+        [NameInMap("NextHopType")]
+        [Validation(Required=false)]
+        public string NextHopType { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
-            public int? ResourceType { get; set; }
+            public string ResourceType { get; set; }
 
             [NameInMap("Status")]
             [Validation(Required=false)]

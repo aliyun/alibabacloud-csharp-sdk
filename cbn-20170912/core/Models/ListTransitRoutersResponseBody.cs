@@ -53,6 +53,32 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public bool? SupportMulticast { get; set; }
 
+            [NameInMap("TransitRouterCidrList")]
+            [Validation(Required=false)]
+            public List<ListTransitRoutersResponseBodyTransitRoutersTransitRouterCidrList> TransitRouterCidrList { get; set; }
+            public class ListTransitRoutersResponseBodyTransitRoutersTransitRouterCidrList : TeaModel {
+                [NameInMap("Cidr")]
+                [Validation(Required=false)]
+                public string Cidr { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("PublishCidrRoute")]
+                [Validation(Required=false)]
+                public bool? PublishCidrRoute { get; set; }
+
+                [NameInMap("TransitRouterCidrId")]
+                [Validation(Required=false)]
+                public string TransitRouterCidrId { get; set; }
+
+            }
+
             [NameInMap("TransitRouterDescription")]
             [Validation(Required=false)]
             public string TransitRouterDescription { get; set; }
