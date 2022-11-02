@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public string InstanceID { get; set; }
 
+        [NameInMap("webServerMode")]
+        [Validation(Required=false)]
+        public bool? WebServerMode { get; set; }
+
     }
 
 }
