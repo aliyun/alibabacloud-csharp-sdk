@@ -8,15 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
-    public class CreateMajorProtectionBlackIpRequest : TeaModel {
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("ExpiredTime")]
-        [Validation(Required=false)]
-        public long? ExpiredTime { get; set; }
-
+    public class DeleteMajorProtectionBlackIpRequest : TeaModel {
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

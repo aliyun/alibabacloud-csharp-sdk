@@ -8,30 +8,30 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
-    public class CreateMajorProtectionBlackIpRequest : TeaModel {
-        [NameInMap("Description")]
+    public class CreateDomainShrinkRequest : TeaModel {
+        [NameInMap("AccessType")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public string AccessType { get; set; }
 
-        [NameInMap("ExpiredTime")]
+        [NameInMap("Domain")]
         [Validation(Required=false)]
-        public long? ExpiredTime { get; set; }
+        public string Domain { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("IpList")]
+        [NameInMap("Listen")]
         [Validation(Required=false)]
-        public string IpList { get; set; }
+        public string ListenShrink { get; set; }
 
-        [NameInMap("RuleId")]
+        [NameInMap("Redirect")]
         [Validation(Required=false)]
-        public long? RuleId { get; set; }
+        public string RedirectShrink { get; set; }
 
-        [NameInMap("TemplateId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public long? TemplateId { get; set; }
+        public string RegionId { get; set; }
 
     }
 

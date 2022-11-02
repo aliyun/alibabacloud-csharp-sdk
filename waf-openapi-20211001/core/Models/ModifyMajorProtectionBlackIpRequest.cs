@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
-    public class CreateMajorProtectionBlackIpRequest : TeaModel {
+    public class ModifyMajorProtectionBlackIpRequest : TeaModel {
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
