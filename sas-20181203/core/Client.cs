@@ -527,17 +527,9 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
-            {
-                query["CurrentPage"] = request.CurrentPage;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -562,17 +554,9 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
-            {
-                query["CurrentPage"] = request.CurrentPage;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -12073,6 +12057,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["AlarmUniqueInfo"] = request.AlarmUniqueInfo;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetsTypeList))
+            {
+                query["AssetsTypeList"] = request.AssetsTypeList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["ClusterId"] = request.ClusterId;
@@ -12209,6 +12197,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmUniqueInfo))
             {
                 query["AlarmUniqueInfo"] = request.AlarmUniqueInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetsTypeList))
+            {
+                query["AssetsTypeList"] = request.AssetsTypeList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {

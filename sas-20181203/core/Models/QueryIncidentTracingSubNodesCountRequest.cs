@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -8,10 +11,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class CheckUserHasEcsRequest : TeaModel {
-        [NameInMap("Lang")]
+    public class QueryIncidentTracingSubNodesCountRequest : TeaModel {
+        [NameInMap("VertexIdAndTypeList")]
         [Validation(Required=false)]
-        public string Lang { get; set; }
+        public List<List<string>> VertexIdAndTypeList { get; set; }
 
     }
 

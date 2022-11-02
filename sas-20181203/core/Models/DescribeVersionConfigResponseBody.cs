@@ -89,6 +89,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? SlsCapacity { get; set; }
 
+        [NameInMap("ThreatAnalysisCapacity")]
+        [Validation(Required=false)]
+        public long? ThreatAnalysisCapacity { get; set; }
+
         [NameInMap("UserDefinedAlarms")]
         [Validation(Required=false)]
         public int? UserDefinedAlarms { get; set; }

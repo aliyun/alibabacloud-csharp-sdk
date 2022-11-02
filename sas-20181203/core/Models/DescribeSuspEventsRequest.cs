@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string AlarmUniqueInfo { get; set; }
 
+        [NameInMap("AssetsTypeList")]
+        [Validation(Required=false)]
+        public List<string> AssetsTypeList { get; set; }
+
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }

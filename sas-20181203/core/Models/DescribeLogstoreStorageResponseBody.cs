@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? Used { get; set; }
 
+        [NameInMap("UserProject")]
+        [Validation(Required=false)]
+        public string UserProject { get; set; }
+
     }
 
 }
