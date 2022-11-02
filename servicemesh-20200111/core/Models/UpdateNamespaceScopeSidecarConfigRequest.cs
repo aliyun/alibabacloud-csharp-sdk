@@ -109,6 +109,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string TerminationDrainDuration { get; set; }
 
+        [NameInMap("Tracing")]
+        [Validation(Required=false)]
+        public string Tracing { get; set; }
+
     }
 
 }

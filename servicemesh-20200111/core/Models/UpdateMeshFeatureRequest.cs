@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string CniExcludeNamespaces { get; set; }
 
+        [NameInMap("Concurrency")]
+        [Validation(Required=false)]
+        public int? Concurrency { get; set; }
+
         [NameInMap("ConfigSourceEnabled")]
         [Validation(Required=false)]
         public bool? ConfigSourceEnabled { get; set; }
@@ -141,6 +145,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public bool? GlobalRateLimitEnabled { get; set; }
 
+        [NameInMap("HoldApplicationUntilProxyStarts")]
+        [Validation(Required=false)]
+        public bool? HoldApplicationUntilProxyStarts { get; set; }
+
         [NameInMap("Http10Enabled")]
         [Validation(Required=false)]
         public bool? Http10Enabled { get; set; }
@@ -152,6 +160,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [NameInMap("IncludeInboundPorts")]
         [Validation(Required=false)]
         public string IncludeInboundPorts { get; set; }
+
+        [NameInMap("IncludeOutboundPorts")]
+        [Validation(Required=false)]
+        public string IncludeOutboundPorts { get; set; }
 
         [NameInMap("IntegrateKiali")]
         [Validation(Required=false)]
@@ -172,6 +184,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [NameInMap("LocalityLoadBalancing")]
         [Validation(Required=false)]
         public bool? LocalityLoadBalancing { get; set; }
+
+        [NameInMap("LogLevel")]
+        [Validation(Required=false)]
+        public string LogLevel { get; set; }
 
         [NameInMap("MSEEnabled")]
         [Validation(Required=false)]
@@ -285,6 +301,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string ProxyRequestMemory { get; set; }
 
+        [NameInMap("ProxyStatsMatcher")]
+        [Validation(Required=false)]
+        public string ProxyStatsMatcher { get; set; }
+
         [NameInMap("RedisFilterEnabled")]
         [Validation(Required=false)]
         public bool? RedisFilterEnabled { get; set; }
@@ -324,6 +344,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [NameInMap("ThriftFilterEnabled")]
         [Validation(Required=false)]
         public bool? ThriftFilterEnabled { get; set; }
+
+        [NameInMap("TraceCustomTags")]
+        [Validation(Required=false)]
+        public string TraceCustomTags { get; set; }
+
+        [NameInMap("TraceMaxPathTagLength")]
+        [Validation(Required=false)]
+        public string TraceMaxPathTagLength { get; set; }
 
         [NameInMap("TraceSampling")]
         [Validation(Required=false)]

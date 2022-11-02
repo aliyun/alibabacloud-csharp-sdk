@@ -135,6 +135,24 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [Validation(Required=false)]
             public string TerminationDrainDuration { get; set; }
 
+            [NameInMap("Tracing")]
+            [Validation(Required=false)]
+            public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesTracing Tracing { get; set; }
+            public class DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesTracing : TeaModel {
+                [NameInMap("CustomTags")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> CustomTags { get; set; }
+
+                [NameInMap("MaxPathTagLength")]
+                [Validation(Required=false)]
+                public int? MaxPathTagLength { get; set; }
+
+                [NameInMap("Sampling")]
+                [Validation(Required=false)]
+                public double? Sampling { get; set; }
+
+            }
+
         }
 
         [NameInMap("RequestId")]
