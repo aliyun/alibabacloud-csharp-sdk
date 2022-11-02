@@ -57,10 +57,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("MessageType")]
-        [Validation(Required=false)]
-        public string MessageType { get; set; }
-
         [NameInMap("Proto")]
         [Validation(Required=false)]
         public string Proto { get; set; }
