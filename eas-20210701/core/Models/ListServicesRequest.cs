@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string Filter { get; set; }
 
+        [NameInMap("GroupName")]
+        [Validation(Required=false)]
+        public string GroupName { get; set; }
+
         [NameInMap("Order")]
         [Validation(Required=false)]
         public string Order { get; set; }

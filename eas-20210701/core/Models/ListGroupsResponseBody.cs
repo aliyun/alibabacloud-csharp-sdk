@@ -8,22 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
-    public class CreateBenchmarkTaskResponseBody : TeaModel {
-        [NameInMap("Message")]
+    public class ListGroupsResponseBody : TeaModel {
+        [NameInMap("Groups")]
         [Validation(Required=false)]
-        public string Message { get; set; }
+        public List<Group> Groups { get; set; }
 
-        [NameInMap("Region")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string Region { get; set; }
+        public long? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("TaskName")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public string TaskName { get; set; }
+        public long? TotalCount { get; set; }
 
     }
 

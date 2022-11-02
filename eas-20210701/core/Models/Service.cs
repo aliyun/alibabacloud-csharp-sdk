@@ -93,6 +93,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string ResourceAlias { get; set; }
 
+        [NameInMap("Role")]
+        [Validation(Required=false)]
+        public string Role { get; set; }
+
+        [NameInMap("RoleAttrs")]
+        [Validation(Required=false)]
+        public string RoleAttrs { get; set; }
+
         [NameInMap("RunningInstance")]
         [Validation(Required=false)]
         public int? RunningInstance { get; set; }

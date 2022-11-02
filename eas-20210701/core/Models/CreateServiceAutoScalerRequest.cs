@@ -17,17 +17,23 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public int? Min { get; set; }
 
-        [NameInMap("strategies")]
+        [NameInMap("scaleStrategies")]
         [Validation(Required=false)]
-        public CreateServiceAutoScalerRequestStrategies Strategies { get; set; }
-        public class CreateServiceAutoScalerRequestStrategies : TeaModel {
-            [NameInMap("cpu")]
+        public List<CreateServiceAutoScalerRequestScaleStrategies> ScaleStrategies { get; set; }
+        public class CreateServiceAutoScalerRequestScaleStrategies : TeaModel {
+            [NameInMap("metricName")]
             [Validation(Required=false)]
-            public float? Cpu { get; set; }
-            [NameInMap("qps")]
+            public string MetricName { get; set; }
+
+            [NameInMap("service")]
             [Validation(Required=false)]
-            public float? Qps { get; set; }
-        };
+            public string Service { get; set; }
+
+            [NameInMap("threshold")]
+            [Validation(Required=false)]
+            public float? Threshold { get; set; }
+
+        }
 
     }
 

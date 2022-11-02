@@ -13,9 +13,23 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Behavior { get; set; }
 
-        [NameInMap("CurrentValues")]
+        [NameInMap("CurrentMetrics")]
         [Validation(Required=false)]
-        public Dictionary<string, object> CurrentValues { get; set; }
+        public List<DescribeServiceAutoScalerResponseBodyCurrentMetrics> CurrentMetrics { get; set; }
+        public class DescribeServiceAutoScalerResponseBodyCurrentMetrics : TeaModel {
+            [NameInMap("metricName")]
+            [Validation(Required=false)]
+            public string MetricName { get; set; }
+
+            [NameInMap("service")]
+            [Validation(Required=false)]
+            public string Service { get; set; }
+
+            [NameInMap("value")]
+            [Validation(Required=false)]
+            public float? Value { get; set; }
+
+        }
 
         [NameInMap("MaxReplica")]
         [Validation(Required=false)]
@@ -29,13 +43,27 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("ScaleStrategies")]
+        [Validation(Required=false)]
+        public List<DescribeServiceAutoScalerResponseBodyScaleStrategies> ScaleStrategies { get; set; }
+        public class DescribeServiceAutoScalerResponseBodyScaleStrategies : TeaModel {
+            [NameInMap("metricName")]
+            [Validation(Required=false)]
+            public string MetricName { get; set; }
+
+            [NameInMap("service")]
+            [Validation(Required=false)]
+            public string Service { get; set; }
+
+            [NameInMap("threshold")]
+            [Validation(Required=false)]
+            public float? Threshold { get; set; }
+
+        }
+
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }
-
-        [NameInMap("Strategies")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> Strategies { get; set; }
 
     }
 

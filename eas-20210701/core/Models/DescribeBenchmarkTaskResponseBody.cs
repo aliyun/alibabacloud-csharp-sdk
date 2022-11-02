@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public long? DesiredAgent { get; set; }
 
+        [NameInMap("Endpoint")]
+        [Validation(Required=false)]
+        public string Endpoint { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }

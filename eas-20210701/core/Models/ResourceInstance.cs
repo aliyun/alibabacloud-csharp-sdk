@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ResourceInstance : TeaModel {
+        [NameInMap("Arch")]
+        [Validation(Required=false)]
+        public string Arch { get; set; }
+
         [NameInMap("AutoRenewal")]
         [Validation(Required=false)]
         public bool? AutoRenewal { get; set; }
@@ -32,6 +36,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("InstanceGpuCount")]
         [Validation(Required=false)]
         public int? InstanceGpuCount { get; set; }
+
+        [NameInMap("InstanceGpuMemory")]
+        [Validation(Required=false)]
+        public string InstanceGpuMemory { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -68,6 +76,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("InstanceUsedMemory")]
         [Validation(Required=false)]
         public string InstanceUsedMemory { get; set; }
+
+        [NameInMap("Region")]
+        [Validation(Required=false)]
+        public string Region { get; set; }
+
+        [NameInMap("Zone")]
+        [Validation(Required=false)]
+        public string Zone { get; set; }
 
     }
 
