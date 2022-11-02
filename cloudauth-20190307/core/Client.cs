@@ -1585,6 +1585,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             {
                 query["UserId"] = request.UserId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoluntaryCustomizedContent))
+            {
+                query["VoluntaryCustomizedContent"] = request.VoluntaryCustomizedContent;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthId))
             {
@@ -1701,6 +1705,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
                 query["UserId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoluntaryCustomizedContent))
+            {
+                query["VoluntaryCustomizedContent"] = request.VoluntaryCustomizedContent;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthId))

@@ -101,6 +101,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string UserId { get; set; }
 
+        [NameInMap("VoluntaryCustomizedContent")]
+        [Validation(Required=false)]
+        public string VoluntaryCustomizedContent { get; set; }
+
     }
 
 }
