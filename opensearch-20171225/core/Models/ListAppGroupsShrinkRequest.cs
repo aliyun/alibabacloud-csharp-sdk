@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
-    public class ListAppGroupsRequest : TeaModel {
+    public class ListAppGroupsShrinkRequest : TeaModel {
         [NameInMap("instanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -35,17 +35,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 
         [NameInMap("tags")]
         [Validation(Required=false)]
-        public List<ListAppGroupsRequestTags> Tags { get; set; }
-        public class ListAppGroupsRequestTags : TeaModel {
-            [NameInMap("key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        public string TagsShrink { get; set; }
 
         [NameInMap("type")]
         [Validation(Required=false)]
