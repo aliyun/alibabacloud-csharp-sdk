@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Qssj20220112.Models
 {
     public class GetStyleTopResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -20,6 +17,10 @@ namespace AlibabaCloud.SDK.Qssj20220112.Models
         [Validation(Required=false)]
         public List<GetStyleTopResponseBodyData> Data { get; set; }
         public class GetStyleTopResponseBodyData : TeaModel {
+            [NameInMap("BuyerTags")]
+            [Validation(Required=false)]
+            public string BuyerTags { get; set; }
+
             [NameInMap("CateName")]
             [Validation(Required=false)]
             public string CateName { get; set; }

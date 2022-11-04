@@ -629,6 +629,10 @@ namespace AlibabaCloud.SDK.Qssj20220112
             {
                 body["CateIds"] = request.CateIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
+            {
+                body["PageIndex"] = request.PageIndex;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
             {
                 body["SortOrder"] = request.SortOrder;
@@ -663,6 +667,10 @@ namespace AlibabaCloud.SDK.Qssj20220112
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CateIds))
             {
                 body["CateIds"] = request.CateIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
+            {
+                body["PageIndex"] = request.PageIndex;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
             {
