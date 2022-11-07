@@ -83,6 +83,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public int? Replica { get; set; }
 
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
             [NameInMap("SecurityGroup")]
             [Validation(Required=false)]
             public string SecurityGroup { get; set; }

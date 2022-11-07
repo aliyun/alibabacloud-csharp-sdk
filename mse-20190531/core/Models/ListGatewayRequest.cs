@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
             [NameInMap("Vpc")]
             [Validation(Required=false)]
             public string Vpc { get; set; }

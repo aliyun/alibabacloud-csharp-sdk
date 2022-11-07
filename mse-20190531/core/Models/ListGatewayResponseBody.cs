@@ -165,6 +165,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public int? Replica { get; set; }
 
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
+                public string ResourceGroupId { get; set; }
+
                 [NameInMap("RollBack")]
                 [Validation(Required=false)]
                 public bool? RollBack { get; set; }
