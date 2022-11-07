@@ -1,3 +1,6 @@
+2022-11-07 Version: 1.0.6
+- Release EstimateMonocularVideoDepth.
+
 2022-10-17 Version: 1.0.5
 - Release EstimateMonocularVideoDepth.
 
