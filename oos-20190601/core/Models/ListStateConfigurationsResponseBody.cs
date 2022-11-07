@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListStateConfigurationsResponseBody : TeaModel {
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

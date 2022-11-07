@@ -8,18 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
-    public class ValidateTemplateContentRequest : TeaModel {
-        [NameInMap("Content")]
+    public class GetOpsItemRequest : TeaModel {
+        [NameInMap("OpsItemId")]
         [Validation(Required=false)]
-        public string Content { get; set; }
+        public string OpsItemId { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        [NameInMap("TemplateURL")]
-        [Validation(Required=false)]
-        public string TemplateURL { get; set; }
 
     }
 

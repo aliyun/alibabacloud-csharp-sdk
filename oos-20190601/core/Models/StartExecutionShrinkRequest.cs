@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string TemplateName { get; set; }
 
+        [NameInMap("TemplateURL")]
+        [Validation(Required=false)]
+        public string TemplateURL { get; set; }
+
         [NameInMap("TemplateVersion")]
         [Validation(Required=false)]
         public string TemplateVersion { get; set; }

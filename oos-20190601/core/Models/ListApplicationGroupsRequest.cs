@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
+        [NameInMap("ResourceProduct")]
+        [Validation(Required=false)]
+        public string ResourceProduct { get; set; }
+
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
