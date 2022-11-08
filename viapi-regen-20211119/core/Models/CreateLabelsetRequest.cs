@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
         [Validation(Required=false)]
         public string ObjectKey { get; set; }
 
+        [NameInMap("PreLabelId")]
+        [Validation(Required=false)]
+        public long? PreLabelId { get; set; }
+
         [NameInMap("TagSettings")]
         [Validation(Required=false)]
         public string TagSettings { get; set; }

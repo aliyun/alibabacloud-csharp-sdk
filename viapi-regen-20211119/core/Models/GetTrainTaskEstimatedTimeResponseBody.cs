@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
             [NameInMap("EstimatedTime")]
             [Validation(Required=false)]
             public string EstimatedTime { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

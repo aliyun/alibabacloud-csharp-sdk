@@ -8,18 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
 {
-    public class CustomizeClassifyImageResponseBody : TeaModel {
+    public class ExportDataReflowDataListResponseBody : TeaModel {
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public CustomizeClassifyImageResponseBodyData Data { get; set; }
-        public class CustomizeClassifyImageResponseBodyData : TeaModel {
-            [NameInMap("Category")]
+        public ExportDataReflowDataListResponseBodyData Data { get; set; }
+        public class ExportDataReflowDataListResponseBodyData : TeaModel {
+            [NameInMap("OssHttpUrl")]
             [Validation(Required=false)]
-            public string Category { get; set; }
-
-            [NameInMap("Score")]
-            [Validation(Required=false)]
-            public float? Score { get; set; }
+            public string OssHttpUrl { get; set; }
 
         }
 

@@ -8,30 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
 {
-    public class DeleteWorkspaceResponseBody : TeaModel {
+    public class DeleteDataReflowDataResponseBody : TeaModel {
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public DeleteWorkspaceResponseBodyData Data { get; set; }
-        public class DeleteWorkspaceResponseBodyData : TeaModel {
-            [NameInMap("Description")]
+        public DeleteDataReflowDataResponseBodyData Data { get; set; }
+        public class DeleteDataReflowDataResponseBodyData : TeaModel {
+            [NameInMap("GmtModified")]
             [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("GmtCreate")]
-            [Validation(Required=false)]
-            public long? GmtCreate { get; set; }
+            public long? GmtModified { get; set; }
 
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
-            [NameInMap("Name")]
+            [NameInMap("ServiceId")]
             [Validation(Required=false)]
-            public string Name { get; set; }
+            public long? ServiceId { get; set; }
 
-            [NameInMap("Type")]
+            [NameInMap("Status")]
             [Validation(Required=false)]
-            public string Type { get; set; }
+            public string Status { get; set; }
 
         }
 

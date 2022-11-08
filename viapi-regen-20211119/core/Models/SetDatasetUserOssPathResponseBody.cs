@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
+
             [NameInMap("OssUrl")]
             [Validation(Required=false)]
             public string OssUrl { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

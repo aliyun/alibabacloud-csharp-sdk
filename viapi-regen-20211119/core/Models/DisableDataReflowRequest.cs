@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
 {
-    public class CustomizeDetectImageAdvanceRequest : TeaModel {
-        [NameInMap("ImageUrl")]
-        [Validation(Required=false)]
-        public Stream ImageUrlObject { get; set; }
-
+    public class DisableDataReflowRequest : TeaModel {
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
-        public string ServiceId { get; set; }
+        public long? ServiceId { get; set; }
 
     }
 

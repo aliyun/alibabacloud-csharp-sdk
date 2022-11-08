@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
         [Validation(Required=false)]
         public long? CurrentPage { get; set; }
 
+        [NameInMap("IsAbandon")]
+        [Validation(Required=false)]
+        public bool? IsAbandon { get; set; }
+
         [NameInMap("LabelId")]
         [Validation(Required=false)]
         public long? LabelId { get; set; }

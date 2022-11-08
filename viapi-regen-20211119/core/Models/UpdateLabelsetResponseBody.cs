@@ -16,16 +16,20 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
             [NameInMap("Description")]
             [Validation(Required=false)]
             public long? Description { get; set; }
+
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public long? GmtCreate { get; set; }
+
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public long? Name { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

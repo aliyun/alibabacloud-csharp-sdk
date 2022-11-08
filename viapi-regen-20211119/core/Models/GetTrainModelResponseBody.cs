@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
             [NameInMap("SimpleEvaluate")]
             [Validation(Required=false)]
             public long? SimpleEvaluate { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

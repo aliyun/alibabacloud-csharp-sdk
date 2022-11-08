@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
             [NameInMap("DiffCount")]
             [Validation(Required=false)]
             public long? DiffCount { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -8,11 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
 {
-    public class ListTrainTasksResponseBody : TeaModel {
+    public class ListDataReflowDatasResponseBody : TeaModel {
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public ListTrainTasksResponseBodyData Data { get; set; }
-        public class ListTrainTasksResponseBodyData : TeaModel {
+        public ListDataReflowDatasResponseBodyData Data { get; set; }
+        public class ListDataReflowDatasResponseBodyData : TeaModel {
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public long? CurrentPage { get; set; }

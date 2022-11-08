@@ -13,21 +13,25 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
         [Validation(Required=false)]
         public string AdvancedParameters { get; set; }
 
-        [NameInMap("DatasetId")]
+        [NameInMap("DatasetIds")]
         [Validation(Required=false)]
-        public long? DatasetId { get; set; }
+        public string DatasetIds { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("LabelId")]
+        [NameInMap("LabelIds")]
         [Validation(Required=false)]
-        public long? LabelId { get; set; }
+        public string LabelIds { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("PreTrainTaskId")]
+        [Validation(Required=false)]
+        public long? PreTrainTaskId { get; set; }
 
         [NameInMap("TrainMode")]
         [Validation(Required=false)]

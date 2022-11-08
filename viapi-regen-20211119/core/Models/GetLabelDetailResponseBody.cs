@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
             [NameInMap("LabelInfo")]
             [Validation(Required=false)]
             public string LabelInfo { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

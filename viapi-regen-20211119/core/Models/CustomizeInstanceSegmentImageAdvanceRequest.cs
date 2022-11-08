@@ -9,8 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
 {
     public class CustomizeInstanceSegmentImageAdvanceRequest : TeaModel {
-        [NameInMap("ImageUrlObject")]
-        [Validation(Required=true)]
+        [NameInMap("ImageUrl")]
+        [Validation(Required=false)]
         public Stream ImageUrlObject { get; set; }
 
         [NameInMap("ServiceId")]

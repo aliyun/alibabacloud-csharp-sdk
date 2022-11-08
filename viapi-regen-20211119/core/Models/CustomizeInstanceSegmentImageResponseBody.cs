@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
             [Validation(Required=false)]
             public List<CustomizeInstanceSegmentImageResponseBodyDataElements> Elements { get; set; }
             public class CustomizeInstanceSegmentImageResponseBodyDataElements : TeaModel {
+                [NameInMap("Boxes")]
+                [Validation(Required=false)]
                 public CustomizeInstanceSegmentImageResponseBodyDataElementsBoxes Boxes { get; set; }
                 public class CustomizeInstanceSegmentImageResponseBodyDataElementsBoxes : TeaModel {
                     [NameInMap("Height")]
@@ -36,12 +38,27 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
                     public int? Y { get; set; }
 
                 }
+
+                [NameInMap("Category")]
+                [Validation(Required=false)]
                 public string Category { get; set; }
+
+                [NameInMap("Contours")]
+                [Validation(Required=false)]
                 public List<CustomizeInstanceSegmentImageResponseBodyDataElementsContours> Contours { get; set; }
                 public class CustomizeInstanceSegmentImageResponseBodyDataElementsContours : TeaModel {
+                    [NameInMap("X")]
+                    [Validation(Required=false)]
                     public int? X { get; set; }
+
+                    [NameInMap("Y")]
+                    [Validation(Required=false)]
                     public int? Y { get; set; }
+
                 }
+
+                [NameInMap("Mask")]
+                [Validation(Required=false)]
                 public CustomizeInstanceSegmentImageResponseBodyDataElementsMask Mask { get; set; }
                 public class CustomizeInstanceSegmentImageResponseBodyDataElementsMask : TeaModel {
                     [NameInMap("Counts")]
@@ -53,9 +70,14 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
                     public List<int?> Sizes { get; set; }
 
                 }
+
+                [NameInMap("Score")]
+                [Validation(Required=false)]
                 public float? Score { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
 {
-    public class DebugServiceResponseBody : TeaModel {
-        [NameInMap("Data")]
+    public class DeleteDataReflowDataRequest : TeaModel {
+        [NameInMap("Id")]
         [Validation(Required=false)]
-        public string Data { get; set; }
+        public long? Id { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("ServiceId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public long? ServiceId { get; set; }
 
     }
 

@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
             [Validation(Required=false)]
             public List<CustomizeDetectImageResponseBodyDataElements> Elements { get; set; }
             public class CustomizeDetectImageResponseBodyDataElements : TeaModel {
+                [NameInMap("Boxes")]
+                [Validation(Required=false)]
                 public CustomizeDetectImageResponseBodyDataElementsBoxes Boxes { get; set; }
                 public class CustomizeDetectImageResponseBodyDataElementsBoxes : TeaModel {
                     [NameInMap("Height")]
@@ -36,10 +38,18 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
                     public float? Y { get; set; }
 
                 }
+
+                [NameInMap("Category")]
+                [Validation(Required=false)]
                 public string Category { get; set; }
+
+                [NameInMap("Score")]
+                [Validation(Required=false)]
                 public float? Score { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

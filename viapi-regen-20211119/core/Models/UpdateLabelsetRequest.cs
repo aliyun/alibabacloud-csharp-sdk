@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
         [Validation(Required=false)]
         public string ObjectKey { get; set; }
 
+        [NameInMap("TagUserList")]
+        [Validation(Required=false)]
+        public string TagUserList { get; set; }
+
         [NameInMap("UserOssUrl")]
         [Validation(Required=false)]
         public string UserOssUrl { get; set; }

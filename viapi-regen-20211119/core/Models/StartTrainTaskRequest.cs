@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
         [Validation(Required=false)]
         public long? Id { get; set; }
 
+        [NameInMap("RelyOnTaskId")]
+        [Validation(Required=false)]
+        public long? RelyOnTaskId { get; set; }
+
     }
 
 }

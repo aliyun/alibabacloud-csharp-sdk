@@ -16,19 +16,24 @@ namespace AlibabaCloud.SDK.Viapi_regen20211119.Models
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public long? CurrentPage { get; set; }
+
             [NameInMap("Elements")]
             [Validation(Required=false)]
             public List<Dictionary<string, object>> Elements { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public long? PageSize { get; set; }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public long? TotalCount { get; set; }
+
             [NameInMap("TotalPage")]
             [Validation(Required=false)]
             public long? TotalPage { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
