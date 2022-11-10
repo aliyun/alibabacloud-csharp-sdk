@@ -20,13 +20,16 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [NameInMap("AccessToken")]
             [Validation(Required=false)]
             public string AccessToken { get; set; }
+
             [NameInMap("AccessTokenExpiredTime")]
             [Validation(Required=false)]
             public long? AccessTokenExpiredTime { get; set; }
+
             [NameInMap("RefreshToken")]
             [Validation(Required=false)]
             public string RefreshToken { get; set; }
-        };
+
+        }
 
     }
 

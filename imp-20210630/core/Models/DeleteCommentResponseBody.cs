@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [NameInMap("DeleteResult")]
             [Validation(Required=false)]
             public bool? DeleteResult { get; set; }
-        };
+
+        }
 
     }
 

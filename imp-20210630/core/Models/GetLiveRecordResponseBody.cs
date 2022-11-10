@@ -19,8 +19,9 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public class GetLiveRecordResponseBodyResult : TeaModel {
             [NameInMap("PlaybackUrlMap")]
             [Validation(Required=false)]
-            public Dictionary<string, string> PlaybackUrlMap { get; set; }
-        };
+            public Dictionary<string, List<string>> PlaybackUrlMap { get; set; }
+
+        }
 
     }
 

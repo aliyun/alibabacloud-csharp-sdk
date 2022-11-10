@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [NameInMap("RoomId")]
             [Validation(Required=false)]
             public string RoomId { get; set; }
-        };
+
+        }
 
     }
 

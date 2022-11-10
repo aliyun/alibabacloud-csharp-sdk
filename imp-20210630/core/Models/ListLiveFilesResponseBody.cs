@@ -21,10 +21,17 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [Validation(Required=false)]
             public List<ListLiveFilesResponseBodyResultFileList> FileList { get; set; }
             public class ListLiveFilesResponseBodyResultFileList : TeaModel {
+                [NameInMap("FileName")]
+                [Validation(Required=false)]
                 public string FileName { get; set; }
+
+                [NameInMap("Url")]
+                [Validation(Required=false)]
                 public string Url { get; set; }
+
             }
-        };
+
+        }
 
     }
 

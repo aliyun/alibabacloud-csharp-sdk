@@ -46,7 +46,8 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
                 public string SenderNick { get; set; }
 
             }
-        };
+
+        }
 
     }
 

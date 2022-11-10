@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
+
             [NameInMap("WordList")]
             [Validation(Required=false)]
             public List<string> WordList { get; set; }
-        };
+
+        }
 
     }
 

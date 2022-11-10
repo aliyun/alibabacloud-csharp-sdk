@@ -20,21 +20,34 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [NameInMap("HasMore")]
             [Validation(Required=false)]
             public bool? HasMore { get; set; }
+
             [NameInMap("PageTotal")]
             [Validation(Required=false)]
             public int? PageTotal { get; set; }
+
             [NameInMap("RoomUserList")]
             [Validation(Required=false)]
             public List<ListRoomUsersResponseBodyResultRoomUserList> RoomUserList { get; set; }
             public class ListRoomUsersResponseBodyResultRoomUserList : TeaModel {
+                [NameInMap("Extension")]
+                [Validation(Required=false)]
                 public Dictionary<string, string> Extension { get; set; }
+
+                [NameInMap("Nick")]
+                [Validation(Required=false)]
                 public string Nick { get; set; }
+
+                [NameInMap("UserId")]
+                [Validation(Required=false)]
                 public string UserId { get; set; }
+
             }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-        };
+
+        }
 
     }
 

@@ -92,7 +92,8 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
                 public long? Uv { get; set; }
 
             }
-        };
+
+        }
 
     }
 

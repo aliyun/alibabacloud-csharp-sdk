@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [NameInMap("StandardRoomJumpUrl")]
             [Validation(Required=false)]
             public string StandardRoomJumpUrl { get; set; }
-        };
+
+        }
 
     }
 

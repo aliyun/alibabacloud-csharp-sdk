@@ -20,13 +20,16 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [NameInMap("LiveId")]
             [Validation(Required=false)]
             public string LiveId { get; set; }
+
             [NameInMap("LiveUrl")]
             [Validation(Required=false)]
             public string LiveUrl { get; set; }
+
             [NameInMap("PushUrl")]
             [Validation(Required=false)]
             public string PushUrl { get; set; }
-        };
+
+        }
 
     }
 

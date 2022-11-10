@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [NameInMap("SliceRecordUrl")]
             [Validation(Required=false)]
             public string SliceRecordUrl { get; set; }
-        };
+
+        }
 
     }
 

@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [NameInMap("Success")]
             [Validation(Required=false)]
             public bool? Success { get; set; }
-        };
+
+        }
 
     }
 

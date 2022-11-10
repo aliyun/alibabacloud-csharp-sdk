@@ -20,25 +20,42 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [NameInMap("HasMore")]
             [Validation(Required=false)]
             public bool? HasMore { get; set; }
+
             [NameInMap("LiveId")]
             [Validation(Required=false)]
             public string LiveId { get; set; }
+
             [NameInMap("PageTotal")]
             [Validation(Required=false)]
             public int? PageTotal { get; set; }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
+
             [NameInMap("UserStatisticsList")]
             [Validation(Required=false)]
             public List<GetLiveRoomUserStatisticsResponseBodyResultUserStatisticsList> UserStatisticsList { get; set; }
             public class GetLiveRoomUserStatisticsResponseBodyResultUserStatisticsList : TeaModel {
+                [NameInMap("CommentCount")]
+                [Validation(Required=false)]
                 public int? CommentCount { get; set; }
+
+                [NameInMap("LikeCount")]
+                [Validation(Required=false)]
                 public int? LikeCount { get; set; }
+
+                [NameInMap("UserId")]
+                [Validation(Required=false)]
                 public string UserId { get; set; }
+
+                [NameInMap("WatchLiveTime")]
+                [Validation(Required=false)]
                 public long? WatchLiveTime { get; set; }
+
             }
-        };
+
+        }
 
     }
 
