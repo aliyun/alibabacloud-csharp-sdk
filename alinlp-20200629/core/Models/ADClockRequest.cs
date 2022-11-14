@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -8,18 +11,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alinlp20200629.Models
 {
-    public class GetKeywordChEcomRequest : TeaModel {
-        [NameInMap("ApiVersion")]
+    public class ADClockRequest : TeaModel {
+        [NameInMap("Params")]
         [Validation(Required=false)]
-        public string ApiVersion { get; set; }
+        public string Params { get; set; }
 
         [NameInMap("ServiceCode")]
         [Validation(Required=false)]
         public string ServiceCode { get; set; }
-
-        [NameInMap("Text")]
-        [Validation(Required=false)]
-        public string Text { get; set; }
 
     }
 
