@@ -12,25 +12,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Nlp_automl20191111.Models
 {
     public class CreateAsyncPredictRequest : TeaModel {
-        [NameInMap("ModelId")]
-        [Validation(Required=false)]
-        public int? ModelId { get; set; }
-
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
-
-        [NameInMap("ModelVersion")]
-        [Validation(Required=false)]
-        public string ModelVersion { get; set; }
 
         [NameInMap("DetailTag")]
         [Validation(Required=false)]
         public string DetailTag { get; set; }
 
-        [NameInMap("TopK")]
+        [NameInMap("FetchContent")]
         [Validation(Required=false)]
-        public int? TopK { get; set; }
+        public string FetchContent { get; set; }
+
+        [NameInMap("FileContent")]
+        [Validation(Required=false)]
+        public string FileContent { get; set; }
 
         [NameInMap("FileType")]
         [Validation(Required=false)]
@@ -40,17 +36,25 @@ namespace AlibabaCloud.SDK.Nlp_automl20191111.Models
         [Validation(Required=false)]
         public string FileUrl { get; set; }
 
-        [NameInMap("FileContent")]
+        [NameInMap("ModelId")]
         [Validation(Required=false)]
-        public string FileContent { get; set; }
+        public int? ModelId { get; set; }
 
-        [NameInMap("FetchContent")]
+        [NameInMap("ModelVersion")]
         [Validation(Required=false)]
-        public string FetchContent { get; set; }
+        public string ModelVersion { get; set; }
 
-        [NameInMap("Product")]
+        [NameInMap("ServiceName")]
         [Validation(Required=false)]
-        public string Product { get; set; }
+        public string ServiceName { get; set; }
+
+        [NameInMap("ServiceVersion")]
+        [Validation(Required=false)]
+        public string ServiceVersion { get; set; }
+
+        [NameInMap("TopK")]
+        [Validation(Required=false)]
+        public int? TopK { get; set; }
 
     }
 

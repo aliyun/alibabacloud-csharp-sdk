@@ -6,10 +6,10 @@
 
 ## 安装
 
-### Composer
+### Nuget
 
 ```bash
-composer require AlibabaCloud.SDK.Nlp-automl20191111
+dotnet add package AlibabaCloud.SDK.Nlp-automl20191111
 ```
 
 ## 问题

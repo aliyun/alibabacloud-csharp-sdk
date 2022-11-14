@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Nlp_automl20191111.Models
         [Validation(Required=false)]
         public int? AsyncPredictId { get; set; }
 
-        [NameInMap("Product")]
-        [Validation(Required=false)]
-        public string Product { get; set; }
-
     }
 
 }

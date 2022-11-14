@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Nlp_automl20191111.Models
 {
     public class RunPreTrainServiceRequest : TeaModel {
+        [NameInMap("PredictContent")]
+        [Validation(Required=false)]
+        public string PredictContent { get; set; }
+
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }
@@ -16,14 +20,6 @@ namespace AlibabaCloud.SDK.Nlp_automl20191111.Models
         [NameInMap("ServiceVersion")]
         [Validation(Required=false)]
         public string ServiceVersion { get; set; }
-
-        [NameInMap("PredictContent")]
-        [Validation(Required=false)]
-        public string PredictContent { get; set; }
-
-        [NameInMap("Product")]
-        [Validation(Required=false)]
-        public string Product { get; set; }
 
     }
 

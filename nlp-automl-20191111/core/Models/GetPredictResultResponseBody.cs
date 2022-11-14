@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Nlp_automl20191111.Models
 {
     public class GetPredictResultResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 
