@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public bool? IsDefault { get; set; }
 
+            [NameInMap("State")]
+            [Validation(Required=false)]
+            public string State { get; set; }
+
         }
 
         [NameInMap("MaxResults")]

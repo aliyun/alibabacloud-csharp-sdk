@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ReplaceBandwidthPackageRequest : TeaModel {
+        [NameInMap("AcceleratorId")]
+        [Validation(Required=false)]
+        public string AcceleratorId { get; set; }
+
         [NameInMap("BandwidthPackageId")]
         [Validation(Required=false)]
         public string BandwidthPackageId { get; set; }

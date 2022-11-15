@@ -29,6 +29,24 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string AddressIPVersion { get; set; }
 
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<ListAclsResponseBodyAclsTags> Tags { get; set; }
+            public class ListAclsResponseBodyAclsTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
         }
 
         [NameInMap("MaxResults")]

@@ -69,9 +69,27 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("State")]
         [Validation(Required=false)]
         public string State { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<DescribeBandwidthPackageResponseBodyTags> Tags { get; set; }
+        public class DescribeBandwidthPackageResponseBodyTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
         [NameInMap("Type")]
         [Validation(Required=false)]
