@@ -25,22 +25,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string CpuCapacity { get; set; }
 
-            [NameInMap("DiskCapacity")]
-            [Validation(Required=false)]
-            public string DiskCapacity { get; set; }
-
-            [NameInMap("InstanceCount")]
-            [Validation(Required=false)]
-            public string InstanceCount { get; set; }
-
-            [NameInMap("MaxCon")]
-            [Validation(Required=false)]
-            public string MaxCon { get; set; }
-
-            [NameInMap("MaxTps")]
-            [Validation(Required=false)]
-            public string MaxTps { get; set; }
-
             [NameInMap("MemoryCapacity")]
             [Validation(Required=false)]
             public string MemoryCapacity { get; set; }
