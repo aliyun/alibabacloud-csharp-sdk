@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateStoryShrinkRequest : TeaModel {
+        [NameInMap("Address")]
+        [Validation(Required=false)]
+        public string AddressShrink { get; set; }
+
         [NameInMap("CustomId")]
         [Validation(Required=false)]
         public string CustomId { get; set; }

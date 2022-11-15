@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class Story : TeaModel {
+        [NameInMap("Addresses")]
+        [Validation(Required=false)]
+        public List<Address> Addresses { get; set; }
+
         [NameInMap("Cover")]
         [Validation(Required=false)]
         public File Cover { get; set; }
