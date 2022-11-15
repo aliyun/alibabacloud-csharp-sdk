@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Linkcard20210520.Models
 
         [NameInMap("OptMsisdns")]
         [Validation(Required=false)]
-        public Dictionary<string, object> OptMsisdns { get; set; }
+        public List<string> OptMsisdns { get; set; }
 
     }
 

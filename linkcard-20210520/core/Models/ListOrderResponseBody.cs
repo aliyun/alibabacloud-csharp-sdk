@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.Linkcard20210520.Models
                 [Validation(Required=false)]
                 public string AliFee { get; set; }
 
+                [NameInMap("ApnName")]
+                [Validation(Required=false)]
+                public string ApnName { get; set; }
+
+                [NameInMap("ApnRegion")]
+                [Validation(Required=false)]
+                public string ApnRegion { get; set; }
+
                 [NameInMap("BillingCycle")]
                 [Validation(Required=false)]
                 public string BillingCycle { get; set; }
@@ -126,6 +134,10 @@ namespace AlibabaCloud.SDK.Linkcard20210520.Models
                 [NameInMap("PoolNo")]
                 [Validation(Required=false)]
                 public string PoolNo { get; set; }
+
+                [NameInMap("ResourceQuantity")]
+                [Validation(Required=false)]
+                public long? ResourceQuantity { get; set; }
 
                 [NameInMap("Vendor")]
                 [Validation(Required=false)]
