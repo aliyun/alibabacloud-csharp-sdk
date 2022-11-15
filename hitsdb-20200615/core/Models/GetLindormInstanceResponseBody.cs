@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public long? AliUid { get; set; }
 
+        [NameInMap("ArbiterVSwitchId")]
+        [Validation(Required=false)]
+        public string ArbiterVSwitchId { get; set; }
+
+        [NameInMap("ArbiterZoneId")]
+        [Validation(Required=false)]
+        public string ArbiterZoneId { get; set; }
+
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
@@ -20,6 +28,22 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [NameInMap("ColdStorage")]
         [Validation(Required=false)]
         public int? ColdStorage { get; set; }
+
+        [NameInMap("CoreDiskCategory")]
+        [Validation(Required=false)]
+        public string CoreDiskCategory { get; set; }
+
+        [NameInMap("CoreNum")]
+        [Validation(Required=false)]
+        public int? CoreNum { get; set; }
+
+        [NameInMap("CoreSingleStorage")]
+        [Validation(Required=false)]
+        public int? CoreSingleStorage { get; set; }
+
+        [NameInMap("CoreSpec")]
+        [Validation(Required=false)]
+        public string CoreSpec { get; set; }
 
         [NameInMap("CreateMilliseconds")]
         [Validation(Required=false)]
@@ -131,6 +155,22 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public string InstanceStorage { get; set; }
 
+        [NameInMap("LogDiskCategory")]
+        [Validation(Required=false)]
+        public string LogDiskCategory { get; set; }
+
+        [NameInMap("LogNum")]
+        [Validation(Required=false)]
+        public int? LogNum { get; set; }
+
+        [NameInMap("LogSingleStorage")]
+        [Validation(Required=false)]
+        public int? LogSingleStorage { get; set; }
+
+        [NameInMap("LogSpec")]
+        [Validation(Required=false)]
+        public string LogSpec { get; set; }
+
         [NameInMap("MaintainEndTime")]
         [Validation(Required=false)]
         public string MaintainEndTime { get; set; }
@@ -139,6 +179,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public string MaintainStartTime { get; set; }
 
+        [NameInMap("MultiZoneCombination")]
+        [Validation(Required=false)]
+        public string MultiZoneCombination { get; set; }
+
         [NameInMap("NetworkType")]
         [Validation(Required=false)]
         public string NetworkType { get; set; }
@@ -146,6 +190,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [NameInMap("PayType")]
         [Validation(Required=false)]
         public string PayType { get; set; }
+
+        [NameInMap("PrimaryVSwitchId")]
+        [Validation(Required=false)]
+        public string PrimaryVSwitchId { get; set; }
+
+        [NameInMap("PrimaryZoneId")]
+        [Validation(Required=false)]
+        public string PrimaryZoneId { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -162,6 +214,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [NameInMap("ServiceType")]
         [Validation(Required=false)]
         public string ServiceType { get; set; }
+
+        [NameInMap("StandbyVSwitchId")]
+        [Validation(Required=false)]
+        public string StandbyVSwitchId { get; set; }
+
+        [NameInMap("StandbyZoneId")]
+        [Validation(Required=false)]
+        public string StandbyZoneId { get; set; }
 
         [NameInMap("VpcId")]
         [Validation(Required=false)]

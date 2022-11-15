@@ -17,13 +17,9 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public int? ColdStorage { get; set; }
 
-        [NameInMap("CoreNum")]
+        [NameInMap("CoreSingleStorage")]
         [Validation(Required=false)]
-        public int? CoreNum { get; set; }
-
-        [NameInMap("CoreSpec")]
-        [Validation(Required=false)]
-        public string CoreSpec { get; set; }
+        public int? CoreSingleStorage { get; set; }
 
         [NameInMap("FilestoreNum")]
         [Validation(Required=false)]
@@ -44,6 +40,18 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [NameInMap("LindormSpec")]
         [Validation(Required=false)]
         public string LindormSpec { get; set; }
+
+        [NameInMap("LogNum")]
+        [Validation(Required=false)]
+        public int? LogNum { get; set; }
+
+        [NameInMap("LogSingleStorage")]
+        [Validation(Required=false)]
+        public int? LogSingleStorage { get; set; }
+
+        [NameInMap("LogSpec")]
+        [Validation(Required=false)]
+        public string LogSpec { get; set; }
 
         [NameInMap("LtsCoreNum")]
         [Validation(Required=false)]

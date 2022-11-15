@@ -12,9 +12,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class CreateLindormInstanceRequest : TeaModel {
+        [NameInMap("ArbiterVSwitchId")]
+        [Validation(Required=false)]
+        public string ArbiterVSwitchId { get; set; }
+
+        [NameInMap("ArbiterZoneId")]
+        [Validation(Required=false)]
+        public string ArbiterZoneId { get; set; }
+
+        [NameInMap("ArchVersion")]
+        [Validation(Required=false)]
+        public string ArchVersion { get; set; }
+
         [NameInMap("ColdStorage")]
         [Validation(Required=false)]
         public int? ColdStorage { get; set; }
+
+        [NameInMap("CoreSingleStorage")]
+        [Validation(Required=false)]
+        public int? CoreSingleStorage { get; set; }
 
         [NameInMap("CoreSpec")]
         [Validation(Required=false)]
@@ -52,6 +68,26 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public string LindormSpec { get; set; }
 
+        [NameInMap("LogDiskCategory")]
+        [Validation(Required=false)]
+        public string LogDiskCategory { get; set; }
+
+        [NameInMap("LogNum")]
+        [Validation(Required=false)]
+        public int? LogNum { get; set; }
+
+        [NameInMap("LogSingleStorage")]
+        [Validation(Required=false)]
+        public int? LogSingleStorage { get; set; }
+
+        [NameInMap("LogSpec")]
+        [Validation(Required=false)]
+        public string LogSpec { get; set; }
+
+        [NameInMap("MultiZoneCombination")]
+        [Validation(Required=false)]
+        public string MultiZoneCombination { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -67,6 +103,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [NameInMap("PricingCycle")]
         [Validation(Required=false)]
         public string PricingCycle { get; set; }
+
+        [NameInMap("PrimaryVSwitchId")]
+        [Validation(Required=false)]
+        public string PrimaryVSwitchId { get; set; }
+
+        [NameInMap("PrimaryZoneId")]
+        [Validation(Required=false)]
+        public string PrimaryZoneId { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -95,6 +139,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [NameInMap("SolrSpec")]
         [Validation(Required=false)]
         public string SolrSpec { get; set; }
+
+        [NameInMap("StandbyVSwitchId")]
+        [Validation(Required=false)]
+        public string StandbyVSwitchId { get; set; }
+
+        [NameInMap("StandbyZoneId")]
+        [Validation(Required=false)]
+        public string StandbyZoneId { get; set; }
 
         [NameInMap("TsdbNum")]
         [Validation(Required=false)]
