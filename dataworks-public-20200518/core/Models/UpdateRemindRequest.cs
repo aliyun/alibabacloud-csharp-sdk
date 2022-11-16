@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public bool? UseFlag { get; set; }
 
+        [NameInMap("Webhooks")]
+        [Validation(Required=false)]
+        public string Webhooks { get; set; }
+
     }
 
 }

@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public int? DevelopmentType { get; set; }
 
+            [NameInMap("DisableDevelopment")]
+            [Validation(Required=false)]
+            public bool? DisableDevelopment { get; set; }
+
             [NameInMap("EnvTypes")]
             [Validation(Required=false)]
             public List<string> EnvTypes { get; set; }
@@ -36,6 +40,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("IsAllowDownload")]
             [Validation(Required=false)]
             public int? IsAllowDownload { get; set; }
+
+            [NameInMap("IsDefault")]
+            [Validation(Required=false)]
+            public int? IsDefault { get; set; }
 
             [NameInMap("ProjectDescription")]
             [Validation(Required=false)]
@@ -69,6 +77,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public string ResidentArea { get; set; }
 
+            [NameInMap("ResourceManagerResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceManagerResourceGroupId { get; set; }
+
             [NameInMap("SchedulerMaxRetryTimes")]
             [Validation(Required=false)]
             public int? SchedulerMaxRetryTimes { get; set; }
@@ -81,9 +93,31 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public int? Status { get; set; }
 
+            [NameInMap("TablePrivacyMode")]
+            [Validation(Required=false)]
+            public int? TablePrivacyMode { get; set; }
+
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<GetProjectDetailResponseBodyDataTags> Tags { get; set; }
+            public class GetProjectDetailResponseBodyDataTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
             [NameInMap("TenantId")]
             [Validation(Required=false)]
             public long? TenantId { get; set; }
+
+            [NameInMap("UseProxyOdpsAccount")]
+            [Validation(Required=false)]
+            public bool? UseProxyOdpsAccount { get; set; }
 
         }
 

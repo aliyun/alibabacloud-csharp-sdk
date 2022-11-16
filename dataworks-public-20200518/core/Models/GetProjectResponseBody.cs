@@ -101,6 +101,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public string ResidentArea { get; set; }
 
+            [NameInMap("ResourceManagerResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceManagerResourceGroupId { get; set; }
+
             [NameInMap("SchedulerMaxRetryTimes")]
             [Validation(Required=false)]
             public int? SchedulerMaxRetryTimes { get; set; }
@@ -116,6 +120,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("TablePrivacyMode")]
             [Validation(Required=false)]
             public int? TablePrivacyMode { get; set; }
+
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<GetProjectResponseBodyDataTags> Tags { get; set; }
+            public class GetProjectResponseBodyDataTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
             [NameInMap("TenantId")]
             [Validation(Required=false)]

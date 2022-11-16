@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public List<ListProjectsResponseBodyPageResultProjectList> ProjectList { get; set; }
             public class ListProjectsResponseBodyPageResultProjectList : TeaModel {
+                [NameInMap("DisableDevelopment")]
+                [Validation(Required=false)]
+                public bool? DisableDevelopment { get; set; }
+
+                [NameInMap("IsDefault")]
+                [Validation(Required=false)]
+                public int? IsDefault { get; set; }
+
                 [NameInMap("ProjectDescription")]
                 [Validation(Required=false)]
                 public string ProjectDescription { get; set; }
@@ -52,6 +60,32 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [NameInMap("ProjectStatusCode")]
                 [Validation(Required=false)]
                 public string ProjectStatusCode { get; set; }
+
+                [NameInMap("ResourceManagerResourceGroupId")]
+                [Validation(Required=false)]
+                public string ResourceManagerResourceGroupId { get; set; }
+
+                [NameInMap("TablePrivacyMode")]
+                [Validation(Required=false)]
+                public int? TablePrivacyMode { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public List<ListProjectsResponseBodyPageResultProjectListTags> Tags { get; set; }
+                public class ListProjectsResponseBodyPageResultProjectListTags : TeaModel {
+                    [NameInMap("Key")]
+                    [Validation(Required=false)]
+                    public string Key { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("UseProxyOdpsAccount")]
+                [Validation(Required=false)]
+                public bool? UseProxyOdpsAccount { get; set; }
 
             }
 

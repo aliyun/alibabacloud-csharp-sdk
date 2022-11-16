@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
-    public class ListResourceGroupsRequest : TeaModel {
+    public class ListResourceGroupsShrinkRequest : TeaModel {
         [NameInMap("BizExtKey")]
         [Validation(Required=false)]
         public string BizExtKey { get; set; }
@@ -27,17 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         [NameInMap("Tags")]
         [Validation(Required=false)]
-        public List<ListResourceGroupsRequestTags> Tags { get; set; }
-        public class ListResourceGroupsRequestTags : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        public string TagsShrink { get; set; }
 
     }
 

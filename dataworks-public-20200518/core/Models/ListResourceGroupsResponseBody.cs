@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public string ResourceGroupType { get; set; }
 
+            [NameInMap("ResourceManagerResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceManagerResourceGroupId { get; set; }
+
             [NameInMap("Sequence")]
             [Validation(Required=false)]
             public int? Sequence { get; set; }
@@ -64,6 +68,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
+
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<ListResourceGroupsResponseBodyDataTags> Tags { get; set; }
+            public class ListResourceGroupsResponseBodyDataTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
             [NameInMap("TenantId")]
             [Validation(Required=false)]
