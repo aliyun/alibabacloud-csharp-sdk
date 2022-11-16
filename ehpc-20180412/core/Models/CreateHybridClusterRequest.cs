@@ -147,6 +147,20 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string OnPremiseVolumeRemotePath { get; set; }
 
+        [NameInMap("OpenldapPar")]
+        [Validation(Required=false)]
+        public CreateHybridClusterRequestOpenldapPar OpenldapPar { get; set; }
+        public class CreateHybridClusterRequestOpenldapPar : TeaModel {
+            [NameInMap("BaseDn")]
+            [Validation(Required=false)]
+            public string BaseDn { get; set; }
+
+            [NameInMap("LdapServerIp")]
+            [Validation(Required=false)]
+            public string LdapServerIp { get; set; }
+
+        }
+
         [NameInMap("OsTag")]
         [Validation(Required=false)]
         public string OsTag { get; set; }
@@ -154,6 +168,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
+
+        [NameInMap("Plugin")]
+        [Validation(Required=false)]
+        public string Plugin { get; set; }
 
         [NameInMap("PostInstallScript")]
         [Validation(Required=false)]
@@ -212,6 +230,28 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
+
+        [NameInMap("WinAdPar")]
+        [Validation(Required=false)]
+        public CreateHybridClusterRequestWinAdPar WinAdPar { get; set; }
+        public class CreateHybridClusterRequestWinAdPar : TeaModel {
+            [NameInMap("AdDc")]
+            [Validation(Required=false)]
+            public string AdDc { get; set; }
+
+            [NameInMap("AdIp")]
+            [Validation(Required=false)]
+            public string AdIp { get; set; }
+
+            [NameInMap("AdUser")]
+            [Validation(Required=false)]
+            public string AdUser { get; set; }
+
+            [NameInMap("AdUserPasswd")]
+            [Validation(Required=false)]
+            public string AdUserPasswd { get; set; }
+
+        }
 
         [NameInMap("ZoneId")]
         [Validation(Required=false)]
