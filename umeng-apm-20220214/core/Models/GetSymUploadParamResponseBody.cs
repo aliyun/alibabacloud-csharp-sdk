@@ -20,22 +20,28 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214.Models
             [NameInMap("accessKeyId")]
             [Validation(Required=false)]
             public string AccessKeyId { get; set; }
+
             [NameInMap("callback")]
             [Validation(Required=false)]
             public string Callback { get; set; }
+
             [NameInMap("key")]
             [Validation(Required=false)]
             public string Key { get; set; }
+
             [NameInMap("policy")]
             [Validation(Required=false)]
             public string Policy { get; set; }
+
             [NameInMap("signature")]
             [Validation(Required=false)]
             public string Signature { get; set; }
+
             [NameInMap("uploadAddress")]
             [Validation(Required=false)]
             public string UploadAddress { get; set; }
-        };
+
+        }
 
         [NameInMap("msg")]
         [Validation(Required=false)]
