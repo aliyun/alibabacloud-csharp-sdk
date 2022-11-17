@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("Direction")]
+        [Validation(Required=false)]
+        public string Direction { get; set; }
+
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }

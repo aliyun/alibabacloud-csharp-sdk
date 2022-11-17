@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListRulesRequest : TeaModel {
+        [NameInMap("Direction")]
+        [Validation(Required=false)]
+        public string Direction { get; set; }
+
         [NameInMap("ListenerIds")]
         [Validation(Required=false)]
         public List<string> ListenerIds { get; set; }
