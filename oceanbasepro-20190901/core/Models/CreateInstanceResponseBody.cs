@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
     public class CreateInstanceResponseBody : TeaModel {
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<CreateInstanceResponseBodyData> Data { get; set; }
+        public CreateInstanceResponseBodyData Data { get; set; }
         public class CreateInstanceResponseBodyData : TeaModel {
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
