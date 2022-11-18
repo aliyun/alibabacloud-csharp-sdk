@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         [NameInMap("file_id_list")]
         [Validation(Required=false)]
-        public string FileIdList { get; set; }
+        public List<string> FileIdList { get; set; }
 
         [NameInMap("preview_limit")]
         [Validation(Required=false)]

@@ -79,14 +79,6 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string PreHash { get; set; }
 
-        [NameInMap("proof_code")]
-        [Validation(Required=false)]
-        public string ProofCode { get; set; }
-
-        [NameInMap("proof_version")]
-        [Validation(Required=false)]
-        public string ProofVersion { get; set; }
-
         [NameInMap("share_id")]
         [Validation(Required=false)]
         public string ShareId { get; set; }

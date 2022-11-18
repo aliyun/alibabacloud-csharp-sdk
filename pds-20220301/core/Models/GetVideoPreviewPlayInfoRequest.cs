@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         [NameInMap("get_without_url")]
         [Validation(Required=false)]
-        public string GetWithoutUrl { get; set; }
+        public bool? GetWithoutUrl { get; set; }
 
         [NameInMap("share_id")]
         [Validation(Required=false)]

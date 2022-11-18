@@ -762,14 +762,6 @@ namespace AlibabaCloud.SDK.Pds20220301
             {
                 body["pre_hash"] = request.PreHash;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProofCode))
-            {
-                body["proof_code"] = request.ProofCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProofVersion))
-            {
-                body["proof_version"] = request.ProofVersion;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareId))
             {
                 body["share_id"] = request.ShareId;
@@ -877,14 +869,6 @@ namespace AlibabaCloud.SDK.Pds20220301
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreHash))
             {
                 body["pre_hash"] = request.PreHash;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProofCode))
-            {
-                body["proof_code"] = request.ProofCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProofVersion))
-            {
-                body["proof_version"] = request.ProofVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareId))
             {
@@ -7278,148 +7262,6 @@ namespace AlibabaCloud.SDK.Pds20220301
                 BodyType = "json",
             };
             return TeaModel.ToObject<UpdateUserResponse>(await ExecuteAsync(params_, req, runtime));
-        }
-
-        public WalkFileResponse WalkFile(WalkFileRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return WalkFileWithOptions(request, headers, runtime);
-        }
-
-        public async Task<WalkFileResponse> WalkFileAsync(WalkFileRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await WalkFileWithOptionsAsync(request, headers, runtime);
-        }
-
-        public WalkFileResponse WalkFileWithOptions(WalkFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
-            {
-                body["category"] = request.Category;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DriveId))
-            {
-                body["drive_id"] = request.DriveId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fields))
-            {
-                body["fields"] = request.Fields;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
-            {
-                body["limit"] = request.Limit;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
-            {
-                body["marker"] = request.Marker;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
-            {
-                body["order_by"] = request.OrderBy;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderDirection))
-            {
-                body["order_direction"] = request.OrderDirection;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentFileId))
-            {
-                body["parent_file_id"] = request.ParentFileId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
-            {
-                body["status"] = request.Status;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
-            {
-                body["type"] = request.Type;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "WalkFile",
-                Version = "2022-03-01",
-                Protocol = "HTTPS",
-                Pathname = "/v2/file/walk",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<WalkFileResponse>(Execute(params_, req, runtime));
-        }
-
-        public async Task<WalkFileResponse> WalkFileWithOptionsAsync(WalkFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
-            {
-                body["category"] = request.Category;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DriveId))
-            {
-                body["drive_id"] = request.DriveId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fields))
-            {
-                body["fields"] = request.Fields;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
-            {
-                body["limit"] = request.Limit;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
-            {
-                body["marker"] = request.Marker;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
-            {
-                body["order_by"] = request.OrderBy;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderDirection))
-            {
-                body["order_direction"] = request.OrderDirection;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentFileId))
-            {
-                body["parent_file_id"] = request.ParentFileId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
-            {
-                body["status"] = request.Status;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
-            {
-                body["type"] = request.Type;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "WalkFile",
-                Version = "2022-03-01",
-                Protocol = "HTTPS",
-                Pathname = "/v2/file/walk",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<WalkFileResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
     }
