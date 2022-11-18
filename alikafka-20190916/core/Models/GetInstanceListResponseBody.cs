@@ -113,6 +113,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [Validation(Required=false)]
                 public string SslEndPoint { get; set; }
 
+                [NameInMap("StandardZoneId")]
+                [Validation(Required=false)]
+                public string StandardZoneId { get; set; }
+
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public GetInstanceListResponseBodyInstanceListInstanceVOTags Tags { get; set; }

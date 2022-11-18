@@ -45,6 +45,20 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public long? ReplicationFactor { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateTopicShrinkRequestTag> Tag { get; set; }
+        public class CreateTopicShrinkRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("Topic")]
         [Validation(Required=false)]
         public string Topic { get; set; }

@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [Validation(Required=false)]
             public List<GetAllowedIpListResponseBodyAllowedListInternetList> InternetList { get; set; }
             public class GetAllowedIpListResponseBodyAllowedListInternetList : TeaModel {
+                [NameInMap("AllowedIpGroup")]
+                [Validation(Required=false)]
+                public Dictionary<string, string> AllowedIpGroup { get; set; }
+
                 [NameInMap("AllowedIpList")]
                 [Validation(Required=false)]
                 public List<string> AllowedIpList { get; set; }
@@ -35,6 +39,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [Validation(Required=false)]
             public List<GetAllowedIpListResponseBodyAllowedListVpcList> VpcList { get; set; }
             public class GetAllowedIpListResponseBodyAllowedListVpcList : TeaModel {
+                [NameInMap("AllowedIpGroup")]
+                [Validation(Required=false)]
+                public Dictionary<string, string> AllowedIpGroup { get; set; }
+
                 [NameInMap("AllowedIpList")]
                 [Validation(Required=false)]
                 public List<string> AllowedIpList { get; set; }

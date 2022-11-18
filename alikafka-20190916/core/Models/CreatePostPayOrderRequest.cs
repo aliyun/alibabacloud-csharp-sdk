@@ -49,6 +49,20 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public string SpecType { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreatePostPayOrderRequestTag> Tag { get; set; }
+        public class CreatePostPayOrderRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("TopicQuota")]
         [Validation(Required=false)]
         public int? TopicQuota { get; set; }
