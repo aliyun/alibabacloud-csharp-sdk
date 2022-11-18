@@ -3530,25 +3530,23 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<GetVideoPreviewPlayInfoResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetVideoPreviewPlayMetaResponse GetVideoPreviewPlayMeta(string domainId, GetVideoPreviewPlayMetaRequest request)
+        public GetVideoPreviewPlayMetaResponse GetVideoPreviewPlayMeta(GetVideoPreviewPlayMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetVideoPreviewPlayMetaWithOptions(domainId, request, headers, runtime);
+            return GetVideoPreviewPlayMetaWithOptions(request, headers, runtime);
         }
 
-        public async Task<GetVideoPreviewPlayMetaResponse> GetVideoPreviewPlayMetaAsync(string domainId, GetVideoPreviewPlayMetaRequest request)
+        public async Task<GetVideoPreviewPlayMetaResponse> GetVideoPreviewPlayMetaAsync(GetVideoPreviewPlayMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetVideoPreviewPlayMetaWithOptionsAsync(domainId, request, headers, runtime);
+            return await GetVideoPreviewPlayMetaWithOptionsAsync(request, headers, runtime);
         }
 
-        public GetVideoPreviewPlayMetaResponse GetVideoPreviewPlayMetaWithOptions(string domainId, GetVideoPreviewPlayMetaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetVideoPreviewPlayMetaResponse GetVideoPreviewPlayMetaWithOptions(GetVideoPreviewPlayMetaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
-            hostMap["domain_id"] = domainId;
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
             {
@@ -3568,7 +3566,6 @@ namespace AlibabaCloud.SDK.Pds20220301
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                HostMap = hostMap,
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
@@ -3587,11 +3584,9 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<GetVideoPreviewPlayMetaResponse>(Execute(params_, req, runtime));
         }
 
-        public async Task<GetVideoPreviewPlayMetaResponse> GetVideoPreviewPlayMetaWithOptionsAsync(string domainId, GetVideoPreviewPlayMetaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetVideoPreviewPlayMetaResponse> GetVideoPreviewPlayMetaWithOptionsAsync(GetVideoPreviewPlayMetaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
-            hostMap["domain_id"] = domainId;
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
             {
@@ -3611,7 +3606,6 @@ namespace AlibabaCloud.SDK.Pds20220301
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                HostMap = hostMap,
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
