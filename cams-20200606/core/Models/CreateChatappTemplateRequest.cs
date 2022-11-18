@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         }
 
+        [NameInMap("CustSpaceId")]
+        [Validation(Required=false)]
+        public string CustSpaceId { get; set; }
+
         [NameInMap("CustWabaId")]
         [Validation(Required=false)]
         public string CustWabaId { get; set; }

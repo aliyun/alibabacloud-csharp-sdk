@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string ChatBotInstanceId { get; set; }
 
+        [NameInMap("CustSpaceId")]
+        [Validation(Required=false)]
+        public string CustSpaceId { get; set; }
+
         [NameInMap("IsvCode")]
         [Validation(Required=false)]
         public string IsvCode { get; set; }
