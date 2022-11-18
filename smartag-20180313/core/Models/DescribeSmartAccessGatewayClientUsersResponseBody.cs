@@ -33,15 +33,37 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [Validation(Required=false)]
             public List<DescribeSmartAccessGatewayClientUsersResponseBodyUsersUser> User { get; set; }
             public class DescribeSmartAccessGatewayClientUsersResponseBodyUsersUser : TeaModel {
+                [NameInMap("AccelerateBandwidth")]
+                [Validation(Required=false)]
                 public long? AccelerateBandwidth { get; set; }
+
+                [NameInMap("Bandwidth")]
+                [Validation(Required=false)]
                 public int? Bandwidth { get; set; }
+
+                [NameInMap("ClientIp")]
+                [Validation(Required=false)]
                 public string ClientIp { get; set; }
+
+                [NameInMap("IsStaticIp")]
+                [Validation(Required=false)]
                 public long? IsStaticIp { get; set; }
+
+                [NameInMap("State")]
+                [Validation(Required=false)]
                 public int? State { get; set; }
+
+                [NameInMap("UserMail")]
+                [Validation(Required=false)]
                 public string UserMail { get; set; }
+
+                [NameInMap("UserName")]
+                [Validation(Required=false)]
                 public string UserName { get; set; }
+
             }
-        };
+
+        }
 
     }
 

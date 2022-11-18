@@ -21,10 +21,17 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [Validation(Required=false)]
             public List<DescribeUserFlowStatisticsResponseBodySagStatisticsStatistics> Statistics { get; set; }
             public class DescribeUserFlowStatisticsResponseBodySagStatisticsStatistics : TeaModel {
+                [NameInMap("TotalBytes")]
+                [Validation(Required=false)]
                 public string TotalBytes { get; set; }
+
+                [NameInMap("UserName")]
+                [Validation(Required=false)]
                 public string UserName { get; set; }
+
             }
-        };
+
+        }
 
     }
 

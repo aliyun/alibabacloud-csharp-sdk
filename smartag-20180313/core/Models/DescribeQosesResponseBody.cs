@@ -25,14 +25,33 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [Validation(Required=false)]
             public List<DescribeQosesResponseBodyQosesQos> Qos { get; set; }
             public class DescribeQosesResponseBodyQosesQos : TeaModel {
+                [NameInMap("QosDescription")]
+                [Validation(Required=false)]
                 public string QosDescription { get; set; }
+
+                [NameInMap("QosId")]
+                [Validation(Required=false)]
                 public string QosId { get; set; }
+
+                [NameInMap("QosName")]
+                [Validation(Required=false)]
                 public string QosName { get; set; }
+
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
+
+                [NameInMap("SagCount")]
+                [Validation(Required=false)]
                 public string SagCount { get; set; }
+
+                [NameInMap("SmartAGIds")]
+                [Validation(Required=false)]
                 public string SmartAGIds { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

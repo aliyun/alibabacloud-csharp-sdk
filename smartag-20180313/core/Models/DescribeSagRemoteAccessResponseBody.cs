@@ -25,10 +25,17 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [Validation(Required=false)]
             public List<DescribeSagRemoteAccessResponseBodyRemoteAccessesRemoteAccess> RemoteAccess { get; set; }
             public class DescribeSagRemoteAccessResponseBodyRemoteAccessesRemoteAccess : TeaModel {
+                [NameInMap("RemoteAccessIp")]
+                [Validation(Required=false)]
                 public string RemoteAccessIp { get; set; }
+
+                [NameInMap("SerialNumber")]
+                [Validation(Required=false)]
                 public string SerialNumber { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

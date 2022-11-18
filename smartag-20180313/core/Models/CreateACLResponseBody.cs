@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string AclId { get; set; }
 
+        [NameInMap("AclType")]
+        [Validation(Required=false)]
+        public string AclType { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

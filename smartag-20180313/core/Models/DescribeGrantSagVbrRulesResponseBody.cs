@@ -17,16 +17,41 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [Validation(Required=false)]
             public List<DescribeGrantSagVbrRulesResponseBodyGrantRulesGrantRule> GrantRule { get; set; }
             public class DescribeGrantSagVbrRulesResponseBodyGrantRulesGrantRule : TeaModel {
+                [NameInMap("Bound")]
+                [Validation(Required=false)]
                 public bool? Bound { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public long? CreateTime { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("SmartAGId")]
+                [Validation(Required=false)]
                 public string SmartAGId { get; set; }
+
+                [NameInMap("SmartAGUid")]
+                [Validation(Required=false)]
                 public long? SmartAGUid { get; set; }
+
+                [NameInMap("VbrInstanceId")]
+                [Validation(Required=false)]
                 public string VbrInstanceId { get; set; }
+
+                [NameInMap("VbrRegionId")]
+                [Validation(Required=false)]
                 public string VbrRegionId { get; set; }
+
+                [NameInMap("VbrUid")]
+                [Validation(Required=false)]
                 public long? VbrUid { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

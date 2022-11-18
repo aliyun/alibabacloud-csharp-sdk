@@ -21,10 +21,17 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [Validation(Required=false)]
             public List<DescribeUserOnlineClientStatisticsResponseBodyUserStatisticsStatistics> Statistics { get; set; }
             public class DescribeUserOnlineClientStatisticsResponseBodyUserStatisticsStatistics : TeaModel {
+                [NameInMap("OnlineCount")]
+                [Validation(Required=false)]
                 public string OnlineCount { get; set; }
+
+                [NameInMap("UserName")]
+                [Validation(Required=false)]
                 public string UserName { get; set; }
+
             }
-        };
+
+        }
 
     }
 

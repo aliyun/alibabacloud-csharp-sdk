@@ -17,16 +17,41 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [Validation(Required=false)]
             public List<DescribeDnatEntriesResponseBodyDnatEntriesDnatEntry> DnatEntry { get; set; }
             public class DescribeDnatEntriesResponseBodyDnatEntriesDnatEntry : TeaModel {
+                [NameInMap("DnatEntryId")]
+                [Validation(Required=false)]
                 public string DnatEntryId { get; set; }
+
+                [NameInMap("ExternalIp")]
+                [Validation(Required=false)]
                 public string ExternalIp { get; set; }
+
+                [NameInMap("ExternalPort")]
+                [Validation(Required=false)]
                 public string ExternalPort { get; set; }
+
+                [NameInMap("InternalIp")]
+                [Validation(Required=false)]
                 public string InternalIp { get; set; }
+
+                [NameInMap("InternalPort")]
+                [Validation(Required=false)]
                 public string InternalPort { get; set; }
+
+                [NameInMap("IpProtocol")]
+                [Validation(Required=false)]
                 public string IpProtocol { get; set; }
+
+                [NameInMap("SagId")]
+                [Validation(Required=false)]
                 public string SagId { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

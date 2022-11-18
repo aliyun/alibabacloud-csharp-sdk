@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string AssociatedCcnId { get; set; }
 
+        [NameInMap("AssociatedCcnName")]
+        [Validation(Required=false)]
+        public string AssociatedCcnName { get; set; }
+
         [NameInMap("BusinessState")]
         [Validation(Required=false)]
         public string BusinessState { get; set; }

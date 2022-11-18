@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("EnableSoftwareConnectionAudit")]
+        [Validation(Required=false)]
+        public bool? EnableSoftwareConnectionAudit { get; set; }
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("Position")]
+        [Validation(Required=false)]
+        public string Position { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]

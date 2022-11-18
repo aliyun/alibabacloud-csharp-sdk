@@ -24,7 +24,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [NameInMap("AclId")]
             [Validation(Required=false)]
             public List<string> AclId { get; set; }
-        };
+
+        }
 
         [NameInMap("ApplicationBandwidthPackageBussinessStatus")]
         [Validation(Required=false)]
@@ -45,10 +46,12 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [NameInMap("LockReason")]
             [Validation(Required=false)]
             public string LockReason { get; set; }
+
             [NameInMap("LockType")]
             [Validation(Required=false)]
             public string LockType { get; set; }
-        };
+
+        }
 
         [NameInMap("AssociatedCcnId")]
         [Validation(Required=false)]
@@ -94,20 +97,49 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [Validation(Required=false)]
             public List<DescribeSmartAccessGatewayAttributeResponseBodyDevicesDevice> Device { get; set; }
             public class DescribeSmartAccessGatewayAttributeResponseBodyDevicesDevice : TeaModel {
+                [NameInMap("DistributeSkStatus")]
+                [Validation(Required=false)]
                 public int? DistributeSkStatus { get; set; }
+
+                [NameInMap("DpiSignatureDbVersion")]
+                [Validation(Required=false)]
                 public string DpiSignatureDbVersion { get; set; }
+
+                [NameInMap("HaState")]
+                [Validation(Required=false)]
                 public string HaState { get; set; }
+
+                [NameInMap("HcState")]
+                [Validation(Required=false)]
                 public string HcState { get; set; }
+
+                [NameInMap("MonitorVersion")]
+                [Validation(Required=false)]
                 public string MonitorVersion { get; set; }
+
+                [NameInMap("SecretKey")]
+                [Validation(Required=false)]
                 public string SecretKey { get; set; }
+
+                [NameInMap("SerialNumber")]
+                [Validation(Required=false)]
                 public string SerialNumber { get; set; }
+
+                [NameInMap("SoftwareVersion")]
+                [Validation(Required=false)]
                 public string SoftwareVersion { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("EnableOptimization")]
         [Validation(Required=false)]
         public bool? EnableOptimization { get; set; }
+
+        [NameInMap("EnableSoftwareConnectionAudit")]
+        [Validation(Required=false)]
+        public bool? EnableSoftwareConnectionAudit { get; set; }
 
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -120,7 +152,18 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [NameInMap("FlowLogId")]
             [Validation(Required=false)]
             public List<string> FlowLogId { get; set; }
-        };
+
+        }
+
+        [NameInMap("IRIds")]
+        [Validation(Required=false)]
+        public DescribeSmartAccessGatewayAttributeResponseBodyIRIds IRIds { get; set; }
+        public class DescribeSmartAccessGatewayAttributeResponseBodyIRIds : TeaModel {
+            [NameInMap("IRId")]
+            [Validation(Required=false)]
+            public List<string> IRId { get; set; }
+
+        }
 
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
@@ -138,17 +181,45 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [Validation(Required=false)]
             public List<DescribeSmartAccessGatewayAttributeResponseBodyLinksLink> Link { get; set; }
             public class DescribeSmartAccessGatewayAttributeResponseBodyLinksLink : TeaModel {
+                [NameInMap("Bandwidth")]
+                [Validation(Required=false)]
                 public string Bandwidth { get; set; }
+
+                [NameInMap("CommodityType")]
+                [Validation(Required=false)]
                 public string CommodityType { get; set; }
+
+                [NameInMap("EndTime")]
+                [Validation(Required=false)]
                 public long? EndTime { get; set; }
+
+                [NameInMap("HealthCheckTargetIp")]
+                [Validation(Required=false)]
                 public string HealthCheckTargetIp { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("RelateInstanceId")]
+                [Validation(Required=false)]
                 public string RelateInstanceId { get; set; }
+
+                [NameInMap("RelateInstanceRegionId")]
+                [Validation(Required=false)]
                 public string RelateInstanceRegionId { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("MaxBandwidth")]
         [Validation(Required=false)]
@@ -162,6 +233,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public bool? OptimizationType { get; set; }
 
+        [NameInMap("Position")]
+        [Validation(Required=false)]
+        public string Position { get; set; }
+
         [NameInMap("QosIds")]
         [Validation(Required=false)]
         public DescribeSmartAccessGatewayAttributeResponseBodyQosIds QosIds { get; set; }
@@ -169,7 +244,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [NameInMap("QosId")]
             [Validation(Required=false)]
             public List<string> QosId { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

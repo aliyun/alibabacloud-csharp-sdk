@@ -17,12 +17,29 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [Validation(Required=false)]
             public List<DescribeACLsResponseBodyAclsAcl> Acl { get; set; }
             public class DescribeACLsResponseBodyAclsAcl : TeaModel {
+                [NameInMap("AclId")]
+                [Validation(Required=false)]
                 public string AclId { get; set; }
+
+                [NameInMap("AclType")]
+                [Validation(Required=false)]
+                public string AclType { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
+
+                [NameInMap("SagCount")]
+                [Validation(Required=false)]
                 public string SagCount { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

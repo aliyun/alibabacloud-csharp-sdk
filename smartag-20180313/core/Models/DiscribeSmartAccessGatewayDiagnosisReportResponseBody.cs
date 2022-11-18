@@ -16,15 +16,21 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [NameInMap("BoxType")]
             [Validation(Required=false)]
             public string BoxType { get; set; }
+
             [NameInMap("BoxVersion")]
             [Validation(Required=false)]
             public string BoxVersion { get; set; }
+
             [NameInMap("Details")]
             [Validation(Required=false)]
             public List<DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetails> Details { get; set; }
             public class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetails : TeaModel {
+                [NameInMap("Items")]
+                [Validation(Required=false)]
                 public List<DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsItems> Items { get; set; }
                 public class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsItems : TeaModel {
+                    [NameInMap("CN")]
+                    [Validation(Required=false)]
                     public DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsItemsCN CN { get; set; }
                     public class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsItemsCN : TeaModel {
                         [NameInMap("Advice")]
@@ -48,6 +54,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                         public string ItemType { get; set; }
 
                     }
+
+                    [NameInMap("EN")]
+                    [Validation(Required=false)]
                     public DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsItemsEN EN { get; set; }
                     public class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsItemsEN : TeaModel {
                         [NameInMap("Advice")]
@@ -71,12 +80,31 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                         public string ItemType { get; set; }
 
                     }
+
+                    [NameInMap("EndTime")]
+                    [Validation(Required=false)]
                     public long? EndTime { get; set; }
+
+                    [NameInMap("ItemName")]
+                    [Validation(Required=false)]
                     public string ItemName { get; set; }
+
+                    [NameInMap("Level")]
+                    [Validation(Required=false)]
                     public string Level { get; set; }
+
+                    [NameInMap("StartTime")]
+                    [Validation(Required=false)]
                     public long? StartTime { get; set; }
+
+                    [NameInMap("Type")]
+                    [Validation(Required=false)]
                     public string Type { get; set; }
+
                 }
+
+                [NameInMap("Statistics")]
+                [Validation(Required=false)]
                 public DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsStatistics Statistics { get; set; }
                 public class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsStatistics : TeaModel {
                     [NameInMap("Error")]
@@ -96,20 +124,29 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                     public int? Warning { get; set; }
 
                 }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
+
             [NameInMap("DiagnoseId")]
             [Validation(Required=false)]
             public string DiagnoseId { get; set; }
+
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public int? EndTime { get; set; }
+
             [NameInMap("FinishedNumber")]
             [Validation(Required=false)]
             public int? FinishedNumber { get; set; }
+
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
+
             [NameInMap("Level")]
             [Validation(Required=false)]
             public DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultLevel Level { get; set; }
@@ -127,24 +164,31 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                 public string Total { get; set; }
 
             }
+
             [NameInMap("MonitorVersion")]
             [Validation(Required=false)]
             public string MonitorVersion { get; set; }
+
             [NameInMap("Percent")]
             [Validation(Required=false)]
             public int? Percent { get; set; }
+
             [NameInMap("ReportSLSSuccess")]
             [Validation(Required=false)]
             public int? ReportSLSSuccess { get; set; }
+
             [NameInMap("SN")]
             [Validation(Required=false)]
             public string SN { get; set; }
+
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public int? StartTime { get; set; }
+
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
+
             [NameInMap("Statistics")]
             [Validation(Required=false)]
             public DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultStatistics Statistics { get; set; }
@@ -166,19 +210,24 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                 public int? Warning { get; set; }
 
             }
+
             [NameInMap("StoreType")]
             [Validation(Required=false)]
             public string StoreType { get; set; }
+
             [NameInMap("TotalNumber")]
             [Validation(Required=false)]
             public int? TotalNumber { get; set; }
+
             [NameInMap("UId")]
             [Validation(Required=false)]
             public string UId { get; set; }
+
             [NameInMap("UserLevel")]
             [Validation(Required=false)]
             public string UserLevel { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

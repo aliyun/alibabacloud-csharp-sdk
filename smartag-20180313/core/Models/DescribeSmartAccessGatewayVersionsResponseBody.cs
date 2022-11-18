@@ -21,12 +21,25 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [Validation(Required=false)]
             public List<DescribeSmartAccessGatewayVersionsResponseBodySmartAGVersionsSmartAGVersion> SmartAGVersion { get; set; }
             public class DescribeSmartAccessGatewayVersionsResponseBodySmartAGVersionsSmartAGVersion : TeaModel {
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public long? CreateTime { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
+                [NameInMap("VersionCode")]
+                [Validation(Required=false)]
                 public string VersionCode { get; set; }
+
+                [NameInMap("VersionName")]
+                [Validation(Required=false)]
                 public string VersionName { get; set; }
+
             }
-        };
+
+        }
 
     }
 

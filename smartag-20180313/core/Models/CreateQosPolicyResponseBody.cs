@@ -28,7 +28,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [NameInMap("DpiGroupId")]
             [Validation(Required=false)]
             public List<string> DpiGroupId { get; set; }
-        };
+
+        }
 
         [NameInMap("DpiSignatureIds")]
         [Validation(Required=false)]
@@ -37,7 +38,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [NameInMap("DpiSignatureId")]
             [Validation(Required=false)]
             public List<string> DpiSignatureId { get; set; }
-        };
+
+        }
 
         [NameInMap("EndTime")]
         [Validation(Required=false)]

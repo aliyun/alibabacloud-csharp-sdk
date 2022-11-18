@@ -29,12 +29,25 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [Validation(Required=false)]
             public List<DescribeSnatEntriesResponseBodySnatEntriesSnatEntry> SnatEntry { get; set; }
             public class DescribeSnatEntriesResponseBodySnatEntriesSnatEntry : TeaModel {
+                [NameInMap("CidrBlock")]
+                [Validation(Required=false)]
                 public string CidrBlock { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public long? CreateTime { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("SnatIp")]
+                [Validation(Required=false)]
                 public string SnatIp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -25,11 +25,21 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [Validation(Required=false)]
             public List<DescribeUnbindFlowLogSagsResponseBodySagsSag> Sag { get; set; }
             public class DescribeUnbindFlowLogSagsResponseBodySagsSag : TeaModel {
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("SmartAGId")]
+                [Validation(Required=false)]
                 public string SmartAGId { get; set; }
+
             }
-        };
+
+        }
 
     }
 

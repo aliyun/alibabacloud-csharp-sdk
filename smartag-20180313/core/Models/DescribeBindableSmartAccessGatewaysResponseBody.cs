@@ -29,11 +29,21 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [Validation(Required=false)]
             public List<DescribeBindableSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGateway> SmartAccessGateway { get; set; }
             public class DescribeBindableSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGateway : TeaModel {
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("SmartAGId")]
+                [Validation(Required=false)]
                 public string SmartAGId { get; set; }
+
+                [NameInMap("SmartAGUid")]
+                [Validation(Required=false)]
                 public long? SmartAGUid { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

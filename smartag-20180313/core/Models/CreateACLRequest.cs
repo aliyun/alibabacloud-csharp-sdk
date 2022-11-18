@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class CreateACLRequest : TeaModel {
+        [NameInMap("AclType")]
+        [Validation(Required=false)]
+        public string AclType { get; set; }
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

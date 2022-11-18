@@ -29,14 +29,33 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [Validation(Required=false)]
             public List<DescribeSmartAccessGatewayHaResponseBodyLinkBackupInfoListLinkBackupInfoList> LinkBackupInfoList { get; set; }
             public class DescribeSmartAccessGatewayHaResponseBodyLinkBackupInfoListLinkBackupInfoList : TeaModel {
+                [NameInMap("BackupLinkId")]
+                [Validation(Required=false)]
                 public string BackupLinkId { get; set; }
+
+                [NameInMap("BackupLinkState")]
+                [Validation(Required=false)]
                 public string BackupLinkState { get; set; }
+
+                [NameInMap("LinkLevelBackupState")]
+                [Validation(Required=false)]
                 public string LinkLevelBackupState { get; set; }
+
+                [NameInMap("LinkLevelBackupType")]
+                [Validation(Required=false)]
                 public string LinkLevelBackupType { get; set; }
+
+                [NameInMap("MainLinkId")]
+                [Validation(Required=false)]
                 public string MainLinkId { get; set; }
+
+                [NameInMap("MainLinkState")]
+                [Validation(Required=false)]
                 public string MainLinkState { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("MainDeviceId")]
         [Validation(Required=false)]
