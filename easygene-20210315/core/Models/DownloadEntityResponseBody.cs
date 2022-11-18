@@ -9,23 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class DownloadEntityResponseBody : TeaModel {
-        /// <summary>
-        /// 下载的表格文件URL
-        /// </summary>
         [NameInMap("EntityCSVFile")]
         [Validation(Required=false)]
         public string EntityCSVFile { get; set; }
 
-        /// <summary>
-        /// 主机ID
-        /// </summary>
         [NameInMap("HostId")]
         [Validation(Required=false)]
         public string HostId { get; set; }
 
-        /// <summary>
-        /// 请求ID
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

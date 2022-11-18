@@ -9,23 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class DeleteAppRequest : TeaModel {
-        /// <summary>
-        /// 应用名称
-        /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
-        /// <summary>
-        /// 应用版本
-        /// </summary>
         [NameInMap("Revision")]
         [Validation(Required=false)]
         public string Revision { get; set; }
 
-        /// <summary>
-        /// 工作空间名称
-        /// </summary>
         [NameInMap("Workspace")]
         [Validation(Required=false)]
         public string Workspace { get; set; }

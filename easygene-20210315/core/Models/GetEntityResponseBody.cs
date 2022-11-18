@@ -9,44 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class GetEntityResponseBody : TeaModel {
-        /// <summary>
-        /// 属性列数组
-        /// </summary>
         [NameInMap("Attributes")]
         [Validation(Required=false)]
         public List<string> Attributes { get; set; }
 
-        /// <summary>
-        /// 实体类型
-        /// </summary>
         [NameInMap("EntityType")]
         [Validation(Required=false)]
         public string EntityType { get; set; }
 
-        /// <summary>
-        /// 主机ID
-        /// </summary>
         [NameInMap("HostId")]
         [Validation(Required=false)]
         public string HostId { get; set; }
 
-        /// <summary>
-        /// 请求ID
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 实体元素总个数
-        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
-        /// <summary>
-        /// 工作空间
-        /// </summary>
         [NameInMap("Workspace")]
         [Validation(Required=false)]
         public string Workspace { get; set; }
