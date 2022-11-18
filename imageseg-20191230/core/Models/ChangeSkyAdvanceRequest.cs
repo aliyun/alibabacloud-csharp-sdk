@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Imageseg20191230.Models
 
         [NameInMap("ReplaceImageURL")]
         [Validation(Required=false)]
-        public string ReplaceImageURL { get; set; }
+        public Stream ReplaceImageURLObject { get; set; }
 
     }
 
