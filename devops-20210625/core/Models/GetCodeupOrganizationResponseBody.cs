@@ -9,53 +9,53 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class GetCodeupOrganizationResponseBody : TeaModel {
-        [NameInMap("ErrorCode")]
+        [NameInMap("errorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("errorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Result")]
+        [NameInMap("result")]
         [Validation(Required=false)]
         public GetCodeupOrganizationResponseBodyResult Result { get; set; }
         public class GetCodeupOrganizationResponseBodyResult : TeaModel {
-            [NameInMap("CreatedAt")]
+            [NameInMap("createdAt")]
             [Validation(Required=false)]
             public string CreatedAt { get; set; }
 
-            [NameInMap("Id")]
+            [NameInMap("id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
-            [NameInMap("NamespaceId")]
+            [NameInMap("namespaceId")]
             [Validation(Required=false)]
             public long? NamespaceId { get; set; }
 
-            [NameInMap("OrganizationId")]
+            [NameInMap("organizationId")]
             [Validation(Required=false)]
             public string OrganizationId { get; set; }
 
-            [NameInMap("Path")]
+            [NameInMap("path")]
             [Validation(Required=false)]
             public string Path { get; set; }
 
-            [NameInMap("UpdatedAt")]
+            [NameInMap("updatedAt")]
             [Validation(Required=false)]
             public string UpdatedAt { get; set; }
 
-            [NameInMap("UserRole")]
+            [NameInMap("userRole")]
             [Validation(Required=false)]
             public string UserRole { get; set; }
 
         }
 
-        [NameInMap("Success")]
+        [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 

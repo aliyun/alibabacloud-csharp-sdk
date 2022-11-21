@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
-    public class UpdateProtectedBranchesResponseBody : TeaModel {
+    public class CreateProtectdBranchResponseBody : TeaModel {
         [NameInMap("errorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 
         [NameInMap("result")]
         [Validation(Required=false)]
-        public UpdateProtectedBranchesResponseBodyResult Result { get; set; }
-        public class UpdateProtectedBranchesResponseBodyResult : TeaModel {
+        public CreateProtectdBranchResponseBodyResult Result { get; set; }
+        public class CreateProtectdBranchResponseBodyResult : TeaModel {
             [NameInMap("allowMergeRoles")]
             [Validation(Required=false)]
             public List<int?> AllowMergeRoles { get; set; }
@@ -51,8 +51,8 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 
             [NameInMap("mergeRequestSetting")]
             [Validation(Required=false)]
-            public UpdateProtectedBranchesResponseBodyResultMergeRequestSetting MergeRequestSetting { get; set; }
-            public class UpdateProtectedBranchesResponseBodyResultMergeRequestSetting : TeaModel {
+            public CreateProtectdBranchResponseBodyResultMergeRequestSetting MergeRequestSetting { get; set; }
+            public class CreateProtectdBranchResponseBodyResultMergeRequestSetting : TeaModel {
                 [NameInMap("allowMergeRequestRoles")]
                 [Validation(Required=false)]
                 public List<int?> AllowMergeRequestRoles { get; set; }
@@ -93,16 +93,16 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 
             [NameInMap("testSettingDTO")]
             [Validation(Required=false)]
-            public UpdateProtectedBranchesResponseBodyResultTestSettingDTO TestSettingDTO { get; set; }
-            public class UpdateProtectedBranchesResponseBodyResultTestSettingDTO : TeaModel {
+            public CreateProtectdBranchResponseBodyResultTestSettingDTO TestSettingDTO { get; set; }
+            public class CreateProtectdBranchResponseBodyResultTestSettingDTO : TeaModel {
                 [NameInMap("checkConfig")]
                 [Validation(Required=false)]
-                public UpdateProtectedBranchesResponseBodyResultTestSettingDTOCheckConfig CheckConfig { get; set; }
-                public class UpdateProtectedBranchesResponseBodyResultTestSettingDTOCheckConfig : TeaModel {
+                public CreateProtectdBranchResponseBodyResultTestSettingDTOCheckConfig CheckConfig { get; set; }
+                public class CreateProtectdBranchResponseBodyResultTestSettingDTOCheckConfig : TeaModel {
                     [NameInMap("checkItems")]
                     [Validation(Required=false)]
-                    public List<UpdateProtectedBranchesResponseBodyResultTestSettingDTOCheckConfigCheckItems> CheckItems { get; set; }
-                    public class UpdateProtectedBranchesResponseBodyResultTestSettingDTOCheckConfigCheckItems : TeaModel {
+                    public List<CreateProtectdBranchResponseBodyResultTestSettingDTOCheckConfigCheckItems> CheckItems { get; set; }
+                    public class CreateProtectdBranchResponseBodyResultTestSettingDTOCheckConfigCheckItems : TeaModel {
                         [NameInMap("isRequired")]
                         [Validation(Required=false)]
                         public bool? IsRequired { get; set; }
@@ -117,8 +117,8 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 
                 [NameInMap("checkTaskQualityConfig")]
                 [Validation(Required=false)]
-                public UpdateProtectedBranchesResponseBodyResultTestSettingDTOCheckTaskQualityConfig CheckTaskQualityConfig { get; set; }
-                public class UpdateProtectedBranchesResponseBodyResultTestSettingDTOCheckTaskQualityConfig : TeaModel {
+                public CreateProtectdBranchResponseBodyResultTestSettingDTOCheckTaskQualityConfig CheckTaskQualityConfig { get; set; }
+                public class CreateProtectdBranchResponseBodyResultTestSettingDTOCheckTaskQualityConfig : TeaModel {
                     [NameInMap("bizNo")]
                     [Validation(Required=false)]
                     public string BizNo { get; set; }
@@ -139,8 +139,8 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 
                 [NameInMap("codeGuidelinesDetection")]
                 [Validation(Required=false)]
-                public UpdateProtectedBranchesResponseBodyResultTestSettingDTOCodeGuidelinesDetection CodeGuidelinesDetection { get; set; }
-                public class UpdateProtectedBranchesResponseBodyResultTestSettingDTOCodeGuidelinesDetection : TeaModel {
+                public CreateProtectdBranchResponseBodyResultTestSettingDTOCodeGuidelinesDetection CodeGuidelinesDetection { get; set; }
+                public class CreateProtectdBranchResponseBodyResultTestSettingDTOCodeGuidelinesDetection : TeaModel {
                     [NameInMap("enabled")]
                     [Validation(Required=false)]
                     public bool? Enabled { get; set; }
@@ -157,8 +157,8 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 
                 [NameInMap("sensitiveInfoDetection")]
                 [Validation(Required=false)]
-                public UpdateProtectedBranchesResponseBodyResultTestSettingDTOSensitiveInfoDetection SensitiveInfoDetection { get; set; }
-                public class UpdateProtectedBranchesResponseBodyResultTestSettingDTOSensitiveInfoDetection : TeaModel {
+                public CreateProtectdBranchResponseBodyResultTestSettingDTOSensitiveInfoDetection SensitiveInfoDetection { get; set; }
+                public class CreateProtectdBranchResponseBodyResultTestSettingDTOSensitiveInfoDetection : TeaModel {
                     [NameInMap("enabled")]
                     [Validation(Required=false)]
                     public bool? Enabled { get; set; }

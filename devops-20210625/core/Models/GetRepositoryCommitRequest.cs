@@ -8,22 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
-    public class GetFileLastCommitRequest : TeaModel {
+    public class GetRepositoryCommitRequest : TeaModel {
         [NameInMap("accessToken")]
         [Validation(Required=false)]
         public string AccessToken { get; set; }
 
-        [NameInMap("filePath")]
-        [Validation(Required=false)]
-        public string FilePath { get; set; }
-
         [NameInMap("organizationId")]
         [Validation(Required=false)]
         public string OrganizationId { get; set; }
-
-        [NameInMap("sha")]
-        [Validation(Required=false)]
-        public string Sha { get; set; }
 
         [NameInMap("showSignature")]
         [Validation(Required=false)]

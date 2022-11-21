@@ -9,67 +9,67 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class GetFileLastCommitResponseBody : TeaModel {
-        [NameInMap("ErrorCode")]
+        [NameInMap("errorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("errorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Result")]
+        [NameInMap("result")]
         [Validation(Required=false)]
         public GetFileLastCommitResponseBodyResult Result { get; set; }
         public class GetFileLastCommitResponseBodyResult : TeaModel {
-            [NameInMap("AuthorDate")]
+            [NameInMap("authorDate")]
             [Validation(Required=false)]
             public string AuthorDate { get; set; }
 
-            [NameInMap("AuthorEmail")]
+            [NameInMap("authorEmail")]
             [Validation(Required=false)]
             public string AuthorEmail { get; set; }
 
-            [NameInMap("AuthorName")]
+            [NameInMap("authorName")]
             [Validation(Required=false)]
             public string AuthorName { get; set; }
 
-            [NameInMap("CommittedDate")]
+            [NameInMap("committedDate")]
             [Validation(Required=false)]
             public string CommittedDate { get; set; }
 
-            [NameInMap("CommitterEmail")]
+            [NameInMap("committerEmail")]
             [Validation(Required=false)]
             public string CommitterEmail { get; set; }
 
-            [NameInMap("CommitterName")]
+            [NameInMap("committerName")]
             [Validation(Required=false)]
             public string CommitterName { get; set; }
 
-            [NameInMap("CreatedAt")]
+            [NameInMap("createdAt")]
             [Validation(Required=false)]
             public string CreatedAt { get; set; }
 
-            [NameInMap("Id")]
+            [NameInMap("id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
-            [NameInMap("Message")]
+            [NameInMap("message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
-            [NameInMap("ParentIds")]
+            [NameInMap("parentIds")]
             [Validation(Required=false)]
             public List<string> ParentIds { get; set; }
 
-            [NameInMap("ShortId")]
+            [NameInMap("shortId")]
             [Validation(Required=false)]
             public string ShortId { get; set; }
 
-            [NameInMap("Signature")]
+            [NameInMap("signature")]
             [Validation(Required=false)]
             public GetFileLastCommitResponseBodyResultSignature Signature { get; set; }
             public class GetFileLastCommitResponseBodyResultSignature : TeaModel {
@@ -83,13 +83,13 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 
             }
 
-            [NameInMap("Title")]
+            [NameInMap("title")]
             [Validation(Required=false)]
             public string Title { get; set; }
 
         }
 
-        [NameInMap("Success")]
+        [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 

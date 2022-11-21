@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class AddWebhookRequest : TeaModel {
-        [NameInMap("AccessToken")]
+        [NameInMap("accessToken")]
         [Validation(Required=false)]
         public string AccessToken { get; set; }
-
-        [NameInMap("OrganizationId")]
-        [Validation(Required=false)]
-        public string OrganizationId { get; set; }
 
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -48,6 +44,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [NameInMap("url")]
         [Validation(Required=false)]
         public string Url { get; set; }
+
+        [NameInMap("organizationId")]
+        [Validation(Required=false)]
+        public string OrganizationId { get; set; }
 
     }
 

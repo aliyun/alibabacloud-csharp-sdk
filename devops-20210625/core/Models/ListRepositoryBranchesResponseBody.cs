@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 
         [NameInMap("total")]
         [Validation(Required=false)]
-        public string Total { get; set; }
+        public long? Total { get; set; }
 
     }
 

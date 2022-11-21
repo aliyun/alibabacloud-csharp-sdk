@@ -9,49 +9,49 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class AddRepositoryMemberResponseBody : TeaModel {
-        [NameInMap("ErrorCode")]
+        [NameInMap("errorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("errorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Result")]
+        [NameInMap("result")]
         [Validation(Required=false)]
         public List<AddRepositoryMemberResponseBodyResult> Result { get; set; }
         public class AddRepositoryMemberResponseBodyResult : TeaModel {
-            [NameInMap("AccessLevel")]
+            [NameInMap("accessLevel")]
             [Validation(Required=false)]
             public int? AccessLevel { get; set; }
 
-            [NameInMap("AvatarUrl")]
+            [NameInMap("avatarUrl")]
             [Validation(Required=false)]
             public string AvatarUrl { get; set; }
 
-            [NameInMap("Email")]
+            [NameInMap("email")]
             [Validation(Required=false)]
             public string Email { get; set; }
 
-            [NameInMap("ExternUserId")]
+            [NameInMap("externUserId")]
             [Validation(Required=false)]
             public string ExternUserId { get; set; }
 
-            [NameInMap("Id")]
+            [NameInMap("id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
-            [NameInMap("State")]
+            [NameInMap("state")]
             [Validation(Required=false)]
             public string State { get; set; }
 
         }
 
-        [NameInMap("Success")]
+        [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
