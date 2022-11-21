@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         [NameInMap("ReplicaGroups")]
         [Validation(Required=false)]
         public List<DescribeDiskReplicaGroupsResponseBodyReplicaGroups> ReplicaGroups { get; set; }
@@ -94,6 +102,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 
