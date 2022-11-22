@@ -41,6 +41,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateCenRequestTag> Tag { get; set; }
+        public class CreateCenRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
     }
 
 }

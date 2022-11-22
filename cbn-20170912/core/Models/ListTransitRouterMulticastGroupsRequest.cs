@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        [NameInMap("ConnectPeerIds")]
-        [Validation(Required=false)]
-        public List<string> ConnectPeerIds { get; set; }
-
         [NameInMap("GroupIpAddress")]
         [Validation(Required=false)]
         public string GroupIpAddress { get; set; }

@@ -73,9 +73,19 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("ServiceType")]
+        [NameInMap("Tag")]
         [Validation(Required=false)]
-        public string ServiceType { get; set; }
+        public List<CreateCenBandwidthPackageRequestTag> Tag { get; set; }
+        public class CreateCenBandwidthPackageRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 
