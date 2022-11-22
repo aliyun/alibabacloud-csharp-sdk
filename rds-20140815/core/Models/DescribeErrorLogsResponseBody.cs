@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeErrorLogsResponseBodyItemsErrorLog> ErrorLog { get; set; }
             public class DescribeErrorLogsResponseBodyItemsErrorLog : TeaModel {
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("ErrorInfo")]
+                [Validation(Required=false)]
                 public string ErrorInfo { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

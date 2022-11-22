@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [NameInMap("Region")]
             [Validation(Required=false)]
             public List<string> Region { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

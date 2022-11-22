@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string Cpu { get; set; }
 
+            [NameInMap("EncryptedMemory")]
+            [Validation(Required=false)]
+            public string EncryptedMemory { get; set; }
+
+            [NameInMap("InstructionSetArch")]
+            [Validation(Required=false)]
+            public string InstructionSetArch { get; set; }
+
             [NameInMap("MaxConnections")]
             [Validation(Required=false)]
             public string MaxConnections { get; set; }

@@ -17,18 +17,49 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeParameterGroupsResponseBodyParameterGroupsParameterGroup> ParameterGroup { get; set; }
             public class DescribeParameterGroupsResponseBodyParameterGroupsParameterGroup : TeaModel {
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("Engine")]
+                [Validation(Required=false)]
                 public string Engine { get; set; }
+
+                [NameInMap("EngineVersion")]
+                [Validation(Required=false)]
                 public string EngineVersion { get; set; }
+
+                [NameInMap("ForceRestart")]
+                [Validation(Required=false)]
                 public int? ForceRestart { get; set; }
+
+                [NameInMap("ParamCounts")]
+                [Validation(Required=false)]
                 public int? ParamCounts { get; set; }
+
+                [NameInMap("ParameterGroupDesc")]
+                [Validation(Required=false)]
                 public string ParameterGroupDesc { get; set; }
+
+                [NameInMap("ParameterGroupId")]
+                [Validation(Required=false)]
                 public string ParameterGroupId { get; set; }
+
+                [NameInMap("ParameterGroupName")]
+                [Validation(Required=false)]
                 public string ParameterGroupName { get; set; }
+
+                [NameInMap("ParameterGroupType")]
+                [Validation(Required=false)]
                 public int? ParameterGroupType { get; set; }
+
+                [NameInMap("UpdateTime")]
+                [Validation(Required=false)]
                 public string UpdateTime { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

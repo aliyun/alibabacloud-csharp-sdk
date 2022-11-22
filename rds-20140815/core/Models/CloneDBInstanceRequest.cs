@@ -88,16 +88,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [NameInMap("AutoPause")]
             [Validation(Required=false)]
             public bool? AutoPause { get; set; }
+
             [NameInMap("MaxCapacity")]
             [Validation(Required=false)]
             public double? MaxCapacity { get; set; }
+
             [NameInMap("MinCapacity")]
             [Validation(Required=false)]
             public double? MinCapacity { get; set; }
+
             [NameInMap("SwitchForce")]
             [Validation(Required=false)]
             public bool? SwitchForce { get; set; }
-        };
+
+        }
 
         [NameInMap("TableMeta")]
         [Validation(Required=false)]

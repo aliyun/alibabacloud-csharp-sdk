@@ -25,10 +25,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDTCSecurityIpHostsForSQLServerResponseBodyItemsWhiteListGroups> WhiteListGroups { get; set; }
             public class DescribeDTCSecurityIpHostsForSQLServerResponseBodyItemsWhiteListGroups : TeaModel {
+                [NameInMap("SecurityIpHosts")]
+                [Validation(Required=false)]
                 public string SecurityIpHosts { get; set; }
+
+                [NameInMap("WhitelistGroupName")]
+                [Validation(Required=false)]
                 public string WhitelistGroupName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

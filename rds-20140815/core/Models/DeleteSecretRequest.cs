@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("DbInstanceId")]
+        [Validation(Required=false)]
+        public string DbInstanceId { get; set; }
+
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }

@@ -24,13 +24,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [NameInMap("MaxValue")]
                 [Validation(Required=false)]
                 public int? MaxValue { get; set; }
+
                 [NameInMap("MinValue")]
                 [Validation(Required=false)]
                 public int? MinValue { get; set; }
+
                 [NameInMap("Step")]
                 [Validation(Required=false)]
                 public int? Step { get; set; }
-            };
+
+            }
 
         }
 

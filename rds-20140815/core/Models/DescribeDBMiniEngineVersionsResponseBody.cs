@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public List<DescribeDBMiniEngineVersionsResponseBodyMinorVersionItems> MinorVersionItems { get; set; }
         public class DescribeDBMiniEngineVersionsResponseBodyMinorVersionItems : TeaModel {
+            [NameInMap("CommunityMinorVersion")]
+            [Validation(Required=false)]
+            public string CommunityMinorVersion { get; set; }
+
             [NameInMap("Engine")]
             [Validation(Required=false)]
             public string Engine { get; set; }
@@ -52,6 +56,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [NameInMap("StatusDesc")]
             [Validation(Required=false)]
             public string StatusDesc { get; set; }
+
+            [NameInMap("Tag")]
+            [Validation(Required=false)]
+            public string Tag { get; set; }
 
         }
 

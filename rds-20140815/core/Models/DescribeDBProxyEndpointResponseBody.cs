@@ -49,11 +49,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBProxyEndpointResponseBodyEndpointConnectItemsEndpointConnectItems> EndpointConnectItems { get; set; }
             public class DescribeDBProxyEndpointResponseBodyEndpointConnectItemsEndpointConnectItems : TeaModel {
+                [NameInMap("DbProxyEndpointConnectString")]
+                [Validation(Required=false)]
                 public string DbProxyEndpointConnectString { get; set; }
+
+                [NameInMap("DbProxyEndpointNetType")]
+                [Validation(Required=false)]
                 public string DbProxyEndpointNetType { get; set; }
+
+                [NameInMap("DbProxyEndpointPort")]
+                [Validation(Required=false)]
                 public string DbProxyEndpointPort { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ReadOnlyInstanceDistributionType")]
         [Validation(Required=false)]

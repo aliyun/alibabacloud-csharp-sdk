@@ -21,11 +21,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeMetaListResponseBodyItemsMeta> Meta { get; set; }
             public class DescribeMetaListResponseBodyItemsMeta : TeaModel {
+                [NameInMap("Database")]
+                [Validation(Required=false)]
                 public string Database { get; set; }
+
+                [NameInMap("Size")]
+                [Validation(Required=false)]
                 public string Size { get; set; }
+
+                [NameInMap("Tables")]
+                [Validation(Required=false)]
                 public string Tables { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

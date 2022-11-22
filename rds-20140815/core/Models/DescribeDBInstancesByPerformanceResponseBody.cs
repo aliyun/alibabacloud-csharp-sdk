@@ -17,14 +17,33 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBInstancesByPerformanceResponseBodyItemsDBInstancePerformance> DBInstancePerformance { get; set; }
             public class DescribeDBInstancesByPerformanceResponseBodyItemsDBInstancePerformance : TeaModel {
+                [NameInMap("CPUUsage")]
+                [Validation(Required=false)]
                 public string CPUUsage { get; set; }
+
+                [NameInMap("DBInstanceDescription")]
+                [Validation(Required=false)]
                 public string DBInstanceDescription { get; set; }
+
+                [NameInMap("DBInstanceId")]
+                [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
+
+                [NameInMap("DiskUsage")]
+                [Validation(Required=false)]
                 public string DiskUsage { get; set; }
+
+                [NameInMap("IOPSUsage")]
+                [Validation(Required=false)]
                 public string IOPSUsage { get; set; }
+
+                [NameInMap("SessionUsage")]
+                [Validation(Required=false)]
                 public string SessionUsage { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

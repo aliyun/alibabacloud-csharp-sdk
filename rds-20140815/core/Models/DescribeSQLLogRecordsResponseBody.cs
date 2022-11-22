@@ -17,16 +17,41 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeSQLLogRecordsResponseBodyItemsSQLRecord> SQLRecord { get; set; }
             public class DescribeSQLLogRecordsResponseBodyItemsSQLRecord : TeaModel {
+                [NameInMap("AccountName")]
+                [Validation(Required=false)]
                 public string AccountName { get; set; }
+
+                [NameInMap("DBName")]
+                [Validation(Required=false)]
                 public string DBName { get; set; }
+
+                [NameInMap("ExecuteTime")]
+                [Validation(Required=false)]
                 public string ExecuteTime { get; set; }
+
+                [NameInMap("HostAddress")]
+                [Validation(Required=false)]
                 public string HostAddress { get; set; }
+
+                [NameInMap("ReturnRowCounts")]
+                [Validation(Required=false)]
                 public long? ReturnRowCounts { get; set; }
+
+                [NameInMap("SQLText")]
+                [Validation(Required=false)]
                 public string SQLText { get; set; }
+
+                [NameInMap("ThreadID")]
+                [Validation(Required=false)]
                 public string ThreadID { get; set; }
+
+                [NameInMap("TotalExecutionTimes")]
+                [Validation(Required=false)]
                 public long? TotalExecutionTimes { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

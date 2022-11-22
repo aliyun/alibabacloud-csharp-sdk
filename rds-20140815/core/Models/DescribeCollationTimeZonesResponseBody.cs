@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeCollationTimeZonesResponseBodyCollationTimeZonesCollationTimeZone> CollationTimeZone { get; set; }
             public class DescribeCollationTimeZonesResponseBodyCollationTimeZonesCollationTimeZone : TeaModel {
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("StandardTimeOffset")]
+                [Validation(Required=false)]
                 public string StandardTimeOffset { get; set; }
+
+                [NameInMap("TimeZone")]
+                [Validation(Required=false)]
                 public string TimeZone { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

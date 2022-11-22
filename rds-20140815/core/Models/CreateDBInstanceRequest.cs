@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ConnectionMode { get; set; }
 
+        [NameInMap("ConnectionString")]
+        [Validation(Required=false)]
+        public string ConnectionString { get; set; }
+
         [NameInMap("CreateStrategy")]
         [Validation(Required=false)]
         public string CreateStrategy { get; set; }
@@ -140,16 +144,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [NameInMap("AutoPause")]
             [Validation(Required=false)]
             public bool? AutoPause { get; set; }
+
             [NameInMap("MaxCapacity")]
             [Validation(Required=false)]
             public double? MaxCapacity { get; set; }
+
             [NameInMap("MinCapacity")]
             [Validation(Required=false)]
             public double? MinCapacity { get; set; }
+
             [NameInMap("SwitchForce")]
             [Validation(Required=false)]
             public bool? SwitchForce { get; set; }
-        };
+
+        }
 
         [NameInMap("StorageAutoScale")]
         [Validation(Required=false)]

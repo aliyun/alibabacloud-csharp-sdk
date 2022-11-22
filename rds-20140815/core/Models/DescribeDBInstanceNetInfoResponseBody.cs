@@ -17,9 +17,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo> DBInstanceNetInfo { get; set; }
             public class DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo : TeaModel {
+                [NameInMap("BabelfishPort")]
+                [Validation(Required=false)]
                 public string BabelfishPort { get; set; }
+
+                [NameInMap("ConnectionString")]
+                [Validation(Required=false)]
                 public string ConnectionString { get; set; }
+
+                [NameInMap("ConnectionStringType")]
+                [Validation(Required=false)]
                 public string ConnectionStringType { get; set; }
+
+                [NameInMap("DBInstanceWeights")]
+                [Validation(Required=false)]
                 public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoDBInstanceWeights DBInstanceWeights { get; set; }
                 public class DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoDBInstanceWeights : TeaModel {
                     [NameInMap("DBInstanceWeight")]
@@ -49,12 +60,33 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     }
 
                 }
+
+                [NameInMap("DistributionType")]
+                [Validation(Required=false)]
                 public string DistributionType { get; set; }
+
+                [NameInMap("ExpiredTime")]
+                [Validation(Required=false)]
                 public string ExpiredTime { get; set; }
+
+                [NameInMap("IPAddress")]
+                [Validation(Required=false)]
                 public string IPAddress { get; set; }
+
+                [NameInMap("IPType")]
+                [Validation(Required=false)]
                 public string IPType { get; set; }
+
+                [NameInMap("MaxDelayTime")]
+                [Validation(Required=false)]
                 public string MaxDelayTime { get; set; }
+
+                [NameInMap("Port")]
+                [Validation(Required=false)]
                 public string Port { get; set; }
+
+                [NameInMap("SecurityIPGroups")]
+                [Validation(Required=false)]
                 public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoSecurityIPGroups SecurityIPGroups { get; set; }
                 public class DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoSecurityIPGroups : TeaModel {
                     [NameInMap("securityIPGroup")]
@@ -72,11 +104,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     }
 
                 }
+
+                [NameInMap("Upgradeable")]
+                [Validation(Required=false)]
                 public string Upgradeable { get; set; }
+
+                [NameInMap("VPCId")]
+                [Validation(Required=false)]
                 public string VPCId { get; set; }
+
+                [NameInMap("VSwitchId")]
+                [Validation(Required=false)]
                 public string VSwitchId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("InstanceNetworkType")]
         [Validation(Required=false)]

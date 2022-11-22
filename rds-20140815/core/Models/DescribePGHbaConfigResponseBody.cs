@@ -21,16 +21,41 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribePGHbaConfigResponseBodyDefaultHbaItemsHbaItem> HbaItem { get; set; }
             public class DescribePGHbaConfigResponseBodyDefaultHbaItemsHbaItem : TeaModel {
+                [NameInMap("Address")]
+                [Validation(Required=false)]
                 public string Address { get; set; }
+
+                [NameInMap("Database")]
+                [Validation(Required=false)]
                 public string Database { get; set; }
+
+                [NameInMap("Mask")]
+                [Validation(Required=false)]
                 public string Mask { get; set; }
+
+                [NameInMap("Method")]
+                [Validation(Required=false)]
                 public string Method { get; set; }
+
+                [NameInMap("Option")]
+                [Validation(Required=false)]
                 public string Option { get; set; }
+
+                [NameInMap("PriorityId")]
+                [Validation(Required=false)]
                 public int? PriorityId { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
+                [NameInMap("User")]
+                [Validation(Required=false)]
                 public string User { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("HbaModifyTime")]
         [Validation(Required=false)]
@@ -56,16 +81,41 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribePGHbaConfigResponseBodyRunningHbaItemsHbaItem> HbaItem { get; set; }
             public class DescribePGHbaConfigResponseBodyRunningHbaItemsHbaItem : TeaModel {
+                [NameInMap("Address")]
+                [Validation(Required=false)]
                 public string Address { get; set; }
+
+                [NameInMap("Database")]
+                [Validation(Required=false)]
                 public string Database { get; set; }
+
+                [NameInMap("Mask")]
+                [Validation(Required=false)]
                 public string Mask { get; set; }
+
+                [NameInMap("Method")]
+                [Validation(Required=false)]
                 public string Method { get; set; }
+
+                [NameInMap("Option")]
+                [Validation(Required=false)]
                 public string Option { get; set; }
+
+                [NameInMap("PriorityId")]
+                [Validation(Required=false)]
                 public int? PriorityId { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
+                [NameInMap("User")]
+                [Validation(Required=false)]
                 public string User { get; set; }
+
             }
-        };
+
+        }
 
     }
 

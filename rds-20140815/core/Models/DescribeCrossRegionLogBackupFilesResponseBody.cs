@@ -25,18 +25,49 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeCrossRegionLogBackupFilesResponseBodyItemsItem> Item { get; set; }
             public class DescribeCrossRegionLogBackupFilesResponseBodyItemsItem : TeaModel {
+                [NameInMap("CrossBackupRegion")]
+                [Validation(Required=false)]
                 public string CrossBackupRegion { get; set; }
+
+                [NameInMap("CrossDownloadLink")]
+                [Validation(Required=false)]
                 public string CrossDownloadLink { get; set; }
+
+                [NameInMap("CrossIntranetDownloadLink")]
+                [Validation(Required=false)]
                 public string CrossIntranetDownloadLink { get; set; }
+
+                [NameInMap("CrossLogBackupId")]
+                [Validation(Required=false)]
                 public int? CrossLogBackupId { get; set; }
+
+                [NameInMap("CrossLogBackupSize")]
+                [Validation(Required=false)]
                 public long? CrossLogBackupSize { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public int? InstanceId { get; set; }
+
+                [NameInMap("LinkExpiredTime")]
+                [Validation(Required=false)]
                 public string LinkExpiredTime { get; set; }
+
+                [NameInMap("LogBeginTime")]
+                [Validation(Required=false)]
                 public string LogBeginTime { get; set; }
+
+                [NameInMap("LogEndTime")]
+                [Validation(Required=false)]
                 public string LogEndTime { get; set; }
+
+                [NameInMap("LogFileName")]
+                [Validation(Required=false)]
                 public string LogFileName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

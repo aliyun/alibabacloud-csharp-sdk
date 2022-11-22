@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeModifyPGHbaConfigLogResponseBodyHbaLogItemsHbaLogItem> HbaLogItem { get; set; }
             public class DescribeModifyPGHbaConfigLogResponseBodyHbaLogItemsHbaLogItem : TeaModel {
+                [NameInMap("AfterHbaItems")]
+                [Validation(Required=false)]
                 public DescribeModifyPGHbaConfigLogResponseBodyHbaLogItemsHbaLogItemAfterHbaItems AfterHbaItems { get; set; }
                 public class DescribeModifyPGHbaConfigLogResponseBodyHbaLogItemsHbaLogItemAfterHbaItems : TeaModel {
                     [NameInMap("HbaItem")]
@@ -62,6 +64,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     }
 
                 }
+
+                [NameInMap("BeforeHbaItems")]
+                [Validation(Required=false)]
                 public DescribeModifyPGHbaConfigLogResponseBodyHbaLogItemsHbaLogItemBeforeHbaItems BeforeHbaItems { get; set; }
                 public class DescribeModifyPGHbaConfigLogResponseBodyHbaLogItemsHbaLogItemBeforeHbaItems : TeaModel {
                     [NameInMap("HbaItem")]
@@ -103,11 +108,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     }
 
                 }
+
+                [NameInMap("ModifyStatus")]
+                [Validation(Required=false)]
                 public string ModifyStatus { get; set; }
+
+                [NameInMap("ModifyTime")]
+                [Validation(Required=false)]
                 public string ModifyTime { get; set; }
+
+                [NameInMap("StatusReason")]
+                [Validation(Required=false)]
                 public string StatusReason { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("LogItemCount")]
         [Validation(Required=false)]

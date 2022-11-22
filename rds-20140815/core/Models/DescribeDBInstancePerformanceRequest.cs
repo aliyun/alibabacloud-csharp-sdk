@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string Key { get; set; }
 
+        [NameInMap("NodeId")]
+        [Validation(Required=false)]
+        public string NodeId { get; set; }
+
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }

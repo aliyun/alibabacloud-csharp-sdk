@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeParametersResponseBodyConfigParametersDBInstanceParameter> DBInstanceParameter { get; set; }
             public class DescribeParametersResponseBodyConfigParametersDBInstanceParameter : TeaModel {
+                [NameInMap("ParameterDescription")]
+                [Validation(Required=false)]
                 public string ParameterDescription { get; set; }
+
+                [NameInMap("ParameterName")]
+                [Validation(Required=false)]
                 public string ParameterName { get; set; }
+
+                [NameInMap("ParameterValue")]
+                [Validation(Required=false)]
                 public string ParameterValue { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Engine")]
         [Validation(Required=false)]
@@ -43,11 +53,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeParametersResponseBodyRunningParametersDBInstanceParameter> DBInstanceParameter { get; set; }
             public class DescribeParametersResponseBodyRunningParametersDBInstanceParameter : TeaModel {
+                [NameInMap("ParameterDescription")]
+                [Validation(Required=false)]
                 public string ParameterDescription { get; set; }
+
+                [NameInMap("ParameterName")]
+                [Validation(Required=false)]
                 public string ParameterName { get; set; }
+
+                [NameInMap("ParameterValue")]
+                [Validation(Required=false)]
                 public string ParameterValue { get; set; }
+
             }
-        };
+
+        }
 
     }
 

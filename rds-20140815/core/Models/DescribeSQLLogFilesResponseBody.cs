@@ -17,14 +17,33 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeSQLLogFilesResponseBodyItemsLogFile> LogFile { get; set; }
             public class DescribeSQLLogFilesResponseBodyItemsLogFile : TeaModel {
+                [NameInMap("FileID")]
+                [Validation(Required=false)]
                 public string FileID { get; set; }
+
+                [NameInMap("LogDownloadURL")]
+                [Validation(Required=false)]
                 public string LogDownloadURL { get; set; }
+
+                [NameInMap("LogEndTime")]
+                [Validation(Required=false)]
                 public string LogEndTime { get; set; }
+
+                [NameInMap("LogSize")]
+                [Validation(Required=false)]
                 public string LogSize { get; set; }
+
+                [NameInMap("LogStartTime")]
+                [Validation(Required=false)]
                 public string LogStartTime { get; set; }
+
+                [NameInMap("LogStatus")]
+                [Validation(Required=false)]
                 public string LogStatus { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

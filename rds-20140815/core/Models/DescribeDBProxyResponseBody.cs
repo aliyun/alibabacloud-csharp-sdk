@@ -17,15 +17,37 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems> DBProxyConnectStringItems { get; set; }
             public class DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems : TeaModel {
+                [NameInMap("DBProxyConnectString")]
+                [Validation(Required=false)]
                 public string DBProxyConnectString { get; set; }
+
+                [NameInMap("DBProxyConnectStringNetType")]
+                [Validation(Required=false)]
                 public string DBProxyConnectStringNetType { get; set; }
+
+                [NameInMap("DBProxyConnectStringNetWorkType")]
+                [Validation(Required=false)]
                 public string DBProxyConnectStringNetWorkType { get; set; }
+
+                [NameInMap("DBProxyConnectStringPort")]
+                [Validation(Required=false)]
                 public string DBProxyConnectStringPort { get; set; }
+
+                [NameInMap("DBProxyEndpointId")]
+                [Validation(Required=false)]
                 public string DBProxyEndpointId { get; set; }
+
+                [NameInMap("DBProxyEndpointName")]
+                [Validation(Required=false)]
                 public string DBProxyEndpointName { get; set; }
+
+                [NameInMap("DBProxyVpcInstanceId")]
+                [Validation(Required=false)]
                 public string DBProxyVpcInstanceId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("DBProxyEngineType")]
         [Validation(Required=false)]
@@ -71,12 +93,25 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBProxyResponseBodyDbProxyEndpointItemsDbProxyEndpointItems> DbProxyEndpointItems { get; set; }
             public class DescribeDBProxyResponseBodyDbProxyEndpointItemsDbProxyEndpointItems : TeaModel {
+                [NameInMap("DbProxyEndpointAliases")]
+                [Validation(Required=false)]
                 public string DbProxyEndpointAliases { get; set; }
+
+                [NameInMap("DbProxyEndpointName")]
+                [Validation(Required=false)]
                 public string DbProxyEndpointName { get; set; }
+
+                [NameInMap("DbProxyEndpointType")]
+                [Validation(Required=false)]
                 public string DbProxyEndpointType { get; set; }
+
+                [NameInMap("DbProxyReadWriteMode")]
+                [Validation(Required=false)]
                 public string DbProxyReadWriteMode { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

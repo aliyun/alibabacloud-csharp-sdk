@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [NameInMap("DeletedBaksetIds")]
             [Validation(Required=false)]
             public List<int?> DeletedBaksetIds { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

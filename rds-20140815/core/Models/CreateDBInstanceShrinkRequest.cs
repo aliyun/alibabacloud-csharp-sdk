@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ConnectionMode { get; set; }
 
+        [NameInMap("ConnectionString")]
+        [Validation(Required=false)]
+        public string ConnectionString { get; set; }
+
         [NameInMap("CreateStrategy")]
         [Validation(Required=false)]
         public string CreateStrategy { get; set; }

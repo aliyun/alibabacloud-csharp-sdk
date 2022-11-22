@@ -17,13 +17,29 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<GetDbProxyInstanceSslResponseBodyDbProxyCertListItemsDbProxyCertListItems> DbProxyCertListItems { get; set; }
             public class GetDbProxyInstanceSslResponseBodyDbProxyCertListItemsDbProxyCertListItems : TeaModel {
+                [NameInMap("CertCommonName")]
+                [Validation(Required=false)]
                 public string CertCommonName { get; set; }
+
+                [NameInMap("DbInstanceName")]
+                [Validation(Required=false)]
                 public string DbInstanceName { get; set; }
+
+                [NameInMap("EndpointName")]
+                [Validation(Required=false)]
                 public string EndpointName { get; set; }
+
+                [NameInMap("EndpointType")]
+                [Validation(Required=false)]
                 public string EndpointType { get; set; }
+
+                [NameInMap("SslExpiredTime")]
+                [Validation(Required=false)]
                 public string SslExpiredTime { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

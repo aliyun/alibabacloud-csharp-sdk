@@ -24,7 +24,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [NameInMap("word")]
             [Validation(Required=false)]
             public List<string> Word { get; set; }
-        };
+
+        }
 
     }
 

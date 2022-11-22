@@ -17,13 +17,29 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescibeImportsFromDatabaseResponseBodyItemsImportResultFromDB> ImportResultFromDB { get; set; }
             public class DescibeImportsFromDatabaseResponseBodyItemsImportResultFromDB : TeaModel {
+                [NameInMap("ImportDataStatus")]
+                [Validation(Required=false)]
                 public string ImportDataStatus { get; set; }
+
+                [NameInMap("ImportDataStatusDescription")]
+                [Validation(Required=false)]
                 public string ImportDataStatusDescription { get; set; }
+
+                [NameInMap("ImportDataType")]
+                [Validation(Required=false)]
                 public string ImportDataType { get; set; }
+
+                [NameInMap("ImportId")]
+                [Validation(Required=false)]
                 public int? ImportId { get; set; }
+
+                [NameInMap("IncrementalImportingTime")]
+                [Validation(Required=false)]
                 public string IncrementalImportingTime { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

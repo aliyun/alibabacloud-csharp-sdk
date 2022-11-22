@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeSQLLogReportListResponseBodyItemsItem> Item { get; set; }
             public class DescribeSQLLogReportListResponseBodyItemsItem : TeaModel {
+                [NameInMap("LatencyTopNItems")]
+                [Validation(Required=false)]
                 public DescribeSQLLogReportListResponseBodyItemsItemLatencyTopNItems LatencyTopNItems { get; set; }
                 public class DescribeSQLLogReportListResponseBodyItemsItemLatencyTopNItems : TeaModel {
                     [NameInMap("LatencyTopNItem")]
@@ -38,6 +40,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     }
 
                 }
+
+                [NameInMap("QPSTopNItems")]
+                [Validation(Required=false)]
                 public DescribeSQLLogReportListResponseBodyItemsItemQPSTopNItems QPSTopNItems { get; set; }
                 public class DescribeSQLLogReportListResponseBodyItemsItemQPSTopNItems : TeaModel {
                     [NameInMap("QPSTopNItem")]
@@ -55,9 +60,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     }
 
                 }
+
+                [NameInMap("ReportTime")]
+                [Validation(Required=false)]
                 public string ReportTime { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

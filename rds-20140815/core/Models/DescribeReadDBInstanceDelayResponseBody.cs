@@ -25,7 +25,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeReadDBInstanceDelayResponseBodyItemsItems> Items { get; set; }
             public class DescribeReadDBInstanceDelayResponseBodyItemsItems : TeaModel {
+                [NameInMap("DBInstanceId")]
+                [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
+
+                [NameInMap("ReadDBInstanceNames")]
+                [Validation(Required=false)]
                 public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDBInstanceNames ReadDBInstanceNames { get; set; }
                 public class DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDBInstanceNames : TeaModel {
                     [NameInMap("ReadDBInstanceName")]
@@ -33,6 +38,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     public List<string> ReadDBInstanceName { get; set; }
 
                 }
+
+                [NameInMap("ReadDelayTimes")]
+                [Validation(Required=false)]
                 public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDelayTimes ReadDelayTimes { get; set; }
                 public class DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDelayTimes : TeaModel {
                     [NameInMap("ReadDelayTime")]
@@ -40,6 +48,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     public List<string> ReadDelayTime { get; set; }
 
                 }
+
+                [NameInMap("ReadonlyInstanceDelay")]
+                [Validation(Required=false)]
                 public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelay ReadonlyInstanceDelay { get; set; }
                 public class DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelay : TeaModel {
                     [NameInMap("ReadonlyInstanceDelay")]
@@ -81,8 +92,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("ReadDBInstanceId")]
         [Validation(Required=false)]

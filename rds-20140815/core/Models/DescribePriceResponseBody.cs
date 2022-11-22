@@ -30,6 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Success { get; set; }
 
             }
+
             [NameInMap("Coupons")]
             [Validation(Required=false)]
             public DescribePriceResponseBodyPriceInfoCoupons Coupons { get; set; }
@@ -57,15 +58,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
 
             }
+
             [NameInMap("Currency")]
             [Validation(Required=false)]
             public string Currency { get; set; }
+
             [NameInMap("DiscountPrice")]
             [Validation(Required=false)]
             public float? DiscountPrice { get; set; }
+
             [NameInMap("OriginalPrice")]
             [Validation(Required=false)]
             public float? OriginalPrice { get; set; }
+
             [NameInMap("RuleIds")]
             [Validation(Required=false)]
             public DescribePriceResponseBodyPriceInfoRuleIds RuleIds { get; set; }
@@ -75,10 +80,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public List<string> RuleId { get; set; }
 
             }
+
             [NameInMap("TradePrice")]
             [Validation(Required=false)]
             public float? TradePrice { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -92,11 +99,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribePriceResponseBodyRulesRule> Rule { get; set; }
             public class DescribePriceResponseBodyRulesRule : TeaModel {
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("RuleId")]
+                [Validation(Required=false)]
                 public long? RuleId { get; set; }
+
             }
-        };
+
+        }
 
     }
 

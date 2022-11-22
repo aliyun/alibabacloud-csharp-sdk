@@ -17,18 +17,49 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeBinlogFilesResponseBodyItemsBinLogFile> BinLogFile { get; set; }
             public class DescribeBinlogFilesResponseBodyItemsBinLogFile : TeaModel {
+                [NameInMap("Checksum")]
+                [Validation(Required=false)]
                 public string Checksum { get; set; }
+
+                [NameInMap("DownloadLink")]
+                [Validation(Required=false)]
                 public string DownloadLink { get; set; }
+
+                [NameInMap("FileSize")]
+                [Validation(Required=false)]
                 public long? FileSize { get; set; }
+
+                [NameInMap("HostInstanceID")]
+                [Validation(Required=false)]
                 public string HostInstanceID { get; set; }
+
+                [NameInMap("IntranetDownloadLink")]
+                [Validation(Required=false)]
                 public string IntranetDownloadLink { get; set; }
+
+                [NameInMap("LinkExpiredTime")]
+                [Validation(Required=false)]
                 public string LinkExpiredTime { get; set; }
+
+                [NameInMap("LogBeginTime")]
+                [Validation(Required=false)]
                 public string LogBeginTime { get; set; }
+
+                [NameInMap("LogEndTime")]
+                [Validation(Required=false)]
                 public string LogEndTime { get; set; }
+
+                [NameInMap("LogFileName")]
+                [Validation(Required=false)]
                 public string LogFileName { get; set; }
+
+                [NameInMap("RemoteStatus")]
+                [Validation(Required=false)]
                 public string RemoteStatus { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

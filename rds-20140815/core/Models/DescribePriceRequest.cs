@@ -33,6 +33,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBInstanceStorageType { get; set; }
 
+        [NameInMap("DBNode")]
+        [Validation(Required=false)]
+        public List<DescribePriceRequestDBNode> DBNode { get; set; }
+        public class DescribePriceRequestDBNode : TeaModel {
+            [NameInMap("ClassCode")]
+            [Validation(Required=false)]
+            public string ClassCode { get; set; }
+
+            [NameInMap("ZoneId")]
+            [Validation(Required=false)]
+            public string ZoneId { get; set; }
+
+        }
+
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }

@@ -17,7 +17,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBInstanceByTagsResponseBodyItemsDBInstanceTag> DBInstanceTag { get; set; }
             public class DescribeDBInstanceByTagsResponseBodyItemsDBInstanceTag : TeaModel {
+                [NameInMap("DBInstanceId")]
+                [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
                 public DescribeDBInstanceByTagsResponseBodyItemsDBInstanceTagTags Tags { get; set; }
                 public class DescribeDBInstanceByTagsResponseBodyItemsDBInstanceTagTags : TeaModel {
                     [NameInMap("Tag")]
@@ -35,8 +40,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string EncryptionKey { get; set; }
 
+        [NameInMap("IsRotate")]
+        [Validation(Required=false)]
+        public bool? IsRotate { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

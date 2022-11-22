@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [NameInMap("CreateCount")]
             [Validation(Required=false)]
             public string CreateCount { get; set; }
+
             [NameInMap("GadInstanceName")]
             [Validation(Required=false)]
             public string GadInstanceName { get; set; }
-        };
+
+        }
 
     }
 

@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string EnableBackupLog { get; set; }
 
+        [NameInMap("EnableIncrementDataBackup")]
+        [Validation(Required=false)]
+        public bool? EnableIncrementDataBackup { get; set; }
+
         [NameInMap("HighSpaceUsageProtection")]
         [Validation(Required=false)]
         public string HighSpaceUsageProtection { get; set; }

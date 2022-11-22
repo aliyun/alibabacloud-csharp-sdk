@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDatabasesResponseBodyDatabasesDatabase> Database { get; set; }
             public class DescribeDatabasesResponseBodyDatabasesDatabase : TeaModel {
+                [NameInMap("Accounts")]
+                [Validation(Required=false)]
                 public DescribeDatabasesResponseBodyDatabasesDatabaseAccounts Accounts { get; set; }
                 public class DescribeDatabasesResponseBodyDatabasesDatabaseAccounts : TeaModel {
                     [NameInMap("AccountPrivilegeInfo")]
@@ -38,18 +40,66 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     }
 
                 }
+
+                [NameInMap("CharacterSetName")]
+                [Validation(Required=false)]
                 public string CharacterSetName { get; set; }
+
+                [NameInMap("Collate")]
+                [Validation(Required=false)]
+                public string Collate { get; set; }
+
+                [NameInMap("ConnLimit")]
+                [Validation(Required=false)]
+                public string ConnLimit { get; set; }
+
+                [NameInMap("Ctype")]
+                [Validation(Required=false)]
+                public string Ctype { get; set; }
+
+                [NameInMap("DBDescription")]
+                [Validation(Required=false)]
                 public string DBDescription { get; set; }
+
+                [NameInMap("DBInstanceId")]
+                [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
+
+                [NameInMap("DBName")]
+                [Validation(Required=false)]
                 public string DBName { get; set; }
+
+                [NameInMap("DBStatus")]
+                [Validation(Required=false)]
                 public string DBStatus { get; set; }
+
+                [NameInMap("Engine")]
+                [Validation(Required=false)]
                 public string Engine { get; set; }
+
+                [NameInMap("PageNumber")]
+                [Validation(Required=false)]
                 public int? PageNumber { get; set; }
+
+                [NameInMap("PageSize")]
+                [Validation(Required=false)]
                 public int? PageSize { get; set; }
+
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
+
+                [NameInMap("Tablespace")]
+                [Validation(Required=false)]
+                public string Tablespace { get; set; }
+
+                [NameInMap("TotalCount")]
+                [Validation(Required=false)]
                 public int? TotalCount { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

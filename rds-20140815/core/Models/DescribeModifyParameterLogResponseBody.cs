@@ -29,13 +29,29 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeModifyParameterLogResponseBodyItemsParameterChangeLog> ParameterChangeLog { get; set; }
             public class DescribeModifyParameterLogResponseBodyItemsParameterChangeLog : TeaModel {
+                [NameInMap("ModifyTime")]
+                [Validation(Required=false)]
                 public string ModifyTime { get; set; }
+
+                [NameInMap("NewParameterValue")]
+                [Validation(Required=false)]
                 public string NewParameterValue { get; set; }
+
+                [NameInMap("OldParameterValue")]
+                [Validation(Required=false)]
                 public string OldParameterValue { get; set; }
+
+                [NameInMap("ParameterName")]
+                [Validation(Required=false)]
                 public string ParameterName { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

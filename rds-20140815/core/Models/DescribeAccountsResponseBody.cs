@@ -17,11 +17,40 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeAccountsResponseBodyAccountsDBInstanceAccount> DBInstanceAccount { get; set; }
             public class DescribeAccountsResponseBodyAccountsDBInstanceAccount : TeaModel {
+                [NameInMap("AccountDescription")]
+                [Validation(Required=false)]
                 public string AccountDescription { get; set; }
+
+                [NameInMap("AccountName")]
+                [Validation(Required=false)]
                 public string AccountName { get; set; }
+
+                [NameInMap("AccountStatus")]
+                [Validation(Required=false)]
                 public string AccountStatus { get; set; }
+
+                [NameInMap("AccountType")]
+                [Validation(Required=false)]
                 public string AccountType { get; set; }
+
+                [NameInMap("BypassRLS")]
+                [Validation(Required=false)]
+                public string BypassRLS { get; set; }
+
+                [NameInMap("CreateDB")]
+                [Validation(Required=false)]
+                public string CreateDB { get; set; }
+
+                [NameInMap("CreateRole")]
+                [Validation(Required=false)]
+                public string CreateRole { get; set; }
+
+                [NameInMap("DBInstanceId")]
+                [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
+
+                [NameInMap("DatabasePrivileges")]
+                [Validation(Required=false)]
                 public DescribeAccountsResponseBodyAccountsDBInstanceAccountDatabasePrivileges DatabasePrivileges { get; set; }
                 public class DescribeAccountsResponseBodyAccountsDBInstanceAccountDatabasePrivileges : TeaModel {
                     [NameInMap("DatabasePrivilege")]
@@ -43,9 +72,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     }
 
                 }
+
+                [NameInMap("PrivExceeded")]
+                [Validation(Required=false)]
                 public string PrivExceeded { get; set; }
+
+                [NameInMap("Replication")]
+                [Validation(Required=false)]
+                public string Replication { get; set; }
+
+                [NameInMap("ValidUntil")]
+                [Validation(Required=false)]
+                public string ValidUntil { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

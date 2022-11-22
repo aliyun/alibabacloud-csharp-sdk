@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBInstanceTDEResponseBodyDatabasesDatabase> Database { get; set; }
             public class DescribeDBInstanceTDEResponseBodyDatabasesDatabase : TeaModel {
+                [NameInMap("DBName")]
+                [Validation(Required=false)]
                 public string DBName { get; set; }
+
+                [NameInMap("TDEStatus")]
+                [Validation(Required=false)]
                 public string TDEStatus { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

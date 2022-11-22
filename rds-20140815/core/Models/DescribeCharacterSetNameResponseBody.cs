@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [NameInMap("CharacterSetName")]
             [Validation(Required=false)]
             public List<string> CharacterSetName { get; set; }
-        };
+
+        }
 
         [NameInMap("Engine")]
         [Validation(Required=false)]

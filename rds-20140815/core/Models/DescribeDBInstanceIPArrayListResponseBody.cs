@@ -17,12 +17,25 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBInstanceIPArrayListResponseBodyItemsDBInstanceIPArray> DBInstanceIPArray { get; set; }
             public class DescribeDBInstanceIPArrayListResponseBodyItemsDBInstanceIPArray : TeaModel {
+                [NameInMap("DBInstanceIPArrayAttribute")]
+                [Validation(Required=false)]
                 public string DBInstanceIPArrayAttribute { get; set; }
+
+                [NameInMap("DBInstanceIPArrayName")]
+                [Validation(Required=false)]
                 public string DBInstanceIPArrayName { get; set; }
+
+                [NameInMap("SecurityIPList")]
+                [Validation(Required=false)]
                 public string SecurityIPList { get; set; }
+
+                [NameInMap("SecurityIPType")]
+                [Validation(Required=false)]
                 public string SecurityIPType { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
