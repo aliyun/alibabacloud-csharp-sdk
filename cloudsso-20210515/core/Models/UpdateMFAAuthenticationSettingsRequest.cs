@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         [Validation(Required=false)]
         public string MFAAuthenticationSettings { get; set; }
 
+        [NameInMap("OperationForRiskLogin")]
+        [Validation(Required=false)]
+        public string OperationForRiskLogin { get; set; }
+
     }
 
 }

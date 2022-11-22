@@ -4863,6 +4863,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             {
                 query["MFAAuthenticationSettings"] = request.MFAAuthenticationSettings;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationForRiskLogin))
+            {
+                query["OperationForRiskLogin"] = request.OperationForRiskLogin;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4893,6 +4897,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MFAAuthenticationSettings))
             {
                 query["MFAAuthenticationSettings"] = request.MFAAuthenticationSettings;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationForRiskLogin))
+            {
+                query["OperationForRiskLogin"] = request.OperationForRiskLogin;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
