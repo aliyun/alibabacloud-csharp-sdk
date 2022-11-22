@@ -1301,6 +1301,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["SourceTag"] = request.SourceTagShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateScratchType))
             {
                 query["TemplateScratchType"] = request.TemplateScratchType;
@@ -1381,6 +1385,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTagShrink))
             {
                 query["SourceTag"] = request.SourceTagShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateScratchType))
             {
@@ -4699,6 +4707,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["Status"] = request.Status;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4741,6 +4753,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5633,6 +5649,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["Status"] = request.Status;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateScratchId))
             {
                 query["TemplateScratchId"] = request.TemplateScratchId;
@@ -5679,6 +5699,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateScratchId))
             {
@@ -6005,15 +6029,9 @@ namespace AlibabaCloud.SDK.ROS20190910
             return await MoveResourceGroupWithOptionsAsync(request, runtime);
         }
 
-        public PreviewStackResponse PreviewStackWithOptions(PreviewStackRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public PreviewStackResponse PreviewStackWithOptions(PreviewStackRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            PreviewStackShrinkRequest request = new PreviewStackShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceConfigRules))
-            {
-                request.ResourceConfigRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceConfigRules, "ResourceConfigRules", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -6022,6 +6040,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisableRollback))
             {
                 query["DisableRollback"] = request.DisableRollback;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnablePreConfig))
+            {
+                query["EnablePreConfig"] = request.EnablePreConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parallelism))
             {
@@ -6034,10 +6056,6 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceConfigRulesShrink))
-            {
-                query["ResourceConfigRules"] = request.ResourceConfigRulesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StackId))
             {
@@ -6102,15 +6120,9 @@ namespace AlibabaCloud.SDK.ROS20190910
             return TeaModel.ToObject<PreviewStackResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<PreviewStackResponse> PreviewStackWithOptionsAsync(PreviewStackRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<PreviewStackResponse> PreviewStackWithOptionsAsync(PreviewStackRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            PreviewStackShrinkRequest request = new PreviewStackShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceConfigRules))
-            {
-                request.ResourceConfigRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceConfigRules, "ResourceConfigRules", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -6119,6 +6131,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisableRollback))
             {
                 query["DisableRollback"] = request.DisableRollback;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnablePreConfig))
+            {
+                query["EnablePreConfig"] = request.EnablePreConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parallelism))
             {
@@ -6131,10 +6147,6 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceConfigRulesShrink))
-            {
-                query["ResourceConfigRules"] = request.ResourceConfigRulesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StackId))
             {

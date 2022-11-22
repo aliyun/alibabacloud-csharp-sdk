@@ -45,6 +45,20 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string SourceTagShrink { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<CreateTemplateScratchShrinkRequestTags> Tags { get; set; }
+        public class CreateTemplateScratchShrinkRequestTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("TemplateScratchType")]
         [Validation(Required=false)]
         public string TemplateScratchType { get; set; }

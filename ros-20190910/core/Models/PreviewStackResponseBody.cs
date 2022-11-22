@@ -71,31 +71,13 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public List<PreviewStackResponseBodyStackResources> Resources { get; set; }
             public class PreviewStackResponseBodyStackResources : TeaModel {
+                [NameInMap("AcsResourceType")]
+                [Validation(Required=false)]
+                public string AcsResourceType { get; set; }
+
                 [NameInMap("Action")]
                 [Validation(Required=false)]
                 public string Action { get; set; }
-
-                [NameInMap("ConfigRuleEvaluations")]
-                [Validation(Required=false)]
-                public List<PreviewStackResponseBodyStackResourcesConfigRuleEvaluations> ConfigRuleEvaluations { get; set; }
-                public class PreviewStackResponseBodyStackResourcesConfigRuleEvaluations : TeaModel {
-                    [NameInMap("Annotation")]
-                    [Validation(Required=false)]
-                    public string Annotation { get; set; }
-
-                    [NameInMap("ComplianceType")]
-                    [Validation(Required=false)]
-                    public string ComplianceType { get; set; }
-
-                    [NameInMap("HelpUrl")]
-                    [Validation(Required=false)]
-                    public string HelpUrl { get; set; }
-
-                    [NameInMap("Identifier")]
-                    [Validation(Required=false)]
-                    public string Identifier { get; set; }
-
-                }
 
                 [NameInMap("Description")]
                 [Validation(Required=false)]

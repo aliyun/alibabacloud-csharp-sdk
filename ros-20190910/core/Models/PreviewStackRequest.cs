@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public bool? DisableRollback { get; set; }
 
+        [NameInMap("EnablePreConfig")]
+        [Validation(Required=false)]
+        public bool? EnablePreConfig { get; set; }
+
         [NameInMap("Parallelism")]
         [Validation(Required=false)]
         public long? Parallelism { get; set; }
@@ -38,24 +42,6 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        [NameInMap("ResourceConfigRules")]
-        [Validation(Required=false)]
-        public List<PreviewStackRequestResourceConfigRules> ResourceConfigRules { get; set; }
-        public class PreviewStackRequestResourceConfigRules : TeaModel {
-            [NameInMap("Identifier")]
-            [Validation(Required=false)]
-            public string Identifier { get; set; }
-
-            [NameInMap("InputParameters")]
-            [Validation(Required=false)]
-            public Dictionary<string, object> InputParameters { get; set; }
-
-            [NameInMap("ResourceType")]
-            [Validation(Required=false)]
-            public string ResourceType { get; set; }
-
-        }
 
         [NameInMap("StackId")]
         [Validation(Required=false)]

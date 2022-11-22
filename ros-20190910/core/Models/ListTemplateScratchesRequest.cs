@@ -25,6 +25,20 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<ListTemplateScratchesRequestTags> Tags { get; set; }
+        public class ListTemplateScratchesRequestTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("TemplateScratchId")]
         [Validation(Required=false)]
         public string TemplateScratchId { get; set; }
