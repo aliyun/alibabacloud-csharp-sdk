@@ -1,3 +1,6 @@
+2022-11-23 Version: 2.0.6
+- Publish Swift.
+
 2022-09-29 Version: 2.0.5
 - Update CompareFace.
 
