@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Eais20190624.Models
                 [Validation(Required=false)]
                 public string SecurityGroupId { get; set; }
 
+                [NameInMap("StartTime")]
+                [Validation(Required=false)]
+                public string StartTime { get; set; }
+
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
