@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("GroupId")]
+            [Validation(Required=false)]
+            public long? GroupId { get; set; }
+
             [NameInMap("GroupMode")]
             [Validation(Required=false)]
             public string GroupMode { get; set; }
