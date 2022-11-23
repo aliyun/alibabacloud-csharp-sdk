@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -11,15 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imageaudit20191230.Models
 {
-    public class ScanImageRequest : TeaModel {
+    public class ScanImageAdvanceRequest : TeaModel {
         [NameInMap("Scene")]
         [Validation(Required=false)]
         public List<string> Scene { get; set; }
 
         [NameInMap("Task")]
         [Validation(Required=false)]
-        public List<ScanImageRequestTask> Task { get; set; }
-        public class ScanImageRequestTask : TeaModel {
+        public List<ScanImageAdvanceRequestTask> Task { get; set; }
+        public class ScanImageAdvanceRequestTask : TeaModel {
             [NameInMap("DataId")]
             [Validation(Required=false)]
             public string DataId { get; set; }
@@ -30,7 +27,7 @@ namespace AlibabaCloud.SDK.Imageaudit20191230.Models
 
             [NameInMap("ImageURL")]
             [Validation(Required=false)]
-            public string ImageURL { get; set; }
+            public Stream ImageURLObject { get; set; }
 
             [NameInMap("Interval")]
             [Validation(Required=false)]
