@@ -65,6 +65,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Remark { get; set; }
 
+        [NameInMap("SortColumn")]
+        [Validation(Required=false)]
+        public string SortColumn { get; set; }
+
+        [NameInMap("SortType")]
+        [Validation(Required=false)]
+        public string SortType { get; set; }
+
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }

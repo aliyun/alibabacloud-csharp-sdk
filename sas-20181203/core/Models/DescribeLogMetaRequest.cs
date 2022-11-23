@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class OperateAgentClientInstallRequest : TeaModel {
-        [NameInMap("InstanceIds")]
+    public class DescribeLogMetaRequest : TeaModel {
+        [NameInMap("From")]
         [Validation(Required=false)]
-        public string InstanceIds { get; set; }
+        public string From { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("Uuids")]
+        [NameInMap("SourceIp")]
         [Validation(Required=false)]
-        public string Uuids { get; set; }
+        public string SourceIp { get; set; }
 
     }
 

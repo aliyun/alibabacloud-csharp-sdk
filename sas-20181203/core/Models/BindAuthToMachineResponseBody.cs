@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? InsufficientCoreCount { get; set; }
 
-        [NameInMap("InsufficientCount")]
-        [Validation(Required=false)]
-        public int? InsufficientCount { get; set; }
-
         [NameInMap("InsufficientEcsCount")]
         [Validation(Required=false)]
         public int? InsufficientEcsCount { get; set; }

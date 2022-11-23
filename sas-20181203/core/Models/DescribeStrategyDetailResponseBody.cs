@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public DescribeStrategyDetailResponseBodyStrategy Strategy { get; set; }
         public class DescribeStrategyDetailResponseBodyStrategy : TeaModel {
+            [NameInMap("CustomType")]
+            [Validation(Required=false)]
+            public string CustomType { get; set; }
+
             [NameInMap("CycleDays")]
             [Validation(Required=false)]
             public int? CycleDays { get; set; }
@@ -24,6 +28,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("CycleStartTime")]
             [Validation(Required=false)]
             public int? CycleStartTime { get; set; }
+
+            [NameInMap("EndTime")]
+            [Validation(Required=false)]
+            public string EndTime { get; set; }
 
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -146,6 +154,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string TypeName { get; set; }
 
             }
+
+            [NameInMap("StartTime")]
+            [Validation(Required=false)]
+            public string StartTime { get; set; }
+
+            [NameInMap("TargetType")]
+            [Validation(Required=false)]
+            public string TargetType { get; set; }
 
             [NameInMap("Type")]
             [Validation(Required=false)]

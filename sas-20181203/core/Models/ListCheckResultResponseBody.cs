@@ -75,6 +75,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string TaskId { get; set; }
 
+            [NameInMap("TrialPermission")]
+            [Validation(Required=false)]
+            public bool? TrialPermission { get; set; }
+
             [NameInMap("Vendor")]
             [Validation(Required=false)]
             public string Vendor { get; set; }

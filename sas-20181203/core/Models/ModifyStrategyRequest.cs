@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string CycleStartTime { get; set; }
 
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
@@ -40,6 +44,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
+
+        [NameInMap("TargetType")]
+        [Validation(Required=false)]
+        public string TargetType { get; set; }
 
     }
 

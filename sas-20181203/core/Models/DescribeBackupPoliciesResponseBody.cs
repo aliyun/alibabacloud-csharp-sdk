@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public List<string> RemarkedUuidList { get; set; }
 
+            [NameInMap("ServerType")]
+            [Validation(Required=false)]
+            public string ServerType { get; set; }
+
             [NameInMap("ServiceErrorCount")]
             [Validation(Required=false)]
             public int? ServiceErrorCount { get; set; }

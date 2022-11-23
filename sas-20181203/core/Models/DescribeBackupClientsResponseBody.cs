@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string ClientStatus { get; set; }
 
+            [NameInMap("ClientVersion")]
+            [Validation(Required=false)]
+            public string ClientVersion { get; set; }
+
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }

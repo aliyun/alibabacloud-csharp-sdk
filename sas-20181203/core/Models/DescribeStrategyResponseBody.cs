@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? EcsCount { get; set; }
 
+            [NameInMap("EndTime")]
+            [Validation(Required=false)]
+            public string EndTime { get; set; }
+
             [NameInMap("ExecStatus")]
             [Validation(Required=false)]
             public int? ExecStatus { get; set; }
@@ -74,6 +78,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("RiskCount")]
             [Validation(Required=false)]
             public int? RiskCount { get; set; }
+
+            [NameInMap("StartTime")]
+            [Validation(Required=false)]
+            public string StartTime { get; set; }
 
             [NameInMap("Type")]
             [Validation(Required=false)]
