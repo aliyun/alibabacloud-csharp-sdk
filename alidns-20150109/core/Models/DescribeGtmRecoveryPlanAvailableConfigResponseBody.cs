@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstance> Instance { get; set; }
             public class DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstance : TeaModel {
+                [NameInMap("AddrPools")]
+                [Validation(Required=false)]
                 public DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstanceAddrPools AddrPools { get; set; }
                 public class DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstanceAddrPools : TeaModel {
                     [NameInMap("AddrPool")]
@@ -34,10 +36,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                     }
 
                 }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("InstanceName")]
+                [Validation(Required=false)]
                 public string InstanceName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

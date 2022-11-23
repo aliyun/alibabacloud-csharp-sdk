@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [NameInMap("AvailableTtl")]
             [Validation(Required=false)]
             public List<string> AvailableTtl { get; set; }
-        };
+
+        }
 
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
@@ -33,7 +34,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [NameInMap("DnsServer")]
             [Validation(Required=false)]
             public List<string> DnsServer { get; set; }
-        };
+
+        }
 
         [NameInMap("DomainId")]
         [Validation(Required=false)]
@@ -87,12 +89,25 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDomainInfoResponseBodyRecordLinesRecordLine> RecordLine { get; set; }
             public class DescribeDomainInfoResponseBodyRecordLinesRecordLine : TeaModel {
+                [NameInMap("FatherCode")]
+                [Validation(Required=false)]
                 public string FatherCode { get; set; }
+
+                [NameInMap("LineCode")]
+                [Validation(Required=false)]
                 public string LineCode { get; set; }
+
+                [NameInMap("LineDisplayName")]
+                [Validation(Required=false)]
                 public string LineDisplayName { get; set; }
+
+                [NameInMap("LineName")]
+                [Validation(Required=false)]
                 public string LineName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RegionLines")]
         [Validation(Required=false)]

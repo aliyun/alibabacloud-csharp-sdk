@@ -29,6 +29,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomain> SlbSubDomain { get; set; }
             public class DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomain : TeaModel {
+                [NameInMap("LineAlgorithms")]
+                [Validation(Required=false)]
                 public DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithms LineAlgorithms { get; set; }
                 public class DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithms : TeaModel {
                     [NameInMap("LineAlgorithm")]
@@ -46,12 +48,26 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                     }
 
                 }
+
+                [NameInMap("Open")]
+                [Validation(Required=false)]
                 public bool? Open { get; set; }
+
+                [NameInMap("RecordCount")]
+                [Validation(Required=false)]
                 public long? RecordCount { get; set; }
+
+                [NameInMap("SubDomain")]
+                [Validation(Required=false)]
                 public string SubDomain { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

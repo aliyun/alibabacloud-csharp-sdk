@@ -40,34 +40,44 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 }
 
             }
+
             [NameInMap("AlertGroup")]
             [Validation(Required=false)]
             public string AlertGroup { get; set; }
+
             [NameInMap("CnameType")]
             [Validation(Required=false)]
             public string CnameType { get; set; }
+
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
+
             [NameInMap("PubicZoneName")]
             [Validation(Required=false)]
             public string PubicZoneName { get; set; }
+
             [NameInMap("PublicCnameMode")]
             [Validation(Required=false)]
             public string PublicCnameMode { get; set; }
+
             [NameInMap("PublicRr")]
             [Validation(Required=false)]
             public string PublicRr { get; set; }
+
             [NameInMap("PublicUserDomainName")]
             [Validation(Required=false)]
             public string PublicUserDomainName { get; set; }
+
             [NameInMap("StrategyMode")]
             [Validation(Required=false)]
             public string StrategyMode { get; set; }
+
             [NameInMap("Ttl")]
             [Validation(Required=false)]
             public int? Ttl { get; set; }
-        };
+
+        }
 
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
@@ -116,16 +126,20 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [NameInMap("DingtalkUsedCount")]
             [Validation(Required=false)]
             public int? DingtalkUsedCount { get; set; }
+
             [NameInMap("EmailUsedCount")]
             [Validation(Required=false)]
             public int? EmailUsedCount { get; set; }
+
             [NameInMap("SmsUsedCount")]
             [Validation(Required=false)]
             public int? SmsUsedCount { get; set; }
+
             [NameInMap("TaskUsedCount")]
             [Validation(Required=false)]
             public int? TaskUsedCount { get; set; }
-        };
+
+        }
 
         [NameInMap("VersionCode")]
         [Validation(Required=false)]

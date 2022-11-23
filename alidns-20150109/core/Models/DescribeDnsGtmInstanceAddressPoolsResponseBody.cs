@@ -17,19 +17,53 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool> AddrPool { get; set; }
             public class DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool : TeaModel {
+                [NameInMap("AddrCount")]
+                [Validation(Required=false)]
                 public int? AddrCount { get; set; }
+
+                [NameInMap("AddrPoolId")]
+                [Validation(Required=false)]
                 public string AddrPoolId { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("CreateTimestamp")]
+                [Validation(Required=false)]
                 public long? CreateTimestamp { get; set; }
+
+                [NameInMap("LbaStrategy")]
+                [Validation(Required=false)]
                 public string LbaStrategy { get; set; }
+
+                [NameInMap("MonitorConfigId")]
+                [Validation(Required=false)]
                 public string MonitorConfigId { get; set; }
+
+                [NameInMap("MonitorStatus")]
+                [Validation(Required=false)]
                 public string MonitorStatus { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
+                [NameInMap("UpdateTime")]
+                [Validation(Required=false)]
                 public string UpdateTime { get; set; }
+
+                [NameInMap("UpdateTimestamp")]
+                [Validation(Required=false)]
                 public long? UpdateTimestamp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

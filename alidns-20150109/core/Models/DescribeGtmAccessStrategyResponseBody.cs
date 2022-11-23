@@ -61,12 +61,25 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeGtmAccessStrategyResponseBodyLinesLine> Line { get; set; }
             public class DescribeGtmAccessStrategyResponseBodyLinesLine : TeaModel {
+                [NameInMap("GroupCode")]
+                [Validation(Required=false)]
                 public string GroupCode { get; set; }
+
+                [NameInMap("GroupName")]
+                [Validation(Required=false)]
                 public string GroupName { get; set; }
+
+                [NameInMap("LineCode")]
+                [Validation(Required=false)]
                 public string LineCode { get; set; }
+
+                [NameInMap("LineName")]
+                [Validation(Required=false)]
                 public string LineName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

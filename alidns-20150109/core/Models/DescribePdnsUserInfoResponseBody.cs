@@ -20,19 +20,24 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [NameInMap("AvailableService")]
             [Validation(Required=false)]
             public string AvailableService { get; set; }
+
             [NameInMap("PdnsId")]
             [Validation(Required=false)]
             public long? PdnsId { get; set; }
+
             [NameInMap("ServiceType")]
             [Validation(Required=false)]
             public string ServiceType { get; set; }
+
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
+
             [NameInMap("StoppedService")]
             [Validation(Required=false)]
             public string StoppedService { get; set; }
-        };
+
+        }
 
     }
 

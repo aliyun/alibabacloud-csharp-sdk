@@ -21,10 +21,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeRecordStatisticsResponseBodyStatisticsStatistic> Statistic { get; set; }
             public class DescribeRecordStatisticsResponseBodyStatisticsStatistic : TeaModel {
+                [NameInMap("Count")]
+                [Validation(Required=false)]
                 public long? Count { get; set; }
+
+                [NameInMap("Timestamp")]
+                [Validation(Required=false)]
                 public long? Timestamp { get; set; }
+
             }
-        };
+
+        }
 
     }
 

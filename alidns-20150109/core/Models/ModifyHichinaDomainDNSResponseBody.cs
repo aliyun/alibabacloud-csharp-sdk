@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [NameInMap("DnsServer")]
             [Validation(Required=false)]
             public List<string> DnsServer { get; set; }
-        };
+
+        }
 
         [NameInMap("OriginalDnsServers")]
         [Validation(Required=false)]
@@ -25,7 +26,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [NameInMap("DnsServer")]
             [Validation(Required=false)]
             public List<string> DnsServer { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

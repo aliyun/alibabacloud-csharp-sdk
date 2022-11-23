@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [NameInMap("DnsServer")]
             [Validation(Required=false)]
             public List<string> DnsServer { get; set; }
-        };
+
+        }
 
         [NameInMap("ExpectDnsServers")]
         [Validation(Required=false)]
@@ -29,7 +30,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [NameInMap("ExpectDnsServer")]
             [Validation(Required=false)]
             public List<string> ExpectDnsServer { get; set; }
-        };
+
+        }
 
         [NameInMap("IncludeAliDns")]
         [Validation(Required=false)]

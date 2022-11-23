@@ -17,17 +17,45 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeGtmLogsResponseBodyLogsLog> Log { get; set; }
             public class DescribeGtmLogsResponseBodyLogsLog : TeaModel {
+                [NameInMap("Content")]
+                [Validation(Required=false)]
                 public string Content { get; set; }
+
+                [NameInMap("EntityId")]
+                [Validation(Required=false)]
                 public string EntityId { get; set; }
+
+                [NameInMap("EntityName")]
+                [Validation(Required=false)]
                 public string EntityName { get; set; }
+
+                [NameInMap("EntityType")]
+                [Validation(Required=false)]
                 public string EntityType { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public long? Id { get; set; }
+
+                [NameInMap("OperAction")]
+                [Validation(Required=false)]
                 public string OperAction { get; set; }
+
+                [NameInMap("OperIp")]
+                [Validation(Required=false)]
                 public string OperIp { get; set; }
+
+                [NameInMap("OperTime")]
+                [Validation(Required=false)]
                 public string OperTime { get; set; }
+
+                [NameInMap("OperTimestamp")]
+                [Validation(Required=false)]
                 public long? OperTimestamp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

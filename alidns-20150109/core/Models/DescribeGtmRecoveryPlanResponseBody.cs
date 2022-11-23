@@ -29,8 +29,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPool> FaultAddrPool { get; set; }
             public class DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPool : TeaModel {
+                [NameInMap("AddrPoolId")]
+                [Validation(Required=false)]
                 public string AddrPoolId { get; set; }
+
+                [NameInMap("AddrPoolName")]
+                [Validation(Required=false)]
                 public string AddrPoolName { get; set; }
+
+                [NameInMap("Addrs")]
+                [Validation(Required=false)]
                 public DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrs Addrs { get; set; }
                 public class DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrs : TeaModel {
                     [NameInMap("Addr")]
@@ -52,9 +60,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                     }
 
                 }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("LastExecuteTime")]
         [Validation(Required=false)]

@@ -40,10 +40,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 [NameInMap("InstanceQuota")]
                 [Validation(Required=false)]
                 public int? InstanceQuota { get; set; }
+
                 [NameInMap("InstanceQuotaUsed")]
                 [Validation(Required=false)]
                 public int? InstanceQuotaUsed { get; set; }
-            };
+
+            }
 
             [NameInMap("Status")]
             [Validation(Required=false)]

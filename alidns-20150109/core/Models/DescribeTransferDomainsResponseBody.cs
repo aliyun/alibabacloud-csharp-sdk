@@ -17,14 +17,33 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeTransferDomainsResponseBodyDomainTransfersDomainTransfer> DomainTransfer { get; set; }
             public class DescribeTransferDomainsResponseBodyDomainTransfersDomainTransfer : TeaModel {
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("CreateTimestamp")]
+                [Validation(Required=false)]
                 public long? CreateTimestamp { get; set; }
+
+                [NameInMap("DomainName")]
+                [Validation(Required=false)]
                 public string DomainName { get; set; }
+
+                [NameInMap("FromUserId")]
+                [Validation(Required=false)]
                 public long? FromUserId { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public long? Id { get; set; }
+
+                [NameInMap("TargetUserId")]
+                [Validation(Required=false)]
                 public long? TargetUserId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

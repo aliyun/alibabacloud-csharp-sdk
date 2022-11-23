@@ -16,16 +16,20 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [NameInMap("AppKeyId")]
             [Validation(Required=false)]
             public string AppKeyId { get; set; }
+
             [NameInMap("AppKeySecret")]
             [Validation(Required=false)]
             public string AppKeySecret { get; set; }
+
             [NameInMap("CreateDate")]
             [Validation(Required=false)]
             public string CreateDate { get; set; }
+
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

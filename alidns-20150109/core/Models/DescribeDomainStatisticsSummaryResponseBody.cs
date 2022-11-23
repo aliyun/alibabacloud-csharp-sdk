@@ -29,11 +29,21 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDomainStatisticsSummaryResponseBodyStatisticsStatistic> Statistic { get; set; }
             public class DescribeDomainStatisticsSummaryResponseBodyStatisticsStatistic : TeaModel {
+                [NameInMap("Count")]
+                [Validation(Required=false)]
                 public long? Count { get; set; }
+
+                [NameInMap("DomainName")]
+                [Validation(Required=false)]
                 public string DomainName { get; set; }
+
+                [NameInMap("DomainType")]
+                [Validation(Required=false)]
                 public string DomainType { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TotalItems")]
         [Validation(Required=false)]

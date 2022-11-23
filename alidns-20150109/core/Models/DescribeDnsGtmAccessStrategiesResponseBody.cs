@@ -29,10 +29,24 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDnsGtmAccessStrategiesResponseBodyStrategiesStrategy> Strategy { get; set; }
             public class DescribeDnsGtmAccessStrategiesResponseBodyStrategiesStrategy : TeaModel {
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("CreateTimestamp")]
+                [Validation(Required=false)]
                 public long? CreateTimestamp { get; set; }
+
+                [NameInMap("EffectiveAddrPoolGroupType")]
+                [Validation(Required=false)]
                 public string EffectiveAddrPoolGroupType { get; set; }
+
+                [NameInMap("EffectiveAddrPoolType")]
+                [Validation(Required=false)]
                 public string EffectiveAddrPoolType { get; set; }
+
+                [NameInMap("EffectiveAddrPools")]
+                [Validation(Required=false)]
                 public DescribeDnsGtmAccessStrategiesResponseBodyStrategiesStrategyEffectiveAddrPools EffectiveAddrPools { get; set; }
                 public class DescribeDnsGtmAccessStrategiesResponseBodyStrategiesStrategyEffectiveAddrPools : TeaModel {
                     [NameInMap("EffectiveAddrPool")]
@@ -58,7 +72,13 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                     }
 
                 }
+
+                [NameInMap("EffectiveLbaStrategy")]
+                [Validation(Required=false)]
                 public string EffectiveLbaStrategy { get; set; }
+
+                [NameInMap("Lines")]
+                [Validation(Required=false)]
                 public DescribeDnsGtmAccessStrategiesResponseBodyStrategiesStrategyLines Lines { get; set; }
                 public class DescribeDnsGtmAccessStrategiesResponseBodyStrategiesStrategyLines : TeaModel {
                     [NameInMap("Line")]
@@ -84,10 +104,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                     }
 
                 }
+
+                [NameInMap("StrategyId")]
+                [Validation(Required=false)]
                 public string StrategyId { get; set; }
+
+                [NameInMap("StrategyName")]
+                [Validation(Required=false)]
                 public string StrategyName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TotalItems")]
         [Validation(Required=false)]

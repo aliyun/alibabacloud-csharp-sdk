@@ -37,12 +37,25 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDnsGtmAccessStrategyResponseBodyDefaultAddrPoolsDefaultAddrPool> DefaultAddrPool { get; set; }
             public class DescribeDnsGtmAccessStrategyResponseBodyDefaultAddrPoolsDefaultAddrPool : TeaModel {
+                [NameInMap("AddrCount")]
+                [Validation(Required=false)]
                 public int? AddrCount { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public string Id { get; set; }
+
+                [NameInMap("LbaWeight")]
+                [Validation(Required=false)]
                 public int? LbaWeight { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("DefaultAvailableAddrNum")]
         [Validation(Required=false)]
@@ -84,12 +97,25 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDnsGtmAccessStrategyResponseBodyFailoverAddrPoolsFailoverAddrPool> FailoverAddrPool { get; set; }
             public class DescribeDnsGtmAccessStrategyResponseBodyFailoverAddrPoolsFailoverAddrPool : TeaModel {
+                [NameInMap("AddrCount")]
+                [Validation(Required=false)]
                 public int? AddrCount { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public string Id { get; set; }
+
+                [NameInMap("LbaWeight")]
+                [Validation(Required=false)]
                 public int? LbaWeight { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("FailoverAvailableAddrNum")]
         [Validation(Required=false)]
@@ -123,12 +149,25 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDnsGtmAccessStrategyResponseBodyLinesLine> Line { get; set; }
             public class DescribeDnsGtmAccessStrategyResponseBodyLinesLine : TeaModel {
+                [NameInMap("GroupCode")]
+                [Validation(Required=false)]
                 public string GroupCode { get; set; }
+
+                [NameInMap("GroupName")]
+                [Validation(Required=false)]
                 public string GroupName { get; set; }
+
+                [NameInMap("LineCode")]
+                [Validation(Required=false)]
                 public string LineCode { get; set; }
+
+                [NameInMap("LineName")]
+                [Validation(Required=false)]
                 public string LineName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

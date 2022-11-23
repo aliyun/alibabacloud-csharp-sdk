@@ -29,19 +29,60 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy> Strategy { get; set; }
             public class DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy : TeaModel {
+                [NameInMap("AccessMode")]
+                [Validation(Required=false)]
                 public string AccessMode { get; set; }
+
+                [NameInMap("AccessStatus")]
+                [Validation(Required=false)]
                 public string AccessStatus { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("CreateTimestamp")]
+                [Validation(Required=false)]
                 public long? CreateTimestamp { get; set; }
+
+                [NameInMap("DefaultAddrPoolId")]
+                [Validation(Required=false)]
                 public string DefaultAddrPoolId { get; set; }
+
+                [NameInMap("DefaultAddrPoolMonitorStatus")]
+                [Validation(Required=false)]
                 public string DefaultAddrPoolMonitorStatus { get; set; }
+
+                [NameInMap("DefaultAddrPoolName")]
+                [Validation(Required=false)]
                 public string DefaultAddrPoolName { get; set; }
+
+                [NameInMap("DefaultAddrPoolStatus")]
+                [Validation(Required=false)]
                 public string DefaultAddrPoolStatus { get; set; }
+
+                [NameInMap("FailoverAddrPoolId")]
+                [Validation(Required=false)]
                 public string FailoverAddrPoolId { get; set; }
+
+                [NameInMap("FailoverAddrPoolMonitorStatus")]
+                [Validation(Required=false)]
                 public string FailoverAddrPoolMonitorStatus { get; set; }
+
+                [NameInMap("FailoverAddrPoolName")]
+                [Validation(Required=false)]
                 public string FailoverAddrPoolName { get; set; }
+
+                [NameInMap("FailoverAddrPoolStatus")]
+                [Validation(Required=false)]
                 public string FailoverAddrPoolStatus { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("Lines")]
+                [Validation(Required=false)]
                 public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategyLines Lines { get; set; }
                 public class DescribeGtmAccessStrategiesResponseBodyStrategiesStrategyLines : TeaModel {
                     [NameInMap("Line")]
@@ -67,11 +108,22 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                     }
 
                 }
+
+                [NameInMap("StrategyId")]
+                [Validation(Required=false)]
                 public string StrategyId { get; set; }
+
+                [NameInMap("StrategyMode")]
+                [Validation(Required=false)]
                 public string StrategyMode { get; set; }
+
+                [NameInMap("StrategyName")]
+                [Validation(Required=false)]
                 public string StrategyName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TotalItems")]
         [Validation(Required=false)]

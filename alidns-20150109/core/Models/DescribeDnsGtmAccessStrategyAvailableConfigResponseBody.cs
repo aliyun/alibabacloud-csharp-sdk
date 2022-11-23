@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyDomainAddrPoolsDomainAddrPool> DomainAddrPool { get; set; }
             public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyDomainAddrPoolsDomainAddrPool : TeaModel {
+                [NameInMap("AddrCount")]
+                [Validation(Required=false)]
                 public int? AddrCount { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public string Id { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Ipv4AddrPools")]
         [Validation(Required=false)]
@@ -31,11 +41,21 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv4AddrPoolsIpv4AddrPool> Ipv4AddrPool { get; set; }
             public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv4AddrPoolsIpv4AddrPool : TeaModel {
+                [NameInMap("AddrCount")]
+                [Validation(Required=false)]
                 public int? AddrCount { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public string Id { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Ipv6AddrPools")]
         [Validation(Required=false)]
@@ -45,11 +65,21 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv6AddrPoolsIpv6AddrPool> Ipv6AddrPool { get; set; }
             public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv6AddrPoolsIpv6AddrPool : TeaModel {
+                [NameInMap("AddrCount")]
+                [Validation(Required=false)]
                 public int? AddrCount { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public string Id { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Lines")]
         [Validation(Required=false)]
@@ -59,13 +89,29 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyLinesLine> Line { get; set; }
             public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyLinesLine : TeaModel {
+                [NameInMap("FatherCode")]
+                [Validation(Required=false)]
                 public string FatherCode { get; set; }
+
+                [NameInMap("GroupCode")]
+                [Validation(Required=false)]
                 public string GroupCode { get; set; }
+
+                [NameInMap("GroupName")]
+                [Validation(Required=false)]
                 public string GroupName { get; set; }
+
+                [NameInMap("LineCode")]
+                [Validation(Required=false)]
                 public string LineCode { get; set; }
+
+                [NameInMap("LineName")]
+                [Validation(Required=false)]
                 public string LineName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -78,7 +124,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [NameInMap("SelectedDomainLine")]
             [Validation(Required=false)]
             public List<string> SelectedDomainLine { get; set; }
-        };
+
+        }
 
         [NameInMap("SelectedIpv4Lines")]
         [Validation(Required=false)]
@@ -87,7 +134,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [NameInMap("SelectedIpv4Line")]
             [Validation(Required=false)]
             public List<string> SelectedIpv4Line { get; set; }
-        };
+
+        }
 
         [NameInMap("SelectedIpv6Lines")]
         [Validation(Required=false)]
@@ -96,7 +144,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [NameInMap("SelectedIpv6Line")]
             [Validation(Required=false)]
             public List<string> SelectedIpv6Line { get; set; }
-        };
+
+        }
 
         [NameInMap("SuggestSetDefaultLine")]
         [Validation(Required=false)]

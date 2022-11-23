@@ -25,8 +25,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<PreviewGtmRecoveryPlanResponseBodyPreviewsPreview> Preview { get; set; }
             public class PreviewGtmRecoveryPlanResponseBodyPreviewsPreview : TeaModel {
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("SwitchInfos")]
+                [Validation(Required=false)]
                 public PreviewGtmRecoveryPlanResponseBodyPreviewsPreviewSwitchInfos SwitchInfos { get; set; }
                 public class PreviewGtmRecoveryPlanResponseBodyPreviewsPreviewSwitchInfos : TeaModel {
                     [NameInMap("SwitchInfo")]
@@ -44,9 +52,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                     }
 
                 }
+
+                [NameInMap("UserDomainName")]
+                [Validation(Required=false)]
                 public string UserDomainName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

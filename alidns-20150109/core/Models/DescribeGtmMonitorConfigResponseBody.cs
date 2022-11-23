@@ -33,14 +33,33 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeGtmMonitorConfigResponseBodyIspCityNodesIspCityNode> IspCityNode { get; set; }
             public class DescribeGtmMonitorConfigResponseBodyIspCityNodesIspCityNode : TeaModel {
+                [NameInMap("CityCode")]
+                [Validation(Required=false)]
                 public string CityCode { get; set; }
+
+                [NameInMap("CityName")]
+                [Validation(Required=false)]
                 public string CityName { get; set; }
+
+                [NameInMap("CountryCode")]
+                [Validation(Required=false)]
                 public string CountryCode { get; set; }
+
+                [NameInMap("CountryName")]
+                [Validation(Required=false)]
                 public string CountryName { get; set; }
+
+                [NameInMap("IspCode")]
+                [Validation(Required=false)]
                 public string IspCode { get; set; }
+
+                [NameInMap("IspName")]
+                [Validation(Required=false)]
                 public string IspName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("MonitorConfigId")]
         [Validation(Required=false)]

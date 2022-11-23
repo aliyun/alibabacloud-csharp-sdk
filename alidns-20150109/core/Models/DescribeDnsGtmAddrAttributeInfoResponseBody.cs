@@ -17,7 +17,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddr> Addr { get; set; }
             public class DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddr : TeaModel {
+                [NameInMap("Addr")]
+                [Validation(Required=false)]
                 public string Addr { get; set; }
+
+                [NameInMap("AttributeInfo")]
+                [Validation(Required=false)]
                 public DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddrAttributeInfo AttributeInfo { get; set; }
                 public class DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddrAttributeInfo : TeaModel {
                     [NameInMap("FatherCode")]
@@ -41,8 +46,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                     public string LineName { get; set; }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

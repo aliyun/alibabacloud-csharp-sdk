@@ -25,18 +25,49 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDnsGtmInstanceAddressPoolResponseBodyAddrsAddr> Addr { get; set; }
             public class DescribeDnsGtmInstanceAddressPoolResponseBodyAddrsAddr : TeaModel {
+                [NameInMap("Addr")]
+                [Validation(Required=false)]
                 public string Addr { get; set; }
+
+                [NameInMap("AlertStatus")]
+                [Validation(Required=false)]
                 public string AlertStatus { get; set; }
+
+                [NameInMap("AttributeInfo")]
+                [Validation(Required=false)]
                 public string AttributeInfo { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("CreateTimestamp")]
+                [Validation(Required=false)]
                 public long? CreateTimestamp { get; set; }
+
+                [NameInMap("LbaWeight")]
+                [Validation(Required=false)]
                 public int? LbaWeight { get; set; }
+
+                [NameInMap("Mode")]
+                [Validation(Required=false)]
                 public string Mode { get; set; }
+
+                [NameInMap("Remark")]
+                [Validation(Required=false)]
                 public string Remark { get; set; }
+
+                [NameInMap("UpdateTime")]
+                [Validation(Required=false)]
                 public string UpdateTime { get; set; }
+
+                [NameInMap("UpdateTimestamp")]
+                [Validation(Required=false)]
                 public long? UpdateTimestamp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
