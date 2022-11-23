@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("Label")]
+            [Validation(Required=false)]
+            public string Label { get; set; }
+
             [NameInMap("OutputKey")]
             [Validation(Required=false)]
             public string OutputKey { get; set; }

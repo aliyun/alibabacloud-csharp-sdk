@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string ParametersKeyFilterShrink { get; set; }
 
+        [NameInMap("ParametersOrder")]
+        [Validation(Required=false)]
+        public string ParametersOrderShrink { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
