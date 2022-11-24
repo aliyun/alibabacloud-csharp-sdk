@@ -129,6 +129,26 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string ExcludeOutboundPorts { get; set; }
 
+        [NameInMap("ExistingCaCert")]
+        [Validation(Required=false)]
+        public string ExistingCaCert { get; set; }
+
+        [NameInMap("ExistingCaKey")]
+        [Validation(Required=false)]
+        public string ExistingCaKey { get; set; }
+
+        [NameInMap("ExistingCaType")]
+        [Validation(Required=false)]
+        public string ExistingCaType { get; set; }
+
+        [NameInMap("ExistingRootCaCert")]
+        [Validation(Required=false)]
+        public string ExistingRootCaCert { get; set; }
+
+        [NameInMap("ExistingRootCaKey")]
+        [Validation(Required=false)]
+        public string ExistingRootCaKey { get; set; }
+
         [NameInMap("FilterGatewayClusterConfig")]
         [Validation(Required=false)]
         public bool? FilterGatewayClusterConfig { get; set; }
@@ -260,6 +280,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [NameInMap("Tracing")]
         [Validation(Required=false)]
         public bool? Tracing { get; set; }
+
+        [NameInMap("UseExistingCA")]
+        [Validation(Required=false)]
+        public bool? UseExistingCA { get; set; }
 
         [NameInMap("VSwitches")]
         [Validation(Required=false)]

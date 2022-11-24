@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
-    public class RemoveClusterFromServiceMeshRequest : TeaModel {
-        [NameInMap("ClusterId")]
+    public class UpdateIstioInjectionConfigRequest : TeaModel {
+        [NameInMap("EnableIstioInjection")]
         [Validation(Required=false)]
-        public string ClusterId { get; set; }
+        public bool? EnableIstioInjection { get; set; }
 
-        [NameInMap("ReserveNamespace")]
+        [NameInMap("EnableSidecarSetInjection")]
         [Validation(Required=false)]
-        public bool? ReserveNamespace { get; set; }
+        public bool? EnableSidecarSetInjection { get; set; }
+
+        [NameInMap("Namespace")]
+        [Validation(Required=false)]
+        public string Namespace { get; set; }
 
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

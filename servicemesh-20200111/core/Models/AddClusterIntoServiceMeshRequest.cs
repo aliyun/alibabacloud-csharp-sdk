@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        [NameInMap("IgnoreNamespaceCheck")]
+        [Validation(Required=false)]
+        public bool? IgnoreNamespaceCheck { get; set; }
+
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]
         public string ServiceMeshId { get; set; }
