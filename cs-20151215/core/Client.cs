@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["rds_instances"] = request.RdsInstances;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Runtime.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Runtime))
             {
                 body["runtime"] = request.Runtime;
             }
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["rds_instances"] = request.RdsInstances;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Runtime.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Runtime))
             {
                 body["runtime"] = request.Runtime;
             }
@@ -847,7 +847,7 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["resource_group_id"] = request.ResourceGroupId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Runtime.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Runtime))
             {
                 body["runtime"] = request.Runtime;
             }
@@ -1223,7 +1223,7 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["resource_group_id"] = request.ResourceGroupId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Runtime.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Runtime))
             {
                 body["runtime"] = request.Runtime;
             }
@@ -1377,7 +1377,7 @@ namespace AlibabaCloud.SDK.CS20151215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoScaling.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoScaling))
             {
                 body["auto_scaling"] = request.AutoScaling;
             }
@@ -1385,7 +1385,7 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["count"] = request.Count;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterconnectConfig.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterconnectConfig))
             {
                 body["interconnect_config"] = request.InterconnectConfig;
             }
@@ -1393,11 +1393,11 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["interconnect_mode"] = request.InterconnectMode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubernetesConfig.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubernetesConfig))
             {
                 body["kubernetes_config"] = request.KubernetesConfig;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Management.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Management))
             {
                 body["management"] = request.Management;
             }
@@ -1405,15 +1405,15 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["max_nodes"] = request.MaxNodes;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodepoolInfo.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodepoolInfo))
             {
                 body["nodepool_info"] = request.NodepoolInfo;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingGroup.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingGroup))
             {
                 body["scaling_group"] = request.ScalingGroup;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeeConfig.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeeConfig))
             {
                 body["tee_config"] = request.TeeConfig;
             }
@@ -1441,7 +1441,7 @@ namespace AlibabaCloud.SDK.CS20151215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoScaling.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoScaling))
             {
                 body["auto_scaling"] = request.AutoScaling;
             }
@@ -1449,7 +1449,7 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["count"] = request.Count;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterconnectConfig.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterconnectConfig))
             {
                 body["interconnect_config"] = request.InterconnectConfig;
             }
@@ -1457,11 +1457,11 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["interconnect_mode"] = request.InterconnectMode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubernetesConfig.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubernetesConfig))
             {
                 body["kubernetes_config"] = request.KubernetesConfig;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Management.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Management))
             {
                 body["management"] = request.Management;
             }
@@ -1469,15 +1469,15 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["max_nodes"] = request.MaxNodes;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodepoolInfo.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodepoolInfo))
             {
                 body["nodepool_info"] = request.NodepoolInfo;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingGroup.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingGroup))
             {
                 body["scaling_group"] = request.ScalingGroup;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeeConfig.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeeConfig))
             {
                 body["tee_config"] = request.TeeConfig;
             }
@@ -5483,7 +5483,7 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["nodes"] = request.Nodes;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RolloutPolicy.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RolloutPolicy))
             {
                 body["rollout_policy"] = request.RolloutPolicy;
             }
@@ -5519,7 +5519,7 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["nodes"] = request.Nodes;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RolloutPolicy.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RolloutPolicy))
             {
                 body["rollout_policy"] = request.RolloutPolicy;
             }
@@ -6063,7 +6063,7 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["instance_deletion_protection"] = request.InstanceDeletionProtection;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaintenanceWindow.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaintenanceWindow))
             {
                 body["maintenance_window"] = request.MaintenanceWindow;
             }
@@ -6123,7 +6123,7 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["instance_deletion_protection"] = request.InstanceDeletionProtection;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaintenanceWindow.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaintenanceWindow))
             {
                 body["maintenance_window"] = request.MaintenanceWindow;
             }
@@ -6309,27 +6309,27 @@ namespace AlibabaCloud.SDK.CS20151215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoScaling.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoScaling))
             {
                 body["auto_scaling"] = request.AutoScaling;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubernetesConfig.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubernetesConfig))
             {
                 body["kubernetes_config"] = request.KubernetesConfig;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Management.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Management))
             {
                 body["management"] = request.Management;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodepoolInfo.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodepoolInfo))
             {
                 body["nodepool_info"] = request.NodepoolInfo;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingGroup.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingGroup))
             {
                 body["scaling_group"] = request.ScalingGroup;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeeConfig.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeeConfig))
             {
                 body["tee_config"] = request.TeeConfig;
             }
@@ -6361,27 +6361,27 @@ namespace AlibabaCloud.SDK.CS20151215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoScaling.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoScaling))
             {
                 body["auto_scaling"] = request.AutoScaling;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubernetesConfig.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubernetesConfig))
             {
                 body["kubernetes_config"] = request.KubernetesConfig;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Management.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Management))
             {
                 body["management"] = request.Management;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodepoolInfo.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodepoolInfo))
             {
                 body["nodepool_info"] = request.NodepoolInfo;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingGroup.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingGroup))
             {
                 body["scaling_group"] = request.ScalingGroup;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeeConfig.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeeConfig))
             {
                 body["tee_config"] = request.TeeConfig;
             }
@@ -6487,11 +6487,11 @@ namespace AlibabaCloud.SDK.CS20151215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubeletConfig.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubeletConfig))
             {
                 body["kubelet_config"] = request.KubeletConfig;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RollingPolicy.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RollingPolicy))
             {
                 body["rolling_policy"] = request.RollingPolicy;
             }
@@ -6519,11 +6519,11 @@ namespace AlibabaCloud.SDK.CS20151215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubeletConfig.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubeletConfig))
             {
                 body["kubelet_config"] = request.KubeletConfig;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RollingPolicy.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RollingPolicy))
             {
                 body["rolling_policy"] = request.RollingPolicy;
             }
@@ -7687,7 +7687,7 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["rds_instances"] = request.RdsInstances;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Runtime.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Runtime))
             {
                 body["runtime"] = request.Runtime;
             }
@@ -7795,7 +7795,7 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["rds_instances"] = request.RdsInstances;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Runtime.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Runtime))
             {
                 body["runtime"] = request.Runtime;
             }
@@ -8721,6 +8721,92 @@ namespace AlibabaCloud.SDK.CS20151215
                 BodyType = "none",
             };
             return TeaModel.ToObject<UpgradeClusterAddonsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpgradeClusterNodepoolResponse UpgradeClusterNodepool(string ClusterId, string NodepoolId, UpgradeClusterNodepoolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpgradeClusterNodepoolWithOptions(ClusterId, NodepoolId, request, headers, runtime);
+        }
+
+        public async Task<UpgradeClusterNodepoolResponse> UpgradeClusterNodepoolAsync(string ClusterId, string NodepoolId, UpgradeClusterNodepoolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpgradeClusterNodepoolWithOptionsAsync(ClusterId, NodepoolId, request, headers, runtime);
+        }
+
+        public UpgradeClusterNodepoolResponse UpgradeClusterNodepoolWithOptions(string ClusterId, string NodepoolId, UpgradeClusterNodepoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["image_id"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubernetesVersion))
+            {
+                body["kubernetes_version"] = request.KubernetesVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeVersion))
+            {
+                body["runtime_version"] = request.RuntimeVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpgradeClusterNodepool",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId) + "/upgrade",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpgradeClusterNodepoolResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpgradeClusterNodepoolResponse> UpgradeClusterNodepoolWithOptionsAsync(string ClusterId, string NodepoolId, UpgradeClusterNodepoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["image_id"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubernetesVersion))
+            {
+                body["kubernetes_version"] = request.KubernetesVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeVersion))
+            {
+                body["runtime_version"] = request.RuntimeVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpgradeClusterNodepool",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodepoolId) + "/upgrade",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpgradeClusterNodepoolResponse>(await CallApiAsync(params_, req, runtime));
         }
 
     }

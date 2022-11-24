@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [Validation(Required=false)]
                 public string ImageCategory { get; set; }
 
+                [NameInMap("architecture")]
+                [Validation(Required=false)]
+                public string Architecture { get; set; }
+
             }
 
             [NameInMap("meta_data")]
