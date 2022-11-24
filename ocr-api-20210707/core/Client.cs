@@ -2861,6 +2861,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             {
                 query["OutputFigure"] = request.OutputFigure;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputQualityInfo))
+            {
+                query["OutputQualityInfo"] = request.OutputQualityInfo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
             {
                 query["Url"] = request.Url;
@@ -2893,6 +2897,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputFigure))
             {
                 query["OutputFigure"] = request.OutputFigure;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputQualityInfo))
+            {
+                query["OutputQualityInfo"] = request.OutputQualityInfo;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
             {
@@ -5521,6 +5529,186 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeWaybillWithOptionsAsync(request, runtime);
+        }
+
+        public VerifyBusinessLicenseResponse VerifyBusinessLicenseWithOptions(VerifyBusinessLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyName))
+            {
+                query["CompanyName"] = request.CompanyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreditCode))
+            {
+                query["CreditCode"] = request.CreditCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPerson))
+            {
+                query["LegalPerson"] = request.LegalPerson;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyBusinessLicense",
+                Version = "2021-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyBusinessLicenseResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<VerifyBusinessLicenseResponse> VerifyBusinessLicenseWithOptionsAsync(VerifyBusinessLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyName))
+            {
+                query["CompanyName"] = request.CompanyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreditCode))
+            {
+                query["CreditCode"] = request.CreditCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPerson))
+            {
+                query["LegalPerson"] = request.LegalPerson;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyBusinessLicense",
+                Version = "2021-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyBusinessLicenseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public VerifyBusinessLicenseResponse VerifyBusinessLicense(VerifyBusinessLicenseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return VerifyBusinessLicenseWithOptions(request, runtime);
+        }
+
+        public async Task<VerifyBusinessLicenseResponse> VerifyBusinessLicenseAsync(VerifyBusinessLicenseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await VerifyBusinessLicenseWithOptionsAsync(request, runtime);
+        }
+
+        public VerifyVATInvoiceResponse VerifyVATInvoiceWithOptions(VerifyVATInvoiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceCode))
+            {
+                query["InvoiceCode"] = request.InvoiceCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceDate))
+            {
+                query["InvoiceDate"] = request.InvoiceDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceNo))
+            {
+                query["InvoiceNo"] = request.InvoiceNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceSum))
+            {
+                query["InvoiceSum"] = request.InvoiceSum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyCode))
+            {
+                query["VerifyCode"] = request.VerifyCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyVATInvoice",
+                Version = "2021-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyVATInvoiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<VerifyVATInvoiceResponse> VerifyVATInvoiceWithOptionsAsync(VerifyVATInvoiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceCode))
+            {
+                query["InvoiceCode"] = request.InvoiceCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceDate))
+            {
+                query["InvoiceDate"] = request.InvoiceDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceNo))
+            {
+                query["InvoiceNo"] = request.InvoiceNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceSum))
+            {
+                query["InvoiceSum"] = request.InvoiceSum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyCode))
+            {
+                query["VerifyCode"] = request.VerifyCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyVATInvoice",
+                Version = "2021-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyVATInvoiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public VerifyVATInvoiceResponse VerifyVATInvoice(VerifyVATInvoiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return VerifyVATInvoiceWithOptions(request, runtime);
+        }
+
+        public async Task<VerifyVATInvoiceResponse> VerifyVATInvoiceAsync(VerifyVATInvoiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await VerifyVATInvoiceWithOptionsAsync(request, runtime);
         }
 
     }

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
         [Validation(Required=false)]
         public bool? OutputFigure { get; set; }
 
+        [NameInMap("OutputQualityInfo")]
+        [Validation(Required=false)]
+        public bool? OutputQualityInfo { get; set; }
+
         [NameInMap("Url")]
         [Validation(Required=false)]
         public string Url { get; set; }
