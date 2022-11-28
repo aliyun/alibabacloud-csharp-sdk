@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
-    public class CreateTransitRouterRouteTableRequest : TeaModel {
+    public class ListTransitRouterCidrRequest : TeaModel {
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -33,31 +37,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("Tag")]
+        [NameInMap("TransitRouterCidrId")]
         [Validation(Required=false)]
-        public List<CreateTransitRouterRouteTableRequestTag> Tag { get; set; }
-        public class CreateTransitRouterRouteTableRequestTag : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        public string TransitRouterCidrId { get; set; }
 
         [NameInMap("TransitRouterId")]
         [Validation(Required=false)]
         public string TransitRouterId { get; set; }
-
-        [NameInMap("TransitRouterRouteTableDescription")]
-        [Validation(Required=false)]
-        public string TransitRouterRouteTableDescription { get; set; }
-
-        [NameInMap("TransitRouterRouteTableName")]
-        [Validation(Required=false)]
-        public string TransitRouterRouteTableName { get; set; }
 
     }
 

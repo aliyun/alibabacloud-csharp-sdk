@@ -8,7 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
-    public class CreateTransitRouterRouteTableRequest : TeaModel {
+    public class CreateTransitRouterShrinkRequest : TeaModel {
+        [NameInMap("CenId")]
+        [Validation(Required=false)]
+        public string CenId { get; set; }
+
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -25,6 +29,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -33,10 +41,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("SupportMulticast")]
+        [Validation(Required=false)]
+        public bool? SupportMulticast { get; set; }
+
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<CreateTransitRouterRouteTableRequestTag> Tag { get; set; }
-        public class CreateTransitRouterRouteTableRequestTag : TeaModel {
+        public List<CreateTransitRouterShrinkRequestTag> Tag { get; set; }
+        public class CreateTransitRouterShrinkRequestTag : TeaModel {
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
@@ -47,17 +59,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         }
 
-        [NameInMap("TransitRouterId")]
+        [NameInMap("TransitRouterCidrList")]
         [Validation(Required=false)]
-        public string TransitRouterId { get; set; }
+        public string TransitRouterCidrListShrink { get; set; }
 
-        [NameInMap("TransitRouterRouteTableDescription")]
+        [NameInMap("TransitRouterDescription")]
         [Validation(Required=false)]
-        public string TransitRouterRouteTableDescription { get; set; }
+        public string TransitRouterDescription { get; set; }
 
-        [NameInMap("TransitRouterRouteTableName")]
+        [NameInMap("TransitRouterName")]
         [Validation(Required=false)]
-        public string TransitRouterRouteTableName { get; set; }
+        public string TransitRouterName { get; set; }
 
     }
 

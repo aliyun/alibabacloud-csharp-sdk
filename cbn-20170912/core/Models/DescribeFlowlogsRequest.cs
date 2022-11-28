@@ -69,6 +69,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<DescribeFlowlogsRequestTag> Tag { get; set; }
+        public class DescribeFlowlogsRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
     }
 
 }

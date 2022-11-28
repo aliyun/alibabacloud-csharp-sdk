@@ -8,18 +8,42 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
-    public class CreateTransitRouterMulticastDomainRequest : TeaModel {
-        [NameInMap("CenId")]
+    public class ListTransitRouterCidrAllocationRequest : TeaModel {
+        [NameInMap("AttachmentId")]
         [Validation(Required=false)]
-        public string CenId { get; set; }
+        public string AttachmentId { get; set; }
+
+        [NameInMap("AttachmentName")]
+        [Validation(Required=false)]
+        public string AttachmentName { get; set; }
+
+        [NameInMap("Cidr")]
+        [Validation(Required=false)]
+        public string Cidr { get; set; }
+
+        [NameInMap("CidrBlock")]
+        [Validation(Required=false)]
+        public string CidrBlock { get; set; }
 
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("DedicatedOwnerId")]
+        [Validation(Required=false)]
+        public string DedicatedOwnerId { get; set; }
+
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
+
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -41,31 +65,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("Tag")]
+        [NameInMap("TransitRouterCidrId")]
         [Validation(Required=false)]
-        public List<CreateTransitRouterMulticastDomainRequestTag> Tag { get; set; }
-        public class CreateTransitRouterMulticastDomainRequestTag : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        public string TransitRouterCidrId { get; set; }
 
         [NameInMap("TransitRouterId")]
         [Validation(Required=false)]
         public string TransitRouterId { get; set; }
-
-        [NameInMap("TransitRouterMulticastDomainDescription")]
-        [Validation(Required=false)]
-        public string TransitRouterMulticastDomainDescription { get; set; }
-
-        [NameInMap("TransitRouterMulticastDomainName")]
-        [Validation(Required=false)]
-        public string TransitRouterMulticastDomainName { get; set; }
 
     }
 

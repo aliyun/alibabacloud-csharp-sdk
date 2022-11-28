@@ -53,6 +53,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public bool? SupportMulticast { get; set; }
 
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<ListTransitRoutersResponseBodyTransitRoutersTags> Tags { get; set; }
+            public class ListTransitRoutersResponseBodyTransitRoutersTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
             [NameInMap("TransitRouterCidrList")]
             [Validation(Required=false)]
             public List<ListTransitRoutersResponseBodyTransitRoutersTransitRouterCidrList> TransitRouterCidrList { get; set; }

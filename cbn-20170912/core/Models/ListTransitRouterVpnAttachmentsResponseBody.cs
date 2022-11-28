@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public bool? AutoPublishRouteEnabled { get; set; }
 
+            [NameInMap("ChargeType")]
+            [Validation(Required=false)]
+            public string ChargeType { get; set; }
+
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }

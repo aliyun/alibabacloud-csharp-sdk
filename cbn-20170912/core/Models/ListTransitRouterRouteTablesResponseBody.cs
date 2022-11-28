@@ -33,6 +33,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesTags> Tags { get; set; }
+            public class ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
             [NameInMap("TransitRouterRouteTableDescription")]
             [Validation(Required=false)]
             public string TransitRouterRouteTableDescription { get; set; }
