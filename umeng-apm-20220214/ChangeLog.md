@@ -1,3 +1,6 @@
+2022-11-28 Version: 1.0.2
+- Add UpdateAlertPlan.
+
 2022-11-16 Version: 1.0.1
 - Init SDK.
 
