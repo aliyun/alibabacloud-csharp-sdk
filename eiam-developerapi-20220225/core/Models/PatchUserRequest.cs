@@ -9,6 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class PatchUserRequest : TeaModel {
+        [NameInMap("customFields")]
+        [Validation(Required=false)]
+        public List<PatchUserRequestCustomFields> CustomFields { get; set; }
+        public class PatchUserRequestCustomFields : TeaModel {
+            [NameInMap("fieldName")]
+            [Validation(Required=false)]
+            public string FieldName { get; set; }
+
+            [NameInMap("fieldValue")]
+            [Validation(Required=false)]
+            public string FieldValue { get; set; }
+
+            [NameInMap("operator")]
+            [Validation(Required=false)]
+            public string Operator { get; set; }
+
+        }
+
         [NameInMap("displayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }

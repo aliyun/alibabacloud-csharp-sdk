@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             [Validation(Required=false)]
             public long? LockExpireTime { get; set; }
 
+            [NameInMap("passwordSet")]
+            [Validation(Required=false)]
+            public bool? PasswordSet { get; set; }
+
             [NameInMap("phoneNumber")]
             [Validation(Required=false)]
             public string PhoneNumber { get; set; }

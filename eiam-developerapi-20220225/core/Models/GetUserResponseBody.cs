@@ -17,6 +17,20 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         [Validation(Required=false)]
         public long? CreateTime { get; set; }
 
+        [NameInMap("customFields")]
+        [Validation(Required=false)]
+        public List<GetUserResponseBodyCustomFields> CustomFields { get; set; }
+        public class GetUserResponseBodyCustomFields : TeaModel {
+            [NameInMap("fieldName")]
+            [Validation(Required=false)]
+            public string FieldName { get; set; }
+
+            [NameInMap("fieldValue")]
+            [Validation(Required=false)]
+            public string FieldValue { get; set; }
+
+        }
+
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
@@ -58,6 +72,10 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public bool? Primary { get; set; }
 
         }
+
+        [NameInMap("passwordSet")]
+        [Validation(Required=false)]
+        public bool? PasswordSet { get; set; }
 
         [NameInMap("phoneNumber")]
         [Validation(Required=false)]

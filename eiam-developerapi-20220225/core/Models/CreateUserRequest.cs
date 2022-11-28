@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class CreateUserRequest : TeaModel {
+        [NameInMap("customFields")]
+        [Validation(Required=false)]
+        public List<CreateUserRequestCustomFields> CustomFields { get; set; }
+        public class CreateUserRequestCustomFields : TeaModel {
+            [NameInMap("fieldName")]
+            [Validation(Required=false)]
+            public string FieldName { get; set; }
+
+            [NameInMap("fieldValue")]
+            [Validation(Required=false)]
+            public string FieldValue { get; set; }
+
+        }
+
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
@@ -28,6 +42,28 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         [NameInMap("password")]
         [Validation(Required=false)]
         public string Password { get; set; }
+
+        [NameInMap("passwordInitializationConfig")]
+        [Validation(Required=false)]
+        public CreateUserRequestPasswordInitializationConfig PasswordInitializationConfig { get; set; }
+        public class CreateUserRequestPasswordInitializationConfig : TeaModel {
+            [NameInMap("passwordForcedUpdateStatus")]
+            [Validation(Required=false)]
+            public string PasswordForcedUpdateStatus { get; set; }
+
+            [NameInMap("passwordInitializationPolicyPriority")]
+            [Validation(Required=false)]
+            public string PasswordInitializationPolicyPriority { get; set; }
+
+            [NameInMap("passwordInitializationType")]
+            [Validation(Required=false)]
+            public string PasswordInitializationType { get; set; }
+
+            [NameInMap("userNotificationChannels")]
+            [Validation(Required=false)]
+            public List<string> UserNotificationChannels { get; set; }
+
+        }
 
         [NameInMap("phoneNumber")]
         [Validation(Required=false)]
