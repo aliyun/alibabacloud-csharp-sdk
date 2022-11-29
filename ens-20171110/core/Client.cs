@@ -2067,7 +2067,7 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["DataDisk"] = request.DataDisk;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDisk.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDisk))
             {
                 query["SystemDisk"] = request.SystemDisk;
             }
@@ -2182,7 +2182,7 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["DataDisk"] = request.DataDisk;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDisk.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDisk))
             {
                 query["SystemDisk"] = request.SystemDisk;
             }
@@ -2215,6 +2215,84 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateInstanceWithOptionsAsync(request, runtime);
+        }
+
+        public CreateInstanceActiveOpsTaskResponse CreateInstanceActiveOpsTaskWithOptions(CreateInstanceActiveOpsTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateInstanceActiveOpsTaskShrinkRequest request = new CreateInstanceActiveOpsTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
+            {
+                query["InstanceIds"] = request.InstanceIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateInstanceActiveOpsTask",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateInstanceActiveOpsTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateInstanceActiveOpsTaskResponse> CreateInstanceActiveOpsTaskWithOptionsAsync(CreateInstanceActiveOpsTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateInstanceActiveOpsTaskShrinkRequest request = new CreateInstanceActiveOpsTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
+            {
+                query["InstanceIds"] = request.InstanceIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateInstanceActiveOpsTask",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateInstanceActiveOpsTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateInstanceActiveOpsTaskResponse CreateInstanceActiveOpsTask(CreateInstanceActiveOpsTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateInstanceActiveOpsTaskWithOptions(request, runtime);
+        }
+
+        public async Task<CreateInstanceActiveOpsTaskResponse> CreateInstanceActiveOpsTaskAsync(CreateInstanceActiveOpsTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateInstanceActiveOpsTaskWithOptionsAsync(request, runtime);
         }
 
         public CreateKeyPairResponse CreateKeyPairWithOptions(CreateKeyPairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -10297,7 +10375,7 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["DataDisk"] = request.DataDisk;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDisk.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDisk))
             {
                 query["SystemDisk"] = request.SystemDisk;
             }
@@ -10362,7 +10440,7 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["DataDisk"] = request.DataDisk;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDisk.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDisk))
             {
                 query["SystemDisk"] = request.SystemDisk;
             }
@@ -15358,9 +15436,9 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 request.DataDiskShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataDisk, "DataDisk", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SystemDisk.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SystemDisk))
             {
-                request.SystemDiskShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SystemDisk.ToMap(), "SystemDisk", "json");
+                request.SystemDiskShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SystemDisk, "SystemDisk", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
@@ -15503,9 +15581,9 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 request.DataDiskShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataDisk, "DataDisk", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SystemDisk.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SystemDisk))
             {
-                request.SystemDiskShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SystemDisk.ToMap(), "SystemDisk", "json");
+                request.SystemDiskShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SystemDisk, "SystemDisk", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
