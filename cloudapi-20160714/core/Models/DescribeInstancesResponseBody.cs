@@ -53,6 +53,22 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [Validation(Required=false)]
                 public string HttpsPolicies { get; set; }
 
+                [NameInMap("IPV6AclId")]
+                [Validation(Required=false)]
+                public string IPV6AclId { get; set; }
+
+                [NameInMap("IPV6AclName")]
+                [Validation(Required=false)]
+                public string IPV6AclName { get; set; }
+
+                [NameInMap("IPV6AclStatus")]
+                [Validation(Required=false)]
+                public string IPV6AclStatus { get; set; }
+
+                [NameInMap("IPV6AclType")]
+                [Validation(Required=false)]
+                public string IPV6AclType { get; set; }
+
                 [NameInMap("InstanceChargeType")]
                 [Validation(Required=false)]
                 public string InstanceChargeType { get; set; }

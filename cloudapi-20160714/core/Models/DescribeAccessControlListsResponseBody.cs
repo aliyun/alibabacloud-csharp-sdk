@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [Validation(Required=false)]
                 public string AclName { get; set; }
 
+                [NameInMap("AddressIPVersion")]
+                [Validation(Required=false)]
+                public string AddressIPVersion { get; set; }
+
             }
 
         }
