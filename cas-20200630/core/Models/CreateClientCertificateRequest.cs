@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -25,9 +28,37 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public string CommonName { get; set; }
 
+        [NameInMap("Country")]
+        [Validation(Required=false)]
+        public string Country { get; set; }
+
+        [NameInMap("Csr")]
+        [Validation(Required=false)]
+        public string Csr { get; set; }
+
         [NameInMap("Days")]
         [Validation(Required=false)]
         public int? Days { get; set; }
+
+        [NameInMap("Immediately")]
+        [Validation(Required=false)]
+        public int? Immediately { get; set; }
+
+        [NameInMap("Locality")]
+        [Validation(Required=false)]
+        public string Locality { get; set; }
+
+        [NameInMap("Months")]
+        [Validation(Required=false)]
+        public int? Months { get; set; }
+
+        [NameInMap("Organization")]
+        [Validation(Required=false)]
+        public string Organization { get; set; }
+
+        [NameInMap("OrganizationUnit")]
+        [Validation(Required=false)]
+        public string OrganizationUnit { get; set; }
 
         [NameInMap("ParentIdentifier")]
         [Validation(Required=false)]
@@ -40,6 +71,14 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [NameInMap("SanValue")]
         [Validation(Required=false)]
         public string SanValue { get; set; }
+
+        [NameInMap("State")]
+        [Validation(Required=false)]
+        public string State { get; set; }
+
+        [NameInMap("Years")]
+        [Validation(Required=false)]
+        public int? Years { get; set; }
 
     }
 

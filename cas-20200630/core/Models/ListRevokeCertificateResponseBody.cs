@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             [Validation(Required=false)]
             public string BeforeDate { get; set; }
 
+            [NameInMap("CertificateType")]
+            [Validation(Required=false)]
+            public string CertificateType { get; set; }
+
             [NameInMap("CommonName")]
             [Validation(Required=false)]
             public string CommonName { get; set; }
@@ -57,6 +61,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             [Validation(Required=false)]
             public string OrganizationUnit { get; set; }
 
+            [NameInMap("ParentIdentifier")]
+            [Validation(Required=false)]
+            public string ParentIdentifier { get; set; }
+
             [NameInMap("RevokeDate")]
             [Validation(Required=false)]
             public string RevokeDate { get; set; }
@@ -80,6 +88,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
 
             [NameInMap("SubjectDN")]
             [Validation(Required=false)]
@@ -105,7 +117,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public long? TotalCount { get; set; }
 
     }
 

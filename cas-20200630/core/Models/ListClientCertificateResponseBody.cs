@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public long? TotalCount { get; set; }
 
     }
 
