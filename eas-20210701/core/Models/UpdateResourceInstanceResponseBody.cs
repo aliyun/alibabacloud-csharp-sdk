@@ -8,22 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
-    public class ListResourcesRequest : TeaModel {
-        [NameInMap("PageNumber")]
+    public class UpdateResourceInstanceResponseBody : TeaModel {
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public string InstanceId { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
-
-        [NameInMap("ResourceName")]
-        [Validation(Required=false)]
-        public string ResourceName { get; set; }
 
     }
 

@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public int? RunningInstance { get; set; }
 
+        [NameInMap("SafetyLock")]
+        [Validation(Required=false)]
+        public string SafetyLock { get; set; }
+
         [NameInMap("ServiceConfig")]
         [Validation(Required=false)]
         public string ServiceConfig { get; set; }

@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListBenchmarkTaskRequest : TeaModel {
-        [NameInMap("Fileter")]
+        [NameInMap("Filter")]
         [Validation(Required=false)]
-        public string Fileter { get; set; }
+        public string Filter { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
