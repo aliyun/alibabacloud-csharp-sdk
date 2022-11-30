@@ -331,6 +331,80 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<AirportSearchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        public AllBaseCityInfoQueryResponse AllBaseCityInfoQuery()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            AllBaseCityInfoQueryHeaders headers = new AllBaseCityInfoQueryHeaders();
+            return AllBaseCityInfoQueryWithOptions(headers, runtime);
+        }
+
+        public async Task<AllBaseCityInfoQueryResponse> AllBaseCityInfoQueryAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            AllBaseCityInfoQueryHeaders headers = new AllBaseCityInfoQueryHeaders();
+            return await AllBaseCityInfoQueryWithOptionsAsync(headers, runtime);
+        }
+
+        public AllBaseCityInfoQueryResponse AllBaseCityInfoQueryWithOptions(AllBaseCityInfoQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripAccessToken))
+            {
+                realHeaders["x-acs-btrip-access-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripAccessToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AllBaseCityInfoQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/city/v1/code",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AllBaseCityInfoQueryResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<AllBaseCityInfoQueryResponse> AllBaseCityInfoQueryWithOptionsAsync(AllBaseCityInfoQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripAccessToken))
+            {
+                realHeaders["x-acs-btrip-access-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripAccessToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AllBaseCityInfoQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/city/v1/code",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AllBaseCityInfoQueryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public ApplyAddResponse ApplyAdd(ApplyAddRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
