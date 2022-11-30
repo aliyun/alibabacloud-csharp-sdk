@@ -21,24 +21,41 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
             [Validation(Required=false)]
             public List<QueryGateVerifyStatisticPublicResponseBodyDataDayStatistic> DayStatistic { get; set; }
             public class QueryGateVerifyStatisticPublicResponseBodyDataDayStatistic : TeaModel {
+                [NameInMap("StatisticDateStr")]
+                [Validation(Required=false)]
                 public string StatisticDateStr { get; set; }
+
+                [NameInMap("TotalFail")]
+                [Validation(Required=false)]
                 public long? TotalFail { get; set; }
+
+                [NameInMap("TotalSuccess")]
+                [Validation(Required=false)]
                 public long? TotalSuccess { get; set; }
+
+                [NameInMap("TotalUnknown")]
+                [Validation(Required=false)]
                 public long? TotalUnknown { get; set; }
+
             }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public long? Total { get; set; }
+
             [NameInMap("TotalFail")]
             [Validation(Required=false)]
             public long? TotalFail { get; set; }
+
             [NameInMap("TotalSuccess")]
             [Validation(Required=false)]
             public long? TotalSuccess { get; set; }
+
             [NameInMap("TotalUnknown")]
             [Validation(Required=false)]
             public long? TotalUnknown { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

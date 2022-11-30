@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
             [NameInMap("Mobile")]
             [Validation(Required=false)]
             public string Mobile { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

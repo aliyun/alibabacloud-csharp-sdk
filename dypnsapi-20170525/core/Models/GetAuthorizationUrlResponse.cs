@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
         public GetAuthorizationUrlResponseBody Body { get; set; }

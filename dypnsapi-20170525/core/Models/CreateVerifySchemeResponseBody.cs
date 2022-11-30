@@ -20,7 +20,12 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
             [NameInMap("SchemeCode")]
             [Validation(Required=false)]
             public string SchemeCode { get; set; }
-        };
+
+        }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public long? HttpStatusCode { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -29,6 +34,10 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

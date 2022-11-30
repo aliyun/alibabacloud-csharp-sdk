@@ -28,7 +28,8 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
             [NameInMap("AppEncryptInfo")]
             [Validation(Required=false)]
             public string AppEncryptInfo { get; set; }
-        };
+
+        }
 
     }
 

@@ -20,19 +20,24 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
             [NameInMap("BizToken")]
             [Validation(Required=false)]
             public string BizToken { get; set; }
+
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
             public long? ExpireTime { get; set; }
+
             [NameInMap("StsAccessKeyId")]
             [Validation(Required=false)]
             public string StsAccessKeyId { get; set; }
+
             [NameInMap("StsAccessKeySecret")]
             [Validation(Required=false)]
             public string StsAccessKeySecret { get; set; }
+
             [NameInMap("StsToken")]
             [Validation(Required=false)]
             public string StsToken { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

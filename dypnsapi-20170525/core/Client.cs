@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._signatureAlgorithm = "v2";
             this._endpointRule = "central";
             CheckConfig(config);
             this._endpoint = GetEndpoint("dypnsapi", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -45,9 +46,37 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525
             {
                 query["AppName"] = request.AppName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BundleId))
             {
                 query["BundleId"] = request.BundleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CmApiCode))
+            {
+                query["CmApiCode"] = request.CmApiCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CtApiCode))
+            {
+                query["CtApiCode"] = request.CtApiCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CuApiCode))
+            {
+                query["CuApiCode"] = request.CuApiCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpWhiteList))
+            {
+                query["IpWhiteList"] = request.IpWhiteList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Origin))
+            {
+                query["Origin"] = request.Origin;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
             {
@@ -73,9 +102,21 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneType))
+            {
+                query["SceneType"] = request.SceneType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchemeName))
             {
                 query["SchemeName"] = request.SchemeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SmsSignName))
+            {
+                query["SmsSignName"] = request.SmsSignName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                query["Url"] = request.Url;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -104,9 +145,37 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525
             {
                 query["AppName"] = request.AppName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BundleId))
             {
                 query["BundleId"] = request.BundleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CmApiCode))
+            {
+                query["CmApiCode"] = request.CmApiCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CtApiCode))
+            {
+                query["CtApiCode"] = request.CtApiCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CuApiCode))
+            {
+                query["CuApiCode"] = request.CuApiCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpWhiteList))
+            {
+                query["IpWhiteList"] = request.IpWhiteList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Origin))
+            {
+                query["Origin"] = request.Origin;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
             {
@@ -132,9 +201,21 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneType))
+            {
+                query["SceneType"] = request.SceneType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchemeName))
             {
                 query["SchemeName"] = request.SchemeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SmsSignName))
+            {
+                query["SmsSignName"] = request.SmsSignName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                query["Url"] = request.Url;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -753,6 +834,96 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetMobileWithOptionsAsync(request, runtime);
+        }
+
+        public GetPhoneWithTokenResponse GetPhoneWithTokenWithOptions(GetPhoneWithTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpToken))
+            {
+                query["SpToken"] = request.SpToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPhoneWithToken",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPhoneWithTokenResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetPhoneWithTokenResponse> GetPhoneWithTokenWithOptionsAsync(GetPhoneWithTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpToken))
+            {
+                query["SpToken"] = request.SpToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPhoneWithToken",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPhoneWithTokenResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetPhoneWithTokenResponse GetPhoneWithToken(GetPhoneWithTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetPhoneWithTokenWithOptions(request, runtime);
+        }
+
+        public async Task<GetPhoneWithTokenResponse> GetPhoneWithTokenAsync(GetPhoneWithTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetPhoneWithTokenWithOptionsAsync(request, runtime);
         }
 
         public GetSmsAuthTokensResponse GetSmsAuthTokensWithOptions(GetSmsAuthTokensRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

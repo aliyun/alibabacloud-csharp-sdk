@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
             [NameInMap("VerifyId")]
             [Validation(Required=false)]
             public string VerifyId { get; set; }
+
             [NameInMap("VerifyResult")]
             [Validation(Required=false)]
             public string VerifyResult { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

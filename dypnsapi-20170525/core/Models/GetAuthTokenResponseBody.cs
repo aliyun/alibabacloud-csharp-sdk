@@ -28,10 +28,12 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
             [NameInMap("AccessToken")]
             [Validation(Required=false)]
             public string AccessToken { get; set; }
+
             [NameInMap("JwtToken")]
             [Validation(Required=false)]
             public string JwtToken { get; set; }
-        };
+
+        }
 
     }
 

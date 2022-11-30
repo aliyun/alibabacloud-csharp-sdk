@@ -8,22 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
 {
-    public class VerifyMobileResponseBody : TeaModel {
+    public class GetPhoneWithTokenResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("GateVerifyResultDTO")]
+        [NameInMap("Data")]
         [Validation(Required=false)]
-        public VerifyMobileResponseBodyGateVerifyResultDTO GateVerifyResultDTO { get; set; }
-        public class VerifyMobileResponseBodyGateVerifyResultDTO : TeaModel {
-            [NameInMap("VerifyId")]
+        public GetPhoneWithTokenResponseBodyData Data { get; set; }
+        public class GetPhoneWithTokenResponseBodyData : TeaModel {
+            [NameInMap("Mobile")]
             [Validation(Required=false)]
-            public string VerifyId { get; set; }
-
-            [NameInMap("VerifyResult")]
-            [Validation(Required=false)]
-            public string VerifyResult { get; set; }
+            public string Mobile { get; set; }
 
         }
 

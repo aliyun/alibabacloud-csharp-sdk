@@ -16,9 +16,37 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         [Validation(Required=false)]
         public string AppName { get; set; }
 
+        [NameInMap("AuthType")]
+        [Validation(Required=false)]
+        public string AuthType { get; set; }
+
         [NameInMap("BundleId")]
         [Validation(Required=false)]
         public string BundleId { get; set; }
+
+        [NameInMap("CmApiCode")]
+        [Validation(Required=false)]
+        public long? CmApiCode { get; set; }
+
+        [NameInMap("CtApiCode")]
+        [Validation(Required=false)]
+        public long? CtApiCode { get; set; }
+
+        [NameInMap("CuApiCode")]
+        [Validation(Required=false)]
+        public long? CuApiCode { get; set; }
+
+        [NameInMap("Email")]
+        [Validation(Required=false)]
+        public string Email { get; set; }
+
+        [NameInMap("IpWhiteList")]
+        [Validation(Required=false)]
+        public string IpWhiteList { get; set; }
+
+        [NameInMap("Origin")]
+        [Validation(Required=false)]
+        public string Origin { get; set; }
 
         [NameInMap("OsType")]
         [Validation(Required=false)]
@@ -44,9 +72,21 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("SceneType")]
+        [Validation(Required=false)]
+        public string SceneType { get; set; }
+
         [NameInMap("SchemeName")]
         [Validation(Required=false)]
         public string SchemeName { get; set; }
+
+        [NameInMap("SmsSignName")]
+        [Validation(Required=false)]
+        public string SmsSignName { get; set; }
+
+        [NameInMap("Url")]
+        [Validation(Required=false)]
+        public string Url { get; set; }
 
     }
 

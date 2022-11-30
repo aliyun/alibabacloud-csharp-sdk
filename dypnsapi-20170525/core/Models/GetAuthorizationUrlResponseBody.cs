@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
             [NameInMap("AuthorizationUrl")]
             [Validation(Required=false)]
             public string AuthorizationUrl { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
