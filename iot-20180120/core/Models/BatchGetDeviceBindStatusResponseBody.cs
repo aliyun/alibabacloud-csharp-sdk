@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public int? BindStatus { get; set; }
 
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
             [NameInMap("IotId")]
             [Validation(Required=false)]
             public string IotId { get; set; }
