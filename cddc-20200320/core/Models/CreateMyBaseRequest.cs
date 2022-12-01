@@ -29,6 +29,22 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
         [Validation(Required=false)]
         public List<CreateMyBaseRequestECSClassList> ECSClassList { get; set; }
         public class CreateMyBaseRequestECSClassList : TeaModel {
+            [NameInMap("dataDiskPerformanceLevel")]
+            [Validation(Required=false)]
+            public string DataDiskPerformanceLevel { get; set; }
+
+            [NameInMap("diskCapacity")]
+            [Validation(Required=false)]
+            public int? DiskCapacity { get; set; }
+
+            [NameInMap("diskCount")]
+            [Validation(Required=false)]
+            public int? DiskCount { get; set; }
+
+            [NameInMap("diskType")]
+            [Validation(Required=false)]
+            public string DiskType { get; set; }
+
             [NameInMap("instanceType")]
             [Validation(Required=false)]
             public string InstanceType { get; set; }
@@ -45,11 +61,23 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
             [Validation(Required=false)]
             public string SysDiskType { get; set; }
 
+            [NameInMap("systemDiskPerformanceLevel")]
+            [Validation(Required=false)]
+            public string SystemDiskPerformanceLevel { get; set; }
+
         }
 
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
+
+        [NameInMap("ImageId")]
+        [Validation(Required=false)]
+        public string ImageId { get; set; }
+
+        [NameInMap("KeyPairName")]
+        [Validation(Required=false)]
+        public string KeyPairName { get; set; }
 
         [NameInMap("OsPassword")]
         [Validation(Required=false)]
@@ -58,6 +86,10 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PasswordInherit")]
+        [Validation(Required=false)]
+        public string PasswordInherit { get; set; }
 
         [NameInMap("PayType")]
         [Validation(Required=false)]

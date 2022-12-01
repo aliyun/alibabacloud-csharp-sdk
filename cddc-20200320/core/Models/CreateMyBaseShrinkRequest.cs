@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
         [Validation(Required=false)]
         public string Engine { get; set; }
 
+        [NameInMap("ImageId")]
+        [Validation(Required=false)]
+        public string ImageId { get; set; }
+
+        [NameInMap("KeyPairName")]
+        [Validation(Required=false)]
+        public string KeyPairName { get; set; }
+
         [NameInMap("OsPassword")]
         [Validation(Required=false)]
         public string OsPassword { get; set; }
@@ -40,6 +48,10 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PasswordInherit")]
+        [Validation(Required=false)]
+        public string PasswordInherit { get; set; }
 
         [NameInMap("PayType")]
         [Validation(Required=false)]

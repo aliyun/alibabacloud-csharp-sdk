@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cddc20200320.Models
 {
     public class DescribeHostEcsLevelInfoRequest : TeaModel {
-        [NameInMap("CommodityCode")]
-        [Validation(Required=false)]
-        public string CommodityCode { get; set; }
-
         [NameInMap("DbType")]
         [Validation(Required=false)]
         public string DbType { get; set; }
@@ -24,10 +20,6 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
-
-        [NameInMap("PayType")]
-        [Validation(Required=false)]
-        public string PayType { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
