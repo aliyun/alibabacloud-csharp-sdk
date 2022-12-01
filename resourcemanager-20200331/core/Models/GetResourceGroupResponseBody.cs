@@ -20,18 +20,23 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [NameInMap("AccountId")]
             [Validation(Required=false)]
             public string AccountId { get; set; }
+
             [NameInMap("CreateDate")]
             [Validation(Required=false)]
             public string CreateDate { get; set; }
+
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
+
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
             [NameInMap("RegionStatuses")]
             [Validation(Required=false)]
             public GetResourceGroupResponseBodyResourceGroupRegionStatuses RegionStatuses { get; set; }
@@ -51,9 +56,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 }
 
             }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public GetResourceGroupResponseBodyResourceGroupTags Tags { get; set; }
@@ -73,7 +80,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 }
 
             }
-        };
+
+        }
 
     }
 

@@ -17,13 +17,29 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [Validation(Required=false)]
             public List<ListDelegatedAdministratorsResponseBodyAccountsAccount> Account { get; set; }
             public class ListDelegatedAdministratorsResponseBodyAccountsAccount : TeaModel {
+                [NameInMap("AccountId")]
+                [Validation(Required=false)]
                 public string AccountId { get; set; }
+
+                [NameInMap("DelegationEnabledTime")]
+                [Validation(Required=false)]
                 public string DelegationEnabledTime { get; set; }
+
+                [NameInMap("DisplayName")]
+                [Validation(Required=false)]
                 public string DisplayName { get; set; }
+
+                [NameInMap("JoinMethod")]
+                [Validation(Required=false)]
                 public string JoinMethod { get; set; }
+
+                [NameInMap("ServicePrincipal")]
+                [Validation(Required=false)]
                 public string ServicePrincipal { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

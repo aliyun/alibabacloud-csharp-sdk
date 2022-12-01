@@ -29,12 +29,25 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [Validation(Required=false)]
             public List<ListTargetAttachmentsForControlPolicyResponseBodyTargetAttachmentsTargetAttachment> TargetAttachment { get; set; }
             public class ListTargetAttachmentsForControlPolicyResponseBodyTargetAttachmentsTargetAttachment : TeaModel {
+                [NameInMap("AttachDate")]
+                [Validation(Required=false)]
                 public string AttachDate { get; set; }
+
+                [NameInMap("TargetId")]
+                [Validation(Required=false)]
                 public string TargetId { get; set; }
+
+                [NameInMap("TargetName")]
+                [Validation(Required=false)]
                 public string TargetName { get; set; }
+
+                [NameInMap("TargetType")]
+                [Validation(Required=false)]
                 public string TargetType { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

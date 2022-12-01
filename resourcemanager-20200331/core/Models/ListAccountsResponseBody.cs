@@ -17,15 +17,44 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [Validation(Required=false)]
             public List<ListAccountsResponseBodyAccountsAccount> Account { get; set; }
             public class ListAccountsResponseBodyAccountsAccount : TeaModel {
+                [NameInMap("AccountId")]
+                [Validation(Required=false)]
                 public string AccountId { get; set; }
+
+                [NameInMap("DisplayName")]
+                [Validation(Required=false)]
                 public string DisplayName { get; set; }
+
+                [NameInMap("FolderId")]
+                [Validation(Required=false)]
                 public string FolderId { get; set; }
+
+                [NameInMap("JoinMethod")]
+                [Validation(Required=false)]
                 public string JoinMethod { get; set; }
+
+                [NameInMap("JoinTime")]
+                [Validation(Required=false)]
                 public string JoinTime { get; set; }
+
+                [NameInMap("ModifyTime")]
+                [Validation(Required=false)]
                 public string ModifyTime { get; set; }
+
+                [NameInMap("ResourceDirectoryId")]
+                [Validation(Required=false)]
                 public string ResourceDirectoryId { get; set; }
+
+                [NameInMap("ResourceDirectoryPath")]
+                [Validation(Required=false)]
                 public string ResourceDirectoryPath { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
                 public ListAccountsResponseBodyAccountsAccountTags Tags { get; set; }
                 public class ListAccountsResponseBodyAccountsAccountTags : TeaModel {
                     [NameInMap("Tag")]
@@ -43,9 +72,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                     }
 
                 }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

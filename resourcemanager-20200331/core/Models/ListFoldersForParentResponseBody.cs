@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [Validation(Required=false)]
             public List<ListFoldersForParentResponseBodyFoldersFolder> Folder { get; set; }
             public class ListFoldersForParentResponseBodyFoldersFolder : TeaModel {
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("FolderId")]
+                [Validation(Required=false)]
                 public string FolderId { get; set; }
+
+                [NameInMap("FolderName")]
+                [Validation(Required=false)]
                 public string FolderName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

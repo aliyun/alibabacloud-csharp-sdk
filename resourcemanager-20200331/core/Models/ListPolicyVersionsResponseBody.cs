@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [Validation(Required=false)]
             public List<ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion> PolicyVersion { get; set; }
             public class ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion : TeaModel {
+                [NameInMap("CreateDate")]
+                [Validation(Required=false)]
                 public string CreateDate { get; set; }
+
+                [NameInMap("IsDefaultVersion")]
+                [Validation(Required=false)]
                 public bool? IsDefaultVersion { get; set; }
+
+                [NameInMap("VersionId")]
+                [Validation(Required=false)]
                 public string VersionId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

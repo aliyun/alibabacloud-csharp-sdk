@@ -25,15 +25,37 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [Validation(Required=false)]
             public List<ListPolicyAttachmentsResponseBodyPolicyAttachmentsPolicyAttachment> PolicyAttachment { get; set; }
             public class ListPolicyAttachmentsResponseBodyPolicyAttachmentsPolicyAttachment : TeaModel {
+                [NameInMap("AttachDate")]
+                [Validation(Required=false)]
                 public string AttachDate { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("PolicyName")]
+                [Validation(Required=false)]
                 public string PolicyName { get; set; }
+
+                [NameInMap("PolicyType")]
+                [Validation(Required=false)]
                 public string PolicyType { get; set; }
+
+                [NameInMap("PrincipalName")]
+                [Validation(Required=false)]
                 public string PrincipalName { get; set; }
+
+                [NameInMap("PrincipalType")]
+                [Validation(Required=false)]
                 public string PrincipalType { get; set; }
+
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

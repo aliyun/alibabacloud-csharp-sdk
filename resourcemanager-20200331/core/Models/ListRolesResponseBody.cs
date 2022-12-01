@@ -29,10 +29,24 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [Validation(Required=false)]
             public List<ListRolesResponseBodyRolesRole> Role { get; set; }
             public class ListRolesResponseBodyRolesRole : TeaModel {
+                [NameInMap("Arn")]
+                [Validation(Required=false)]
                 public string Arn { get; set; }
+
+                [NameInMap("CreateDate")]
+                [Validation(Required=false)]
                 public string CreateDate { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("IsServiceLinkedRole")]
+                [Validation(Required=false)]
                 public bool? IsServiceLinkedRole { get; set; }
+
+                [NameInMap("LatestDeletionTask")]
+                [Validation(Required=false)]
                 public ListRolesResponseBodyRolesRoleLatestDeletionTask LatestDeletionTask { get; set; }
                 public class ListRolesResponseBodyRolesRoleLatestDeletionTask : TeaModel {
                     [NameInMap("CreateDate")]
@@ -44,13 +58,30 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                     public string DeletionTaskId { get; set; }
 
                 }
+
+                [NameInMap("MaxSessionDuration")]
+                [Validation(Required=false)]
                 public long? MaxSessionDuration { get; set; }
+
+                [NameInMap("RoleId")]
+                [Validation(Required=false)]
                 public string RoleId { get; set; }
+
+                [NameInMap("RoleName")]
+                [Validation(Required=false)]
                 public string RoleName { get; set; }
+
+                [NameInMap("RolePrincipalName")]
+                [Validation(Required=false)]
                 public string RolePrincipalName { get; set; }
+
+                [NameInMap("UpdateDate")]
+                [Validation(Required=false)]
                 public string UpdateDate { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

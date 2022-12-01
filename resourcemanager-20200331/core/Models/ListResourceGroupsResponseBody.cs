@@ -29,12 +29,32 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [Validation(Required=false)]
             public List<ListResourceGroupsResponseBodyResourceGroupsResourceGroup> ResourceGroup { get; set; }
             public class ListResourceGroupsResponseBodyResourceGroupsResourceGroup : TeaModel {
+                [NameInMap("AccountId")]
+                [Validation(Required=false)]
                 public string AccountId { get; set; }
+
+                [NameInMap("CreateDate")]
+                [Validation(Required=false)]
                 public string CreateDate { get; set; }
+
+                [NameInMap("DisplayName")]
+                [Validation(Required=false)]
                 public string DisplayName { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public string Id { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
                 public ListResourceGroupsResponseBodyResourceGroupsResourceGroupTags Tags { get; set; }
                 public class ListResourceGroupsResponseBodyResourceGroupsResourceGroupTags : TeaModel {
                     [NameInMap("Tag")]
@@ -52,8 +72,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

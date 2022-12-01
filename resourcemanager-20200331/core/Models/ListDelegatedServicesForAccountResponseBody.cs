@@ -17,10 +17,21 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [Validation(Required=false)]
             public List<ListDelegatedServicesForAccountResponseBodyDelegatedServicesDelegatedService> DelegatedService { get; set; }
             public class ListDelegatedServicesForAccountResponseBodyDelegatedServicesDelegatedService : TeaModel {
+                [NameInMap("DelegationEnabledTime")]
+                [Validation(Required=false)]
                 public string DelegationEnabledTime { get; set; }
+
+                [NameInMap("ServicePrincipal")]
+                [Validation(Required=false)]
                 public string ServicePrincipal { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

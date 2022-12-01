@@ -17,14 +17,33 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [Validation(Required=false)]
             public List<ListControlPolicyAttachmentsForTargetResponseBodyControlPolicyAttachmentsControlPolicyAttachment> ControlPolicyAttachment { get; set; }
             public class ListControlPolicyAttachmentsForTargetResponseBodyControlPolicyAttachmentsControlPolicyAttachment : TeaModel {
+                [NameInMap("AttachDate")]
+                [Validation(Required=false)]
                 public string AttachDate { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("EffectScope")]
+                [Validation(Required=false)]
                 public string EffectScope { get; set; }
+
+                [NameInMap("PolicyId")]
+                [Validation(Required=false)]
                 public string PolicyId { get; set; }
+
+                [NameInMap("PolicyName")]
+                [Validation(Required=false)]
                 public string PolicyName { get; set; }
+
+                [NameInMap("PolicyType")]
+                [Validation(Required=false)]
                 public string PolicyType { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
