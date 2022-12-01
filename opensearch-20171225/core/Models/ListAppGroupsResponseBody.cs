@@ -127,13 +127,13 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [Validation(Required=false)]
             public List<ListAppGroupsResponseBodyResultTags> Tags { get; set; }
             public class ListAppGroupsResponseBodyResultTags : TeaModel {
-                [NameInMap("tagKey")]
+                [NameInMap("key")]
                 [Validation(Required=false)]
-                public string TagKey { get; set; }
+                public string Key { get; set; }
 
-                [NameInMap("tagValue")]
+                [NameInMap("value")]
                 [Validation(Required=false)]
-                public string TagValue { get; set; }
+                public string Value { get; set; }
 
             }
 

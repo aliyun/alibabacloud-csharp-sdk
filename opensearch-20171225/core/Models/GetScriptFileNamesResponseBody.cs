@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [Validation(Required=false)]
             public string ModifyTime { get; set; }
 
+            [NameInMap("pathName")]
+            [Validation(Required=false)]
+            public string PathName { get; set; }
+
         }
 
     }

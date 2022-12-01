@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("result")]
+        [Validation(Required=false)]
+        public bool? Result { get; set; }
+
     }
 
 }
