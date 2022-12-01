@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [Validation(Required=false)]
             public string IncludeOutboundPorts { get; set; }
 
+            [NameInMap("InterceptionMode")]
+            [Validation(Required=false)]
+            public string InterceptionMode { get; set; }
+
             [NameInMap("IstioDNSProxyEnabled")]
             [Validation(Required=false)]
             public bool? IstioDNSProxyEnabled { get; set; }

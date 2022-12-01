@@ -169,6 +169,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public bool? IntegrateKiali { get; set; }
 
+        [NameInMap("InterceptionMode")]
+        [Validation(Required=false)]
+        public string InterceptionMode { get; set; }
+
         [NameInMap("KialiEnabled")]
         [Validation(Required=false)]
         public bool? KialiEnabled { get; set; }

@@ -6814,6 +6814,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["IntegrateKiali"] = request.IntegrateKiali;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterceptionMode))
+            {
+                body["InterceptionMode"] = request.InterceptionMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KialiEnabled))
             {
                 body["KialiEnabled"] = request.KialiEnabled;
@@ -7209,6 +7213,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["IntegrateKiali"] = request.IntegrateKiali;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterceptionMode))
+            {
+                body["InterceptionMode"] = request.InterceptionMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KialiEnabled))
             {
                 body["KialiEnabled"] = request.KialiEnabled;
@@ -7488,6 +7496,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["IncludeOutboundPorts"] = request.IncludeOutboundPorts;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterceptionMode))
+            {
+                body["InterceptionMode"] = request.InterceptionMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IstioDNSProxyEnabled))
             {
                 body["IstioDNSProxyEnabled"] = request.IstioDNSProxyEnabled;
@@ -7614,6 +7626,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeOutboundPorts))
             {
                 body["IncludeOutboundPorts"] = request.IncludeOutboundPorts;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterceptionMode))
+            {
+                body["InterceptionMode"] = request.InterceptionMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IstioDNSProxyEnabled))
             {
