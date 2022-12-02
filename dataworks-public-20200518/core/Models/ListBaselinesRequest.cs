@@ -33,10 +33,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string Priority { get; set; }
 
-        [NameInMap("ProjectEnv")]
-        [Validation(Required=false)]
-        public string ProjectEnv { get; set; }
-
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }

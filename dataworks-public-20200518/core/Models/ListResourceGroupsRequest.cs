@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         }
 
+        [NameInMap("TypeNames")]
+        [Validation(Required=false)]
+        public string TypeNames { get; set; }
+
     }
 
 }

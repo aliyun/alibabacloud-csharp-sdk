@@ -392,6 +392,88 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await ApprovePermissionApplyOrderWithOptionsAsync(request, runtime);
         }
 
+        public ChangeResourceManagerResourceGroupResponse ChangeResourceManagerResourceGroupWithOptions(ChangeResourceManagerResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChangeResourceManagerResourceGroup",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChangeResourceManagerResourceGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ChangeResourceManagerResourceGroupResponse> ChangeResourceManagerResourceGroupWithOptionsAsync(ChangeResourceManagerResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChangeResourceManagerResourceGroup",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChangeResourceManagerResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ChangeResourceManagerResourceGroupResponse ChangeResourceManagerResourceGroup(ChangeResourceManagerResourceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ChangeResourceManagerResourceGroupWithOptions(request, runtime);
+        }
+
+        public async Task<ChangeResourceManagerResourceGroupResponse> ChangeResourceManagerResourceGroupAsync(ChangeResourceManagerResourceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ChangeResourceManagerResourceGroupWithOptionsAsync(request, runtime);
+        }
+
         public CheckFileDeploymentResponse CheckFileDeploymentWithOptions(CheckFileDeploymentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10037,9 +10119,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             GetMetaTablePartitionShrinkRequest request = new GetMetaTablePartitionShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SortCriterion.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SortCriterion))
             {
-                request.SortCriterionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SortCriterion.ToMap(), "SortCriterion", "json");
+                request.SortCriterionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SortCriterion, "SortCriterion", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
@@ -10098,9 +10180,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             GetMetaTablePartitionShrinkRequest request = new GetMetaTablePartitionShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SortCriterion.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SortCriterion))
             {
-                request.SortCriterionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SortCriterion.ToMap(), "SortCriterion", "json");
+                request.SortCriterionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SortCriterion, "SortCriterion", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
@@ -12280,10 +12362,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["Priority"] = request.Priority;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectEnv))
-            {
-                body["ProjectEnv"] = request.ProjectEnv;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
                 body["ProjectId"] = request.ProjectId;
@@ -12338,10 +12416,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
             {
                 body["Priority"] = request.Priority;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectEnv))
-            {
-                body["ProjectEnv"] = request.ProjectEnv;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
@@ -16568,6 +16642,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 query["Tags"] = request.TagsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TypeNames))
+            {
+                query["TypeNames"] = request.TypeNames;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -16616,6 +16694,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
             {
                 query["Tags"] = request.TagsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TypeNames))
+            {
+                query["TypeNames"] = request.TypeNames;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
