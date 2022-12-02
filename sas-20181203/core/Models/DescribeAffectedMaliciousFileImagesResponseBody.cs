@@ -53,6 +53,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string ImageUuid { get; set; }
 
+            [NameInMap("InstanceName")]
+            [Validation(Required=false)]
+            public string InstanceName { get; set; }
+
+            [NameInMap("InternetIp")]
+            [Validation(Required=false)]
+            public string InternetIp { get; set; }
+
+            [NameInMap("IntranetIp")]
+            [Validation(Required=false)]
+            public string IntranetIp { get; set; }
+
             [NameInMap("LatestScanTimestamp")]
             [Validation(Required=false)]
             public long? LatestScanTimestamp { get; set; }
@@ -104,6 +116,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public string Tag { get; set; }
+
+            [NameInMap("TargetId")]
+            [Validation(Required=false)]
+            public string TargetId { get; set; }
+
+            [NameInMap("TargetName")]
+            [Validation(Required=false)]
+            public string TargetName { get; set; }
+
+            [NameInMap("TargetType")]
+            [Validation(Required=false)]
+            public string TargetType { get; set; }
+
+            [NameInMap("Uuid")]
+            [Validation(Required=false)]
+            public string Uuid { get; set; }
 
         }
 

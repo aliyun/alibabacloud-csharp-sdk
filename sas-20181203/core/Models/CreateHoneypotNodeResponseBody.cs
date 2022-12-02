@@ -13,6 +13,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("HoneypotNode")]
+        [Validation(Required=false)]
+        public CreateHoneypotNodeResponseBodyHoneypotNode HoneypotNode { get; set; }
+        public class CreateHoneypotNodeResponseBodyHoneypotNode : TeaModel {
+            [NameInMap("NodeId")]
+            [Validation(Required=false)]
+            public string NodeId { get; set; }
+
+        }
+
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }

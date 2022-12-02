@@ -13,6 +13,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("VulWhitelistList")]
+        [Validation(Required=false)]
+        public List<ModifyCreateVulWhitelistResponseBodyVulWhitelistList> VulWhitelistList { get; set; }
+        public class ModifyCreateVulWhitelistResponseBodyVulWhitelistList : TeaModel {
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public long? Id { get; set; }
+
+        }
+
     }
 
 }

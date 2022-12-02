@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Levels { get; set; }
 
+        [NameInMap("MaliciousMd5")]
+        [Validation(Required=false)]
+        public string MaliciousMd5 { get; set; }
+
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }

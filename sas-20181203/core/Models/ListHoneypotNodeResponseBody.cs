@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? TotalStatus { get; set; }
 
+            [NameInMap("UpgradeAvailable")]
+            [Validation(Required=false)]
+            public bool? UpgradeAvailable { get; set; }
+
         }
 
         [NameInMap("HttpStatusCode")]

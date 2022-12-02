@@ -117,6 +117,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string ImageDigest { get; set; }
 
+            [NameInMap("InstanceName")]
+            [Validation(Required=false)]
+            public string InstanceName { get; set; }
+
+            [NameInMap("InternetIp")]
+            [Validation(Required=false)]
+            public string InternetIp { get; set; }
+
+            [NameInMap("IntranetIp")]
+            [Validation(Required=false)]
+            public string IntranetIp { get; set; }
+
             [NameInMap("LastTs")]
             [Validation(Required=false)]
             public long? LastTs { get; set; }
@@ -124,6 +136,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Layers")]
             [Validation(Required=false)]
             public List<string> Layers { get; set; }
+
+            [NameInMap("MaliciousSource")]
+            [Validation(Required=false)]
+            public string MaliciousSource { get; set; }
 
             [NameInMap("ModifyTs")]
             [Validation(Required=false)]
@@ -161,6 +177,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string RepoNamespace { get; set; }
 
+            [NameInMap("ScanTime")]
+            [Validation(Required=false)]
+            public long? ScanTime { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
@@ -168,6 +188,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public string Tag { get; set; }
+
+            [NameInMap("TargetId")]
+            [Validation(Required=false)]
+            public string TargetId { get; set; }
+
+            [NameInMap("TargetName")]
+            [Validation(Required=false)]
+            public string TargetName { get; set; }
+
+            [NameInMap("TargetType")]
+            [Validation(Required=false)]
+            public string TargetType { get; set; }
 
             [NameInMap("Type")]
             [Validation(Required=false)]

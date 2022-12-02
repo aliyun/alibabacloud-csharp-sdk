@@ -8,38 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class DescribeVulWhitelistResponseBody : TeaModel {
-        [NameInMap("Count")]
-        [Validation(Required=false)]
-        public int? Count { get; set; }
-
-        [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
+    public class GetVulWhitelistResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("TotalCount")]
+        [NameInMap("VulWhitelist")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("VulWhitelists")]
-        [Validation(Required=false)]
-        public List<DescribeVulWhitelistResponseBodyVulWhitelists> VulWhitelists { get; set; }
-        public class DescribeVulWhitelistResponseBodyVulWhitelists : TeaModel {
+        public GetVulWhitelistResponseBodyVulWhitelist VulWhitelist { get; set; }
+        public class GetVulWhitelistResponseBodyVulWhitelist : TeaModel {
             [NameInMap("AliasName")]
             [Validation(Required=false)]
             public string AliasName { get; set; }
 
             [NameInMap("Id")]
             [Validation(Required=false)]
-            public string Id { get; set; }
+            public long? Id { get; set; }
 
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -49,9 +33,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Reason { get; set; }
 
-            [NameInMap("TargetInfo")]
+            [NameInMap("Target")]
             [Validation(Required=false)]
-            public string TargetInfo { get; set; }
+            public string Target { get; set; }
 
             [NameInMap("Type")]
             [Validation(Required=false)]

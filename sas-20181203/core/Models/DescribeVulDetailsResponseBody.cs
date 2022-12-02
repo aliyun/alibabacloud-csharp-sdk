@@ -59,6 +59,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string CvssVector { get; set; }
 
+            [NameInMap("InstanceName")]
+            [Validation(Required=false)]
+            public string InstanceName { get; set; }
+
+            [NameInMap("InternetIp")]
+            [Validation(Required=false)]
+            public string InternetIp { get; set; }
+
+            [NameInMap("IntranetIp")]
+            [Validation(Required=false)]
+            public string IntranetIp { get; set; }
+
             [NameInMap("Poc")]
             [Validation(Required=false)]
             public string Poc { get; set; }
@@ -90,6 +102,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Summary")]
             [Validation(Required=false)]
             public string Summary { get; set; }
+
+            [NameInMap("TargetId")]
+            [Validation(Required=false)]
+            public string TargetId { get; set; }
+
+            [NameInMap("TargetName")]
+            [Validation(Required=false)]
+            public string TargetName { get; set; }
 
             [NameInMap("Title")]
             [Validation(Required=false)]

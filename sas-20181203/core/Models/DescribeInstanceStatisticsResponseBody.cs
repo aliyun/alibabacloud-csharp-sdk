@@ -17,6 +17,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? Account { get; set; }
 
+            [NameInMap("AgentlessAll")]
+            [Validation(Required=false)]
+            public int? AgentlessAll { get; set; }
+
+            [NameInMap("AgentlessBaseline")]
+            [Validation(Required=false)]
+            public int? AgentlessBaseline { get; set; }
+
+            [NameInMap("AgentlessMalicious")]
+            [Validation(Required=false)]
+            public int? AgentlessMalicious { get; set; }
+
+            [NameInMap("AgentlessVulCve")]
+            [Validation(Required=false)]
+            public int? AgentlessVulCve { get; set; }
+
+            [NameInMap("AgentlessVulSca")]
+            [Validation(Required=false)]
+            public int? AgentlessVulSca { get; set; }
+
             [NameInMap("AppNum")]
             [Validation(Required=false)]
             public int? AppNum { get; set; }

@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string HoneypotImageDisplayName { get; set; }
 
+            [NameInMap("HoneypotImageId")]
+            [Validation(Required=false)]
+            public string HoneypotImageId { get; set; }
+
             [NameInMap("HoneypotImageName")]
             [Validation(Required=false)]
             public string HoneypotImageName { get; set; }
