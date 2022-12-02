@@ -29,6 +29,16 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string DatabaseId { get; set; }
 
+            [NameInMap("DatabaseIds")]
+            [Validation(Required=false)]
+            public GetLogicDatabaseResponseBodyLogicDatabaseDatabaseIds DatabaseIds { get; set; }
+            public class GetLogicDatabaseResponseBodyLogicDatabaseDatabaseIds : TeaModel {
+                [NameInMap("DatabaseIds")]
+                [Validation(Required=false)]
+                public List<long?> DatabaseIds { get; set; }
+
+            }
+
             [NameInMap("DbType")]
             [Validation(Required=false)]
             public string DbType { get; set; }

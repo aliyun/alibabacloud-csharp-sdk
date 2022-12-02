@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public int? DatasetType { get; set; }
 
+        [NameInMap("Digest")]
+        [Validation(Required=false)]
+        public string Digest { get; set; }
+
         [NameInMap("FileSystem")]
         [Validation(Required=false)]
         public string FileSystem { get; set; }
