@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
-        [NameInMap("UserId")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
-
     }
 
 }

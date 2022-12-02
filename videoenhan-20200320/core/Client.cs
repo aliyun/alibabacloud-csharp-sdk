@@ -529,10 +529,6 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
-            {
-                body["UserId"] = request.UserId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoURL))
             {
                 body["VideoURL"] = request.VideoURL;
@@ -560,10 +556,6 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
-            {
-                body["UserId"] = request.UserId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoURL))
             {
                 body["VideoURL"] = request.VideoURL;
@@ -1573,10 +1565,6 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             {
                 body["TemplateId"] = request.TemplateId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
-            {
-                body["UserId"] = request.UserId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -1603,10 +1591,6 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 body["TemplateId"] = request.TemplateId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
-            {
-                body["UserId"] = request.UserId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3419,10 +3403,6 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             {
                 body["TemplateId"] = request.TemplateId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
-            {
-                body["UserId"] = request.UserId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -3453,10 +3433,6 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 body["TemplateId"] = request.TemplateId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
-            {
-                body["UserId"] = request.UserId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3659,10 +3635,6 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             {
                 query["TemplateId"] = request.TemplateId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
-            {
-                query["UserId"] = request.UserId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -3689,10 +3661,6 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 query["TemplateId"] = request.TemplateId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
-            {
-                query["UserId"] = request.UserId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
