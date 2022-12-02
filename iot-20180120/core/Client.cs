@@ -19771,6 +19771,10 @@ namespace AlibabaCloud.SDK.Iot20180120
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentType))
+            {
+                query["ContentType"] = request.ContentType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CorrelationData))
             {
                 query["CorrelationData"] = request.CorrelationData;
@@ -19782,6 +19786,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
             {
                 query["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayloadFormatIndicator))
+            {
+                query["PayloadFormatIndicator"] = request.PayloadFormatIndicator;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
             {
@@ -19832,6 +19840,10 @@ namespace AlibabaCloud.SDK.Iot20180120
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentType))
+            {
+                query["ContentType"] = request.ContentType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CorrelationData))
             {
                 query["CorrelationData"] = request.CorrelationData;
@@ -19843,6 +19855,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
             {
                 query["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayloadFormatIndicator))
+            {
+                query["PayloadFormatIndicator"] = request.PayloadFormatIndicator;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
             {

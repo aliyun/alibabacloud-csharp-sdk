@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class PubRequest : TeaModel {
+        [NameInMap("ContentType")]
+        [Validation(Required=false)]
+        public string ContentType { get; set; }
+
         [NameInMap("CorrelationData")]
         [Validation(Required=false)]
         public string CorrelationData { get; set; }
@@ -24,6 +28,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("MessageContent")]
         [Validation(Required=false)]
         public string MessageContent { get; set; }
+
+        [NameInMap("PayloadFormatIndicator")]
+        [Validation(Required=false)]
+        public int? PayloadFormatIndicator { get; set; }
 
         [NameInMap("ProductKey")]
         [Validation(Required=false)]
