@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public DescribeTenantResponseBodyTenant Tenant { get; set; }
         public class DescribeTenantResponseBodyTenant : TeaModel {
+            [NameInMap("AvailableZones")]
+            [Validation(Required=false)]
+            public List<string> AvailableZones { get; set; }
+
             [NameInMap("Charset")]
             [Validation(Required=false)]
             public string Charset { get; set; }
@@ -45,6 +49,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("DiskType")]
+            [Validation(Required=false)]
+            public string DiskType { get; set; }
+
             [NameInMap("EnableClogService")]
             [Validation(Required=false)]
             public bool? EnableClogService { get; set; }
@@ -53,9 +61,21 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public bool? EnableInternetAddressService { get; set; }
 
+            [NameInMap("EnableReadWriteSplit")]
+            [Validation(Required=false)]
+            public bool? EnableReadWriteSplit { get; set; }
+
+            [NameInMap("InstanceType")]
+            [Validation(Required=false)]
+            public string InstanceType { get; set; }
+
             [NameInMap("MasterIntranetAddressZone")]
             [Validation(Required=false)]
             public string MasterIntranetAddressZone { get; set; }
+
+            [NameInMap("PayType")]
+            [Validation(Required=false)]
+            public string PayType { get; set; }
 
             [NameInMap("PrimaryZone")]
             [Validation(Required=false)]
@@ -65,6 +85,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public string PrimaryZoneDeployType { get; set; }
 
+            [NameInMap("Series")]
+            [Validation(Required=false)]
+            public string Series { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
@@ -73,6 +97,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public List<DescribeTenantResponseBodyTenantTenantConnections> TenantConnections { get; set; }
             public class DescribeTenantResponseBodyTenantTenantConnections : TeaModel {
+                [NameInMap("AddressType")]
+                [Validation(Required=false)]
+                public string AddressType { get; set; }
+
                 [NameInMap("ConnectionRole")]
                 [Validation(Required=false)]
                 public string ConnectionRole { get; set; }
@@ -112,6 +140,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [NameInMap("IntranetPort")]
                 [Validation(Required=false)]
                 public int? IntranetPort { get; set; }
+
+                [NameInMap("TransactionSplit")]
+                [Validation(Required=false)]
+                public bool? TransactionSplit { get; set; }
 
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]

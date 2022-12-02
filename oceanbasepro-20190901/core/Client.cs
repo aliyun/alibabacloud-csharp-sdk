@@ -464,25 +464,25 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateOmsOpenAPIProjectShrinkRequest request = new CreateOmsOpenAPIProjectShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DestConfig.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DestConfig))
             {
-                request.DestConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DestConfig.ToMap(), "DestConfig", "json");
+                request.DestConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DestConfig, "DestConfig", "json");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LabelIds))
             {
                 request.LabelIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LabelIds, "LabelIds", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceConfig.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceConfig))
             {
-                request.SourceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceConfig.ToMap(), "SourceConfig", "json");
+                request.SourceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceConfig, "SourceConfig", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TransferMapping.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TransferMapping))
             {
-                request.TransferMappingShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TransferMapping.ToMap(), "TransferMapping", "json");
+                request.TransferMappingShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TransferMapping, "TransferMapping", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TransferStepConfig.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TransferStepConfig))
             {
-                request.TransferStepConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TransferStepConfig.ToMap(), "TransferStepConfig", "json");
+                request.TransferStepConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TransferStepConfig, "TransferStepConfig", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessName))
@@ -549,25 +549,25 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateOmsOpenAPIProjectShrinkRequest request = new CreateOmsOpenAPIProjectShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DestConfig.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DestConfig))
             {
-                request.DestConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DestConfig.ToMap(), "DestConfig", "json");
+                request.DestConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DestConfig, "DestConfig", "json");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LabelIds))
             {
                 request.LabelIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LabelIds, "LabelIds", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceConfig.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceConfig))
             {
-                request.SourceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceConfig.ToMap(), "SourceConfig", "json");
+                request.SourceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceConfig, "SourceConfig", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TransferMapping.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TransferMapping))
             {
-                request.TransferMappingShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TransferMapping.ToMap(), "TransferMapping", "json");
+                request.TransferMappingShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TransferMapping, "TransferMapping", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TransferStepConfig.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TransferStepConfig))
             {
-                request.TransferStepConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TransferStepConfig.ToMap(), "TransferStepConfig", "json");
+                request.TransferStepConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TransferStepConfig, "TransferStepConfig", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessName))

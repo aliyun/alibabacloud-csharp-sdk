@@ -97,9 +97,9 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public double? FailTimes { get; set; }
 
-                [NameInMap("GetplanTime")]
+                [NameInMap("GetPlanTime")]
                 [Validation(Required=false)]
-                public double? GetplanTime { get; set; }
+                public double? GetPlanTime { get; set; }
 
                 [NameInMap("IOWaitTime")]
                 [Validation(Required=false)]
@@ -125,9 +125,9 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public double? MissPlans { get; set; }
 
-                [NameInMap("NetwaitTime")]
+                [NameInMap("NetWaitTime")]
                 [Validation(Required=false)]
-                public double? NetwaitTime { get; set; }
+                public double? NetWaitTime { get; set; }
 
                 [NameInMap("NodeIp")]
                 [Validation(Required=false)]

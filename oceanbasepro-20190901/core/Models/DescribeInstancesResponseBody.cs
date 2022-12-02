@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
+            [NameInMap("InstanceType")]
+            [Validation(Required=false)]
+            public string InstanceType { get; set; }
+
             [NameInMap("MaintainTime")]
             [Validation(Required=false)]
             public string MaintainTime { get; set; }
