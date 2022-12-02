@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public string Statistics { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<Tag> Tags { get; set; }
+
         [NameInMap("Threshold")]
         [Validation(Required=false)]
         public double? Threshold { get; set; }
