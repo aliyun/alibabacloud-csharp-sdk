@@ -2081,6 +2081,150 @@ namespace AlibabaCloud.SDK.Serverless20210924
             return TeaModel.ToObject<PutEnvironmentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        public PutPipelineStatusResponse PutPipelineStatus(string name, PutPipelineStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return PutPipelineStatusWithOptions(name, request, headers, runtime);
+        }
+
+        public async Task<PutPipelineStatusResponse> PutPipelineStatusAsync(string name, PutPipelineStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await PutPipelineStatusWithOptionsAsync(name, request, headers, runtime);
+        }
+
+        public PutPipelineStatusResponse PutPipelineStatusWithOptions(string name, PutPipelineStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["force"] = request.Force;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PutPipelineStatus",
+                Version = "2021-09-24",
+                Protocol = "HTTPS",
+                Pathname = "/apis/serverlessdeployment/v1/pipelines/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/status",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PutPipelineStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<PutPipelineStatusResponse> PutPipelineStatusWithOptionsAsync(string name, PutPipelineStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["force"] = request.Force;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PutPipelineStatus",
+                Version = "2021-09-24",
+                Protocol = "HTTPS",
+                Pathname = "/apis/serverlessdeployment/v1/pipelines/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/status",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PutPipelineStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public PutPipelineTemplateResponse PutPipelineTemplate(string name, PutPipelineTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return PutPipelineTemplateWithOptions(name, request, headers, runtime);
+        }
+
+        public async Task<PutPipelineTemplateResponse> PutPipelineTemplateAsync(string name, PutPipelineTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await PutPipelineTemplateWithOptionsAsync(name, request, headers, runtime);
+        }
+
+        public PutPipelineTemplateResponse PutPipelineTemplateWithOptions(string name, PutPipelineTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["force"] = request.Force;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PutPipelineTemplate",
+                Version = "2021-09-24",
+                Protocol = "HTTPS",
+                Pathname = "/apis/serverlessdeployment/v1/pipelinetemplates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PutPipelineTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<PutPipelineTemplateResponse> PutPipelineTemplateWithOptionsAsync(string name, PutPipelineTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["force"] = request.Force;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PutPipelineTemplate",
+                Version = "2021-09-24",
+                Protocol = "HTTPS",
+                Pathname = "/apis/serverlessdeployment/v1/pipelinetemplates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PutPipelineTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public PutServiceResponse PutService(string name, PutServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2139,6 +2283,150 @@ namespace AlibabaCloud.SDK.Serverless20210924
                 BodyType = "json",
             };
             return TeaModel.ToObject<PutServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public PutTaskStatusResponse PutTaskStatus(string name, PutTaskStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return PutTaskStatusWithOptions(name, request, headers, runtime);
+        }
+
+        public async Task<PutTaskStatusResponse> PutTaskStatusAsync(string name, PutTaskStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await PutTaskStatusWithOptionsAsync(name, request, headers, runtime);
+        }
+
+        public PutTaskStatusResponse PutTaskStatusWithOptions(string name, PutTaskStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["force"] = request.Force;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PutTaskStatus",
+                Version = "2021-09-24",
+                Protocol = "HTTPS",
+                Pathname = "/apis/serverlessdeployment/v1/tasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/status",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PutTaskStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<PutTaskStatusResponse> PutTaskStatusWithOptionsAsync(string name, PutTaskStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["force"] = request.Force;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PutTaskStatus",
+                Version = "2021-09-24",
+                Protocol = "HTTPS",
+                Pathname = "/apis/serverlessdeployment/v1/tasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/status",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PutTaskStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public PutTaskTemplateResponse PutTaskTemplate(string name, PutTaskTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return PutTaskTemplateWithOptions(name, request, headers, runtime);
+        }
+
+        public async Task<PutTaskTemplateResponse> PutTaskTemplateAsync(string name, PutTaskTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await PutTaskTemplateWithOptionsAsync(name, request, headers, runtime);
+        }
+
+        public PutTaskTemplateResponse PutTaskTemplateWithOptions(string name, PutTaskTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["force"] = request.Force;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PutTaskTemplate",
+                Version = "2021-09-24",
+                Protocol = "HTTPS",
+                Pathname = "/apis/serverlessdeployment/v1/tasktemplates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PutTaskTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<PutTaskTemplateResponse> PutTaskTemplateWithOptionsAsync(string name, PutTaskTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["force"] = request.Force;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PutTaskTemplate",
+                Version = "2021-09-24",
+                Protocol = "HTTPS",
+                Pathname = "/apis/serverlessdeployment/v1/tasktemplates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PutTaskTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public PutTemplateResponse PutTemplate(string name, PutTemplateRequest request)
