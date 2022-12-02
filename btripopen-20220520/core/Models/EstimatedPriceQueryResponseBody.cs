@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public class EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutes : TeaModel {
                     [NameInMap("arr_date")]
                     [Validation(Required=false)]
-                    public string ArrDate { get; set; }
+                    public long? ArrDate { get; set; }
 
                     [NameInMap("btrip_type")]
                     [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                     [NameInMap("dep_date")]
                     [Validation(Required=false)]
-                    public string DepDate { get; set; }
+                    public long? DepDate { get; set; }
 
                     [NameInMap("dest_city")]
                     [Validation(Required=false)]

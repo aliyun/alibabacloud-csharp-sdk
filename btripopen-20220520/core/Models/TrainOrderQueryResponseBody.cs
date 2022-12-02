@@ -149,6 +149,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string DepartName { get; set; }
 
+                [NameInMap("exceed_apply_id")]
+                [Validation(Required=false)]
+                public string ExceedApplyId { get; set; }
+
+                [NameInMap("exceed_third_part_apply_id")]
+                [Validation(Required=false)]
+                public string ExceedThirdPartApplyId { get; set; }
+
                 [NameInMap("gmt_create")]
                 [Validation(Required=false)]
                 public string GmtCreate { get; set; }
