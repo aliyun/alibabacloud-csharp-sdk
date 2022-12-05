@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
-    public class DescribeDomainUsageDataRequest : TeaModel {
-        [NameInMap("Area")]
+    public class DescribeLiveStreamsNotifyRecordsRequest : TeaModel {
+        [NameInMap("AppName")]
         [Validation(Required=false)]
-        public string Area { get; set; }
-
-        [NameInMap("DataProtocol")]
-        [Validation(Required=false)]
-        public string DataProtocol { get; set; }
+        public string AppName { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -25,25 +21,29 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        [NameInMap("Field")]
-        [Validation(Required=false)]
-        public string Field { get; set; }
-
-        [NameInMap("Interval")]
-        [Validation(Required=false)]
-        public string Interval { get; set; }
-
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
-        [NameInMap("Type")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public string Status { get; set; }
+
+        [NameInMap("StreamName")]
+        [Validation(Required=false)]
+        public string StreamName { get; set; }
 
     }
 

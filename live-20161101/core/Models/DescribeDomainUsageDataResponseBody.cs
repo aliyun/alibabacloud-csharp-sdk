@@ -25,10 +25,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        [NameInMap("Field")]
-        [Validation(Required=false)]
-        public string Field { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -36,6 +32,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
         [NameInMap("UsageDataPerInterval")]
         [Validation(Required=false)]

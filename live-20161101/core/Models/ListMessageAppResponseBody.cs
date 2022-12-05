@@ -8,38 +8,38 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
-    public class ListMessageGroupResponseBody : TeaModel {
+    public class ListMessageAppResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         [NameInMap("Result")]
         [Validation(Required=false)]
-        public ListMessageGroupResponseBodyResult Result { get; set; }
-        public class ListMessageGroupResponseBodyResult : TeaModel {
-            [NameInMap("GroupList")]
+        public ListMessageAppResponseBodyResult Result { get; set; }
+        public class ListMessageAppResponseBodyResult : TeaModel {
+            [NameInMap("AppList")]
             [Validation(Required=false)]
-            public List<ListMessageGroupResponseBodyResultGroupList> GroupList { get; set; }
-            public class ListMessageGroupResponseBodyResultGroupList : TeaModel {
+            public List<ListMessageAppResponseBodyResultAppList> AppList { get; set; }
+            public class ListMessageAppResponseBodyResultAppList : TeaModel {
+                [NameInMap("AppConfig")]
+                [Validation(Required=false)]
+                public Dictionary<string, string> AppConfig { get; set; }
+
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public string AppId { get; set; }
+
+                [NameInMap("AppName")]
+                [Validation(Required=false)]
+                public string AppName { get; set; }
 
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
-                [NameInMap("CreatorId")]
-                [Validation(Required=false)]
-                public string CreatorId { get; set; }
-
                 [NameInMap("Extension")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> Extension { get; set; }
-
-                [NameInMap("GroupId")]
-                [Validation(Required=false)]
-                public string GroupId { get; set; }
 
                 [NameInMap("Status")]
                 [Validation(Required=false)]

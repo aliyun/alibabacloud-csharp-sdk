@@ -8,26 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
-    public class ListMessageGroupUserRequest : TeaModel {
+    public class SendMessageToGroupRequest : TeaModel {
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public string Data { get; set; }
 
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
-        [NameInMap("PageNum")]
+        [NameInMap("OperatorUserId")]
         [Validation(Required=false)]
-        public int? PageNum { get; set; }
+        public string OperatorUserId { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("Type")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("SortType")]
-        [Validation(Required=false)]
-        public int? SortType { get; set; }
+        public int? Type { get; set; }
 
     }
 

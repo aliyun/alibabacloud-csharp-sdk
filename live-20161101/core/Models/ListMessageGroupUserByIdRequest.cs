@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
-    public class ListMessageGroupUserRequest : TeaModel {
+    public class ListMessageGroupUserByIdRequest : TeaModel {
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
@@ -17,17 +17,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
-        [NameInMap("PageNum")]
+        [NameInMap("UserIdList")]
         [Validation(Required=false)]
-        public int? PageNum { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("SortType")]
-        [Validation(Required=false)]
-        public int? SortType { get; set; }
+        public List<string> UserIdList { get; set; }
 
     }
 

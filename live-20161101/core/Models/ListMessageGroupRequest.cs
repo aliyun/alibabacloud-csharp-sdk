@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ListMessageGroupRequest : TeaModel {
+        [NameInMap("AppId")]
+        [Validation(Required=false)]
+        public string AppId { get; set; }
+
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }

@@ -8,38 +8,38 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
-    public class ListMessageGroupResponseBody : TeaModel {
+    public class QueryMessageAppResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         [NameInMap("Result")]
         [Validation(Required=false)]
-        public ListMessageGroupResponseBodyResult Result { get; set; }
-        public class ListMessageGroupResponseBodyResult : TeaModel {
-            [NameInMap("GroupList")]
+        public List<QueryMessageAppResponseBodyResult> Result { get; set; }
+        public class QueryMessageAppResponseBodyResult : TeaModel {
+            [NameInMap("AppList")]
             [Validation(Required=false)]
-            public List<ListMessageGroupResponseBodyResultGroupList> GroupList { get; set; }
-            public class ListMessageGroupResponseBodyResultGroupList : TeaModel {
+            public List<QueryMessageAppResponseBodyResultAppList> AppList { get; set; }
+            public class QueryMessageAppResponseBodyResultAppList : TeaModel {
+                [NameInMap("AppConfig")]
+                [Validation(Required=false)]
+                public Dictionary<string, string> AppConfig { get; set; }
+
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public string AppId { get; set; }
+
+                [NameInMap("AppName")]
+                [Validation(Required=false)]
+                public string AppName { get; set; }
 
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
-                [NameInMap("CreatorId")]
-                [Validation(Required=false)]
-                public string CreatorId { get; set; }
-
                 [NameInMap("Extension")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> Extension { get; set; }
-
-                [NameInMap("GroupId")]
-                [Validation(Required=false)]
-                public string GroupId { get; set; }
 
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -51,9 +51,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public bool? HasMore { get; set; }
 
-            [NameInMap("Total")]
+            [NameInMap("TotalCount")]
             [Validation(Required=false)]
-            public int? Total { get; set; }
+            public int? TotalCount { get; set; }
 
         }
 
