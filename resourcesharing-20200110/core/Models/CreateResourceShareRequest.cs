@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         [Validation(Required=false)]
         public bool? AllowExternalTargets { get; set; }
 
+        [NameInMap("PermissionNames")]
+        [Validation(Required=false)]
+        public List<string> PermissionNames { get; set; }
+
         [NameInMap("ResourceShareName")]
         [Validation(Required=false)]
         public string ResourceShareName { get; set; }

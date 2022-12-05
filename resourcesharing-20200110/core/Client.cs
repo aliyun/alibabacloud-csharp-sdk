@@ -107,6 +107,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermissionNames))
+            {
+                query["PermissionNames"] = request.PermissionNames;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceShareId))
             {
                 query["ResourceShareId"] = request.ResourceShareId;
@@ -142,6 +146,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermissionNames))
+            {
+                query["PermissionNames"] = request.PermissionNames;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceShareId))
             {
                 query["ResourceShareId"] = request.ResourceShareId;
@@ -185,6 +193,88 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
             return await AssociateResourceShareWithOptionsAsync(request, runtime);
         }
 
+        public AssociateResourceSharePermissionResponse AssociateResourceSharePermissionWithOptions(AssociateResourceSharePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermissionName))
+            {
+                query["PermissionName"] = request.PermissionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replace))
+            {
+                query["Replace"] = request.Replace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceShareId))
+            {
+                query["ResourceShareId"] = request.ResourceShareId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AssociateResourceSharePermission",
+                Version = "2020-01-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AssociateResourceSharePermissionResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<AssociateResourceSharePermissionResponse> AssociateResourceSharePermissionWithOptionsAsync(AssociateResourceSharePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermissionName))
+            {
+                query["PermissionName"] = request.PermissionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replace))
+            {
+                query["Replace"] = request.Replace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceShareId))
+            {
+                query["ResourceShareId"] = request.ResourceShareId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AssociateResourceSharePermission",
+                Version = "2020-01-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AssociateResourceSharePermissionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public AssociateResourceSharePermissionResponse AssociateResourceSharePermission(AssociateResourceSharePermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AssociateResourceSharePermissionWithOptions(request, runtime);
+        }
+
+        public async Task<AssociateResourceSharePermissionResponse> AssociateResourceSharePermissionAsync(AssociateResourceSharePermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AssociateResourceSharePermissionWithOptionsAsync(request, runtime);
+        }
+
         public CreateResourceShareResponse CreateResourceShareWithOptions(CreateResourceShareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -192,6 +282,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowExternalTargets))
             {
                 query["AllowExternalTargets"] = request.AllowExternalTargets;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermissionNames))
+            {
+                query["PermissionNames"] = request.PermissionNames;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceShareName))
             {
@@ -231,6 +325,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowExternalTargets))
             {
                 query["AllowExternalTargets"] = request.AllowExternalTargets;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermissionNames))
+            {
+                query["PermissionNames"] = request.PermissionNames;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceShareName))
             {
@@ -497,6 +595,80 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
             return await DisassociateResourceShareWithOptionsAsync(request, runtime);
         }
 
+        public DisassociateResourceSharePermissionResponse DisassociateResourceSharePermissionWithOptions(DisassociateResourceSharePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermissionName))
+            {
+                query["PermissionName"] = request.PermissionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceShareId))
+            {
+                query["ResourceShareId"] = request.ResourceShareId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisassociateResourceSharePermission",
+                Version = "2020-01-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisassociateResourceSharePermissionResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DisassociateResourceSharePermissionResponse> DisassociateResourceSharePermissionWithOptionsAsync(DisassociateResourceSharePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermissionName))
+            {
+                query["PermissionName"] = request.PermissionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceShareId))
+            {
+                query["ResourceShareId"] = request.ResourceShareId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisassociateResourceSharePermission",
+                Version = "2020-01-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisassociateResourceSharePermissionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DisassociateResourceSharePermissionResponse DisassociateResourceSharePermission(DisassociateResourceSharePermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DisassociateResourceSharePermissionWithOptions(request, runtime);
+        }
+
+        public async Task<DisassociateResourceSharePermissionResponse> DisassociateResourceSharePermissionAsync(DisassociateResourceSharePermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DisassociateResourceSharePermissionWithOptionsAsync(request, runtime);
+        }
+
         public EnableSharingWithResourceDirectoryResponse EnableSharingWithResourceDirectoryWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -543,6 +715,244 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableSharingWithResourceDirectoryWithOptionsAsync(runtime);
+        }
+
+        public GetPermissionResponse GetPermissionWithOptions(GetPermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermissionName))
+            {
+                query["PermissionName"] = request.PermissionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermissionVersion))
+            {
+                query["PermissionVersion"] = request.PermissionVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPermission",
+                Version = "2020-01-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPermissionResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetPermissionResponse> GetPermissionWithOptionsAsync(GetPermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermissionName))
+            {
+                query["PermissionName"] = request.PermissionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermissionVersion))
+            {
+                query["PermissionVersion"] = request.PermissionVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPermission",
+                Version = "2020-01-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPermissionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetPermissionResponse GetPermission(GetPermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetPermissionWithOptions(request, runtime);
+        }
+
+        public async Task<GetPermissionResponse> GetPermissionAsync(GetPermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetPermissionWithOptionsAsync(request, runtime);
+        }
+
+        public ListPermissionVersionsResponse ListPermissionVersionsWithOptions(ListPermissionVersionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermissionName))
+            {
+                query["PermissionName"] = request.PermissionName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPermissionVersions",
+                Version = "2020-01-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPermissionVersionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListPermissionVersionsResponse> ListPermissionVersionsWithOptionsAsync(ListPermissionVersionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermissionName))
+            {
+                query["PermissionName"] = request.PermissionName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPermissionVersions",
+                Version = "2020-01-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPermissionVersionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListPermissionVersionsResponse ListPermissionVersions(ListPermissionVersionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListPermissionVersionsWithOptions(request, runtime);
+        }
+
+        public async Task<ListPermissionVersionsResponse> ListPermissionVersionsAsync(ListPermissionVersionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListPermissionVersionsWithOptionsAsync(request, runtime);
+        }
+
+        public ListPermissionsResponse ListPermissionsWithOptions(ListPermissionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPermissions",
+                Version = "2020-01-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPermissionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListPermissionsResponse> ListPermissionsWithOptionsAsync(ListPermissionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPermissions",
+                Version = "2020-01-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPermissionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListPermissionsResponse ListPermissions(ListPermissionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListPermissionsWithOptions(request, runtime);
+        }
+
+        public async Task<ListPermissionsResponse> ListPermissionsAsync(ListPermissionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListPermissionsWithOptionsAsync(request, runtime);
         }
 
         public ListResourceShareAssociationsResponse ListResourceShareAssociationsWithOptions(ListResourceShareAssociationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -749,6 +1159,96 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
             return await ListResourceShareInvitationsWithOptionsAsync(request, runtime);
         }
 
+        public ListResourceSharePermissionsResponse ListResourceSharePermissionsWithOptions(ListResourceSharePermissionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwner))
+            {
+                query["ResourceOwner"] = request.ResourceOwner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceShareId))
+            {
+                query["ResourceShareId"] = request.ResourceShareId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListResourceSharePermissions",
+                Version = "2020-01-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListResourceSharePermissionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListResourceSharePermissionsResponse> ListResourceSharePermissionsWithOptionsAsync(ListResourceSharePermissionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwner))
+            {
+                query["ResourceOwner"] = request.ResourceOwner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceShareId))
+            {
+                query["ResourceShareId"] = request.ResourceShareId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListResourceSharePermissions",
+                Version = "2020-01-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListResourceSharePermissionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListResourceSharePermissionsResponse ListResourceSharePermissions(ListResourceSharePermissionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListResourceSharePermissionsWithOptions(request, runtime);
+        }
+
+        public async Task<ListResourceSharePermissionsResponse> ListResourceSharePermissionsAsync(ListResourceSharePermissionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListResourceSharePermissionsWithOptionsAsync(request, runtime);
+        }
+
         public ListResourceSharesResponse ListResourceSharesWithOptions(ListResourceSharesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -760,6 +1260,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermissionName))
+            {
+                query["PermissionName"] = request.PermissionName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwner))
             {
@@ -807,6 +1311,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermissionName))
+            {
+                query["PermissionName"] = request.PermissionName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwner))
             {

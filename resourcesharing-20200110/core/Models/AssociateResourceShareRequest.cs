@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class AssociateResourceShareRequest : TeaModel {
+        [NameInMap("PermissionNames")]
+        [Validation(Required=false)]
+        public List<string> PermissionNames { get; set; }
+
         [NameInMap("ResourceShareId")]
         [Validation(Required=false)]
         public string ResourceShareId { get; set; }
