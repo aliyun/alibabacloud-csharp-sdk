@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateDBClusterRequest : TeaModel {
+        [NameInMap("AllowShutDown")]
+        [Validation(Required=false)]
+        public string AllowShutDown { get; set; }
+
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
@@ -105,13 +109,37 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("ScaleMax")]
+        [Validation(Required=false)]
+        public string ScaleMax { get; set; }
+
+        [NameInMap("ScaleMin")]
+        [Validation(Required=false)]
+        public string ScaleMin { get; set; }
+
+        [NameInMap("ScaleRoNumMax")]
+        [Validation(Required=false)]
+        public string ScaleRoNumMax { get; set; }
+
+        [NameInMap("ScaleRoNumMin")]
+        [Validation(Required=false)]
+        public string ScaleRoNumMin { get; set; }
+
         [NameInMap("SecurityIPList")]
         [Validation(Required=false)]
         public string SecurityIPList { get; set; }
 
+        [NameInMap("ServerlessType")]
+        [Validation(Required=false)]
+        public string ServerlessType { get; set; }
+
         [NameInMap("SourceResourceId")]
         [Validation(Required=false)]
         public string SourceResourceId { get; set; }
+
+        [NameInMap("StorageType")]
+        [Validation(Required=false)]
+        public string StorageType { get; set; }
 
         [NameInMap("TDEStatus")]
         [Validation(Required=false)]

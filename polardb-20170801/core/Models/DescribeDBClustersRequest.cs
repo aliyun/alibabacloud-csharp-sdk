@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClustersRequest : TeaModel {
+        [NameInMap("ConnectionString")]
+        [Validation(Required=false)]
+        public string ConnectionString { get; set; }
+
         [NameInMap("DBClusterDescription")]
         [Validation(Required=false)]
         public string DBClusterDescription { get; set; }
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("DBType")]
         [Validation(Required=false)]
         public string DBType { get; set; }
+
+        [NameInMap("DBVersion")]
+        [Validation(Required=false)]
+        public string DBVersion { get; set; }
 
         [NameInMap("Expired")]
         [Validation(Required=false)]

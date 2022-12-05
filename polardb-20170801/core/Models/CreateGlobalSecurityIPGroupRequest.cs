@@ -8,18 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
-    public class SwitchOverGlobalDatabaseNetworkRequest : TeaModel {
-        [NameInMap("DBClusterId")]
+    public class CreateGlobalSecurityIPGroupRequest : TeaModel {
+        [NameInMap("GIpList")]
         [Validation(Required=false)]
-        public string DBClusterId { get; set; }
+        public string GIpList { get; set; }
 
-        [NameInMap("Forced")]
+        [NameInMap("GlobalIgName")]
         [Validation(Required=false)]
-        public bool? Forced { get; set; }
-
-        [NameInMap("GDNId")]
-        [Validation(Required=false)]
-        public string GDNId { get; set; }
+        public string GlobalIgName { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]

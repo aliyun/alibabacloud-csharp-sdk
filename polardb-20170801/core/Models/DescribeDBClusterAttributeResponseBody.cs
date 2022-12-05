@@ -97,6 +97,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string SccMode { get; set; }
 
+            [NameInMap("ServerWeight")]
+            [Validation(Required=false)]
+            public string ServerWeight { get; set; }
+
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
             public string ZoneId { get; set; }

@@ -145,6 +145,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string SourceRDSDBInstanceId { get; set; }
 
+        [NameInMap("SrcDbType")]
+        [Validation(Required=false)]
+        public string SrcDbType { get; set; }
+
         [NameInMap("Topologies")]
         [Validation(Required=false)]
         public string Topologies { get; set; }
