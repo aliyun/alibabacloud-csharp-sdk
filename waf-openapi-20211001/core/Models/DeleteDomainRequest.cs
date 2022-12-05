@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DeleteDomainRequest : TeaModel {
+        [NameInMap("AccessType")]
+        [Validation(Required=false)]
+        public string AccessType { get; set; }
+
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }

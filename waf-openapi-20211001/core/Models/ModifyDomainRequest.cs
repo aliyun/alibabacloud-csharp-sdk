@@ -99,6 +99,18 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public bool? FocusHttpBackend { get; set; }
 
+            [NameInMap("Keepalive")]
+            [Validation(Required=false)]
+            public bool? Keepalive { get; set; }
+
+            [NameInMap("KeepaliveRequests")]
+            [Validation(Required=false)]
+            public int? KeepaliveRequests { get; set; }
+
+            [NameInMap("KeepaliveTimeout")]
+            [Validation(Required=false)]
+            public int? KeepaliveTimeout { get; set; }
+
             [NameInMap("Loadbalance")]
             [Validation(Required=false)]
             public string Loadbalance { get; set; }
@@ -120,6 +132,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public string Value { get; set; }
 
             }
+
+            [NameInMap("Retry")]
+            [Validation(Required=false)]
+            public bool? Retry { get; set; }
 
             [NameInMap("SniEnabled")]
             [Validation(Required=false)]

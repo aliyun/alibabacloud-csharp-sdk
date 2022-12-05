@@ -445,13 +445,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateDomainShrinkRequest request = new CreateDomainShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Listen.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Listen))
             {
-                request.ListenShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Listen.ToMap(), "Listen", "json");
+                request.ListenShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Listen, "Listen", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Redirect.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Redirect))
             {
-                request.RedirectShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Redirect.ToMap(), "Redirect", "json");
+                request.RedirectShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Redirect, "Redirect", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessType))
@@ -502,13 +502,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateDomainShrinkRequest request = new CreateDomainShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Listen.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Listen))
             {
-                request.ListenShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Listen.ToMap(), "Listen", "json");
+                request.ListenShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Listen, "Listen", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Redirect.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Redirect))
             {
-                request.RedirectShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Redirect.ToMap(), "Redirect", "json");
+                request.RedirectShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Redirect, "Redirect", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessType))
@@ -906,6 +906,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessType))
+            {
+                query["AccessType"] = request.AccessType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
             {
                 query["Domain"] = request.Domain;
@@ -941,6 +945,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessType))
+            {
+                query["AccessType"] = request.AccessType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
             {
                 query["Domain"] = request.Domain;
@@ -3919,13 +3927,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ModifyDomainShrinkRequest request = new ModifyDomainShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Listen.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Listen))
             {
-                request.ListenShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Listen.ToMap(), "Listen", "json");
+                request.ListenShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Listen, "Listen", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Redirect.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Redirect))
             {
-                request.RedirectShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Redirect.ToMap(), "Redirect", "json");
+                request.RedirectShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Redirect, "Redirect", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessType))
@@ -3976,13 +3984,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ModifyDomainShrinkRequest request = new ModifyDomainShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Listen.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Listen))
             {
-                request.ListenShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Listen.ToMap(), "Listen", "json");
+                request.ListenShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Listen, "Listen", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Redirect.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Redirect))
             {
-                request.RedirectShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Redirect.ToMap(), "Redirect", "json");
+                request.RedirectShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Redirect, "Redirect", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessType))
