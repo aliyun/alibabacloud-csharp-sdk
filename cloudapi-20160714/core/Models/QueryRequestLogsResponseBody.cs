@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
                 [NameInMap("ClientIp")]
                 [Validation(Required=false)]
-                public int? ClientIp { get; set; }
+                public string ClientIp { get; set; }
 
                 [NameInMap("ClientNonce")]
                 [Validation(Required=false)]
