@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         public class ListWorkitemTimeResponseBodyWorkitemTime : TeaModel {
             [NameInMap("actualTime")]
             [Validation(Required=false)]
-            public long? ActualTime { get; set; }
+            public float? ActualTime { get; set; }
 
             [NameInMap("description")]
             [Validation(Required=false)]
