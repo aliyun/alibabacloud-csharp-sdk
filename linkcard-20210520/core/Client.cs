@@ -38,6 +38,234 @@ namespace AlibabaCloud.SDK.Linkcard20210520
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        public AddCardToDirectionalGroupResponse AddCardToDirectionalGroupWithOptions(AddCardToDirectionalGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddCardToDirectionalGroupShrinkRequest request = new AddCardToDirectionalGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.IccidList))
+            {
+                request.IccidListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.IccidList, "IccidList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddType))
+            {
+                query["AddType"] = request.AddType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IccidListShrink))
+            {
+                query["IccidList"] = request.IccidListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MsgNotify))
+            {
+                query["MsgNotify"] = request.MsgNotify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SerialNo))
+            {
+                query["SerialNo"] = request.SerialNo;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiProduct))
+            {
+                body["ApiProduct"] = request.ApiProduct;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddCardToDirectionalGroup",
+                Version = "2021-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddCardToDirectionalGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<AddCardToDirectionalGroupResponse> AddCardToDirectionalGroupWithOptionsAsync(AddCardToDirectionalGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddCardToDirectionalGroupShrinkRequest request = new AddCardToDirectionalGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.IccidList))
+            {
+                request.IccidListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.IccidList, "IccidList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddType))
+            {
+                query["AddType"] = request.AddType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IccidListShrink))
+            {
+                query["IccidList"] = request.IccidListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MsgNotify))
+            {
+                query["MsgNotify"] = request.MsgNotify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SerialNo))
+            {
+                query["SerialNo"] = request.SerialNo;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiProduct))
+            {
+                body["ApiProduct"] = request.ApiProduct;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddCardToDirectionalGroup",
+                Version = "2021-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddCardToDirectionalGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public AddCardToDirectionalGroupResponse AddCardToDirectionalGroup(AddCardToDirectionalGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddCardToDirectionalGroupWithOptions(request, runtime);
+        }
+
+        public async Task<AddCardToDirectionalGroupResponse> AddCardToDirectionalGroupAsync(AddCardToDirectionalGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddCardToDirectionalGroupWithOptionsAsync(request, runtime);
+        }
+
+        public AddDirectionalAddressResponse AddDirectionalAddressWithOptions(AddDirectionalAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Address))
+            {
+                query["Address"] = request.Address;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressType))
+            {
+                query["AddressType"] = request.AddressType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MsgNotify))
+            {
+                query["MsgNotify"] = request.MsgNotify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SerialNo))
+            {
+                query["SerialNo"] = request.SerialNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddDirectionalAddress",
+                Version = "2021-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddDirectionalAddressResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<AddDirectionalAddressResponse> AddDirectionalAddressWithOptionsAsync(AddDirectionalAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Address))
+            {
+                query["Address"] = request.Address;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressType))
+            {
+                query["AddressType"] = request.AddressType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MsgNotify))
+            {
+                query["MsgNotify"] = request.MsgNotify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SerialNo))
+            {
+                query["SerialNo"] = request.SerialNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddDirectionalAddress",
+                Version = "2021-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddDirectionalAddressResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public AddDirectionalAddressResponse AddDirectionalAddress(AddDirectionalAddressRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddDirectionalAddressWithOptions(request, runtime);
+        }
+
+        public async Task<AddDirectionalAddressResponse> AddDirectionalAddressAsync(AddDirectionalAddressRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddDirectionalAddressWithOptionsAsync(request, runtime);
+        }
+
         public AddDirectionalCardResponse AddDirectionalCardWithOptions(AddDirectionalCardRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -326,6 +554,162 @@ namespace AlibabaCloud.SDK.Linkcard20210520
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await BatchAddDirectionalAddressWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteDirectionalAddressResponse DeleteDirectionalAddressWithOptions(DeleteDirectionalAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Address))
+            {
+                query["Address"] = request.Address;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MsgNotify))
+            {
+                query["MsgNotify"] = request.MsgNotify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SerialNo))
+            {
+                query["SerialNo"] = request.SerialNo;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDirectionalAddress",
+                Version = "2021-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDirectionalAddressResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteDirectionalAddressResponse> DeleteDirectionalAddressWithOptionsAsync(DeleteDirectionalAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Address))
+            {
+                query["Address"] = request.Address;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MsgNotify))
+            {
+                query["MsgNotify"] = request.MsgNotify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SerialNo))
+            {
+                query["SerialNo"] = request.SerialNo;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDirectionalAddress",
+                Version = "2021-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDirectionalAddressResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteDirectionalAddressResponse DeleteDirectionalAddress(DeleteDirectionalAddressRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDirectionalAddressWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteDirectionalAddressResponse> DeleteDirectionalAddressAsync(DeleteDirectionalAddressRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDirectionalAddressWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteDirectionalGroupResponse DeleteDirectionalGroupWithOptions(DeleteDirectionalGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDirectionalGroup",
+                Version = "2021-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDirectionalGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteDirectionalGroupResponse> DeleteDirectionalGroupWithOptionsAsync(DeleteDirectionalGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDirectionalGroup",
+                Version = "2021-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDirectionalGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteDirectionalGroupResponse DeleteDirectionalGroup(DeleteDirectionalGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDirectionalGroupWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteDirectionalGroupResponse> DeleteDirectionalGroupAsync(DeleteDirectionalGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDirectionalGroupWithOptionsAsync(request, runtime);
         }
 
         public ForceActivationResponse ForceActivationWithOptions(ForceActivationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
