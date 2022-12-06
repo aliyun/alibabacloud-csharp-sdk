@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public bool? ConfigAuthSupported { get; set; }
 
+            [NameInMap("ConfigContentLimit")]
+            [Validation(Required=false)]
+            public long? ConfigContentLimit { get; set; }
+
             [NameInMap("ConfigSecretEnabled")]
             [Validation(Required=false)]
             public bool? ConfigSecretEnabled { get; set; }
@@ -76,6 +80,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("MinSessionTimeout")]
             [Validation(Required=false)]
             public string MinSessionTimeout { get; set; }
+
+            [NameInMap("NacosRunningEnv")]
+            [Validation(Required=false)]
+            public QueryConfigResponseBodyDataNacosRunningEnv NacosRunningEnv { get; set; }
+            public class QueryConfigResponseBodyDataNacosRunningEnv : TeaModel {
+                [NameInMap("emptyProtect")]
+                [Validation(Required=false)]
+                public bool? EmptyProtect { get; set; }
+
+            }
 
             [NameInMap("NamingAuthEnabled")]
             [Validation(Required=false)]
