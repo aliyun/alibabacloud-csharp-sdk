@@ -129,6 +129,20 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string State { get; set; }
 
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<ListEndpointGroupsResponseBodyEndpointGroupsTags> Tags { get; set; }
+            public class ListEndpointGroupsResponseBodyEndpointGroupsTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
             [NameInMap("ThresholdCount")]
             [Validation(Required=false)]
             public int? ThresholdCount { get; set; }
