@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string ArrayRequest { get; set; }
 
+        [NameInMap("Async")]
+        [Validation(Required=false)]
+        public bool? Async { get; set; }
+
         [NameInMap("ClockTime")]
         [Validation(Required=false)]
         public string ClockTime { get; set; }
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [NameInMap("ContainerId")]
         [Validation(Required=false)]
         public string ContainerId { get; set; }
+
+        [NameInMap("Cpu")]
+        [Validation(Required=false)]
+        public int? Cpu { get; set; }
 
         [NameInMap("Gpu")]
         [Validation(Required=false)]
