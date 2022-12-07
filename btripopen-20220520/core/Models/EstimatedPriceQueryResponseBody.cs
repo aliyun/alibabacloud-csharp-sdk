@@ -55,13 +55,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public List<EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutes> BtripRoutes { get; set; }
                 public class EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutes : TeaModel {
+                    [NameInMap("arr_city")]
+                    [Validation(Required=false)]
+                    public string ArrCity { get; set; }
+
                     [NameInMap("arr_date")]
                     [Validation(Required=false)]
                     public long? ArrDate { get; set; }
-
-                    [NameInMap("btrip_type")]
-                    [Validation(Required=false)]
-                    public int? BtripType { get; set; }
 
                     [NameInMap("cheapest")]
                     [Validation(Required=false)]
@@ -89,13 +89,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                     }
 
+                    [NameInMap("dep_city")]
+                    [Validation(Required=false)]
+                    public string DepCity { get; set; }
+
                     [NameInMap("dep_date")]
                     [Validation(Required=false)]
                     public long? DepDate { get; set; }
-
-                    [NameInMap("dest_city")]
-                    [Validation(Required=false)]
-                    public string DestCity { get; set; }
 
                     [NameInMap("err_msg")]
                     [Validation(Required=false)]
@@ -104,10 +104,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [NameInMap("itinerary_id")]
                     [Validation(Required=false)]
                     public string ItineraryId { get; set; }
-
-                    [NameInMap("itinerary_index")]
-                    [Validation(Required=false)]
-                    public int? ItineraryIndex { get; set; }
 
                     [NameInMap("most_expensive")]
                     [Validation(Required=false)]
@@ -134,10 +130,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                         public string VehicleNo { get; set; }
 
                     }
-
-                    [NameInMap("org_city")]
-                    [Validation(Required=false)]
-                    public string OrgCity { get; set; }
 
                     [NameInMap("success")]
                     [Validation(Required=false)]
