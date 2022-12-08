@@ -37,6 +37,62 @@ namespace AlibabaCloud.SDK.Serverless20210924
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        public CancelTaskResponse CancelTask(string name)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CancelTaskWithOptions(name, headers, runtime);
+        }
+
+        public async Task<CancelTaskResponse> CancelTaskAsync(string name)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CancelTaskWithOptionsAsync(name, headers, runtime);
+        }
+
+        public CancelTaskResponse CancelTaskWithOptions(string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelTask",
+                Version = "2021-09-24",
+                Protocol = "HTTPS",
+                Pathname = "/apis/serverlessdeployment/v1/tasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/cancel",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CancelTaskResponse> CancelTaskWithOptionsAsync(string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelTask",
+                Version = "2021-09-24",
+                Protocol = "HTTPS",
+                Pathname = "/apis/serverlessdeployment/v1/tasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/cancel",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public CreateApplicationResponse CreateApplication(CreateApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
