@@ -16,14 +16,21 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [NameInMap("ChainConfigId")]
             [Validation(Required=false)]
             public string ChainConfigId { get; set; }
+
             [NameInMap("IsActive")]
             [Validation(Required=false)]
             public bool? IsActive { get; set; }
+
             [NameInMap("Nodes")]
             [Validation(Required=false)]
             public List<GetChainResponseBodyChainConfigNodes> Nodes { get; set; }
             public class GetChainResponseBodyChainConfigNodes : TeaModel {
+                [NameInMap("Enable")]
+                [Validation(Required=false)]
                 public bool? Enable { get; set; }
+
+                [NameInMap("NodeConfig")]
+                [Validation(Required=false)]
                 public GetChainResponseBodyChainConfigNodesNodeConfig NodeConfig { get; set; }
                 public class GetChainResponseBodyChainConfigNodesNodeConfig : TeaModel {
                     [NameInMap("DenyPolicy")]
@@ -33,16 +40,32 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
                         [NameInMap("Action")]
                         [Validation(Required=false)]
                         public string Action { get; set; }
+
+                        [NameInMap("BaselineList")]
+                        [Validation(Required=false)]
+                        public string BaselineList { get; set; }
+
                         [NameInMap("IssueCount")]
                         [Validation(Required=false)]
                         public string IssueCount { get; set; }
+
                         [NameInMap("IssueLevel")]
                         [Validation(Required=false)]
                         public string IssueLevel { get; set; }
+
+                        [NameInMap("IssueList")]
+                        [Validation(Required=false)]
+                        public string IssueList { get; set; }
+
                         [NameInMap("Logic")]
                         [Validation(Required=false)]
                         public string Logic { get; set; }
-                    };
+
+                        [NameInMap("MaliciousList")]
+                        [Validation(Required=false)]
+                        public string MaliciousList { get; set; }
+
+                    }
 
                     [NameInMap("Retry")]
                     [Validation(Required=false)]
@@ -57,12 +80,19 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
                     public long? Timeout { get; set; }
 
                 }
+
+                [NameInMap("NodeName")]
+                [Validation(Required=false)]
                 public string NodeName { get; set; }
+
             }
+
             [NameInMap("Routers")]
             [Validation(Required=false)]
             public List<GetChainResponseBodyChainConfigRouters> Routers { get; set; }
             public class GetChainResponseBodyChainConfigRouters : TeaModel {
+                [NameInMap("From")]
+                [Validation(Required=false)]
                 public GetChainResponseBodyChainConfigRoutersFrom From { get; set; }
                 public class GetChainResponseBodyChainConfigRoutersFrom : TeaModel {
                     [NameInMap("NodeName")]
@@ -70,6 +100,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
                     public string NodeName { get; set; }
 
                 }
+
+                [NameInMap("To")]
+                [Validation(Required=false)]
                 public GetChainResponseBodyChainConfigRoutersTo To { get; set; }
                 public class GetChainResponseBodyChainConfigRoutersTo : TeaModel {
                     [NameInMap("NodeName")]
@@ -77,11 +110,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
                     public string NodeName { get; set; }
 
                 }
+
             }
+
             [NameInMap("Version")]
             [Validation(Required=false)]
             public string Version { get; set; }
-        };
+
+        }
 
         [NameInMap("ChainId")]
         [Validation(Required=false)]
@@ -118,6 +154,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("ScopeExclude")]
+        [Validation(Required=false)]
+        public List<string> ScopeExclude { get; set; }
 
         [NameInMap("ScopeId")]
         [Validation(Required=false)]

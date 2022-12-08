@@ -44,13 +44,16 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [NameInMap("ArtifactType")]
             [Validation(Required=false)]
             public string ArtifactType { get; set; }
+
             [NameInMap("RepoId")]
             [Validation(Required=false)]
             public string RepoId { get; set; }
+
             [NameInMap("Version")]
             [Validation(Required=false)]
             public string Version { get; set; }
-        };
+
+        }
 
         [NameInMap("StartTime")]
         [Validation(Required=false)]
@@ -63,13 +66,16 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [NameInMap("ArtifactType")]
             [Validation(Required=false)]
             public string ArtifactType { get; set; }
+
             [NameInMap("RepoId")]
             [Validation(Required=false)]
             public string RepoId { get; set; }
+
             [NameInMap("Version")]
             [Validation(Required=false)]
             public string Version { get; set; }
-        };
+
+        }
 
         [NameInMap("TaskStatus")]
         [Validation(Required=false)]

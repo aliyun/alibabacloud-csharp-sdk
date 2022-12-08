@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("ScopeExclude")]
+            [Validation(Required=false)]
+            public List<string> ScopeExclude { get; set; }
+
             [NameInMap("ScopeId")]
             [Validation(Required=false)]
             public string ScopeId { get; set; }

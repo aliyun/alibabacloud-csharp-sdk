@@ -32,16 +32,20 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
                 [NameInMap("ImageTag")]
                 [Validation(Required=false)]
                 public string ImageTag { get; set; }
+
                 [NameInMap("RepoId")]
                 [Validation(Required=false)]
                 public string RepoId { get; set; }
+
                 [NameInMap("RepoName")]
                 [Validation(Required=false)]
                 public string RepoName { get; set; }
+
                 [NameInMap("RepoNamespaceName")]
                 [Validation(Required=false)]
                 public string RepoNamespaceName { get; set; }
-            };
+
+            }
 
             [NameInMap("StartTime")]
             [Validation(Required=false)]

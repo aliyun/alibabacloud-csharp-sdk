@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
-    public class CreateRepoBuildRuleResponse : TeaModel {
+    public class ChangeResourceGroupResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public CreateRepoBuildRuleResponseBody Body { get; set; }
+        public ChangeResourceGroupResponseBody Body { get; set; }
 
     }
 

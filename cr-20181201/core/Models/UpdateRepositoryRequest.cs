@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string RepoId { get; set; }
 
+        [NameInMap("RepoName")]
+        [Validation(Required=false)]
+        public string RepoName { get; set; }
+
+        [NameInMap("RepoNamespaceName")]
+        [Validation(Required=false)]
+        public string RepoNamespaceName { get; set; }
+
         [NameInMap("RepoType")]
         [Validation(Required=false)]
         public string RepoType { get; set; }

@@ -20,13 +20,16 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
                 [NameInMap("ChainId")]
                 [Validation(Required=false)]
                 public string ChainId { get; set; }
+
                 [NameInMap("ChainName")]
                 [Validation(Required=false)]
                 public string ChainName { get; set; }
+
                 [NameInMap("Version")]
                 [Validation(Required=false)]
                 public long? Version { get; set; }
-            };
+
+            }
 
             [NameInMap("ChainInstanceId")]
             [Validation(Required=false)]

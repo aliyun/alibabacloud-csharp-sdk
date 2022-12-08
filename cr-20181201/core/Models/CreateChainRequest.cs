@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string RepoNamespaceName { get; set; }
 
+        [NameInMap("ScopeExclude")]
+        [Validation(Required=false)]
+        public List<string> ScopeExclude { get; set; }
+
     }
 
 }

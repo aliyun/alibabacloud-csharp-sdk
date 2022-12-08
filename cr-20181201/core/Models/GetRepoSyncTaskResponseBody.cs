@@ -24,19 +24,24 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [NameInMap("ImageTag")]
             [Validation(Required=false)]
             public string ImageTag { get; set; }
+
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
+
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
             [NameInMap("RepoName")]
             [Validation(Required=false)]
             public string RepoName { get; set; }
+
             [NameInMap("RepoNamespaceName")]
             [Validation(Required=false)]
             public string RepoNamespaceName { get; set; }
-        };
+
+        }
 
         [NameInMap("ImageTo")]
         [Validation(Required=false)]
@@ -45,19 +50,24 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [NameInMap("ImageTag")]
             [Validation(Required=false)]
             public string ImageTag { get; set; }
+
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
+
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
             [NameInMap("RepoName")]
             [Validation(Required=false)]
             public string RepoName { get; set; }
+
             [NameInMap("RepoNamespaceName")]
             [Validation(Required=false)]
             public string RepoNamespaceName { get; set; }
-        };
+
+        }
 
         [NameInMap("IsSuccess")]
         [Validation(Required=false)]

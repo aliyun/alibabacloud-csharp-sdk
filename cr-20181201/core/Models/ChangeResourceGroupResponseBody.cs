@@ -8,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
-    public class DeleteEventCenterRuleResponseBody : TeaModel {
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
+    public class ChangeResourceGroupResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
