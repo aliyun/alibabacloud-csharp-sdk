@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public object Data { get; set; }
+        public Dictionary<string, object> Data { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
