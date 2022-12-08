@@ -23,13 +23,13 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
 
             [NameInMap("imageData")]
             [Validation(Required=false)]
-            public byte[] ImageData { get; set; }
+            public string ImageData { get; set; }
 
         }
 
         [NameInMap("VideoData")]
         [Validation(Required=false)]
-        public byte[] VideoData { get; set; }
+        public string VideoData { get; set; }
 
         [NameInMap("VideoUrl")]
         [Validation(Required=false)]

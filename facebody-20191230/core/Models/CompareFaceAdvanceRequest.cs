@@ -11,11 +11,11 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
     public class CompareFaceAdvanceRequest : TeaModel {
         [NameInMap("ImageDataA")]
         [Validation(Required=false)]
-        public byte[] ImageDataA { get; set; }
+        public string ImageDataA { get; set; }
 
         [NameInMap("ImageDataB")]
         [Validation(Required=false)]
-        public byte[] ImageDataB { get; set; }
+        public string ImageDataB { get; set; }
 
         [NameInMap("ImageURLA")]
         [Validation(Required=false)]

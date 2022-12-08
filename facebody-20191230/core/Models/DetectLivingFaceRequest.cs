@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         public class DetectLivingFaceRequestTasks : TeaModel {
             [NameInMap("ImageData")]
             [Validation(Required=false)]
-            public byte[] ImageData { get; set; }
+            public string ImageData { get; set; }
 
             [NameInMap("ImageURL")]
             [Validation(Required=false)]
