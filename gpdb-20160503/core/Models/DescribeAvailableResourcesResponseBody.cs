@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [Validation(Required=false)]
                 public List<DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClasses> SupportedInstanceClasses { get; set; }
                 public class DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClasses : TeaModel {
+                    [NameInMap("Category")]
+                    [Validation(Required=false)]
+                    public string Category { get; set; }
+
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
