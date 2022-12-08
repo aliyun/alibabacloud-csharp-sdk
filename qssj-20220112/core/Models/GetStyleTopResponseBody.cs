@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Qssj20220112.Models
         [Validation(Required=false)]
         public List<GetStyleTopResponseBodyData> Data { get; set; }
         public class GetStyleTopResponseBodyData : TeaModel {
+            [NameInMap("AttributeContent")]
+            [Validation(Required=false)]
+            public string AttributeContent { get; set; }
+
+            [NameInMap("BrandName")]
+            [Validation(Required=false)]
+            public string BrandName { get; set; }
+
             [NameInMap("BuyerTags")]
             [Validation(Required=false)]
             public string BuyerTags { get; set; }
@@ -37,6 +45,10 @@ namespace AlibabaCloud.SDK.Qssj20220112.Models
             [Validation(Required=false)]
             public string Material { get; set; }
 
+            [NameInMap("Price")]
+            [Validation(Required=false)]
+            public double? Price { get; set; }
+
             [NameInMap("ProductLink")]
             [Validation(Required=false)]
             public string ProductLink { get; set; }
@@ -48,6 +60,10 @@ namespace AlibabaCloud.SDK.Qssj20220112.Models
             [NameInMap("SearchVolume")]
             [Validation(Required=false)]
             public double? SearchVolume { get; set; }
+
+            [NameInMap("ShopName")]
+            [Validation(Required=false)]
+            public string ShopName { get; set; }
 
             [NameInMap("Style")]
             [Validation(Required=false)]
