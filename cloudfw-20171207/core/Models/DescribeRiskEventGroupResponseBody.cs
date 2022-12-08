@@ -117,6 +117,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string SrcIP { get; set; }
 
+            [NameInMap("SrcIPTag")]
+            [Validation(Required=false)]
+            public string SrcIPTag { get; set; }
+
             [NameInMap("SrcPrivateIPList")]
             [Validation(Required=false)]
             public List<string> SrcPrivateIPList { get; set; }

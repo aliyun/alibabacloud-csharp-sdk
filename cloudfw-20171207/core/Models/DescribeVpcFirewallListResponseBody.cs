@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public int? Bandwidth { get; set; }
 
+            [NameInMap("ConnectSubType")]
+            [Validation(Required=false)]
+            public string ConnectSubType { get; set; }
+
             [NameInMap("ConnectType")]
             [Validation(Required=false)]
             public string ConnectType { get; set; }
@@ -158,6 +162,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [NameInMap("RegionStatus")]
             [Validation(Required=false)]
             public string RegionStatus { get; set; }
+
+            [NameInMap("ResultCode")]
+            [Validation(Required=false)]
+            public string ResultCode { get; set; }
 
             [NameInMap("VpcFirewallId")]
             [Validation(Required=false)]

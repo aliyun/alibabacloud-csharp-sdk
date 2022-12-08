@@ -75,6 +75,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         }
 
+        [NameInMap("MemberUid")]
+        [Validation(Required=false)]
+        public string MemberUid { get; set; }
+
         [NameInMap("PeerVpc")]
         [Validation(Required=false)]
         public DescribeVpcFirewallDetailResponseBodyPeerVpc PeerVpc { get; set; }

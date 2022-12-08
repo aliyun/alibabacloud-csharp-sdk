@@ -644,144 +644,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return await CreateVpcFirewallCenConfigureWithOptionsAsync(request, runtime);
         }
 
-        public CreateVpcFirewallConfigureResponse CreateVpcFirewallConfigureWithOptions(CreateVpcFirewallConfigureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallSwitch))
-            {
-                query["FirewallSwitch"] = request.FirewallSwitch;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
-            {
-                query["Lang"] = request.Lang;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalVpcCidrTableList))
-            {
-                query["LocalVpcCidrTableList"] = request.LocalVpcCidrTableList;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalVpcId))
-            {
-                query["LocalVpcId"] = request.LocalVpcId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalVpcRegion))
-            {
-                query["LocalVpcRegion"] = request.LocalVpcRegion;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberUid))
-            {
-                query["MemberUid"] = request.MemberUid;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeerVpcCidrTableList))
-            {
-                query["PeerVpcCidrTableList"] = request.PeerVpcCidrTableList;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeerVpcId))
-            {
-                query["PeerVpcId"] = request.PeerVpcId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeerVpcRegion))
-            {
-                query["PeerVpcRegion"] = request.PeerVpcRegion;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcFirewallName))
-            {
-                query["VpcFirewallName"] = request.VpcFirewallName;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateVpcFirewallConfigure",
-                Version = "2017-12-07",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateVpcFirewallConfigureResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<CreateVpcFirewallConfigureResponse> CreateVpcFirewallConfigureWithOptionsAsync(CreateVpcFirewallConfigureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallSwitch))
-            {
-                query["FirewallSwitch"] = request.FirewallSwitch;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
-            {
-                query["Lang"] = request.Lang;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalVpcCidrTableList))
-            {
-                query["LocalVpcCidrTableList"] = request.LocalVpcCidrTableList;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalVpcId))
-            {
-                query["LocalVpcId"] = request.LocalVpcId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalVpcRegion))
-            {
-                query["LocalVpcRegion"] = request.LocalVpcRegion;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberUid))
-            {
-                query["MemberUid"] = request.MemberUid;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeerVpcCidrTableList))
-            {
-                query["PeerVpcCidrTableList"] = request.PeerVpcCidrTableList;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeerVpcId))
-            {
-                query["PeerVpcId"] = request.PeerVpcId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeerVpcRegion))
-            {
-                query["PeerVpcRegion"] = request.PeerVpcRegion;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcFirewallName))
-            {
-                query["VpcFirewallName"] = request.VpcFirewallName;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateVpcFirewallConfigure",
-                Version = "2017-12-07",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateVpcFirewallConfigureResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public CreateVpcFirewallConfigureResponse CreateVpcFirewallConfigure(CreateVpcFirewallConfigureRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return CreateVpcFirewallConfigureWithOptions(request, runtime);
-        }
-
-        public async Task<CreateVpcFirewallConfigureResponse> CreateVpcFirewallConfigureAsync(CreateVpcFirewallConfigureRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await CreateVpcFirewallConfigureWithOptionsAsync(request, runtime);
-        }
-
         public CreateVpcFirewallControlPolicyResponse CreateVpcFirewallControlPolicyWithOptions(CreateVpcFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3692,6 +3554,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectSubType))
+            {
+                query["ConnectSubType"] = request.ConnectSubType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
                 query["CurrentPage"] = request.CurrentPage;
@@ -3715,6 +3581,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeerUid))
+            {
+                query["PeerUid"] = request.PeerUid;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionNo))
             {
@@ -3755,6 +3625,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectSubType))
+            {
+                query["ConnectSubType"] = request.ConnectSubType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
                 query["CurrentPage"] = request.CurrentPage;
@@ -3778,6 +3652,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeerUid))
+            {
+                query["PeerUid"] = request.PeerUid;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionNo))
             {

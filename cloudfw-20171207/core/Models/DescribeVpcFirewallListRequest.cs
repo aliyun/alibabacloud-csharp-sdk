@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallListRequest : TeaModel {
+        [NameInMap("ConnectSubType")]
+        [Validation(Required=false)]
+        public string ConnectSubType { get; set; }
+
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public string CurrentPage { get; set; }
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
+
+        [NameInMap("PeerUid")]
+        [Validation(Required=false)]
+        public string PeerUid { get; set; }
 
         [NameInMap("RegionNo")]
         [Validation(Required=false)]

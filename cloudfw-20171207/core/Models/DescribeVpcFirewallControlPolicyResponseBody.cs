@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public List<string> DestinationGroupCidrs { get; set; }
 
+            [NameInMap("DestinationGroupType")]
+            [Validation(Required=false)]
+            public string DestinationGroupType { get; set; }
+
             [NameInMap("DestinationType")]
             [Validation(Required=false)]
             public string DestinationType { get; set; }
@@ -88,6 +92,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [NameInMap("SourceGroupCidrs")]
             [Validation(Required=false)]
             public List<string> SourceGroupCidrs { get; set; }
+
+            [NameInMap("SourceGroupType")]
+            [Validation(Required=false)]
+            public string SourceGroupType { get; set; }
 
             [NameInMap("SourceType")]
             [Validation(Required=false)]
