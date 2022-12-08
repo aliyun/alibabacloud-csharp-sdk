@@ -2493,6 +2493,10 @@ namespace AlibabaCloud.SDK.ROS20190910
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationTypes))
+            {
+                query["OperationTypes"] = request.OperationTypes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBody))
             {
                 query["TemplateBody"] = request.TemplateBody;
@@ -2532,6 +2536,10 @@ namespace AlibabaCloud.SDK.ROS20190910
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationTypes))
+            {
+                query["OperationTypes"] = request.OperationTypes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBody))
             {
                 query["TemplateBody"] = request.TemplateBody;
