@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public string TransitRouterAttachmentId { get; set; }
 
+            [NameInMap("TransitRouterMulticastDomainId")]
+            [Validation(Required=false)]
+            public string TransitRouterMulticastDomainId { get; set; }
+
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }

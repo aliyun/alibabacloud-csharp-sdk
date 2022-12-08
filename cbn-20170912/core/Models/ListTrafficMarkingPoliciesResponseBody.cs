@@ -99,6 +99,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             }
 
+            [NameInMap("TransitRouterId")]
+            [Validation(Required=false)]
+            public string TransitRouterId { get; set; }
+
         }
 
     }

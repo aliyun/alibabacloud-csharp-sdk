@@ -83,6 +83,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         }
 
+        [NameInMap("TransitRouterAttachmentId")]
+        [Validation(Required=false)]
+        public string TransitRouterAttachmentId { get; set; }
+
     }
 
 }

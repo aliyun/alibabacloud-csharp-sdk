@@ -17,9 +17,21 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string GroupIpAddress { get; set; }
 
+        [NameInMap("IsGroupMember")]
+        [Validation(Required=false)]
+        public bool? IsGroupMember { get; set; }
+
+        [NameInMap("IsGroupSource")]
+        [Validation(Required=false)]
+        public bool? IsGroupSource { get; set; }
+
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public long? MaxResults { get; set; }
+
+        [NameInMap("NetworkInterfaceIds")]
+        [Validation(Required=false)]
+        public List<string> NetworkInterfaceIds { get; set; }
 
         [NameInMap("NextToken")]
         [Validation(Required=false)]
