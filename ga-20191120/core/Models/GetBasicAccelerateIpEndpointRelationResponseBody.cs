@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string AccelerateIpId { get; set; }
 
+        [NameInMap("AcceleratorId")]
+        [Validation(Required=false)]
+        public string AcceleratorId { get; set; }
+
         [NameInMap("EndpointAddress")]
         [Validation(Required=false)]
         public string EndpointAddress { get; set; }
