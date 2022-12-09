@@ -21,24 +21,49 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public List<ListRamUsersResponseBodyDataList> List { get; set; }
             public class ListRamUsersResponseBodyDataList : TeaModel {
+                [NameInMap("AliyunUid")]
+                [Validation(Required=false)]
                 public long? AliyunUid { get; set; }
+
+                [NameInMap("DisplayName")]
+                [Validation(Required=false)]
                 public string DisplayName { get; set; }
+
+                [NameInMap("Email")]
+                [Validation(Required=false)]
                 public string Email { get; set; }
+
+                [NameInMap("LoginName")]
+                [Validation(Required=false)]
                 public string LoginName { get; set; }
+
+                [NameInMap("Mobile")]
+                [Validation(Required=false)]
                 public string Mobile { get; set; }
+
+                [NameInMap("Primary")]
+                [Validation(Required=false)]
                 public bool? Primary { get; set; }
+
+                [NameInMap("RamId")]
+                [Validation(Required=false)]
                 public string RamId { get; set; }
+
             }
+
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
@@ -47,10 +72,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
-
-        [NameInMap("Params")]
-        [Validation(Required=false)]
-        public List<string> Params { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -21,23 +21,45 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public List<ListPersonalNumbersOfUserResponseBodyDataList> List { get; set; }
             public class ListPersonalNumbersOfUserResponseBodyDataList : TeaModel {
+                [NameInMap("Active")]
+                [Validation(Required=false)]
                 public bool? Active { get; set; }
+
+                [NameInMap("City")]
+                [Validation(Required=false)]
                 public string City { get; set; }
+
+                [NameInMap("ContactFlowId")]
+                [Validation(Required=false)]
                 public string ContactFlowId { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("Number")]
+                [Validation(Required=false)]
                 public string Number { get; set; }
+
+                [NameInMap("Province")]
+                [Validation(Required=false)]
                 public string Province { get; set; }
+
             }
+
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]

@@ -29,10 +29,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Sync")]
-        [Validation(Required=false)]
-        public string Sync { get; set; }
-
         [NameInMap("WorkflowId")]
         [Validation(Required=false)]
         public string WorkflowId { get; set; }

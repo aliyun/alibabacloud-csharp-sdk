@@ -29,10 +29,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public List<SwitchToConferenceResponseBodyDataCallContextChannelContexts> ChannelContexts { get; set; }
                 public class SwitchToConferenceResponseBodyDataCallContextChannelContexts : TeaModel {
-                    [NameInMap("AssociatedData")]
-                    [Validation(Required=false)]
-                    public Dictionary<string, object> AssociatedData { get; set; }
-
                     [NameInMap("CallType")]
                     [Validation(Required=false)]
                     public string CallType { get; set; }
@@ -100,6 +96,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string JobId { get; set; }
 
             }
+
             [NameInMap("UserContext")]
             [Validation(Required=false)]
             public SwitchToConferenceResponseBodyDataUserContext UserContext { get; set; }
@@ -144,10 +141,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public List<string> SignedSkillGroupIdList { get; set; }
 
-                [NameInMap("Uri")]
-                [Validation(Required=false)]
-                public string Uri { get; set; }
-
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
                 public string UserId { get; set; }
@@ -161,7 +154,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string WorkMode { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]

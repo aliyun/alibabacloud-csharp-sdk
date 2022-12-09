@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public List<ListHistoricalSkillGroupReportResponseBodyDataList> List { get; set; }
             public class ListHistoricalSkillGroupReportResponseBodyDataList : TeaModel {
+                [NameInMap("Inbound")]
+                [Validation(Required=false)]
                 public ListHistoricalSkillGroupReportResponseBodyDataListInbound Inbound { get; set; }
                 public class ListHistoricalSkillGroupReportResponseBodyDataListInbound : TeaModel {
                     [NameInMap("AbandonRate")]
@@ -204,6 +206,9 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalWorkTime { get; set; }
 
                 }
+
+                [NameInMap("Outbound")]
+                [Validation(Required=false)]
                 public ListHistoricalSkillGroupReportResponseBodyDataListOutbound Outbound { get; set; }
                 public class ListHistoricalSkillGroupReportResponseBodyDataListOutbound : TeaModel {
                     [NameInMap("AnswerRate")]
@@ -319,6 +324,9 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalWorkTime { get; set; }
 
                 }
+
+                [NameInMap("Overall")]
+                [Validation(Required=false)]
                 public ListHistoricalSkillGroupReportResponseBodyDataListOverall Overall { get; set; }
                 public class ListHistoricalSkillGroupReportResponseBodyDataListOverall : TeaModel {
                     [NameInMap("AverageBreakTime")]
@@ -410,19 +418,30 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalWorkTime { get; set; }
 
                 }
+
+                [NameInMap("SkillGroupId")]
+                [Validation(Required=false)]
                 public string SkillGroupId { get; set; }
+
+                [NameInMap("SkillGroupName")]
+                [Validation(Required=false)]
                 public string SkillGroupName { get; set; }
+
             }
+
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]

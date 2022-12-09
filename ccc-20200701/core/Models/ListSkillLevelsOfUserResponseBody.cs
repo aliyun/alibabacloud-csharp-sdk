@@ -21,20 +21,33 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public List<ListSkillLevelsOfUserResponseBodyDataList> List { get; set; }
             public class ListSkillLevelsOfUserResponseBodyDataList : TeaModel {
+                [NameInMap("SkillGroupId")]
+                [Validation(Required=false)]
                 public string SkillGroupId { get; set; }
+
+                [NameInMap("SkillGroupName")]
+                [Validation(Required=false)]
                 public string SkillGroupName { get; set; }
+
+                [NameInMap("SkillLevel")]
+                [Validation(Required=false)]
                 public string SkillLevel { get; set; }
+
             }
+
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]

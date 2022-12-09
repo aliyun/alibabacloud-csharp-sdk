@@ -1,3 +1,6 @@
+2022-12-09 Version: 2.8.0
+- Supported new features.
+
 2022-07-11 Version: 2.6.6
 - Supported legacy api.
 

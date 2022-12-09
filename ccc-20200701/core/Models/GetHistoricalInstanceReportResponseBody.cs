@@ -230,6 +230,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public long? TotalWorkTime { get; set; }
 
             }
+
             [NameInMap("Outbound")]
             [Validation(Required=false)]
             public GetHistoricalInstanceReportResponseBodyDataOutbound Outbound { get; set; }
@@ -339,6 +340,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public long? TotalWorkTime { get; set; }
 
             }
+
             [NameInMap("Overall")]
             [Validation(Required=false)]
             public GetHistoricalInstanceReportResponseBodyDataOverall Overall { get; set; }
@@ -432,7 +434,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public long? TotalWorkTime { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]

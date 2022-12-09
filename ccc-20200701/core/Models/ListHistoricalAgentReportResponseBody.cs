@@ -21,9 +21,20 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public List<ListHistoricalAgentReportResponseBodyDataList> List { get; set; }
             public class ListHistoricalAgentReportResponseBodyDataList : TeaModel {
+                [NameInMap("AgentId")]
+                [Validation(Required=false)]
                 public string AgentId { get; set; }
+
+                [NameInMap("AgentName")]
+                [Validation(Required=false)]
                 public string AgentName { get; set; }
+
+                [NameInMap("DisplayId")]
+                [Validation(Required=false)]
                 public string DisplayId { get; set; }
+
+                [NameInMap("Inbound")]
+                [Validation(Required=false)]
                 public ListHistoricalAgentReportResponseBodyDataListInbound Inbound { get; set; }
                 public class ListHistoricalAgentReportResponseBodyDataListInbound : TeaModel {
                     [NameInMap("AverageHoldTime")]
@@ -127,6 +138,9 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalWorkTime { get; set; }
 
                 }
+
+                [NameInMap("Outbound")]
+                [Validation(Required=false)]
                 public ListHistoricalAgentReportResponseBodyDataListOutbound Outbound { get; set; }
                 public class ListHistoricalAgentReportResponseBodyDataListOutbound : TeaModel {
                     [NameInMap("AnswerRate")]
@@ -242,6 +256,9 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalWorkTime { get; set; }
 
                 }
+
+                [NameInMap("Overall")]
+                [Validation(Required=false)]
                 public ListHistoricalAgentReportResponseBodyDataListOverall Overall { get; set; }
                 public class ListHistoricalAgentReportResponseBodyDataListOverall : TeaModel {
                     [NameInMap("AverageBreakTime")]
@@ -333,19 +350,30 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalWorkTime { get; set; }
 
                 }
+
+                [NameInMap("SkillGroupIds")]
+                [Validation(Required=false)]
                 public string SkillGroupIds { get; set; }
+
+                [NameInMap("SkillGroupNames")]
+                [Validation(Required=false)]
                 public string SkillGroupNames { get; set; }
+
             }
+
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]

@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("Mobile")]
+        [Validation(Required=false)]
+        public string Mobile { get; set; }
+
+        [NameInMap("SignedSkillGroupIdList")]
+        [Validation(Required=false)]
+        public string SignedSkillGroupIdList { get; set; }
+
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }

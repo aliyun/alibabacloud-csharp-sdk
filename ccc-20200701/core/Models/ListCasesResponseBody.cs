@@ -13,9 +13,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// data
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListCasesResponseBodyData Data { get; set; }
@@ -24,25 +21,49 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public List<ListCasesResponseBodyDataList> List { get; set; }
             public class ListCasesResponseBodyDataList : TeaModel {
+                [NameInMap("AbandonType")]
+                [Validation(Required=false)]
                 public string AbandonType { get; set; }
+
+                [NameInMap("AttemptCount")]
+                [Validation(Required=false)]
                 public long? AttemptCount { get; set; }
+
+                [NameInMap("CaseId")]
+                [Validation(Required=false)]
                 public string CaseId { get; set; }
+
+                [NameInMap("CustomVariables")]
+                [Validation(Required=false)]
                 public string CustomVariables { get; set; }
-                public string ExpandInfo { get; set; }
+
+                [NameInMap("FailureReason")]
+                [Validation(Required=false)]
                 public string FailureReason { get; set; }
+
+                [NameInMap("PhoneNumber")]
+                [Validation(Required=false)]
                 public string PhoneNumber { get; set; }
+
+                [NameInMap("State")]
+                [Validation(Required=false)]
                 public string State { get; set; }
+
             }
+
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public long? PageNumber { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public long? PageSize { get; set; }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public long? TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
@@ -55,10 +76,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

@@ -29,8 +29,16 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public List<ListAgentSummaryReportsSinceMidnightResponseBodyPagedAgentSummaryReportList> List { get; set; }
             public class ListAgentSummaryReportsSinceMidnightResponseBodyPagedAgentSummaryReportList : TeaModel {
+                [NameInMap("AgentId")]
+                [Validation(Required=false)]
                 public string AgentId { get; set; }
+
+                [NameInMap("AgentName")]
+                [Validation(Required=false)]
                 public string AgentName { get; set; }
+
+                [NameInMap("Inbound")]
+                [Validation(Required=false)]
                 public ListAgentSummaryReportsSinceMidnightResponseBodyPagedAgentSummaryReportListInbound Inbound { get; set; }
                 public class ListAgentSummaryReportsSinceMidnightResponseBodyPagedAgentSummaryReportListInbound : TeaModel {
                     [NameInMap("AverageRingTime")]
@@ -98,8 +106,17 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalWorkTime { get; set; }
 
                 }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("LoginName")]
+                [Validation(Required=false)]
                 public string LoginName { get; set; }
+
+                [NameInMap("Outbound")]
+                [Validation(Required=false)]
                 public ListAgentSummaryReportsSinceMidnightResponseBodyPagedAgentSummaryReportListOutbound Outbound { get; set; }
                 public class ListAgentSummaryReportsSinceMidnightResponseBodyPagedAgentSummaryReportListOutbound : TeaModel {
                     [NameInMap("AnswerRate")]
@@ -163,6 +180,9 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalWorkTime { get; set; }
 
                 }
+
+                [NameInMap("Overall")]
+                [Validation(Required=false)]
                 public ListAgentSummaryReportsSinceMidnightResponseBodyPagedAgentSummaryReportListOverall Overall { get; set; }
                 public class ListAgentSummaryReportsSinceMidnightResponseBodyPagedAgentSummaryReportListOverall : TeaModel {
                     [NameInMap("AverageReadyTime")]
@@ -234,20 +254,34 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? TotalWorkTime { get; set; }
 
                 }
+
+                [NameInMap("SkillGroupIds")]
+                [Validation(Required=false)]
                 public string SkillGroupIds { get; set; }
+
+                [NameInMap("SkillGroupNames")]
+                [Validation(Required=false)]
                 public string SkillGroupNames { get; set; }
+
+                [NameInMap("Timestamp")]
+                [Validation(Required=false)]
                 public string Timestamp { get; set; }
+
             }
+
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

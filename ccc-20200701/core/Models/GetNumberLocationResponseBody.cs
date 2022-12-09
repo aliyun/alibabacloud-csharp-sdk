@@ -20,13 +20,16 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [NameInMap("City")]
             [Validation(Required=false)]
             public string City { get; set; }
+
             [NameInMap("Number")]
             [Validation(Required=false)]
             public string Number { get; set; }
+
             [NameInMap("Province")]
             [Validation(Required=false)]
             public string Province { get; set; }
-        };
+
+        }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]

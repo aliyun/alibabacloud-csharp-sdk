@@ -20,25 +20,32 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
+
             [NameInMap("Email")]
             [Validation(Required=false)]
             public string Email { get; set; }
+
             [NameInMap("Extension")]
             [Validation(Required=false)]
             public string Extension { get; set; }
+
             [NameInMap("LoginName")]
             [Validation(Required=false)]
             public string LoginName { get; set; }
+
             [NameInMap("Mobile")]
             [Validation(Required=false)]
             public string Mobile { get; set; }
+
             [NameInMap("UserId")]
             [Validation(Required=false)]
             public string UserId { get; set; }
+
             [NameInMap("WorkMode")]
             [Validation(Required=false)]
             public string WorkMode { get; set; }
-        };
+
+        }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
@@ -47,10 +54,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
-
-        [NameInMap("Params")]
-        [Validation(Required=false)]
-        public List<string> Params { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [NameInMap("CaseFileKey")]
             [Validation(Required=false)]
             public string CaseFileKey { get; set; }
+
             [NameInMap("Url")]
             [Validation(Required=false)]
             public string Url { get; set; }
-        };
+
+        }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]

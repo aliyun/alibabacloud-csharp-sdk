@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [NameInMap("FileName")]
             [Validation(Required=false)]
             public string FileName { get; set; }
+
             [NameInMap("FileUrl")]
             [Validation(Required=false)]
             public string FileUrl { get; set; }
-        };
+
+        }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]

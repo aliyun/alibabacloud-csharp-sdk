@@ -20,25 +20,32 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [NameInMap("BreakingAgents")]
             [Validation(Required=false)]
             public long? BreakingAgents { get; set; }
+
             [NameInMap("Caps")]
             [Validation(Required=false)]
             public long? Caps { get; set; }
+
             [NameInMap("LoggedInAgents")]
             [Validation(Required=false)]
             public long? LoggedInAgents { get; set; }
+
             [NameInMap("ReadyAgents")]
             [Validation(Required=false)]
             public long? ReadyAgents { get; set; }
+
             [NameInMap("TalkingAgents")]
             [Validation(Required=false)]
             public long? TalkingAgents { get; set; }
+
             [NameInMap("TotalAgents")]
             [Validation(Required=false)]
             public long? TotalAgents { get; set; }
+
             [NameInMap("WorkingAgents")]
             [Validation(Required=false)]
             public long? WorkingAgents { get; set; }
-        };
+
+        }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]

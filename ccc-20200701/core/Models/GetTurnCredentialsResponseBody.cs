@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [NameInMap("Password")]
             [Validation(Required=false)]
             public string Password { get; set; }
+
             [NameInMap("UserName")]
             [Validation(Required=false)]
             public string UserName { get; set; }
-        };
+
+        }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
@@ -32,10 +34,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
-
-        [NameInMap("Params")]
-        [Validation(Required=false)]
-        public List<string> Params { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

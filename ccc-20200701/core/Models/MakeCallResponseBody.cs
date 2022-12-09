@@ -29,10 +29,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public List<MakeCallResponseBodyDataCallContextChannelContexts> ChannelContexts { get; set; }
                 public class MakeCallResponseBodyDataCallContextChannelContexts : TeaModel {
-                    [NameInMap("AssociatedData")]
-                    [Validation(Required=false)]
-                    public Dictionary<string, object> AssociatedData { get; set; }
-
                     [NameInMap("CallType")]
                     [Validation(Required=false)]
                     public string CallType { get; set; }
@@ -92,9 +88,11 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string JobId { get; set; }
 
             }
+
             [NameInMap("ContextId")]
             [Validation(Required=false)]
             public long? ContextId { get; set; }
+
             [NameInMap("UserContext")]
             [Validation(Required=false)]
             public MakeCallResponseBodyDataUserContext UserContext { get; set; }
@@ -140,7 +138,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string WorkMode { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]

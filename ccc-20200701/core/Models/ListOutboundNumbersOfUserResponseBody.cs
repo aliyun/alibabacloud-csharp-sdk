@@ -21,20 +21,33 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public List<ListOutboundNumbersOfUserResponseBodyDataList> List { get; set; }
             public class ListOutboundNumbersOfUserResponseBodyDataList : TeaModel {
+                [NameInMap("City")]
+                [Validation(Required=false)]
                 public string City { get; set; }
+
+                [NameInMap("Number")]
+                [Validation(Required=false)]
                 public string Number { get; set; }
+
+                [NameInMap("Province")]
+                [Validation(Required=false)]
                 public string Province { get; set; }
+
             }
+
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]

@@ -20,22 +20,28 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [NameInMap("AccessKeyId")]
             [Validation(Required=false)]
             public string AccessKeyId { get; set; }
+
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
             public int? ExpireTime { get; set; }
+
             [NameInMap("FilePath")]
             [Validation(Required=false)]
             public string FilePath { get; set; }
+
             [NameInMap("Host")]
             [Validation(Required=false)]
             public string Host { get; set; }
+
             [NameInMap("Policy")]
             [Validation(Required=false)]
             public string Policy { get; set; }
+
             [NameInMap("Signature")]
             [Validation(Required=false)]
             public string Signature { get; set; }
-        };
+
+        }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]

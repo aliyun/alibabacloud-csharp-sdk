@@ -21,23 +21,55 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public List<GetInstanceTrendingReportResponseBodyDataInbound> Inbound { get; set; }
             public class GetInstanceTrendingReportResponseBodyDataInbound : TeaModel {
+                [NameInMap("CallsAbandonedInIVR")]
+                [Validation(Required=false)]
                 public long? CallsAbandonedInIVR { get; set; }
+
+                [NameInMap("CallsAbandonedInQueue")]
+                [Validation(Required=false)]
                 public long? CallsAbandonedInQueue { get; set; }
+
+                [NameInMap("CallsAbandonedInRing")]
+                [Validation(Required=false)]
                 public long? CallsAbandonedInRing { get; set; }
+
+                [NameInMap("CallsHandled")]
+                [Validation(Required=false)]
                 public long? CallsHandled { get; set; }
+
+                [NameInMap("CallsQueued")]
+                [Validation(Required=false)]
                 public long? CallsQueued { get; set; }
+
+                [NameInMap("StatsTime")]
+                [Validation(Required=false)]
                 public long? StatsTime { get; set; }
+
+                [NameInMap("TotalCalls")]
+                [Validation(Required=false)]
                 public long? TotalCalls { get; set; }
+
             }
+
             [NameInMap("Outbound")]
             [Validation(Required=false)]
             public List<GetInstanceTrendingReportResponseBodyDataOutbound> Outbound { get; set; }
             public class GetInstanceTrendingReportResponseBodyDataOutbound : TeaModel {
+                [NameInMap("CallsAnswered")]
+                [Validation(Required=false)]
                 public long? CallsAnswered { get; set; }
+
+                [NameInMap("StatsTime")]
+                [Validation(Required=false)]
                 public long? StatsTime { get; set; }
+
+                [NameInMap("TotalCalls")]
+                [Validation(Required=false)]
                 public long? TotalCalls { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]

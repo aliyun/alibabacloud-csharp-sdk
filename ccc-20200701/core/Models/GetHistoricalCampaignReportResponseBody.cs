@@ -20,22 +20,28 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [NameInMap("AbandonedRate")]
             [Validation(Required=false)]
             public float? AbandonedRate { get; set; }
+
             [NameInMap("CallsAbandoned")]
             [Validation(Required=false)]
             public long? CallsAbandoned { get; set; }
+
             [NameInMap("CallsConnected")]
             [Validation(Required=false)]
             public long? CallsConnected { get; set; }
+
             [NameInMap("CallsDialed")]
             [Validation(Required=false)]
             public long? CallsDialed { get; set; }
+
             [NameInMap("ConnectedRate")]
             [Validation(Required=false)]
             public float? ConnectedRate { get; set; }
+
             [NameInMap("OccupancyRate")]
             [Validation(Required=false)]
             public float? OccupancyRate { get; set; }
-        };
+
+        }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]

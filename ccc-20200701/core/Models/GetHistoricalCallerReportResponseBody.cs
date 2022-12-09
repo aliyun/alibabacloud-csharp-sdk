@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [NameInMap("LastCallingTime")]
             [Validation(Required=false)]
             public long? LastCallingTime { get; set; }
+
             [NameInMap("TotalCalls")]
             [Validation(Required=false)]
             public long? TotalCalls { get; set; }
-        };
+
+        }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]

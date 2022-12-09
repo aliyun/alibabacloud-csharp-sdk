@@ -25,14 +25,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public string CallType { get; set; }
 
+                [NameInMap("CallVariables")]
+                [Validation(Required=false)]
+                public string CallVariables { get; set; }
+
                 [NameInMap("ChannelContexts")]
                 [Validation(Required=false)]
                 public List<PollUserStatusResponseBodyDataCallContextChannelContexts> ChannelContexts { get; set; }
                 public class PollUserStatusResponseBodyDataCallContextChannelContexts : TeaModel {
-                    [NameInMap("AssociatedData")]
-                    [Validation(Required=false)]
-                    public Dictionary<string, object> AssociatedData { get; set; }
-
                     [NameInMap("CallType")]
                     [Validation(Required=false)]
                     public string CallType { get; set; }
@@ -104,9 +104,11 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string JobId { get; set; }
 
             }
+
             [NameInMap("ContextId")]
             [Validation(Required=false)]
             public long? ContextId { get; set; }
+
             [NameInMap("UserContext")]
             [Validation(Required=false)]
             public PollUserStatusResponseBodyDataUserContext UserContext { get; set; }
@@ -164,7 +166,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string WorkMode { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
