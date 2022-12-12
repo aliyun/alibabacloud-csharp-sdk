@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
 
+                [NameInMap("ResourceTypes")]
+                [Validation(Required=false)]
+                public List<string> ResourceTypes { get; set; }
+
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
                 public string ZoneId { get; set; }

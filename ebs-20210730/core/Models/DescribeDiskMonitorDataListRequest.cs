@@ -8,30 +8,30 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
-    public class CreateDedicatedBlockStorageClusterRequest : TeaModel {
-        [NameInMap("Azone")]
+    public class DescribeDiskMonitorDataListRequest : TeaModel {
+        [NameInMap("DiskIds")]
         [Validation(Required=false)]
-        public string Azone { get; set; }
+        public string DiskIds { get; set; }
 
-        [NameInMap("Capacity")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public long? Capacity { get; set; }
+        public string EndTime { get; set; }
 
-        [NameInMap("DbscId")]
+        [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public string DbscId { get; set; }
+        public string MaxResults { get; set; }
 
-        [NameInMap("DbscName")]
+        [NameInMap("NextToken")]
         [Validation(Required=false)]
-        public string DbscName { get; set; }
+        public string NextToken { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("ResourceGroupId")]
+        [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public string StartTime { get; set; }
 
         [NameInMap("Type")]
         [Validation(Required=false)]

@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
@@ -74,6 +78,20 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             [NameInMap("SupportedCategory")]
             [Validation(Required=false)]
             public string SupportedCategory { get; set; }
+
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersTags> Tags { get; set; }
+            public class DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersTags : TeaModel {
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
+            }
 
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -89,9 +107,21 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 
