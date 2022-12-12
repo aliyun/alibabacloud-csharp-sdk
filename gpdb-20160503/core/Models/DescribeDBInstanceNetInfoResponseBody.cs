@@ -37,6 +37,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [Validation(Required=false)]
                 public string Port { get; set; }
 
+                /// <summary>
+                /// VPC ID。
+                /// </summary>
                 [NameInMap("VPCId")]
                 [Validation(Required=false)]
                 public string VPCId { get; set; }

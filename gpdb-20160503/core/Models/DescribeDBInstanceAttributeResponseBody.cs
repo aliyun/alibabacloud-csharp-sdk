@@ -257,10 +257,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
                 }
 
+                /// <summary>
+                /// vSwitch ID。
+                /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
+                /// <summary>
+                /// VPC ID。
+                /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }

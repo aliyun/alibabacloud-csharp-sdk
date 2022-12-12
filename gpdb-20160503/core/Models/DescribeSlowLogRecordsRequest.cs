@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// SQL ID。
+        /// </summary>
         [NameInMap("SQLId")]
         [Validation(Required=false)]
         public long? SQLId { get; set; }

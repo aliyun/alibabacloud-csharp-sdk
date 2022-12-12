@@ -49,6 +49,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public long? ReturnRowCounts { get; set; }
 
+            /// <summary>
+            /// Segment ID。
+            /// </summary>
             [NameInMap("SegmentId")]
             [Validation(Required=false)]
             public string SegmentId { get; set; }
