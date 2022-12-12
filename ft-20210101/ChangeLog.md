@@ -1,3 +1,6 @@
+2022-12-12 Version: 1.0.2
+- Generated csharp 2021-01-01 for Ft.
+
 2022-12-10 Version: 1.0.1
 - Generated csharp 2021-01-01 for Ft.
 
