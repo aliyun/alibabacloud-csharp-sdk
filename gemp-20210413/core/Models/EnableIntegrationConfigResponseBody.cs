@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class EnableIntegrationConfigResponseBody : TeaModel {
+        /// <summary>
+        /// requestId
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

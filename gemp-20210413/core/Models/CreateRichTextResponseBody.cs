@@ -19,13 +19,16 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public long? InstanceId { get; set; }
+
             [NameInMap("instanceType")]
             [Validation(Required=false)]
             public long? InstanceType { get; set; }
+
             [NameInMap("richText")]
             [Validation(Required=false)]
             public string RichText { get; set; }
-        };
+
+        }
 
         /// <summary>
         /// Id of the request

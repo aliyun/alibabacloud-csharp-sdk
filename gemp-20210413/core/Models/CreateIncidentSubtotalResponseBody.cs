@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class CreateIncidentSubtotalResponseBody : TeaModel {
+        /// <summary>
+        /// data
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateIncidentSubtotalResponseBodyData Data { get; set; }
@@ -16,7 +19,8 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("subtotalId")]
             [Validation(Required=false)]
             public long? SubtotalId { get; set; }
-        };
+
+        }
 
         /// <summary>
         /// requestId

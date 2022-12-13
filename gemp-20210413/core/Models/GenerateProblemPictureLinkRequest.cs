@@ -16,9 +16,6 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public List<string> Keys { get; set; }
 
-        /// <summary>
-        /// 故障id
-        /// </summary>
         [NameInMap("problemId")]
         [Validation(Required=false)]
         public string ProblemId { get; set; }

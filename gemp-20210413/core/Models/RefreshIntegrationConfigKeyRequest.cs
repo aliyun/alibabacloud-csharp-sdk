@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class RefreshIntegrationConfigKeyRequest : TeaModel {
-        /// <summary>
-        /// 幂等id
-        /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }

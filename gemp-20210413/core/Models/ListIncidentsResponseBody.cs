@@ -9,124 +9,121 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class ListIncidentsResponseBody : TeaModel {
+        /// <summary>
+        /// data
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListIncidentsResponseBodyData> Data { get; set; }
         public class ListIncidentsResponseBodyData : TeaModel {
+            [NameInMap("assignToWhoIsValid")]
+            [Validation(Required=false)]
+            public long? AssignToWhoIsValid { get; set; }
+
             /// <summary>
-            /// 分派的用户ID
+            /// 代表创建时间的资源属性字段
             /// </summary>
             [NameInMap("assignUserId")]
             [Validation(Required=false)]
             public long? AssignUserId { get; set; }
 
             /// <summary>
-            /// 分派的用户姓名
+            /// 代表资源一级ID的资源属性字段
             /// </summary>
             [NameInMap("assignUserName")]
             [Validation(Required=false)]
             public string AssignUserName { get; set; }
 
-            /// <summary>
-            /// 分派人手机号
-            /// </summary>
             [NameInMap("assignUserPhone")]
             [Validation(Required=false)]
             public string AssignUserPhone { get; set; }
 
             /// <summary>
-            /// 创建时间
+            /// 事件级别
             /// </summary>
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// 影响等级 高：HIGH 低 LOW
+            /// 时间指派人ID
             /// </summary>
             [NameInMap("effect")]
             [Validation(Required=false)]
             public string Effect { get; set; }
 
+            /// <summary>
+            /// 修改时间
+            /// </summary>
             [NameInMap("incidentId")]
             [Validation(Required=false)]
             public long? IncidentId { get; set; }
 
             /// <summary>
-            /// 事件级别 P1 P2 P3 P4
+            /// 影响程度
             /// </summary>
             [NameInMap("incidentLevel")]
             [Validation(Required=false)]
             public string IncidentLevel { get; set; }
 
-            /// <summary>
-            /// 事件编号
-            /// </summary>
             [NameInMap("incidentNumber")]
             [Validation(Required=false)]
             public string IncidentNumber { get; set; }
 
             /// <summary>
-            /// 事件状态 0已分派 1已响应 2已完结
+            /// 关联流转规则ID
             /// </summary>
             [NameInMap("incidentStatus")]
             [Validation(Required=false)]
             public string IncidentStatus { get; set; }
 
             /// <summary>
-            /// 事件标题
+            /// 事件内容
             /// </summary>
             [NameInMap("incidentTitle")]
             [Validation(Required=false)]
             public string IncidentTitle { get; set; }
 
-            /// <summary>
-            /// 事件来源 是=手动 否=自动
-            /// </summary>
             [NameInMap("isManual")]
             [Validation(Required=false)]
             public bool? IsManual { get; set; }
 
+            [NameInMap("relRouteRuleDeleteType")]
+            [Validation(Required=false)]
+            public int? RelRouteRuleDeleteType { get; set; }
+
+            [NameInMap("relServiceDeleteType")]
+            [Validation(Required=false)]
+            public int? RelServiceDeleteType { get; set; }
+
             /// <summary>
-            /// 关联服务ID
+            /// 事件状态
             /// </summary>
             [NameInMap("relatedServiceId")]
             [Validation(Required=false)]
             public long? RelatedServiceId { get; set; }
 
-            /// <summary>
-            /// 关联服务名称
-            /// </summary>
             [NameInMap("relatedServiceName")]
             [Validation(Required=false)]
             public string RelatedServiceName { get; set; }
 
             /// <summary>
-            /// 流转规则ID
+            /// 关联的服务ID
             /// </summary>
             [NameInMap("routeRuleId")]
             [Validation(Required=false)]
             public long? RouteRuleId { get; set; }
 
-            /// <summary>
-            /// 流转规则
-            /// </summary>
             [NameInMap("routeRuleName")]
             [Validation(Required=false)]
             public string RouteRuleName { get; set; }
 
         }
 
-        /// <summary>
-        /// 页
-        /// </summary>
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        /// <summary>
-        /// 行
-        /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -138,9 +135,6 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 总数
-        /// </summary>
         [NameInMap("totalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

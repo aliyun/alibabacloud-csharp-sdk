@@ -16,16 +16,10 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public List<ListEscalationPlanServicesResponseBodyData> Data { get; set; }
         public class ListEscalationPlanServicesResponseBodyData : TeaModel {
-            /// <summary>
-            /// 范围类型
-            /// </summary>
             [NameInMap("scope")]
             [Validation(Required=false)]
             public string Scope { get; set; }
 
-            /// <summary>
-            /// 范围对象id
-            /// </summary>
             [NameInMap("scopeObjectId")]
             [Validation(Required=false)]
             public long? ScopeObjectId { get; set; }

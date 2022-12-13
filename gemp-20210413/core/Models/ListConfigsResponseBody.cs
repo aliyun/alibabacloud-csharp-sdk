@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class ListConfigsResponseBody : TeaModel {
+        /// <summary>
+        /// data
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public Dictionary<string, List<DataValue>> Data { get; set; }

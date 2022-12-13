@@ -10,15 +10,12 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class UpdateIntegrationConfigRequest : TeaModel {
         /// <summary>
-        /// 集成秘钥
+        /// accessKey
         /// </summary>
         [NameInMap("accessKey")]
         [Validation(Required=false)]
         public string AccessKey { get; set; }
 
-        /// <summary>
-        /// 幂等id
-        /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }

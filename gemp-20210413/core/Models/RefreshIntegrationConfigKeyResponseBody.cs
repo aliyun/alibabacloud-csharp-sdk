@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class RefreshIntegrationConfigKeyResponseBody : TeaModel {
+        /// <summary>
+        /// data
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public RefreshIntegrationConfigKeyResponseBodyData Data { get; set; }
@@ -16,7 +19,8 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("key")]
             [Validation(Required=false)]
             public string Key { get; set; }
-        };
+
+        }
 
         /// <summary>
         /// Id of the request

@@ -13,9 +13,6 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public long? Data { get; set; }
 
-        /// <summary>
-        /// 请求ID
-        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class GetProblemImprovementRequest : TeaModel {
-        /// <summary>
-        /// 幂等校验token
-        /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        /// <summary>
-        /// 故障ID
-        /// </summary>
         [NameInMap("problemId")]
         [Validation(Required=false)]
         public string ProblemId { get; set; }

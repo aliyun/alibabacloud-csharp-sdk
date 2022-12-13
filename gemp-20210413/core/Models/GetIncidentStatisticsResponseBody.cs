@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class GetIncidentStatisticsResponseBody : TeaModel {
+        /// <summary>
+        /// data
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetIncidentStatisticsResponseBodyData Data { get; set; }
@@ -16,17 +19,24 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("allFinish")]
             [Validation(Required=false)]
             public int? AllFinish { get; set; }
+
             [NameInMap("allResponse")]
             [Validation(Required=false)]
             public int? AllResponse { get; set; }
+
             [NameInMap("myFinish")]
             [Validation(Required=false)]
             public int? MyFinish { get; set; }
+
             [NameInMap("myResponse")]
             [Validation(Required=false)]
             public int? MyResponse { get; set; }
-        };
 
+        }
+
+        /// <summary>
+        /// requestId
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

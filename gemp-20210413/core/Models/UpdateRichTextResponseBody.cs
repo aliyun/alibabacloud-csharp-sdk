@@ -19,7 +19,8 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
-        };
+
+        }
 
         /// <summary>
         /// Id of the request

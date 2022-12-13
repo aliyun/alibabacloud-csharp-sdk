@@ -9,15 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class RespondIncidentRequest : TeaModel {
-        /// <summary>
-        /// 幂等校验Id
-        /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// 事件ID数组
+        /// 影响程度
         /// </summary>
         [NameInMap("incidentIds")]
         [Validation(Required=false)]

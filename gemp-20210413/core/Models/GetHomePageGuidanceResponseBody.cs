@@ -16,16 +16,20 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("notifySubscriptionStatus")]
             [Validation(Required=false)]
             public bool? NotifySubscriptionStatus { get; set; }
+
             [NameInMap("serviceGroupStatus")]
             [Validation(Required=false)]
             public bool? ServiceGroupStatus { get; set; }
+
             [NameInMap("serviceStatus")]
             [Validation(Required=false)]
             public bool? ServiceStatus { get; set; }
+
             [NameInMap("usersStatus")]
             [Validation(Required=false)]
             public bool? UsersStatus { get; set; }
-        };
+
+        }
 
         /// <summary>
         /// Id of the request

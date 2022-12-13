@@ -9,44 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class ListRouteRulesRequest : TeaModel {
-        /// <summary>
-        /// 幂等号
-        /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        /// <summary>
-        /// 第几页
-        /// </summary>
+        [NameInMap("notFilterRouteRuleDeleted")]
+        [Validation(Required=false)]
+        public bool? NotFilterRouteRuleDeleted { get; set; }
+
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        /// <summary>
-        /// 页的大小
-        /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// 路由类型：0触发事件 1仅触发报警 r
-        /// </summary>
         [NameInMap("routeType")]
         [Validation(Required=false)]
         public long? RouteType { get; set; }
 
-        /// <summary>
-        /// 规则名称
-        /// </summary>
         [NameInMap("ruleName")]
         [Validation(Required=false)]
         public byte[] RuleName { get; set; }
 
-        /// <summary>
-        /// 服务名称
-        /// </summary>
         [NameInMap("serviceName")]
         [Validation(Required=false)]
         public byte[] ServiceName { get; set; }

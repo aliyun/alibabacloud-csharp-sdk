@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class CreateServiceResponseBody : TeaModel {
-        /// <summary>
-        /// 服务ID
-        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateServiceResponseBodyData Data { get; set; }
@@ -19,7 +16,8 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("serviceId")]
             [Validation(Required=false)]
             public long? ServiceId { get; set; }
-        };
+
+        }
 
         /// <summary>
         /// Id of the request

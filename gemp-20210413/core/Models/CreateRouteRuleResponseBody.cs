@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class CreateRouteRuleResponseBody : TeaModel {
-        /// <summary>
-        /// 结果
-        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateRouteRuleResponseBodyData Data { get; set; }
@@ -19,11 +16,9 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("routeRuleId")]
             [Validation(Required=false)]
             public long? RouteRuleId { get; set; }
-        };
 
-        /// <summary>
-        /// 请求
-        /// </summary>
+        }
+
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

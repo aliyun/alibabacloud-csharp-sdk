@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class CreateProblemTimelineResponseBody : TeaModel {
         /// <summary>
-        /// Object
+        /// data
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -19,7 +19,8 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("problemTimelineId")]
             [Validation(Required=false)]
             public long? ProblemTimelineId { get; set; }
-        };
+
+        }
 
         /// <summary>
         /// id of the request

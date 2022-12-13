@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class ListMonitorSourcesResponseBody : TeaModel {
+        /// <summary>
+        /// data
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListMonitorSourcesResponseBodyData> Data { get; set; }
@@ -27,6 +30,9 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 
         }
 
+        /// <summary>
+        /// id of the request
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class UpdateIncidentResponseBody : TeaModel {
+        /// <summary>
+        /// data
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public UpdateIncidentResponseBodyData Data { get; set; }
@@ -16,7 +19,8 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("incidentId")]
             [Validation(Required=false)]
             public long? IncidentId { get; set; }
-        };
+
+        }
 
         /// <summary>
         /// Id of the request

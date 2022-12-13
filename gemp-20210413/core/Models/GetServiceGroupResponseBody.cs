@@ -16,41 +16,59 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
             [NameInMap("enableWebhook")]
             [Validation(Required=false)]
             public string EnableWebhook { get; set; }
+
             [NameInMap("serviceGroupDescription")]
             [Validation(Required=false)]
             public string ServiceGroupDescription { get; set; }
+
             [NameInMap("serviceGroupId")]
             [Validation(Required=false)]
             public long? ServiceGroupId { get; set; }
+
             [NameInMap("serviceGroupName")]
             [Validation(Required=false)]
             public string ServiceGroupName { get; set; }
+
             [NameInMap("updateTime")]
             [Validation(Required=false)]
             public string UpdateTime { get; set; }
+
             [NameInMap("users")]
             [Validation(Required=false)]
             public List<GetServiceGroupResponseBodyDataUsers> Users { get; set; }
             public class GetServiceGroupResponseBodyDataUsers : TeaModel {
+                [NameInMap("phone")]
+                [Validation(Required=false)]
                 public string Phone { get; set; }
+
+                [NameInMap("serviceGroupId")]
+                [Validation(Required=false)]
                 public long? ServiceGroupId { get; set; }
+
+                [NameInMap("userId")]
+                [Validation(Required=false)]
                 public long? UserId { get; set; }
+
+                [NameInMap("userName")]
+                [Validation(Required=false)]
                 public string UserName { get; set; }
+
             }
+
             [NameInMap("webhookLink")]
             [Validation(Required=false)]
             public string WebhookLink { get; set; }
+
             [NameInMap("webhookType")]
             [Validation(Required=false)]
             public string WebhookType { get; set; }
-        };
 
-        /// <summary>
-        /// 请求ID
-        /// </summary>
+        }
+
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -19,7 +19,8 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("escalationPlanId")]
             [Validation(Required=false)]
             public long? EscalationPlanId { get; set; }
-        };
+
+        }
 
         /// <summary>
         /// Id of the request

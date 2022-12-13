@@ -9,15 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class CreateProblemTimelinesResponseBody : TeaModel {
+        /// <summary>
+        /// data
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateProblemTimelinesResponseBodyData Data { get; set; }
         public class CreateProblemTimelinesResponseBodyData : TeaModel {
             [NameInMap("problemTimelineIds")]
             [Validation(Required=false)]
-            public List<string> ProblemTimelineIds { get; set; }
-        };
+            public List<long?> ProblemTimelineIds { get; set; }
 
+        }
+
+        /// <summary>
+        /// id of the request
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

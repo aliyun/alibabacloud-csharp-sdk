@@ -19,10 +19,12 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("openUrl")]
             [Validation(Required=false)]
             public string OpenUrl { get; set; }
+
             [NameInMap("progress")]
             [Validation(Required=false)]
             public string Progress { get; set; }
-        };
+
+        }
 
         /// <summary>
         /// id of the req

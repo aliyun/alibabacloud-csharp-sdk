@@ -19,16 +19,20 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("alertCount")]
             [Validation(Required=false)]
             public int? AlertCount { get; set; }
+
             [NameInMap("incidentCount")]
             [Validation(Required=false)]
             public int? IncidentCount { get; set; }
+
             [NameInMap("integrationCount")]
             [Validation(Required=false)]
             public int? IntegrationCount { get; set; }
+
             [NameInMap("problemCount")]
             [Validation(Required=false)]
             public int? ProblemCount { get; set; }
-        };
+
+        }
 
         /// <summary>
         /// Id of the request

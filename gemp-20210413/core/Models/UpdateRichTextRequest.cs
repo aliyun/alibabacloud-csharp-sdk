@@ -9,30 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class UpdateRichTextRequest : TeaModel {
-        /// <summary>
-        /// 资源id
-        /// </summary>
         [NameInMap("instanceId")]
         [Validation(Required=false)]
         public long? InstanceId { get; set; }
 
-        /// <summary>
-        /// 资源类型
-        /// </summary>
         [NameInMap("instanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
-        /// <summary>
-        /// 文本内容
-        /// </summary>
         [NameInMap("richText")]
         [Validation(Required=false)]
         public string RichText { get; set; }
 
-        /// <summary>
-        /// 富文本id
-        /// </summary>
         [NameInMap("richTextId")]
         [Validation(Required=false)]
         public long? RichTextId { get; set; }

@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class GetServiceGroupSchedulingRequest : TeaModel {
-        /// <summary>
-        /// 幂等号
-        /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        /// <summary>
-        /// 服务组ID
-        /// </summary>
         [NameInMap("serviceGroupId")]
         [Validation(Required=false)]
         public long? ServiceGroupId { get; set; }

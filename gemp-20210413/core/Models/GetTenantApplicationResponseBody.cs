@@ -19,16 +19,24 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("bizId")]
             [Validation(Required=false)]
             public string BizId { get; set; }
+
             [NameInMap("channel")]
             [Validation(Required=false)]
             public string Channel { get; set; }
+
             [NameInMap("corporationId")]
             [Validation(Required=false)]
             public string CorporationId { get; set; }
+
+            [NameInMap("originalCorpId")]
+            [Validation(Required=false)]
+            public string OriginalCorpId { get; set; }
+
             [NameInMap("progress")]
             [Validation(Required=false)]
             public string Progress { get; set; }
-        };
+
+        }
 
         /// <summary>
         /// id of the request

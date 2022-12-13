@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class GenerateProblemPictureLinkResponseBody : TeaModel {
+        /// <summary>
+        /// data
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GenerateProblemPictureLinkResponseBodyData Data { get; set; }
@@ -17,10 +20,20 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [Validation(Required=false)]
             public List<GenerateProblemPictureLinkResponseBodyDataLinks> Links { get; set; }
             public class GenerateProblemPictureLinkResponseBodyDataLinks : TeaModel {
+                /// <summary>
+                /// oss key
+                /// </summary>
+                [NameInMap("key")]
+                [Validation(Required=false)]
                 public string Key { get; set; }
+
+                [NameInMap("link")]
+                [Validation(Required=false)]
                 public string Link { get; set; }
+
             }
-        };
+
+        }
 
         /// <summary>
         /// requestId

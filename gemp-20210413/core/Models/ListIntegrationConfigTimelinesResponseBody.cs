@@ -9,27 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class ListIntegrationConfigTimelinesResponseBody : TeaModel {
+        /// <summary>
+        /// data
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListIntegrationConfigTimelinesResponseBodyData> Data { get; set; }
         public class ListIntegrationConfigTimelinesResponseBodyData : TeaModel {
-            /// <summary>
-            /// 创建时间
-            /// </summary>
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
-            /// <summary>
-            /// 描述
-            /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
-            /// <summary>
-            /// 主题
-            /// </summary>
             [NameInMap("title")]
             [Validation(Required=false)]
             public string Title { get; set; }
