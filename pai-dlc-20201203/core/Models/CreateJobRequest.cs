@@ -16,16 +16,20 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             [NameInMap("Branch")]
             [Validation(Required=false)]
             public string Branch { get; set; }
+
             [NameInMap("CodeSourceId")]
             [Validation(Required=false)]
             public string CodeSourceId { get; set; }
+
             [NameInMap("Commit")]
             [Validation(Required=false)]
             public string Commit { get; set; }
+
             [NameInMap("MountPath")]
             [Validation(Required=false)]
             public string MountPath { get; set; }
-        };
+
+        }
 
         [NameInMap("DataSources")]
         [Validation(Required=false)]
@@ -85,6 +89,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public JobSettings Settings { get; set; }
 
+        [NameInMap("SuccessPolicy")]
+        [Validation(Required=false)]
+        public string SuccessPolicy { get; set; }
+
         [NameInMap("ThirdpartyLibDir")]
         [Validation(Required=false)]
         public string ThirdpartyLibDir { get; set; }
@@ -104,16 +112,20 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             [NameInMap("ExtendedCIDRs")]
             [Validation(Required=false)]
             public List<string> ExtendedCIDRs { get; set; }
+
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
             public string SecurityGroupId { get; set; }
+
             [NameInMap("SwitchId")]
             [Validation(Required=false)]
             public string SwitchId { get; set; }
+
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
-        };
+
+        }
 
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

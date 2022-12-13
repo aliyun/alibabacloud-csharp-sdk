@@ -90,25 +90,11 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        public CreateJobResponse CreateJob(CreateJobRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateJobWithOptions(request, headers, runtime);
-        }
-
-        public async Task<CreateJobResponse> CreateJobAsync(CreateJobRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateJobWithOptionsAsync(request, headers, runtime);
-        }
-
         public CreateJobResponse CreateJobWithOptions(CreateJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeSource.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeSource))
             {
                 body["CodeSource"] = request.CodeSource;
             }
@@ -124,7 +110,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 body["DisplayName"] = request.DisplayName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ElasticSpec.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ElasticSpec))
             {
                 body["ElasticSpec"] = request.ElasticSpec;
             }
@@ -156,9 +142,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 body["ResourceId"] = request.ResourceId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Settings.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Settings))
             {
                 body["Settings"] = request.Settings;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SuccessPolicy))
+            {
+                body["SuccessPolicy"] = request.SuccessPolicy;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdpartyLibDir))
             {
@@ -172,7 +162,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 body["UserCommand"] = request.UserCommand;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserVpc.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserVpc))
             {
                 body["UserVpc"] = request.UserVpc;
             }
@@ -204,7 +194,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeSource.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeSource))
             {
                 body["CodeSource"] = request.CodeSource;
             }
@@ -220,7 +210,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 body["DisplayName"] = request.DisplayName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ElasticSpec.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ElasticSpec))
             {
                 body["ElasticSpec"] = request.ElasticSpec;
             }
@@ -252,9 +242,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 body["ResourceId"] = request.ResourceId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Settings.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Settings))
             {
                 body["Settings"] = request.Settings;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SuccessPolicy))
+            {
+                body["SuccessPolicy"] = request.SuccessPolicy;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdpartyLibDir))
             {
@@ -268,7 +262,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 body["UserCommand"] = request.UserCommand;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserVpc.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserVpc))
             {
                 body["UserVpc"] = request.UserVpc;
             }
@@ -296,18 +290,18 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             return TeaModel.ToObject<CreateJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public CreateTensorboardResponse CreateTensorboard(CreateTensorboardRequest request)
+        public CreateJobResponse CreateJob(CreateJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateTensorboardWithOptions(request, headers, runtime);
+            return CreateJobWithOptions(request, headers, runtime);
         }
 
-        public async Task<CreateTensorboardResponse> CreateTensorboardAsync(CreateTensorboardRequest request)
+        public async Task<CreateJobResponse> CreateJobAsync(CreateJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateTensorboardWithOptionsAsync(request, headers, runtime);
+            return await CreateJobWithOptionsAsync(request, headers, runtime);
         }
 
         public CreateTensorboardResponse CreateTensorboardWithOptions(CreateTensorboardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -462,6 +456,62 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             return TeaModel.ToObject<CreateTensorboardResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        public CreateTensorboardResponse CreateTensorboard(CreateTensorboardRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateTensorboardWithOptions(request, headers, runtime);
+        }
+
+        public async Task<CreateTensorboardResponse> CreateTensorboardAsync(CreateTensorboardRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateTensorboardWithOptionsAsync(request, headers, runtime);
+        }
+
+        public DeleteJobResponse DeleteJobWithOptions(string JobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteJob",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteJobResponse> DeleteJobWithOptionsAsync(string JobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteJob",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public DeleteJobResponse DeleteJob(string JobId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -476,48 +526,60 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             return await DeleteJobWithOptionsAsync(JobId, headers, runtime);
         }
 
-        public DeleteJobResponse DeleteJobWithOptions(string JobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteTensorboardResponse DeleteTensorboardWithOptions(string TensorboardId, DeleteTensorboardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            JobId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "DeleteJob",
+                Action = "DeleteTensorboard",
                 Version = "2020-12-03",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/jobs/" + JobId,
+                Pathname = "/api/v1/tensorboards/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TensorboardId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteJobResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<DeleteTensorboardResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DeleteJobResponse> DeleteJobWithOptionsAsync(string JobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteTensorboardResponse> DeleteTensorboardWithOptionsAsync(string TensorboardId, DeleteTensorboardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            JobId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "DeleteJob",
+                Action = "DeleteTensorboard",
                 Version = "2020-12-03",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/jobs/" + JobId,
+                Pathname = "/api/v1/tensorboards/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TensorboardId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteJobResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<DeleteTensorboardResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteTensorboardResponse DeleteTensorboard(string TensorboardId, DeleteTensorboardRequest request)
@@ -534,62 +596,46 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             return await DeleteTensorboardWithOptionsAsync(TensorboardId, request, headers, runtime);
         }
 
-        public DeleteTensorboardResponse DeleteTensorboardWithOptions(string TensorboardId, DeleteTensorboardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetJobResponse GetJobWithOptions(string JobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            TensorboardId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TensorboardId);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
-            {
-                query["WorkspaceId"] = request.WorkspaceId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "DeleteTensorboard",
+                Action = "GetJob",
                 Version = "2020-12-03",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/tensorboards/" + TensorboardId,
-                Method = "DELETE",
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId),
+                Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteTensorboardResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<GetJobResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DeleteTensorboardResponse> DeleteTensorboardWithOptionsAsync(string TensorboardId, DeleteTensorboardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetJobResponse> GetJobWithOptionsAsync(string JobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            TensorboardId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TensorboardId);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
-            {
-                query["WorkspaceId"] = request.WorkspaceId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "DeleteTensorboard",
+                Action = "GetJob",
                 Version = "2020-12-03",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/tensorboards/" + TensorboardId,
-                Method = "DELETE",
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId),
+                Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteTensorboardResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetJobResponse GetJob(string JobId)
@@ -606,48 +652,76 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             return await GetJobWithOptionsAsync(JobId, headers, runtime);
         }
 
-        public GetJobResponse GetJobWithOptions(string JobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetJobEventsResponse GetJobEventsWithOptions(string JobId, GetJobEventsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            JobId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxEventsNum))
+            {
+                query["MaxEventsNum"] = request.MaxEventsNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "GetJob",
+                Action = "GetJobEvents",
                 Version = "2020-12-03",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/jobs/" + JobId,
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId) + "/events",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetJobResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<GetJobEventsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<GetJobResponse> GetJobWithOptionsAsync(string JobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetJobEventsResponse> GetJobEventsWithOptionsAsync(string JobId, GetJobEventsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            JobId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxEventsNum))
+            {
+                query["MaxEventsNum"] = request.MaxEventsNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "GetJob",
+                Action = "GetJobEvents",
                 Version = "2020-12-03",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/jobs/" + JobId,
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId) + "/events",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetJobResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetJobEventsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetJobEventsResponse GetJobEvents(string JobId, GetJobEventsRequest request)
@@ -664,22 +738,29 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             return await GetJobEventsWithOptionsAsync(JobId, request, headers, runtime);
         }
 
-        public GetJobEventsResponse GetJobEventsWithOptions(string JobId, GetJobEventsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetJobMetricsResponse GetJobMetricsWithOptions(string JobId, GetJobMetricsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            JobId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxEventsNum))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricType))
             {
-                query["MaxEventsNum"] = request.MaxEventsNum;
+                query["MetricType"] = request.MetricType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeStep))
+            {
+                query["TimeStep"] = request.TimeStep;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["Token"] = request.Token;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -688,35 +769,42 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "GetJobEvents",
+                Action = "GetJobMetrics",
                 Version = "2020-12-03",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/jobs/" + JobId + "/events",
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId) + "/metrics",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetJobEventsResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<GetJobMetricsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<GetJobEventsResponse> GetJobEventsWithOptionsAsync(string JobId, GetJobEventsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetJobMetricsResponse> GetJobMetricsWithOptionsAsync(string JobId, GetJobMetricsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            JobId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxEventsNum))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricType))
             {
-                query["MaxEventsNum"] = request.MaxEventsNum;
+                query["MetricType"] = request.MetricType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeStep))
+            {
+                query["TimeStep"] = request.TimeStep;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["Token"] = request.Token;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -725,17 +813,17 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "GetJobEvents",
+                Action = "GetJobMetrics",
                 Version = "2020-12-03",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/jobs/" + JobId + "/events",
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId) + "/metrics",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetJobEventsResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetJobMetricsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetJobMetricsResponse GetJobMetrics(string JobId, GetJobMetricsRequest request)
@@ -752,30 +840,25 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             return await GetJobMetricsWithOptionsAsync(JobId, request, headers, runtime);
         }
 
-        public GetJobMetricsResponse GetJobMetricsWithOptions(string JobId, GetJobMetricsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetPodEventsResponse GetPodEventsWithOptions(string JobId, string PodId, GetPodEventsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            JobId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricType))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxEventsNum))
             {
-                query["MetricType"] = request.MetricType;
+                query["MaxEventsNum"] = request.MaxEventsNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PodUid))
+            {
+                query["PodUid"] = request.PodUid;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeStep))
-            {
-                query["TimeStep"] = request.TimeStep;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
-            {
-                query["Token"] = request.Token;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -784,43 +867,38 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "GetJobMetrics",
+                Action = "GetPodEvents",
                 Version = "2020-12-03",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/jobs/" + JobId + "/metrics",
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId) + "/pods/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PodId) + "/events",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetJobMetricsResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<GetPodEventsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<GetJobMetricsResponse> GetJobMetricsWithOptionsAsync(string JobId, GetJobMetricsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetPodEventsResponse> GetPodEventsWithOptionsAsync(string JobId, string PodId, GetPodEventsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            JobId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricType))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxEventsNum))
             {
-                query["MetricType"] = request.MetricType;
+                query["MaxEventsNum"] = request.MaxEventsNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PodUid))
+            {
+                query["PodUid"] = request.PodUid;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeStep))
-            {
-                query["TimeStep"] = request.TimeStep;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
-            {
-                query["Token"] = request.Token;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -829,17 +907,17 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "GetJobMetrics",
+                Action = "GetPodEvents",
                 Version = "2020-12-03",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/jobs/" + JobId + "/metrics",
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId) + "/pods/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PodId) + "/events",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetJobMetricsResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetPodEventsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetPodEventsResponse GetPodEvents(string JobId, string PodId, GetPodEventsRequest request)
@@ -856,19 +934,21 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             return await GetPodEventsWithOptionsAsync(JobId, PodId, request, headers, runtime);
         }
 
-        public GetPodEventsResponse GetPodEventsWithOptions(string JobId, string PodId, GetPodEventsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetPodLogsResponse GetPodLogsWithOptions(string JobId, string PodId, GetPodLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            JobId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId);
-            PodId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PodId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownloadToFile))
+            {
+                query["DownloadToFile"] = request.DownloadToFile;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxEventsNum))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxLines))
             {
-                query["MaxEventsNum"] = request.MaxEventsNum;
+                query["MaxLines"] = request.MaxLines;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PodUid))
             {
@@ -885,32 +965,34 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "GetPodEvents",
+                Action = "GetPodLogs",
                 Version = "2020-12-03",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/jobs/" + JobId + "/pods/" + PodId + "/events",
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId) + "/pods/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PodId) + "/logs",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetPodEventsResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<GetPodLogsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<GetPodEventsResponse> GetPodEventsWithOptionsAsync(string JobId, string PodId, GetPodEventsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetPodLogsResponse> GetPodLogsWithOptionsAsync(string JobId, string PodId, GetPodLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            JobId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId);
-            PodId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PodId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownloadToFile))
+            {
+                query["DownloadToFile"] = request.DownloadToFile;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxEventsNum))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxLines))
             {
-                query["MaxEventsNum"] = request.MaxEventsNum;
+                query["MaxLines"] = request.MaxLines;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PodUid))
             {
@@ -927,17 +1009,17 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "GetPodEvents",
+                Action = "GetPodLogs",
                 Version = "2020-12-03",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/jobs/" + JobId + "/pods/" + PodId + "/events",
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId) + "/pods/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PodId) + "/logs",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetPodEventsResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetPodLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetPodLogsResponse GetPodLogs(string JobId, string PodId, GetPodLogsRequest request)
@@ -954,31 +1036,17 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             return await GetPodLogsWithOptionsAsync(JobId, PodId, request, headers, runtime);
         }
 
-        public GetPodLogsResponse GetPodLogsWithOptions(string JobId, string PodId, GetPodLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetTensorboardResponse GetTensorboardWithOptions(string TensorboardId, GetTensorboardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            JobId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId);
-            PodId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PodId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownloadToFile))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JodId))
             {
-                query["DownloadToFile"] = request.DownloadToFile;
+                query["JodId"] = request.JodId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
-                query["EndTime"] = request.EndTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxLines))
-            {
-                query["MaxLines"] = request.MaxLines;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PodUid))
-            {
-                query["PodUid"] = request.PodUid;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
-            {
-                query["StartTime"] = request.StartTime;
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -987,44 +1055,30 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "GetPodLogs",
+                Action = "GetTensorboard",
                 Version = "2020-12-03",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/jobs/" + JobId + "/pods/" + PodId + "/logs",
+                Pathname = "/api/v1/tensorboards/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TensorboardId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetPodLogsResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<GetTensorboardResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<GetPodLogsResponse> GetPodLogsWithOptionsAsync(string JobId, string PodId, GetPodLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetTensorboardResponse> GetTensorboardWithOptionsAsync(string TensorboardId, GetTensorboardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            JobId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId);
-            PodId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PodId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownloadToFile))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JodId))
             {
-                query["DownloadToFile"] = request.DownloadToFile;
+                query["JodId"] = request.JodId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
-                query["EndTime"] = request.EndTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxLines))
-            {
-                query["MaxLines"] = request.MaxLines;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PodUid))
-            {
-                query["PodUid"] = request.PodUid;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
-            {
-                query["StartTime"] = request.StartTime;
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1033,17 +1087,17 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "GetPodLogs",
+                Action = "GetTensorboard",
                 Version = "2020-12-03",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/jobs/" + JobId + "/pods/" + PodId + "/logs",
+                Pathname = "/api/v1/tensorboards/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TensorboardId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetPodLogsResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetTensorboardResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetTensorboardResponse GetTensorboard(string TensorboardId, GetTensorboardRequest request)
@@ -1058,86 +1112,6 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetTensorboardWithOptionsAsync(TensorboardId, request, headers, runtime);
-        }
-
-        public GetTensorboardResponse GetTensorboardWithOptions(string TensorboardId, GetTensorboardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            TensorboardId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TensorboardId);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JodId))
-            {
-                query["JodId"] = request.JodId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
-            {
-                query["WorkspaceId"] = request.WorkspaceId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetTensorboard",
-                Version = "2020-12-03",
-                Protocol = "HTTPS",
-                Pathname = "/api/v1/tensorboards/" + TensorboardId,
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetTensorboardResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<GetTensorboardResponse> GetTensorboardWithOptionsAsync(string TensorboardId, GetTensorboardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            TensorboardId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TensorboardId);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JodId))
-            {
-                query["JodId"] = request.JodId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
-            {
-                query["WorkspaceId"] = request.WorkspaceId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetTensorboard",
-                Version = "2020-12-03",
-                Protocol = "HTTPS",
-                Pathname = "/api/v1/tensorboards/" + TensorboardId,
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetTensorboardResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public ListEcsSpecsResponse ListEcsSpecs(ListEcsSpecsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListEcsSpecsWithOptions(request, headers, runtime);
-        }
-
-        public async Task<ListEcsSpecsResponse> ListEcsSpecsAsync(ListEcsSpecsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListEcsSpecsWithOptionsAsync(request, headers, runtime);
         }
 
         public ListEcsSpecsResponse ListEcsSpecsWithOptions(ListEcsSpecsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1228,18 +1202,18 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             return TeaModel.ToObject<ListEcsSpecsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListJobsResponse ListJobs(ListJobsRequest request)
+        public ListEcsSpecsResponse ListEcsSpecs(ListEcsSpecsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListJobsWithOptions(request, headers, runtime);
+            return ListEcsSpecsWithOptions(request, headers, runtime);
         }
 
-        public async Task<ListJobsResponse> ListJobsAsync(ListJobsRequest request)
+        public async Task<ListEcsSpecsResponse> ListEcsSpecsAsync(ListEcsSpecsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListJobsWithOptionsAsync(request, headers, runtime);
+            return await ListEcsSpecsWithOptionsAsync(request, headers, runtime);
         }
 
         public ListJobsResponse ListJobsWithOptions(ListJobsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1271,6 +1245,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromAllWorkspaces))
             {
                 query["FromAllWorkspaces"] = request.FromAllWorkspaces;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobType))
             {
@@ -1370,6 +1348,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 query["FromAllWorkspaces"] = request.FromAllWorkspaces;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobType))
             {
                 query["JobType"] = request.JobType;
@@ -1438,18 +1420,18 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             return TeaModel.ToObject<ListJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListTensorboardsResponse ListTensorboards(ListTensorboardsRequest request)
+        public ListJobsResponse ListJobs(ListJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListTensorboardsWithOptions(request, headers, runtime);
+            return ListJobsWithOptions(request, headers, runtime);
         }
 
-        public async Task<ListTensorboardsResponse> ListTensorboardsAsync(ListTensorboardsRequest request)
+        public async Task<ListJobsResponse> ListJobsAsync(ListJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListTensorboardsWithOptionsAsync(request, headers, runtime);
+            return await ListJobsWithOptionsAsync(request, headers, runtime);
         }
 
         public ListTensorboardsResponse ListTensorboardsWithOptions(ListTensorboardsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1612,6 +1594,76 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             return TeaModel.ToObject<ListTensorboardsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        public ListTensorboardsResponse ListTensorboards(ListTensorboardsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListTensorboardsWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ListTensorboardsResponse> ListTensorboardsAsync(ListTensorboardsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListTensorboardsWithOptionsAsync(request, headers, runtime);
+        }
+
+        public StartTensorboardResponse StartTensorboardWithOptions(string TensorboardId, StartTensorboardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartTensorboard",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/tensorboards/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TensorboardId) + "/start",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartTensorboardResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<StartTensorboardResponse> StartTensorboardWithOptionsAsync(string TensorboardId, StartTensorboardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartTensorboard",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/tensorboards/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TensorboardId) + "/start",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartTensorboardResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public StartTensorboardResponse StartTensorboard(string TensorboardId, StartTensorboardRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1626,62 +1678,46 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             return await StartTensorboardWithOptionsAsync(TensorboardId, request, headers, runtime);
         }
 
-        public StartTensorboardResponse StartTensorboardWithOptions(string TensorboardId, StartTensorboardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public StopJobResponse StopJobWithOptions(string JobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            TensorboardId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TensorboardId);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
-            {
-                query["WorkspaceId"] = request.WorkspaceId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "StartTensorboard",
+                Action = "StopJob",
                 Version = "2020-12-03",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/tensorboards/" + TensorboardId + "/start",
-                Method = "PUT",
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId) + "/stop",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StartTensorboardResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<StopJobResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<StartTensorboardResponse> StartTensorboardWithOptionsAsync(string TensorboardId, StartTensorboardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<StopJobResponse> StopJobWithOptionsAsync(string JobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            TensorboardId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TensorboardId);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
-            {
-                query["WorkspaceId"] = request.WorkspaceId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "StartTensorboard",
+                Action = "StopJob",
                 Version = "2020-12-03",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/tensorboards/" + TensorboardId + "/start",
-                Method = "PUT",
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId) + "/stop",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StartTensorboardResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<StopJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public StopJobResponse StopJob(string JobId)
@@ -1698,48 +1734,60 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             return await StopJobWithOptionsAsync(JobId, headers, runtime);
         }
 
-        public StopJobResponse StopJobWithOptions(string JobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public StopTensorboardResponse StopTensorboardWithOptions(string TensorboardId, StopTensorboardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            JobId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "StopJob",
+                Action = "StopTensorboard",
                 Version = "2020-12-03",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/jobs/" + JobId + "/stop",
-                Method = "POST",
+                Pathname = "/api/v1/tensorboards/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TensorboardId) + "/stop",
+                Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StopJobResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<StopTensorboardResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<StopJobResponse> StopJobWithOptionsAsync(string JobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<StopTensorboardResponse> StopTensorboardWithOptionsAsync(string TensorboardId, StopTensorboardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            JobId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "StopJob",
+                Action = "StopTensorboard",
                 Version = "2020-12-03",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/jobs/" + JobId + "/stop",
-                Method = "POST",
+                Pathname = "/api/v1/tensorboards/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TensorboardId) + "/stop",
+                Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StopJobResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<StopTensorboardResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public StopTensorboardResponse StopTensorboard(string TensorboardId, StopTensorboardRequest request)
@@ -1756,62 +1804,60 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             return await StopTensorboardWithOptionsAsync(TensorboardId, request, headers, runtime);
         }
 
-        public StopTensorboardResponse StopTensorboardWithOptions(string TensorboardId, StopTensorboardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateJobResponse UpdateJobWithOptions(string JobId, UpdateJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            TensorboardId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TensorboardId);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
             {
-                query["WorkspaceId"] = request.WorkspaceId;
+                body["Priority"] = request.Priority;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "StopTensorboard",
+                Action = "UpdateJob",
                 Version = "2020-12-03",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/tensorboards/" + TensorboardId + "/stop",
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StopTensorboardResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<UpdateJobResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<StopTensorboardResponse> StopTensorboardWithOptionsAsync(string TensorboardId, StopTensorboardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateJobResponse> UpdateJobWithOptionsAsync(string JobId, UpdateJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            TensorboardId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TensorboardId);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
             {
-                query["WorkspaceId"] = request.WorkspaceId;
+                body["Priority"] = request.Priority;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "StopTensorboard",
+                Action = "UpdateJob",
                 Version = "2020-12-03",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/tensorboards/" + TensorboardId + "/stop",
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StopTensorboardResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<UpdateJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateJobResponse UpdateJob(string JobId, UpdateJobRequest request)
@@ -1828,62 +1874,68 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             return await UpdateJobWithOptionsAsync(JobId, request, headers, runtime);
         }
 
-        public UpdateJobResponse UpdateJobWithOptions(string JobId, UpdateJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateTensorboardResponse UpdateTensorboardWithOptions(string TensorboardId, UpdateTensorboardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            JobId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxRunningTimeMinutes))
             {
-                body["Priority"] = request.Priority;
+                query["MaxRunningTimeMinutes"] = request.MaxRunningTimeMinutes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "UpdateJob",
+                Action = "UpdateTensorboard",
                 Version = "2020-12-03",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/jobs/" + JobId,
+                Pathname = "/api/v1/tensorboards/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TensorboardId),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateJobResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<UpdateTensorboardResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<UpdateJobResponse> UpdateJobWithOptionsAsync(string JobId, UpdateJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateTensorboardResponse> UpdateTensorboardWithOptionsAsync(string TensorboardId, UpdateTensorboardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            JobId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxRunningTimeMinutes))
             {
-                body["Priority"] = request.Priority;
+                query["MaxRunningTimeMinutes"] = request.MaxRunningTimeMinutes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "UpdateJob",
+                Action = "UpdateTensorboard",
                 Version = "2020-12-03",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/jobs/" + JobId,
+                Pathname = "/api/v1/tensorboards/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TensorboardId),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateJobResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<UpdateTensorboardResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateTensorboardResponse UpdateTensorboard(string TensorboardId, UpdateTensorboardRequest request)
@@ -1898,72 +1950,6 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateTensorboardWithOptionsAsync(TensorboardId, request, headers, runtime);
-        }
-
-        public UpdateTensorboardResponse UpdateTensorboardWithOptions(string TensorboardId, UpdateTensorboardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            TensorboardId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TensorboardId);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxRunningTimeMinutes))
-            {
-                query["MaxRunningTimeMinutes"] = request.MaxRunningTimeMinutes;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
-            {
-                query["WorkspaceId"] = request.WorkspaceId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UpdateTensorboard",
-                Version = "2020-12-03",
-                Protocol = "HTTPS",
-                Pathname = "/api/v1/tensorboards/" + TensorboardId,
-                Method = "PUT",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<UpdateTensorboardResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<UpdateTensorboardResponse> UpdateTensorboardWithOptionsAsync(string TensorboardId, UpdateTensorboardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            TensorboardId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TensorboardId);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxRunningTimeMinutes))
-            {
-                query["MaxRunningTimeMinutes"] = request.MaxRunningTimeMinutes;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
-            {
-                query["WorkspaceId"] = request.WorkspaceId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UpdateTensorboard",
-                Version = "2020-12-03",
-                Protocol = "HTTPS",
-                Pathname = "/api/v1/tensorboards/" + TensorboardId,
-                Method = "PUT",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<UpdateTensorboardResponse>(await CallApiAsync(params_, req, runtime));
         }
 
     }

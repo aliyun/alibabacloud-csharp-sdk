@@ -16,16 +16,20 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             [NameInMap("Branch")]
             [Validation(Required=false)]
             public string Branch { get; set; }
+
             [NameInMap("CodeSourceId")]
             [Validation(Required=false)]
             public string CodeSourceId { get; set; }
+
             [NameInMap("Commit")]
             [Validation(Required=false)]
             public string Commit { get; set; }
+
             [NameInMap("MountPath")]
             [Validation(Required=false)]
             public string MountPath { get; set; }
-        };
+
+        }
 
         [NameInMap("DataSources")]
         [Validation(Required=false)]

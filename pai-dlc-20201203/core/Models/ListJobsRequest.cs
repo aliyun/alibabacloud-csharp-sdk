@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public bool? FromAllWorkspaces { get; set; }
 
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public string JobId { get; set; }
+
         [NameInMap("JobType")]
         [Validation(Required=false)]
         public string JobType { get; set; }

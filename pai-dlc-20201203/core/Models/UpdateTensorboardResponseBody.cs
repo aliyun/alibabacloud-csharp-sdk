@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Tensorboad Id
+        /// </summary>
         [NameInMap("TensorboardId")]
         [Validation(Required=false)]
         public string TensorboardId { get; set; }

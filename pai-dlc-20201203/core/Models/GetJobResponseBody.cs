@@ -20,16 +20,20 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             [NameInMap("Branch")]
             [Validation(Required=false)]
             public string Branch { get; set; }
+
             [NameInMap("CodeSourceId")]
             [Validation(Required=false)]
             public string CodeSourceId { get; set; }
+
             [NameInMap("Commit")]
             [Validation(Required=false)]
             public string Commit { get; set; }
+
             [NameInMap("MountPath")]
             [Validation(Required=false)]
             public string MountPath { get; set; }
-        };
+
+        }
 
         [NameInMap("DataSources")]
         [Validation(Required=false)]
@@ -137,14 +141,23 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
                 [Validation(Required=false)]
                 public string GmtStartTime { get; set; }
 
+                /// <summary>
+                /// Pod Ip
+                /// </summary>
                 [NameInMap("Ip")]
                 [Validation(Required=false)]
                 public string Ip { get; set; }
 
+                /// <summary>
+                /// Pod Id
+                /// </summary>
                 [NameInMap("PodId")]
                 [Validation(Required=false)]
                 public string PodId { get; set; }
 
+                /// <summary>
+                /// Pod UId
+                /// </summary>
                 [NameInMap("PodUid")]
                 [Validation(Required=false)]
                 public string PodUid { get; set; }
@@ -167,6 +180,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             [Validation(Required=false)]
             public string PodId { get; set; }
 
+            /// <summary>
+            /// Pod UId
+            /// </summary>
             [NameInMap("PodUid")]
             [Validation(Required=false)]
             public string PodUid { get; set; }

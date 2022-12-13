@@ -17,13 +17,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string ClusterName { get; set; }
 
-        [NameInMap("EnableTideResource")]
+        [NameInMap("QuotaConfig")]
         [Validation(Required=false)]
-        public bool? EnableTideResource { get; set; }
-
-        [NameInMap("IsExclusiveQuota")]
-        [Validation(Required=false)]
-        public bool? IsExclusiveQuota { get; set; }
+        public QuotaConfig QuotaConfig { get; set; }
 
         [NameInMap("QuotaId")]
         [Validation(Required=false)]
@@ -36,10 +32,6 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [NameInMap("QuotaType")]
         [Validation(Required=false)]
         public string QuotaType { get; set; }
-
-        [NameInMap("ResourceLevel")]
-        [Validation(Required=false)]
-        public string ResourceLevel { get; set; }
 
         [NameInMap("TotalQuota")]
         [Validation(Required=false)]

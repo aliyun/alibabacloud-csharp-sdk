@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class GetTensorboardRequest : TeaModel {
+        /// <summary>
+        /// JodId
+        /// </summary>
         [NameInMap("JodId")]
         [Validation(Required=false)]
         public string JodId { get; set; }
