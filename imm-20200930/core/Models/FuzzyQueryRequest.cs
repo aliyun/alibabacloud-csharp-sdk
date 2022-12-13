@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        [NameInMap("Order")]
+        [Validation(Required=false)]
+        public string Order { get; set; }
+
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("Query")]
         [Validation(Required=false)]
         public string Query { get; set; }
+
+        [NameInMap("Sort")]
+        [Validation(Required=false)]
+        public string Sort { get; set; }
 
     }
 

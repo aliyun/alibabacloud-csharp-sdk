@@ -1421,6 +1421,14 @@ namespace AlibabaCloud.SDK.Imm20200930
             return await CreateDatasetWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param tmpReq CreateDetectVideoLabelsTaskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDetectVideoLabelsTaskResponse
+         */
+        // Deprecated
         public CreateDetectVideoLabelsTaskResponse CreateDetectVideoLabelsTaskWithOptions(CreateDetectVideoLabelsTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1478,6 +1486,14 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateDetectVideoLabelsTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param tmpReq CreateDetectVideoLabelsTaskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDetectVideoLabelsTaskResponse
+         */
+        // Deprecated
         public async Task<CreateDetectVideoLabelsTaskResponse> CreateDetectVideoLabelsTaskWithOptionsAsync(CreateDetectVideoLabelsTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1535,12 +1551,26 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateDetectVideoLabelsTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request CreateDetectVideoLabelsTaskRequest
+          * @return CreateDetectVideoLabelsTaskResponse
+         */
+        // Deprecated
         public CreateDetectVideoLabelsTaskResponse CreateDetectVideoLabelsTask(CreateDetectVideoLabelsTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDetectVideoLabelsTaskWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request CreateDetectVideoLabelsTaskRequest
+          * @return CreateDetectVideoLabelsTaskResponse
+         */
+        // Deprecated
         public async Task<CreateDetectVideoLabelsTaskResponse> CreateDetectVideoLabelsTaskAsync(CreateDetectVideoLabelsTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5111,6 +5141,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 query["NextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
                 query["ProjectName"] = request.ProjectName;
@@ -5118,6 +5152,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
             {
                 query["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sort))
+            {
+                query["Sort"] = request.Sort;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5154,6 +5192,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 query["NextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
                 query["ProjectName"] = request.ProjectName;
@@ -5161,6 +5203,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
             {
                 query["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sort))
+            {
+                query["Sort"] = request.Sort;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5357,6 +5403,14 @@ namespace AlibabaCloud.SDK.Imm20200930
             return await GetDatasetWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetDetectVideoLabelsResultRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetDetectVideoLabelsResultResponse
+         */
+        // Deprecated
         public GetDetectVideoLabelsResultResponse GetDetectVideoLabelsResultWithOptions(GetDetectVideoLabelsResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5392,6 +5446,14 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetDetectVideoLabelsResultResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetDetectVideoLabelsResultRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetDetectVideoLabelsResultResponse
+         */
+        // Deprecated
         public async Task<GetDetectVideoLabelsResultResponse> GetDetectVideoLabelsResultWithOptionsAsync(GetDetectVideoLabelsResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5427,12 +5489,26 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetDetectVideoLabelsResultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetDetectVideoLabelsResultRequest
+          * @return GetDetectVideoLabelsResultResponse
+         */
+        // Deprecated
         public GetDetectVideoLabelsResultResponse GetDetectVideoLabelsResult(GetDetectVideoLabelsResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetDetectVideoLabelsResultWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetDetectVideoLabelsResultRequest
+          * @return GetDetectVideoLabelsResultResponse
+         */
+        // Deprecated
         public async Task<GetDetectVideoLabelsResultResponse> GetDetectVideoLabelsResultAsync(GetDetectVideoLabelsResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
