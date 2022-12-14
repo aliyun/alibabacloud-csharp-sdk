@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Facebody20200910.Models
 
         [NameInMap("facialPictureData")]
         [Validation(Required=false)]
-        public byte[] FacialPictureData { get; set; }
+        public string FacialPictureData { get; set; }
 
         [NameInMap("facialPictureUrl")]
         [Validation(Required=false)]

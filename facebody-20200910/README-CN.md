@@ -6,10 +6,10 @@
 
 ## 安装
 
-### Composer
+### Nuget
 
 ```bash
-composer require AlibabaCloud.SDK.Facebody20200910
+dotnet add package AlibabaCloud.SDK.Facebody20200910
 ```
 
 ## 问题

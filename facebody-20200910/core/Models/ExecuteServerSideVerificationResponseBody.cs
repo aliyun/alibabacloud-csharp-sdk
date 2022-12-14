@@ -9,13 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20200910.Models
 {
     public class ExecuteServerSideVerificationResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ExecuteServerSideVerificationResponseBodyData Data { get; set; }
@@ -23,21 +16,20 @@ namespace AlibabaCloud.SDK.Facebody20200910.Models
             [NameInMap("Pass")]
             [Validation(Required=false)]
             public bool? Pass { get; set; }
-            [NameInMap("VerificationToken")]
-            [Validation(Required=false)]
-            public string VerificationToken { get; set; }
+
             [NameInMap("Reason")]
             [Validation(Required=false)]
             public string Reason { get; set; }
-        };
 
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
+            [NameInMap("VerificationToken")]
+            [Validation(Required=false)]
+            public string VerificationToken { get; set; }
 
-        [NameInMap("Message")]
+        }
+
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Message { get; set; }
+        public string RequestId { get; set; }
 
     }
 

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20200910.Models
 {
     public class DetectIPCPedestrianOptimizedResponseBody : TeaModel {
-        /// <summary>
-        /// data
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DetectIPCPedestrianOptimizedResponseBodyData Data { get; set; }
@@ -20,17 +17,24 @@ namespace AlibabaCloud.SDK.Facebody20200910.Models
             [Validation(Required=false)]
             public List<DetectIPCPedestrianOptimizedResponseBodyDataImageInfoList> ImageInfoList { get; set; }
             public class DetectIPCPedestrianOptimizedResponseBodyDataImageInfoList : TeaModel {
+                [NameInMap("Elements")]
+                [Validation(Required=false)]
                 public List<DetectIPCPedestrianOptimizedResponseBodyDataImageInfoListElements> Elements { get; set; }
                 public class DetectIPCPedestrianOptimizedResponseBodyDataImageInfoListElements : TeaModel {
-                    public List<string> Boxes { get; set; }
-                    public float? Score { get; set; }
-                }
-            }
-        };
+                    [NameInMap("Boxes")]
+                    [Validation(Required=false)]
+                    public List<long?> Boxes { get; set; }
 
-        /// <summary>
-        /// requestId
-        /// </summary>
+                    [NameInMap("Score")]
+                    [Validation(Required=false)]
+                    public float? Score { get; set; }
+
+                }
+
+            }
+
+        }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
