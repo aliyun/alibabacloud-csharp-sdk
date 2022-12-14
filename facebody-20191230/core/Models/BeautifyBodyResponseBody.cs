@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class BeautifyBodyResponseBody : TeaModel {
+        /// <summary>
+        /// Id of the request
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public BeautifyBodyResponseBodyData Data { get; set; }

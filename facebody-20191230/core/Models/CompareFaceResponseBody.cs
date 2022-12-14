@@ -29,14 +29,23 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public float? QualityScoreB { get; set; }
 
+            /// <summary>
+            /// 1
+            /// </summary>
             [NameInMap("RectAList")]
             [Validation(Required=false)]
             public List<int?> RectAList { get; set; }
 
+            /// <summary>
+            /// 1
+            /// </summary>
             [NameInMap("RectBList")]
             [Validation(Required=false)]
             public List<int?> RectBList { get; set; }
 
+            /// <summary>
+            /// 1
+            /// </summary>
             [NameInMap("Thresholds")]
             [Validation(Required=false)]
             public List<float?> Thresholds { get; set; }

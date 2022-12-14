@@ -17,10 +17,16 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public int? FaceCount { get; set; }
 
+            /// <summary>
+            /// 1
+            /// </summary>
             [NameInMap("FaceProbabilityList")]
             [Validation(Required=false)]
             public List<float?> FaceProbabilityList { get; set; }
 
+            /// <summary>
+            /// 1
+            /// </summary>
             [NameInMap("FaceRectangles")]
             [Validation(Required=false)]
             public List<int?> FaceRectangles { get; set; }
@@ -29,14 +35,23 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public int? LandmarkCount { get; set; }
 
+            /// <summary>
+            /// 1
+            /// </summary>
             [NameInMap("Landmarks")]
             [Validation(Required=false)]
             public List<float?> Landmarks { get; set; }
 
+            /// <summary>
+            /// 1
+            /// </summary>
             [NameInMap("PoseList")]
             [Validation(Required=false)]
             public List<float?> PoseList { get; set; }
 
+            /// <summary>
+            /// 1
+            /// </summary>
             [NameInMap("Pupils")]
             [Validation(Required=false)]
             public List<float?> Pupils { get; set; }
@@ -45,34 +60,58 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public DetectFaceResponseBodyDataQualities Qualities { get; set; }
             public class DetectFaceResponseBodyDataQualities : TeaModel {
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("BlurList")]
                 [Validation(Required=false)]
                 public List<float?> BlurList { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("FnfList")]
                 [Validation(Required=false)]
                 public List<float?> FnfList { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("GlassList")]
                 [Validation(Required=false)]
                 public List<float?> GlassList { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("IlluList")]
                 [Validation(Required=false)]
                 public List<float?> IlluList { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("MaskList")]
                 [Validation(Required=false)]
                 public List<float?> MaskList { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("NoiseList")]
                 [Validation(Required=false)]
                 public List<float?> NoiseList { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("PoseList")]
                 [Validation(Required=false)]
                 public List<float?> PoseList { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("ScoreList")]
                 [Validation(Required=false)]
                 public List<float?> ScoreList { get; set; }

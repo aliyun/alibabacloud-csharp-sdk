@@ -3761,7 +3761,7 @@ namespace AlibabaCloud.SDK.Facebody20191230
             AlibabaCloud.OpenApiUtil.Client.Convert(request, detectLivingFaceReq);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tasks))
             {
-                int? i = 0;
+                int? i0 = 0;
 
                 foreach (var item0 in request.Tasks) {
                     if (!AlibabaCloud.TeaUtil.Common.IsUnset(item0.ImageURLObject))
@@ -3791,9 +3791,9 @@ namespace AlibabaCloud.SDK.Facebody20191230
                             Header = ossHeader,
                         };
                         ossClient.PostObject(uploadRequest, ossRuntime);
-                        DetectLivingFaceRequest.DetectLivingFaceRequestTasks tmp = detectLivingFaceReq.Tasks[i.Value];
+                        DetectLivingFaceRequest.DetectLivingFaceRequestTasks tmp = detectLivingFaceReq.Tasks[i0.Value];
                         tmp.ImageURL = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
-                        i = AlibabaCloud.DarabonbaNumber.NumberUtil.Ltoi(AlibabaCloud.DarabonbaNumber.NumberUtil.Add(AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(i), AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(1)));
+                        i0 = AlibabaCloud.DarabonbaNumber.NumberUtil.Ltoi(AlibabaCloud.DarabonbaNumber.NumberUtil.Add(AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(i0), AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(1)));
                     }
                 }
             }
@@ -3851,7 +3851,7 @@ namespace AlibabaCloud.SDK.Facebody20191230
             AlibabaCloud.OpenApiUtil.Client.Convert(request, detectLivingFaceReq);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tasks))
             {
-                int? i = 0;
+                int? i0 = 0;
 
                 foreach (var item0 in request.Tasks) {
                     if (!AlibabaCloud.TeaUtil.Common.IsUnset(item0.ImageURLObject))
@@ -3881,9 +3881,9 @@ namespace AlibabaCloud.SDK.Facebody20191230
                             Header = ossHeader,
                         };
                         await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
-                        DetectLivingFaceRequest.DetectLivingFaceRequestTasks tmp = detectLivingFaceReq.Tasks[i.Value];
+                        DetectLivingFaceRequest.DetectLivingFaceRequestTasks tmp = detectLivingFaceReq.Tasks[i0.Value];
                         tmp.ImageURL = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
-                        i = AlibabaCloud.DarabonbaNumber.NumberUtil.Ltoi(AlibabaCloud.DarabonbaNumber.NumberUtil.Add(AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(i), AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(1)));
+                        i0 = AlibabaCloud.DarabonbaNumber.NumberUtil.Ltoi(AlibabaCloud.DarabonbaNumber.NumberUtil.Add(AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(i0), AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(1)));
                     }
                 }
             }
@@ -8547,7 +8547,7 @@ namespace AlibabaCloud.SDK.Facebody20191230
             AlibabaCloud.OpenApiUtil.Client.Convert(request, recognizeActionReq);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.URLList))
             {
-                int? i = 0;
+                int? i0 = 0;
 
                 foreach (var item0 in request.URLList) {
                     if (!AlibabaCloud.TeaUtil.Common.IsUnset(item0.URLObject))
@@ -8577,11 +8577,40 @@ namespace AlibabaCloud.SDK.Facebody20191230
                             Header = ossHeader,
                         };
                         ossClient.PostObject(uploadRequest, ossRuntime);
-                        RecognizeActionRequest.RecognizeActionRequestURLList tmp = recognizeActionReq.URLList[i.Value];
+                        RecognizeActionRequest.RecognizeActionRequestURLList tmp = recognizeActionReq.URLList[i0.Value];
                         tmp.URL = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
-                        i = AlibabaCloud.DarabonbaNumber.NumberUtil.Ltoi(AlibabaCloud.DarabonbaNumber.NumberUtil.Add(AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(i), AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(1)));
+                        i0 = AlibabaCloud.DarabonbaNumber.NumberUtil.Ltoi(AlibabaCloud.DarabonbaNumber.NumberUtil.Add(AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(i0), AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(1)));
                     }
                 }
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoUrlObject))
+            {
+                authResponse = authClient.AuthorizeFileUploadWithOptions(authRequest, runtime);
+                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
+                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
+                ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+                fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
+                {
+                    Filename = authResponse.Body.ObjectKey,
+                    Content = request.VideoUrlObject,
+                    ContentType = "",
+                };
+                ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
+                {
+                    AccessKeyId = authResponse.Body.AccessKeyId,
+                    Policy = authResponse.Body.EncodedPolicy,
+                    Signature = authResponse.Body.Signature,
+                    Key = authResponse.Body.ObjectKey,
+                    File = fileObj,
+                    SuccessActionStatus = "201",
+                };
+                uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
+                {
+                    BucketName = authResponse.Body.Bucket,
+                    Header = ossHeader,
+                };
+                ossClient.PostObject(uploadRequest, ossRuntime);
+                recognizeActionReq.VideoUrl = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
             }
             RecognizeActionResponse recognizeActionResp = RecognizeActionWithOptions(recognizeActionReq, runtime);
             return recognizeActionResp;
@@ -8637,7 +8666,7 @@ namespace AlibabaCloud.SDK.Facebody20191230
             AlibabaCloud.OpenApiUtil.Client.Convert(request, recognizeActionReq);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.URLList))
             {
-                int? i = 0;
+                int? i0 = 0;
 
                 foreach (var item0 in request.URLList) {
                     if (!AlibabaCloud.TeaUtil.Common.IsUnset(item0.URLObject))
@@ -8667,11 +8696,40 @@ namespace AlibabaCloud.SDK.Facebody20191230
                             Header = ossHeader,
                         };
                         await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
-                        RecognizeActionRequest.RecognizeActionRequestURLList tmp = recognizeActionReq.URLList[i.Value];
+                        RecognizeActionRequest.RecognizeActionRequestURLList tmp = recognizeActionReq.URLList[i0.Value];
                         tmp.URL = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
-                        i = AlibabaCloud.DarabonbaNumber.NumberUtil.Ltoi(AlibabaCloud.DarabonbaNumber.NumberUtil.Add(AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(i), AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(1)));
+                        i0 = AlibabaCloud.DarabonbaNumber.NumberUtil.Ltoi(AlibabaCloud.DarabonbaNumber.NumberUtil.Add(AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(i0), AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(1)));
                     }
                 }
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoUrlObject))
+            {
+                authResponse = await authClient.AuthorizeFileUploadWithOptionsAsync(authRequest, runtime);
+                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
+                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
+                ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+                fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
+                {
+                    Filename = authResponse.Body.ObjectKey,
+                    Content = request.VideoUrlObject,
+                    ContentType = "",
+                };
+                ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
+                {
+                    AccessKeyId = authResponse.Body.AccessKeyId,
+                    Policy = authResponse.Body.EncodedPolicy,
+                    Signature = authResponse.Body.Signature,
+                    Key = authResponse.Body.ObjectKey,
+                    File = fileObj,
+                    SuccessActionStatus = "201",
+                };
+                uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
+                {
+                    BucketName = authResponse.Body.Bucket,
+                    Header = ossHeader,
+                };
+                await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
+                recognizeActionReq.VideoUrl = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
             }
             RecognizeActionResponse recognizeActionResp = await RecognizeActionWithOptionsAsync(recognizeActionReq, runtime);
             return recognizeActionResp;
@@ -9565,7 +9623,7 @@ namespace AlibabaCloud.SDK.Facebody20191230
             AlibabaCloud.OpenApiUtil.Client.Convert(request, recognizePublicFaceReq);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Task))
             {
-                int? i = 0;
+                int? i0 = 0;
 
                 foreach (var item0 in request.Task) {
                     if (!AlibabaCloud.TeaUtil.Common.IsUnset(item0.ImageURLObject))
@@ -9595,9 +9653,9 @@ namespace AlibabaCloud.SDK.Facebody20191230
                             Header = ossHeader,
                         };
                         ossClient.PostObject(uploadRequest, ossRuntime);
-                        RecognizePublicFaceRequest.RecognizePublicFaceRequestTask tmp = recognizePublicFaceReq.Task[i.Value];
+                        RecognizePublicFaceRequest.RecognizePublicFaceRequestTask tmp = recognizePublicFaceReq.Task[i0.Value];
                         tmp.ImageURL = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
-                        i = AlibabaCloud.DarabonbaNumber.NumberUtil.Ltoi(AlibabaCloud.DarabonbaNumber.NumberUtil.Add(AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(i), AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(1)));
+                        i0 = AlibabaCloud.DarabonbaNumber.NumberUtil.Ltoi(AlibabaCloud.DarabonbaNumber.NumberUtil.Add(AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(i0), AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(1)));
                     }
                 }
             }
@@ -9655,7 +9713,7 @@ namespace AlibabaCloud.SDK.Facebody20191230
             AlibabaCloud.OpenApiUtil.Client.Convert(request, recognizePublicFaceReq);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Task))
             {
-                int? i = 0;
+                int? i0 = 0;
 
                 foreach (var item0 in request.Task) {
                     if (!AlibabaCloud.TeaUtil.Common.IsUnset(item0.ImageURLObject))
@@ -9685,9 +9743,9 @@ namespace AlibabaCloud.SDK.Facebody20191230
                             Header = ossHeader,
                         };
                         await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
-                        RecognizePublicFaceRequest.RecognizePublicFaceRequestTask tmp = recognizePublicFaceReq.Task[i.Value];
+                        RecognizePublicFaceRequest.RecognizePublicFaceRequestTask tmp = recognizePublicFaceReq.Task[i0.Value];
                         tmp.ImageURL = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
-                        i = AlibabaCloud.DarabonbaNumber.NumberUtil.Ltoi(AlibabaCloud.DarabonbaNumber.NumberUtil.Add(AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(i), AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(1)));
+                        i0 = AlibabaCloud.DarabonbaNumber.NumberUtil.Ltoi(AlibabaCloud.DarabonbaNumber.NumberUtil.Add(AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(i0), AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(1)));
                     }
                 }
             }

@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
 
         [NameInMap("VideoUrl")]
         [Validation(Required=false)]
-        public string VideoUrl { get; set; }
+        public Stream VideoUrlObject { get; set; }
 
     }
 

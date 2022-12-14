@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public List<DetectPedestrianResponseBodyDataElements> Elements { get; set; }
             public class DetectPedestrianResponseBodyDataElements : TeaModel {
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("Boxes")]
                 [Validation(Required=false)]
                 public List<int?> Boxes { get; set; }

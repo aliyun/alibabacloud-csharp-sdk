@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public List<DetectCelebrityResponseBodyDataFaceRecognizeResults> FaceRecognizeResults { get; set; }
             public class DetectCelebrityResponseBodyDataFaceRecognizeResults : TeaModel {
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("FaceBoxes")]
                 [Validation(Required=false)]
                 public List<float?> FaceBoxes { get; set; }

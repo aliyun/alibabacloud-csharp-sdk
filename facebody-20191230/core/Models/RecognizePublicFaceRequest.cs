@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class RecognizePublicFaceRequest : TeaModel {
+        /// <summary>
+        /// 1
+        /// </summary>
         [NameInMap("Task")]
         [Validation(Required=false)]
         public List<RecognizePublicFaceRequestTask> Task { get; set; }
