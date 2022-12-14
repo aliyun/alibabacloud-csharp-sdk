@@ -3188,6 +3188,35 @@ namespace AlibabaCloud.SDK.Imageenhan20190930
                 ossClient.PostObject(uploadRequest, ossRuntime);
                 imitatePhotoStyleReq.ImageURL = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StyleUrlObject))
+            {
+                authResponse = authClient.AuthorizeFileUploadWithOptions(authRequest, runtime);
+                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
+                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
+                ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+                fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
+                {
+                    Filename = authResponse.Body.ObjectKey,
+                    Content = request.StyleUrlObject,
+                    ContentType = "",
+                };
+                ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
+                {
+                    AccessKeyId = authResponse.Body.AccessKeyId,
+                    Policy = authResponse.Body.EncodedPolicy,
+                    Signature = authResponse.Body.Signature,
+                    Key = authResponse.Body.ObjectKey,
+                    File = fileObj,
+                    SuccessActionStatus = "201",
+                };
+                uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
+                {
+                    BucketName = authResponse.Body.Bucket,
+                    Header = ossHeader,
+                };
+                ossClient.PostObject(uploadRequest, ossRuntime);
+                imitatePhotoStyleReq.StyleUrl = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
+            }
             ImitatePhotoStyleResponse imitatePhotoStyleResp = ImitatePhotoStyleWithOptions(imitatePhotoStyleReq, runtime);
             return imitatePhotoStyleResp;
         }
@@ -3268,6 +3297,35 @@ namespace AlibabaCloud.SDK.Imageenhan20190930
                 };
                 await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
                 imitatePhotoStyleReq.ImageURL = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StyleUrlObject))
+            {
+                authResponse = await authClient.AuthorizeFileUploadWithOptionsAsync(authRequest, runtime);
+                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
+                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
+                ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+                fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
+                {
+                    Filename = authResponse.Body.ObjectKey,
+                    Content = request.StyleUrlObject,
+                    ContentType = "",
+                };
+                ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
+                {
+                    AccessKeyId = authResponse.Body.AccessKeyId,
+                    Policy = authResponse.Body.EncodedPolicy,
+                    Signature = authResponse.Body.Signature,
+                    Key = authResponse.Body.ObjectKey,
+                    File = fileObj,
+                    SuccessActionStatus = "201",
+                };
+                uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
+                {
+                    BucketName = authResponse.Body.Bucket,
+                    Header = ossHeader,
+                };
+                await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
+                imitatePhotoStyleReq.StyleUrl = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
             }
             ImitatePhotoStyleResponse imitatePhotoStyleResp = await ImitatePhotoStyleWithOptionsAsync(imitatePhotoStyleReq, runtime);
             return imitatePhotoStyleResp;

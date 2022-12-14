@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
         [Validation(Required=false)]
         public int? ColorCount { get; set; }
 
+        /// <summary>
+        /// 1
+        /// </summary>
         [NameInMap("ColorTemplate")]
         [Validation(Required=false)]
         public List<RecolorImageAdvanceRequestColorTemplate> ColorTemplate { get; set; }
