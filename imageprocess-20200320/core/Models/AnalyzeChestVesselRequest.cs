@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
         [Validation(Required=false)]
         public string OrgName { get; set; }
 
+        /// <summary>
+        /// 1
+        /// </summary>
         [NameInMap("URLList")]
         [Validation(Required=false)]
         public List<AnalyzeChestVesselRequestURLList> URLList { get; set; }

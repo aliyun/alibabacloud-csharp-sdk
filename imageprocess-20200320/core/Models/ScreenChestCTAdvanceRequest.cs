@@ -8,10 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 {
-    public class DetectLungNoduleRequest : TeaModel {
+    public class ScreenChestCTAdvanceRequest : TeaModel {
         [NameInMap("DataFormat")]
         [Validation(Required=false)]
         public string DataFormat { get; set; }
+
+        [NameInMap("Mask")]
+        [Validation(Required=false)]
+        public long? Mask { get; set; }
 
         [NameInMap("OrgId")]
         [Validation(Required=false)]
@@ -21,22 +25,19 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
         [Validation(Required=false)]
         public string OrgName { get; set; }
 
-        [NameInMap("Threshold")]
-        [Validation(Required=false)]
-        public float? Threshold { get; set; }
-
-        /// <summary>
-        /// 1
-        /// </summary>
         [NameInMap("URLList")]
         [Validation(Required=false)]
-        public List<DetectLungNoduleRequestURLList> URLList { get; set; }
-        public class DetectLungNoduleRequestURLList : TeaModel {
+        public List<ScreenChestCTAdvanceRequestURLList> URLList { get; set; }
+        public class ScreenChestCTAdvanceRequestURLList : TeaModel {
             [NameInMap("URL")]
             [Validation(Required=false)]
-            public string URL { get; set; }
+            public Stream URLObject { get; set; }
 
         }
+
+        [NameInMap("Verbose")]
+        [Validation(Required=false)]
+        public long? Verbose { get; set; }
 
     }
 

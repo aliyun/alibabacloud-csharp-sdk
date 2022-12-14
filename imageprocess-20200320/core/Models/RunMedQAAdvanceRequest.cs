@@ -8,11 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 {
-    public class RunMedQARequest : TeaModel {
+    public class RunMedQAAdvanceRequest : TeaModel {
         [NameInMap("AnswerImageDataList")]
         [Validation(Required=false)]
-        public List<RunMedQARequestAnswerImageDataList> AnswerImageDataList { get; set; }
-        public class RunMedQARequestAnswerImageDataList : TeaModel {
+        public List<RunMedQAAdvanceRequestAnswerImageDataList> AnswerImageDataList { get; set; }
+        public class RunMedQAAdvanceRequestAnswerImageDataList : TeaModel {
             [NameInMap("AnswerImageData")]
             [Validation(Required=false)]
             public string AnswerImageData { get; set; }
@@ -21,18 +21,18 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 
         [NameInMap("AnswerImageURLList")]
         [Validation(Required=false)]
-        public List<RunMedQARequestAnswerImageURLList> AnswerImageURLList { get; set; }
-        public class RunMedQARequestAnswerImageURLList : TeaModel {
+        public List<RunMedQAAdvanceRequestAnswerImageURLList> AnswerImageURLList { get; set; }
+        public class RunMedQAAdvanceRequestAnswerImageURLList : TeaModel {
             [NameInMap("AnswerImageURL")]
             [Validation(Required=false)]
-            public string AnswerImageURL { get; set; }
+            public Stream AnswerImageURLObject { get; set; }
 
         }
 
         [NameInMap("AnswerTextList")]
         [Validation(Required=false)]
-        public List<RunMedQARequestAnswerTextList> AnswerTextList { get; set; }
-        public class RunMedQARequestAnswerTextList : TeaModel {
+        public List<RunMedQAAdvanceRequestAnswerTextList> AnswerTextList { get; set; }
+        public class RunMedQAAdvanceRequestAnswerTextList : TeaModel {
             [NameInMap("AnswerText")]
             [Validation(Required=false)]
             public string AnswerText { get; set; }

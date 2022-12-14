@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 [Validation(Required=false)]
                 public ScreenChestCTResponseBodyDataAnalyzeChestVesselAortaInfo AortaInfo { get; set; }
                 public class ScreenChestCTResponseBodyDataAnalyzeChestVesselAortaInfo : TeaModel {
+                    /// <summary>
+                    /// 1
+                    /// </summary>
                     [NameInMap("Area")]
                     [Validation(Required=false)]
                     public List<float?> Area { get; set; }
@@ -51,6 +54,9 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 [Validation(Required=false)]
                 public ScreenChestCTResponseBodyDataAnalyzeChestVesselPulmonaryInfo PulmonaryInfo { get; set; }
                 public class ScreenChestCTResponseBodyDataAnalyzeChestVesselPulmonaryInfo : TeaModel {
+                    /// <summary>
+                    /// 1
+                    /// </summary>
                     [NameInMap("Area")]
                     [Validation(Required=false)]
                     public List<float?> Area { get; set; }
@@ -249,6 +255,10 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                     [Validation(Required=false)]
                     public List<long?> Coordinates { get; set; }
 
+                    [NameInMap("FracSOPInstanceUID")]
+                    [Validation(Required=false)]
+                    public string FracSOPInstanceUID { get; set; }
+
                     [NameInMap("FractureCategory")]
                     [Validation(Required=false)]
                     public long? FractureCategory { get; set; }
@@ -394,6 +404,42 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             [NameInMap("NestedUrlList")]
             [Validation(Required=false)]
             public Dictionary<string, object> NestedUrlList { get; set; }
+
+            [NameInMap("ScreenEc")]
+            [Validation(Required=false)]
+            public ScreenChestCTResponseBodyDataScreenEc ScreenEc { get; set; }
+            public class ScreenChestCTResponseBodyDataScreenEc : TeaModel {
+                [NameInMap("Lesion")]
+                [Validation(Required=false)]
+                public ScreenChestCTResponseBodyDataScreenEcLesion Lesion { get; set; }
+                public class ScreenChestCTResponseBodyDataScreenEcLesion : TeaModel {
+                    [NameInMap("BenignVolume")]
+                    [Validation(Required=false)]
+                    public string BenignVolume { get; set; }
+
+                    [NameInMap("EcVolume")]
+                    [Validation(Required=false)]
+                    public string EcVolume { get; set; }
+
+                    [NameInMap("EsoVolume")]
+                    [Validation(Required=false)]
+                    public string EsoVolume { get; set; }
+
+                    [NameInMap("Mask")]
+                    [Validation(Required=false)]
+                    public string Mask { get; set; }
+
+                    [NameInMap("Possibilities")]
+                    [Validation(Required=false)]
+                    public List<string> Possibilities { get; set; }
+
+                }
+
+                [NameInMap("SeriesInsanceUid")]
+                [Validation(Required=false)]
+                public string SeriesInsanceUid { get; set; }
+
+            }
 
             [NameInMap("URLList")]
             [Validation(Required=false)]

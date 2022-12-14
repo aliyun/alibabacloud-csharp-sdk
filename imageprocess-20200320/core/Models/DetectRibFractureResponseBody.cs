@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 [Validation(Required=false)]
                 public List<int?> Coordinates { get; set; }
 
+                [NameInMap("FracSOPInstanceUID")]
+                [Validation(Required=false)]
+                public string FracSOPInstanceUID { get; set; }
+
                 [NameInMap("FractureCategory")]
                 [Validation(Required=false)]
                 public string FractureCategory { get; set; }

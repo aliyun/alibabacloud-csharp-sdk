@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 {
-    public class DetectLungNoduleRequest : TeaModel {
+    public class DetectLungNoduleAdvanceRequest : TeaModel {
         [NameInMap("DataFormat")]
         [Validation(Required=false)]
         public string DataFormat { get; set; }
@@ -30,11 +30,11 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
         /// </summary>
         [NameInMap("URLList")]
         [Validation(Required=false)]
-        public List<DetectLungNoduleRequestURLList> URLList { get; set; }
-        public class DetectLungNoduleRequestURLList : TeaModel {
+        public List<DetectLungNoduleAdvanceRequestURLList> URLList { get; set; }
+        public class DetectLungNoduleAdvanceRequestURLList : TeaModel {
             [NameInMap("URL")]
             [Validation(Required=false)]
-            public string URL { get; set; }
+            public Stream URLObject { get; set; }
 
         }
 

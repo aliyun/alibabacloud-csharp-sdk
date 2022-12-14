@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 {
-    public class RunCTRegistrationRequest : TeaModel {
+    public class RunCTRegistrationAdvanceRequest : TeaModel {
         /// <summary>
         /// DICOM。
         /// </summary>
@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 
         [NameInMap("FloatingList")]
         [Validation(Required=false)]
-        public List<RunCTRegistrationRequestFloatingList> FloatingList { get; set; }
-        public class RunCTRegistrationRequestFloatingList : TeaModel {
+        public List<RunCTRegistrationAdvanceRequestFloatingList> FloatingList { get; set; }
+        public class RunCTRegistrationAdvanceRequestFloatingList : TeaModel {
             [NameInMap("FloatingURL")]
             [Validation(Required=false)]
-            public string FloatingURL { get; set; }
+            public Stream FloatingURLObject { get; set; }
 
         }
 
@@ -40,11 +40,11 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 
         [NameInMap("ReferenceList")]
         [Validation(Required=false)]
-        public List<RunCTRegistrationRequestReferenceList> ReferenceList { get; set; }
-        public class RunCTRegistrationRequestReferenceList : TeaModel {
+        public List<RunCTRegistrationAdvanceRequestReferenceList> ReferenceList { get; set; }
+        public class RunCTRegistrationAdvanceRequestReferenceList : TeaModel {
             [NameInMap("ReferenceURL")]
             [Validation(Required=false)]
-            public string ReferenceURL { get; set; }
+            public Stream ReferenceURLObject { get; set; }
 
         }
 

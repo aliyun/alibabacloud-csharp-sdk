@@ -79,6 +79,9 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 
                 }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("Origin")]
                 [Validation(Required=false)]
                 public List<float?> Origin { get; set; }
@@ -91,6 +94,9 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 [Validation(Required=false)]
                 public string SeriesInstanceUid { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("Spacing")]
                 [Validation(Required=false)]
                 public List<float?> Spacing { get; set; }
