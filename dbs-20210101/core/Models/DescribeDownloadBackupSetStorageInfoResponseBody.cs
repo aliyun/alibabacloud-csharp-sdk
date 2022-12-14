@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dbs20210101.Models
 {
-    public class DeleteSandboxInstanceResponseBody : TeaModel {
+    public class DescribeDownloadBackupSetStorageInfoResponseBody : TeaModel {
         /// <summary>
         /// The error code.
         /// </summary>
@@ -21,7 +21,32 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public string Data { get; set; }
+        public DescribeDownloadBackupSetStorageInfoResponseBodyData Data { get; set; }
+        public class DescribeDownloadBackupSetStorageInfoResponseBodyData : TeaModel {
+            /// <summary>
+            /// The expiration time of the URL.
+            /// 
+            /// >  The return value is in the timestamp format.
+            /// </summary>
+            [NameInMap("ExpirationTime")]
+            [Validation(Required=false)]
+            public long? ExpirationTime { get; set; }
+
+            /// <summary>
+            /// The private download URL of the backup set.
+            /// </summary>
+            [NameInMap("PrivateUrl")]
+            [Validation(Required=false)]
+            public string PrivateUrl { get; set; }
+
+            /// <summary>
+            /// The public download URL of the backup set.
+            /// </summary>
+            [NameInMap("PublicUrl")]
+            [Validation(Required=false)]
+            public string PublicUrl { get; set; }
+
+        }
 
         /// <summary>
         /// The error code.
@@ -52,7 +77,10 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   **true**: the request is successful.
+        /// *   **false**: the request fails.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

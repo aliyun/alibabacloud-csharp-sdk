@@ -8,52 +8,31 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dbs20210101.Models
 {
-    public class DeleteSandboxInstanceResponseBody : TeaModel {
-        /// <summary>
-        /// The error code.
-        /// </summary>
+    public class ModifyDBTablesRecoveryStateResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// The response parameters.
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
-        /// <summary>
-        /// The error code.
-        /// </summary>
         [NameInMap("ErrCode")]
         [Validation(Required=false)]
         public string ErrCode { get; set; }
 
-        /// <summary>
-        /// The error message.
-        /// </summary>
         [NameInMap("ErrMessage")]
         [Validation(Required=false)]
         public string ErrMessage { get; set; }
 
-        /// <summary>
-        /// The error message.
-        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// The ID of the request.
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// Indicates whether the request is successful.
-        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }

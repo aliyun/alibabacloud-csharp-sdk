@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dbs20210101.Models
 {
-    public class DeleteSandboxInstanceResponseBody : TeaModel {
+    public class DescribeDownloadSupportResponseBody : TeaModel {
         /// <summary>
         /// The error code.
         /// </summary>
@@ -17,21 +17,24 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// The response parameters.
+        /// Indicates whether the advanced download feature is supported. Valid values:
+        /// 
+        /// *   **true**: The advanced download feature is supported.
+        /// *   **false**: The advanced download feature is not supported.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// The error code.
+        /// The error code returned if the request fails.
         /// </summary>
         [NameInMap("ErrCode")]
         [Validation(Required=false)]
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// The error message returned if the request fails.
         /// </summary>
         [NameInMap("ErrMessage")]
         [Validation(Required=false)]
@@ -52,7 +55,10 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// Indicates whether the request is successful. Valid values:
+        /// 
+        /// *   **true**: The request is successful.
+        /// *   **false**: The request fails.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
