@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
         [Validation(Required=false)]
         public bool? DurationAdaption { get; set; }
 
+        /// <summary>
+        /// 1
+        /// </summary>
         [NameInMap("FileList")]
         [Validation(Required=false)]
         public List<GenerateVideoRequestFileList> FileList { get; set; }

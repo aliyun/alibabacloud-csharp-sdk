@@ -2591,7 +2591,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.OpenApiUtil.Client.Convert(request, generateVideoReq);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileList))
             {
-                int? i = 0;
+                int? i0 = 0;
 
                 foreach (var item0 in request.FileList) {
                     if (!AlibabaCloud.TeaUtil.Common.IsUnset(item0.FileUrlObject))
@@ -2621,9 +2621,9 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
                             Header = ossHeader,
                         };
                         ossClient.PostObject(uploadRequest, ossRuntime);
-                        GenerateVideoRequest.GenerateVideoRequestFileList tmp = generateVideoReq.FileList[i.Value];
+                        GenerateVideoRequest.GenerateVideoRequestFileList tmp = generateVideoReq.FileList[i0.Value];
                         tmp.FileUrl = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
-                        i = AlibabaCloud.DarabonbaNumber.NumberUtil.Ltoi(AlibabaCloud.DarabonbaNumber.NumberUtil.Add(AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(i), AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(1)));
+                        i0 = AlibabaCloud.DarabonbaNumber.NumberUtil.Ltoi(AlibabaCloud.DarabonbaNumber.NumberUtil.Add(AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(i0), AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(1)));
                     }
                 }
             }
@@ -2681,7 +2681,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.OpenApiUtil.Client.Convert(request, generateVideoReq);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileList))
             {
-                int? i = 0;
+                int? i0 = 0;
 
                 foreach (var item0 in request.FileList) {
                     if (!AlibabaCloud.TeaUtil.Common.IsUnset(item0.FileUrlObject))
@@ -2711,9 +2711,9 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
                             Header = ossHeader,
                         };
                         await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
-                        GenerateVideoRequest.GenerateVideoRequestFileList tmp = generateVideoReq.FileList[i.Value];
+                        GenerateVideoRequest.GenerateVideoRequestFileList tmp = generateVideoReq.FileList[i0.Value];
                         tmp.FileUrl = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
-                        i = AlibabaCloud.DarabonbaNumber.NumberUtil.Ltoi(AlibabaCloud.DarabonbaNumber.NumberUtil.Add(AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(i), AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(1)));
+                        i0 = AlibabaCloud.DarabonbaNumber.NumberUtil.Ltoi(AlibabaCloud.DarabonbaNumber.NumberUtil.Add(AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(i0), AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(1)));
                     }
                 }
             }
