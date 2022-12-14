@@ -1,3 +1,13 @@
+2022-12-14 Version: 1.0.17
+- Add error code InputParamIllegal.
+- Add field AuditRemark.
+- Change new api.
+- Add date transform.
+- Fixed Bugs.
+- Fix Bug.
+- Fix STS Bug.
+- Fixed sts bug.
+
 2022-09-21 Version: 1.0.16
 - Automatically generate sdk tasks.
 
