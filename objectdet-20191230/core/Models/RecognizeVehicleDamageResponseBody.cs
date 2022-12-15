@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
             [Validation(Required=false)]
             public List<RecognizeVehicleDamageResponseBodyDataElements> Elements { get; set; }
             public class RecognizeVehicleDamageResponseBodyDataElements : TeaModel {
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("Boxes")]
                 [Validation(Required=false)]
                 public List<int?> Boxes { get; set; }
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
                 [Validation(Required=false)]
                 public float? Score { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("Scores")]
                 [Validation(Required=false)]
                 public List<float?> Scores { get; set; }

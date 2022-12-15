@@ -27,6 +27,9 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
         [Validation(Required=false)]
         public string ImageUrl { get; set; }
 
+        /// <summary>
+        /// 1
+        /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<string> Labels { get; set; }
