@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// module。
+        /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]
         public HotelOrderQueryResponseBodyModule Module { get; set; }
@@ -229,6 +232,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
+        /// <summary>
+        /// requestId
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -237,6 +243,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        /// <summary>
+        /// traceId
+        /// </summary>
         [NameInMap("traceId")]
         [Validation(Required=false)]
         public string TraceId { get; set; }

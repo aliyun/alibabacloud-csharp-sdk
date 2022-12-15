@@ -63,6 +63,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public long? ArrDate { get; set; }
 
+                    /// <summary>
+                    /// cheapest
+                    /// </summary>
                     [NameInMap("cheapest")]
                     [Validation(Required=false)]
                     public EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutesCheapest Cheapest { get; set; }
@@ -165,6 +168,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        /// <summary>
+        /// traceId
+        /// </summary>
         [NameInMap("traceId")]
         [Validation(Required=false)]
         public string TraceId { get; set; }

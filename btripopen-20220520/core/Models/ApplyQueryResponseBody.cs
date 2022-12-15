@@ -121,6 +121,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                 }
 
+                [NameInMap("premium_economy_discount")]
+                [Validation(Required=false)]
+                public int? PremiumEconomyDiscount { get; set; }
+
                 [NameInMap("reserve_type")]
                 [Validation(Required=false)]
                 public int? ReserveType { get; set; }
@@ -342,6 +346,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public long? Fee { get; set; }
 
                 }
+
+                [NameInMap("premium_economy_discount")]
+                [Validation(Required=false)]
+                public int? PremiumEconomyDiscount { get; set; }
 
                 [NameInMap("reserve_type")]
                 [Validation(Required=false)]

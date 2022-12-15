@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public List<InvoiceSearchResponseBodyModule> Module { get; set; }
         public class InvoiceSearchResponseBodyModule : TeaModel {
+            /// <summary>
+            /// ID
+            /// </summary>
             [NameInMap("id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
@@ -43,6 +46,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        /// <summary>
+        /// traceId
+        /// </summary>
         [NameInMap("traceId")]
         [Validation(Required=false)]
         public string TraceId { get; set; }

@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// module
+        /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]
         public CitySearchResponseBodyModule Module { get; set; }
