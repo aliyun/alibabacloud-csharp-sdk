@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Cloudauth20221125.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// Id of the request
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -29,6 +32,10 @@ namespace AlibabaCloud.SDK.Cloudauth20221125.Models
             [Validation(Required=false)]
             public EntVerifyResponseBodyResultRiskVerifyResult RiskVerifyResult { get; set; }
             public class EntVerifyResponseBodyResultRiskVerifyResult : TeaModel {
+                [NameInMap("Found")]
+                [Validation(Required=false)]
+                public string Found { get; set; }
+
                 [NameInMap("ModelResults")]
                 [Validation(Required=false)]
                 public List<EntVerifyResponseBodyResultRiskVerifyResultModelResults> ModelResults { get; set; }
