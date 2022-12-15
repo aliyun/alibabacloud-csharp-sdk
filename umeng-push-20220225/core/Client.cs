@@ -37,20 +37,6 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        public CancelByMsgIdResponse CancelByMsgId(CancelByMsgIdRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CancelByMsgIdWithOptions(request, headers, runtime);
-        }
-
-        public async Task<CancelByMsgIdResponse> CancelByMsgIdAsync(CancelByMsgIdRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CancelByMsgIdWithOptionsAsync(request, headers, runtime);
-        }
-
         public CancelByMsgIdResponse CancelByMsgIdWithOptions(CancelByMsgIdRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -107,18 +93,18 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return TeaModel.ToObject<CancelByMsgIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public QueryMsgStatResponse QueryMsgStat(QueryMsgStatRequest request)
+        public CancelByMsgIdResponse CancelByMsgId(CancelByMsgIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return QueryMsgStatWithOptions(request, headers, runtime);
+            return CancelByMsgIdWithOptions(request, headers, runtime);
         }
 
-        public async Task<QueryMsgStatResponse> QueryMsgStatAsync(QueryMsgStatRequest request)
+        public async Task<CancelByMsgIdResponse> CancelByMsgIdAsync(CancelByMsgIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await QueryMsgStatWithOptionsAsync(request, headers, runtime);
+            return await CancelByMsgIdWithOptionsAsync(request, headers, runtime);
         }
 
         public QueryMsgStatResponse QueryMsgStatWithOptions(QueryMsgStatRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -177,18 +163,18 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return TeaModel.ToObject<QueryMsgStatResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public SendByAliasResponse SendByAlias(SendByAliasRequest request)
+        public QueryMsgStatResponse QueryMsgStat(QueryMsgStatRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return SendByAliasWithOptions(request, headers, runtime);
+            return QueryMsgStatWithOptions(request, headers, runtime);
         }
 
-        public async Task<SendByAliasResponse> SendByAliasAsync(SendByAliasRequest request)
+        public async Task<QueryMsgStatResponse> QueryMsgStatAsync(QueryMsgStatRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await SendByAliasWithOptionsAsync(request, headers, runtime);
+            return await QueryMsgStatWithOptionsAsync(request, headers, runtime);
         }
 
         public SendByAliasResponse SendByAliasWithOptions(SendByAliasRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -355,18 +341,18 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return TeaModel.ToObject<SendByAliasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public SendByAliasFileIdResponse SendByAliasFileId(SendByAliasFileIdRequest request)
+        public SendByAliasResponse SendByAlias(SendByAliasRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return SendByAliasFileIdWithOptions(request, headers, runtime);
+            return SendByAliasWithOptions(request, headers, runtime);
         }
 
-        public async Task<SendByAliasFileIdResponse> SendByAliasFileIdAsync(SendByAliasFileIdRequest request)
+        public async Task<SendByAliasResponse> SendByAliasAsync(SendByAliasRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await SendByAliasFileIdWithOptionsAsync(request, headers, runtime);
+            return await SendByAliasWithOptionsAsync(request, headers, runtime);
         }
 
         public SendByAliasFileIdResponse SendByAliasFileIdWithOptions(SendByAliasFileIdRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -533,18 +519,18 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return TeaModel.ToObject<SendByAliasFileIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public SendByAppResponse SendByApp(SendByAppRequest request)
+        public SendByAliasFileIdResponse SendByAliasFileId(SendByAliasFileIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return SendByAppWithOptions(request, headers, runtime);
+            return SendByAliasFileIdWithOptions(request, headers, runtime);
         }
 
-        public async Task<SendByAppResponse> SendByAppAsync(SendByAppRequest request)
+        public async Task<SendByAliasFileIdResponse> SendByAliasFileIdAsync(SendByAliasFileIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await SendByAppWithOptionsAsync(request, headers, runtime);
+            return await SendByAliasFileIdWithOptionsAsync(request, headers, runtime);
         }
 
         public SendByAppResponse SendByAppWithOptions(SendByAppRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -695,18 +681,18 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return TeaModel.ToObject<SendByAppResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public SendByDeviceResponse SendByDevice(SendByDeviceRequest request)
+        public SendByAppResponse SendByApp(SendByAppRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return SendByDeviceWithOptions(request, headers, runtime);
+            return SendByAppWithOptions(request, headers, runtime);
         }
 
-        public async Task<SendByDeviceResponse> SendByDeviceAsync(SendByDeviceRequest request)
+        public async Task<SendByAppResponse> SendByAppAsync(SendByAppRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await SendByDeviceWithOptionsAsync(request, headers, runtime);
+            return await SendByAppWithOptionsAsync(request, headers, runtime);
         }
 
         public SendByDeviceResponse SendByDeviceWithOptions(SendByDeviceRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -865,18 +851,18 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return TeaModel.ToObject<SendByDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public SendByDeviceFileIdResponse SendByDeviceFileId(SendByDeviceFileIdRequest request)
+        public SendByDeviceResponse SendByDevice(SendByDeviceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return SendByDeviceFileIdWithOptions(request, headers, runtime);
+            return SendByDeviceWithOptions(request, headers, runtime);
         }
 
-        public async Task<SendByDeviceFileIdResponse> SendByDeviceFileIdAsync(SendByDeviceFileIdRequest request)
+        public async Task<SendByDeviceResponse> SendByDeviceAsync(SendByDeviceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await SendByDeviceFileIdWithOptionsAsync(request, headers, runtime);
+            return await SendByDeviceWithOptionsAsync(request, headers, runtime);
         }
 
         public SendByDeviceFileIdResponse SendByDeviceFileIdWithOptions(SendByDeviceFileIdRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1035,18 +1021,18 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return TeaModel.ToObject<SendByDeviceFileIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public SendByFilterResponse SendByFilter(SendByFilterRequest request)
+        public SendByDeviceFileIdResponse SendByDeviceFileId(SendByDeviceFileIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return SendByFilterWithOptions(request, headers, runtime);
+            return SendByDeviceFileIdWithOptions(request, headers, runtime);
         }
 
-        public async Task<SendByFilterResponse> SendByFilterAsync(SendByFilterRequest request)
+        public async Task<SendByDeviceFileIdResponse> SendByDeviceFileIdAsync(SendByDeviceFileIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await SendByFilterWithOptionsAsync(request, headers, runtime);
+            return await SendByDeviceFileIdWithOptionsAsync(request, headers, runtime);
         }
 
         public SendByFilterResponse SendByFilterWithOptions(SendByFilterRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1205,18 +1191,18 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return TeaModel.ToObject<SendByFilterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public UploadDeviceResponse UploadDevice(UploadDeviceRequest request)
+        public SendByFilterResponse SendByFilter(SendByFilterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UploadDeviceWithOptions(request, headers, runtime);
+            return SendByFilterWithOptions(request, headers, runtime);
         }
 
-        public async Task<UploadDeviceResponse> UploadDeviceAsync(UploadDeviceRequest request)
+        public async Task<SendByFilterResponse> SendByFilterAsync(SendByFilterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UploadDeviceWithOptionsAsync(request, headers, runtime);
+            return await SendByFilterWithOptionsAsync(request, headers, runtime);
         }
 
         public UploadDeviceResponse UploadDeviceWithOptions(UploadDeviceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1273,6 +1259,20 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
                 BodyType = "json",
             };
             return TeaModel.ToObject<UploadDeviceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UploadDeviceResponse UploadDevice(UploadDeviceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UploadDeviceWithOptions(request, headers, runtime);
+        }
+
+        public async Task<UploadDeviceResponse> UploadDeviceAsync(UploadDeviceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UploadDeviceWithOptionsAsync(request, headers, runtime);
         }
 
     }
