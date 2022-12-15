@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloudauth20221125.Models
             public class EntVerifyResponseBodyResultRiskVerifyResult : TeaModel {
                 [NameInMap("Found")]
                 [Validation(Required=false)]
-                public string Found { get; set; }
+                public bool? Found { get; set; }
 
                 [NameInMap("ModelResults")]
                 [Validation(Required=false)]
