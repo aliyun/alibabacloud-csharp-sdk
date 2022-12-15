@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
+        [NameInMap("TemplateId")]
+        [Validation(Required=false)]
+        public string TemplateId { get; set; }
+
         [NameInMap("TotalFileSize")]
         [Validation(Required=false)]
         public long? TotalFileSize { get; set; }

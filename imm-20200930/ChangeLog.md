@@ -1,3 +1,6 @@
+2022-12-15 Version: 1.29.1
+- Expose TemplateId in Project and Dataset.
+
 2022-12-13 Version: 1.29.0
 - Support Face Searching Api.
 - Support Face Comparasion Api.
