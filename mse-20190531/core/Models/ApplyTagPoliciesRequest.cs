@@ -9,30 +9,54 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ApplyTagPoliciesRequest : TeaModel {
+        /// <summary>
+        /// The language of the response. Valid values:
+        /// 
+        /// - zh: Chinese
+        /// - en: English
+        /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        /// <summary>
+        /// The ID of the application.
+        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable the routing rule.
+        /// </summary>
         [NameInMap("Enable")]
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
+        /// <summary>
+        /// Optional. The ID of the namespace.
+        /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
 
+        /// <summary>
+        /// The ID of the region.
+        /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        /// <summary>
+        /// The details of the routing rule.
+        /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public string Rules { get; set; }
 
+        /// <summary>
+        /// The source of the routing rule.
+        /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }

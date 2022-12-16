@@ -33,6 +33,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Path { get; set; }
 
+        /// <summary>
+        /// RequestPars。
+        /// </summary>
         [NameInMap("RequestPars")]
         [Validation(Required=false)]
         public string RequestPars { get; set; }
@@ -41,6 +44,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public bool? Reverse { get; set; }
 
+        /// <summary>
+        /// SessionId。
+        /// </summary>
         [NameInMap("SessionId")]
         [Validation(Required=false)]
         public string SessionId { get; set; }

@@ -9,44 +9,74 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ImportServicesRequest : TeaModel {
+        /// <summary>
+        /// The data structure.
+        /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        /// <summary>
+        /// The unique ID of the gateway.
+        /// </summary>
         [NameInMap("GatewayUniqueId")]
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }
 
+        /// <summary>
+        /// The information about services.
+        /// </summary>
         [NameInMap("ServiceList")]
         [Validation(Required=false)]
         public List<ImportServicesRequestServiceList> ServiceList { get; set; }
         public class ImportServicesRequestServiceList : TeaModel {
+            /// <summary>
+            /// The name of the group.
+            /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
             public string GroupName { get; set; }
 
+            /// <summary>
+            /// The IP addresses of the service.
+            /// </summary>
             [NameInMap("Ips")]
             [Validation(Required=false)]
             public List<string> Ips { get; set; }
 
+            /// <summary>
+            /// The name of the service.
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// The name of the namespace.
+            /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
 
+            /// <summary>
+            /// The port of the service.
+            /// </summary>
             [NameInMap("ServicePort")]
             [Validation(Required=false)]
             public long? ServicePort { get; set; }
 
+            /// <summary>
+            /// The protocol of the service.
+            /// </summary>
             [NameInMap("ServiceProtocol")]
             [Validation(Required=false)]
             public string ServiceProtocol { get; set; }
 
         }
 
+        /// <summary>
+        /// The source type of the service.
+        /// </summary>
         [NameInMap("SourceType")]
         [Validation(Required=false)]
         public string SourceType { get; set; }

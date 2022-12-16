@@ -9,48 +9,84 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class QueryClusterDiskSpecificationResponseBody : TeaModel {
+        /// <summary>
+        /// The status code returned.
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        /// <summary>
+        /// The details of the data.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryClusterDiskSpecificationResponseBodyData Data { get; set; }
         public class QueryClusterDiskSpecificationResponseBodyData : TeaModel {
+            /// <summary>
+            /// The maximum capacity of the disk.
+            /// </summary>
             [NameInMap("Max")]
             [Validation(Required=false)]
             public int? Max { get; set; }
 
+            /// <summary>
+            /// The minimum capacity of the disk.
+            /// </summary>
             [NameInMap("Min")]
             [Validation(Required=false)]
             public int? Min { get; set; }
 
+            /// <summary>
+            /// The step size of the disk capacity.
+            /// </summary>
             [NameInMap("Step")]
             [Validation(Required=false)]
             public int? Step { get; set; }
 
         }
 
+        /// <summary>
+        /// The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **Message** parameter. 
+        /// > If the specified **InstanceId** parameter is invalid, **The Value of Input Parameter %s is not valid** is returned for **Message** and **InstanceId** is returned for **DynamicMessage**.
+        /// </summary>
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
 
+        /// <summary>
+        /// The error code returned if the request fails.
+        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        /// <summary>
+        /// The HTTP status code returned.
+        /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// The message returned.
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Indicates whether the request is successful. Valid values:
+        /// - `true`: The request is successful. 
+        /// - `false`: The request fails.
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

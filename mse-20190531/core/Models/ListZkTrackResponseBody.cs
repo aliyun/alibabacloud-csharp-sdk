@@ -45,6 +45,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public List<ListZkTrackResponseBodyTraces> Traces { get; set; }
         public class ListZkTrackResponseBodyTraces : TeaModel {
+            /// <summary>
+            /// ACL。
+            /// </summary>
             [NameInMap("Acl")]
             [Validation(Required=false)]
             public string Acl { get; set; }
@@ -81,6 +84,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Result { get; set; }
 
+            /// <summary>
+            /// SessionId。
+            /// </summary>
             [NameInMap("SessionId")]
             [Validation(Required=false)]
             public string SessionId { get; set; }
@@ -93,6 +99,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string TraceType { get; set; }
 
+            /// <summary>
+            /// TTL。
+            /// </summary>
             [NameInMap("Ttl")]
             [Validation(Required=false)]
             public long? Ttl { get; set; }

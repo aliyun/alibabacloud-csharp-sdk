@@ -13,10 +13,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        /// <summary>
+        /// Specifies whether to delete the Server Load Balancer (SLB) instance purchased for the gateway.
+        /// </summary>
         [NameInMap("DeleteSlb")]
         [Validation(Required=false)]
         public bool? DeleteSlb { get; set; }
 
+        /// <summary>
+        /// The unique ID of the gateway.
+        /// </summary>
         [NameInMap("GatewayUniqueId")]
         [Validation(Required=false)]
         public string GatewayUniqueId { get; set; }

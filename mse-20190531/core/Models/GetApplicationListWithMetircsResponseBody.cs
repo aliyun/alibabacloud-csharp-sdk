@@ -57,6 +57,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     [Validation(Required=false)]
                     public double? Qps { get; set; }
 
+                    /// <summary>
+                    /// Rt。
+                    /// </summary>
                     [NameInMap("Rt")]
                     [Validation(Required=false)]
                     public double? Rt { get; set; }
@@ -87,10 +90,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     [Validation(Required=false)]
                     public double? PassQps { get; set; }
 
+                    /// <summary>
+                    /// QPS。
+                    /// </summary>
                     [NameInMap("Qps")]
                     [Validation(Required=false)]
                     public double? Qps { get; set; }
 
+                    /// <summary>
+                    /// Rt。
+                    /// </summary>
                     [NameInMap("Rt")]
                     [Validation(Required=false)]
                     public double? Rt { get; set; }

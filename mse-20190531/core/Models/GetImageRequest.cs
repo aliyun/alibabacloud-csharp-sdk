@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        /// <summary>
+        /// The version of the cluster.
+        /// </summary>
         [NameInMap("VersionCode")]
         [Validation(Required=false)]
         public string VersionCode { get; set; }

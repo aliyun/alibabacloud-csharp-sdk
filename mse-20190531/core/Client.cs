@@ -1744,6 +1744,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return await ApplyTagPoliciesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request CloneNacosConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CloneNacosConfigResponse
+         */
         public CloneNacosConfigResponse CloneNacosConfigWithOptions(CloneNacosConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1791,6 +1798,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<CloneNacosConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request CloneNacosConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CloneNacosConfigResponse
+         */
         public async Task<CloneNacosConfigResponse> CloneNacosConfigWithOptionsAsync(CloneNacosConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1838,12 +1852,24 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<CloneNacosConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request CloneNacosConfigRequest
+          * @return CloneNacosConfigResponse
+         */
         public CloneNacosConfigResponse CloneNacosConfig(CloneNacosConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CloneNacosConfigWithOptions(request, runtime);
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request CloneNacosConfigRequest
+          * @return CloneNacosConfigResponse
+         */
         public async Task<CloneNacosConfigResponse> CloneNacosConfigAsync(CloneNacosConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1972,6 +1998,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return await CreateApplicationWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this API operation, you must make sure that you fully understand the billing method and pricing of MSE.
+          *
+          * @param request CreateClusterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateClusterResponse
+         */
         public CreateClusterResponse CreateClusterWithOptions(CreateClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2071,6 +2104,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<CreateClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this API operation, you must make sure that you fully understand the billing method and pricing of MSE.
+          *
+          * @param request CreateClusterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateClusterResponse
+         */
         public async Task<CreateClusterResponse> CreateClusterWithOptionsAsync(CreateClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2170,12 +2210,24 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<CreateClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this API operation, you must make sure that you fully understand the billing method and pricing of MSE.
+          *
+          * @param request CreateClusterRequest
+          * @return CreateClusterResponse
+         */
         public CreateClusterResponse CreateCluster(CreateClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateClusterWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this API operation, you must make sure that you fully understand the billing method and pricing of MSE.
+          *
+          * @param request CreateClusterRequest
+          * @return CreateClusterResponse
+         */
         public async Task<CreateClusterResponse> CreateClusterAsync(CreateClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2426,6 +2478,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return await CreateMseServiceApplicationWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request CreateNacosConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateNacosConfigResponse
+         */
         public CreateNacosConfigResponse CreateNacosConfigWithOptions(CreateNacosConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2493,6 +2552,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<CreateNacosConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request CreateNacosConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateNacosConfigResponse
+         */
         public async Task<CreateNacosConfigResponse> CreateNacosConfigWithOptionsAsync(CreateNacosConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2560,18 +2626,37 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<CreateNacosConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request CreateNacosConfigRequest
+          * @return CreateNacosConfigResponse
+         */
         public CreateNacosConfigResponse CreateNacosConfig(CreateNacosConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateNacosConfigWithOptions(request, runtime);
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request CreateNacosConfigRequest
+          * @return CreateNacosConfigResponse
+         */
         public async Task<CreateNacosConfigResponse> CreateNacosConfigAsync(CreateNacosConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateNacosConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Programming language
+          *
+          * @param request CreateNacosInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateNacosInstanceResponse
+         */
         public CreateNacosInstanceResponse CreateNacosInstanceWithOptions(CreateNacosInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2645,6 +2730,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<CreateNacosInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Programming language
+          *
+          * @param request CreateNacosInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateNacosInstanceResponse
+         */
         public async Task<CreateNacosInstanceResponse> CreateNacosInstanceWithOptionsAsync(CreateNacosInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2718,18 +2810,37 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<CreateNacosInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Programming language
+          *
+          * @param request CreateNacosInstanceRequest
+          * @return CreateNacosInstanceResponse
+         */
         public CreateNacosInstanceResponse CreateNacosInstance(CreateNacosInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateNacosInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * Programming language
+          *
+          * @param request CreateNacosInstanceRequest
+          * @return CreateNacosInstanceResponse
+         */
         public async Task<CreateNacosInstanceResponse> CreateNacosInstanceAsync(CreateNacosInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateNacosInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For more information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request CreateNacosServiceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateNacosServiceResponse
+         */
         public CreateNacosServiceResponse CreateNacosServiceWithOptions(CreateNacosServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2785,6 +2896,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<CreateNacosServiceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For more information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request CreateNacosServiceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateNacosServiceResponse
+         */
         public async Task<CreateNacosServiceResponse> CreateNacosServiceWithOptionsAsync(CreateNacosServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2840,12 +2958,24 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<CreateNacosServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For more information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request CreateNacosServiceRequest
+          * @return CreateNacosServiceResponse
+         */
         public CreateNacosServiceResponse CreateNacosService(CreateNacosServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateNacosServiceWithOptions(request, runtime);
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For more information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request CreateNacosServiceRequest
+          * @return CreateNacosServiceResponse
+         */
         public async Task<CreateNacosServiceResponse> CreateNacosServiceAsync(CreateNacosServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4076,6 +4206,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return await DeleteGatewaySlbWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request DeleteNacosConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteNacosConfigResponse
+         */
         public DeleteNacosConfigResponse DeleteNacosConfigWithOptions(DeleteNacosConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4123,6 +4260,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<DeleteNacosConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request DeleteNacosConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteNacosConfigResponse
+         */
         public async Task<DeleteNacosConfigResponse> DeleteNacosConfigWithOptionsAsync(DeleteNacosConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4170,18 +4314,37 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<DeleteNacosConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request DeleteNacosConfigRequest
+          * @return DeleteNacosConfigResponse
+         */
         public DeleteNacosConfigResponse DeleteNacosConfig(DeleteNacosConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteNacosConfigWithOptions(request, runtime);
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request DeleteNacosConfigRequest
+          * @return DeleteNacosConfigResponse
+         */
         public async Task<DeleteNacosConfigResponse> DeleteNacosConfigAsync(DeleteNacosConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteNacosConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request DeleteNacosConfigsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteNacosConfigsResponse
+         */
         public DeleteNacosConfigsResponse DeleteNacosConfigsWithOptions(DeleteNacosConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4221,6 +4384,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<DeleteNacosConfigsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request DeleteNacosConfigsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteNacosConfigsResponse
+         */
         public async Task<DeleteNacosConfigsResponse> DeleteNacosConfigsWithOptionsAsync(DeleteNacosConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4260,18 +4430,37 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<DeleteNacosConfigsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request DeleteNacosConfigsRequest
+          * @return DeleteNacosConfigsResponse
+         */
         public DeleteNacosConfigsResponse DeleteNacosConfigs(DeleteNacosConfigsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteNacosConfigsWithOptions(request, runtime);
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request DeleteNacosConfigsRequest
+          * @return DeleteNacosConfigsResponse
+         */
         public async Task<DeleteNacosConfigsResponse> DeleteNacosConfigsAsync(DeleteNacosConfigsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteNacosConfigsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For more information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request DeleteNacosInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteNacosInstanceResponse
+         */
         public DeleteNacosInstanceResponse DeleteNacosInstanceWithOptions(DeleteNacosInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4331,6 +4520,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<DeleteNacosInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For more information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request DeleteNacosInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteNacosInstanceResponse
+         */
         public async Task<DeleteNacosInstanceResponse> DeleteNacosInstanceWithOptionsAsync(DeleteNacosInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4390,18 +4586,37 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<DeleteNacosInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For more information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request DeleteNacosInstanceRequest
+          * @return DeleteNacosInstanceResponse
+         */
         public DeleteNacosInstanceResponse DeleteNacosInstance(DeleteNacosInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteNacosInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For more information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request DeleteNacosInstanceRequest
+          * @return DeleteNacosInstanceResponse
+         */
         public async Task<DeleteNacosInstanceResponse> DeleteNacosInstanceAsync(DeleteNacosInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteNacosInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For more information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request DeleteNacosServiceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteNacosServiceResponse
+         */
         public DeleteNacosServiceResponse DeleteNacosServiceWithOptions(DeleteNacosServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4445,6 +4660,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<DeleteNacosServiceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For more information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request DeleteNacosServiceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteNacosServiceResponse
+         */
         public async Task<DeleteNacosServiceResponse> DeleteNacosServiceWithOptionsAsync(DeleteNacosServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4488,12 +4710,24 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<DeleteNacosServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For more information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request DeleteNacosServiceRequest
+          * @return DeleteNacosServiceResponse
+         */
         public DeleteNacosServiceResponse DeleteNacosService(DeleteNacosServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteNacosServiceWithOptions(request, runtime);
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For more information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request DeleteNacosServiceRequest
+          * @return DeleteNacosServiceResponse
+         */
         public async Task<DeleteNacosServiceResponse> DeleteNacosServiceAsync(DeleteNacosServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4902,6 +5136,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return await DeleteZnodeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ExportNacosConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ExportNacosConfigResponse
+         */
         public ExportNacosConfigResponse ExportNacosConfigWithOptions(ExportNacosConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4953,6 +5194,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<ExportNacosConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ExportNacosConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ExportNacosConfigResponse
+         */
         public async Task<ExportNacosConfigResponse> ExportNacosConfigWithOptionsAsync(ExportNacosConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5004,12 +5252,24 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<ExportNacosConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ExportNacosConfigRequest
+          * @return ExportNacosConfigResponse
+         */
         public ExportNacosConfigResponse ExportNacosConfig(ExportNacosConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ExportNacosConfigWithOptions(request, runtime);
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ExportNacosConfigRequest
+          * @return ExportNacosConfigResponse
+         */
         public async Task<ExportNacosConfigResponse> ExportNacosConfigAsync(ExportNacosConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6096,6 +6356,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return await GetImageWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request GetImportFileUrlRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetImportFileUrlResponse
+         */
         public GetImportFileUrlResponse GetImportFileUrlWithOptions(GetImportFileUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6135,6 +6402,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<GetImportFileUrlResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request GetImportFileUrlRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetImportFileUrlResponse
+         */
         public async Task<GetImportFileUrlResponse> GetImportFileUrlWithOptionsAsync(GetImportFileUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6174,12 +6448,24 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<GetImportFileUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request GetImportFileUrlRequest
+          * @return GetImportFileUrlResponse
+         */
         public GetImportFileUrlResponse GetImportFileUrl(GetImportFileUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetImportFileUrlWithOptions(request, runtime);
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request GetImportFileUrlRequest
+          * @return GetImportFileUrlResponse
+         */
         public async Task<GetImportFileUrlResponse> GetImportFileUrlAsync(GetImportFileUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6416,6 +6702,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return await GetMseSourceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request GetNacosConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetNacosConfigResponse
+         */
         public GetNacosConfigResponse GetNacosConfigWithOptions(GetNacosConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6463,6 +6756,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<GetNacosConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request GetNacosConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetNacosConfigResponse
+         */
         public async Task<GetNacosConfigResponse> GetNacosConfigWithOptionsAsync(GetNacosConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6510,18 +6810,37 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<GetNacosConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request GetNacosConfigRequest
+          * @return GetNacosConfigResponse
+         */
         public GetNacosConfigResponse GetNacosConfig(GetNacosConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetNacosConfigWithOptions(request, runtime);
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request GetNacosConfigRequest
+          * @return GetNacosConfigResponse
+         */
         public async Task<GetNacosConfigResponse> GetNacosConfigAsync(GetNacosConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetNacosConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request GetNacosHistoryConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetNacosHistoryConfigResponse
+         */
         public GetNacosHistoryConfigResponse GetNacosHistoryConfigWithOptions(GetNacosHistoryConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6569,6 +6888,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<GetNacosHistoryConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request GetNacosHistoryConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetNacosHistoryConfigResponse
+         */
         public async Task<GetNacosHistoryConfigResponse> GetNacosHistoryConfigWithOptionsAsync(GetNacosHistoryConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6616,12 +6942,24 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<GetNacosHistoryConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request GetNacosHistoryConfigRequest
+          * @return GetNacosHistoryConfigResponse
+         */
         public GetNacosHistoryConfigResponse GetNacosHistoryConfig(GetNacosHistoryConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetNacosHistoryConfigWithOptions(request, runtime);
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request GetNacosHistoryConfigRequest
+          * @return GetNacosHistoryConfigResponse
+         */
         public async Task<GetNacosHistoryConfigResponse> GetNacosHistoryConfigAsync(GetNacosHistoryConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7224,6 +7562,95 @@ namespace AlibabaCloud.SDK.Mse20190531
             return await GetTagsBySwimmingLaneGroupIdWithOptionsAsync(request, runtime);
         }
 
+        public GetZookeeperDataImportUrlResponse GetZookeeperDataImportUrlWithOptions(GetZookeeperDataImportUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentType))
+            {
+                query["ContentType"] = request.ContentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetZookeeperDataImportUrl",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetZookeeperDataImportUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetZookeeperDataImportUrlResponse> GetZookeeperDataImportUrlWithOptionsAsync(GetZookeeperDataImportUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentType))
+            {
+                query["ContentType"] = request.ContentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetZookeeperDataImportUrl",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetZookeeperDataImportUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetZookeeperDataImportUrlResponse GetZookeeperDataImportUrl(GetZookeeperDataImportUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetZookeeperDataImportUrlWithOptions(request, runtime);
+        }
+
+        public async Task<GetZookeeperDataImportUrlResponse> GetZookeeperDataImportUrlAsync(GetZookeeperDataImportUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetZookeeperDataImportUrlWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ImportNacosConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ImportNacosConfigResponse
+         */
         public ImportNacosConfigResponse ImportNacosConfigWithOptions(ImportNacosConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7267,6 +7694,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<ImportNacosConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ImportNacosConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ImportNacosConfigResponse
+         */
         public async Task<ImportNacosConfigResponse> ImportNacosConfigWithOptionsAsync(ImportNacosConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7310,12 +7744,24 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<ImportNacosConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ImportNacosConfigRequest
+          * @return ImportNacosConfigResponse
+         */
         public ImportNacosConfigResponse ImportNacosConfig(ImportNacosConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ImportNacosConfigWithOptions(request, runtime);
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ImportNacosConfigRequest
+          * @return ImportNacosConfigResponse
+         */
         public async Task<ImportNacosConfigResponse> ImportNacosConfigAsync(ImportNacosConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7432,6 +7878,119 @@ namespace AlibabaCloud.SDK.Mse20190531
             return await ImportServicesWithOptionsAsync(request, runtime);
         }
 
+        public ImportZookeeperDataResponse ImportZookeeperDataWithOptions(ImportZookeeperDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["FileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
+            {
+                query["FileUrl"] = request.FileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestPars))
+            {
+                query["RequestPars"] = request.RequestPars;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportZookeeperData",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportZookeeperDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ImportZookeeperDataResponse> ImportZookeeperDataWithOptionsAsync(ImportZookeeperDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["FileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
+            {
+                query["FileUrl"] = request.FileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestPars))
+            {
+                query["RequestPars"] = request.RequestPars;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportZookeeperData",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportZookeeperDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ImportZookeeperDataResponse ImportZookeeperData(ImportZookeeperDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ImportZookeeperDataWithOptions(request, runtime);
+        }
+
+        public async Task<ImportZookeeperDataResponse> ImportZookeeperDataAsync(ImportZookeeperDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ImportZookeeperDataWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListAnsInstancesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListAnsInstancesResponse
+         */
         public ListAnsInstancesResponse ListAnsInstancesWithOptions(ListAnsInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7455,6 +8014,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<ListAnsInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListAnsInstancesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListAnsInstancesResponse
+         */
         public async Task<ListAnsInstancesResponse> ListAnsInstancesWithOptionsAsync(ListAnsInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7478,18 +8044,37 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<ListAnsInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListAnsInstancesRequest
+          * @return ListAnsInstancesResponse
+         */
         public ListAnsInstancesResponse ListAnsInstances(ListAnsInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListAnsInstancesWithOptions(request, runtime);
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListAnsInstancesRequest
+          * @return ListAnsInstancesResponse
+         */
         public async Task<ListAnsInstancesResponse> ListAnsInstancesAsync(ListAnsInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAnsInstancesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListAnsServiceClustersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListAnsServiceClustersResponse
+         */
         public ListAnsServiceClustersResponse ListAnsServiceClustersWithOptions(ListAnsServiceClustersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7513,6 +8098,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<ListAnsServiceClustersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListAnsServiceClustersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListAnsServiceClustersResponse
+         */
         public async Task<ListAnsServiceClustersResponse> ListAnsServiceClustersWithOptionsAsync(ListAnsServiceClustersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7536,18 +8128,37 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<ListAnsServiceClustersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListAnsServiceClustersRequest
+          * @return ListAnsServiceClustersResponse
+         */
         public ListAnsServiceClustersResponse ListAnsServiceClusters(ListAnsServiceClustersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListAnsServiceClustersWithOptions(request, runtime);
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListAnsServiceClustersRequest
+          * @return ListAnsServiceClustersResponse
+         */
         public async Task<ListAnsServiceClustersResponse> ListAnsServiceClustersAsync(ListAnsServiceClustersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAnsServiceClustersWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For more information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListAnsServicesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListAnsServicesResponse
+         */
         public ListAnsServicesResponse ListAnsServicesWithOptions(ListAnsServicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7571,6 +8182,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<ListAnsServicesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For more information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListAnsServicesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListAnsServicesResponse
+         */
         public async Task<ListAnsServicesResponse> ListAnsServicesWithOptionsAsync(ListAnsServicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7594,12 +8212,24 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<ListAnsServicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For more information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListAnsServicesRequest
+          * @return ListAnsServicesResponse
+         */
         public ListAnsServicesResponse ListAnsServices(ListAnsServicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListAnsServicesWithOptions(request, runtime);
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For more information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListAnsServicesRequest
+          * @return ListAnsServicesResponse
+         */
         public async Task<ListAnsServicesResponse> ListAnsServicesAsync(ListAnsServicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7810,6 +8440,112 @@ namespace AlibabaCloud.SDK.Mse20190531
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListClusterConnectionTypesWithOptionsAsync(request, runtime);
+        }
+
+        public ListClusterHealthCheckTaskResponse ListClusterHealthCheckTaskWithOptions(ListClusterHealthCheckTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestPars))
+            {
+                query["RequestPars"] = request.RequestPars;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListClusterHealthCheckTask",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListClusterHealthCheckTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListClusterHealthCheckTaskResponse> ListClusterHealthCheckTaskWithOptionsAsync(ListClusterHealthCheckTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestPars))
+            {
+                query["RequestPars"] = request.RequestPars;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListClusterHealthCheckTask",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListClusterHealthCheckTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListClusterHealthCheckTaskResponse ListClusterHealthCheckTask(ListClusterHealthCheckTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListClusterHealthCheckTaskWithOptions(request, runtime);
+        }
+
+        public async Task<ListClusterHealthCheckTaskResponse> ListClusterHealthCheckTaskAsync(ListClusterHealthCheckTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListClusterHealthCheckTaskWithOptionsAsync(request, runtime);
         }
 
         public ListClusterTypesResponse ListClusterTypesWithOptions(ListClusterTypesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8824,6 +9560,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return await ListInstanceCountWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListListenersByConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListListenersByConfigResponse
+         */
         public ListListenersByConfigResponse ListListenersByConfigWithOptions(ListListenersByConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8871,6 +9614,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<ListListenersByConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListListenersByConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListListenersByConfigResponse
+         */
         public async Task<ListListenersByConfigResponse> ListListenersByConfigWithOptionsAsync(ListListenersByConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8918,18 +9668,37 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<ListListenersByConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListListenersByConfigRequest
+          * @return ListListenersByConfigResponse
+         */
         public ListListenersByConfigResponse ListListenersByConfig(ListListenersByConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListListenersByConfigWithOptions(request, runtime);
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListListenersByConfigRequest
+          * @return ListListenersByConfigResponse
+         */
         public async Task<ListListenersByConfigResponse> ListListenersByConfigAsync(ListListenersByConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListListenersByConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListListenersByIpRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListListenersByIpResponse
+         */
         public ListListenersByIpResponse ListListenersByIpWithOptions(ListListenersByIpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8973,6 +9742,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<ListListenersByIpResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListListenersByIpRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListListenersByIpResponse
+         */
         public async Task<ListListenersByIpResponse> ListListenersByIpWithOptionsAsync(ListListenersByIpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9016,18 +9792,37 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<ListListenersByIpResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListListenersByIpRequest
+          * @return ListListenersByIpResponse
+         */
         public ListListenersByIpResponse ListListenersByIp(ListListenersByIpRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListListenersByIpWithOptions(request, runtime);
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListListenersByIpRequest
+          * @return ListListenersByIpResponse
+         */
         public async Task<ListListenersByIpResponse> ListListenersByIpAsync(ListListenersByIpRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListListenersByIpWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListNacosConfigsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListNacosConfigsResponse
+         */
         public ListNacosConfigsResponse ListNacosConfigsWithOptions(ListNacosConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9095,6 +9890,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<ListNacosConfigsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListNacosConfigsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListNacosConfigsResponse
+         */
         public async Task<ListNacosConfigsResponse> ListNacosConfigsWithOptionsAsync(ListNacosConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9162,18 +9964,37 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<ListNacosConfigsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListNacosConfigsRequest
+          * @return ListNacosConfigsResponse
+         */
         public ListNacosConfigsResponse ListNacosConfigs(ListNacosConfigsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListNacosConfigsWithOptions(request, runtime);
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListNacosConfigsRequest
+          * @return ListNacosConfigsResponse
+         */
         public async Task<ListNacosConfigsResponse> ListNacosConfigsAsync(ListNacosConfigsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListNacosConfigsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListNacosHistoryConfigsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListNacosHistoryConfigsResponse
+         */
         public ListNacosHistoryConfigsResponse ListNacosHistoryConfigsWithOptions(ListNacosHistoryConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9233,6 +10054,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<ListNacosHistoryConfigsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListNacosHistoryConfigsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListNacosHistoryConfigsResponse
+         */
         public async Task<ListNacosHistoryConfigsResponse> ListNacosHistoryConfigsWithOptionsAsync(ListNacosHistoryConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9292,12 +10120,24 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<ListNacosHistoryConfigsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListNacosHistoryConfigsRequest
+          * @return ListNacosHistoryConfigsResponse
+         */
         public ListNacosHistoryConfigsResponse ListNacosHistoryConfigs(ListNacosHistoryConfigsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListNacosHistoryConfigsWithOptions(request, runtime);
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request ListNacosHistoryConfigsRequest
+          * @return ListNacosHistoryConfigsResponse
+         */
         public async Task<ListNacosHistoryConfigsResponse> ListNacosHistoryConfigsAsync(ListNacosHistoryConfigsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11970,6 +12810,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return await UpdateClusterWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this API operation to update the number of nodes or specifications of a pay-as-you-go MSE instance. You are charged for node addition or specifications upgrades of the instance. For more information about billing, see [Billing overview](~~139842~~)
+          *
+          * @param request UpdateClusterSpecRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateClusterSpecResponse
+         */
         public UpdateClusterSpecResponse UpdateClusterSpecWithOptions(UpdateClusterSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12013,6 +12860,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<UpdateClusterSpecResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this API operation to update the number of nodes or specifications of a pay-as-you-go MSE instance. You are charged for node addition or specifications upgrades of the instance. For more information about billing, see [Billing overview](~~139842~~)
+          *
+          * @param request UpdateClusterSpecRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateClusterSpecResponse
+         */
         public async Task<UpdateClusterSpecResponse> UpdateClusterSpecWithOptionsAsync(UpdateClusterSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12056,12 +12910,24 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<UpdateClusterSpecResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this API operation to update the number of nodes or specifications of a pay-as-you-go MSE instance. You are charged for node addition or specifications upgrades of the instance. For more information about billing, see [Billing overview](~~139842~~)
+          *
+          * @param request UpdateClusterSpecRequest
+          * @return UpdateClusterSpecResponse
+         */
         public UpdateClusterSpecResponse UpdateClusterSpec(UpdateClusterSpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateClusterSpecWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this API operation to update the number of nodes or specifications of a pay-as-you-go MSE instance. You are charged for node addition or specifications upgrades of the instance. For more information about billing, see [Billing overview](~~139842~~)
+          *
+          * @param request UpdateClusterSpecRequest
+          * @return UpdateClusterSpecResponse
+         */
         public async Task<UpdateClusterSpecResponse> UpdateClusterSpecAsync(UpdateClusterSpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13772,6 +14638,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return await UpdateGatewayServiceVersionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation to update the number or specifications of nodes in a pay-as-you-go cloud-native gateway. You are charged when you add nodes or upgrade node specifications. For more information, see \\[Pricing] (`~~250950~~`).
+          *
+          * @param request UpdateGatewaySpecRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateGatewaySpecResponse
+         */
         public UpdateGatewaySpecResponse UpdateGatewaySpecWithOptions(UpdateGatewaySpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13811,6 +14684,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<UpdateGatewaySpecResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to update the number or specifications of nodes in a pay-as-you-go cloud-native gateway. You are charged when you add nodes or upgrade node specifications. For more information, see \\[Pricing] (`~~250950~~`).
+          *
+          * @param request UpdateGatewaySpecRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateGatewaySpecResponse
+         */
         public async Task<UpdateGatewaySpecResponse> UpdateGatewaySpecWithOptionsAsync(UpdateGatewaySpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13850,12 +14730,24 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<UpdateGatewaySpecResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to update the number or specifications of nodes in a pay-as-you-go cloud-native gateway. You are charged when you add nodes or upgrade node specifications. For more information, see \\[Pricing] (`~~250950~~`).
+          *
+          * @param request UpdateGatewaySpecRequest
+          * @return UpdateGatewaySpecResponse
+         */
         public UpdateGatewaySpecResponse UpdateGatewaySpec(UpdateGatewaySpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateGatewaySpecWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation to update the number or specifications of nodes in a pay-as-you-go cloud-native gateway. You are charged when you add nodes or upgrade node specifications. For more information, see \\[Pricing] (`~~250950~~`).
+          *
+          * @param request UpdateGatewaySpecRequest
+          * @return UpdateGatewaySpecResponse
+         */
         public async Task<UpdateGatewaySpecResponse> UpdateGatewaySpecAsync(UpdateGatewaySpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14192,6 +15084,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return await UpdateNacosClusterWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request UpdateNacosConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateNacosConfigResponse
+         */
         public UpdateNacosConfigResponse UpdateNacosConfigWithOptions(UpdateNacosConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14267,6 +15166,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<UpdateNacosConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request UpdateNacosConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateNacosConfigResponse
+         */
         public async Task<UpdateNacosConfigResponse> UpdateNacosConfigWithOptionsAsync(UpdateNacosConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14342,18 +15248,37 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<UpdateNacosConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request UpdateNacosConfigRequest
+          * @return UpdateNacosConfigResponse
+         */
         public UpdateNacosConfigResponse UpdateNacosConfig(UpdateNacosConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateNacosConfigWithOptions(request, runtime);
         }
 
+        /**
+          * > The current API operation is not provided in Nacos SDK. For information about Nacos SDK, see the [official Nacos documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request UpdateNacosConfigRequest
+          * @return UpdateNacosConfigResponse
+         */
         public async Task<UpdateNacosConfigResponse> UpdateNacosConfigAsync(UpdateNacosConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateNacosConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request UpdateNacosInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateNacosInstanceResponse
+         */
         public UpdateNacosInstanceResponse UpdateNacosInstanceWithOptions(UpdateNacosInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14427,6 +15352,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<UpdateNacosInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request UpdateNacosInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateNacosInstanceResponse
+         */
         public async Task<UpdateNacosInstanceResponse> UpdateNacosInstanceWithOptionsAsync(UpdateNacosInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14500,18 +15432,37 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<UpdateNacosInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request UpdateNacosInstanceRequest
+          * @return UpdateNacosInstanceResponse
+         */
         public UpdateNacosInstanceResponse UpdateNacosInstance(UpdateNacosInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateNacosInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request UpdateNacosInstanceRequest
+          * @return UpdateNacosInstanceResponse
+         */
         public async Task<UpdateNacosInstanceResponse> UpdateNacosInstanceAsync(UpdateNacosInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateNacosInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For more information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request UpdateNacosServiceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateNacosServiceResponse
+         */
         public UpdateNacosServiceResponse UpdateNacosServiceWithOptions(UpdateNacosServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14563,6 +15514,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<UpdateNacosServiceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For more information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request UpdateNacosServiceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateNacosServiceResponse
+         */
         public async Task<UpdateNacosServiceResponse> UpdateNacosServiceWithOptionsAsync(UpdateNacosServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14614,12 +15572,24 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<UpdateNacosServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For more information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request UpdateNacosServiceRequest
+          * @return UpdateNacosServiceResponse
+         */
         public UpdateNacosServiceResponse UpdateNacosService(UpdateNacosServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateNacosServiceWithOptions(request, runtime);
         }
 
+        /**
+          * > The operation is not provided in Nacos SDKs. For more information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+          *
+          * @param request UpdateNacosServiceRequest
+          * @return UpdateNacosServiceResponse
+         */
         public async Task<UpdateNacosServiceResponse> UpdateNacosServiceAsync(UpdateNacosServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
