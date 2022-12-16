@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [Validation(Required=false)]
                 public string CreateUser { get; set; }
 
+                /// <summary>
+                /// DagId。
+                /// </summary>
                 [NameInMap("DagId")]
                 [Validation(Required=false)]
                 public long? DagId { get; set; }
@@ -37,6 +40,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [Validation(Required=false)]
                 public long? FinishTime { get; set; }
 
+                /// <summary>
+                /// Gmtdate。
+                /// </summary>
                 [NameInMap("Gmtdate")]
                 [Validation(Required=false)]
                 public long? Gmtdate { get; set; }

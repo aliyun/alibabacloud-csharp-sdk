@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
-    public class AbolishDataServiceApiRequest : TeaModel {
-        [NameInMap("ApiId")]
+    public class Entity : TeaModel {
+        [NameInMap("EntityContent")]
         [Validation(Required=false)]
-        public long? ApiId { get; set; }
+        public Dictionary<string, object> EntityContent { get; set; }
 
-        [NameInMap("ProjectId")]
+        [NameInMap("QualifiedName")]
         [Validation(Required=false)]
-        public long? ProjectId { get; set; }
+        public string QualifiedName { get; set; }
 
         [NameInMap("TenantId")]
         [Validation(Required=false)]

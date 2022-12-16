@@ -988,6 +988,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await CreateBusinessWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request CreateConnectionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateConnectionResponse
+         */
+        // Deprecated
         public CreateConnectionResponse CreateConnectionWithOptions(CreateConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1039,6 +1047,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<CreateConnectionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request CreateConnectionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateConnectionResponse
+         */
+        // Deprecated
         public async Task<CreateConnectionResponse> CreateConnectionWithOptionsAsync(CreateConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1090,12 +1106,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<CreateConnectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request CreateConnectionRequest
+          * @return CreateConnectionResponse
+         */
+        // Deprecated
         public CreateConnectionResponse CreateConnection(CreateConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateConnectionWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request CreateConnectionRequest
+          * @return CreateConnectionResponse
+         */
+        // Deprecated
         public async Task<CreateConnectionResponse> CreateConnectionAsync(CreateConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1208,6 +1238,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await CreateDISyncTaskWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request CreateDagComplementRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDagComplementResponse
+         */
+        // Deprecated
         public CreateDagComplementResponse CreateDagComplementWithOptions(CreateDagComplementRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1275,6 +1313,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<CreateDagComplementResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request CreateDagComplementRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDagComplementResponse
+         */
+        // Deprecated
         public async Task<CreateDagComplementResponse> CreateDagComplementWithOptionsAsync(CreateDagComplementRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1342,18 +1388,40 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<CreateDagComplementResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request CreateDagComplementRequest
+          * @return CreateDagComplementResponse
+         */
+        // Deprecated
         public CreateDagComplementResponse CreateDagComplement(CreateDagComplementRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDagComplementWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request CreateDagComplementRequest
+          * @return CreateDagComplementResponse
+         */
+        // Deprecated
         public async Task<CreateDagComplementResponse> CreateDagComplementAsync(CreateDagComplementRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDagComplementWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request CreateDagTestRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDagTestResponse
+         */
+        // Deprecated
         public CreateDagTestResponse CreateDagTestWithOptions(CreateDagTestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1397,6 +1465,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<CreateDagTestResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request CreateDagTestRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDagTestResponse
+         */
+        // Deprecated
         public async Task<CreateDagTestResponse> CreateDagTestWithOptionsAsync(CreateDagTestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1440,12 +1516,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<CreateDagTestResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request CreateDagTestRequest
+          * @return CreateDagTestResponse
+         */
+        // Deprecated
         public CreateDagTestResponse CreateDagTest(CreateDagTestRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDagTestWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request CreateDagTestRequest
+          * @return CreateDagTestResponse
+         */
+        // Deprecated
         public async Task<CreateDagTestResponse> CreateDagTestAsync(CreateDagTestRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2816,6 +2906,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return createImportMigrationResp;
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request CreateManualDagRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateManualDagResponse
+         */
+        // Deprecated
         public CreateManualDagResponse CreateManualDagWithOptions(CreateManualDagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2871,6 +2969,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<CreateManualDagResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request CreateManualDagRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateManualDagResponse
+         */
+        // Deprecated
         public async Task<CreateManualDagResponse> CreateManualDagWithOptionsAsync(CreateManualDagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2926,12 +3032,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<CreateManualDagResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request CreateManualDagRequest
+          * @return CreateManualDagResponse
+         */
+        // Deprecated
         public CreateManualDagResponse CreateManualDag(CreateManualDagRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateManualDagWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request CreateManualDagRequest
+          * @return CreateManualDagResponse
+         */
+        // Deprecated
         public async Task<CreateManualDagResponse> CreateManualDagAsync(CreateManualDagRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4642,6 +4762,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await DeleteBusinessWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DeleteConnectionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteConnectionResponse
+         */
+        // Deprecated
         public DeleteConnectionResponse DeleteConnectionWithOptions(DeleteConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4669,6 +4797,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<DeleteConnectionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DeleteConnectionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteConnectionResponse
+         */
+        // Deprecated
         public async Task<DeleteConnectionResponse> DeleteConnectionWithOptionsAsync(DeleteConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4696,12 +4832,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<DeleteConnectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DeleteConnectionRequest
+          * @return DeleteConnectionResponse
+         */
+        // Deprecated
         public DeleteConnectionResponse DeleteConnection(DeleteConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteConnectionWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DeleteConnectionRequest
+          * @return DeleteConnectionResponse
+         */
+        // Deprecated
         public async Task<DeleteConnectionResponse> DeleteConnectionAsync(DeleteConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8532,6 +8682,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await GetInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetInstanceConsumeTimeRankRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetInstanceConsumeTimeRankResponse
+         */
+        // Deprecated
         public GetInstanceConsumeTimeRankResponse GetInstanceConsumeTimeRankWithOptions(GetInstanceConsumeTimeRankRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8563,6 +8721,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetInstanceConsumeTimeRankResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetInstanceConsumeTimeRankRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetInstanceConsumeTimeRankResponse
+         */
+        // Deprecated
         public async Task<GetInstanceConsumeTimeRankResponse> GetInstanceConsumeTimeRankWithOptionsAsync(GetInstanceConsumeTimeRankRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8594,18 +8760,40 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetInstanceConsumeTimeRankResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetInstanceConsumeTimeRankRequest
+          * @return GetInstanceConsumeTimeRankResponse
+         */
+        // Deprecated
         public GetInstanceConsumeTimeRankResponse GetInstanceConsumeTimeRank(GetInstanceConsumeTimeRankRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetInstanceConsumeTimeRankWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetInstanceConsumeTimeRankRequest
+          * @return GetInstanceConsumeTimeRankResponse
+         */
+        // Deprecated
         public async Task<GetInstanceConsumeTimeRankResponse> GetInstanceConsumeTimeRankAsync(GetInstanceConsumeTimeRankRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetInstanceConsumeTimeRankWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetInstanceCountTrendRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetInstanceCountTrendResponse
+         */
+        // Deprecated
         public GetInstanceCountTrendResponse GetInstanceCountTrendWithOptions(GetInstanceCountTrendRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8641,6 +8829,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetInstanceCountTrendResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetInstanceCountTrendRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetInstanceCountTrendResponse
+         */
+        // Deprecated
         public async Task<GetInstanceCountTrendResponse> GetInstanceCountTrendWithOptionsAsync(GetInstanceCountTrendRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8676,18 +8872,40 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetInstanceCountTrendResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetInstanceCountTrendRequest
+          * @return GetInstanceCountTrendResponse
+         */
+        // Deprecated
         public GetInstanceCountTrendResponse GetInstanceCountTrend(GetInstanceCountTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetInstanceCountTrendWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetInstanceCountTrendRequest
+          * @return GetInstanceCountTrendResponse
+         */
+        // Deprecated
         public async Task<GetInstanceCountTrendResponse> GetInstanceCountTrendAsync(GetInstanceCountTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetInstanceCountTrendWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetInstanceErrorRankRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetInstanceErrorRankResponse
+         */
+        // Deprecated
         public GetInstanceErrorRankResponse GetInstanceErrorRankWithOptions(GetInstanceErrorRankRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8715,6 +8933,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetInstanceErrorRankResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetInstanceErrorRankRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetInstanceErrorRankResponse
+         */
+        // Deprecated
         public async Task<GetInstanceErrorRankResponse> GetInstanceErrorRankWithOptionsAsync(GetInstanceErrorRankRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8742,12 +8968,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetInstanceErrorRankResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetInstanceErrorRankRequest
+          * @return GetInstanceErrorRankResponse
+         */
+        // Deprecated
         public GetInstanceErrorRankResponse GetInstanceErrorRank(GetInstanceErrorRankRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetInstanceErrorRankWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetInstanceErrorRankRequest
+          * @return GetInstanceErrorRankResponse
+         */
+        // Deprecated
         public async Task<GetInstanceErrorRankResponse> GetInstanceErrorRankAsync(GetInstanceErrorRankRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8836,6 +9076,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await GetInstanceLogWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetInstanceStatusCountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetInstanceStatusCountResponse
+         */
+        // Deprecated
         public GetInstanceStatusCountResponse GetInstanceStatusCountWithOptions(GetInstanceStatusCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8871,6 +9119,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetInstanceStatusCountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetInstanceStatusCountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetInstanceStatusCountResponse
+         */
+        // Deprecated
         public async Task<GetInstanceStatusCountResponse> GetInstanceStatusCountWithOptionsAsync(GetInstanceStatusCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8906,12 +9162,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetInstanceStatusCountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetInstanceStatusCountRequest
+          * @return GetInstanceStatusCountResponse
+         */
+        // Deprecated
         public GetInstanceStatusCountResponse GetInstanceStatusCount(GetInstanceStatusCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetInstanceStatusCountWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetInstanceStatusCountRequest
+          * @return GetInstanceStatusCountResponse
+         */
+        // Deprecated
         public async Task<GetInstanceStatusCountResponse> GetInstanceStatusCountAsync(GetInstanceStatusCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9016,6 +9286,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await GetInstanceStatusStatisticWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetManualDagInstancesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetManualDagInstancesResponse
+         */
+        // Deprecated
         public GetManualDagInstancesResponse GetManualDagInstancesWithOptions(GetManualDagInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9051,6 +9329,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetManualDagInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetManualDagInstancesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetManualDagInstancesResponse
+         */
+        // Deprecated
         public async Task<GetManualDagInstancesResponse> GetManualDagInstancesWithOptionsAsync(GetManualDagInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9086,12 +9372,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetManualDagInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetManualDagInstancesRequest
+          * @return GetManualDagInstancesResponse
+         */
+        // Deprecated
         public GetManualDagInstancesResponse GetManualDagInstances(GetManualDagInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetManualDagInstancesWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetManualDagInstancesRequest
+          * @return GetManualDagInstancesResponse
+         */
+        // Deprecated
         public async Task<GetManualDagInstancesResponse> GetManualDagInstancesAsync(GetManualDagInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9474,6 +9774,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await GetMetaDBTableListWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ****
+          *
+          * @param request GetMetaTableBasicInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetMetaTableBasicInfoResponse
+         */
         public GetMetaTableBasicInfoResponse GetMetaTableBasicInfoWithOptions(GetMetaTableBasicInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9497,6 +9804,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetMetaTableBasicInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ****
+          *
+          * @param request GetMetaTableBasicInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetMetaTableBasicInfoResponse
+         */
         public async Task<GetMetaTableBasicInfoResponse> GetMetaTableBasicInfoWithOptionsAsync(GetMetaTableBasicInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9520,12 +9834,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetMetaTableBasicInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ****
+          *
+          * @param request GetMetaTableBasicInfoRequest
+          * @return GetMetaTableBasicInfoResponse
+         */
         public GetMetaTableBasicInfoResponse GetMetaTableBasicInfo(GetMetaTableBasicInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetMetaTableBasicInfoWithOptions(request, runtime);
         }
 
+        /**
+          * ****
+          *
+          * @param request GetMetaTableBasicInfoRequest
+          * @return GetMetaTableBasicInfoResponse
+         */
         public async Task<GetMetaTableBasicInfoResponse> GetMetaTableBasicInfoAsync(GetMetaTableBasicInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10040,6 +10366,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 query["TableGuid"] = request.TableGuid;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -10082,6 +10412,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableGuid))
             {
                 query["TableGuid"] = request.TableGuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10676,6 +11010,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await GetNodeCodeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetNodeOnBaselineRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetNodeOnBaselineResponse
+         */
+        // Deprecated
         public GetNodeOnBaselineResponse GetNodeOnBaselineWithOptions(GetNodeOnBaselineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10703,6 +11045,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetNodeOnBaselineResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetNodeOnBaselineRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetNodeOnBaselineResponse
+         */
+        // Deprecated
         public async Task<GetNodeOnBaselineResponse> GetNodeOnBaselineWithOptionsAsync(GetNodeOnBaselineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10730,12 +11080,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetNodeOnBaselineResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetNodeOnBaselineRequest
+          * @return GetNodeOnBaselineResponse
+         */
+        // Deprecated
         public GetNodeOnBaselineResponse GetNodeOnBaseline(GetNodeOnBaselineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetNodeOnBaselineWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetNodeOnBaselineRequest
+          * @return GetNodeOnBaselineResponse
+         */
+        // Deprecated
         public async Task<GetNodeOnBaselineResponse> GetNodeOnBaselineAsync(GetNodeOnBaselineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10816,6 +11180,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await GetNodeParentsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetNodeTypeListInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetNodeTypeListInfoResponse
+         */
+        // Deprecated
         public GetNodeTypeListInfoResponse GetNodeTypeListInfoWithOptions(GetNodeTypeListInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10863,6 +11235,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetNodeTypeListInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetNodeTypeListInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetNodeTypeListInfoResponse
+         */
+        // Deprecated
         public async Task<GetNodeTypeListInfoResponse> GetNodeTypeListInfoWithOptionsAsync(GetNodeTypeListInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10910,12 +11290,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetNodeTypeListInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetNodeTypeListInfoRequest
+          * @return GetNodeTypeListInfoResponse
+         */
+        // Deprecated
         public GetNodeTypeListInfoResponse GetNodeTypeListInfo(GetNodeTypeListInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetNodeTypeListInfoWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetNodeTypeListInfoRequest
+          * @return GetNodeTypeListInfoResponse
+         */
+        // Deprecated
         public async Task<GetNodeTypeListInfoResponse> GetNodeTypeListInfoAsync(GetNodeTypeListInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11244,6 +11638,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await GetProjectWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetProjectDetailRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetProjectDetailResponse
+         */
+        // Deprecated
         public GetProjectDetailResponse GetProjectDetailWithOptions(GetProjectDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11271,6 +11673,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetProjectDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetProjectDetailRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetProjectDetailResponse
+         */
+        // Deprecated
         public async Task<GetProjectDetailResponse> GetProjectDetailWithOptionsAsync(GetProjectDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11298,12 +11708,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetProjectDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetProjectDetailRequest
+          * @return GetProjectDetailResponse
+         */
+        // Deprecated
         public GetProjectDetailResponse GetProjectDetail(GetProjectDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetProjectDetailWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetProjectDetailRequest
+          * @return GetProjectDetailResponse
+         */
+        // Deprecated
         public async Task<GetProjectDetailResponse> GetProjectDetailAsync(GetProjectDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11672,6 +12096,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await GetSensitiveDataWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetSuccessInstanceTrendRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetSuccessInstanceTrendResponse
+         */
+        // Deprecated
         public GetSuccessInstanceTrendResponse GetSuccessInstanceTrendWithOptions(GetSuccessInstanceTrendRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11699,6 +12131,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetSuccessInstanceTrendResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetSuccessInstanceTrendRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetSuccessInstanceTrendResponse
+         */
+        // Deprecated
         public async Task<GetSuccessInstanceTrendResponse> GetSuccessInstanceTrendWithOptionsAsync(GetSuccessInstanceTrendRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11726,18 +12166,39 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetSuccessInstanceTrendResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetSuccessInstanceTrendRequest
+          * @return GetSuccessInstanceTrendResponse
+         */
+        // Deprecated
         public GetSuccessInstanceTrendResponse GetSuccessInstanceTrend(GetSuccessInstanceTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetSuccessInstanceTrendWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetSuccessInstanceTrendRequest
+          * @return GetSuccessInstanceTrendResponse
+         */
+        // Deprecated
         public async Task<GetSuccessInstanceTrendResponse> GetSuccessInstanceTrendAsync(GetSuccessInstanceTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetSuccessInstanceTrendWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ****
+          *
+          * @param request GetTopicRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetTopicResponse
+         */
         public GetTopicResponse GetTopicWithOptions(GetTopicRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11765,6 +12226,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetTopicResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ****
+          *
+          * @param request GetTopicRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetTopicResponse
+         */
         public async Task<GetTopicResponse> GetTopicWithOptionsAsync(GetTopicRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11792,12 +12260,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetTopicResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ****
+          *
+          * @param request GetTopicRequest
+          * @return GetTopicResponse
+         */
         public GetTopicResponse GetTopic(GetTopicRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetTopicWithOptions(request, runtime);
         }
 
+        /**
+          * ****
+          *
+          * @param request GetTopicRequest
+          * @return GetTopicResponse
+         */
         public async Task<GetTopicResponse> GetTopicAsync(GetTopicRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12660,6 +13140,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await ListCalcEnginesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request ListConnectionsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListConnectionsResponse
+         */
+        // Deprecated
         public ListConnectionsResponse ListConnectionsWithOptions(ListConnectionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12683,6 +13171,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<ListConnectionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request ListConnectionsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListConnectionsResponse
+         */
+        // Deprecated
         public async Task<ListConnectionsResponse> ListConnectionsWithOptionsAsync(ListConnectionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12706,12 +13202,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<ListConnectionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request ListConnectionsRequest
+          * @return ListConnectionsResponse
+         */
+        // Deprecated
         public ListConnectionsResponse ListConnections(ListConnectionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListConnectionsWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request ListConnectionsRequest
+          * @return ListConnectionsResponse
+         */
+        // Deprecated
         public async Task<ListConnectionsResponse> ListConnectionsAsync(ListConnectionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15128,6 +15638,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await ListMigrationsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request ListNodeIORequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListNodeIOResponse
+         */
+        // Deprecated
         public ListNodeIOResponse ListNodeIOWithOptions(ListNodeIORequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15163,6 +15681,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<ListNodeIOResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request ListNodeIORequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListNodeIOResponse
+         */
+        // Deprecated
         public async Task<ListNodeIOResponse> ListNodeIOWithOptionsAsync(ListNodeIORequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15198,12 +15724,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<ListNodeIOResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request ListNodeIORequest
+          * @return ListNodeIOResponse
+         */
+        // Deprecated
         public ListNodeIOResponse ListNodeIO(ListNodeIORequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListNodeIOWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request ListNodeIORequest
+          * @return ListNodeIOResponse
+         */
+        // Deprecated
         public async Task<ListNodeIOResponse> ListNodeIOAsync(ListNodeIORequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15700,6 +16240,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await ListPermissionApplyOrdersWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request ListProgramTypeCountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListProgramTypeCountResponse
+         */
+        // Deprecated
         public ListProgramTypeCountResponse ListProgramTypeCountWithOptions(ListProgramTypeCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15731,6 +16279,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<ListProgramTypeCountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request ListProgramTypeCountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListProgramTypeCountResponse
+         */
+        // Deprecated
         public async Task<ListProgramTypeCountResponse> ListProgramTypeCountWithOptionsAsync(ListProgramTypeCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15762,12 +16318,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<ListProgramTypeCountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request ListProgramTypeCountRequest
+          * @return ListProgramTypeCountResponse
+         */
+        // Deprecated
         public ListProgramTypeCountResponse ListProgramTypeCount(ListProgramTypeCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListProgramTypeCountWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request ListProgramTypeCountRequest
+          * @return ListProgramTypeCountResponse
+         */
+        // Deprecated
         public async Task<ListProgramTypeCountResponse> ListProgramTypeCountAsync(ListProgramTypeCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16090,6 +16660,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await ListProjectsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ****
+          *
+          * @param request ListQualityResultsByEntityRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListQualityResultsByEntityResponse
+         */
         public ListQualityResultsByEntityResponse ListQualityResultsByEntityWithOptions(ListQualityResultsByEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16137,6 +16714,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<ListQualityResultsByEntityResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ****
+          *
+          * @param request ListQualityResultsByEntityRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListQualityResultsByEntityResponse
+         */
         public async Task<ListQualityResultsByEntityResponse> ListQualityResultsByEntityWithOptionsAsync(ListQualityResultsByEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16184,12 +16768,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<ListQualityResultsByEntityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ****
+          *
+          * @param request ListQualityResultsByEntityRequest
+          * @return ListQualityResultsByEntityResponse
+         */
         public ListQualityResultsByEntityResponse ListQualityResultsByEntity(ListQualityResultsByEntityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListQualityResultsByEntityWithOptions(request, runtime);
         }
 
+        /**
+          * ****
+          *
+          * @param request ListQualityResultsByEntityRequest
+          * @return ListQualityResultsByEntityResponse
+         */
         public async Task<ListQualityResultsByEntityResponse> ListQualityResultsByEntityAsync(ListQualityResultsByEntityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16642,10 +17238,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 query["Tags"] = request.TagsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TypeNames))
-            {
-                query["TypeNames"] = request.TypeNames;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -16694,10 +17286,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
             {
                 query["Tags"] = request.TagsShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TypeNames))
-            {
-                query["TypeNames"] = request.TypeNames;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -18636,6 +19224,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await SearchMetaTablesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request SearchNodesByOutputRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SearchNodesByOutputResponse
+         */
+        // Deprecated
         public SearchNodesByOutputResponse SearchNodesByOutputWithOptions(SearchNodesByOutputRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18667,6 +19263,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<SearchNodesByOutputResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request SearchNodesByOutputRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SearchNodesByOutputResponse
+         */
+        // Deprecated
         public async Task<SearchNodesByOutputResponse> SearchNodesByOutputWithOptionsAsync(SearchNodesByOutputRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18698,18 +19302,40 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<SearchNodesByOutputResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request SearchNodesByOutputRequest
+          * @return SearchNodesByOutputResponse
+         */
+        // Deprecated
         public SearchNodesByOutputResponse SearchNodesByOutput(SearchNodesByOutputRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SearchNodesByOutputWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request SearchNodesByOutputRequest
+          * @return SearchNodesByOutputResponse
+         */
+        // Deprecated
         public async Task<SearchNodesByOutputResponse> SearchNodesByOutputAsync(SearchNodesByOutputRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SearchNodesByOutputWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request SetDataSourceShareRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SetDataSourceShareResponse
+         */
+        // Deprecated
         public SetDataSourceShareResponse SetDataSourceShareWithOptions(SetDataSourceShareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18753,6 +19379,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<SetDataSourceShareResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request SetDataSourceShareRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SetDataSourceShareResponse
+         */
+        // Deprecated
         public async Task<SetDataSourceShareResponse> SetDataSourceShareWithOptionsAsync(SetDataSourceShareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18796,12 +19430,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<SetDataSourceShareResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request SetDataSourceShareRequest
+          * @return SetDataSourceShareResponse
+         */
+        // Deprecated
         public SetDataSourceShareResponse SetDataSourceShare(SetDataSourceShareRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetDataSourceShareWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request SetDataSourceShareRequest
+          * @return SetDataSourceShareResponse
+         */
+        // Deprecated
         public async Task<SetDataSourceShareResponse> SetDataSourceShareAsync(SetDataSourceShareRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -20076,6 +20724,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await UpdateBusinessWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request UpdateConnectionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateConnectionResponse
+         */
+        // Deprecated
         public UpdateConnectionResponse UpdateConnectionWithOptions(UpdateConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20119,6 +20775,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<UpdateConnectionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request UpdateConnectionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateConnectionResponse
+         */
+        // Deprecated
         public async Task<UpdateConnectionResponse> UpdateConnectionWithOptionsAsync(UpdateConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20162,12 +20826,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<UpdateConnectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request UpdateConnectionRequest
+          * @return UpdateConnectionResponse
+         */
+        // Deprecated
         public UpdateConnectionResponse UpdateConnection(UpdateConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateConnectionWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request UpdateConnectionRequest
+          * @return UpdateConnectionResponse
+         */
+        // Deprecated
         public async Task<UpdateConnectionResponse> UpdateConnectionAsync(UpdateConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
