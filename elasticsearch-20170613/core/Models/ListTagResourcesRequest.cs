@@ -15,6 +15,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 
         [NameInMap("Page")]
         [Validation(Required=false)]
+        [Obsolete]
         public int? Page { get; set; }
 
         [NameInMap("ResourceIds")]
@@ -27,6 +28,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 
         [NameInMap("Size")]
         [Validation(Required=false)]
+        [Obsolete]
         public int? Size { get; set; }
 
         [NameInMap("Tags")]

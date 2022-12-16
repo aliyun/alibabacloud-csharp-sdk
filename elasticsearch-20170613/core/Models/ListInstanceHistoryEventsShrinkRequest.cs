@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListInstanceHistoryEventsShrinkRequest : TeaModel {
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public List<ListInstanceHistoryEventsShrinkRequestBody> Body { get; set; }
+        public class ListInstanceHistoryEventsShrinkRequestBody : TeaModel {
+            [NameInMap("desc")]
+            [Validation(Required=false)]
+            public bool? Desc { get; set; }
+
+            [NameInMap("sortField")]
+            [Validation(Required=false)]
+            public string SortField { get; set; }
+
+        }
+
         [NameInMap("eventCreateEndTime")]
         [Validation(Required=false)]
         public string EventCreateEndTime { get; set; }

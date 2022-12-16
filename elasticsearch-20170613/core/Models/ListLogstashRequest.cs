@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("ownerId")]
-        [Validation(Required=false)]
-        public string OwnerId { get; set; }
-
         [NameInMap("page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
