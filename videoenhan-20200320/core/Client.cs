@@ -3035,10 +3035,6 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PostURL))
-            {
-                body["PostURL"] = request.PostURL;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReferenceURL))
             {
                 body["ReferenceURL"] = request.ReferenceURL;
@@ -3070,10 +3066,6 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PostURL))
-            {
-                body["PostURL"] = request.PostURL;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReferenceURL))
             {
                 body["ReferenceURL"] = request.ReferenceURL;
@@ -3161,35 +3153,6 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.OpenApiUtil.Client.Convert(runtime, ossRuntime);
             MergeVideoFaceRequest mergeVideoFaceReq = new MergeVideoFaceRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(request, mergeVideoFaceReq);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PostURLObject))
-            {
-                authResponse = authClient.AuthorizeFileUploadWithOptions(authRequest, runtime);
-                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
-                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
-                ossClient = new AlibabaCloud.OSS.Client(ossConfig);
-                fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
-                {
-                    Filename = authResponse.Body.ObjectKey,
-                    Content = request.PostURLObject,
-                    ContentType = "",
-                };
-                ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
-                {
-                    AccessKeyId = authResponse.Body.AccessKeyId,
-                    Policy = authResponse.Body.EncodedPolicy,
-                    Signature = authResponse.Body.Signature,
-                    Key = authResponse.Body.ObjectKey,
-                    File = fileObj,
-                    SuccessActionStatus = "201",
-                };
-                uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
-                {
-                    BucketName = authResponse.Body.Bucket,
-                    Header = ossHeader,
-                };
-                ossClient.PostObject(uploadRequest, ossRuntime);
-                mergeVideoFaceReq.PostURL = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReferenceURLObject))
             {
                 authResponse = authClient.AuthorizeFileUploadWithOptions(authRequest, runtime);
@@ -3300,35 +3263,6 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.OpenApiUtil.Client.Convert(runtime, ossRuntime);
             MergeVideoFaceRequest mergeVideoFaceReq = new MergeVideoFaceRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(request, mergeVideoFaceReq);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PostURLObject))
-            {
-                authResponse = await authClient.AuthorizeFileUploadWithOptionsAsync(authRequest, runtime);
-                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
-                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
-                ossClient = new AlibabaCloud.OSS.Client(ossConfig);
-                fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
-                {
-                    Filename = authResponse.Body.ObjectKey,
-                    Content = request.PostURLObject,
-                    ContentType = "",
-                };
-                ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
-                {
-                    AccessKeyId = authResponse.Body.AccessKeyId,
-                    Policy = authResponse.Body.EncodedPolicy,
-                    Signature = authResponse.Body.Signature,
-                    Key = authResponse.Body.ObjectKey,
-                    File = fileObj,
-                    SuccessActionStatus = "201",
-                };
-                uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
-                {
-                    BucketName = authResponse.Body.Bucket,
-                    Header = ossHeader,
-                };
-                await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
-                mergeVideoFaceReq.PostURL = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReferenceURLObject))
             {
                 authResponse = await authClient.AuthorizeFileUploadWithOptionsAsync(authRequest, runtime);

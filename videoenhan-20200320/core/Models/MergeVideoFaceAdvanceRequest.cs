@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class MergeVideoFaceAdvanceRequest : TeaModel {
-        [NameInMap("PostURL")]
-        [Validation(Required=false)]
-        public Stream PostURLObject { get; set; }
-
         [NameInMap("ReferenceURL")]
         [Validation(Required=false)]
         public Stream ReferenceURLObject { get; set; }
