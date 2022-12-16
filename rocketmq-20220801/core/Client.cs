@@ -37,25 +37,11 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        public CreateConsumerGroupResponse CreateConsumerGroup(string instanceId, string consumerGroupId, CreateConsumerGroupRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateConsumerGroupWithOptions(instanceId, consumerGroupId, request, headers, runtime);
-        }
-
-        public async Task<CreateConsumerGroupResponse> CreateConsumerGroupAsync(string instanceId, string consumerGroupId, CreateConsumerGroupRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateConsumerGroupWithOptionsAsync(instanceId, consumerGroupId, request, headers, runtime);
-        }
-
         public CreateConsumerGroupResponse CreateConsumerGroupWithOptions(string instanceId, string consumerGroupId, CreateConsumerGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumeRetryPolicy.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumeRetryPolicy))
             {
                 body["consumeRetryPolicy"] = request.ConsumeRetryPolicy;
             }
@@ -91,7 +77,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumeRetryPolicy.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumeRetryPolicy))
             {
                 body["consumeRetryPolicy"] = request.ConsumeRetryPolicy;
             }
@@ -123,18 +109,196 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<CreateConsumerGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public CreateTopicResponse CreateTopic(string instanceId, string topicName, CreateTopicRequest request)
+        public CreateConsumerGroupResponse CreateConsumerGroup(string instanceId, string consumerGroupId, CreateConsumerGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateTopicWithOptions(instanceId, topicName, request, headers, runtime);
+            return CreateConsumerGroupWithOptions(instanceId, consumerGroupId, request, headers, runtime);
         }
 
-        public async Task<CreateTopicResponse> CreateTopicAsync(string instanceId, string topicName, CreateTopicRequest request)
+        public async Task<CreateConsumerGroupResponse> CreateConsumerGroupAsync(string instanceId, string consumerGroupId, CreateConsumerGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateTopicWithOptionsAsync(instanceId, topicName, request, headers, runtime);
+            return await CreateConsumerGroupWithOptionsAsync(instanceId, consumerGroupId, request, headers, runtime);
+        }
+
+        public CreateInstanceResponse CreateInstanceWithOptions(CreateInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                body["autoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenewPeriod))
+            {
+                body["autoRenewPeriod"] = request.AutoRenewPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                body["instanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInfo))
+            {
+                body["networkInfo"] = request.NetworkInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentType))
+            {
+                body["paymentType"] = request.PaymentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                body["period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                body["periodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductInfo))
+            {
+                body["productInfo"] = request.ProductInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                body["remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["resourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SeriesCode))
+            {
+                body["seriesCode"] = request.SeriesCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceCode))
+            {
+                body["serviceCode"] = request.ServiceCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubSeriesCode))
+            {
+                body["subSeriesCode"] = request.SubSeriesCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateInstance",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/instances",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateInstanceResponse> CreateInstanceWithOptionsAsync(CreateInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                body["autoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenewPeriod))
+            {
+                body["autoRenewPeriod"] = request.AutoRenewPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                body["instanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInfo))
+            {
+                body["networkInfo"] = request.NetworkInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentType))
+            {
+                body["paymentType"] = request.PaymentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                body["period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                body["periodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductInfo))
+            {
+                body["productInfo"] = request.ProductInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                body["remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["resourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SeriesCode))
+            {
+                body["seriesCode"] = request.SeriesCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceCode))
+            {
+                body["serviceCode"] = request.ServiceCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubSeriesCode))
+            {
+                body["subSeriesCode"] = request.SubSeriesCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateInstance",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/instances",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateInstanceResponse CreateInstance(CreateInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateInstanceWithOptions(request, headers, runtime);
+        }
+
+        public async Task<CreateInstanceResponse> CreateInstanceAsync(CreateInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateInstanceWithOptionsAsync(request, headers, runtime);
         }
 
         public CreateTopicResponse CreateTopicWithOptions(string instanceId, string topicName, CreateTopicRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -201,18 +365,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<CreateTopicResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DeleteConsumerGroupResponse DeleteConsumerGroup(string instanceId, string consumerGroupId)
+        public CreateTopicResponse CreateTopic(string instanceId, string topicName, CreateTopicRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteConsumerGroupWithOptions(instanceId, consumerGroupId, headers, runtime);
+            return CreateTopicWithOptions(instanceId, topicName, request, headers, runtime);
         }
 
-        public async Task<DeleteConsumerGroupResponse> DeleteConsumerGroupAsync(string instanceId, string consumerGroupId)
+        public async Task<CreateTopicResponse> CreateTopicAsync(string instanceId, string topicName, CreateTopicRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteConsumerGroupWithOptionsAsync(instanceId, consumerGroupId, headers, runtime);
+            return await CreateTopicWithOptionsAsync(instanceId, topicName, request, headers, runtime);
         }
 
         public DeleteConsumerGroupResponse DeleteConsumerGroupWithOptions(string instanceId, string consumerGroupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -257,18 +421,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<DeleteConsumerGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DeleteInstanceResponse DeleteInstance(string instanceId)
+        public DeleteConsumerGroupResponse DeleteConsumerGroup(string instanceId, string consumerGroupId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteInstanceWithOptions(instanceId, headers, runtime);
+            return DeleteConsumerGroupWithOptions(instanceId, consumerGroupId, headers, runtime);
         }
 
-        public async Task<DeleteInstanceResponse> DeleteInstanceAsync(string instanceId)
+        public async Task<DeleteConsumerGroupResponse> DeleteConsumerGroupAsync(string instanceId, string consumerGroupId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteInstanceWithOptionsAsync(instanceId, headers, runtime);
+            return await DeleteConsumerGroupWithOptionsAsync(instanceId, consumerGroupId, headers, runtime);
         }
 
         public DeleteInstanceResponse DeleteInstanceWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -313,18 +477,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<DeleteInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DeleteTopicResponse DeleteTopic(string instanceId, string topicName)
+        public DeleteInstanceResponse DeleteInstance(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteTopicWithOptions(instanceId, topicName, headers, runtime);
+            return DeleteInstanceWithOptions(instanceId, headers, runtime);
         }
 
-        public async Task<DeleteTopicResponse> DeleteTopicAsync(string instanceId, string topicName)
+        public async Task<DeleteInstanceResponse> DeleteInstanceAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteTopicWithOptionsAsync(instanceId, topicName, headers, runtime);
+            return await DeleteInstanceWithOptionsAsync(instanceId, headers, runtime);
         }
 
         public DeleteTopicResponse DeleteTopicWithOptions(string instanceId, string topicName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -369,18 +533,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<DeleteTopicResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetConsumerGroupResponse GetConsumerGroup(string instanceId, string consumerGroupId)
+        public DeleteTopicResponse DeleteTopic(string instanceId, string topicName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetConsumerGroupWithOptions(instanceId, consumerGroupId, headers, runtime);
+            return DeleteTopicWithOptions(instanceId, topicName, headers, runtime);
         }
 
-        public async Task<GetConsumerGroupResponse> GetConsumerGroupAsync(string instanceId, string consumerGroupId)
+        public async Task<DeleteTopicResponse> DeleteTopicAsync(string instanceId, string topicName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetConsumerGroupWithOptionsAsync(instanceId, consumerGroupId, headers, runtime);
+            return await DeleteTopicWithOptionsAsync(instanceId, topicName, headers, runtime);
         }
 
         public GetConsumerGroupResponse GetConsumerGroupWithOptions(string instanceId, string consumerGroupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -425,18 +589,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<GetConsumerGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetInstanceResponse GetInstance(string instanceId)
+        public GetConsumerGroupResponse GetConsumerGroup(string instanceId, string consumerGroupId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetInstanceWithOptions(instanceId, headers, runtime);
+            return GetConsumerGroupWithOptions(instanceId, consumerGroupId, headers, runtime);
         }
 
-        public async Task<GetInstanceResponse> GetInstanceAsync(string instanceId)
+        public async Task<GetConsumerGroupResponse> GetConsumerGroupAsync(string instanceId, string consumerGroupId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetInstanceWithOptionsAsync(instanceId, headers, runtime);
+            return await GetConsumerGroupWithOptionsAsync(instanceId, consumerGroupId, headers, runtime);
         }
 
         public GetInstanceResponse GetInstanceWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -481,18 +645,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<GetInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetTopicResponse GetTopic(string instanceId, string topicName)
+        public GetInstanceResponse GetInstance(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetTopicWithOptions(instanceId, topicName, headers, runtime);
+            return GetInstanceWithOptions(instanceId, headers, runtime);
         }
 
-        public async Task<GetTopicResponse> GetTopicAsync(string instanceId, string topicName)
+        public async Task<GetInstanceResponse> GetInstanceAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetTopicWithOptionsAsync(instanceId, topicName, headers, runtime);
+            return await GetInstanceWithOptionsAsync(instanceId, headers, runtime);
         }
 
         public GetTopicResponse GetTopicWithOptions(string instanceId, string topicName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -537,18 +701,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<GetTopicResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListConsumerGroupsResponse ListConsumerGroups(string instanceId, ListConsumerGroupsRequest request)
+        public GetTopicResponse GetTopic(string instanceId, string topicName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListConsumerGroupsWithOptions(instanceId, request, headers, runtime);
+            return GetTopicWithOptions(instanceId, topicName, headers, runtime);
         }
 
-        public async Task<ListConsumerGroupsResponse> ListConsumerGroupsAsync(string instanceId, ListConsumerGroupsRequest request)
+        public async Task<GetTopicResponse> GetTopicAsync(string instanceId, string topicName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListConsumerGroupsWithOptionsAsync(instanceId, request, headers, runtime);
+            return await GetTopicWithOptionsAsync(instanceId, topicName, headers, runtime);
         }
 
         public ListConsumerGroupsResponse ListConsumerGroupsWithOptions(string instanceId, ListConsumerGroupsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -623,18 +787,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListConsumerGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListInstancesResponse ListInstances(ListInstancesRequest request)
+        public ListConsumerGroupsResponse ListConsumerGroups(string instanceId, ListConsumerGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListInstancesWithOptions(request, headers, runtime);
+            return ListConsumerGroupsWithOptions(instanceId, request, headers, runtime);
         }
 
-        public async Task<ListInstancesResponse> ListInstancesAsync(ListInstancesRequest request)
+        public async Task<ListConsumerGroupsResponse> ListConsumerGroupsAsync(string instanceId, ListConsumerGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListInstancesWithOptionsAsync(request, headers, runtime);
+            return await ListConsumerGroupsWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
         public ListInstancesResponse ListInstancesWithOptions(ListInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -709,18 +873,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListTopicsResponse ListTopics(string instanceId, ListTopicsRequest request)
+        public ListInstancesResponse ListInstances(ListInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListTopicsWithOptions(instanceId, request, headers, runtime);
+            return ListInstancesWithOptions(request, headers, runtime);
         }
 
-        public async Task<ListTopicsResponse> ListTopicsAsync(string instanceId, ListTopicsRequest request)
+        public async Task<ListInstancesResponse> ListInstancesAsync(ListInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListTopicsWithOptionsAsync(instanceId, request, headers, runtime);
+            return await ListInstancesWithOptionsAsync(request, headers, runtime);
         }
 
         public ListTopicsResponse ListTopicsWithOptions(string instanceId, ListTopicsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -795,25 +959,25 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<ListTopicsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public UpdateConsumerGroupResponse UpdateConsumerGroup(string instanceId, string consumerGroupId, UpdateConsumerGroupRequest request)
+        public ListTopicsResponse ListTopics(string instanceId, ListTopicsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UpdateConsumerGroupWithOptions(instanceId, consumerGroupId, request, headers, runtime);
+            return ListTopicsWithOptions(instanceId, request, headers, runtime);
         }
 
-        public async Task<UpdateConsumerGroupResponse> UpdateConsumerGroupAsync(string instanceId, string consumerGroupId, UpdateConsumerGroupRequest request)
+        public async Task<ListTopicsResponse> ListTopicsAsync(string instanceId, ListTopicsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UpdateConsumerGroupWithOptionsAsync(instanceId, consumerGroupId, request, headers, runtime);
+            return await ListTopicsWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
         public UpdateConsumerGroupResponse UpdateConsumerGroupWithOptions(string instanceId, string consumerGroupId, UpdateConsumerGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumeRetryPolicy.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumeRetryPolicy))
             {
                 body["consumeRetryPolicy"] = request.ConsumeRetryPolicy;
             }
@@ -849,7 +1013,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumeRetryPolicy.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumeRetryPolicy))
             {
                 body["consumeRetryPolicy"] = request.ConsumeRetryPolicy;
             }
@@ -881,35 +1045,35 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<UpdateConsumerGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public UpdateInstanceResponse UpdateInstance(string instanceId, UpdateInstanceRequest request)
+        public UpdateConsumerGroupResponse UpdateConsumerGroup(string instanceId, string consumerGroupId, UpdateConsumerGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UpdateInstanceWithOptions(instanceId, request, headers, runtime);
+            return UpdateConsumerGroupWithOptions(instanceId, consumerGroupId, request, headers, runtime);
         }
 
-        public async Task<UpdateInstanceResponse> UpdateInstanceAsync(string instanceId, UpdateInstanceRequest request)
+        public async Task<UpdateConsumerGroupResponse> UpdateConsumerGroupAsync(string instanceId, string consumerGroupId, UpdateConsumerGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UpdateInstanceWithOptionsAsync(instanceId, request, headers, runtime);
+            return await UpdateConsumerGroupWithOptionsAsync(instanceId, consumerGroupId, request, headers, runtime);
         }
 
         public UpdateInstanceResponse UpdateInstanceWithOptions(string instanceId, UpdateInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtConfig.ToMap()))
-            {
-                body["extConfig"] = request.ExtConfig;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 body["instanceName"] = request.InstanceName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInfo.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInfo))
             {
                 body["networkInfo"] = request.NetworkInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductInfo))
+            {
+                body["productInfo"] = request.ProductInfo;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
@@ -939,17 +1103,17 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtConfig.ToMap()))
-            {
-                body["extConfig"] = request.ExtConfig;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 body["instanceName"] = request.InstanceName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInfo.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInfo))
             {
                 body["networkInfo"] = request.NetworkInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductInfo))
+            {
+                body["productInfo"] = request.ProductInfo;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
@@ -975,18 +1139,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             return TeaModel.ToObject<UpdateInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public UpdateTopicResponse UpdateTopic(string instanceId, string topicName, UpdateTopicRequest request)
+        public UpdateInstanceResponse UpdateInstance(string instanceId, UpdateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UpdateTopicWithOptions(instanceId, topicName, request, headers, runtime);
+            return UpdateInstanceWithOptions(instanceId, request, headers, runtime);
         }
 
-        public async Task<UpdateTopicResponse> UpdateTopicAsync(string instanceId, string topicName, UpdateTopicRequest request)
+        public async Task<UpdateInstanceResponse> UpdateInstanceAsync(string instanceId, UpdateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UpdateTopicWithOptionsAsync(instanceId, topicName, request, headers, runtime);
+            return await UpdateInstanceWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
         public UpdateTopicResponse UpdateTopicWithOptions(string instanceId, string topicName, UpdateTopicRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1043,6 +1207,20 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 BodyType = "json",
             };
             return TeaModel.ToObject<UpdateTopicResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateTopicResponse UpdateTopic(string instanceId, string topicName, UpdateTopicRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateTopicWithOptions(instanceId, topicName, request, headers, runtime);
+        }
+
+        public async Task<UpdateTopicResponse> UpdateTopicAsync(string instanceId, string topicName, UpdateTopicRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateTopicWithOptionsAsync(instanceId, topicName, request, headers, runtime);
         }
 
     }

@@ -27,6 +27,19 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 
             }
 
+            [NameInMap("aclInfo")]
+            [Validation(Required=false)]
+            public GetInstanceResponseBodyDataAclInfo AclInfo { get; set; }
+            public class GetInstanceResponseBodyDataAclInfo : TeaModel {
+                [NameInMap("aclType")]
+                [Validation(Required=false)]
+                public string AclType { get; set; }
+
+            }
+
+            /// <summary>
+            /// BID
+            /// </summary>
             [NameInMap("bid")]
             [Validation(Required=false)]
             public string Bid { get; set; }
@@ -85,10 +98,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 
             }
 
-            [NameInMap("groupCount")]
-            [Validation(Required=false)]
-            public long? GroupCount { get; set; }
-
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
@@ -141,6 +150,28 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 
                 }
 
+                [NameInMap("internetInfo")]
+                [Validation(Required=false)]
+                public GetInstanceResponseBodyDataNetworkInfoInternetInfo InternetInfo { get; set; }
+                public class GetInstanceResponseBodyDataNetworkInfoInternetInfo : TeaModel {
+                    [NameInMap("flowOutBandwidth")]
+                    [Validation(Required=false)]
+                    public int? FlowOutBandwidth { get; set; }
+
+                    [NameInMap("flowOutType")]
+                    [Validation(Required=false)]
+                    public string FlowOutType { get; set; }
+
+                    [NameInMap("internetSpec")]
+                    [Validation(Required=false)]
+                    public string InternetSpec { get; set; }
+
+                    [NameInMap("ipWhitelist")]
+                    [Validation(Required=false)]
+                    public List<string> IpWhitelist { get; set; }
+
+                }
+
                 [NameInMap("vpcInfo")]
                 [Validation(Required=false)]
                 public GetInstanceResponseBodyDataNetworkInfoVpcInfo VpcInfo { get; set; }
@@ -161,6 +192,32 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [Validation(Required=false)]
             public string PaymentType { get; set; }
 
+            [NameInMap("productInfo")]
+            [Validation(Required=false)]
+            public GetInstanceResponseBodyDataProductInfo ProductInfo { get; set; }
+            public class GetInstanceResponseBodyDataProductInfo : TeaModel {
+                [NameInMap("autoScaling")]
+                [Validation(Required=false)]
+                public bool? AutoScaling { get; set; }
+
+                [NameInMap("messageRetentionTime")]
+                [Validation(Required=false)]
+                public int? MessageRetentionTime { get; set; }
+
+                [NameInMap("msgProcessSpec")]
+                [Validation(Required=false)]
+                public string MsgProcessSpec { get; set; }
+
+                [NameInMap("sendReceiveRatio")]
+                [Validation(Required=false)]
+                public float? SendReceiveRatio { get; set; }
+
+                [NameInMap("supportAutoScaling")]
+                [Validation(Required=false)]
+                public bool? SupportAutoScaling { get; set; }
+
+            }
+
             [NameInMap("regionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
@@ -172,6 +229,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [NameInMap("remark")]
             [Validation(Required=false)]
             public string Remark { get; set; }
+
+            [NameInMap("resourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
 
             [NameInMap("seriesCode")]
             [Validation(Required=false)]
@@ -192,10 +253,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [NameInMap("subSeriesCode")]
             [Validation(Required=false)]
             public string SubSeriesCode { get; set; }
-
-            [NameInMap("topicCount")]
-            [Validation(Required=false)]
-            public long? TopicCount { get; set; }
 
             [NameInMap("updateTime")]
             [Validation(Required=false)]

@@ -9,10 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class UpdateInstanceRequest : TeaModel {
-        [NameInMap("extConfig")]
+        [NameInMap("instanceName")]
         [Validation(Required=false)]
-        public UpdateInstanceRequestExtConfig ExtConfig { get; set; }
-        public class UpdateInstanceRequestExtConfig : TeaModel {
+        public string InstanceName { get; set; }
+
+        [NameInMap("networkInfo")]
+        [Validation(Required=false)]
+        public UpdateInstanceRequestNetworkInfo NetworkInfo { get; set; }
+        public class UpdateInstanceRequestNetworkInfo : TeaModel {
+            [NameInMap("internetInfo")]
+            [Validation(Required=false)]
+            public UpdateInstanceRequestNetworkInfoInternetInfo InternetInfo { get; set; }
+            public class UpdateInstanceRequestNetworkInfoInternetInfo : TeaModel {
+                [NameInMap("ipWhitelist")]
+                [Validation(Required=false)]
+                public List<string> IpWhitelist { get; set; }
+
+            }
+
+        }
+
+        [NameInMap("productInfo")]
+        [Validation(Required=false)]
+        public UpdateInstanceRequestProductInfo ProductInfo { get; set; }
+        public class UpdateInstanceRequestProductInfo : TeaModel {
             [NameInMap("autoScaling")]
             [Validation(Required=false)]
             public bool? AutoScaling { get; set; }
@@ -24,30 +44,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [NameInMap("sendReceiveRatio")]
             [Validation(Required=false)]
             public float? SendReceiveRatio { get; set; }
-
-        }
-
-        [NameInMap("instanceName")]
-        [Validation(Required=false)]
-        public string InstanceName { get; set; }
-
-        [NameInMap("networkInfo")]
-        [Validation(Required=false)]
-        public UpdateInstanceRequestNetworkInfo NetworkInfo { get; set; }
-        public class UpdateInstanceRequestNetworkInfo : TeaModel {
-            [NameInMap("endpoints")]
-            [Validation(Required=false)]
-            public List<UpdateInstanceRequestNetworkInfoEndpoints> Endpoints { get; set; }
-            public class UpdateInstanceRequestNetworkInfoEndpoints : TeaModel {
-                [NameInMap("endpointType")]
-                [Validation(Required=false)]
-                public string EndpointType { get; set; }
-
-                [NameInMap("ipWhitelist")]
-                [Validation(Required=false)]
-                public string IpWhitelist { get; set; }
-
-            }
 
         }
 
