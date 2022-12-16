@@ -10784,6 +10784,14 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["FuncType"] = request.FuncType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LossLessDetail))
+            {
+                query["LossLessDetail"] = request.LossLessDetail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notice))
+            {
+                query["Notice"] = request.Notice;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -10854,6 +10862,14 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FuncType))
             {
                 query["FuncType"] = request.FuncType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LossLessDetail))
+            {
+                query["LossLessDetail"] = request.LossLessDetail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notice))
+            {
+                query["Notice"] = request.Notice;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {

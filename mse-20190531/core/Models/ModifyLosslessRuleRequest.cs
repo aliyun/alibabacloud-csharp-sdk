@@ -64,6 +64,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public long? FuncType { get; set; }
 
+        [NameInMap("LossLessDetail")]
+        [Validation(Required=false)]
+        public bool? LossLessDetail { get; set; }
+
+        [NameInMap("Notice")]
+        [Validation(Required=false)]
+        public bool? Notice { get; set; }
+
         /// <summary>
         /// The region ID.
         /// </summary>
