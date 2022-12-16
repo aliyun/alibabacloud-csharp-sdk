@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
             {
                 body["IntAttr"] = request.IntAttr;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntAttr2))
+            {
+                body["IntAttr2"] = request.IntAttr2;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PicContent))
             {
                 body["PicContent"] = request.PicContent;
@@ -80,6 +84,10 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrAttr))
             {
                 body["StrAttr"] = request.StrAttr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrAttr2))
+            {
+                body["StrAttr2"] = request.StrAttr2;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -124,6 +132,10 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
             {
                 body["IntAttr"] = request.IntAttr;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntAttr2))
+            {
+                body["IntAttr2"] = request.IntAttr2;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PicContent))
             {
                 body["PicContent"] = request.PicContent;
@@ -143,6 +155,10 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrAttr))
             {
                 body["StrAttr"] = request.StrAttr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrAttr2))
+            {
+                body["StrAttr2"] = request.StrAttr2;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1251,6 +1267,10 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
             {
                 body["IntAttr"] = request.IntAttr;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntAttr2))
+            {
+                body["IntAttr2"] = request.IntAttr2;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PicName))
             {
                 body["PicName"] = request.PicName;
@@ -1262,6 +1282,10 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrAttr))
             {
                 body["StrAttr"] = request.StrAttr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrAttr2))
+            {
+                body["StrAttr2"] = request.StrAttr2;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1298,6 +1322,10 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
             {
                 body["IntAttr"] = request.IntAttr;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntAttr2))
+            {
+                body["IntAttr2"] = request.IntAttr2;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PicName))
             {
                 body["PicName"] = request.PicName;
@@ -1309,6 +1337,10 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrAttr))
             {
                 body["StrAttr"] = request.StrAttr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrAttr2))
+            {
+                body["StrAttr2"] = request.StrAttr2;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         [Validation(Required=false)]
         public int? IntAttr { get; set; }
 
+        [NameInMap("IntAttr2")]
+        [Validation(Required=false)]
+        public int? IntAttr2 { get; set; }
+
         [NameInMap("PicContent")]
         [Validation(Required=false)]
         public Stream PicContentObject { get; set; }
@@ -48,6 +52,10 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         [NameInMap("StrAttr")]
         [Validation(Required=false)]
         public string StrAttr { get; set; }
+
+        [NameInMap("StrAttr2")]
+        [Validation(Required=false)]
+        public string StrAttr2 { get; set; }
 
     }
 
