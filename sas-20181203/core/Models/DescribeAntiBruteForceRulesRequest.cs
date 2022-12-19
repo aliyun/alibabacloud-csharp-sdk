@@ -9,10 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAntiBruteForceRulesRequest : TeaModel {
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public long? Id { get; set; }
+
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The source IP address of the request.
+        /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }

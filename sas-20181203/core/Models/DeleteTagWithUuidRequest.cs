@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteTagWithUuidRequest : TeaModel {
+        /// <summary>
+        /// The name of the tag.
+        /// </summary>
         [NameInMap("TagName")]
         [Validation(Required=false)]
         public string TagName { get; set; }
 
+        /// <summary>
+        /// The list of server UUIDs.
+        /// 
+        /// >  If the UuidList parameter is configured, Security Center removes the tag only from the servers whose UUIDs are specified by UuidList. If the UuidList parameter is not configured, Security Center removes the tag from all servers.
+        /// </summary>
         [NameInMap("UuidList")]
         [Validation(Required=false)]
         public string UuidList { get; set; }

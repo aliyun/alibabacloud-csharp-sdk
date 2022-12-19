@@ -9,6 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSuspiciousUUIDConfigRequest : TeaModel {
+        /// <summary>
+        /// The type of proactive defense. Valid values:
+        /// 
+        /// *   **auto_breaking**: virus defense
+        /// *   **ransomware_breaking**: ransomware capture
+        /// *   **webshell\_cloud_breaking**: webshell defense
+        /// *   **alinet**: malicious behavior defense
+        /// *   **alisecguard**: client protection
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }

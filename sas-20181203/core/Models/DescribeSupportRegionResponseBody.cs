@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSupportRegionResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The regions in which the anti-ransomware feature is supported.
+        /// </summary>
         [NameInMap("SupportRegion")]
         [Validation(Required=false)]
         public List<string> SupportRegion { get; set; }

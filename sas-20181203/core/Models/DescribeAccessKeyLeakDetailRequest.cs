@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAccessKeyLeakDetailRequest : TeaModel {
+        /// <summary>
+        /// The ID of the AccessKey pair leak.
+        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }

@@ -9,34 +9,62 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCheckWarningDetailResponseBody : TeaModel {
+        /// <summary>
+        /// The suggestion for the management of the risk item.
+        /// </summary>
         [NameInMap("Advice")]
         [Validation(Required=false)]
         public string Advice { get; set; }
 
+        /// <summary>
+        /// The ID of the check item.
+        /// </summary>
         [NameInMap("CheckId")]
         [Validation(Required=false)]
         public long? CheckId { get; set; }
 
+        /// <summary>
+        /// The additional information about the risk item.
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// The name of the check item.
+        /// </summary>
         [NameInMap("Item")]
         [Validation(Required=false)]
         public string Item { get; set; }
 
+        /// <summary>
+        /// The risk level of the check item. Valid values:
+        /// 
+        /// *   **high**: The item is a high-risk item and is highlighted in red.
+        /// *   **medium**: The item is a medium-risk item and is highlighted in orange.
+        /// *   **low**: The item is a low-risk item and is highlighted in gray.
+        /// </summary>
         [NameInMap("Level")]
         [Validation(Required=false)]
         public string Level { get; set; }
 
+        /// <summary>
+        /// The prompt for the risk item.
+        /// </summary>
         [NameInMap("Prompt")]
         [Validation(Required=false)]
         public string Prompt { get; set; }
 
+        /// <summary>
+        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The type of the check item. Valid values:
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }

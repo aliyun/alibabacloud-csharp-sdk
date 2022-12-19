@@ -9,16 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateAntiBruteForceRuleResponseBody : TeaModel {
+        /// <summary>
+        /// The information about the defense rule.
+        /// </summary>
         [NameInMap("CreateAntiBruteForceRule")]
         [Validation(Required=false)]
         public CreateAntiBruteForceRuleResponseBodyCreateAntiBruteForceRule CreateAntiBruteForceRule { get; set; }
         public class CreateAntiBruteForceRuleResponseBodyCreateAntiBruteForceRule : TeaModel {
+            /// <summary>
+            /// The ID of the defense rule.
+            /// </summary>
             [NameInMap("RuleId")]
             [Validation(Required=false)]
             public long? RuleId { get; set; }
 
         }
 
+        /// <summary>
+        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

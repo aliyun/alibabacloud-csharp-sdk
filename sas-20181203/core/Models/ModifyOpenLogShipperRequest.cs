@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyOpenLogShipperRequest : TeaModel {
+        /// <summary>
+        /// The ID of the request source. The default value is **aegis**. Valid values:
+        /// - **aegis**: Server Guard
+        /// - **sas**: Security Center
+        /// 
+        /// > If you use Server Guard, set the value to **aegis**. If you use Security Center, set the value to **sas**.
+        /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
         public string From { get; set; }

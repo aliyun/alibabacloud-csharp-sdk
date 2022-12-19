@@ -9,9 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyLoginBaseConfigResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        /// <summary>
+        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 
