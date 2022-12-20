@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Imageaudit20191230
             AlibabaCloud.OpenApiUtil.Client.Convert(request, scanImageReq);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Task))
             {
-                int? i = 0;
+                int? i0 = 0;
 
                 foreach (var item0 in request.Task) {
                     if (!AlibabaCloud.TeaUtil.Common.IsUnset(item0.ImageURLObject))
@@ -191,9 +191,9 @@ namespace AlibabaCloud.SDK.Imageaudit20191230
                             Header = ossHeader,
                         };
                         ossClient.PostObject(uploadRequest, ossRuntime);
-                        ScanImageRequest.ScanImageRequestTask tmp = scanImageReq.Task[i.Value];
+                        ScanImageRequest.ScanImageRequestTask tmp = scanImageReq.Task[i0.Value];
                         tmp.ImageURL = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
-                        i = AlibabaCloud.DarabonbaNumber.NumberUtil.Ltoi(AlibabaCloud.DarabonbaNumber.NumberUtil.Add(AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(i), AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(1)));
+                        i0 = AlibabaCloud.DarabonbaNumber.NumberUtil.Ltoi(AlibabaCloud.DarabonbaNumber.NumberUtil.Add(AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(i0), AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(1)));
                     }
                 }
             }
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.Imageaudit20191230
             AlibabaCloud.OpenApiUtil.Client.Convert(request, scanImageReq);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Task))
             {
-                int? i = 0;
+                int? i0 = 0;
 
                 foreach (var item0 in request.Task) {
                     if (!AlibabaCloud.TeaUtil.Common.IsUnset(item0.ImageURLObject))
@@ -281,9 +281,9 @@ namespace AlibabaCloud.SDK.Imageaudit20191230
                             Header = ossHeader,
                         };
                         await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
-                        ScanImageRequest.ScanImageRequestTask tmp = scanImageReq.Task[i.Value];
+                        ScanImageRequest.ScanImageRequestTask tmp = scanImageReq.Task[i0.Value];
                         tmp.ImageURL = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
-                        i = AlibabaCloud.DarabonbaNumber.NumberUtil.Ltoi(AlibabaCloud.DarabonbaNumber.NumberUtil.Add(AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(i), AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(1)));
+                        i0 = AlibabaCloud.DarabonbaNumber.NumberUtil.Ltoi(AlibabaCloud.DarabonbaNumber.NumberUtil.Add(AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(i0), AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(1)));
                     }
                 }
             }

@@ -87,6 +87,9 @@ namespace AlibabaCloud.SDK.Imageaudit20191230.Models
 
                     }
 
+                    /// <summary>
+                    /// 1
+                    /// </summary>
                     [NameInMap("OCRDataList")]
                     [Validation(Required=false)]
                     public List<string> OCRDataList { get; set; }

@@ -12,10 +12,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageaudit20191230.Models
 {
     public class ScanImageRequest : TeaModel {
+        /// <summary>
+        /// 1
+        /// </summary>
         [NameInMap("Scene")]
         [Validation(Required=false)]
         public List<string> Scene { get; set; }
 
+        /// <summary>
+        /// 1
+        /// </summary>
         [NameInMap("Task")]
         [Validation(Required=false)]
         public List<ScanImageRequestTask> Task { get; set; }

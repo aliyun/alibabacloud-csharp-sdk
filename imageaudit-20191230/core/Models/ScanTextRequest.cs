@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageaudit20191230.Models
 {
     public class ScanTextRequest : TeaModel {
+        /// <summary>
+        /// 1
+        /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<ScanTextRequestLabels> Labels { get; set; }
@@ -19,6 +22,9 @@ namespace AlibabaCloud.SDK.Imageaudit20191230.Models
 
         }
 
+        /// <summary>
+        /// 1
+        /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public List<ScanTextRequestTasks> Tasks { get; set; }
