@@ -9,22 +9,39 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class UpdateTaskFlowNotificationRequest : TeaModel {
+        /// <summary>
+        /// The unique ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
+        /// </summary>
         [NameInMap("DagId")]
         [Validation(Required=false)]
         public long? DagId { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable notifications for failed task flows. Notifications are disabled by default. You can enable notifications based on your business requirements.
+        /// </summary>
         [NameInMap("DagNotificationFail")]
         [Validation(Required=false)]
         public bool? DagNotificationFail { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable SLA global notifications for task flows. Notifications are disabled by default. You can enable notifications based on your business requirements.
+        /// </summary>
         [NameInMap("DagNotificationSla")]
         [Validation(Required=false)]
         public bool? DagNotificationSla { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable notifications for successful task flows. Notifications are disabled by default. You can enable notifications based on your business requirements.
+        /// </summary>
         [NameInMap("DagNotificationSuccess")]
         [Validation(Required=false)]
         public bool? DagNotificationSuccess { get; set; }
 
+        /// <summary>
+        /// The ID of the tenant.
+        /// 
+        /// >  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+        /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]
         public long? Tid { get; set; }

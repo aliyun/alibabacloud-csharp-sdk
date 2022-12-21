@@ -159,6 +159,17 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await AddDesensitizationRuleWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
+          * Usage notes:
+          * *   Before you call this operation to add a user as a task flow developer, make sure that you have added the user as a workspace member.
+          * *   You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the [ChangLhDagOwner](~~424761~~) operation.
+          * *   For more information about workspace roles and permissions, see [Manage permissions on a workspace](~~410893~~).
+          *
+          * @param tmpReq AddLhMembersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddLhMembersResponse
+         */
         public AddLhMembersResponse AddLhMembersWithOptions(AddLhMembersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -204,6 +215,17 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<AddLhMembersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
+          * Usage notes:
+          * *   Before you call this operation to add a user as a task flow developer, make sure that you have added the user as a workspace member.
+          * *   You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the [ChangLhDagOwner](~~424761~~) operation.
+          * *   For more information about workspace roles and permissions, see [Manage permissions on a workspace](~~410893~~).
+          *
+          * @param tmpReq AddLhMembersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddLhMembersResponse
+         */
         public async Task<AddLhMembersResponse> AddLhMembersWithOptionsAsync(AddLhMembersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -249,12 +271,32 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<AddLhMembersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
+          * Usage notes:
+          * *   Before you call this operation to add a user as a task flow developer, make sure that you have added the user as a workspace member.
+          * *   You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the [ChangLhDagOwner](~~424761~~) operation.
+          * *   For more information about workspace roles and permissions, see [Manage permissions on a workspace](~~410893~~).
+          *
+          * @param request AddLhMembersRequest
+          * @return AddLhMembersResponse
+         */
         public AddLhMembersResponse AddLhMembers(AddLhMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddLhMembersWithOptions(request, runtime);
         }
 
+        /**
+          * You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
+          * Usage notes:
+          * *   Before you call this operation to add a user as a task flow developer, make sure that you have added the user as a workspace member.
+          * *   You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the [ChangLhDagOwner](~~424761~~) operation.
+          * *   For more information about workspace roles and permissions, see [Manage permissions on a workspace](~~410893~~).
+          *
+          * @param request AddLhMembersRequest
+          * @return AddLhMembersResponse
+         */
         public async Task<AddLhMembersResponse> AddLhMembersAsync(AddLhMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -535,6 +577,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await ApproveOrderWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Description
+          * During a data backfill, task flows are run in sequence based on their dates. You can specify whether task flows are run in chronological or reverse chronological order. After the data backfill is complete, you can specify a date or date range, and a node range to run task flows.
+          *
+          * @param tmpReq BackFillRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return BackFillResponse
+         */
         public BackFillResponse BackFillWithOptions(BackFillRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -604,6 +654,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<BackFillResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Description
+          * During a data backfill, task flows are run in sequence based on their dates. You can specify whether task flows are run in chronological or reverse chronological order. After the data backfill is complete, you can specify a date or date range, and a node range to run task flows.
+          *
+          * @param tmpReq BackFillRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return BackFillResponse
+         */
         public async Task<BackFillResponse> BackFillWithOptionsAsync(BackFillRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -673,12 +731,26 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<BackFillResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Description
+          * During a data backfill, task flows are run in sequence based on their dates. You can specify whether task flows are run in chronological or reverse chronological order. After the data backfill is complete, you can specify a date or date range, and a node range to run task flows.
+          *
+          * @param request BackFillRequest
+          * @return BackFillResponse
+         */
         public BackFillResponse BackFill(BackFillRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BackFillWithOptions(request, runtime);
         }
 
+        /**
+          * ## Description
+          * During a data backfill, task flows are run in sequence based on their dates. You can specify whether task flows are run in chronological or reverse chronological order. After the data backfill is complete, you can specify a date or date range, and a node range to run task flows.
+          *
+          * @param request BackFillRequest
+          * @return BackFillResponse
+         */
         public async Task<BackFillResponse> BackFillAsync(BackFillRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -889,6 +961,15 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await ChangeColumnSecLevelWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Usage notes:
+          * *   If you call this operation to transfer the ownership of a published task flow, the ownership transfer does not take effect.
+          * *   You can call the [ReDeployLhDagVersion](~~424712~~) operation to redeploy a published version of a task flow.
+          *
+          * @param request ChangeLhDagOwnerRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ChangeLhDagOwnerResponse
+         */
         public ChangeLhDagOwnerResponse ChangeLhDagOwnerWithOptions(ChangeLhDagOwnerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -924,6 +1005,15 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<ChangeLhDagOwnerResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Usage notes:
+          * *   If you call this operation to transfer the ownership of a published task flow, the ownership transfer does not take effect.
+          * *   You can call the [ReDeployLhDagVersion](~~424712~~) operation to redeploy a published version of a task flow.
+          *
+          * @param request ChangeLhDagOwnerRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ChangeLhDagOwnerResponse
+         */
         public async Task<ChangeLhDagOwnerResponse> ChangeLhDagOwnerWithOptionsAsync(ChangeLhDagOwnerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -959,12 +1049,28 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<ChangeLhDagOwnerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Usage notes:
+          * *   If you call this operation to transfer the ownership of a published task flow, the ownership transfer does not take effect.
+          * *   You can call the [ReDeployLhDagVersion](~~424712~~) operation to redeploy a published version of a task flow.
+          *
+          * @param request ChangeLhDagOwnerRequest
+          * @return ChangeLhDagOwnerResponse
+         */
         public ChangeLhDagOwnerResponse ChangeLhDagOwner(ChangeLhDagOwnerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ChangeLhDagOwnerWithOptions(request, runtime);
         }
 
+        /**
+          * Usage notes:
+          * *   If you call this operation to transfer the ownership of a published task flow, the ownership transfer does not take effect.
+          * *   You can call the [ReDeployLhDagVersion](~~424712~~) operation to redeploy a published version of a task flow.
+          *
+          * @param request ChangeLhDagOwnerRequest
+          * @return ChangeLhDagOwnerResponse
+         */
         public async Task<ChangeLhDagOwnerResponse> ChangeLhDagOwnerAsync(ChangeLhDagOwnerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1053,6 +1159,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await CloseOrderWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
+          *
+          * @param tmpReq CreateDataCorrectOrderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDataCorrectOrderResponse
+         */
         public CreateDataCorrectOrderResponse CreateDataCorrectOrderWithOptions(CreateDataCorrectOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1106,6 +1219,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<CreateDataCorrectOrderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
+          *
+          * @param tmpReq CreateDataCorrectOrderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDataCorrectOrderResponse
+         */
         public async Task<CreateDataCorrectOrderResponse> CreateDataCorrectOrderWithOptionsAsync(CreateDataCorrectOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1159,18 +1279,38 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<CreateDataCorrectOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
+          *
+          * @param request CreateDataCorrectOrderRequest
+          * @return CreateDataCorrectOrderResponse
+         */
         public CreateDataCorrectOrderResponse CreateDataCorrectOrder(CreateDataCorrectOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDataCorrectOrderWithOptions(request, runtime);
         }
 
+        /**
+          * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
+          *
+          * @param request CreateDataCorrectOrderRequest
+          * @return CreateDataCorrectOrderResponse
+         */
         public async Task<CreateDataCorrectOrderResponse> CreateDataCorrectOrderAsync(CreateDataCorrectOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDataCorrectOrderWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * For more information about the historical data cleaning, see [Clear historical data](~~162507~~).
+          * This operation can be used only for MySQL databases.
+          *
+          * @param tmpReq CreateDataCronClearOrderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDataCronClearOrderResponse
+         */
         public CreateDataCronClearOrderResponse CreateDataCronClearOrderWithOptions(CreateDataCronClearOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1224,6 +1364,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<CreateDataCronClearOrderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * For more information about the historical data cleaning, see [Clear historical data](~~162507~~).
+          * This operation can be used only for MySQL databases.
+          *
+          * @param tmpReq CreateDataCronClearOrderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDataCronClearOrderResponse
+         */
         public async Task<CreateDataCronClearOrderResponse> CreateDataCronClearOrderWithOptionsAsync(CreateDataCronClearOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1277,18 +1425,39 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<CreateDataCronClearOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * For more information about the historical data cleaning, see [Clear historical data](~~162507~~).
+          * This operation can be used only for MySQL databases.
+          *
+          * @param request CreateDataCronClearOrderRequest
+          * @return CreateDataCronClearOrderResponse
+         */
         public CreateDataCronClearOrderResponse CreateDataCronClearOrder(CreateDataCronClearOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDataCronClearOrderWithOptions(request, runtime);
         }
 
+        /**
+          * For more information about the historical data cleaning, see [Clear historical data](~~162507~~).
+          * This operation can be used only for MySQL databases.
+          *
+          * @param request CreateDataCronClearOrderRequest
+          * @return CreateDataCronClearOrderResponse
+         */
         public async Task<CreateDataCronClearOrderResponse> CreateDataCronClearOrderAsync(CreateDataCronClearOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDataCronClearOrderWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * For more information about the Large Data Import feature, see [Import data](~~161439~~).
+          *
+          * @param tmpReq CreateDataImportOrderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDataImportOrderResponse
+         */
         public CreateDataImportOrderResponse CreateDataImportOrderWithOptions(CreateDataImportOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1342,6 +1511,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<CreateDataImportOrderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * For more information about the Large Data Import feature, see [Import data](~~161439~~).
+          *
+          * @param tmpReq CreateDataImportOrderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDataImportOrderResponse
+         */
         public async Task<CreateDataImportOrderResponse> CreateDataImportOrderWithOptionsAsync(CreateDataImportOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1395,18 +1571,38 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<CreateDataImportOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * For more information about the Large Data Import feature, see [Import data](~~161439~~).
+          *
+          * @param request CreateDataImportOrderRequest
+          * @return CreateDataImportOrderResponse
+         */
         public CreateDataImportOrderResponse CreateDataImportOrder(CreateDataImportOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDataImportOrderWithOptions(request, runtime);
         }
 
+        /**
+          * For more information about the Large Data Import feature, see [Import data](~~161439~~).
+          *
+          * @param request CreateDataImportOrderRequest
+          * @return CreateDataImportOrderResponse
+         */
         public async Task<CreateDataImportOrderResponse> CreateDataImportOrderAsync(CreateDataImportOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDataImportOrderWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * For more information about the lock-free change feature, see [Overview](~~207847~~).
+          * This operation can be used only for instances that are managed in Stable Change or Security Collaboration mode. For more information, see [Change data without the need to lock tables](~~96145~~) and [Change schemas without locking tables](~~98373~~).
+          *
+          * @param tmpReq CreateFreeLockCorrectOrderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateFreeLockCorrectOrderResponse
+         */
         public CreateFreeLockCorrectOrderResponse CreateFreeLockCorrectOrderWithOptions(CreateFreeLockCorrectOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1460,6 +1656,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<CreateFreeLockCorrectOrderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * For more information about the lock-free change feature, see [Overview](~~207847~~).
+          * This operation can be used only for instances that are managed in Stable Change or Security Collaboration mode. For more information, see [Change data without the need to lock tables](~~96145~~) and [Change schemas without locking tables](~~98373~~).
+          *
+          * @param tmpReq CreateFreeLockCorrectOrderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateFreeLockCorrectOrderResponse
+         */
         public async Task<CreateFreeLockCorrectOrderResponse> CreateFreeLockCorrectOrderWithOptionsAsync(CreateFreeLockCorrectOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1513,18 +1717,40 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<CreateFreeLockCorrectOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * For more information about the lock-free change feature, see [Overview](~~207847~~).
+          * This operation can be used only for instances that are managed in Stable Change or Security Collaboration mode. For more information, see [Change data without the need to lock tables](~~96145~~) and [Change schemas without locking tables](~~98373~~).
+          *
+          * @param request CreateFreeLockCorrectOrderRequest
+          * @return CreateFreeLockCorrectOrderResponse
+         */
         public CreateFreeLockCorrectOrderResponse CreateFreeLockCorrectOrder(CreateFreeLockCorrectOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateFreeLockCorrectOrderWithOptions(request, runtime);
         }
 
+        /**
+          * For more information about the lock-free change feature, see [Overview](~~207847~~).
+          * This operation can be used only for instances that are managed in Stable Change or Security Collaboration mode. For more information, see [Change data without the need to lock tables](~~96145~~) and [Change schemas without locking tables](~~98373~~).
+          *
+          * @param request CreateFreeLockCorrectOrderRequest
+          * @return CreateFreeLockCorrectOrderResponse
+         */
         public async Task<CreateFreeLockCorrectOrderResponse> CreateFreeLockCorrectOrderAsync(CreateFreeLockCorrectOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateFreeLockCorrectOrderWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   The workspace name must be unique within a tenant. If a workspace with the same name already exists within the tenant, the call may fail.
+          * *   You can call the [GetLhSpaceByName](~~424379~~) operation to query whether a workspace with a specific name already exists as a DMS administrator or database administrator (DBA).
+          *
+          * @param request CreateLakeHouseSpaceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateLakeHouseSpaceResponse
+         */
         public CreateLakeHouseSpaceResponse CreateLakeHouseSpaceWithOptions(CreateLakeHouseSpaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1580,6 +1806,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<CreateLakeHouseSpaceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   The workspace name must be unique within a tenant. If a workspace with the same name already exists within the tenant, the call may fail.
+          * *   You can call the [GetLhSpaceByName](~~424379~~) operation to query whether a workspace with a specific name already exists as a DMS administrator or database administrator (DBA).
+          *
+          * @param request CreateLakeHouseSpaceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateLakeHouseSpaceResponse
+         */
         public async Task<CreateLakeHouseSpaceResponse> CreateLakeHouseSpaceWithOptionsAsync(CreateLakeHouseSpaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1635,12 +1869,26 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<CreateLakeHouseSpaceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   The workspace name must be unique within a tenant. If a workspace with the same name already exists within the tenant, the call may fail.
+          * *   You can call the [GetLhSpaceByName](~~424379~~) operation to query whether a workspace with a specific name already exists as a DMS administrator or database administrator (DBA).
+          *
+          * @param request CreateLakeHouseSpaceRequest
+          * @return CreateLakeHouseSpaceResponse
+         */
         public CreateLakeHouseSpaceResponse CreateLakeHouseSpace(CreateLakeHouseSpaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateLakeHouseSpaceWithOptions(request, runtime);
         }
 
+        /**
+          * *   The workspace name must be unique within a tenant. If a workspace with the same name already exists within the tenant, the call may fail.
+          * *   You can call the [GetLhSpaceByName](~~424379~~) operation to query whether a workspace with a specific name already exists as a DMS administrator or database administrator (DBA).
+          *
+          * @param request CreateLakeHouseSpaceRequest
+          * @return CreateLakeHouseSpaceResponse
+         */
         public async Task<CreateLakeHouseSpaceResponse> CreateLakeHouseSpaceAsync(CreateLakeHouseSpaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1741,6 +1989,17 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await CreateLogicDatabaseWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * To facilitate ticket creation, you can call the following dedicated operations to create some types of tickets:
+          * *   [CreateDataCorrectOrder](~~208388~~): creates a regular data change ticket.
+          * *   [CreateDataCronClearOrder](~~208385~~): creates a ticket to clear historical data.
+          * *   [CreateDataImportOrder](~~208387~~): creates a data import ticket.
+          * *   [CreateFreeLockCorrectOrder](~~208386~~): creates a lock-free change ticket.
+          *
+          * @param tmpReq CreateOrderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateOrderResponse
+         */
         public CreateOrderResponse CreateOrderWithOptions(CreateOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1796,6 +2055,17 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<CreateOrderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * To facilitate ticket creation, you can call the following dedicated operations to create some types of tickets:
+          * *   [CreateDataCorrectOrder](~~208388~~): creates a regular data change ticket.
+          * *   [CreateDataCronClearOrder](~~208385~~): creates a ticket to clear historical data.
+          * *   [CreateDataImportOrder](~~208387~~): creates a data import ticket.
+          * *   [CreateFreeLockCorrectOrder](~~208386~~): creates a lock-free change ticket.
+          *
+          * @param tmpReq CreateOrderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateOrderResponse
+         */
         public async Task<CreateOrderResponse> CreateOrderWithOptionsAsync(CreateOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1851,18 +2121,47 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<CreateOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * To facilitate ticket creation, you can call the following dedicated operations to create some types of tickets:
+          * *   [CreateDataCorrectOrder](~~208388~~): creates a regular data change ticket.
+          * *   [CreateDataCronClearOrder](~~208385~~): creates a ticket to clear historical data.
+          * *   [CreateDataImportOrder](~~208387~~): creates a data import ticket.
+          * *   [CreateFreeLockCorrectOrder](~~208386~~): creates a lock-free change ticket.
+          *
+          * @param request CreateOrderRequest
+          * @return CreateOrderResponse
+         */
         public CreateOrderResponse CreateOrder(CreateOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateOrderWithOptions(request, runtime);
         }
 
+        /**
+          * To facilitate ticket creation, you can call the following dedicated operations to create some types of tickets:
+          * *   [CreateDataCorrectOrder](~~208388~~): creates a regular data change ticket.
+          * *   [CreateDataCronClearOrder](~~208385~~): creates a ticket to clear historical data.
+          * *   [CreateDataImportOrder](~~208387~~): creates a data import ticket.
+          * *   [CreateFreeLockCorrectOrder](~~208386~~): creates a lock-free change ticket.
+          *
+          * @param request CreateOrderRequest
+          * @return CreateOrderResponse
+         */
         public async Task<CreateOrderResponse> CreateOrderAsync(CreateOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateOrderWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * - The database instance runs the MySQL or MariaDB database engine. For example, the database instance can be an ApsaraDB RDS for MySQL instance, a PolarDB for MySQL cluster, a Distributed Relational Database Service (DRDS) cluster, or an AnalyticDB for MySQL cluster. The database instance can also be a self-managed MySQL or MariaDB database, or a MySQL or MariaDB database in a third-party cloud.
+          * - The database instance resides in the China (Hangzhou) or China (Beijing) region.
+          * - You are a Data Management (DMS) administrator, a database administrator (DBA), or the owner of the database instance.
+          *
+          * @param request CreateProxyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateProxyResponse
+         */
         public CreateProxyResponse CreateProxyWithOptions(CreateProxyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1902,6 +2201,15 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<CreateProxyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * - The database instance runs the MySQL or MariaDB database engine. For example, the database instance can be an ApsaraDB RDS for MySQL instance, a PolarDB for MySQL cluster, a Distributed Relational Database Service (DRDS) cluster, or an AnalyticDB for MySQL cluster. The database instance can also be a self-managed MySQL or MariaDB database, or a MySQL or MariaDB database in a third-party cloud.
+          * - The database instance resides in the China (Hangzhou) or China (Beijing) region.
+          * - You are a Data Management (DMS) administrator, a database administrator (DBA), or the owner of the database instance.
+          *
+          * @param request CreateProxyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateProxyResponse
+         */
         public async Task<CreateProxyResponse> CreateProxyWithOptionsAsync(CreateProxyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1941,18 +2249,42 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<CreateProxyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * - The database instance runs the MySQL or MariaDB database engine. For example, the database instance can be an ApsaraDB RDS for MySQL instance, a PolarDB for MySQL cluster, a Distributed Relational Database Service (DRDS) cluster, or an AnalyticDB for MySQL cluster. The database instance can also be a self-managed MySQL or MariaDB database, or a MySQL or MariaDB database in a third-party cloud.
+          * - The database instance resides in the China (Hangzhou) or China (Beijing) region.
+          * - You are a Data Management (DMS) administrator, a database administrator (DBA), or the owner of the database instance.
+          *
+          * @param request CreateProxyRequest
+          * @return CreateProxyResponse
+         */
         public CreateProxyResponse CreateProxy(CreateProxyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateProxyWithOptions(request, runtime);
         }
 
+        /**
+          * - The database instance runs the MySQL or MariaDB database engine. For example, the database instance can be an ApsaraDB RDS for MySQL instance, a PolarDB for MySQL cluster, a Distributed Relational Database Service (DRDS) cluster, or an AnalyticDB for MySQL cluster. The database instance can also be a self-managed MySQL or MariaDB database, or a MySQL or MariaDB database in a third-party cloud.
+          * - The database instance resides in the China (Hangzhou) or China (Beijing) region.
+          * - You are a Data Management (DMS) administrator, a database administrator (DBA), or the owner of the database instance.
+          *
+          * @param request CreateProxyRequest
+          * @return CreateProxyResponse
+         */
         public async Task<CreateProxyResponse> CreateProxyAsync(CreateProxyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateProxyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * - The data security protection feature is enabled for the instance.
+          * - Your user role is the administrator role, DBA role, or the owner of data security protection for the current instance.
+          *
+          * @param request CreateProxyAccessRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateProxyAccessResponse
+         */
         public CreateProxyAccessResponse CreateProxyAccessWithOptions(CreateProxyAccessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1996,6 +2328,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<CreateProxyAccessResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * - The data security protection feature is enabled for the instance.
+          * - Your user role is the administrator role, DBA role, or the owner of data security protection for the current instance.
+          *
+          * @param request CreateProxyAccessRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateProxyAccessResponse
+         */
         public async Task<CreateProxyAccessResponse> CreateProxyAccessWithOptionsAsync(CreateProxyAccessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2039,12 +2379,26 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<CreateProxyAccessResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * - The data security protection feature is enabled for the instance.
+          * - Your user role is the administrator role, DBA role, or the owner of data security protection for the current instance.
+          *
+          * @param request CreateProxyAccessRequest
+          * @return CreateProxyAccessResponse
+         */
         public CreateProxyAccessResponse CreateProxyAccess(CreateProxyAccessRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateProxyAccessWithOptions(request, runtime);
         }
 
+        /**
+          * - The data security protection feature is enabled for the instance.
+          * - Your user role is the administrator role, DBA role, or the owner of data security protection for the current instance.
+          *
+          * @param request CreateProxyAccessRequest
+          * @return CreateProxyAccessResponse
+         */
         public async Task<CreateProxyAccessResponse> CreateProxyAccessAsync(CreateProxyAccessRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2157,6 +2511,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await CreatePublishGroupTaskWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * For more instructions on this feature, see [SQL audit](~~60374~~) .
+          *
+          * @param tmpReq CreateSQLReviewOrderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateSQLReviewOrderResponse
+         */
         public CreateSQLReviewOrderResponse CreateSQLReviewOrderWithOptions(CreateSQLReviewOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2206,6 +2567,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<CreateSQLReviewOrderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * For more instructions on this feature, see [SQL audit](~~60374~~) .
+          *
+          * @param tmpReq CreateSQLReviewOrderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateSQLReviewOrderResponse
+         */
         public async Task<CreateSQLReviewOrderResponse> CreateSQLReviewOrderWithOptionsAsync(CreateSQLReviewOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2255,12 +2623,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<CreateSQLReviewOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * For more instructions on this feature, see [SQL audit](~~60374~~) .
+          *
+          * @param request CreateSQLReviewOrderRequest
+          * @return CreateSQLReviewOrderResponse
+         */
         public CreateSQLReviewOrderResponse CreateSQLReviewOrder(CreateSQLReviewOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateSQLReviewOrderWithOptions(request, runtime);
         }
 
+        /**
+          * For more instructions on this feature, see [SQL audit](~~60374~~) .
+          *
+          * @param request CreateSQLReviewOrderRequest
+          * @return CreateSQLReviewOrderResponse
+         */
         public async Task<CreateSQLReviewOrderResponse> CreateSQLReviewOrderAsync(CreateSQLReviewOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2961,6 +3341,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await CreateUploadOSSFileJobWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Note: You can call this operation only to remove a database instance from the instance list of DMS. The instance is not deleted or shut down.
+          *
+          * @param request DeleteInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteInstanceResponse
+         */
         public DeleteInstanceResponse DeleteInstanceWithOptions(DeleteInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3000,6 +3387,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<DeleteInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Note: You can call this operation only to remove a database instance from the instance list of DMS. The instance is not deleted or shut down.
+          *
+          * @param request DeleteInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteInstanceResponse
+         */
         public async Task<DeleteInstanceResponse> DeleteInstanceWithOptionsAsync(DeleteInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3039,12 +3433,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<DeleteInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Note: You can call this operation only to remove a database instance from the instance list of DMS. The instance is not deleted or shut down.
+          *
+          * @param request DeleteInstanceRequest
+          * @return DeleteInstanceResponse
+         */
         public DeleteInstanceResponse DeleteInstance(DeleteInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * Note: You can call this operation only to remove a database instance from the instance list of DMS. The instance is not deleted or shut down.
+          *
+          * @param request DeleteInstanceRequest
+          * @return DeleteInstanceResponse
+         */
         public async Task<DeleteInstanceResponse> DeleteInstanceAsync(DeleteInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3125,6 +3531,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await DeleteLakeHouseSpaceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
+          * You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the [ChangLhDagOwner](~~424761~~) operation.
+          *
+          * @param tmpReq DeleteLhMembersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteLhMembersResponse
+         */
         public DeleteLhMembersResponse DeleteLhMembersWithOptions(DeleteLhMembersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3170,6 +3584,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<DeleteLhMembersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
+          * You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the [ChangLhDagOwner](~~424761~~) operation.
+          *
+          * @param tmpReq DeleteLhMembersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteLhMembersResponse
+         */
         public async Task<DeleteLhMembersResponse> DeleteLhMembersWithOptionsAsync(DeleteLhMembersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3215,12 +3637,26 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<DeleteLhMembersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
+          * You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the [ChangLhDagOwner](~~424761~~) operation.
+          *
+          * @param request DeleteLhMembersRequest
+          * @return DeleteLhMembersResponse
+         */
         public DeleteLhMembersResponse DeleteLhMembers(DeleteLhMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteLhMembersWithOptions(request, runtime);
         }
 
+        /**
+          * You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
+          * You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the [ChangLhDagOwner](~~424761~~) operation.
+          *
+          * @param request DeleteLhMembersRequest
+          * @return DeleteLhMembersResponse
+         */
         public async Task<DeleteLhMembersResponse> DeleteLhMembersAsync(DeleteLhMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3383,6 +3819,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await DeleteLogicTableRouteConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * After you disable this feature, your DB instance loses the JDBC protocol. All authorization information is recycled.
+          *
+          * @param request DeleteProxyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteProxyResponse
+         */
         public DeleteProxyResponse DeleteProxyWithOptions(DeleteProxyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3414,6 +3857,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<DeleteProxyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * After you disable this feature, your DB instance loses the JDBC protocol. All authorization information is recycled.
+          *
+          * @param request DeleteProxyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteProxyResponse
+         */
         public async Task<DeleteProxyResponse> DeleteProxyWithOptionsAsync(DeleteProxyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3445,12 +3895,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<DeleteProxyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * After you disable this feature, your DB instance loses the JDBC protocol. All authorization information is recycled.
+          *
+          * @param request DeleteProxyRequest
+          * @return DeleteProxyResponse
+         */
         public DeleteProxyResponse DeleteProxy(DeleteProxyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteProxyWithOptions(request, runtime);
         }
 
+        /**
+          * After you disable this feature, your DB instance loses the JDBC protocol. All authorization information is recycled.
+          *
+          * @param request DeleteProxyRequest
+          * @return DeleteProxyResponse
+         */
         public async Task<DeleteProxyResponse> DeleteProxyAsync(DeleteProxyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3531,6 +3993,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await DeleteProxyAccessWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * When you call this operation, make sure that no task flow is specified in the business scenario.
+          *
+          * @param request DeleteScenarioRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteScenarioResponse
+         */
         public DeleteScenarioResponse DeleteScenarioWithOptions(DeleteScenarioRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3562,6 +4032,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<DeleteScenarioResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * When you call this operation, make sure that no task flow is specified in the business scenario.
+          *
+          * @param request DeleteScenarioRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteScenarioResponse
+         */
         public async Task<DeleteScenarioResponse> DeleteScenarioWithOptionsAsync(DeleteScenarioRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3593,12 +4071,26 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<DeleteScenarioResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * When you call this operation, make sure that no task flow is specified in the business scenario.
+          *
+          * @param request DeleteScenarioRequest
+          * @return DeleteScenarioResponse
+         */
         public DeleteScenarioResponse DeleteScenario(DeleteScenarioRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteScenarioWithOptions(request, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * When you call this operation, make sure that no task flow is specified in the business scenario.
+          *
+          * @param request DeleteScenarioRequest
+          * @return DeleteScenarioResponse
+         */
         public async Task<DeleteScenarioResponse> DeleteScenarioAsync(DeleteScenarioRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3753,6 +4245,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await DeleteTaskFlowWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is used for multi-condition query. You can call it to delete the edges of a specified task flow that meet all specified conditions.
+          *
+          * @param request DeleteTaskFlowEdgesByConditionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTaskFlowEdgesByConditionResponse
+         */
         public DeleteTaskFlowEdgesByConditionResponse DeleteTaskFlowEdgesByConditionWithOptions(DeleteTaskFlowEdgesByConditionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3796,6 +4295,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<DeleteTaskFlowEdgesByConditionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is used for multi-condition query. You can call it to delete the edges of a specified task flow that meet all specified conditions.
+          *
+          * @param request DeleteTaskFlowEdgesByConditionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTaskFlowEdgesByConditionResponse
+         */
         public async Task<DeleteTaskFlowEdgesByConditionResponse> DeleteTaskFlowEdgesByConditionWithOptionsAsync(DeleteTaskFlowEdgesByConditionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3839,18 +4345,38 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<DeleteTaskFlowEdgesByConditionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is used for multi-condition query. You can call it to delete the edges of a specified task flow that meet all specified conditions.
+          *
+          * @param request DeleteTaskFlowEdgesByConditionRequest
+          * @return DeleteTaskFlowEdgesByConditionResponse
+         */
         public DeleteTaskFlowEdgesByConditionResponse DeleteTaskFlowEdgesByCondition(DeleteTaskFlowEdgesByConditionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteTaskFlowEdgesByConditionWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is used for multi-condition query. You can call it to delete the edges of a specified task flow that meet all specified conditions.
+          *
+          * @param request DeleteTaskFlowEdgesByConditionRequest
+          * @return DeleteTaskFlowEdgesByConditionResponse
+         */
         public async Task<DeleteTaskFlowEdgesByConditionResponse> DeleteTaskFlowEdgesByConditionAsync(DeleteTaskFlowEdgesByConditionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteTaskFlowEdgesByConditionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The effect of deleting a user by calling this operation is the same as that of deleting a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to delete a user that is no longer used from DMS Enterprise. After the user is deleted, the data source permission, data owner configuration, and database administrator (DBA) configuration of the corresponding Alibaba Cloud account or Resource Access Management (RAM) user are revoked and become invalid.
+          * >  This operation only removes the association of the Alibaba Cloud account or RAM user with DMS Enterprise of the enterprise, rather than actually deleting the Alibaba Cloud account or RAM user. After the user is deleted, the Alibaba Cloud account or RAM user cannot log on to DMS Enterprise, unless the user is added to DMS Enterprise again.
+          *
+          * @param request DeleteUserRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteUserResponse
+         */
         public DeleteUserResponse DeleteUserWithOptions(DeleteUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3882,6 +4408,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<DeleteUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The effect of deleting a user by calling this operation is the same as that of deleting a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to delete a user that is no longer used from DMS Enterprise. After the user is deleted, the data source permission, data owner configuration, and database administrator (DBA) configuration of the corresponding Alibaba Cloud account or Resource Access Management (RAM) user are revoked and become invalid.
+          * >  This operation only removes the association of the Alibaba Cloud account or RAM user with DMS Enterprise of the enterprise, rather than actually deleting the Alibaba Cloud account or RAM user. After the user is deleted, the Alibaba Cloud account or RAM user cannot log on to DMS Enterprise, unless the user is added to DMS Enterprise again.
+          *
+          * @param request DeleteUserRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteUserResponse
+         */
         public async Task<DeleteUserResponse> DeleteUserWithOptionsAsync(DeleteUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3913,18 +4447,40 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<DeleteUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The effect of deleting a user by calling this operation is the same as that of deleting a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to delete a user that is no longer used from DMS Enterprise. After the user is deleted, the data source permission, data owner configuration, and database administrator (DBA) configuration of the corresponding Alibaba Cloud account or Resource Access Management (RAM) user are revoked and become invalid.
+          * >  This operation only removes the association of the Alibaba Cloud account or RAM user with DMS Enterprise of the enterprise, rather than actually deleting the Alibaba Cloud account or RAM user. After the user is deleted, the Alibaba Cloud account or RAM user cannot log on to DMS Enterprise, unless the user is added to DMS Enterprise again.
+          *
+          * @param request DeleteUserRequest
+          * @return DeleteUserResponse
+         */
         public DeleteUserResponse DeleteUser(DeleteUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteUserWithOptions(request, runtime);
         }
 
+        /**
+          * The effect of deleting a user by calling this operation is the same as that of deleting a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to delete a user that is no longer used from DMS Enterprise. After the user is deleted, the data source permission, data owner configuration, and database administrator (DBA) configuration of the corresponding Alibaba Cloud account or Resource Access Management (RAM) user are revoked and become invalid.
+          * >  This operation only removes the association of the Alibaba Cloud account or RAM user with DMS Enterprise of the enterprise, rather than actually deleting the Alibaba Cloud account or RAM user. After the user is deleted, the Alibaba Cloud account or RAM user cannot log on to DMS Enterprise, unless the user is added to DMS Enterprise again.
+          *
+          * @param request DeleteUserRequest
+          * @return DeleteUserResponse
+         */
         public async Task<DeleteUserResponse> DeleteUserAsync(DeleteUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteUserWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The effect of disabling a user by calling this operation is the same as that of disabling a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to disable a user that is temporarily not used in DMS Enterprise. After the user is disabled, the data source permission, data owner configuration, and database administrator (DBA) configuration of the corresponding Alibaba Cloud account or Resource Access Management (RAM) user are revoked and become invalid.
+          * >  This operation only stops the Alibaba Cloud account or RAM user from logging on to DMS Enterprise of the enterprise, rather than actually disabling the Alibaba Cloud account or RAM user. After the user is disabled, the Alibaba Cloud account or RAM user cannot log on to DMS Enterprise, unless the user is enabled again. The disabled user, however, still exists in DMS Enterprise.
+          *
+          * @param request DisableUserRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DisableUserResponse
+         */
         public DisableUserResponse DisableUserWithOptions(DisableUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3956,6 +4512,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<DisableUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The effect of disabling a user by calling this operation is the same as that of disabling a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to disable a user that is temporarily not used in DMS Enterprise. After the user is disabled, the data source permission, data owner configuration, and database administrator (DBA) configuration of the corresponding Alibaba Cloud account or Resource Access Management (RAM) user are revoked and become invalid.
+          * >  This operation only stops the Alibaba Cloud account or RAM user from logging on to DMS Enterprise of the enterprise, rather than actually disabling the Alibaba Cloud account or RAM user. After the user is disabled, the Alibaba Cloud account or RAM user cannot log on to DMS Enterprise, unless the user is enabled again. The disabled user, however, still exists in DMS Enterprise.
+          *
+          * @param request DisableUserRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DisableUserResponse
+         */
         public async Task<DisableUserResponse> DisableUserWithOptionsAsync(DisableUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3987,12 +4551,26 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<DisableUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The effect of disabling a user by calling this operation is the same as that of disabling a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to disable a user that is temporarily not used in DMS Enterprise. After the user is disabled, the data source permission, data owner configuration, and database administrator (DBA) configuration of the corresponding Alibaba Cloud account or Resource Access Management (RAM) user are revoked and become invalid.
+          * >  This operation only stops the Alibaba Cloud account or RAM user from logging on to DMS Enterprise of the enterprise, rather than actually disabling the Alibaba Cloud account or RAM user. After the user is disabled, the Alibaba Cloud account or RAM user cannot log on to DMS Enterprise, unless the user is enabled again. The disabled user, however, still exists in DMS Enterprise.
+          *
+          * @param request DisableUserRequest
+          * @return DisableUserResponse
+         */
         public DisableUserResponse DisableUser(DisableUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisableUserWithOptions(request, runtime);
         }
 
+        /**
+          * The effect of disabling a user by calling this operation is the same as that of disabling a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to disable a user that is temporarily not used in DMS Enterprise. After the user is disabled, the data source permission, data owner configuration, and database administrator (DBA) configuration of the corresponding Alibaba Cloud account or Resource Access Management (RAM) user are revoked and become invalid.
+          * >  This operation only stops the Alibaba Cloud account or RAM user from logging on to DMS Enterprise of the enterprise, rather than actually disabling the Alibaba Cloud account or RAM user. After the user is disabled, the Alibaba Cloud account or RAM user cannot log on to DMS Enterprise, unless the user is enabled again. The disabled user, however, still exists in DMS Enterprise.
+          *
+          * @param request DisableUserRequest
+          * @return DisableUserResponse
+         */
         public async Task<DisableUserResponse> DisableUserAsync(DisableUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4101,6 +4679,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await EditLogicDatabaseWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The effect of enabling a user by calling this operation is the same as that of enabling a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to enable a user that has been disabled in DMS Enterprise. After the user is enabled, the corresponding Alibaba Cloud account or Resource Access Management (RAM) user can continue to log on to DMS Enterprise and perform relevant operations.
+          * >  This operation only enables the Alibaba Cloud account or RAM user to log on to DMS Enterprise of the enterprise and perform relevant operations, rather than granting other permissions to the Alibaba Cloud account or RAM user.
+          *
+          * @param request EnableUserRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return EnableUserResponse
+         */
         public EnableUserResponse EnableUserWithOptions(EnableUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4132,6 +4718,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<EnableUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The effect of enabling a user by calling this operation is the same as that of enabling a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to enable a user that has been disabled in DMS Enterprise. After the user is enabled, the corresponding Alibaba Cloud account or Resource Access Management (RAM) user can continue to log on to DMS Enterprise and perform relevant operations.
+          * >  This operation only enables the Alibaba Cloud account or RAM user to log on to DMS Enterprise of the enterprise and perform relevant operations, rather than granting other permissions to the Alibaba Cloud account or RAM user.
+          *
+          * @param request EnableUserRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return EnableUserResponse
+         */
         public async Task<EnableUserResponse> EnableUserWithOptionsAsync(EnableUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4163,12 +4757,26 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<EnableUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The effect of enabling a user by calling this operation is the same as that of enabling a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to enable a user that has been disabled in DMS Enterprise. After the user is enabled, the corresponding Alibaba Cloud account or Resource Access Management (RAM) user can continue to log on to DMS Enterprise and perform relevant operations.
+          * >  This operation only enables the Alibaba Cloud account or RAM user to log on to DMS Enterprise of the enterprise and perform relevant operations, rather than granting other permissions to the Alibaba Cloud account or RAM user.
+          *
+          * @param request EnableUserRequest
+          * @return EnableUserResponse
+         */
         public EnableUserResponse EnableUser(EnableUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnableUserWithOptions(request, runtime);
         }
 
+        /**
+          * The effect of enabling a user by calling this operation is the same as that of enabling a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to enable a user that has been disabled in DMS Enterprise. After the user is enabled, the corresponding Alibaba Cloud account or Resource Access Management (RAM) user can continue to log on to DMS Enterprise and perform relevant operations.
+          * >  This operation only enables the Alibaba Cloud account or RAM user to log on to DMS Enterprise of the enterprise and perform relevant operations, rather than granting other permissions to the Alibaba Cloud account or RAM user.
+          *
+          * @param request EnableUserRequest
+          * @return EnableUserResponse
+         */
         public async Task<EnableUserResponse> EnableUserAsync(EnableUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4363,6 +4971,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await ExecuteDataExportWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation only for instances that are managed in Security Collaboration mode.
+          *
+          * @param request ExecuteScriptRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ExecuteScriptResponse
+         */
         public ExecuteScriptResponse ExecuteScriptWithOptions(ExecuteScriptRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4402,6 +5017,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<ExecuteScriptResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation only for instances that are managed in Security Collaboration mode.
+          *
+          * @param request ExecuteScriptRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ExecuteScriptResponse
+         */
         public async Task<ExecuteScriptResponse> ExecuteScriptWithOptionsAsync(ExecuteScriptRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4441,18 +5063,38 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<ExecuteScriptResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation only for instances that are managed in Security Collaboration mode.
+          *
+          * @param request ExecuteScriptRequest
+          * @return ExecuteScriptResponse
+         */
         public ExecuteScriptResponse ExecuteScript(ExecuteScriptRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ExecuteScriptWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation only for instances that are managed in Security Collaboration mode.
+          *
+          * @param request ExecuteScriptRequest
+          * @return ExecuteScriptResponse
+         */
         public async Task<ExecuteScriptResponse> ExecuteScriptAsync(ExecuteScriptRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ExecuteScriptWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If the security rules of the instance need to be approved for synchronization, call [SubmitStructSyncOrderApproval](~~206166~~) The interface initiates an approval process and completes the approval.
+          * >  You can call [GetStructSyncJobDetail](~~206160~~) You can call this operation to query whether the target instance requires an approval.
+          *
+          * @param request ExecuteStructSyncRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ExecuteStructSyncResponse
+         */
         public ExecuteStructSyncResponse ExecuteStructSyncWithOptions(ExecuteStructSyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4484,6 +5126,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<ExecuteStructSyncResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If the security rules of the instance need to be approved for synchronization, call [SubmitStructSyncOrderApproval](~~206166~~) The interface initiates an approval process and completes the approval.
+          * >  You can call [GetStructSyncJobDetail](~~206160~~) You can call this operation to query whether the target instance requires an approval.
+          *
+          * @param request ExecuteStructSyncRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ExecuteStructSyncResponse
+         */
         public async Task<ExecuteStructSyncResponse> ExecuteStructSyncWithOptionsAsync(ExecuteStructSyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4515,12 +5165,26 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<ExecuteStructSyncResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If the security rules of the instance need to be approved for synchronization, call [SubmitStructSyncOrderApproval](~~206166~~) The interface initiates an approval process and completes the approval.
+          * >  You can call [GetStructSyncJobDetail](~~206160~~) You can call this operation to query whether the target instance requires an approval.
+          *
+          * @param request ExecuteStructSyncRequest
+          * @return ExecuteStructSyncResponse
+         */
         public ExecuteStructSyncResponse ExecuteStructSync(ExecuteStructSyncRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ExecuteStructSyncWithOptions(request, runtime);
         }
 
+        /**
+          * If the security rules of the instance need to be approved for synchronization, call [SubmitStructSyncOrderApproval](~~206166~~) The interface initiates an approval process and completes the approval.
+          * >  You can call [GetStructSyncJobDetail](~~206160~~) You can call this operation to query whether the target instance requires an approval.
+          *
+          * @param request ExecuteStructSyncRequest
+          * @return ExecuteStructSyncResponse
+         */
         public async Task<ExecuteStructSyncResponse> ExecuteStructSyncAsync(ExecuteStructSyncRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4991,6 +5655,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await GetDataCorrectRollbackFileWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This interface applies to: [Common data change](~~58419~~) and [Batch Data import](~~144643~~) .
+          *
+          * @param request GetDataCorrectSQLFileRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetDataCorrectSQLFileResponse
+         */
         public GetDataCorrectSQLFileResponse GetDataCorrectSQLFileWithOptions(GetDataCorrectSQLFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5022,6 +5693,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<GetDataCorrectSQLFileResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This interface applies to: [Common data change](~~58419~~) and [Batch Data import](~~144643~~) .
+          *
+          * @param request GetDataCorrectSQLFileRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetDataCorrectSQLFileResponse
+         */
         public async Task<GetDataCorrectSQLFileResponse> GetDataCorrectSQLFileWithOptionsAsync(GetDataCorrectSQLFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5053,12 +5731,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<GetDataCorrectSQLFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This interface applies to: [Common data change](~~58419~~) and [Batch Data import](~~144643~~) .
+          *
+          * @param request GetDataCorrectSQLFileRequest
+          * @return GetDataCorrectSQLFileResponse
+         */
         public GetDataCorrectSQLFileResponse GetDataCorrectSQLFile(GetDataCorrectSQLFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetDataCorrectSQLFileWithOptions(request, runtime);
         }
 
+        /**
+          * This interface applies to: [Common data change](~~58419~~) and [Batch Data import](~~144643~~) .
+          *
+          * @param request GetDataCorrectSQLFileRequest
+          * @return GetDataCorrectSQLFileResponse
+         */
         public async Task<GetDataCorrectSQLFileResponse> GetDataCorrectSQLFileAsync(GetDataCorrectSQLFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5717,6 +6407,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await GetIntervalLimitOfSLAWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You are a DMS administrator or a database administrator (DBA).
+          *
+          * @param request GetLhSpaceByNameRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetLhSpaceByNameResponse
+         */
         public GetLhSpaceByNameResponse GetLhSpaceByNameWithOptions(GetLhSpaceByNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5748,6 +6445,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<GetLhSpaceByNameResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You are a DMS administrator or a database administrator (DBA).
+          *
+          * @param request GetLhSpaceByNameRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetLhSpaceByNameResponse
+         */
         public async Task<GetLhSpaceByNameResponse> GetLhSpaceByNameWithOptionsAsync(GetLhSpaceByNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5779,12 +6483,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<GetLhSpaceByNameResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You are a DMS administrator or a database administrator (DBA).
+          *
+          * @param request GetLhSpaceByNameRequest
+          * @return GetLhSpaceByNameResponse
+         */
         public GetLhSpaceByNameResponse GetLhSpaceByName(GetLhSpaceByNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetLhSpaceByNameWithOptions(request, runtime);
         }
 
+        /**
+          * You are a DMS administrator or a database administrator (DBA).
+          *
+          * @param request GetLhSpaceByNameRequest
+          * @return GetLhSpaceByNameResponse
+         */
         public async Task<GetLhSpaceByNameResponse> GetLhSpaceByNameAsync(GetLhSpaceByNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6087,6 +6803,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await GetOnlineDDLProgressWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Prerequisites: You are an administrator of Data Management (DMS) or a security administrator. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain your user role from the RoleIdList parameter that is returned.
+          *
+          * @param request GetOpLogRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetOpLogResponse
+         */
         public GetOpLogResponse GetOpLogWithOptions(GetOpLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6134,6 +6857,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<GetOpLogResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Prerequisites: You are an administrator of Data Management (DMS) or a security administrator. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain your user role from the RoleIdList parameter that is returned.
+          *
+          * @param request GetOpLogRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetOpLogResponse
+         */
         public async Task<GetOpLogResponse> GetOpLogWithOptionsAsync(GetOpLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6181,12 +6911,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<GetOpLogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Prerequisites: You are an administrator of Data Management (DMS) or a security administrator. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain your user role from the RoleIdList parameter that is returned.
+          *
+          * @param request GetOpLogRequest
+          * @return GetOpLogResponse
+         */
         public GetOpLogResponse GetOpLog(GetOpLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetOpLogWithOptions(request, runtime);
         }
 
+        /**
+          * Prerequisites: You are an administrator of Data Management (DMS) or a security administrator. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain your user role from the RoleIdList parameter that is returned.
+          *
+          * @param request GetOpLogRequest
+          * @return GetOpLogResponse
+         */
         public async Task<GetOpLogResponse> GetOpLogAsync(GetOpLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6415,6 +7157,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await GetOwnerApplyOrderDetailWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This interface is applicable to obtaining: **Database-permission** , **Table-permissions** , **sensitive column-permission** .
+          *
+          * @param request GetPermApplyOrderDetailRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetPermApplyOrderDetailResponse
+         */
         public GetPermApplyOrderDetailResponse GetPermApplyOrderDetailWithOptions(GetPermApplyOrderDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6446,6 +7195,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<GetPermApplyOrderDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This interface is applicable to obtaining: **Database-permission** , **Table-permissions** , **sensitive column-permission** .
+          *
+          * @param request GetPermApplyOrderDetailRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetPermApplyOrderDetailResponse
+         */
         public async Task<GetPermApplyOrderDetailResponse> GetPermApplyOrderDetailWithOptionsAsync(GetPermApplyOrderDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6477,12 +7233,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<GetPermApplyOrderDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This interface is applicable to obtaining: **Database-permission** , **Table-permissions** , **sensitive column-permission** .
+          *
+          * @param request GetPermApplyOrderDetailRequest
+          * @return GetPermApplyOrderDetailResponse
+         */
         public GetPermApplyOrderDetailResponse GetPermApplyOrderDetail(GetPermApplyOrderDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetPermApplyOrderDetailWithOptions(request, runtime);
         }
 
+        /**
+          * This interface is applicable to obtaining: **Database-permission** , **Table-permissions** , **sensitive column-permission** .
+          *
+          * @param request GetPermApplyOrderDetailRequest
+          * @return GetPermApplyOrderDetailResponse
+         */
         public async Task<GetPermApplyOrderDetailResponse> GetPermApplyOrderDetailAsync(GetPermApplyOrderDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6645,6 +7413,80 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await GetProxyWithOptionsAsync(request, runtime);
         }
 
+        public GetProxyAccessResponse GetProxyAccessWithOptions(GetProxyAccessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyAccessId))
+            {
+                query["ProxyAccessId"] = request.ProxyAccessId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetProxyAccess",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetProxyAccessResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetProxyAccessResponse> GetProxyAccessWithOptionsAsync(GetProxyAccessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyAccessId))
+            {
+                query["ProxyAccessId"] = request.ProxyAccessId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetProxyAccess",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetProxyAccessResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetProxyAccessResponse GetProxyAccess(GetProxyAccessRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetProxyAccessWithOptions(request, runtime);
+        }
+
+        public async Task<GetProxyAccessResponse> GetProxyAccessAsync(GetProxyAccessRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetProxyAccessWithOptionsAsync(request, runtime);
+        }
+
         public GetRuleNumLimitOfSLAResponse GetRuleNumLimitOfSLAWithOptions(GetRuleNumLimitOfSLARequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6719,6 +7561,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await GetRuleNumLimitOfSLAWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * For more instructions on this feature, see [SQL audit](~~60374~~) .
+          *
+          * @param request GetSQLReviewCheckResultStatusRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetSQLReviewCheckResultStatusResponse
+         */
         public GetSQLReviewCheckResultStatusResponse GetSQLReviewCheckResultStatusWithOptions(GetSQLReviewCheckResultStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6750,6 +7599,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<GetSQLReviewCheckResultStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * For more instructions on this feature, see [SQL audit](~~60374~~) .
+          *
+          * @param request GetSQLReviewCheckResultStatusRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetSQLReviewCheckResultStatusResponse
+         */
         public async Task<GetSQLReviewCheckResultStatusResponse> GetSQLReviewCheckResultStatusWithOptionsAsync(GetSQLReviewCheckResultStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6781,18 +7637,37 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<GetSQLReviewCheckResultStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * For more instructions on this feature, see [SQL audit](~~60374~~) .
+          *
+          * @param request GetSQLReviewCheckResultStatusRequest
+          * @return GetSQLReviewCheckResultStatusResponse
+         */
         public GetSQLReviewCheckResultStatusResponse GetSQLReviewCheckResultStatus(GetSQLReviewCheckResultStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetSQLReviewCheckResultStatusWithOptions(request, runtime);
         }
 
+        /**
+          * For more instructions on this feature, see [SQL audit](~~60374~~) .
+          *
+          * @param request GetSQLReviewCheckResultStatusRequest
+          * @return GetSQLReviewCheckResultStatusResponse
+         */
         public async Task<GetSQLReviewCheckResultStatusResponse> GetSQLReviewCheckResultStatusAsync(GetSQLReviewCheckResultStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetSQLReviewCheckResultStatusWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * For more information about the SQL review feature, see [SQL review](https://icms.alibaba-inc.com/content/dms/doc?l=1\\&m=61777\\&n=2433364).
+          *
+          * @param request GetSQLReviewOptimizeDetailRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetSQLReviewOptimizeDetailResponse
+         */
         public GetSQLReviewOptimizeDetailResponse GetSQLReviewOptimizeDetailWithOptions(GetSQLReviewOptimizeDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6824,6 +7699,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<GetSQLReviewOptimizeDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * For more information about the SQL review feature, see [SQL review](https://icms.alibaba-inc.com/content/dms/doc?l=1\\&m=61777\\&n=2433364).
+          *
+          * @param request GetSQLReviewOptimizeDetailRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetSQLReviewOptimizeDetailResponse
+         */
         public async Task<GetSQLReviewOptimizeDetailResponse> GetSQLReviewOptimizeDetailWithOptionsAsync(GetSQLReviewOptimizeDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6855,12 +7737,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<GetSQLReviewOptimizeDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * For more information about the SQL review feature, see [SQL review](https://icms.alibaba-inc.com/content/dms/doc?l=1\\&m=61777\\&n=2433364).
+          *
+          * @param request GetSQLReviewOptimizeDetailRequest
+          * @return GetSQLReviewOptimizeDetailResponse
+         */
         public GetSQLReviewOptimizeDetailResponse GetSQLReviewOptimizeDetail(GetSQLReviewOptimizeDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetSQLReviewOptimizeDetailWithOptions(request, runtime);
         }
 
+        /**
+          * For more information about the SQL review feature, see [SQL review](https://icms.alibaba-inc.com/content/dms/doc?l=1\\&m=61777\\&n=2433364).
+          *
+          * @param request GetSQLReviewOptimizeDetailRequest
+          * @return GetSQLReviewOptimizeDetailResponse
+         */
         public async Task<GetSQLReviewOptimizeDetailResponse> GetSQLReviewOptimizeDetailAsync(GetSQLReviewOptimizeDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8581,6 +9475,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await ListDDLPublishRecordsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
+          *
+          * @param request ListDataCorrectPreCheckDBRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListDataCorrectPreCheckDBResponse
+         */
         public ListDataCorrectPreCheckDBResponse ListDataCorrectPreCheckDBWithOptions(ListDataCorrectPreCheckDBRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8620,6 +9521,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<ListDataCorrectPreCheckDBResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
+          *
+          * @param request ListDataCorrectPreCheckDBRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListDataCorrectPreCheckDBResponse
+         */
         public async Task<ListDataCorrectPreCheckDBResponse> ListDataCorrectPreCheckDBWithOptionsAsync(ListDataCorrectPreCheckDBRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8659,18 +9567,37 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<ListDataCorrectPreCheckDBResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
+          *
+          * @param request ListDataCorrectPreCheckDBRequest
+          * @return ListDataCorrectPreCheckDBResponse
+         */
         public ListDataCorrectPreCheckDBResponse ListDataCorrectPreCheckDB(ListDataCorrectPreCheckDBRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListDataCorrectPreCheckDBWithOptions(request, runtime);
         }
 
+        /**
+          * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
+          *
+          * @param request ListDataCorrectPreCheckDBRequest
+          * @return ListDataCorrectPreCheckDBResponse
+         */
         public async Task<ListDataCorrectPreCheckDBResponse> ListDataCorrectPreCheckDBAsync(ListDataCorrectPreCheckDBRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListDataCorrectPreCheckDBWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
+          *
+          * @param request ListDataCorrectPreCheckSQLRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListDataCorrectPreCheckSQLResponse
+         */
         public ListDataCorrectPreCheckSQLResponse ListDataCorrectPreCheckSQLWithOptions(ListDataCorrectPreCheckSQLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8714,6 +9641,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<ListDataCorrectPreCheckSQLResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
+          *
+          * @param request ListDataCorrectPreCheckSQLRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListDataCorrectPreCheckSQLResponse
+         */
         public async Task<ListDataCorrectPreCheckSQLResponse> ListDataCorrectPreCheckSQLWithOptionsAsync(ListDataCorrectPreCheckSQLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8757,12 +9691,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<ListDataCorrectPreCheckSQLResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
+          *
+          * @param request ListDataCorrectPreCheckSQLRequest
+          * @return ListDataCorrectPreCheckSQLResponse
+         */
         public ListDataCorrectPreCheckSQLResponse ListDataCorrectPreCheckSQL(ListDataCorrectPreCheckSQLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListDataCorrectPreCheckSQLWithOptions(request, runtime);
         }
 
+        /**
+          * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
+          *
+          * @param request ListDataCorrectPreCheckSQLRequest
+          * @return ListDataCorrectPreCheckSQLResponse
+         */
         public async Task<ListDataCorrectPreCheckSQLResponse> ListDataCorrectPreCheckSQLAsync(ListDataCorrectPreCheckSQLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9651,6 +10597,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await ListInstancesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   Before you call this operation, make sure that you have the access permissions on the workspace. If you do not have the access permissions on the workspace, you can contact a DMS administrator, database administrator (DBA), or workspace administrator to add you as a member of the workspace. The [AddLhMembers](~~424759~~) operation can be called to add a workspace member.
+          * *   If you are a DMS administrator or a workspace administrator, you can query the business scenarios and task flows related to a user in a workspace based on the user ID.
+          *
+          * @param request ListLhTaskFlowAndScenarioRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListLhTaskFlowAndScenarioResponse
+         */
         public ListLhTaskFlowAndScenarioResponse ListLhTaskFlowAndScenarioWithOptions(ListLhTaskFlowAndScenarioRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9686,6 +10640,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<ListLhTaskFlowAndScenarioResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   Before you call this operation, make sure that you have the access permissions on the workspace. If you do not have the access permissions on the workspace, you can contact a DMS administrator, database administrator (DBA), or workspace administrator to add you as a member of the workspace. The [AddLhMembers](~~424759~~) operation can be called to add a workspace member.
+          * *   If you are a DMS administrator or a workspace administrator, you can query the business scenarios and task flows related to a user in a workspace based on the user ID.
+          *
+          * @param request ListLhTaskFlowAndScenarioRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListLhTaskFlowAndScenarioResponse
+         */
         public async Task<ListLhTaskFlowAndScenarioResponse> ListLhTaskFlowAndScenarioWithOptionsAsync(ListLhTaskFlowAndScenarioRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9721,12 +10683,26 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<ListLhTaskFlowAndScenarioResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   Before you call this operation, make sure that you have the access permissions on the workspace. If you do not have the access permissions on the workspace, you can contact a DMS administrator, database administrator (DBA), or workspace administrator to add you as a member of the workspace. The [AddLhMembers](~~424759~~) operation can be called to add a workspace member.
+          * *   If you are a DMS administrator or a workspace administrator, you can query the business scenarios and task flows related to a user in a workspace based on the user ID.
+          *
+          * @param request ListLhTaskFlowAndScenarioRequest
+          * @return ListLhTaskFlowAndScenarioResponse
+         */
         public ListLhTaskFlowAndScenarioResponse ListLhTaskFlowAndScenario(ListLhTaskFlowAndScenarioRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListLhTaskFlowAndScenarioWithOptions(request, runtime);
         }
 
+        /**
+          * *   Before you call this operation, make sure that you have the access permissions on the workspace. If you do not have the access permissions on the workspace, you can contact a DMS administrator, database administrator (DBA), or workspace administrator to add you as a member of the workspace. The [AddLhMembers](~~424759~~) operation can be called to add a workspace member.
+          * *   If you are a DMS administrator or a workspace administrator, you can query the business scenarios and task flows related to a user in a workspace based on the user ID.
+          *
+          * @param request ListLhTaskFlowAndScenarioRequest
+          * @return ListLhTaskFlowAndScenarioResponse
+         */
         public async Task<ListLhTaskFlowAndScenarioResponse> ListLhTaskFlowAndScenarioAsync(ListLhTaskFlowAndScenarioRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10607,6 +11583,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await ListSQLExecAuditLogWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * For more information about the SQL review feature, see [SQL review](~~60374~~).
+          *
+          * @param tmpReq ListSQLReviewOriginSQLRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListSQLReviewOriginSQLResponse
+         */
         public ListSQLReviewOriginSQLResponse ListSQLReviewOriginSQLWithOptions(ListSQLReviewOriginSQLRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -10648,6 +11631,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<ListSQLReviewOriginSQLResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * For more information about the SQL review feature, see [SQL review](~~60374~~).
+          *
+          * @param tmpReq ListSQLReviewOriginSQLRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListSQLReviewOriginSQLResponse
+         */
         public async Task<ListSQLReviewOriginSQLResponse> ListSQLReviewOriginSQLWithOptionsAsync(ListSQLReviewOriginSQLRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -10689,12 +11679,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<ListSQLReviewOriginSQLResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * For more information about the SQL review feature, see [SQL review](~~60374~~).
+          *
+          * @param request ListSQLReviewOriginSQLRequest
+          * @return ListSQLReviewOriginSQLResponse
+         */
         public ListSQLReviewOriginSQLResponse ListSQLReviewOriginSQL(ListSQLReviewOriginSQLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListSQLReviewOriginSQLWithOptions(request, runtime);
         }
 
+        /**
+          * For more information about the SQL review feature, see [SQL review](~~60374~~).
+          *
+          * @param request ListSQLReviewOriginSQLRequest
+          * @return ListSQLReviewOriginSQLResponse
+         */
         public async Task<ListSQLReviewOriginSQLResponse> ListSQLReviewOriginSQLAsync(ListSQLReviewOriginSQLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11527,6 +12529,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await ListTaskFlowCooperatorsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is used for multi-condition query. You can call this operation to query the edges of a specified task flow that meet all specified conditions.
+          *
+          * @param request ListTaskFlowEdgesByConditionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTaskFlowEdgesByConditionResponse
+         */
         public ListTaskFlowEdgesByConditionResponse ListTaskFlowEdgesByConditionWithOptions(ListTaskFlowEdgesByConditionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11570,6 +12579,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<ListTaskFlowEdgesByConditionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is used for multi-condition query. You can call this operation to query the edges of a specified task flow that meet all specified conditions.
+          *
+          * @param request ListTaskFlowEdgesByConditionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTaskFlowEdgesByConditionResponse
+         */
         public async Task<ListTaskFlowEdgesByConditionResponse> ListTaskFlowEdgesByConditionWithOptionsAsync(ListTaskFlowEdgesByConditionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11613,12 +12629,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<ListTaskFlowEdgesByConditionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is used for multi-condition query. You can call this operation to query the edges of a specified task flow that meet all specified conditions.
+          *
+          * @param request ListTaskFlowEdgesByConditionRequest
+          * @return ListTaskFlowEdgesByConditionResponse
+         */
         public ListTaskFlowEdgesByConditionResponse ListTaskFlowEdgesByCondition(ListTaskFlowEdgesByConditionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTaskFlowEdgesByConditionWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is used for multi-condition query. You can call this operation to query the edges of a specified task flow that meet all specified conditions.
+          *
+          * @param request ListTaskFlowEdgesByConditionRequest
+          * @return ListTaskFlowEdgesByConditionResponse
+         */
         public async Task<ListTaskFlowEdgesByConditionResponse> ListTaskFlowEdgesByConditionAsync(ListTaskFlowEdgesByConditionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13295,6 +14323,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await RefundPayAsYouGoOrderWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Prerequisites:
+          * You are a DMS administrator or a database administrator (DBA). You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain your user role from the RoleIdList parameter that is returned.
+          *
+          * @param request RegisterInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RegisterInstanceResponse
+         */
         public RegisterInstanceResponse RegisterInstanceWithOptions(RegisterInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13418,6 +14454,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<RegisterInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Prerequisites:
+          * You are a DMS administrator or a database administrator (DBA). You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain your user role from the RoleIdList parameter that is returned.
+          *
+          * @param request RegisterInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RegisterInstanceResponse
+         */
         public async Task<RegisterInstanceResponse> RegisterInstanceWithOptionsAsync(RegisterInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13541,18 +14585,39 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<RegisterInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Prerequisites:
+          * You are a DMS administrator or a database administrator (DBA). You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain your user role from the RoleIdList parameter that is returned.
+          *
+          * @param request RegisterInstanceRequest
+          * @return RegisterInstanceResponse
+         */
         public RegisterInstanceResponse RegisterInstance(RegisterInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RegisterInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * Prerequisites:
+          * You are a DMS administrator or a database administrator (DBA). You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain your user role from the RoleIdList parameter that is returned.
+          *
+          * @param request RegisterInstanceRequest
+          * @return RegisterInstanceResponse
+         */
         public async Task<RegisterInstanceResponse> RegisterInstanceAsync(RegisterInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RegisterInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If you are an **administrator** in Data Management (DMS), you can call this operation to register a user for your enterprise. To view users that are assigned the administrator role, perform the following steps: Log on to the DMS console. In the top navigation bar, click O&M. In the left-side navigation pane, click User.
+          *
+          * @param request RegisterUserRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RegisterUserResponse
+         */
         public RegisterUserResponse RegisterUserWithOptions(RegisterUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13596,6 +14661,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<RegisterUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If you are an **administrator** in Data Management (DMS), you can call this operation to register a user for your enterprise. To view users that are assigned the administrator role, perform the following steps: Log on to the DMS console. In the top navigation bar, click O&M. In the left-side navigation pane, click User.
+          *
+          * @param request RegisterUserRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RegisterUserResponse
+         */
         public async Task<RegisterUserResponse> RegisterUserWithOptionsAsync(RegisterUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13639,12 +14711,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<RegisterUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If you are an **administrator** in Data Management (DMS), you can call this operation to register a user for your enterprise. To view users that are assigned the administrator role, perform the following steps: Log on to the DMS console. In the top navigation bar, click O&M. In the left-side navigation pane, click User.
+          *
+          * @param request RegisterUserRequest
+          * @return RegisterUserResponse
+         */
         public RegisterUserResponse RegisterUser(RegisterUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RegisterUserWithOptions(request, runtime);
         }
 
+        /**
+          * If you are an **administrator** in Data Management (DMS), you can call this operation to register a user for your enterprise. To view users that are assigned the administrator role, perform the following steps: Log on to the DMS console. In the top navigation bar, click O&M. In the left-side navigation pane, click User.
+          *
+          * @param request RegisterUserRequest
+          * @return RegisterUserResponse
+         */
         public async Task<RegisterUserResponse> RegisterUserAsync(RegisterUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14861,6 +15945,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await SyncInstanceMetaWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call the UpdateInstance operation, call the [GetInstance](~~141567~~) or [ListInstances](~~141936~~) operation to obtain the complete information about the instance.
+          *
+          * @param request UpdateInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateInstanceResponse
+         */
         public UpdateInstanceResponse UpdateInstanceWithOptions(UpdateInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14984,6 +16075,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<UpdateInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call the UpdateInstance operation, call the [GetInstance](~~141567~~) or [ListInstances](~~141936~~) operation to obtain the complete information about the instance.
+          *
+          * @param request UpdateInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateInstanceResponse
+         */
         public async Task<UpdateInstanceResponse> UpdateInstanceWithOptionsAsync(UpdateInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15107,12 +16205,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<UpdateInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call the UpdateInstance operation, call the [GetInstance](~~141567~~) or [ListInstances](~~141936~~) operation to obtain the complete information about the instance.
+          *
+          * @param request UpdateInstanceRequest
+          * @return UpdateInstanceResponse
+         */
         public UpdateInstanceResponse UpdateInstance(UpdateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call the UpdateInstance operation, call the [GetInstance](~~141567~~) or [ListInstances](~~141936~~) operation to obtain the complete information about the instance.
+          *
+          * @param request UpdateInstanceRequest
+          * @return UpdateInstanceResponse
+         */
         public async Task<UpdateInstanceResponse> UpdateInstanceAsync(UpdateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15385,6 +16495,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await UpdateTaskConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation to modify node configurations.
+          *
+          * @param request UpdateTaskContentRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateTaskContentResponse
+         */
         public UpdateTaskContentResponse UpdateTaskContentWithOptions(UpdateTaskContentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15420,6 +16537,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<UpdateTaskContentResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to modify node configurations.
+          *
+          * @param request UpdateTaskContentRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateTaskContentResponse
+         */
         public async Task<UpdateTaskContentResponse> UpdateTaskContentWithOptionsAsync(UpdateTaskContentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15455,12 +16579,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<UpdateTaskContentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to modify node configurations.
+          *
+          * @param request UpdateTaskContentRequest
+          * @return UpdateTaskContentResponse
+         */
         public UpdateTaskContentResponse UpdateTaskContent(UpdateTaskContentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateTaskContentWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation to modify node configurations.
+          *
+          * @param request UpdateTaskContentRequest
+          * @return UpdateTaskContentResponse
+         */
         public async Task<UpdateTaskContentResponse> UpdateTaskContentAsync(UpdateTaskContentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15655,6 +16791,17 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await UpdateTaskFlowCooperatorsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * The edges can be updated only when the following conditions are met:
+          * 1\\. The specified edge exists in the Directed Acyclic Graph (DAG) of the task flow. The DAG is identified by DagId.
+          * 2\\. The end points of the specified edge exist in the DAG of the task flow. The DAG is identified by DagId.
+          * 3\\. After the update, no loop appears in the DAG.
+          *
+          * @param tmpReq UpdateTaskFlowEdgesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateTaskFlowEdgesResponse
+         */
         public UpdateTaskFlowEdgesResponse UpdateTaskFlowEdgesWithOptions(UpdateTaskFlowEdgesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -15696,6 +16843,17 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<UpdateTaskFlowEdgesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * The edges can be updated only when the following conditions are met:
+          * 1\\. The specified edge exists in the Directed Acyclic Graph (DAG) of the task flow. The DAG is identified by DagId.
+          * 2\\. The end points of the specified edge exist in the DAG of the task flow. The DAG is identified by DagId.
+          * 3\\. After the update, no loop appears in the DAG.
+          *
+          * @param tmpReq UpdateTaskFlowEdgesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateTaskFlowEdgesResponse
+         */
         public async Task<UpdateTaskFlowEdgesResponse> UpdateTaskFlowEdgesWithOptionsAsync(UpdateTaskFlowEdgesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -15737,12 +16895,32 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<UpdateTaskFlowEdgesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * The edges can be updated only when the following conditions are met:
+          * 1\\. The specified edge exists in the Directed Acyclic Graph (DAG) of the task flow. The DAG is identified by DagId.
+          * 2\\. The end points of the specified edge exist in the DAG of the task flow. The DAG is identified by DagId.
+          * 3\\. After the update, no loop appears in the DAG.
+          *
+          * @param request UpdateTaskFlowEdgesRequest
+          * @return UpdateTaskFlowEdgesResponse
+         */
         public UpdateTaskFlowEdgesResponse UpdateTaskFlowEdges(UpdateTaskFlowEdgesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateTaskFlowEdgesWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * The edges can be updated only when the following conditions are met:
+          * 1\\. The specified edge exists in the Directed Acyclic Graph (DAG) of the task flow. The DAG is identified by DagId.
+          * 2\\. The end points of the specified edge exist in the DAG of the task flow. The DAG is identified by DagId.
+          * 3\\. After the update, no loop appears in the DAG.
+          *
+          * @param request UpdateTaskFlowEdgesRequest
+          * @return UpdateTaskFlowEdgesResponse
+         */
         public async Task<UpdateTaskFlowEdgesResponse> UpdateTaskFlowEdgesAsync(UpdateTaskFlowEdgesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15937,6 +17115,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await UpdateTaskFlowNotificationWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Note: The new owner of the task flow must belong to the same tenant as the previous owner.
+          *
+          * @param request UpdateTaskFlowOwnerRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateTaskFlowOwnerResponse
+         */
         public UpdateTaskFlowOwnerResponse UpdateTaskFlowOwnerWithOptions(UpdateTaskFlowOwnerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15972,6 +17157,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<UpdateTaskFlowOwnerResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Note: The new owner of the task flow must belong to the same tenant as the previous owner.
+          *
+          * @param request UpdateTaskFlowOwnerRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateTaskFlowOwnerResponse
+         */
         public async Task<UpdateTaskFlowOwnerResponse> UpdateTaskFlowOwnerWithOptionsAsync(UpdateTaskFlowOwnerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16007,18 +17199,37 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<UpdateTaskFlowOwnerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Note: The new owner of the task flow must belong to the same tenant as the previous owner.
+          *
+          * @param request UpdateTaskFlowOwnerRequest
+          * @return UpdateTaskFlowOwnerResponse
+         */
         public UpdateTaskFlowOwnerResponse UpdateTaskFlowOwner(UpdateTaskFlowOwnerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateTaskFlowOwnerWithOptions(request, runtime);
         }
 
+        /**
+          * Note: The new owner of the task flow must belong to the same tenant as the previous owner.
+          *
+          * @param request UpdateTaskFlowOwnerRequest
+          * @return UpdateTaskFlowOwnerResponse
+         */
         public async Task<UpdateTaskFlowOwnerResponse> UpdateTaskFlowOwnerAsync(UpdateTaskFlowOwnerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateTaskFlowOwnerWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation to perform a full update. For incremental updates, see AddTaskFlowEdges, UpdateTaskFlowEdges, and DeleteTaskFlowEdgesByMultiCondition.
+          *
+          * @param tmpReq UpdateTaskFlowRelationsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateTaskFlowRelationsResponse
+         */
         public UpdateTaskFlowRelationsResponse UpdateTaskFlowRelationsWithOptions(UpdateTaskFlowRelationsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -16060,6 +17271,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<UpdateTaskFlowRelationsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to perform a full update. For incremental updates, see AddTaskFlowEdges, UpdateTaskFlowEdges, and DeleteTaskFlowEdgesByMultiCondition.
+          *
+          * @param tmpReq UpdateTaskFlowRelationsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateTaskFlowRelationsResponse
+         */
         public async Task<UpdateTaskFlowRelationsResponse> UpdateTaskFlowRelationsWithOptionsAsync(UpdateTaskFlowRelationsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -16101,12 +17319,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<UpdateTaskFlowRelationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to perform a full update. For incremental updates, see AddTaskFlowEdges, UpdateTaskFlowEdges, and DeleteTaskFlowEdgesByMultiCondition.
+          *
+          * @param request UpdateTaskFlowRelationsRequest
+          * @return UpdateTaskFlowRelationsResponse
+         */
         public UpdateTaskFlowRelationsResponse UpdateTaskFlowRelations(UpdateTaskFlowRelationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateTaskFlowRelationsWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation to perform a full update. For incremental updates, see AddTaskFlowEdges, UpdateTaskFlowEdges, and DeleteTaskFlowEdgesByMultiCondition.
+          *
+          * @param request UpdateTaskFlowRelationsRequest
+          * @return UpdateTaskFlowRelationsResponse
+         */
         public async Task<UpdateTaskFlowRelationsResponse> UpdateTaskFlowRelationsAsync(UpdateTaskFlowRelationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16415,6 +17645,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await UpdateTaskNameWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * Only nodes of single-instance SQL assignment, script code, and ECS remote command have output variables.
+          *
+          * @param request UpdateTaskOutputRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateTaskOutputResponse
+         */
         public UpdateTaskOutputResponse UpdateTaskOutputWithOptions(UpdateTaskOutputRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16450,6 +17688,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<UpdateTaskOutputResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Only nodes of single-instance SQL assignment, script code, and ECS remote command have output variables.
+          *
+          * @param request UpdateTaskOutputRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateTaskOutputResponse
+         */
         public async Task<UpdateTaskOutputResponse> UpdateTaskOutputWithOptionsAsync(UpdateTaskOutputRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16485,12 +17731,26 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<UpdateTaskOutputResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Only nodes of single-instance SQL assignment, script code, and ECS remote command have output variables.
+          *
+          * @param request UpdateTaskOutputRequest
+          * @return UpdateTaskOutputResponse
+         */
         public UpdateTaskOutputResponse UpdateTaskOutput(UpdateTaskOutputRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateTaskOutputWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * Only nodes of single-instance SQL assignment, script code, and ECS remote command have output variables.
+          *
+          * @param request UpdateTaskOutputRequest
+          * @return UpdateTaskOutputResponse
+         */
         public async Task<UpdateTaskOutputResponse> UpdateTaskOutputAsync(UpdateTaskOutputRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

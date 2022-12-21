@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class AddTaskFlowEdgesResponseBody : TeaModel {
+        [NameInMap("EdgeIds")]
+        [Validation(Required=false)]
+        public AddTaskFlowEdgesResponseBodyEdgeIds EdgeIds { get; set; }
+        public class AddTaskFlowEdgesResponseBodyEdgeIds : TeaModel {
+            [NameInMap("EdgeId")]
+            [Validation(Required=false)]
+            public List<long?> EdgeId { get; set; }
+
+        }
+
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }

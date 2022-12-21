@@ -8,10 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
-    public class ListStandardGroupsRequest : TeaModel {
-        /// <summary>
-        /// The ID of the tenant.
-        /// </summary>
+    public class GetProxyAccessRequest : TeaModel {
+        [NameInMap("ProxyAccessId")]
+        [Validation(Required=false)]
+        public long? ProxyAccessId { get; set; }
+
         [NameInMap("Tid")]
         [Validation(Required=false)]
         public long? Tid { get; set; }
