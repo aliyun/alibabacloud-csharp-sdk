@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class PutEnableAllFwSwitchRequest : TeaModel {
+        /// <summary>
+        /// The instance ID of your Cloud Firewall.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// The language of the content within the request and response. Valid values:
+        /// 
+        /// *   **zh**: Chinese (default)
+        /// *   **en**: English
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// The source IP address of the request.
+        /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }

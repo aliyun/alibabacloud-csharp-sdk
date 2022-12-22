@@ -42,6 +42,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+          * You can call the AddAddressBook operation to create an address book for access control. The address book can be an IP address book, an ECS tag-based address book, a port address book, or a domain address book.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request AddAddressBookRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddAddressBookResponse
+         */
         public AddAddressBookResponse AddAddressBookWithOptions(AddAddressBookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -101,6 +110,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<AddAddressBookResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the AddAddressBook operation to create an address book for access control. The address book can be an IP address book, an ECS tag-based address book, a port address book, or a domain address book.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request AddAddressBookRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddAddressBookResponse
+         */
         public async Task<AddAddressBookResponse> AddAddressBookWithOptionsAsync(AddAddressBookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -160,18 +178,43 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<AddAddressBookResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the AddAddressBook operation to create an address book for access control. The address book can be an IP address book, an ECS tag-based address book, a port address book, or a domain address book.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request AddAddressBookRequest
+          * @return AddAddressBookResponse
+         */
         public AddAddressBookResponse AddAddressBook(AddAddressBookRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddAddressBookWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the AddAddressBook operation to create an address book for access control. The address book can be an IP address book, an ECS tag-based address book, a port address book, or a domain address book.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request AddAddressBookRequest
+          * @return AddAddressBookResponse
+         */
         public async Task<AddAddressBookResponse> AddAddressBookAsync(AddAddressBookRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddAddressBookWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the AddControlPolicy operation to create an access control policy to allow, deny, or monitor traffic that passes through Cloud Firewall.
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request AddControlPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddControlPolicyResponse
+         */
         public AddControlPolicyResponse AddControlPolicyWithOptions(AddControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -267,6 +310,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<AddControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the AddControlPolicy operation to create an access control policy to allow, deny, or monitor traffic that passes through Cloud Firewall.
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request AddControlPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddControlPolicyResponse
+         */
         public async Task<AddControlPolicyResponse> AddControlPolicyWithOptionsAsync(AddControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -362,18 +414,43 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<AddControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the AddControlPolicy operation to create an access control policy to allow, deny, or monitor traffic that passes through Cloud Firewall.
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request AddControlPolicyRequest
+          * @return AddControlPolicyResponse
+         */
         public AddControlPolicyResponse AddControlPolicy(AddControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddControlPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the AddControlPolicy operation to create an access control policy to allow, deny, or monitor traffic that passes through Cloud Firewall.
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request AddControlPolicyRequest
+          * @return AddControlPolicyResponse
+         */
         public async Task<AddControlPolicyResponse> AddControlPolicyAsync(AddControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddControlPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the AddInstanceMembers operation to add members to Cloud Firewall. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request AddInstanceMembersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddInstanceMembersResponse
+         */
         public AddInstanceMembersResponse AddInstanceMembersWithOptions(AddInstanceMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -401,6 +478,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<AddInstanceMembersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the AddInstanceMembers operation to add members to Cloud Firewall. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request AddInstanceMembersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddInstanceMembersResponse
+         */
         public async Task<AddInstanceMembersResponse> AddInstanceMembersWithOptionsAsync(AddInstanceMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -428,18 +514,46 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<AddInstanceMembersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the AddInstanceMembers operation to add members to Cloud Firewall. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request AddInstanceMembersRequest
+          * @return AddInstanceMembersResponse
+         */
         public AddInstanceMembersResponse AddInstanceMembers(AddInstanceMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddInstanceMembersWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the AddInstanceMembers operation to add members to Cloud Firewall. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request AddInstanceMembersRequest
+          * @return AddInstanceMembersResponse
+         */
         public async Task<AddInstanceMembersResponse> AddInstanceMembersAsync(AddInstanceMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddInstanceMembersWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the BatchCopyVpcFirewallControlPolicy operation to copy all access control policies from a policy group of a source VPC firewall to a policy group of a destination VPC firewall.  
+          * Before you call this operation, we recommend that you back up access control policies. For more information about how to back up an access control policy, see [Back up an access control policy](https://www.alibabacloud.com/help/en/cloud-firewall/latest/back-up-and-roll-back-an-access-control-policy).  
+          * After you call this operation, all the access control policies in the policy group of the destination VPC firewall are replaced.  
+          * The policy groups of the source VPC firewall and the destination VPC firewall must belong to the same Alibaba Cloud account.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.
+          *
+          * @param request BatchCopyVpcFirewallControlPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return BatchCopyVpcFirewallControlPolicyResponse
+         */
         public BatchCopyVpcFirewallControlPolicyResponse BatchCopyVpcFirewallControlPolicyWithOptions(BatchCopyVpcFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -479,6 +593,18 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<BatchCopyVpcFirewallControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the BatchCopyVpcFirewallControlPolicy operation to copy all access control policies from a policy group of a source VPC firewall to a policy group of a destination VPC firewall.  
+          * Before you call this operation, we recommend that you back up access control policies. For more information about how to back up an access control policy, see [Back up an access control policy](https://www.alibabacloud.com/help/en/cloud-firewall/latest/back-up-and-roll-back-an-access-control-policy).  
+          * After you call this operation, all the access control policies in the policy group of the destination VPC firewall are replaced.  
+          * The policy groups of the source VPC firewall and the destination VPC firewall must belong to the same Alibaba Cloud account.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.
+          *
+          * @param request BatchCopyVpcFirewallControlPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return BatchCopyVpcFirewallControlPolicyResponse
+         */
         public async Task<BatchCopyVpcFirewallControlPolicyResponse> BatchCopyVpcFirewallControlPolicyWithOptionsAsync(BatchCopyVpcFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -518,18 +644,49 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<BatchCopyVpcFirewallControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the BatchCopyVpcFirewallControlPolicy operation to copy all access control policies from a policy group of a source VPC firewall to a policy group of a destination VPC firewall.  
+          * Before you call this operation, we recommend that you back up access control policies. For more information about how to back up an access control policy, see [Back up an access control policy](https://www.alibabacloud.com/help/en/cloud-firewall/latest/back-up-and-roll-back-an-access-control-policy).  
+          * After you call this operation, all the access control policies in the policy group of the destination VPC firewall are replaced.  
+          * The policy groups of the source VPC firewall and the destination VPC firewall must belong to the same Alibaba Cloud account.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.
+          *
+          * @param request BatchCopyVpcFirewallControlPolicyRequest
+          * @return BatchCopyVpcFirewallControlPolicyResponse
+         */
         public BatchCopyVpcFirewallControlPolicyResponse BatchCopyVpcFirewallControlPolicy(BatchCopyVpcFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BatchCopyVpcFirewallControlPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the BatchCopyVpcFirewallControlPolicy operation to copy all access control policies from a policy group of a source VPC firewall to a policy group of a destination VPC firewall.  
+          * Before you call this operation, we recommend that you back up access control policies. For more information about how to back up an access control policy, see [Back up an access control policy](https://www.alibabacloud.com/help/en/cloud-firewall/latest/back-up-and-roll-back-an-access-control-policy).  
+          * After you call this operation, all the access control policies in the policy group of the destination VPC firewall are replaced.  
+          * The policy groups of the source VPC firewall and the destination VPC firewall must belong to the same Alibaba Cloud account.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.
+          *
+          * @param request BatchCopyVpcFirewallControlPolicyRequest
+          * @return BatchCopyVpcFirewallControlPolicyResponse
+         */
         public async Task<BatchCopyVpcFirewallControlPolicyResponse> BatchCopyVpcFirewallControlPolicyAsync(BatchCopyVpcFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await BatchCopyVpcFirewallControlPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the CreateVpcFirewallCenConfigure operation to create a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. The VPC firewall cannot protect mutual access traffic between VBRs, between CCN instances, or between VBRs and CCN instances. For more information, see [VPC firewall limits](https://www.alibabacloud.com/help/en/cloud-firewall/latest/vpc-firewall-limits).
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.
+          *
+          * @param request CreateVpcFirewallCenConfigureRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateVpcFirewallCenConfigureResponse
+         */
         public CreateVpcFirewallCenConfigureResponse CreateVpcFirewallCenConfigureWithOptions(CreateVpcFirewallCenConfigureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -581,6 +738,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<CreateVpcFirewallCenConfigureResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the CreateVpcFirewallCenConfigure operation to create a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. The VPC firewall cannot protect mutual access traffic between VBRs, between CCN instances, or between VBRs and CCN instances. For more information, see [VPC firewall limits](https://www.alibabacloud.com/help/en/cloud-firewall/latest/vpc-firewall-limits).
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.
+          *
+          * @param request CreateVpcFirewallCenConfigureRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateVpcFirewallCenConfigureResponse
+         */
         public async Task<CreateVpcFirewallCenConfigureResponse> CreateVpcFirewallCenConfigureWithOptionsAsync(CreateVpcFirewallCenConfigureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -632,18 +798,43 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<CreateVpcFirewallCenConfigureResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the CreateVpcFirewallCenConfigure operation to create a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. The VPC firewall cannot protect mutual access traffic between VBRs, between CCN instances, or between VBRs and CCN instances. For more information, see [VPC firewall limits](https://www.alibabacloud.com/help/en/cloud-firewall/latest/vpc-firewall-limits).
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.
+          *
+          * @param request CreateVpcFirewallCenConfigureRequest
+          * @return CreateVpcFirewallCenConfigureResponse
+         */
         public CreateVpcFirewallCenConfigureResponse CreateVpcFirewallCenConfigure(CreateVpcFirewallCenConfigureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateVpcFirewallCenConfigureWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the CreateVpcFirewallCenConfigure operation to create a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. The VPC firewall cannot protect mutual access traffic between VBRs, between CCN instances, or between VBRs and CCN instances. For more information, see [VPC firewall limits](https://www.alibabacloud.com/help/en/cloud-firewall/latest/vpc-firewall-limits).
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.
+          *
+          * @param request CreateVpcFirewallCenConfigureRequest
+          * @return CreateVpcFirewallCenConfigureResponse
+         */
         public async Task<CreateVpcFirewallCenConfigureResponse> CreateVpcFirewallCenConfigureAsync(CreateVpcFirewallCenConfigureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateVpcFirewallCenConfigureWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the CreateVpcFirewallControlPolicy operation to create an access control policy in a specified policy group for a VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request CreateVpcFirewallControlPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateVpcFirewallControlPolicyResponse
+         */
         public CreateVpcFirewallControlPolicyResponse CreateVpcFirewallControlPolicyWithOptions(CreateVpcFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -731,6 +922,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<CreateVpcFirewallControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the CreateVpcFirewallControlPolicy operation to create an access control policy in a specified policy group for a VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request CreateVpcFirewallControlPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateVpcFirewallControlPolicyResponse
+         */
         public async Task<CreateVpcFirewallControlPolicyResponse> CreateVpcFirewallControlPolicyWithOptionsAsync(CreateVpcFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -818,18 +1018,43 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<CreateVpcFirewallControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the CreateVpcFirewallControlPolicy operation to create an access control policy in a specified policy group for a VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request CreateVpcFirewallControlPolicyRequest
+          * @return CreateVpcFirewallControlPolicyResponse
+         */
         public CreateVpcFirewallControlPolicyResponse CreateVpcFirewallControlPolicy(CreateVpcFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateVpcFirewallControlPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the CreateVpcFirewallControlPolicy operation to create an access control policy in a specified policy group for a VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request CreateVpcFirewallControlPolicyRequest
+          * @return CreateVpcFirewallControlPolicyResponse
+         */
         public async Task<CreateVpcFirewallControlPolicyResponse> CreateVpcFirewallControlPolicyAsync(CreateVpcFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateVpcFirewallControlPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the DeleteAddressBook operation to delete an address book for access control.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteAddressBookRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteAddressBookResponse
+         */
         public DeleteAddressBookResponse DeleteAddressBookWithOptions(DeleteAddressBookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -865,6 +1090,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteAddressBookResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the DeleteAddressBook operation to delete an address book for access control.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteAddressBookRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteAddressBookResponse
+         */
         public async Task<DeleteAddressBookResponse> DeleteAddressBookWithOptionsAsync(DeleteAddressBookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -900,18 +1134,43 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteAddressBookResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the DeleteAddressBook operation to delete an address book for access control.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteAddressBookRequest
+          * @return DeleteAddressBookResponse
+         */
         public DeleteAddressBookResponse DeleteAddressBook(DeleteAddressBookRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteAddressBookWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the DeleteAddressBook operation to delete an address book for access control.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteAddressBookRequest
+          * @return DeleteAddressBookResponse
+         */
         public async Task<DeleteAddressBookResponse> DeleteAddressBookAsync(DeleteAddressBookRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteAddressBookWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the DeleteControlPolicy operation to delete an access control policy that applies to inbound or outbound traffic.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteControlPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteControlPolicyResponse
+         */
         public DeleteControlPolicyResponse DeleteControlPolicyWithOptions(DeleteControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -951,6 +1210,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the DeleteControlPolicy operation to delete an access control policy that applies to inbound or outbound traffic.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteControlPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteControlPolicyResponse
+         */
         public async Task<DeleteControlPolicyResponse> DeleteControlPolicyWithOptionsAsync(DeleteControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -990,18 +1258,43 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the DeleteControlPolicy operation to delete an access control policy that applies to inbound or outbound traffic.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteControlPolicyRequest
+          * @return DeleteControlPolicyResponse
+         */
         public DeleteControlPolicyResponse DeleteControlPolicy(DeleteControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteControlPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the DeleteControlPolicy operation to delete an access control policy that applies to inbound or outbound traffic.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteControlPolicyRequest
+          * @return DeleteControlPolicyResponse
+         */
         public async Task<DeleteControlPolicyResponse> DeleteControlPolicyAsync(DeleteControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteControlPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the DeleteInstanceMembers operation to remove members from Cloud Firewall. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteInstanceMembersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteInstanceMembersResponse
+         */
         public DeleteInstanceMembersResponse DeleteInstanceMembersWithOptions(DeleteInstanceMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1029,6 +1322,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteInstanceMembersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the DeleteInstanceMembers operation to remove members from Cloud Firewall. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteInstanceMembersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteInstanceMembersResponse
+         */
         public async Task<DeleteInstanceMembersResponse> DeleteInstanceMembersWithOptionsAsync(DeleteInstanceMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1056,18 +1358,44 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteInstanceMembersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the DeleteInstanceMembers operation to remove members from Cloud Firewall. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteInstanceMembersRequest
+          * @return DeleteInstanceMembersResponse
+         */
         public DeleteInstanceMembersResponse DeleteInstanceMembers(DeleteInstanceMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteInstanceMembersWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the DeleteInstanceMembers operation to remove members from Cloud Firewall. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteInstanceMembersRequest
+          * @return DeleteInstanceMembersResponse
+         */
         public async Task<DeleteInstanceMembersResponse> DeleteInstanceMembersAsync(DeleteInstanceMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteInstanceMembersWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the DeleteVpcFirewallCenConfigure operation to delete a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.  
+          * Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallcenconfigure) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.
+          *
+          * @param request DeleteVpcFirewallCenConfigureRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteVpcFirewallCenConfigureResponse
+         */
         public DeleteVpcFirewallCenConfigureResponse DeleteVpcFirewallCenConfigureWithOptions(DeleteVpcFirewallCenConfigureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1103,6 +1431,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteVpcFirewallCenConfigureResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the DeleteVpcFirewallCenConfigure operation to delete a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.  
+          * Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallcenconfigure) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.
+          *
+          * @param request DeleteVpcFirewallCenConfigureRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteVpcFirewallCenConfigureResponse
+         */
         public async Task<DeleteVpcFirewallCenConfigureResponse> DeleteVpcFirewallCenConfigureWithOptionsAsync(DeleteVpcFirewallCenConfigureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1138,18 +1476,46 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteVpcFirewallCenConfigureResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the DeleteVpcFirewallCenConfigure operation to delete a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.  
+          * Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallcenconfigure) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.
+          *
+          * @param request DeleteVpcFirewallCenConfigureRequest
+          * @return DeleteVpcFirewallCenConfigureResponse
+         */
         public DeleteVpcFirewallCenConfigureResponse DeleteVpcFirewallCenConfigure(DeleteVpcFirewallCenConfigureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteVpcFirewallCenConfigureWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the DeleteVpcFirewallCenConfigure operation to delete a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.  
+          * Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallcenconfigure) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.
+          *
+          * @param request DeleteVpcFirewallCenConfigureRequest
+          * @return DeleteVpcFirewallCenConfigureResponse
+         */
         public async Task<DeleteVpcFirewallCenConfigureResponse> DeleteVpcFirewallCenConfigureAsync(DeleteVpcFirewallCenConfigureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteVpcFirewallCenConfigureWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the DeleteVpcFirewallConfigure operation to delete a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.  
+          * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteVpcFirewallConfigureRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteVpcFirewallConfigureResponse
+         */
         public DeleteVpcFirewallConfigureResponse DeleteVpcFirewallConfigureWithOptions(DeleteVpcFirewallConfigureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1185,6 +1551,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteVpcFirewallConfigureResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the DeleteVpcFirewallConfigure operation to delete a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.  
+          * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteVpcFirewallConfigureRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteVpcFirewallConfigureResponse
+         */
         public async Task<DeleteVpcFirewallConfigureResponse> DeleteVpcFirewallConfigureWithOptionsAsync(DeleteVpcFirewallConfigureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1220,18 +1596,45 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteVpcFirewallConfigureResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the DeleteVpcFirewallConfigure operation to delete a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.  
+          * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteVpcFirewallConfigureRequest
+          * @return DeleteVpcFirewallConfigureResponse
+         */
         public DeleteVpcFirewallConfigureResponse DeleteVpcFirewallConfigure(DeleteVpcFirewallConfigureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteVpcFirewallConfigureWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the DeleteVpcFirewallConfigure operation to delete a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.  
+          * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteVpcFirewallConfigureRequest
+          * @return DeleteVpcFirewallConfigureResponse
+         */
         public async Task<DeleteVpcFirewallConfigureResponse> DeleteVpcFirewallConfigureAsync(DeleteVpcFirewallConfigureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteVpcFirewallConfigureWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the DeleteVpcFirewallControlPolicy operation to delete an access control policy from a specific policy group for a VPC firewall. Different access control policies are used for the VPC firewall that is used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewall that is used to protect each Express Connect circuit. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteVpcFirewallControlPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteVpcFirewallControlPolicyResponse
+         */
         public DeleteVpcFirewallControlPolicyResponse DeleteVpcFirewallControlPolicyWithOptions(DeleteVpcFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1267,6 +1670,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteVpcFirewallControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the DeleteVpcFirewallControlPolicy operation to delete an access control policy from a specific policy group for a VPC firewall. Different access control policies are used for the VPC firewall that is used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewall that is used to protect each Express Connect circuit. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteVpcFirewallControlPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteVpcFirewallControlPolicyResponse
+         */
         public async Task<DeleteVpcFirewallControlPolicyResponse> DeleteVpcFirewallControlPolicyWithOptionsAsync(DeleteVpcFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1302,18 +1714,43 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteVpcFirewallControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the DeleteVpcFirewallControlPolicy operation to delete an access control policy from a specific policy group for a VPC firewall. Different access control policies are used for the VPC firewall that is used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewall that is used to protect each Express Connect circuit. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteVpcFirewallControlPolicyRequest
+          * @return DeleteVpcFirewallControlPolicyResponse
+         */
         public DeleteVpcFirewallControlPolicyResponse DeleteVpcFirewallControlPolicy(DeleteVpcFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteVpcFirewallControlPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the DeleteVpcFirewallControlPolicy operation to delete an access control policy from a specific policy group for a VPC firewall. Different access control policies are used for the VPC firewall that is used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewall that is used to protect each Express Connect circuit. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteVpcFirewallControlPolicyRequest
+          * @return DeleteVpcFirewallControlPolicyResponse
+         */
         public async Task<DeleteVpcFirewallControlPolicyResponse> DeleteVpcFirewallControlPolicyAsync(DeleteVpcFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteVpcFirewallControlPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the DescribeAddressBook operation to query the details about an address book for an access control policy.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeAddressBookRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAddressBookResponse
+         */
         public DescribeAddressBookResponse DescribeAddressBookWithOptions(DescribeAddressBookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1361,6 +1798,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeAddressBookResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeAddressBook operation to query the details about an address book for an access control policy.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeAddressBookRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAddressBookResponse
+         */
         public async Task<DescribeAddressBookResponse> DescribeAddressBookWithOptionsAsync(DescribeAddressBookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1408,18 +1854,43 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeAddressBookResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeAddressBook operation to query the details about an address book for an access control policy.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeAddressBookRequest
+          * @return DescribeAddressBookResponse
+         */
         public DescribeAddressBookResponse DescribeAddressBook(DescribeAddressBookRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAddressBookWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the DescribeAddressBook operation to query the details about an address book for an access control policy.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeAddressBookRequest
+          * @return DescribeAddressBookResponse
+         */
         public async Task<DescribeAddressBookResponse> DescribeAddressBookAsync(DescribeAddressBookRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAddressBookWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the DescribeAssetList operation to query the assets that are protected by Cloud Firewall. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeAssetListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAssetListResponse
+         */
         public DescribeAssetListResponse DescribeAssetListWithOptions(DescribeAssetListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1491,6 +1962,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeAssetListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeAssetList operation to query the assets that are protected by Cloud Firewall. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeAssetListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAssetListResponse
+         */
         public async Task<DescribeAssetListResponse> DescribeAssetListWithOptionsAsync(DescribeAssetListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1562,18 +2042,43 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeAssetListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeAssetList operation to query the assets that are protected by Cloud Firewall. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeAssetListRequest
+          * @return DescribeAssetListResponse
+         */
         public DescribeAssetListResponse DescribeAssetList(DescribeAssetListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAssetListWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the DescribeAssetList operation to query the assets that are protected by Cloud Firewall. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeAssetListRequest
+          * @return DescribeAssetListResponse
+         */
         public async Task<DescribeAssetListResponse> DescribeAssetListAsync(DescribeAssetListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAssetListWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the DescribeControlPolicy operation to query the details about access control policies by page.
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeControlPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeControlPolicyResponse
+         */
         public DescribeControlPolicyResponse DescribeControlPolicyWithOptions(DescribeControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1649,6 +2154,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeControlPolicy operation to query the details about access control policies by page.
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeControlPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeControlPolicyResponse
+         */
         public async Task<DescribeControlPolicyResponse> DescribeControlPolicyWithOptionsAsync(DescribeControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1724,18 +2238,43 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeControlPolicy operation to query the details about access control policies by page.
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeControlPolicyRequest
+          * @return DescribeControlPolicyResponse
+         */
         public DescribeControlPolicyResponse DescribeControlPolicy(DescribeControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeControlPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the DescribeControlPolicy operation to query the details about access control policies by page.
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeControlPolicyRequest
+          * @return DescribeControlPolicyResponse
+         */
         public async Task<DescribeControlPolicyResponse> DescribeControlPolicyAsync(DescribeControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeControlPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the DescribeDomainResolve operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeDomainResolveRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDomainResolveResponse
+         */
         public DescribeDomainResolveResponse DescribeDomainResolveWithOptions(DescribeDomainResolveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1779,6 +2318,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeDomainResolveResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeDomainResolve operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeDomainResolveRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDomainResolveResponse
+         */
         public async Task<DescribeDomainResolveResponse> DescribeDomainResolveWithOptionsAsync(DescribeDomainResolveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1822,18 +2370,43 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeDomainResolveResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeDomainResolve operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeDomainResolveRequest
+          * @return DescribeDomainResolveResponse
+         */
         public DescribeDomainResolveResponse DescribeDomainResolve(DescribeDomainResolveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDomainResolveWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the DescribeDomainResolve operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeDomainResolveRequest
+          * @return DescribeDomainResolveResponse
+         */
         public async Task<DescribeDomainResolveResponse> DescribeDomainResolveAsync(DescribeDomainResolveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDomainResolveWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the DescribeInstanceMembers operation to query the information about members in Cloud Firewall.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeInstanceMembersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeInstanceMembersResponse
+         */
         public DescribeInstanceMembersResponse DescribeInstanceMembersWithOptions(DescribeInstanceMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1877,6 +2450,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeInstanceMembersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeInstanceMembers operation to query the information about members in Cloud Firewall.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeInstanceMembersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeInstanceMembersResponse
+         */
         public async Task<DescribeInstanceMembersResponse> DescribeInstanceMembersWithOptionsAsync(DescribeInstanceMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1920,12 +2502,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeInstanceMembersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeInstanceMembers operation to query the information about members in Cloud Firewall.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeInstanceMembersRequest
+          * @return DescribeInstanceMembersResponse
+         */
         public DescribeInstanceMembersResponse DescribeInstanceMembers(DescribeInstanceMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInstanceMembersWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the DescribeInstanceMembers operation to query the information about members in Cloud Firewall.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeInstanceMembersRequest
+          * @return DescribeInstanceMembersResponse
+         */
         public async Task<DescribeInstanceMembersResponse> DescribeInstanceMembersAsync(DescribeInstanceMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2434,6 +3032,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return await DescribeOutgoingDomainWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the DescribePolicyAdvancedConfig operation to query whether the strict mode is enabled for an access control policy.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribePolicyAdvancedConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribePolicyAdvancedConfigResponse
+         */
         public DescribePolicyAdvancedConfigResponse DescribePolicyAdvancedConfigWithOptions(DescribePolicyAdvancedConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2469,6 +3076,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribePolicyAdvancedConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribePolicyAdvancedConfig operation to query whether the strict mode is enabled for an access control policy.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribePolicyAdvancedConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribePolicyAdvancedConfigResponse
+         */
         public async Task<DescribePolicyAdvancedConfigResponse> DescribePolicyAdvancedConfigWithOptionsAsync(DescribePolicyAdvancedConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2504,18 +3120,43 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribePolicyAdvancedConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribePolicyAdvancedConfig operation to query whether the strict mode is enabled for an access control policy.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribePolicyAdvancedConfigRequest
+          * @return DescribePolicyAdvancedConfigResponse
+         */
         public DescribePolicyAdvancedConfigResponse DescribePolicyAdvancedConfig(DescribePolicyAdvancedConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePolicyAdvancedConfigWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the DescribePolicyAdvancedConfig operation to query whether the strict mode is enabled for an access control policy.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribePolicyAdvancedConfigRequest
+          * @return DescribePolicyAdvancedConfigResponse
+         */
         public async Task<DescribePolicyAdvancedConfigResponse> DescribePolicyAdvancedConfigAsync(DescribePolicyAdvancedConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePolicyAdvancedConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the DescribePolicyPriorUsed operation to query the priority range of the access control policies that match specific query conditions.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribePolicyPriorUsedRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribePolicyPriorUsedResponse
+         */
         public DescribePolicyPriorUsedResponse DescribePolicyPriorUsedWithOptions(DescribePolicyPriorUsedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2555,6 +3196,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribePolicyPriorUsedResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribePolicyPriorUsed operation to query the priority range of the access control policies that match specific query conditions.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribePolicyPriorUsedRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribePolicyPriorUsedResponse
+         */
         public async Task<DescribePolicyPriorUsedResponse> DescribePolicyPriorUsedWithOptionsAsync(DescribePolicyPriorUsedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2594,18 +3244,43 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribePolicyPriorUsedResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribePolicyPriorUsed operation to query the priority range of the access control policies that match specific query conditions.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribePolicyPriorUsedRequest
+          * @return DescribePolicyPriorUsedResponse
+         */
         public DescribePolicyPriorUsedResponse DescribePolicyPriorUsed(DescribePolicyPriorUsedRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePolicyPriorUsedWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the DescribePolicyPriorUsed operation to query the priority range of the access control policies that match specific query conditions.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribePolicyPriorUsedRequest
+          * @return DescribePolicyPriorUsedResponse
+         */
         public async Task<DescribePolicyPriorUsedResponse> DescribePolicyPriorUsedAsync(DescribePolicyPriorUsedRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePolicyPriorUsedWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the DescribeRiskEventGroup operation to query and download the details of intrusion events. We recommend that you query the details of 5 to 10 intrusion events at a time. If you do not need to query the information about the geographical locations of IP addresses, set the NoLocation parameter to true. This prevents query timeout.
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeRiskEventGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeRiskEventGroupResponse
+         */
         public DescribeRiskEventGroupResponse DescribeRiskEventGroupWithOptions(DescribeRiskEventGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2717,6 +3392,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeRiskEventGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeRiskEventGroup operation to query and download the details of intrusion events. We recommend that you query the details of 5 to 10 intrusion events at a time. If you do not need to query the information about the geographical locations of IP addresses, set the NoLocation parameter to true. This prevents query timeout.
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeRiskEventGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeRiskEventGroupResponse
+         */
         public async Task<DescribeRiskEventGroupResponse> DescribeRiskEventGroupWithOptionsAsync(DescribeRiskEventGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2828,12 +3512,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeRiskEventGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeRiskEventGroup operation to query and download the details of intrusion events. We recommend that you query the details of 5 to 10 intrusion events at a time. If you do not need to query the information about the geographical locations of IP addresses, set the NoLocation parameter to true. This prevents query timeout.
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeRiskEventGroupRequest
+          * @return DescribeRiskEventGroupResponse
+         */
         public DescribeRiskEventGroupResponse DescribeRiskEventGroup(DescribeRiskEventGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRiskEventGroupWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the DescribeRiskEventGroup operation to query and download the details of intrusion events. We recommend that you query the details of 5 to 10 intrusion events at a time. If you do not need to query the information about the geographical locations of IP addresses, set the NoLocation parameter to true. This prevents query timeout.
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeRiskEventGroupRequest
+          * @return DescribeRiskEventGroupResponse
+         */
         public async Task<DescribeRiskEventGroupResponse> DescribeRiskEventGroupAsync(DescribeRiskEventGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2898,6 +3598,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return await DescribeUserAssetIPTrafficInfoWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the DescribeVpcFirewallAclGroupList operation to query the information about all policy groups of access control policies that are created for VPC firewalls. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallAclGroupListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeVpcFirewallAclGroupListResponse
+         */
         public DescribeVpcFirewallAclGroupListResponse DescribeVpcFirewallAclGroupListWithOptions(DescribeVpcFirewallAclGroupListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2941,6 +3650,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallAclGroupListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeVpcFirewallAclGroupList operation to query the information about all policy groups of access control policies that are created for VPC firewalls. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallAclGroupListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeVpcFirewallAclGroupListResponse
+         */
         public async Task<DescribeVpcFirewallAclGroupListResponse> DescribeVpcFirewallAclGroupListWithOptionsAsync(DescribeVpcFirewallAclGroupListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2984,18 +3702,43 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallAclGroupListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeVpcFirewallAclGroupList operation to query the information about all policy groups of access control policies that are created for VPC firewalls. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallAclGroupListRequest
+          * @return DescribeVpcFirewallAclGroupListResponse
+         */
         public DescribeVpcFirewallAclGroupListResponse DescribeVpcFirewallAclGroupList(DescribeVpcFirewallAclGroupListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVpcFirewallAclGroupListWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the DescribeVpcFirewallAclGroupList operation to query the information about all policy groups of access control policies that are created for VPC firewalls. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallAclGroupListRequest
+          * @return DescribeVpcFirewallAclGroupListResponse
+         */
         public async Task<DescribeVpcFirewallAclGroupListResponse> DescribeVpcFirewallAclGroupListAsync(DescribeVpcFirewallAclGroupListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVpcFirewallAclGroupListWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the DescribeVpcFirewallCenDetail operation to query the details about a VPC firewall. The VPC firewall controls mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallCenDetailRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeVpcFirewallCenDetailResponse
+         */
         public DescribeVpcFirewallCenDetailResponse DescribeVpcFirewallCenDetailWithOptions(DescribeVpcFirewallCenDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3035,6 +3778,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallCenDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeVpcFirewallCenDetail operation to query the details about a VPC firewall. The VPC firewall controls mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallCenDetailRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeVpcFirewallCenDetailResponse
+         */
         public async Task<DescribeVpcFirewallCenDetailResponse> DescribeVpcFirewallCenDetailWithOptionsAsync(DescribeVpcFirewallCenDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3074,18 +3826,43 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallCenDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeVpcFirewallCenDetail operation to query the details about a VPC firewall. The VPC firewall controls mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallCenDetailRequest
+          * @return DescribeVpcFirewallCenDetailResponse
+         */
         public DescribeVpcFirewallCenDetailResponse DescribeVpcFirewallCenDetail(DescribeVpcFirewallCenDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVpcFirewallCenDetailWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the DescribeVpcFirewallCenDetail operation to query the details about a VPC firewall. The VPC firewall controls mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallCenDetailRequest
+          * @return DescribeVpcFirewallCenDetailResponse
+         */
         public async Task<DescribeVpcFirewallCenDetailResponse> DescribeVpcFirewallCenDetailAsync(DescribeVpcFirewallCenDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVpcFirewallCenDetailWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the DescribeVpcFirewallCenList operation to query VPC firewalls. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallCenListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeVpcFirewallCenListResponse
+         */
         public DescribeVpcFirewallCenListResponse DescribeVpcFirewallCenListWithOptions(DescribeVpcFirewallCenListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3165,6 +3942,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallCenListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeVpcFirewallCenList operation to query VPC firewalls. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallCenListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeVpcFirewallCenListResponse
+         */
         public async Task<DescribeVpcFirewallCenListResponse> DescribeVpcFirewallCenListWithOptionsAsync(DescribeVpcFirewallCenListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3244,18 +4030,41 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallCenListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeVpcFirewallCenList operation to query VPC firewalls. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallCenListRequest
+          * @return DescribeVpcFirewallCenListResponse
+         */
         public DescribeVpcFirewallCenListResponse DescribeVpcFirewallCenList(DescribeVpcFirewallCenListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVpcFirewallCenListWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the DescribeVpcFirewallCenList operation to query VPC firewalls. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallCenListRequest
+          * @return DescribeVpcFirewallCenListResponse
+         */
         public async Task<DescribeVpcFirewallCenListResponse> DescribeVpcFirewallCenListAsync(DescribeVpcFirewallCenListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVpcFirewallCenListWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the DescribeVpcFirewallControlPolicy operation to query the details of all access control policies that are created for a specified VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.
+          *
+          * @param request DescribeVpcFirewallControlPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeVpcFirewallControlPolicyResponse
+         */
         public DescribeVpcFirewallControlPolicyResponse DescribeVpcFirewallControlPolicyWithOptions(DescribeVpcFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3327,6 +4136,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeVpcFirewallControlPolicy operation to query the details of all access control policies that are created for a specified VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.
+          *
+          * @param request DescribeVpcFirewallControlPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeVpcFirewallControlPolicyResponse
+         */
         public async Task<DescribeVpcFirewallControlPolicyResponse> DescribeVpcFirewallControlPolicyWithOptionsAsync(DescribeVpcFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3398,18 +4214,39 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeVpcFirewallControlPolicy operation to query the details of all access control policies that are created for a specified VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.
+          *
+          * @param request DescribeVpcFirewallControlPolicyRequest
+          * @return DescribeVpcFirewallControlPolicyResponse
+         */
         public DescribeVpcFirewallControlPolicyResponse DescribeVpcFirewallControlPolicy(DescribeVpcFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVpcFirewallControlPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the DescribeVpcFirewallControlPolicy operation to query the details of all access control policies that are created for a specified VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.
+          *
+          * @param request DescribeVpcFirewallControlPolicyRequest
+          * @return DescribeVpcFirewallControlPolicyResponse
+         */
         public async Task<DescribeVpcFirewallControlPolicyResponse> DescribeVpcFirewallControlPolicyAsync(DescribeVpcFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVpcFirewallControlPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the DescribeVpcFirewallDefaultIPSConfig operation to query the intrusion prevention configurations of a VPC firewall.
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallDefaultIPSConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeVpcFirewallDefaultIPSConfigResponse
+         */
         public DescribeVpcFirewallDefaultIPSConfigResponse DescribeVpcFirewallDefaultIPSConfigWithOptions(DescribeVpcFirewallDefaultIPSConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3441,6 +4278,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallDefaultIPSConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeVpcFirewallDefaultIPSConfig operation to query the intrusion prevention configurations of a VPC firewall.
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallDefaultIPSConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeVpcFirewallDefaultIPSConfigResponse
+         */
         public async Task<DescribeVpcFirewallDefaultIPSConfigResponse> DescribeVpcFirewallDefaultIPSConfigWithOptionsAsync(DescribeVpcFirewallDefaultIPSConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3472,18 +4318,44 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallDefaultIPSConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeVpcFirewallDefaultIPSConfig operation to query the intrusion prevention configurations of a VPC firewall.
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallDefaultIPSConfigRequest
+          * @return DescribeVpcFirewallDefaultIPSConfigResponse
+         */
         public DescribeVpcFirewallDefaultIPSConfigResponse DescribeVpcFirewallDefaultIPSConfig(DescribeVpcFirewallDefaultIPSConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVpcFirewallDefaultIPSConfigWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the DescribeVpcFirewallDefaultIPSConfig operation to query the intrusion prevention configurations of a VPC firewall.
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallDefaultIPSConfigRequest
+          * @return DescribeVpcFirewallDefaultIPSConfigResponse
+         */
         public async Task<DescribeVpcFirewallDefaultIPSConfigResponse> DescribeVpcFirewallDefaultIPSConfigAsync(DescribeVpcFirewallDefaultIPSConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVpcFirewallDefaultIPSConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the DescribeVpcFirewallDetail operation to query the details about a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.  
+          * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallDetailRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeVpcFirewallDetailResponse
+         */
         public DescribeVpcFirewallDetailResponse DescribeVpcFirewallDetailWithOptions(DescribeVpcFirewallDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3527,6 +4399,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeVpcFirewallDetail operation to query the details about a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.  
+          * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallDetailRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeVpcFirewallDetailResponse
+         */
         public async Task<DescribeVpcFirewallDetailResponse> DescribeVpcFirewallDetailWithOptionsAsync(DescribeVpcFirewallDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3570,18 +4452,45 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeVpcFirewallDetail operation to query the details about a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.  
+          * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallDetailRequest
+          * @return DescribeVpcFirewallDetailResponse
+         */
         public DescribeVpcFirewallDetailResponse DescribeVpcFirewallDetail(DescribeVpcFirewallDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVpcFirewallDetailWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the DescribeVpcFirewallDetail operation to query the details about a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.  
+          * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallDetailRequest
+          * @return DescribeVpcFirewallDetailResponse
+         */
         public async Task<DescribeVpcFirewallDetailResponse> DescribeVpcFirewallDetailAsync(DescribeVpcFirewallDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVpcFirewallDetailWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeVpcFirewallListResponse
+         */
         public DescribeVpcFirewallListResponse DescribeVpcFirewallListWithOptions(DescribeVpcFirewallListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3653,6 +4562,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeVpcFirewallListResponse
+         */
         public async Task<DescribeVpcFirewallListResponse> DescribeVpcFirewallListWithOptionsAsync(DescribeVpcFirewallListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3724,18 +4642,43 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallListRequest
+          * @return DescribeVpcFirewallListResponse
+         */
         public DescribeVpcFirewallListResponse DescribeVpcFirewallList(DescribeVpcFirewallListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVpcFirewallListWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallListRequest
+          * @return DescribeVpcFirewallListResponse
+         */
         public async Task<DescribeVpcFirewallListResponse> DescribeVpcFirewallListAsync(DescribeVpcFirewallListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVpcFirewallListWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the DescribeVpcFirewallPolicyPriorUsed operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallPolicyPriorUsedRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeVpcFirewallPolicyPriorUsedResponse
+         */
         public DescribeVpcFirewallPolicyPriorUsedResponse DescribeVpcFirewallPolicyPriorUsedWithOptions(DescribeVpcFirewallPolicyPriorUsedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3767,6 +4710,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallPolicyPriorUsedResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeVpcFirewallPolicyPriorUsed operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallPolicyPriorUsedRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeVpcFirewallPolicyPriorUsedResponse
+         */
         public async Task<DescribeVpcFirewallPolicyPriorUsedResponse> DescribeVpcFirewallPolicyPriorUsedWithOptionsAsync(DescribeVpcFirewallPolicyPriorUsedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3798,12 +4750,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DescribeVpcFirewallPolicyPriorUsedResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the DescribeVpcFirewallPolicyPriorUsed operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallPolicyPriorUsedRequest
+          * @return DescribeVpcFirewallPolicyPriorUsedResponse
+         */
         public DescribeVpcFirewallPolicyPriorUsedResponse DescribeVpcFirewallPolicyPriorUsed(DescribeVpcFirewallPolicyPriorUsedRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVpcFirewallPolicyPriorUsedWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the DescribeVpcFirewallPolicyPriorUsed operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DescribeVpcFirewallPolicyPriorUsedRequest
+          * @return DescribeVpcFirewallPolicyPriorUsedResponse
+         */
         public async Task<DescribeVpcFirewallPolicyPriorUsedResponse> DescribeVpcFirewallPolicyPriorUsedAsync(DescribeVpcFirewallPolicyPriorUsedRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4004,6 +4972,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return await DescribeVulnerabilityProtectedListWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the ModifyAddressBook operation to modify the address book that is configured for access control.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyAddressBookRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyAddressBookResponse
+         */
         public ModifyAddressBookResponse ModifyAddressBookWithOptions(ModifyAddressBookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4063,6 +5040,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyAddressBookResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the ModifyAddressBook operation to modify the address book that is configured for access control.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyAddressBookRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyAddressBookResponse
+         */
         public async Task<ModifyAddressBookResponse> ModifyAddressBookWithOptionsAsync(ModifyAddressBookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4122,18 +5108,43 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyAddressBookResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the ModifyAddressBook operation to modify the address book that is configured for access control.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyAddressBookRequest
+          * @return ModifyAddressBookResponse
+         */
         public ModifyAddressBookResponse ModifyAddressBook(ModifyAddressBookRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyAddressBookWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the ModifyAddressBook operation to modify the address book that is configured for access control.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyAddressBookRequest
+          * @return ModifyAddressBookResponse
+         */
         public async Task<ModifyAddressBookResponse> ModifyAddressBookAsync(ModifyAddressBookRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyAddressBookWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the ModifyControlPolicy operation to modify the configurations of an access control policy. The policy allows Cloud Firewall to allow, deny, or monitor the traffic that passes through Cloud Firewall.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyControlPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyControlPolicyResponse
+         */
         public ModifyControlPolicyResponse ModifyControlPolicyWithOptions(ModifyControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4198,10 +5209,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Source"] = request.Source;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
-            {
-                query["SourceIp"] = request.SourceIp;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
             {
                 query["SourceType"] = request.SourceType;
@@ -4225,6 +5232,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the ModifyControlPolicy operation to modify the configurations of an access control policy. The policy allows Cloud Firewall to allow, deny, or monitor the traffic that passes through Cloud Firewall.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyControlPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyControlPolicyResponse
+         */
         public async Task<ModifyControlPolicyResponse> ModifyControlPolicyWithOptionsAsync(ModifyControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4289,10 +5305,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Source"] = request.Source;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
-            {
-                query["SourceIp"] = request.SourceIp;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
             {
                 query["SourceType"] = request.SourceType;
@@ -4316,18 +5328,43 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the ModifyControlPolicy operation to modify the configurations of an access control policy. The policy allows Cloud Firewall to allow, deny, or monitor the traffic that passes through Cloud Firewall.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyControlPolicyRequest
+          * @return ModifyControlPolicyResponse
+         */
         public ModifyControlPolicyResponse ModifyControlPolicy(ModifyControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyControlPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the ModifyControlPolicy operation to modify the configurations of an access control policy. The policy allows Cloud Firewall to allow, deny, or monitor the traffic that passes through Cloud Firewall.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyControlPolicyRequest
+          * @return ModifyControlPolicyResponse
+         */
         public async Task<ModifyControlPolicyResponse> ModifyControlPolicyAsync(ModifyControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyControlPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the ModifyControlPolicyPosition operation to modify the priority of an IPv4 access control policy for the Internet firewall. No API operations are provided for you to modify the priority of an IPv6 access control policy for the Internet firewall. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyControlPolicyPositionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyControlPolicyPositionResponse
+         */
         public ModifyControlPolicyPositionResponse ModifyControlPolicyPositionWithOptions(ModifyControlPolicyPositionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4371,6 +5408,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyControlPolicyPositionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the ModifyControlPolicyPosition operation to modify the priority of an IPv4 access control policy for the Internet firewall. No API operations are provided for you to modify the priority of an IPv6 access control policy for the Internet firewall. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyControlPolicyPositionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyControlPolicyPositionResponse
+         */
         public async Task<ModifyControlPolicyPositionResponse> ModifyControlPolicyPositionWithOptionsAsync(ModifyControlPolicyPositionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4414,18 +5460,43 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyControlPolicyPositionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the ModifyControlPolicyPosition operation to modify the priority of an IPv4 access control policy for the Internet firewall. No API operations are provided for you to modify the priority of an IPv6 access control policy for the Internet firewall. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyControlPolicyPositionRequest
+          * @return ModifyControlPolicyPositionResponse
+         */
         public ModifyControlPolicyPositionResponse ModifyControlPolicyPosition(ModifyControlPolicyPositionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyControlPolicyPositionWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the ModifyControlPolicyPosition operation to modify the priority of an IPv4 access control policy for the Internet firewall. No API operations are provided for you to modify the priority of an IPv6 access control policy for the Internet firewall. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyControlPolicyPositionRequest
+          * @return ModifyControlPolicyPositionResponse
+         */
         public async Task<ModifyControlPolicyPositionResponse> ModifyControlPolicyPositionAsync(ModifyControlPolicyPositionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyControlPolicyPositionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the ModifyInstanceMemberAttributes operation to update the information about members in Cloud Firewall.  
+          * ## Limits
+          * You can call this operation up to 10 times per second for each account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyInstanceMemberAttributesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyInstanceMemberAttributesResponse
+         */
         public ModifyInstanceMemberAttributesResponse ModifyInstanceMemberAttributesWithOptions(ModifyInstanceMemberAttributesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4453,6 +5524,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyInstanceMemberAttributesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the ModifyInstanceMemberAttributes operation to update the information about members in Cloud Firewall.  
+          * ## Limits
+          * You can call this operation up to 10 times per second for each account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyInstanceMemberAttributesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyInstanceMemberAttributesResponse
+         */
         public async Task<ModifyInstanceMemberAttributesResponse> ModifyInstanceMemberAttributesWithOptionsAsync(ModifyInstanceMemberAttributesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4480,18 +5560,43 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyInstanceMemberAttributesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the ModifyInstanceMemberAttributes operation to update the information about members in Cloud Firewall.  
+          * ## Limits
+          * You can call this operation up to 10 times per second for each account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyInstanceMemberAttributesRequest
+          * @return ModifyInstanceMemberAttributesResponse
+         */
         public ModifyInstanceMemberAttributesResponse ModifyInstanceMemberAttributes(ModifyInstanceMemberAttributesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceMemberAttributesWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the ModifyInstanceMemberAttributes operation to update the information about members in Cloud Firewall.  
+          * ## Limits
+          * You can call this operation up to 10 times per second for each account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyInstanceMemberAttributesRequest
+          * @return ModifyInstanceMemberAttributesResponse
+         */
         public async Task<ModifyInstanceMemberAttributesResponse> ModifyInstanceMemberAttributesAsync(ModifyInstanceMemberAttributesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyInstanceMemberAttributesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the ModifyPolicyAdvancedConfig operation to enable or disable the strict mode for an access control policy.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyPolicyAdvancedConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyPolicyAdvancedConfigResponse
+         */
         public ModifyPolicyAdvancedConfigResponse ModifyPolicyAdvancedConfigWithOptions(ModifyPolicyAdvancedConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4527,6 +5632,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyPolicyAdvancedConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the ModifyPolicyAdvancedConfig operation to enable or disable the strict mode for an access control policy.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyPolicyAdvancedConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyPolicyAdvancedConfigResponse
+         */
         public async Task<ModifyPolicyAdvancedConfigResponse> ModifyPolicyAdvancedConfigWithOptionsAsync(ModifyPolicyAdvancedConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4562,18 +5676,44 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyPolicyAdvancedConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the ModifyPolicyAdvancedConfig operation to enable or disable the strict mode for an access control policy.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyPolicyAdvancedConfigRequest
+          * @return ModifyPolicyAdvancedConfigResponse
+         */
         public ModifyPolicyAdvancedConfigResponse ModifyPolicyAdvancedConfig(ModifyPolicyAdvancedConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyPolicyAdvancedConfigWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the ModifyPolicyAdvancedConfig operation to enable or disable the strict mode for an access control policy.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyPolicyAdvancedConfigRequest
+          * @return ModifyPolicyAdvancedConfigResponse
+         */
         public async Task<ModifyPolicyAdvancedConfigResponse> ModifyPolicyAdvancedConfigAsync(ModifyPolicyAdvancedConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyPolicyAdvancedConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the ModifyVpcFirewallCenConfigure operation to modify the configurations of a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
+          * Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallcenconfigure) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallCenConfigureRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyVpcFirewallCenConfigureResponse
+         */
         public ModifyVpcFirewallCenConfigureResponse ModifyVpcFirewallCenConfigureWithOptions(ModifyVpcFirewallCenConfigureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4613,6 +5753,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallCenConfigureResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the ModifyVpcFirewallCenConfigure operation to modify the configurations of a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
+          * Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallcenconfigure) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallCenConfigureRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyVpcFirewallCenConfigureResponse
+         */
         public async Task<ModifyVpcFirewallCenConfigureResponse> ModifyVpcFirewallCenConfigureWithOptionsAsync(ModifyVpcFirewallCenConfigureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4652,18 +5802,46 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallCenConfigureResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the ModifyVpcFirewallCenConfigure operation to modify the configurations of a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
+          * Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallcenconfigure) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallCenConfigureRequest
+          * @return ModifyVpcFirewallCenConfigureResponse
+         */
         public ModifyVpcFirewallCenConfigureResponse ModifyVpcFirewallCenConfigure(ModifyVpcFirewallCenConfigureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyVpcFirewallCenConfigureWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the ModifyVpcFirewallCenConfigure operation to modify the configurations of a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
+          * Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallcenconfigure) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallCenConfigureRequest
+          * @return ModifyVpcFirewallCenConfigureResponse
+         */
         public async Task<ModifyVpcFirewallCenConfigureResponse> ModifyVpcFirewallCenConfigureAsync(ModifyVpcFirewallCenConfigureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyVpcFirewallCenConfigureWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the ModifyVpcFirewallCenSwitchStatus operation to enable or disable a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. After you enable the VPC firewall, the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. After you disable the VPC firewall, the VPC firewall no longer protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. 
+          * Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](~~CreateVpcFirewallCenConfigure~~) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallCenSwitchStatusRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyVpcFirewallCenSwitchStatusResponse
+         */
         public ModifyVpcFirewallCenSwitchStatusResponse ModifyVpcFirewallCenSwitchStatusWithOptions(ModifyVpcFirewallCenSwitchStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4703,6 +5881,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallCenSwitchStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the ModifyVpcFirewallCenSwitchStatus operation to enable or disable a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. After you enable the VPC firewall, the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. After you disable the VPC firewall, the VPC firewall no longer protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. 
+          * Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](~~CreateVpcFirewallCenConfigure~~) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallCenSwitchStatusRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyVpcFirewallCenSwitchStatusResponse
+         */
         public async Task<ModifyVpcFirewallCenSwitchStatusResponse> ModifyVpcFirewallCenSwitchStatusWithOptionsAsync(ModifyVpcFirewallCenSwitchStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4742,18 +5930,46 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallCenSwitchStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the ModifyVpcFirewallCenSwitchStatus operation to enable or disable a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. After you enable the VPC firewall, the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. After you disable the VPC firewall, the VPC firewall no longer protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. 
+          * Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](~~CreateVpcFirewallCenConfigure~~) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallCenSwitchStatusRequest
+          * @return ModifyVpcFirewallCenSwitchStatusResponse
+         */
         public ModifyVpcFirewallCenSwitchStatusResponse ModifyVpcFirewallCenSwitchStatus(ModifyVpcFirewallCenSwitchStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyVpcFirewallCenSwitchStatusWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the ModifyVpcFirewallCenSwitchStatus operation to enable or disable a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. After you enable the VPC firewall, the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. After you disable the VPC firewall, the VPC firewall no longer protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. 
+          * Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](~~CreateVpcFirewallCenConfigure~~) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallCenSwitchStatusRequest
+          * @return ModifyVpcFirewallCenSwitchStatusResponse
+         */
         public async Task<ModifyVpcFirewallCenSwitchStatusResponse> ModifyVpcFirewallCenSwitchStatusAsync(ModifyVpcFirewallCenSwitchStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyVpcFirewallCenSwitchStatusWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the ModifyVpcFirewallConfigure operation to modify the configurations of a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.  
+          * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallConfigureRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyVpcFirewallConfigureResponse
+         */
         public ModifyVpcFirewallConfigureResponse ModifyVpcFirewallConfigureWithOptions(ModifyVpcFirewallConfigureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4801,6 +6017,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallConfigureResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the ModifyVpcFirewallConfigure operation to modify the configurations of a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.  
+          * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallConfigureRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyVpcFirewallConfigureResponse
+         */
         public async Task<ModifyVpcFirewallConfigureResponse> ModifyVpcFirewallConfigureWithOptionsAsync(ModifyVpcFirewallConfigureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4848,18 +6074,45 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallConfigureResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the ModifyVpcFirewallConfigure operation to modify the configurations of a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.  
+          * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallConfigureRequest
+          * @return ModifyVpcFirewallConfigureResponse
+         */
         public ModifyVpcFirewallConfigureResponse ModifyVpcFirewallConfigure(ModifyVpcFirewallConfigureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyVpcFirewallConfigureWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the ModifyVpcFirewallConfigure operation to modify the configurations of a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.  
+          * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallConfigureRequest
+          * @return ModifyVpcFirewallConfigureResponse
+         */
         public async Task<ModifyVpcFirewallConfigureResponse> ModifyVpcFirewallConfigureAsync(ModifyVpcFirewallConfigureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyVpcFirewallConfigureWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the ModifyVpcFirewallControlPolicy operation to modify the configurations of an access control policy that is created for a VPC firewall in a specific policy group. Different access control policies are used for the VPC firewall that is used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewall that is used to protect each Express Connect circuit.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallControlPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyVpcFirewallControlPolicyResponse
+         */
         public ModifyVpcFirewallControlPolicyResponse ModifyVpcFirewallControlPolicyWithOptions(ModifyVpcFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4943,6 +6196,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the ModifyVpcFirewallControlPolicy operation to modify the configurations of an access control policy that is created for a VPC firewall in a specific policy group. Different access control policies are used for the VPC firewall that is used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewall that is used to protect each Express Connect circuit.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallControlPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyVpcFirewallControlPolicyResponse
+         */
         public async Task<ModifyVpcFirewallControlPolicyResponse> ModifyVpcFirewallControlPolicyWithOptionsAsync(ModifyVpcFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5026,18 +6288,43 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the ModifyVpcFirewallControlPolicy operation to modify the configurations of an access control policy that is created for a VPC firewall in a specific policy group. Different access control policies are used for the VPC firewall that is used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewall that is used to protect each Express Connect circuit.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallControlPolicyRequest
+          * @return ModifyVpcFirewallControlPolicyResponse
+         */
         public ModifyVpcFirewallControlPolicyResponse ModifyVpcFirewallControlPolicy(ModifyVpcFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyVpcFirewallControlPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the ModifyVpcFirewallControlPolicy operation to modify the configurations of an access control policy that is created for a VPC firewall in a specific policy group. Different access control policies are used for the VPC firewall that is used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewall that is used to protect each Express Connect circuit.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallControlPolicyRequest
+          * @return ModifyVpcFirewallControlPolicyResponse
+         */
         public async Task<ModifyVpcFirewallControlPolicyResponse> ModifyVpcFirewallControlPolicyAsync(ModifyVpcFirewallControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyVpcFirewallControlPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the ModifyVpcFirewallControlPolicyPosition operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallControlPolicyPositionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyVpcFirewallControlPolicyPositionResponse
+         */
         public ModifyVpcFirewallControlPolicyPositionResponse ModifyVpcFirewallControlPolicyPositionWithOptions(ModifyVpcFirewallControlPolicyPositionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5077,6 +6364,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallControlPolicyPositionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the ModifyVpcFirewallControlPolicyPosition operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallControlPolicyPositionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyVpcFirewallControlPolicyPositionResponse
+         */
         public async Task<ModifyVpcFirewallControlPolicyPositionResponse> ModifyVpcFirewallControlPolicyPositionWithOptionsAsync(ModifyVpcFirewallControlPolicyPositionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5116,18 +6412,43 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallControlPolicyPositionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the ModifyVpcFirewallControlPolicyPosition operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallControlPolicyPositionRequest
+          * @return ModifyVpcFirewallControlPolicyPositionResponse
+         */
         public ModifyVpcFirewallControlPolicyPositionResponse ModifyVpcFirewallControlPolicyPosition(ModifyVpcFirewallControlPolicyPositionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyVpcFirewallControlPolicyPositionWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the ModifyVpcFirewallControlPolicyPosition operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallControlPolicyPositionRequest
+          * @return ModifyVpcFirewallControlPolicyPositionResponse
+         */
         public async Task<ModifyVpcFirewallControlPolicyPositionResponse> ModifyVpcFirewallControlPolicyPositionAsync(ModifyVpcFirewallControlPolicyPositionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyVpcFirewallControlPolicyPositionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the ModifyVpcFirewallDefaultIPSConfig operation to modify the intrusion prevention configurations of a VPC firewall.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallDefaultIPSConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyVpcFirewallDefaultIPSConfigResponse
+         */
         public ModifyVpcFirewallDefaultIPSConfigResponse ModifyVpcFirewallDefaultIPSConfigWithOptions(ModifyVpcFirewallDefaultIPSConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5179,6 +6500,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallDefaultIPSConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the ModifyVpcFirewallDefaultIPSConfig operation to modify the intrusion prevention configurations of a VPC firewall.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallDefaultIPSConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyVpcFirewallDefaultIPSConfigResponse
+         */
         public async Task<ModifyVpcFirewallDefaultIPSConfigResponse> ModifyVpcFirewallDefaultIPSConfigWithOptionsAsync(ModifyVpcFirewallDefaultIPSConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5230,18 +6560,44 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallDefaultIPSConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the ModifyVpcFirewallDefaultIPSConfig operation to modify the intrusion prevention configurations of a VPC firewall.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallDefaultIPSConfigRequest
+          * @return ModifyVpcFirewallDefaultIPSConfigResponse
+         */
         public ModifyVpcFirewallDefaultIPSConfigResponse ModifyVpcFirewallDefaultIPSConfig(ModifyVpcFirewallDefaultIPSConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyVpcFirewallDefaultIPSConfigWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the ModifyVpcFirewallDefaultIPSConfig operation to modify the intrusion prevention configurations of a VPC firewall.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallDefaultIPSConfigRequest
+          * @return ModifyVpcFirewallDefaultIPSConfigResponse
+         */
         public async Task<ModifyVpcFirewallDefaultIPSConfigResponse> ModifyVpcFirewallDefaultIPSConfigAsync(ModifyVpcFirewallDefaultIPSConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyVpcFirewallDefaultIPSConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the ModifyVpcFirewallSwitchStatus operation to enable or disable a VPC firewall. The VPC firewall can control traffic between two VPCs that are connected by using an Express Connect circuit. After you enable the VPC firewall, the VPC firewall controls mutual access traffic between two VPCs that are connected by using an Express Connect circuit. After you disable the VPC firewall, the VPC firewall no longer controls mutual access traffic between two VPCs that are connected by using an Express Connect circuit.  
+          * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallSwitchStatusRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyVpcFirewallSwitchStatusResponse
+         */
         public ModifyVpcFirewallSwitchStatusResponse ModifyVpcFirewallSwitchStatusWithOptions(ModifyVpcFirewallSwitchStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5281,6 +6637,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallSwitchStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the ModifyVpcFirewallSwitchStatus operation to enable or disable a VPC firewall. The VPC firewall can control traffic between two VPCs that are connected by using an Express Connect circuit. After you enable the VPC firewall, the VPC firewall controls mutual access traffic between two VPCs that are connected by using an Express Connect circuit. After you disable the VPC firewall, the VPC firewall no longer controls mutual access traffic between two VPCs that are connected by using an Express Connect circuit.  
+          * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallSwitchStatusRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyVpcFirewallSwitchStatusResponse
+         */
         public async Task<ModifyVpcFirewallSwitchStatusResponse> ModifyVpcFirewallSwitchStatusWithOptionsAsync(ModifyVpcFirewallSwitchStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5320,18 +6686,45 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ModifyVpcFirewallSwitchStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the ModifyVpcFirewallSwitchStatus operation to enable or disable a VPC firewall. The VPC firewall can control traffic between two VPCs that are connected by using an Express Connect circuit. After you enable the VPC firewall, the VPC firewall controls mutual access traffic between two VPCs that are connected by using an Express Connect circuit. After you disable the VPC firewall, the VPC firewall no longer controls mutual access traffic between two VPCs that are connected by using an Express Connect circuit.  
+          * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallSwitchStatusRequest
+          * @return ModifyVpcFirewallSwitchStatusResponse
+         */
         public ModifyVpcFirewallSwitchStatusResponse ModifyVpcFirewallSwitchStatus(ModifyVpcFirewallSwitchStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyVpcFirewallSwitchStatusWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the ModifyVpcFirewallSwitchStatus operation to enable or disable a VPC firewall. The VPC firewall can control traffic between two VPCs that are connected by using an Express Connect circuit. After you enable the VPC firewall, the VPC firewall controls mutual access traffic between two VPCs that are connected by using an Express Connect circuit. After you disable the VPC firewall, the VPC firewall no longer controls mutual access traffic between two VPCs that are connected by using an Express Connect circuit.  
+          * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure) operation.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyVpcFirewallSwitchStatusRequest
+          * @return ModifyVpcFirewallSwitchStatusResponse
+         */
         public async Task<ModifyVpcFirewallSwitchStatusResponse> ModifyVpcFirewallSwitchStatusAsync(ModifyVpcFirewallSwitchStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyVpcFirewallSwitchStatusWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the PutDisableAllFwSwitch operation to turn off all firewall switches. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request PutDisableAllFwSwitchRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PutDisableAllFwSwitchResponse
+         */
         public PutDisableAllFwSwitchResponse PutDisableAllFwSwitchWithOptions(PutDisableAllFwSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5367,6 +6760,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<PutDisableAllFwSwitchResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the PutDisableAllFwSwitch operation to turn off all firewall switches. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request PutDisableAllFwSwitchRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PutDisableAllFwSwitchResponse
+         */
         public async Task<PutDisableAllFwSwitchResponse> PutDisableAllFwSwitchWithOptionsAsync(PutDisableAllFwSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5402,18 +6804,43 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<PutDisableAllFwSwitchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the PutDisableAllFwSwitch operation to turn off all firewall switches. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request PutDisableAllFwSwitchRequest
+          * @return PutDisableAllFwSwitchResponse
+         */
         public PutDisableAllFwSwitchResponse PutDisableAllFwSwitch(PutDisableAllFwSwitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return PutDisableAllFwSwitchWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the PutDisableAllFwSwitch operation to turn off all firewall switches. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request PutDisableAllFwSwitchRequest
+          * @return PutDisableAllFwSwitchResponse
+         */
         public async Task<PutDisableAllFwSwitchResponse> PutDisableAllFwSwitchAsync(PutDisableAllFwSwitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PutDisableAllFwSwitchWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the PutDisableFwSwitch operation to disable a firewall for specific assets. After you disable the firewall, traffic does not pass through Cloud Firewall.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request PutDisableFwSwitchRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PutDisableFwSwitchResponse
+         */
         public PutDisableFwSwitchResponse PutDisableFwSwitchWithOptions(PutDisableFwSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5457,6 +6884,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<PutDisableFwSwitchResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the PutDisableFwSwitch operation to disable a firewall for specific assets. After you disable the firewall, traffic does not pass through Cloud Firewall.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request PutDisableFwSwitchRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PutDisableFwSwitchResponse
+         */
         public async Task<PutDisableFwSwitchResponse> PutDisableFwSwitchWithOptionsAsync(PutDisableFwSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5500,18 +6936,43 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<PutDisableFwSwitchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the PutDisableFwSwitch operation to disable a firewall for specific assets. After you disable the firewall, traffic does not pass through Cloud Firewall.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request PutDisableFwSwitchRequest
+          * @return PutDisableFwSwitchResponse
+         */
         public PutDisableFwSwitchResponse PutDisableFwSwitch(PutDisableFwSwitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return PutDisableFwSwitchWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the PutDisableFwSwitch operation to disable a firewall for specific assets. After you disable the firewall, traffic does not pass through Cloud Firewall.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request PutDisableFwSwitchRequest
+          * @return PutDisableFwSwitchResponse
+         */
         public async Task<PutDisableFwSwitchResponse> PutDisableFwSwitchAsync(PutDisableFwSwitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PutDisableFwSwitchWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the PutEnableAllFwSwitch operation to enable a firewall for all public IP addresses within your Alibaba Cloud account.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request PutEnableAllFwSwitchRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PutEnableAllFwSwitchResponse
+         */
         public PutEnableAllFwSwitchResponse PutEnableAllFwSwitchWithOptions(PutEnableAllFwSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5547,6 +7008,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<PutEnableAllFwSwitchResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the PutEnableAllFwSwitch operation to enable a firewall for all public IP addresses within your Alibaba Cloud account.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request PutEnableAllFwSwitchRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PutEnableAllFwSwitchResponse
+         */
         public async Task<PutEnableAllFwSwitchResponse> PutEnableAllFwSwitchWithOptionsAsync(PutEnableAllFwSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5582,18 +7052,43 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<PutEnableAllFwSwitchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the PutEnableAllFwSwitch operation to enable a firewall for all public IP addresses within your Alibaba Cloud account.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request PutEnableAllFwSwitchRequest
+          * @return PutEnableAllFwSwitchResponse
+         */
         public PutEnableAllFwSwitchResponse PutEnableAllFwSwitch(PutEnableAllFwSwitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return PutEnableAllFwSwitchWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the PutEnableAllFwSwitch operation to enable a firewall for all public IP addresses within your Alibaba Cloud account.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request PutEnableAllFwSwitchRequest
+          * @return PutEnableAllFwSwitchResponse
+         */
         public async Task<PutEnableAllFwSwitchResponse> PutEnableAllFwSwitchAsync(PutEnableAllFwSwitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PutEnableAllFwSwitchWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request PutEnableFwSwitchRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PutEnableFwSwitchResponse
+         */
         public PutEnableFwSwitchResponse PutEnableFwSwitchWithOptions(PutEnableFwSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5637,6 +7132,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<PutEnableFwSwitchResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request PutEnableFwSwitchRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PutEnableFwSwitchResponse
+         */
         public async Task<PutEnableFwSwitchResponse> PutEnableFwSwitchWithOptionsAsync(PutEnableFwSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5680,18 +7184,43 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<PutEnableFwSwitchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request PutEnableFwSwitchRequest
+          * @return PutEnableFwSwitchResponse
+         */
         public PutEnableFwSwitchResponse PutEnableFwSwitch(PutEnableFwSwitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return PutEnableFwSwitchWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request PutEnableFwSwitchRequest
+          * @return PutEnableFwSwitchResponse
+         */
         public async Task<PutEnableFwSwitchResponse> PutEnableFwSwitchAsync(PutEnableFwSwitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PutEnableFwSwitchWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the ResetVpcFirewallRuleHitCount operation to clear the count on hits of an access control policy that is created for a VPC firewall in a specific policy group.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ResetVpcFirewallRuleHitCountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ResetVpcFirewallRuleHitCountResponse
+         */
         public ResetVpcFirewallRuleHitCountResponse ResetVpcFirewallRuleHitCountWithOptions(ResetVpcFirewallRuleHitCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5723,6 +7252,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ResetVpcFirewallRuleHitCountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the ResetVpcFirewallRuleHitCount operation to clear the count on hits of an access control policy that is created for a VPC firewall in a specific policy group.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ResetVpcFirewallRuleHitCountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ResetVpcFirewallRuleHitCountResponse
+         */
         public async Task<ResetVpcFirewallRuleHitCountResponse> ResetVpcFirewallRuleHitCountWithOptionsAsync(ResetVpcFirewallRuleHitCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5754,12 +7292,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<ResetVpcFirewallRuleHitCountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the ResetVpcFirewallRuleHitCount operation to clear the count on hits of an access control policy that is created for a VPC firewall in a specific policy group.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ResetVpcFirewallRuleHitCountRequest
+          * @return ResetVpcFirewallRuleHitCountResponse
+         */
         public ResetVpcFirewallRuleHitCountResponse ResetVpcFirewallRuleHitCount(ResetVpcFirewallRuleHitCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResetVpcFirewallRuleHitCountWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the ResetVpcFirewallRuleHitCount operation to clear the count on hits of an access control policy that is created for a VPC firewall in a specific policy group.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ResetVpcFirewallRuleHitCountRequest
+          * @return ResetVpcFirewallRuleHitCountResponse
+         */
         public async Task<ResetVpcFirewallRuleHitCountResponse> ResetVpcFirewallRuleHitCountAsync(ResetVpcFirewallRuleHitCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

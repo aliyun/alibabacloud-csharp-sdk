@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class AddAddressBookResponseBody : TeaModel {
+        /// <summary>
+        /// The UUID of the returned address book.
+        /// </summary>
         [NameInMap("GroupUuid")]
         [Validation(Required=false)]
         public string GroupUuid { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DeleteInstanceMembersRequest : TeaModel {
+        /// <summary>
+        /// The unique identifiers (UID) of members that you want to remove from Cloud Firewall.
+        /// </summary>
         [NameInMap("MemberUids")]
         [Validation(Required=false)]
         public List<long?> MemberUids { get; set; }
