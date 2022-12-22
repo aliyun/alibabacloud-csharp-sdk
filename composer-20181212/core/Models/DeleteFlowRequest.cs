@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Composer20181212.Models
 {
     public class DeleteFlowRequest : TeaModel {
+        /// <summary>
+        /// The ID of the workflow that you want to delete.
+        /// </summary>
         [NameInMap("FlowId")]
         [Validation(Required=false)]
         public string FlowId { get; set; }

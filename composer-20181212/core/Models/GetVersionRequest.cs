@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Composer20181212.Models
 {
     public class GetVersionRequest : TeaModel {
+        /// <summary>
+        /// The ID of the workflow.
+        /// </summary>
         [NameInMap("FlowId")]
         [Validation(Required=false)]
         public string FlowId { get; set; }
 
+        /// <summary>
+        /// The ID of the version.
+        /// </summary>
         [NameInMap("VersionId")]
         [Validation(Required=false)]
         public string VersionId { get; set; }

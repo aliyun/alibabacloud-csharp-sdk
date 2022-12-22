@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Composer20181212.Models
 {
     public class GetTemplateRequest : TeaModel {
+        /// <summary>
+        /// The ID of the template.
+        /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
