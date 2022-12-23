@@ -17,6 +17,22 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public float? Confidence { get; set; }
 
+            [NameInMap("IsMaskA")]
+            [Validation(Required=false)]
+            public long? IsMaskA { get; set; }
+
+            [NameInMap("IsMaskB")]
+            [Validation(Required=false)]
+            public long? IsMaskB { get; set; }
+
+            [NameInMap("LandmarksAList")]
+            [Validation(Required=false)]
+            public List<long?> LandmarksAList { get; set; }
+
+            [NameInMap("LandmarksBList")]
+            [Validation(Required=false)]
+            public List<long?> LandmarksBList { get; set; }
+
             [NameInMap("MessageTips")]
             [Validation(Required=false)]
             public string MessageTips { get; set; }
