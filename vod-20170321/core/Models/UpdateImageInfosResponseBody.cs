@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UpdateImageInfosResponseBody : TeaModel {
+        /// <summary>
+        /// The IDs of the images that do not exist.
+        /// </summary>
         [NameInMap("NonExistImageIds")]
         [Validation(Required=false)]
         public UpdateImageInfosResponseBodyNonExistImageIds NonExistImageIds { get; set; }
@@ -19,6 +22,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

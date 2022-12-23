@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetMediaAuditAudioResultDetailRequest : TeaModel {
+        /// <summary>
+        /// The ID of the video. You can query the video ID by using the ApsaraVideo VOD console or calling the [SearchMedia](~~86044~~) operation.
+        /// </summary>
         [NameInMap("MediaId")]
         [Validation(Required=false)]
         public string MediaId { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string OwnerId { get; set; }
 
+        /// <summary>
+        /// The number of the page to return. This parameter is optional. If you do not specify this parameter, all results are returned without pagination.
+        /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }

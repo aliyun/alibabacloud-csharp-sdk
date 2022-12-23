@@ -9,38 +9,76 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitSnapshotJobRequest : TeaModel {
+        /// <summary>
+        /// The maximum number of snapshots. Default value: **1**.
+        /// </summary>
         [NameInMap("Count")]
         [Validation(Required=false)]
         public long? Count { get; set; }
 
+        /// <summary>
+        /// The height of each snapshot. Valid values: `[8,4096]`. By default, the height of the video mezzanine file is used. Unit: pixel.
+        /// </summary>
         [NameInMap("Height")]
         [Validation(Required=false)]
         public string Height { get; set; }
 
+        /// <summary>
+        /// The snapshot interval. The value must be **greater than or equal to 0**. Unit: seconds. If you set this parameter to **0**, snapshots are taken at even intervals based on the video duration divided by the value of the Count parameter. Default value: **1**.
+        /// </summary>
         [NameInMap("Interval")]
         [Validation(Required=false)]
         public long? Interval { get; set; }
 
+        /// <summary>
+        /// The ID of the snapshot template.
+        /// 
+        /// *   We recommend that you create a snapshot template before you specify the ID of the snapshot template.
+        /// *   If you set the SnapshotTemplateId parameter, all the other request parameters except the Action and VideoId parameters are ignored.
+        /// *   For more information about how to create a snapshot template, see [AddVodTemplate](~~99406~~).
+        /// </summary>
         [NameInMap("SnapshotTemplateId")]
         [Validation(Required=false)]
         public string SnapshotTemplateId { get; set; }
 
+        /// <summary>
+        /// The start time of the specified snapshot time period.
+        /// 
+        /// *   Unit: milliseconds.
+        /// *   Default value: **0**.
+        /// </summary>
         [NameInMap("SpecifiedOffsetTime")]
         [Validation(Required=false)]
         public long? SpecifiedOffsetTime { get; set; }
 
+        /// <summary>
+        /// The sprite snapshot configuration. If you set this parameter, sprite snapshots are generated. For more information, see [SpriteSnapshotConfig](~~86952~~).
+        /// </summary>
         [NameInMap("SpriteSnapshotConfig")]
         [Validation(Required=false)]
         public string SpriteSnapshotConfig { get; set; }
 
+        /// <summary>
+        /// The custom configurations, including the configuration of transparent data transmission and callback configurations. The value is a JSON-formatted string. For more information, see [UserData](~~86952~~).
+        /// 
+        /// **
+        /// 
+        /// **Note** The callback configurations take effect only when you specify the HTTP callback URL and select the specific callback events in the ApsaraVideo VOD console.
+        /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }
 
+        /// <summary>
+        /// The ID of the video.
+        /// </summary>
         [NameInMap("VideoId")]
         [Validation(Required=false)]
         public string VideoId { get; set; }
 
+        /// <summary>
+        /// The width of each snapshot. Valid values: `[8,4096]`. By default, the width of the video mezzanine file is used. Unit: pixel.
+        /// </summary>
         [NameInMap("Width")]
         [Validation(Required=false)]
         public string Width { get; set; }

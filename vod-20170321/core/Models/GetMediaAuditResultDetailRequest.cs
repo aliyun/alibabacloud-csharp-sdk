@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetMediaAuditResultDetailRequest : TeaModel {
+        /// <summary>
+        /// The ID of the video.
+        /// </summary>
         [NameInMap("MediaId")]
         [Validation(Required=false)]
         public string MediaId { get; set; }
 
+        /// <summary>
+        /// The page number of the review result to return. The default value is **1**. A maximum of **20** records can be returned on each page.
+        /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }

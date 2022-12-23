@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DeleteVodSpecificConfigRequest : TeaModel {
+        /// <summary>
+        /// The ID of the configuration.
+        /// </summary>
         [NameInMap("ConfigId")]
         [Validation(Required=false)]
         public string ConfigId { get; set; }
 
+        /// <summary>
+        /// The domain name for CDN.
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodVerifyContentRequest : TeaModel {
+        /// <summary>
+        /// The domain name for which you want to query the ownership verification content. You can specify only one domain name in each call.
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }

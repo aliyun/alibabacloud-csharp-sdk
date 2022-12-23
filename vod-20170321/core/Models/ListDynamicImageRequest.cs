@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListDynamicImageRequest : TeaModel {
+        /// <summary>
+        /// The ID of the video.
+        /// </summary>
         [NameInMap("VideoId")]
         [Validation(Required=false)]
         public string VideoId { get; set; }

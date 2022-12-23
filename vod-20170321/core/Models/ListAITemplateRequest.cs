@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListAITemplateRequest : TeaModel {
+        /// <summary>
+        /// The type of the AI template. Valid values:
+        /// 
+        /// *   **AIMediaAudit**: automated review
+        /// *   **AIImage**: smart thumbnail
+        /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]
         public string TemplateType { get; set; }
