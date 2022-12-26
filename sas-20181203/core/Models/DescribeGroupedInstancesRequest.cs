@@ -81,6 +81,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? Vendor { get; set; }
 
+        /// <summary>
+        /// The source of the server. Separate multiple sources with commas (,).Valid values:
+        /// 
+        /// *   **0**: an asset provided by Alibaba Cloud.
+        /// *   **1**: a third-party cloud server
+        /// *   **2**: a server in a data center
+        /// *   **3**, **4**, **5**, and **7**: other cloud asset
+        /// *   **8**: a lightweight asset
+        /// </summary>
+        [NameInMap("Vendors")]
+        [Validation(Required=false)]
+        public string Vendors { get; set; }
+
     }
 
 }

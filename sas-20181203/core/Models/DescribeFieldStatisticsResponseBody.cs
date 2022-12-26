@@ -157,6 +157,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? TestAssetCount { get; set; }
 
             /// <summary>
+            /// The number of simple application servers.
+            /// </summary>
+            [NameInMap("TripartiteInstanceCount")]
+            [Validation(Required=false)]
+            public int? TripartiteInstanceCount { get; set; }
+
+            /// <summary>
             /// The number of assets whose statuses are unknown.
             /// </summary>
             [NameInMap("UnKnowStatusInstanceCount")]

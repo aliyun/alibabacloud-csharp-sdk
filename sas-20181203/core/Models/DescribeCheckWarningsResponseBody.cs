@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? CheckWarningId { get; set; }
 
+            [NameInMap("ExecErrorMessage")]
+            [Validation(Required=false)]
+            public string ExecErrorMessage { get; set; }
+
             /// <summary>
             /// The fixing status of the check item. Valid values:
             /// 

@@ -74,6 +74,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// The subtype of the baselines.
+            /// </summary>
+            [NameInMap("RiskSubTypeName")]
+            [Validation(Required=false)]
+            public string RiskSubTypeName { get; set; }
+
+            /// <summary>
             /// An array that consists of the whitelist of risk items.
             /// </summary>
             [NameInMap("RiskTypeWhiteListQueryResultList")]
