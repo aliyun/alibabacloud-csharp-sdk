@@ -13,16 +13,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public List<ListLgfResponseBodyLgfs> Lgfs { get; set; }
         public class ListLgfResponseBodyLgfs : TeaModel {
-            /// <summary>
-            /// 创建时间
-            /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
-            /// <summary>
-            /// 意图ID
-            /// </summary>
             [NameInMap("IntentId")]
             [Validation(Required=false)]
             public long? IntentId { get; set; }
@@ -34,16 +28,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             [Validation(Required=false)]
             public long? LgfId { get; set; }
 
-            /// <summary>
-            /// 修改时间
-            /// </summary>
             [NameInMap("ModifyTime")]
             [Validation(Required=false)]
             public string ModifyTime { get; set; }
 
-            /// <summary>
-            /// LGF规则
-            /// </summary>
             [NameInMap("RuleText")]
             [Validation(Required=false)]
             public string RuleText { get; set; }

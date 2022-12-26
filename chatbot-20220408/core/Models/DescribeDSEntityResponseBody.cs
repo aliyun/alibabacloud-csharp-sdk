@@ -21,23 +21,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public string CreateUserName { get; set; }
 
-        /// <summary>
-        /// 实体ID
-        /// </summary>
         [NameInMap("EntityId")]
         [Validation(Required=false)]
         public long? EntityId { get; set; }
 
-        /// <summary>
-        /// 实体名称，仅支持中文、大小写字母、数字、下划线
-        /// </summary>
         [NameInMap("EntityName")]
         [Validation(Required=false)]
         public string EntityName { get; set; }
 
-        /// <summary>
-        /// 实体类型：详见:,EntityTypeEnum[synonyms(同义词),regex(正则)]
-        /// </summary>
         [NameInMap("EntityType")]
         [Validation(Required=false)]
         public string EntityType { get; set; }
@@ -58,9 +49,6 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 系统实体code，如@sys.date
-        /// </summary>
         [NameInMap("SysEntityCode")]
         [Validation(Required=false)]
         public string SysEntityCode { get; set; }

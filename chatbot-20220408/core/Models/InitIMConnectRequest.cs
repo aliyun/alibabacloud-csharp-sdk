@@ -8,10 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
-    public class QueryPerspectivesRequest : TeaModel {
+    public class InitIMConnectRequest : TeaModel {
         [NameInMap("AgentKey")]
         [Validation(Required=false)]
         public string AgentKey { get; set; }
+
+        [NameInMap("From")]
+        [Validation(Required=false)]
+        public string From { get; set; }
+
+        [NameInMap("UserAccessToken")]
+        [Validation(Required=false)]
+        public string UserAccessToken { get; set; }
 
     }
 

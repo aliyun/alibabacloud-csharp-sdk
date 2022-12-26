@@ -13,9 +13,6 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 答案ID
-        /// </summary>
         [NameInMap("SolutionId")]
         [Validation(Required=false)]
         public long? SolutionId { get; set; }

@@ -49,9 +49,6 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             [Validation(Required=false)]
             public string ModifyUserName { get; set; }
 
-            /// <summary>
-            /// 系统实体code，如@sys.date
-            /// </summary>
             [NameInMap("SysEntityCode")]
             [Validation(Required=false)]
             public string SysEntityCode { get; set; }

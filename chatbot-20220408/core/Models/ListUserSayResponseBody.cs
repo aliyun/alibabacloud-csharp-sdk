@@ -49,23 +49,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             [Validation(Required=false)]
             public List<ListUserSayResponseBodyUserSaysSlotInfos> SlotInfos { get; set; }
             public class ListUserSayResponseBodyUserSaysSlotInfos : TeaModel {
-                /// <summary>
-                /// 槽位在意图话术中的下标
-                /// </summary>
                 [NameInMap("EndIndex")]
                 [Validation(Required=false)]
                 public int? EndIndex { get; set; }
 
-                /// <summary>
-                /// 意图槽位ID
-                /// </summary>
                 [NameInMap("SlotId")]
                 [Validation(Required=false)]
                 public string SlotId { get; set; }
 
-                /// <summary>
-                /// 槽位在意图话术中的下标
-                /// </summary>
                 [NameInMap("StartIndex")]
                 [Validation(Required=false)]
                 public int? StartIndex { get; set; }

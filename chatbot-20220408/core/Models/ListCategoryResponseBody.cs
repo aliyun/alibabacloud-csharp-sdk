@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class ListCategoryResponseBody : TeaModel {
-        /// <summary>
-        /// list结果
-        /// </summary>
         [NameInMap("Categories")]
         [Validation(Required=false)]
         public List<ListCategoryResponseBodyCategories> Categories { get; set; }
         public class ListCategoryResponseBodyCategories : TeaModel {
-            /// <summary>
-            /// 类目ID
-            /// </summary>
             [NameInMap("CategoryId")]
             [Validation(Required=false)]
             public long? CategoryId { get; set; }

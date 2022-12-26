@@ -9,23 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CreateCategoryRequest : TeaModel {
-        /// <summary>
-        /// 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
-        /// </summary>
         [NameInMap("AgentKey")]
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
-        /// <summary>
-        /// 类目名称
-        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        /// <summary>
-        /// 父类目ID，默认-1，对应根目录
-        /// </summary>
         [NameInMap("ParentCategoryId")]
         [Validation(Required=false)]
         public long? ParentCategoryId { get; set; }

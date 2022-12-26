@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class LinkInstanceCategoryResponseBody : TeaModel {
-        /// <summary>
-        /// 请求Id
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

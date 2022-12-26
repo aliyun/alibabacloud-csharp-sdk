@@ -53,44 +53,26 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             [Validation(Required=false)]
             public List<ListIntentResponseBodyIntentsSlotInfos> SlotInfos { get; set; }
             public class ListIntentResponseBodyIntentsSlotInfos : TeaModel {
-                /// <summary>
-                /// 是否数组
-                /// </summary>
                 [NameInMap("Array")]
                 [Validation(Required=false)]
                 public bool? Array { get; set; }
 
-                /// <summary>
-                /// 是否敏感
-                /// </summary>
                 [NameInMap("Encrypt")]
                 [Validation(Required=false)]
                 public bool? Encrypt { get; set; }
 
-                /// <summary>
-                /// 是否交互式收集
-                /// </summary>
                 [NameInMap("Interactive")]
                 [Validation(Required=false)]
                 public bool? Interactive { get; set; }
 
-                /// <summary>
-                /// 槽位名
-                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
-                /// <summary>
-                /// 槽位ID
-                /// </summary>
                 [NameInMap("SlotId")]
                 [Validation(Required=false)]
                 public string SlotId { get; set; }
 
-                /// <summary>
-                /// 槽位值（实体名）
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

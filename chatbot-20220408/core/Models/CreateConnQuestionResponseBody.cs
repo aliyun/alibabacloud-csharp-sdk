@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CreateConnQuestionResponseBody : TeaModel {
-        /// <summary>
-        /// 关联关系ID
-        /// </summary>
         [NameInMap("OutlineId")]
         [Validation(Required=false)]
         public long? OutlineId { get; set; }
