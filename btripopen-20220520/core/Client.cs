@@ -2721,6 +2721,62 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await CommonApplySyncWithOptionsAsync(request, headers, runtime);
         }
 
+        public CorpAuthLinkInfoQueryResponse CorpAuthLinkInfoQueryWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CorpAuthLinkInfoQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/corp-authority-link/v1/info",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CorpAuthLinkInfoQueryResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CorpAuthLinkInfoQueryResponse> CorpAuthLinkInfoQueryWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CorpAuthLinkInfoQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/corp-authority-link/v1/info",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CorpAuthLinkInfoQueryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CorpAuthLinkInfoQueryResponse CorpAuthLinkInfoQuery()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CorpAuthLinkInfoQueryWithOptions(headers, runtime);
+        }
+
+        public async Task<CorpAuthLinkInfoQueryResponse> CorpAuthLinkInfoQueryAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CorpAuthLinkInfoQueryWithOptionsAsync(headers, runtime);
+        }
+
         public CorpTokenResponse CorpTokenWithOptions(CorpTokenRequest request, CorpTokenHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
