@@ -8,14 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class CreateForwardEntryResponseBody : TeaModel {
-        [NameInMap("ForwardEntryId")]
+    public class StartInstancesResponseBody : TeaModel {
+        [NameInMap("InstanceResponses")]
         [Validation(Required=false)]
-        public string ForwardEntryId { get; set; }
+        public List<InstanceOperateResponse> InstanceResponses { get; set; }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

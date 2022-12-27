@@ -33,6 +33,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string NetworkId { get; set; }
 
+            /// <summary>
+            /// BUY。
+            /// </summary>
             [NameInMap("OrderType")]
             [Validation(Required=false)]
             public string OrderType { get; set; }

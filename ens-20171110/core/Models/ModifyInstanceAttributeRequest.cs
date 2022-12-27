@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ModifyInstanceAttributeRequest : TeaModel {
+        [NameInMap("HostName")]
+        [Validation(Required=false)]
+        public string HostName { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -21,9 +25,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string Password { get; set; }
 
-        [NameInMap("Version")]
+        [NameInMap("UserData")]
         [Validation(Required=false)]
-        public string Version { get; set; }
+        public string UserData { get; set; }
 
     }
 

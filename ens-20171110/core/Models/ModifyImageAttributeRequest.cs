@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string ImageName { get; set; }
 
+        /// <summary>
+        /// 2017-11-10
+        /// </summary>
         [NameInMap("Version")]
         [Validation(Required=false)]
         public string Version { get; set; }

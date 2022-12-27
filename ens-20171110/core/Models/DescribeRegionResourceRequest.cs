@@ -8,13 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class DescribeCloudDiskTypesRequest : TeaModel {
-        /// <summary>
-        /// A short description of struct
-        /// </summary>
+    public class DescribeRegionResourceRequest : TeaModel {
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
+
+        [NameInMap("IspType")]
+        [Validation(Required=false)]
+        public string IspType { get; set; }
 
     }
 

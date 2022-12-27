@@ -8,13 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class UnassignPrivateIpAddressesResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
+    public class StopInstancesShrinkRequest : TeaModel {
+        [NameInMap("InstanceIds")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string InstanceIdsShrink { get; set; }
 
     }
 

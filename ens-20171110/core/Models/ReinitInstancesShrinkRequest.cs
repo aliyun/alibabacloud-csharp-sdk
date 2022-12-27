@@ -8,21 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class ReInitDiskRequest : TeaModel {
-        [NameInMap("DiskId")]
-        [Validation(Required=false)]
-        public string DiskId { get; set; }
-
+    public class ReinitInstancesShrinkRequest : TeaModel {
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
-        /// <summary>
-        /// 2017-11-10
-        /// </summary>
-        [NameInMap("Version")]
+        [NameInMap("InstanceIds")]
         [Validation(Required=false)]
-        public string Version { get; set; }
+        public string InstanceIdsShrink { get; set; }
+
+        [NameInMap("Password")]
+        [Validation(Required=false)]
+        public string Password { get; set; }
 
     }
 

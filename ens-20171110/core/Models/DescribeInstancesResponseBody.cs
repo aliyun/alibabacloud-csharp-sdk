@@ -69,6 +69,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                         [Validation(Required=false)]
                         public int? Storage { get; set; }
 
+                        /// <summary>
+                        /// UUID。
+                        /// </summary>
                         [NameInMap("uuid")]
                         [Validation(Required=false)]
                         public string Uuid { get; set; }
@@ -135,6 +138,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public int? Memory { get; set; }
 
+                /// <summary>
+                /// Schema of Response
+                /// </summary>
                 [NameInMap("NetworkAttributes")]
                 [Validation(Required=false)]
                 public DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes NetworkAttributes { get; set; }
@@ -239,6 +245,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// Schema of Response
+                /// </summary>
                 [NameInMap("SystemDisk")]
                 [Validation(Required=false)]
                 public DescribeInstancesResponseBodyInstancesInstanceSystemDisk SystemDisk { get; set; }
@@ -275,6 +284,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     [Validation(Required=false)]
                     public int? Storage { get; set; }
 
+                    /// <summary>
+                    /// UUID。
+                    /// </summary>
                     [NameInMap("uuid")]
                     [Validation(Required=false)]
                     public string Uuid { get; set; }
