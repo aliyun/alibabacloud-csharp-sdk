@@ -77,14 +77,23 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
                         [Validation(Required=false)]
                         public long? CloneDepth { get; set; }
 
+                        /// <summary>
+                        /// Credential Id
+                        /// </summary>
                         [NameInMap("credentialId")]
                         [Validation(Required=false)]
                         public long? CredentialId { get; set; }
 
+                        /// <summary>
+                        /// Credential Label
+                        /// </summary>
                         [NameInMap("credentialLabel")]
                         [Validation(Required=false)]
                         public string CredentialLabel { get; set; }
 
+                        /// <summary>
+                        /// Credential Type
+                        /// </summary>
                         [NameInMap("credentialType")]
                         [Validation(Required=false)]
                         public string CredentialType { get; set; }

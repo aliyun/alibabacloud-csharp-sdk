@@ -53,6 +53,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public string CreatedAt { get; set; }
 
+            /// <summary>
+            /// Commit ID
+            /// </summary>
             [NameInMap("id")]
             [Validation(Required=false)]
             public string Id { get; set; }

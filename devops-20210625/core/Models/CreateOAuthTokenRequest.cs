@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class CreateOAuthTokenRequest : TeaModel {
+        /// <summary>
+        /// clientId
+        /// </summary>
         [NameInMap("clientId")]
         [Validation(Required=false)]
         public string ClientId { get; set; }
 
+        /// <summary>
+        /// client_secret
+        /// </summary>
         [NameInMap("clientSecret")]
         [Validation(Required=false)]
         public string ClientSecret { get; set; }

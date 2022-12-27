@@ -61,6 +61,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public string HttpUrlToRepo { get; set; }
 
+            /// <summary>
+            /// id
+            /// </summary>
             [NameInMap("id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
@@ -93,6 +96,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// id
+                /// </summary>
                 [NameInMap("id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
@@ -139,6 +145,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public string VisibilityLevel { get; set; }
 
+            /// <summary>
+            /// web url
+            /// </summary>
             [NameInMap("webUrl")]
             [Validation(Required=false)]
             public string WebUrl { get; set; }

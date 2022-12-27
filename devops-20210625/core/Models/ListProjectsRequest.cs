@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string Category { get; set; }
 
+        /// <summary>
+        /// {"conditionGroups":[[]]}
+        /// </summary>
         [NameInMap("conditions")]
         [Validation(Required=false)]
         public string Conditions { get; set; }

@@ -53,6 +53,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public long? HostNum { get; set; }
 
+            /// <summary>
+            /// 323232
+            /// </summary>
             [NameInMap("id")]
             [Validation(Required=false)]
             public long? Id { get; set; }

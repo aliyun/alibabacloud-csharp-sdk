@@ -49,6 +49,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public ListRepositoryMemberWithInheritedResponseBodyResultInherited Inherited { get; set; }
             public class ListRepositoryMemberWithInheritedResponseBodyResultInherited : TeaModel {
+                /// <summary>
+                /// id
+                /// </summary>
                 [NameInMap("id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }

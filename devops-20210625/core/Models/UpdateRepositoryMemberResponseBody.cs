@@ -81,6 +81,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public string Username { get; set; }
 
+            /// <summary>
+            /// web url
+            /// </summary>
             [NameInMap("webUrl")]
             [Validation(Required=false)]
             public string WebUrl { get; set; }
