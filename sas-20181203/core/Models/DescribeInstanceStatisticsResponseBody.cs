@@ -73,6 +73,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CmsNum { get; set; }
 
             /// <summary>
+            /// The number of CSPM risks detected on the asset.
+            /// </summary>
+            [NameInMap("CspmNum")]
+            [Validation(Required=false)]
+            public int? CspmNum { get; set; }
+
+            /// <summary>
             /// The number of common vulnerabilities detected on the asset.
             /// </summary>
             [NameInMap("CveNum")]
