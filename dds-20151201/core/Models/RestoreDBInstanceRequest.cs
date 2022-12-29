@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class RestoreDBInstanceRequest : TeaModel {
+        /// <summary>
+        /// The ID of the backup.
+        /// 
+        /// >  You can call the [DescribeBackups](~~62172~~) operation to query the backup ID.
+        /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public int? BackupId { get; set; }
 
+        /// <summary>
+        /// The ID of an instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }

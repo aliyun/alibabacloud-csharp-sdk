@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class CheckCloudResourceAuthorizedRequest : TeaModel {
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
@@ -33,6 +36,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        /// <summary>
+        /// The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the region ID of the instance.
+        /// </summary>
         [NameInMap("TargetRegionId")]
         [Validation(Required=false)]
         public string TargetRegionId { get; set; }

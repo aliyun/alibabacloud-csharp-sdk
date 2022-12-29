@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class RestartDBInstanceRequest : TeaModel {
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// The ID of the shard or mongos node in the sharded cluster instance.
+        /// 
+        /// >  The sharded cluster instance is restarted if you do not specify this parameter.
+        /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public string NodeId { get; set; }

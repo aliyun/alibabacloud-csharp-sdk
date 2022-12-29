@@ -9,10 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class CreateBackupRequest : TeaModel {
+        /// <summary>
+        /// The backup method of the instance. Default value: Physical. Valid values:
+        /// 
+        /// *   **Logical**
+        /// *   **Physical**
+        /// 
+        /// >  Only replica set instances and sharded cluster instances support this parameter. You do not need to specify this parameter for standalone instances. All standalone instances use snapshot backup.
+        /// </summary>
         [NameInMap("BackupMethod")]
         [Validation(Required=false)]
         public string BackupMethod { get; set; }
 
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }

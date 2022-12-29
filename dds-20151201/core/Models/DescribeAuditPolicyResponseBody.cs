@@ -9,10 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeAuditPolicyResponseBody : TeaModel {
+        /// <summary>
+        /// Indicates whether the log audit feature is enabled. Valid values:
+        /// 
+        /// *   Enable
+        /// *   Disabled
+        /// 
+        /// Default value: Disabled.
+        /// </summary>
         [NameInMap("LogAuditStatus")]
         [Validation(Required=false)]
         public string LogAuditStatus { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

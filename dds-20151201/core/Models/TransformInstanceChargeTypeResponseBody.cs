@@ -8,19 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
-    public class DescribeUserEncryptionKeyListResponseBody : TeaModel {
+    public class TransformInstanceChargeTypeResponseBody : TeaModel {
         /// <summary>
-        /// The list of custom keys.
+        /// The ID of the order.
         /// </summary>
-        [NameInMap("KeyIds")]
+        [NameInMap("OrderId")]
         [Validation(Required=false)]
-        public DescribeUserEncryptionKeyListResponseBodyKeyIds KeyIds { get; set; }
-        public class DescribeUserEncryptionKeyListResponseBodyKeyIds : TeaModel {
-            [NameInMap("KeyId")]
-            [Validation(Required=false)]
-            public List<string> KeyId { get; set; }
-
-        }
+        public string OrderId { get; set; }
 
         /// <summary>
         /// The ID of the request.

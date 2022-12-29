@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeActiveOperationTaskTypeRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to return all O\&M tasks. Valid values:
+        /// 
+        /// *   **0**: returns only pending tasks.
+        /// *   **1**: returns all tasks.
+        /// 
+        /// Default value: **0**.
+        /// </summary>
         [NameInMap("IsHistory")]
         [Validation(Required=false)]
         public int? IsHistory { get; set; }
@@ -21,6 +29,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

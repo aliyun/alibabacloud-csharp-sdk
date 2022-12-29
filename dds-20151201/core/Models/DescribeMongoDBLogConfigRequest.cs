@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeMongoDBLogConfigRequest : TeaModel {
+        /// <summary>
+        /// The ID of the instance. You can call the [DescribeDBInstances](~~61939~~) operation to query the ID of the instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeKernelReleaseNotesResponseBody : TeaModel {
+        /// <summary>
+        /// The list of version release notes.
+        /// </summary>
         [NameInMap("ReleaseNotes")]
         [Validation(Required=false)]
         public DescribeKernelReleaseNotesResponseBodyReleaseNotes ReleaseNotes { get; set; }
@@ -17,10 +20,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeKernelReleaseNotesResponseBodyReleaseNotesReleaseNote> ReleaseNote { get; set; }
             public class DescribeKernelReleaseNotesResponseBodyReleaseNotesReleaseNote : TeaModel {
+                /// <summary>
+                /// The version number.
+                /// </summary>
                 [NameInMap("KernelVersion")]
                 [Validation(Required=false)]
                 public string KernelVersion { get; set; }
 
+                /// <summary>
+                /// Publishes the log.
+                /// </summary>
                 [NameInMap("ReleaseNote")]
                 [Validation(Required=false)]
                 public string ReleaseNote { get; set; }
@@ -29,6 +38,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

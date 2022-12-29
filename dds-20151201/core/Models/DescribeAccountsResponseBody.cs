@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeAccountsResponseBody : TeaModel {
+        /// <summary>
+        /// Details about the accounts.
+        /// </summary>
         [NameInMap("Accounts")]
         [Validation(Required=false)]
         public DescribeAccountsResponseBodyAccounts Accounts { get; set; }
@@ -17,22 +20,46 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeAccountsResponseBodyAccountsAccount> Account { get; set; }
             public class DescribeAccountsResponseBodyAccountsAccount : TeaModel {
+                /// <summary>
+                /// The description of the account.
+                /// </summary>
                 [NameInMap("AccountDescription")]
                 [Validation(Required=false)]
                 public string AccountDescription { get; set; }
 
+                /// <summary>
+                /// The name of the account.
+                /// </summary>
                 [NameInMap("AccountName")]
                 [Validation(Required=false)]
                 public string AccountName { get; set; }
 
+                /// <summary>
+                /// The status of the account.
+                /// 
+                /// *   Unavailable
+                /// *   Available
+                /// </summary>
                 [NameInMap("AccountStatus")]
                 [Validation(Required=false)]
                 public string AccountStatus { get; set; }
 
+                /// <summary>
+                /// The role of the account. Valid values:
+                /// 
+                /// *   db: shard
+                /// *   cs: Configserver
+                /// *   mongos: mongos
+                /// *   logic: sharded cluster instance
+                /// *   normal: replica set instance
+                /// </summary>
                 [NameInMap("CharacterType")]
                 [Validation(Required=false)]
                 public string CharacterType { get; set; }
 
+                /// <summary>
+                /// The name of the instance to which the account belongs.
+                /// </summary>
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
@@ -41,6 +68,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

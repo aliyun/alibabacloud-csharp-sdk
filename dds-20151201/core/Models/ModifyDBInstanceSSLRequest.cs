@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyDBInstanceSSLRequest : TeaModel {
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
@@ -29,6 +32,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The operation on the SSL feature. Valid values: Valid values:
+        /// 
+        /// *   **Open**: enables SSL encryption.
+        /// *   **Close**: disables SSL encryption.
+        /// *   **Update**: updates the SSL certificate.
+        /// </summary>
         [NameInMap("SSLAction")]
         [Validation(Required=false)]
         public string SSLAction { get; set; }

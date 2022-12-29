@@ -9,14 +9,31 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyDBInstanceDescriptionRequest : TeaModel {
+        /// <summary>
+        /// The name of the instance.
+        /// 
+        /// > * The name cannot start with `http://` or `https://`.
+        /// > * The name must start with a letter.
+        /// > * The name must be 2 to 256 characters in length, and can contain letters, underscores (\_), hyphens (-), and digits.
+        /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
         public string DBInstanceDescription { get; set; }
 
+        /// <summary>
+        /// The ID of the instance.
+        /// 
+        /// >  To modify the name of a shard or mongos node in a sharded cluster instance, you must also specify the **NodeId** parameter.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// The ID of the shard or mongos node in the sharded cluster instance.
+        /// 
+        /// >  This parameter is valid only if you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.
+        /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public string NodeId { get; set; }

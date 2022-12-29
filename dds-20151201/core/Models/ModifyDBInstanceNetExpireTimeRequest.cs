@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyDBInstanceNetExpireTimeRequest : TeaModel {
+        /// <summary>
+        /// The retention period of the original classic network address. Valid values: **14**, **30**, **60**, and** 120**. Unit: day.
+        /// </summary>
         [NameInMap("ClassicExpendExpiredDays")]
         [Validation(Required=false)]
         public int? ClassicExpendExpiredDays { get; set; }
 
+        /// <summary>
+        /// The connection string of the instance
+        /// </summary>
         [NameInMap("ConnectionString")]
         [Validation(Required=false)]
         public string ConnectionString { get; set; }
 
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }

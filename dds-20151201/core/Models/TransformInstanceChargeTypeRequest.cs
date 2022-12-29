@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
-    public class TransformToPrePaidRequest : TeaModel {
+    public class TransformInstanceChargeTypeRequest : TeaModel {
         /// <summary>
         /// Specifies whether to enable automatic payment. Valid values:
         /// 
@@ -41,6 +41,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
+        /// The billing method of the instance. Valid values:
+        /// 
+        /// *   **PostPaid: pay-as-you-go.**
+        /// *   **PrePaid**: subscription
+        /// 
+        /// >  If you specify this parameter to **PrePaid**, you must also specify the **Period** parameter.
+        /// </summary>
+        [NameInMap("ChargeType")]
+        [Validation(Required=false)]
+        public string ChargeType { get; set; }
+
+        /// <summary>
         /// The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.
         /// </summary>
         [NameInMap("CouponNo")]
@@ -63,7 +75,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The subscription duration of the instance. Unit: months. Valid values: **1, 2, 3, 4, 5, 6, 7, 8, 9******, **12**, **24**, and **36**.
+        /// The subscription period of the instance. Unit: months.
+        /// 
+        /// Valid values: **1** to **9**, **12**, **24**, **36**, and **60**.
+        /// 
+        /// >  If you set the ChargeType property to PrePaid, you must configure this property.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]

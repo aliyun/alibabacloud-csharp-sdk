@@ -9,10 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeParameterTemplatesRequest : TeaModel {
+        /// <summary>
+        /// The database engine of the instance. Set the value to **MongoDB**.
+        /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
+        /// <summary>
+        /// The database engine version of the instance. Valid values:
+        /// 
+        /// *   **5.0**
+        /// *   **4.4**
+        /// *   **4.2**
+        /// *   **4.0**
+        /// *   **3.4**
+        /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
@@ -25,6 +37,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

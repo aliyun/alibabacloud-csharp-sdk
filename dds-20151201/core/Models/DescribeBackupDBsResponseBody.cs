@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeBackupDBsResponseBody : TeaModel {
+        /// <summary>
+        /// Details about the databases.
+        /// </summary>
         [NameInMap("Databases")]
         [Validation(Required=false)]
         public DescribeBackupDBsResponseBodyDatabases Databases { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeBackupDBsResponseBodyDatabasesDatabase> Database { get; set; }
             public class DescribeBackupDBsResponseBodyDatabasesDatabase : TeaModel {
+                /// <summary>
+                /// The name of the database.
+                /// </summary>
                 [NameInMap("DBName")]
                 [Validation(Required=false)]
                 public string DBName { get; set; }
@@ -25,18 +31,30 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         }
 
+        /// <summary>
+        /// The page number of the returned page.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries returned per page.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The number of returned databases.
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

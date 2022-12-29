@@ -9,14 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyDBInstanceMaintainTimeRequest : TeaModel {
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// The end time of the maintenance window. Specify the time in the *HH:mmZ* format. The time must be in UTC.
+        /// 
+        /// >  The end time must be later than the start time of the maintenance window.
+        /// </summary>
         [NameInMap("MaintainEndTime")]
         [Validation(Required=false)]
         public string MaintainEndTime { get; set; }
 
+        /// <summary>
+        /// The start time of the maintenance window. Specify the time in the *HH:mm*Z format. The time must be in UTC.
+        /// </summary>
         [NameInMap("MaintainStartTime")]
         [Validation(Required=false)]
         public string MaintainStartTime { get; set; }
