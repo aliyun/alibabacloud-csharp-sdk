@@ -8,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Qssj20220112.Models
 {
-    public class GetTrendStatisticRequest : TeaModel {
-        [NameInMap("BrandNames")]
-        [Validation(Required=false)]
-        public string BrandNames { get; set; }
-
+    public class GetTrendWordAndIndexRequest : TeaModel {
         [NameInMap("CateIds")]
         [Validation(Required=false)]
         public string CateIds { get; set; }
@@ -21,9 +17,9 @@ namespace AlibabaCloud.SDK.Qssj20220112.Models
         [Validation(Required=false)]
         public string EndingDate { get; set; }
 
-        [NameInMap("ShopIds")]
+        [NameInMap("PageIndex")]
         [Validation(Required=false)]
-        public string ShopIds { get; set; }
+        public long? PageIndex { get; set; }
 
         [NameInMap("StartDate")]
         [Validation(Required=false)]

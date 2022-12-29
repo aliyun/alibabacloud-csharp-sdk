@@ -8,15 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Qssj20220112.Models
 {
-    public class GetStyleTopResponseBody : TeaModel {
+    public class GetStyleOnlineResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<GetStyleTopResponseBodyData> Data { get; set; }
-        public class GetStyleTopResponseBodyData : TeaModel {
+        public List<GetStyleOnlineResponseBodyData> Data { get; set; }
+        public class GetStyleOnlineResponseBodyData : TeaModel {
             [NameInMap("AttributeContent")]
             [Validation(Required=false)]
             public string AttributeContent { get; set; }

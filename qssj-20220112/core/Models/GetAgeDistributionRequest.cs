@@ -16,6 +16,14 @@ namespace AlibabaCloud.SDK.Qssj20220112.Models
         [Validation(Required=false)]
         public string CateIds { get; set; }
 
+        [NameInMap("EndingDate")]
+        [Validation(Required=false)]
+        public string EndingDate { get; set; }
+
+        [NameInMap("StartDate")]
+        [Validation(Required=false)]
+        public string StartDate { get; set; }
+
     }
 
 }

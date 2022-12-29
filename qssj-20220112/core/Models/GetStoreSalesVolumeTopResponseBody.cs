@@ -17,9 +17,29 @@ namespace AlibabaCloud.SDK.Qssj20220112.Models
         [Validation(Required=false)]
         public List<GetStoreSalesVolumeTopResponseBodyData> Data { get; set; }
         public class GetStoreSalesVolumeTopResponseBodyData : TeaModel {
+            [NameInMap("CommodityQuantity")]
+            [Validation(Required=false)]
+            public long? CommodityQuantity { get; set; }
+
+            [NameInMap("SalesVolume")]
+            [Validation(Required=false)]
+            public long? SalesVolume { get; set; }
+
+            [NameInMap("SearchVolume")]
+            [Validation(Required=false)]
+            public long? SearchVolume { get; set; }
+
+            [NameInMap("ShopId")]
+            [Validation(Required=false)]
+            public long? ShopId { get; set; }
+
             [NameInMap("ShopName")]
             [Validation(Required=false)]
             public string ShopName { get; set; }
+
+            [NameInMap("TotalSales")]
+            [Validation(Required=false)]
+            public double? TotalSales { get; set; }
 
         }
 
