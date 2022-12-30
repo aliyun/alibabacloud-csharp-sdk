@@ -8,16 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class QueryGatewayTypeRequest : TeaModel {
-        /// <summary>
-        /// The language of the response. Valid values:
-        /// 
-        /// *   zh: Chinese
-        /// *   en: English
-        /// </summary>
+    public class DeleteMigrationTaskRequest : TeaModel {
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
+
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
+
+        [NameInMap("RequestPars")]
+        [Validation(Required=false)]
+        public string RequestPars { get; set; }
 
     }
 

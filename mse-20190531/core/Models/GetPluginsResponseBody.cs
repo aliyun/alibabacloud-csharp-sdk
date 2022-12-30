@@ -17,18 +17,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// The data entries returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetPluginsResponseBodyData> Data { get; set; }
         public class GetPluginsResponseBodyData : TeaModel {
             /// <summary>
-            /// The directory of the plug-in.
+            /// The type of the plug-in. Valid values:
             /// 
-            /// 0: user-defined
+            /// 0: custom
             /// 
-            /// 1: permission authentication
+            /// 1: permission authorization
             /// 
             /// 2: security protection
             /// 
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? Category { get; set; }
 
             /// <summary>
-            /// The information about the configuration check.
+            /// The information about the plug-in configuration used for checking.
             /// </summary>
             [NameInMap("ConfigCheck")]
             [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? NewVersionPublishingFlag { get; set; }
 
             /// <summary>
-            /// The plug-in execution stage.
+            /// The execution stage of the plug-in.
             /// 
             /// *   0: default stage
             /// *   1: authorization stage
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string PrimaryUser { get; set; }
 
             /// <summary>
-            /// The plug-in execution priority. A larger value indicates a higher priority.
+            /// The execution priority of the plug-in. A larger value indicates a higher priority.
             /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
@@ -133,14 +133,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Version { get; set; }
 
             /// <summary>
-            /// The Object Storage Service (OSS) of the WebAssembly plug-in.
+            /// The URL of the Object Storage Service (OSS) bucket that stores the WebAssembly plug-in.
             /// </summary>
             [NameInMap("WasmFile")]
             [Validation(Required=false)]
             public string WasmFile { get; set; }
 
             /// <summary>
-            /// The WebAssembly language.
+            /// The WebAssembly language. Valid values:
             /// 
             /// *   0: C++
             /// *   1: TinyGo
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// The error code returned.
+        /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

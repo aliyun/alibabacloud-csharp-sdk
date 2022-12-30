@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class QueryGatewayTypeResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned. A value of 200 indicates that the request is successful. Other values indicate that the request fails.
+        /// The status code returned. The value 200 indicates that the request was successful. Other values indicate that the request failed.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The information about gateway types.
+        /// The information about the gateway type. The data type of this parameter is List.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -45,9 +45,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
-        /// - `true`: The request is successful. 
-        /// - `false`: The request fails.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   `true`: The request was successful.
+        /// *   `false`: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

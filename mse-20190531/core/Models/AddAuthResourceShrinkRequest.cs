@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class AddAuthResourceRequest : TeaModel {
+    public class AddAuthResourceShrinkRequest : TeaModel {
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
@@ -22,21 +22,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         [NameInMap("AuthResourceHeaderList")]
         [Validation(Required=false)]
-        public List<AddAuthResourceRequestAuthResourceHeaderList> AuthResourceHeaderList { get; set; }
-        public class AddAuthResourceRequestAuthResourceHeaderList : TeaModel {
-            [NameInMap("HeaderKey")]
-            [Validation(Required=false)]
-            public string HeaderKey { get; set; }
-
-            [NameInMap("HeaderMethod")]
-            [Validation(Required=false)]
-            public string HeaderMethod { get; set; }
-
-            [NameInMap("HeaderValue")]
-            [Validation(Required=false)]
-            public string HeaderValue { get; set; }
-
-        }
+        public string AuthResourceHeaderListShrink { get; set; }
 
         /// <summary>
         /// The ID of the domain name.

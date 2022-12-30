@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class AddBlackWhiteListRequest : TeaModel {
+        /// <summary>
+        /// The language of the response. Valid values:
+        /// 
+        /// *   zh: Chinese
+        /// *   en: English
+        /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
@@ -28,20 +34,29 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the whitelist mode for authorization.
+        /// Specifies whether to create a whitelist.
         /// </summary>
         [NameInMap("IsWhite")]
         [Validation(Required=false)]
         public bool? IsWhite { get; set; }
 
+        /// <summary>
+        /// The name.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// The description.
+        /// </summary>
         [NameInMap("Note")]
         [Validation(Required=false)]
         public string Note { get; set; }
 
+        /// <summary>
+        /// The resource IDs in the JSON format.
+        /// </summary>
         [NameInMap("ResourceIdJsonList")]
         [Validation(Required=false)]
         public string ResourceIdJsonList { get; set; }
@@ -55,6 +70,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The status of the blacklist.
+        /// 
+        /// *   on: enabled
+        /// *   off: disabled
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
