@@ -38,6 +38,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Type { get; set; }
 
                 }
+
+                /// <summary>
+                /// BasicInfo
+                /// </summary>
                 [NameInMap("MediaBasicInfo")]
                 [Validation(Required=false)]
                 public SearchPublicMediaInfoResponseBodyPublicMediaInfosMediaInfoMediaBasicInfo MediaBasicInfo { get; set; }
@@ -66,6 +70,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
+                    /// <summary>
+                    /// MediaId
+                    /// </summary>
                     [NameInMap("MediaId")]
                     [Validation(Required=false)]
                     public string MediaId { get; set; }
@@ -103,10 +110,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string UserData { get; set; }
 
                 }
+
                 [NameInMap("MediaId")]
                 [Validation(Required=false)]
                 public string MediaId { get; set; }
-            };
+
+            }
 
             [NameInMap("RemainingAuthTime")]
             [Validation(Required=false)]

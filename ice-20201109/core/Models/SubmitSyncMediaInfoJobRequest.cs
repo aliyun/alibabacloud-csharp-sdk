@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("Media")]
             [Validation(Required=false)]
             public string Media { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
-        };
+
+        }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -32,10 +34,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("PipelineId")]
             [Validation(Required=false)]
             public string PipelineId { get; set; }
+
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }
-        };
+
+        }
 
         [NameInMap("UserData")]
         [Validation(Required=false)]

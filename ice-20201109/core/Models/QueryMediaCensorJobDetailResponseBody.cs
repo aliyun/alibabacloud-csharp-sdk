@@ -34,9 +34,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Suggestion { get; set; }
 
             }
+
             [NameInMap("Code")]
             [Validation(Required=false)]
             public string Code { get; set; }
+
             [NameInMap("CoverImageCensorResults")]
             [Validation(Required=false)]
             public QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailCoverImageCensorResults CoverImageCensorResults { get; set; }
@@ -65,19 +67,34 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                         [Validation(Required=false)]
                         public List<QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailCoverImageCensorResultsCoverImageCensorResultResultsResult> Result { get; set; }
                         public class QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailCoverImageCensorResultsCoverImageCensorResultResultsResult : TeaModel {
+                            [NameInMap("Label")]
+                            [Validation(Required=false)]
                             public string Label { get; set; }
+
+                            [NameInMap("Rate")]
+                            [Validation(Required=false)]
                             public string Rate { get; set; }
+
+                            [NameInMap("Scene")]
+                            [Validation(Required=false)]
                             public string Scene { get; set; }
+
+                            [NameInMap("Suggestion")]
+                            [Validation(Required=false)]
                             public string Suggestion { get; set; }
+
                         }
-                    };
+
+                    }
 
                 }
 
             }
+
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
+
             [NameInMap("DescCensorResult")]
             [Validation(Required=false)]
             public QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailDescCensorResult DescCensorResult { get; set; }
@@ -99,9 +116,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Suggestion { get; set; }
 
             }
+
             [NameInMap("FinishTime")]
             [Validation(Required=false)]
             public string FinishTime { get; set; }
+
             [NameInMap("Input")]
             [Validation(Required=false)]
             public QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailInput Input { get; set; }
@@ -119,21 +138,27 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Object { get; set; }
 
             }
+
             [NameInMap("JobId")]
             [Validation(Required=false)]
             public string JobId { get; set; }
+
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
+
             [NameInMap("PipelineId")]
             [Validation(Required=false)]
             public string PipelineId { get; set; }
+
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
+
             [NameInMap("Suggestion")]
             [Validation(Required=false)]
             public string Suggestion { get; set; }
+
             [NameInMap("TitleCensorResult")]
             [Validation(Required=false)]
             public QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailTitleCensorResult TitleCensorResult { get; set; }
@@ -155,9 +180,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Suggestion { get; set; }
 
             }
+
             [NameInMap("UserData")]
             [Validation(Required=false)]
             public string UserData { get; set; }
+
             [NameInMap("VensorCensorResult")]
             [Validation(Required=false)]
             public QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVensorCensorResult VensorCensorResult { get; set; }
@@ -170,12 +197,25 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     [Validation(Required=false)]
                     public List<QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVensorCensorResultCensorResultsCensorResult> CensorResult { get; set; }
                     public class QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVensorCensorResultCensorResultsCensorResult : TeaModel {
+                        [NameInMap("Label")]
+                        [Validation(Required=false)]
                         public string Label { get; set; }
+
+                        [NameInMap("Rate")]
+                        [Validation(Required=false)]
                         public string Rate { get; set; }
+
+                        [NameInMap("Scene")]
+                        [Validation(Required=false)]
                         public string Scene { get; set; }
+
+                        [NameInMap("Suggestion")]
+                        [Validation(Required=false)]
                         public string Suggestion { get; set; }
+
                     }
-                };
+
+                }
 
                 [NameInMap("NextPageToken")]
                 [Validation(Required=false)]
@@ -189,6 +229,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     [Validation(Required=false)]
                     public List<QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVensorCensorResultVideoTimelinesVideoTimeline> VideoTimeline { get; set; }
                     public class QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVensorCensorResultVideoTimelinesVideoTimeline : TeaModel {
+                        [NameInMap("CensorResults")]
+                        [Validation(Required=false)]
                         public QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVensorCensorResultVideoTimelinesVideoTimelineCensorResults CensorResults { get; set; }
                         public class QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVensorCensorResultVideoTimelinesVideoTimelineCensorResults : TeaModel {
                             [NameInMap("CensorResult")]
@@ -214,12 +256,21 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                             }
 
                         }
+
+                        [NameInMap("Object")]
+                        [Validation(Required=false)]
                         public string Object { get; set; }
+
+                        [NameInMap("Timestamp")]
+                        [Validation(Required=false)]
                         public string Timestamp { get; set; }
+
                     }
-                };
+
+                }
 
             }
+
             [NameInMap("VideoCensorConfig")]
             [Validation(Required=false)]
             public QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVideoCensorConfig VideoCensorConfig { get; set; }
@@ -235,20 +286,24 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     [NameInMap("Bucket")]
                     [Validation(Required=false)]
                     public string Bucket { get; set; }
+
                     [NameInMap("Location")]
                     [Validation(Required=false)]
                     public string Location { get; set; }
+
                     [NameInMap("Object")]
                     [Validation(Required=false)]
                     public string Object { get; set; }
-                };
+
+                }
 
                 [NameInMap("VideoCensor")]
                 [Validation(Required=false)]
                 public string VideoCensor { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

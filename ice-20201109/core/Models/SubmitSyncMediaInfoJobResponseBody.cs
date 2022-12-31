@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitSyncMediaInfoJobResponseBody : TeaModel {
+        /// <summary>
+        /// MediaInfoJobDTO
+        /// </summary>
         [NameInMap("MediaInfoJob")]
         [Validation(Required=false)]
         public SubmitSyncMediaInfoJobResponseBodyMediaInfoJob MediaInfoJob { get; set; }
@@ -16,9 +19,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("Async")]
             [Validation(Required=false)]
             public bool? Async { get; set; }
+
             [NameInMap("FinishTime")]
             [Validation(Required=false)]
             public string FinishTime { get; set; }
+
             [NameInMap("Input")]
             [Validation(Required=false)]
             public SubmitSyncMediaInfoJobResponseBodyMediaInfoJobInput Input { get; set; }
@@ -32,9 +37,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Type { get; set; }
 
             }
+
             [NameInMap("JobId")]
             [Validation(Required=false)]
             public string JobId { get; set; }
+
             [NameInMap("MediaInfoProperty")]
             [Validation(Required=false)]
             public SubmitSyncMediaInfoJobResponseBodyMediaInfoJobMediaInfoProperty MediaInfoProperty { get; set; }
@@ -112,40 +119,52 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     [NameInMap("Bitrate")]
                     [Validation(Required=false)]
                     public string Bitrate { get; set; }
+
                     [NameInMap("Duration")]
                     [Validation(Required=false)]
                     public string Duration { get; set; }
+
                     [NameInMap("FileName")]
                     [Validation(Required=false)]
                     public string FileName { get; set; }
+
                     [NameInMap("FileSize")]
                     [Validation(Required=false)]
                     public string FileSize { get; set; }
+
                     [NameInMap("FileStatus")]
                     [Validation(Required=false)]
                     public string FileStatus { get; set; }
+
                     [NameInMap("FileType")]
                     [Validation(Required=false)]
                     public string FileType { get; set; }
+
                     [NameInMap("FileUrl")]
                     [Validation(Required=false)]
                     public string FileUrl { get; set; }
+
                     [NameInMap("FormatName")]
                     [Validation(Required=false)]
                     public string FormatName { get; set; }
+
                     [NameInMap("Height")]
                     [Validation(Required=false)]
                     public string Height { get; set; }
+
                     [NameInMap("MediaId")]
                     [Validation(Required=false)]
                     public string MediaId { get; set; }
+
                     [NameInMap("Region")]
                     [Validation(Required=false)]
                     public string Region { get; set; }
+
                     [NameInMap("Width")]
                     [Validation(Required=false)]
                     public string Width { get; set; }
-                };
+
+                }
 
                 [NameInMap("VideoStreamInfoList")]
                 [Validation(Required=false)]
@@ -246,12 +265,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 }
 
             }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
             [NameInMap("RequestId")]
             [Validation(Required=false)]
             public string RequestId { get; set; }
+
             [NameInMap("ScheduleConfig")]
             [Validation(Required=false)]
             public SubmitSyncMediaInfoJobResponseBodyMediaInfoJobScheduleConfig ScheduleConfig { get; set; }
@@ -265,22 +287,28 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public int? Priority { get; set; }
 
             }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("SubmitResultJson")]
             [Validation(Required=false)]
-            public Dictionary<string, string> SubmitResultJson { get; set; }
+            public Dictionary<string, object> SubmitResultJson { get; set; }
+
             [NameInMap("SubmitTime")]
             [Validation(Required=false)]
             public string SubmitTime { get; set; }
+
             [NameInMap("TriggerSource")]
             [Validation(Required=false)]
             public string TriggerSource { get; set; }
+
             [NameInMap("UserData")]
             [Validation(Required=false)]
             public string UserData { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

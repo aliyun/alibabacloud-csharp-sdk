@@ -42,6 +42,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Samplerate { get; set; }
 
             }
+
             [NameInMap("VideoParams")]
             [Validation(Required=false)]
             public CreateLiveTranscodeTemplateRequestTemplateConfigVideoParams VideoParams { get; set; }
@@ -75,7 +76,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Width { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("Type")]
         [Validation(Required=false)]

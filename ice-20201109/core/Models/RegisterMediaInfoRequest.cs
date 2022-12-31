@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public bool? Overwrite { get; set; }
 
+        [NameInMap("ReferenceId")]
+        [Validation(Required=false)]
+        public string ReferenceId { get; set; }
+
         [NameInMap("RegisterConfig")]
         [Validation(Required=false)]
         public string RegisterConfig { get; set; }

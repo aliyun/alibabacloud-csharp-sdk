@@ -13,31 +13,116 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public GetMediaInfoResponseBodyMediaInfo MediaInfo { get; set; }
         public class GetMediaInfoResponseBodyMediaInfo : TeaModel {
+            [NameInMap("AiRoughData")]
+            [Validation(Required=false)]
+            public GetMediaInfoResponseBodyMediaInfoAiRoughData AiRoughData { get; set; }
+            public class GetMediaInfoResponseBodyMediaInfoAiRoughData : TeaModel {
+                [NameInMap("AiCategory")]
+                [Validation(Required=false)]
+                public string AiCategory { get; set; }
+
+                [NameInMap("AiJobId")]
+                [Validation(Required=false)]
+                public string AiJobId { get; set; }
+
+                [NameInMap("Result")]
+                [Validation(Required=false)]
+                public string Result { get; set; }
+
+                [NameInMap("SaveType")]
+                [Validation(Required=false)]
+                public string SaveType { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
             [NameInMap("FileInfoList")]
             [Validation(Required=false)]
             public List<GetMediaInfoResponseBodyMediaInfoFileInfoList> FileInfoList { get; set; }
             public class GetMediaInfoResponseBodyMediaInfoFileInfoList : TeaModel {
+                [NameInMap("AudioStreamInfoList")]
+                [Validation(Required=false)]
                 public List<GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList> AudioStreamInfoList { get; set; }
                 public class GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList : TeaModel {
+                    [NameInMap("Bitrate")]
+                    [Validation(Required=false)]
                     public string Bitrate { get; set; }
+
+                    [NameInMap("ChannelLayout")]
+                    [Validation(Required=false)]
                     public string ChannelLayout { get; set; }
+
+                    [NameInMap("Channels")]
+                    [Validation(Required=false)]
                     public string Channels { get; set; }
+
+                    [NameInMap("CodecLongName")]
+                    [Validation(Required=false)]
                     public string CodecLongName { get; set; }
+
+                    [NameInMap("CodecName")]
+                    [Validation(Required=false)]
                     public string CodecName { get; set; }
+
+                    [NameInMap("CodecTag")]
+                    [Validation(Required=false)]
                     public string CodecTag { get; set; }
+
+                    [NameInMap("CodecTagString")]
+                    [Validation(Required=false)]
                     public string CodecTagString { get; set; }
+
+                    [NameInMap("CodecTimeBase")]
+                    [Validation(Required=false)]
                     public string CodecTimeBase { get; set; }
+
+                    [NameInMap("Duration")]
+                    [Validation(Required=false)]
                     public string Duration { get; set; }
+
+                    [NameInMap("Fps")]
+                    [Validation(Required=false)]
                     public string Fps { get; set; }
+
+                    [NameInMap("Index")]
+                    [Validation(Required=false)]
                     public string Index { get; set; }
+
+                    [NameInMap("Lang")]
+                    [Validation(Required=false)]
                     public string Lang { get; set; }
+
+                    [NameInMap("NumFrames")]
+                    [Validation(Required=false)]
                     public string NumFrames { get; set; }
+
+                    [NameInMap("Profile")]
+                    [Validation(Required=false)]
                     public string Profile { get; set; }
+
+                    [NameInMap("SampleFmt")]
+                    [Validation(Required=false)]
                     public string SampleFmt { get; set; }
+
+                    [NameInMap("SampleRate")]
+                    [Validation(Required=false)]
                     public string SampleRate { get; set; }
+
+                    [NameInMap("StartTime")]
+                    [Validation(Required=false)]
                     public string StartTime { get; set; }
+
+                    [NameInMap("Timebase")]
+                    [Validation(Required=false)]
                     public string Timebase { get; set; }
+
                 }
+
+                [NameInMap("FileBasicInfo")]
+                [Validation(Required=false)]
                 public GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo FileBasicInfo { get; set; }
                 public class GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo : TeaModel {
                     [NameInMap("Bitrate")]
@@ -93,47 +178,160 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Width { get; set; }
 
                 }
+
+                [NameInMap("SubtitleStreamInfoList")]
+                [Validation(Required=false)]
                 public List<GetMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList> SubtitleStreamInfoList { get; set; }
                 public class GetMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList : TeaModel {
+                    [NameInMap("CodecLongName")]
+                    [Validation(Required=false)]
                     public string CodecLongName { get; set; }
+
+                    [NameInMap("CodecName")]
+                    [Validation(Required=false)]
                     public string CodecName { get; set; }
+
+                    [NameInMap("CodecTag")]
+                    [Validation(Required=false)]
                     public string CodecTag { get; set; }
+
+                    [NameInMap("CodecTagString")]
+                    [Validation(Required=false)]
                     public string CodecTagString { get; set; }
+
+                    [NameInMap("CodecTimeBase")]
+                    [Validation(Required=false)]
                     public string CodecTimeBase { get; set; }
+
+                    [NameInMap("Duration")]
+                    [Validation(Required=false)]
                     public string Duration { get; set; }
+
+                    [NameInMap("Index")]
+                    [Validation(Required=false)]
                     public string Index { get; set; }
+
+                    [NameInMap("Lang")]
+                    [Validation(Required=false)]
                     public string Lang { get; set; }
+
+                    [NameInMap("StartTime")]
+                    [Validation(Required=false)]
                     public string StartTime { get; set; }
+
+                    [NameInMap("Timebase")]
+                    [Validation(Required=false)]
                     public string Timebase { get; set; }
+
                 }
+
+                [NameInMap("VideoStreamInfoList")]
+                [Validation(Required=false)]
                 public List<GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList> VideoStreamInfoList { get; set; }
                 public class GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList : TeaModel {
+                    [NameInMap("AvgFPS")]
+                    [Validation(Required=false)]
                     public string AvgFPS { get; set; }
+
+                    [NameInMap("Bitrate")]
+                    [Validation(Required=false)]
                     public string Bitrate { get; set; }
+
+                    [NameInMap("CodecLongName")]
+                    [Validation(Required=false)]
                     public string CodecLongName { get; set; }
+
+                    [NameInMap("CodecName")]
+                    [Validation(Required=false)]
                     public string CodecName { get; set; }
+
+                    [NameInMap("CodecTag")]
+                    [Validation(Required=false)]
                     public string CodecTag { get; set; }
+
+                    [NameInMap("CodecTagString")]
+                    [Validation(Required=false)]
                     public string CodecTagString { get; set; }
+
+                    [NameInMap("CodecTimeBase")]
+                    [Validation(Required=false)]
                     public string CodecTimeBase { get; set; }
+
+                    [NameInMap("Dar")]
+                    [Validation(Required=false)]
                     public string Dar { get; set; }
+
+                    [NameInMap("Duration")]
+                    [Validation(Required=false)]
                     public string Duration { get; set; }
+
+                    [NameInMap("Fps")]
+                    [Validation(Required=false)]
                     public string Fps { get; set; }
+
+                    [NameInMap("HasBFrames")]
+                    [Validation(Required=false)]
                     public string HasBFrames { get; set; }
+
+                    [NameInMap("Height")]
+                    [Validation(Required=false)]
                     public string Height { get; set; }
+
+                    [NameInMap("Index")]
+                    [Validation(Required=false)]
                     public string Index { get; set; }
+
+                    [NameInMap("Lang")]
+                    [Validation(Required=false)]
                     public string Lang { get; set; }
+
+                    [NameInMap("Level")]
+                    [Validation(Required=false)]
                     public string Level { get; set; }
+
+                    [NameInMap("Nb_frames")]
+                    [Validation(Required=false)]
                     public string NbFrames { get; set; }
+
+                    [NameInMap("NumFrames")]
+                    [Validation(Required=false)]
                     public string NumFrames { get; set; }
+
+                    [NameInMap("PixFmt")]
+                    [Validation(Required=false)]
                     public string PixFmt { get; set; }
+
+                    [NameInMap("Profile")]
+                    [Validation(Required=false)]
                     public string Profile { get; set; }
+
+                    [NameInMap("Rotate")]
+                    [Validation(Required=false)]
                     public string Rotate { get; set; }
+
+                    [NameInMap("Sar")]
+                    [Validation(Required=false)]
                     public string Sar { get; set; }
+
+                    [NameInMap("StartTime")]
+                    [Validation(Required=false)]
                     public string StartTime { get; set; }
+
+                    [NameInMap("Timebase")]
+                    [Validation(Required=false)]
                     public string Timebase { get; set; }
+
+                    [NameInMap("Width")]
+                    [Validation(Required=false)]
                     public string Width { get; set; }
+
                 }
+
             }
+
+            /// <summary>
+            /// BasicInfo
+            /// </summary>
             [NameInMap("MediaBasicInfo")]
             [Validation(Required=false)]
             public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo MediaBasicInfo { get; set; }
@@ -178,6 +376,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public string InputURL { get; set; }
 
+                /// <summary>
+                /// MediaId
+                /// </summary>
                 [NameInMap("MediaId")]
                 [Validation(Required=false)]
                 public string MediaId { get; set; }
@@ -193,6 +394,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [NameInMap("ModifiedTime")]
                 [Validation(Required=false)]
                 public string ModifiedTime { get; set; }
+
+                [NameInMap("ReferenceId")]
+                [Validation(Required=false)]
+                public string ReferenceId { get; set; }
 
                 [NameInMap("Source")]
                 [Validation(Required=false)]
@@ -219,10 +424,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string UserData { get; set; }
 
             }
+
             [NameInMap("MediaId")]
             [Validation(Required=false)]
             public string MediaId { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

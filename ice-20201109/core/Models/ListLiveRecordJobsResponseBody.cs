@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public List<ListLiveRecordJobsResponseBodyLiveRecordJobs> LiveRecordJobs { get; set; }
         public class ListLiveRecordJobsResponseBodyLiveRecordJobs : TeaModel {
+            /// <summary>
+            /// 代表创建时间的资源属性字段
+            /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
@@ -21,10 +24,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string JobId { get; set; }
 
+            /// <summary>
+            /// 代表资源名称的资源属性字段
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// 回调地址
+            /// </summary>
             [NameInMap("NotifyUrl")]
             [Validation(Required=false)]
             public string NotifyUrl { get; set; }
@@ -36,13 +45,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [NameInMap("Bucket")]
                 [Validation(Required=false)]
                 public string Bucket { get; set; }
+
                 [NameInMap("Endpoint")]
                 [Validation(Required=false)]
                 public string Endpoint { get; set; }
+
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
-            };
+
+            }
 
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -55,11 +67,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
+
                 [NameInMap("Url")]
                 [Validation(Required=false)]
                 public string Url { get; set; }
-            };
 
+            }
+
+            /// <summary>
+            /// 录制模板ID
+            /// </summary>
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
             public string TemplateId { get; set; }

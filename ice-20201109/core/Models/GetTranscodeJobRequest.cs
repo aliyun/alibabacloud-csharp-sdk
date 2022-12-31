@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetTranscodeJobRequest : TeaModel {
-        [NameInMap("JobId")]
+        [NameInMap("ParentJobId")]
         [Validation(Required=false)]
-        public string JobId { get; set; }
+        public string ParentJobId { get; set; }
 
     }
 

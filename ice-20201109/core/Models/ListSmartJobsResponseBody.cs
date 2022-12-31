@@ -44,10 +44,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [NameInMap("InputFile")]
                 [Validation(Required=false)]
                 public string InputFile { get; set; }
+
                 [NameInMap("Keyword")]
                 [Validation(Required=false)]
                 public string Keyword { get; set; }
-            };
+
+            }
 
             [NameInMap("JobId")]
             [Validation(Required=false)]
@@ -69,13 +71,21 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public ListSmartJobsResponseBodySmartJobListOutputConfig OutputConfig { get; set; }
             public class ListSmartJobsResponseBodySmartJobListOutputConfig : TeaModel {
+                /// <summary>
+                /// OSS Bucket
+                /// </summary>
                 [NameInMap("Bucket")]
                 [Validation(Required=false)]
                 public string Bucket { get; set; }
+
+                /// <summary>
+                /// OSS Object
+                /// </summary>
                 [NameInMap("Object")]
                 [Validation(Required=false)]
                 public string Object { get; set; }
-            };
+
+            }
 
             [NameInMap("Title")]
             [Validation(Required=false)]

@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("Media")]
             [Validation(Required=false)]
             public string Media { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
-        };
+
+        }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -32,10 +34,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("Media")]
             [Validation(Required=false)]
             public string Media { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
-        };
+
+        }
 
         [NameInMap("ScheduleConfig")]
         [Validation(Required=false)]
@@ -44,10 +48,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("PipelineId")]
             [Validation(Required=false)]
             public string PipelineId { get; set; }
+
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }
-        };
+
+        }
 
         [NameInMap("TemplateConfig")]
         [Validation(Required=false)]
@@ -84,23 +90,28 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     [NameInMap("Duration")]
                     [Validation(Required=false)]
                     public string Duration { get; set; }
+
                     [NameInMap("End")]
                     [Validation(Required=false)]
                     public string End { get; set; }
+
                     [NameInMap("Seek")]
                     [Validation(Required=false)]
                     public string Seek { get; set; }
-                };
+
+                }
 
                 [NameInMap("Width")]
                 [Validation(Required=false)]
                 public int? Width { get; set; }
 
             }
+
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
             public string TemplateId { get; set; }
-        };
+
+        }
 
         [NameInMap("UserData")]
         [Validation(Required=false)]

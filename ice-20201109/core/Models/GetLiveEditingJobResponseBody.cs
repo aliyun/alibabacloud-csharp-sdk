@@ -16,18 +16,23 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("Clips")]
             [Validation(Required=false)]
             public string Clips { get; set; }
+
             [NameInMap("Code")]
             [Validation(Required=false)]
             public string Code { get; set; }
+
             [NameInMap("CompleteTime")]
             [Validation(Required=false)]
             public string CompleteTime { get; set; }
+
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
+
             [NameInMap("JobId")]
             [Validation(Required=false)]
             public string JobId { get; set; }
+
             [NameInMap("LiveStreamConfig")]
             [Validation(Required=false)]
             public GetLiveEditingJobResponseBodyLiveEditingJobLiveStreamConfig LiveStreamConfig { get; set; }
@@ -45,9 +50,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string StreamName { get; set; }
 
             }
+
             [NameInMap("MediaId")]
             [Validation(Required=false)]
             public string MediaId { get; set; }
+
             [NameInMap("MediaProduceConfig")]
             [Validation(Required=false)]
             public GetLiveEditingJobResponseBodyLiveEditingJobMediaProduceConfig MediaProduceConfig { get; set; }
@@ -57,15 +64,19 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Mode { get; set; }
 
             }
+
             [NameInMap("MediaURL")]
             [Validation(Required=false)]
             public string MediaURL { get; set; }
+
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
+
             [NameInMap("ModifiedTime")]
             [Validation(Required=false)]
             public string ModifiedTime { get; set; }
+
             [NameInMap("OutputMediaConfig")]
             [Validation(Required=false)]
             public GetLiveEditingJobResponseBodyLiveEditingJobOutputMediaConfig OutputMediaConfig { get; set; }
@@ -99,16 +110,20 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public int? Width { get; set; }
 
             }
+
             [NameInMap("ProjectId")]
             [Validation(Required=false)]
             public string ProjectId { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("UserData")]
             [Validation(Required=false)]
             public string UserData { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

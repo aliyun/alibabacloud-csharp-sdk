@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string ProjectId { get; set; }
 
+        [NameInMap("RequestSource")]
+        [Validation(Required=false)]
+        public string RequestSource { get; set; }
+
     }
 
 }

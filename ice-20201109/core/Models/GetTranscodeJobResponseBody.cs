@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// TranscodeParentJobWithSubJobDTO
+        /// </summary>
         [NameInMap("TranscodeParentJob")]
         [Validation(Required=false)]
         public GetTranscodeJobResponseBodyTranscodeParentJob TranscodeParentJob { get; set; }
@@ -20,39 +23,99 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
             [NameInMap("FinishTime")]
             [Validation(Required=false)]
             public string FinishTime { get; set; }
+
             [NameInMap("InputGroup")]
             [Validation(Required=false)]
             public List<GetTranscodeJobResponseBodyTranscodeParentJobInputGroup> InputGroup { get; set; }
             public class GetTranscodeJobResponseBodyTranscodeParentJobInputGroup : TeaModel {
+                [NameInMap("Media")]
+                [Validation(Required=false)]
                 public string Media { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
+
             [NameInMap("JobCount")]
             [Validation(Required=false)]
             public int? JobCount { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
             [NameInMap("OutputGroup")]
             [Validation(Required=false)]
             public List<GetTranscodeJobResponseBodyTranscodeParentJobOutputGroup> OutputGroup { get; set; }
             public class GetTranscodeJobResponseBodyTranscodeParentJobOutputGroup : TeaModel {
+                [NameInMap("Output")]
+                [Validation(Required=false)]
                 public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupOutput Output { get; set; }
                 public class GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupOutput : TeaModel {
                     [NameInMap("Media")]
                     [Validation(Required=false)]
                     public string Media { get; set; }
 
+                    [NameInMap("OutputUrl")]
+                    [Validation(Required=false)]
+                    public string OutputUrl { get; set; }
+
                     [NameInMap("Type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }
 
                 }
+
+                [NameInMap("ProcessConfig")]
+                [Validation(Required=false)]
                 public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfig ProcessConfig { get; set; }
                 public class GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfig : TeaModel {
+                    [NameInMap("CombineConfigs")]
+                    [Validation(Required=false)]
+                    public List<GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigCombineConfigs> CombineConfigs { get; set; }
+                    public class GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigCombineConfigs : TeaModel {
+                        [NameInMap("AudioIndex")]
+                        [Validation(Required=false)]
+                        public string AudioIndex { get; set; }
+
+                        [NameInMap("Duration")]
+                        [Validation(Required=false)]
+                        public double? Duration { get; set; }
+
+                        [NameInMap("Start")]
+                        [Validation(Required=false)]
+                        public double? Start { get; set; }
+
+                        [NameInMap("VideoIndex")]
+                        [Validation(Required=false)]
+                        public string VideoIndex { get; set; }
+
+                    }
+
+                    [NameInMap("Encryption")]
+                    [Validation(Required=false)]
+                    public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigEncryption Encryption { get; set; }
+                    public class GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigEncryption : TeaModel {
+                        [NameInMap("CipherText")]
+                        [Validation(Required=false)]
+                        public string CipherText { get; set; }
+
+                        [NameInMap("DecryptKeyUri")]
+                        [Validation(Required=false)]
+                        public string DecryptKeyUri { get; set; }
+
+                        [NameInMap("EncryptType")]
+                        [Validation(Required=false)]
+                        public string EncryptType { get; set; }
+
+                    }
+
                     [NameInMap("ImageWatermarks")]
                     [Validation(Required=false)]
                     public List<GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarks> ImageWatermarks { get; set; }
@@ -64,9 +127,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                             [NameInMap("Dx")]
                             [Validation(Required=false)]
                             public string Dx { get; set; }
+
                             [NameInMap("Dy")]
                             [Validation(Required=false)]
                             public string Dy { get; set; }
+
                             [NameInMap("File")]
                             [Validation(Required=false)]
                             public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarksOverwriteParamsFile File { get; set; }
@@ -80,12 +145,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string Type { get; set; }
 
                             }
+
                             [NameInMap("Height")]
                             [Validation(Required=false)]
                             public string Height { get; set; }
+
                             [NameInMap("ReferPos")]
                             [Validation(Required=false)]
                             public string ReferPos { get; set; }
+
                             [NameInMap("Timeline")]
                             [Validation(Required=false)]
                             public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarksOverwriteParamsTimeline Timeline { get; set; }
@@ -99,10 +167,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string Start { get; set; }
 
                             }
+
                             [NameInMap("Width")]
                             [Validation(Required=false)]
                             public string Width { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("TemplateId")]
                         [Validation(Required=false)]
@@ -121,6 +191,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                             [NameInMap("CharEnc")]
                             [Validation(Required=false)]
                             public string CharEnc { get; set; }
+
                             [NameInMap("File")]
                             [Validation(Required=false)]
                             public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigSubtitlesOverwriteParamsFile File { get; set; }
@@ -134,10 +205,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string Type { get; set; }
 
                             }
+
                             [NameInMap("Format")]
                             [Validation(Required=false)]
                             public string Format { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("TemplateId")]
                         [Validation(Required=false)]
@@ -156,34 +229,44 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                             [NameInMap("Adaptive")]
                             [Validation(Required=false)]
                             public string Adaptive { get; set; }
+
                             [NameInMap("BorderColor")]
                             [Validation(Required=false)]
                             public string BorderColor { get; set; }
+
                             [NameInMap("BorderWidth")]
                             [Validation(Required=false)]
                             public int? BorderWidth { get; set; }
+
                             [NameInMap("Content")]
                             [Validation(Required=false)]
                             public string Content { get; set; }
+
                             [NameInMap("FontAlpha")]
                             [Validation(Required=false)]
                             public string FontAlpha { get; set; }
+
                             [NameInMap("FontColor")]
                             [Validation(Required=false)]
                             public string FontColor { get; set; }
+
                             [NameInMap("FontName")]
                             [Validation(Required=false)]
                             public string FontName { get; set; }
+
                             [NameInMap("FontSize")]
                             [Validation(Required=false)]
                             public int? FontSize { get; set; }
+
                             [NameInMap("Left")]
                             [Validation(Required=false)]
                             public string Left { get; set; }
+
                             [NameInMap("Top")]
                             [Validation(Required=false)]
                             public string Top { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("TemplateId")]
                         [Validation(Required=false)]
@@ -206,21 +289,27 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 [NameInMap("Bitrate")]
                                 [Validation(Required=false)]
                                 public string Bitrate { get; set; }
+
                                 [NameInMap("Channels")]
                                 [Validation(Required=false)]
                                 public string Channels { get; set; }
+
                                 [NameInMap("Codec")]
                                 [Validation(Required=false)]
                                 public string Codec { get; set; }
+
                                 [NameInMap("Profile")]
                                 [Validation(Required=false)]
                                 public string Profile { get; set; }
+
                                 [NameInMap("Remove")]
                                 [Validation(Required=false)]
                                 public string Remove { get; set; }
+
                                 [NameInMap("Samplerate")]
                                 [Validation(Required=false)]
                                 public string Samplerate { get; set; }
+
                                 [NameInMap("Volume")]
                                 [Validation(Required=false)]
                                 public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsAudioVolume Volume { get; set; }
@@ -242,7 +331,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                     public string TruePeak { get; set; }
 
                                 }
-                            };
+
+                            }
 
                             [NameInMap("Container")]
                             [Validation(Required=false)]
@@ -251,7 +341,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 [NameInMap("Format")]
                                 [Validation(Required=false)]
                                 public string Format { get; set; }
-                            };
+
+                            }
 
                             [NameInMap("MuxConfig")]
                             [Validation(Required=false)]
@@ -270,7 +361,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                     public string ForceSegTime { get; set; }
 
                                 }
-                            };
+
+                            }
 
                             [NameInMap("Video")]
                             [Validation(Required=false)]
@@ -279,76 +371,101 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 [NameInMap("AbrMax")]
                                 [Validation(Required=false)]
                                 public string AbrMax { get; set; }
+
                                 [NameInMap("Bitrate")]
                                 [Validation(Required=false)]
                                 public string Bitrate { get; set; }
+
                                 [NameInMap("Bufsize")]
                                 [Validation(Required=false)]
                                 public string Bufsize { get; set; }
+
                                 [NameInMap("Codec")]
                                 [Validation(Required=false)]
                                 public string Codec { get; set; }
+
                                 [NameInMap("Crf")]
                                 [Validation(Required=false)]
                                 public string Crf { get; set; }
+
                                 [NameInMap("Crop")]
                                 [Validation(Required=false)]
                                 public string Crop { get; set; }
+
                                 [NameInMap("Fps")]
                                 [Validation(Required=false)]
                                 public string Fps { get; set; }
+
                                 [NameInMap("Gop")]
                                 [Validation(Required=false)]
                                 public string Gop { get; set; }
+
                                 [NameInMap("Height")]
                                 [Validation(Required=false)]
                                 public string Height { get; set; }
+
                                 [NameInMap("LongShortMode")]
                                 [Validation(Required=false)]
                                 public string LongShortMode { get; set; }
+
                                 [NameInMap("Maxrate")]
                                 [Validation(Required=false)]
                                 public string Maxrate { get; set; }
+
                                 [NameInMap("Pad")]
                                 [Validation(Required=false)]
                                 public string Pad { get; set; }
+
                                 [NameInMap("PixFmt")]
                                 [Validation(Required=false)]
                                 public string PixFmt { get; set; }
+
                                 [NameInMap("Preset")]
                                 [Validation(Required=false)]
                                 public string Preset { get; set; }
+
                                 [NameInMap("Profile")]
                                 [Validation(Required=false)]
                                 public string Profile { get; set; }
+
                                 [NameInMap("Remove")]
                                 [Validation(Required=false)]
                                 public string Remove { get; set; }
+
                                 [NameInMap("ScanMode")]
                                 [Validation(Required=false)]
                                 public string ScanMode { get; set; }
+
                                 [NameInMap("Width")]
                                 [Validation(Required=false)]
                                 public string Width { get; set; }
-                            };
+
+                            }
 
                         }
+
                         [NameInMap("TemplateId")]
                         [Validation(Required=false)]
                         public string TemplateId { get; set; }
-                    };
+
+                    }
 
                 }
+
             }
+
             [NameInMap("ParentJobId")]
             [Validation(Required=false)]
             public string ParentJobId { get; set; }
+
             [NameInMap("Percent")]
             [Validation(Required=false)]
             public int? Percent { get; set; }
+
             [NameInMap("RequestId")]
             [Validation(Required=false)]
             public string RequestId { get; set; }
+
             [NameInMap("ScheduleConfig")]
             [Validation(Required=false)]
             public GetTranscodeJobResponseBodyTranscodeParentJobScheduleConfig ScheduleConfig { get; set; }
@@ -362,26 +479,59 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public int? Priority { get; set; }
 
             }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("SubmitTime")]
             [Validation(Required=false)]
             public string SubmitTime { get; set; }
+
             [NameInMap("TranscodeJobList")]
             [Validation(Required=false)]
             public List<GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobList> TranscodeJobList { get; set; }
             public class GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobList : TeaModel {
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("FinishTime")]
+                [Validation(Required=false)]
                 public string FinishTime { get; set; }
+
+                [NameInMap("InputGroup")]
+                [Validation(Required=false)]
                 public List<GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListInputGroup> InputGroup { get; set; }
                 public class GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListInputGroup : TeaModel {
+                    [NameInMap("InputUrl")]
+                    [Validation(Required=false)]
+                    public string InputUrl { get; set; }
+
+                    [NameInMap("Media")]
+                    [Validation(Required=false)]
                     public string Media { get; set; }
+
+                    [NameInMap("Type")]
+                    [Validation(Required=false)]
                     public string Type { get; set; }
+
                 }
+
+                [NameInMap("JobId")]
+                [Validation(Required=false)]
                 public string JobId { get; set; }
+
+                [NameInMap("JobIndex")]
+                [Validation(Required=false)]
                 public int? JobIndex { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("OutFileMeta")]
+                [Validation(Required=false)]
                 public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListOutFileMeta OutFileMeta { get; set; }
                 public class GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListOutFileMeta : TeaModel {
                     [NameInMap("AudioStreamInfoList")]
@@ -457,40 +607,52 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                         [NameInMap("Bitrate")]
                         [Validation(Required=false)]
                         public string Bitrate { get; set; }
+
                         [NameInMap("Duration")]
                         [Validation(Required=false)]
                         public string Duration { get; set; }
+
                         [NameInMap("FileName")]
                         [Validation(Required=false)]
                         public string FileName { get; set; }
+
                         [NameInMap("FileSize")]
                         [Validation(Required=false)]
                         public string FileSize { get; set; }
+
                         [NameInMap("FileStatus")]
                         [Validation(Required=false)]
                         public string FileStatus { get; set; }
+
                         [NameInMap("FileType")]
                         [Validation(Required=false)]
                         public string FileType { get; set; }
+
                         [NameInMap("FileUrl")]
                         [Validation(Required=false)]
                         public string FileUrl { get; set; }
+
                         [NameInMap("FormatName")]
                         [Validation(Required=false)]
                         public string FormatName { get; set; }
+
                         [NameInMap("Height")]
                         [Validation(Required=false)]
                         public string Height { get; set; }
+
                         [NameInMap("MediaId")]
                         [Validation(Required=false)]
                         public string MediaId { get; set; }
+
                         [NameInMap("Region")]
                         [Validation(Required=false)]
                         public string Region { get; set; }
+
                         [NameInMap("Width")]
                         [Validation(Required=false)]
                         public string Width { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("VideoStreamInfoList")]
                     [Validation(Required=false)]
@@ -591,20 +753,73 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     }
 
                 }
+
+                [NameInMap("Output")]
+                [Validation(Required=false)]
                 public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListOutput Output { get; set; }
                 public class GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListOutput : TeaModel {
                     [NameInMap("Media")]
                     [Validation(Required=false)]
                     public string Media { get; set; }
 
+                    [NameInMap("OutputUrl")]
+                    [Validation(Required=false)]
+                    public string OutputUrl { get; set; }
+
                     [NameInMap("Type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }
 
                 }
+
+                [NameInMap("ParentJobId")]
+                [Validation(Required=false)]
                 public string ParentJobId { get; set; }
+
+                [NameInMap("ProcessConfig")]
+                [Validation(Required=false)]
                 public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfig ProcessConfig { get; set; }
                 public class GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfig : TeaModel {
+                    [NameInMap("CombineConfigs")]
+                    [Validation(Required=false)]
+                    public List<GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigCombineConfigs> CombineConfigs { get; set; }
+                    public class GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigCombineConfigs : TeaModel {
+                        [NameInMap("AudioIndex")]
+                        [Validation(Required=false)]
+                        public string AudioIndex { get; set; }
+
+                        [NameInMap("Duration")]
+                        [Validation(Required=false)]
+                        public double? Duration { get; set; }
+
+                        [NameInMap("Start")]
+                        [Validation(Required=false)]
+                        public double? Start { get; set; }
+
+                        [NameInMap("VideoIndex")]
+                        [Validation(Required=false)]
+                        public string VideoIndex { get; set; }
+
+                    }
+
+                    [NameInMap("Encryption")]
+                    [Validation(Required=false)]
+                    public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigEncryption Encryption { get; set; }
+                    public class GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigEncryption : TeaModel {
+                        [NameInMap("CipherText")]
+                        [Validation(Required=false)]
+                        public string CipherText { get; set; }
+
+                        [NameInMap("DecryptKeyUri")]
+                        [Validation(Required=false)]
+                        public string DecryptKeyUri { get; set; }
+
+                        [NameInMap("EncryptType")]
+                        [Validation(Required=false)]
+                        public string EncryptType { get; set; }
+
+                    }
+
                     [NameInMap("ImageWatermarks")]
                     [Validation(Required=false)]
                     public List<GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarks> ImageWatermarks { get; set; }
@@ -616,9 +831,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                             [NameInMap("Dx")]
                             [Validation(Required=false)]
                             public string Dx { get; set; }
+
                             [NameInMap("Dy")]
                             [Validation(Required=false)]
                             public string Dy { get; set; }
+
                             [NameInMap("File")]
                             [Validation(Required=false)]
                             public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarksOverwriteParamsFile File { get; set; }
@@ -632,12 +849,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string Type { get; set; }
 
                             }
+
                             [NameInMap("Height")]
                             [Validation(Required=false)]
                             public string Height { get; set; }
+
                             [NameInMap("ReferPos")]
                             [Validation(Required=false)]
                             public string ReferPos { get; set; }
+
                             [NameInMap("Timeline")]
                             [Validation(Required=false)]
                             public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarksOverwriteParamsTimeline Timeline { get; set; }
@@ -651,16 +871,22 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string Start { get; set; }
 
                             }
+
                             [NameInMap("Width")]
                             [Validation(Required=false)]
                             public string Width { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("TemplateId")]
                         [Validation(Required=false)]
                         public string TemplateId { get; set; }
 
                     }
+
+                    [NameInMap("IsInheritTags")]
+                    [Validation(Required=false)]
+                    public bool? IsInheritTags { get; set; }
 
                     [NameInMap("Subtitles")]
                     [Validation(Required=false)]
@@ -673,6 +899,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                             [NameInMap("CharEnc")]
                             [Validation(Required=false)]
                             public string CharEnc { get; set; }
+
                             [NameInMap("File")]
                             [Validation(Required=false)]
                             public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigSubtitlesOverwriteParamsFile File { get; set; }
@@ -686,10 +913,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string Type { get; set; }
 
                             }
+
                             [NameInMap("Format")]
                             [Validation(Required=false)]
                             public string Format { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("TemplateId")]
                         [Validation(Required=false)]
@@ -708,34 +937,44 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                             [NameInMap("Adaptive")]
                             [Validation(Required=false)]
                             public string Adaptive { get; set; }
+
                             [NameInMap("BorderColor")]
                             [Validation(Required=false)]
                             public string BorderColor { get; set; }
+
                             [NameInMap("BorderWidth")]
                             [Validation(Required=false)]
                             public int? BorderWidth { get; set; }
+
                             [NameInMap("Content")]
                             [Validation(Required=false)]
                             public string Content { get; set; }
+
                             [NameInMap("FontAlpha")]
                             [Validation(Required=false)]
                             public string FontAlpha { get; set; }
+
                             [NameInMap("FontColor")]
                             [Validation(Required=false)]
                             public string FontColor { get; set; }
+
                             [NameInMap("FontName")]
                             [Validation(Required=false)]
                             public string FontName { get; set; }
+
                             [NameInMap("FontSize")]
                             [Validation(Required=false)]
                             public int? FontSize { get; set; }
+
                             [NameInMap("Left")]
                             [Validation(Required=false)]
                             public string Left { get; set; }
+
                             [NameInMap("Top")]
                             [Validation(Required=false)]
                             public string Top { get; set; }
-                        };
+
+                        }
 
                         [NameInMap("TemplateId")]
                         [Validation(Required=false)]
@@ -758,21 +997,27 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 [NameInMap("Bitrate")]
                                 [Validation(Required=false)]
                                 public string Bitrate { get; set; }
+
                                 [NameInMap("Channels")]
                                 [Validation(Required=false)]
                                 public string Channels { get; set; }
+
                                 [NameInMap("Codec")]
                                 [Validation(Required=false)]
                                 public string Codec { get; set; }
+
                                 [NameInMap("Profile")]
                                 [Validation(Required=false)]
                                 public string Profile { get; set; }
+
                                 [NameInMap("Remove")]
                                 [Validation(Required=false)]
                                 public string Remove { get; set; }
+
                                 [NameInMap("Samplerate")]
                                 [Validation(Required=false)]
                                 public string Samplerate { get; set; }
+
                                 [NameInMap("Volume")]
                                 [Validation(Required=false)]
                                 public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsAudioVolume Volume { get; set; }
@@ -794,7 +1039,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                     public string TruePeak { get; set; }
 
                                 }
-                            };
+
+                            }
 
                             [NameInMap("Container")]
                             [Validation(Required=false)]
@@ -803,7 +1049,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 [NameInMap("Format")]
                                 [Validation(Required=false)]
                                 public string Format { get; set; }
-                            };
+
+                            }
 
                             [NameInMap("MuxConfig")]
                             [Validation(Required=false)]
@@ -822,7 +1069,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                     public string ForceSegTime { get; set; }
 
                                 }
-                            };
+
+                            }
+
+                            [NameInMap("Tags")]
+                            [Validation(Required=false)]
+                            public Dictionary<string, string> Tags { get; set; }
 
                             [NameInMap("Video")]
                             [Validation(Required=false)]
@@ -831,67 +1083,93 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 [NameInMap("AbrMax")]
                                 [Validation(Required=false)]
                                 public string AbrMax { get; set; }
+
                                 [NameInMap("Bitrate")]
                                 [Validation(Required=false)]
                                 public string Bitrate { get; set; }
+
                                 [NameInMap("Bufsize")]
                                 [Validation(Required=false)]
                                 public string Bufsize { get; set; }
+
                                 [NameInMap("Codec")]
                                 [Validation(Required=false)]
                                 public string Codec { get; set; }
+
                                 [NameInMap("Crf")]
                                 [Validation(Required=false)]
                                 public string Crf { get; set; }
+
                                 [NameInMap("Crop")]
                                 [Validation(Required=false)]
                                 public string Crop { get; set; }
+
                                 [NameInMap("Fps")]
                                 [Validation(Required=false)]
                                 public string Fps { get; set; }
+
                                 [NameInMap("Gop")]
                                 [Validation(Required=false)]
                                 public string Gop { get; set; }
+
                                 [NameInMap("Height")]
                                 [Validation(Required=false)]
                                 public string Height { get; set; }
+
                                 [NameInMap("LongShortMode")]
                                 [Validation(Required=false)]
                                 public string LongShortMode { get; set; }
+
                                 [NameInMap("Maxrate")]
                                 [Validation(Required=false)]
                                 public string Maxrate { get; set; }
+
                                 [NameInMap("Pad")]
                                 [Validation(Required=false)]
                                 public string Pad { get; set; }
+
                                 [NameInMap("PixFmt")]
                                 [Validation(Required=false)]
                                 public string PixFmt { get; set; }
+
                                 [NameInMap("Preset")]
                                 [Validation(Required=false)]
                                 public string Preset { get; set; }
+
                                 [NameInMap("Profile")]
                                 [Validation(Required=false)]
                                 public string Profile { get; set; }
+
                                 [NameInMap("Remove")]
                                 [Validation(Required=false)]
                                 public string Remove { get; set; }
+
                                 [NameInMap("ScanMode")]
                                 [Validation(Required=false)]
                                 public string ScanMode { get; set; }
+
                                 [NameInMap("Width")]
                                 [Validation(Required=false)]
                                 public string Width { get; set; }
-                            };
+
+                            }
 
                         }
+
                         [NameInMap("TemplateId")]
                         [Validation(Required=false)]
                         public string TemplateId { get; set; }
-                    };
+
+                    }
 
                 }
+
+                [NameInMap("RequestId")]
+                [Validation(Required=false)]
                 public string RequestId { get; set; }
+
+                [NameInMap("ScheduleConfig")]
+                [Validation(Required=false)]
                 public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListScheduleConfig ScheduleConfig { get; set; }
                 public class GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListScheduleConfig : TeaModel {
                     [NameInMap("PipelineId")]
@@ -903,18 +1181,34 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public int? Priority { get; set; }
 
                 }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
-                public Dictionary<string, string> SubmitResultJson { get; set; }
+
+                [NameInMap("SubmitResultJson")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> SubmitResultJson { get; set; }
+
+                [NameInMap("SubmitTime")]
+                [Validation(Required=false)]
                 public string SubmitTime { get; set; }
+
+                [NameInMap("UserData")]
+                [Validation(Required=false)]
                 public string UserData { get; set; }
+
             }
+
             [NameInMap("TriggerSource")]
             [Validation(Required=false)]
             public string TriggerSource { get; set; }
+
             [NameInMap("UserData")]
             [Validation(Required=false)]
             public string UserData { get; set; }
-        };
+
+        }
 
     }
 

@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public List<ListTemplatesResponseBodyTemplates> Templates { get; set; }
         public class ListTemplatesResponseBodyTemplates : TeaModel {
+            /// <summary>
+            /// ClipsParam
+            /// </summary>
             [NameInMap("ClipsParam")]
             [Validation(Required=false)]
             public string ClipsParam { get; set; }

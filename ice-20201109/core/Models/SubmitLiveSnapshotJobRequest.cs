@@ -24,13 +24,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("Bucket")]
             [Validation(Required=false)]
             public string Bucket { get; set; }
+
             [NameInMap("Endpoint")]
             [Validation(Required=false)]
             public string Endpoint { get; set; }
+
             [NameInMap("StorageType")]
             [Validation(Required=false)]
             public string StorageType { get; set; }
-        };
+
+        }
 
         [NameInMap("StreamInput")]
         [Validation(Required=false)]
@@ -39,10 +42,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
+
             [NameInMap("Url")]
             [Validation(Required=false)]
             public string Url { get; set; }
-        };
+
+        }
 
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

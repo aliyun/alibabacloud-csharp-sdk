@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string MediaTags { get; set; }
 
+        [NameInMap("ReferenceId")]
+        [Validation(Required=false)]
+        public string ReferenceId { get; set; }
+
         [NameInMap("Title")]
         [Validation(Required=false)]
         public string Title { get; set; }

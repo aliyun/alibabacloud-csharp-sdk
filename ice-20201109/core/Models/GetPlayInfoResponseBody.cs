@@ -16,22 +16,28 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("CoverURL")]
             [Validation(Required=false)]
             public string CoverURL { get; set; }
+
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
+
             [NameInMap("MediaId")]
             [Validation(Required=false)]
             public string MediaId { get; set; }
+
             [NameInMap("MediaType")]
             [Validation(Required=false)]
             public string MediaType { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
-        };
+
+        }
 
         [NameInMap("PlayInfoList")]
         [Validation(Required=false)]
@@ -85,6 +91,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public long? Height { get; set; }
 
+            [NameInMap("JobId")]
+            [Validation(Required=false)]
+            public string JobId { get; set; }
+
             [NameInMap("ModificationTime")]
             [Validation(Required=false)]
             public string ModificationTime { get; set; }
@@ -104,6 +114,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            [NameInMap("StreamTags")]
+            [Validation(Required=false)]
+            public string StreamTags { get; set; }
 
             [NameInMap("StreamType")]
             [Validation(Required=false)]

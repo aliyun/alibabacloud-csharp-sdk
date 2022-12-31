@@ -16,19 +16,24 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("CateId")]
             [Validation(Required=false)]
             public long? CateId { get; set; }
+
             [NameInMap("CateName")]
             [Validation(Required=false)]
             public string CateName { get; set; }
+
             [NameInMap("Level")]
             [Validation(Required=false)]
             public long? Level { get; set; }
+
             [NameInMap("ParentId")]
             [Validation(Required=false)]
             public long? ParentId { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

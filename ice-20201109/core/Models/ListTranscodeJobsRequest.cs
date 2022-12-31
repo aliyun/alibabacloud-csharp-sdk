@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string EndOfCreateTime { get; set; }
 
-        [NameInMap("JobId")]
-        [Validation(Required=false)]
-        public string JobId { get; set; }
-
         [NameInMap("NextPageToken")]
         [Validation(Required=false)]
         public string NextPageToken { get; set; }
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("ParentJobId")]
+        [Validation(Required=false)]
+        public string ParentJobId { get; set; }
 
         [NameInMap("StartOfCreateTime")]
         [Validation(Required=false)]

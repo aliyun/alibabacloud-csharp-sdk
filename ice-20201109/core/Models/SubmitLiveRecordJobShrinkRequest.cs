@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitLiveRecordJobShrinkRequest : TeaModel {
+        /// <summary>
+        /// 代表资源名称的资源属性字段
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// 回调地址
+        /// </summary>
         [NameInMap("NotifyUrl")]
         [Validation(Required=false)]
         public string NotifyUrl { get; set; }
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string StreamInputShrink { get; set; }
 
+        /// <summary>
+        /// 录制模板ID
+        /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }

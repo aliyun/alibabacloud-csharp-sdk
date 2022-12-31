@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetPlayInfoRequest : TeaModel {
+        [NameInMap("InputURL")]
+        [Validation(Required=false)]
+        public string InputURL { get; set; }
+
         [NameInMap("MediaId")]
         [Validation(Required=false)]
         public string MediaId { get; set; }

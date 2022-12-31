@@ -24,10 +24,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("InputUrl")]
             [Validation(Required=false)]
             public string InputUrl { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
-        };
+
+        }
 
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
@@ -40,10 +42,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public string EndTime { get; set; }
+
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
-        };
+
+        }
 
         [NameInMap("TranscodeOutput")]
         [Validation(Required=false)]
@@ -52,10 +56,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("DomainName")]
             [Validation(Required=false)]
             public string DomainName { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
-        };
+
+        }
 
     }
 

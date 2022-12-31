@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string PlayDuration { get; set; }
 
+            [NameInMap("PlayTs")]
+            [Validation(Required=false)]
+            public string PlayTs { get; set; }
+
             [NameInMap("PlayType")]
             [Validation(Required=false)]
             public string PlayType { get; set; }

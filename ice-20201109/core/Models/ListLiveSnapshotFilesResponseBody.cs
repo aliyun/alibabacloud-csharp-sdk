@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public bool? IsOverlay { get; set; }
 
+            /// <summary>
+            /// OSS bucket。
+            /// </summary>
             [NameInMap("OssBucket")]
             [Validation(Required=false)]
             public string OssBucket { get; set; }

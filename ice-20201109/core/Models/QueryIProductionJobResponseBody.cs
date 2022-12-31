@@ -28,10 +28,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("Media")]
             [Validation(Required=false)]
             public string Media { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
-        };
+
+        }
 
         [NameInMap("JobId")]
         [Validation(Required=false)]
@@ -52,10 +54,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("Media")]
             [Validation(Required=false)]
             public string Media { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
-        };
+
+        }
 
         [NameInMap("OutputFiles")]
         [Validation(Required=false)]
@@ -80,10 +84,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("PipelineId")]
             [Validation(Required=false)]
             public string PipelineId { get; set; }
+
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }
-        };
+
+        }
 
         [NameInMap("Status")]
         [Validation(Required=false)]

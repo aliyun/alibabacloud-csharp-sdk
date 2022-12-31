@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class AddTemplateResponseBody : TeaModel {
+        /// <summary>
+        /// Id of the request
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -20,31 +23,40 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("Config")]
             [Validation(Required=false)]
             public string Config { get; set; }
+
             [NameInMap("CoverUrl")]
             [Validation(Required=false)]
             public string CoverUrl { get; set; }
+
             [NameInMap("CreateSource")]
             [Validation(Required=false)]
             public string CreateSource { get; set; }
+
             [NameInMap("ModifiedSource")]
             [Validation(Required=false)]
             public string ModifiedSource { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
             [NameInMap("PreviewMedia")]
             [Validation(Required=false)]
             public string PreviewMedia { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
             public string TemplateId { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
-        };
+
+        }
 
     }
 

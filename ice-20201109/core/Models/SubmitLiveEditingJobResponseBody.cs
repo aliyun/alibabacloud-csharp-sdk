@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("VodMediaId")]
+        [Validation(Required=false)]
+        public string VodMediaId { get; set; }
+
     }
 
 }

@@ -25,10 +25,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public List<QuerySmarttagJobResponseBodyResultsResult> Result { get; set; }
             public class QuerySmarttagJobResponseBodyResultsResult : TeaModel {
+                [NameInMap("Data")]
+                [Validation(Required=false)]
                 public string Data { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("UserData")]
         [Validation(Required=false)]

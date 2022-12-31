@@ -33,10 +33,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public List<ListLiveTranscodeJobsResponseBodyJobListOutputStreamStreamInfos> StreamInfos { get; set; }
                 public class ListLiveTranscodeJobsResponseBodyJobListOutputStreamStreamInfos : TeaModel {
+                    [NameInMap("OutputUrl")]
+                    [Validation(Required=false)]
                     public string OutputUrl { get; set; }
+
+                    [NameInMap("Type")]
+                    [Validation(Required=false)]
                     public string Type { get; set; }
+
                 }
-            };
+
+            }
 
             [NameInMap("StartMode")]
             [Validation(Required=false)]
@@ -53,10 +60,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [NameInMap("InputUrl")]
                 [Validation(Required=false)]
                 public string InputUrl { get; set; }
+
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
-            };
+
+            }
 
             [NameInMap("TemplateId")]
             [Validation(Required=false)]

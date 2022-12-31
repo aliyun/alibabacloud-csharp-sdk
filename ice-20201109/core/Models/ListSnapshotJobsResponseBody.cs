@@ -36,10 +36,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [NameInMap("Media")]
                 [Validation(Required=false)]
                 public string Media { get; set; }
+
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
-            };
+
+            }
 
             [NameInMap("JobId")]
             [Validation(Required=false)]
@@ -60,10 +62,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [NameInMap("Media")]
                 [Validation(Required=false)]
                 public string Media { get; set; }
+
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
-            };
+
+            }
 
             [NameInMap("PipelineId")]
             [Validation(Required=false)]

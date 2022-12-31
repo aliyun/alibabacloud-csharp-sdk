@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string ContentType { get; set; }
 
+        /// <summary>
+        /// input
+        /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]
         public SubmitSmarttagJobRequestInput Input { get; set; }
@@ -28,10 +31,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("Media")]
             [Validation(Required=false)]
             public string Media { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
-        };
+
+        }
 
         [NameInMap("NotifyUrl")]
         [Validation(Required=false)]
@@ -41,6 +46,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string Params { get; set; }
 
+        /// <summary>
+        /// scheduleConfig
+        /// </summary>
         [NameInMap("ScheduleConfig")]
         [Validation(Required=false)]
         public SubmitSmarttagJobRequestScheduleConfig ScheduleConfig { get; set; }
@@ -48,10 +56,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("PipelineId")]
             [Validation(Required=false)]
             public string PipelineId { get; set; }
+
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public string Priority { get; set; }
-        };
+
+        }
 
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

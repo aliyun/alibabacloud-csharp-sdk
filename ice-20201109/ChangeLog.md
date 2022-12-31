@@ -1,3 +1,6 @@
+2022-12-31 Version: 1.3.4
+- Add RequestSource param to GetEditingProject API.
+
 2022-08-29 Version: 1.3.1
 - Change RegisterMediaInfo.
 
