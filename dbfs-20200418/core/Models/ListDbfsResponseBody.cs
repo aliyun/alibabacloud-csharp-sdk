@@ -109,6 +109,28 @@ namespace AlibabaCloud.SDK.DBFS20200418.Models
             [Validation(Required=false)]
             public int? SizeG { get; set; }
 
+            [NameInMap("SnapshotInfo")]
+            [Validation(Required=false)]
+            public ListDbfsResponseBodyDBFSInfoSnapshotInfo SnapshotInfo { get; set; }
+            public class ListDbfsResponseBodyDBFSInfoSnapshotInfo : TeaModel {
+                [NameInMap("LinkId")]
+                [Validation(Required=false)]
+                public string LinkId { get; set; }
+
+                [NameInMap("PolicyId")]
+                [Validation(Required=false)]
+                public string PolicyId { get; set; }
+
+                [NameInMap("SnapshotCount")]
+                [Validation(Required=false)]
+                public int? SnapshotCount { get; set; }
+
+                [NameInMap("TotalSize")]
+                [Validation(Required=false)]
+                public long? TotalSize { get; set; }
+
+            }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
