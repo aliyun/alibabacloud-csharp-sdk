@@ -14399,6 +14399,13 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return await GetCloudConnectNetworkUseLimitWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ****
+          *
+          * @param request GetQosAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetQosAttributeResponse
+         */
         public GetQosAttributeResponse GetQosAttributeWithOptions(GetQosAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14430,6 +14437,13 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<GetQosAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ****
+          *
+          * @param request GetQosAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetQosAttributeResponse
+         */
         public async Task<GetQosAttributeResponse> GetQosAttributeWithOptionsAsync(GetQosAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14461,12 +14475,24 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<GetQosAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ****
+          *
+          * @param request GetQosAttributeRequest
+          * @return GetQosAttributeResponse
+         */
         public GetQosAttributeResponse GetQosAttribute(GetQosAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetQosAttributeWithOptions(request, runtime);
         }
 
+        /**
+          * ****
+          *
+          * @param request GetQosAttributeRequest
+          * @return GetQosAttributeResponse
+         */
         public async Task<GetQosAttributeResponse> GetQosAttributeAsync(GetQosAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -22639,10 +22665,6 @@ namespace AlibabaCloud.SDK.Smartag20180313
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressType))
-            {
-                query["AddressType"] = request.AddressType;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
             {
                 query["Domain"] = request.Domain;
@@ -22710,10 +22732,6 @@ namespace AlibabaCloud.SDK.Smartag20180313
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressType))
-            {
-                query["AddressType"] = request.AddressType;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
             {
                 query["Domain"] = request.Domain;

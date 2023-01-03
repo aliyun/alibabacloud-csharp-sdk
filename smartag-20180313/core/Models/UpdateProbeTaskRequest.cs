@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class UpdateProbeTaskRequest : TeaModel {
-        [NameInMap("AddressType")]
-        [Validation(Required=false)]
-        public string AddressType { get; set; }
-
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
