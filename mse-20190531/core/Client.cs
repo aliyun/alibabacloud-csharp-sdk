@@ -13632,6 +13632,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["ConfigType"] = request.ConfigType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendedTypesEnable))
+            {
+                query["ExtendedTypesEnable"] = request.ExtendedTypesEnable;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitLimit))
             {
                 query["InitLimit"] = request.InitLimit;
@@ -13744,6 +13748,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigType))
             {
                 query["ConfigType"] = request.ConfigType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendedTypesEnable))
+            {
+                query["ExtendedTypesEnable"] = request.ExtendedTypesEnable;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitLimit))
             {

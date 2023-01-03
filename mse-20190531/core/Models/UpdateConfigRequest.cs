@@ -71,6 +71,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string ConfigType { get; set; }
 
+        [NameInMap("ExtendedTypesEnable")]
+        [Validation(Required=false)]
+        public string ExtendedTypesEnable { get; set; }
+
         /// <summary>
         /// The maximum connection duration of the instance. This parameter is valid for ZooKeeper instances. Unit: seconds.
         /// </summary>
