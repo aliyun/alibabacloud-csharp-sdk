@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
-    public class DeleteHubClusterRequest : TeaModel {
+    public class DeleteHubClusterShrinkRequest : TeaModel {
         /// <summary>
         /// The ID of the master instance.
         /// </summary>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
 
         [NameInMap("RetainResources")]
         [Validation(Required=false)]
-        public List<string> RetainResources { get; set; }
+        public string RetainResourcesShrink { get; set; }
 
     }
 

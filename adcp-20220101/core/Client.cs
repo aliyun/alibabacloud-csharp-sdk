@@ -272,9 +272,15 @@ namespace AlibabaCloud.SDK.Adcp20220101
             return await CreateHubClusterWithOptionsAsync(request, runtime);
         }
 
-        public DeleteHubClusterResponse DeleteHubClusterWithOptions(DeleteHubClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteHubClusterResponse DeleteHubClusterWithOptions(DeleteHubClusterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteHubClusterShrinkRequest request = new DeleteHubClusterShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RetainResources))
+            {
+                request.RetainResourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RetainResources, "RetainResources", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
@@ -283,6 +289,10 @@ namespace AlibabaCloud.SDK.Adcp20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
             {
                 query["Force"] = request.Force;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetainResourcesShrink))
+            {
+                query["RetainResources"] = request.RetainResourcesShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -303,9 +313,15 @@ namespace AlibabaCloud.SDK.Adcp20220101
             return TeaModel.ToObject<DeleteHubClusterResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DeleteHubClusterResponse> DeleteHubClusterWithOptionsAsync(DeleteHubClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteHubClusterResponse> DeleteHubClusterWithOptionsAsync(DeleteHubClusterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteHubClusterShrinkRequest request = new DeleteHubClusterShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RetainResources))
+            {
+                request.RetainResourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RetainResources, "RetainResources", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
@@ -314,6 +330,10 @@ namespace AlibabaCloud.SDK.Adcp20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
             {
                 query["Force"] = request.Force;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetainResourcesShrink))
+            {
+                query["RetainResources"] = request.RetainResourcesShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
