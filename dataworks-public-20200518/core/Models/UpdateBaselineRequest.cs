@@ -97,6 +97,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public bool? Enabled { get; set; }
 
+        [NameInMap("NodeIds")]
+        [Validation(Required=false)]
+        public string NodeIds { get; set; }
+
         [NameInMap("OvertimeSettings")]
         [Validation(Required=false)]
         public List<UpdateBaselineRequestOvertimeSettings> OvertimeSettings { get; set; }
@@ -123,13 +127,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
-        [NameInMap("RemoveTaskIds")]
+        [NameInMap("RemoveNodeIds")]
         [Validation(Required=false)]
-        public string RemoveTaskIds { get; set; }
-
-        [NameInMap("TaskIds")]
-        [Validation(Required=false)]
-        public string TaskIds { get; set; }
+        public string RemoveNodeIds { get; set; }
 
     }
 
