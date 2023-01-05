@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Qssj20220112.Models
             [Validation(Required=false)]
             public double? Sales { get; set; }
 
+            [NameInMap("SalesVolume")]
+            [Validation(Required=false)]
+            public long? SalesVolume { get; set; }
+
             [NameInMap("ShopCount")]
             [Validation(Required=false)]
             public long? ShopCount { get; set; }
