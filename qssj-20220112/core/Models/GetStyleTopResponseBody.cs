@@ -57,9 +57,13 @@ namespace AlibabaCloud.SDK.Qssj20220112.Models
             [Validation(Required=false)]
             public string ProductLink { get; set; }
 
+            [NameInMap("Sales")]
+            [Validation(Required=false)]
+            public double? Sales { get; set; }
+
             [NameInMap("SalesVolume")]
             [Validation(Required=false)]
-            public double? SalesVolume { get; set; }
+            public long? SalesVolume { get; set; }
 
             [NameInMap("SearchVolume")]
             [Validation(Required=false)]
