@@ -16,16 +16,20 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [NameInMap("AccessKeyId")]
             [Validation(Required=false)]
             public string AccessKeyId { get; set; }
+
             [NameInMap("AccessKeySecret")]
             [Validation(Required=false)]
             public string AccessKeySecret { get; set; }
+
             [NameInMap("CreateDate")]
             [Validation(Required=false)]
             public string CreateDate { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

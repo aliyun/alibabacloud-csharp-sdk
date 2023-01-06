@@ -29,11 +29,41 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public List<ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfo> UserBasicInfo { get; set; }
             public class ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfo : TeaModel {
+                [NameInMap("DisplayName")]
+                [Validation(Required=false)]
                 public string DisplayName { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTags Tags { get; set; }
+                public class ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTagsTag> Tag { get; set; }
+                    public class ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTagsTag : TeaModel {
+                        [NameInMap("TagKey")]
+                        [Validation(Required=false)]
+                        public string TagKey { get; set; }
+
+                        [NameInMap("TagValue")]
+                        [Validation(Required=false)]
+                        public string TagValue { get; set; }
+
+                    }
+
+                }
+
+                [NameInMap("UserId")]
+                [Validation(Required=false)]
                 public string UserId { get; set; }
+
+                [NameInMap("UserPrincipalName")]
+                [Validation(Required=false)]
                 public string UserPrincipalName { get; set; }
+
             }
-        };
+
+        }
 
     }
 

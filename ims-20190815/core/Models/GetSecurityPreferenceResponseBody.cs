@@ -26,6 +26,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 public bool? AllowUserToManageAccessKeys { get; set; }
 
             }
+
             [NameInMap("LoginProfilePreference")]
             [Validation(Required=false)]
             public GetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference LoginProfilePreference { get; set; }
@@ -51,6 +52,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 public int? LoginSessionDuration { get; set; }
 
             }
+
             [NameInMap("MFAPreference")]
             [Validation(Required=false)]
             public GetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference MFAPreference { get; set; }
@@ -60,6 +62,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 public bool? AllowUserToManageMFADevices { get; set; }
 
             }
+
             [NameInMap("PersonalInfoPreference")]
             [Validation(Required=false)]
             public GetSecurityPreferenceResponseBodySecurityPreferencePersonalInfoPreference PersonalInfoPreference { get; set; }
@@ -69,7 +72,8 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 public bool? AllowUserToManagePersonalDingTalk { get; set; }
 
             }
-        };
+
+        }
 
     }
 

@@ -29,12 +29,25 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public List<ListUsersForGroupResponseBodyUsersUser> User { get; set; }
             public class ListUsersForGroupResponseBodyUsersUser : TeaModel {
+                [NameInMap("DisplayName")]
+                [Validation(Required=false)]
                 public string DisplayName { get; set; }
+
+                [NameInMap("JoinDate")]
+                [Validation(Required=false)]
                 public string JoinDate { get; set; }
+
+                [NameInMap("UserId")]
+                [Validation(Required=false)]
                 public string UserId { get; set; }
+
+                [NameInMap("UserPrincipalName")]
+                [Validation(Required=false)]
                 public string UserPrincipalName { get; set; }
+
             }
-        };
+
+        }
 
     }
 

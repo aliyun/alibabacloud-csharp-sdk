@@ -20,13 +20,16 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [NameInMap("AuxiliaryDomain")]
             [Validation(Required=false)]
             public string AuxiliaryDomain { get; set; }
+
             [NameInMap("MetadataDocument")]
             [Validation(Required=false)]
             public string MetadataDocument { get; set; }
+
             [NameInMap("SsoEnabled")]
             [Validation(Required=false)]
             public bool? SsoEnabled { get; set; }
-        };
+
+        }
 
     }
 

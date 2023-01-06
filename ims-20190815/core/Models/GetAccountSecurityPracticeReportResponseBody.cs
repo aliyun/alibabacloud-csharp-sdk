@@ -54,10 +54,12 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 public int? UnusedAkNum { get; set; }
 
             }
+
             [NameInMap("Score")]
             [Validation(Required=false)]
             public int? Score { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -20,13 +20,16 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [NameInMap("Base32StringSeed")]
             [Validation(Required=false)]
             public string Base32StringSeed { get; set; }
+
             [NameInMap("QRCodePNG")]
             [Validation(Required=false)]
             public string QRCodePNG { get; set; }
+
             [NameInMap("SerialNumber")]
             [Validation(Required=false)]
             public string SerialNumber { get; set; }
-        };
+
+        }
 
     }
 

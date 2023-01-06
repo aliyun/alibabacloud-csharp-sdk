@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [NameInMap("LastUsedDate")]
             [Validation(Required=false)]
             public string LastUsedDate { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

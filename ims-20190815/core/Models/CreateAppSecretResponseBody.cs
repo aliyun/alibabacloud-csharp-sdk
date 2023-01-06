@@ -16,16 +16,20 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [NameInMap("AppId")]
             [Validation(Required=false)]
             public string AppId { get; set; }
+
             [NameInMap("AppSecretId")]
             [Validation(Required=false)]
             public string AppSecretId { get; set; }
+
             [NameInMap("AppSecretValue")]
             [Validation(Required=false)]
             public string AppSecretValue { get; set; }
+
             [NameInMap("CreateDate")]
             [Validation(Required=false)]
             public string CreateDate { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

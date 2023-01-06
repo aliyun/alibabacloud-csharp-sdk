@@ -29,8 +29,16 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public List<ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADevice> VirtualMFADevice { get; set; }
             public class ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADevice : TeaModel {
+                [NameInMap("ActivateDate")]
+                [Validation(Required=false)]
                 public string ActivateDate { get; set; }
+
+                [NameInMap("SerialNumber")]
+                [Validation(Required=false)]
                 public string SerialNumber { get; set; }
+
+                [NameInMap("User")]
+                [Validation(Required=false)]
                 public ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADeviceUser User { get; set; }
                 public class ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADeviceUser : TeaModel {
                     [NameInMap("DisplayName")]
@@ -46,8 +54,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                     public string UserPrincipalName { get; set; }
 
                 }
+
             }
-        };
+
+        }
 
     }
 
