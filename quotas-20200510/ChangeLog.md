@@ -1,3 +1,6 @@
+2023-01-06 Version: 1.0.2
+- Quota category supported whiteListLabel.
+
 2022-09-05 Version: 1.0.1
 - Added quota template service.
 

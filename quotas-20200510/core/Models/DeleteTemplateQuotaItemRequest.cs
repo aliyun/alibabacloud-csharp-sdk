@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class DeleteTemplateQuotaItemRequest : TeaModel {
+        /// <summary>
+        /// The ID of the quota template.
+        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
