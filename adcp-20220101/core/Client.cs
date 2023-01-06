@@ -150,9 +150,20 @@ namespace AlibabaCloud.SDK.Adcp20220101
             return await AttachClusterToHubWithOptionsAsync(request, runtime);
         }
 
-        public CreateHubClusterResponse CreateHubClusterWithOptions(CreateHubClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateHubClusterResponse CreateHubClusterWithOptions(CreateHubClusterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateHubClusterShrinkRequest request = new CreateHubClusterShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ClusterConfiguration))
+            {
+                request.ClusterConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ClusterConfiguration, "ClusterConfiguration", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterConfigurationShrink))
+            {
+                query["ClusterConfiguration"] = request.ClusterConfigurationShrink;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiServerPublicEip))
             {
@@ -188,6 +199,7 @@ namespace AlibabaCloud.SDK.Adcp20220101
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -205,9 +217,20 @@ namespace AlibabaCloud.SDK.Adcp20220101
             return TeaModel.ToObject<CreateHubClusterResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CreateHubClusterResponse> CreateHubClusterWithOptionsAsync(CreateHubClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateHubClusterResponse> CreateHubClusterWithOptionsAsync(CreateHubClusterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateHubClusterShrinkRequest request = new CreateHubClusterShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ClusterConfiguration))
+            {
+                request.ClusterConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ClusterConfiguration, "ClusterConfiguration", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterConfigurationShrink))
+            {
+                query["ClusterConfiguration"] = request.ClusterConfigurationShrink;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiServerPublicEip))
             {
@@ -243,6 +266,7 @@ namespace AlibabaCloud.SDK.Adcp20220101
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
