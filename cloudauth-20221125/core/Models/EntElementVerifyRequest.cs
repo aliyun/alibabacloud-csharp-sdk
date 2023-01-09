@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -8,11 +11,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudauth20221125.Models
 {
-    public class EntVerifyRequest : TeaModel {
-        [NameInMap("AccountNo")]
-        [Validation(Required=false)]
-        public string AccountNo { get; set; }
-
+    public class EntElementVerifyRequest : TeaModel {
         [NameInMap("EntName")]
         [Validation(Required=false)]
         public string EntName { get; set; }
@@ -24,10 +23,6 @@ namespace AlibabaCloud.SDK.Cloudauth20221125.Models
         [NameInMap("LegalPersonCertNo")]
         [Validation(Required=false)]
         public string LegalPersonCertNo { get; set; }
-
-        [NameInMap("LegalPersonMobile")]
-        [Validation(Required=false)]
-        public string LegalPersonMobile { get; set; }
 
         [NameInMap("LegalPersonName")]
         [Validation(Required=false)]
@@ -44,14 +39,6 @@ namespace AlibabaCloud.SDK.Cloudauth20221125.Models
         [NameInMap("MerchantUserId")]
         [Validation(Required=false)]
         public string MerchantUserId { get; set; }
-
-        [NameInMap("RiskModelVersion")]
-        [Validation(Required=false)]
-        public string RiskModelVersion { get; set; }
-
-        [NameInMap("RiskVerifyType")]
-        [Validation(Required=false)]
-        public string RiskVerifyType { get; set; }
 
         [NameInMap("SceneCode")]
         [Validation(Required=false)]

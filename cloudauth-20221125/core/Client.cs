@@ -37,6 +37,136 @@ namespace AlibabaCloud.SDK.Cloudauth20221125
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        public EntElementVerifyResponse EntElementVerifyWithOptions(EntElementVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntName))
+            {
+                query["EntName"] = request.EntName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InfoVerifyType))
+            {
+                query["InfoVerifyType"] = request.InfoVerifyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonCertNo))
+            {
+                query["LegalPersonCertNo"] = request.LegalPersonCertNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonName))
+            {
+                query["LegalPersonName"] = request.LegalPersonName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LicenseNo))
+            {
+                query["LicenseNo"] = request.LicenseNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                query["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantUserId))
+            {
+                query["MerchantUserId"] = request.MerchantUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
+            {
+                query["SceneCode"] = request.SceneCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAuthorization))
+            {
+                query["UserAuthorization"] = request.UserAuthorization;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EntElementVerify",
+                Version = "2022-11-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EntElementVerifyResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<EntElementVerifyResponse> EntElementVerifyWithOptionsAsync(EntElementVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntName))
+            {
+                query["EntName"] = request.EntName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InfoVerifyType))
+            {
+                query["InfoVerifyType"] = request.InfoVerifyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonCertNo))
+            {
+                query["LegalPersonCertNo"] = request.LegalPersonCertNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonName))
+            {
+                query["LegalPersonName"] = request.LegalPersonName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LicenseNo))
+            {
+                query["LicenseNo"] = request.LicenseNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                query["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantUserId))
+            {
+                query["MerchantUserId"] = request.MerchantUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
+            {
+                query["SceneCode"] = request.SceneCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAuthorization))
+            {
+                query["UserAuthorization"] = request.UserAuthorization;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EntElementVerify",
+                Version = "2022-11-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EntElementVerifyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public EntElementVerifyResponse EntElementVerify(EntElementVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EntElementVerifyWithOptions(request, runtime);
+        }
+
+        public async Task<EntElementVerifyResponse> EntElementVerifyAsync(EntElementVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EntElementVerifyWithOptionsAsync(request, runtime);
+        }
+
         public EntVerifyResponse EntVerifyWithOptions(EntVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
