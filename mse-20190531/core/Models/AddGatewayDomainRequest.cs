@@ -59,7 +59,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The type of the protocol.
+        /// The type of the protocol. Valid values:
+        /// 
+        /// *   `HTTP`
+        /// *   `HTTPS`
         /// </summary>
         [NameInMap("Protocol")]
         [Validation(Required=false)]

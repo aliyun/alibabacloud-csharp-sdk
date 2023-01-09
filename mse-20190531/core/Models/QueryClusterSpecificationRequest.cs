@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ConnectType { get; set; }
 
         /// <summary>
-        /// The edition of the Microservices Engine (MSE) instance that you want to purchase.
+        /// The edition of the MSE instance that you want to purchase.
         /// 
         /// *   mse_pro: Professional Edition
         /// *   mse_dev: Developer Edition

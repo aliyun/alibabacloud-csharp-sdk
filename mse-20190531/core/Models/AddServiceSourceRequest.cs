@@ -12,16 +12,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The language in which the returned information is displayed. Valid values:
         /// 
-        /// - zh-CN: Chinese. This is the default value.
-        /// - en-US: English.
-        /// - ja: Japanese.
+        /// *   zh-CN: Chinese. This is the default value.
+        /// *   en-US: English.
+        /// *   ja: Japanese.
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The address of the service.
+        /// The endpoint.
         /// </summary>
         [NameInMap("Address")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// GroupList.
+        /// The list of service groups.
         /// </summary>
         [NameInMap("GroupList")]
         [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? EnableIngress { get; set; }
 
             /// <summary>
-            /// Update the Ingress Status.
+            /// Specifies whether to update the Ingress status.
             /// </summary>
             [NameInMap("EnableStatus")]
             [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string IngressClass { get; set; }
 
             /// <summary>
-            /// The namespace that you want to monitor.
+            /// The namespace whose resources you want to monitor.
             /// </summary>
             [NameInMap("WatchNamespace")]
             [Validation(Required=false)]
@@ -79,28 +79,40 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The name of the service.
+        /// The name.
+        /// 
+        /// >  The parameter value varies based on the source type.
+        /// 
+        /// *   If Type is set to K8S, this parameter specifies the name of the ACK cluster.
+        /// 
+        /// *   If Type is set to NACOS, this parameter specifies the ID of the instance.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Service root path array.
+        /// An array of service root paths.
         /// </summary>
         [NameInMap("PathList")]
         [Validation(Required=false)]
         public List<string> PathList { get; set; }
 
         /// <summary>
-        /// The type of the service source.
+        /// The service source.
+        /// 
+        /// *   K8S: ACK cluster
+        /// *   MSE: Nacos instance
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }
 
         /// <summary>
-        /// The service type.
+        /// The type of the service source. Valid values:
+        /// 
+        /// *   K8S: ACK cluster
+        /// *   NACOS: Nacos instance
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

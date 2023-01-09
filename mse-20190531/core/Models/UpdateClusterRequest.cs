@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The alias of the cluster.
+        /// The alias of the instance.
         /// </summary>
         [NameInMap("ClusterAliasName")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The extended request parameter in the JSON format.
+        /// The extended request parameters in the JSON format.
         /// </summary>
         [NameInMap("RequestPars")]
         [Validation(Required=false)]

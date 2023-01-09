@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The language of the response. Valid values:
         /// 
-        /// - zh: Chinese
-        /// - en: English
+        /// *   zh: Chinese
+        /// *   en: English
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// The ID of the configuration.
+        /// The ID of the data.
         /// </summary>
         [NameInMap("DataId")]
         [Validation(Required=false)]
         public string DataId { get; set; }
 
         /// <summary>
-        /// The name of the group. Default value: `default`.
+        /// The name of the group. Default value: `default`
         /// </summary>
         [NameInMap("Group")]
         [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the cluster resides.
+        /// The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestPars { get; set; }
 
         /// <summary>
-        /// The tags of the configuration.
+        /// The tags.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

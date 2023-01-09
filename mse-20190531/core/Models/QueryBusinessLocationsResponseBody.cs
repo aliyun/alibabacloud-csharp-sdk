@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string CnName { get; set; }
 
             /// <summary>
-            /// The description of the region.
+            /// The description.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string DistrictEnName { get; set; }
 
             /// <summary>
-            /// The ID of the district.
+            /// The ID of the region.
             /// </summary>
             [NameInMap("DistrictId")]
             [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string EnName { get; set; }
 
             /// <summary>
-            /// The ID of the region.
+            /// The name.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -94,14 +94,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? Ordering { get; set; }
 
             /// <summary>
-            /// The display name of the region.
+            /// The display name.
             /// </summary>
             [NameInMap("ShowName")]
             [Validation(Required=false)]
             public string ShowName { get; set; }
 
             /// <summary>
-            /// The type of the data.
+            /// The type.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The error code returned if the request fails.
+        /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// The result of the request.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

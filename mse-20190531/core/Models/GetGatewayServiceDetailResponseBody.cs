@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetGatewayServiceDetailResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// The response code returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GatewayUniqueId { get; set; }
 
             /// <summary>
-            /// The time when the service was added.
+            /// The creation time.
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// The time when the service was last modified.
+            /// The last modification time.
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
@@ -65,10 +65,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string GroupName { get; set; }
 
+            /// <summary>
+            /// Indicates whether the health check is enabled.
+            /// </summary>
             [NameInMap("HealthCheck")]
             [Validation(Required=false)]
             public string HealthCheck { get; set; }
 
+            /// <summary>
+            /// The status of the health check. Valid values:
+            /// </summary>
             [NameInMap("HealthStatus")]
             [Validation(Required=false)]
             public string HealthStatus { get; set; }
@@ -81,28 +87,28 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// The IP addresses of the service.
+            /// The IP address of the service.
             /// </summary>
             [NameInMap("Ips")]
             [Validation(Required=false)]
             public List<string> Ips { get; set; }
 
             /// <summary>
-            /// The details of tags.
+            /// The details of the tag.
             /// </summary>
             [NameInMap("LabelDetails")]
             [Validation(Required=false)]
             public List<GetGatewayServiceDetailResponseBodyDataLabelDetails> LabelDetails { get; set; }
             public class GetGatewayServiceDetailResponseBodyDataLabelDetails : TeaModel {
                 /// <summary>
-                /// The key of the tag.
+                /// The tag.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The values of the tag.
+                /// The key of the tag.
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
@@ -125,46 +131,73 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The name of the namespace.
+            /// The namespace.
             /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
 
+            /// <summary>
+            /// The traffic policy of service ports.
+            /// </summary>
             [NameInMap("PortTrafficPolicyList")]
             [Validation(Required=false)]
             public List<GetGatewayServiceDetailResponseBodyDataPortTrafficPolicyList> PortTrafficPolicyList { get; set; }
             public class GetGatewayServiceDetailResponseBodyDataPortTrafficPolicyList : TeaModel {
+                /// <summary>
+                /// The unique ID of the gateway.
+                /// </summary>
                 [NameInMap("GatewayUniqueId")]
                 [Validation(Required=false)]
                 public string GatewayUniqueId { get; set; }
 
+                /// <summary>
+                /// The creation time.
+                /// </summary>
                 [NameInMap("GmtCreate")]
                 [Validation(Required=false)]
                 public string GmtCreate { get; set; }
 
+                /// <summary>
+                /// The modification time.
+                /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]
                 public string GmtModified { get; set; }
 
+                /// <summary>
+                /// The ID of the port configuration.
+                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
+                /// <summary>
+                /// The ID of the service.
+                /// </summary>
                 [NameInMap("ServiceId")]
                 [Validation(Required=false)]
                 public long? ServiceId { get; set; }
 
+                /// <summary>
+                /// The service port number.
+                /// </summary>
                 [NameInMap("ServicePort")]
                 [Validation(Required=false)]
                 public int? ServicePort { get; set; }
 
+                /// <summary>
+                /// The traffic policy.
+                /// </summary>
                 [NameInMap("TrafficPolicy")]
                 [Validation(Required=false)]
                 public TrafficPolicy TrafficPolicy { get; set; }
 
             }
 
+            /// <summary>
+            /// The array of service ports.
+            /// </summary>
             [NameInMap("Ports")]
             [Validation(Required=false)]
             public List<int?> Ports { get; set; }
@@ -176,12 +209,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string ServiceNameInRegistry { get; set; }
 
+            /// <summary>
+            /// The protocol of the service.
+            /// </summary>
             [NameInMap("ServiceProtocol")]
             [Validation(Required=false)]
             public string ServiceProtocol { get; set; }
 
             /// <summary>
-            /// The source ID of the service.
+            /// The ID of the service source.
             /// </summary>
             [NameInMap("SourceId")]
             [Validation(Required=false)]
@@ -223,21 +259,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public GetGatewayServiceDetailResponseBodyDataVersionDetailsServiceVersion ServiceVersion { get; set; }
                 public class GetGatewayServiceDetailResponseBodyDataVersionDetailsServiceVersion : TeaModel {
                     /// <summary>
-                    /// The tags of the version.
+                    /// The tag.
                     /// </summary>
                     [NameInMap("Labels")]
                     [Validation(Required=false)]
                     public List<GetGatewayServiceDetailResponseBodyDataVersionDetailsServiceVersionLabels> Labels { get; set; }
                     public class GetGatewayServiceDetailResponseBodyDataVersionDetailsServiceVersionLabels : TeaModel {
                         /// <summary>
-                        /// The key of the tag.
+                        /// The tag.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The value of the tag.
+                        /// The key of the tag.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -246,7 +282,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     }
 
                     /// <summary>
-                    /// The name of the version.
+                    /// The version number.
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -257,28 +293,28 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// The versions of the service.
+            /// The version of the service.
             /// </summary>
             [NameInMap("Versions")]
             [Validation(Required=false)]
             public List<GetGatewayServiceDetailResponseBodyDataVersions> Versions { get; set; }
             public class GetGatewayServiceDetailResponseBodyDataVersions : TeaModel {
                 /// <summary>
-                /// The key of the tag.
+                /// The tag.
                 /// </summary>
                 [NameInMap("Label")]
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
                 /// <summary>
-                /// The type of the version.
+                /// The type.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The value of the tag.
+                /// The key of the tag.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -310,9 +346,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
-        /// - `true`: The request is successful. 
-        /// - `false`: The request fails.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   `true`: The request was successful.
+        /// *   `false`: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

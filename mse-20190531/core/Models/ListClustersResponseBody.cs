@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string EndDate { get; set; }
 
             /// <summary>
-            /// The initialization status of the instance.
+            /// The initial status of the instance.
             /// </summary>
             [NameInMap("InitStatus")]
             [Validation(Required=false)]
@@ -152,14 +152,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The error code returned.
+        /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// The HTTP status code returned.
         /// </summary>
         [NameInMap("HttpCode")]
         [Validation(Required=false)]
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The total number of instances.
+        /// The total number of returned instances.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

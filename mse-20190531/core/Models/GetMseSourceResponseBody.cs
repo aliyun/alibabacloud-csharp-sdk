@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetMseSourceResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// The response code returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Address { get; set; }
 
             /// <summary>
-            /// The ID of the cluster.
+            /// The ID of the instance.
             /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The name of the service source.
+            /// The name.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The type of the service source.
+            /// The type.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -68,10 +68,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The message returned. Valid values: 
+        /// The message returned.
         /// 
-        /// - If the request is successful, a success message is returned. 
-        /// - If the request fails, an error message is returned, such as the "TaskId not found" message.
+        /// *   If the request is successful, a success message is returned.
+        /// *   If the request fails, an error message is returned, such as the "TaskId not found" message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -85,9 +85,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
-        /// - `true`: The request is successful. 
-        /// - `false`: The request fails.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   `true`: The request was successful.
+        /// *   `false`: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

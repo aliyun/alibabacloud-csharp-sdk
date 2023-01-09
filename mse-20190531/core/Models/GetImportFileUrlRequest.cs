@@ -12,15 +12,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The language of the response. Valid values:
         /// 
-        /// - zh: Chinese
-        /// - en: English
+        /// *   zh: Chinese
+        /// *   en: English
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The type of the configuration file.
+        /// The type of the file.
         /// </summary>
         [NameInMap("ContentType")]
         [Validation(Required=false)]

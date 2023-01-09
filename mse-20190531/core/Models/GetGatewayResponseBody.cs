@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public GetGatewayResponseBodyDataLogConfigDetails LogConfigDetails { get; set; }
             public class GetGatewayResponseBodyDataLogConfigDetails : TeaModel {
                 /// <summary>
-                /// Indicates whether log shipping is enabled.
+                /// Indicates whether Log Service is activated.
                 /// </summary>
                 [NameInMap("LogEnabled")]
                 [Validation(Required=false)]
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// The tag of the instance.
+            /// The tag of the resource.
             /// </summary>
             [NameInMap("MseTag")]
             [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string PrimaryUser { get; set; }
 
             /// <summary>
-            /// The ID of the region.
+            /// The region ID.
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The HTTP status code.
+        /// The HTTP status code returned.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]

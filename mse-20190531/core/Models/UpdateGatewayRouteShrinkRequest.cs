@@ -12,15 +12,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The language of the response. Valid values:
         /// 
-        /// - zh: Chinese
-        /// - en: English
+        /// *   zh: Chinese
+        /// *   en: English
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The type of the destination service.
+        /// The destination service type.
         /// </summary>
         [NameInMap("DestinationType")]
         [Validation(Required=false)]
@@ -34,20 +34,29 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DirectResponseJSONShrink { get; set; }
 
         /// <summary>
-        /// The IDs of domain names with which the route is associated.
+        /// The associated domain name.
         /// </summary>
         [NameInMap("DomainIdListJSON")]
         [Validation(Required=false)]
         public string DomainIdListJSON { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable Web Application Firewall (WAF).
+        /// </summary>
         [NameInMap("EnableWaf")]
         [Validation(Required=false)]
         public bool? EnableWaf { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable the Fallback service.
+        /// </summary>
         [NameInMap("Fallback")]
         [Validation(Required=false)]
         public bool? Fallback { get; set; }
 
+        /// <summary>
+        /// The information about the Fallback service.
+        /// </summary>
         [NameInMap("FallbackServices")]
         [Validation(Required=false)]
         public string FallbackServicesShrink { get; set; }
@@ -81,14 +90,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The matching rules of the route.
+        /// The route matching conditions.
         /// </summary>
         [NameInMap("Predicates")]
         [Validation(Required=false)]
         public string PredicatesShrink { get; set; }
 
         /// <summary>
-        /// The configuration of the redirect action.
+        /// The information about redirection.
         /// </summary>
         [NameInMap("RedirectJSON")]
         [Validation(Required=false)]
@@ -102,7 +111,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? RouteOrder { get; set; }
 
         /// <summary>
-        /// The information about services.
+        /// The information about destination services.
         /// </summary>
         [NameInMap("Services")]
         [Validation(Required=false)]

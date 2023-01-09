@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// The ID of the authorization record.
+        /// The destination ID.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

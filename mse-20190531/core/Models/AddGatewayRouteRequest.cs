@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The ID of the domain name.
+        /// The domain ID.
         /// </summary>
         [NameInMap("DomainId")]
         [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DomainIdListJSON { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable Web Application Firewall (WAF).
+        /// Specifies whether to activate Web Application Firewall (WAF).
         /// </summary>
         [NameInMap("EnableWaf")]
         [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? Fallback { get; set; }
 
         /// <summary>
-        /// The information of the Fallback service.
+        /// The information about the Fallback service.
         /// </summary>
         [NameInMap("FallbackServices")]
         [Validation(Required=false)]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// The name.
+            /// The name of the application.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? ServiceId { get; set; }
 
             /// <summary>
-            /// The service port.
+            /// The service port number.
             /// </summary>
             [NameInMap("ServicePort")]
             [Validation(Required=false)]
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public AddGatewayRouteRequestRedirectJSON RedirectJSON { get; set; }
         public class AddGatewayRouteRequestRedirectJSON : TeaModel {
             /// <summary>
-            /// The return code.
+            /// The status code returned.
             /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
@@ -499,7 +499,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? ServiceId { get; set; }
 
             /// <summary>
-            /// The service port.
+            /// The service port number.
             /// </summary>
             [NameInMap("ServicePort")]
             [Validation(Required=false)]

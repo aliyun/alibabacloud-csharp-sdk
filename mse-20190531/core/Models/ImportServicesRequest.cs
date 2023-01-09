@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ImportServicesRequest : TeaModel {
         /// <summary>
-        /// The data structure.
+        /// The language of the response. Valid values:
+        /// 
+        /// *   zh: Chinese
+        /// *   en: English
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
@@ -31,7 +34,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public List<ImportServicesRequestServiceList> ServiceList { get; set; }
         public class ImportServicesRequestServiceList : TeaModel {
             /// <summary>
-            /// The name of the group.
+            /// The group.
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
@@ -52,7 +55,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The name of the namespace.
+            /// The namespace.
             /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]
@@ -75,12 +78,26 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The source type of the service.
+        /// The service source. Valid values:
+        /// 
+        /// *   MSE: MSE Nacos instance
+        /// *   K8s: ACK cluster
+        /// *   VIP: fixed address
+        /// *   DNS: DNS domain
         /// </summary>
         [NameInMap("SourceType")]
         [Validation(Required=false)]
         public string SourceType { get; set; }
 
+        /// <summary>
+        /// The Transport Layer Security (TLS) settings. Valid values:
+        /// 
+        /// *   mode: TLS mode
+        /// *   certId: certificate ID
+        /// *   caCertId: CA certificate ID
+        /// *   caCertContent: CA certificate public key
+        /// *   sni: service name identification
+        /// </summary>
         [NameInMap("TlsSetting")]
         [Validation(Required=false)]
         public string TlsSetting { get; set; }

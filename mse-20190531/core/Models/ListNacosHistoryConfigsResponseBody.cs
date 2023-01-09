@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListNacosHistoryConfigsResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the request fails.
+        /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The information about configurations.
+        /// The configuration items.
         /// </summary>
         [NameInMap("HistoryItems")]
         [Validation(Required=false)]
         public List<ListNacosHistoryConfigsResponseBodyHistoryItems> HistoryItems { get; set; }
         public class ListNacosHistoryConfigsResponseBodyHistoryItems : TeaModel {
             /// <summary>
-            /// The name of the application.
+            /// The tags of the application.
             /// </summary>
             [NameInMap("AppName")]
             [Validation(Required=false)]
             public string AppName { get; set; }
 
             /// <summary>
-            /// The ID of the configuration.
+            /// The ID of the data.
             /// </summary>
             [NameInMap("DataId")]
             [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? LastModifiedTime { get; set; }
 
             /// <summary>
-            /// The type of the configuration.
+            /// The type of the configuration file.
             /// </summary>
             [NameInMap("OpType")]
             [Validation(Required=false)]
@@ -103,9 +103,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
-        /// - `true`: The request is successful. 
-        /// - `false`: The request fails.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   `true`: The request was successful.
+        /// *   `false`: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

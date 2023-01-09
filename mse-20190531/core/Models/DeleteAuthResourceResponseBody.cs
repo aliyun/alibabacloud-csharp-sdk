@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public DeleteAuthResourceResponseBodyData Data { get; set; }
         public class DeleteAuthResourceResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the authorization record.
+            /// The authentication ID.
             /// </summary>
             [NameInMap("AuthId")]
             [Validation(Required=false)]

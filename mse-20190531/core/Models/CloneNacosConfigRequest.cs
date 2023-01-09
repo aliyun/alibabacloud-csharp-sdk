@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The language of the response. Valid values:
         /// 
-        /// - zh: Chinese
-        /// - en: English
+        /// *   zh: Chinese
+        /// *   en: English
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
@@ -41,7 +41,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string OriginNamespaceId { get; set; }
 
         /// <summary>
-        /// The policy used to handle write conflicts.
+        /// The policy used when a write conflict occurs.
+        /// 
+        /// *   ABORT
+        /// *   SKIP
+        /// *   OVERWRITE
         /// </summary>
         [NameInMap("Policy")]
         [Validation(Required=false)]

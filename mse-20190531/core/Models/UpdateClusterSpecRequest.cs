@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The specifications of the engine.
+        /// The destination engine specifications.
         /// </summary>
         [NameInMap("ClusterSpecification")]
         [Validation(Required=false)]
         public string ClusterSpecification { get; set; }
 
         /// <summary>
-        /// The number of nodes.
+        /// The number of destination nodes.
         /// </summary>
         [NameInMap("InstanceCount")]
         [Validation(Required=false)]

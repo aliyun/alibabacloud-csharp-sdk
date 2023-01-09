@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// Specifies whether to perform a beta release. Valid values:
         /// 
-        /// *   `true`: yes
-        /// *   `false`: no
+        /// *   `true`: performs a beta release.
+        /// *   `false`: not performs a beta release.
         /// </summary>
         [NameInMap("Beta")]
         [Validation(Required=false)]

@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable RAM authentication for a configuration center. This parameter is valid for Nacos instances. Valid values:
+        /// Specifies whether to enable RAM authorization for a configuration center. This parameter is valid for Nacos instances. Valid values:
         /// 
         /// *   `true`: yes
         /// *   `false`: no
@@ -71,6 +71,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string ConfigType { get; set; }
 
+        /// <summary>
+        /// zookeeper参数，是否开启TTL配置。
+        /// </summary>
         [NameInMap("ExtendedTypesEnable")]
         [Validation(Required=false)]
         public string ExtendedTypesEnable { get; set; }
@@ -131,7 +134,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string MinSessionTimeout { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable RAM authentication for a registry. This parameter is valid for Nacos instances. Valid values:
+        /// Specifies whether to enable RAM authorization for a registry. This parameter is valid for Nacos instances. Valid values:
         /// 
         /// *   `true`: yes
         /// *   `false`: no
@@ -162,7 +165,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string PassWord { get; set; }
 
         /// <summary>
-        /// The extended request parameter in the JSON format.
+        /// The extended request parameters in the JSON format.
         /// </summary>
         [NameInMap("RequestPars")]
         [Validation(Required=false)]
@@ -190,7 +193,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string TickTime { get; set; }
 
         /// <summary>
-        /// The name of the user.
+        /// The username.
         /// 
         /// > You must specify this parameter if OpenSuperAcl is set to true.
         /// </summary>

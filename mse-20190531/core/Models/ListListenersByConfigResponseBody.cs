@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListListenersByConfigResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned.
+        /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public List<ListListenersByConfigResponseBodyListeners> Listeners { get; set; }
         public class ListListenersByConfigResponseBodyListeners : TeaModel {
             /// <summary>
-            /// IP.
+            /// The IP address.
             /// </summary>
             [NameInMap("Ip")]
             [Validation(Required=false)]
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The response message.
+        /// The message returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The number of the returned page.
+        /// The page number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   `true`: The call was successful.
+        /// *   `true`: The request was successful.
         /// *   `false`: The request failed.
         /// </summary>
         [NameInMap("Success")]

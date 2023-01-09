@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The type of the service source.
+            /// The source type.
             /// </summary>
             [NameInMap("Source")]
             [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// The time of the last modification.
+            /// The last modification time.
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]

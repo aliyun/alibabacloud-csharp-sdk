@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The language of the response. Valid values:
         /// 
-        /// - zh: Chinese
-        /// - en: English
+        /// *   zh: Chinese
+        /// *   en: English
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string EncryptedDataKey { get; set; }
 
         /// <summary>
-        /// The name of the group.
+        /// The group.
         /// </summary>
         [NameInMap("Group")]
         [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// The tags of the configuration.
+        /// The list of tags.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

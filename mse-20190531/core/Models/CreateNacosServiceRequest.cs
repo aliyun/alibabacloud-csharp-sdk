@@ -20,14 +20,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The ID of the cluster. This operation contains both the InstanceId and ClusterId parameters. You must configure either InstanceId or ClusterId.
+        /// The ID of the instance.
+        /// 
+        /// > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// Specifies whether the instance is a temporary node. Valid values:
+        /// Specifies whether the instance is marked as a temporary node. Valid values:
         /// 
         /// *   `true`: yes
         /// *   `false`: no
@@ -46,7 +48,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The ID of the instance.
         /// 
-        /// > This operation contains both the InstanceId and ClusterId parameters. You must configure either InstanceId or ClusterId.
+        /// > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

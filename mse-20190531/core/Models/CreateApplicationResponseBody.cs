@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CreateApplicationResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// The response code returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The details of the data.
+        /// The data of the node.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// The time when the application was created.
+            /// The creation time.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
@@ -66,17 +66,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string LicenseKey { get; set; }
 
             /// <summary>
-            /// The ID of the region.
+            /// The region ID.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The service where the application is deployed. Valid values: 
+            /// The service where the application is deployed. Valid values:
             /// 
-            /// - ACK: Container Service for Kubernetes 
-            /// - Normal: another service
+            /// *   \- ACK: Container Service for Kubernetes
+            /// *   \- Normal: another service
             /// </summary>
             [NameInMap("Source")]
             [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// The time when the application was last modified.
+            /// The update time.
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
@@ -127,10 +127,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
-        /// - `true`: The request is successful. 
-        /// - `false`: The request fails.
+        /// *   `true`: The request was successful.
+        /// *   `false`: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

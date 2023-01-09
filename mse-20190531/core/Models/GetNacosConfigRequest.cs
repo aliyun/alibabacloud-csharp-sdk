@@ -12,32 +12,32 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The language of the response. Valid values:
         /// 
-        /// - zh: Chinese
-        /// - en: English
+        /// *   zh: Chinese
+        /// *   en: English
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a beta release. Valid values: 
+        /// Specifies whether to perform a beta release. Valid values:
         /// 
-        /// - `true`
-        /// - `false`
+        /// *   `true`: yes
+        /// *   `false`: no
         /// </summary>
         [NameInMap("Beta")]
         [Validation(Required=false)]
         public bool? Beta { get; set; }
 
         /// <summary>
-        /// The ID of the configuration.
+        /// The ID of the data.
         /// </summary>
         [NameInMap("DataId")]
         [Validation(Required=false)]
         public string DataId { get; set; }
 
         /// <summary>
-        /// The name of the group.
+        /// The name of the configuration group.
         /// </summary>
         [NameInMap("Group")]
         [Validation(Required=false)]

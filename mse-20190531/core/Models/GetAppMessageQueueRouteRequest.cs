@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// The region where the cluster resides. Examples:
+        /// The region where the instance resides. Examples:
         /// 
         /// *   `cn-hangzhou`: China (Hangzhou)
         /// *   `cn-beijing`: China (Beijing)

@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The details of the data.
+        /// The data of the node.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListGatewayDomainResponseBodyData> Data { get; set; }
         public class ListGatewayDomainResponseBodyData : TeaModel {
             /// <summary>
-            /// The expiration time of the certificate.
+            /// The expiration time.
             /// </summary>
             [NameInMap("CertBeforeDate")]
             [Validation(Required=false)]
@@ -37,10 +37,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string CertIdentifier { get; set; }
 
+            /// <summary>
+            /// The route comment (ingress).
+            /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public ListGatewayDomainResponseBodyDataComment Comment { get; set; }
             public class ListGatewayDomainResponseBodyDataComment : TeaModel {
+                /// <summary>
+                /// The status.
+                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
@@ -55,24 +61,25 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? GatewayId { get; set; }
 
             /// <summary>
-            /// The time when the domain name was associated.
+            /// The creation time.
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// The time when the domain name was last modified.
+            /// The update time.
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// Specifies whether to enable `Http2`.
-            /// - `open`: enables `Http2`.
-            /// - `close`: disables `Http2`.
-            /// - `globalConfig`: uses global configurations.
+            /// Indicates whether `HTTP/2` is enabled.
+            /// 
+            /// *   `open`: `HTTP/2` is enabled.
+            /// *   `close`: `HTTP/2` is disabled.
+            /// *   `globalConfig`: Global configurations are used.
             /// </summary>
             [NameInMap("Http2")]
             [Validation(Required=false)]
@@ -86,7 +93,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// Indicates whether HTTPS is forcibly used.
+            /// Indicates whether HTTPS is forcefully used.
             /// </summary>
             [NameInMap("MustHttps")]
             [Validation(Required=false)]
@@ -100,12 +107,22 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The type of the protocol.
+            /// The protocol.
             /// </summary>
             [NameInMap("Protocol")]
             [Validation(Required=false)]
             public string Protocol { get; set; }
 
+            /// <summary>
+            /// The status of the domain name. Valid values:
+            /// 
+            /// *   0: unpublish
+            /// *   2: publishing
+            /// *   3: published
+            /// *   4: editing
+            /// *   5: unpublishing
+            /// *   6: unavailable
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
@@ -124,6 +141,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string TlsMin { get; set; }
 
+            /// <summary>
+            /// The type.
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
@@ -138,7 +158,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request fails.
+        /// The error message returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -152,9 +172,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
-        /// - `true`: The request is successful. 
-        /// - `false`: The request fails.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   `true`: The request was successful.
+        /// *   `false`: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

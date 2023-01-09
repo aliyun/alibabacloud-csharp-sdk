@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string CertIdentifier { get; set; }
 
         /// <summary>
-        /// The ID of the domain name.
+        /// The domain ID.
         /// </summary>
         [NameInMap("DomainId")]
         [Validation(Required=false)]

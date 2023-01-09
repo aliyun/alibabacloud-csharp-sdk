@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListSecurityGroupResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// The response code returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -40,15 +40,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// <summary>
             /// The type of the security group. Valid values:
             /// 
-            /// - normal: basic security group 
-            /// - enterprise: advanced security group For more information, see [Overview](~~120621~~).
+            /// *   normal: basic security group
+            /// *   enterprise: advanced security group For more information, see [Advanced security groups](~~120621~~).
             /// </summary>
             [NameInMap("SecurityGroupType")]
             [Validation(Required=false)]
             public string SecurityGroupType { get; set; }
 
             /// <summary>
-            /// VPC ID.
+            /// The ID of the virtual private cloud (VPC).
             /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
@@ -71,16 +71,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
-        /// - `true`: The request is successful. 
-        /// - `false`: The request fails.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   `true`: The request was successful.
+        /// *   `false`: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? EnableHardwareAcceleration { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable Log Service.
+        /// Specifies whether to activate Log Service.
         /// </summary>
         [NameInMap("EnableSls")]
         [Validation(Required=false)]
         public bool? EnableSls { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable Tracing Analysis.
+        /// Specifies whether to activate Tracing Analysis.
         /// </summary>
         [NameInMap("EnableXtrace")]
         [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? EnterpriseSecurityGroup { get; set; }
 
         /// <summary>
-        /// The specifications of the Internet-facing SLB instance.
+        /// The specifications of the Internet-facing SLB instance. Valid values:
         /// 
         /// *   slb.s1.small
         /// *   slb.s2.small
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The specifications of the internal-facing Server Load Balancer (SLB) instance.
+        /// The specifications of the internal-facing Server Load Balancer (SLB) instance. Valid values:
         /// 
         /// *   slb.s1.small
         /// *   slb.s2.small
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string SlbSpec { get; set; }
 
         /// <summary>
-        /// The node specifications.
+        /// The node specifications. Valid values:
         /// 
         /// *   MSE_GTW\_16\_32\_200\_c(16C32G)
         /// *   MSE_GTW\_2\_4\_200\_c(2C4G)

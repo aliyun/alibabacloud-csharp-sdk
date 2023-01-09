@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// The response data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,26 +37,29 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
+            /// <summary>
+            /// The data structure.
+            /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<QueryGovernanceKubernetesClusterResponseBodyDataResult> Result { get; set; }
             public class QueryGovernanceKubernetesClusterResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// The ID of the cluster.
+                /// The ID of the instance.
                 /// </summary>
                 [NameInMap("ClusterId")]
                 [Validation(Required=false)]
                 public string ClusterId { get; set; }
 
                 /// <summary>
-                /// The name of the cluster.
+                /// The name of the instance.
                 /// </summary>
                 [NameInMap("ClusterName")]
                 [Validation(Required=false)]
                 public string ClusterName { get; set; }
 
                 /// <summary>
-                /// The version of the cluster.
+                /// The Kubernetes version of the instance.
                 /// </summary>
                 [NameInMap("K8sVersion")]
                 [Validation(Required=false)]
@@ -70,14 +73,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string NamespaceInfos { get; set; }
 
                 /// <summary>
-                /// The time when the ack-one-pilot component was started.
+                /// The time when the ack-onepilot component was started.
                 /// </summary>
                 [NameInMap("PilotStartTime")]
                 [Validation(Required=false)]
                 public string PilotStartTime { get; set; }
 
                 /// <summary>
-                /// Region
+                /// The region where the cluster resides.
                 /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
@@ -86,7 +89,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// The number of clusters.
+            /// The total number of clusters.
             /// </summary>
             [NameInMap("TotalSize")]
             [Validation(Required=false)]
@@ -95,14 +98,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// HttpCode
+        /// The HTTP status code returned.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// Message
+        /// The message returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

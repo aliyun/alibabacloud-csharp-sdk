@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string DefaultServiceName { get; set; }
 
                 /// <summary>
-                /// The destination type.
+                /// The destination service type.
                 /// </summary>
                 [NameInMap("DestinationType")]
                 [Validation(Required=false)]
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public long? DomainId { get; set; }
 
                 /// <summary>
-                /// The list of domain IDs.
+                /// The IDs of domains.
                 /// </summary>
                 [NameInMap("DomainIdList")]
                 [Validation(Required=false)]
@@ -133,14 +133,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public List<string> DomainNameList { get; set; }
 
                 /// <summary>
-                /// Indicates whether Web Application Firewall (WAF) is activated.
+                /// Specifies whether to activate Web Application Firewall (WAF).
                 /// </summary>
                 [NameInMap("EnableWaf")]
                 [Validation(Required=false)]
                 public string EnableWaf { get; set; }
 
                 /// <summary>
-                /// Indicates whether the Fallback service is enabled.
+                /// Specifies whether to enable the Fallback service.
                 /// </summary>
                 [NameInMap("Fallback")]
                 [Validation(Required=false)]
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public int? ServicePort { get; set; }
 
                     /// <summary>
-                    /// The type of the service source.
+                    /// The source type.
                     /// </summary>
                     [NameInMap("SourceType")]
                     [Validation(Required=false)]
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// ID.
+                /// The ID.
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
@@ -340,7 +340,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                         public string Type { get; set; }
 
                         /// <summary>
-                        /// The header value.
+                        /// The value.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]

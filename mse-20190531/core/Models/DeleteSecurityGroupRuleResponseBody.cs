@@ -45,46 +45,46 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GatewayUniqueId { get; set; }
 
             /// <summary>
-            /// The time when the security group rule was created.
+            /// The creation time.
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// The time when the security group rule was last modified.
+            /// The modification time.
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// ID.
+            /// The ID.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
             /// <summary>
-            /// The transport layer protocol. The value of this parameter is case-insensitive. Valid values: 
-            ///          
-            /// - icmp
-            /// - gre
-            /// - tcp
-            /// - udp
-            /// - all: All protocols are supported.
+            /// The transport layer protocol. The value of this parameter is case-insensitive. Valid values:
+            /// 
+            /// *   icmp
+            /// *   gre
+            /// *   tcp
+            /// *   udp
+            /// *   all: All protocols are supported.
             /// </summary>
             [NameInMap("IpProtocol")]
             [Validation(Required=false)]
             public string IpProtocol { get; set; }
 
             /// <summary>
-            /// The range of destination ports that correspond to the transport layer protocol. Valid values: 
-            ///          
-            /// - When the value of the IpProtocol parameter is tcp or udp, the port number range is 1 to 65535. The start port number and the end port number are separated by a forward slash (/). Example: 1/200.
-            /// - When the value of the IpProtocol parameter is icmp, the port number range is -1/-1, which indicates all ports.
-            /// - When the value of the IpProtocol parameter is gre, the port number range is -1/-1, which indicates all ports.
-            /// - When the value of the IpProtocol parameter is all, the port number range is -1/-1, which indicates all ports.
+            /// The range of ports for the transport layer protocol in the destination security group. Valid values:
+            /// 
+            /// *   When the IpProtocol parameter is set to tcp or udp, the port number range is 1 to 65535. The start port number and the end port number are separated by a forward slash (/). Example: 1/200.
+            /// *   If the IpProtocol parameter is set to icmp, the port number range is -1/-1, which indicates all ports.
+            /// *   If the IpProtocol parameter is set to gre, the port number range is -1/-1, which indicates all ports.
+            /// *   If the IpProtocol parameter is set to all, the port number range is -1/-1, which indicates all ports.
             /// </summary>
             [NameInMap("PortRange")]
             [Validation(Required=false)]
@@ -114,16 +114,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
-        /// - `true`: The request is successful. 
-        /// - `false`: The request fails.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   `true`: The request was successful.
+        /// *   `false`: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

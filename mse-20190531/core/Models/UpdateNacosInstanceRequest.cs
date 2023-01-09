@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// The port of the Nacos instance.
+        /// The port number of the Nacos instance.
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]

@@ -86,8 +86,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string LicenseKey { get; set; }
 
+                [NameInMap("Namespace")]
+                [Validation(Required=false)]
+                public string Namespace { get; set; }
+
                 /// <summary>
-                /// The region ID.
+                /// The ID of the region.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]

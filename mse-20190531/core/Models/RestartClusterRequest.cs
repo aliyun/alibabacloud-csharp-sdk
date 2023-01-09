@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class RestartClusterRequest : TeaModel {
+        /// <summary>
+        /// The language of the response. Valid values:
+        /// 
+        /// *   zh: Chinese
+        /// *   en: English
+        /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
@@ -28,8 +34,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The name of the pod. You can specify the names of multiple pods at a time. Separate multiple pod names with commas (,).
-        /// Example: mse-a8aba010-1629719288255-reg-center-0-1,mse-a8aba010-1629719288255-reg-center-0-2.
+        /// The names of pods. You can specify the names of multiple pods at a time. Separate multiple pod names with commas (,). Example: mse-a8aba010-1629719288255-reg-center-0-1,mse-a8aba010-1629719288255-reg-center-0-2.
         /// 
         /// The specified pods must belong to the current cluster and be associated with the specified instance. Otherwise, a restart exception occurs.
         /// </summary>

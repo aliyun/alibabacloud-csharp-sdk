@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class SelectGatewaySlbResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code returned.
+        /// The status code returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public List<SelectGatewaySlbResponseBodyData> Data { get; set; }
         public class SelectGatewaySlbResponseBodyData : TeaModel {
             /// <summary>
-            /// SLB ID.
+            /// The ID of the SLB instance.
             /// </summary>
             [NameInMap("SlbId")]
             [Validation(Required=false)]

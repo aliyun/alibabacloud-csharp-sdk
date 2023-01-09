@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class AddAuthResourceRequest : TeaModel {
+        /// <summary>
+        /// The language of the response. Valid values:
+        /// 
+        /// *   zh: Chinese
+        /// *   en: English
+        /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
@@ -39,7 +45,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The ID of the domain name.
+        /// The domain ID.
         /// </summary>
         [NameInMap("DomainId")]
         [Validation(Required=false)]
@@ -56,6 +62,13 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public bool? IgnoreCase { get; set; }
 
+        /// <summary>
+        /// The matching type.
+        /// 
+        /// *   exact: exact matching
+        /// *   prefix: prefix matching
+        /// *   regex: regular expression matching
+        /// </summary>
         [NameInMap("MatchType")]
         [Validation(Required=false)]
         public string MatchType { get; set; }

@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Replica { get; set; }
 
         /// <summary>
-        /// The node specifications.
+        /// The node specifications of the gateway.
         /// </summary>
         [NameInMap("Spec")]
         [Validation(Required=false)]

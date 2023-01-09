@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class QuerySlbSpecResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// The return value.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// The data entries returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string MaxConnection { get; set; }
 
             /// <summary>
-            /// The name of the instance type.
+            /// The name.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string NewConnectionPerSecond { get; set; }
 
             /// <summary>
-            /// The maximum queries per second (QPS).
+            /// The number of queries per second (QPS).
             /// </summary>
             [NameInMap("Qps")]
             [Validation(Required=false)]
             public string Qps { get; set; }
 
             /// <summary>
-            /// The instance type of the SLB instance.
+            /// The specifications.
             /// </summary>
             [NameInMap("Spec")]
             [Validation(Required=false)]
@@ -89,9 +89,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
-        /// - `true`: The request is successful. 
-        /// - `false`: The request fails.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   `true`: The request was successful.
+        /// *   `false`: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

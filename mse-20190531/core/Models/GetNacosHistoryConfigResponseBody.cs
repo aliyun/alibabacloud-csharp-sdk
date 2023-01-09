@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetNacosHistoryConfigResponseBody : TeaModel {
         /// <summary>
-        /// The information about the configuration.
+        /// The configuration information.
         /// </summary>
         [NameInMap("Configuration")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string EncryptedDataKey { get; set; }
 
             /// <summary>
-            /// The name of the group.
+            /// The name of the configuration group.
             /// </summary>
             [NameInMap("Group")]
             [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Md5 { get; set; }
 
             /// <summary>
-            /// The type of the configuration.
+            /// The configuration type.
             /// </summary>
             [NameInMap("OpType")]
             [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The error code returned if the request fails.
+        /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -89,9 +89,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
-        /// - `true`: The request is successful. 
-        /// - `false`: The request fails.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   `true`: The request was successful.
+        /// *   `false`: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

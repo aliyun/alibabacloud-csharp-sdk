@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public ListAnsServiceClustersResponseBodyData Data { get; set; }
         public class ListAnsServiceClustersResponseBodyData : TeaModel {
             /// <summary>
-            /// The information about clusters.
+            /// The information about the clusters.
             /// </summary>
             [NameInMap("Clusters")]
             [Validation(Required=false)]
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? DefaultPort { get; set; }
 
                 /// <summary>
-                /// The type of health check.
+                /// The type of health checks.
                 /// </summary>
                 [NameInMap("HealthCheckerType")]
                 [Validation(Required=false)]
                 public string HealthCheckerType { get; set; }
 
                 /// <summary>
-                /// The metadata.
+                /// The metadata of the cluster.
                 /// </summary>
                 [NameInMap("Metadata")]
                 [Validation(Required=false)]
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The name of the service.
+                /// The complete name of the service.
                 /// </summary>
                 [NameInMap("ServiceName")]
                 [Validation(Required=false)]
                 public string ServiceName { get; set; }
 
                 /// <summary>
-                /// Indicates whether the IP address is used for a health check.
+                /// Indicates whether the health check is initiated by the server. This parameter is valid only when the service is a temporary service.
                 /// </summary>
                 [NameInMap("UseIPPort4Check")]
                 [Validation(Required=false)]
@@ -75,9 +75,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// Indicates whether the service is marked as a temporary node. Valid values:
-            /// - `true` 
-            /// - `false`
+            /// Indicates whether the service is a temporary service. Valid values:
+            /// 
+            /// *   `true`: The service is a temporary service.
+            /// *   `false`: The service is not a temporary service.
             /// </summary>
             [NameInMap("Ephemeral")]
             [Validation(Required=false)]
@@ -91,7 +92,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// The metadata.
+            /// The metadata of the service.
             /// </summary>
             [NameInMap("Metadata")]
             [Validation(Required=false)]
@@ -121,7 +122,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The error code returned if the request fails.
+        /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -142,9 +143,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
-        /// - `true`: The request is successful. 
-        /// - `false`: The request fails.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   `true`: The request was successful.
+        /// *   `false`: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

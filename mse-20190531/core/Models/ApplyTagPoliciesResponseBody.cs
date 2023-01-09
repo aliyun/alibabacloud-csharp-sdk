@@ -17,24 +17,24 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// The details of the data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ApplyTagPoliciesResponseBodyData> Data { get; set; }
         public class ApplyTagPoliciesResponseBodyData : TeaModel {
             /// <summary>
-            /// Indicates whether pass-through is enabled.
+            /// Indicates whether the field is the primary key.
             /// </summary>
             [NameInMap("CarryData")]
             [Validation(Required=false)]
             public bool? CarryData { get; set; }
 
             /// <summary>
-            /// Indicates whether the routing rule is enabled. 
+            /// Indicates whether the routing rule is enabled.
             /// 
-            /// - `true`: enabled 
-            /// - `false`: disabled
+            /// *   `true`: enabled
+            /// *   `false`: disabled
             /// </summary>
             [NameInMap("Enable")]
             [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? InstanceNum { get; set; }
 
             /// <summary>
-            /// The name of the routing rule.
+            /// The policy name.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Rules { get; set; }
 
             /// <summary>
-            /// The status of the routing rule.
+            /// The status.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

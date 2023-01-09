@@ -12,15 +12,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The language of the response. Valid values:
         /// 
-        /// - zh: Chinese
-        /// - en: English
+        /// *   zh: Chinese
+        /// *   en: English
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The ID of the cluster.
+        /// The ID of the MSE cluster.
+        /// 
+        /// > The MSE cluster is different from the cluster of the Nacos service.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// The name of the contact group.
+        /// The name of the group.
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]

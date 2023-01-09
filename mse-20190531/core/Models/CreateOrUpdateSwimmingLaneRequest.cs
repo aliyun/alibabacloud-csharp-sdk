@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CreateOrUpdateSwimmingLaneRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Valid values:****
+        /// The language that the value of the **LocalName** response parameter uses. Valid values:
         /// 
-        /// *   **zh-CN**: Chinese
-        /// *   **en-US**: English.
+        /// *   **zh-cn**: Chinese
+        /// *   **en-us**: English.
         /// 
         /// > Default value: **zh-CN**.
         /// </summary>
@@ -36,14 +36,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? EnableRules { get; set; }
 
         /// <summary>
-        /// json string.
+        /// The JSON string.
         /// </summary>
         [NameInMap("EntryRule")]
         [Validation(Required=false)]
         public string EntryRule { get; set; }
 
         /// <summary>
-        /// SwimmingLane.
+        /// The lane.
         /// </summary>
         [NameInMap("EntryRules")]
         [Validation(Required=false)]
@@ -59,8 +59,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// <summary>
             /// Specifies whether to enable the rule. Valid values:
             /// 
-            /// *   `true`: yes
-            /// *   `false`: no
+            /// *   `true`: enables the rule.
+            /// *   `false`: disables the rule.
             /// </summary>
             [NameInMap("Enable")]
             [Validation(Required=false)]

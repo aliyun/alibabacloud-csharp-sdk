@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string AutopurgeSnapRetainCount { get; set; }
 
             /// <summary>
-            /// The name of the cluster.
+            /// The name of the instance.
             /// </summary>
             [NameInMap("ClusterName")]
             [Validation(Required=false)]
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// Indicates whether RAM authentication of a configuration center is enabled. This parameter is valid for Nacos instances. Valid values:
+            /// Indicates whether RAM authorization of a configuration center is enabled. This parameter is valid for Nacos instances. Valid values:
             /// 
             /// *   `true`: enabled
             /// *   `false`: disabled
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? ConfigAuthEnabled { get; set; }
 
             /// <summary>
-            /// Indicates whether RAM authentication is supported by a configuration center of the instance. This parameter is valid for Nacos instances. Valid values:
+            /// Indicates whether RAM authorization is supported by a configuration center of the instance. This parameter is valid for Nacos instances. Valid values:
             /// 
             /// *   `true`: supported
             /// *   `false`: not supported
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? ExtendedTypesEnable { get; set; }
 
             /// <summary>
-            /// The maximum connection duration of the instance. This parameter is valid for ZooKeeper instances. Unit: seconds.
+            /// The maximum connection duration of the instance. Unit: seconds. This parameter is valid for ZooKeeper instances.
             /// </summary>
             [NameInMap("InitLimit")]
             [Validation(Required=false)]
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// Indicates whether RAM authentication of a registry is enabled. This parameter is valid for Nacos instances. Valid values:
+            /// Indicates whether RAM authorization of a registry is enabled. This parameter is valid for Nacos instances. Valid values:
             /// 
             /// *   `true`: enabled
             /// *   `false`: disabled
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? NamingAuthEnabled { get; set; }
 
             /// <summary>
-            /// Indicates whether RAM authentication of services is supported by the instance. This parameter is valid for Nacos instances. Valid values:
+            /// Indicates whether RAM authorization of services is supported by the instance. This parameter is valid for Nacos instances. Valid values:
             /// 
             /// *   `true`: supported
             /// *   `false`: not supported
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? OpenSuperAcl { get; set; }
 
             /// <summary>
-            /// The password of the user. This parameter is valid only if OpenSuperAcl is set to true.
+            /// The user password. This parameter is valid only if OpenSuperAcl is set to true.
             /// </summary>
             [NameInMap("PassWord")]
             [Validation(Required=false)]
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string TickTime { get; set; }
 
             /// <summary>
-            /// The username of the user. This parameter is valid only if OpenSuperAcl is set to true.
+            /// The username. This parameter is valid only if OpenSuperAcl is set to true.
             /// </summary>
             [NameInMap("UserName")]
             [Validation(Required=false)]
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The HTTP status code.
+        /// The HTTP status code returned.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]

@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The returned data.
+            /// The data entries returned.
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<ListGatewayResponseBodyDataResult> Result { get; set; }
             public class ListGatewayResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// Indicates whether Application High Availability Service (AHAS) is enabled.
+                /// Indicates whether Application High Availability Service (AHAS) is activated.
                 /// </summary>
                 [NameInMap("AhasOn")]
                 [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string AppVersion { get; set; }
 
                 /// <summary>
-                /// Indicates whether Application Real-Time Monitoring Service (ARMS) is enabled.
+                /// Indicates whether Application Real-Time Monitoring Service (ARMS) is activated.
                 /// </summary>
                 [NameInMap("ArmsOn")]
                 [Validation(Required=false)]
@@ -100,6 +100,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string GatewayUniqueId { get; set; }
 
+                /// <summary>
+                /// The version of the gateway.
+                /// </summary>
                 [NameInMap("GatewayVersion")]
                 [Validation(Required=false)]
                 public string GatewayVersion { get; set; }
@@ -184,14 +187,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string InternetNetworkFlow { get; set; }
 
                     /// <summary>
-                    /// SLB ID.
+                    /// The ID of the SLB instance.
                     /// </summary>
                     [NameInMap("SlbId")]
                     [Validation(Required=false)]
                     public string SlbId { get; set; }
 
                     /// <summary>
-                    /// SLB IP.
+                    /// The IP address of the SLB instance.
                     /// </summary>
                     [NameInMap("SlbIp")]
                     [Validation(Required=false)]
@@ -234,6 +237,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string LatestVersion { get; set; }
 
+                /// <summary>
+                /// The tag of the instance.
+                /// </summary>
                 [NameInMap("MseTag")]
                 [Validation(Required=false)]
                 public string MseTag { get; set; }
@@ -260,7 +266,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string PrimaryUser { get; set; }
 
                 /// <summary>
-                /// The ID of the region.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
@@ -273,10 +279,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public int? Replica { get; set; }
 
+                /// <summary>
+                /// The ID of the resource group.
+                /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
+                /// <summary>
+                /// Indicates whether rollbacks are allowed.
+                /// </summary>
                 [NameInMap("RollBack")]
                 [Validation(Required=false)]
                 public bool? RollBack { get; set; }
@@ -303,14 +315,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string GatewaySlbStatus { get; set; }
 
                     /// <summary>
-                    /// SLB ID.
+                    /// The ID of the SLB instance.
                     /// </summary>
                     [NameInMap("SlbId")]
                     [Validation(Required=false)]
                     public string SlbId { get; set; }
 
                     /// <summary>
-                    /// SLB IP.
+                    /// The IP address of the SLB instance.
                     /// </summary>
                     [NameInMap("SlbIp")]
                     [Validation(Required=false)]
@@ -420,14 +432,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The HTTP status code.
+        /// The HTTP status code returned.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// The message returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

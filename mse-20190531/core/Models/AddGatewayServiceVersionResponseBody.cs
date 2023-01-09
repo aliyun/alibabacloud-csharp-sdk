@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The ID of the created gateway.
+        /// The ID of the created service version.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

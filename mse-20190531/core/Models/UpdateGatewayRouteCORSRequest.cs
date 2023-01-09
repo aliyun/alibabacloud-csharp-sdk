@@ -11,9 +11,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
     public class UpdateGatewayRouteCORSRequest : TeaModel {
         /// <summary>
         /// The language of the response. In compliance with [RFC 7231](https://tools.ietf.org/html/rfc7231), the backend service must return a response based on the language used by the user.
-        /// This parameter is empty by default. Valid values:
-        /// * zh-CN: Chinese
-        /// * en-US: English
+        /// 
+        /// *   No default value
+        /// *   zh-CN: Chinese
+        /// *   en-US: English
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
@@ -99,7 +100,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// The ID of the route.
+        /// The ID of the associated record.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

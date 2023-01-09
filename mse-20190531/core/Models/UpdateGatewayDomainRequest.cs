@@ -36,16 +36,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// Specifies whether to enable `HTTP/2`.
         /// 
-        /// *   `open`: enables `HTTP/2`
-        /// *   `close`: disables `HTTP/2`
-        /// *   `globalConfig`: uses global configurations
+        /// *   `open`: `HTTP/2` is enabled.
+        /// *   `close`: `HTTP/2` is disabled.
+        /// *   `globalConfig`: Global configurations are used.
         /// </summary>
         [NameInMap("Http2")]
         [Validation(Required=false)]
         public string Http2 { get; set; }
 
         /// <summary>
-        /// The ID of the domain name.
+        /// The ID of the domain name that you want to update.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

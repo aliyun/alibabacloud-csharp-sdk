@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GatewayId { get; set; }
 
             /// <summary>
-            /// The service source.
+            /// The mode of the SLB instance.
             /// </summary>
             [NameInMap("GatewaySlbMode")]
             [Validation(Required=false)]

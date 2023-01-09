@@ -12,15 +12,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The language of the response. Valid values:
         /// 
-        /// - zh: Chinese
-        /// - en: English
+        /// *   zh: Chinese
+        /// *   en: English
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The IP addresses in the whitelist.
+        /// The IP addresses or CIDR blocks in the IP address whitelist.
         /// </summary>
         [NameInMap("AclEntryList")]
         [Validation(Required=false)]

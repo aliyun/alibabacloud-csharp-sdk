@@ -24,8 +24,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string App { get; set; }
 
             /// <summary>
-            /// The timeout period of the instance.   
-            /// After the specified timeout period expires, the service is unavailable by default and therefore is deleted.
+            /// The timeout period of the instance.\
+            /// After the specified timeout period expires, the service is unavailable by default and is deleted.
             /// </summary>
             [NameInMap("DurationInSecs")]
             [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The IP address of the instance.
+            /// The IP address.
             /// </summary>
             [NameInMap("IpAddr")]
             [Validation(Required=false)]
@@ -81,14 +81,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public Dictionary<string, object> Metadata { get; set; }
 
             /// <summary>
-            /// The port of the service.
+            /// The service port number.
             /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
             public int? Port { get; set; }
 
             /// <summary>
-            /// The maximum interval between two heartbeat checks after a heartbeat check times out.   
+            /// The maximum interval between two heartbeat checks after a heartbeat check times out.\
             /// Default value: 10.
             /// </summary>
             [NameInMap("RenewalIntervalInSecs")]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The virtual hostname.
+            /// The virtual IP address (VIP).
             /// </summary>
             [NameInMap("VipAddress")]
             [Validation(Required=false)]
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The error code returned if the request fails.
+        /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -161,16 +161,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
-        /// - `true`: The request is successful. 
-        /// - `false`: The request fails.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   `true`: The request was successful.
+        /// *   `false`: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// The total number of returned instances.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

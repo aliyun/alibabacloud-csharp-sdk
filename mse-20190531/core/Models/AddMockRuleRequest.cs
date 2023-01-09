@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The language of the response. Valid values:
         /// 
-        /// - zh: Chinese
-        /// - en: English
+        /// *   zh: Chinese
+        /// *   en: English
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DubboMockItems { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the rule. Valid values:
+        /// Specifies whether to enable the alert rule. Valid values:
         /// 
-        /// - `true`: enables the rule. 
-        /// - `false`: disables the rule.
+        /// *   `true`: enables the alert rule.
+        /// *   `false`: disables the alert rule.
         /// </summary>
         [NameInMap("Enable")]
         [Validation(Required=false)]
@@ -51,12 +51,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ExtraJson { get; set; }
 
         /// <summary>
-        /// The response time threshold of slow calls. Valid values:
+        /// The response time (RT) threshold of slow calls. Valid values:
         /// 
-        /// - 15: 15 ms
-        /// - 30: 30 ms
-        /// - 60: 60 ms
-        /// - 120: 120 ms
+        /// *   \- 15: 15 ms
+        /// *   \- 30: 30 ms
+        /// *   \- 60: 60 ms
+        /// *   \- 120: 120 ms
         /// </summary>
         [NameInMap("MockType")]
         [Validation(Required=false)]
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ScMockItems { get; set; }
 
         /// <summary>
-        /// The source of the rule. Valid values: -custom_fc: The rule is based on a custom function. -system_custom: The rule is based on a system function.
+        /// The rule source.
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]

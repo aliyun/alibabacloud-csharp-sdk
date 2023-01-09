@@ -24,21 +24,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public List<ListSSLCertResponseBodyData> Data { get; set; }
         public class ListSSLCertResponseBodyData : TeaModel {
             /// <summary>
-            /// The effective time of the certificate.
+            /// The validation time.
             /// </summary>
             [NameInMap("AfterDate")]
             [Validation(Required=false)]
             public string AfterDate { get; set; }
 
             /// <summary>
-            /// The algorithm of the certificate.
+            /// The algorithm.
             /// </summary>
             [NameInMap("Algorithm")]
             [Validation(Required=false)]
             public string Algorithm { get; set; }
 
             /// <summary>
-            /// The expiration time of the certificate.
+            /// The expiration time.
             /// </summary>
             [NameInMap("BeforeDate")]
             [Validation(Required=false)]
@@ -66,21 +66,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string CommonName { get; set; }
 
             /// <summary>
-            /// The effective time of the certificate.
+            /// The validation time.
             /// </summary>
             [NameInMap("GmtAfter")]
             [Validation(Required=false)]
             public string GmtAfter { get; set; }
 
             /// <summary>
-            /// The expiration time of the certificate.
+            /// The expiration time.
             /// </summary>
             [NameInMap("GmtBefore")]
             [Validation(Required=false)]
             public string GmtBefore { get; set; }
 
             /// <summary>
-            /// The issuer of the certificate.
+            /// The issuer.
             /// </summary>
             [NameInMap("Issuer")]
             [Validation(Required=false)]
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request fails.
+        /// The error message returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -117,9 +117,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
-        /// - `true`: The request is successful. 
-        /// - `false`: The request fails.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   `true`: The request was successful.
+        /// *   `false`: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

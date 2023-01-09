@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Body { get; set; }
 
                 /// <summary>
-                /// The return value.
+                /// The status code returned.
                 /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
@@ -133,14 +133,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// The ID of the domain name.
+            /// The domain ID.
             /// </summary>
             [NameInMap("DomainId")]
             [Validation(Required=false)]
             public long? DomainId { get; set; }
 
             /// <summary>
-            /// The IDs of the domain names.
+            /// The IDs of domains.
             /// </summary>
             [NameInMap("DomainIdList")]
             [Validation(Required=false)]
@@ -154,14 +154,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string DomainName { get; set; }
 
             /// <summary>
-            /// The domain names.
+            /// The list of domain names.
             /// </summary>
             [NameInMap("DomainNameList")]
             [Validation(Required=false)]
             public List<string> DomainNameList { get; set; }
 
             /// <summary>
-            /// Indicates whether WAF is enabled.
+            /// Indicates whether WAF is activated.
             /// </summary>
             [NameInMap("EnableWaf")]
             [Validation(Required=false)]
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// The information about the header configuration policy.
+            /// The header settings.
             /// </summary>
             [NameInMap("HeaderOp")]
             [Validation(Required=false)]
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string DirectionType { get; set; }
 
                     /// <summary>
-                    /// Header Key.
+                    /// The header key.
                     /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
@@ -365,7 +365,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? Attempts { get; set; }
 
                 /// <summary>
-                /// The HTTP status code.
+                /// The HTTP status code returned.
                 /// </summary>
                 [NameInMap("HttpCodes")]
                 [Validation(Required=false)]
@@ -612,21 +612,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The HTTP status code.
+        /// The HTTP status code returned.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The response message.
+        /// The message returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// ID of the Request.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

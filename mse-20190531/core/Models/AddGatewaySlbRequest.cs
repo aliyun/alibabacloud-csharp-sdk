@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? ServiceWeight { get; set; }
 
         /// <summary>
-        /// SLB ID.
+        /// The ID of the SLB instance.
         /// </summary>
         [NameInMap("SlbId")]
         [Validation(Required=false)]

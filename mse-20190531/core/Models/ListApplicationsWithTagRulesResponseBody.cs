@@ -59,38 +59,38 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// The information about routing rules.
+                /// An array that consists of the rules.
                 /// </summary>
                 [NameInMap("RouteRules")]
                 [Validation(Required=false)]
                 public List<ListApplicationsWithTagRulesResponseBodyDataResultRouteRules> RouteRules { get; set; }
                 public class ListApplicationsWithTagRulesResponseBodyDataResultRouteRules : TeaModel {
                     /// <summary>
-                    /// Indicates whether pass-through is enabled.
+                    /// Indicates whether the field is a primary key.
                     /// </summary>
                     [NameInMap("CarryData")]
                     [Validation(Required=false)]
                     public bool? CarryData { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the routing rule is enabled. Valid values:
+                    /// Indicates whether the alert rule is enabled. Valid values:
                     /// 
-                    /// - `true`: enabled 
-                    /// - `false`: disabled
+                    /// *   `true`: enabled
+                    /// *   `false`: disabled
                     /// </summary>
                     [NameInMap("Enable")]
                     [Validation(Required=false)]
                     public bool? Enable { get; set; }
 
                     /// <summary>
-                    /// The time when the routing rule was last modified.
+                    /// The modification time.
                     /// </summary>
                     [NameInMap("GmtModified")]
                     [Validation(Required=false)]
                     public string GmtModified { get; set; }
 
                     /// <summary>
-                    /// The ID of the routing rule.
+                    /// The ID of the rule.
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public int? InstanceNum { get; set; }
 
                     /// <summary>
-                    /// The name of the routing rule.
+                    /// The name of the rule.
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -132,14 +132,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string Rules { get; set; }
 
                     /// <summary>
-                    /// The status of the routing rule.
+                    /// The status.
                     /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
                     public int? Status { get; set; }
 
                     /// <summary>
-                    /// The tag of the routing rule.
+                    /// The tag.
                     /// </summary>
                     [NameInMap("Tag")]
                     [Validation(Required=false)]
@@ -173,10 +173,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The message returned. Valid values: 
+        /// The message returned.
         /// 
-        /// - If the request is successful, a success message is returned. 
-        /// - If the request fails, an error message is returned.
+        /// *   If the request is successful, a success message is returned.
+        /// *   If the request fails, an error message is returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values: -[unk]true[unk]: The request is successful. -[unk]false[unk]: The request fails.
+        /// Indicates whether the request is successful. Valid values: -\[unk]true\[unk]: The request is successful. -\[unk]false\[unk]: The request fails.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

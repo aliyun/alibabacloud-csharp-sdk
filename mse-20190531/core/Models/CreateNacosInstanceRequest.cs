@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CreateNacosInstanceRequest : TeaModel {
+        /// <summary>
+        /// The language of the response. Valid values:
+        /// 
+        /// *   zh: Chinese
+        /// *   en: English
+        /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The name of the Nacos cluster.
+        /// The name of the Nacos instance.
         /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
@@ -56,7 +62,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Ip { get; set; }
 
         /// <summary>
-        /// The node metadata of the instance.
+        /// The metadata of the instance.
         /// </summary>
         [NameInMap("Metadata")]
         [Validation(Required=false)]
@@ -84,7 +90,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// The weight of the instance.
+        /// The weight. Valid values: 0 to 10000. The value must be an integer. A larger value indicates a higher frequency at which the instance is accessed.
         /// </summary>
         [NameInMap("Weight")]
         [Validation(Required=false)]

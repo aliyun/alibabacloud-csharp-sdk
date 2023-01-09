@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The metric type. The following metrics are supported:
+        /// The metric type. The following metric types are supported:
         /// 
         /// \[Basic system metrics]
         /// 
@@ -49,18 +49,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// *   serviceCount
         /// *   writeCostTime
         /// *   readCostTime
-        /// *   regCenterTps
-        /// *   regCenterQps
+        /// *   TPS regCenterTps
+        /// *   QPS regCenterQps
         /// 
         /// \[Nacos configuration center]
         /// 
         /// *   publish
         /// *   getConfig
         /// 
-        /// \[Zookeeper]
+        /// \[zookeeper]
         /// 
-        /// *   zk_TpsCount
-        /// *   zk_QpsCount
+        /// *   TPS zk_TpsCount
+        /// *   QPS zk_QpsCount
         /// *   zookeeper_AvgRequestLatency
         /// </summary>
         [NameInMap("MonitorType")]

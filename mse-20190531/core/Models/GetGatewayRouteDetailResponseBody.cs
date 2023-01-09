@@ -140,14 +140,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// The ID of the domain name.
+            /// The domain ID.
             /// </summary>
             [NameInMap("DomainId")]
             [Validation(Required=false)]
             public long? DomainId { get; set; }
 
             /// <summary>
-            /// The domain names.
+            /// The IDs of domains.
             /// </summary>
             [NameInMap("DomainIdList")]
             [Validation(Required=false)]
@@ -161,14 +161,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string DomainName { get; set; }
 
             /// <summary>
-            /// The domain names.
+            /// The list of domain names.
             /// </summary>
             [NameInMap("DomainNameList")]
             [Validation(Required=false)]
             public List<string> DomainNameList { get; set; }
 
             /// <summary>
-            /// Indicates whether Web Application Firewall (WAF) is enabled.
+            /// Indicates whether WAF is activated.
             /// </summary>
             [NameInMap("EnableWaf")]
             [Validation(Required=false)]
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? Fallback { get; set; }
 
             /// <summary>
-            /// The information of the Fallback service.
+            /// The information about the Fallback service.
             /// </summary>
             [NameInMap("FallbackServices")]
             [Validation(Required=false)]
@@ -238,14 +238,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string ServiceName { get; set; }
 
                 /// <summary>
-                /// The service port.
+                /// The service port number.
                 /// </summary>
                 [NameInMap("ServicePort")]
                 [Validation(Required=false)]
                 public int? ServicePort { get; set; }
 
                 /// <summary>
-                /// The type of the service source.
+                /// The source type.
                 /// </summary>
                 [NameInMap("SourceType")]
                 [Validation(Required=false)]
@@ -324,7 +324,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Pattern { get; set; }
 
                 /// <summary>
-                /// The status of the policy.
+                /// The status.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -340,7 +340,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// The information about the header configuration policy.
+            /// The header settings.
             /// </summary>
             [NameInMap("HeaderOp")]
             [Validation(Required=false)]
@@ -361,7 +361,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string DirectionType { get; set; }
 
                     /// <summary>
-                    /// Header Key.
+                    /// The header key.
                     /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
@@ -393,7 +393,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// ID.
+            /// The ID.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -458,7 +458,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? Attempts { get; set; }
 
                 /// <summary>
-                /// The HTTP status code.
+                /// The HTTP status code returned.
                 /// </summary>
                 [NameInMap("HttpCodes")]
                 [Validation(Required=false)]
@@ -650,7 +650,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string ServiceName { get; set; }
 
                 /// <summary>
-                /// The service port.
+                /// The service port number.
                 /// </summary>
                 [NameInMap("ServicePort")]
                 [Validation(Required=false)]
@@ -680,7 +680,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Services { get; set; }
 
             /// <summary>
-            /// The status of the route.
+            /// The status of the route. Valid values:
             /// 
             /// *   0: unpublished
             /// *   2: publishing
@@ -726,7 +726,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The HTTP status code.
+        /// The HTTP status code returned.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]

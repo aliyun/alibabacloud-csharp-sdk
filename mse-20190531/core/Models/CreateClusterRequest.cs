@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? InstanceCount { get; set; }
 
         /// <summary>
-        /// The name of the instance.
+        /// The name of the MSE instance.
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// The extended request parameter in the JSON format.
+        /// The extended request parameters in the JSON format.
         /// </summary>
         [NameInMap("RequestPars")]
         [Validation(Required=false)]
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// VPC ID.
+        /// The ID of the virtual private cloud (VPC).
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateGatewayRouteTimeoutResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// The return value.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The details of the data.
+        /// The data of the node.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. A value of true indicates that the request is successful. A value of false indicates that the request fails.
+        /// Indicates whether the request was successful. true: The request was successful. false: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

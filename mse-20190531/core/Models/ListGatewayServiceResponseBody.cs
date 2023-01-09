@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListGatewayServiceResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// The return value.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The maximum number of entries returned per page. Default value: 10.
+            /// The number of entries returned per page. Default value: 10.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                         public string LoadbalancerType { get; set; }
 
                         /// <summary>
-                        /// The prefetch time of least connection load balancing.
+                        /// The prefetch time of the least connection load balancing.
                         /// </summary>
                         [NameInMap("WarmupDuration")]
                         [Validation(Required=false)]
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     }
 
                     /// <summary>
-                    /// TLS.
+                    /// The Transport Layer Security (TLS).
                     /// </summary>
                     [NameInMap("Tls")]
                     [Validation(Required=false)]
@@ -339,7 +339,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string HealthStatus { get; set; }
 
                 /// <summary>
-                /// ID.
+                /// The ID.
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]

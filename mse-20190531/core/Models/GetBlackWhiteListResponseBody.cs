@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The details of the data.
+        /// The data of the node.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -45,28 +45,28 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GatewayUniqueId { get; set; }
 
             /// <summary>
-            /// The time when the blacklist or whitelist was created.
+            /// The creation time.
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// The time when the blacklist or whitelist was last modified.
+            /// The modification time.
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// ID.
+            /// The ID.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
             /// <summary>
-            /// Indicates whether the whitelist is queried.
+            /// Indicates whether the whitelist is enabled.
             /// </summary>
             [NameInMap("IsWhite")]
             [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? ResourceId { get; set; }
 
             /// <summary>
-            /// The type of the resource.
+            /// The type of a resource.
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The type of the blacklist or whitelist.
+            /// The type.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -124,9 +124,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
-        /// - `true`: The request is successful. 
-        /// - `false`: The request fails.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   `true`: The request was successful.
+        /// *   `false`: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

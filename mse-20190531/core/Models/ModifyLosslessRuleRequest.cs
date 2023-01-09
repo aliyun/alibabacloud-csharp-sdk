@@ -68,6 +68,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public bool? LossLessDetail { get; set; }
 
+        [NameInMap("Namespace")]
+        [Validation(Required=false)]
+        public string Namespace { get; set; }
+
         [NameInMap("Notice")]
         [Validation(Required=false)]
         public bool? Notice { get; set; }

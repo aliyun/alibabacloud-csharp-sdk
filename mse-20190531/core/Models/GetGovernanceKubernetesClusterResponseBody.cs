@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetGovernanceKubernetesClusterResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// The response code returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public GetGovernanceKubernetesClusterResponseBodyData Data { get; set; }
         public class GetGovernanceKubernetesClusterResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the cluster.
+            /// The ID of the instance.
             /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// The name of the cluster.
+            /// The name of the instance.
             /// </summary>
             [NameInMap("ClusterName")]
             [Validation(Required=false)]
@@ -45,28 +45,28 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string K8sVersion { get; set; }
 
             /// <summary>
-            /// The information about namespaces.
+            /// The information of the namespace.
             /// </summary>
             [NameInMap("NamespaceInfos")]
             [Validation(Required=false)]
             public string NamespaceInfos { get; set; }
 
             /// <summary>
-            /// The details of namespaces.
+            /// The list of namespaces.
             /// </summary>
             [NameInMap("Namespaces")]
             [Validation(Required=false)]
             public List<GetGovernanceKubernetesClusterResponseBodyDataNamespaces> Namespaces { get; set; }
             public class GetGovernanceKubernetesClusterResponseBodyDataNamespaces : TeaModel {
                 /// <summary>
-                /// The name of the namespace.
+                /// The name.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The tags of the namespace.
+                /// The tags.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -75,21 +75,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// The time when the cluster was started.
+            /// The time when the ack-onepilot component was started.
             /// </summary>
             [NameInMap("PilotStartTime")]
             [Validation(Required=false)]
             public string PilotStartTime { get; set; }
 
             /// <summary>
-            /// The ID of the region in which the cluster resides.
+            /// The ID of the region in which the instance resides. The region is supported by MSE.
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
 
             /// <summary>
-            /// The time when the cluster was last modified.
+            /// The time of the last modification.
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
@@ -119,9 +119,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
-        /// - `true`: The request is successful. 
-        /// - `false`: The request fails.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   `true`: The request was successful.
+        /// *   `false`: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

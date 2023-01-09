@@ -12,36 +12,43 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The language of the response. Valid values:
         /// 
-        /// - zh: Chinese
-        /// - en: English
+        /// *   zh: Chinese
+        /// *   en: English
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The name of the application.
+        /// The tag of the application.
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
         /// <summary>
-        /// The data ID.
+        /// The ID of the data that you want to export.
+        /// 
+        /// > :
+        /// 
+        /// *   Multiple export methods are supported.
+        /// *   If you want to export a single configuration, you must leave the Ids parameter empty and specify the DataID and Group parameters.
         /// </summary>
         [NameInMap("DataId")]
         [Validation(Required=false)]
         public string DataId { get; set; }
 
         /// <summary>
-        /// The name of the group.
+        /// The name of the configuration group.
         /// </summary>
         [NameInMap("Group")]
         [Validation(Required=false)]
         public string Group { get; set; }
 
         /// <summary>
-        /// The IDs of configurations.
+        /// The ID of the primary key of a configuration item.
+        /// 
+        /// > : - Multiple export methods are supported. You must specify this parameter if you want to export multiple configurations. - You can obtain the value of this parameter by calling the ListNacosConfigs operation. - If you specify this parameter, multiple configurations are exported. The DataId and Group parameters are invalid.
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]

@@ -45,10 +45,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ConsumerAppName { get; set; }
 
             /// <summary>
-            /// Indicates whether the rule is enabled. 
+            /// Indicates whether the mock rule is enabled.
             /// 
-            /// - `true`: enabled 
-            /// - `false`: disabled
+            /// *   `true`: enabled
+            /// *   `false`: disabled
             /// </summary>
             [NameInMap("Enable")]
             [Validation(Required=false)]
@@ -69,17 +69,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// The type of the model. Valid values:
+            /// The mock type. Valid values:
             /// 
-            /// - `[unk]0[unk]`: desktop client
-            /// - `[unk]1[unk]`: mobile client
+            /// *   \- `[unk]0[unk]`: desktop client
+            /// *   \- `[unk]1[unk]`: mobile client
             /// </summary>
             [NameInMap("MockType")]
             [Validation(Required=false)]
             public long? MockType { get; set; }
 
             /// <summary>
-            /// The name of the rule.
+            /// The name.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ProviderAppName { get; set; }
 
             /// <summary>
-            /// The ID of the region.
+            /// The region ID.
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ScMockItemJson { get; set; }
 
             /// <summary>
-            /// The source.
+            /// The service source.
             /// </summary>
             [NameInMap("Source")]
             [Validation(Required=false)]
@@ -151,9 +151,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
-        /// - `true`: The request is successful. 
-        /// - `false`: The request fails.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   `true`: The request was successful.
+        /// *   `false`: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

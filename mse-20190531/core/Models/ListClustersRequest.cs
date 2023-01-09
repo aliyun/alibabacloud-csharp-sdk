@@ -48,14 +48,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The extended request parameter in the JSON format.
+        /// The extended request parameters in the JSON format.
         /// </summary>
         [NameInMap("RequestPars")]
         [Validation(Required=false)]
         public string RequestPars { get; set; }
 
         /// <summary>
-        /// The ID of the resource group. For more information about resource groups, see the topic "View basic information of a resource group."
+        /// The ID of the resource group to which the instance belongs. For more information about resource groups, see the topic "View basic information of a resource group."
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -69,14 +69,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public List<ListClustersRequestTag> Tag { get; set; }
         public class ListClustersRequestTag : TeaModel {
             /// <summary>
-            /// The key of a tag.
+            /// The tag key.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of a tag.
+            /// The tag value.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

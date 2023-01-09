@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DirectResponseJSONShrink { get; set; }
 
         /// <summary>
-        /// The ID of the domain name.
+        /// The domain ID.
         /// </summary>
         [NameInMap("DomainId")]
         [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DomainIdListJSON { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable Web Application Firewall (WAF).
+        /// Specifies whether to activate Web Application Firewall (WAF).
         /// </summary>
         [NameInMap("EnableWaf")]
         [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? Fallback { get; set; }
 
         /// <summary>
-        /// The information of the Fallback service.
+        /// The information about the Fallback service.
         /// </summary>
         [NameInMap("FallbackServices")]
         [Validation(Required=false)]

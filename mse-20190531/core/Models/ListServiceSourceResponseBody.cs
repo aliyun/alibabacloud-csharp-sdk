@@ -10,98 +10,105 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListServiceSourceResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
-        /// - `true`: The request is successful. 
-        /// - `false`: The request fails.
+        /// The response code returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data structure.
+        /// The returned data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListServiceSourceResponseBodyData> Data { get; set; }
         public class ListServiceSourceResponseBodyData : TeaModel {
             /// <summary>
-            /// The type of the service source.
+            /// The ID of the Container Service for Kubernetes (ACK) cluster or the endpoint of the Microservices Engine (MSE) registry.
             /// </summary>
             [NameInMap("Address")]
             [Validation(Required=false)]
             public string Address { get; set; }
 
             /// <summary>
-            /// The ID of the gateway.
+            /// Indicates whether the service source is associated with the gateway. The value 1 indicates that the service source is associated with the gateway.
             /// </summary>
             [NameInMap("BindingWithGateway")]
             [Validation(Required=false)]
             public int? BindingWithGateway { get; set; }
 
             /// <summary>
-            /// The time when the service source was added.
+            /// The ID of the gateway.
             /// </summary>
             [NameInMap("GatewayId")]
             [Validation(Required=false)]
             public long? GatewayId { get; set; }
 
+            /// <summary>
+            /// The unique ID of the gateway.
+            /// </summary>
             [NameInMap("GatewayUniqueId")]
             [Validation(Required=false)]
             public string GatewayUniqueId { get; set; }
 
             /// <summary>
-            /// The time when the service source was last modified.
+            /// The creation time.
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// The unique ID of the service source.
+            /// The update time.
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public string GmtModified { get; set; }
 
+            /// <summary>
+            /// The array of service groups.
+            /// </summary>
             [NameInMap("GroupList")]
             [Validation(Required=false)]
             public List<string> GroupList { get; set; }
 
             /// <summary>
-            /// The name of the service source.
+            /// The ID.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
             /// <summary>
-            /// Programming language
+            /// Support for Ingresses of applications.
             /// </summary>
             [NameInMap("IngressOptions")]
             [Validation(Required=false)]
             public ListServiceSourceResponseBodyDataIngressOptions IngressOptions { get; set; }
             public class ListServiceSourceResponseBodyDataIngressOptions : TeaModel {
                 /// <summary>
-                /// Alibaba Cloud provides SDKs for multiple programming languages to help you integrate Alibaba Cloud products and services by using APIs. We recommend that you use an SDK to call API operations. This frees you from manual signature verification.
+                /// Indicates whether Ingresses are enabled.
                 /// </summary>
                 [NameInMap("EnableIngress")]
                 [Validation(Required=false)]
                 public bool? EnableIngress { get; set; }
 
+                /// <summary>
+                /// Indicates whether the Ingress gateway status is updated.
+                /// </summary>
                 [NameInMap("EnableStatus")]
                 [Validation(Required=false)]
                 public bool? EnableStatus { get; set; }
 
                 /// <summary>
-                /// ingress class
+                /// The Ingress class.
                 /// </summary>
                 [NameInMap("IngressClass")]
                 [Validation(Required=false)]
                 public string IngressClass { get; set; }
 
                 /// <summary>
-                /// Alibaba Cloud CLI allows you to search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.
+                /// The namespace whose resources you want to monitor.
                 /// </summary>
                 [NameInMap("WatchNamespace")]
                 [Validation(Required=false)]
@@ -110,32 +117,35 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// The ID of the Container Service for Kubernetes (ACK) cluster, or the endpoint of the Microservices Engine (MSE) Nacos registry.
+            /// The name.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// The array of root paths of service lists.
+            /// </summary>
             [NameInMap("PathList")]
             [Validation(Required=false)]
             public List<string> PathList { get; set; }
 
             /// <summary>
-            /// Indicates whether the service source is associated with the gateway.
+            /// The type of the service source.
             /// </summary>
             [NameInMap("Source")]
             [Validation(Required=false)]
             public string Source { get; set; }
 
             /// <summary>
-            /// Query service sources
+            /// The unique ID of the service source.
             /// </summary>
             [NameInMap("SourceUniqueId")]
             [Validation(Required=false)]
             public string SourceUniqueId { get; set; }
 
             /// <summary>
-            /// The source of the service source.
+            /// The type.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -144,28 +154,31 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The error message returned if the request fails.
+        /// The HTTP status code returned.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The status code returned.
+        /// The error message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The returned results.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   `true`: The request was successful.
+        /// *   `false`: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
