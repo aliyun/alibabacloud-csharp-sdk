@@ -39,10 +39,6 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 [Validation(Required=false)]
                 public bool? EnableSaveMFATicket { get; set; }
 
-                [NameInMap("EnforceMFAForLogin")]
-                [Validation(Required=false)]
-                public bool? EnforceMFAForLogin { get; set; }
-
                 [NameInMap("LoginNetworkMasks")]
                 [Validation(Required=false)]
                 public string LoginNetworkMasks { get; set; }
@@ -50,6 +46,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 [NameInMap("LoginSessionDuration")]
                 [Validation(Required=false)]
                 public int? LoginSessionDuration { get; set; }
+
+                [NameInMap("MFAOperationForLogin")]
+                [Validation(Required=false)]
+                public string MFAOperationForLogin { get; set; }
+
+                [NameInMap("OperationForRiskLogin")]
+                [Validation(Required=false)]
+                public string OperationForRiskLogin { get; set; }
 
             }
 
