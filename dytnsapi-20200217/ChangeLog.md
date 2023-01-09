@@ -1,3 +1,6 @@
+2023-01-09 Version: 1.0.18
+- Delete numberType.
+
 2022-12-14 Version: 1.0.17
 - Add error code InputParamIllegal.
 - Add field AuditRemark.
