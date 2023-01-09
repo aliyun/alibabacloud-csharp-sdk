@@ -21,9 +21,6 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// 报告ID
-        /// </summary>
         [NameInMap("ReportId")]
         [Validation(Required=false)]
         public string ReportId { get; set; }

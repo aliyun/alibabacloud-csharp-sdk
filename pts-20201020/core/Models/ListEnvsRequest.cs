@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.PTS20201020.Models
 {
     public class ListEnvsRequest : TeaModel {
-        /// <summary>
-        /// 环境ID
-        /// </summary>
         [NameInMap("EnvId")]
         [Validation(Required=false)]
         public string EnvId { get; set; }
 
-        /// <summary>
-        /// 环境名
-        /// </summary>
         [NameInMap("EnvName")]
         [Validation(Required=false)]
         public string EnvName { get; set; }

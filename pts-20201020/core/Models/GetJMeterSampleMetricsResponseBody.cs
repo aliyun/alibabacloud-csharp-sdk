@@ -21,16 +21,10 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 采样器聚合数据列表
-        /// </summary>
         [NameInMap("SampleMetricList")]
         [Validation(Required=false)]
         public List<string> SampleMetricList { get; set; }
 
-        /// <summary>
-        /// 采样器列表，可根据该列表传递需要查询的采样器
-        /// </summary>
         [NameInMap("SamplerMap")]
         [Validation(Required=false)]
         public Dictionary<string, object> SamplerMap { get; set; }

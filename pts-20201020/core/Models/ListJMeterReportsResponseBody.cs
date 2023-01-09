@@ -33,37 +33,22 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
         [Validation(Required=false)]
         public List<ListJMeterReportsResponseBodyReports> Reports { get; set; }
         public class ListJMeterReportsResponseBodyReports : TeaModel {
-            /// <summary>
-            /// 压测开始时间
-            /// </summary>
             [NameInMap("ActualStartTime")]
             [Validation(Required=false)]
             public long? ActualStartTime { get; set; }
 
-            /// <summary>
-            /// 压测持续时间
-            /// </summary>
             [NameInMap("Duration")]
             [Validation(Required=false)]
             public string Duration { get; set; }
 
-            /// <summary>
-            /// 报告id
-            /// </summary>
             [NameInMap("ReportId")]
             [Validation(Required=false)]
             public string ReportId { get; set; }
 
-            /// <summary>
-            /// 报告名称
-            /// </summary>
             [NameInMap("ReportName")]
             [Validation(Required=false)]
             public string ReportName { get; set; }
 
-            /// <summary>
-            /// 消耗的vum
-            /// </summary>
             [NameInMap("Vum")]
             [Validation(Required=false)]
             public long? Vum { get; set; }

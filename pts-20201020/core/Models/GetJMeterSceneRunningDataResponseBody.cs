@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 运行中的数据
-        /// </summary>
         [NameInMap("RunningData")]
         [Validation(Required=false)]
         public GetJMeterSceneRunningDataResponseBodyRunningData RunningData { get; set; }
@@ -39,46 +36,60 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
             [NameInMap("AgentCount")]
             [Validation(Required=false)]
             public int? AgentCount { get; set; }
+
             [NameInMap("AgentIdList")]
             [Validation(Required=false)]
             public List<string> AgentIdList { get; set; }
+
             [NameInMap("AllSampleStat")]
             [Validation(Required=false)]
-            public Dictionary<string, string> AllSampleStat { get; set; }
+            public Dictionary<string, object> AllSampleStat { get; set; }
+
             [NameInMap("Concurrency")]
             [Validation(Required=false)]
             public int? Concurrency { get; set; }
+
             [NameInMap("HasReport")]
             [Validation(Required=false)]
             public bool? HasReport { get; set; }
+
             [NameInMap("HoldFor")]
             [Validation(Required=false)]
             public int? HoldFor { get; set; }
+
             [NameInMap("IsDebugging")]
             [Validation(Required=false)]
             public bool? IsDebugging { get; set; }
+
             [NameInMap("SampleStatList")]
             [Validation(Required=false)]
-            public List<string> SampleStatList { get; set; }
+            public List<Dictionary<string, object>> SampleStatList { get; set; }
+
             [NameInMap("SceneId")]
             [Validation(Required=false)]
             public string SceneId { get; set; }
+
             [NameInMap("SceneName")]
             [Validation(Required=false)]
             public string SceneName { get; set; }
+
             [NameInMap("StageName")]
             [Validation(Required=false)]
             public string StageName { get; set; }
+
             [NameInMap("StartTimeTS")]
             [Validation(Required=false)]
             public long? StartTimeTS { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("Vum")]
             [Validation(Required=false)]
             public long? Vum { get; set; }
-        };
+
+        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

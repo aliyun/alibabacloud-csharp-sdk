@@ -17,22 +17,60 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
             [Validation(Required=false)]
             public List<GetPtsSceneBaseLineResponseBodyBaselineApiBaselines> ApiBaselines { get; set; }
             public class GetPtsSceneBaseLineResponseBodyBaselineApiBaselines : TeaModel {
+                [NameInMap("AvgRt")]
+                [Validation(Required=false)]
                 public float? AvgRt { get; set; }
+
+                [NameInMap("AvgTps")]
+                [Validation(Required=false)]
                 public float? AvgTps { get; set; }
+
+                [NameInMap("FailCountBiz")]
+                [Validation(Required=false)]
                 public long? FailCountBiz { get; set; }
+
+                [NameInMap("FailCountReq")]
+                [Validation(Required=false)]
                 public long? FailCountReq { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public long? Id { get; set; }
+
+                [NameInMap("MaxRt")]
+                [Validation(Required=false)]
                 public int? MaxRt { get; set; }
+
+                [NameInMap("MinRt")]
+                [Validation(Required=false)]
                 public int? MinRt { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Seg90Rt")]
+                [Validation(Required=false)]
                 public float? Seg90Rt { get; set; }
+
+                [NameInMap("Seg99Rt")]
+                [Validation(Required=false)]
                 public float? Seg99Rt { get; set; }
+
+                [NameInMap("SuccessRateBiz")]
+                [Validation(Required=false)]
                 public float? SuccessRateBiz { get; set; }
+
+                [NameInMap("SuccessRateReq")]
+                [Validation(Required=false)]
                 public float? SuccessRateReq { get; set; }
+
             }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
             [NameInMap("SceneBaseline")]
             [Validation(Required=false)]
             public GetPtsSceneBaseLineResponseBodyBaselineSceneBaseline SceneBaseline { get; set; }
@@ -70,7 +108,8 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
                 public float? SuccessRateReq { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("Code")]
         [Validation(Required=false)]

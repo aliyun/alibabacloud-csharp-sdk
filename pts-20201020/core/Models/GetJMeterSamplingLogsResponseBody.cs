@@ -33,9 +33,6 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 采样器的采样结果
-        /// </summary>
         [NameInMap("SampleResults")]
         [Validation(Required=false)]
         public List<string> SampleResults { get; set; }

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.PTS20201020.Models
 {
     public class RemoveOpenJMeterSceneRequest : TeaModel {
-        /// <summary>
-        /// 场景ID
-        /// </summary>
         [NameInMap("SceneId")]
         [Validation(Required=false)]
         public string SceneId { get; set; }

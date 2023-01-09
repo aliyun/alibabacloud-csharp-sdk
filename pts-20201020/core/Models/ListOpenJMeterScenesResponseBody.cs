@@ -21,23 +21,14 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
         [Validation(Required=false)]
         public List<ListOpenJMeterScenesResponseBodyJMeterScene> JMeterScene { get; set; }
         public class ListOpenJMeterScenesResponseBodyJMeterScene : TeaModel {
-            /// <summary>
-            /// 压测持续时间
-            /// </summary>
             [NameInMap("DurationStr")]
             [Validation(Required=false)]
             public string DurationStr { get; set; }
 
-            /// <summary>
-            /// 场景id
-            /// </summary>
             [NameInMap("SceneId")]
             [Validation(Required=false)]
             public string SceneId { get; set; }
 
-            /// <summary>
-            /// 场景名
-            /// </summary>
             [NameInMap("SceneName")]
             [Validation(Required=false)]
             public string SceneName { get; set; }

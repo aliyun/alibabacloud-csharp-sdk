@@ -2300,9 +2300,9 @@ namespace AlibabaCloud.SDK.PTS20201020
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             SaveEnvShrinkRequest request = new SaveEnvShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Env.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Env))
             {
-                request.EnvShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Env.ToMap(), "Env", "json");
+                request.EnvShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Env, "Env", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvShrink))
@@ -2333,9 +2333,9 @@ namespace AlibabaCloud.SDK.PTS20201020
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             SaveEnvShrinkRequest request = new SaveEnvShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Env.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Env))
             {
-                request.EnvShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Env.ToMap(), "Env", "json");
+                request.EnvShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Env, "Env", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvShrink))
@@ -2378,9 +2378,9 @@ namespace AlibabaCloud.SDK.PTS20201020
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             SaveOpenJMeterSceneShrinkRequest request = new SaveOpenJMeterSceneShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OpenJMeterScene.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OpenJMeterScene))
             {
-                request.OpenJMeterSceneShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OpenJMeterScene.ToMap(), "OpenJMeterScene", "json");
+                request.OpenJMeterSceneShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OpenJMeterScene, "OpenJMeterScene", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenJMeterSceneShrink))
@@ -2411,9 +2411,9 @@ namespace AlibabaCloud.SDK.PTS20201020
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             SaveOpenJMeterSceneShrinkRequest request = new SaveOpenJMeterSceneShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OpenJMeterScene.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OpenJMeterScene))
             {
-                request.OpenJMeterSceneShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OpenJMeterScene.ToMap(), "OpenJMeterScene", "json");
+                request.OpenJMeterSceneShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OpenJMeterScene, "OpenJMeterScene", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenJMeterSceneShrink))
@@ -2456,9 +2456,9 @@ namespace AlibabaCloud.SDK.PTS20201020
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             SavePtsSceneShrinkRequest request = new SavePtsSceneShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Scene.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Scene))
             {
-                request.SceneShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Scene.ToMap(), "Scene", "json");
+                request.SceneShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Scene, "Scene", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneShrink))
@@ -2489,9 +2489,9 @@ namespace AlibabaCloud.SDK.PTS20201020
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             SavePtsSceneShrinkRequest request = new SavePtsSceneShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Scene.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Scene))
             {
-                request.SceneShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Scene.ToMap(), "Scene", "json");
+                request.SceneShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Scene, "Scene", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneShrink))

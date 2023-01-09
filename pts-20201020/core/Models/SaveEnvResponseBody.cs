@@ -13,9 +13,6 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// 操作的环境id
-        /// </summary>
         [NameInMap("EnvId")]
         [Validation(Required=false)]
         public string EnvId { get; set; }

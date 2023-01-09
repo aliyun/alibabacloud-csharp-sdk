@@ -17,16 +17,10 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// 场景id
-        /// </summary>
         [NameInMap("SceneId")]
         [Validation(Required=false)]
         public string SceneId { get; set; }
 
-        /// <summary>
-        /// 场景名
-        /// </summary>
         [NameInMap("SceneName")]
         [Validation(Required=false)]
         public string SceneName { get; set; }

@@ -66,16 +66,20 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
                 [NameInMap("FailedBusinessCount")]
                 [Validation(Required=false)]
                 public long? FailedBusinessCount { get; set; }
+
                 [NameInMap("FailedBusinessQps")]
                 [Validation(Required=false)]
                 public float? FailedBusinessQps { get; set; }
+
                 [NameInMap("SucceedBusinessCount")]
                 [Validation(Required=false)]
                 public long? SucceedBusinessCount { get; set; }
+
                 [NameInMap("SucceedBusinessQps")]
                 [Validation(Required=false)]
                 public float? SucceedBusinessQps { get; set; }
-            };
+
+            }
 
             [NameInMap("Concurrency")]
             [Validation(Required=false)]
@@ -182,6 +186,10 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
         [NameInMap("TotalAgents")]
         [Validation(Required=false)]
         public int? TotalAgents { get; set; }
+
+        [NameInMap("TotalRealQps")]
+        [Validation(Required=false)]
+        public int? TotalRealQps { get; set; }
 
         [NameInMap("TotalRequestCount")]
         [Validation(Required=false)]

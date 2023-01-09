@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.PTS20201020.Models
 {
     public class SaveEnvShrinkRequest : TeaModel {
-        /// <summary>
-        /// 环境
-        /// </summary>
         [NameInMap("Env")]
         [Validation(Required=false)]
         public string EnvShrink { get; set; }

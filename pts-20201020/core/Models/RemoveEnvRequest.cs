@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.PTS20201020.Models
 {
     public class RemoveEnvRequest : TeaModel {
-        /// <summary>
-        /// 要删除的环境ID
-        /// </summary>
         [NameInMap("EnvId")]
         [Validation(Required=false)]
         public string EnvId { get; set; }

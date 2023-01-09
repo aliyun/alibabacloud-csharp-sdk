@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.PTS20201020.Models
 {
     public class GetJMeterLogsResponseBody : TeaModel {
-        /// <summary>
-        /// 引擎数量，想要获得第几台引擎的日志可以根据引擎数量传值
-        /// </summary>
         [NameInMap("AgentCount")]
         [Validation(Required=false)]
         public int? AgentCount { get; set; }
@@ -20,9 +17,6 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// 日志内容
-        /// </summary>
         [NameInMap("Logs")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> Logs { get; set; }
