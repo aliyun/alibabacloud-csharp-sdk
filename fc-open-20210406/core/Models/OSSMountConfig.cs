@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
             [Validation(Required=false)]
             public string BucketName { get; set; }
 
+            [NameInMap("bucketPath")]
+            [Validation(Required=false)]
+            public string BucketPath { get; set; }
+
             [NameInMap("endpoint")]
             [Validation(Required=false)]
             public string Endpoint { get; set; }

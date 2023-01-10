@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class GetResourceTagsResponseBody : TeaModel {
+        /// <summary>
+        /// The ARN of the resource. 
+        /// 
+        /// > You can use the value of this parameter to query the information about the resource, such as the account, service, and region information of the resource.
+        /// </summary>
         [NameInMap("resourceArn")]
         [Validation(Required=false)]
         public string ResourceArn { get; set; }
 
+        /// <summary>
+        /// The tag dictionary.
+        /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public Dictionary<string, string> Tags { get; set; }

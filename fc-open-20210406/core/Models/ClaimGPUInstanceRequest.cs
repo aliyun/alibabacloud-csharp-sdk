@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public string Password { get; set; }
 
+        [NameInMap("role")]
+        [Validation(Required=false)]
+        public string Role { get; set; }
+
+        [NameInMap("sgId")]
+        [Validation(Required=false)]
+        public string SgId { get; set; }
+
         [NameInMap("sourceCidrIp")]
         [Validation(Required=false)]
         public string SourceCidrIp { get; set; }
@@ -44,6 +52,14 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [NameInMap("udpPortRange")]
         [Validation(Required=false)]
         public List<string> UdpPortRange { get; set; }
+
+        [NameInMap("vpcId")]
+        [Validation(Required=false)]
+        public string VpcId { get; set; }
+
+        [NameInMap("vswId")]
+        [Validation(Required=false)]
+        public string VswId { get; set; }
 
     }
 
