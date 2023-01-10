@@ -21,7 +21,12 @@ namespace AlibabaCloud.SDK.ImageSearch20210501.Models
             [Validation(Required=false)]
             public List<SearchByUrlResponseBodyDataAuctions> Auctions { get; set; }
             public class SearchByUrlResponseBodyDataAuctions : TeaModel {
+                [NameInMap("RankScore")]
+                [Validation(Required=false)]
                 public float? RankScore { get; set; }
+
+                [NameInMap("Result")]
+                [Validation(Required=false)]
                 public SearchByUrlResponseBodyDataAuctionsResult Result { get; set; }
                 public class SearchByUrlResponseBodyDataAuctionsResult : TeaModel {
                     [NameInMap("CategoryName")]
@@ -87,13 +92,16 @@ namespace AlibabaCloud.SDK.ImageSearch20210501.Models
                         [NameInMap("MaxCommissionClickUrl")]
                         [Validation(Required=false)]
                         public string MaxCommissionClickUrl { get; set; }
+
                         [NameInMap("MaxCommissionCouponShareUrl")]
                         [Validation(Required=false)]
                         public string MaxCommissionCouponShareUrl { get; set; }
+
                         [NameInMap("MaxCommissionRate")]
                         [Validation(Required=false)]
                         public string MaxCommissionRate { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("Nick")]
                     [Validation(Required=false)]
@@ -152,8 +160,10 @@ namespace AlibabaCloud.SDK.ImageSearch20210501.Models
                     public string ZkFinalPrice { get; set; }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -186,13 +196,18 @@ namespace AlibabaCloud.SDK.ImageSearch20210501.Models
                 public string Region { get; set; }
 
             }
+
             [NameInMap("MultiRegion")]
             [Validation(Required=false)]
             public List<SearchByUrlResponseBodyPicInfoMultiRegion> MultiRegion { get; set; }
             public class SearchByUrlResponseBodyPicInfoMultiRegion : TeaModel {
+                [NameInMap("Region")]
+                [Validation(Required=false)]
                 public string Region { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -40,9 +40,22 @@ namespace AlibabaCloud.SDK.ImageSearch20210501
         public GetProductInfoByIdsResponse GetProductInfoByIdsWithOptions(GetProductInfoByIdsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fields))
+            {
+                body["Fields"] = request.Fields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItemIds))
+            {
+                body["ItemIds"] = request.ItemIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Pid))
+            {
+                body["Pid"] = request.Pid;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -62,9 +75,22 @@ namespace AlibabaCloud.SDK.ImageSearch20210501
         public async Task<GetProductInfoByIdsResponse> GetProductInfoByIdsWithOptionsAsync(GetProductInfoByIdsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fields))
+            {
+                body["Fields"] = request.Fields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItemIds))
+            {
+                body["ItemIds"] = request.ItemIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Pid))
+            {
+                body["Pid"] = request.Pid;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -97,11 +123,51 @@ namespace AlibabaCloud.SDK.ImageSearch20210501
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["UserType"] = request.UserType;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserType))
+            {
+                query["UserType"] = request.UserType;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
+            {
+                body["CategoryId"] = request.CategoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Crop))
+            {
+                body["Crop"] = request.Crop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fields))
+            {
+                body["Fields"] = request.Fields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Num))
+            {
+                body["Num"] = request.Num;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PicContent))
+            {
+                body["PicContent"] = request.PicContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Pid))
+            {
+                body["Pid"] = request.Pid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                body["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationId))
+            {
+                body["RelationId"] = request.RelationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
+            {
+                body["Start"] = request.Start;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -122,11 +188,51 @@ namespace AlibabaCloud.SDK.ImageSearch20210501
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["UserType"] = request.UserType;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserType))
+            {
+                query["UserType"] = request.UserType;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
+            {
+                body["CategoryId"] = request.CategoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Crop))
+            {
+                body["Crop"] = request.Crop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fields))
+            {
+                body["Fields"] = request.Fields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Num))
+            {
+                body["Num"] = request.Num;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PicContent))
+            {
+                body["PicContent"] = request.PicContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Pid))
+            {
+                body["Pid"] = request.Pid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                body["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationId))
+            {
+                body["RelationId"] = request.RelationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
+            {
+                body["Start"] = request.Start;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -171,7 +277,7 @@ namespace AlibabaCloud.SDK.ImageSearch20210501
             {
                 credentialType = "access_key";
             }
-            AlibabaCloud.RPCClient.Models.Config authConfig = new AlibabaCloud.RPCClient.Models.Config
+            AlibabaCloud.OpenApiClient.Models.Config authConfig = new AlibabaCloud.OpenApiClient.Models.Config
             {
                 AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
@@ -206,31 +312,31 @@ namespace AlibabaCloud.SDK.ImageSearch20210501
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PicContentObject))
             {
                 authResponse = authClient.AuthorizeFileUploadWithOptions(authRequest, runtime);
-                ossConfig.AccessKeyId = authResponse.AccessKeyId;
-                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Endpoint, authResponse.UseAccelerate, _endpointType);
+                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
+                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
                 ossClient = new AlibabaCloud.OSS.Client(ossConfig);
                 fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
                 {
-                    Filename = authResponse.ObjectKey,
+                    Filename = authResponse.Body.ObjectKey,
                     Content = request.PicContentObject,
                     ContentType = "",
                 };
                 ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
                 {
-                    AccessKeyId = authResponse.AccessKeyId,
-                    Policy = authResponse.EncodedPolicy,
-                    Signature = authResponse.Signature,
-                    Key = authResponse.ObjectKey,
+                    AccessKeyId = authResponse.Body.AccessKeyId,
+                    Policy = authResponse.Body.EncodedPolicy,
+                    Signature = authResponse.Body.Signature,
+                    Key = authResponse.Body.ObjectKey,
                     File = fileObj,
                     SuccessActionStatus = "201",
                 };
                 uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
                 {
-                    BucketName = authResponse.Bucket,
+                    BucketName = authResponse.Body.Bucket,
                     Header = ossHeader,
                 };
                 ossClient.PostObject(uploadRequest, ossRuntime);
-                searchByPicReq.PicContent = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
+                searchByPicReq.PicContent = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
             }
             SearchByPicResponse searchByPicResp = SearchByPicWithOptions(searchByPicReq, runtime);
             return searchByPicResp;
@@ -252,7 +358,7 @@ namespace AlibabaCloud.SDK.ImageSearch20210501
             {
                 credentialType = "access_key";
             }
-            AlibabaCloud.RPCClient.Models.Config authConfig = new AlibabaCloud.RPCClient.Models.Config
+            AlibabaCloud.OpenApiClient.Models.Config authConfig = new AlibabaCloud.OpenApiClient.Models.Config
             {
                 AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
@@ -287,31 +393,31 @@ namespace AlibabaCloud.SDK.ImageSearch20210501
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PicContentObject))
             {
                 authResponse = await authClient.AuthorizeFileUploadWithOptionsAsync(authRequest, runtime);
-                ossConfig.AccessKeyId = authResponse.AccessKeyId;
-                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Endpoint, authResponse.UseAccelerate, _endpointType);
+                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
+                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
                 ossClient = new AlibabaCloud.OSS.Client(ossConfig);
                 fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
                 {
-                    Filename = authResponse.ObjectKey,
+                    Filename = authResponse.Body.ObjectKey,
                     Content = request.PicContentObject,
                     ContentType = "",
                 };
                 ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
                 {
-                    AccessKeyId = authResponse.AccessKeyId,
-                    Policy = authResponse.EncodedPolicy,
-                    Signature = authResponse.Signature,
-                    Key = authResponse.ObjectKey,
+                    AccessKeyId = authResponse.Body.AccessKeyId,
+                    Policy = authResponse.Body.EncodedPolicy,
+                    Signature = authResponse.Body.Signature,
+                    Key = authResponse.Body.ObjectKey,
                     File = fileObj,
                     SuccessActionStatus = "201",
                 };
                 uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
                 {
-                    BucketName = authResponse.Bucket,
+                    BucketName = authResponse.Body.Bucket,
                     Header = ossHeader,
                 };
                 await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
-                searchByPicReq.PicContent = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
+                searchByPicReq.PicContent = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
             }
             SearchByPicResponse searchByPicResp = await SearchByPicWithOptionsAsync(searchByPicReq, runtime);
             return searchByPicResp;
@@ -321,11 +427,51 @@ namespace AlibabaCloud.SDK.ImageSearch20210501
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["UserType"] = request.UserType;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserType))
+            {
+                query["UserType"] = request.UserType;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
+            {
+                body["CategoryId"] = request.CategoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Crop))
+            {
+                body["Crop"] = request.Crop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fields))
+            {
+                body["Fields"] = request.Fields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Num))
+            {
+                body["Num"] = request.Num;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PicUrl))
+            {
+                body["PicUrl"] = request.PicUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Pid))
+            {
+                body["Pid"] = request.Pid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                body["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationId))
+            {
+                body["RelationId"] = request.RelationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
+            {
+                body["Start"] = request.Start;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -346,11 +492,51 @@ namespace AlibabaCloud.SDK.ImageSearch20210501
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["UserType"] = request.UserType;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserType))
+            {
+                query["UserType"] = request.UserType;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
+            {
+                body["CategoryId"] = request.CategoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Crop))
+            {
+                body["Crop"] = request.Crop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fields))
+            {
+                body["Fields"] = request.Fields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Num))
+            {
+                body["Num"] = request.Num;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PicUrl))
+            {
+                body["PicUrl"] = request.PicUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Pid))
+            {
+                body["Pid"] = request.Pid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                body["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationId))
+            {
+                body["RelationId"] = request.RelationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
+            {
+                body["Start"] = request.Start;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {

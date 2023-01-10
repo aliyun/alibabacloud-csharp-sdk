@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ImageSearch20210501.Models
 {
     public class SearchByPicAdvanceRequest : TeaModel {
-        [NameInMap("PicContentObject")]
-        [Validation(Required=true)]
-        public Stream PicContentObject { get; set; }
-
         [NameInMap("CategoryId")]
         [Validation(Required=false)]
         public int? CategoryId { get; set; }
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.ImageSearch20210501.Models
         [NameInMap("Num")]
         [Validation(Required=false)]
         public int? Num { get; set; }
+
+        [NameInMap("PicContent")]
+        [Validation(Required=false)]
+        public Stream PicContentObject { get; set; }
 
         [NameInMap("Pid")]
         [Validation(Required=false)]
