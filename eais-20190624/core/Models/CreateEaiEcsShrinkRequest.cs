@@ -8,26 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eais20190624.Models
 {
-    public class DescribeEaisRequest : TeaModel {
-        [NameInMap("ElasticAcceleratedInstanceIds")]
+    public class CreateEaiEcsShrinkRequest : TeaModel {
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string ElasticAcceleratedInstanceIds { get; set; }
+        public string ClientToken { get; set; }
 
-        [NameInMap("InstanceName")]
+        [NameInMap("EaisName")]
         [Validation(Required=false)]
-        public string InstanceName { get; set; }
+        public string EaisName { get; set; }
 
-        [NameInMap("InstanceType")]
+        [NameInMap("EaisType")]
         [Validation(Required=false)]
-        public string InstanceType { get; set; }
+        public string EaisType { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("Ecs")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string EcsShrink { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -37,9 +33,13 @@ namespace AlibabaCloud.SDK.Eais20190624.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
-        [NameInMap("Status")]
+        [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string SecurityGroupId { get; set; }
+
+        [NameInMap("VSwitchId")]
+        [Validation(Required=false)]
+        public string VSwitchId { get; set; }
 
     }
 
