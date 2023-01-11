@@ -950,6 +950,120 @@ namespace AlibabaCloud.SDK.Linkcard20210520
             return await GetCardFlowInfoWithOptionsAsync(request, runtime);
         }
 
+        public GetCardLatestFlowResponse GetCardLatestFlowWithOptions(GetCardLatestFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Iccid))
+            {
+                query["Iccid"] = request.Iccid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCardLatestFlow",
+                Version = "2021-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCardLatestFlowResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetCardLatestFlowResponse> GetCardLatestFlowWithOptionsAsync(GetCardLatestFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Iccid))
+            {
+                query["Iccid"] = request.Iccid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCardLatestFlow",
+                Version = "2021-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCardLatestFlowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetCardLatestFlowResponse GetCardLatestFlow(GetCardLatestFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCardLatestFlowWithOptions(request, runtime);
+        }
+
+        public async Task<GetCardLatestFlowResponse> GetCardLatestFlowAsync(GetCardLatestFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCardLatestFlowWithOptionsAsync(request, runtime);
+        }
+
+        public GetCardStatusStatisticsResponse GetCardStatusStatisticsWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCardStatusStatistics",
+                Version = "2021-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCardStatusStatisticsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetCardStatusStatisticsResponse> GetCardStatusStatisticsWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCardStatusStatistics",
+                Version = "2021-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCardStatusStatisticsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetCardStatusStatisticsResponse GetCardStatusStatistics()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCardStatusStatisticsWithOptions(runtime);
+        }
+
+        public async Task<GetCardStatusStatisticsResponse> GetCardStatusStatisticsAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCardStatusStatisticsWithOptionsAsync(runtime);
+        }
+
         public GetCredentialPoolStatisticsResponse GetCredentialPoolStatisticsWithOptions(GetCredentialPoolStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1022,6 +1136,248 @@ namespace AlibabaCloud.SDK.Linkcard20210520
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetCredentialPoolStatisticsWithOptionsAsync(request, runtime);
+        }
+
+        public GetOperateResultResponse GetOperateResultWithOptions(GetOperateResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiProduct))
+            {
+                query["ApiProduct"] = request.ApiProduct;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResId))
+            {
+                query["ResId"] = request.ResId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SerialNo))
+            {
+                query["SerialNo"] = request.SerialNo;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetOperateResult",
+                Version = "2021-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetOperateResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetOperateResultResponse> GetOperateResultWithOptionsAsync(GetOperateResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiProduct))
+            {
+                query["ApiProduct"] = request.ApiProduct;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResId))
+            {
+                query["ResId"] = request.ResId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SerialNo))
+            {
+                query["SerialNo"] = request.SerialNo;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetOperateResult",
+                Version = "2021-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetOperateResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetOperateResultResponse GetOperateResult(GetOperateResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetOperateResultWithOptions(request, runtime);
+        }
+
+        public async Task<GetOperateResultResponse> GetOperateResultAsync(GetOperateResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetOperateResultWithOptionsAsync(request, runtime);
+        }
+
+        public GetRealNameStatusResponse GetRealNameStatusWithOptions(GetRealNameStatusRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetRealNameStatusShrinkRequest request = new GetRealNameStatusShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ListMsisdns))
+            {
+                request.ListMsisdnsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ListMsisdns, "ListMsisdns", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Iccid))
+            {
+                query["Iccid"] = request.Iccid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListMsisdnsShrink))
+            {
+                query["ListMsisdns"] = request.ListMsisdnsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRealNameStatus",
+                Version = "2021-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRealNameStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetRealNameStatusResponse> GetRealNameStatusWithOptionsAsync(GetRealNameStatusRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetRealNameStatusShrinkRequest request = new GetRealNameStatusShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ListMsisdns))
+            {
+                request.ListMsisdnsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ListMsisdns, "ListMsisdns", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Iccid))
+            {
+                query["Iccid"] = request.Iccid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListMsisdnsShrink))
+            {
+                query["ListMsisdns"] = request.ListMsisdnsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRealNameStatus",
+                Version = "2021-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRealNameStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetRealNameStatusResponse GetRealNameStatus(GetRealNameStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetRealNameStatusWithOptions(request, runtime);
+        }
+
+        public async Task<GetRealNameStatusResponse> GetRealNameStatusAsync(GetRealNameStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetRealNameStatusWithOptionsAsync(request, runtime);
+        }
+
+        public GetSimCardStateDistributionResponse GetSimCardStateDistributionWithOptions(GetSimCardStateDistributionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialNO))
+            {
+                query["CredentialNO"] = request.CredentialNO;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Date))
+            {
+                query["Date"] = request.Date;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSimCardStateDistribution",
+                Version = "2021-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSimCardStateDistributionResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetSimCardStateDistributionResponse> GetSimCardStateDistributionWithOptionsAsync(GetSimCardStateDistributionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialNO))
+            {
+                query["CredentialNO"] = request.CredentialNO;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Date))
+            {
+                query["Date"] = request.Date;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSimCardStateDistribution",
+                Version = "2021-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSimCardStateDistributionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetSimCardStateDistributionResponse GetSimCardStateDistribution(GetSimCardStateDistributionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetSimCardStateDistributionWithOptions(request, runtime);
+        }
+
+        public async Task<GetSimCardStateDistributionResponse> GetSimCardStateDistributionAsync(GetSimCardStateDistributionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetSimCardStateDistributionWithOptionsAsync(request, runtime);
         }
 
         public ListCardInfoResponse ListCardInfoWithOptions(ListCardInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

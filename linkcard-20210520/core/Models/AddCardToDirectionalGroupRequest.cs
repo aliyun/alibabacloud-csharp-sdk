@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.Linkcard20210520.Models
         [Validation(Required=false)]
         public string AddType { get; set; }
 
+        /// <summary>
+        /// Linkcard
+        /// </summary>
         [NameInMap("ApiProduct")]
         [Validation(Required=false)]
         public string ApiProduct { get; set; }
