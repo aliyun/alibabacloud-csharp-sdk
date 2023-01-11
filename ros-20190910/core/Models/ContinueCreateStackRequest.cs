@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public long? Parallelism { get; set; }
 
+        /// <summary>
+        /// test
+        /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public List<ContinueCreateStackRequestParameters> Parameters { get; set; }

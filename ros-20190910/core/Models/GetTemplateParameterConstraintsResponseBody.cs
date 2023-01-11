@@ -37,6 +37,20 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public List<object> IllegalValueByRules { get; set; }
 
+            [NameInMap("NotSupportResources")]
+            [Validation(Required=false)]
+            public List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsNotSupportResources> NotSupportResources { get; set; }
+            public class GetTemplateParameterConstraintsResponseBodyParameterConstraintsNotSupportResources : TeaModel {
+                [NameInMap("PropertyName")]
+                [Validation(Required=false)]
+                public string PropertyName { get; set; }
+
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
+                public string ResourceType { get; set; }
+
+            }
+
             [NameInMap("ParameterKey")]
             [Validation(Required=false)]
             public string ParameterKey { get; set; }

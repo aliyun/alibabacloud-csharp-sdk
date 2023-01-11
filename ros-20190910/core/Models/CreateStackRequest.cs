@@ -33,6 +33,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public long? Parallelism { get; set; }
 
+        /// <summary>
+        /// test
+        /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public List<CreateStackRequestParameters> Parameters { get; set; }
@@ -71,6 +74,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string StackPolicyURL { get; set; }
 
+        /// <summary>
+        /// test
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateStackRequestTags> Tags { get; set; }

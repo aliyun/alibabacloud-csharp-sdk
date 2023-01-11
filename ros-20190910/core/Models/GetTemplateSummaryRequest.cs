@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// test
+        /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public List<GetTemplateSummaryRequestParameters> Parameters { get; set; }

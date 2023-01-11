@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -8,7 +11,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
-    public class CancelUpdateStackRequest : TeaModel {
+    public class CancelStackOperationRequest : TeaModel {
+        [NameInMap("AllowedStackOperations")]
+        [Validation(Required=false)]
+        public List<string> AllowedStackOperations { get; set; }
+
         [NameInMap("CancelType")]
         [Validation(Required=false)]
         public string CancelType { get; set; }

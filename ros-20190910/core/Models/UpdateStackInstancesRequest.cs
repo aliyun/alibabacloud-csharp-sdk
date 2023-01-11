@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public List<string> AccountIds { get; set; }
 
+            /// <summary>
+            /// test
+            /// </summary>
             [NameInMap("RdFolderIds")]
             [Validation(Required=false)]
             public List<string> RdFolderIds { get; set; }
@@ -39,6 +42,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public Dictionary<string, object> OperationPreferences { get; set; }
 
+        /// <summary>
+        /// test
+        /// </summary>
         [NameInMap("ParameterOverrides")]
         [Validation(Required=false)]
         public List<UpdateStackInstancesRequestParameterOverrides> ParameterOverrides { get; set; }

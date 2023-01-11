@@ -37,6 +37,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 [Validation(Required=false)]
                 public List<string> AccountIds { get; set; }
 
+                /// <summary>
+                /// test
+                /// </summary>
                 [NameInMap("RdFolderIds")]
                 [Validation(Required=false)]
                 public List<string> RdFolderIds { get; set; }
@@ -79,6 +82,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 [Validation(Required=false)]
                 public int? MaxConcurrentPercentage { get; set; }
 
+                /// <summary>
+                /// test
+                /// </summary>
                 [NameInMap("RegionIdsOrder")]
                 [Validation(Required=false)]
                 public List<string> RegionIdsOrder { get; set; }
