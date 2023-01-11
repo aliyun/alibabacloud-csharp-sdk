@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
-    public class ListTopicsRequest : TeaModel {
+    public class ListTopicsShrinkRequest : TeaModel {
         [NameInMap("filter")]
         [Validation(Required=false)]
         public string Filter { get; set; }
 
         [NameInMap("messageTypes")]
         [Validation(Required=false)]
-        public List<string> MessageTypes { get; set; }
+        public string MessageTypesShrink { get; set; }
 
         [NameInMap("pageNumber")]
         [Validation(Required=false)]

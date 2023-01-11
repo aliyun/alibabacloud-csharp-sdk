@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [Validation(Required=false)]
             public GetConsumerGroupResponseBodyDataConsumeRetryPolicy ConsumeRetryPolicy { get; set; }
             public class GetConsumerGroupResponseBodyDataConsumeRetryPolicy : TeaModel {
+                [NameInMap("deadLetterTargetTopic")]
+                [Validation(Required=false)]
+                public string DeadLetterTargetTopic { get; set; }
+
                 [NameInMap("maxRetryTimes")]
                 [Validation(Required=false)]
                 public int? MaxRetryTimes { get; set; }
