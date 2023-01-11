@@ -1,3 +1,6 @@
+2023-01-11 Version: 2.0.9
+- Update sdk.
+
 2022-12-15 Version: 2.0.8
 - Update DetectVehicleICongestion DetectVehicleIllegalParking.
 
