@@ -27,18 +27,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// The additional information.
-        /// </summary>
-        [NameInMap("ExtraInfo")]
-        [Validation(Required=false)]
-        public string ExtraInfo { get; set; }
-
-        /// <summary>
         /// The programming language of the application.
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
         public string Language { get; set; }
+
+        [NameInMap("Namespace")]
+        [Validation(Required=false)]
+        public string Namespace { get; set; }
 
         /// <summary>
         /// The region to which the application belongs.

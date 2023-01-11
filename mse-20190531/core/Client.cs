@@ -2062,13 +2062,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["AppName"] = request.AppName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraInfo))
-            {
-                query["ExtraInfo"] = request.ExtraInfo;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
                 query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
@@ -2117,13 +2117,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["AppName"] = request.AppName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraInfo))
-            {
-                query["ExtraInfo"] = request.ExtraInfo;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
                 query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
@@ -2522,6 +2522,14 @@ namespace AlibabaCloud.SDK.Mse20190531
             return await CreateEngineNamespaceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated : CreateMseServiceApplication is deprecated, please use mse::2019-05-31::CreateApplication instead.
+          *
+          * @param request CreateMseServiceApplicationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateMseServiceApplicationResponse
+         */
+        // Deprecated
         public CreateMseServiceApplicationResponse CreateMseServiceApplicationWithOptions(CreateMseServiceApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2581,6 +2589,14 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<CreateMseServiceApplicationResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : CreateMseServiceApplication is deprecated, please use mse::2019-05-31::CreateApplication instead.
+          *
+          * @param request CreateMseServiceApplicationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateMseServiceApplicationResponse
+         */
+        // Deprecated
         public async Task<CreateMseServiceApplicationResponse> CreateMseServiceApplicationWithOptionsAsync(CreateMseServiceApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2640,12 +2656,26 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<CreateMseServiceApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : CreateMseServiceApplication is deprecated, please use mse::2019-05-31::CreateApplication instead.
+          *
+          * @param request CreateMseServiceApplicationRequest
+          * @return CreateMseServiceApplicationResponse
+         */
+        // Deprecated
         public CreateMseServiceApplicationResponse CreateMseServiceApplication(CreateMseServiceApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateMseServiceApplicationWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated : CreateMseServiceApplication is deprecated, please use mse::2019-05-31::CreateApplication instead.
+          *
+          * @param request CreateMseServiceApplicationRequest
+          * @return CreateMseServiceApplicationResponse
+         */
+        // Deprecated
         public async Task<CreateMseServiceApplicationResponse> CreateMseServiceApplicationAsync(CreateMseServiceApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15756,6 +15786,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["AppId"] = request.AppId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
             {
                 query["Enable"] = request.Enable;
@@ -15763,6 +15797,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterSide))
             {
                 query["FilterSide"] = request.FilterSide;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
@@ -15809,6 +15847,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["AppId"] = request.AppId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
             {
                 query["Enable"] = request.Enable;
@@ -15816,6 +15858,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterSide))
             {
                 query["FilterSide"] = request.FilterSide;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {

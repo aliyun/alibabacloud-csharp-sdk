@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        [NameInMap("AppName")]
+        [Validation(Required=false)]
+        public string AppName { get; set; }
+
         /// <summary>
         /// Specifies whether the canary release for messaging feature is enabled for the application. Valid values:
         /// 
@@ -42,6 +46,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("FilterSide")]
         [Validation(Required=false)]
         public string FilterSide { get; set; }
+
+        [NameInMap("Namespace")]
+        [Validation(Required=false)]
+        public string Namespace { get; set; }
 
         /// <summary>
         /// The region ID.
