@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListBasicAcceleratorsResponseBody : TeaModel {
+        /// <summary>
+        /// The information about basic GA instances.
+        /// </summary>
         [NameInMap("Accelerators")]
         [Validation(Required=false)]
         public List<ListBasicAcceleratorsResponseBodyAccelerators> Accelerators { get; set; }
         public class ListBasicAcceleratorsResponseBodyAccelerators : TeaModel {
+            /// <summary>
+            /// The ID of the basic GA instance.
+            /// </summary>
             [NameInMap("AcceleratorId")]
             [Validation(Required=false)]
             public string AcceleratorId { get; set; }
@@ -21,66 +27,117 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string BandwidthBillingType { get; set; }
 
+            /// <summary>
+            /// The details about the basic bandwidth plan that is associated with the basic GA instance.
+            /// </summary>
             [NameInMap("BasicBandwidthPackage")]
             [Validation(Required=false)]
             public ListBasicAcceleratorsResponseBodyAcceleratorsBasicBandwidthPackage BasicBandwidthPackage { get; set; }
             public class ListBasicAcceleratorsResponseBodyAcceleratorsBasicBandwidthPackage : TeaModel {
+                /// <summary>
+                /// The bandwidth value of the basic bandwidth plan. Unit: Mbit/s.
+                /// </summary>
                 [NameInMap("Bandwidth")]
                 [Validation(Required=false)]
                 public int? Bandwidth { get; set; }
 
+                /// <summary>
+                /// The type of the bandwidth that is provided by the basic bandwidth plan. Valid values:
+                /// 
+                /// *   **Basic**: basic
+                /// *   **Enhanced**: enhanced
+                /// *   **Advanced**: premium
+                /// </summary>
                 [NameInMap("BandwidthType")]
                 [Validation(Required=false)]
                 public string BandwidthType { get; set; }
 
+                /// <summary>
+                /// The ID of the basic bandwidth plan.
+                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
             }
 
+            /// <summary>
+            /// The ID of the endpoint group that is associated with the basic GA instance.
+            /// </summary>
             [NameInMap("BasicEndpointGroupId")]
             [Validation(Required=false)]
             public string BasicEndpointGroupId { get; set; }
 
+            /// <summary>
+            /// The ID of the acceleration region.
+            /// </summary>
             [NameInMap("BasicIpSetId")]
             [Validation(Required=false)]
             public string BasicIpSetId { get; set; }
 
+            /// <summary>
+            /// The timestamp that indicates when the basic GA instance was created.
+            /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
+            /// <summary>
+            /// The details about the cross-region acceleration bandwidth plan that is associated with the GA instance.
+            /// 
+            /// This array is returned only for GA instances that are created on the International site (alibabacloud.com).
+            /// </summary>
             [NameInMap("CrossDomainBandwidthPackage")]
             [Validation(Required=false)]
             public ListBasicAcceleratorsResponseBodyAcceleratorsCrossDomainBandwidthPackage CrossDomainBandwidthPackage { get; set; }
             public class ListBasicAcceleratorsResponseBodyAcceleratorsCrossDomainBandwidthPackage : TeaModel {
+                /// <summary>
+                /// The bandwidth value of the cross-region acceleration bandwidth plan. Unit: Mbit/s.
+                /// </summary>
                 [NameInMap("Bandwidth")]
                 [Validation(Required=false)]
                 public int? Bandwidth { get; set; }
 
+                /// <summary>
+                /// The ID of the cross-region acceleration bandwidth plan.
+                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
             }
 
+            /// <summary>
+            /// The description of the basic GA instance.
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// The timestamp that indicates when the basic GA instance expires.
+            /// </summary>
             [NameInMap("ExpiredTime")]
             [Validation(Required=false)]
             public long? ExpiredTime { get; set; }
 
+            /// <summary>
+            /// The billing method of the basic GA instance. Only **PREPAY** is returned, which indicates the subscription billing method.
+            /// </summary>
             [NameInMap("InstanceChargeType")]
             [Validation(Required=false)]
             public string InstanceChargeType { get; set; }
 
+            /// <summary>
+            /// The name of the basic GA instance.
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// The ID of the region where the basic GA instance is deployed.
+            /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
@@ -89,6 +146,17 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            /// <summary>
+            /// The status of the basic GA instance. Valid values:
+            /// 
+            /// *   **init**: initializing
+            /// *   **active**: available
+            /// *   **configuring**: being configured
+            /// *   **binding**: being associated
+            /// *   **unbinding**: being disassociated
+            /// *   **Deleting**: being deleted
+            /// *   **finacialLocked**: locked due to overdue payments
+            /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
@@ -107,24 +175,39 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
             }
 
+            /// <summary>
+            /// Ignore this parameter.
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
         }
 
+        /// <summary>
+        /// The page number of the returned page.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries returned on each page.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The total number of basic GA instances returned.
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

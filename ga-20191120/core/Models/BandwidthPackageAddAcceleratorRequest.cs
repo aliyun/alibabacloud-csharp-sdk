@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class BandwidthPackageAddAcceleratorRequest : TeaModel {
+        /// <summary>
+        /// The ID of the GA instance.
+        /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
         public string AcceleratorId { get; set; }
 
+        /// <summary>
+        /// The ID of the bandwidth plan.
+        /// </summary>
         [NameInMap("BandwidthPackageId")]
         [Validation(Required=false)]
         public string BandwidthPackageId { get; set; }
 
+        /// <summary>
+        /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

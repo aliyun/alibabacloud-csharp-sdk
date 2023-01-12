@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListBusiRegionsRequest : TeaModel {
+        /// <summary>
+        /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

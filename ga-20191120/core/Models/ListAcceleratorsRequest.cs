@@ -9,18 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListAcceleratorsRequest : TeaModel {
+        /// <summary>
+        /// The ID of the GA instance.
+        /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
         public string AcceleratorId { get; set; }
 
+        /// <summary>
+        /// The number of the page to return. Default value: **1**.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -29,6 +41,17 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The state of the GA instance. Valid values:
+        /// 
+        /// *   **init**: The GA instance is being initialized.
+        /// *   **active**: The GA instance is available.
+        /// *   **configuring**: The GA instance is being configured.
+        /// *   **binding**: The GA instance is being associated.
+        /// *   **unbinding**: The GA instance is being disassociated.
+        /// *   **deleting**: The GA instance is being deleted.
+        /// *   **finacialLocked**: The GA instance is locked due to overdue payments.
+        /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]
         public string State { get; set; }

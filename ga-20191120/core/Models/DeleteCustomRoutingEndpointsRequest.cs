@@ -9,10 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class DeleteCustomRoutingEndpointsRequest : TeaModel {
+        /// <summary>
+        /// The client token that is used to ensure the idempotence of the request.
+        /// 
+        /// You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.
+        /// 
+        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The ID of the endpoint group to which the endpoint that you want to delete belongs.
+        /// </summary>
         [NameInMap("EndpointGroupId")]
         [Validation(Required=false)]
         public string EndpointGroupId { get; set; }
@@ -21,6 +31,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public List<string> EndpointIds { get; set; }
 
+        /// <summary>
+        /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
