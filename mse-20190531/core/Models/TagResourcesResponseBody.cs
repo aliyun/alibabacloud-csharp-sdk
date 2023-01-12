@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class TagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the request failed.
+        /// The error code returned.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

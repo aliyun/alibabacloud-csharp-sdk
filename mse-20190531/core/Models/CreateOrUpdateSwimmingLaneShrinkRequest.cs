@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class CreateOrUpdateSwimmingLaneRequest : TeaModel {
+    public class CreateOrUpdateSwimmingLaneShrinkRequest : TeaModel {
         /// <summary>
         /// The language that the value of the **LocalName** response parameter uses. Valid values:
         /// 
@@ -47,8 +47,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// </summary>
         [NameInMap("EntryRules")]
         [Validation(Required=false)]
-        public List<CreateOrUpdateSwimmingLaneRequestEntryRules> EntryRules { get; set; }
-        public class CreateOrUpdateSwimmingLaneRequestEntryRules : TeaModel {
+        public List<CreateOrUpdateSwimmingLaneShrinkRequestEntryRules> EntryRules { get; set; }
+        public class CreateOrUpdateSwimmingLaneShrinkRequestEntryRules : TeaModel {
             /// <summary>
             /// The common parameters in the JSON format.
             /// </summary>
@@ -92,8 +92,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// </summary>
             [NameInMap("RestItems")]
             [Validation(Required=false)]
-            public List<CreateOrUpdateSwimmingLaneRequestEntryRulesRestItems> RestItems { get; set; }
-            public class CreateOrUpdateSwimmingLaneRequestEntryRulesRestItems : TeaModel {
+            public List<CreateOrUpdateSwimmingLaneShrinkRequestEntryRulesRestItems> RestItems { get; set; }
+            public class CreateOrUpdateSwimmingLaneShrinkRequestEntryRulesRestItems : TeaModel {
                 /// <summary>
                 /// The expression. =, >, <, >=, <=
                 /// </summary>
@@ -170,43 +170,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         [NameInMap("GatewaySwimmingLaneRouteJson")]
         [Validation(Required=false)]
-        public CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson GatewaySwimmingLaneRouteJson { get; set; }
-        public class CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson : TeaModel {
-            [NameInMap("Conditions")]
-            [Validation(Required=false)]
-            public List<CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonConditions> Conditions { get; set; }
-            public class CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonConditions : TeaModel {
-                [NameInMap("Cond")]
-                [Validation(Required=false)]
-                public string Cond { get; set; }
-
-                [NameInMap("Name")]
-                [Validation(Required=false)]
-                public string Name { get; set; }
-
-                [NameInMap("Type")]
-                [Validation(Required=false)]
-                public string Type { get; set; }
-
-                [NameInMap("Value")]
-                [Validation(Required=false)]
-                public string Value { get; set; }
-
-            }
-
-            [NameInMap("GatewayId")]
-            [Validation(Required=false)]
-            public long? GatewayId { get; set; }
-
-            [NameInMap("GatewayUniqueId")]
-            [Validation(Required=false)]
-            public string GatewayUniqueId { get; set; }
-
-            [NameInMap("RouteIdList")]
-            [Validation(Required=false)]
-            public List<long?> RouteIdList { get; set; }
-
-        }
+        public string GatewaySwimmingLaneRouteJsonShrink { get; set; }
 
         /// <summary>
         /// Optional. The time when the lane was created.

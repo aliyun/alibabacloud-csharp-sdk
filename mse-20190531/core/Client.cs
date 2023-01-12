@@ -3186,9 +3186,15 @@ namespace AlibabaCloud.SDK.Mse20190531
             return await CreateNacosServiceWithOptionsAsync(request, runtime);
         }
 
-        public CreateOrUpdateSwimmingLaneResponse CreateOrUpdateSwimmingLaneWithOptions(CreateOrUpdateSwimmingLaneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateOrUpdateSwimmingLaneResponse CreateOrUpdateSwimmingLaneWithOptions(CreateOrUpdateSwimmingLaneRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateOrUpdateSwimmingLaneShrinkRequest request = new CreateOrUpdateSwimmingLaneShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GatewaySwimmingLaneRouteJson))
+            {
+                request.GatewaySwimmingLaneRouteJsonShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GatewaySwimmingLaneRouteJson, "GatewaySwimmingLaneRouteJson", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
@@ -3209,6 +3215,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntryRules))
             {
                 query["EntryRules"] = request.EntryRules;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewaySwimmingLaneRouteJsonShrink))
+            {
+                query["GatewaySwimmingLaneRouteJson"] = request.GatewaySwimmingLaneRouteJsonShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GmtCreate))
             {
@@ -3273,9 +3283,15 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<CreateOrUpdateSwimmingLaneResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CreateOrUpdateSwimmingLaneResponse> CreateOrUpdateSwimmingLaneWithOptionsAsync(CreateOrUpdateSwimmingLaneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateOrUpdateSwimmingLaneResponse> CreateOrUpdateSwimmingLaneWithOptionsAsync(CreateOrUpdateSwimmingLaneRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateOrUpdateSwimmingLaneShrinkRequest request = new CreateOrUpdateSwimmingLaneShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GatewaySwimmingLaneRouteJson))
+            {
+                request.GatewaySwimmingLaneRouteJsonShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GatewaySwimmingLaneRouteJson, "GatewaySwimmingLaneRouteJson", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
@@ -3296,6 +3312,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntryRules))
             {
                 query["EntryRules"] = request.EntryRules;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewaySwimmingLaneRouteJsonShrink))
+            {
+                query["GatewaySwimmingLaneRouteJson"] = request.GatewaySwimmingLaneRouteJsonShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GmtCreate))
             {

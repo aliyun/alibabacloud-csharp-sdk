@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// The error code returned if the request failed.
+        /// The error code returned.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// The message returned.
         /// 
         /// *   If the request is successful, a success message is returned.
-        /// *   If the request fails, an error message, such as the "TaskId not found" message, is returned.
+        /// *   If the request fails, an error message is returned, such as the "TaskId not found" message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
