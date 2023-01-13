@@ -30,15 +30,15 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string ProductKey { get; set; }
 
         [NameInMap("ProjectCode")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProjectCode { get; set; }
 
         [NameInMap("PushMode")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string PushMode { get; set; }
 
         [NameInMap("SpeechCodeList")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public List<string> SpeechCodeList { get; set; }
 
     }

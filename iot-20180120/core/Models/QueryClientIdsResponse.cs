@@ -9,17 +9,45 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryClientIdsResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("Code")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string Code { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("ErrorMessage")]
         [Validation(Required=true)]
-        public int? StatusCode { get; set; }
+        public string ErrorMessage { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public QueryClientIdsResponseBody Body { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=true)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public QueryClientIdsResponseData Data { get; set; }
+        public class QueryClientIdsResponseData : TeaModel {
+            [NameInMap("IotId")]
+            [Validation(Required=true)]
+            public string IotId { get; set; }
+
+            [NameInMap("DynamicRegClientIds")]
+            [Validation(Required=true)]
+            public List<QueryClientIdsResponseDataDynamicRegClientIds> DynamicRegClientIds { get; set; }
+            public class QueryClientIdsResponseDataDynamicRegClientIds : TeaModel {
+                [NameInMap("ClientId")]
+                [Validation(Required=true)]
+                public string ClientId { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=true)]
+                public long? CreateTime { get; set; }
+
+            }
+
+        }
 
     }
 

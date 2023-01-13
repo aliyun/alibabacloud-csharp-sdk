@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string ResourceGroupId { get; set; }
 
         [NameInMap("Status")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? Status { get; set; }
 
     }

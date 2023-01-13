@@ -18,15 +18,15 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("PageId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? PageId { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? PageSize { get; set; }
 
         [NameInMap("ProjectCode")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProjectCode { get; set; }
 
     }

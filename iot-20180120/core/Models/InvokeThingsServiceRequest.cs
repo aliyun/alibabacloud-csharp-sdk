@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class InvokeThingsServiceRequest : TeaModel {
         [NameInMap("Args")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Args { get; set; }
 
         [NameInMap("DeviceName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public List<string> DeviceName { get; set; }
 
         [NameInMap("Identifier")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Identifier { get; set; }
 
         [NameInMap("IotInstanceId")]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("ProductKey")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProductKey { get; set; }
 
     }

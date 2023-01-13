@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class DetachDestinationRequest : TeaModel {
         [NameInMap("DestinationId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? DestinationId { get; set; }
 
         [NameInMap("IotInstanceId")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("ParserId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? ParserId { get; set; }
 
     }

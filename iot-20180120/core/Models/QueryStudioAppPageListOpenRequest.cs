@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryStudioAppPageListOpenRequest : TeaModel {
         [NameInMap("AppId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string AppId { get; set; }
 
         [NameInMap("IotInstanceId")]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public int? PageSize { get; set; }
 
         [NameInMap("ProjectId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProjectId { get; set; }
 
     }

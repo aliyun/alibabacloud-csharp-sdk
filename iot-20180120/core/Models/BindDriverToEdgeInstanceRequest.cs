@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BindDriverToEdgeInstanceRequest : TeaModel {
         [NameInMap("DriverId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DriverId { get; set; }
 
         [NameInMap("DriverVersion")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string DriverVersion { get; set; }
 
         [NameInMap("InstanceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string InstanceId { get; set; }
 
         [NameInMap("IotInstanceId")]

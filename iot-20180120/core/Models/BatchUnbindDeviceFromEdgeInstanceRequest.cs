@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchUnbindDeviceFromEdgeInstanceRequest : TeaModel {
         [NameInMap("InstanceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string InstanceId { get; set; }
 
         [NameInMap("IotIds")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public List<string> IotIds { get; set; }
 
         [NameInMap("IotInstanceId")]

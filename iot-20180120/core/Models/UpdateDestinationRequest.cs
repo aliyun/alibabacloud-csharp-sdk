@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class UpdateDestinationRequest : TeaModel {
         [NameInMap("Configuration")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Configuration { get; set; }
 
         [NameInMap("Description")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string Description { get; set; }
 
         [NameInMap("DestinationId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? DestinationId { get; set; }
 
         [NameInMap("IotInstanceId")]
@@ -26,11 +26,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("Name")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Name { get; set; }
 
         [NameInMap("Type")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Type { get; set; }
 
     }

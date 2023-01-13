@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string RuleDesc { get; set; }
 
         [NameInMap("RuleId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? RuleId { get; set; }
 
         [NameInMap("Select")]

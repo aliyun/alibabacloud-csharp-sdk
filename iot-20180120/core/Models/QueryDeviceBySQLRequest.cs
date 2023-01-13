@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("SQL")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string SQL { get; set; }
 
     }

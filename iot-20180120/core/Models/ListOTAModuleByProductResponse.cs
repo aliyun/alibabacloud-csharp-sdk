@@ -9,17 +9,51 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class ListOTAModuleByProductResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("Code")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string Code { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("ErrorMessage")]
         [Validation(Required=true)]
-        public int? StatusCode { get; set; }
+        public string ErrorMessage { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public ListOTAModuleByProductResponseBody Body { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=true)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public List<ListOTAModuleByProductResponseData> Data { get; set; }
+        public class ListOTAModuleByProductResponseData : TeaModel {
+            [NameInMap("AliasName")]
+            [Validation(Required=true)]
+            public string AliasName { get; set; }
+
+            [NameInMap("Desc")]
+            [Validation(Required=true)]
+            public string Desc { get; set; }
+
+            [NameInMap("GmtCreate")]
+            [Validation(Required=true)]
+            public string GmtCreate { get; set; }
+
+            [NameInMap("GmtModified")]
+            [Validation(Required=true)]
+            public string GmtModified { get; set; }
+
+            [NameInMap("ModuleName")]
+            [Validation(Required=true)]
+            public string ModuleName { get; set; }
+
+            [NameInMap("ProductKey")]
+            [Validation(Required=true)]
+            public string ProductKey { get; set; }
+
+        }
 
     }
 

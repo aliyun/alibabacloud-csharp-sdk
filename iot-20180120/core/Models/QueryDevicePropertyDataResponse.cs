@@ -9,17 +9,55 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryDevicePropertyDataResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("Code")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string Code { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("ErrorMessage")]
         [Validation(Required=true)]
-        public int? StatusCode { get; set; }
+        public string ErrorMessage { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public QueryDevicePropertyDataResponseBody Body { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=true)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public QueryDevicePropertyDataResponseData Data { get; set; }
+        public class QueryDevicePropertyDataResponseData : TeaModel {
+            [NameInMap("NextTime")]
+            [Validation(Required=true)]
+            public long? NextTime { get; set; }
+
+            [NameInMap("NextValid")]
+            [Validation(Required=true)]
+            public bool? NextValid { get; set; }
+
+            [NameInMap("List")]
+            [Validation(Required=true)]
+            public QueryDevicePropertyDataResponseDataList List { get; set; }
+            public class QueryDevicePropertyDataResponseDataList : TeaModel {
+                [NameInMap("PropertyInfo")]
+                [Validation(Required=true)]
+                public List<QueryDevicePropertyDataResponseDataListPropertyInfo> PropertyInfo { get; set; }
+                public class QueryDevicePropertyDataResponseDataListPropertyInfo : TeaModel {
+                    [NameInMap("Time")]
+                    [Validation(Required=true)]
+                    public string Time { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=true)]
+                    public string Value { get; set; }
+
+                }
+
+            }
+
+        }
 
     }
 

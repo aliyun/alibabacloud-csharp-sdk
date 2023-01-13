@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class DeleteDeviceTunnelRequest : TeaModel {
+        [NameInMap("TunnelId")]
+        [Validation(Required=true)]
+        public string TunnelId { get; set; }
+
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
-
-        [NameInMap("TunnelId")]
-        [Validation(Required=false)]
-        public string TunnelId { get; set; }
 
     }
 

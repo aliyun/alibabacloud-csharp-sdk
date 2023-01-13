@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class ListDataSourceItemRequest : TeaModel {
         [NameInMap("DataSourceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? DataSourceId { get; set; }
 
         [NameInMap("IotInstanceId")]
@@ -18,11 +18,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("Page")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? Page { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? PageSize { get; set; }
 
         [NameInMap("SearchName")]

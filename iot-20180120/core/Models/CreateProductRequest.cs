@@ -46,11 +46,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string NetType { get; set; }
 
         [NameInMap("NodeType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? NodeType { get; set; }
 
         [NameInMap("ProductName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProductName { get; set; }
 
         [NameInMap("ProtocolType")]

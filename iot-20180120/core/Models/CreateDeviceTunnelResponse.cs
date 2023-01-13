@@ -9,17 +9,39 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateDeviceTunnelResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("Code")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string Code { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("ErrorMessage")]
         [Validation(Required=true)]
-        public int? StatusCode { get; set; }
+        public string ErrorMessage { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public CreateDeviceTunnelResponseBody Body { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=true)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public CreateDeviceTunnelResponseData Data { get; set; }
+        public class CreateDeviceTunnelResponseData : TeaModel {
+            [NameInMap("SourceAccessToken")]
+            [Validation(Required=true)]
+            public string SourceAccessToken { get; set; }
+
+            [NameInMap("SourceURI")]
+            [Validation(Required=true)]
+            public string SourceURI { get; set; }
+
+            [NameInMap("TunnelId")]
+            [Validation(Required=true)]
+            public string TunnelId { get; set; }
+
+        }
 
     }
 

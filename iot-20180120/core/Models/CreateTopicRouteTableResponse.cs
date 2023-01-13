@@ -9,17 +9,35 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateTopicRouteTableResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("Code")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string Code { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("ErrorMessage")]
         [Validation(Required=true)]
-        public int? StatusCode { get; set; }
+        public string ErrorMessage { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("IsAllSucceed")]
         [Validation(Required=true)]
-        public CreateTopicRouteTableResponseBody Body { get; set; }
+        public bool? IsAllSucceed { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=true)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=true)]
+        public bool? Success { get; set; }
+
+        [NameInMap("FailureTopics")]
+        [Validation(Required=true)]
+        public CreateTopicRouteTableResponseFailureTopics FailureTopics { get; set; }
+        public class CreateTopicRouteTableResponseFailureTopics : TeaModel {
+            [NameInMap("Topic")]
+            [Validation(Required=true)]
+            public List<Dictionary<string, object>> Topic { get; set; }
+
+        }
 
     }
 

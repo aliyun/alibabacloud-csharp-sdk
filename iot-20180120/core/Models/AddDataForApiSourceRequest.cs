@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,15 +10,15 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class AddDataForApiSourceRequest : TeaModel {
         [NameInMap("ApiId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ApiId { get; set; }
 
         [NameInMap("Content")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Content { get; set; }
 
         [NameInMap("IotInstanceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string IotInstanceId { get; set; }
 
     }

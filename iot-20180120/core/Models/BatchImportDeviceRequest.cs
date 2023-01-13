@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchImportDeviceRequest : TeaModel {
         [NameInMap("DeviceList")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public List<BatchImportDeviceRequestDeviceList> DeviceList { get; set; }
         public class BatchImportDeviceRequestDeviceList : TeaModel {
             [NameInMap("DeviceName")]
-            [Validation(Required=false)]
+            [Validation(Required=true)]
             public string DeviceName { get; set; }
 
             [NameInMap("DeviceSecret")]
-            [Validation(Required=false)]
+            [Validation(Required=true)]
             public string DeviceSecret { get; set; }
 
             [NameInMap("Sn")]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("ProductKey")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProductKey { get; set; }
 
     }

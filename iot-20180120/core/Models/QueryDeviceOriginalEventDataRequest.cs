@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryDeviceOriginalEventDataRequest : TeaModel {
         [NameInMap("Asc")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? Asc { get; set; }
 
         [NameInMap("DeviceName")]
@@ -18,11 +18,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string DeviceName { get; set; }
 
         [NameInMap("EndTime")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? EndTime { get; set; }
 
         [NameInMap("Identifier")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Identifier { get; set; }
 
         [NameInMap("IotId")]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string NextPageToken { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? PageSize { get; set; }
 
         [NameInMap("ProductKey")]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string ProductKey { get; set; }
 
         [NameInMap("StartTime")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? StartTime { get; set; }
 
     }

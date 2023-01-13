@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string ProductKey { get; set; }
 
         [NameInMap("TemplateBizCode")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TemplateBizCode { get; set; }
 
     }

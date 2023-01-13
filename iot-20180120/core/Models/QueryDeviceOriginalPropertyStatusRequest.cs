@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryDeviceOriginalPropertyStatusRequest : TeaModel {
         [NameInMap("Asc")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? Asc { get; set; }
 
         [NameInMap("DeviceName")]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string NextPageToken { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? PageSize { get; set; }
 
         [NameInMap("ProductKey")]

@@ -30,15 +30,15 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string DriverConfig { get; set; }
 
         [NameInMap("DriverId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DriverId { get; set; }
 
         [NameInMap("DriverVersion")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DriverVersion { get; set; }
 
         [NameInMap("EdgeVersion")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string EdgeVersion { get; set; }
 
         [NameInMap("IotInstanceId")]

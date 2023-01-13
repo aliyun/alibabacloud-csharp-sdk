@@ -9,17 +9,57 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchGetDeviceStateResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("Code")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string Code { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("ErrorMessage")]
         [Validation(Required=true)]
-        public int? StatusCode { get; set; }
+        public string ErrorMessage { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public BatchGetDeviceStateResponseBody Body { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=true)]
+        public bool? Success { get; set; }
+
+        [NameInMap("DeviceStatusList")]
+        [Validation(Required=true)]
+        public BatchGetDeviceStateResponseDeviceStatusList DeviceStatusList { get; set; }
+        public class BatchGetDeviceStateResponseDeviceStatusList : TeaModel {
+            [NameInMap("DeviceStatus")]
+            [Validation(Required=true)]
+            public List<BatchGetDeviceStateResponseDeviceStatusListDeviceStatus> DeviceStatus { get; set; }
+            public class BatchGetDeviceStateResponseDeviceStatusListDeviceStatus : TeaModel {
+                [NameInMap("AsAddress")]
+                [Validation(Required=true)]
+                public string AsAddress { get; set; }
+
+                [NameInMap("DeviceId")]
+                [Validation(Required=true)]
+                public string DeviceId { get; set; }
+
+                [NameInMap("DeviceName")]
+                [Validation(Required=true)]
+                public string DeviceName { get; set; }
+
+                [NameInMap("IotId")]
+                [Validation(Required=true)]
+                public string IotId { get; set; }
+
+                [NameInMap("LastOnlineTime")]
+                [Validation(Required=true)]
+                public string LastOnlineTime { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=true)]
+                public string Status { get; set; }
+
+            }
+
+        }
 
     }
 

@@ -9,17 +9,57 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class SetupStudioAppAuthModeOpenResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("Code")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string Code { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("ErrorMessage")]
         [Validation(Required=true)]
-        public int? StatusCode { get; set; }
+        public string ErrorMessage { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public SetupStudioAppAuthModeOpenResponseBody Body { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=true)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public SetupStudioAppAuthModeOpenResponseData Data { get; set; }
+        public class SetupStudioAppAuthModeOpenResponseData : TeaModel {
+            [NameInMap("AuthMode")]
+            [Validation(Required=true)]
+            public int? AuthMode { get; set; }
+
+            [NameInMap("TokenInfo")]
+            [Validation(Required=true)]
+            public SetupStudioAppAuthModeOpenResponseDataTokenInfo TokenInfo { get; set; }
+            public class SetupStudioAppAuthModeOpenResponseDataTokenInfo : TeaModel {
+                [NameInMap("BizId")]
+                [Validation(Required=true)]
+                public string BizId { get; set; }
+
+                [NameInMap("BizType")]
+                [Validation(Required=true)]
+                public string BizType { get; set; }
+
+                [NameInMap("IsEnable")]
+                [Validation(Required=true)]
+                public string IsEnable { get; set; }
+
+                [NameInMap("Token")]
+                [Validation(Required=true)]
+                public string Token { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=true)]
+                public string Type { get; set; }
+
+            }
+
+        }
 
     }
 

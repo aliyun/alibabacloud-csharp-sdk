@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateRuleActionRequest : TeaModel {
         [NameInMap("Configuration")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Configuration { get; set; }
 
         [NameInMap("ErrorActionFlag")]
@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("RuleId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? RuleId { get; set; }
 
         [NameInMap("Type")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Type { get; set; }
 
     }

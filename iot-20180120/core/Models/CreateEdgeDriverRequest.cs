@@ -14,11 +14,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string CpuArch { get; set; }
 
         [NameInMap("DriverName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DriverName { get; set; }
 
         [NameInMap("DriverProtocol")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DriverProtocol { get; set; }
 
         [NameInMap("IotInstanceId")]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public bool? IsBuiltIn { get; set; }
 
         [NameInMap("Runtime")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Runtime { get; set; }
 
     }

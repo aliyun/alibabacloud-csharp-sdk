@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string ProductKey { get; set; }
 
         [NameInMap("ShareTaskId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ShareTaskId { get; set; }
 
     }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class ResetConsumerGroupPositionRequest : TeaModel {
         [NameInMap("GroupId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string GroupId { get; set; }
 
         [NameInMap("IotInstanceId")]

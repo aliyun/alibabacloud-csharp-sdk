@@ -26,11 +26,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public List<QueryDeviceGroupByTagsRequestTag> Tag { get; set; }
         public class QueryDeviceGroupByTagsRequestTag : TeaModel {
             [NameInMap("TagKey")]
-            [Validation(Required=false)]
+            [Validation(Required=true)]
             public string TagKey { get; set; }
 
             [NameInMap("TagValue")]
-            [Validation(Required=false)]
+            [Validation(Required=true)]
             public string TagValue { get; set; }
 
         }

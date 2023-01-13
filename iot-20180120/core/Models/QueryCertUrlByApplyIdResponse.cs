@@ -9,17 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryCertUrlByApplyIdResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("CertUrl")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string CertUrl { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("Code")]
         [Validation(Required=true)]
-        public int? StatusCode { get; set; }
+        public string Code { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("ErrorMessage")]
         [Validation(Required=true)]
-        public QueryCertUrlByApplyIdResponseBody Body { get; set; }
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=true)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=true)]
+        public bool? Success { get; set; }
 
     }
 

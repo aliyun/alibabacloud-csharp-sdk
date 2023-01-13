@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class AttachDestinationRequest : TeaModel {
         [NameInMap("DestinationId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? DestinationId { get; set; }
 
         [NameInMap("IotInstanceId")]
@@ -18,11 +18,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("IsFailover")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public bool? IsFailover { get; set; }
 
         [NameInMap("ParserId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? ParserId { get; set; }
 
     }

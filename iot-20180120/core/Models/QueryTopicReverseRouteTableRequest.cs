@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string RegionId { get; set; }
 
         [NameInMap("Topic")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Topic { get; set; }
 
     }

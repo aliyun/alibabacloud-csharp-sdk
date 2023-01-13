@@ -9,17 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class RRpcResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("Code")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string Code { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("ErrorMessage")]
         [Validation(Required=true)]
-        public int? StatusCode { get; set; }
+        public string ErrorMessage { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("MessageId")]
         [Validation(Required=true)]
-        public RRpcResponseBody Body { get; set; }
+        public long? MessageId { get; set; }
+
+        [NameInMap("PayloadBase64Byte")]
+        [Validation(Required=true)]
+        public string PayloadBase64Byte { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=true)]
+        public string RequestId { get; set; }
+
+        [NameInMap("RrpcCode")]
+        [Validation(Required=true)]
+        public string RrpcCode { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=true)]
+        public bool? Success { get; set; }
 
     }
 

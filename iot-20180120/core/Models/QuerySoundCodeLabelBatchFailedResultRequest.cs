@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QuerySoundCodeLabelBatchFailedResultRequest : TeaModel {
         [NameInMap("BatchCode")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string BatchCode { get; set; }
 
         [NameInMap("IotInstanceId")]

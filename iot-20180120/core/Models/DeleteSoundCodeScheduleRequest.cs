@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("ScheduleCode")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ScheduleCode { get; set; }
 
     }

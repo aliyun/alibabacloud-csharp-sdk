@@ -14,17 +14,17 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public List<BatchAddDeviceGroupRelationsRequestDevice> Device { get; set; }
         public class BatchAddDeviceGroupRelationsRequestDevice : TeaModel {
             [NameInMap("DeviceName")]
-            [Validation(Required=false)]
+            [Validation(Required=true)]
             public string DeviceName { get; set; }
 
             [NameInMap("ProductKey")]
-            [Validation(Required=false)]
+            [Validation(Required=true)]
             public string ProductKey { get; set; }
 
         }
 
         [NameInMap("GroupId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string GroupId { get; set; }
 
         [NameInMap("IotInstanceId")]

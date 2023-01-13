@@ -14,11 +14,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("QueryDateTimeHour")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string QueryDateTimeHour { get; set; }
 
         [NameInMap("ShareTaskCode")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ShareTaskCode { get; set; }
 
     }

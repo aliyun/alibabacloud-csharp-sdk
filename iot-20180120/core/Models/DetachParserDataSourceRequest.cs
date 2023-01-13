@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class DetachParserDataSourceRequest : TeaModel {
         [NameInMap("DataSourceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? DataSourceId { get; set; }
 
         [NameInMap("IotInstanceId")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("ParserId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? ParserId { get; set; }
 
     }

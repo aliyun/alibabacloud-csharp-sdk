@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class GetParserDataSourceRequest : TeaModel {
         [NameInMap("DataSourceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? DataSourceId { get; set; }
 
         [NameInMap("IotInstanceId")]

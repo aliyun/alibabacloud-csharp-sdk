@@ -58,8 +58,12 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public bool? OtaVersionFlag { get; set; }
 
         [NameInMap("ProductKey")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProductKey { get; set; }
+
+        [NameInMap("SubscribeFlags")]
+        [Validation(Required=false)]
+        public string SubscribeFlags { get; set; }
 
         [NameInMap("ThingHistoryFlag")]
         [Validation(Required=false)]

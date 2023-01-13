@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class GetEdgeInstanceDeploymentRequest : TeaModel {
         [NameInMap("DeploymentId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DeploymentId { get; set; }
 
         [NameInMap("InstanceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string InstanceId { get; set; }
 
         [NameInMap("IotInstanceId")]

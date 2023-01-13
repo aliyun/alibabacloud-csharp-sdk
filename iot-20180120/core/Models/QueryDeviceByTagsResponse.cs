@@ -9,17 +9,65 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryDeviceByTagsResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("Code")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string Code { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("ErrorMessage")]
         [Validation(Required=true)]
-        public int? StatusCode { get; set; }
+        public string ErrorMessage { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Page")]
         [Validation(Required=true)]
-        public QueryDeviceByTagsResponseBody Body { get; set; }
+        public int? Page { get; set; }
+
+        [NameInMap("PageCount")]
+        [Validation(Required=true)]
+        public int? PageCount { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=true)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=true)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=true)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Total")]
+        [Validation(Required=true)]
+        public int? Total { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public QueryDeviceByTagsResponseData Data { get; set; }
+        public class QueryDeviceByTagsResponseData : TeaModel {
+            [NameInMap("SimpleDeviceInfo")]
+            [Validation(Required=true)]
+            public List<QueryDeviceByTagsResponseDataSimpleDeviceInfo> SimpleDeviceInfo { get; set; }
+            public class QueryDeviceByTagsResponseDataSimpleDeviceInfo : TeaModel {
+                [NameInMap("DeviceName")]
+                [Validation(Required=true)]
+                public string DeviceName { get; set; }
+
+                [NameInMap("IotId")]
+                [Validation(Required=true)]
+                public string IotId { get; set; }
+
+                [NameInMap("ProductKey")]
+                [Validation(Required=true)]
+                public string ProductKey { get; set; }
+
+                [NameInMap("ProductName")]
+                [Validation(Required=true)]
+                public string ProductName { get; set; }
+
+            }
+
+        }
 
     }
 

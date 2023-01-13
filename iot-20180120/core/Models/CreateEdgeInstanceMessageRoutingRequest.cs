@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateEdgeInstanceMessageRoutingRequest : TeaModel {
         [NameInMap("InstanceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string InstanceId { get; set; }
 
         [NameInMap("IotInstanceId")]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string SourceData { get; set; }
 
         [NameInMap("SourceType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string SourceType { get; set; }
 
         [NameInMap("TargetData")]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public int? TargetIotHubQos { get; set; }
 
         [NameInMap("TargetType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TargetType { get; set; }
 
         [NameInMap("TopicFilter")]

@@ -26,15 +26,19 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("MessageContent")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string MessageContent { get; set; }
+
+        [NameInMap("MessageExpiryInterval")]
+        [Validation(Required=false)]
+        public long? MessageExpiryInterval { get; set; }
 
         [NameInMap("PayloadFormatIndicator")]
         [Validation(Required=false)]
         public int? PayloadFormatIndicator { get; set; }
 
         [NameInMap("ProductKey")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProductKey { get; set; }
 
         [NameInMap("Qos")]
@@ -45,8 +49,12 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string ResponseTopic { get; set; }
 
-        [NameInMap("TopicFullName")]
+        [NameInMap("Retained")]
         [Validation(Required=false)]
+        public bool? Retained { get; set; }
+
+        [NameInMap("TopicFullName")]
+        [Validation(Required=true)]
         public string TopicFullName { get; set; }
 
         [NameInMap("UserProp")]

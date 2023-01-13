@@ -9,17 +9,67 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class GetThingTopoResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("Code")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string Code { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("ErrorMessage")]
         [Validation(Required=true)]
-        public int? StatusCode { get; set; }
+        public string ErrorMessage { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public GetThingTopoResponseBody Body { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=true)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public GetThingTopoResponseData Data { get; set; }
+        public class GetThingTopoResponseData : TeaModel {
+            [NameInMap("CurrentPage")]
+            [Validation(Required=true)]
+            public int? CurrentPage { get; set; }
+
+            [NameInMap("PageCount")]
+            [Validation(Required=true)]
+            public long? PageCount { get; set; }
+
+            [NameInMap("PageSize")]
+            [Validation(Required=true)]
+            public int? PageSize { get; set; }
+
+            [NameInMap("Total")]
+            [Validation(Required=true)]
+            public long? Total { get; set; }
+
+            [NameInMap("List")]
+            [Validation(Required=true)]
+            public GetThingTopoResponseDataList List { get; set; }
+            public class GetThingTopoResponseDataList : TeaModel {
+                [NameInMap("deviceInfo")]
+                [Validation(Required=true)]
+                public List<GetThingTopoResponseDataListDeviceInfo> DeviceInfo { get; set; }
+                public class GetThingTopoResponseDataListDeviceInfo : TeaModel {
+                    [NameInMap("DeviceName")]
+                    [Validation(Required=true)]
+                    public string DeviceName { get; set; }
+
+                    [NameInMap("IotId")]
+                    [Validation(Required=true)]
+                    public string IotId { get; set; }
+
+                    [NameInMap("ProductKey")]
+                    [Validation(Required=true)]
+                    public string ProductKey { get; set; }
+
+                }
+
+            }
+
+        }
 
     }
 

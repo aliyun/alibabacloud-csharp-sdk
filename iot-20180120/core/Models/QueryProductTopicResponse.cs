@@ -9,17 +9,53 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryProductTopicResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("Code")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string Code { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("ErrorMessage")]
         [Validation(Required=true)]
-        public int? StatusCode { get; set; }
+        public string ErrorMessage { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public QueryProductTopicResponseBody Body { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=true)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public QueryProductTopicResponseData Data { get; set; }
+        public class QueryProductTopicResponseData : TeaModel {
+            [NameInMap("ProductTopicInfo")]
+            [Validation(Required=true)]
+            public List<QueryProductTopicResponseDataProductTopicInfo> ProductTopicInfo { get; set; }
+            public class QueryProductTopicResponseDataProductTopicInfo : TeaModel {
+                [NameInMap("Desc")]
+                [Validation(Required=true)]
+                public string Desc { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=true)]
+                public string Id { get; set; }
+
+                [NameInMap("Operation")]
+                [Validation(Required=true)]
+                public string Operation { get; set; }
+
+                [NameInMap("ProductKey")]
+                [Validation(Required=true)]
+                public string ProductKey { get; set; }
+
+                [NameInMap("TopicShortName")]
+                [Validation(Required=true)]
+                public string TopicShortName { get; set; }
+
+            }
+
+        }
 
     }
 

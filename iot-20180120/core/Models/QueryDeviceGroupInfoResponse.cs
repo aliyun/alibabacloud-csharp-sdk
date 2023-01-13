@@ -9,17 +9,59 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryDeviceGroupInfoResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("Code")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string Code { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("ErrorMessage")]
         [Validation(Required=true)]
-        public int? StatusCode { get; set; }
+        public string ErrorMessage { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public QueryDeviceGroupInfoResponseBody Body { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=true)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public QueryDeviceGroupInfoResponseData Data { get; set; }
+        public class QueryDeviceGroupInfoResponseData : TeaModel {
+            [NameInMap("DeviceActive")]
+            [Validation(Required=true)]
+            public int? DeviceActive { get; set; }
+
+            [NameInMap("DeviceCount")]
+            [Validation(Required=true)]
+            public int? DeviceCount { get; set; }
+
+            [NameInMap("DeviceOnline")]
+            [Validation(Required=true)]
+            public int? DeviceOnline { get; set; }
+
+            [NameInMap("DynamicGroupExpression")]
+            [Validation(Required=true)]
+            public string DynamicGroupExpression { get; set; }
+
+            [NameInMap("GroupDesc")]
+            [Validation(Required=true)]
+            public string GroupDesc { get; set; }
+
+            [NameInMap("GroupId")]
+            [Validation(Required=true)]
+            public string GroupId { get; set; }
+
+            [NameInMap("GroupName")]
+            [Validation(Required=true)]
+            public string GroupName { get; set; }
+
+            [NameInMap("UtcCreate")]
+            [Validation(Required=true)]
+            public string UtcCreate { get; set; }
+
+        }
 
     }
 

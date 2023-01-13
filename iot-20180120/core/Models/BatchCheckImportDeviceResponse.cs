@@ -9,17 +9,43 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchCheckImportDeviceResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("Code")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string Code { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("ErrorMessage")]
         [Validation(Required=true)]
-        public int? StatusCode { get; set; }
+        public string ErrorMessage { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public BatchCheckImportDeviceResponseBody Body { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=true)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public BatchCheckImportDeviceResponseData Data { get; set; }
+        public class BatchCheckImportDeviceResponseData : TeaModel {
+            [NameInMap("InvalidDeviceNameList")]
+            [Validation(Required=true)]
+            public List<string> InvalidDeviceNameList { get; set; }
+
+            [NameInMap("InvalidDeviceSecretList")]
+            [Validation(Required=true)]
+            public List<string> InvalidDeviceSecretList { get; set; }
+
+            [NameInMap("InvalidSnList")]
+            [Validation(Required=true)]
+            public List<string> InvalidSnList { get; set; }
+
+            [NameInMap("RepeatedDeviceNameList")]
+            [Validation(Required=true)]
+            public List<string> RepeatedDeviceNameList { get; set; }
+
+        }
 
     }
 

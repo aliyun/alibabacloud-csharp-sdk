@@ -9,17 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchAddDataForApiSourceResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("Code")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string Code { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("Data")]
         [Validation(Required=true)]
-        public int? StatusCode { get; set; }
+        public Dictionary<string, object> Data { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("ErrorMessage")]
         [Validation(Required=true)]
-        public BatchAddDataForApiSourceResponseBody Body { get; set; }
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=true)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=true)]
+        public bool? Success { get; set; }
 
     }
 

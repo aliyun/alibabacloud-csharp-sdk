@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("JobDocument")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string JobDocument { get; set; }
 
         [NameInMap("JobFile")]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string JobFileShrink { get; set; }
 
         [NameInMap("JobName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string JobName { get; set; }
 
         [NameInMap("RolloutConfig")]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public long? ScheduledTime { get; set; }
 
         [NameInMap("TargetConfig")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TargetConfigShrink { get; set; }
 
         [NameInMap("TimeoutConfig")]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string TimeoutConfigShrink { get; set; }
 
         [NameInMap("Type")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Type { get; set; }
 
     }

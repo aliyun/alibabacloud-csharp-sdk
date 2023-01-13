@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class ReleaseEdgeDriverVersionRequest : TeaModel {
         [NameInMap("DriverId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DriverId { get; set; }
 
         [NameInMap("DriverVersion")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DriverVersion { get; set; }
 
         [NameInMap("IotInstanceId")]

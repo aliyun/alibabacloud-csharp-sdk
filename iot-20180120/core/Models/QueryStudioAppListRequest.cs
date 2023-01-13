@@ -26,11 +26,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public int? PageSize { get; set; }
 
         [NameInMap("ProjectId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProjectId { get; set; }
 
         [NameInMap("Types")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public List<string> Types { get; set; }
 
     }

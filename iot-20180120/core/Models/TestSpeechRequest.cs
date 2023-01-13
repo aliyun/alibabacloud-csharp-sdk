@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("ProjectCode")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProjectCode { get; set; }
 
         [NameInMap("SoundCodeConfig")]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string Text { get; set; }
 
         [NameInMap("Voice")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Voice { get; set; }
 
         [NameInMap("Volume")]

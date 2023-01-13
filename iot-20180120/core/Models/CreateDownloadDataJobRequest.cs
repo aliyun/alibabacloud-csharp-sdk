@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public Dictionary<string, object> Context { get; set; }
 
         [NameInMap("DownloadDataType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DownloadDataType { get; set; }
 
         [NameInMap("EndTime")]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public long? StartTime { get; set; }
 
         [NameInMap("TableName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TableName { get; set; }
 
     }

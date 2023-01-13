@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateSoundCodeRequest : TeaModel {
         [NameInMap("Duration")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? Duration { get; set; }
 
         [NameInMap("IotInstanceId")]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string OpenType { get; set; }
 
         [NameInMap("SoundCodeContent")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string SoundCodeContent { get; set; }
 
     }

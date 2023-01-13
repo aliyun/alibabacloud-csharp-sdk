@@ -9,17 +9,77 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class ListTaskResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("Code")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string Code { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("ErrorMessage")]
         [Validation(Required=true)]
-        public int? StatusCode { get; set; }
+        public string ErrorMessage { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("NextToken")]
         [Validation(Required=true)]
-        public ListTaskResponseBody Body { get; set; }
+        public string NextToken { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=true)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=true)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public ListTaskResponseData Data { get; set; }
+        public class ListTaskResponseData : TeaModel {
+            [NameInMap("data")]
+            [Validation(Required=true)]
+            public List<ListTaskResponseDataData> Data { get; set; }
+            public class ListTaskResponseDataData : TeaModel {
+                [NameInMap("DeviceName")]
+                [Validation(Required=true)]
+                public string DeviceName { get; set; }
+
+                [NameInMap("IotId")]
+                [Validation(Required=true)]
+                public string IotId { get; set; }
+
+                [NameInMap("JobId")]
+                [Validation(Required=true)]
+                public string JobId { get; set; }
+
+                [NameInMap("JobName")]
+                [Validation(Required=true)]
+                public string JobName { get; set; }
+
+                [NameInMap("ProductKey")]
+                [Validation(Required=true)]
+                public string ProductKey { get; set; }
+
+                [NameInMap("Progress")]
+                [Validation(Required=true)]
+                public string Progress { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=true)]
+                public string Status { get; set; }
+
+                [NameInMap("TaskId")]
+                [Validation(Required=true)]
+                public string TaskId { get; set; }
+
+                [NameInMap("UtcModified")]
+                [Validation(Required=true)]
+                public string UtcModified { get; set; }
+
+                [NameInMap("UtcQueueTime")]
+                [Validation(Required=true)]
+                public string UtcQueueTime { get; set; }
+
+            }
+
+        }
 
     }
 

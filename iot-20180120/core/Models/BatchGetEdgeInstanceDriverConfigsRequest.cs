@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchGetEdgeInstanceDriverConfigsRequest : TeaModel {
         [NameInMap("DriverIds")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public List<string> DriverIds { get; set; }
 
         [NameInMap("InstanceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string InstanceId { get; set; }
 
         [NameInMap("IotInstanceId")]

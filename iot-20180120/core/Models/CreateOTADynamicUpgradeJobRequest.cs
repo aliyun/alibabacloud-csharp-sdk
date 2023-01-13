@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public int? DynamicMode { get; set; }
 
         [NameInMap("FirmwareId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string FirmwareId { get; set; }
 
         [NameInMap("GroupId")]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public int? OverwriteMode { get; set; }
 
         [NameInMap("ProductKey")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProductKey { get; set; }
 
         [NameInMap("RetryCount")]
@@ -74,11 +74,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public List<CreateOTADynamicUpgradeJobRequestTag> Tag { get; set; }
         public class CreateOTADynamicUpgradeJobRequestTag : TeaModel {
             [NameInMap("Key")]
-            [Validation(Required=false)]
+            [Validation(Required=true)]
             public string Key { get; set; }
 
             [NameInMap("Value")]
-            [Validation(Required=false)]
+            [Validation(Required=true)]
             public string Value { get; set; }
 
         }

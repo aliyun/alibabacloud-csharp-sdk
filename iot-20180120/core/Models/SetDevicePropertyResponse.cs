@@ -9,17 +9,31 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class SetDevicePropertyResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("Code")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string Code { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("ErrorMessage")]
         [Validation(Required=true)]
-        public int? StatusCode { get; set; }
+        public string ErrorMessage { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public SetDevicePropertyResponseBody Body { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=true)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public SetDevicePropertyResponseData Data { get; set; }
+        public class SetDevicePropertyResponseData : TeaModel {
+            [NameInMap("MessageId")]
+            [Validation(Required=true)]
+            public string MessageId { get; set; }
+
+        }
 
     }
 

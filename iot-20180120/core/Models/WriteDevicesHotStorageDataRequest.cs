@@ -18,11 +18,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotId { get; set; }
 
         [NameInMap("IotInstanceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string IotInstanceId { get; set; }
 
         [NameInMap("Items")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Items { get; set; }
 
         [NameInMap("ProductKey")]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string ProductKey { get; set; }
 
         [NameInMap("UserTopic")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string UserTopic { get; set; }
 
     }

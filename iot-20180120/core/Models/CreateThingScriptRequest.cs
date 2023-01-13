@@ -14,15 +14,15 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("ProductKey")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProductKey { get; set; }
 
         [NameInMap("ScriptContent")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ScriptContent { get; set; }
 
         [NameInMap("ScriptType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ScriptType { get; set; }
 
     }

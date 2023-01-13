@@ -9,17 +9,115 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class ListDeviceDistributeJobResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("Code")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string Code { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("ErrorMessage")]
         [Validation(Required=true)]
-        public int? StatusCode { get; set; }
+        public string ErrorMessage { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public ListDeviceDistributeJobResponseBody Body { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=true)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public ListDeviceDistributeJobResponseData Data { get; set; }
+        public class ListDeviceDistributeJobResponseData : TeaModel {
+            [NameInMap("NextToken")]
+            [Validation(Required=true)]
+            public string NextToken { get; set; }
+
+            [NameInMap("Total")]
+            [Validation(Required=true)]
+            public int? Total { get; set; }
+
+            [NameInMap("JobInfo")]
+            [Validation(Required=true)]
+            public ListDeviceDistributeJobResponseDataJobInfo JobInfo { get; set; }
+            public class ListDeviceDistributeJobResponseDataJobInfo : TeaModel {
+                [NameInMap("items")]
+                [Validation(Required=true)]
+                public List<ListDeviceDistributeJobResponseDataJobInfoItems> Items { get; set; }
+                public class ListDeviceDistributeJobResponseDataJobInfoItems : TeaModel {
+                    [NameInMap("GmtCreate")]
+                    [Validation(Required=true)]
+                    public long? GmtCreate { get; set; }
+
+                    [NameInMap("JobId")]
+                    [Validation(Required=true)]
+                    public string JobId { get; set; }
+
+                    [NameInMap("ProductKey")]
+                    [Validation(Required=true)]
+                    public string ProductKey { get; set; }
+
+                    [NameInMap("SourceInstanceId")]
+                    [Validation(Required=true)]
+                    public string SourceInstanceId { get; set; }
+
+                    [NameInMap("SourceInstanceName")]
+                    [Validation(Required=true)]
+                    public string SourceInstanceName { get; set; }
+
+                    [NameInMap("SourceRegion")]
+                    [Validation(Required=true)]
+                    public string SourceRegion { get; set; }
+
+                    [NameInMap("SourceUid")]
+                    [Validation(Required=true)]
+                    public string SourceUid { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=true)]
+                    public int? Status { get; set; }
+
+                    [NameInMap("Strategy")]
+                    [Validation(Required=true)]
+                    public int? Strategy { get; set; }
+
+                    [NameInMap("TargetUid")]
+                    [Validation(Required=true)]
+                    public string TargetUid { get; set; }
+
+                    [NameInMap("Total")]
+                    [Validation(Required=true)]
+                    public int? Total { get; set; }
+
+                    [NameInMap("TargetInstanceConfigs")]
+                    [Validation(Required=true)]
+                    public ListDeviceDistributeJobResponseDataJobInfoItemsTargetInstanceConfigs TargetInstanceConfigs { get; set; }
+                    public class ListDeviceDistributeJobResponseDataJobInfoItemsTargetInstanceConfigs : TeaModel {
+                        [NameInMap("targetInstanceConfigs")]
+                        [Validation(Required=true)]
+                        public List<ListDeviceDistributeJobResponseDataJobInfoItemsTargetInstanceConfigsTargetInstanceConfigs> TargetInstanceConfigs { get; set; }
+                        public class ListDeviceDistributeJobResponseDataJobInfoItemsTargetInstanceConfigsTargetInstanceConfigs : TeaModel {
+                            [NameInMap("TargetInstanceId")]
+                            [Validation(Required=true)]
+                            public string TargetInstanceId { get; set; }
+
+                            [NameInMap("TargetInstanceName")]
+                            [Validation(Required=true)]
+                            public string TargetInstanceName { get; set; }
+
+                            [NameInMap("TargetRegion")]
+                            [Validation(Required=true)]
+                            public string TargetRegion { get; set; }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
 
     }
 

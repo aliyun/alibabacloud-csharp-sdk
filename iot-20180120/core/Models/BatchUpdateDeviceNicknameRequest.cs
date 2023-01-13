@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchUpdateDeviceNicknameRequest : TeaModel {
         [NameInMap("DeviceNicknameInfo")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public List<BatchUpdateDeviceNicknameRequestDeviceNicknameInfo> DeviceNicknameInfo { get; set; }
         public class BatchUpdateDeviceNicknameRequestDeviceNicknameInfo : TeaModel {
             [NameInMap("DeviceName")]

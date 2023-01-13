@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateStudioAppDomainOpenRequest : TeaModel {
         [NameInMap("AppId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string AppId { get; set; }
 
         [NameInMap("Host")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Host { get; set; }
 
         [NameInMap("IotInstanceId")]
@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("ProjectId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProjectId { get; set; }
 
         [NameInMap("Protocol")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Protocol { get; set; }
 
     }

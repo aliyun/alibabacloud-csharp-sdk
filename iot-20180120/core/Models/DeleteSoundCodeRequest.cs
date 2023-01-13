@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("SoundCode")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string SoundCode { get; set; }
 
     }

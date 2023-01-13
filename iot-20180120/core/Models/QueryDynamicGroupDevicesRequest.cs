@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public bool? FuzzyName { get; set; }
 
         [NameInMap("GroupId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string GroupId { get; set; }
 
         [NameInMap("IotInstanceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string IotInstanceId { get; set; }
 
         [NameInMap("NextToken")]

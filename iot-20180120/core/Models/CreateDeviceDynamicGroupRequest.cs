@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateDeviceDynamicGroupRequest : TeaModel {
         [NameInMap("DynamicGroupExpression")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DynamicGroupExpression { get; set; }
 
         [NameInMap("GroupDesc")]
@@ -18,11 +18,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string GroupDesc { get; set; }
 
         [NameInMap("GroupName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string GroupName { get; set; }
 
         [NameInMap("IotInstanceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string IotInstanceId { get; set; }
 
     }

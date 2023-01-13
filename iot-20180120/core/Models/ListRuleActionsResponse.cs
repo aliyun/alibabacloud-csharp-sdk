@@ -9,17 +9,57 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class ListRuleActionsResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("Code")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string Code { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("ErrorMessage")]
         [Validation(Required=true)]
-        public int? StatusCode { get; set; }
+        public string ErrorMessage { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public ListRuleActionsResponseBody Body { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=true)]
+        public bool? Success { get; set; }
+
+        [NameInMap("RuleActionList")]
+        [Validation(Required=true)]
+        public ListRuleActionsResponseRuleActionList RuleActionList { get; set; }
+        public class ListRuleActionsResponseRuleActionList : TeaModel {
+            [NameInMap("RuleActionInfo")]
+            [Validation(Required=true)]
+            public List<ListRuleActionsResponseRuleActionListRuleActionInfo> RuleActionInfo { get; set; }
+            public class ListRuleActionsResponseRuleActionListRuleActionInfo : TeaModel {
+                [NameInMap("Configuration")]
+                [Validation(Required=true)]
+                public string Configuration { get; set; }
+
+                [NameInMap("ErrorActionFlag")]
+                [Validation(Required=true)]
+                public bool? ErrorActionFlag { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=true)]
+                public long? Id { get; set; }
+
+                [NameInMap("RuleId")]
+                [Validation(Required=true)]
+                public long? RuleId { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=true)]
+                public string Status { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=true)]
+                public string Type { get; set; }
+
+            }
+
+        }
 
     }
 

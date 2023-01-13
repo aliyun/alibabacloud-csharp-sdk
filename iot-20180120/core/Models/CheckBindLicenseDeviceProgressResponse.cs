@@ -9,17 +9,43 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CheckBindLicenseDeviceProgressResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("Code")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string Code { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("ErrorMessage")]
         [Validation(Required=true)]
-        public int? StatusCode { get; set; }
+        public string ErrorMessage { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public CheckBindLicenseDeviceProgressResponseBody Body { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=true)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public CheckBindLicenseDeviceProgressResponseData Data { get; set; }
+        public class CheckBindLicenseDeviceProgressResponseData : TeaModel {
+            [NameInMap("FailSum")]
+            [Validation(Required=true)]
+            public long? FailSum { get; set; }
+
+            [NameInMap("Progress")]
+            [Validation(Required=true)]
+            public int? Progress { get; set; }
+
+            [NameInMap("ResultCsvFile")]
+            [Validation(Required=true)]
+            public string ResultCsvFile { get; set; }
+
+            [NameInMap("SuccessSum")]
+            [Validation(Required=true)]
+            public long? SuccessSum { get; set; }
+
+        }
 
     }
 
