@@ -101,11 +101,15 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             /// The public endpoint. A public endpoint is returned no matter whether the public endpoint is enabled or disabled.  
             /// 
             /// > - If the value of the PublicEnable parameter is **true**, a valid public endpoint that can be resolved by using Alibaba Cloud DNS (DNS) is returned.
-            /// - If the value of the PublicEnable parameter is **false**, an invalid public endpoint that cannot be resolved by using DNS is returned.
+            /// > - If the value of the PublicEnable parameter is **false**, an invalid public endpoint that cannot be resolved by using DNS is returned.
             /// </summary>
             [NameInMap("PublicHost")]
             [Validation(Required=false)]
             public string PublicHost { get; set; }
+
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
 
         }
 

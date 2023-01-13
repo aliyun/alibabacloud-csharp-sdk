@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// The unique key of the routing algorithm. 
         /// 
         /// > - You can create a custom unique key for the routing algorithm. No requirements are imposed on custom unique keys.
-        /// - The unique key of the routing algorithm in the same logical table must be unique.
+        /// > - The unique key of the routing algorithm in the same logical table must be unique.
         /// </summary>
         [NameInMap("RouteKey")]
         [Validation(Required=false)]

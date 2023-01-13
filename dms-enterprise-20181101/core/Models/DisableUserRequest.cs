@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public long? Tid { get; set; }
 
+        /// <summary>
+        /// The UID of the Alibaba Cloud account.
+        /// </summary>
         [NameInMap("Uid")]
         [Validation(Required=false)]
         public string Uid { get; set; }

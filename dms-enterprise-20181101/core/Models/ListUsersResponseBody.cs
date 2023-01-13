@@ -75,9 +75,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 /// <summary>
                 /// The DingTalk chatbot URL that is used to receive notifications.
                 /// 
-                /// > 
-                /// *   The system returns this parameter if the user has set a DingTalk chatbot URL in the console. To set a DingTalk chatbot URL in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
-                /// *   The system does not return this parameter if the user has not set a DingTalk chatbot URL.
+                /// > * The system returns this parameter if the user has set a DingTalk chatbot URL in the console. To set a DingTalk chatbot URL in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
+                /// > * The system does not return this parameter if the user has not set a DingTalk chatbot URL.
                 /// </summary>
                 [NameInMap("DingRobot")]
                 [Validation(Required=false)]
@@ -86,9 +85,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 /// <summary>
                 /// The email address that is used to receive notifications.
                 /// 
-                /// > 
-                /// *   The system returns this parameter if the user has set an email address in the console. To set an email address in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
-                /// *   The system does not return this parameter if the user has not set an email address.
+                /// > * The system returns this parameter if the user has set an email address in the console. To set an email address in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
+                /// > * The system does not return this parameter if the user has not set an email address.
                 /// </summary>
                 [NameInMap("Email")]
                 [Validation(Required=false)]
@@ -118,9 +116,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 /// <summary>
                 /// The mobile phone number that is used to receive notifications.
                 /// 
-                /// > 
-                /// *   The system returns this parameter if the user has set a mobile phone number in the console. To set a mobile phone number in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
-                /// *   The system does not return this parameter if the user has not set a mobile phone number.
+                /// > * The system returns this parameter if the user has set a mobile phone number in the console. To set a mobile phone number in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
+                /// > * The system does not return this parameter if the user has not set a mobile phone number.
                 /// </summary>
                 [NameInMap("Mobile")]
                 [Validation(Required=false)]
@@ -179,7 +176,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 /// *   **DBA**: a DBA.
                 /// *   **ADMIN**: a DMS administrator.
                 /// *   **SECURITY_ADMIN**: a security administrator.
-                /// *   **STRUCT_READ_ONLY**: a schema read-only user.
+                /// *   **STRUCT\_READ\_ONLY**: a schema read-only user.
                 /// </summary>
                 [NameInMap("RoleNameList")]
                 [Validation(Required=false)]
@@ -229,9 +226,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 /// <summary>
                 /// The webhook URL that is used to receive notifications.
                 /// 
-                /// > 
-                /// *   If the user has set a webhook URL, DMS sends notifications to the specified URL.
-                /// *   The system does not return this parameter if the user has not set a webhook URL.
+                /// > * If the user has set a webhook URL, DMS sends notifications to the specified URL.
+                /// > * The system does not return this parameter if the user has not set a webhook URL.
                 /// </summary>
                 [NameInMap("Webhook")]
                 [Validation(Required=false)]

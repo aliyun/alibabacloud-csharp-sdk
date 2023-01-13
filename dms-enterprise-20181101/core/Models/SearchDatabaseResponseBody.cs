@@ -48,6 +48,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public string Alias { get; set; }
 
+                [NameInMap("CatalogName")]
+                [Validation(Required=false)]
+                public string CatalogName { get; set; }
+
                 /// <summary>
                 /// The ID of the database.
                 /// </summary>

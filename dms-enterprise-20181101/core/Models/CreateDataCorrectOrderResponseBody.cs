@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateDataCorrectOrderResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the ticket.
+        /// The IDs of the tickets.
         /// </summary>
         [NameInMap("CreateOrderResult")]
         [Validation(Required=false)]

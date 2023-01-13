@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class UpdateInstanceRequest : TeaModel {
         /// <summary>
-        /// The name of the data link for cross-database query.
+        /// The name of the database link for cross-database query.
         /// 
         /// > 
+        /// 
         /// *   This parameter is required if the UseDsql parameter is set to 1.
+        /// 
         /// *   The name can contain only lowercase letters and underscores (\_).
         /// *   The name must be unique within a tenant.
         /// </summary>
@@ -36,7 +38,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string DatabaseUser { get; set; }
 
         /// <summary>
-        /// The ID of the user who assumes the DBA role of the database instance. You can call the [ListUsers](~~141938~~) or [GetInstance](~~141567~~) operation to obtain the user ID.
+        /// The ID of the user who assumes the database administrator (DBA) role of the database instance. You can call the [ListUsers](~~141938~~) or [GetInstance](~~141567~~) operation to query the user ID.
         /// </summary>
         [NameInMap("DbaId")]
         [Validation(Required=false)]
@@ -45,18 +47,18 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// Specifies whether to enable the lock-free schema change feature for the database instance. Valid values:
         /// 
-        /// *   0: The feature is disabled.
-        /// *   1: The native online DDL feature takes precedence.
-        /// *   2: The lock-free schema change feature of DMS takes precedence.
+        /// *   **0:** disables the lock-free schema change feature
+        /// *   **1:** uses the online DDL of MySQL first
+        /// *   **2:** uses the lock-free schema change feature of DMS first
         /// </summary>
         [NameInMap("DdlOnline")]
         [Validation(Required=false)]
         public int? DdlOnline { get; set; }
 
         /// <summary>
-        /// The ID of the ECS instance.
+        /// The ID of the ECS instance on which the database instance is deployed.
         /// 
-        /// >  This parameter is required if the InstanceSource parameter is set to ECS_OWN.
+        /// > This parameter is required if the InstanceSource parameter is set to ECS_OWN.
         /// </summary>
         [NameInMap("EcsInstanceId")]
         [Validation(Required=false)]
@@ -65,27 +67,32 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// The ID of the region in which the database instance resides.
         /// 
-        /// >  This parameter is required if the InstanceSource parameter is set to RDS, ECS_OWN, or VPC_IDC.
+        /// > This parameter is required if the InstanceSource parameter is set to RDS, ECS_OWN, or VPC_IDC.
         /// </summary>
         [NameInMap("EcsRegion")]
         [Validation(Required=false)]
         public string EcsRegion { get; set; }
 
+        /// <summary>
+        /// *   **Y:** enables the sensitive data protection feature
+        /// *   **N:** disables the sensitive data protection feature
+        /// *   **NULL or other:** does not update the status of the sensitive data protection feature
+        /// </summary>
         [NameInMap("EnableSellSitd")]
         [Validation(Required=false)]
         public string EnableSellSitd { get; set; }
 
         /// <summary>
-        /// The type of the environment to which the database instance belongs. Valid values:
+        /// The type of the environment in which the database instance is deployed. Valid values:
         /// 
-        /// *   **product**: production environment
-        /// *   **dev**: development environment
-        /// *   **pre**: staging environment
-        /// *   **test**: test environment
-        /// *   **sit**: system integration testing (SIT) environment
-        /// *   **uat**: user acceptance testing (UAT) environment
-        /// *   **pet**: stress testing environment
-        /// *   **stag**: STAG environment
+        /// *   **product:** production environment
+        /// *   **dev:** development environment
+        /// *   **pre:** pre-release environment
+        /// *   **test:** test environment
+        /// *   **sit:** system integration testing (SIT) environment
+        /// *   **uat:** user acceptance testing (UAT) environment
+        /// *   **pet:** stress testing environment
+        /// *   **stag:** staging environment
         /// </summary>
         [NameInMap("EnvType")]
         [Validation(Required=false)]
@@ -113,7 +120,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string InstanceAlias { get; set; }
 
         /// <summary>
-        /// The ID of the database instance. You can call the [GetInstance](~~141567~~) operation to obtain the instance ID.
+        /// The ID of the database instance. You can call the [GetInstance](~~141567~~) operation to query the instance ID.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -122,10 +129,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// The source of the database instance. Valid values:
         /// 
-        /// *   **PUBLIC_OWN**: a self-managed database instance that is deployed on the Internet
-        /// *   **RDS**: an ApsaraDB RDS instance
-        /// *   **ECS_OWN**: a self-managed database that is deployed on an Elastic Compute Service (ECS) instance
-        /// *   **VPC_IDC**: a self-managed database instance that is deployed in a data center connected over a virtual private cloud (VPC)
+        /// *   **PUBLIC_OWN:** a self-managed database instance that is deployed on the Internet
+        /// *   **RDS:** an ApsaraDB RDS instance
+        /// *   **ECS_OWN:** a self-managed database that is deployed on an Elastic Compute Service (ECS) instance
+        /// *   **VPC_IDC:** a self-managed database instance that is deployed in a data center connected over a virtual private cloud (VPC)
         /// </summary>
         [NameInMap("InstanceSource")]
         [Validation(Required=false)]
@@ -139,7 +146,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// The port number that is used to connect to the database instance.
+        /// The port that is used to connect to the database instance.
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
@@ -153,7 +160,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public int? QueryTimeout { get; set; }
 
         /// <summary>
-        /// The ID of the security rule set for the instance. You can call the [ListStandardGroups](~~417891~~) or [GetInstance](~~141567~~) operation to obtain the name of the security rule set that you want to use.
+        /// The name of the security rule set (GroupName) for the instance. You can call the [ListStandardGroups](~~417891~~) or [GetInstance](~~141567~~) operation to query the name of the security rule set.
         /// </summary>
         [NameInMap("SafeRuleId")]
         [Validation(Required=false)]
@@ -162,32 +169,38 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// The system ID (SID) of the database instance.
         /// 
-        /// >  This parameter is required if the InstanceType parameter is set to ORACLE.
+        /// > This parameter is required if the InstanceType parameter is set to ORACLE.
         /// </summary>
         [NameInMap("Sid")]
         [Validation(Required=false)]
         public string Sid { get; set; }
 
         /// <summary>
-        /// Specifies whether to skip connectivity test. Valid values:
+        /// Specifies whether to skip the connectivity test. Valid values:
         /// 
-        /// *   **true**: The connectivity test is skipped.
-        /// *   **false**: The connectivity test is not skipped.
+        /// *   **true:** skips the connectivity test
+        /// *   **false:** does not skip the connectivity test
         /// </summary>
         [NameInMap("SkipTest")]
         [Validation(Required=false)]
         public bool? SkipTest { get; set; }
 
+        /// <summary>
+        /// The ID of the classification template. You can call the [ListClassificationTemplates](~~460613~~) operation to query the template ID.
+        /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public long? TemplateId { get; set; }
 
+        /// <summary>
+        /// The type of the classification template. You can call the [ListClassificationTemplates](~~460613~~) operation to query the template type.
+        /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]
         public string TemplateType { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
+        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]
@@ -196,19 +209,19 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// Specifies whether to enable the cross-database query feature for the database instance. Valid values:
         /// 
-        /// *   0: The feature is disabled.
-        /// *   1: The feature is enabled.
+        /// *   **0:** disables the cross-database query feature
+        /// *   **1:** enables the cross-database query feature
         /// 
-        /// >  Supported database types: MySQL, SQL Server, PostgreSQL, PolarDB for Oracle, and ApsaraDB for Redis.
+        /// > Supported database types: MySQL, SQL Server, PostgreSQL, PolarDB for Oracle, and ApsaraDB for Redis.
         /// </summary>
         [NameInMap("UseDsql")]
         [Validation(Required=false)]
         public int? UseDsql { get; set; }
 
         /// <summary>
-        /// The ID of the VPC.
+        /// The ID of the VPC to which the database instance belongs.
         /// 
-        /// >  This parameter is required if the InstanceSource parameter is set to VPC_IDC.
+        /// > This parameter is required if the InstanceSource parameter is set to VPC_IDC.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

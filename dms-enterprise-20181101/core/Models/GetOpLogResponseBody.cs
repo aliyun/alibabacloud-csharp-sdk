@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 /// <summary>
                 /// The endpoint of the database instance.
                 /// 
-                /// > *   This parameter is valid only for database instances of the LocalInstance type.
-                /// *   This parameter is valid only for operations on the functional modules related to tasks.
+                /// > * This parameter is valid only for database instances of the LocalInstance type.
+                /// > * This parameter is valid only for operations on the functional modules related to tasks.
                 /// </summary>
                 [NameInMap("Database")]
                 [Validation(Required=false)]

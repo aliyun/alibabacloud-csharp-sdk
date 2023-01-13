@@ -114,8 +114,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             /// <summary>
             /// The SQL statements used to roll back the data change.
             /// 
-            /// > 
-            /// *   This parameter is required if you set the **RollbackSqlType** parameter to **TEXT**.
+            /// > This parameter is required if you set the **RollbackSqlType** parameter to **TEXT**.
             /// </summary>
             [NameInMap("RollbackSQL")]
             [Validation(Required=false)]

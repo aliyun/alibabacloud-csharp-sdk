@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// *   **PERMISSION**: permissions
         /// *   **OWNER**: data owner
         /// *   **SQL_CONSOLE**: data query
-        /// *   **SQL_CONSOLE_EXPORT**: query result export
+        /// *   **SQL\_CONSOLE\_EXPORT**: query result export
         /// *   **DATA_CHANGE**: data change
         /// *   **DATA_EXPORT**: data export
         /// *   **SQL_REVIEW**: SQL review
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// *   **SECURITY_RULE**: security rule
         /// *   **CONFIG_MANAGE**: configuration management
         /// *   **RESOURCE_AUTH**: resource authorization
-        /// *   **ACCESS_WHITE_IP**: access IP address allowlist
+        /// *   **ACCESS\_WHITE\_IP**: access IP address allowlist
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]

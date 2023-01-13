@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class UpdateInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The error code that is returned.
+        /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message that is returned.
+        /// The error message returned if the request failed.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   **true**: The request was successful.
-        /// *   **false**: The request failed.
+        /// *   **true:** The request was successful.
+        /// *   **false:** The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

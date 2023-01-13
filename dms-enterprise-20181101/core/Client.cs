@@ -393,6 +393,15 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await AddLogicTableRouteConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * When you add directed edges for a task node, take note of the following limits:
+          * 1. The endpoints of the specified edge exist in the Directed Acyclic Graph (DAG) of the task flow specified by DagId.
+          * 2. After a backward edge is added, the DAG does not contain loops.
+          *
+          * @param tmpReq AddTaskFlowEdgesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddTaskFlowEdgesResponse
+         */
         public AddTaskFlowEdgesResponse AddTaskFlowEdgesWithOptions(AddTaskFlowEdgesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -434,6 +443,15 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<AddTaskFlowEdgesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * When you add directed edges for a task node, take note of the following limits:
+          * 1. The endpoints of the specified edge exist in the Directed Acyclic Graph (DAG) of the task flow specified by DagId.
+          * 2. After a backward edge is added, the DAG does not contain loops.
+          *
+          * @param tmpReq AddTaskFlowEdgesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddTaskFlowEdgesResponse
+         */
         public async Task<AddTaskFlowEdgesResponse> AddTaskFlowEdgesWithOptionsAsync(AddTaskFlowEdgesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -475,12 +493,28 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<AddTaskFlowEdgesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * When you add directed edges for a task node, take note of the following limits:
+          * 1. The endpoints of the specified edge exist in the Directed Acyclic Graph (DAG) of the task flow specified by DagId.
+          * 2. After a backward edge is added, the DAG does not contain loops.
+          *
+          * @param request AddTaskFlowEdgesRequest
+          * @return AddTaskFlowEdgesResponse
+         */
         public AddTaskFlowEdgesResponse AddTaskFlowEdges(AddTaskFlowEdgesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddTaskFlowEdgesWithOptions(request, runtime);
         }
 
+        /**
+          * When you add directed edges for a task node, take note of the following limits:
+          * 1. The endpoints of the specified edge exist in the Directed Acyclic Graph (DAG) of the task flow specified by DagId.
+          * 2. After a backward edge is added, the DAG does not contain loops.
+          *
+          * @param request AddTaskFlowEdgesRequest
+          * @return AddTaskFlowEdgesResponse
+         */
         public async Task<AddTaskFlowEdgesResponse> AddTaskFlowEdgesAsync(AddTaskFlowEdgesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -578,7 +612,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * ## Description
           * During a data backfill, task flows are run in sequence based on their dates. You can specify whether task flows are run in chronological or reverse chronological order. After the data backfill is complete, you can specify a date or date range, and a node range to run task flows.
           *
           * @param tmpReq BackFillRequest
@@ -655,7 +688,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * ## Description
           * During a data backfill, task flows are run in sequence based on their dates. You can specify whether task flows are run in chronological or reverse chronological order. After the data backfill is complete, you can specify a date or date range, and a node range to run task flows.
           *
           * @param tmpReq BackFillRequest
@@ -732,7 +764,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * ## Description
           * During a data backfill, task flows are run in sequence based on their dates. You can specify whether task flows are run in chronological or reverse chronological order. After the data backfill is complete, you can specify a date or date range, and a node range to run task flows.
           *
           * @param request BackFillRequest
@@ -745,7 +776,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * ## Description
           * During a data backfill, task flows are run in sequence based on their dates. You can specify whether task flows are run in chronological or reverse chronological order. After the data backfill is complete, you can specify a date or date range, and a node range to run task flows.
           *
           * @param request BackFillRequest
@@ -3994,7 +4024,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * ### Usage notes
           * When you call this operation, make sure that no task flow is specified in the business scenario.
           *
           * @param request DeleteScenarioRequest
@@ -4033,7 +4062,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * ### Usage notes
           * When you call this operation, make sure that no task flow is specified in the business scenario.
           *
           * @param request DeleteScenarioRequest
@@ -4072,7 +4100,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * ### Usage notes
           * When you call this operation, make sure that no task flow is specified in the business scenario.
           *
           * @param request DeleteScenarioRequest
@@ -4085,7 +4112,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * ### Usage notes
           * When you call this operation, make sure that no task flow is specified in the business scenario.
           *
           * @param request DeleteScenarioRequest
@@ -6333,6 +6359,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await GetInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The scheduling cycle of a task flow must be greater than the minimum scheduling cycle configured in the SLA rule for the task flow.
+          *
+          * @param request GetIntervalLimitOfSLARequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetIntervalLimitOfSLAResponse
+         */
         public GetIntervalLimitOfSLAResponse GetIntervalLimitOfSLAWithOptions(GetIntervalLimitOfSLARequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6364,6 +6397,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<GetIntervalLimitOfSLAResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The scheduling cycle of a task flow must be greater than the minimum scheduling cycle configured in the SLA rule for the task flow.
+          *
+          * @param request GetIntervalLimitOfSLARequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetIntervalLimitOfSLAResponse
+         */
         public async Task<GetIntervalLimitOfSLAResponse> GetIntervalLimitOfSLAWithOptionsAsync(GetIntervalLimitOfSLARequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6395,12 +6435,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<GetIntervalLimitOfSLAResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The scheduling cycle of a task flow must be greater than the minimum scheduling cycle configured in the SLA rule for the task flow.
+          *
+          * @param request GetIntervalLimitOfSLARequest
+          * @return GetIntervalLimitOfSLAResponse
+         */
         public GetIntervalLimitOfSLAResponse GetIntervalLimitOfSLA(GetIntervalLimitOfSLARequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetIntervalLimitOfSLAWithOptions(request, runtime);
         }
 
+        /**
+          * The scheduling cycle of a task flow must be greater than the minimum scheduling cycle configured in the SLA rule for the task flow.
+          *
+          * @param request GetIntervalLimitOfSLARequest
+          * @return GetIntervalLimitOfSLAResponse
+         */
         public async Task<GetIntervalLimitOfSLAResponse> GetIntervalLimitOfSLAAsync(GetIntervalLimitOfSLARequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14324,8 +14376,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * Prerequisites:
-          * You are a DMS administrator or a database administrator (DBA). You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain your user role from the RoleIdList parameter that is returned.
+          * Prerequisites: You are a DMS administrator or a database administrator (DBA). You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to query your user role from the RoleIdList parameter that is returned.
           *
           * @param request RegisterInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14455,8 +14506,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * Prerequisites:
-          * You are a DMS administrator or a database administrator (DBA). You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain your user role from the RoleIdList parameter that is returned.
+          * Prerequisites: You are a DMS administrator or a database administrator (DBA). You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to query your user role from the RoleIdList parameter that is returned.
           *
           * @param request RegisterInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14586,8 +14636,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * Prerequisites:
-          * You are a DMS administrator or a database administrator (DBA). You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain your user role from the RoleIdList parameter that is returned.
+          * Prerequisites: You are a DMS administrator or a database administrator (DBA). You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to query your user role from the RoleIdList parameter that is returned.
           *
           * @param request RegisterInstanceRequest
           * @return RegisterInstanceResponse
@@ -14599,8 +14648,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * Prerequisites:
-          * You are a DMS administrator or a database administrator (DBA). You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain your user role from the RoleIdList parameter that is returned.
+          * Prerequisites: You are a DMS administrator or a database administrator (DBA). You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to query your user role from the RoleIdList parameter that is returned.
           *
           * @param request RegisterInstanceRequest
           * @return RegisterInstanceResponse
@@ -14825,6 +14873,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await RestartDataCorrectSQLJobWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation only for task flows that are suspended.
+          *
+          * @param request ResumeTaskFlowInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ResumeTaskFlowInstanceResponse
+         */
         public ResumeTaskFlowInstanceResponse ResumeTaskFlowInstanceWithOptions(ResumeTaskFlowInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14864,6 +14919,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<ResumeTaskFlowInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation only for task flows that are suspended.
+          *
+          * @param request ResumeTaskFlowInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ResumeTaskFlowInstanceResponse
+         */
         public async Task<ResumeTaskFlowInstanceResponse> ResumeTaskFlowInstanceWithOptionsAsync(ResumeTaskFlowInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14903,12 +14965,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<ResumeTaskFlowInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation only for task flows that are suspended.
+          *
+          * @param request ResumeTaskFlowInstanceRequest
+          * @return ResumeTaskFlowInstanceResponse
+         */
         public ResumeTaskFlowInstanceResponse ResumeTaskFlowInstance(ResumeTaskFlowInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResumeTaskFlowInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation only for task flows that are suspended.
+          *
+          * @param request ResumeTaskFlowInstanceRequest
+          * @return ResumeTaskFlowInstanceResponse
+         */
         public async Task<ResumeTaskFlowInstanceResponse> ResumeTaskFlowInstanceAsync(ResumeTaskFlowInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16229,6 +16303,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await UpdateInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * SLA rules take effect after task flows are deployed and published.
+          *
+          * @param tmpReq UpdateSLARulesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateSLARulesResponse
+         */
         public UpdateSLARulesResponse UpdateSLARulesWithOptions(UpdateSLARulesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -16270,6 +16351,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<UpdateSLARulesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * SLA rules take effect after task flows are deployed and published.
+          *
+          * @param tmpReq UpdateSLARulesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateSLARulesResponse
+         */
         public async Task<UpdateSLARulesResponse> UpdateSLARulesWithOptionsAsync(UpdateSLARulesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -16311,12 +16399,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<UpdateSLARulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * SLA rules take effect after task flows are deployed and published.
+          *
+          * @param request UpdateSLARulesRequest
+          * @return UpdateSLARulesResponse
+         */
         public UpdateSLARulesResponse UpdateSLARules(UpdateSLARulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateSLARulesWithOptions(request, runtime);
         }
 
+        /**
+          * SLA rules take effect after task flows are deployed and published.
+          *
+          * @param request UpdateSLARulesRequest
+          * @return UpdateSLARulesResponse
+         */
         public async Task<UpdateSLARulesResponse> UpdateSLARulesAsync(UpdateSLARulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16413,6 +16513,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await UpdateScenarioWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation to configure a failed task or rerun a task.
+          *
+          * @param request UpdateTaskConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateTaskConfigResponse
+         */
         public UpdateTaskConfigResponse UpdateTaskConfigWithOptions(UpdateTaskConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16448,6 +16555,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<UpdateTaskConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to configure a failed task or rerun a task.
+          *
+          * @param request UpdateTaskConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateTaskConfigResponse
+         */
         public async Task<UpdateTaskConfigResponse> UpdateTaskConfigWithOptionsAsync(UpdateTaskConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16483,12 +16597,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<UpdateTaskConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to configure a failed task or rerun a task.
+          *
+          * @param request UpdateTaskConfigRequest
+          * @return UpdateTaskConfigResponse
+         */
         public UpdateTaskConfigResponse UpdateTaskConfig(UpdateTaskConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateTaskConfigWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation to configure a failed task or rerun a task.
+          *
+          * @param request UpdateTaskConfigRequest
+          * @return UpdateTaskConfigResponse
+         */
         public async Task<UpdateTaskConfigResponse> UpdateTaskConfigAsync(UpdateTaskConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16792,11 +16918,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * ## Usage notes
           * The edges can be updated only when the following conditions are met:
-          * 1\\. The specified edge exists in the Directed Acyclic Graph (DAG) of the task flow. The DAG is identified by DagId.
-          * 2\\. The end points of the specified edge exist in the DAG of the task flow. The DAG is identified by DagId.
-          * 3\\. After the update, no loop appears in the DAG.
+          * 1. The specified edge exists in the Directed Acyclic Graph (DAG) of the task flow. The DAG is identified by DagId.
+          * 2. The end points of the specified edge exist in the DAG of the task flow. The DAG is identified by DagId.
+          * 3. After the update, no loop appears in the DAG.
           *
           * @param tmpReq UpdateTaskFlowEdgesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -16844,11 +16969,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * ## Usage notes
           * The edges can be updated only when the following conditions are met:
-          * 1\\. The specified edge exists in the Directed Acyclic Graph (DAG) of the task flow. The DAG is identified by DagId.
-          * 2\\. The end points of the specified edge exist in the DAG of the task flow. The DAG is identified by DagId.
-          * 3\\. After the update, no loop appears in the DAG.
+          * 1. The specified edge exists in the Directed Acyclic Graph (DAG) of the task flow. The DAG is identified by DagId.
+          * 2. The end points of the specified edge exist in the DAG of the task flow. The DAG is identified by DagId.
+          * 3. After the update, no loop appears in the DAG.
           *
           * @param tmpReq UpdateTaskFlowEdgesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -16896,11 +17020,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * ## Usage notes
           * The edges can be updated only when the following conditions are met:
-          * 1\\. The specified edge exists in the Directed Acyclic Graph (DAG) of the task flow. The DAG is identified by DagId.
-          * 2\\. The end points of the specified edge exist in the DAG of the task flow. The DAG is identified by DagId.
-          * 3\\. After the update, no loop appears in the DAG.
+          * 1. The specified edge exists in the Directed Acyclic Graph (DAG) of the task flow. The DAG is identified by DagId.
+          * 2. The end points of the specified edge exist in the DAG of the task flow. The DAG is identified by DagId.
+          * 3. After the update, no loop appears in the DAG.
           *
           * @param request UpdateTaskFlowEdgesRequest
           * @return UpdateTaskFlowEdgesResponse
@@ -16912,11 +17035,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * ## Usage notes
           * The edges can be updated only when the following conditions are met:
-          * 1\\. The specified edge exists in the Directed Acyclic Graph (DAG) of the task flow. The DAG is identified by DagId.
-          * 2\\. The end points of the specified edge exist in the DAG of the task flow. The DAG is identified by DagId.
-          * 3\\. After the update, no loop appears in the DAG.
+          * 1. The specified edge exists in the Directed Acyclic Graph (DAG) of the task flow. The DAG is identified by DagId.
+          * 2. The end points of the specified edge exist in the DAG of the task flow. The DAG is identified by DagId.
+          * 3. After the update, no loop appears in the DAG.
           *
           * @param request UpdateTaskFlowEdgesRequest
           * @return UpdateTaskFlowEdgesResponse
@@ -17343,6 +17465,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await UpdateTaskFlowRelationsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation to update the scheduling properties for a task flow in the editing state. You can configure a **timed scheduling** task flow or an **event scheduling** task flow. When you configure a **timed scheduling** task flow, you can choose from one-time scheduling or periodic scheduling. When you configure an **event scheduling** task flow, you can subscribe to task flows or task flow nodes.****\\
+          * After you update the scheduling properties, you need to publish and deploy the task flow again. The new task flow instance will run based on the updated scheduling properties.
+          *
+          * @param request UpdateTaskFlowScheduleRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateTaskFlowScheduleResponse
+         */
         public UpdateTaskFlowScheduleResponse UpdateTaskFlowScheduleWithOptions(UpdateTaskFlowScheduleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17406,6 +17536,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<UpdateTaskFlowScheduleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to update the scheduling properties for a task flow in the editing state. You can configure a **timed scheduling** task flow or an **event scheduling** task flow. When you configure a **timed scheduling** task flow, you can choose from one-time scheduling or periodic scheduling. When you configure an **event scheduling** task flow, you can subscribe to task flows or task flow nodes.****\\
+          * After you update the scheduling properties, you need to publish and deploy the task flow again. The new task flow instance will run based on the updated scheduling properties.
+          *
+          * @param request UpdateTaskFlowScheduleRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateTaskFlowScheduleResponse
+         */
         public async Task<UpdateTaskFlowScheduleResponse> UpdateTaskFlowScheduleWithOptionsAsync(UpdateTaskFlowScheduleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17469,12 +17607,26 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<UpdateTaskFlowScheduleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to update the scheduling properties for a task flow in the editing state. You can configure a **timed scheduling** task flow or an **event scheduling** task flow. When you configure a **timed scheduling** task flow, you can choose from one-time scheduling or periodic scheduling. When you configure an **event scheduling** task flow, you can subscribe to task flows or task flow nodes.****\\
+          * After you update the scheduling properties, you need to publish and deploy the task flow again. The new task flow instance will run based on the updated scheduling properties.
+          *
+          * @param request UpdateTaskFlowScheduleRequest
+          * @return UpdateTaskFlowScheduleResponse
+         */
         public UpdateTaskFlowScheduleResponse UpdateTaskFlowSchedule(UpdateTaskFlowScheduleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateTaskFlowScheduleWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation to update the scheduling properties for a task flow in the editing state. You can configure a **timed scheduling** task flow or an **event scheduling** task flow. When you configure a **timed scheduling** task flow, you can choose from one-time scheduling or periodic scheduling. When you configure an **event scheduling** task flow, you can subscribe to task flows or task flow nodes.****\\
+          * After you update the scheduling properties, you need to publish and deploy the task flow again. The new task flow instance will run based on the updated scheduling properties.
+          *
+          * @param request UpdateTaskFlowScheduleRequest
+          * @return UpdateTaskFlowScheduleResponse
+         */
         public async Task<UpdateTaskFlowScheduleResponse> UpdateTaskFlowScheduleAsync(UpdateTaskFlowScheduleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17646,7 +17798,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * ## Usage notes
           * Only nodes of single-instance SQL assignment, script code, and ECS remote command have output variables.
           *
           * @param request UpdateTaskOutputRequest
@@ -17689,7 +17840,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * ## Usage notes
           * Only nodes of single-instance SQL assignment, script code, and ECS remote command have output variables.
           *
           * @param request UpdateTaskOutputRequest
@@ -17732,7 +17882,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * ## Usage notes
           * Only nodes of single-instance SQL assignment, script code, and ECS remote command have output variables.
           *
           * @param request UpdateTaskOutputRequest
@@ -17745,7 +17894,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * ## Usage notes
           * Only nodes of single-instance SQL assignment, script code, and ECS remote command have output variables.
           *
           * @param request UpdateTaskOutputRequest
