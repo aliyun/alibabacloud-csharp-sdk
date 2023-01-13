@@ -135,6 +135,104 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             return await CheckResultWithOptionsAsync(request, runtime);
         }
 
+        public FaceCompareResponse FaceCompareWithOptions(FaceCompareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                query["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceFacePicture))
+            {
+                query["SourceFacePicture"] = request.SourceFacePicture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceFacePictureUrl))
+            {
+                query["SourceFacePictureUrl"] = request.SourceFacePictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetFacePicture))
+            {
+                query["TargetFacePicture"] = request.TargetFacePicture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetFacePictureUrl))
+            {
+                query["TargetFacePictureUrl"] = request.TargetFacePictureUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FaceCompare",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FaceCompareResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<FaceCompareResponse> FaceCompareWithOptionsAsync(FaceCompareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                query["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceFacePicture))
+            {
+                query["SourceFacePicture"] = request.SourceFacePicture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceFacePictureUrl))
+            {
+                query["SourceFacePictureUrl"] = request.SourceFacePictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetFacePicture))
+            {
+                query["TargetFacePicture"] = request.TargetFacePicture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetFacePictureUrl))
+            {
+                query["TargetFacePictureUrl"] = request.TargetFacePictureUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FaceCompare",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FaceCompareResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public FaceCompareResponse FaceCompare(FaceCompareRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return FaceCompareWithOptions(request, runtime);
+        }
+
+        public async Task<FaceCompareResponse> FaceCompareAsync(FaceCompareRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await FaceCompareWithOptionsAsync(request, runtime);
+        }
+
         public InitializeResponse InitializeWithOptions(InitializeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -142,6 +240,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
             {
                 query["DocType"] = request.DocType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureBase64))
+            {
+                query["FacePictureBase64"] = request.FacePictureBase64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureUrl))
+            {
+                query["FacePictureUrl"] = request.FacePictureUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowType))
             {
@@ -209,6 +315,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
             {
                 query["DocType"] = request.DocType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureBase64))
+            {
+                query["FacePictureBase64"] = request.FacePictureBase64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureUrl))
+            {
+                query["FacePictureUrl"] = request.FacePictureUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowType))
             {

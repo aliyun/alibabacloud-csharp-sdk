@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string DocType { get; set; }
 
+        [NameInMap("FacePictureBase64")]
+        [Validation(Required=false)]
+        public string FacePictureBase64 { get; set; }
+
+        [NameInMap("FacePictureUrl")]
+        [Validation(Required=false)]
+        public string FacePictureUrl { get; set; }
+
         [NameInMap("FlowType")]
         [Validation(Required=false)]
         public string FlowType { get; set; }

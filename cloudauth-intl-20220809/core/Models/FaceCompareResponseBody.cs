@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
-    public class InitializeResponseBody : TeaModel {
+    public class FaceCompareResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -17,17 +17,24 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// Id of the request
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         [NameInMap("Result")]
         [Validation(Required=false)]
-        public InitializeResponseBodyResult Result { get; set; }
-        public class InitializeResponseBodyResult : TeaModel {
-            [NameInMap("ClientCfg")]
+        public FaceCompareResponseBodyResult Result { get; set; }
+        public class FaceCompareResponseBodyResult : TeaModel {
+            [NameInMap("FaceComparisonScore")]
             [Validation(Required=false)]
-            public string ClientCfg { get; set; }
+            public double? FaceComparisonScore { get; set; }
+
+            [NameInMap("Passed")]
+            [Validation(Required=false)]
+            public string Passed { get; set; }
 
             [NameInMap("TransactionId")]
             [Validation(Required=false)]

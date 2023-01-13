@@ -28,19 +28,32 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             [NameInMap("EkycResult")]
             [Validation(Required=false)]
             public string EkycResult { get; set; }
+
             [NameInMap("ExtBasicInfo")]
             [Validation(Required=false)]
             public string ExtBasicInfo { get; set; }
+
             [NameInMap("ExtFaceInfo")]
             [Validation(Required=false)]
             public string ExtFaceInfo { get; set; }
+
             [NameInMap("ExtIdInfo")]
             [Validation(Required=false)]
             public string ExtIdInfo { get; set; }
+
             [NameInMap("ExtRiskInfo")]
             [Validation(Required=false)]
             public string ExtRiskInfo { get; set; }
-        };
+
+            [NameInMap("Passed")]
+            [Validation(Required=false)]
+            public string Passed { get; set; }
+
+            [NameInMap("SubCode")]
+            [Validation(Required=false)]
+            public string SubCode { get; set; }
+
+        }
 
     }
 
