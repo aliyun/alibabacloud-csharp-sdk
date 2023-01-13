@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         [NameInMap("RuleId")]
         [Validation(Required=false)]
-        public int? RuleId { get; set; }
+        public long? RuleId { get; set; }
 
         [NameInMap("StartDate")]
         [Validation(Required=false)]

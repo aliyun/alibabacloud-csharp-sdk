@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public int? AlarmMode { get; set; }
 
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public long? CreateTime { get; set; }
+
             [NameInMap("EntityId")]
             [Validation(Required=false)]
             public string EntityId { get; set; }
@@ -32,6 +36,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
+
+            [NameInMap("ModifyTime")]
+            [Validation(Required=false)]
+            public long? ModifyTime { get; set; }
 
             [NameInMap("ProjectName")]
             [Validation(Required=false)]

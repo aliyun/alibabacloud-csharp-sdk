@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public string OnDutyAccountName { get; set; }
 
+            [NameInMap("OpenSwitch")]
+            [Validation(Required=false)]
+            public bool? OpenSwitch { get; set; }
+
             [NameInMap("Operator")]
             [Validation(Required=false)]
             public string Operator { get; set; }

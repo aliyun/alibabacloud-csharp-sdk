@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 [NameInMap("EntityId")]
                 [Validation(Required=false)]
-                public int? EntityId { get; set; }
+                public long? EntityId { get; set; }
 
                 [NameInMap("ExpectValue")]
                 [Validation(Required=false)]
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 [NameInMap("Id")]
                 [Validation(Required=false)]
-                public int? Id { get; set; }
+                public long? Id { get; set; }
 
                 [NameInMap("IsPrediction")]
                 [Validation(Required=false)]
@@ -124,6 +124,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [NameInMap("Op")]
                 [Validation(Required=false)]
                 public string Op { get; set; }
+
+                [NameInMap("Open")]
+                [Validation(Required=false)]
+                public bool? Open { get; set; }
 
                 [NameInMap("ProjectName")]
                 [Validation(Required=false)]
@@ -165,7 +169,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 [NameInMap("RuleId")]
                 [Validation(Required=false)]
-                public int? RuleId { get; set; }
+                public long? RuleId { get; set; }
 
                 [NameInMap("RuleName")]
                 [Validation(Required=false)]
